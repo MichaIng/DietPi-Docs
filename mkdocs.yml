@@ -4,7 +4,6 @@ site_author: "DietPi Team"
 
 theme:
   name: 'material'
-  #favicon: https://dietpi.com/images/logo.png
   #logo: https://dietpi.com/images/logo.png
 
 markdown_extensions:  
@@ -16,7 +15,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/solid/home
-      link: https://dietpi
+      link: https://dietpi.com
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/DietPi_
 
