@@ -1,2 +1,34 @@
-site_name: DietPi-Docs
-theme: readthedocs
+site_name: DietPi Documentation
+repo_url: https://github.com/MichaIng/DietPi-Docs
+site_author: "DietPi Team"
+
+theme:
+  name: 'material'
+  # logo: 'assets/images/logo.png'
+  favicon: https://dietpi.com/favicon.ico
+
+markdown_extensions:  
+  - attr_list
+  - admonition
+  - codehilite
+  - pymdownx.details
+
+extra:
+  social:
+    - icon: fontawesome/solid/home
+      link: https://dietpi.com
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/DietPi_
+
+extra_css:
+   - "css/custom.css"
+
+# Copyright
+copyright: '&copy; 2020, DietPi'
+
+nav:
+  - 'Home' : index.md
+  - 'User Guide' :
+      - 'Getting Started' : 'User-Guide_Getting-Started.md'
+  - 'Optimised software' : 'User-OptimisedSoftware.md'
+  - 'Supported SBC' : 'Hardware-Supported_SBC.md'
