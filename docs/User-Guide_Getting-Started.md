@@ -4,7 +4,7 @@
 
 To follow this tutorial, you will need the next hardware list:
 
- - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](/../Hardware-Supported_SBC/)
+ - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](../hardware-supported_sbc/)
  - An SD card of at least 4G, and a way to read it on your computer (integrated slot or external SD card reader)
  - Optional: Ethernet (network) cable
 

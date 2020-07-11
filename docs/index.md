@@ -4,7 +4,7 @@ DietPi | Minimal image at its core
 
 # Welcome to the DietPi Documentation!
 
-If you are **new to DietPi**, the [_Getting Started_](User-Guide_Getting-Started.md) section provides a tutorial for everything you need to get DietPi running, and answers many **F**requently **A**sked **Q**uestions.
+If you are **new to DietPi**, the [_Getting Started_](user-guide_getting-started.md) section provides a tutorial for everything you need to get DietPi running, and answers many **F**requently **A**sked **Q**uestions.
 
 If you **need help**, and have read through _Getting Started_, check out [_Troubleshooting_]().
 
