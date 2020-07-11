@@ -1,72 +1,86 @@
 # DietPi Updates
 
 ## July 2020 (version 6.31)
-Welcome to the July 2020 release of DietPi. There are a number of updates in this version that we hope you will like, some of the key highlights include:
-
-- Support for Raspberry Pi OS (64-bit) has been added
-- Odroid C4 | Support for this new Hardkernel SBC has been added
+Welcome to the July 2020 release of DietPi. There are a number of updates in this version that we hope you will like it.
 
 ### Improvements
-- RPi | Support for Raspberry Pi OS (64-bit) has been added, including any other Debian pre-image on RPi. Many thanks to @FusionPlmH for doing this request: https://github.com/MichaIng/DietPi/issues/3570
-- Odroid C4 | Support for this new Hardkernel SBC has been added to allow image creation based on Meveric's Odroid repository, including Kodi support.
-- Network | "ping" can now be used by all users without any file capabilities, sudo or setuid. For this we allow all users to create native ICMP sockets which are available since Linux 3.X but disabled by default on Debian. Other distributions and systemd (upstream) have this enabled by default and for security and usability reasons we follow them: https://fedoraproject.org/wiki/Changes/ ... GroupRange
-- DietPi-Login | A new setting has been added which allows to skip the interactive GPLv2 license agreement on first login. Add/set "AUTO_SETUP_ACCEPT_LICENSE=1" in (/boot/)dietpi.txt in which case we assume you read and agreed the license text at least once. Many thanks to @mrbluecoat for reporting the urgent use-case of Chromium kiosk mode autostart without keyboard attached: https://github.com/MichaIng/DietPi/issues/3326
-- DietPi-Cleaner | Enhanced performance of the files cleaner if /mnt is skipped, especially in combination with large drives or network mounts. Many thanks to @maartenlangeveld for revealing the underlying issue: https://github.com/MichaIng/DietPi/issues/3609
-- DietPi-Drive_Manager | SSHFS entries in fstab are now detected and preserved. Many thanks to @notwork for doing this suggestion: viewtopic.php?f=9&t=7781
-- DietPi-Config | Added Ethernet link speed selection to Network>Ethernet menu. The function and dietpi.txt entry exists for a long time but it was only exposed as first run setup option.
-- DietPi-Software | WireGuard: Added generic support for all SBCs where the WireGuard kernel module is shipped together with the kernel package. This applies to most current Armbian-based images at the time of writing and will be the more regular case since Linux 5.6 has WireGuard natively integrated.
-- DietPi-Software | Firefox Sync Server has been added to our software list, which allows to sync your Firefox bookmarks, history, tabs and passwords via your self-hosted server. Many thanks and all credits to @CedArctic for implementing this software title: https://github.com/MichaIng/DietPi/pull/3471
-- DietPi-Software | Folding@Home: Updated to latest v7.6.X, which includes an explicit option for prioritising COVID 19 projects: https://foldingathome.org/2020/04/17/ne ... -projects/. This update is applied to all systems with DietPi v6.31, existing config and data are preserved.
-- DietPi-Software | Sonarr/Radarr/Lidarr: The /media directory as second common mount point can now also be used as download/media directory without manually adding it to the systemd units ReadWritePaths list. Many thanks to @ricardoandren for doing this suggestion: https://github.com/MichaIng/DietPi/issues/3561
-- DietPi-Software | Samba Server: Changed default server-side file permissions from 0775 to 0664, hence files on the server are by default created without execute permissions now, which suits usual standards. Many thanks to @maartenlangeveld for doing this suggestion: https://github.com/MichaIng/DietPi/issues/3581
-- DietPi-Software | QuiteRSS: Re-added the years ago accidentally removed install code block. If you ever wondered why there was no QuiteRSS after selecting it for install, now there will be. If it is marked as installed already, run either "dietpi-software install 22" or simply "apt install quiterss" to (really) get it.
-- DietPi-Software | SqueezeLite: Updated to v1.9.7 and the service runs now as own user "squeezelite". Many thanks to @volpone for doing the update request: https://github.com/MichaIng/DietPi/issues/2386
+- **Raspberry Pi** - Support for Raspberry Pi OS (64-bit) has been added, including any other Debian pre-image on RPi.
+- **Odroid C4** - Support for this new Hardkernel SBC has been added to allow image creation based on Meveric's Odroid repository, including Kodi support.
+- **Network "ping"** - it can now be used by all users without any file capabilities, sudo or setuid. For this we allow all users to create native ICMP sockets which are available since Linux 3.X but disabled by default on Debian. Other distributions and systemd (upstream) have this enabled by default and for security and usability reasons we follow them. Click [here](https://fedoraproject.org/wiki/Changes/EnableSysctlPingGroupRange) for more details
+- **DietPi-Login** - A new setting has been added which allows to skip the interactive GPLv2 license agreement on first login. Add/set "AUTO_SETUP_ACCEPT_LICENSE=1" in (/boot/)dietpi.txt in which case we assume you read and agreed the license text at least once. 
+- **DietPi-Cleaner** - Enhanced performance of the files cleaner if /mnt is skipped, especially in combination with large drives or network mounts. 
+- **DietPi-Drive_Manager** - SSHFS entries in fstab are now detected and preserved. 
+- **DietPi-Config** - Added Ethernet link speed selection to Network>Ethernet menu. The function and dietpi.txt entry exists for a long time but it was only exposed as first run setup option.
+- **DietPi-Software - WireGuard** - Added generic support for all SBCs where the WireGuard kernel module is shipped together with the kernel package. This applies to most current Armbian-based images at the time of writing and will be the more regular case since Linux 5.6 has WireGuard natively integrated.
+- **DietPi-Software - Firefox Sync Server** - It has been added to our software list, which allows to sync your Firefox bookmarks, history, tabs and passwords via your self-hosted server. 
+- **DietPi-Software - Folding@Home** - Updated to latest v7.6.X, which includes an explicit option for prioritising COVID 19 projects [see link](https://foldingathome.org/2020/04/17/new-foldinghome-software-with-the-option-to-prioritize-covid-19-projects/). This update is applied to all systems with DietPi v6.31, existing config and data are preserved.
+- **DietPi-Software - Sonarr/Radarr/Lidarr** - The /media directory as second common mount point can now also be used as download/media directory without manually adding it to the systemd units ReadWritePaths list. 
+- **DietPi-Software - Samba Server** - Changed default server-side file permissions from 0775 to 0664, hence files on the server are by default created without execute permissions now, which suits usual standards.
+- **DietPi-Software - QuiteRSS** - Re-added the years ago accidentally removed install code block. If you ever wondered why there was no QuiteRSS after selecting it for install, now there will be. If it is marked as installed already, run either "dietpi-software install 22" or simply "apt install quiterss" to (really) get it.
+- **DietPi-Software - SqueezeLite** - Updated to v1.9.7 and the service runs now as own user "squeezelite".
 
 ### Notable fixes
-- System | Resolved potential issues due to missing /media directory on DietPi images, which is not used by default but is part of FHS and can hence be expected by Linux software, e.g. htpdate. Many thanks to @jokoren for reporting this issue: https://github.com/MichaIng/DietPi/issues/3558
-- DietPi-Login | Resolved an issue where the script called itself from within the error handler subshell. Generally the error handler subshell must never call dietpi-login (and related autostart programs) and dietpi-login must never call itself from an interactive subshell. Many thanks to @nosyaardvark for reporting this issue: https://github.com/MichaIng/DietPi/issu ... -643583664
-- DietPi-Drive_Manager | Resolved an issue where moving the RootFS to an external drive did not include DietPi userdata. Many thanks to @sdomotica and @Joulinar for reporting this issue: https://github.com/MichaIng/DietPi/issu ... -643261670
-- DietPi-LED_control | Resolved an issue where LED triggers fail to become boot persistent. Many thanks to @FrostyMisa for reporting this issue: https://github.com/MichaIng/DietPi/issues/3636
-- DietPi-Config | Resolved an issue on RPi3+ models where RPi3 non-plus overclocking profiles were shown. Many thanks to @lone for reporting this issue: viewtopic.php?f=9&t=7804
-- DietPi-Config | Resolved an issue on RPi4 2/4/8 GiB RAM models where the current GPU memory split was not obtained correctly. Many thanks to @FrostyMisa for reporting this issue: https://github.com/MichaIng/DietPi/issu ... -652467249
-- DietPi-Software | Logging choice: Resolved an issue where manually choosing logging options "None" and "Full" during firstrun installs did not uninstall DietPi-RAMlog as intended. Many thanks to @Pain-Patate for reporting this issue: https://github.com/MichaIng/DietPi/issues/3588
-- DietPi-Software | GMediaRender+WireGuard: Resolved an issue where service start could have failed due to invalid network information. Many thanks to @fnsnyc for reporting this issue: https://github.com/MichaIng/DietPi/issues/3519
-- DietPi-Software | rTorrent: Resolved an issue where startup fails because of invalid default config values. Many thanks to @PiTech and @vorrac for reporting and fixing this issue: viewtopic.php?f=15&t=7613, viewtopic.php?f=11&t=7607
-- DietPi-Software | Sonarr/Radarr/Lidarr: Resolved an issue where those software services crashed once an hour due to faulty SQLite database log file clearing. Many thanks to @Taloth from Sonarr and all the others who reported, investigated and finally solved the mystery: viewtopic.php?f=11&t=7598
-- DietPi-Software | WireGuard: Resolved an issue where WireGuard in client mode failed to start due to missing resolvconf. It is now installed together with WireGuard when choosing client setup. Many thanks to @yahoo456 for reporting this issue: viewtopic.php?f=11&t=7783
-- DietPi-Software | WireGuard: Worked around an issue where on some Odroids install failed due to missing symlinks to the Linux headers. Many thanks to @repomanz for reporting this issue: https://github.com/MichaIng/DietPi/issues/3577
-- DietPi-Software | Ubooquity: Updated the installer to pull the latest version from Vae Mendis Software directly and enhanced permissions to better integrate with other software. Many thanks to @Mr.Roboto for doing this suggestion: viewtopic.php?f=12&t=7786
-- DietPi-Software | Node.js: Resolved an issue where Node failed to start due to missing new libatmoic1 dependency. Many thanks to @larsno for reporting this issue: https://github.com/MichaIng/DietPi/issues/3614
-- DietPi-Software | TigerVNC: Worked around an external bug where the VNC server crashed after client logout or failed to start at all. Many thanks to @Joulinar for investigating this issue and providing the workaround: viewtopic.php?p=25285#p25285
-- DietPi-Software | XRDP: The above TigerVNC bug affected as well XRDP connections which have been resolved in the same turn: https://github.com/MichaIng/DietPi/issu ... -650559035
+- **System** - Resolved potential issues due to missing /media directory on DietPi images, which is not used by default but is part of FHS and can hence be expected by Linux software, e.g. htpdate. 
+- **DietPi-Login** - Resolved an issue where the script called itself from within the error handler subshell. Generally the error handler subshell must never call dietpi-login (and related autostart programs) and dietpi-login must never call itself from an interactive subshell.
+- **DietPi-Drive_Manager** - Resolved an issue where moving the RootFS to an external drive did not include DietPi userdata. 
+- **DietPi-LED_control** - Resolved an issue where LED triggers fail to become boot persistent.
+- **DietPi-Config** - Resolved an issue on RPi3+ models where RPi3 non-plus overclocking profiles were shown.
+- **DietPi-Config** - Resolved an issue on RPi4 2/4/8 GiB RAM models where the current GPU memory split was not obtained correctly. 
+- **DietPi-Software - Logging choice** - Resolved an issue where manually choosing logging options "None" and "Full" during firstrun installs did not uninstall DietPi-RAMlog as intended. 
+- **DietPi-Software - GMediaRender + WireGuard** - Resolved an issue where service start could have failed due to invalid network information. 
+- **DietPi-Software - rTorrent** - Resolved an issue where startup fails because of invalid default config values. 
+- **DietPi-Software - Sonarr/Radarr/Lidarr** - Resolved an issue where those software services crashed once an hour due to faulty SQLite database log file clearing. 
+- **DietPi-Software - WireGuard** - Resolved an issue where WireGuard in client mode failed to start due to missing resolvconf. It is now installed together with WireGuard when choosing client setup. 
+- **DietPi-Software - WireGuard** - Worked around an issue where on some Odroids install failed due to missing symlinks to the Linux headers. 
+- **DietPi-Software - Ubooquity** - Updated the installer to pull the latest version from Vae Mendis Software directly and enhanced permissions to better integrate with other software. 
+- **DietPi-Software - Node.js** - Resolved an issue where Node failed to start due to missing new libatmoic1 dependency.
+- **DietPi-Software - TigerVNC** - Worked around an external bug where the VNC server crashed after client logout or failed to start at all. 
+- **DietPi-Software - XRDP** - The above TigerVNC bug affected as well XRDP connections which have been resolved in the same turn: [Fix 3615](https://github.com/MichaIng/DietPi/issues/3615#issuecomment-650559035)
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: https://github.com/MichaIng/DietPi/pull/3640
 
 ### Known issues
-- DietPi-Config | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: https://github.com/MichaIng/DietPi/issues/2103
-RPi | On TigerVNC virtual desktop, LXAppearance hangs on dbus-launch: https://github.com/MichaIng/DietPi/issues/1791
-- Odroid C2 | Some WiFi adapters do no work as hotspot: https://github.com/MichaIng/DietPi/issues/1955
-- DietPi-Software | Node-RED: Pre-installed modules cannot be updated via web UI: https://github.com/MichaIng/DietPi/issues/2073
-- DietPi-Software | Raspimjpeg: With Lighttpd, streaming mjpeg does not work: https://github.com/MichaIng/DietPi/issues/1747
-- DietPi-Software | MATE desktop: When logging in as root, desktop items and right-click context menu is missing: https://github.com/MichaIng/DietPi/issues/3160
-- DietPi-Software | Sonarr/Mono: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: https://github.com/MichaIng/DietPi/issues/3179
-- DietPi-Software | Transmission: On Raspbian/Debian Stretch, RAM usage raises unlimited over time: https://github.com/MichaIng/DietPi/issues/2413
+- **DietPi-Config** - Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases - [Issue 2103](https://github.com/MichaIng/DietPi/issues/2103)
+- **Raspberry Pi** - On TigerVNC virtual desktop, LXAppearance hangs on dbus-launch - [Issue 1791](https://github.com/MichaIng/DietPi/issues/1791)
+- **Odroid C2** - Some WiFi adapters do no work as hotspot -  [Issue 1955](https://github.com/MichaIng/DietPi/issues/1955)
+- **DietPi-Software - Node-RED** - Pre-installed modules cannot be updated via web UI - [Issue 2073](https://github.com/MichaIng/DietPi/issues/2073)
+- **DietPi-Software - Raspimjpeg** - With Lighttpd, streaming mjpeg does not work: [Issue 1747](https://github.com/MichaIng/DietPi/issues/1747)
+- **DietPi-Software - MATE desktop** - When logging in as root, desktop items and right-click context menu is missing - [Issue 3160](https://github.com/MichaIng/DietPi/issues/3160)
+- **DietPi-Software - Sonarr/Mono** - With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: [Issue 3179](https://github.com/MichaIng/DietPi/issues/3179)
+- **DietPi-Software - Transmission** - On Raspbian/Debian Stretch, RAM usage raises unlimited over time: https://github.com/MichaIng/DietPi/issues/2413
 
 For all additional issues that may appear after release, please see the following link for active tickets: https://github.com/MichaIng/DietPi/issues
 
 ### Thank you
-Last but certainly not least, a big Thank You to the following people who contributed this month to DietPi:
-
-**Investigation and providing solutions:**
-
-- @Joulinar
+Last but certainly not least, a big **Thank You** to the following people who contributed this month to DietPi:
 
 **Contributions to our issue tracking, reporting issues and providing insights:**
 
-- @larsno 
-- @repomanz
-- @Taloth
+- @Joulinar - Many thanks to  for investigating this issue and providing the workaround: [RDP Black Screen](https://dietpi.com/phpbb/viewtopic.php?p=25285#p25285)
+- @mrbluecoat: Many thanks for reporting the urgent use-case of Chromium kiosk mode autostart without keyboard attached - Fix [3326](https://github.com/MichaIng/DietPi/issues/3326)
+- @maartenlangeveld: Many thanks for revealing the underlying issue - [Fix 3609](https://github.com/MichaIng/DietPi/issues/3609)
+- @maartenlangeveld: Many thanks for making this suggestion - [Fix 3581](https://github.com/MichaIng/DietPi/issues/3581)
+- @jokoren - Many thanks for reporting this issue - [Fix 3558](https://github.com/MichaIng/DietPi/issues/3558)
+- @nosyaardvark - Many thanks for reporting this issue: [Fix 3583](https://github.com/MichaIng/DietPi/issues/3583#issuecomment-643583664)
+- @sdomotica & @Joulinar - Many thanks for reporting this issue: [Fix 3600](https://github.com/MichaIng/DietPi/issues/3600#issuecomment-643261670)
+- @FrostyMisa - Many thanks for reporting this issue: [Fix 3636](https://github.com/MichaIng/DietPi/issues/3636)
+- @lone - Many thanks for reporting this issue: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?f=9&t=7804)
+- @Pain-Patate - Many thanks to  for reporting this issue: [Fix 3588](https://github.com/MichaIng/DietPi/issues/3588)
+- @fnsnyc - Many thanks for reporting this issue: [Fix 3519](https://github.com/MichaIng/DietPi/issues/3519)
+- @yahoo456 - Many thanks for reporting this issue: [Wireguard client not starting](https://dietpi.com/phpbb/viewtopic.php?f=11&t=7783)
+- @repomanz - Many thanks for reporting this issue: [Fix 3577](https://github.com/MichaIng/DietPi/issues/3577)
+- @Mr.Roboto - Many thanks for making this suggestion: [Ubooquity Update](https://dietpi.com/phpbb/viewtopic.php?f=12&t=7786)
+- @larsno - Many thanks for reporting this issue: [Fix 3614](https://github.com/MichaIng/DietPi/issues/3614)
 
+**Contributions to DietPi:**
+
+- @FusionPlmH: [Fix 3570](https://github.com/MichaIng/DietPi/issues/3570) - many thanks to  for doing this request 
+- @notwork: Many thanks for doing this suggestion: [How to add manual entries for sshfs in fstab](https://dietpi.com/phpbb/viewtopic.php?f=9&t=7781)
+- @CedArctic: Many thanks and all credits for implementing this software title - [Fix 3471](https://github.com/MichaIng/DietPi/pull/3471)
+- @ricardoandren: Many thanks for doing this suggestion - [Fix 3561](https://github.com/MichaIng/DietPi/issues/3561)
+- @volpone: Many thanks for doing the update request - [Fix 2386](https://github.com/MichaIng/DietPi/issues/2386)
+- @PiTech and @vorrac: Many thanks for reporting and fixing this issue: [Fixing Rtorrent on latest dietpi version Pi4](https://dietpi.com/phpbb/viewtopic.php?f=15&t=7613), [Rtorrent not working](https://dietpi.com/phpbb/viewtopic.php?f=11&t=7607)
+- @Taloth from Sonarr: Many thanks, including all the others who reported, investigated and finally solved the mystery: [Sonarr/Radarr services failed on v6.29.2](https://dietpi.com/phpbb/viewtopic.php?f=11&t=7598)
 
 ## May 2020 (version 6.30)
 
