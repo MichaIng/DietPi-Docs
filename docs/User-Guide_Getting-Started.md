@@ -109,6 +109,8 @@ On login, more tools are available, in the command line.
 
 ![dietpi-login-screen](assets/images/dietpi-login-screen.jpg)
 
+Here is the list of DietPi commands:
+ 
 Tool | Details
 :----------- |:-------------
 `dietpi-config` | Configure system settings
