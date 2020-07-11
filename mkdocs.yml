@@ -28,7 +28,7 @@ copyright: '&copy; 2020, DietPi'
 
 nav:
   - 'Home' : index.md
-  - 'User Guide' :
-      - 'Getting Started' : 'User-Guide_Getting-Started.md'
-  - 'Optimised software' : 'User-OptimisedSoftware.md'
-  - 'Supported SBC' : 'Hardware-Supported_SBC.md'
+  - 'Getting Started' : 'user-guide_getting-started.md'
+  - 'Optimised software' : 'user-optimised-software.md'
+  - 'Supported SBC' : 'hardware-supported_sbc.md'
+  - 'Updates' : 'release-notes-updates.md'
