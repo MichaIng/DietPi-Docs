@@ -5,8 +5,10 @@
 To follow this tutorial, you will need the next hardware list:
 
  - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](../hardware-supported_sbc/)
- - An SD card of at least 4G, and a way to read it on your computer (integrated slot or external SD card reader)
+ - An SD card of at least 4 Gb, and a way to read it on your computer (integrated slot or external SD card reader)
  - Optional: Ethernet (network) cable
+
+_Note_: Following this guide you could make the installation without using a monitor or keyboard connected to your single board computer (known as headless). 
 
 For the software, just two are needed:
 
@@ -54,27 +56,31 @@ Remove the SD card from the PC and insert it into the Raspberry Pi to prepare to
 
 ## First boot on DietPi
 
-Insert the SD card into your Raspberry Pi and start it
-A few seconds later, you can connect through SSH, or follow the instructions on the screen
+Insert the SD card into your Raspberry Pi and start it. A few seconds later, you can connect following the instructions on the screen, or connecting via network (through SSH). 
 
-### IP Scanning tool
+### Headless install
 
-For the following steps we require an IP Scanning tool to determine the IP address of the Raspberry Pi. 
+??? info "Click here if you want to connect via network (**ssh connect**, runing a _headless install_)" 
 
-For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://download.advanced-ip-scanner.com).
-For Linux, you can use nmap command:
+    **IP Scanning tool**
 
-```python
-sudo apt-get install nmap #For installing Nmap
-sudo nmap -sn 192.168.1.0/24 #For scanning IP address
-```
+    For the following steps we require an IP Scanning tool to determine the IP address of the Raspberry Pi. 
+    For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://download.advanced-ip-scanner.com).
+	For Linux, you can use nmap command:
 
-### Connect to DietPi via SSH
+		`
+		sudo apt-get install nmap #For installing Nmap
+		sudo nmap -sn 192.168.1.0/24 #For scanning IP address
+		`
 
-A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). 
-Most Linux distributions come packaged with an ssh client. Simply type ssh in your terminal to access SSH Client.
+	**Connect to DietPi via SSH**
+	
+	A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). 
+	Most Linux distributions come packaged with an ssh client. Simply type ssh in your terminal to access SSH Client.
 
-![DietPi-ssh](assets/images/dietpi-ssh.jpg)
+	![DietPi-ssh](assets/images/dietpi-ssh.jpg)
+
+**Initial settings**
 
 ![dietpi-login01](assets/images/dietpi-login01.jpg)
 
@@ -87,6 +93,7 @@ Most Linux distributions come packaged with an ssh client. Simply type ssh in yo
 DietPi Launcher will be automatically displayed on first login. It has lots of useful tools. 
 One of the first options to try is to select `Software Optimised` and then tos install.
 ![dietpi-software](assets/images/dietpi-software.jpg)
+
 
 Option | Details
 :----------- |:-------------

@@ -4,7 +4,7 @@ DietPi | Minimal image at its core
 
 # Welcome to the DietPi Documentation!
 
-If you are **new to DietPi**, the [_Getting Started_](user-guide_getting-started.md) section provides a tutorial for everything you need to get DietPi running, and answers many **F**requently **A**sked **Q**uestions.
+If you are **new to DietPi**, the [_Getting Started_](user-guide_getting-started) section provides a tutorial for everything you need to get DietPi running, and answers many **F**requently **A**sked **Q**uestions.
 
 If you **need help**, and have read through _Getting Started_, check out [_Troubleshooting_]().
 
@@ -15,15 +15,15 @@ If you still cannot find what you need here, visit the [_DietPi Community Forum_
 DietPi it is a **highly optimised minimal Debian OS**. DietPi is extremely lightweight at its core, our images start at 400MB in size (3x lighter than 'Raspbian Lite'). With features of low process/memory footprint, DietPi allows you to get the maximum performance from your device.
 
 ## Easy to install popular software
-You can **quickly and easily install popular software** ! All of them are **READY TO RUN** and optimised for your system, checkout [_DietPi Optimised Software_]().
+You can **quickly and easily install popular software** ! All of them are **READY TO RUN** and optimised for your system, checkout [_DietPi Optimised Software_](user-optimised-software).
 
 DietPi does everything for you, giving you more time to enjoy the software you need.
 
 ## What is supported ?
-“Supported” is not a guarantee. “Supported” implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.
+Check [_Supported SBC_](hardware-supported_sbc) page for recently supported list.
 
-### Supported boards
-Check [_Download_](https://dietpi.com/#download) page for recently supported list.
+**_Note:_** “Supported” is not a guarantee. “Supported” implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.
+
 
 ## Get Involved ! #
 * [Contribute](https://github.com/MichaIng/DietPi)
