@@ -27,8 +27,14 @@ extra_css:
 copyright: '&copy; 2020, DietPi'
 
 nav:
-  - 'Home' : index.md
-  - 'Getting Started' : 'user-guide_getting-started.md'
+  - 'Overview' : index.md
+  - 'Installation' : 'user-guide_install.md'
+  - 'Getting started': 
+      - 'Overview' : 'user-guide_overview.md'
+      - 'DietPi Tools' : 'user-guide_tools.md'
   - 'Optimised software' : 'user-optimised-software.md'
   - 'Supported SBC' : 'hardware-supported_sbc.md'
   - 'Updates' : 'release-notes-updates.md'
+  - 'Community' : 'https://dietpi.com/phpbb/index.php'
+  - 'Request features' : 'https://feathub.com/MichaIng/DietPi'
+  - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'

@@ -4,7 +4,7 @@ DietPi | Minimal image at its core
 
 # Welcome to the DietPi Documentation!
 
-If you are **new to DietPi**, the [_Getting Started_](user-guide_getting-started) section provides a tutorial for everything you need to get DietPi running, and answers many **F**requently **A**sked **Q**uestions.
+If you are **new to DietPi**, the [_Install_](user-guide_install) provides a tutorial for everything you need to get DietPi running, and answers many **F**requently **A**sked **Q**uestions.
 
 If you **need help**, and have read through _Getting Started_, check out [_Troubleshooting_]().
 
@@ -24,8 +24,11 @@ Check [_Supported SBC_](hardware-supported_sbc) page for recently supported list
 
 **_Note:_** “Supported” is not a guarantee. “Supported” implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.
 
-
-## Get Involved ! #
+## Contributing 
 * [Contribute](https://github.com/MichaIng/DietPi)
-* [Community](https://dietpi.com/phpbb/viewforum.php?f=5)
+
+## Community
+* [Community](https://dietpi.com/phpbb/index.php)
+
+## Donate
 * [Donate PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DVBECXRW3TAA) or [Become a Patron](https://www.patreon.com/bePatron?u=12464530)
