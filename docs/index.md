@@ -24,11 +24,22 @@ Check [_Supported SBC_](hardware-supported_sbc) page for recently supported list
 
 **_Note:_** “Supported” is not a guarantee. “Supported” implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.
 
-## Contributing 
-* [Contribute](https://github.com/MichaIng/DietPi)
-
 ## Community
-* [Community](https://dietpi.com/phpbb/index.php)
+Have some feedback, questions, suggestions, or just fancy a chat ? Visit our [community](https://dietpi.com/phpbb/index.php) !
+![DietPi Forum](assets/images/dietpi-forum.jpg)
 
-## Donate
-* [Donate PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DVBECXRW3TAA) or [Become a Patron](https://www.patreon.com/bePatron?u=12464530)
+## Collaborate on the project
+
+**How ?**
+
+1. Fork the project [https://github.com/MichaIng/DietPi](https://github.com/MichaIng/DietPi) or the documentation [https://github.com/MichaIng/DietPi-Docs](https://github.com/MichaIng/DietPi-Docs/). 
+2. Make one or more well commented and clean commits to the repository.
+3. Perform a pull request in GitHub’s web interface.
+4. If it is a new feature request, don’t start the coding first. Remember to open a GitHub [issue](https://github.com/MichaIng/DietPi/issues) to discuss the new enhancement.
+
+## Help with donations
+If you find our project useful, then we would really appreciate it if you would consider contributing to the project however you can. 
+
+Donating is the easiest way to help us via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DVBECXRW3TAA) or become a [Patron](https://www.patreon.com/bePatron?u=12464530).
+
+Thank you !
