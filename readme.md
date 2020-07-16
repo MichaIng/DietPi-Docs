@@ -2,8 +2,8 @@ Official Website: [dietpi.com](https://dietpi.com)
 
 # DietPi Documentation
 
-The source for DietPi documentation [ditepi.com/docs](https://dietpi.com/docs) is in this directory.
-The documentation uses extended Markdown, as implemented by [MkDocs](http://mkdocs.org).
+The source for DietPi documentation [dietpi.com/docs](https://dietpi.com/docs) is in this directory.
+The documentation uses extended Markdown, as implemented by [MkDocs](https://www.mkdocs.org/).
 
 ## Building the documentation
 
