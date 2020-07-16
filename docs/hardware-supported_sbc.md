@@ -1,4 +1,4 @@
-# Supported Single Board Computers (SBC)
+# Supported Single Board Computers (SBCs)
 
 ## Raspberry Pi
 The Raspberry Pi has sold more than 31 million units since it launched in 2012. Any Raspberry Pi can serve as a secondary computer for email and web surfing. The real fun starts when you use your Pi for projects, which can range from robots to retro arcade machines to home media servers, security cameras and so on.
@@ -49,7 +49,7 @@ ODROID single board computers are powerful, stable, and fast performing. They ca
     <table>
         <thead>
             <tr>
-                <th align="left" ><strong>Product</strong></th>
+                <th align="left"><strong>Product</strong></th>
                 <th align="left"><strong>Description</strong></th>
             </tr>
         </thead>
@@ -73,7 +73,7 @@ ODROID single board computers are powerful, stable, and fast performing. They ca
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Odroid N1</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>Odroid N2</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
@@ -88,9 +88,9 @@ ODROID single board computers are powerful, stable, and fast performing. They ca
     </table>
 </div>
 
-## Pin64.org
+## PINE64
 
-This is where Pin64 journey began. The PINE A64 is their first Single Board Computer powered by Allwinner’s A64 Quad-Core ARM Cortex A53 64-Bit SOC. For more details visit <a target="_blank" href="https://www.pine64.org">Pine64.org</a>
+This is where PINE64 journey began. The PINE A64 is their first Single Board Computer powered by Allwinner’s A64 Quad-Core ARM Cortex A53 64-Bit SOC. For more details visit <a target="_blank" href="https://www.pine64.org">PINE64.org</a>
 
 <div class="md-typeset__table">
     <table>
@@ -120,13 +120,13 @@ This is where Pin64 journey began. The PINE A64 is their first Single Board Comp
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Rock64</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>ROCK64</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_Rock64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>RockPro 64</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>ROCKPro64</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_RockPro64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
@@ -136,9 +136,9 @@ This is where Pin64 journey began. The PINE A64 is their first Single Board Comp
 </div>
 
 
-## RockPi
+## Radxa ROCK Pi
 
-**Maker Friendly, IoT connectivity** enabled. ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications. On board 802.11 ac wifi offers 2.4G & 5G WLAN connectivity. With Bluetooh 5.0, ROCK Pi benefits improved Bluetooth speed and greater range. For more details visit [RockPi](http://rockpi.org/) website.
+**Maker Friendly, IoT connectivity** enabled. ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications. On board 802.11 ac wifi offers 2.4G & 5G WLAN connectivity. With Bluetooh 5.0, ROCK Pi benefits improved Bluetooth speed and greater range. For more details visit [ROCK Pi](http://rockpi.org/) website.
 
 <div class="md-typeset__table">
     <table>
@@ -150,13 +150,13 @@ This is where Pin64 journey began. The PINE A64 is their first Single Board Comp
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Rock Pi 4</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>ROCK Pi 4</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Rock Pi S</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>ROCK Pi S</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_ROCKPiS-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
