@@ -1,4 +1,4 @@
-# Overview
+# Getting started
 
 ## DietPi-Software
 
