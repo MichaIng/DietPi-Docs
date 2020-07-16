@@ -19,11 +19,10 @@ DietPi-Software can be launched via the command line: `dietpi-launcher` or `diet
 - QuiteRSS - RSS and Atom news feeds reader for your desktop.
 
 ## Remote Desktop Access
-- TightVNC Server - Since Stretch replaced by TigerVNC (below)!
 - TigerVNC Server - Desktop for remote connection.
-- NoMachine - Feature rich remote desktop connection.
-- XRDP - Remote desktop server for Windows Remote Desktop Client.
 - RealVNC Server - Desktop for remote connection.
+- XRDP - Remote desktop server for Windows Remote Desktop Client.
+- NoMachine - Feature rich remote desktop connection.
 
 ## Media Systems
 - Kodi - Media Centre / Player
@@ -32,8 +31,8 @@ DietPi-Software can be launched via the command line: `dietpi-launcher` or `diet
 - O!MPD - Feature-rich web Interface audio player for MPD
 - CAVA - Optional: Console-based audio visualizer for MPD
 - Mopidy - Web Interface Music /Radio Player
-- AirSonic - Feature rich media streaming server with web interface.
-- SubSonic - Feature rich media streaming server with web interface.
+- Airsonic - Feature rich media streaming server with web interface.
+- Subsonic - Feature rich media streaming server with web interface.
 - Logitech Media Server - aka LMS, Squeezebox Server
 - SqueezeLite - Audio player for Logitech Media Server
 - Shairport Sync - AirPlay audio player with multiroom sync
@@ -70,11 +69,11 @@ DietPi-Software can be launched via the command line: `dietpi-launcher` or `diet
 - HTPC Manager - combines all your favourite software into one slick interface.
 
 ## Emulation & Gaming
+- Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi
 - OpenTyrian - Gaming
 - Cuberite - Fast Minecraft server with web interface
 - MineOS - Multiple Minecraft servers with web interface
 - Nukkit - Server for Minecraft Pocket Edition
-- Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi
 - DXX-Rebirth - Descent 1 & 2 OpenGL port
 - Steam - Steam client
 
@@ -128,11 +127,11 @@ DietPi-Software can be launched via the command line: `dietpi-launcher` or `diet
 - Grafana - The open platform for beautiful analytics and monitoring.
 
 ## Remote Access
-- Remot3.it - (Weaved) Access your device over the internet.
-- VirtualHere - Share physically attached USB devices from your SBC, over the network.
+- Remot3.it - (Weaved) Access your device over the internet
+- VirtualHere - Share physically attached USB devices from your SBC, over the network
 
 ## System Stats / Management
-- DietPi-Cloudshell - Lightweight system stats for your LCD display or monitor.
+- DietPi-Cloudshell - Lightweight system stats for your LCD display or monitor
 - Raspcontrol - Web interface system stats
 - Linux Dash - Web interface system stats
 - PhpSysInfo - Web interface system stats
@@ -153,28 +152,28 @@ DietPi-Software can be launched via the command line: `dietpi-launcher` or `diet
 - LLMP Webserver - Lighttpd / MariaDB / PHP
 - LLSP Webserver - Lighttpd / SQLite / PHP
 - phpMyAdmin - Web interface SQL admin tool
-- Certbot - Free, automated SSL cert creation and setup, allowing https.
+- Certbot - Free, automated SSL cert creation and setup, allowing https
 - Tomcat8 - Apache Tomcat server
 
 ## DNS Servers
-- Pi-hole - A DNS/Web server that will block ads for any device on your network.
+- Pi-hole - A DNS/Web server that will block ads for any device on your network
 
 ## File Servers
-- ProFTP - Simple, efficient, lightweight FTP file server.
-- Samba - Feature rich file server.
-- vsFTPD - Feature rich FTP file server.
 - NFS - Network file system server
+- Samba - Feature rich file server
+- ProFTP - Simple, efficient, lightweight FTP file server
+- vsFTPD - Feature rich FTP file server
 
 ## VPN
-- DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users.
+- WireGuard - An extremely simple yet fast and modern VPN
 - OpenVPN - Easy to use, minimal hassle VPN server
 - PiVPN - OpenVPN server installer & management tool
-- WireGuard - An extremely simple yet fast and modern VPN
+- DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users
 
 ## Network Load Balancing
-- HaProxy - High performance TCP/HTTP load balancer.
+- HAProxy - High performance TCP/HTTP load balancer
 
-## Website URL's
+## Website URLs
 - No-IP - Website URL Address
 
 ## Printing
@@ -185,16 +184,16 @@ DietPi-Software can be launched via the command line: `dietpi-launcher` or `diet
 - Folding@Home - Use processing power to assist with disease research
 
 ## File Server Choices
-- ProFTP - Simple, efficient, lightweight file server.
-- Samba - Feature rich file server.
+- Samba - Feature rich file server
+- ProFTP - Simple, efficient, lightweight file server
 
 ## SSH Server Choices
 - Dropbear - Lightweight SSH Server
-- OpenSSH - Feature rich SSH server with SFTP/SCP support.
+- OpenSSH - Feature rich SSH server with SFTP/SCP support
 
 ## Log System Choices
-- DietPi-RAMlog - Lightweight RAM logging.
-- Full - Full logging system with Rsyslog and Logrotate.
+- DietPi-RAMlog - Lightweight RAM logging
+- Full - Full logging system with Rsyslog and Logrotate
 
 ## Webserver Preference System
 - Apache2 - Feature-rich webserver
