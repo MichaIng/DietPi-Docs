@@ -1,9 +1,18 @@
 site_name: DietPi Documentation
 repo_url: https://github.com/MichaIng/DietPi-Docs
+site_url: https://dietpi.com/docs
 site_author: "DietPi Team"
 
 theme:
   name: 'material'
+  
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  language: en
+  features:
+    - tabs
   # logo: 'assets/images/logo.png'
   favicon: https://dietpi.com/favicon.ico
 
@@ -11,8 +20,40 @@ markdown_extensions:
   - attr_list
   - admonition
   - codehilite
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
   - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
+# Plugins
+plugins:
+  - search
+  # - minify:
+  #     minify_html: true
+
+# Customization
 extra:
   social:
     - icon: fontawesome/solid/home
@@ -27,14 +68,17 @@ extra_css:
 copyright: '&copy; 2020, DietPi'
 
 nav:
-  - 'Overview' : index.md
-  - 'Installation' : 'user-guide_install.md'
-  - 'Getting started': 
-      - 'Overview' : 'user-guide_overview.md'
+  - 'Home' : 
+      - 'Overview' : index.md
+      - 'Installation' : 'user-guide_install.md'
+      - 'Getting started' : 'user-guide_overview.md'
       - 'DietPi Tools' : 'user-guide_tools.md'
-  - 'Optimised software' : 'user-optimised-software.md'
-  - 'Supported SBC' : 'hardware-supported_sbc.md'
-  - 'Updates' : 'release-notes-updates.md'
-  - 'Community' : 'https://dietpi.com/phpbb/index.php'
-  - 'Request features' : 'https://feathub.com/MichaIng/DietPi'
-  - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
+      - 'Optimised software' : 'user-optimised-software.md'
+      - 'Supported SBC' : 'hardware-supported_sbc.md'
+  - 'Updates' : 
+      - 'Release notes' : 'release-notes-updates.md'
+      - 'Request features' : 'https://feathub.com/MichaIng/DietPi'
+      - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
+  - 'Community' : 
+      - 'DietPi Forum' : 'https://dietpi.com/phpbb/index.php'
+  
