@@ -1,8 +1,8 @@
 # Getting started
 
-## DietPi Launcher
+## DietPi-Software
 
-DietPi Launcher will be automatically displayed on first login. It has lots of useful tools. 
+DietPi-Software will be automatically displayed on first login. It has lots of useful tools. 
 One of the first options to try is to select `Software Optimised` and then tos install.
 ![dietpi-software](assets/images/dietpi-software.jpg)
 

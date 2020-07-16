@@ -27,7 +27,7 @@ _Specific steps to different platforms are detailed below._
 
 Unzip the dowloaded file to a local folder. 
 
-It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](http://wakaba.c3.cx/s/apps/unarchiver.html). Both are free of charge and have been tested to unzip the image correctly.
+It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://wakaba.c3.cx/s/apps/unarchiver.html). Both are free of charge and have been tested to unzip the image correctly.
 
 ### Run Etcher and flash the image 
 
@@ -88,8 +88,8 @@ Insert the SD card into your Raspberry Pi and start it. A few seconds later, you
 
 ![dietpi-password](assets/images/dietpi-password-01.jpg)
 
-## DietPi Launcher
+## DietPi-Software
 
-DietPi Launcher will be automatically displayed on first login. It has lots of useful tools. 
+DietPi-Software will be automatically displayed on first login. It has lots of useful tools. 
 One of the first options to try is to select `Software Optimised` and then tos install.
 ![dietpi-software](assets/images/dietpi-software.jpg)
