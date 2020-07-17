@@ -4,9 +4,9 @@ DietPi | Minimal image at its core
 
 # Welcome to the DietPi Documentation!
 
-If you are **new to DietPi**, the [_Install_](user-guide_install) provides a tutorial for everything you need to get DietPi running, and answers many **F**requently **A**sked **Q**uestions.
+If you are **new to DietPi**, the [_Install_](user-guide_install) provides a tutorial for everything you need to get DietPi running.
 
-If you **need help**, and have read through _Getting Started_, check out [_Troubleshooting_]().
+If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11&sid=5c075e238d977cf0a31530d9cd594235).
 
 If you still cannot find what you need here, visit the [_DietPi Community Forum_](https://dietpi.com/phpbb/viewforum.php?f=5).
 
