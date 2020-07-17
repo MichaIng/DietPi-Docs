@@ -1,5 +1,10 @@
 site_name: DietPi Documentation
+
+repo_name: DietPi-Docs
+repo_host: github.com
 repo_url: https://github.com/MichaIng/DietPi-Docs
+docs_dir: docs
+
 site_url: https://dietpi.com/docs
 site_author: "DietPi Team"
 
