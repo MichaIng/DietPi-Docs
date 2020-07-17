@@ -6,7 +6,7 @@ DietPi | Minimal image at its core
 
 If you are **new to DietPi**, the [_Install_](user-guide_install) provides a tutorial for everything you need to get DietPi running.
 
-If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11&sid=5c075e238d977cf0a31530d9cd594235).
+If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11).
 
 If you still cannot find what you need here, visit the [_DietPi Community Forum_](https://dietpi.com/phpbb/viewforum.php?f=5).
 
@@ -25,7 +25,7 @@ Check [_Supported SBC_](hardware-supported_sbc) page for recently supported list
 **_Note:_** “Supported” is not a guarantee. “Supported” implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.
 
 ## Community
-Have some feedback, questions, suggestions, or just fancy a chat ? Visit our [community](https://dietpi.com/phpbb/index.php) !
+Have some feedback, questions, suggestions, or just fancy a chat ? Visit our [community](https://dietpi.com/phpbb/) !
 ![DietPi Forum](assets/images/dietpi-forum.jpg)
 
 ## Collaborate on the project
