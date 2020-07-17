@@ -1,7 +1,6 @@
 site_name: DietPi Documentation
 
 repo_name: DietPi-Docs
-repo_host: github.com
 repo_url: https://github.com/MichaIng/DietPi-Docs
 docs_dir: docs
 
