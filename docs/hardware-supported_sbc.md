@@ -44,8 +44,8 @@ Quick intro:
 
 ODROID single board computers are powerful, stable, and fast performing. They can function as a home theater set-top box, a general purpose computer for web browsing, gaming and socializing, a compact tool for college or office work, a prototyping device for hardware tinkering, a controller for home automation, a workstation for software development, and much more. For more details visit <a target="_blank" href="https://www.hardkernel.com">Hardkernel.com</a>
 
-ODROID-N2 is one of the board supported.
-![Odroid N2](assets/images/dietpi-odroid-n2-plus.jpg)
+ODROID-N2 is one of the supported boards.
+![DietPi Odroid N2](assets/images/dietpi-odroid-n2-plus.jpg)
 
  It is a new generation single board computer that is more powerful, more stable, and faster performing than N1. The main CPU of the N2 is based on big. Thanks to the modern 12nm silicon technology, the A73 cores runs at 1.8Ghz without thermal throttling using the stock metal-housing heatsink allowing a robust and quiet computer.
 
@@ -96,6 +96,15 @@ ODROID-N2 is one of the board supported.
 
 This is where PINE64 journey began. The PINE A64 is their first Single Board Computer powered by Allwinner’s A64 Quad-Core ARM Cortex A53 64-Bit SOC. For more details visit <a target="_blank" href="https://www.pine64.org">PINE64.org</a>
 
+The ROCKPro64 is the most powerful single board computer offered by PINE64.
+![DietPi ROCKPro64](assets/images/dietpi-rockpro64.jpg)
+
+It features a Rockchip RK3399 hexa-core SOC and up-to 4GB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C  with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UARTs and GPIOs. 
+
+The board is backwards compatible with many of the existing PINE64 peripherals, including the Wifi/BT module, camera module and LCD panel but an array of new peripherals specific for the board is also available. All this in the exact same model “A” dimension as the original PINE A64.
+
+The ROCKPro64 4GB board is designated as LTS (long Term Supply) which means that PINE64 is committed to supply it for at least 5 years – until year 2023 and beyond.
+
 <div class="md-typeset__table">
     <table>
         <thead>
@@ -140,9 +149,15 @@ This is where PINE64 journey began. The PINE A64 is their first Single Board Com
 </div>
 
 
-## Radxa ROCK Pi
+## ROCK PI
 
-**Maker Friendly, IoT connectivity** enabled. ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications. On board 802.11 ac wifi offers 2.4G & 5G WLAN connectivity. With Bluetooh 5.0, ROCK Pi benefits improved Bluetooth speed and greater range. For more details visit [ROCK Pi](http://rockpi.org/) website.
+**Maker Friendly, IoT connectivity** enabled. ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications. 
+For more details visit [ROCK Pi](http://rockpi.org/) website.
+
+One of the supported boards is RockPI 4.
+![DietPi RockPi 4](assets/images/dietpi-rockpi-4b.jpg)
+
+ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
 
 <div class="md-typeset__table">
     <table>
@@ -169,7 +184,7 @@ This is where PINE64 journey began. The PINE A64 is their first Single Board Com
     </table>
 </div>
 
-## FireFly-RK3399
+## FireFly
 **Six-core 64Bit High Performance Open Source Platform**. For more details visit [Firefly-RK3399](http://shop.t-firefly.com/goods.php?id=45) website.
 
 <div class="md-typeset__table">
@@ -216,6 +231,18 @@ Sparky Single Board Computer (SBC) is a credit card-sized board that can be used
 ## ASUS Tinker Board
 Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit [Asus.com - Asus Tinker Board](https://www.asus.com/Single-Board-Computer/Tinker-Board/) website.
 
+**Maker-Friendly, with IoT Connectivity**
+
+Tinker Board features standard maker connectivity options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. 
+
+![DietPi TinkerBoard](assets/images/dietpi-tinkerboard.jpg)
+
+Tinker Board is equipped with one DSI MIPI connection for displays and touchscreens. The secondary CSI MIPI connection is for connection to compatible cameras allowing for computer vision, and much more.
+
+**Enhanced DIY Design**
+
+Careful consideration went into the design and development of the Tinker Board to ensure that it provides a superior user experience for first-time builders or for seasoned hobbyists. Builders appreciate the color-coded GPIO header, which makes it easy to recognize respective pin headers.
+
 <div class="md-typeset__table">
     <table>
         <thead>
@@ -245,6 +272,10 @@ The Native PC images are great for those occasions where SBC performance just is
 The VMware virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
 ### VirtualBox
+![Oracle VirtualBox](assets/images/vbox.jpg)
+
+VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.
+
 The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
 ### HyperV (community image)
