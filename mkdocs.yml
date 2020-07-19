@@ -9,6 +9,7 @@ site_author: "DietPi Team"
 
 theme:
   name: 'material'
+  custom_dir: docs/overrides
   
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -19,7 +20,7 @@ theme:
   #   - tabs
   # logo: 'assets/images/logo.png'
   favicon: https://dietpi.com/favicon.ico
-
+    
 markdown_extensions:  
   - attr_list
   - admonition
