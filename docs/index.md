@@ -45,7 +45,7 @@ Check [_Supported SBC_](hardware-supported_sbc) page for recently supported list
 **_Note:_** “Supported” is not a guarantee. “Supported” implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.
 
 ## Community
-Have some feedback, questions, suggestions, or just fancy a chat ? Visit our [community](https://dietpi.com/phpbb/index.php) !
+Have some feedback, questions, suggestions, or just fancy a chat ? Visit our [community](https://dietpi.com/phpbb/) !
 ![DietPi Forum](assets/images/dietpi-forum.jpg)
 
 ## Collaborate on the project
