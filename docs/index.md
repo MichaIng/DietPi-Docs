@@ -1,10 +1,10 @@
-[![](https://www.dietpi.com/images/Slider01.png){: style="height:180px"}](http://www.dietpi.com)
+[![](https://dietpi.com/images/Slider01.png){: style="height:180px"}](https://dietpi.com)
 
 DietPi | Minimal image at its core
 
 # Welcome to the DietPi Documentation!
 
-If you are **new to DietPi**, the [_Install_](user-guide_install) provides a tutorial for everything you need to get DietPi running. If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11&sid=5c075e238d977cf0a31530d9cd594235).
+If you are **new to DietPi**, the [_Install_](user-guide_install) provides a tutorial for everything you need to get DietPi running. If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11).
 
 For more details visit the [_DietPi Community Forum_](https://dietpi.com/phpbb/viewforum.php?f=5).
 
@@ -40,7 +40,7 @@ and [much more...](user-optimised-software)
 DietPi does everything for you, giving you more time to enjoy the software you need.
 
 ## What is supported ?
-Check [_Supported SBC_](hardware-supported_sbc) page for recently supported list.
+Check [_Supported SBCs_](hardware-supported_sbc) page for recently supported list.
 
 **_Note:_** “Supported” is not a guarantee. “Supported” implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.
 
