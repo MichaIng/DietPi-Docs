@@ -1,9 +1,3 @@
-
-.md-header {
-    background-color: #232f3e !important;
-    border-bottom: 1px solid #1b2532 !important;
-}
-
 @media only screen and (max-width: 76.1875em) {
 
     html .md-nav--primary .md-nav__title--site {
@@ -26,9 +20,15 @@
     }
 }
 
-.md-tabs__link {
-    font-weight: bold !important;
-    font-size: .8rem !important;
+/* Header */
+
+.md-header {
+    background-color: #232f3e !important;
+    border-bottom: 1px solid #1b2532 !important;
+}
+
+.md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
+    width: 40px
 }
 
 .md-header-nav__source {
@@ -36,7 +36,8 @@
 }
 
 /* Language Drop Down */
-.md-header-nav__lang {
+
+/*.md-header-nav__lang {
     display: block;
     width: 2rem;
     margin-left: .5rem;
@@ -87,22 +88,25 @@
 
 .show {
     display:block;
-}
+}*/
 
 /* Second Navigation */
 
-.md-tabs {
+/*.md-tabs {
     background-image: url(../assets/images/second-nav-blue.png);
     background-color: #1f4e79 !important;
 }
 
-.md-tabs__item {
-    margin-right: 15px;
+.md-tabs__link {
+    font-weight: bold !important;
+    font-size: .8rem !important;
 }
 
-.md-content__button {
-    display: none;
-}
+.md-tabs__item {
+    margin-right: 15px;
+}*/
+
+/* Tables */
 
 .md-typeset table:not([class]) th {
     min-width: 15rem;
@@ -116,10 +120,6 @@
 
 .table {
     font-size: medium;
-}
-
-.md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
-    width: 40px
 }
 
 /* Footer */
