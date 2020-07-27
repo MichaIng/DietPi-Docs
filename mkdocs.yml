@@ -1,11 +1,13 @@
 site_name: DietPi Documentation
+site_url: https://dietpi.com/docs/
+site_description: 'Official documentation pages for DietPi OS'
+site_author: 'DietPi Team'
+copyright: '&copy; 2020, DietPi'
 
 repo_name: DietPi-Docs
 repo_url: https://github.com/MichaIng/DietPi-Docs
-docs_dir: docs
 
-site_url: https://dietpi.com/docs
-site_author: "DietPi Team"
+docs_dir: docs
 
 theme:
   name: 'material'
@@ -16,9 +18,9 @@ theme:
   search_index_only: true
 
   language: en
-  # features:
-  #   - tabs
-  # logo: 'assets/images/logo.png'
+  #features:
+  #  - tabs
+  #logo: 'assets/images/logo.png'
   favicon: https://dietpi.com/favicon.ico
     
 markdown_extensions:  
@@ -62,15 +64,12 @@ plugins:
 extra:
   social:
     - icon: fontawesome/solid/home
-      link: https://dietpi.com
+      link: https://dietpi.com/
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/DietPi_
 
 extra_css:
    - "css/custom.css"
-
-# Copyright
-copyright: '&copy; 2020, DietPi'
 
 nav:
   - 'Home' : 
@@ -87,4 +86,4 @@ nav:
       - 'Request features' : 'https://feathub.com/MichaIng/DietPi'
       - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
   - 'Community' : 
-      - 'DietPi Forum' : 'https://dietpi.com/phpbb/index.php'
+      - 'DietPi Forum' : 'https://dietpi.com/phpbb/'
