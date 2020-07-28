@@ -1,5 +1,8 @@
 # Desktop environments 
 
+## How do I run DietPi-Software?
+DietPi-Software can be launched via the command line: `dietpi-launcher` or directly `dietpi-software`.
+
 ## LXDE - ultra lightweight desktop
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
 

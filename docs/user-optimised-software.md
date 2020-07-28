@@ -6,12 +6,12 @@
 ### How do I run DietPi-Software?
 DietPi-Software can be launched via the command line: `dietpi-launcher` or `dietpi-software`
 
-## Desktops
-- LXDE - Highly optimized ultra lightweight desktop without the "bloatware".
-- LXQt - Slick and optimized lightweight desktop.
-- MATE - Popular Gnome 2 desktop.
-- XFCE - Lightweight desktop.
-- GnuStep - Alternative/unique desktop.
+## [Desktops](../dietpi-software-desktop)
+- [LXDE - Highly optimized ultra lightweight desktop](../dietpi-software-desktop/#lxde-ultra-lightweight-desktop)
+- [LXQt - Slick and optimized lightweight desktop](../dietpi-software-desktop/#lxqt-optimized-lightweight-desktop)
+- [MATE - Popular Gnome 2 desktop](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
+- [XFCE - Lightweight desktop](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
+- [GnuStep - Alternative/unique desktop](../dietpi-software-desktop/#gnustep-alternativeunique-desktop)
 - Chromium - Optional: Web browser
 - GIMP - Optional: Image editor
 
