@@ -1,7 +1,19 @@
-# Desktop environments 
+# Desktop environments & utilities
 
 ## How do I run DietPi-Software?
 DietPi-Software can be launched via the command line: `dietpi-launcher` or directly `dietpi-software`.
+
+## [Desktops](../dietpi-software-desktop)
+- [LXDE - Highly optimized ultra lightweight desktop](#lxde-ultra-lightweight-desktop)
+- [LXQt - Slick and optimized lightweight desktop](#lxqt-optimized-lightweight-desktop)
+- [MATE - Popular Gnome 2 desktop](#mate-popular-gnome2-desktop)
+- [XFCE - Lightweight desktop](#mate-popular-gnome2-desktop)
+- [GnuStep - Alternative/unique desktop](#gnustep-alternativeunique-desktop)
+
+## Deskop Utilities
+- [Chromium - Web browser](#chromium-web-browser)
+- [GIMP - Image editor](#gimp-image-editor)
+- [QuiteRSS - RSS and Atom news feeds reader](#quiterss-atom-news-feeds-reader)
 
 ## LXDE - ultra lightweight desktop
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
@@ -85,27 +97,38 @@ Popular Gnome2 based desktop environment.
 
 ![DietPi GNUstep](assets/images/dietpi-software-gnustep-desktop.jpg)
 
-## Chromium - Optional: Web browser
+## Desktop utilities
 
-Does my device support GPU acceleration?
+### Chromium - Web browser
+
+**Does my device support GPU acceleration ?** 
 
 Not all devices support GPU acceleration with Chromium.
 - RPis supports native OpenGL and will be configured during installation.
 - Odroids support OpenGLES and will be configured during installation.
 - Other devices will most likely be limited to software rendering.
 
-Where can I check the status of GPU acceleration?
-
+**Where can I check the status of GPU acceleration ?**
 Once Chromium is running, simply go to the following address:
     chrome://gpu
 
-Enable support for Widevine DRM protected content on RPi:
+**Enable support for Widevine DRM protected content on RPi:**
 
- - Manual: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
- - Script: [https://blog.vpetkov.net/2020/03/30/ras ... ny-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
+ - Manually: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
+ - with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... ny-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
 
-## GIMP - Optional: Image editor
+![DietPi GIMP](assets/images/dietpi-software-desktop-tools-chromium.jpg)
+
+### GIMP - Image editor
 
 MS Paint on steroids. If you need to edit pixels with a vast number of tools, GIMP is the only program you'll need. 
 
+![DietPi GIMP](assets/images/dietpi-software-desktop-tools-gimp.jpg)
+
 https://www.gimp.org/
+
+### QuiteRSS - Atom news feeds reader
+QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
+
+![DietPi QuiteRSS](assets/images/dietpi-software-desktop-tools-quiterss.jpg)
+

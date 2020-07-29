@@ -3,7 +3,8 @@
 ## DietPi-Software
 **DietPi-Software** allows you to install optional "ready to run" and optimized software for your device. As well as automating the Linux installation and configuration process for you, DietPi-Software also applies specific optimizations unique to your hardware model, ensuring you get the maximum performance from your device.
 
-### How do I run DietPi-Software?
+**How do I run DietPi-Software ?**
+
 DietPi-Software can be launched via the command line: `dietpi-launcher` or `dietpi-software`
 
 ## [Desktops](../dietpi-software-desktop)
@@ -12,11 +13,11 @@ DietPi-Software can be launched via the command line: `dietpi-launcher` or `diet
 - [MATE - Popular Gnome 2 desktop](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
 - [XFCE - Lightweight desktop](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
 - [GnuStep - Alternative/unique desktop](../dietpi-software-desktop/#gnustep-alternativeunique-desktop)
-- Chromium - Optional: Web browser
-- GIMP - Optional: Image editor
 
-## Deskop Utilities
-- QuiteRSS - RSS and Atom news feeds reader for your desktop.
+### [Desktop Utilities](../dietpi-software-desktop)
+- [Chromium - Web browser](../dietpi-software-desktop/#chromium-web-browser)
+- [GIMP - Image editor](../dietpi-software-desktop/#gimp-image-editor)
+- [QuiteRSS - RSS and Atom news feeds reader](../dietpi-software-desktop/#quiterss-atom-news-feeds-reader)
 
 ## Remote Desktop Access
 - TigerVNC Server - Desktop for remote connection.
