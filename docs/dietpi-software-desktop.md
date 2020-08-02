@@ -1,8 +1,5 @@
 # Desktop environments & utilities
 
-## How do I run DietPi-Software?
-DietPi-Software can be launched via the command line: `dietpi-launcher` or directly `dietpi-software`.
-
 ## Desktops
 - [LXDE - Highly optimized ultra lightweight desktop](#lxde-ultra-lightweight-desktop)
 - [LXQt - Slick and optimized lightweight desktop](#lxqt-optimized-lightweight-desktop)
@@ -14,6 +11,12 @@ DietPi-Software can be launched via the command line: `dietpi-launcher` or direc
 - [Chromium - Web browser](#chromium-web-browser)
 - [GIMP - Image editor](#gimp-image-editor)
 - [QuiteRSS - RSS and Atom news feeds reader](#quiterss-atom-news-feeds-reader)
+- [XFCE4 Power - Power manager with brightness](#xfce4-power-power-manager-with-brightness)
+
+## How do I run DietPi-Software?
+DietPi-Software can be launched via the command line: `dietpi-launcher` or directly `dietpi-software`. Choose `Software optimised` and select the `Desktop` software. Then choose `Install` option.
+
+![DietPi Software](assets/images/dietpi-software.jpg)
 
 ## LXDE - ultra lightweight desktop
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
@@ -132,3 +135,8 @@ QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the 
 
 ![DietPi QuiteRSS](assets/images/dietpi-software-desktop-tools-quiterss.jpg)
 
+### XFCE4 Power - Power manager with brightness
+
+Enables laptop users to set up a power profile for two different modes `on battery power` and `on AC Power` while still allowing desktop users to at least change the DPMS settings and CPU frequency using the settings dialogue.
+
+![DietPi XFCE4 Power manager](assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg)
