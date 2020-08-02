@@ -3,9 +3,11 @@
 ## DietPi-Software
 **DietPi-Software** allows you to install optional "ready to run" and optimized software for your device. As well as automating the Linux installation and configuration process for you, DietPi-Software also applies specific optimizations unique to your hardware model, ensuring you get the maximum performance from your device.
 
-**How do I run DietPi-Software ?**
+## How do I run DietPi-Software?
 
-DietPi-Software can be launched via the command line: `dietpi-launcher` or `dietpi-software`
+DietPi-Software can be launched via the command line: `dietpi-launcher` or directly `dietpi-software`. Choose **Software optimised** and select one or multiple software items you want. Then choose **Install** option.
+
+![DietPi Software](assets/images/dietpi-software.jpg)
 
 ## [Desktops](../dietpi-software-desktop)
 - [LXDE - Highly optimized ultra lightweight desktop](../dietpi-software-desktop/#lxde-ultra-lightweight-desktop)
