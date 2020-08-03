@@ -1,13 +1,23 @@
 # Optimised software
 
 ## DietPi-Software
-**DietPi-Software** allows you to install optional "ready to run" and optimized software for your device. As well as automating the Linux installation and configuration process for you, DietPi-Software also applies specific optimizations unique to your hardware model, ensuring you get the maximum performance from your device.
+**DietPi-Software** allows you to install optional **Ready to run** and **Optimized** software for your device. As well as automating the installation and configuration process for you, DietPi-Software also applies specific optimizations unique to your hardware model, ensuring you get the **maximum performance** from your device.
 
-## How do I run DietPi-Software?
+??? info "How do I install the **DietPi Optimised Sofware** ?" 
+    To install any of the **DietPi Optimised Software** listed below run from the command line: 
+    ```
+    dietpi-launcher 
+    ```
+    and selected _DietPi-Software_. You could also do this directly: 
+    ```
+    dietpi-software 
+    ```
+    
+    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-DietPi-Software can be launched via the command line: `dietpi-launcher` or directly `dietpi-software`. Choose **Software optimised** and select one or multiple software items you want. Then choose **Install** option.
+    ![DietPi Software](assets/images/dietpi-software.jpg)
 
-![DietPi Software](assets/images/dietpi-software.jpg)
+    To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
 
 ## [Desktops](../dietpi-software-desktop)
 - [LXDE - Highly optimized ultra lightweight desktop](../dietpi-software-desktop/#lxde-ultra-lightweight-desktop)
@@ -22,7 +32,7 @@ DietPi-Software can be launched via the command line: `dietpi-launcher` or direc
 - [QuiteRSS - RSS and Atom news feeds reader](../dietpi-software-desktop/#quiterss-atom-news-feeds-reader)
 
 ## Remote Desktop Access
-- TigerVNC Server - Desktop for remote connection.
+- [TigerVNC Server - Desktop for remote connection](../dietpi-software-remote-desktop/#29-tigervnc-server-desktop-for-remote-connection)
 - RealVNC Server - Desktop for remote connection.
 - XRDP - Remote desktop server for Windows Remote Desktop Client.
 - NoMachine - Feature rich remote desktop connection.

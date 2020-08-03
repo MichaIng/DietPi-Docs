@@ -13,10 +13,23 @@
 - [QuiteRSS - RSS and Atom news feeds reader](#quiterss-atom-news-feeds-reader)
 - [XFCE4 Power - Power manager with brightness](#xfce4-power-power-manager-with-brightness)
 
-## How do I run DietPi-Software?
-DietPi-Software can be launched via the command line: `dietpi-launcher` or directly `dietpi-software`. Choose `Software optimised` and select the `Desktop` software. Then choose `Install` option.
+[Return to Optimised Software list](../user-optimised-software)
 
-![DietPi Software](assets/images/dietpi-software.jpg)
+??? info "How do I install the **DietPi Optimised Sofware**  ?" 
+    To install any of the **DietPi Optimised Software** run from the command line: 
+    ```
+    dietpi-launcher 
+    ```
+    and selected _DietPi-Software_ or directly: 
+    ```
+    dietpi-software 
+    ```
+    
+    Choose **Software optimised** and select the **Desktop** category. Once you have selected one or more options, click on `Install`.
+
+    ![DietPi Software](assets/images/dietpi-software.jpg)
+
+    To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
 
 ## LXDE - ultra lightweight desktop
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
@@ -28,7 +41,15 @@ LXDE is highly optimized and ultra lightweight desktop. It works well with compu
     ```
 
 === "Enable autostart"
-    Using `dietpi-autostart` you can have DietPi boot directly to the desktop
+    To start different programs when the SBC starts, run from the command line the main DietPi tool: 
+    ```
+    dietpi-launcher 
+    ```
+    or directly. 
+    ```
+    dietpi-autostart 
+    ```
+    To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
 
 === "Official documentation"
     [LXDE Website](https://www.lxde.org) - [LXDE Wiki](https://wiki.lxde.org/en/Main_Page)
