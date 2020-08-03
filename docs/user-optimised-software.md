@@ -19,23 +19,26 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
 
+!!! warning "Documentation in progress..." 
+    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
+
 ## [Desktops](../dietpi-software-desktop)
-- [LXDE - Highly optimized ultra lightweight desktop](../dietpi-software-desktop/#lxde-ultra-lightweight-desktop)
-- [LXQt - Slick and optimized lightweight desktop](../dietpi-software-desktop/#lxqt-optimized-lightweight-desktop)
-- [MATE - Popular Gnome 2 desktop](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
-- [XFCE - Lightweight desktop](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
-- [GnuStep - Alternative/unique desktop](../dietpi-software-desktop/#gnustep-alternativeunique-desktop)
+- [**LXDE - Highly optimized ultra lightweight desktop**](../dietpi-software-desktop/#lxde-ultra-lightweight-desktop)
+- [**LXQt - Slick and optimized lightweight desktop**](../dietpi-software-desktop/#lxqt-optimized-lightweight-desktop)
+- [**MATE - Popular Gnome 2 desktop**](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
+- [**XFCE - Lightweight desktop**](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
+- [**GnuStep - Alternative/unique desktop**](../dietpi-software-desktop/#gnustep-alternativeunique-desktop)
 
 ### [Desktop Utilities](../dietpi-software-desktop/#desktop-utilities)
-- [Chromium - Web browser](../dietpi-software-desktop/#chromium-web-browser)
-- [GIMP - Image editor](../dietpi-software-desktop/#gimp-image-editor)
-- [QuiteRSS - RSS and Atom news feeds reader](../dietpi-software-desktop/#quiterss-atom-news-feeds-reader)
+- [**Chromium - Web browser**](../dietpi-software-desktop/#chromium-web-browser)
+- [**GIMP - Image editor**](../dietpi-software-desktop/#gimp-image-editor)
+- [**QuiteRSS - RSS and Atom news feeds reader**](../dietpi-software-desktop/#quiterss-atom-news-feeds-reader)
 
 ## Remote Desktop Access
-- [TigerVNC Server - Desktop for remote connection](../dietpi-software-remote-desktop/#29-tigervnc-server-desktop-for-remote-connection)
-- RealVNC Server - Desktop for remote connection.
-- XRDP - Remote desktop server for Windows Remote Desktop Client.
-- NoMachine - Feature rich remote desktop connection.
+- [**TigerVNC Server - Desktop for remote connection**](../dietpi-software-remote-desktop/#29-tigervnc-server-desktop-for-remote-connection)
+- [RealVNC Server - Desktop for remote connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4149)
+- [XRDP - Remote desktop server for Windows Remote Desktop Client](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2074)
+- [NoMachine - Feature rich remote desktop connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2071)
 
 ## Media Systems
 - Kodi - Media Centre / Player

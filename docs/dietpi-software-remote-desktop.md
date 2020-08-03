@@ -1,16 +1,15 @@
 # Remote Desktop Access
 
 ## Overview
-- [TigerVNC Server - Desktop for remote connection](#29-tigervnc-server-desktop-for-remote-connection)
-- RealVNC Server - Desktop for remote connection.
-- XRDP - Remote desktop server for Windows Remote Desktop Client.
-- NoMachine - Feature rich remote desktop connection.
+- [**TigerVNC Server - Desktop for remote connection**](#29-tigervnc-server-desktop-for-remote-connection)
+- [RealVNC Server - Desktop for remote connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4149)
+- [XRDP - Remote desktop server for Windows Remote Desktop Client](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2074)
+- [NoMachine - Feature rich remote desktop connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2071)
 
-!!! info Desktop environment
+!!! warning "Documentation in progress..." 
+    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
 
-    From the list of **Optimised Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../dietpi-software-desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
-
-[Return to Optimised Software list](../user-optimised-software)
+Return to the full [**Optimised Software**](../user-optimised-software) list.
 
 ??? info "How do I install the **DietPi Optimised Sofware**  ?" 
     To install any of the **DietPi Optimised Software** run from the command line: 
@@ -29,6 +28,10 @@
     ![DietPi Software](assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
+
+!!! info Desktop environment
+
+    From the list of **Optimised Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../dietpi-software-desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
 
 ## [29] TigerVNC Server - Desktop for remote connection
 
