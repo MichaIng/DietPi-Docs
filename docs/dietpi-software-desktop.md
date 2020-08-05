@@ -13,7 +13,7 @@
 - [QuiteRSS - RSS and Atom news feeds reader](#quiterss-atom-news-feeds-reader)
 - [XFCE4 Power - Power manager with brightness](#xfce4-power-power-manager-with-brightness)
 
-[Return to Optimised Software list](../user-optimised-software)
+[Return to the **Optimised Software list**](../user-optimised-software)
 
 ??? info "How do I install the **DietPi Optimised Sofware**  ?" 
     To install any of the **DietPi Optimised Software** run from the command line: 
@@ -30,6 +30,10 @@
     ![DietPi Software](assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
+
+!!! warning "Documentation in progress..." 
+    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
+
 
 ## LXDE - ultra lightweight desktop
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
