@@ -29,11 +29,11 @@ Return to the full [**Optimised Software**](../user-optimised-software) list.
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
 
+## [29] TigerVNC Server - Desktop for remote connection
+
 !!! info Desktop environment
 
     From the list of **Optimised Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../dietpi-software-desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
-
-## [29] TigerVNC Server - Desktop for remote connection
 
 Run a **Desktop environment** on your device and access it accessed remotely via network. It is a great option for headless SBC devices.
 

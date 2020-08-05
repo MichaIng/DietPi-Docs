@@ -1,12 +1,10 @@
 [![](https://dietpi.com/images/Slider01.png){: style="height:180px"}](https://dietpi.com)
 
-DietPi | Minimal image at its core
+**DietPi | Minimal image at its core**
+
+**Optimised | Simplified | For everyone**
 
 # Welcome to the DietPi Documentation!
-
-If you are **new to DietPi**, the [_Install_](user-guide_install) provides a tutorial for everything you need to get DietPi running. If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11).
-
-For more details visit the [_DietPi Community Forum_](https://dietpi.com/phpbb/viewforum.php?f=5).
 
 ## What is DietPi ?
 
@@ -25,7 +23,16 @@ our images start at 400MB in size (3x lighter than 'Raspbian Lite'). With featur
     
     Reds, DietPi Forum
 
+## Getting started
+
+If you are **new to DietPi**, the [_Install_](user-guide_install) provides a tutorial for everything you need to get DietPi running. 
+
+If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11).
+
+For more details visit the [_DietPi Community Forum_](https://dietpi.com/phpbb/viewforum.php?f=5).
+
 ## Easy to install popular software
+
 You can **quickly and easily install popular software** ! All of them are **READY TO RUN** and optimised for your system. The list of available apps is long , and for the full list checkout [_DietPi Optimised Software_](user-optimised-software) page. Here are few highlights:
 
 - Desktops (MATE/XFCE)
