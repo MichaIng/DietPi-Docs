@@ -1,4 +1,4 @@
-[![](https://dietpi.com/images/Slider01.png){: style="height:180px"}](https://dietpi.com)
+[![](https://dietpi.com/images/logo_transparent_360x360.png){: style="height:180px"}](https://dietpi.com)
 
 **DietPi | Minimal image at its core**
 
