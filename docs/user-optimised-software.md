@@ -26,7 +26,7 @@
 - [**LXDE - Highly optimized ultra lightweight desktop**](../dietpi-software-desktop/#lxde-ultra-lightweight-desktop)
 - [**LXQt - Slick and optimized lightweight desktop**](../dietpi-software-desktop/#lxqt-optimized-lightweight-desktop)
 - [**MATE - Popular Gnome 2 desktop**](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
-- [**XFCE - Lightweight desktop**](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
+- [**Xfce - Lightweight desktop**](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
 - [**GnuStep - Alternative/unique desktop**](../dietpi-software-desktop/#gnustep-alternativeunique-desktop)
 
 ### [Desktop Utilities](../dietpi-software-desktop/#desktop-utilities)
@@ -204,7 +204,7 @@
 
 - [HAProxy - High performance TCP/HTTP load balancer.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p221)  
 
-## Website URL's
+## Dynamic DNS Clients
 
 - [No-IP - Website URL Address](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p58)  
 
