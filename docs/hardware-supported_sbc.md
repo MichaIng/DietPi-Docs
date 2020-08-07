@@ -9,7 +9,7 @@ You can install DietPi by following the step by step [Starting guide](../user-gu
     <table>
         <thead>
             <tr>
-                <th align="left" ><strong>Product</strong></th>
+                <th align="left"><strong>Product</strong></th>
                 <th align="left"><strong>Description</strong></th>
             </tr>
         </thead>
@@ -99,7 +99,7 @@ This is where PINE64 journey began. The PINE A64 is their first Single Board Com
 The ROCKPro64 is the most powerful single board computer offered by PINE64.
 ![DietPi ROCKPro64](assets/images/dietpi-rockpro64.jpg)
 
-It features a Rockchip RK3399 hexa-core SOC and up-to 4GB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C  with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UARTs and GPIOs. 
+It features a Rockchip RK3399 hexa-core SOC and up-to 4 GiB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C  with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UARTs and GPIOs. 
 
 The board is backwards compatible with many of the existing PINE64 peripherals, including the Wifi/BT module, camera module and LCD panel but an array of new peripherals specific for the board is also available. All this in the exact same model “A” dimension as the original PINE A64.
 
@@ -109,7 +109,7 @@ The ROCKPro64 4GB board is designated as LTS (long Term Supply) which means that
     <table>
         <thead>
             <tr>
-                <th align="left" ><strong>Product</strong></th>
+                <th align="left"><strong>Product</strong></th>
                 <th align="left"><strong>Description</strong></th>
             </tr>
         </thead>
@@ -149,13 +149,13 @@ The ROCKPro64 4GB board is designated as LTS (long Term Supply) which means that
 </div>
 
 
-## ROCK PI
+## ROCK Pi
 
 **Maker Friendly, IoT connectivity** enabled. ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications. 
 For more details visit [ROCK Pi](http://rockpi.org/) website.
 
-One of the supported boards is RockPI 4.
-![DietPi RockPi 4](assets/images/dietpi-rockpi-4b.jpg)
+One of the supported boards is ROCK Pi 4.
+![DietPi ROCK Pi 4](assets/images/dietpi-rockpi-4b.jpg)
 
 ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
 
@@ -163,7 +163,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
     <table>
         <thead>
             <tr>
-                <th align="left" ><strong>Product</strong></th>
+                <th align="left"><strong>Product</strong></th>
                 <th align="left"><strong>Description</strong></th>
             </tr>
         </thead>
@@ -184,14 +184,14 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
     </table>
 </div>
 
-## FireFly
-**Six-core 64Bit High Performance Open Source Platform**. For more details visit [Firefly-RK3399](http://shop.t-firefly.com/goods.php?id=45) website.
+## Firefly
+**Six-core 64-bit High Performance Open Source Platform**. For more details visit [Firefly-RK3399](http://shop.t-firefly.com/goods.php?id=45) website.
 
 <div class="md-typeset__table">
     <table>
         <thead>
             <tr>
-                <th align="left" ><strong>Product</strong></th>
+                <th align="left"><strong>Product</strong></th>
                 <th align="left"><strong>Description</strong></th>
             </tr>
         </thead>
@@ -206,14 +206,14 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
     </table>
 </div>
 
-## SPARKY SBC
+## Sparky SBC
 Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit [Allo.com - SparkySBC](https://www.allo.com/sparky/sparky-sbc.html) website.
 
 <div class="md-typeset__table">
     <table>
         <thead>
             <tr>
-                <th align="left" ><strong>Product</strong></th>
+                <th align="left"><strong>Product</strong></th>
                 <th align="left"><strong>Description</strong></th>
             </tr>
         </thead>
@@ -229,13 +229,13 @@ Sparky Single Board Computer (SBC) is a credit card-sized board that can be used
 </div>
 
 ## ASUS Tinker Board
-Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit [Asus.com - Asus Tinker Board](https://www.asus.com/Single-Board-Computer/Tinker-Board/) website.
+Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit [asus.com - ASUS Tinker Board](https://www.asus.com/Single-Board-Computer/Tinker-Board/) website.
 
 **Maker-Friendly, with IoT Connectivity**
 
 Tinker Board features standard maker connectivity options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. 
 
-![DietPi TinkerBoard](assets/images/dietpi-tinkerboard.jpg)
+![DietPi Tinker Board](assets/images/dietpi-tinkerboard.jpg)
 
 Tinker Board is equipped with one DSI MIPI connection for displays and touchscreens. The secondary CSI MIPI connection is for connection to compatible cameras allowing for computer vision, and much more.
 
@@ -247,7 +247,7 @@ Careful consideration went into the design and development of the Tinker Board t
     <table>
         <thead>
             <tr>
-                <th align="left" ><strong>Product</strong></th>
+                <th align="left"><strong>Product</strong></th>
                 <th align="left"><strong>Description</strong></th>
             </tr>
         </thead>
@@ -266,7 +266,7 @@ Careful consideration went into the design and development of the Tinker Board t
 ## Native PC & Virtualized environments
 
 ### Native PC images
-The Native PC images are great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience. This image is for motherboards with UEFI boot support and onboard EMMC (eg: Z83-II, Beelink AP32 and other Intel NUC/SBC devices with onboard EMMC).
+The Native PC images are great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience. This image is for motherboards with UEFI boot support and onboard eMMC (eg: Z83-II, Beelink AP32 and other Intel NUC/SBC devices with onboard eMMC).
 
 ### VMware
 The VMware virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
@@ -278,14 +278,14 @@ VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at s
 
 The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
-### HyperV (community image)
-The HyperV virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
+### Hyper-V (community image)
+The Hyper-V virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
 <div class="md-typeset__table">
     <table>
         <thead>
             <tr>
-                <th align="left" ><strong>Product</strong></th>
+                <th align="left"><strong>Product</strong></th>
                 <th align="left"><strong>Description</strong></th>
             </tr>
         </thead>
@@ -325,15 +325,15 @@ The HyperV virtual machine is great for those occasions where SBC performance ju
 </div>
 
 
-## NanoPi Series (Friendly ARM)
-**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBC's available, a great addition to your SBC lineup that provides next gen SBC performance. 
+## NanoPi Series (FriendlyARM)
+**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance. 
 For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
 
 <div class="md-typeset__table">
     <table>
         <thead>
             <tr>
-                <th align="left" ><strong>Product</strong></th>
+                <th align="left"><strong>Product</strong></th>
                 <th align="left"><strong>Description</strong></th>
             </tr>
         </thead>
@@ -417,7 +417,7 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi Fire 3</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi Fire3</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
