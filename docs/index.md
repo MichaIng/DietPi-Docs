@@ -1,4 +1,4 @@
-[![](https://dietpi.com/images/logo_transparent_360x360.png){: style="height:180px"}](https://dietpi.com)
+[![](https://dietpi.com/images/logo_transparent_360x360.png){: style="height:180px"}](https://dietpi.com/)
 
 **DietPi | Minimal image at its core**
 
@@ -35,13 +35,13 @@ For more details visit the [_DietPi Community Forum_](https://dietpi.com/phpbb/v
 
 You can **quickly and easily install popular software** ! All of them are **READY TO RUN** and optimised for your system. The list of available apps is long , and for the full list checkout [_DietPi Optimised Software_](user-optimised-software) page. Here are few highlights:
 
-- Desktops (MATE/XFCE)
-- Remote Desktop (VNC/No Machine)
+- Desktops (MATE/Xfce)
+- Remote Desktop (VNC/NoMachine)
 - Media Systems/Players (Kodi/Plex/Murmur)
 - Torrents/Downloading (Transmission/Sonarr/Radarr)
 - Cloud/Backup (Nextcloud/Syncthing)
-- Gaming (AmiBerry/MineOS)
-- Social, Surveillance, Hotspots, System Stats, Hardware Projects, Stacks (LAMP/LEMP), PiHole/PiVPN, File Servers, Home Automation and Printing
+- Gaming (Amiberry/MineOS)
+- Social, Surveillance, Hotspots, System Stats, Hardware Projects, Stacks (LAMP/LEMP), Pi-hole, VPN, File Servers, Home Automation and Printing
 and [much more...](user-optimised-software)
 
 DietPi does everything for you, giving you more time to enjoy the software you need.
@@ -59,7 +59,7 @@ Have some feedback, questions, suggestions, or just fancy a chat ? Visit our [co
 
 **How ?**
 
-1. Fork the project [https://github.com/MichaIng/DietPi](https://github.com/MichaIng/DietPi) or the documentation [https://github.com/MichaIng/DietPi-Docs](https://github.com/MichaIng/DietPi-Docs/). 
+1. Fork the project [https://github.com/MichaIng/DietPi](https://github.com/MichaIng/DietPi/blob/dev/CONTRIBUTING.md) or the documentation [https://github.com/MichaIng/DietPi-Docs](https://github.com/MichaIng/DietPi-Docs). 
 2. Make one or more well commented and clean commits to the repository.
 3. Perform a pull request in GitHub’s web interface.
 4. If it is a new feature request, don’t start the coding first. Remember to open a GitHub [issue](https://github.com/MichaIng/DietPi/issues) to discuss the new enhancement.
