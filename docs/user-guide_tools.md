@@ -21,9 +21,9 @@ DietPi-Software will be automatically displayed on the first login. It is one of
 
 ![dietpi-software](assets/images/dietpi-software.jpg)
 
-### Software Optimized 
+### Software Optimised 
 
-Select DietPi optimized software to install.
+Select DietPi optimised software to install.
 
 ![dietpi-software](assets/images/dietpi-software-optimised.jpg)
 
@@ -61,7 +61,7 @@ Provides service control, priority level tweaks and status print.
 ![DietPi-Services](assets/images/dietpi-services.jpg)
 
 
-### Dietpi-Led_control
+### Dietpi-LED_control
 
 ![DietPi-Led_control](assets/images/dietpi-ledcontrol.jpg)
 
@@ -139,6 +139,6 @@ Clean up not necessary files from the operating system and free up valuable disk
 
 ### Dietpi-LogClear
 
-Clear the logs
+Clear log files in /var/log/.
 
 ![DietPi-LogClear](assets/images/dietpi-logclear.jpg)
