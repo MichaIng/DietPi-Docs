@@ -4,14 +4,14 @@
 - [LXDE - Highly optimized ultra lightweight desktop](#lxde-ultra-lightweight-desktop)
 - [LXQt - Slick and optimized lightweight desktop](#lxqt-optimized-lightweight-desktop)
 - [MATE - Popular Gnome 2 desktop](#mate-popular-gnome2-desktop)
-- [XFCE - Lightweight desktop](#mate-popular-gnome2-desktop)
+- [Xfce - Lightweight desktop](#mate-popular-gnome2-desktop)
 - [GnuStep - Alternative/unique desktop](#gnustep-alternativeunique-desktop)
 
 ### [Desktop Utilities](#desktop-utilities_1)
 - [Chromium - Web browser](#chromium-web-browser)
 - [GIMP - Image editor](#gimp-image-editor)
 - [QuiteRSS - RSS and Atom news feeds reader](#quiterss-atom-news-feeds-reader)
-- [XFCE4 Power - Power manager with brightness](#xfce4-power-power-manager-with-brightness)
+- [Xfce4 Power - Power manager with brightness](#xfce4-power-power-manager-with-brightness)
 
 [Return to the **Optimised Software list**](../user-optimised-software)
 
@@ -93,7 +93,7 @@ Popular Gnome2 based desktop environment.
 
 ![DietPi LXDE](assets/images/dietpi-software-mate-desktop.jpg)
 
-## XFCE - Lightweight desktop
+## Xfce - Lightweight desktop
 
 === "Quick start"
     After installation, desktop can be run by typing 
@@ -105,9 +105,9 @@ Popular Gnome2 based desktop environment.
     Using `dietpi-autostart` you can have DietPi boot directly to the desktop
 
 === "Official documentation"
-    [XFCE website](https://wiki.debian.org/Xfce)
+    [Xfce website](https://wiki.debian.org/Xfce)
 
-![DietPi XFCE](assets/images/dietpi-software-xfce-desktop.jpg)
+![DietPi Xfce](assets/images/dietpi-software-xfce-desktop.jpg)
 
 ## GnuStep - Alternative/unique desktop
 
@@ -160,8 +160,8 @@ QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the 
 
 ![DietPi QuiteRSS](assets/images/dietpi-software-desktop-tools-quiterss.jpg)
 
-### XFCE4 Power - Power manager with brightness
+### Xfce4 Power - Power manager with brightness
 
 Enables laptop users to set up a power profile for two different modes `on battery power` and `on AC Power` while still allowing desktop users to at least change the DPMS settings and CPU frequency using the settings dialogue.
 
-![DietPi XFCE4 Power manager](assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg)
+![DietPi Xfce4 Power manager](assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg)
