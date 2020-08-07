@@ -5,7 +5,7 @@
 To follow this tutorial, you will need the next hardware list:
 
  - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](../hardware-supported_sbc/)
- - An SD card of at least 4 Gb, and a way to read it on your computer (integrated slot or external SD card reader)
+ - An SD card of at least 4 GiB, and a way to read it on your computer (integrated slot or external SD card reader)
  - Optional: Ethernet (network) cable
 
 _Note_: Following this guide you could make the installation without using a monitor or keyboard connected to your single board computer (known as headless). 
@@ -13,7 +13,7 @@ _Note_: Following this guide you could make the installation without using a mon
 For the software, just two are needed:
 
  - The latest DietPi image
- - _and_ the Etcher software to flash SD card. [Etcher](https://etcher.io/) is available for Windows, Linux and macOS. 
+ - _and_ a software to flash SD card. [Etcher](https://etcher.io/) is available for Windows, Linux and macOS.
 
 ## Download and prepare the disk image
 Open [dietpi.com](https://dietpi.com#download) and select “Download”. Various supported devices will be displayed. Download the disk image (about 1 GB in size).
@@ -60,7 +60,7 @@ Insert the SD card into your Raspberry Pi and start it. A few seconds later, you
 
 ### Headless install
 
-??? info "Click here if you want to connect via network (**ssh connect**, runing a _headless install_)" 
+??? info "Click here if you want to connect via network (**SSH connect**, runing a _headless install_)" 
 
     **IP Scanning tool**
 
@@ -69,16 +69,16 @@ Insert the SD card into your Raspberry Pi and start it. A few seconds later, you
 	For Linux, you can use nmap command:
 
 		`
-		sudo apt-get install nmap #For installing Nmap
-		sudo nmap -sn 192.168.1.0/24 #For scanning IP address
+		sudo apt-get install nmap # For installing Nmap
+		sudo nmap -sn 192.168.1.0/24 # For scanning IP address
 		`
 
 	**Connect to DietPi via SSH**
 	
-	A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). 
+	A popular SSH Client for Windows is PuTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). 
 	Most Linux distributions come packaged with an ssh client. Simply type ssh in your terminal to access SSH Client.
 
-	![DietPi-ssh](assets/images/dietpi-ssh.jpg)
+	![DietPi-SSH](assets/images/dietpi-ssh.jpg)
 
 **Initial settings**
 
@@ -92,4 +92,5 @@ Insert the SD card into your Raspberry Pi and start it. A few seconds later, you
 
 DietPi-Software will be automatically displayed on first login. It has lots of useful tools. 
 One of the first options to try is to select `Software Optimised` and then tos install.
+
 ![dietpi-software](assets/images/dietpi-software.jpg)
