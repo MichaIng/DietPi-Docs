@@ -78,7 +78,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 Edit dietpi.txt and enable VNC server to run in _shared desktop_ mode:
 
 ```
-nano /DietPi/dietpi.txt
+nano /boot/dietpi.txt
 ```
 
 and change to value 1 next line 
