@@ -56,7 +56,10 @@ Remove the SD card from the PC and insert it into the Raspberry Pi to prepare to
 
 ## First boot on DietPi
 
-Insert the SD card into your Raspberry Pi and start it. A few seconds later, you can connect following the instructions on the screen, or connecting via network (through SSH). 
+Insert the SD card into your Raspberry Pi and start it. A few seconds later, you can connect following the instructions on the screen, or connecting via network (through SSH).
+
+- login: **root**
+- password: **dietpi**
 
 ### Headless install
 
