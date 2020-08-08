@@ -1,14 +1,14 @@
-# Optimised software
+# DietPi Optimised software Index
 
-## DietPi-Software
-**DietPi-Software** allows you to install optional **Ready to run** and **Optimized** software for your device. As well as automating the installation and configuration process for you, DietPi-Software also applies specific optimizations unique to your hardware model, ensuring you get the **maximum performance** from your device.
+## Overview
+**DietPi-Software** is a core DietPi tool, allowing you to install **Ready to run** and **Optimized software** for your device. It automates the installation and configuration process for you and also applies specific optimizations unique to your hardware model. As a result DietPi-Software ensure you get the **maximum performance** from your device.
 
-??? info "How do I install the **DietPi Optimised Sofware** ?" 
+??? info "How do I run **DietPi-Software** and install **Optimised software** ?" 
     To install any of the **DietPi Optimised Software** listed below run from the command line: 
     ```
     dietpi-launcher 
     ```
-    and selected _DietPi-Software_. You could also do this directly: 
+    and selected _DietPi-Software_. or launch directly the tool: 
     ```
     dietpi-software 
     ```

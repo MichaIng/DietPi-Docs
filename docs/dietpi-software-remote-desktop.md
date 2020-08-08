@@ -11,19 +11,17 @@
 
 Return to the full [**Optimised Software**](../user-optimised-software) list.
 
-??? info "How do I install the **DietPi Optimised Sofware**  ?" 
-    To install any of the **DietPi Optimised Software** run from the command line: 
+??? info "How do I run **DietPi-Software** and install **Optimised software** ?" 
+    To install any of the **DietPi Optimised Software** listed below run from the command line: 
     ```
     dietpi-launcher 
     ```
-    and selected _DietPi-Software_ or directly: 
+    and selected _DietPi-Software_. or launch directly the tool: 
     ```
     dietpi-software 
     ```
     
-    Choose **Software optimised** and select one or more items. Then click on `Install`. 
-    
-    DietPi will do all the necessary steps to install and start these software items.
+    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi Software](assets/images/dietpi-software.jpg)
 
