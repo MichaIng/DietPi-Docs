@@ -16,11 +16,9 @@ For the software, just two are needed:
  - _and_ a software to flash SD card. [Etcher](https://etcher.io/) is available for Windows, Linux and macOS.
 
 ## Download and prepare the disk image
-Open [dietpi.com](https://dietpi.com#download) and select “Download”. Various supported devices will be displayed. Download the disk image (about 1 GB in size).
-For simplicity, the guide will follow the Raspberry Pi installation. 
+Open [dietpi.com](https://dietpi.com#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally. 
 
-_Specific steps to different platforms are detailed below._
-
+_Example:_
 ![DietPi-RaspberryPi-image](assets/images/DietPi-RaspberryPi-image.jpg)
 
 ### Unzip the disk image 
@@ -63,25 +61,30 @@ Insert the SD card into your Raspberry Pi and start it. A few seconds later, you
 
 ### Headless install
 
-??? info "Click here if you want to connect via network (**SSH connect**, runing a _headless install_)" 
+??? info "Click here if you want to connect via network (running a _headless install_)" 
 
     **IP Scanning tool**
 
     For the following steps we require an IP Scanning tool to determine the IP address of the Raspberry Pi. 
-    For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://download.advanced-ip-scanner.com).
-	For Linux, you can use nmap command:
+    
+	- For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://download.advanced-ip-scanner.com).
+	
+	- For Linux, you can use nmap command:
 
-		`
-		sudo apt-get install nmap # For installing Nmap
-		sudo nmap -sn 192.168.1.0/24 # For scanning IP address
-		`
+		```
+		sudo apt-get install nmap #For installing Nmap
+		sudo nmap -sn 192.168.1.0/24 #For scanning IP address
+		```
 
 	**Connect to DietPi via SSH**
 	
-	A popular SSH Client for Windows is PuTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). 
-	Most Linux distributions come packaged with an ssh client. Simply type ssh in your terminal to access SSH Client.
+	- A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.
+	![DietPi-ssh](assets/images/dietpi-ssh.jpg)
 
-	![DietPi-SSH](assets/images/dietpi-ssh.jpg)
+	- Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address 192.168.1.20 with the one found via scanning the network).
+	```
+	ssh pi@192.168.1.20
+	```
 
 **Initial settings**
 
