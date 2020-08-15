@@ -1,6 +1,11 @@
+---
+description: Easy to follow tutorial to install & initially configure DietPi 
+title: How to install DietPi
+---
+
 # How to install DietPi
 
-## 0. What do you need ?
+## What do you need ?
 
 To follow this tutorial, you will need the next hardware list:
 
@@ -8,12 +13,7 @@ To follow this tutorial, you will need the next hardware list:
  - An SD card of at least 4 GiB, and a way to read it on your computer (integrated slot or external SD card reader)
  - Optional: Ethernet (network) cable
 
-_Note_: Following this guide you could make the installation without using a monitor or keyboard connected to your single board computer (known as headless). 
-
-For the software, just two are needed:
-
- - The latest DietPi image
- - _and_ a software to flash SD card. [Etcher](https://etcher.io/) is available for Windows, Linux and macOS.
+_Note_: Following this guide you could run the installation directly or via network. If you choose an installation via network you will not need a monitor or keyboard connected to your SBC or virtualized environment. 
 
 ## 1. Download and extract the DietPi disk image
 
@@ -41,7 +41,7 @@ Linux users will need to download and install `p7zip` (the terminal version of `
 	
 	Replace **DietPi-Image.7z** with the correct name of your compressed DietPi file, example: **DietPi_RPi-ARMv6-Buster.7z**. This will extract the DietPi image file for you to use.
 
-## 2. Run Etcher and flash the image 
+## 2. Run balenaEtcher and flash the image 
 
 Download and install [balenaEtcher](https://etcher.io/) - it flashes OS images to SD cards & USB drives, safely and easily on Windows, macOS, Linux.
 
@@ -101,7 +101,7 @@ Use:
 	ssh pi@192.168.1.20
 	```
 
-To further proceed you’ll need to accept the DietPi GPL license. Hit the enter key on your keyboard to do this. 
+To further proceed you’ll need to accept the DietPi GPL license. Hit the Enter key on your keyboard to do this. 
 
 ![dietpi-login01](assets/images/dietpi-login01.jpg)
 
@@ -109,18 +109,19 @@ DietPi will then immediately begin to search for and install updated software pa
 
 Once the packages have been updated, DietPi will ask you to confirm whether you would like to enable user analytics. 
 
-DietPi survey is **optional**, and not enabled by default. It is anonymous, secured and require a minimal data survey. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/) page. Checkout and see how DietPi is used ! 
+DietPi Survey is **optional**, and not enabled by default. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/) page. Checkout and see how DietPi is used ! 
 
 ![dietpi-data](assets/images/dietpi-data-policy.jpg)
 
-The default DietPi password is public, so you’ll be asked to change this at the next stage for both the `root` and `dietpi` user accounts. Select OK and hit enter, then provide your password (twice) to confirm. You can change this again later by typing `passwd` at the terminal.
+The default DietPi password is public, so you’ll be asked to change this at the next stage for both the `root` and `dietpi` user accounts. Select OK and hit enter, then provide your password (twice) to confirm. 
+
+You can change the password again later by typing `passwd` at the terminal.
 
 ![dietpi-password](assets/images/dietpi-password-01.jpg)
 
-## 4. Installing software with the DietPi-Software tool
+## 4. Install software with the DietPi-Software tool
 
 The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use. If you’re unsure what software to install, checkout [DietPi Optimised Software](../user-optimised-software) page for more details.
-
 
 !!! info "How do I run **DietPi-Software** and install **Optimised software** ?" 
 
@@ -138,7 +139,9 @@ The base installation of DietPi is minimal **by design**, allowing you to choose
 
 You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
 
-If you want to make further changes to your DietPi configuration, you can run `dietpi-launcher` at the terminal to view all the available DietPi tools, including **DietPi-Update** to update your device and **DietPi-Backup** to back up your device. More on these tools please review [DietPi Tools](../user-guide_tools) section.
+If you want to make further changes to your DietPi configuration, you can run `dietpi-launcher` at the terminal to view all the available DietPi tools, including **DietPi-Update** to update your device and **DietPi-Backup** to back up your device. 
+
+For more details, check [DietPi Tools](../user-guide_tools) section.
 
 ## Install by community (YouTube)
 A video tutorial on _How to install and initially configure DietPi_ by Roberto Jorge. 
