@@ -1,6 +1,6 @@
 # How to install DietPi
 
-## What do you need ?
+## 0. What do you need ?
 
 To follow this tutorial, you will need the next hardware list:
 
@@ -15,22 +15,37 @@ For the software, just two are needed:
  - The latest DietPi image
  - _and_ a software to flash SD card. [Etcher](https://etcher.io/) is available for Windows, Linux and macOS.
 
-## Download and prepare the disk image
-Open [dietpi.com](https://dietpi.com#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally. 
+## 1. Download and extract the DietPi disk image
+
+Open [dietpi.com](https://dietpi.com#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC or virtualized environment and click on the **Download**. The disk image will be downloaded locally. 
 
 _Example:_
 ![DietPi-RaspberryPi-image](assets/images/DietPi-RaspberryPi-image.jpg)
 
-### Unzip the disk image 
-
-Unzip the dowloaded file to a local folder. 
+**Unzip the dowloaded file to a local folder.** 
 
 It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://wakaba.c3.cx/s/apps/unarchiver.html). Both are free of charge and have been tested to unzip the image correctly.
 
-### Run Etcher and flash the image 
+Linux users will need to download and install `p7zip` (the terminal version of `7zip`).
 
-Once you have downloaded and installed [Etcher](https://etcher.io/), start the program. Also, make sure you have your SD card inserted into your computer.
-Locate and select the DietPi image.
+??? info "How do I extract DietPi image on Linux" 
+	On Debian and Ubuntu-based systems, open a terminal and type:
+	```
+	sudo apt install p7zip-full
+	```
+	
+	Once p7zip is installed, type the following at the terminal to extract the file:
+	```
+	7za e DietPi-Image.7z 
+	```	
+	
+	Replace **DietPi-Image.7z** with the correct name of your compressed DietPi file, example: **DietPi_RPi-ARMv6-Buster.7z**. This will extract the DietPi image file for you to use.
+
+## 2. Run Etcher and flash the image 
+
+Download and install [balenaEtcher](https://etcher.io/) - it flashes OS images to SD cards & USB drives, safely and easily on Windows, macOS, Linux.
+
+Start the program and make sure you have your SD card inserted into your computer. Locate and select the DietPi image.
 
 ![DietPi-Etcher-install-01](assets/images/DietPi-Etcher-install-01.jpg)
 
@@ -50,16 +65,16 @@ Once you have confirmed all the details are correct, proceed to flash the SD car
     3.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
     4.  Save and close the files
 
-Remove the SD card from the PC and insert it into the Raspberry Pi to prepare to boot for the first time. 
+Remove the SD card from the PC and insert it into your device, preparing to boot for the first time. 
 
-## First boot on DietPi
+## 3. First boot on DietPi
 
-Insert the SD card into your Raspberry Pi and start it. A few seconds later, you can connect following the instructions on the screen, or connecting via network (through SSH).
+Insert the SD card into your device (e.g. Raspberry Pi) and start it. A few seconds later, you can connect following the instructions on the screen, or connecting via network.
+
+Use:
 
 - login: **root**
 - password: **dietpi**
-
-### Headless install
 
 ??? info "Click here if you want to connect via network (running a _headless install_)" 
 
@@ -86,17 +101,46 @@ Insert the SD card into your Raspberry Pi and start it. A few seconds later, you
 	ssh pi@192.168.1.20
 	```
 
-**Initial settings**
+To further proceed you’ll need to accept the DietPi GPL license. Hit the enter key on your keyboard to do this. 
 
 ![dietpi-login01](assets/images/dietpi-login01.jpg)
 
+DietPi will then immediately begin to search for and install updated software packages, which will take some time to complete. 
+
+Once the packages have been updated, DietPi will ask you to confirm whether you would like to enable user analytics. 
+
+DietPi survey is **optional**, and not enabled by default. It is anonymous, secured and require a minimal data survey. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/) page. Checkout and see how DietPi is used ! 
+
 ![dietpi-data](assets/images/dietpi-data-policy.jpg)
+
+The default DietPi password is public, so you’ll be asked to change this at the next stage for both the `root` and `dietpi` user accounts. Select OK and hit enter, then provide your password (twice) to confirm. You can change this again later by typing `passwd` at the terminal.
 
 ![dietpi-password](assets/images/dietpi-password-01.jpg)
 
-## DietPi-Software
+## 4. Installing software with the DietPi-Software tool
 
-DietPi-Software will be automatically displayed on first login. It has lots of useful tools. 
-One of the first options to try is to select `Software Optimised` and then tos install.
+The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use. If you’re unsure what software to install, checkout [DietPi Optimised Software](../user-optimised-software) page for more details.
 
-![dietpi-software](assets/images/dietpi-software.jpg)
+
+!!! info "How do I run **DietPi-Software** and install **Optimised software** ?" 
+
+	This tool will automatically launch when you first boot your Raspberry Pi using DietPi after the initial configuration process has completed. You can also launch it manually by typing `dietpi-software` in the terminal.
+
+	- To begin, select **Software Optimized** in the main menu list and hit Enter.    
+	- Scroll through the list of available software - for more details check [DietPi Optimised Software](../user-optimised_software)
+	- To install software on your DietPi, select it in the list and press the **space bar** to add it to the installation list. If you change your mind, hit space again to remove it.
+	- Once you’ve selected the software you wish to install, press the tab key on your keyboard to switch to the confirmation options at the bottom. Select **OK**, then hit enter on your keyboard to confirm.
+	- To begin installing your software, select **Install** from the main menu list, then hit the Enter key. DietPi will ask you to confirm your choice(s). Select OK, then hit enter to begin the installation.
+
+	The software you selected will begin to install at this point. Once the process is completed, you may be asked to restart your device. Press OK to confirm. 
+	
+![DietPi Software](assets/images/dietpi-software.jpg)
+
+You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
+
+If you want to make further changes to your DietPi configuration, you can run `dietpi-launcher` at the terminal to view all the available DietPi tools, including **DietPi-Update** to update your device and **DietPi-Backup** to back up your device. More on these tools please review [DietPi Tools](../user-guide_tools) section.
+
+## Install by community (YouTube)
+A video tutorial on _How to install and initially configure DietPi_ by Roberto Jorge. 
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Me0PfuNLl-Q?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
