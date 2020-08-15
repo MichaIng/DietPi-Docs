@@ -75,7 +75,6 @@ nav:
       - 'Overview' : index.md
       - 'Installation' : 'user-guide_install.md'
       - 'Getting started' : 'user-guide_overview.md'
-      - 'DietPi Tools' : 'user-guide_tools.md'
       - 'Optimised software' :
           - 'DietPi Optimised software Overview' : 'user-optimised-software.md'
           - 'Desktops & Utilities' : 'dietpi-software-desktop.md'
@@ -83,6 +82,7 @@ nav:
           - 'Cloud & Backups' : 'dietpi-software-cloud.md'
       - 'Supported SBC' : 'hardware-supported_sbc.md'
       - 'Community Tutorials' : 'https://dietpi.com/phpbb/viewforum.php?f=15'
+      - 'Advanced configuration & DietPi Tools' : 'user-guide_tools.md'
       - 'Troubleshooting' : 'https://dietpi.com/phpbb/viewforum.php?f=11'
       - 'DietPi Forum' : 'https://dietpi.com/phpbb/'
       - 'Release notes' : 'release-notes-updates.md'
