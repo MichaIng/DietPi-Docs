@@ -1,3 +1,8 @@
+---
+description: DietPi supported SBCs (Raspberry Pi 4/3/2/1/Zero, Odroid, PINE 64 etc.) - Native PC & Virtualized environments (VirtualBox, Hyper-V, VMWare)
+title: DietPi Supported SBCs
+---
+
 # Supported Single Board Computers (SBCs)
 
 ## Raspberry Pi
