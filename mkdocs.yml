@@ -3,26 +3,23 @@ site_url: https://dietpi.com/docs/
 site_description: 'Official documentation pages for DietPi OS'
 site_author: 'DietPi.com Team'
 copyright: '&copy; 2020, DietPi.com'
-
 repo_name: DietPi-Docs
 repo_url: https://github.com/MichaIng/DietPi-Docs
 docs_dir: docs
 
 theme:
-  name: 'material'
+  language: en
+  favicon: https://dietpi.com/favicon.ico
+  #logo: assets/images/logo.png
+  name: material
   custom_dir: docs/overrides
-  
+  #features:
+  #  - tabs 
   # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
 
-  language: en
-  #features:
-  #  - tabs
-  #logo: 'assets/images/logo.png'
-  favicon: https://dietpi.com/favicon.ico
-    
-markdown_extensions:  
+markdown_extensions:
   - attr_list
   - admonition
   - codehilite
@@ -53,38 +50,38 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-# Plugins
 plugins:
   - search
   - minify:
       minify_html: true
 
-# Customization
 extra:
   social:
     - icon: fontawesome/solid/home
       link: https://dietpi.com/
+    - icon: fontawesome/brands/github
+      link: https://github.com/MichaIng/DietPi
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/DietPi_
 
 extra_css:
-   - "css/custom.css"
+   - css/custom.css
 
 nav:
   - 'Home' : 
       - 'Overview' : index.md
-      - 'Installation' : 'user-guide_install.md'
-      - 'Getting started' : 'user-guide_overview.md'
+      - 'Installation' : user-guide_install.md
+      - 'Getting started' : user-guide_overview.md
       - 'Optimised software' :
-          - 'DietPi Optimised software Overview' : 'user-optimised-software.md'
-          - 'Desktops & Utilities' : 'dietpi-software-desktop.md'
-          - 'Remote Desktop Access' : 'dietpi-software-remote-desktop.md'
-          - 'Cloud & Backups' : 'dietpi-software-cloud.md'
-      - 'Supported SBC' : 'hardware-supported_sbc.md'
-      - 'Community Tutorials' : 'https://dietpi.com/phpbb/viewforum.php?f=15'
-      - 'Advanced configuration & DietPi Tools' : 'user-guide_tools.md'
-      - 'Troubleshooting' : 'https://dietpi.com/phpbb/viewforum.php?f=11'
-      - 'DietPi Forum' : 'https://dietpi.com/phpbb/'
-      - 'Release notes' : 'release-notes-updates.md'
-      - 'Request features' : 'https://feathub.com/MichaIng/DietPi'
-      - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
+          - 'DietPi Optimised software Overview' : user-optimised-software.md
+          - 'Desktops & Utilities' : dietpi-software-desktop.md
+          - 'Remote Desktop Access' : dietpi-software-remote-desktop.md
+          - 'Cloud & Backups' : dietpi-software-cloud.md
+      - 'Supported SBC' : hardware-supported_sbc.md
+      - 'Community Tutorials' : https://dietpi.com/phpbb/viewforum.php?f=15
+      - 'Advanced configuration & DietPi Tools' : user-guide_tools.md
+      - 'Troubleshooting' : https://dietpi.com/phpbb/viewforum.php?f=11
+      - 'DietPi Forum' : https://dietpi.com/phpbb/
+      - 'Release notes' : release-notes-updates.md
+      - 'Request features' : https://feathub.com/MichaIng/DietPi
+      - 'Report issues' : https://github.com/MichaIng/DietPi/issues
