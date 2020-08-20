@@ -12,7 +12,7 @@ docs_dir: docs
 theme:
   name: 'material'
   custom_dir: docs/overrides
-  
+
   # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
@@ -22,8 +22,8 @@ theme:
    - tabs
   #logo: 'assets/images/logo.png'
   favicon: https://dietpi.com/favicon.ico
-    
-markdown_extensions:  
+
+markdown_extensions:
   - attr_list
   - admonition
   - codehilite
@@ -72,12 +72,12 @@ extra:
       link: https://dietpi.com/
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/DietPi_
-      
+
 extra_css:
    - "css/custom.css"
 
 nav:
-  - 'HOME' : 
+  - 'HOME' :
       - 'Overview' : index.md
       - 'Installation' : 'user-guide_install.md'
       - 'Getting started' : 'user-guide_overview.md'
@@ -97,5 +97,5 @@ nav:
       - 'BitTorrent / Download Tools' : 'dietpi-software-bittorrent.md'
       - 'Gaming / Emulation' : 'dietpi-software-gaming.md'
       - 'Camera / Surveillance' : 'dietpi-software-camera.md'
-  - 'COMMUNITY' : 
+  - 'COMMUNITY' :
       - 'DietPi Forums & Community' : 'https://dietpi.com/phpbb/viewforum.php?f=5'
