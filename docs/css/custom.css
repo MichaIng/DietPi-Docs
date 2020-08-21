@@ -35,76 +35,12 @@
     margin-left: 0;
 }
 
-/* Language Drop Down */
-
-/*.md-header-nav__lang {
-    display: block;
-    width: 2rem;
-    margin-left: .5rem;
-    margin-right: .2rem;
-    padding-right: .6rem;
-}
-
-.md-lang-drop {
-    line-height: 2.6rem;
-    padding: 0 0.5rem;
-    font-size: 1.2rem;
-    width: 1px
-}
-
-.md-lang-dropbtn {
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.md-lang-dropbtn:hover, .md-lang-dropbtn:focus {
-    color: #f8991d;
-}
-
-.md-dropdown-content {
-    display: none;
-    width: 100%;
-    background-color: #f1f1f1;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    overflow: auto;
-}
-
-.md-dropdown-content a {
-    color: black;
-    padding: 0px 10px;
-    text-decoration: none;
-    display: block;
-    line-height: 3rem;
-    font-weight: bold;
-    font-size: 1.3rem;
-  }
-
-.md-dropdown-content a:hover {
-    color: #f8991d;
-}
-
-.show {
-    display:block;
-}*/
-
 /* Second Navigation */
 
-/*.md-tabs {
+.md-tabs {
     background-image: url(../assets/images/second-nav-blue.png);
     background-color: #1f4e79 !important;
 }
-
-.md-tabs__link {
-    font-weight: bold !important;
-    font-size: .8rem !important;
-}
-
-.md-tabs__item {
-    margin-right: 15px;
-}*/
 
 /* Tables */
 
