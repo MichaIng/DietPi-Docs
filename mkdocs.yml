@@ -3,14 +3,14 @@ site_url: https://dietpi.com/docs/
 site_description: 'Official documentation pages for DietPi OS'
 site_author: 'DietPi.com Team'
 copyright: 'Copyright © 2020 DietPi.com | Documentation Distributed under <a target="_blank"
-            href="http://creativecommons.org/licenses/by-sa/4.0/">CC-BY-4.0</a>'
+            href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>'
 
 repo_name: DietPi-Docs
 repo_url: https://github.com/MichaIng/DietPi-Docs
 docs_dir: docs
 
 theme:
-  name: 'material'
+  name: material
   custom_dir: docs/overrides
 
   # Don't include MkDocs' JavaScript
@@ -20,7 +20,7 @@ theme:
   language: en
   features:
    - tabs
-  #logo: 'assets/images/logo.png'
+  logo: assets/images/logo.png
   favicon: https://dietpi.com/favicon.ico
 
 markdown_extensions:
@@ -57,13 +57,16 @@ markdown_extensions:
   - extra
   - pymdownx.magiclink
 
-# Plugins
 plugins:
   - search
   - minify:
       minify_html: true
+      htmlmin_opts:
+          # https://htmlmin.readthedocs.io/en/latest/reference.html#main-functions
+          remove_comments: true
+          remove_empty_space: true
+          reduce_boolean_attributes: true
 
-# Customization
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -74,7 +77,7 @@ extra:
       link: https://twitter.com/DietPi_
 
 extra_css:
-   - "css/custom.css"
+   - css/custom.css
 
 nav:
   - 'HOME' :
@@ -87,7 +90,7 @@ nav:
       - 'Advanced configuration & DietPi Tools' : 'user-guide_tools.md'
       - 'Troubleshooting' : 'https://dietpi.com/phpbb/viewforum.php?f=11'
       - 'Release notes' : 'release-notes-updates.md'
-      - 'Request features' : 'https://feathub.com/MichaIng/DietPi'
+      - 'Request features' : 'https://github.com/MichaIng/DietPi/issues/new/choose'
       - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
   - 'OPTIMISED SOFTWARE' :
       - 'Desktops & Utilities' : 'dietpi-software-desktop.md'
