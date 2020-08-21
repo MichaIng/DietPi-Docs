@@ -20,7 +20,7 @@ theme:
   language: en
   features:
    - tabs
-  logo: assets/images/logo.png
+  #logo: assets/images/logo.png
   favicon: https://dietpi.com/favicon.ico
 
 markdown_extensions:
