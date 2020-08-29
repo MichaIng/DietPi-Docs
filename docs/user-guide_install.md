@@ -80,7 +80,7 @@ Use:
 
     **WARNING**
 
-    On first login DietPi will immediately  install updated software packages, if the network connection is not stable it is recommended to perform this step locally instead.
+    On first login DietPi will immediately upgrade system and packages. If your network connection is not stable it is recommended to perform this step locally instead.
 
     **IP Scanning tool**
 
