@@ -22,7 +22,7 @@ Open [dietpi.com](https://dietpi.com#download) and select “Download”. Variou
 _Example:_
 ![DietPi-RaspberryPi-image](assets/images/DietPi-RaspberryPi-image.jpg)
 
-**Unzip the dowloaded file to a local folder.** 
+**Unzip the downloaded file to a local folder.** 
 
 It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://wakaba.c3.cx/s/apps/unarchiver.html). Both are free of charge and have been tested to unzip the image correctly.
 
@@ -31,12 +31,12 @@ Linux users will need to download and install `p7zip` (the terminal version of `
 ??? info "How do I extract DietPi image on Linux" 
 	On Debian and Ubuntu-based systems, open a terminal and type:
 	```
-	sudo apt install p7zip-full
+	sudo apt install p7zip
 	```
 	
 	Once p7zip is installed, type the following at the terminal to extract the file:
 	```
-	7za e DietPi-Image.7z 
+	7zr e DietPi-Image.7z 
 	```	
 	
 	Replace **DietPi-Image.7z** with the correct name of your compressed DietPi file, example: **DietPi_RPi-ARMv6-Buster.7z**. This will extract the DietPi image file for you to use.
