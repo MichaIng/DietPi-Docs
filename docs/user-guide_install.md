@@ -78,6 +78,10 @@ Use:
 
 ??? info "Click here if you want to connect via network (running a _headless install_)" 
 
+    **WARNING**
+
+    On first login DietPi will immediately  install updated software packages, if the network connection is not stable it is recommended to perform this step locally instead.
+
     **IP Scanning tool**
 
     For the following steps we require an IP Scanning tool to determine the IP address of the Raspberry Pi. 
