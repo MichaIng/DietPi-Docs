@@ -13,9 +13,9 @@ The documentation uses extended Markdown, as implemented by [MkDocs](https://www
     - `mkdocs build`    # Builds a static site in `site/` directory
 
 ## License
-<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text"><a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/docs/">DietPi-Docs</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/">DietPi</a> is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0.
+<a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/docs/">DietPi-Docs</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/">DietPi</a> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License - <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
 
-<img style="height:11px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.png"><img style="height:11px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.png"><img style="height:11px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.png"></a></p>
+<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
 ## Contributing
 
@@ -29,7 +29,8 @@ We are always looking for talented people wishing to contribute in any way to Di
 
 - Send an email: micha@dietpi.com
 - Join DietPi Forums: https://dietpi.com/phpbb/
-- GitHub: 
-    - DietPi: https://github.com/MichaIng/DietPi
-    - Documentation: https://github.com/MichaIng/DietPi-Docs
-    - Website: https://github.com/MichaIng/DietPi-Website
+
+On GitHub: 
+- DietPi: https://github.com/MichaIng/DietPi
+- Documentation: https://github.com/MichaIng/DietPi-Docs
+- Website: https://github.com/MichaIng/DietPi-Website
