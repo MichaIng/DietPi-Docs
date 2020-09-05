@@ -28,7 +28,7 @@ There are many ways in which you can participate in the project, for example:
 ## Feedback
 
 * Ask a question on [DietPi Forum](https://dietpi.com/phpbb/)
-* [Request a new feature or upvote popular feature requests]()
+* [Request a new feature or upvote popular feature requests](https://feathub.com/MichaIng/DietPi)
 * [File an issue](https://github.com/MichaIng/DietPi/issues)
 * Follow [@DietPi_](https://twitter.com/DietPi_) and let us know what you think!
 
