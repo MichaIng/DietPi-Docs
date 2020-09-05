@@ -25,12 +25,15 @@ There are many ways in which you can participate in the project, for example:
 * [Submit problems and things to investigate](https://github.com/MichaIng/DietPi/issues), and help us verify as they are checked in.
 * Improve / Add more features to [DietPi website](https://dietpi.com/)?
 
-We are always looking for talented people wishing to contribute in any way to DietPi development.
+## Feedback
 
-- Send an email: micha@dietpi.com
-- Join DietPi Forums: https://dietpi.com/phpbb/
+* Ask a question on [DietPi Forum](https://dietpi.com/phpbb/)
+* [Request a new feature or upvote popular feature requests]()
+* [File an issue](https://github.com/MichaIng/DietPi/issues)
+* Follow [@DietPi_](https://twitter.com/DietPi_) and let us know what you think!
 
-On GitHub: 
+### GitHub Projects
+
 - DietPi: https://github.com/MichaIng/DietPi
 - Documentation: https://github.com/MichaIng/DietPi-Docs
 - Website: https://github.com/MichaIng/DietPi-Website
