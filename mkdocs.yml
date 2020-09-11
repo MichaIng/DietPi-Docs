@@ -102,7 +102,6 @@ nav:
       - 'BitTorrent / Download Tools' : 'dietpi-software-bittorrent.md'
       - 'Gaming / Emulation' : 'dietpi-software-gaming.md'
       - 'Camera / Surveillance' : 'dietpi-software-camera.md'
-      - 'Social / Search' : 'dietpi-software-social.md'
 
   - 'COMMUNITY' :
       - 'DietPi Forums & Community' : 'https://dietpi.com/phpbb/viewforum.php?f=5'

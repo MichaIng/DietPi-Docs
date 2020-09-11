@@ -372,7 +372,7 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO3</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO3</strong> <i>new</i></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiNEO3-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
@@ -390,7 +390,7 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K2</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K2</strong> <i>new</i></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiK2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
@@ -444,7 +444,7 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi R2S</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi R2S</strong> <i>new</i></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiR2S-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
