@@ -334,6 +334,10 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
 **FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance. 
 For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
 
+![NanoPi K2](assets/images/dietpi-nanopi-k2.jpg)
+
+**NanoPi K2** supports DVFS and it can smooth play high-definition video streams, and it is very well suited for applications such as advertisement machines, TV boxes, home entertainment appliances or multimedia devices.
+
 <div class="md-typeset__table">
     <table>
         <thead>
@@ -368,6 +372,12 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
                 </td>
             </tr>
             <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO3</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiNEO3-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
                 <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO4</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
@@ -377,6 +387,12 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
                 <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K1 Plus</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiK1Plus-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K2</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiK2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
@@ -425,6 +441,12 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
                 <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi Fire3</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi R2S</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiR2S-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
