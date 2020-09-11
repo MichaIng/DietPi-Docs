@@ -56,6 +56,9 @@ markdown_extensions:
   - smarty
   - extra
   - pymdownx.magiclink
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg  
 
 plugins:
   - search
@@ -100,5 +103,7 @@ nav:
       - 'BitTorrent / Download Tools' : 'dietpi-software-bittorrent.md'
       - 'Gaming / Emulation' : 'dietpi-software-gaming.md'
       - 'Camera / Surveillance' : 'dietpi-software-camera.md'
+      - 'Social / Search' : 'dietpi-software-social.md'
+
   - 'COMMUNITY' :
       - 'DietPi Forums & Community' : 'https://dietpi.com/phpbb/viewforum.php?f=5'
