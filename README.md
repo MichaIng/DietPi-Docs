@@ -5,6 +5,8 @@ Official Website: [dietpi.com](https://dietpi.com/)
 The source for DietPi documentation [dietpi.com/docs](https://dietpi.com/docs/) is in this directory.
 The documentation uses extended Markdown, as implemented by [MkDocs](https://www.mkdocs.org/).
 
+[![CodeFactor](https://www.codefactor.io/repository/github/michaing/dietpi-docs/badge)](https://www.codefactor.io/repository/github/michaing/dietpi-docs)
+
 ## Building the documentation
 
 - Install dependencies: `pip install -r docs/requirements.txt`
