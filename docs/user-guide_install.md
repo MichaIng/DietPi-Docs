@@ -69,9 +69,9 @@ Remove the SD card from the PC and insert it into your device, preparing to boot
 
 ## 3. First boot on DietPi
 
-Insert the SD card into your device (e.g. Raspberry Pi) and start it. A few seconds later, you can connect following the instructions on the screen, or connecting via network.
+Insert the SD card into your device (e.g. Raspberry Pi) and start it. A few seconds later, you can continue following the instructions on the screen, or connect via network.
 
-Use:
+Initial credentials:
 
 - login: **root**
 - password: **dietpi**
@@ -113,7 +113,8 @@ DietPi will then immediately begin to search for and install updated software pa
 
 Once the packages have been updated, DietPi will ask you to confirm whether you would like to enable user analytics. 
 
-DietPi Survey is **optional**, and not enabled by default. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/) page. Checkout and see how DietPi is used ! 
+!!! info "DietPi Survey"
+	DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/) page. Checkout and see how DietPi is used ! 
 
 ![dietpi-data](assets/images/dietpi-data-policy.jpg)
 

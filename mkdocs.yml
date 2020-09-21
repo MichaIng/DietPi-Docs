@@ -85,6 +85,8 @@ nav:
   - 'HOME' :
       - 'Overview' : index.md
       - 'Installation' : 'user-guide_install.md'
+      - ' > Advanced installation' : 
+          - 'Install DietPi on native PC' : 'user-guide_install_uefi.md'
       - 'Getting started' : 'user-guide_overview.md'
       - 'Optimised software list' : 'user-optimised-software.md'
       - 'Supported SBC' : 'hardware-supported_sbc.md'
