@@ -38,17 +38,21 @@ Download **[Rufus](https://rufus.ie/)** and run the application. There is a port
 
 ## 2. Flash image to USB drive
 
-Start the program and make sure you have your USB drive inserted into your computer. Locate and select the DietPi image.
+Start **[Rufus](https://rufus.ie/)** application and make sure you have your USB drive inserted into your computer. Follow the next steps:
+
+- (1) Select the USB device
+- (2) Select the downloaded **DietPi** image.
+- (3) Select GPT as partition scheme
+- (4) Select UEFI as target system
+- (5) Click on _Start_ button
+	
+	_Note: Ensure the selected USB card is the correct one ! The app will wipe the drive, so if you choose the wrong one, you may risk losing data._
 
 ![dietpi-rufus-uefi](assets/images/dietpi-rufus-uefi.jpg)
 
-Next, ensure that the USB card selected is the correct one. It will wipe the drive clean, so if you choose the wrong one, you may risk losing data.
+## 3. Boot target PC and install the image on the local disk
 
-Once you have confirmed all the details are correct, proceed to flash the USB drive. 
-
-## 3. Boot target PC and install image on the harddisk
-
-Boot **target PC** from USB image and install image on the harddisk. Put the USB stick into the target PC and boot from this USB stick (possibly it will be necessary to change BIOS settings, this is not described here).
+Boot **target PC** from USB image and install image on the local disk / harddisk. Put the USB stick into the target PC and boot from this USB stick _Note: it may be necessary to change BIOS settings to enabled the UEFI boot. This action is not described here._
 
 During the initial boot, the following dialog may appear to boot from the USB stick:
 
