@@ -11,14 +11,24 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DietPi Documentation">
   <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ config.site_description }}">
-  <meta property="og:url" content="{{ page.canonical_url }}">
+  {% if page and page.meta and page.meta.description %}
+    <meta property="og:description" content="{{ page.meta.description }}">
+  {% elif config.site_description %}
+    <meta property="og:description" content="{{ config.site_description }}">
+  {% endif %}
+  {% if page.canonical_url %}
+    <meta property="og:url" content="{{ page.canonical_url }}">
+  {% endif %}
   <meta property="og:image" content="https://dietpi.com/images/dietpi-logo_720x720.png">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@DietPi_">
   <meta name="twitter:creator" content="@DietPi_">
   <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ config.site_description }}">
+  {% if page and page.meta and page.meta.description %}
+    <meta name="twitter:description" content="{{ page.meta.description }}">
+  {% elif config.site_description %}
+    <meta name="twitter:description" content="{{ config.site_description }}">
+  {% endif %}
   <meta name="twitter:image" content="https://dietpi.com/images/dietpi-logo_720x720.png">
 {% endblock %}
