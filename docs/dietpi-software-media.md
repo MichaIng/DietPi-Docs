@@ -2,6 +2,10 @@
 
 ## Overview
 
+!!! warning "Documentation in progress..." 
+
+    The links redirect to the old documentation available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
+
 - [Kodi - Media Centre / Player](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5#p43)
 - [ympd - Lightweight web Interface audio player for MPD](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5#p50)
 - [myMPD - Lightweight web Interface audio player for MPD](https://dietpi.com/phpbb/viewtopic.php?p=13978#p13978)
@@ -29,6 +33,5 @@
 - [GMediaRender - Resource efficient UPnP/DLNA renderer](https://dietpi.com/phpbb/viewtopic.php?p=9012#p9012)
 - [Ubooquity - Free home server for your comics and ebooks library](https://dietpi.com/phpbb/viewtopic.php?p=12969#p12969)
 - [Komga - Free and open source comics/mangas media server with web UI](https://dietpi.com/phpbb/viewtopic.php?p=26858#p26858)
-
 
 [Return to the **Optimised Software list**](../user-optimised-software)

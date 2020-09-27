@@ -1,5 +1,9 @@
 # Desktop environments & utilities
 
+!!! warning "Documentation in progress..." 
+
+    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5)). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
+  
 ## Desktops
 - [LXDE - Highly optimized ultra lightweight desktop](#lxde-ultra-lightweight-desktop)
 - [LXQt - Slick and optimized lightweight desktop](#lxqt-optimized-lightweight-desktop)
@@ -30,10 +34,6 @@
     ![DietPi Software](assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
-
-!!! warning "Documentation in progress..." 
-    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
-
 
 ## LXDE - ultra lightweight desktop
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.

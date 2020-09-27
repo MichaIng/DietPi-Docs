@@ -182,9 +182,19 @@
 - [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
 - [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
 
+### Webservers
+
+- [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
+- [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
+- [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
+
 ## DNS Servers
 
 - [Pi-hole - A DNS/Web server that will block ads for any device on your network.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p174)  
+
+### Dynamic DNS Clients
+
+- [No-IP - Website URL Address](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p58)  
 
 ## File Servers
 
@@ -200,13 +210,9 @@
 - [PiVPN - OpenVPN server installer & management tool](https://dietpi.com/phpbb/viewtopic.php?p=3469#p3469)  
 - [WireGuard - An extremely simple yet fast and modern VPN](https://dietpi.com/phpbb/viewtopic.php?p=16308#p16308)  
 
-## Network Load Balancing
+## Network Load Balancer
 
 - [HAProxy - High performance TCP/HTTP load balancer.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p221)  
-
-## Dynamic DNS Clients
-
-- [No-IP - Website URL Address](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p58)  
 
 ## Printing
 
@@ -217,11 +223,6 @@
 
 - [Folding@Home - Use processing power to assist with disease research](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13704)  
 
-## File Server Choices
-
-- [ProFTP - Simple, efficient, lightweight file server.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p55)  
-- [Samba - Feature rich file server.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p56)  
-
 ## SSH Server Choices
 
 - [Dropbear - Lightweight SSH Server](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p62)  
@@ -230,10 +231,4 @@
 ## Log System Choices
 
 - [DietPi-RAMlog - Lightweight RAM logging.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p68)  
-- [Full - Full logging system with Rsyslog and Logrotate.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p68)  
-
-## Webserver Preference System
-
-- [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
-- [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
-- [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
+- [Full - Full logging system with Rsyslog and Logrotate.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p68)
