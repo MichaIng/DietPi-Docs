@@ -115,10 +115,10 @@ nav:
       - 'File Servers' : 'dietpi-software-file-servers.md'
       - 'VPN' : 'dietpi-software-vpn.md'
       - 'Network Load Balancer' : 'dietpi-software-load-balancer.md'
-      - 'Printing servers' : 'dietpi-software-printing.md'      
-      - 'Computational science' : 'dietpi-software-computational-science.md'      
-      - 'SSH Servers' : 'dietpi-software-ssh.md'      
-      - 'Log System Servers' : 'dietpi-software-log-system.md'      
+      - 'Printing servers' : 'dietpi-software-printing.md'
+      - 'Computational science' : 'dietpi-software-computational-science.md'
+      - 'SSH Servers' : 'dietpi-software-ssh.md'
+      - 'Log System Servers' : 'dietpi-software-log-system.md'
 
   - 'COMMUNITY' :
       - 'DietPi Forums & Community' : 'https://dietpi.com/phpbb/viewforum.php?f=5'
