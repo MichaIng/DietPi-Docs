@@ -2,6 +2,10 @@
 
 ## Overview
 
+!!! warning "Documentation in progress..." 
+
+    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5)). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
+  
 - [ownCloud - Your own personal cloud based backup/data storage system](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p47)  
 - [**Nextcloud - Self-hosted productivity platform**](#nextcloud-self-hosted-productivity-platform)  
 - [Nextcloud Talk - Video calls via Nextcloud, including TURN server](https://dietpi.com/phpbb/viewtopic.php?p=15227#p15227)  
@@ -31,11 +35,6 @@
     ![DietPi Software](assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
-
-!!! warning "Documentation in progress..." 
-
-    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
-
 
 ## Nextcloud - Self-hosted productivity platform
 

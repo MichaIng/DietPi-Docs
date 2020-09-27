@@ -1,13 +1,19 @@
 # Remote Desktop Access
 
 ## Overview
+
+!!! warning "Documentation in progress..." 
+
+    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5)). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:  
+
 - [**TigerVNC Server - Desktop for remote connection**](#29-tigervnc-server-desktop-for-remote-connection)
 - [RealVNC Server - Desktop for remote connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4149)
 - [XRDP - Remote desktop server for Windows Remote Desktop Client](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2074)
 - [NoMachine - Feature rich remote desktop connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2071)
 
-!!! warning "Documentation in progress..." 
-    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
+## Remote Access:
+- [Remot3.it - (Weaved) Access your device over the internet.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p188)  
+- [VirtualHere - Share physically attached USB devices from your SBC, over the network.](https://dietpi.com/phpbb/viewtopic.php?p=6709#p6709)  
 
 Return to the full [**Optimised Software**](../user-optimised-software) list.
 
