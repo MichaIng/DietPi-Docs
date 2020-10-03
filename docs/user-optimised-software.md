@@ -80,6 +80,7 @@
 - [Medusa - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3327)
 - [Sonarr - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p7455)
 - [Radarr - Automatically download Movies](https://dietpi.com/phpbb/viewtopic.php?p=7457#p7457)
+- **[Bazarr - Automatically download Subtitles for Sonarr/Radarr](../dietpi-software-bittorrent/#bazarr)**
 - [Lidarr - Automatically download Music](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13580)
 - [CouchPotato - Automatically download movies.](https://dietpi.com/phpbb/viewtopic.php?p=7212#p7212)
 - [Jackett - API Support for your favourite torrent trackers.](https://dietpi.com/phpbb/viewtopic.php?p=7503#p7503)
