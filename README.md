@@ -9,10 +9,10 @@ The documentation uses extended Markdown, as implemented by [MkDocs](https://www
 
 ## Building the documentation
 
-- Install dependencies: `pip install -r docs/requirements.txt`
-- From the root directory, `cd` into the `docs/` folder and run:
-    - `mkdocs serve`    # Starts a local webserver:  [localhost:8000](http://localhost:8000)
-    - `mkdocs build`    # Builds a static site in `site/` directory
+- Install dependencies: `pip3 install -r requirements.txt`
+- From the root directory, run: `mkdocs serve`
+
+It builds the static `site` and starts a local webserver: [http://localhost:8000](http://localhost:8000). If you have troubles accessing the MkDocs website, you could also listen on a specific IP address or all IP addresses, e.g. `mkdocs serve -a 0.0.0.0:8000`.    
 
 ## License
 <a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/docs/">DietPi-Docs</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/">DietPi</a> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License - <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
