@@ -19,10 +19,9 @@ One of the options of a virtual machine is [__Oracle VirtualBox__](https://www.o
 ## 2. Prerequisites
 
 As a starting point you need a **PC with a running VirtualBox software** on which the DietPi system will run.  
-On this PC a free harddisk space of about
-- 1.2 GB for a minimal running system
-- 5-10 GB for a typical running system with X11
-
+On this PC a free harddisk space of about  
+- 1.2 GB for a minimal running system  
+- 5-10 GB for a typical running system with X11  
 is needed. A recommended size is at least a free space of 10 GB.
 
 
@@ -33,17 +32,18 @@ unzip the downloaded file to a local folder. It is a _7z_ archive format so you 
 
 ![DietPi-download-image](assets/images/dietpi-VirtualBox-Download.png)
 
-The zip file contains a couple of files, the important one is the .ova file which has to be imported in VirtualBox.
+The zip file contains a couple of files, the important one is the .ova file which has to be imported into VirtualBox.
+
 ![Dietpi-zipfile-content](assets/images/dietpi-VirtualBox-7zip-file.png)
 
 
 ## 4. Import of the .ova file in VirtualBox
 
-As next, the VirtualBox virtual machine has to be setup by importing the .ova file
+As next, the VirtualBox virtual machine has to be setup by importing the .ova file (via \File\Import Appliance):
 
 ![DietPi-import-VirtualBoxMachine1](assets/images/dietpi-VirtualBox-import1.png)
 
-and choose DietPi_VirtualBox-x86_64-Buster.ova.
+In the following dialog the user hast to choose DietPi_VirtualBox-x86_64-Buster.ova as the file which shall be imported.
 
 ![DietPi-import-VirtualBoxMachine2](assets/images/dietpi-VirtualBox-import2.png)
 
@@ -54,9 +54,9 @@ After the importing has finished the DietPi VirtualBox virtual machine is presen
 ![DietPi-VirtualBoxMachine1](assets/images/dietpi-VirtualBox-VB-Machine.png)
 
 ## 5. First boot of the new VirtualBox image
-Press the start button (green arrow, today) to 'boot' your system based on the DietPi Image.
-If you do not have a wired LAN connection you have to change the network settings matching to your environment (files ___\boot\dietpi.txt___ and ___boot\dietpi-wifi.txt___).
+Press the start button (green arrow) to 'boot up' your system based on the DietPi image.
+If you do not have a wired LAN connection you have to change the network settings matching to your environment (files ___\boot\dietpi.txt___ and ___\boot\dietpi-wifi.txt___).
 
 Then go on with
 	https://dietpi.com/docs/user-guide_install/#3-first-boot-on-dietpi
-and follow the instructions there.
+and follow the instructions there for the first startup of the virtual machine.
