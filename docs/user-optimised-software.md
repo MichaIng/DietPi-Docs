@@ -26,7 +26,7 @@
 - [**LXDE - Highly optimized ultra lightweight desktop**](../dietpi-software-desktop/#lxde-ultra-lightweight-desktop)
 - [**LXQt - Slick and optimized lightweight desktop**](../dietpi-software-desktop/#lxqt-optimized-lightweight-desktop)
 - [**MATE - Popular Gnome 2 desktop**](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
-- [**Xfce - Lightweight desktop**](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
+- [**Xfce - Lightweight desktop**](../dietpi-software-desktop/#xfce-lightweight-desktop)
 - [**GnuStep - Alternative/unique desktop**](../dietpi-software-desktop/#gnustep-alternativeunique-desktop)
 
 ### [Desktop Utilities](../dietpi-software-desktop/#desktop-utilities)

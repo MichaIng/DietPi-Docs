@@ -87,6 +87,7 @@ nav:
       - 'Installation' : 'user-guide_install.md'
       - ' > Advanced installation' :
           - 'Install DietPi on native PC' : 'user-guide_install_uefi.md'
+          - 'Install DietPi in Oracle VirtualBox' : 'user-guide_install_VirtualBox.md'
       - 'Getting started' : 'user-guide_overview.md'
       - 'Optimised software list' : 'user-optimised-software.md'
       - 'Supported SBC' : 'hardware-supported_sbc.md'
