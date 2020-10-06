@@ -65,6 +65,13 @@ Actually it is only referenced at the end of the [*Supported SBC* section](https
 1. Q: Rename *hardware-supported_sbc.md* to *user-guide_supported_sbc.md*
 
 
+### 3.5 Images
+Add images for
+- Firefly
+- Sparky SBC (Allo)
+
+The images are available on Dietpi.com\Download.
+
 
 ## 4. Desktops
 Desktop basics (https://dietpi.com/docs/dietpi-software-desktop/):
