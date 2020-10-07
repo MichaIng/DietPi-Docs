@@ -8,7 +8,7 @@ title: DietPi Supported SBCs
 ## Raspberry Pi
 The Raspberry Pi has sold more than 31 million units since it launched in 2012. Any Raspberry Pi can serve as a secondary computer for email and web surfing. The real fun starts when you use your Pi for projects, which can range from robots to retro arcade machines to home media servers, security cameras and so on.
 
-You can install DietPi by following the step by step [Starting guide](../user-guide_install/). 
+You can install DietPi by following the step by step [Starting guide](../user-guide_install/).
 
 <div class="md-typeset__table">
     <table>
@@ -104,7 +104,7 @@ This is where PINE64 journey began. The PINE A64 is their first Single Board Com
 The ROCKPro64 is the most powerful single board computer offered by PINE64.
 ![DietPi ROCKPro64](assets/images/dietpi-rockpro64.jpg)
 
-It features a Rockchip RK3399 hexa-core SOC and up-to 4 GiB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C  with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UARTs and GPIOs. 
+It features a Rockchip RK3399 hexa-core SOC and up-to 4 GiB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C  with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UARTs and GPIOs.
 
 The board is backwards compatible with many of the existing PINE64 peripherals, including the Wifi/BT module, camera module and LCD panel but an array of new peripherals specific for the board is also available. All this in the exact same model “A” dimension as the original PINE A64.
 
@@ -156,7 +156,7 @@ The ROCKPro64 4GB board is designated as LTS (long Term Supply) which means that
 
 ## ROCK Pi
 
-**Maker Friendly, IoT connectivity** enabled. ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications. 
+**Maker Friendly, IoT connectivity** enabled. ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
 For more details visit [ROCK Pi](http://rockpi.org/) website.
 
 One of the supported boards is ROCK Pi 4.
@@ -238,7 +238,7 @@ Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that
 
 **Maker-Friendly, with IoT Connectivity**
 
-Tinker Board features standard maker connectivity options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. 
+Tinker Board features standard maker connectivity options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
 
 ![DietPi Tinker Board](assets/images/dietpi-tinkerboard.jpg)
 
@@ -258,7 +258,7 @@ Careful consideration went into the design and development of the Tinker Board t
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Asus Tinker Box</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>Asus Tinker Board</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_ASUSTB-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
@@ -331,7 +331,7 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
 
 
 ## NanoPi Series (FriendlyARM)
-**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance. 
+**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
 For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
 
 ![NanoPi K2](assets/images/dietpi-nanopi-k2.jpg)
