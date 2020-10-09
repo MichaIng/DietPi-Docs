@@ -7,6 +7,15 @@
 1. Q: Shall we use (personal) branches to push changes directly into the master branch, or shall we use forking mechanisms?
 2. If using branches, which naming conventions shall we use for branch names (e.g. "dev-<short name>-<ChangeArea>". Example: "dev-StS-AddBoardImages" or "dev-MiI-DescribeWebserverStacks")
 
+Have branches on MichaIng/DietPi-Docs:
+- master branch: stable
+- dev branch: work on this branch and will be merged into master branch at planned release dates
+
+Everyone works on his own fork for development. There "private" branches with "private" naming can be chosen.
+
+Committing changes from the private fork branch to the dev branch on Micha's repo shall be done via a pull request.
+
+Merging should be done via 4-eyes method when merging to the master branch.
 
 
 ## 2. Files general
@@ -16,11 +25,23 @@ Some of the filenames use '-', others use '_'.
 E.g. dietpi-software-bittorrent.md vs. user-guide_install.md.  
 I would prefer the latter one: <docu type>_<chapter contents>.md.
 
+Style Guide: <docu type>_<chapter contents>.md, e.g. user-guide_install.md.
+ToDo: Change file names initially.
+Remark: Google search should be considered.
+
+**ToDo: Petru**
+
+
 ### 2.2 File structure
 Q: Shall we structure every chapter to subdirs (with own assets sub-subdirs)?   
 This could lead to a more general structure if the docu is extending.   
 
 Could this lead to problems when chapters or images are used several times?
+
+Open point, has to be cleared.
+
+**ToDo: Petru**
+
 
 
 
@@ -41,10 +62,23 @@ Proposal:
   - **First boot on DietPi** (move this from the [*Installation on SBC*](https://dietpi.com/docs/user-guide_install/#3-first-boot-on-dietpi) section to here)
 
 
+Idea: Use tabs in the content area (like there: https://dietpi.com/docs/dietpi-software-desktop/#lxde-ultra-lightweight-desktop) to distinguish between SBC, native PC, VirtualBox,etc.  
+Below the tab area the *First boot on DietPi* section is located.
+
+**ToDo Stephan:** Implement the changed *Installation* structure.
+
+
+
 ### 3.2 Description of *dietpi-software* usage
 1. Move [4. Install software with the DietPi-Software tool](https://dietpi.com/docs/user-guide_install/#4-install-software-with-the-dietpi-software-tool) to [DietPi Optimised software Index](https://dietpi.com/docs/user-optimised-software/) ?  
   *dietpi-software* should not be a tool which is run only once during the installation.
 
+Shall be moved to *Getting started*.
+
+*Getting started* shall contain often used procedures. Seldom used procedures shall be in *Advanced configuration & DietPi tools*.
+
+
+# xxx go ahead here
 
 ## 4 Supported Single Board Computers (SBCs)
 See there: https://dietpi.com/docs/hardware-supported_sbc/.
