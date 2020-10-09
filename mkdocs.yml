@@ -73,7 +73,6 @@ plugins:
   - redirects:
       redirect_maps:
           'dietpi-software-bittorrent.md': 'software/bittorrent.md'
-          'user-guide_install_VirtualBox.md' : 'user-guide_install_virtualbox.md'
           'user-optimised-software.md' : 'dietpi_optimised_software.md'
           'user-guide-install.md' : 'user-guide_install_sbc.md'
           'user-guide_install.md' : 'user-guide_install_sbc.md'
