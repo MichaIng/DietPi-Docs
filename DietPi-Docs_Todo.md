@@ -110,6 +110,12 @@ Q: Is this linking done in all necessary pages? If no, where should it be insert
 
 
 ## 9. Gitea software
-Describe fail2ban usage unter "external access".  
-See: https://docs.gitea.io/en-us/fail2ban-setup/
+### 9.1 Prerequisites
+Describe/check user rights of dietpi user and letsencrypt.
+
+### 9.2 Add section "hardening Gitea for external access (behind a router)"
+- Describe fail2ban usage unter "external access".  
+  See: https://docs.gitea.io/en-us/fail2ban-setup/
+- Describe combination Gitea and letsencrypt. Then use https for access.
+
 
