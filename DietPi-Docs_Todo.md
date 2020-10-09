@@ -141,3 +141,15 @@ See there: https://dietpi.com/docs/dietpi-software-webserver-stack/
 See there: https://dietpi.com/docs/dietpi-software-webserver-stack/  
 At the bottom there is a link to jump back.  
 Q: Is this linking done in all necessary pages? If no, where should it be inserted?
+
+
+## 9. Gitea software
+### 9.1 Prerequisites
+Describe/check user rights of dietpi user and letsencrypt.
+
+### 9.2 Add section "hardening Gitea for external access (behind a router)"
+- Describe fail2ban usage unter "external access".  
+  See: https://docs.gitea.io/en-us/fail2ban-setup/
+- Describe combination Gitea and letsencrypt. Then use https for access.
+
+
