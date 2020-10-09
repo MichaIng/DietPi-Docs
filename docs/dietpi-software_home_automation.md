@@ -10,4 +10,4 @@
 - [EmonPi - Lightweight Energy usage stats with EmonPi PCB.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1525)  
 - [Grasshopper - Web App to control Bticino MyHome](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p70)  
 
-[Return to the **Optimised Software list**](../user-optimised-software)
+[Return to the **Optimised Software list**](../dietpi_optimised_software)

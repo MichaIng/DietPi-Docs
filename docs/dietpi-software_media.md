@@ -34,4 +34,4 @@
 - [Ubooquity - Free home server for your comics and ebooks library](https://dietpi.com/phpbb/viewtopic.php?p=12969#p12969)
 - [Komga - Free and open source comics/mangas media server with web UI](https://dietpi.com/phpbb/viewtopic.php?p=26858#p26858)
 
-[Return to the **Optimised Software list**](../user-optimised-software)
+[Return to the **Optimised Software list**](../dietpi_optimised_software)

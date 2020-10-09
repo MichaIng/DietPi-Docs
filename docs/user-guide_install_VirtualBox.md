@@ -58,5 +58,5 @@ Press the start button (green arrow) to 'boot up' your system based on the DietP
 If you do not have a wired LAN connection you have to change the network settings matching to your environment (files ___\boot\dietpi.txt___ and ___\boot\dietpi-wifi.txt___).
 
 Then go on with
-	https://dietpi.com/docs/user-guide_install/#3-first-boot-on-dietpi
+	https://dietpi.com/docs/user-guide_install_sbc/#3-first-boot-on-dietpi
 and follow the instructions there for the first startup of the virtual machine.

@@ -17,7 +17,7 @@
 - [QuiteRSS - RSS and Atom news feeds reader](#quiterss-atom-news-feeds-reader)
 - [Xfce4 Power - Power manager with brightness](#xfce4-power-power-manager-with-brightness)
 
-[Return to the **Optimised Software list**](../user-optimised-software)
+[Return to the **Optimised Software list**](../dietpi_optimised_software)
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?" 
     To install any of the **DietPi Optimised Software** listed below run from the command line: 

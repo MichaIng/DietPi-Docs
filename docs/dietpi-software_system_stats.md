@@ -10,7 +10,7 @@
 - [NetData - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p1611)  
 - [Webmin - Remote system management with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3047)  
 
-[Return to the **Optimised Software list**](../user-optimised-software)
+[Return to the **Optimised Software list**](../dietpi_optimised_software)
 
 !!! warning "Documentation in progress..." 
 

@@ -89,4 +89,4 @@ At first disconnect your USB stick from the target PC. Then power on the PC. The
 
 ![dietpi-boot-start](assets/images/dietpi-boot-start.jpg)
 
-[Follow the rest of initialization](../user-guide_install/#3-first-boot-on-dietpi). This is similar to the SBC installation.
+[Follow the rest of initialization](../user-guide_install_sbc/#3-first-boot-on-dietpi). This is similar to the SBC installation.
