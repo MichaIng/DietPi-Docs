@@ -107,3 +107,9 @@ See there: https://dietpi.com/docs/dietpi-software-webserver-stack/
 See there: https://dietpi.com/docs/dietpi-software-webserver-stack/  
 At the bottom there is a link to jump back.  
 Q: Is this linking done in all necessary pages? If no, where should it be inserted?
+
+
+## 9. Gitea software
+Describe fail2ban usage unter "external access".  
+See: https://docs.gitea.io/en-us/fail2ban-setup/
+
