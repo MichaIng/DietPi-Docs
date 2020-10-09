@@ -15,7 +15,7 @@
 - [Remot3.it - (Weaved) Access your device over the internet.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p188)  
 - [VirtualHere - Share physically attached USB devices from your SBC, over the network.](https://dietpi.com/phpbb/viewtopic.php?p=6709#p6709)  
 
-[Return to the **Optimised Software list**](../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?" 
     To install any of the **DietPi Optimised Software** listed below run from the command line: 

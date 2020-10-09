@@ -8,5 +8,5 @@
 
 - [Folding@Home - Use processing power to assist with disease research](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13704)  
 
-[Return to the **Optimised Software list**](../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 

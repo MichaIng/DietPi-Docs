@@ -9,4 +9,4 @@
 - [CloudPrint - CUPS print server, with support for Google cloud printing](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p6630)  
 - [OctoPrint - Web interface for controlling 3D printers](https://dietpi.com/phpbb/viewtopic.php?p=7958#p7958)  
 
-[Return to the **Optimised Software list**](../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

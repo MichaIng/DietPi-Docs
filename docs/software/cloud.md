@@ -18,7 +18,7 @@
 - [Minio - S3 compatible distributed object server](https://dietpi.com/phpbb/viewtopic.php?p=9121#p9121)  
 - [Firefox Sync Server - Sync bookmarks, tabs, history & passwords](https://dietpi.com/phpbb/viewtopic.php?p=24713#p24713)  
 
-[Return to the **Optimised Software list**](../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?" 
     To install any of the **DietPi Optimised Software** listed below run from the command line: 

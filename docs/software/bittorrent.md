@@ -22,7 +22,7 @@
 - [NZBget - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
 - [HTPC Manager - combines all your favourite software into one slick interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p8043)
 
-[Return to the **Optimised Software list**](../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ## Bazarr
 

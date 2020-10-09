@@ -14,5 +14,6 @@
 - [DXX-Rebirth - Descent 1 & 2 OpenGL port](https://dietpi.com/phpbb/viewtopic.php?p=2963#p2963)
 - [Steam - Steam client](https://dietpi.com/phpbb/viewtopic.php?p=8016#p8016)
 
-[Return to the **Optimised Software list**](../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+
 

@@ -7,7 +7,7 @@
 - [PiVPN - OpenVPN server installer & management tool](https://dietpi.com/phpbb/viewtopic.php?p=3469#p3469)  
 - [WireGuard - An extremely simple yet fast and modern VPN](https://dietpi.com/phpbb/viewtopic.php?p=16308#p16308)  
 
-[Return to the **Optimised Software list**](../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 !!! warning "Documentation in progress..." 
 
