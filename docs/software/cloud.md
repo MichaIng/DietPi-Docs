@@ -32,7 +32,7 @@
     
     Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi Software](assets/images/dietpi-software.jpg)
+    ![DietPi Software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
 
@@ -75,4 +75,4 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     [Nextcloud Website](https://nextcloud.com/athome/)
 
-![DietPi-Software-NextCloud](assets/images/dietpi-software-cloud-nextcloud.jpg)
+![DietPi-Software-NextCloud](../assets/images/dietpi-software-cloud-nextcloud.jpg)

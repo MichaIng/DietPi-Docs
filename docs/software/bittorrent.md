@@ -40,7 +40,7 @@ Key features:
 === "Quick start"
     After installation access the web interface using port **6767** (ex: http://192.168.0.100:6767) 
 
-    ![Bazarr](assets/images/dietpi-software-download-bazarr.jpg)
+    ![Bazarr](../assets/images/dietpi-software-download-bazarr.jpg)
 
 
 === "Advanced"

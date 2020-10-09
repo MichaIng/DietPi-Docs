@@ -29,7 +29,7 @@
     
     Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi Software](assets/images/dietpi-software.jpg)
+    ![DietPi Software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
 
@@ -74,7 +74,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 === "Official documentation"
     [LXDE Website](https://www.lxde.org) - [LXDE Wiki](https://wiki.lxde.org/en/Main_Page)
 
-![DietPi-Remote-Desktop-TigerVNC](assets/images/dietpi-software-remote-desktop-tigervnc.jpg)
+![DietPi-Remote-Desktop-TigerVNC](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg)
 
 
 ### VNC Server - Shared desktop
