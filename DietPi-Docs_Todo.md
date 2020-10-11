@@ -29,7 +29,7 @@ Style Guide: <docu type>_<chapter contents>.md, e.g. user-guide_install.md.
 ToDo: Change file names initially.
 Remark: Google search should be considered.
 
-**ToDo: Petru**
+**ToDo: Petru** (done)
 
 
 ### 2.2 File structure
@@ -40,7 +40,7 @@ Could this lead to problems when chapters or images are used several times?
 
 Open point, has to be cleared.
 
-**ToDo: Petru**
+**ToDo: Petru** (done)
 
 
 
@@ -75,6 +75,8 @@ Below the tab area the *First boot on DietPi* section is located.
 
 Shall be moved to *Getting started*.
 
+**ToDo Stephan:** Move contents.
+
 *Getting started* shall contain often used procedures. Seldom used procedures shall be in *Advanced configuration & DietPi tools*.
 
 
@@ -91,9 +93,13 @@ Harmonize/rearrange order in all sub-chapters:
 - Link table to images
 
 
+**ToDo Stephan:** Harmonize sections.
+
 
 ### 4.2 Supported Single Board Computers (SBCs)
 1. Move *NanoPi Series (FriendlyARM)* below *ASUS Tinker Board*
+
+**ToDo Stephan:** Change order.
 
 
 ### 4.3 Description of DietPi PREP?
@@ -102,9 +108,14 @@ Harmonize/rearrange order in all sub-chapters:
 
 Actually it is only referenced at the end of the [*Supported SBC* section](https://dietpi.com/docs/hardware-supported_sbc/#make-your-own-distribution).
 
+**ToDo Stephan:** Make a proposal with some more screenshots.  
+Basically use *master* branch, use *dev* for hardening/testing Micha's PREP-script.
+
 
 ### 4.4 Name of .md file
 1. Q: Rename *hardware-supported_sbc.md* to *user-guide_supported_sbc.md*
+
+**Done** with renaming/restructuring from Petru.
 
 
 ### 4.5 Images
@@ -114,33 +125,51 @@ Add images for
 
 The images are available on Dietpi.com\Download.
 
+**ToDo Stephan:** Add images.
+
 
 ## 5. Desktops
 Desktop basics (https://dietpi.com/docs/dietpi-software-desktop/):
 1. Add a section how to setup the ***Autostart options*** via ***dietpi-config*** to start with LightDM
   - Have it similar to the collapsable description *How do I run DietPi-Software and install Optimised software ?*
 
+**No extra description, because this is already described in the tab page *Enable autostart*.**
+
 
 LXQt (https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweight-desktop):
 1. Add screenshot of desktop
+
+**ToDo Stephan:** Add image.
+
 
 
 ## 6. DietPi Tools
 See there: https://dietpi.com/docs/user-guide_tools/
 1. Add a screenshot for *Software Additional*
 
+**Todo Stephan:**
+- Move dietpi-software main menu screenshot above the tabs selection
+- Add a screenshot for *Software Additional* within the corresponding tab section
+
+
 
 ## 7. Description of Webserver stacks
 See there: https://dietpi.com/docs/dietpi-software-webserver-stack/  
-1. Add a section how to select the webservers stacks via ***dietpi-software***
-2. Section [Webservers](https://dietpi.com/docs/dietpi-software-webserver-stack/#webservers): Exchange the three bullets with the description "behind the links" ([*Webserver Preference System*](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549))
-
+1. Add a section how to select the webservers stacks via ***dietpi-software***. Two options: Select via *Software Optimized* or via *Webserver Preference* (Preference is used in the case of the first webserver background installation).
+2. Section [Webservers](https://dietpi.com/docs/dietpi-software-webserver-stack/#webservers): Exchange the three bullets with the description "behind the links" ([*Webserver Preference System*](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)):
+   - Remove the links, but keep the three bullets
+   - Port the description *Webserver Preference System* to this section
+3. How to port the stack description to the Webserver stacks section? Idea:
+   - Divide the description into sections about webservers, about data bases and about PHP.
 
 
 ## 8. Links *Return to the Optimised Software list*
 See there: https://dietpi.com/docs/dietpi-software-webserver-stack/  
 At the bottom there is a link to jump back.  
 Q: Is this linking done in all necessary pages? If no, where should it be inserted?
+
+**Already done in this way.**
+
 
 
 ## 9. Gitea software
@@ -153,3 +182,14 @@ Describe/check user rights of dietpi user and letsencrypt.
 - Describe combination Gitea and letsencrypt. Then use https for access.
 
 
+Alternative:
+- Add a general *hardening with https:* description in the webserver section (where in detail?).  
+  See also there: https://github.com/MichaIng/DietPi/wiki/Security-recommendation.
+- Reference this hardening section from the software titles and add there specialities of the software title hardening
+
+
+## 10. Backup/Restore
+Describe Backup/Restore:
+- via dietpi-backup
+- via different/other backup solutions
+  E.g. see https://www.linuxlinks.com/backup/ 
