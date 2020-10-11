@@ -22,7 +22,7 @@
 - [NZBget - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
 - [HTPC Manager - combines all your favourite software into one slick interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p8043)
 
-[Return to the **Optimised Software list**](../user-optimised-software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ## Bazarr
 
@@ -40,7 +40,7 @@ Key features:
 === "Quick start"
     After installation access the web interface using port **6767** (ex: http://192.168.0.100:6767) 
 
-    ![Bazarr](assets/images/dietpi-software-download-bazarr.jpg)
+    ![Bazarr](../assets/images/dietpi-software-download-bazarr.jpg)
 
 
 === "Advanced"

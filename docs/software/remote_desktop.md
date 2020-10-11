@@ -15,7 +15,7 @@
 - [Remot3.it - (Weaved) Access your device over the internet.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p188)  
 - [VirtualHere - Share physically attached USB devices from your SBC, over the network.](https://dietpi.com/phpbb/viewtopic.php?p=6709#p6709)  
 
-Return to the full [**Optimised Software**](../user-optimised-software) list.
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?" 
     To install any of the **DietPi Optimised Software** listed below run from the command line: 
@@ -29,7 +29,7 @@ Return to the full [**Optimised Software**](../user-optimised-software) list.
     
     Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi Software](assets/images/dietpi-software.jpg)
+    ![DietPi Software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
 
@@ -74,7 +74,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 === "Official documentation"
     [LXDE Website](https://www.lxde.org) - [LXDE Wiki](https://wiki.lxde.org/en/Main_Page)
 
-![DietPi-Remote-Desktop-TigerVNC](assets/images/dietpi-software-remote-desktop-tigervnc.jpg)
+![DietPi-Remote-Desktop-TigerVNC](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg)
 
 
 ### VNC Server - Shared desktop

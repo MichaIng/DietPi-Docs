@@ -18,7 +18,7 @@
 - [Minio - S3 compatible distributed object server](https://dietpi.com/phpbb/viewtopic.php?p=9121#p9121)  
 - [Firefox Sync Server - Sync bookmarks, tabs, history & passwords](https://dietpi.com/phpbb/viewtopic.php?p=24713#p24713)  
 
-[Return to the **Optimised Software list**](../user-optimised-software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?" 
     To install any of the **DietPi Optimised Software** listed below run from the command line: 
@@ -32,7 +32,7 @@
     
     Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi Software](assets/images/dietpi-software.jpg)
+    ![DietPi Software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
 
@@ -75,4 +75,4 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     [Nextcloud Website](https://nextcloud.com/athome/)
 
-![DietPi-Software-NextCloud](assets/images/dietpi-software-cloud-nextcloud.jpg)
+![DietPi-Software-NextCloud](../assets/images/dietpi-software-cloud-nextcloud.jpg)

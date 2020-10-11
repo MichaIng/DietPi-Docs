@@ -17,25 +17,25 @@
 
     ![DietPi Software](assets/images/dietpi-software.jpg)
 
-    To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools) section.
 
 !!! warning "Documentation in progress..." 
     The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
 
-## [Desktops](../dietpi-software-desktop)
-- [**LXDE - Highly optimized ultra lightweight desktop**](../dietpi-software-desktop/#lxde-ultra-lightweight-desktop)
-- [**LXQt - Slick and optimized lightweight desktop**](../dietpi-software-desktop/#lxqt-optimized-lightweight-desktop)
-- [**MATE - Popular Gnome 2 desktop**](../dietpi-software-desktop/#mate-popular-gnome2-desktop)
-- [**Xfce - Lightweight desktop**](../dietpi-software-desktop/#xfce-lightweight-desktop)
-- [**GnuStep - Alternative/unique desktop**](../dietpi-software-desktop/#gnustep-alternativeunique-desktop)
+## [Desktops](../software/desktop)
+- [**LXDE - Highly optimized ultra lightweight desktop**](../software/desktop/#lxde-ultra-lightweight-desktop)
+- [**LXQt - Slick and optimized lightweight desktop**](../software/desktop/#lxqt-optimized-lightweight-desktop)
+- [**MATE - Popular Gnome 2 desktop**](../software/desktop/#mate-popular-gnome2-desktop)
+- [**Xfce - Lightweight desktop**](../software/desktop/#xfce-lightweight-desktop)
+- [**GnuStep - Alternative/unique desktop**](../software/desktop/#gnustep-alternativeunique-desktop)
 
-### [Desktop Utilities](../dietpi-software-desktop/#desktop-utilities)
-- [**Chromium - Web browser**](../dietpi-software-desktop/#chromium-web-browser)
-- [**GIMP - Image editor**](../dietpi-software-desktop/#gimp-image-editor)
-- [**QuiteRSS - RSS and Atom news feeds reader**](../dietpi-software-desktop/#quiterss-atom-news-feeds-reader)
+### [Desktop Utilities](../software/desktop/#desktop-utilities)
+- [**Chromium - Web browser**](../software/desktop/#chromium-web-browser)
+- [**GIMP - Image editor**](../software/desktop/#gimp-image-editor)
+- [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss-atom-news-feeds-reader)
 
 ## Remote Desktop Access
-- [**TigerVNC Server - Desktop for remote connection**](../dietpi-software-remote-desktop/#29-tigervnc-server-desktop-for-remote-connection)
+- [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection)
 - [RealVNC Server - Desktop for remote connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4149)
 - [XRDP - Remote desktop server for Windows Remote Desktop Client](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2074)
 - [NoMachine - Feature rich remote desktop connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2071)
@@ -80,7 +80,7 @@
 - [Medusa - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3327)
 - [Sonarr - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p7455)
 - [Radarr - Automatically download Movies](https://dietpi.com/phpbb/viewtopic.php?p=7457#p7457)
-- **[Bazarr - Automatically download Subtitles for Sonarr/Radarr](../dietpi-software-bittorrent/#bazarr)**
+- **[Bazarr - Automatically download Subtitles for Sonarr/Radarr](../software/bittorrent/#bazarr)**
 - [Lidarr - Automatically download Music](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13580)
 - [CouchPotato - Automatically download movies.](https://dietpi.com/phpbb/viewtopic.php?p=7212#p7212)
 - [Jackett - API Support for your favourite torrent trackers.](https://dietpi.com/phpbb/viewtopic.php?p=7503#p7503)
@@ -105,7 +105,7 @@
 ## Cloud & Backup systems  
 
 - [ownCloud - Your own personal cloud based backup/data storage system](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p47)  
-- [**Nextcloud - Self-hosted productivity platform**](../dietpi-software-cloud/#nextcloud-self-hosted-productivity-platform)  
+- [**Nextcloud - Self-hosted productivity platform**](../software/cloud/#nextcloud-self-hosted-productivity-platform)  
 - [Nextcloud Talk - Video calls via Nextcloud, including TURN server](https://dietpi.com/phpbb/viewtopic.php?p=15227#p15227)  
 - [Pydio - Feature-rich backup and sync server with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=1064#p1064)  
 - [UrBackup Server - Full backups for systems on your network](https://dietpi.com/phpbb/viewtopic.php?p=65#p65)  
