@@ -113,7 +113,7 @@ Harmonize/rearrange order in all sub-chapters:
 
 Actually it is only referenced at the end of the [*Supported SBC* section](https://dietpi.com/docs/hardware-supported_sbc/#make-your-own-distribution).
 
-- [ ] **ToDo Stephan:** Make a proposal with some more screenshots.  
+- [ ] **ToDo Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
   Basically use *master* branch, use *dev* for hardening/testing Micha's PREP-script.
 
 
@@ -165,6 +165,9 @@ See there: https://dietpi.com/docs/dietpi-software-webserver-stack/
    - Port the description *Webserver Preference System* to this section
 3. How to port the stack description to the Webserver stacks section? Idea:
    - Divide the description into sections about webservers, about data bases and about PHP.
+   
+- [ ] **Todo Stephan:** Implement points 1. and 2. above
+- [ ] **Afterwards:** Discuss how to implement point 3. above and decide further steps
 
 
 ## 8. Links *Return to the Optimised Software list*
@@ -190,6 +193,11 @@ Alternative:
 - Add a general *hardening with https:* description in the webserver section (where in detail?).  
   See also there: https://github.com/MichaIng/DietPi/wiki/Security-recommendation.
 - Reference this hardening section from the software titles and add there specialities of the software title hardening
+
+How to go on?
+- First do a description about gitea hardening
+- Then describe a bit more general security solutions
+- Then possibly restructure the whole issue
 
 
 ## 10. Backup/Restore
