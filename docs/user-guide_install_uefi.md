@@ -1,19 +1,19 @@
 ---
-description: DietPi installation on native PC
+description: DietPi installation on native PC using UEFI
 title: How to install DietPi on native PC
 ---
 
 # How to install DietPi on native PC (with UEFI)
 
-## 1. Intro
+## Introduction
 
-The Native PC images are great for those occasions where SBC performance just isn’t enough. One example could be [Intel NUC Kit](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits.html?page=2). It is a small, versatile, upgradable, and affordable desktop PC with the same basic feature set as that of a much larger machine.
+The Native PC images are great for those occasions where SBC performance is just not enough. One example could be [Intel NUC Kit](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits.html?page=2). It is a small, versatile, upgradable, and affordable desktop PC with the same basic feature set as that of a much larger machine.
 
 ![DietPi-Intel-NUC](assets/images/dietpi-nuc8.jpg)
 
 It could be also a great way to make use of an old computer that’s not capable of running the latest version of Windows or macOS.
 
-## 2. Prerequisites
+### Prerequisites
 You would need the next:
 
 - one **working PC with internet access**, helping to flash the boot media
@@ -23,7 +23,7 @@ You would need the next:
 !!! warning "All data on the USB medium and on the target PCs harddisk will be erased !"
 	Before starting the installation make first backup of the data available on the target PC and USB drive !
 
-## 3. Download and extract the DietPi disk image
+## 1. Download and extract the DietPi disk image
 
 Download the **DietPi installer image** from [dietpi.com](https://dietpi.com/#download) and
 unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
@@ -35,7 +35,7 @@ Download **[Rufus](https://rufus.ie/)** and run the application. There is a port
 !!! warning "Be careful if you run alternative applications !"
 	While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
 
-## 4. Flash image to USB drive
+## 2. Flash image to USB drive
 
 Start **[Rufus](https://rufus.ie/)** application and make sure you have your USB drive inserted into your computer. Follow the next steps:
 
@@ -49,7 +49,7 @@ Start **[Rufus](https://rufus.ie/)** application and make sure you have your USB
 
 ![dietpi-rufus-uefi](assets/images/dietpi-rufus-uefi.jpg)
 
-## 5. Boot the target PC and install the image on the local disk
+## 3. Boot the target PC and install the image on the local disk
 
 Boot the **target PC** from USB image and install the image on the local disk / harddisk. Put the USB stick into the target PC and boot from this USB stick  
 _Note: it may be necessary to change BIOS settings to enable the UEFI boot. This action is not described here._
@@ -83,7 +83,7 @@ After this, the installation process starts with several steps, e.g. showing the
 These steps take some time, be patient ! Otherwise buy an SSD. :-)  
 At the end the system executes a shutdown.
 
-## 6. First boot of the target PC with DietPi
+## 4. First boot of the target PC with DietPi
 
 At first disconnect your USB stick from the target PC. Then power on the PC. The system will boot up and do the DietPi installation.
 

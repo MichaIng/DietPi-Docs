@@ -130,6 +130,7 @@ nav:
       - 'Release notes' : 'release-notes.md'
       - 'Request features' : 'https://github.com/MichaIng/DietPi/issues/new/choose'
       - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
+      - 'Documentation Tasks' : 'dietpi_docs_todo.md'
   - 'OPTIMISED SOFTWARE' :
       - 'Desktops & Utilities' : 'software/desktop.md'
       - 'Media Systems': 'software/media.md'
