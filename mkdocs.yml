@@ -117,10 +117,7 @@ extra_css:
 nav:
   - 'HOME' :
       - 'Overview' : index.md
-      - 'Installation' :
-          - 'Install DietPi on SBC' : 'user-guide_install_sbc.md'
-          - 'Install DietPi on native PC' : 'user-guide_install_uefi.md'
-          - 'Install DietPi in Oracle VirtualBox' : 'user-guide_install_virtualbox.md'
+      - 'Installation' : 'user-guide_install_sbc.md'
       - 'Getting started' : 'user-guide_overview.md'
       - 'Optimised software list' : 'dietpi_optimised_software.md'
       - 'Supported SBC' : 'dietpi_sbc.md'
