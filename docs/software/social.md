@@ -14,4 +14,5 @@
 - [OpenBazaar - Decentralized peer to peer market server using BitCoin.](https://dietpi.com/phpbb/viewtopic.php?p=1796#p1796)  
 - [YaCy - Decentralized open source search engine.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p6202)
 
-[Return to the **Optimised Software list**](../user-optimised-software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+

@@ -126,7 +126,7 @@ You can change the password again later by typing `passwd` at the terminal.
 
 ## 4. Install software with the DietPi-Software tool
 
-The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use. If you’re unsure what software to install, checkout [DietPi Optimised Software](../user-optimised-software) page for more details.
+The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use. If you’re unsure what software to install, checkout [DietPi Optimised Software](../dietpi_optimised_software) page for more details.
 
 !!! info "How do I run **DietPi-Software** and install **Optimised software** ?" 
 

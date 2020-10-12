@@ -1,11 +1,11 @@
 ---
 description: DietPi installation as an Oracle VirtualBox machine
-title: How to install DietPi as an Oracle VirtualBox machine
+title: How to install DietPi as a VirtualBox machine
 ---
 
 # How to install DietPi as an Oracle VirtualBox machine
 
-## 1. Intro
+## Introduction
 
 Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a debian based linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
@@ -16,7 +16,7 @@ One of the options of a virtual machine is [__Oracle VirtualBox__](https://www.o
 ![DietPi-VirtualBox-program](assets/images/dietpi-VirtualBox-program.png)
 
 
-## 2. Prerequisites
+### Prerequisites
 
 As a starting point you need a **PC with a running VirtualBox software** on which the DietPi system will run.  
 On this PC a free harddisk space of about  
@@ -25,7 +25,7 @@ On this PC a free harddisk space of about
 is needed. A recommended size is at least a free space of 10 GB.
 
 
-## 3. Download and extract the DietPi disk image
+## 1. Download and extract the DietPi disk image
 
 Download the **DietPi VirtualBox file** "DietPi_VirtualBox-x86_64-Buster.7z" from [dietpi.com](https://dietpi.com/#download) and
 unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
@@ -37,7 +37,7 @@ The zip file contains a couple of files, the important one is the .ova file whic
 ![Dietpi-zipfile-content](assets/images/dietpi-VirtualBox-7zip-file.png)
 
 
-## 4. Import of the .ova file in VirtualBox
+## 2. Import of the .ova file in VirtualBox
 
 As next, the VirtualBox virtual machine has to be setup by importing the .ova file (via \File\Import Appliance):
 
@@ -53,10 +53,10 @@ After the importing has finished the DietPi VirtualBox virtual machine is presen
 
 ![DietPi-VirtualBoxMachine1](assets/images/dietpi-VirtualBox-VB-Machine.png)
 
-## 5. First boot of the new VirtualBox image
+## 3. First boot of the new VirtualBox image
 Press the start button (green arrow) to 'boot up' your system based on the DietPi image.
 If you do not have a wired LAN connection you have to change the network settings matching to your environment (files ___\boot\dietpi.txt___ and ___\boot\dietpi-wifi.txt___).
 
 Then go on with
-	https://dietpi.com/docs/user-guide_install/#3-first-boot-on-dietpi
+	https://dietpi.com/docs/user-guide_install_sbc/#3-first-boot-on-dietpi
 and follow the instructions there for the first startup of the virtual machine.

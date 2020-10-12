@@ -59,6 +59,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
 plugins:
   - search
   - minify:
@@ -68,6 +69,38 @@ plugins:
           remove_comments: true
           remove_empty_space: true
           reduce_boolean_attributes: true
+
+  - redirects:
+      redirect_maps:
+          'dietpi-software-bittorrent.md': 'software/bittorrent.md'
+          'user-optimised-software.md' : 'dietpi_optimised_software.md'
+          'user-guide-install.md' : 'user-guide_install_sbc.md'
+          'user-guide_install.md' : 'user-guide_install_sbc.md'
+          'hardware-supported_sbc.md' : 'dietpi_sbc.md'
+          'user-guide_tools.md' : 'dietpi_tools.md'
+          'release-notes-updates.md' : 'release-notes.md'
+          'dietpi-software-desktop.md' : 'software/desktop.md'
+          'dietpi-software-media.md' : 'software/media.md'
+          'dietpi-software-remote-desktop.md' : 'software/remote_desktop.md'
+          'dietpi-software-cloud.md' : 'software/cloud.md'
+          'dietpi-software_bittorrent.md' : 'software/bittorrent.md'
+          'dietpi-software-gaming.md' : 'software/gaming.md'
+          'dietpi-software-camera.md' : 'software/camera.md'
+          'dietpi-software-social.md' : 'software/social.md'
+          'dietpi-software-wifi-hotspot.md' : 'software/wifi_hotspot.md'
+          'dietpi-software-home-automation.md' : 'software/home_automation.md'
+          'dietpi-software-hardware-projects.md' : 'software/hardware_projects.md'
+          'dietpi-software-system-stats.md' : 'software/system_stats.md'
+          'dietpi-software-system-security.md' : 'software/system_security.md'
+          'dietpi-software-webserver-stack.md' : 'software/webserver_stack.md'
+          'dietpi-software-dns-servers.md' : 'software/dns_servers.md'
+          'dietpi-software-file-servers.md' : 'software/file_servers.md'
+          'dietpi-software-vpn.md' : 'software/vpn.md'
+          'dietpi-software-load-balancer.md' : 'software/load_balancer.md'
+          'dietpi-software-printing.md' : 'software/printing.md'
+          'dietpi-software-computational-science.md' : 'software/computational_science.md'
+          'dietpi-software-ssh.md' : 'software/ssh.md'
+          'dietpi-software-log-system.md' : 'software/log_system.md'
 
 extra:
   social:
@@ -84,42 +117,43 @@ extra_css:
 nav:
   - 'HOME' :
       - 'Overview' : index.md
-      - 'Installation' : 'user-guide_install.md'
-      - ' > Advanced installation' :
+      - 'Installation' :
+          - 'Install DietPi on SBC' : 'user-guide_install_sbc.md'
           - 'Install DietPi on native PC' : 'user-guide_install_uefi.md'
-          - 'Install DietPi in Oracle VirtualBox' : 'user-guide_install_VirtualBox.md'
+          - 'Install DietPi in Oracle VirtualBox' : 'user-guide_install_virtualbox.md'
       - 'Getting started' : 'user-guide_overview.md'
-      - 'Optimised software list' : 'user-optimised-software.md'
-      - 'Supported SBC' : 'hardware-supported_sbc.md'
+      - 'Optimised software list' : 'dietpi_optimised_software.md'
+      - 'Supported SBC' : 'dietpi_sbc.md'
       - 'Community Tutorials' : 'https://dietpi.com/phpbb/viewforum.php?f=15'
-      - 'Advanced configuration & DietPi Tools' : 'user-guide_tools.md'
+      - 'Advanced configuration & DietPi Tools' : 'dietpi_tools.md'
       - 'Troubleshooting' : 'https://dietpi.com/phpbb/viewforum.php?f=11'
-      - 'Release notes' : 'release-notes-updates.md'
+      - 'Release notes' : 'release-notes.md'
       - 'Request features' : 'https://github.com/MichaIng/DietPi/issues/new/choose'
       - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
+      - 'Documentation Tasks' : 'dietpi_docs_todo.md'
   - 'OPTIMISED SOFTWARE' :
-      - 'Desktops & Utilities' : 'dietpi-software-desktop.md'
-      - 'Media Systems': 'dietpi-software-media.md'
-      - 'Remote Desktop & Remote Access' : 'dietpi-software-remote-desktop.md'
-      - 'Cloud & Backups' : 'dietpi-software-cloud.md'
-      - 'BitTorrent / Download Tools' : 'dietpi-software-bittorrent.md'
-      - 'Gaming / Emulation' : 'dietpi-software-gaming.md'
-      - 'Camera / Surveillance' : 'dietpi-software-camera.md'
-      - 'Social / Search' : 'dietpi-software-social.md'
-      - 'WiFi Hotspot' : 'dietpi-software-wifi-hotspot.md'
-      - 'Home Automation' : 'dietpi-software-home-automation.md'
-      - 'Hardware Projects' : 'dietpi-software-hardware-projects.md'
-      - 'System Stats / Management' : 'dietpi-software-system-stats.md'
-      - 'System Security' : 'dietpi-software-system-security.md'
-      - 'Webserves & Web stacks' : 'dietpi-software-webserver-stack.md'
-      - 'DNS Servers' : 'dietpi-software-dns-servers.md'
-      - 'File Servers' : 'dietpi-software-file-servers.md'
-      - 'VPN' : 'dietpi-software-vpn.md'
-      - 'Network Load Balancer' : 'dietpi-software-load-balancer.md'
-      - 'Printing servers' : 'dietpi-software-printing.md'
-      - 'Computational science' : 'dietpi-software-computational-science.md'
-      - 'SSH Servers' : 'dietpi-software-ssh.md'
-      - 'Log System Servers' : 'dietpi-software-log-system.md'
+      - 'Desktops & Utilities' : 'software/desktop.md'
+      - 'Media Systems': 'software/media.md'
+      - 'Remote Desktop & Remote Access' : 'software/remote_desktop.md'
+      - 'Cloud & Backups' : 'software/cloud.md'
+      - 'BitTorrent / Download Tools' : 'software/bittorrent.md'
+      - 'Gaming / Emulation' : 'software/gaming.md'
+      - 'Camera / Surveillance' : 'software/camera.md'
+      - 'Social / Search' : 'software/social.md'
+      - 'WiFi Hotspot' : 'software/wifi_hotspot.md'
+      - 'Home Automation' : 'software/home_automation.md'
+      - 'Hardware Projects' : 'software/hardware_projects.md'
+      - 'System Stats / Management' : 'software/system_stats.md'
+      - 'System Security' : 'software/system_security.md'
+      - 'Webserves & Web stacks' : 'software/webserver_stack.md'
+      - 'DNS Servers' : 'software/dns_servers.md'
+      - 'File Servers' : 'software/file_servers.md'
+      - 'VPN' : 'software/vpn.md'
+      - 'Network Load Balancer' : 'software/load_balancer.md'
+      - 'Printing servers' : 'software/printing.md'
+      - 'Computational science' : 'software/computational_science.md'
+      - 'SSH Servers' : 'software/ssh.md'
+      - 'Log System Servers' : 'software/log_system.md'
 
   - 'COMMUNITY' :
       - 'DietPi Forums & Community' : 'https://dietpi.com/phpbb/viewforum.php?f=5'

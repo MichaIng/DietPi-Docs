@@ -17,7 +17,7 @@
 - [QuiteRSS - RSS and Atom news feeds reader](#quiterss-atom-news-feeds-reader)
 - [Xfce4 Power - Power manager with brightness](#xfce4-power-power-manager-with-brightness)
 
-[Return to the **Optimised Software list**](../user-optimised-software)
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?" 
     To install any of the **DietPi Optimised Software** listed below run from the command line: 
@@ -31,7 +31,7 @@
     
     Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi Software](assets/images/dietpi-software.jpg)
+    ![DietPi Software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
 
@@ -58,7 +58,7 @@ LXDE is highly optimized and ultra lightweight desktop. It works well with compu
 === "Official documentation"
     [LXDE Website](https://www.lxde.org) - [LXDE Wiki](https://wiki.lxde.org/en/Main_Page)
 
-![DietPi LXDE](assets/images/dietpi-software-LXDE_desktop.jpg)
+![DietPi LXDE](../assets/images/dietpi-software-LXDE_desktop.jpg)
 
 ## LXQt - Optimized lightweight desktop
 Optimized lightweight desktop without the bloatware. Slick and fluid GUI, however, more resource heavy than LXDE.
@@ -91,7 +91,7 @@ Popular Gnome2 based desktop environment.
 === "Official documentation"
     [MATE Desktop website](https://mate-desktop.org/)
 
-![DietPi LXDE](assets/images/dietpi-software-mate-desktop.jpg)
+![DietPi LXDE](../assets/images/dietpi-software-mate-desktop.jpg)
 
 ## Xfce - Lightweight desktop
 
@@ -107,7 +107,7 @@ Popular Gnome2 based desktop environment.
 === "Official documentation"
     [Xfce website](https://wiki.debian.org/Xfce)
 
-![DietPi Xfce](assets/images/dietpi-software-xfce-desktop.jpg)
+![DietPi Xfce](../assets/images/dietpi-software-xfce-desktop.jpg)
 
 ## GnuStep - Alternative/unique desktop
 
@@ -123,7 +123,7 @@ Popular Gnome2 based desktop environment.
 === "Official documentation"
     [GNUstep website](http://gnustep.org/)
 
-![DietPi GNUstep](assets/images/dietpi-software-gnustep-desktop.jpg)
+![DietPi GNUstep](../assets/images/dietpi-software-gnustep-desktop.jpg)
 
 ## Desktop utilities
 
@@ -145,23 +145,23 @@ Once Chromium is running, simply go to the following address:
  - Manually: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
  - with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... ny-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
 
-![DietPi GIMP](assets/images/dietpi-software-desktop-tools-chromium.jpg)
+![DietPi GIMP](../assets/images/dietpi-software-desktop-tools-chromium.jpg)
 
 ### GIMP - Image editor
 
 MS Paint on steroids. If you need to edit pixels with a vast number of tools, GIMP is the only program you'll need. 
 
-![DietPi GIMP](assets/images/dietpi-software-desktop-tools-gimp.jpg)
+![DietPi GIMP](../assets/images/dietpi-software-desktop-tools-gimp.jpg)
 
 https://www.gimp.org/
 
 ### QuiteRSS - Atom news feeds reader
 QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
 
-![DietPi QuiteRSS](assets/images/dietpi-software-desktop-tools-quiterss.jpg)
+![DietPi QuiteRSS](../assets/images/dietpi-software-desktop-tools-quiterss.jpg)
 
 ### Xfce4 Power - Power manager with brightness
 
 Enables laptop users to set up a power profile for two different modes `on battery power` and `on AC Power` while still allowing desktop users to at least change the DPMS settings and CPU frequency using the settings dialogue.
 
-![DietPi Xfce4 Power manager](assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg)
+![DietPi Xfce4 Power manager](../assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg)

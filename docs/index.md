@@ -30,7 +30,7 @@ our images start at 400MB in size (3x lighter than 'Raspbian Lite'). With featur
 
 ## Getting started
 
-If you are **new to DietPi**, the [_Install_](user-guide_install) provides a tutorial for everything you need to get DietPi running. 
+If you are **new to DietPi**, the [_Install_](user-guide_install_sbc) provides a tutorial for everything you need to get DietPi running. 
 
 If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11).
 
@@ -38,7 +38,7 @@ For more details visit the [_DietPi Community Forum_](https://dietpi.com/phpbb/v
 
 ## Easy to install popular software
 
-You can **quickly and easily install popular software** ! All of them are **READY TO RUN** and optimised for your system. The list of available apps is long , and for the full list checkout [_DietPi Optimised Software_](user-optimised-software) page. Here are few highlights:
+You can **quickly and easily install popular software** ! All of them are **READY TO RUN** and optimised for your system. The list of available apps is long , and for the full list checkout [_DietPi Optimised Software_](dietpi_optimised_software) page. Here are few highlights:
 
 - Desktops (MATE/Xfce)
 - Remote Desktop (VNC/NoMachine)
@@ -47,7 +47,7 @@ You can **quickly and easily install popular software** ! All of them are **READ
 - Cloud/Backup (Nextcloud/Syncthing)
 - Gaming (Amiberry/MineOS)
 - Social, Surveillance, Hotspots, System Stats, Hardware Projects, Stacks (LAMP/LEMP), Pi-hole, VPN, File Servers, Home Automation and Printing
-and [much more...](user-optimised-software)
+and [much more...](dietpi_optimised_software)
 
 DietPi does everything for you, giving you more time to enjoy the software you need.
 
