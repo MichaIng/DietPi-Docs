@@ -1,7 +1,7 @@
 name: Markdown tests
 on: push
 jobs:
-  markdownlint:
+  Markdownlint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -10,15 +10,15 @@ jobs:
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: "*.md **/*.md"
-  spellcheck:
+  Spellcheck:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # spellcheck.yaml: https://github.com/marketplace/actions/check-spelling-js-vue-html-markdown-text#example-config
-      # wordlist.txt
-      - name: Check Spelling
-        uses: UnicornGlobal/spellcheck-github-actions@0.4.0
-  linkcheck:
+      # .spellcheck.yaml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
+      # .wordlist.txt
+      - name: Spellcheck
+        uses: rojopolis/spellcheck-github-actions@0.5.0
+  Linkcheck:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
