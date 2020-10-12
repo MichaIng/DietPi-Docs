@@ -74,8 +74,7 @@ plugins:
       redirect_maps:
           'dietpi-software-bittorrent.md': 'software/bittorrent.md'
           'user-optimised-software.md' : 'dietpi_optimised_software.md'
-          'user-guide-install.md' : 'user-guide_install_sbc.md'
-          'user-guide_install.md' : 'user-guide_install_sbc.md'
+          'user-guide-install.md' : 'user-guide_installation.md'
           'hardware-supported_sbc.md' : 'dietpi_sbc.md'
           'user-guide_tools.md' : 'dietpi_tools.md'
           'release-notes-updates.md' : 'release-notes.md'
@@ -117,7 +116,7 @@ extra_css:
 nav:
   - 'HOME' :
       - 'Overview' : index.md
-      - 'Installation' : 'user-guide_install_sbc.md'
+      - 'Installation' : 'user-guide_installation.md'
       - 'Getting started' : 'user-guide_overview.md'
       - 'Optimised software list' : 'dietpi_optimised_software.md'
       - 'Supported SBC' : 'dietpi_sbc.md'
