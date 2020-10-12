@@ -1,19 +1,27 @@
 name: Markdown tests
 on: push
 jobs:
-  build:
+  markdownlint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       # .markdownlintrc: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
       - name: markdownlint-cli
-      # spellcheck.yaml: https://github.com/marketplace/actions/check-spelling-js-vue-html-markdown-text#example-config
-      # wordlist.txt
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: "*.md **/*.md"
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # spellcheck.yaml: https://github.com/marketplace/actions/check-spelling-js-vue-html-markdown-text#example-config
+      # wordlist.txt
       - name: Check Spelling
         uses: UnicornGlobal/spellcheck-github-actions@0.4.0
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
       # mlc_config.json: https://github.com/tcort/markdown-link-check#config-file-format
       - name: markdown-link-check
         uses: gaurav-nelson/github-action-markdown-link-check@v1
