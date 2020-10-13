@@ -1,7 +1,7 @@
 name: Markdown tests
 on: push
 jobs:
-  Check Markdown:
+  Check_Markdown:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -10,7 +10,7 @@ jobs:
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: "*.md **/*.md"
-  Check spelling:
+  Check_Spelling:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -18,7 +18,7 @@ jobs:
       # .wordlist.txt
       - name: Spellcheck
         uses: rojopolis/spellcheck-github-actions@0.5.0
-  Check links:
+  Check_BuildAndLinks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
