@@ -4,11 +4,14 @@ title: How to install DietPi
 ---
 
 # How to install DietPi
-DietPi images are available for several target systems, as follows:   
+The installation of DietPi consists of several steps:
 
-- Single board computers (SBCs), like Raspberry PI, Odroid, NanoPi etc.
-- Native PCs (Intel based PCs)
-- Virtual machines, like Oracle VirtualBox, VMware, Microsoft Hyper-V
+1. Provide an installation media (e.g. SD card for single board computer or USB stick for PC)
+2. Get the DietPi image (and put it on the installation media)   
+3. Boot up the DietPi device and go through one time installation steps
+
+Afterwards these steps you will be able to install additional software packages using an easy to use command line script (*dietpi-software*).
+
 
 Select the following tabs for the installation description of your target.
 
@@ -23,14 +26,14 @@ Select the following tabs for the installation description of your target.
     To follow this tutorial, you will need the next hardware list:
 
     - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](../hardware-supported_sbc/)
-    - An SD card of at least 4 GiB, and a way to read it on your computer (integrated slot or external SD card reader)
+    - An SD card of at least 4 GiB, and a way to write it on your computer (integrated slot or external SD card reader)
     - Optional: Ethernet (network) cable
 
-    _Note_: Following this guide you could run the installation directly or via network. If you choose an installation via network you will not need a monitor or keyboard connected to your SBC or virtualized environment.
+    _Note_: Following this guide you could run the installation directly (from a console) or via network. If you choose an installation via network you will not need a monitor or keyboard connected to your SBC or virtualized environment.
 
     ## 1. Download and extract the DietPi disk image
 
-    Open [dietpi.com](https://dietpi.com#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC or virtualized environment and click on the **Download**. The disk image will be downloaded locally.
+    Open [dietpi.com](https://dietpi.com#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally.
 
     _Example:_
     ![DietPi-RaspberryPi-image](assets/images/DietPi-RaspberryPi-image.jpg)
@@ -42,27 +45,32 @@ Select the following tabs for the installation description of your target.
     Linux users will need to download and install `p7zip` (the terminal version of `7zip`).
 
     ??? info "How do I extract DietPi image on Linux"
-    	On Debian and Ubuntu-based systems, open a terminal and type:
-    	```
-    	sudo apt install p7zip
-    	```
+      	On Debian and Ubuntu-based systems, open a terminal and type:
+      	```
+      	sudo apt install p7zip
+      	```
 
-    	Once p7zip is installed, type the following at the terminal to extract the file:
-    	```
-    	7zr e DietPi-Image.7z
-    	```
+      	Once p7zip is installed, type the following at the terminal to extract the file:
+      	```
+      	7zr e DietPi-Image.7z
+      	```
 
-    	Replace **DietPi-Image.7z** with the correct name of your compressed DietPi file, example: **DietPi_RPi-ARMv6-Buster.7z**. This will extract the DietPi image file for you to use.
+      	Replace **DietPi-Image.7z** with the correct name of your compressed DietPi file, example: **DietPi_RPi-ARMv6-Buster.7z**. This will extract the DietPi image file for you to use.
 
     ## 2. Run balenaEtcher and flash the image
 
-    Download and install [balenaEtcher](https://etcher.io/) - it flashes OS images to SD cards & USB drives, safely and easily on Windows, macOS, Linux.
+    Download and install [balenaEtcher](https://etcher.io/) - it flashes OS images to SD cards & USB drives, safely and easily on Windows, macOS, Linux.  
+    You may also use [Rufus](https://rufus.ie/) to flash the SD card. See ***Install on native PC (UEFI)*** for an example of the usage of Rufus.
 
     Start the program and make sure you have your SD card inserted into your computer. Locate and select the DietPi image.
 
     ![DietPi-Etcher-install-01](assets/images/DietPi-Etcher-install-01.jpg)
 
-    Next, ensure that the SD card selected is the correct one. It will wipe the drive clean, so if you choose the wrong one, you may risk losing data.
+    Next, ensure that the SD card selected is the correct one.
+
+    !!! warning "All data on the SD card will be erased!"
+        The flash procedure will wipe the drive clean, so if you choose the wrong one, you may risk losing data.
+
 
     ![DietPi-Etcher-install-02](assets/images/DietPi-Etcher-install-02.jpg)
 
@@ -71,20 +79,21 @@ Select the following tabs for the installation description of your target.
     ![DietPi-Etcher-install-03](assets/images/DietPi-Etcher-install-03.jpg)
 
     ??? info "Click here if you want to pre-configure WiFi network "
-    	To setup Wifi, open the SD card folder, and update next two files using a text editor of your choice:
+      	To setup Wifi, open the SD card folder, and update next two files using a text editor of your choice:
 
-    	1.  Open the file named `dietpi.txt`. Find `AUTO_SETUP_NET_WIFI_ENABLED` and set to value 1.
-    	2.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+      	1.  Open the file named `dietpi.txt`. Find `AUTO_SETUP_NET_WIFI_ENABLED` and set to value 1.
+      	2.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
         3.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
         4.  Save and close the files
 
 
     ## 3. Prepare the first boot of your SBC
 
-    Remove the SD card from the PC and insert it into your device, preparing to boot for the first time.
-
+    Remove the SD card from the PC and insert it into your device, preparing to boot for the first time.  
     Power on the SBC to login and execute the first boot procedure.  
-    ***Remark:*** Due to a resize of the filesystem on the SD card this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depeding on the SD card size, SD card speed and system speed.
+
+    !!! info "Initial boot duration"
+      	Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depeding on the SD card size, SD card speed and system speed.
 
 
 === "Install on native PC (UEFI)"
@@ -104,8 +113,6 @@ Select the following tabs for the installation description of your target.
     - one **bootable USB flash drive** (at least 2 GB), to hold the DietPi installer image and to boot the target PC
     - **target PC** to be installed
 
-    !!! warning "All data on the USB medium and on the target PCs harddisk will be erased !"
-    	Before starting the installation make first backup of the data available on the target PC and USB drive !
 
     ## 1. Download and extract the DietPi disk image
 
@@ -114,14 +121,14 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi-download-image](assets/images/dietpi-download-nativepc.jpg)
 
-    Download **[Rufus](https://rufus.ie/)** and run the application. There is a portable version of Rufus available which doesn't require any local installation.
+    Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
-    !!! warning "Be careful if you run alternative applications !"
-    	While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
+    !!! warning "Be careful if you run alternative applications!"
+      	While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
 
     ## 2. Flash image to USB drive
 
-    Start **[Rufus](https://rufus.ie/)** application and make sure you have your USB drive inserted into your computer. Follow the next steps:
+    Start [Rufus](https://rufus.ie/) application and make sure you have your USB drive inserted into your computer. Follow the next steps:
 
     - (1) Select the USB device
     - (2) Select the downloaded **DietPi** image
@@ -129,14 +136,20 @@ Select the following tabs for the installation description of your target.
     - (4) Select UEFI as target system
     - (5) Click on _Start_ button
 
-    	_Note: Ensure the selected USB card is the correct one! The app will wipe the drive, so if you choose the wrong one, you may risk losing data._
+    Ensure that the USB medium selected is the correct one.
+
+    !!! warning "All data on the USB medium and on the target PCs harddisk will be erased!"
+        Before starting the installation first make a backup of the data available on the target PC and USB drive if you need it later again!
+
 
     ![dietpi-rufus-uefi](assets/images/dietpi-rufus-uefi.jpg)
 
     ## 3. Boot the target PC and install the image on the local disk
 
     Boot the **target PC** from USB image and install the image on the local disk / harddisk. Put the USB stick into the target PC and boot from this USB stick  
-    _Note: it may be necessary to change BIOS settings to enable the UEFI boot. This action is not described here._
+
+    !!! note "BIOS settings"
+        It may be necessary to change BIOS settings to enable the UEFI boot. This action is not described here.
 
     During the initial boot, the following dialog may appear to boot from the USB stick:
 
@@ -164,7 +177,7 @@ Select the following tabs for the installation description of your target.
 
     ![dietpi-boot-partclone](assets/images/dietpi-boot-partclone.jpg)
 
-    These steps take some time, be patient ! Otherwise buy an SSD. :-)  
+    These steps take some time, be patient! Otherwise buy an SSD. :-)  
     At the end the system executes a shutdown.
 
     For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
@@ -187,15 +200,17 @@ Select the following tabs for the installation description of your target.
 
     As a starting point you need a **PC with a running VirtualBox software** on which the DietPi system will run.  
     On this PC a free harddisk space of about  
+
     - 1.2 GB for a minimal running system  
-    - 5-10 GB for a typical running system with X11  
+    - 5 - 10 GB for a typical running system with X11  
+
     is needed. A recommended size is at least a free space of 10 GB.
 
 
     ## 1. Download and extract the DietPi disk image
 
     Download the **DietPi VirtualBox file** "DietPi_VirtualBox-x86_64-Buster.7z" from [dietpi.com](https://dietpi.com/#download) and   
-    unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    unzip the downloaded file to a local!!! info "DietPi Survey" folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi-download-image](assets/images/dietpi-VirtualBox-Download.png)
 
@@ -230,8 +245,9 @@ Select the following tabs for the installation description of your target.
 ## 4. First logon on DietPi
 
 After you have bootet up your system, you can continue following the instructions on the screen, or connect via network:
+
 - If you have a keyboard and a monitor connected to your system you login via this console.
-- If you have a headless system (e.g. a SBC without keyboard resp. monitor) you have to use a terminal program (e.g. putty) to connect to the system via a ssh connection.
+- If you have a headless system (e.g. an SBC without keyboard resp. monitor) you have to use a terminal program (e.g. `putty`) to connect to the system via an ssh connection.
 
 A login prompt should appear.
 
@@ -252,22 +268,25 @@ Initial credentials:
 
 	- For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://download.advanced-ip-scanner.com).
 
-	- For Linux, you can use nmap command:
-
-		```
+	- For Linux, you can use nmap command:  
+    ```
 		sudo apt-get install nmap #For installing Nmap
-		sudo nmap -sn 192.168.1.0/24 #For scanning IP address
+    ```  
+    ```
+    sudo nmap -sn 192.168.1.0/24 #For scanning IP address
 		```
+
+    Alternatively you may also determine the IP address in the DHCP status page of your DHCP server (often included in a router).
 
 	**Connect to DietPi via SSH**
 
-	- A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.
+	- A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host Name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.
 	![DietPi-ssh](assets/images/dietpi-ssh.jpg)
 
-	- Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address 192.168.1.20 with the one found via scanning the network).
-	```
-	ssh pi@192.168.1.20
-	```
+	- Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address 192.168.1.20 with the one found via scanning the network):  
+    ```
+  	ssh root@192.168.1.20
+  	```
 
 To further proceed you’ll need to accept the DietPi GPL license. Hit the Enter key on your keyboard to do this.
 
@@ -278,13 +297,13 @@ DietPi will then immediately begin to search for and install updated software pa
 Once the packages have been updated, DietPi will ask you to confirm whether you would like to enable user analytics.
 
 !!! info "DietPi Survey"
-	DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/) page. Checkout and see how DietPi is used!
+  	DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/) page. Checkout and see how DietPi is used!
 
 ![dietpi-data](assets/images/dietpi-data-policy.jpg)
 
 The default DietPi password is public, so you’ll be asked to change this at the next stage for both the `root` and `dietpi` user accounts. Select OK and hit enter, then provide your password (twice) to confirm.
 
-You can change the password again later by typing `passwd` at the terminal.
+You can change the password again later by typing `passwd` at the terminal or also via the command line script *dietpi-config* (within the "Security options").
 
 ![dietpi-password](assets/images/dietpi-password-01.jpg)
 
@@ -292,17 +311,19 @@ You can change the password again later by typing `passwd` at the terminal.
 
 The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use. If you’re unsure what software to install, checkout [DietPi Optimised Software](../dietpi_optimised_software) page for more details.
 
-!!! info "How do I run **DietPi-Software** and install **Optimised software** ?"
+!!! info "How do I run ***dietPi-software*** and install **optimised software**?"
 
-	This tool will automatically launch when you first boot your Raspberry Pi using DietPi after the initial configuration process has completed. You can also launch it manually by typing `dietpi-software` in the terminal.
+  	This tool will automatically launch when you first boot your Raspberry Pi using DietPi after the initial configuration process has completed. You can also launch it manually by typing `dietpi-software` in the terminal.
 
-	- To begin, select **Software Optimized** in the main menu list and hit Enter.    
-	- Scroll through the list of available software - for more details check [DietPi Optimised Software](../user-optimised_software)
-	- To install software on your DietPi, select it in the list and press the **space bar** to add it to the installation list. If you change your mind, hit space again to remove it.
-	- Once you’ve selected the software you wish to install, press the tab key on your keyboard to switch to the confirmation options at the bottom. Select **OK**, then hit enter on your keyboard to confirm.
-	- To begin installing your software, select **Install** from the main menu list, then hit the Enter key. DietPi will ask you to confirm your choice(s). Select OK, then hit enter to begin the installation.
+  	- To begin, select **Software Optimized** in the main menu list and hit Enter.    
+  	- Scroll through the list of available software - for more details check [DietPi Optimised Software](../user-optimised_software)
+  	- To install software on your DietPi, select it in the list and press the **space bar** to add it to the installation list. If you change your mind, hit space again to remove it.
+  	- Once you’ve selected the software you wish to install, press the tab key on your keyboard to switch to the confirmation options at the bottom. Select **OK**, then hit enter on your keyboard to confirm.
+  	- To begin installing your software, select **Install** from the main menu list, then hit the Enter key. DietPi will ask you to confirm your choice(s). Select **OK**, then hit enter to begin the installation.
 
-	The software you selected will begin to install at this point. Once the process is completed, you may be asked to restart your device. Press OK to confirm.
+  	The software you selected will begin to install at this point.  
+    Once the process is completed, you may be asked to restart your device. Press **OK** to confirm.
+
 
 ![DietPi Software](assets/images/dietpi-software.jpg)
 
