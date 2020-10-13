@@ -70,7 +70,7 @@ Proposal:
 Idea:
   - Use tabs in the content area (like there: https://dietpi.com/docs/dietpi-software-desktop/#lxde-ultra-lightweight-desktop) to distinguish between SBC, native PC, VirtualBox,etc. Below the tab area the *First boot on DietPi* section is located.
 
-- [ ] **ToDo Stephan:** Implement the changed *Installation* structure.
+- [x] **ToDo Stephan:** Implement the changed *Installation* structure.
 
 ### 3.2 Description of *dietpi-software* usage
 
