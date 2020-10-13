@@ -33,7 +33,7 @@ jobs:
       - name: Configure MkDocs
         run: |
           sed -i "/repo_url/c\repo_url: https://github.com/$GITHUB_REPOSITORY" mkdocs.yml
-          sed -i "/edit_uri/c\edit_uri: edit/${GITHUB_REPOSITORY#*/}/docs/" mkdocs.yml
+          sed -i "/edit_uri/c\edit_uri: edit/${GITHUB_REF#refs/heads}docs/" mkdocs.yml
       - name: Build MkDocs
         run: mkdocs build -csd build/docs
       - name: Link Checker
