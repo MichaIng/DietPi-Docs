@@ -8,7 +8,19 @@ title: DietPi Supported SBCs
 ## Raspberry Pi
 The Raspberry Pi has sold more than 31 million units since it launched in 2012. Any Raspberry Pi can serve as a secondary computer for email and web surfing. The real fun starts when you use your Pi for projects, which can range from robots to retro arcade machines to home media servers, security cameras and so on.
 
-You can install DietPi by following the step by step [Starting guide](../user-guide_install_sbc/).
+You can install DietPi by following the step by step [Starting guide](../user-guide_installation/).
+
+DietPi runs very well on latest model **Raspberry Pi 4 Model B** (launched in 2019 / 2020)
+
+![raspberry-pi-4-model-b](assets/images/raspberry-pi-4-labelled.png)
+
+as well as on one of the first models **Raspberry Pi 1** (launched in 2012)
+
+![raspberry-pi-1-model-b](assets/images/raspberry-pi-1b.jpg)
+
+and even on the compact form **Raspberry Pi Zero W**
+
+![raspberry-pi-zero-w](assets/images/raspberry-pi-zero-w.jpg)
 
 <div class="md-typeset__table">
     <table>
@@ -28,18 +40,6 @@ You can install DietPi by following the step by step [Starting guide](../user-gu
         </tbody>
     </table>
 </div>
-
-DietPi runs very well on latest model **Raspberry Pi 4 Model B** (launched in 2019 / 2020)
-
-![raspberry-pi-4-model-b](assets/images/raspberry-pi-4-labelled.png)
-
-as well as on one of the first models **Raspberry Pi 1** (launched in 2012)
-
-![raspberry-pi-1-model-b](assets/images/raspberry-pi-1b.jpg)
-
-and even on the compact form **Raspberry Pi Zero W**
-
-![raspberry-pi-zero-w](assets/images/raspberry-pi-zero-w.jpg)
 
 Quick intro:
 
@@ -268,6 +268,136 @@ Careful consideration went into the design and development of the Tinker Board t
 </div>
 
 
+## NanoPi Series (FriendlyARM)
+**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
+For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
+
+![NanoPi K2](assets/images/dietpi-nanopi-k2.jpg)
+
+**NanoPi K2** supports DVFS and it can smooth play high-definition video streams, and it is very well suited for applications such as advertisement machines, TV boxes, home entertainment appliances or multimedia devices.
+
+<div class="md-typeset__table">
+    <table>
+        <thead>
+            <tr>
+                <th align="left"><strong>Product</strong></th>
+                <th align="left"><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO-ARMv7-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO Plus2</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEOPlus2-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO2</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO2 Black</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://github.com/MichaIng/DietPi/issues/3333">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO3</strong> </a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiNEO3-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO4</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K1 Plus</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiK1Plus-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K2</strong> </a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiK2-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M1 Plus</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM1Plus-ARMv7-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M1/T1</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM1-ARMv7-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M2/T2</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM2-ARMv7-Stretch.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M3/T3</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM3-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M4V2</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM4v2-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPC T4</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPC M4</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi Fire3</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi R2S</strong> </a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiR2S-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>ZeroPi</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiZeroPi-ARMv7-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
 ## Native PC & Virtualized environments
 
 ### Native PC images
@@ -329,135 +459,6 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
     </table>
 </div>
 
-
-## NanoPi Series (FriendlyARM)
-**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
-For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
-
-![NanoPi K2](assets/images/dietpi-nanopi-k2.jpg)
-
-**NanoPi K2** supports DVFS and it can smooth play high-definition video streams, and it is very well suited for applications such as advertisement machines, TV boxes, home entertainment appliances or multimedia devices.
-
-<div class="md-typeset__table">
-    <table>
-        <thead>
-            <tr>
-                <th align="left"><strong>Product</strong></th>
-                <th align="left"><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO-ARMv7-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO Plus2</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEOPlus2-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO2</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO2 Black</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://github.com/MichaIng/DietPi/issues/3333">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO3</strong> <i>new</i></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiNEO3-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO4</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K1 Plus</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiK1Plus-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K2</strong> <i>new</i></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiK2-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M1 Plus</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM1Plus-ARMv7-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M1/T1</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM1-ARMv7-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M2/T2</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM2-ARMv7-Stretch.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M3/T3</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM3-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M4V2</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM4v2-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPC T4</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPC M4</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi Fire3</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi R2S</strong> <i>new</i></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiR2S-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>ZeroPi</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiZeroPi-ARMv7-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 
 ## Make your own distribution
 
