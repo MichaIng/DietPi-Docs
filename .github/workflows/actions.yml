@@ -1,28 +1,18 @@
-name: Markdown tests
+name: Build test and quality checks
 on: push
 jobs:
-  Check_Markdown:
-    runs-on: ubuntu-latest
+  Actions:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      # .markdownlintrc: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
-      - name: markdownlint-cli
+      - name: Clone DietPi-Docs repository
+        uses: actions/checkout@v2
+      - name: Check Markdown syntax
+        # .markdownlintrc: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
           files: "*.md **/*.md"
-  Check_Spelling:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      # .spellcheck.yaml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
-      # .wordlist.txt
-      - name: Spellcheck
-        uses: rojopolis/spellcheck-github-actions@0.5.0
-  Check_BuildAndLinks:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
       - name: Set up Python 3.7
+        if: ${{ always() }}
         uses: actions/setup-python@v2
         with:
           python-version: '3.7'
@@ -34,9 +24,17 @@ jobs:
         run: |
           sed -i "/repo_url/c\repo_url: https://github.com/$GITHUB_REPOSITORY" mkdocs.yml
           sed -i "/edit_uri/c\edit_uri: edit/${GITHUB_REF#refs/heads}/docs/" mkdocs.yml
-      - name: Build MkDocs
+      - name: Build DietPi-Docs
         run: mkdocs build -sd build/docs
-      - name: Link Checker
+      - name: Check links in HTML files
+        id: lc
         uses: peter-evans/link-checker@v1
         with:
           args: -c 1 -d build -r README.md build/docs
+      - name: Check link check result
+        run: exit ${{ steps.lc.outputs.exit_code }}
+      - name: Check spelling in HTML files
+        if: ${{ always() }}
+        # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
+        # .wordlist.txt
+        uses: rojopolis/spellcheck-github-actions@0.5.0
