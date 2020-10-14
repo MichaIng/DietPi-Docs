@@ -1,0 +1,34 @@
+matrix:
+- name: README
+  aspell:
+    lang: en
+  dictionary:
+    wordlists:
+    - .wordlist.txt
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.markdown:
+  - pyspelling.filters.html:
+    comments: false
+    ignores:
+    - code
+    - pre
+  sources:
+  - 'README.md'
+  default_encoding: utf-8
+- name: HTML
+  aspell:
+    lang: en
+  dictionary:
+    wordlists:
+    - .wordlist.txt
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.html:
+    comments: false
+    ignores:
+    - code
+    - pre
+  sources:
+  - 'build/docs/**/*.html'
+  default_encoding: utf-8
