@@ -41,6 +41,7 @@ jobs:
         with:
           args: -c 1 -d build -r README.md build/docs
       - name: Check link check result
+        if: always() && steps.check_links.outcome == 'success'
         run: exit ${{ steps.check_links.outputs.exit_code }}
       - name: Check spelling in HTML files
         if: always() && steps.build.outcome == 'success'
