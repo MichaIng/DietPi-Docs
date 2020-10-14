@@ -45,17 +45,17 @@ Select the following tabs for the installation description of your target.
     Linux users will need to download and install `p7zip` (the terminal version of `7zip`).
 
     ??? info "How do I extract DietPi image on Linux"
-      	On Debian and Ubuntu-based systems, open a terminal and type:
-      	```
-      	sudo apt install p7zip
-      	```
+        On Debian and Ubuntu-based systems, open a terminal and type:
+        ```
+        sudo apt install p7zip
+        ```
 
-      	Once p7zip is installed, type the following at the terminal to extract the file:
-      	```
-      	7zr e DietPi-Image.7z
-      	```
+        Once p7zip is installed, type the following at the terminal to extract the file:
+        ```
+        7zr e DietPi-Image.7z
+        ```
 
-      	Replace **DietPi-Image.7z** with the correct name of your compressed DietPi file, example: **DietPi_RPi-ARMv6-Buster.7z**. This will extract the DietPi image file for you to use.
+        Replace **DietPi-Image.7z** with the correct name of your compressed DietPi file, example: **DietPi_RPi-ARMv6-Buster.7z**. This will extract the DietPi image file for you to use.
 
     ## 2. Run balenaEtcher and flash the image
 
@@ -79,10 +79,10 @@ Select the following tabs for the installation description of your target.
     ![DietPi-Etcher-install-03](assets/images/DietPi-Etcher-install-03.jpg)
 
     ??? info "Click here if you want to pre-configure WiFi network "
-      	To setup Wifi, open the SD card folder, and update next two files using a text editor of your choice:
+        To setup Wifi, open the SD card folder, and update next two files using a text editor of your choice:
 
-      	1.  Open the file named `dietpi.txt`. Find `AUTO_SETUP_NET_WIFI_ENABLED` and set to value 1.
-      	2.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+        1.  Open the file named `dietpi.txt`. Find `AUTO_SETUP_NET_WIFI_ENABLED` and set to value 1.
+        2.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
         3.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
         4.  Save and close the files
 
@@ -93,7 +93,7 @@ Select the following tabs for the installation description of your target.
     Power on the SBC to login and execute the first boot procedure.  
 
     !!! info "Initial boot duration"
-      	Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depeding on the SD card size, SD card speed and system speed.
+        Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depeding on the SD card size, SD card speed and system speed.
 
 
 === "Install on native PC (UEFI)"
@@ -124,7 +124,7 @@ Select the following tabs for the installation description of your target.
     Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
     !!! warning "Be careful if you run alternative applications!"
-      	While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
+        While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
 
     ## 2. Flash image to USB drive
 
@@ -220,6 +220,15 @@ Select the following tabs for the installation description of your target.
 
 
     ## 2. Import of the .ova file in VirtualBox
+    - To install software on your DietPi, select it in the list and press the **space bar** to add it to the installation list. If you change your mind, hit space again to remove it.
+    - Once you’ve selected the software you wish to install, press the tab key on your keyboard to switch to the confirmation options at the bottom. Select **OK**, then hit enter on your keyboard to confirm.
+    - To begin installing your software, select **Install** from the main menu list, then hit the Enter key. DietPi will ask you to confirm your choice(s). Select **OK**, then hit enter to begin the installation.
+
+    The software you selected will begin to install at this point.  
+    Once the process is completed, you may be asked to restart your device. Press **OK** to confirm.
+
+
+    ![DietPi Software](assets/images/dietpi-software.jpg)
 
     As next, the VirtualBox virtual machine has to be setup by importing the .ova file (via \File\Import Appliance):
 
@@ -238,7 +247,7 @@ Select the following tabs for the installation description of your target.
 
     ## 3. First boot of the new VirtualBox image
     Press the start button (green arrow) to 'boot up' your system based on the DietPi image.
-    If you do not have a wired LAN connection you have to change the network settings matching to your environment (files ___\boot\dietpi.txt___ and ___\boot\dietpi-wifi.txt___).
+    If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
 
 
 
@@ -270,11 +279,11 @@ Initial credentials:
 
 	- For Linux, you can use nmap command:  
     ```
-		sudo apt-get install nmap #For installing Nmap
+    sudo apt-get install nmap #For installing Nmap
     ```  
     ```
     sudo nmap -sn 192.168.1.0/24 #For scanning IP address
-		```
+    ```
 
     Alternatively you may also determine the IP address in the DHCP status page of your DHCP server (often included in a router).
 
@@ -285,8 +294,8 @@ Initial credentials:
 
 	- Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address 192.168.1.20 with the one found via scanning the network):  
     ```
-  	ssh root@192.168.1.20
-  	```
+    ssh root@192.168.1.20
+    ```
 
 To further proceed you’ll need to accept the DietPi GPL license. Hit the Enter key on your keyboard to do this.
 
@@ -297,36 +306,18 @@ DietPi will then immediately begin to search for and install updated software pa
 Once the packages have been updated, DietPi will ask you to confirm whether you would like to enable user analytics.
 
 !!! info "DietPi Survey"
-  	DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/) page. Checkout and see how DietPi is used!
+    DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/) page. Checkout and see how DietPi is used!
 
 ![dietpi-data](assets/images/dietpi-data-policy.jpg)
 
 The default DietPi password is public, so you’ll be asked to change this at the next stage for both the `root` and `dietpi` user accounts. Select OK and hit enter, then provide your password (twice) to confirm.
 
-You can change the password again later by typing `passwd` at the terminal or also via the command line script *dietpi-config* (within the "Security options").
+You can change the password again later by typing `passwd` at the terminal or also via the command line script `dietpi-config` (within the "Security options").
 
 ![dietpi-password](assets/images/dietpi-password-01.jpg)
 
-## 5. Install software with the DietPi-Software tool
-
-The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use. If you’re unsure what software to install, checkout [DietPi Optimised Software](../dietpi_optimised_software) page for more details.
-
-!!! info "How do I run ***dietPi-software*** and install **optimised software**?"
-
-  	This tool will automatically launch when you first boot your Raspberry Pi using DietPi after the initial configuration process has completed. You can also launch it manually by typing `dietpi-software` in the terminal.
-
-  	- To begin, select **Software Optimized** in the main menu list and hit Enter.    
-  	- Scroll through the list of available software - for more details check [DietPi Optimised Software](../user-optimised_software)
-  	- To install software on your DietPi, select it in the list and press the **space bar** to add it to the installation list. If you change your mind, hit space again to remove it.
-  	- Once you’ve selected the software you wish to install, press the tab key on your keyboard to switch to the confirmation options at the bottom. Select **OK**, then hit enter on your keyboard to confirm.
-  	- To begin installing your software, select **Install** from the main menu list, then hit the Enter key. DietPi will ask you to confirm your choice(s). Select **OK**, then hit enter to begin the installation.
-
-  	The software you selected will begin to install at this point.  
-    Once the process is completed, you may be asked to restart your device. Press **OK** to confirm.
-
-
-![DietPi Software](assets/images/dietpi-software.jpg)
-
+## 5. Further steps
+The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use: Just run `dietPi-software` and install [**DietPi Optimised Software**](../user-optimised_software).  
 You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
 
 If you want to make further changes to your DietPi configuration, you can run `dietpi-launcher` at the terminal to view all the available DietPi tools, including **DietPi-Update** to update your device and **DietPi-Backup** to back up your device.

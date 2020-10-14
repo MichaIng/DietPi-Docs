@@ -79,7 +79,7 @@ Idea:
 
 Shall be moved to *Getting started*.
 
-- [ ] **ToDo Stephan:** Move contents.
+- [x] **ToDo Stephan:** Move contents.
 
 *Getting started* shall contain often used procedures. Seldom used procedures shall be in *Advanced configuration & DietPi tools*.
 
@@ -165,7 +165,7 @@ See there: https://dietpi.com/docs/dietpi-software-webserver-stack/
    - Port the description *Webserver Preference System* to this section
 3. How to port the stack description to the Webserver stacks section? Idea:
    - Divide the description into sections about webservers, about data bases and about PHP.
-   
+
 - [ ] **Todo Stephan:** Implement points 1. and 2. above
 - [ ] **Afterwards:** Discuss how to implement point 3. above and decide further steps
 
