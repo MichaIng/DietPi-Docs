@@ -35,7 +35,7 @@ CSM
 Cuberite
 DarkBetter
 DarkIce
-dietpi
+DietPi
 DIY
 DLNA
 DNS
@@ -110,7 +110,7 @@ Minecraft
 MineOS
 MiniDLNA
 Minio
-mkdocs
+MkDocs
 Mopidy
 Mosquitto
 MotionEye
