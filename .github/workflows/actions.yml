@@ -14,36 +14,36 @@ jobs:
           files: "*.md **/*.md"
       - name: Set up Python 3.7
         id: python_setup
-        if: ${{ steps.clone.outputs.status == 'success' }}
+        if: ${{ steps.clone.outcome == 'success' }}
         uses: actions/setup-python@v2
         with:
           python-version: '3.7'
       - name: Install Python dependencies
         id: python_deps
-        if: ${{ steps.python_setup.outputs.status == 'success' }}
+        if: ${{ steps.python_setup.outcome == 'success' }}
         run: |
           python3 -m pip install -U pip wheel setuptools
           pip3 install -r requirements.txt
       - name: Configure MkDocs
         id: mkdocs_config
-        if: ${{ steps.python_deps.outputs.status == 'success' }}
+        if: ${{ steps.python_deps.outcome == 'success' }}
         run: |
           sed -i "/repo_url/c\repo_url: https://github.com/$GITHUB_REPOSITORY" mkdocs.yml
           sed -i "/edit_uri/c\edit_uri: edit/${GITHUB_REF#refs/heads}/docs/" mkdocs.yml
       - name: Build DietPi-Docs
         id: build
-        if: ${{ steps.mkdocs_config.outputs.status == 'success' }}
+        if: ${{ steps.mkdocs_config.outcome == 'success' }}
         run: mkdocs build -sd build/docs
       - name: Check links in HTML files
         id: check_links
-        if: ${{ steps.build.outputs.status == 'success' }}
+        if: ${{ steps.build.outcome == 'success' }}
         uses: peter-evans/link-checker@v1
         with:
           args: -c 1 -d build -r README.md build/docs
       - name: Check link check result
         run: exit ${{ steps.check_links.outputs.exit_code }}
       - name: Check spelling in HTML files
-        if: ${{ steps.build.outputs.status == 'success' }}
+        if: ${{ steps.build.outcome == 'success' }}
         # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
         # .wordlist.txt
         uses: rojopolis/spellcheck-github-actions@0.5.0
