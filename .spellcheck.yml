@@ -1,26 +1,4 @@
 matrix:
-- name: README
-  aspell:
-    lang: en
-  dictionary:
-    wordlists:
-    - .wordlist.txt
-    encoding: utf-8
-  pipeline:
-  - pyspelling.filters.markdown:
-    markdown_extensions:
-    - pymdownx.magiclink
-  - pyspelling.filters.html:
-    attributes:
-    - title
-    - alt
-    ignores:
-    - code
-    - pre
-  - pyspelling.filters.url:
-  sources:
-  - 'README.md'
-  default_encoding: utf-8
 - name: HTML
   aspell:
     lang: en
