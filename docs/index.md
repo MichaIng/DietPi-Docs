@@ -3,7 +3,7 @@ description: How to install DietPi on SBCs and virtualized environments. Install
 title: DietPi Documentation
 ---
 
-[![](https://dietpi.com/images/logo_transparent_360x360.png){: style="height:180px"}](https://dietpi.com/)
+[![DietPi Logo](https://dietpi.com/images/dietpi-logo_180x180.png)](https://dietpi.com/)
 
 **DietPi | Minimal image at its core**
 
