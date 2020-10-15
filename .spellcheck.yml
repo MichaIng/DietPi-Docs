@@ -1,0 +1,20 @@
+matrix:
+- name: HTML
+  aspell:
+    lang: en
+  dictionary:
+    wordlists:
+    - .wordlist.txt
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.html:
+    attributes:
+    - title
+    - alt
+    ignores:
+    - code
+    - pre
+  - pyspelling.filters.url:
+  sources:
+  - 'build/docs/**/*.html'
+  default_encoding: utf-8
