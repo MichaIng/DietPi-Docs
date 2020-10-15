@@ -1,5 +1,5 @@
 matrix:
-- name: Markdown
+- name: HTML
   aspell:
     lang: en
   dictionary:
@@ -7,12 +7,14 @@ matrix:
     - .wordlist.txt
     encoding: utf-8
   pipeline:
-  - pyspelling.filters.markdown:
   - pyspelling.filters.html:
-    comments: false
+    attributes:
+    - title
+    - alt
     ignores:
     - code
     - pre
+  - pyspelling.filters.url:
   sources:
-  - '**/*.md'
+  - 'build/docs/**/*.html'
   default_encoding: utf-8

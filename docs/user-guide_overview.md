@@ -36,9 +36,7 @@ The list includes desktop environments, Remote Desktop, Media Systems/Players, T
     The software you selected will begin to install at this point.  
     Once the process is completed, you may be asked to restart your device. Press **OK** to confirm.
 
-
 You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
-
 
 ## Supported SBC
 

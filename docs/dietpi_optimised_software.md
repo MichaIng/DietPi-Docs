@@ -1,28 +1,30 @@
 # DietPi Optimised software Index
 
 ## Overview
+
 **DietPi-Software** is a core DietPi tool, allowing you to install **Ready to run** and **Optimized software** for your device. It automates the installation and configuration process for you and also applies specific optimizations unique to your hardware model. As a result DietPi-Software ensure you get the **maximum performance** from your device.
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?" 
-    To install any of the **DietPi Optimised Software** listed below run from the command line: 
+??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
+    To install any of the **DietPi Optimised Software** listed below run from the command line:
     ```
-    dietpi-launcher 
+    dietpi-launcher
     ```
-    and selected _DietPi-Software_. or launch directly the tool: 
+    and selected _DietPi-Software_. or launch directly the tool:
     ```
-    dietpi-software 
+    dietpi-software
     ```
-    
+
     Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi Software](assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools) section.
 
-!!! warning "Documentation in progress..." 
+!!! warning "Documentation in progress..."
     The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
 
 ## [Desktops](../software/desktop)
+
 - [**LXDE - Highly optimized ultra lightweight desktop**](../software/desktop/#lxde-ultra-lightweight-desktop)
 - [**LXQt - Slick and optimized lightweight desktop**](../software/desktop/#lxqt-optimized-lightweight-desktop)
 - [**MATE - Popular Gnome 2 desktop**](../software/desktop/#mate-popular-gnome2-desktop)
@@ -30,11 +32,13 @@
 - [**GnuStep - Alternative/unique desktop**](../software/desktop/#gnustep-alternativeunique-desktop)
 
 ### [Desktop Utilities](../software/desktop/#desktop-utilities)
+
 - [**Chromium - Web browser**](../software/desktop/#chromium-web-browser)
 - [**GIMP - Image editor**](../software/desktop/#gimp-image-editor)
 - [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss-atom-news-feeds-reader)
 
 ## Remote Desktop Access
+
 - [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection)
 - [RealVNC Server - Desktop for remote connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4149)
 - [XRDP - Remote desktop server for Windows Remote Desktop Client](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2074)
@@ -127,6 +131,7 @@
 - [YaCy - Decentralized open source search engine.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p6202)  
 
 ## WiFi HotSpot
+
 - [WiFi HotSpot - Turn your device into a wireless hotspot/access point.](https://dietpi.com/phpbb/viewtopic.php?p=1207#p1207)  
 - [Tor HotSpot - Optional: Routes all WiFi HotSpot traffic through the Tor network.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1529)  
 

@@ -2,6 +2,7 @@ AirPlay
 Airsonic
 AIY
 Allo
+Allwinner
 Amiberry
 Ampache
 analytics
@@ -14,6 +15,7 @@ BaiKal
 balancer
 balenaEtcher
 Bazarr
+Beelink
 Blynk
 CalDAV
 CardDAV
@@ -35,7 +37,7 @@ CSM
 Cuberite
 DarkBetter
 DarkIce
-dietpi
+DietPi
 DIY
 DLNA
 DNS
@@ -44,6 +46,7 @@ DPMS
 DRM
 Dropbear
 DSI
+DVFS
 DXX
 EEPROM
 Emby
@@ -67,8 +70,9 @@ GPT
 Grafana
 HAProxy
 Hardkernel
+HC
+hexa
 HTPC
-http
 HTTPS
 IceCast
 ICMP
@@ -95,10 +99,10 @@ Lighttpd
 LLMP
 LLSP
 LMS
-localhost
 Logitech
 Logrotate
 LPDDR
+LTS
 LXDE
 LXQt
 macOS
@@ -110,7 +114,9 @@ Minecraft
 MineOS
 MiniDLNA
 Minio
-mkdocs
+MIPI
+MkDocs
+nm
 Mopidy
 Mosquitto
 MotionEye
@@ -157,12 +163,16 @@ pyenv
 qBittorrent
 QuiteRSS
 Radarr
+Radxa
 RAMdisk
 RAMlog
 Raspbian
 RDP
 ReadyMedia
 RealVNC
+RK
+Rockchip
+ROCKPro
 Roon
 RPi
 RPis
@@ -210,7 +220,8 @@ UrBackup
 UUID
 VirtualBox
 VirtualHere
-virtualized
+virtualised
+virtualiser
 VM
 VMware
 VNC
@@ -225,6 +236,7 @@ WiringPi
 Wordpress
 Xfce
 XRDP
+XU
 YaCy
 ympd
 ZeroPi
