@@ -13,11 +13,11 @@ title: DietPi Documentation
 
 ## What is DietPi ?
 
-DietPi is a **highly optimised & minimal Debian-based Linux distribution**. DietPi is extremely lightweight at its core, and also extremely easy to install and use. 
+DietPi is a **highly optimised & minimal Debian-based Linux distribution**. DietPi is extremely lightweight at its core, and also extremely easy to install and use.
 
-Setting up a single board computer (SBC) or even a computer, for both regular or server use, takes time and skill. DietPi provides an **easy way to install and run favourite software you choose**. 
+Setting up a single board computer (SBC) or even a computer, for both regular or server use, takes time and skill. DietPi provides an **easy way to install and run favourite software you choose**.
 
-<!-- 
+<!--
 our images start at 400MB in size (3x lighter than 'Raspbian Lite'). With features of low process/memory footprint, DietPi allows you to get the maximum performance from your device. -->
 
 !!! quote
@@ -30,7 +30,7 @@ our images start at 400MB in size (3x lighter than 'Raspbian Lite'). With featur
 
 ## Getting started
 
-If you are **new to DietPi**, the [_Install_](user-guide_install_sbc) provides a tutorial for everything you need to get DietPi running. 
+If you are **new to DietPi**, the [_Install_](user-guide_installation) provides a tutorial for everything you need to get DietPi running. 
 
 If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11).
 
@@ -64,13 +64,13 @@ Have some feedback, questions, suggestions, or just fancy a chat ? Visit our [co
 
 **How ?**
 
-1. Fork the project [https://github.com/MichaIng/DietPi](https://github.com/MichaIng/DietPi/blob/dev/CONTRIBUTING.md) or the documentation [https://github.com/MichaIng/DietPi-Docs](https://github.com/MichaIng/DietPi-Docs). 
+1. Fork the project [https://github.com/MichaIng/DietPi](https://github.com/MichaIng/DietPi/blob/dev/CONTRIBUTING.md) or the documentation [https://github.com/MichaIng/DietPi-Docs](https://github.com/MichaIng/DietPi-Docs).
 2. Make one or more well commented and clean commits to the repository.
 3. Perform a pull request in GitHub’s web interface.
 4. If it is a new feature request, don’t start the coding first. Remember to open a GitHub [issue](https://github.com/MichaIng/DietPi/issues) to discuss the new enhancement.
 
 ## If you find our project useful
-then we would really appreciate it if you would consider contributing to the project however you can. 
+then we would really appreciate it if you would consider contributing to the project however you can.
 
 Donating is the easiest way to help us via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DVBECXRW3TAA) or become a [Patron](https://www.patreon.com/bePatron?u=12464530).
 

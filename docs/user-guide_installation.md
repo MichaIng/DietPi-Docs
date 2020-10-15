@@ -10,7 +10,7 @@ The installation of DietPi consists of several steps:
 2. Get the DietPi image (and put it on the installation media)   
 3. Boot up the DietPi device and go through one time installation steps
 
-Afterwards these steps you will be able to install additional software packages using an easy to use command line script (*dietpi-software*).
+Afterwards these steps you will be able to install additional software packages using an easy to use command line script ([`dietpi-software`](../dietpi_tools/#dietpi-software)).
 
 
 Select the following tabs for the installation description of your target.
@@ -220,16 +220,6 @@ Select the following tabs for the installation description of your target.
 
 
     ## 2. Import of the .ova file in VirtualBox
-    - To install software on your DietPi, select it in the list and press the **space bar** to add it to the installation list. If you change your mind, hit space again to remove it.
-    - Once you’ve selected the software you wish to install, press the tab key on your keyboard to switch to the confirmation options at the bottom. Select **OK**, then hit enter on your keyboard to confirm.
-    - To begin installing your software, select **Install** from the main menu list, then hit the Enter key. DietPi will ask you to confirm your choice(s). Select **OK**, then hit enter to begin the installation.
-
-    The software you selected will begin to install at this point.  
-    Once the process is completed, you may be asked to restart your device. Press **OK** to confirm.
-
-
-    ![DietPi Software](assets/images/dietpi-software.jpg)
-
     As next, the VirtualBox virtual machine has to be setup by importing the .ova file (via \File\Import Appliance):
 
     ![DietPi-import-VirtualBoxMachine1](assets/images/dietpi-VirtualBox-import1.png)
@@ -275,7 +265,7 @@ Initial credentials:
 
     For the following steps we require an IP Scanning tool to determine the IP address of the Raspberry Pi.
 
-	- For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://download.advanced-ip-scanner.com).
+	- For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://www.advanced-ip-scanner.com).
 
 	- For Linux, you can use nmap command:  
     ```
@@ -317,12 +307,12 @@ You can change the password again later by typing `passwd` at the terminal or al
 ![dietpi-password](assets/images/dietpi-password-01.jpg)
 
 ## 5. Further steps
-The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use: Just run `dietPi-software` and install [**DietPi Optimised Software**](../user-optimised_software).  
+The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use: Just run `dietpi-software` and install [**DietPi Optimised Software**](../dietpi_optimised_software).  
 You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
 
 If you want to make further changes to your DietPi configuration, you can run `dietpi-launcher` at the terminal to view all the available DietPi tools, including **DietPi-Update** to update your device and **DietPi-Backup** to back up your device.
 
-For more details, check [DietPi Tools](../user-guide_tools) section.
+For more details, check [DietPi Tools](../dietpi_tools) section.
 
 ## 6. Install by community (YouTube)
 A video tutorial on _How to install and initially configure DietPi_ by Roberto Jorge.
