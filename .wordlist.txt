@@ -68,7 +68,6 @@ Grafana
 HAProxy
 Hardkernel
 HTPC
-http
 HTTPS
 IceCast
 ICMP
