@@ -163,6 +163,7 @@ pyenv
 qBittorrent
 QuiteRSS
 Radarr
+Radxa
 RAMdisk
 RAMlog
 Raspbian
