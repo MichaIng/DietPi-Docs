@@ -52,6 +52,7 @@ and [much more...](dietpi_optimised_software)
 DietPi does everything for you, giving you more time to enjoy the software you need.
 
 ## What is supported?
+
 Check [_Supported SBCs_](hardware-supported_sbc) page for recently supported list.
 
 **_Note:_** “Supported” is not a guarantee. “Supported” implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.

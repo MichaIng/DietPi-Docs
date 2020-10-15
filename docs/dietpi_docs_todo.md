@@ -41,8 +41,8 @@ Remark: Google search should be considered.
 
 ### 2.2 File structure
 
-Q: Shall we structure every chapter to subdirs (with own assets sub-subdirs)?   
-This could lead to a more general structure if the docu is extending.   
+Q: Shall we structure every chapter to subdirs (with own assets sub-subdirs)?
+This could lead to a more general structure if the docu is extending.
 
 Could this lead to problems when chapters or images are used several times?
 
@@ -56,30 +56,30 @@ Open point, has to be cleared.
 
 Today:
 
-  - Installation (*covers SBC installation* and *First boot on DietPi*)
-  - Advanced installation
-    - Install DietPi on native PC
-    - Install DietPi as an Oracle VirtualBox machine
+- Installation (*covers SBC installation* and *First boot on DietPi*)
+- Advanced installation
+  - Install DietPi on native PC
+  - Install DietPi as an Oracle VirtualBox machine
 
 Proposal:
 
-  - **Installation** (*covers overview over several options: SBC, PC, virtual machine*)
-  - **Installation on SBC** ([contents](https://dietpi.com/docs/user-guide_install/))
-  - **Installation on native PC** ([contents](https://dietpi.com/docs/user-guide_install_uefi/))
-  - **Installation on VirtualBox machine** ([contents](https://dietpi.com/docs/user-guide_install_VirtualBox/))
-  - (later: - **Installation on VmWare virtual machine**)
-  - **First boot on DietPi** (move this from the [*Installation on SBC*](https://dietpi.com/docs/user-guide_install/#3-first-boot-on-dietpi) section to here)
-
+- **Installation** (*covers overview over several options: SBC, PC, virtual machine*)
+- **Installation on SBC** ([contents](https://dietpi.com/docs/user-guide_install/))
+- **Installation on native PC** ([contents](https://dietpi.com/docs/user-guide_install_uefi/))
+- **Installation on VirtualBox machine** ([contents](https://dietpi.com/docs/user-guide_install_VirtualBox/))
+- (later: - **Installation on VmWare virtual machine**)
+- **First boot on DietPi** (move this from the [*Installation on SBC*](https://dietpi.com/docs/user-guide_install/#3-first-boot-on-dietpi) section to here)
 
 Idea:
-  - Use tabs in the content area (like there: https://dietpi.com/docs/dietpi-software-desktop/#lxde-ultra-lightweight-desktop) to distinguish between SBC, native PC, VirtualBox,etc. Below the tab area the *First boot on DietPi* section is located.
+
+- Use tabs in the content area (like there: https://dietpi.com/docs/dietpi-software-desktop/#lxde-ultra-lightweight-desktop) to distinguish between SBC, native PC, VirtualBox,etc. Below the tab area the *First boot on DietPi* section is located.
 
 - [x] **ToDo Stephan:** Implement the changed *Installation* structure.
 
 ### 3.2 Description of *dietpi-software* usage
 
-  1. Move [4. Install software with the DietPi-Software tool](https://dietpi.com/docs/user-guide_install/#4-install-software-with-the-dietpi-software-tool) to [DietPi Optimised software Index](https://dietpi.com/docs/user-optimised-software/) ?  
-  *dietpi-software* should not be a tool which is run only once during the installation.
+1. Move [4. Install software with the DietPi-Software tool](https://dietpi.com/docs/user-guide_install/#4-install-software-with-the-dietpi-software-tool) to [DietPi Optimised software Index](https://dietpi.com/docs/user-optimised-software/) ?  
+*dietpi-software* should not be a tool which is run only once during the installation.
 
 Shall be moved to *Getting started*.
 
@@ -97,21 +97,19 @@ See there: https://dietpi.com/docs/hardware-supported_sbc/.
 
 Harmonize/rearrange order in all sub-chapters:
 
-  - Heading
-  - Hardware description
-  - Picture of hardware
-  - Link table to images
+- Heading
+- Hardware description
+- Picture of hardware
+- Link table to images
 
 
 - [x] **ToDo Stephan:** Harmonize sections.
-
 
 ### 4.2 Supported Single Board Computers (SBCs)
 
 1. Move *NanoPi Series (FriendlyARM)* below *ASUS Tinker Board*
 
 - [x] **ToDo Stephan:** Change order.
-
 
 ### 4.3 Description of DietPi PREP?
 
@@ -123,13 +121,11 @@ Actually it is only referenced at the end of the [*Supported SBC* section](https
 - [ ] **ToDo Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
   Basically use *master* branch, use *dev* for hardening/testing Micha's PREP-script.
 
-
 ### 4.4 Name of .md file
 
 1. Q: Rename *hardware-supported_sbc.md* to *user-guide_supported_sbc.md*
 
 - [x] **Done** with renaming/restructuring from Petru.
-
 
 ### 4.5 Images
 
@@ -140,7 +136,6 @@ Add images for
 The images are available on Dietpi.com\Download.
 
 - [ ] **ToDo Stephan:** Add images.
-
 
 ## 5. Desktops
 
@@ -158,8 +153,6 @@ LXQt (https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweigh
 
 - [ ] **ToDo Stephan:** Add image.
 
-
-
 ## 6. DietPi Tools
 
 See there: https://dietpi.com/docs/user-guide_tools/
@@ -168,8 +161,6 @@ See there: https://dietpi.com/docs/user-guide_tools/
 
 - [ ] **Todo Stephan:** Move dietpi-software main menu screenshot above the tabs selection
 - [ ] **Todo Stephan:** Add a screenshot for *Software Additional* within the corresponding tab section
-
-
 
 ## 7. Description of Webserver stacks
 
@@ -185,7 +176,6 @@ See there: https://dietpi.com/docs/dietpi-software-webserver-stack/
 - [ ] **Todo Stephan:** Implement points 1. and 2. above
 - [ ] **Afterwards:** Discuss how to implement point 3. above and decide further steps
 
-
 ## 8. Links *Return to the Optimised Software list*
 
 See there: https://dietpi.com/docs/dietpi-software-webserver-stack/  
@@ -193,8 +183,6 @@ At the bottom there is a link to jump back.
 Q: Is this linking done in all necessary pages? If no, where should it be inserted?
 
 - [x] **Already done in this way.**
-
-
 
 ## 9. Gitea software
 
@@ -208,7 +196,6 @@ Describe/check user rights of dietpi user and letsencrypt.
   See: https://docs.gitea.io/en-us/fail2ban-setup/
 - Describe combination Gitea and letsencrypt. Then use https for access.
 
-
 Alternative:
 
 - Add a general *hardening with https:* description in the webserver section (where in detail?).  
@@ -220,7 +207,6 @@ How to go on?
 - First do a description about gitea hardening
 - Then describe a bit more general security solutions
 - Then possibly restructure the whole issue
-
 
 ## 10. Backup/Restore
 
