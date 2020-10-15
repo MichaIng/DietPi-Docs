@@ -1,11 +1,12 @@
 ---
-description: DietPi supported SBCs (Raspberry Pi 4/3/2/1/Zero, Odroid, PINE 64 etc.) - Native PC & Virtualized environments (VirtualBox, Hyper-V, VMWare)
+description: DietPi Supported SBCs (Raspberry Pi 4/3/2/1/Zero, Odroid, PINE64 etc.) - Native PC & Virtual Machines (VirtualBox, VMware, Hyper-V)
 title: DietPi Supported SBCs
 ---
 
 # Supported Single Board Computers (SBCs)
 
 ## Raspberry Pi
+
 The Raspberry Pi has sold more than 31 million units since it launched in 2012. Any Raspberry Pi can serve as a secondary computer for email and web surfing. The real fun starts when you use your Pi for projects, which can range from robots to retro arcade machines to home media servers, security cameras and so on.
 
 You can install DietPi by following the step by step [Starting guide](../user-guide_install_sbc/).
@@ -153,14 +154,13 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
     </table>
 </div>
 
-
 ## ROCK Pi
 
-**Maker Friendly, IoT connectivity** enabled. ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
-For more details visit [ROCK Pi](http://rockpi.org/) website.
+**Maker Friendly, IoT connectivity** enabled. Radxa ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
+For more details visit the [Radxa ROCK Pi](http://rockpi.org/) website.
 
 One of the supported boards is ROCK Pi 4.
-![DietPi ROCK Pi 4](assets/images/dietpi-rockpi-4b.jpg)
+![Radxa ROCK Pi 4](assets/images/dietpi-rockpi-4b.jpg)
 
 ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
 
@@ -190,6 +190,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
 </div>
 
 ## Firefly
+
 **Six-core 64-bit High Performance Open Source Platform**. For more details visit [Firefly RK3399](http://shop.t-firefly.com/goods.php?id=45) website.
 
 <div class="md-typeset__table">
@@ -212,7 +213,8 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
 </div>
 
 ## Sparky SBC
-Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit [Allo.com - Sparky SBC](https://www.allo.com/sparky/sparky-sbc.html) website.
+
+Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit the [Allo Sparky SBC](https://www.allo.com/sparky/sparky-sbc.html) website.
 
 <div class="md-typeset__table">
     <table>
@@ -234,17 +236,18 @@ Sparky Single Board Computer (SBC) is a credit card-sized board that can be used
 </div>
 
 ## ASUS Tinker Board
-Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit [asus.com - ASUS Tinker Board](https://www.asus.com/Single-Board-Computer/Tinker-Board/) website.
 
-**Maker-Friendly, with IoT Connectivity**
+Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit the [ASUS Tinker Board](https://www.asus.com/Single-Board-Computer/Tinker-Board/) website.
+
+### Maker-Friendly, with IoT Connectivity
 
 Tinker Board features standard maker connectivity options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
 
-![DietPi Tinker Board](assets/images/dietpi-tinkerboard.jpg)
+![ASUS Tinker Board](assets/images/dietpi-tinkerboard.jpg)
 
 Tinker Board is equipped with one DSI MIPI connection for displays and touchscreens. The secondary CSI MIPI connection is for connection to compatible cameras allowing for computer vision, and much more.
 
-**Enhanced DIY Design**
+### Enhanced DIY Design
 
 Careful consideration went into the design and development of the Tinker Board to ensure that it provides a superior user experience for first-time builders or for seasoned hobbyists. Builders appreciate the color-coded GPIO header, which makes it easy to recognize respective pin headers.
 
@@ -267,16 +270,18 @@ Careful consideration went into the design and development of the Tinker Board t
     </table>
 </div>
 
-
-## Native PC & Virtualized environments
+## Native PC & Virtual Machines
 
 ### Native PC images
+
 The Native PC images are great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience. This image is for motherboards with UEFI boot support and onboard eMMC (e.g.: Z83-II, Beelink AP32 and other Intel NUC/SBC devices with onboard eMMC).
 
 ### VMware
+
 The VMware virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
 ### VirtualBox
+
 ![Oracle VirtualBox](assets/images/vbox.jpg)
 
 VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at server, desktop and embedded use.
@@ -284,6 +289,7 @@ VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at s
 The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
 ### Hyper-V (community image)
+
 The Hyper-V virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
 <div class="md-typeset__table">
@@ -329,10 +335,10 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
     </table>
 </div>
 
-
 ## NanoPi Series (FriendlyARM)
+
 **FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
-For more details visit [FriendlyARM.com](https://www.friendlyarm.com/) website.
+For more details visit the [FriendlyARM](https://www.friendlyarm.com/) website.
 
 ![NanoPi K2](assets/images/dietpi-nanopi-k2.jpg)
 
@@ -465,4 +471,4 @@ Unable to find an available image for your device? No worries, DietPi can be eas
 
 Simply run the DietPi PREP script [click for details](https://github.com/MichaIng/DietPi/issues/1285#issue-280771944) and follow the onscreen instructions.
 
-_NB: End user support will be limited to issues that are DietPi specific (which excludes Kernel/GPU/onboard BT+WiFi+Audio etc from our support). GPU features are disabled for other devices (eg: Kodi, Desktop), ideal for server usage._
+_NB: End user support will be limited to issues that are DietPi specific (which excludes Kernel/GPU/onboard Bluetooth+WiFi+Audio etc from our support). GPU features are disabled for other devices (e.g.: Kodi, Desktop), ideal for server usage._
