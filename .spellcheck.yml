@@ -13,6 +13,7 @@ matrix:
     ignores:
     - code
     - pre
+  - pyspelling.filters.url:
   sources:
   - 'README.md'
   default_encoding: utf-8
@@ -29,6 +30,7 @@ matrix:
     ignores:
     - code
     - pre
+  - pyspelling.filters.url:
   sources:
   - 'build/docs/**/*.html'
   default_encoding: utf-8
