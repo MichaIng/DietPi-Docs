@@ -20,7 +20,7 @@ You can install DietPi by following the step by step [Starting guide](../user-gu
         </thead>
         <tbody>
         <tr>
-            <td align="left"><a class="table"><strong>Rasberry Pi - ALL models</strong></a></td>
+            <td align="left"><a class="table"><strong>Raspberry Pi - ALL models</strong></a></td>
             <td align="left">
                 <strong>Unique DietPi image available for ALL Raspberry Pi models: Raspberry Pi 4 Model B, Raspberry Pi 3 Model A+ / B / B+, Raspberry Pi 2 Model B, Raspberry Pi 1 Model A+ / B+, Raspberry Pi Zero W</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster.7z">Download image</a></li>
             </td>
@@ -52,7 +52,7 @@ ODROID single board computers are powerful, stable, and fast performing. They ca
 ODROID-N2 is one of the supported boards.
 ![DietPi Odroid N2](assets/images/dietpi-odroid-n2-plus.jpg)
 
- It is a new generation single board computer that is more powerful, more stable, and faster performing than N1. The main CPU of the N2 is based on big. Thanks to the modern 12nm silicon technology, the A73 cores runs at 1.8Ghz without thermal throttling using the stock metal-housing heatsink allowing a robust and quiet computer.
+ It is a new generation single board computer that is more powerful, more stable, and faster performing than N1. The main CPU of the N2 is based on big. Thanks to the modern 12nm silicon technology, the A73 cores runs at 1.8 GHz without thermal throttling using the stock metal-housing heat sink allowing a robust and quiet computer.
 
 <div class="md-typeset__table">
     <table>
@@ -104,11 +104,11 @@ This is where PINE64 journey began. The PINE A64 is their first Single Board Com
 The ROCKPro64 is the most powerful single board computer offered by PINE64.
 ![DietPi ROCKPro64](assets/images/dietpi-rockpro64.jpg)
 
-It features a Rockchip RK3399 hexa-core SOC and up-to 4 GiB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C  with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UARTs and GPIOs.
+It features a Rockchip RK3399 hexa-core SOC and up-to 4 GiB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C  with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UART and GPIO.
 
-The board is backwards compatible with many of the existing PINE64 peripherals, including the Wifi/BT module, camera module and LCD panel but an array of new peripherals specific for the board is also available. All this in the exact same model “A” dimension as the original PINE A64.
+The board is backwards compatible with many of the existing PINE64 peripherals, including the WiFi/Bluetooth module, camera module and LCD panel but an array of new peripherals specific for the board is also available. All this in the exact same model “A” dimension as the original PINE A64.
 
-The ROCKPro64 4GB board is designated as LTS (long Term Supply) which means that PINE64 is committed to supply it for at least 5 years – until year 2023 and beyond.
+The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means that PINE64 is committed to provide support for at least 5 years – until year 2023 and beyond.
 
 <div class="md-typeset__table">
     <table>
@@ -128,7 +128,7 @@ The ROCKPro64 4GB board is designated as LTS (long Term Supply) which means that
             <tr>
                 <td align="left"><a class="table" target="_blank" href=""><strong>PINE H64</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_PineH64-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_PineH64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
@@ -182,7 +182,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
             <tr>
                 <td align="left"><a class="table" target="_blank" href=""><strong>ROCK Pi S</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_ROCKPiS-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
@@ -190,7 +190,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
 </div>
 
 ## Firefly
-**Six-core 64-bit High Performance Open Source Platform**. For more details visit [Firefly-RK3399](http://shop.t-firefly.com/goods.php?id=45) website.
+**Six-core 64-bit High Performance Open Source Platform**. For more details visit [Firefly RK3399](http://shop.t-firefly.com/goods.php?id=45) website.
 
 <div class="md-typeset__table">
     <table>
@@ -202,9 +202,9 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>FireFly-RK3399</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>Firefly RK3399</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_FireflyRK3399-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_FireflyRK3399-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
@@ -212,7 +212,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
 </div>
 
 ## Sparky SBC
-Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit [Allo.com - SparkySBC](https://www.allo.com/sparky/sparky-sbc.html) website.
+Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit [Allo.com - Sparky SBC](https://www.allo.com/sparky/sparky-sbc.html) website.
 
 <div class="md-typeset__table">
     <table>
@@ -226,7 +226,7 @@ Sparky Single Board Computer (SBC) is a credit card-sized board that can be used
             <tr>
                 <td align="left"><a class="table" target="_blank" href=""><strong>Sparky SBC</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_SparkySBC-ARMv7-Stretch.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_SparkySBC-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
@@ -258,7 +258,7 @@ Careful consideration went into the design and development of the Tinker Board t
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Asus Tinker Board</strong></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>ASUS Tinker Board</strong></a></td>
                 <td align="left">
                    <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_ASUSTB-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
@@ -271,7 +271,7 @@ Careful consideration went into the design and development of the Tinker Board t
 ## Native PC & Virtualized environments
 
 ### Native PC images
-The Native PC images are great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience. This image is for motherboards with UEFI boot support and onboard eMMC (eg: Z83-II, Beelink AP32 and other Intel NUC/SBC devices with onboard eMMC).
+The Native PC images are great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience. This image is for motherboards with UEFI boot support and onboard eMMC (e.g.: Z83-II, Beelink AP32 and other Intel NUC/SBC devices with onboard eMMC).
 
 ### VMware
 The VMware virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
@@ -279,7 +279,7 @@ The VMware virtual machine is great for those occasions where SBC performance ju
 ### VirtualBox
 ![Oracle VirtualBox](assets/images/vbox.jpg)
 
-VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.
+VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at server, desktop and embedded use.
 
 The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
@@ -332,7 +332,7 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
 
 ## NanoPi Series (FriendlyARM)
 **FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
-For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
+For more details visit [FriendlyARM.com](https://www.friendlyarm.com/) website.
 
 ![NanoPi K2](assets/images/dietpi-nanopi-k2.jpg)
 
@@ -372,9 +372,9 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO3</strong> <i>new</i></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO3</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiNEO3-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO3-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
@@ -390,9 +390,9 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K2</strong> <i>new</i></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiK2-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiK2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
@@ -410,7 +410,7 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
             <tr>
                 <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M2/T2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM2-ARMv7-Stretch.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM2-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
@@ -422,7 +422,7 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
             <tr>
                 <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M4V2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM4v2-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM4V2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
@@ -444,9 +444,9 @@ For more details visit [FrienlyARM.com](https://www.friendlyarm.com/) website.
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi R2S</strong> <i>new</i></a></td>
+                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi R2S</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiR2S-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiR2S-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
