@@ -4,14 +4,14 @@ title: How to install DietPi
 ---
 
 # How to install DietPi
+
 The installation of DietPi consists of several steps:
 
 1. Provide an installation media (e.g. SD card for single board computer or USB stick for PC)
-2. Get the DietPi image (and put it on the installation media)   
+2. Get the DietPi image (and put it on the installation media)
 3. Boot up the DietPi device and go through one time installation steps
 
 Afterwards these steps you will be able to install additional software packages using an easy to use command line script ([`dietpi-software`](../dietpi_tools/#dietpi-software)).
-
 
 Select the following tabs for the installation description of your target.
 
@@ -94,7 +94,6 @@ Select the following tabs for the installation description of your target.
 
     !!! info "Initial boot duration"
         Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depeding on the SD card size, SD card speed and system speed.
-
 
 === "Install on native PC (UEFI)"
 
@@ -182,7 +181,6 @@ Select the following tabs for the installation description of your target.
 
     For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
 
-
 === "Install in VirtualBox"
 
     ## Introduction
@@ -239,8 +237,6 @@ Select the following tabs for the installation description of your target.
     Press the start button (green arrow) to 'boot up' your system based on the DietPi image.
     If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
 
-
-
 ## 4. First logon on DietPi
 
 After you have bootet up your system, you can continue following the instructions on the screen, or connect via network:
@@ -265,9 +261,9 @@ Initial credentials:
 
     For the following steps we require an IP Scanning tool to determine the IP address of the Raspberry Pi.
 
-	- For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://www.advanced-ip-scanner.com).
+    - For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://www.advanced-ip-scanner.com).
 
-	- For Linux, you can use nmap command:  
+    - For Linux, you can use nmap command:  
     ```
     sudo apt-get install nmap #For installing Nmap
     ```  
@@ -277,12 +273,12 @@ Initial credentials:
 
     Alternatively you may also determine the IP address in the DHCP status page of your DHCP server (often included in a router).
 
-	**Connect to DietPi via SSH**
+    **Connect to DietPi via SSH**
 
-	- A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host Name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.
-	![DietPi-ssh](assets/images/dietpi-ssh.jpg)
+    - A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host Name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.
+    ![DietPi-ssh](assets/images/dietpi-ssh.jpg)
 
-	- Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address 192.168.1.20 with the one found via scanning the network):  
+    - Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address 192.168.1.20 with the one found via scanning the network):  
     ```
     ssh root@192.168.1.20
     ```
@@ -307,6 +303,7 @@ You can change the password again later by typing `passwd` at the terminal or al
 ![dietpi-password](assets/images/dietpi-password-01.jpg)
 
 ## 5. Further steps
+
 The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use: Just run `dietpi-software` and install [**DietPi Optimised Software**](../dietpi_optimised_software).  
 You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
 
@@ -315,6 +312,7 @@ If you want to make further changes to your DietPi configuration, you can run `d
 For more details, check [DietPi Tools](../dietpi_tools) section.
 
 ## 6. Install by community (YouTube)
+
 A video tutorial on _How to install and initially configure DietPi_ by Roberto Jorge.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Me0PfuNLl-Q?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>

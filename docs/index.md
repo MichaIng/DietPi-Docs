@@ -9,9 +9,9 @@ title: DietPi Documentation
 
 **Optimised | Simplified | For everyone**
 
-# Welcome to the DietPi Documentation!
+# Welcome to the DietPi Documentation
 
-## What is DietPi ?
+## What is DietPi?
 
 DietPi is a **highly optimised & minimal Debian-based Linux distribution**. DietPi is extremely lightweight at its core, and also extremely easy to install and use.
 
@@ -30,7 +30,7 @@ our images start at 400MB in size (3x lighter than 'Raspbian Lite'). With featur
 
 ## Getting started
 
-If you are **new to DietPi**, the [_Install_](user-guide_installation) provides a tutorial for everything you need to get DietPi running. 
+If you are **new to DietPi**, the [_Install_](user-guide_installation) provides a tutorial for everything you need to get DietPi running.
 
 If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11).
 
@@ -51,12 +51,13 @@ and [much more...](dietpi_optimised_software)
 
 DietPi does everything for you, giving you more time to enjoy the software you need.
 
-## What is supported ?
+## What is supported?
 Check [_Supported SBCs_](hardware-supported_sbc) page for recently supported list.
 
 **_Note:_** “Supported” is not a guarantee. “Supported” implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.
 
 ## Community
+
 Have some feedback, questions, suggestions, or just fancy a chat ? Visit our [community](https://dietpi.com/phpbb/) !
 ![DietPi Forum](assets/images/dietpi-forum.jpg)
 
@@ -70,7 +71,8 @@ Have some feedback, questions, suggestions, or just fancy a chat ? Visit our [co
 4. If it is a new feature request, don’t start the coding first. Remember to open a GitHub [issue](https://github.com/MichaIng/DietPi/issues) to discuss the new enhancement.
 
 ## If you find our project useful
-then we would really appreciate it if you would consider contributing to the project however you can.
+
+We would really appreciate it if you would consider contributing to the project however you can.
 
 Donating is the easiest way to help us via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DVBECXRW3TAA) or become a [Patron](https://www.patreon.com/bePatron?u=12464530).
 

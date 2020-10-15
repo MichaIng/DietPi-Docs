@@ -11,17 +11,17 @@ It is the main program to run whenever you have a DietPi OS. It provides a quick
 DietPi-Software will be automatically displayed on the first login. It is one of the core tools, enabling the installation of one or multiple software items, either:
 
 === "Software Optimised"
-    This contains a long list of optimised software. You either browse the list by selecting **Software optimised** or used the option **Search**. 
+    This contains a long list of optimised software. You either browse the list by selecting **Software optimised** or used the option **Search**.
 
 === "Software Additional"
     This section provides:
-    
-    - software packages that are often used and installed via `apt install <package>`, without additional optimisation from DietPi team. 
-    - _or_ packages not directly required, but pulled as a dependency, like: build tools, libraries or runtime systems. 
+
+    - software packages that are often used and installed via `apt install <package>`, without additional optimisation from DietPi team.
+    - _or_ packages not directly required, but pulled as a dependency, like: build tools, libraries or runtime systems.
 
 ![dietpi-software](assets/images/dietpi-software.jpg)
 
-### Software Optimised 
+### Software Optimised
 
 Select DietPi optimised software to install.
 
@@ -29,10 +29,10 @@ Select DietPi optimised software to install.
 
 ### Install / Uninstall
 
-Use this option to: 
+Use this option to:
 
- - install selected software items (either **optimised software** or **additional software** items)
- - or select and then remove installed software from your operating system.
+- install selected software items (either **optimised software** or **additional software** items)
+- or select and then remove installed software from your operating system.
 
 ## Configuration
 
@@ -60,7 +60,6 @@ Provides service control, priority level tweaks and status print.
 
 ![DietPi-Services](assets/images/dietpi-services.jpg)
 
-
 ### Dietpi-LED_control
 
 ![DietPi-Led_control](assets/images/dietpi-ledcontrol.jpg)
@@ -79,7 +78,7 @@ Change the audio settings
 
 ## Dietpi Update / Backup / Sync
 
-### DietPi-Update 
+### DietPi-Update
 
 Update DietPi OS version to the latest version available.
 
