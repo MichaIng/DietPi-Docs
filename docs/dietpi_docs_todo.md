@@ -72,7 +72,7 @@ Proposal:
 
 Idea:
 
-- Use tabs in the content area (like there: https://dietpi.com/docs/dietpi-software-desktop/#lxde-ultra-lightweight-desktop) to distinguish between SBC, native PC, VirtualBox,etc. Below the tab area the *First boot on DietPi* section is located.
+- Use tabs in the content area ([like there](https://dietpi.com/docs/dietpi-software-desktop/#lxde-ultra-lightweight-desktop) to distinguish between SBC, native PC, VirtualBox,etc. Below the tab area the *First boot on DietPi* section is located.
 
 - [x] **ToDo Stephan:** Implement the changed *Installation* structure.
 
@@ -91,7 +91,7 @@ Shall be moved to *Getting started*.
 
 ## 4 Supported Single Board Computers (SBCs)
 
-See there: https://dietpi.com/docs/hardware-supported_sbc/.
+See there: [Supported SBCs](https://dietpi.com/docs/hardware-supported_sbc/).
 
 ### 4.1 Structure of chapters
 
@@ -101,7 +101,6 @@ Harmonize/rearrange order in all sub-chapters:
 - Hardware description
 - Picture of hardware
 - Link table to images
-
 
 - [x] **ToDo Stephan:** Harmonize sections.
 
@@ -130,6 +129,7 @@ Actually it is only referenced at the end of the [*Supported SBC* section](https
 ### 4.5 Images
 
 Add images for
+
 - Firefly
 - Sparky SBC (Allo)
 
@@ -139,13 +139,12 @@ The images are available on Dietpi.com\Download.
 
 ## 5. Desktops
 
-Desktop basics (https://dietpi.com/docs/dietpi-software-desktop/):
+Desktop basics [DietPi Desktops](https://dietpi.com/docs/dietpi-software-desktop/):
 
 1. Add a section how to setup the ***Autostart options*** via ***dietpi-config*** to start with LightDM
   - Have it similar to the collapsable description *How do I run DietPi-Software and install Optimised software ?*
 
 - [x] **No extra description, because this is already described in the tab page *Enable autostart*.**
-
 
 LXQt (https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweight-desktop):
 
