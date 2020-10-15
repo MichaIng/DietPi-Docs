@@ -100,7 +100,7 @@ ODROID-N2 is one of the supported boards.
 
 ## PINE64
 
-This is where PINE64 journey began. The PINE A64 is their first Single Board Computer powered by Allwinner’s A64 Quad-Core ARM Cortex A53 64-Bit SOC. For more details visit <a target="_blank" href="https://www.pine64.org">PINE64.org</a>
+This is where PINE64 journey began. The PINE A64 is their first Single Board Computer powered by Allwinner's A64 Quad-Core ARM Cortex A53 64-Bit SOC. For more details visit <a target="_blank" href="https://www.pine64.org">PINE64.org</a>
 
 The ROCKPro64 is the most powerful single board computer offered by PINE64.
 ![DietPi ROCKPro64](assets/images/dietpi-rockpro64.jpg)
