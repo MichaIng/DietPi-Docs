@@ -9,7 +9,7 @@ title: DietPi Supported SBCs
 
 The Raspberry Pi has sold more than 31 million units since it launched in 2012. Any Raspberry Pi can serve as a secondary computer for email and web surfing. The real fun starts when you use your Pi for projects, which can range from robots to retro arcade machines to home media servers, security cameras and so on.
 
-You can install DietPi by following the step by step [Starting guide](../user-guide_install_sbc/).
+You can install DietPi by following the step by step [Starting guide](../user-guide_installation/).
 
 DietPi runs very well on latest model **Raspberry Pi 4 Model B** (launched in 2019 / 2020)
 
@@ -470,7 +470,7 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
 
 ## Make your own distribution
 
-Unable to find an available image for your device? No worries, DietPi can be easily installed on any device !
+Unable to find an available image for your device? No worries, DietPi can be easily installed on any device!
 
 Simply run the DietPi PREP script [click for details](https://github.com/MichaIng/DietPi/issues/1285#issue-280771944) and follow the onscreen instructions.
 
