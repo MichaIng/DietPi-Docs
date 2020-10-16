@@ -29,6 +29,7 @@ Merging should be done via 4-eyes method when merging to the master branch.
   I would prefer the latter one: `<docu type>_<chapter contents>.md`.
 
   **Style Guide**:
+  
   ```
   <docu type>_<chapter contents>.md, all lower case
   Example: user-guide_install.md.
@@ -87,7 +88,7 @@ Shall be moved to *Getting started*.
 
 *Getting started* shall contain often used procedures. Seldom used procedures shall be in *Advanced configuration & DietPi tools*.
 
-  - go ahead here
+- go ahead here
 
 ## 4 Supported Single Board Computers (SBCs)
 
@@ -142,7 +143,8 @@ The images are available on Dietpi.com\Download.
 Desktop basics [DietPi Desktops](https://dietpi.com/docs/dietpi-software-desktop/):
 
 1. Add a section how to setup the ***Autostart options*** via ***dietpi-config*** to start with LightDM
-  - Have it similar to the collapsable description *How do I run DietPi-Software and install Optimised software ?*
+
+    - Have it similar to the collapsable description *How do I run DietPi-Software and install Optimised software ?*
 
 - [x] **No extra description, because this is already described in the tab page *Enable autostart*.**
 
