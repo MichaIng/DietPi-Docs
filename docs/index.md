@@ -5,9 +5,9 @@ title: DietPi Documentation
 
 [![DietPi Logo](https://dietpi.com/images/dietpi-logo_180x180.png)](https://dietpi.com/)
 
-**DietPi | Minimal image at its core**
+#### DietPi | Minimal image at its core
 
-**Optimised | Simplified | For everyone**
+#### Optimised | Simplified | For everyone
 
 # Welcome to the DietPi Documentation
 
