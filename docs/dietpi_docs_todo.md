@@ -29,7 +29,7 @@ Merging should be done via 4-eyes method when merging to the master branch.
   I would prefer the latter one: `<docu type>_<chapter contents>.md`.
 
   **Style Guide**:
-  
+
   ```
   <docu type>_<chapter contents>.md, all lower case
   Example: user-guide_install.md.
@@ -136,7 +136,7 @@ Add images for
 
 The images are available on Dietpi.com\Download.
 
-- [ ] **ToDo Stephan:** Add images.
+- [x] **ToDo Stephan:** Add images.
 
 ## 5. Desktops
 

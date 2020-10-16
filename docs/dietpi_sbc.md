@@ -11,6 +11,22 @@ The Raspberry Pi has sold more than 31 million units since it launched in 2012. 
 
 You can install DietPi by following the step by step [Starting guide](../user-guide_install_sbc/).
 
+DietPi runs very well on latest model **Raspberry Pi 4 Model B** (launched in 2019 / 2020)
+
+<img src="../assets/images/raspberry-pi-4-labelled.png" title="Raspberry Pi model 4B" width="500" />
+
+as well as on one of the first models **Raspberry Pi 1** (launched in 2012)
+
+<img src="../assets/images/raspberry-pi-1b.jpg" title="Raspberry Pi model 1B" width="500" />
+
+and even on the compact form **Raspberry Pi Zero W**
+
+<img src="../assets/images/raspberry-pi-zero-w.jpg" title="Raspberry Pi zero W" width="500" />
+
+Quick intro:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sajBySPeYH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+
 <div class="md-typeset__table">
     <table>
         <thead>
@@ -30,30 +46,15 @@ You can install DietPi by following the step by step [Starting guide](../user-gu
     </table>
 </div>
 
-DietPi runs very well on latest model **Raspberry Pi 4 Model B** (launched in 2019 / 2020)
-
-![raspberry-pi-4-model-b](assets/images/raspberry-pi-4-labelled.png)
-
-as well as on one of the first models **Raspberry Pi 1** (launched in 2012)
-
-![raspberry-pi-1-model-b](assets/images/raspberry-pi-1b.jpg)
-
-and even on the compact form **Raspberry Pi Zero W**
-
-![raspberry-pi-zero-w](assets/images/raspberry-pi-zero-w.jpg)
-
-Quick intro:
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sajBySPeYH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
-
 ## Odroid
 
 ODROID single board computers are powerful, stable, and fast performing. They can function as a home theater set-top box, a general purpose computer for web browsing, gaming and socializing, a compact tool for college or office work, a prototyping device for hardware tinkering, a controller for home automation, a workstation for software development, and much more. For more details visit <a target="_blank" href="https://www.hardkernel.com">Hardkernel.com</a>
 
 ODROID-N2 is one of the supported boards.
-![DietPi Odroid N2](assets/images/dietpi-odroid-n2-plus.jpg)
 
- It is a new generation single board computer that is more powerful, more stable, and faster performing than N1. The main CPU of the N2 is based on big. Thanks to the modern 12nm silicon technology, the A73 cores runs at 1.8 GHz without thermal throttling using the stock metal-housing heat sink allowing a robust and quiet computer.
+<img src="../assets/images/dietpi-odroid-n2-plus.jpg" title="Odroid N2+" width="500" />
+
+It is a new generation single board computer that is more powerful, more stable, and faster performing than N1. The main CPU of the N2 is based on big. Thanks to the modern 12nm silicon technology, the A73 cores runs at 1.8 GHz without thermal throttling using the stock metal-housing heat sink allowing a robust and quiet computer.
 
 <div class="md-typeset__table">
     <table>
@@ -103,7 +104,8 @@ ODROID-N2 is one of the supported boards.
 This is where PINE64 journey began. The PINE A64 is their first Single Board Computer powered by Allwinner's A64 Quad-Core ARM Cortex A53 64-Bit SOC. For more details visit <a target="_blank" href="https://www.pine64.org">PINE64.org</a>
 
 The ROCKPro64 is the most powerful single board computer offered by PINE64.
-![DietPi ROCKPro64](assets/images/dietpi-rockpro64.jpg)
+
+<img src="../assets/images/dietpi-rockpro64.jpg" title="PINE64 ROCKPro64" width="500" />
 
 It features a Rockchip RK3399 hexa-core SOC and up-to 4 GiB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C  with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UART and GPIO.
 
@@ -160,7 +162,8 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
 For more details visit the [Radxa ROCK Pi](http://rockpi.org/) website.
 
 One of the supported boards is ROCK Pi 4.
-![Radxa ROCK Pi 4](assets/images/dietpi-rockpi-4b.jpg)
+
+<img src="../assets/images/dietpi-rockpi-4b.jpg" title="Radxa ROCK Pi 4B" width="500" />
 
 ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
 
@@ -193,6 +196,8 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
 
 **Six-core 64-bit High Performance Open Source Platform**. For more details visit [Firefly RK3399](http://shop.t-firefly.com/goods.php?id=45) website.
 
+<img src="../assets/images/dietpi-firefly-rk3399.png" title="Firefly RK3399" width="500" />
+
 <div class="md-typeset__table">
     <table>
         <thead>
@@ -215,6 +220,8 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
 ## Sparky SBC
 
 Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit the [Allo Sparky SBC](https://www.allo.com/sparky/sparky-sbc.html) website.
+
+<img src="../assets/images/dietpi-sparky-sbc.jpg" title="Sparky SBC" width="500" />
 
 <div class="md-typeset__table">
     <table>
@@ -239,15 +246,11 @@ Sparky Single Board Computer (SBC) is a credit card-sized board that can be used
 
 Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit the [ASUS Tinker Board](https://www.asus.com/Single-Board-Computer/Tinker-Board/) website.
 
-### Maker-Friendly, with IoT Connectivity
-
 Tinker Board features standard maker connectivity options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
 
-![ASUS Tinker Board](assets/images/dietpi-tinkerboard.jpg)
+<img src="../assets/images/dietpi-tinkerboard.jpg" title="ASUS Tinker Board" width="500" />
 
 Tinker Board is equipped with one DSI MIPI connection for displays and touchscreens. The secondary CSI MIPI connection is for connection to compatible cameras allowing for computer vision, and much more.
-
-### Enhanced DIY Design
 
 Careful consideration went into the design and development of the Tinker Board to ensure that it provides a superior user experience for first-time builders or for seasoned hobbyists. Builders appreciate the color-coded GPIO header, which makes it easy to recognize respective pin headers.
 
@@ -270,77 +273,12 @@ Careful consideration went into the design and development of the Tinker Board t
     </table>
 </div>
 
-## Native PC & Virtual Machines
-
-### Native PC images
-
-The Native PC images are great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience. This image is for motherboards with UEFI boot support and onboard eMMC (e.g.: Z83-II, Beelink AP32 and other Intel NUC/SBC devices with onboard eMMC).
-
-### VMware
-
-The VMware virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
-
-### VirtualBox
-
-![Oracle VirtualBox](assets/images/vbox.jpg)
-
-VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at server, desktop and embedded use.
-
-The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
-
-### Hyper-V (community image)
-
-The Hyper-V virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
-
-<div class="md-typeset__table">
-    <table>
-        <thead>
-            <tr>
-                <th align="left"><strong>Product</strong></th>
-                <th align="left"><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Native PC for BIOS/CSM</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Native PC UEFI</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>VMware</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>VirtualBox</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-            <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Hyper-V</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://github.com/yumiris/DietPi.Hyper-V/blob/master/README.md">DietPi image</a></li>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
 ## NanoPi Series (FriendlyARM)
 
 **FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
 For more details visit the [FriendlyARM](https://www.friendlyarm.com/) website.
 
-![NanoPi K2](assets/images/dietpi-nanopi-k2.jpg)
+<img src="../assets/images/dietpi-nanopi-k2.jpg" title="FriendlyARM NanoPi K2" width="500" />
 
 **NanoPi K2** supports DVFS and it can smooth play high-definition video streams, and it is very well suited for applications such as advertisement machines, TV boxes, home entertainment appliances or multimedia devices.
 
@@ -465,10 +403,76 @@ For more details visit the [FriendlyARM](https://www.friendlyarm.com/) website.
     </table>
 </div>
 
+## Native PC & Virtual Machines
+
+### Native PC images
+
+The Native PC images are great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience. This image is for motherboards with UEFI boot support and onboard eMMC (e.g.: Z83-II, Beelink AP32 and other Intel NUC/SBC devices with onboard eMMC).
+
+### VMware
+
+The VMware virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
+
+### VirtualBox
+
+![Oracle VirtualBox](assets/images/vbox.jpg)
+
+VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at server, desktop and embedded use.
+
+The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
+
+### Hyper-V (community image)
+
+The Hyper-V virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
+
+<div class="md-typeset__table">
+    <table>
+        <thead>
+            <tr>
+                <th align="left"><strong>Product</strong></th>
+                <th align="left"><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>Native PC for BIOS/CSM</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>Native PC UEFI</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>VMware</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>VirtualBox</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><a class="table" target="_blank" href=""><strong>Hyper-V</strong></a></td>
+                <td align="left">
+                   <strong>Download</strong>: <a target="_blank" href="https://github.com/yumiris/DietPi.Hyper-V/blob/master/README.md">DietPi image</a></li>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 ## Make your own distribution
 
 Unable to find an available image for your device? No worries, DietPi can be easily installed on any device !
 
 Simply run the DietPi PREP script [click for details](https://github.com/MichaIng/DietPi/issues/1285#issue-280771944) and follow the onscreen instructions.
 
-_NB: End user support will be limited to issues that are DietPi specific (which excludes Kernel/GPU/onboard Bluetooth+WiFi+Audio etc from our support). GPU features are disabled for other devices (e.g.: Kodi, Desktop), ideal for server usage._
+!!! info "Limited end user support"
+    End user support will be limited to issues that are DietPi specific (which excludes Kernel, GPU, onboard Bluetooth, WiFi, Audio, etc. from our support). GPU features are disabled for other devices (e.g.: Kodi, Desktop), ideal for server usage.
