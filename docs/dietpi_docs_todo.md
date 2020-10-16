@@ -136,7 +136,7 @@ Add images for
 
 The images are available on Dietpi.com\Download.
 
-- [ ] **ToDo Stephan:** Add images.
+- [x] **ToDo Stephan:** Add images.
 
 ## 5. Desktops
 
