@@ -146,7 +146,7 @@ Desktop basics [DietPi Desktops](https://dietpi.com/docs/dietpi-software-desktop
 
 - [x] **No extra description, because this is already described in the tab page *Enable autostart*.**
 
-LXQt (https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweight-desktop):
+LXQt (<https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweight-desktop>):
 
 1. Add screenshot of desktop
 
@@ -154,7 +154,7 @@ LXQt (https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweigh
 
 ## 6. DietPi Tools
 
-See there: https://dietpi.com/docs/user-guide_tools/
+See there: <https://dietpi.com/docs/user-guide_tools/>
 
 1. Add a screenshot for *Software Additional*
 
@@ -163,7 +163,7 @@ See there: https://dietpi.com/docs/user-guide_tools/
 
 ## 7. Description of Webserver stacks
 
-See there: https://dietpi.com/docs/dietpi-software-webserver-stack/  
+See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>
 
 1. Add a section how to select the webservers stacks via ***dietpi-software***. Two options: Select via *Software Optimized* or via *Webserver Preference* (Preference is used in the case of the first webserver background installation).
 2. Section [Webservers](https://dietpi.com/docs/dietpi-software-webserver-stack/#webservers): Exchange the three bullets with the description "behind the links" ([*Webserver Preference System*](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)):
@@ -177,7 +177,7 @@ See there: https://dietpi.com/docs/dietpi-software-webserver-stack/
 
 ## 8. Links *Return to the Optimised Software list*
 
-See there: https://dietpi.com/docs/dietpi-software-webserver-stack/  
+See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>  
 At the bottom there is a link to jump back.  
 Q: Is this linking done in all necessary pages? If no, where should it be inserted?
 
@@ -192,13 +192,13 @@ Describe/check user rights of dietpi user and letsencrypt.
 ### 9.2 Add section "hardening Gitea for external access (behind a router)"
 
 - Describe fail2ban usage unter "external access".  
-  See: https://docs.gitea.io/en-us/fail2ban-setup/
+  See: <https://docs.gitea.io/en-us/fail2ban-setup/>
 - Describe combination Gitea and letsencrypt. Then use https for access.
 
 Alternative:
 
 - Add a general *hardening with https:* description in the webserver section (where in detail?).  
-  See also there: https://github.com/MichaIng/DietPi/wiki/Security-recommendation.
+  See also there: <https://github.com/MichaIng/DietPi/wiki/Security-recommendation>.
 - Reference this hardening section from the software titles and add there specialities of the software title hardening
 
 How to go on?
@@ -213,4 +213,4 @@ Describe Backup/Restore:
 
 - via dietpi-backup
 - via different/other backup solutions
-  E.g. see https://www.linuxlinks.com/backup/
+  E.g. see <https://www.linuxlinks.com/backup/>
