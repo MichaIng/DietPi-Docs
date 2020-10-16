@@ -76,6 +76,8 @@ plugins:
           'dietpi-software-bittorrent.md': 'software/bittorrent.md'
           'user-optimised-software.md' : 'dietpi_optimised_software.md'
           'user-guide_install.md' : 'user-guide_installation.md'
+          'user-guide_install_uefi.md' : 'user-guide_installation.md'
+          'user-guide_install_VirtualBox.md' : 'user-guide_installation.md'
           'hardware-supported_sbc.md' : 'dietpi_sbc.md'
           'user-guide_tools.md' : 'dietpi_tools.md'
           'release-notes-updates.md' : 'release-notes.md'
