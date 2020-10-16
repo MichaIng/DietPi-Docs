@@ -93,7 +93,7 @@ Select the following tabs for the installation description of your target.
     Power on the SBC to login and execute the first boot procedure.  
 
     !!! info "Initial boot duration"
-        Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depeding on the SD card size, SD card speed and system speed.
+        Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the SD card size, SD card speed and system speed.
 
 === "Install on native PC (UEFI)"
 
@@ -239,7 +239,7 @@ Select the following tabs for the installation description of your target.
 
 ## 4. First logon on DietPi
 
-After you have bootet up your system, you can continue following the instructions on the screen, or connect via network:
+After the system has booted up, you can continue following the instructions on the screen, or connect via network:
 
 - If you have a keyboard and a monitor connected to your system you login via this console.
 - If you have a headless system (e.g. an SBC without keyboard resp. monitor) you have to use a terminal program (e.g. `putty`) to connect to the system via an ssh connection.
