@@ -33,7 +33,7 @@
 
     ![DietPi Software](../assets/images/dietpi-software.jpg)
 
-    To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
 ## LXDE - ultra lightweight desktop
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.

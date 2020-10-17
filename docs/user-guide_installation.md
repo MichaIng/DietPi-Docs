@@ -33,7 +33,7 @@ Select the following tabs for the installation description of your target.
 
     ## 1. Download and extract the DietPi disk image
 
-    Open [dietpi.com](https://dietpi.com#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally.
+    Open [dietpi.com](https://dietpi.com/#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally.
 
     _Example:_
     ![DietPi-RaspberryPi-image](assets/images/DietPi-RaspberryPi-image.jpg)
