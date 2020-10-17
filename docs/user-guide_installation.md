@@ -185,7 +185,7 @@ Select the following tabs for the installation description of your target.
 
     ## Introduction
 
-    Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a debian based linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
+    Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
     One big advantage of such a VM is that id needs only a couple of minutes coming to a running DietPi system.
 
