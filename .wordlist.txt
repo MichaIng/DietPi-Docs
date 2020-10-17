@@ -13,14 +13,18 @@ ASUS
 Audiophonics
 Autostart
 autostart
+AutoStart
+aWIFI
 BaiKal
 balancer
+Balena
 balenaEtcher
 Bazarr
 bazarr
 Beelink
 BitCoin
 Blynk
+bootable
 Bticino
 BugReport
 CalDAV
@@ -35,6 +39,7 @@ Cloudflare
 CloudPrint
 Cloudshell
 config
+configs
 containerd
 CORS
 CouchPotato
@@ -45,10 +50,13 @@ CSM
 Cuberite
 DarkBetter
 DarkIce
+deinstallation
 DHCP
+dialogs
 DietPi
 dietpi
 DiogoAbu
+diskimager
 DIY
 DLNA
 DNS
@@ -66,9 +74,11 @@ eMMC
 EmonPi
 exFAT
 FHS
+filesystem
 FOSS
 FreshRSS
 FriendlyARM
+frontend
 Gbit
 GiB
 Gitea
@@ -83,13 +93,16 @@ GPT
 gpu
 Grafana
 HAProxy
+harddisk
 Hardkernel
 HC
 hexa
 Hotfix
 hotspot
 Hotspot
+HotSpot
 Hotspots
+hostname
 HTPC
 HTTPS
 https
@@ -122,6 +135,7 @@ Lighttpd
 LLMP
 LLSP
 LMS
+LogClear
 Logitech
 Logrotate
 LPDDR
@@ -144,6 +158,8 @@ MkDocs
 nm
 mnt
 Mopidy
+morse
+Morsecode
 Mosquitto
 MotionEye
 MPD
@@ -211,7 +227,7 @@ Raspcontrol
 RDP
 ReadyMedia
 RealVNC
-Remot3
+Remot
 RK
 renderer
 Rockchip
@@ -222,6 +238,7 @@ RPis
 RSS
 Rsyslog
 rTorrent
+runtime
 ruTorrent
 SABnzbd
 SBC
@@ -262,6 +279,7 @@ Ubooquity
 UEFI
 UI
 Unarchiver
+upgradable
 UPnP
 upvote
 UrBackup
@@ -296,3 +314,4 @@ XU
 YaCy
 ympd
 ZeroPi
+zr
