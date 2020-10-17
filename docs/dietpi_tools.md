@@ -114,7 +114,7 @@ Access the frontend for the `Let's Encrypt` integration.
 
 ![dietpi-survey](assets/images/dietpi-survey.jpg)
 
-### DietPi-BugReport
+### DietPi-Bugreport
 
 ![dietpi-bugreport](assets/images/dietpi-bugreport.jpg)
 
