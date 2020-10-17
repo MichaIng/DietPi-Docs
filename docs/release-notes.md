@@ -4,7 +4,6 @@
 
 ### Highlights
 
-
 - **Bazarr** is the latest application from DietPi optimised software portfolio. It is a companion application to Sonarr and Radarr, and manages and downloads subtitles based on defined requirements.
 
     ![DietPi-Software Bazarr](assets/images/dietpi-software_bazarr.jpg)
