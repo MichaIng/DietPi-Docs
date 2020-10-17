@@ -296,7 +296,7 @@ As always, many smaller code performance and stability improvements, visual and 
 
 ### Known/Outstanding Issues
 
-- **DietPi-Config** :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: https://github.com/MichaIng/DietPi/issues/2103
+- **DietPi-Config** :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
 - **RPi** :octicons-arrow-right-16: On TigerVNC virtual desktop, LXAppearance hangs on dbus-launch: <https://github.com/MichaIng/DietPi/issues/1791>
 - **Odroid C2** :octicons-arrow-right-16: Some WiFi adapters do no work as hotspot: <https://github.com/MichaIng/DietPi/issues/1955>
 - **Odroid XU4** :octicons-arrow-right-16: Kodi freezes shortly on video playback: <https://github.com/MichaIng/DietPi/issues/2584>
