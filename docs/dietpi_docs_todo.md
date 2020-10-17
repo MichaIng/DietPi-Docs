@@ -141,6 +141,7 @@ The images are available on Dietpi.com\Download.
 Compare <https://dietpi.com/docs/dietpi_optimised_software/>, table of contents on the right side with <https://dietpi.com/docs/software/desktop/>, structure on the left side.
 
 Proposal:
+
 - Harmonize naming
 - List in alphabetical order
 
