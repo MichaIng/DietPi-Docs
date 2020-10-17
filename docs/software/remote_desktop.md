@@ -69,7 +69,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     ```
     dietpi-autostart
     ```
-    To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
 === "Official documentation"
     [LXDE Website](https://www.lxde.org) - [LXDE Wiki](https://wiki.lxde.org/en/Main_Page)

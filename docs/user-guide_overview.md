@@ -2,7 +2,7 @@
 
 ## Overview
 
-Once you did the [DietPi Installation](../user-guide_installation) you could choose to install one or more [Optimised software](../dietpi_optimised_software) items or run one of the [DietPi tools](../../dietpi_tools).
+Once you did the [DietPi Installation](../user-guide_installation) you could choose to install one or more [Optimised software](../dietpi_optimised_software) items or run one of the [DietPi tools](../dietpi_tools).
 
 ## Initial start
 

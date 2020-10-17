@@ -34,7 +34,7 @@
 
     ![DietPi Software](../assets/images/dietpi-software.jpg)
 
-    To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
 ## Nextcloud - Self-hosted productivity platform
 
@@ -42,7 +42,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Quick start"
 
-    Access the web interface using the next URL when running on SBC (http://localhost/nextcloud/) or the IP address / hostname of your DietPi device (e.g.: [http://192.168.0.100/nextcloud/](http://192.168.0.100/nextcloud/)).
+    Access the web interface using the next URL when running on SBC (<http://localhost/nextcloud/>) or the IP address / hostname of your DietPi device (e.g.: [http://192.168.0.100/nextcloud/](<http://192.168.0.100/nextcloud/>)).
 
     ```
     username = admin
