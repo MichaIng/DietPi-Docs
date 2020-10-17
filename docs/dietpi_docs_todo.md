@@ -136,6 +136,15 @@ The images are available on Dietpi.com\Download.
 
 - [x] **ToDo Stephan:** Add images.
 
+### 4.6 Headings of Optimized software list
+Compare <https://dietpi.com/docs/dietpi_optimised_software/>, table of contents on the right side with <https://dietpi.com/docs/software/desktop/>, structure on the left side.
+
+Proposal:
+- Harmonize naming
+- List in alphabetical order
+
+Decision?
+
 ## 5. Desktops
 
 Desktop basics [DietPi Desktops](https://dietpi.com/docs/dietpi-software-desktop/):
