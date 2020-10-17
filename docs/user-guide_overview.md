@@ -23,7 +23,7 @@ The list includes desktop environments, Remote Desktop, Media Systems/Players, T
 
 ![DietPi Software](assets/images/dietpi-software.jpg)
 
-??? info "How do I run `dietPi-software` and install **optimised software**?"
+??? info "How do I run `dietpi-software` and install **optimised software**?"
 
     This tool will automatically launch when you first boot your Raspberry Pi using DietPi after the initial configuration process has completed. You can also launch it manually by typing `dietpi-software` in the terminal.
 
