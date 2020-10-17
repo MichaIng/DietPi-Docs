@@ -30,10 +30,8 @@ Merging should be done via 4-eyes method when merging to the master branch.
 
 **Style Guide**:
 
-```
-<docu type>_<chapter contents>.md, all lower case
-Example: user-guide_install.md.
-```
+    <docu type>_<chapter contents>.md, all lower case
+    Example: user-guide_install.md.
 
 ToDo: Change file names initially.
 Remark: Google search should be considered.
