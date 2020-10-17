@@ -30,10 +30,8 @@ Merging should be done via 4-eyes method when merging to the master branch.
 
 **Style Guide**:
 
-```
-<docu type>_<chapter contents>.md, all lower case
-Example: user-guide_install.md.
-```
+    <docu type>_<chapter contents>.md, all lower case
+    Example: user-guide_install.md.
 
 ToDo: Change file names initially.
 Remark: Google search should be considered.
@@ -75,7 +73,7 @@ Idea:
 
 - Use tabs in the content area ([like there](https://dietpi.com/docs/dietpi-software-desktop/#lxde-ultra-lightweight-desktop) to distinguish between SBC, native PC, VirtualBox,etc. Below the tab area the *First boot on DietPi* section is located.
 
-- [x] **ToDo Stephan:** Implement the changed *Installation* structure.
+- [x] **Stephan:** Implement the changed *Installation* structure.
 
 ### 3.2 Description of *dietpi-software* usage
 
@@ -84,7 +82,7 @@ Idea:
 
 Shall be moved to *Getting started*.
 
-- [x] **ToDo Stephan:** Move contents.
+- [x] **Stephan:** Move contents.
 
 *Getting started* shall contain often used procedures. Seldom used procedures shall be in *Advanced configuration & DietPi tools*.
 
@@ -103,13 +101,13 @@ Harmonize/rearrange order in all sub-chapters:
 - Picture of hardware
 - Link table to images
 
-- [x] **ToDo Stephan:** Harmonize sections.
+- [x] **Stephan:** Harmonize sections.
 
 ### 4.2 Supported Single Board Computers (SBCs)
 
 1. Move *NanoPi Series (FriendlyARM)* below *ASUS Tinker Board*
 
-- [x] **ToDo Stephan:** Change order.
+- [x] **Stephan:** Change order.
 
 ### 4.3 Description of DietPi PREP?
 
@@ -136,7 +134,7 @@ Add images for
 
 The images are available on Dietpi.com\Download.
 
-- [x] **ToDo Stephan:** Add images.
+- [x] **Stephan:** Add images.
 
 ### 4.6 Headings of Optimized software list
 
