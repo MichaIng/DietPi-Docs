@@ -4,6 +4,7 @@
     "style": "atx"
   },
   "MD013": false,
+  "MD024": false,
   "MD025": {
     "front_matter_title": ""
   },
