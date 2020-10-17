@@ -27,7 +27,7 @@ BitCoin
 Blynk
 bootable
 Bticino
-BugReport
+Bugreport
 CalDAV
 CardDAV
 CAVA
