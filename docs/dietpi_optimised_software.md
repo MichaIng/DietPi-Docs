@@ -22,7 +22,7 @@
 - [**LXQt - Slick and optimized lightweight desktop**](../software/desktop/#lxqt-optimized-lightweight-desktop)
 - [**MATE - Popular Gnome 2 desktop**](../software/desktop/#mate-popular-gnome2-desktop)
 - [**Xfce - Lightweight desktop**](../software/desktop/#xfce-lightweight-desktop)
-- [**GnuStep - Alternative/unique desktop**](../software/desktop/#gnustep-alternativeunique-desktop)
+- [**GNUstep - Alternative/unique desktop**](../software/desktop/#gnustep-alternativeunique-desktop)
 
 ### [Desktop Utilities](../software/desktop/#desktop-utilities)
 
@@ -81,7 +81,7 @@
 - [Lidarr - Automatically download Music](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13580)
 - [CouchPotato - Automatically download movies.](https://dietpi.com/phpbb/viewtopic.php?p=7212#p7212)
 - [Jackett - API Support for your favourite torrent trackers.](https://dietpi.com/phpbb/viewtopic.php?p=7503#p7503)
-- [NZBget - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
+- [NZBGet - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
 - [HTPC Manager - combines all your favourite software into one slick interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p8043)
 
 ## Emulation & Gaming
@@ -126,7 +126,7 @@
 ## WiFi HotSpot
 
 - [WiFi HotSpot - Turn your device into a wireless hotspot/access point.](https://dietpi.com/phpbb/viewtopic.php?p=1207#p1207)  
-- [Tor HotSpot - Optional: Routes all WiFi hotSpot traffic through the Tor network.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1529)  
+- [Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1529)  
 
 ## Home Automation
 
@@ -145,7 +145,7 @@
 - [Node-RED - Visual tool for wiring together hardware devices, APIs and online services.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4292)  
 - [Mosquitto - Message broker that implements MQTT protocol versions 3.1 and 3.1.1.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p4293)  
 - [Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p5901)  
-- [AudioPhonics Pi-SPC - Power control module for Raspberry Pi, allowing physical button power on/off.](https://dietpi.com/phpbb/viewtopic.php?p=9359#p9359)  
+- [Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off.](https://dietpi.com/phpbb/viewtopic.php?p=9359#p9359)  
 - [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
 - [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
 

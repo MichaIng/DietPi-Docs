@@ -29,7 +29,7 @@ Select the following tabs for the installation description of your target.
     - An SD card of at least 4 GiB, and a way to write it on your computer (integrated slot or external SD card reader)
     - Optional: Ethernet (network) cable
 
-    _Note_: Following this guide you could run the installation directly (from a console) or via network. If you choose an installation via network you will not need a monitor or keyboard connected to your SBC or virtualized environment.
+    _Note_: Following this guide you could run the installation directly (from a console) or via network. If you choose an installation via network you will not need a monitor or keyboard connected to your SBC or virtualised environment.
 
     ## 1. Download and extract the DietPi disk image
 

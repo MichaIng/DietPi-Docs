@@ -9,7 +9,7 @@
 - [LXQt - Slick and optimized lightweight desktop](#lxqt-optimized-lightweight-desktop)
 - [MATE - Popular Gnome 2 desktop](#mate-popular-gnome2-desktop)
 - [Xfce - Lightweight desktop](#mate-popular-gnome2-desktop)
-- [GNUStep - Alternative/unique desktop](#gnustep-alternativeunique-desktop)
+- [GNUstep - Alternative/unique desktop](#gnustep-alternativeunique-desktop)
 
 ### [Desktop Utilities](#desktop-utilities_1)
 - [Chromium - Web browser](#chromium-web-browser)
@@ -109,7 +109,7 @@ Popular Gnome2 based desktop environment.
 
 ![DietPi Xfce](../assets/images/dietpi-software-xfce-desktop.jpg)
 
-## GNUStep - Alternative/unique desktop
+## GNUstep - Alternative/unique desktop
 
 === "Quick start"
     After installation, desktop can be run by typing

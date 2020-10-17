@@ -1,4 +1,4 @@
-# Webservers & Web Stacks
+# Webserver & Web Stacks
 
 ## Overview
 
@@ -12,7 +12,7 @@
 - [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
 - [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
 
-### Webservers
+### Webserver
 
 - [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
 - [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
@@ -20,7 +20,6 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-!!! warning "Documentation in progress..." 
+!!! warning "Documentation in progress..."
 
     The links redirect to the old documentation available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
-
