@@ -194,7 +194,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
 
 ## Firefly
 
-**Six-core 64-bit High Performance Open Source Platform**. For more details visit [Firefly RK3399](http://shop.t-firefly.com/goods.php?id=45) website.
+**Six-core 64-bit High Performance Open Source Platform**. For more details visit [Firefly RK3399](http://en.t-firefly.com/product/rk3399.html) website.
 
 <img src="../assets/images/dietpi-firefly-rk3399.png" title="Firefly RK3399" width="500" />
 
