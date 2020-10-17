@@ -39,7 +39,7 @@ jobs:
         if: always() && steps.build.outcome == 'success'
         uses: peter-evans/link-checker@v1
         with:
-          args: -c 1 -d build -r -x http://192.168.0.100 README.md build/docs
+          args: -c 1 -d build -r -x http://localhost|http://192.168.0.100|https://github.com README.md build/docs
       - name: Check link check result
         if: always() && steps.check_links.outcome == 'success'
         run: exit ${{ steps.check_links.outputs.exit_code }}
