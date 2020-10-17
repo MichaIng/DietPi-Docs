@@ -3,6 +3,7 @@ Airsonic
 AIY
 Allo
 Allwinner
+Allwinner's
 Amiberry
 Ampache
 analytics
@@ -78,6 +79,7 @@ filesystem
 FOSS
 FreshRSS
 FriendlyARM
+FriendlyARM's
 frontend
 Gbit
 GiB
@@ -173,6 +175,7 @@ NAA
 nano
 NanoPC
 NanoPi
+natively
 ncc
 NetData
 Nextcloud
@@ -200,12 +203,14 @@ OpenSSH
 OpenTyrian
 OpenVPN
 ownCloud
+passwd
 PCIe
 php
 phpBB
 phpbb
 phpMyAdmin
 PhpSysInfo
+Pi-hole
 PiJuice
 Pinebook
 PiSupply
@@ -233,6 +238,7 @@ renderer
 Rockchip
 ROCKPro
 Roon
+rpi
 RPi
 RPis
 RSS
@@ -273,7 +279,7 @@ TCP
 TigerVNC
 Tonido
 txt
-uae4arm-rpi
+uae
 UART
 Ubooquity
 UEFI
@@ -290,6 +296,7 @@ VirtualHere
 virtualised
 virtualiser
 VM
+VMs
 VMware
 VNC
 vncpasswd
@@ -300,6 +307,7 @@ vsFTPD
 WebIOPi
 Webmin
 webserver
+Webservers
 Webserves
 Widevine
 Wifi
