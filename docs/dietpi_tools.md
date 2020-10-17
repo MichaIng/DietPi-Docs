@@ -46,98 +46,98 @@ Configure various system settings, from display / audio / network to _auto start
 
 Feature-rich drive management utility.
 
-![Dietpi-Drive_Manager](assets/images/dietpi-drive-manager.jpg)
+![dietpi-drive_manager](assets/images/dietpi-drive-manager.jpg)
 
-### Dietpi-AutoStart
+### DietPi-AutoStart
 
 Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running.
 
-![DietPi-Autostart](assets/images/dietpi-autostart.jpg)
+![dietpi-autostart](assets/images/dietpi-autostart.jpg)
 
-### Dietpi-Services
+### DietPi-Services
 
 Provides service control, priority level tweaks and status print.
 
-![DietPi-Services](assets/images/dietpi-services.jpg)
+![dietpi-services](assets/images/dietpi-services.jpg)
 
-### Dietpi-LED_control
+### DietPi-LED_control
 
-![DietPi-Led_control](assets/images/dietpi-ledcontrol.jpg)
+![dietpi-led_control](assets/images/dietpi-ledcontrol.jpg)
 
-### Dietpi-Cron
+### DietPi-Cron
 
 Modify the start times of specific cron job groups.
 
-![DietPi-Cron](assets/images/dietpi-cron.jpg)
+![dietpi-cron](assets/images/dietpi-cron.jpg)
 
-### Dietpi-JustBoom
+### DietPi-JustBoom
 
 Change the audio settings
 
-![DietPi-JustBoom](assets/images/dietpi-justboom.jpg)
+![dietpi-justBoom](assets/images/dietpi-justboom.jpg)
 
-## Dietpi Update / Backup / Sync
+## DietPi-Update / DietPi-Backup / DietPi-Sync
 
 ### DietPi-Update
 
 Update DietPi OS version to the latest version available.
 
-### Dietpi-Backup
+### DietPi-Backup
 
 Fully backup DietPi setup or restore from an already available DietPi backup.
 
-### Dietpi-Sync
+### DietPi-Sync
 
 Sync or duplicate a directory to another
 
-![DietPi-Sync](assets/images/dietpi-sync.jpg)
+![dietpi-sync](assets/images/dietpi-sync.jpg)
 
 ## Misc
 
-### Dietpi-CPUInfo
+### DietPi CPU Info
 
 Displays CPU temperature, processor frequency, throttle level etc.
 
-![DietPi-CPUInfo](assets/images/dietpi-cpuinfo.jpg)
+![dietpi-cpuinfo](assets/images/dietpi-cpuinfo.jpg)
 
 ### DietPi-LetsEncrypt
 
 Access the frontend for the `Let's Encrypt` integration.
 
-![DietPi-LetsEncrypt](assets/images/dietpi-letsencrypt.jpg)
+![dietpi-letsencrypt](assets/images/dietpi-letsencrypt.jpg)
 
 ### DietPi-NordVPN
 
-![DietPi-NordVPN](assets/images/dietpi-nordvpn.jpg)
+![dietpi-nordvpn](assets/images/dietpi-nordvpn.jpg)
 
 ### DietPi-Survey
 
-![DietPi-Survey](assets/images/dietpi-survey.jpg)
+![dietpi-survey](assets/images/dietpi-survey.jpg)
 
 ### DietPi-BugReport
 
-![DietPi-BugReport](assets/images/dietpi-bugreport.jpg)
+![dietpi-bugreport](assets/images/dietpi-bugreport.jpg)
 
-### Dietpi-Morsecode
+### DietPi-Morsecode
 
 Convert a text file into morse code.
 
 ## Maintenance
 
-### Dietpi-Explorer
+### DietPi-Explorer
 
 Lightweight file manager and explorer
 
-![DietPi-Explorer](assets/images/dietpi-explorer.jpg)
+![dietpi-explorer](assets/images/dietpi-explorer.jpg)
 
-### Dietpi-Cleaner
+### DietPi-Cleaner
 
 Clean up not necessary files from the operating system and free up valuable disk space.
 
-![DietPi-Cleaner](assets/images/dietpi-cleaner.jpg)
+![dietpi-cleaner](assets/images/dietpi-cleaner.jpg)
 
-### Dietpi-LogClear
+### DietPi-LogClear
 
 Clear log files in /var/log/.
 
-![DietPi-LogClear](assets/images/dietpi-logclear.jpg)
+![dietpi-logclear](assets/images/dietpi-logclear.jpg)
