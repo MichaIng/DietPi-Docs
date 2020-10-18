@@ -95,7 +95,7 @@ Select one or more software items which you would like to be removed from your D
 
 : Change the audio settings
 
-: ![dietpi-justBoom](assets/images/dietpi-justboom.jpg)
+: ![DietPi-JustBoom screenshot](assets/images/dietpi-justboom.jpg)
 
 `dietpi-sync` {: #dietpi-sync }
 
@@ -119,11 +119,11 @@ Select one or more software items which you would like to be removed from your D
 
 : Access the frontend for the `Let's Encrypt` integration.
 
-: ![dietpi-letsencrypt](assets/images/dietpi-letsencrypt.jpg)
+: ![DietPi-LetsEncrypt screenshot](assets/images/dietpi-letsencrypt.jpg)
 
 `dietpi-nordvpn` {: #dietpi-nordvpn }
 
-: ![dietpi-nordvpn](assets/images/dietpi-nordvpn.jpg)
+: ![DietPi-NordVPN screenshot](assets/images/dietpi-nordvpn.jpg)
 
 ## Miscellaneous
 
@@ -131,15 +131,15 @@ Select one or more software items which you would like to be removed from your D
 
 : Displays CPU temperature, processor frequency, throttle level etc.
 
-: ![dietpi-cpuinfo](assets/images/dietpi-cpuinfo.jpg)
+: ![DietPi-CPU_info screenshot](assets/images/dietpi-cpuinfo.jpg)
 
 `dietpi-survey` {: #dietpi-survey }
 
-: ![dietpi-survey](assets/images/dietpi-survey.jpg)
+: ![DietPi-Survey screenshot](assets/images/dietpi-survey.jpg)
 
 `dietpi-bugreport` {: #dietpi-bugreport }
 
-: ![dietpi-bugreport](assets/images/dietpi-bugreport.jpg)
+: ![DietPi-Bugreport screenshot](assets/images/dietpi-bugreport.jpg)
 
 `dietpi-morsecode` {: #dietpi-morsecode }
 
@@ -151,16 +151,16 @@ Select one or more software items which you would like to be removed from your D
 
 : Lightweight file manager and explorer
 
-: ![dietpi-explorer](assets/images/dietpi-explorer.jpg)
+: ![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg)
 
 `dietpi-cleaner` {: #dietpi-cleaner }
 
 : Clean up not necessary files from the operating system and free up valuable disk space.
 
-: ![dietpi-cleaner](assets/images/dietpi-cleaner.jpg)
+: ![DietPi-Cleaner screenshot](assets/images/dietpi-cleaner.jpg)
 
 `dietpi-logclear` {: #dietpi-logclear }
 
 : Clear log files in /var/log/.
 
-: ![dietpi-logclear](assets/images/dietpi-logclear.jpg)
+: ![DietPi-LogClear screenshot](assets/images/dietpi-logclear.jpg)

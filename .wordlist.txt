@@ -15,19 +15,17 @@ Audiophonics
 Autostart
 autostart
 AutoStart
-aWIFI
 Baïkal
 balancer
 Balena
 balenaEtcher
 Bazarr
-bazarr
 Beelink
 Bitcoin
 Blynk
 bootable
+bootloader
 Bticino
-bugreport
 Bugreport
 CalDAV
 CardDAV
@@ -43,7 +41,6 @@ Cloudshell
 config
 configs
 containerd
-cpuinfo
 CORS
 CouchPotato
 COVID
@@ -94,7 +91,6 @@ Gogs
 GPIO
 GPL
 GPT
-gpu
 Grafana
 HAProxy
 harddisk
@@ -118,10 +114,8 @@ IoT
 Jackett
 Jellyfin
 Joulinar
-journalctl
 journald
 jRiver
-justboom
 JustBoom
 Kbit
 KiB
@@ -133,7 +127,6 @@ LASP
 LEDs
 LEMP
 LESP
-letsencrypt
 LetsEncrypt
 Lidarr
 LightDM
@@ -141,7 +134,6 @@ Lighttpd
 LLMP
 LLSP
 LMS
-logclear
 LogClear
 Logitech
 Logrotate
@@ -166,7 +158,6 @@ nm
 mnt
 Mopidy
 morse
-morsecode
 Morsecode
 Mosquitto
 MotionEye
@@ -189,9 +180,7 @@ nextcloud
 NFS
 Nginx
 Nmap
-nmap
 NoMachine
-nordvpn
 NordVPN
 NTFS
 NUC
@@ -214,7 +203,6 @@ passwd
 PCIe
 php
 phpBB
-phpbb
 phpMyAdmin
 PhpSysInfo
 Pi-hole
@@ -277,7 +265,6 @@ startx
 StephanStS
 sudo
 Syncthing
-systemctl
 systemd
 TasmoAdmin
 Tasmota
@@ -306,8 +293,6 @@ VM
 VMs
 VMware
 VNC
-vncpasswd
-vncserver
 VNCSERVER
 VPN
 vsFTPD
@@ -317,7 +302,6 @@ webserver
 Webservers
 Webserves
 Widevine
-wifi
 WireGuard
 WiringPi
 Wordpress

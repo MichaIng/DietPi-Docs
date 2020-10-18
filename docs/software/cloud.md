@@ -75,4 +75,4 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     [Nextcloud Website](https://nextcloud.com/athome/)
 
-![DietPi-Software-NextCloud](../assets/images/dietpi-software-cloud-nextcloud.jpg)
+![DietPi-Software-Nextcloud](../assets/images/dietpi-software-cloud-nextcloud.jpg)

@@ -8,12 +8,13 @@ matrix:
     encoding: utf-8
   pipeline:
   - pyspelling.filters.html:
-    attributes:
-    - title
-    - alt
-    ignores:
-    - ':is(code, pre)'
+      attributes:
+      - title
+      - alt
+      ignores:
+      - code
+      - pre
   - pyspelling.filters.url:
   sources:
-  - build/docs/**/*.html|!build/docs/release-notes/*|!build/docs/dietpi_docs_todo/*|!build/docs/overrides/*
+  - 'build/docs/**/*.html|!build/docs/release-notes/*|!build/docs/dietpi_docs_todo/*|!build/docs/overrides/*'
   default_encoding: utf-8

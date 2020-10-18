@@ -45,14 +45,14 @@ Key features:
 
 === "Advanced"
 
-    - Install directory: /opt/bazarr
-    - Data directory: /mnt/dietpi_userdata/bazarr
-    - Bazarr configuration file: /mnt/dietpi_userdata/bazarr/config/config.ini
+    - Install directory: `/opt/bazarr`
+    - Data directory: `/mnt/dietpi_userdata/bazarr`
+    - Bazarr configuration file: `/mnt/dietpi_userdata/bazarr/config/config.ini`
 
     View logs:
 
-    - Service: journalctl -u bazarr
-    - Binary: /var/log/bazarr/bazarr.log
+    - Service: `journalctl -u bazarr`
+    - Binary: `/var/log/bazarr/bazarr.log`
 
     Update to latest version:
 
