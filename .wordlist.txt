@@ -310,8 +310,7 @@ webserver
 Webservers
 Webserves
 Widevine
-Wifi
-wifi
+WiFi
 WireGuard
 WiringPi
 Wordpress
