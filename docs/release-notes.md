@@ -9,7 +9,7 @@
     ![DietPi-Software Bazarr](assets/images/dietpi-software_bazarr.jpg)
     For more details on installation and configuration open [DietPi Optimised Software - Bazarr](../software/bittorrent#bazarr) page.
 
-:    Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent#bazarr) page in [Optimised software](../software/).
+ Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent#bazarr) page in [Optimised software](../software/).
     Many thanks to @DiogoAbu for doing this suggestion [Issue #2045](https://github.com/MichaIng/DietPi/issues/2045)
 
 - **Docker logging available in RAM/journald**  
@@ -26,7 +26,6 @@ dietpi-software reinstall 162
 ```
 
   Many thanks to @SaturnusDJ for doing this suggestion: [Issue #2388](https://github.com/MichaIng/DietPi/issues/2388)
-
 
 ### Improvements
 
@@ -48,7 +47,7 @@ dietpi-software reinstall 162
 
     A bash shell alias solves this automatically for all users with sudo permissions, but if you use a custom shell, the CLI needs to be called like:
 
-  ``` bash
+ ``` bash
 sudo -u octoprint octoprint <command>
 ```
 
