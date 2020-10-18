@@ -222,11 +222,11 @@ Select the following tabs for the installation description of your target.
 
     As next, the VirtualBox virtual machine has to be setup by importing the .ova file (via \File\Import Appliance):
 
-    ![VirtualBox applicance import screenshot](assets/images/dietpi-VirtualBox-import1.png)
+    ![VirtualBox appliance import screenshot](assets/images/dietpi-VirtualBox-import1.png)
 
     In the following dialog the user has to choose DietPi_VirtualBox-x86_64-Buster.ova as the file which shall be imported.
 
-    ![VirtualBox applicance import selection screenshot](assets/images/dietpi-VirtualBox-import2.png)
+    ![VirtualBox appliance import selection screenshot](assets/images/dietpi-VirtualBox-import2.png)
 
     Keep the settings in the next dialog and klick “Import”.
 
@@ -263,9 +263,9 @@ A login prompt will appear. Use the initial credentials:
 
     - For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://www.advanced-ip-scanner.com).
 
-    - For Linux, you can use nmap command:  
+    - For Linux, you can use `nmap` command:
     ```
-    sudo apt-get install nmap #For installing Nmap
+    sudo apt-get install nmap # for installing Nmap
     ```  
     ```
     sudo nmap -sn 192.168.1.0/24 #For scanning IP address
