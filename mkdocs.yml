@@ -47,9 +47,9 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      check_paths: true
+  - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.highlight
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -124,7 +124,7 @@ nav:
       - 'Optimised software list' : 'dietpi_optimised_software.md'
       - 'Supported SBC' : 'dietpi_sbc.md'
       - 'Community Tutorials' : 'https://dietpi.com/phpbb/viewforum.php?f=15'
-      - 'Advanced configuration & DietPi Tools' : 'dietpi_tools.md'
+      - 'Advanced configuration' : 'dietpi_tools.md'
       - 'Troubleshooting' : 'https://dietpi.com/phpbb/viewforum.php?f=11'
       - 'Release notes' : 'release-notes.md'
       - 'Request features' : 'https://github.com/MichaIng/DietPi/issues/new/choose'
