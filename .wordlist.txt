@@ -23,10 +23,11 @@ balenaEtcher
 Bazarr
 bazarr
 Beelink
-BitCoin
+Bitcoin
 Blynk
 bootable
 Bticino
+bugreport
 Bugreport
 CalDAV
 CardDAV
@@ -42,6 +43,7 @@ Cloudshell
 config
 configs
 containerd
+cpuinfo
 CORS
 CouchPotato
 COVID
@@ -119,6 +121,7 @@ Joulinar
 journalctl
 journald
 jRiver
+justboom
 JustBoom
 Kbit
 KiB
@@ -130,6 +133,7 @@ LASP
 LEDs
 LEMP
 LESP
+letsencrypt
 LetsEncrypt
 Lidarr
 LightDM
@@ -137,6 +141,7 @@ Lighttpd
 LLMP
 LLSP
 LMS
+logclear
 LogClear
 Logitech
 Logrotate
@@ -161,6 +166,7 @@ nm
 mnt
 Mopidy
 morse
+morsecode
 Morsecode
 Mosquitto
 MotionEye
@@ -185,6 +191,7 @@ Nginx
 Nmap
 nmap
 NoMachine
+nordvpn
 NordVPN
 NTFS
 NUC
@@ -310,7 +317,7 @@ webserver
 Webservers
 Webserves
 Widevine
-WiFi
+wifi
 WireGuard
 WiringPi
 Wordpress
