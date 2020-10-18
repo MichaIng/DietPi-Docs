@@ -24,6 +24,7 @@ Beelink
 Bitcoin
 Blynk
 bootable
+bootloader
 Bticino
 Bugreport
 CalDAV
