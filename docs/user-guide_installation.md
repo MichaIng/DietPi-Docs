@@ -38,7 +38,7 @@ Select the following tabs for the installation description of your target.
     Open [dietpi.com](https://dietpi.com/#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally.
 
     _Example:_
-    ![DietPi-RaspberryPi-image](assets/images/DietPi-RaspberryPi-image.jpg)
+    ![DietPi for Raspberry Pi download page](assets/images/DietPi-RaspberryPi-image.jpg)
 
     **Unzip the downloaded file to a local folder.**
 
@@ -144,7 +144,7 @@ Select the following tabs for the installation description of your target.
     !!! warning "All data on the USB medium and on the target PCs harddisk will be erased!"
         Before starting the installation first make a backup of the data available on the target PC and USB drive if you need it later again!
 
-    ![dietpi-rufus-uefi](assets/images/dietpi-rufus-uefi.jpg)
+    ![Rufus UEFI selections screenshot](assets/images/dietpi-rufus-uefi.jpg)
 
     <font size="+2">3. Boot the target PC and install the image on the local disk</font>
 
@@ -155,11 +155,11 @@ Select the following tabs for the installation description of your target.
 
     During the initial boot, the following dialog may appear to boot from the USB stick:
 
-    ![dietpi-uefi-boot](assets/images/dietpi-uefi-boot.jpg)
+    ![Bootloader menu screenshot](assets/images/dietpi-uefi-boot.jpg)
 
     After booting the graphics selection dialog appears:
 
-    ![dietpi-uefi-boot-graphic](assets/images/dietpi-uefi-boot-graphic.jpg)
+    ![Clonezilla main menu screenshot](assets/images/dietpi-uefi-boot-graphic.jpg)
 
     You can select the default settings. In case of problems, please select "Safe graphic settings".
 
@@ -169,15 +169,15 @@ Select the following tabs for the installation description of your target.
 
     Select the image file to be installed on the target PCs harddisk. Normally you should only see one single option:
 
-    ![dietpi-boot-clonezilla](assets/images/dietpi-boot-clonezilla.jpg)
+    ![Clonezilla source image selection screenshot](assets/images/dietpi-boot-clonezilla.jpg)
 
     After this, you have to select the target PCs harddisk where your DietPi shall be installed. In this example there is only one harddisk present:
 
-    ![dietpi-boot-clonezilla-run](assets/images/dietpi-boot-clonezilla-run.jpg)
+    ![Clonezilla target drive selection screenshot](assets/images/dietpi-boot-clonezilla-run.jpg)
 
     After this, the installation process starts with several steps, e.g. showing the process of the image copying:
 
-    ![dietpi-boot-partclone](assets/images/dietpi-boot-partclone.jpg)
+    ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg)
 
     These steps take some time, be patient! Otherwise buy an SSD. :-)  
     At the end the system executes a shutdown.
@@ -216,23 +216,23 @@ Select the following tabs for the installation description of your target.
 
     The zip file contains a couple of files, the important one is the .ova file which has to be imported into VirtualBox.
 
-    ![Dietpi-zipfile-content](assets/images/dietpi-VirtualBox-7zip-file.png)
+    ![DietPi 7zip archive content](assets/images/dietpi-VirtualBox-7zip-file.png)
 
     <font size="+2">2. Import of the .ova file in VirtualBox</font>
 
     As next, the VirtualBox virtual machine has to be setup by importing the .ova file (via \File\Import Appliance):
 
-    ![DietPi-import-VirtualBoxMachine1](assets/images/dietpi-VirtualBox-import1.png)
+    ![VirtualBox applicance import screenshot](assets/images/dietpi-VirtualBox-import1.png)
 
-    In the following dialog the user hast to choose DietPi_VirtualBox-x86_64-Buster.ova as the file which shall be imported.
+    In the following dialog the user has to choose DietPi_VirtualBox-x86_64-Buster.ova as the file which shall be imported.
 
-    ![DietPi-import-VirtualBoxMachine2](assets/images/dietpi-VirtualBox-import2.png)
+    ![VirtualBox applicance import selection screenshot](assets/images/dietpi-VirtualBox-import2.png)
 
     Keep the settings in the next dialog and klick “Import”.
 
     After the importing has finished the DietPi VirtualBox virtual machine is present:
 
-    ![DietPi-VirtualBoxMachine1](assets/images/dietpi-VirtualBox-VB-Machine.png)
+    ![VirtualBox virtual machine list screenshot](assets/images/dietpi-VirtualBox-VB-Machine.png)
 
     <font size="+2">3. First boot of the new VirtualBox image</font>
 
