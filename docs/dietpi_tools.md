@@ -2,28 +2,26 @@
 
 ## DietPi-Launcher
 
-**dietpi-software** will be automatically ran on the first login. It could be accessed at any time running next next from the command line:
+It provides an easy access to all DietPi OS tools, and it could be accessed by running next command:
 
 ``` bash
 dietpi-launcher
 ```
 
-It is the main program to run whenever you have a DietPi OS. It provides a quick access to all the main DietPi programs.
-
 ![dietpi-launcher](assets/images/dietpi-launcher.jpg)
 
 ## DietPi-Software
 
-**dietpi-software** will be automatically displayed on the first login. It could be accessed at any time running next next from the command line:
+**dietpi-software** will be automatically displayed on the first login after the installation. It could be accessed at any time running next command:
 
 ``` bash
 dietpi-software
 ```
 
-![dietpi-software](assets/images/dietpi-software.jpg)
-
 It is one of the core tools, enabling you to install or uninstall one or more 
 [**DietPi optimised software**](../software/) titles.
+
+![dietpi-software](assets/images/dietpi-software.jpg)
 
 === "Software Optimised"
 
