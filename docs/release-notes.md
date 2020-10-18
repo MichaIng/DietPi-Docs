@@ -1,6 +1,6 @@
 # DietPi Updates
 
-## To be released in October 2020 (version 6.33)
+## October 2020 (version 6.33)
 
 ### Highlights
 
@@ -8,6 +8,24 @@
 
     ![DietPi-Software Bazarr](assets/images/dietpi-software_bazarr.jpg)
     For more details on installation and configuration open [DietPi Optimised Software - Bazarr](../software/bittorrent#bazarr) page.
+
+:    Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent#bazarr) page in [Optimised software](../software/).
+    Many thanks to @DiogoAbu for doing this suggestion [Issue #2045](https://github.com/MichaIng/DietPi/issues/2045)
+
+- **Docker logging available in RAM/journald** 
+    This feature is now available to newly fresh Docker installs or reinstalls. Logs are now done with limited verbosity to systemd-journald (RAM). They could be accessible running next command: 
+    
+``` bash
+journalctl -u docker -u containerd
+``` 
+:    This change brings the advantage that reduces the disk writes, as well as make them accessible to system journal (external to containerized environment). To fully benefit from this improvment, Docker can be reinstalled using next command:
+
+``` bash
+dietpi-software reinstall 162
+``` 
+
+:    Many thanks to @SaturnusDJ for doing this suggestion: [Issue #2388](https://github.com/MichaIng/DietPi/issues/2388)
+
 
 ### Improvements
 
@@ -18,9 +36,6 @@
 
     If the user (+group) is created by an external package or installer, the original primary group is kept as supplementary group to not possibly break access permissions to pre-created directories and files.
     Currently, only exception from these changes is _Deluge_ - we don't want to run the separate web UI service with `dietpi` group permissions. In case of _Tautulli_, the `dietpi` group permissions are remove, since _Tautulli_ does not require it.
-
-- **DietPi-Software** :octicons-heart-16: **Bazarr** :octicons-arrow-right-16: Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent#bazarr) page in [Optimised software](../software/).
- Many thanks to @DiogoAbu for doing this suggestion [Issue #2045](https://github.com/MichaIng/DietPi/issues/2045)
 
 - **DietPi-Software**  :octicons-commit-24:  **phpBB** :octicons-arrow-right-16: New phpBB installations will be done using version 3.3.1. Existing instances won't be touched, as updates need to be done manually through the internal update mechanism, which includes the mandatory database migration.
 
@@ -42,19 +57,19 @@
 
     The webserver configurations have been added to harden access permissions.
 
-- **DietPi-Software**  :octicons-commit-24: **Docker** :octicons-arrow-right-16: On fresh installs or reinstalls, logs are now done with limited verbosity to systemd-journald (RAM), accessible via `"journalctl -u docker -u containerd"` to reduce disk writes.
-
-    Docker can be reinstalled via `"dietpi-software reinstall 162"`.
-
-    Many thanks to @SaturnusDJ for doing this suggestion: [Issue #2388](https://github.com/MichaIng/DietPi/issues/2388)
-
 - **DietPi-Software**  :octicons-commit-24: **Mosquitto** :octicons-arrow-right-16: The official APT repository is now used where possible, which currently excludes ARMv8/arm64 and Raspbian/Debian Bullseye. This change is applied via reinstall during DietPi update.
 
     Many thanks to @marcobrianza for doing this suggestion: [Issue #3042](https://github.com/MichaIng/DietPi/issues/3042)
 
-- **DietPi-Software**  :octicons-commit-24: **Cuberite** :octicons-arrow-right-16: A wrong directory name based on a typo has been fixed.
+- **DietPi-Software** :octicons-commit-24: **Cuberite** :octicons-arrow-right-16: A wrong directory name based on a typo has been fixed.
 
     A reinstall updates Cuberite and moves its install directory to `/mnt/dietpi_userdata/cuberite` as intended. This is applied via DietPi update but a backup is created to cover issues due to potential structural changes, especially for older instances installed at /etc/cuberite.
+
+### Documentation improvements
+
+- **Installation guide** :octicons-arrow-right-16: It has been fully changed & simplified. There is a single page with more tabs. The page highlights different steps used for different platforms, while it keeps the common structure. Many thanks to @StephanStS for doing these updates.
+
+- **Writing rules** :octicons-arrow-right-16: The documentation has evolved. It starts to have a file naming convention, more url updated and so on. Many thanks to @StephanStS for doing these updates.   
 
 ### APT Changes
 
