@@ -26,7 +26,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     - Begin by selecting **Software Optimized** in the main menu list and hit Enter.
 
-    - Scroll through the list of available software - for more details check [DietPi Optimised Software](../dietpi_optimised_software).
+    - Scroll through the list of available software - for more details check [DietPi Optimised Software](../dietpi_optimised_software/).
 
     The list of optimised software is long. You either browse the list or use the option **Search**.
 
@@ -41,6 +41,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     ![dietpi-software](assets/images/dietpi-software-optimised.jpg)
 
 === "Software Additional"
+
     This section provides:
 
     - software packages that are often used and installed via ```apt install <package>```, without additional optimisation from DietPi team.
@@ -58,13 +59,13 @@ Select one or more software items which you would like to be removed from your D
 
 `dietpi-config`{: #DietPi-Config }
 
-:    Configure various system settings, from display / audio / network to _auto start_ options.  
+: Configure various system settings, from display / audio / network to _auto start_ options.
 
     ![dietpi-config](assets/images/dietpi-config.jpg)
 
 `dietpi-drive_manager`{: #dietpi-drive_manager }
 
-:    Feature-rich drive management utility.
+: Feature-rich drive management utility.
 
     ![dietpi-drive_manager](assets/images/dietpi-drive-manager.jpg)
 
