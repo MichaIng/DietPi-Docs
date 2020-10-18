@@ -42,10 +42,10 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "Software Additional"
 
-    This section provides:
+  This section provides:
 
-    - software packages that are often used and installed via ```apt install <package>```, without additional optimisation from DietPi team.
-    - _or_ packages not directly required, but pulled as a dependency, like: build tools, libraries or runtime systems.
+  - software packages that are often used and installed via ```apt install <package>```, without additional optimisation from DietPi team.
+  - _or_ packages not directly required, but pulled as a dependency, like: build tools, libraries or runtime systems.
 
 You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
 
@@ -61,7 +61,7 @@ Select one or more software items which you would like to be removed from your D
 
 : Configure various system settings, from display / audio / network to _auto start_ options.
 
-    ![dietpi-config](assets/images/dietpi-config.jpg)
+: ![dietpi-config](assets/images/dietpi-config.jpg)
 
 `dietpi-drive_manager`{: #dietpi-drive_manager }
 
