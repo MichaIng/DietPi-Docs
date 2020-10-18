@@ -129,21 +129,21 @@ Popular Gnome2 based desktop environment.
 
 ### Chromium - Web browser
 
-**Does my device support GPU acceleration ?**
+#### Does my device support GPU acceleration?
 
 Not all devices support GPU acceleration with Chromium.
 - RPis supports native OpenGL and will be configured during installation.
 - Odroids support OpenGLES and will be configured during installation.
 - Other devices will most likely be limited to software rendering.
 
-**Where can I check the status of GPU acceleration ?**
-Once Chromium is running, simply go to the following address:
-    chrome://gpu
+#### Where can I check the status of GPU acceleration?
 
-**Enable support for Widevine DRM protected content on RPi:**
+Once Chromium is running, simply go to the following address: <chrome://gpu>
 
- - Manually: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
- - with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... many-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
+#### Enable support for Widevine DRM protected content on RPi
+
+- Manually: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
+- with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... many-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
 
 ![DietPi GIMP](../assets/images/dietpi-software-desktop-tools-chromium.jpg)
 
