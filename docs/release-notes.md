@@ -17,13 +17,13 @@
 
     ```bash
 journalctl -u docker -u containerd
-    ```
+  ```
 
     This change brings the advantage that reduces the disk writes, as well as make them accessible to system journal (external to containerized environment). To fully benefit from this improvment, Docker can be reinstalled using next command:
 
     ``` bash
 dietpi-software reinstall 162
-    ```
+  ```
 
     Many thanks to @SaturnusDJ for doing this suggestion: [Issue #2388](https://github.com/MichaIng/DietPi/issues/2388)
 
@@ -49,7 +49,7 @@ dietpi-software reinstall 162
 
     ``` bash
 sudo -u octoprint octoprint <command>
-    ```
+  ```
 
     Many thanks to @ModischFabrications for reporting an issue that is related to the fact that the service ran as root user before: [Issue #3315](https://github.com/MichaIng/DietPi/issues/3315)
 
