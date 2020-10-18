@@ -317,7 +317,6 @@ webserver
 Webservers
 Webserves
 Widevine
-wifi
 WireGuard
 WiringPi
 Wordpress
