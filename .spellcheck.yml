@@ -12,7 +12,7 @@ matrix:
     - title
     - alt
     ignores:
-    - :matches(code, pre)
+    - ':is(code, pre)'
   - pyspelling.filters.url:
   sources:
   - build/docs/**/*.html|!build/docs/release-notes/*|!build/docs/dietpi_docs_todo/*|!build/docs/overrides/*
