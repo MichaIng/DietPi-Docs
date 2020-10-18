@@ -5,24 +5,26 @@ title: How to install DietPi
 
 # How to install DietPi
 
-The installation of DietPi consists of several steps:
+The installation of DietPi consists of few steps:
 
-1. Provide an installation media (e.g. SD card for single board computer or USB stick for PC)
-2. Get the DietPi image (and put it on the installation media)
-3. Boot up the DietPi device and go through one time installation steps
+- Provide an installation media (e.g. SD card for single board computer or USB stick for PC)
+- Get the DietPi image (and put it on the installation media)
+- Boot up the DietPi device and go through one time installation steps
 
-Afterwards these steps you will be able to install additional software packages using an easy to use command line script ([`dietpi-software`](../dietpi_tools/#dietpi-software)).
+Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/#dietpi-software).
 
 Select the following tabs for the installation description of your target.
 
 === "Install on SBC"
 
     ## Introduction
+    
     Single board computers (SBCs) based on the well known Raspberry PI ARM based architecture gained more and more friends in the last years. The low cost in combination with the power and hardware flexibility makes these SBCs optimal for embedded systems, like e.g. home automation or cloud applications.
 
     ![raspberry-pi-1-model-b](assets/images/raspberry-pi-1b.jpg)
 
     ## Prerequisites
+
     To follow this tutorial, you will need the next hardware list:
 
     - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](../hardware-supported_sbc/)
@@ -44,7 +46,7 @@ Select the following tabs for the installation description of your target.
 
     Linux users will need to download and install `p7zip` (the terminal version of `7zip`).
 
-    ??? info "How do I extract DietPi image on Linux"
+    ??? hint "How do I extract DietPi image on Linux"
         On Debian and Ubuntu-based systems, open a terminal and type:
         ```
         sudo apt install p7zip
@@ -57,12 +59,14 @@ Select the following tabs for the installation description of your target.
 
         Replace **DietPi-Image.7z** with the correct name of your compressed DietPi file, example: **DietPi_RPi-ARMv6-Buster.7z**. This will extract the DietPi image file for you to use.
 
-    ## 2. Run balenaEtcher and flash the image
+    ## 2. Flash the DietPi image
 
-    Download and install [balenaEtcher](https://etcher.io/) - it flashes OS images to SD cards & USB drives, safely and easily on Windows, macOS, Linux.  
-    You may also use [Rufus](https://rufus.ie/) to flash the SD card. See ***Install on native PC (UEFI)*** for an example of the usage of Rufus.
+    At first, download and install [balenaEtcher](https://etcher.io/). This application flashes OS images to SD cards & USB drives, safely and easily on Windows, macOS, Linux.  
 
-    Start the program and make sure you have your SD card inserted into your computer. Locate and select the DietPi image.
+    !!! note ""
+        You may also use [Rufus](https://rufus.ie/) to flash the SD card. In the same page, click on **Install on native PC (UEFI)** tab to see an example of using Rufus.
+
+    Start balenaEtcher and make sure you have your SD card inserted into your computer. Locate and select the DietPi image.
 
     ![DietPi-Etcher-install-01](assets/images/DietPi-Etcher-install-01.jpg)
 
@@ -86,18 +90,17 @@ Select the following tabs for the installation description of your target.
         3.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
         4.  Save and close the files
 
+    ## 3. Prepare the first boot
 
-    ## 3. Prepare the first boot of your SBC
-
-    Remove the SD card from the PC and insert it into your device, preparing to boot for the first time.  
+    Remove the SD card from the PC and insert it into your SBC device, preparing to boot for the first time.  
     Power on the SBC to login and execute the first boot procedure.  
 
-    !!! info "Initial boot duration"
+    ???+ hint "Initial boot duration"
         Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the SD card size, SD card speed and system speed.
 
 === "Install on native PC (UEFI)"
 
-    ## Introduction
+    <font size="+2">Introduction</font>
 
     The Native PC images are great for those occasions where SBC performance is just not enough. One example could be [Intel NUC Kit](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits.html?page=2). It is a small, versatile, upgradable, and affordable desktop PC with the same basic feature set as that of a much larger machine.
 
@@ -105,7 +108,8 @@ Select the following tabs for the installation description of your target.
 
     It could be also a great way to make use of an old computer that’s not capable of running the latest version of Windows or macOS.
 
-    ## Prerequisites
+    <font size="+2">Prerequisites</font>
+
     You would need the next:
 
     - one **working PC with internet access**, helping to flash the boot media
@@ -113,7 +117,7 @@ Select the following tabs for the installation description of your target.
     - **target PC** to be installed
 
 
-    ## 1. Download and extract the DietPi disk image
+    <font size="+2">1. Download and extract the DietPi disk image</font>
 
     Download the **DietPi installer image** from [dietpi.com](https://dietpi.com/#download) and
     unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
@@ -125,7 +129,7 @@ Select the following tabs for the installation description of your target.
     !!! warning "Be careful if you run alternative applications!"
         While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
 
-    ## 2. Flash image to USB drive
+    <font size="+2">2. Flash image to USB drive</font>
 
     Start [Rufus](https://rufus.ie/) application and make sure you have your USB drive inserted into your computer. Follow the next steps:
 
@@ -140,10 +144,9 @@ Select the following tabs for the installation description of your target.
     !!! warning "All data on the USB medium and on the target PCs harddisk will be erased!"
         Before starting the installation first make a backup of the data available on the target PC and USB drive if you need it later again!
 
-
     ![dietpi-rufus-uefi](assets/images/dietpi-rufus-uefi.jpg)
 
-    ## 3. Boot the target PC and install the image on the local disk
+    <font size="+2">3. Boot the target PC and install the image on the local disk</font>
 
     Boot the **target PC** from USB image and install the image on the local disk / harddisk. Put the USB stick into the target PC and boot from this USB stick  
 
@@ -183,7 +186,7 @@ Select the following tabs for the installation description of your target.
 
 === "Install in VirtualBox"
 
-    ## Introduction
+    <font size="+2">Introduction</font>
 
     Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
@@ -194,7 +197,7 @@ Select the following tabs for the installation description of your target.
     ![DietPi-VirtualBox-program](assets/images/dietpi-VirtualBox-program.png)
 
 
-    ## Prerequisites
+    <font size="+2">Prerequisites</font>
 
     As a starting point you need a **PC with a running VirtualBox software** on which the DietPi system will run.  
     On this PC a free harddisk space of about  
@@ -204,8 +207,7 @@ Select the following tabs for the installation description of your target.
 
     is needed. A recommended size is at least a free space of 10 GB.
 
-
-    ## 1. Download and extract the DietPi disk image
+    <font size="+2">1. Download and extract the DietPi disk image</font>
 
     Download the **DietPi VirtualBox file** "DietPi_VirtualBox-x86_64-Buster.7z" from [dietpi.com](https://dietpi.com/#download) and   
     unzip the downloaded file to a local!!! info "DietPi Survey" folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
@@ -216,8 +218,8 @@ Select the following tabs for the installation description of your target.
 
     ![Dietpi-zipfile-content](assets/images/dietpi-VirtualBox-7zip-file.png)
 
+    <font size="+2">2. Import of the .ova file in VirtualBox</font>
 
-    ## 2. Import of the .ova file in VirtualBox
     As next, the VirtualBox virtual machine has to be setup by importing the .ova file (via \File\Import Appliance):
 
     ![DietPi-import-VirtualBoxMachine1](assets/images/dietpi-VirtualBox-import1.png)
@@ -232,8 +234,8 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi-VirtualBoxMachine1](assets/images/dietpi-VirtualBox-VB-Machine.png)
 
+    <font size="+2">3. First boot of the new VirtualBox image</font>
 
-    ## 3. First boot of the new VirtualBox image
     Press the start button (green arrow) to 'boot up' your system based on the DietPi image.
     If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
 
@@ -244,14 +246,12 @@ After the system has booted up, you can continue following the instructions on t
 - If you have a keyboard and a monitor connected to your system you login via this console.
 - If you have a headless system (e.g. an SBC without keyboard resp. monitor) you have to use a terminal program (e.g. `putty`) to connect to the system via an ssh connection.
 
-A login prompt should appear.
-
-Initial credentials:
+A login prompt will appear. Use the initial credentials:
 
 - login: **root**
 - password: **dietpi**
 
-??? info "Click here if you want to connect via network (running a _headless install_)"
+??? hint "Click here if you want to connect via network (running a _headless install_)"
 
     **WARNING**
 
