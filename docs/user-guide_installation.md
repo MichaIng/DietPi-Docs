@@ -83,7 +83,7 @@ Select the following tabs for the installation description of your target.
     ![DietPi-Etcher-install-03](assets/images/DietPi-Etcher-install-03.jpg)
 
     ??? info "Click here if you want to pre-configure WiFi network "
-        To setup Wifi, open the SD card folder, and update next two files using a text editor of your choice:
+        To setup the WiFi, open the SD card folder, and update next two files using a text editor of your choice:
 
         1.  Open the file named `dietpi.txt`. Find `AUTO_SETUP_NET_WIFI_ENABLED` and set to value 1.
         2.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
