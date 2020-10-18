@@ -18,8 +18,7 @@ dietpi-launcher
 dietpi-software
 ```
 
-It is one of the core tools, enabling you to install or uninstall one or more 
-[**DietPi optimised software**](../software/) titles.
+It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../dietpi_optimised_software/) titles.
 
 ![dietpi-software](assets/images/dietpi-software.jpg)
 
@@ -27,8 +26,8 @@ It is one of the core tools, enabling you to install or uninstall one or more
 
     - Begin by selecting **Software Optimized** in the main menu list and hit Enter.    
 
-    - Scroll through the list of available software - for more details check [DietPi Optimised Software](../user-optimised_software). 
-    
+    - Scroll through the list of available software - for more details check [DietPi Optimised Software](../dietpi_optimised_software).
+
     The list of optimised software is long. You either browse the list or use the option **Search**.
 
     - To install software on your DietPi, select it in the list and press the **space bar** to add it to the installation list. If you change your mind, hit space again to remove it.
@@ -49,8 +48,7 @@ It is one of the core tools, enabling you to install or uninstall one or more
 
 You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
 
-
-**Install** 
+**Install**
 
 Install selected software item(s), and these could come both from **optimised software** list or **additional software** items.
 
@@ -66,65 +64,65 @@ Select one or more software items which you would like to be removed from your D
 
     ![dietpi-config](assets/images/dietpi-config.jpg)
 
-`dietpi-drive_manager` {: #dietpi-drive_manager }
+`dietpi-drive_manager`{: #dietpi-drive_manager }
 
 :    Feature-rich drive management utility.
 
     ![dietpi-drive_manager](assets/images/dietpi-drive-manager.jpg)
 
-`dietpi-autostart` {: #dietpi-autostart }
+`dietpi-autostart`{: #dietpi-autostart }
 
 :    Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running.
 
     ![dietpi-autostart](assets/images/dietpi-autostart.jpg)
 
-`dietpi-services` {: #dietpi-services }
+`dietpi-services`{: #dietpi-services }
 
 :    Provides service control, priority level tweaks and status print.
 
     ![dietpi-services](assets/images/dietpi-services.jpg)
 
-`dietpi-led_control` {: #dietpi-led_control }
+`dietpi-led_control`{: #dietpi-led_control }
 
 :    ![dietpi-led_control](assets/images/dietpi-ledcontrol.jpg)
 
-`dietpi-cron` {: #dietpi-cron }
+`dietpi-cron`{: #dietpi-cron }
 
 :    Modify the start times of specific cron job groups.
 
     ![dietpi-cron](assets/images/dietpi-cron.jpg)
 
-`dietpi-justboom` {: #dietpi-justboom }
+`dietpi-justboom`{: #dietpi-justboom }
 
 :    Change the audio settings
 
     ![dietpi-justBoom](assets/images/dietpi-justboom.jpg)
 
-`dietpi-sync`  {: #dietpi-sync }
+`dietpi-sync`{: #dietpi-sync }
 
 :    Sync or duplicate a directory to another
 
     ![dietpi-sync](assets/images/dietpi-sync.jpg)
 
-## Update & Backup 
+## Update & Backup
 
-`dietpi-update` {: #dietpi-update }
+`dietpi-update`{: #dietpi-update }
 
 :    Update DietPi OS version to the latest version available.
 
-`dietpi-backup` {: #dietpi-backup }
+`dietpi-backup`{: #dietpi-backup }
 
 :    Fully backups DietPi setup. It also includes the restore capability from an already made DietPi backup.
 
 ## Let's encrypt SSL & NordVPN support
 
-`dietpi-letsencrypt` {: #dietpi-letsencrypt }
+`dietpi-letsencrypt`{: #dietpi-letsencrypt }
 
 :    Access the frontend for the `Let's Encrypt` integration.
 
     ![dietpi-letsencrypt](assets/images/dietpi-letsencrypt.jpg)
 
-`dietpi-nordvpn` {: #dietpi-nordvpn }
+`dietpi-nordvpn`{: #dietpi-nordvpn }
 
 :    ![dietpi-nordvpn](assets/images/dietpi-nordvpn.jpg)
 
@@ -136,33 +134,33 @@ Select one or more software items which you would like to be removed from your D
 
     ![dietpi-cpuinfo](assets/images/dietpi-cpuinfo.jpg)
 
-`dietpi-survey` {: #dietpi-survey }
+`dietpi-survey`{: #dietpi-survey }
 
 :    ![dietpi-survey](assets/images/dietpi-survey.jpg)
 
-`dietpi-bugreport` {: #dietpi-bugreport }
+`dietpi-bugreport`{: #dietpi-bugreport }
 
 :    ![dietpi-bugreport](assets/images/dietpi-bugreport.jpg)
 
-`dietpi-morsecode` {: #dietpi-morsecode }
+`dietpi-morsecode`{: #dietpi-morsecode }
 
 :    It converts a text file into morse code.
 
 ## Maintenance
 
-`dietpi-explorer` {: #dietpi-explorer }
+`dietpi-explorer`{: #dietpi-explorer }
 
 :    Lightweight file manager and explorer
 
     ![dietpi-explorer](assets/images/dietpi-explorer.jpg)
 
-`dietpi-cleaner` {: #dietpi-cleaner }
+`dietpi-cleaner`{: #dietpi-cleaner }
 
 :    Clean up not necessary files from the operating system and free up valuable disk space.
 
     ![dietpi-cleaner](assets/images/dietpi-cleaner.jpg)
 
-`dietpi-logclear` {: #dietpi-logclear }
+`dietpi-logclear`{: #dietpi-logclear }
 
 :    Clear log files in /var/log/.
 
