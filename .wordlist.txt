@@ -16,7 +16,7 @@ Autostart
 autostart
 AutoStart
 aWIFI
-BaiKal
+Baïkal
 balancer
 Balena
 balenaEtcher
