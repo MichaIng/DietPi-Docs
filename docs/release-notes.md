@@ -9,23 +9,23 @@
     ![DietPi-Software Bazarr](assets/images/dietpi-software_bazarr.jpg)
     For more details on installation and configuration open [DietPi Optimised Software - Bazarr](../software/bittorrent#bazarr) page.
 
- Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent#bazarr) page in [Optimised software](../software/).
+    Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent#bazarr) page in [Optimised software](../software/).
     Many thanks to @DiogoAbu for doing this suggestion [Issue #2045](https://github.com/MichaIng/DietPi/issues/2045)
 
 - **Docker logging available in RAM/journald**  
     This feature is now available to newly fresh Docker installs or reinstalls. Logs are now done with limited verbosity to systemd-journald (RAM). They could be accessible running next command:
 
- ``` bash
+    ```bash
 journalctl -u docker -u containerd
-```
+    ```
 
-  This change brings the advantage that reduces the disk writes, as well as make them accessible to system journal (external to containerized environment). To fully benefit from this improvment, Docker can be reinstalled using next command:
+    This change brings the advantage that reduces the disk writes, as well as make them accessible to system journal (external to containerized environment). To fully benefit from this improvment, Docker can be reinstalled using next command:
 
-  ``` bash
+    ``` bash
 dietpi-software reinstall 162
-```
+    ```
 
-  Many thanks to @SaturnusDJ for doing this suggestion: [Issue #2388](https://github.com/MichaIng/DietPi/issues/2388)
+    Many thanks to @SaturnusDJ for doing this suggestion: [Issue #2388](https://github.com/MichaIng/DietPi/issues/2388)
 
 ### Improvements
 
@@ -47,17 +47,17 @@ dietpi-software reinstall 162
 
     A bash shell alias solves this automatically for all users with sudo permissions, but if you use a custom shell, the CLI needs to be called like:
 
- ``` bash
+    ``` bash
 sudo -u octoprint octoprint <command>
-```
+    ```
 
-  Many thanks to @ModischFabrications for reporting an issue that is related to the fact that the service ran as root user before: [Issue #3315](https://github.com/MichaIng/DietPi/issues/3315)
+    Many thanks to @ModischFabrications for reporting an issue that is related to the fact that the service ran as root user before: [Issue #3315](https://github.com/MichaIng/DietPi/issues/3315)
 
 - **DietPi-Software** :octicons-commit-24: **Tautulli** :octicons-arrow-right-16: Directories, user and service are renamed from `"plexpy"` to `"tautulli"`.
 
     Additionally it runs with Python 3 now instead of Python 2. These changes are applied as well during DietPi update.
 
-- **DietPi-Software** :octicons-commit-24: **Baikal** :octicons-arrow-right-16: Update (re)install procedure to cover the new config directory and use the pre-packed release archives instead of raw source and composer.
+- **DietPi-Software** :octicons-commit-24: **Baïkal** :octicons-arrow-right-16: Update (re)install procedure to cover the new config directory and use the pre-packed release archives instead of raw source and composer.
 
     The webserver configurations have been added to harden access permissions.
 
