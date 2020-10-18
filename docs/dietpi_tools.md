@@ -94,7 +94,7 @@ Select one or more software items which you would like to be removed from your D
 
 :    Change the audio settings
 
-    ![dietpi-justBoom](assets/images/dietpi-justboom.jpg)
+    ![DietPi-JustBoom screenshot](assets/images/dietpi-justboom.jpg)
 
 `dietpi-sync`{: #dietpi-sync }
 
