@@ -311,8 +311,8 @@ If you want to make further changes to your DietPi configuration, you can run `d
 
 For more details, check [DietPi Tools](../dietpi_tools) section.
 
-## 6. Install by community (YouTube)
+## YouTube tutorial (made by community)
 
-A video tutorial on _How to install and initially configure DietPi_ by Roberto Jorge.
+A video tutorial on _How to install and initially configure DietPi_ made by Roberto Jorge.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Me0PfuNLl-Q?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
