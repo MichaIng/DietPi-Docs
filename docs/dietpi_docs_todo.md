@@ -69,7 +69,7 @@ Then the main order will be:
 7. Troubleshooting
 8. ...
 
-Decision?
+**Decision?**
 
 ## 3. Installation chapter
 
@@ -136,7 +136,7 @@ Harmonize/rearrange order in all sub-chapters:
 
 Actually it is only referenced at the end of the [*Supported SBC* section](https://dietpi.com/docs/hardware-supported_sbc/#make-your-own-distribution).
 
-- [ ] **Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
+- [ ] **ToDo Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
   Basically use *master* branch, use *dev* for hardening/testing Micha's PREP-script.
 
 ### 4.4 Name of .md file
@@ -165,7 +165,7 @@ Proposal:
 - Harmonize naming
 - List in alphabetical order
 
-Decision?
+**Decision?**
 
 ## 5. Desktops
 
@@ -180,7 +180,7 @@ LXQt (<https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweig
 
 1. Add screenshot of desktop
 
-- [ ] **ToDo Stephan:** Add image.
+- [x] **Stephan:** Add image.
 
 ## 6. DietPi Tools
 
