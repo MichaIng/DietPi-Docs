@@ -270,6 +270,7 @@ TasmoAdmin
 Tasmota
 Tautulli
 TCP
+tcpdump
 TigerVNC
 Tonido
 txt
@@ -302,6 +303,7 @@ webserver
 Webservers
 Webserves
 Widevine
+wikimedia
 WireGuard
 WiringPi
 Wordpress

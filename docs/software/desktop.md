@@ -77,7 +77,7 @@ Optimized lightweight desktop without the bloatware. Slick and fluid GUI, howeve
 
 ![DietPi LXQt](../assets/images/dietpi-software-LXQt_desktop.png)
 
-From [LXQt](http://lxqt.org/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
+From [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
 
 ## MATE - Popular Gnome2 desktop.
 Popular Gnome2 based desktop environment.
