@@ -12,7 +12,7 @@ docs_dir: docs
 
 theme:
   name: material
-  custom_dir: docs/overrides
+  custom_dir: overrides # https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -25,41 +25,40 @@ theme:
   favicon: https://dietpi.com/favicon.ico
 
 markdown_extensions:
-  - attr_list
-  - admonition
-  - codehilite
-  - markdown.extensions.admonition
-  - markdown.extensions.attr_list
-  - markdown.extensions.codehilite:
-      guess_lang: false
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
-  - markdown.extensions.toc:
-      permalink: true
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - pymdownx.highlight
-  - pymdownx.tabbed
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-  - smarty
-  - extra
-  - pymdownx.magiclink
+  #- markdown.extensions.abbr # Abbreviations <abbr>
+  - markdown.extensions.admonition # Highlighted warning/info blocks
+  - markdown.extensions.attr_list # Set custom HTML attributes
+  - markdown.extensions.codehilite: # Highlight syntax in code blocks
+      guess_lang: false # Language must always be defined for syntax highlighting
+  - markdown.extensions.def_list # Definition lists
+  #- markdown.extensions.footnotes # Footnotes
+  #- markdown.markdown.md_in_html # Allow Markdown syntax inside of HTML tags
+  - markdown.extensions.meta # Define meta data (page title and description) at the top of the Markdown document
+  - markdown.extensions.smarty # Automatically convert dashes, underscore, three-dots and quotes to text symbols
+  - markdown.extensions.tables # Tables
+  - markdown.extensions.toc: # Add HTML id attribute to headers
+      permalink: true # Headers are links to themselves
+  #- pymdownx.arithmatex # LaTeX math term support
+  - pymdownx.betterem: # More intuitive emphasis handling
+      smart_enable: all # Even smarter for both (asterisk and underscore) syntax => GitHub-like
+  #- pymdownx.caret # Superscript <sup> and intert <ins> via caret ^
+  #- pymdownx.critic # Comment, highlight, add or strikethrough text
+  - pymdownx.details # Collapsible details blocks
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  #- pymdownx.highlight # Configure code highlighting for all code detinitions, fenced, inline and blocked by indentation
+  #- pymdownx.inlinehilite # Highlight syntax in inline code
+  #- pymdownx.keys # Keyboard key symbols
+  #- pymdownx.magiclink # Auto-links non angle bracket URLs and email addresses and allows to shorten and visualise Git repo links
+  #- pymdownx.mark # Mark text <mark> via ==text==
+  #- pymdownx.smartsymbols # Easy symbols syntax (trademark, copyright, arrows, ...)
+  #- pymdownx.snippets # Insert Markdown files into others
+  - pymdownx.superfences # Indended code blocks, e.g. within lists, admonition, details or tabbed blocks
+  - pymdownx.tabbed # Tabbed content blocks
+  - pymdownx.tasklist: # Task list support
+      custom_checkbox: true # Custom icons
+  #- pymdownx.tilde # Subscript <sub> and strikethrough <del> text via tilde ~
 
 plugins:
   - search
@@ -70,7 +69,6 @@ plugins:
           remove_comments: true
           remove_empty_space: true
           reduce_boolean_attributes: true
-
   - redirects:
       redirect_maps:
           'dietpi-software-bittorrent.md': 'software/bittorrent.md'
@@ -122,37 +120,36 @@ nav:
       - 'Installation' : 'user-guide_installation.md'
       - 'Getting started' : 'user-guide_overview.md'
       - 'Optimised software list' : 'dietpi_optimised_software.md'
-      - 'Supported SBC' : 'dietpi_sbc.md'
-      - 'Community Tutorials' : 'https://dietpi.com/phpbb/viewforum.php?f=15'
+      - 'Supported SBCs' : 'dietpi_sbc.md'
+      - 'Community tutorials' : 'https://dietpi.com/phpbb/viewforum.php?f=15'
       - 'Advanced configuration' : 'dietpi_tools.md'
       - 'Troubleshooting' : 'https://dietpi.com/phpbb/viewforum.php?f=11'
       - 'Release notes' : 'release-notes.md'
       - 'Request features' : 'https://github.com/MichaIng/DietPi/issues/new/choose'
       - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
-      - 'Documentation Tasks' : 'dietpi_docs_todo.md'
+      - 'Documentation tasks' : 'dietpi_docs_todo.md'
   - 'OPTIMISED SOFTWARE' :
       - 'Desktops & Utilities' : 'software/desktop.md'
       - 'Media Systems': 'software/media.md'
       - 'Remote Desktop & Remote Access' : 'software/remote_desktop.md'
       - 'Cloud & Backups' : 'software/cloud.md'
-      - 'BitTorrent / Download Tools' : 'software/bittorrent.md'
-      - 'Gaming / Emulation' : 'software/gaming.md'
-      - 'Camera / Surveillance' : 'software/camera.md'
-      - 'Social / Search' : 'software/social.md'
+      - 'BitTorrent & Download Tools' : 'software/bittorrent.md'
+      - 'Gaming & Emulation' : 'software/gaming.md'
+      - 'Camera & Surveillance' : 'software/camera.md'
+      - 'Social & Search' : 'software/social.md'
       - 'WiFi Hotspot' : 'software/wifi_hotspot.md'
       - 'Home Automation' : 'software/home_automation.md'
       - 'Hardware Projects' : 'software/hardware_projects.md'
-      - 'System Stats / Management' : 'software/system_stats.md'
+      - 'System Stats & Management' : 'software/system_stats.md'
       - 'System Security' : 'software/system_security.md'
-      - 'Webserves & Web stacks' : 'software/webserver_stack.md'
+      - 'Web serves & Web stacks' : 'software/webserver_stack.md'
       - 'DNS Servers' : 'software/dns_servers.md'
       - 'File Servers' : 'software/file_servers.md'
       - 'VPN' : 'software/vpn.md'
       - 'Network Load Balancer' : 'software/load_balancer.md'
-      - 'Printing servers' : 'software/printing.md'
-      - 'Computational science' : 'software/computational_science.md'
+      - 'Printing Servers' : 'software/printing.md'
+      - 'Computational Science' : 'software/computational_science.md'
       - 'SSH Servers' : 'software/ssh.md'
-      - 'Log System Servers' : 'software/log_system.md'
-
+      - 'Logging Systems' : 'software/log_system.md'
   - 'COMMUNITY' :
       - 'DietPi Forums & Community' : 'https://dietpi.com/phpbb/viewforum.php?f=5'
