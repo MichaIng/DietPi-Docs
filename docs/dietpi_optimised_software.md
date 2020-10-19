@@ -29,6 +29,7 @@
 - [**Chromium - Web browser**](../software/desktop/#chromium-web-browser)
 - [**GIMP - Image editor**](../software/desktop/#gimp-image-editor)
 - [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss-atom-news-feeds-reader)
+- [**Xfce4 Power - Power manager with brightness**](../software/desktop/#xfce4-power-power-manager-with-brightness)
 
 ## Remote Desktop Access
 
@@ -65,6 +66,7 @@
 - [Koel - Web interface streaming server](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5&amp;start=100#p7305)
 - [GMediaRender - Resource efficient UPnP/DLNA renderer](https://dietpi.com/phpbb/viewtopic.php?p=9012#p9012)
 - [Ubooquity - Free home server for your comics and ebooks library](https://dietpi.com/phpbb/viewtopic.php?p=12969#p12969)
+- [Komga - Free and open source comics/mangas media server with web UI](https://dietpi.com/phpbb/viewtopic.php?p=26858#p26858)
 
 ## BitTorrent / Download Tools
 

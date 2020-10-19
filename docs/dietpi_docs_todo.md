@@ -50,6 +50,26 @@ Open point, has to be cleared.
 
 - [x] Petru to enable new file structure
 
+### 2.3 Content order
+
+**Proposal:** The content of the HOME area is reordered by exchanging Supported SBCs with Optimised software list and Advanced configuration with Community tutorials.  
+This gives the following benefits:
+
+- "Advanced configuration" is nearer to the system usage description
+- All links to DietPi.com forum ("Community tutorials" and "Troubleshooting" are consecutive)
+
+Then the main order will be:
+1. Overview
+2. Installation
+3. Getting started
+4. Supported SBCs
+5. Advanced configuration
+6. Community tutorials
+7. Troubleshooting
+8. ...
+
+Decision?
+
 ## 3. Installation chapter
 
 ### 3.1 Docu structure
