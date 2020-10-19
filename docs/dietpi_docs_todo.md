@@ -59,6 +59,7 @@ This gives the following benefits:
 - All links to DietPi.com forum ("Community tutorials" and "Troubleshooting" are consecutive)
 
 Then the main order will be:
+
 1. Overview
 2. Installation
 3. Getting started
