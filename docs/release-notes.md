@@ -20,7 +20,7 @@
     journalctl -u docker -u containerd
     ```
 
-    This change brings the advantage that reduces the disk writes, as well as make them accessible to system journal (external to containerized environment). To fully benefit from this improvment, Docker can be reinstalled using next command:
+    This change brings the advantage of reduced disk writes, as well as makes logs accessible to system journal (external to containerised environment). To fully benefit from this improvement, Docker can be reinstalled using next command:
 
     ```bash
     dietpi-software reinstall 162
