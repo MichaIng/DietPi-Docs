@@ -2,7 +2,7 @@
 
 ## Overview
 
-!!! warning "Documentation in progress..." 
+!!! warning "Documentation in progress..."
 
     The links redirect to the old documentation available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
 
@@ -19,7 +19,7 @@
 - [Lidarr - Automatically download Music](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13580)
 - [CouchPotato - Automatically download movies.](https://dietpi.com/phpbb/viewtopic.php?p=7212#p7212)
 - [Jackett - API Support for your favourite torrent trackers.](https://dietpi.com/phpbb/viewtopic.php?p=7503#p7503)
-- [NZBget - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
+- [NZBGet - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
 - [HTPC Manager - combines all your favourite software into one slick interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p8043)
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
@@ -38,24 +38,24 @@ Key features:
     Search for matching subtitles on a regular basis and upgrade the one you previously downloaded if a better one is found.
 
 === "Quick start"
-    After installation access the web interface using port **6767** (ex: http://192.168.0.100:6767) 
+    After installation access the web interface using port **6767** (ex: http://192.168.0.100:6767)
 
     ![Bazarr](../assets/images/dietpi-software-download-bazarr.jpg)
 
 
 === "Advanced"
-    
-    - Install directory: /opt/bazarr
-    - Data directory: /mnt/dietpi_userdata/bazarr
-    - Bazarr configuration file: /mnt/dietpi_userdata/bazarr/config/config.ini
+
+    - Install directory: `/opt/bazarr`
+    - Data directory: `/mnt/dietpi_userdata/bazarr`
+    - Bazarr configuration file: `/mnt/dietpi_userdata/bazarr/config/config.ini`
 
     View logs:
 
-    - Service: journalctl -u bazarr
-    - Binary: /var/log/bazarr/bazarr.log
-    
-    Update to latest version: 
-    
+    - Service: `journalctl -u bazarr`
+    - Binary: `/var/log/bazarr/bazarr.log`
+
+    Update to latest version:
+
     - Use the internal web based updater
 
 === "Official documentation"

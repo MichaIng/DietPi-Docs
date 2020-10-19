@@ -5,14 +5,7 @@
 **DietPi-Software** is a core DietPi tool, allowing you to install **Ready to run** and **Optimized software** for your device. It automates the installation and configuration process for you and also applies specific optimizations unique to your hardware model. As a result DietPi-Software ensure you get the **maximum performance** from your device.
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
-    ```
-    dietpi-launcher
-    ```
-    and selected _DietPi-Software_. or launch directly the tool:
-    ```
-    dietpi-software
-    ```
+    To install any of the **DietPi Optimised Software** listed below run from the command line `dietpi-launcher` and selected *DietPi-Software* or launch the tool `dietpi-software`.
 
     Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
@@ -29,7 +22,7 @@
 - [**LXQt - Slick and optimized lightweight desktop**](../software/desktop/#lxqt-optimized-lightweight-desktop)
 - [**MATE - Popular Gnome 2 desktop**](../software/desktop/#mate-popular-gnome2-desktop)
 - [**Xfce - Lightweight desktop**](../software/desktop/#xfce-lightweight-desktop)
-- [**GnuStep - Alternative/unique desktop**](../software/desktop/#gnustep-alternativeunique-desktop)
+- [**GNUstep - Alternative/unique desktop**](../software/desktop/#gnustep-alternativeunique-desktop)
 
 ### [Desktop Utilities](../software/desktop/#desktop-utilities)
 
@@ -88,7 +81,7 @@
 - [Lidarr - Automatically download Music](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13580)
 - [CouchPotato - Automatically download movies.](https://dietpi.com/phpbb/viewtopic.php?p=7212#p7212)
 - [Jackett - API Support for your favourite torrent trackers.](https://dietpi.com/phpbb/viewtopic.php?p=7503#p7503)
-- [NZBget - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
+- [NZBGet - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
 - [HTPC Manager - combines all your favourite software into one slick interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p8043)
 
 ## Emulation & Gaming
@@ -122,18 +115,18 @@
 
 ## Social / Search
 
-- [FreshRSS - A self-hosted RSS feed aggregator](https://dietpi.com/phpbb/viewtopic.php?p=13918#p13918)  
-- [Forums - phpBB3](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=5#p51)  
-- [Wordpress - Website Blog and Publishing platform.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p395)  
-- [Image Gallery - Host and browse your images from a web interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=40#p480)  
-- [BaiKal - Lightweight CalDAV + CardDAV server.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=50#p1502)  
-- [OpenBazaar - Decentralized peer to peer market server using BitCoin.](https://dietpi.com/phpbb/viewtopic.php?p=1796#p1796)  
-- [YaCy - Decentralized open source search engine.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p6202)  
+- [FreshRSS - A self-hosted RSS feed aggregator](https://dietpi.com/phpbb/viewtopic.php?p=13918#p13918)
+- [phpBB - Free flat-forum bulletin board software solution](https://dietpi.com/phpbb/viewtopic.php?p=51#p51)  
+- [Wordpress - Website Blog and Publishing platform](https://dietpi.com/phpbb/viewtopic.php?p=395#p395)  
+- [Image Gallery - Host and browse your images from a web interface.](https://dietpi.com/phpbb/viewtopic.php?p=480#p480)  
+- [Baïkal - Lightweight CalDAV + CardDAV server](https://dietpi.com/phpbb/viewtopic.php?p=1502#p1502)  
+- [OpenBazaar - Decentralized peer to peer market server using Bitcoin](https://dietpi.com/phpbb/viewtopic.php?p=1796#p1796)  
+- [YaCy - Decentralized open source search engine](https://dietpi.com/phpbb/viewtopic.php?p=6202#p6202)
 
 ## WiFi HotSpot
 
 - [WiFi HotSpot - Turn your device into a wireless hotspot/access point.](https://dietpi.com/phpbb/viewtopic.php?p=1207#p1207)  
-- [Tor HotSpot - Optional: Routes all WiFi HotSpot traffic through the Tor network.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1529)  
+- [Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1529)  
 
 ## Home Automation
 
@@ -151,8 +144,8 @@
 - [WebIOPi - Web interface to control RPi GPIO.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p189)  
 - [Node-RED - Visual tool for wiring together hardware devices, APIs and online services.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4292)  
 - [Mosquitto - Message broker that implements MQTT protocol versions 3.1 and 3.1.1.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p4293)  
-- [Blynk Server - iOs and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p5901)  
-- [AudioPhonics Pi-SPC - Power control module for Raspberry Pi, allowing physical button power on/off.](https://dietpi.com/phpbb/viewtopic.php?p=9359#p9359)  
+- [Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p5901)  
+- [Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off.](https://dietpi.com/phpbb/viewtopic.php?p=9359#p9359)  
 - [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
 - [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
 

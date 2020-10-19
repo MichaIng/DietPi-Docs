@@ -2,7 +2,7 @@
 
 ## Overview
 
-!!! warning "Documentation in progress..." 
+!!! warning "Documentation in progress..."
 
     The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5)). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:  
 
@@ -17,34 +17,34 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?" 
-    To install any of the **DietPi Optimised Software** listed below run from the command line: 
+??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
+    To install any of the **DietPi Optimised Software** listed below run from the command line:
     ```
-    dietpi-launcher 
+    dietpi-launcher
     ```
-    and selected _DietPi-Software_. or launch directly the tool: 
+    and selected _DietPi-Software_. or launch directly the tool:
     ```
-    dietpi-software 
+    dietpi-software
     ```
-    
+
     Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi Software](../assets/images/dietpi-software.jpg)
 
-    To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
 ## [29] TigerVNC Server - Desktop for remote connection
 
 !!! info Desktop environment
 
-    From the list of **Optimised Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../dietpi-software-desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
+    From the list of **Optimised Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
 
 Run a **Desktop environment** on your device and access it accessed remotely via network. It is a great option for headless SBC devices.
 
 === "Quick start"
 
     You can control the VNC service with:
-    ``` 
+    ```
     systemctl status vncserver.service
     ```
 
@@ -53,7 +53,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     - Use the IP address of your DietPi device (e.g.: 192.168.0.100). If you can't connect, try connecting to screen 1 (e.g.: 192.168.0.100:1)
     - Use the password you entered during the installation. If you would like to change the password run from the console/terminal
     ```
-    vncpasswd 
+    vncpasswd
     ```
     - The default port is 5901. **Note:** To enable access from outside of your local network, this port needs to be forwarded from your router.
 
@@ -61,15 +61,15 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
     VNC servers start automatically during boot, unless you have selected **Desktop** from `dietpi-autostart` configuration tool.
 
-    To enable a different startup setup, run from the command line the main DietPi tool: 
+    To enable a different startup setup, run from the command line the main DietPi tool:
     ```
-    dietpi-launcher 
+    dietpi-launcher
     ```
-    or directly. 
+    or directly.
     ```
-    dietpi-autostart 
+    dietpi-autostart
     ```
-    To see all the DietPi configurations options, review [DietPi Tools](../user-guide_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
 === "Official documentation"
     [LXDE Website](https://www.lxde.org) - [LXDE Wiki](https://wiki.lxde.org/en/Main_Page)
@@ -85,7 +85,7 @@ Edit dietpi.txt and enable VNC server to run in _shared desktop_ mode:
 nano /boot/dietpi.txt
 ```
 
-and change to value 1 next line 
+and change to value 1 next line
 ```
 SOFTWARE_VNCSERVER_SHARE_DESKTOP=1
 ```

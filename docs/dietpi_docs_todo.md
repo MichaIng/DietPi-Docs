@@ -24,15 +24,15 @@ Merging should be done via 4-eyes method when merging to the master branch.
 
 ### 2.1 Filenames .md
 
-- Some of the filenames use '-', others use '_'.  
-  e.g. dietpi-software-bittorrent.md vs. user-guide_install.md.  
-  I would prefer the latter one: `<docu type>_<chapter contents>.md`.
+Some of the filenames use `-`, others use `_`.  
+e.g. dietpi-software-bittorrent.md vs. user-guide_install.md.  
+I would prefer the latter one: `<docu type>_<chapter contents>.md`.
 
-  **Style Guide**:
-  ```
-  <docu type>_<chapter contents>.md, all lower case
-  Example: user-guide_install.md.
-  ```
+**Style Guide**:
+
+`<docu type>_<chapter contents>.md`, all lower case
+
+Example: `user-guide_install.md`.
 
 ToDo: Change file names initially.
 Remark: Google search should be considered.
@@ -74,7 +74,7 @@ Idea:
 
 - Use tabs in the content area ([like there](https://dietpi.com/docs/dietpi-software-desktop/#lxde-ultra-lightweight-desktop) to distinguish between SBC, native PC, VirtualBox,etc. Below the tab area the *First boot on DietPi* section is located.
 
-- [x] **ToDo Stephan:** Implement the changed *Installation* structure.
+- [x] **Stephan:** Implement the changed *Installation* structure.
 
 ### 3.2 Description of *dietpi-software* usage
 
@@ -83,11 +83,9 @@ Idea:
 
 Shall be moved to *Getting started*.
 
-- [x] **ToDo Stephan:** Move contents.
+- [x] **Stephan:** Move contents.
 
 *Getting started* shall contain often used procedures. Seldom used procedures shall be in *Advanced configuration & DietPi tools*.
-
-  - go ahead here
 
 ## 4 Supported Single Board Computers (SBCs)
 
@@ -102,13 +100,13 @@ Harmonize/rearrange order in all sub-chapters:
 - Picture of hardware
 - Link table to images
 
-- [x] **ToDo Stephan:** Harmonize sections.
+- [x] **Stephan:** Harmonize sections.
 
 ### 4.2 Supported Single Board Computers (SBCs)
 
 1. Move *NanoPi Series (FriendlyARM)* below *ASUS Tinker Board*
 
-- [x] **ToDo Stephan:** Change order.
+- [x] **Stephan:** Change order.
 
 ### 4.3 Description of DietPi PREP?
 
@@ -117,7 +115,7 @@ Harmonize/rearrange order in all sub-chapters:
 
 Actually it is only referenced at the end of the [*Supported SBC* section](https://dietpi.com/docs/hardware-supported_sbc/#make-your-own-distribution).
 
-- [ ] **ToDo Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
+- [ ] **Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
   Basically use *master* branch, use *dev* for hardening/testing Micha's PREP-script.
 
 ### 4.4 Name of .md file
@@ -135,18 +133,29 @@ Add images for
 
 The images are available on Dietpi.com\Download.
 
-- [ ] **ToDo Stephan:** Add images.
+- [x] **Stephan:** Add images.
+
+### 4.6 Headings of Optimized software list
+
+Compare <https://dietpi.com/docs/dietpi_optimised_software/>, table of contents on the right side with <https://dietpi.com/docs/software/desktop/>, structure on the left side.
+
+Proposal:
+
+- Harmonize naming
+- List in alphabetical order
+
+Decision?
 
 ## 5. Desktops
 
 Desktop basics [DietPi Desktops](https://dietpi.com/docs/dietpi-software-desktop/):
 
 1. Add a section how to setup the ***Autostart options*** via ***dietpi-config*** to start with LightDM
-  - Have it similar to the collapsable description *How do I run DietPi-Software and install Optimised software ?*
+   - Have it similar to the collapsable description *How do I run DietPi-Software and install Optimised software ?*
 
 - [x] **No extra description, because this is already described in the tab page *Enable autostart*.**
 
-LXQt (https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweight-desktop):
+LXQt (<https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweight-desktop>):
 
 1. Add screenshot of desktop
 
@@ -154,7 +163,7 @@ LXQt (https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweigh
 
 ## 6. DietPi Tools
 
-See there: https://dietpi.com/docs/user-guide_tools/
+See there: <https://dietpi.com/docs/user-guide_tools/>
 
 1. Add a screenshot for *Software Additional*
 
@@ -163,7 +172,7 @@ See there: https://dietpi.com/docs/user-guide_tools/
 
 ## 7. Description of Webserver stacks
 
-See there: https://dietpi.com/docs/dietpi-software-webserver-stack/  
+See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>
 
 1. Add a section how to select the webservers stacks via ***dietpi-software***. Two options: Select via *Software Optimized* or via *Webserver Preference* (Preference is used in the case of the first webserver background installation).
 2. Section [Webservers](https://dietpi.com/docs/dietpi-software-webserver-stack/#webservers): Exchange the three bullets with the description "behind the links" ([*Webserver Preference System*](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)):
@@ -177,7 +186,7 @@ See there: https://dietpi.com/docs/dietpi-software-webserver-stack/
 
 ## 8. Links *Return to the Optimised Software list*
 
-See there: https://dietpi.com/docs/dietpi-software-webserver-stack/  
+See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>  
 At the bottom there is a link to jump back.  
 Q: Is this linking done in all necessary pages? If no, where should it be inserted?
 
@@ -192,13 +201,13 @@ Describe/check user rights of dietpi user and letsencrypt.
 ### 9.2 Add section "hardening Gitea for external access (behind a router)"
 
 - Describe fail2ban usage unter "external access".  
-  See: https://docs.gitea.io/en-us/fail2ban-setup/
+  See: <https://docs.gitea.io/en-us/fail2ban-setup/>
 - Describe combination Gitea and letsencrypt. Then use https for access.
 
 Alternative:
 
 - Add a general *hardening with https:* description in the webserver section (where in detail?).  
-  See also there: https://github.com/MichaIng/DietPi/wiki/Security-recommendation.
+  See also there: <https://github.com/MichaIng/DietPi/wiki/Security-recommendation>.
 - Reference this hardening section from the software titles and add there specialities of the software title hardening
 
 How to go on?
@@ -211,6 +220,6 @@ How to go on?
 
 Describe Backup/Restore:
 
-- via dietpi-backup
+- via `dietpi-backup`
 - via different/other backup solutions
-  E.g. see https://www.linuxlinks.com/backup/
+  E.g. see <https://www.linuxlinks.com/backup/>
