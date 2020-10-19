@@ -113,7 +113,7 @@ Select one or more software items which you would like to be removed from your D
 
 : Fully backups DietPi setup. It also includes the restore capability from an already made DietPi backup.
 
-## Let's encrypt SSL & NordVPN support
+## Let's Encrypt SSL & NordVPN support
 
 `dietpi-letsencrypt` {: #dietpi-letsencrypt }
 
