@@ -69,7 +69,7 @@ Then the main order will be:
 7. Troubleshooting
 8. ...
 
-**Decision?**
+#### Decision?
 
 ## 3. Installation chapter
 
@@ -165,7 +165,7 @@ Proposal:
 - Harmonize naming
 - List in alphabetical order
 
-**Decision?**
+#### Decision?
 
 ## 5. Desktops
 
