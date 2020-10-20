@@ -265,6 +265,12 @@ Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
 
 #### Decision?
 
+### 11.2 Add section "how do I run..."
+
+In every chapter of "Optimized software" the section "How do I run DietPi-Software and install Optimised software ?" shall be added.
+
+#### Decision?
+
 ## 12. Chapter "Advanced configuration"
 
 ### 12.1 Add descriptions
