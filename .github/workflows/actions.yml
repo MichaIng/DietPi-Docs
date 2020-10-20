@@ -38,7 +38,7 @@ jobs:
         if: always() && steps.build.outcome == 'success'
         run: |
           GO111MODULE=on go get -u github.com/raviqqe/liche
-          $(go env GOPATH)/bin/liche -d build -x 'http://localhost|http://192.168.0.100|https://github.com' -r README.md build/docs
+          $(go env GOPATH)/bin/liche -v -x 'http://localhost|http://192.168.0.100|https://github.com' -d build -r README.md build/docs
       - name: Check spelling in HTML files
         if: always() && steps.build.outcome == 'success'
         # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
