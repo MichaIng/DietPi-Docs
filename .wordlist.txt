@@ -75,7 +75,6 @@ eMMC
 EmonPi
 exFAT
 FHS
-fileserver
 filesystem
 FOSS
 FreshRSS
