@@ -64,7 +64,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
     DietPi-Software allows you to easily choose a method of **accessing the files** on your DietPi system.
     Installing one of DietPi's file server choices will allow you to access and share files on your DietPi system.
 
-    DietPi will then automatically install and setup the fileserver for you. DietPi will also clean and remove any previous fileserver from your system.
+    DietPi will then automatically install and setup the file server for you. DietPi will also clean and remove any previous file server from your system.
 
     The **default destination** directory for file servers is ***/mnt/dietpi_userdata***.
 
@@ -76,7 +76,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
     ![dietpi-software-fileserver-selection](assets/images/dietpi-software-fileserver-selection.jpg){: style="width:550px"}
 
-    See [fileserver](../software/file_servers/) for further information.
+    See [file server](../software/file_servers/) for further information.
 
 === "Log System"
 
@@ -96,7 +96,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
     In DietPi, we class user data as:
 
     - **Data storage for applications**. Some examples are ownCloud/Nextcloud data store, BitTorrent downloads and SQL data store (v142+).
-    - The location where your **fileserver** choice will point to, if you install one (e.g.: Samba Server, ProFTPD).
+    - The location where your **file server** choice will point to, if you install one (e.g.: Samba Server, ProFTPD).
     - The location where you can upload and store your **media content**, for other applications to use (e.g.: Kodi, Emby, Plex etc).
 
     For all software you install in dietpi-software, you can access your user data with ***/mnt/dietpi_userdata***. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
