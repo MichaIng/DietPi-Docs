@@ -29,7 +29,7 @@ jobs:
         if: always() && steps.python_deps.outcome == 'success'
         run: |
           sed -i "/repo_url/c\repo_url: https://github.com/$GITHUB_REPOSITORY" mkdocs.yml
-          sed -i "/edit_uri/c\edit_uri: edit/${GITHUB_REF#refs/heads}/docs/" mkdocs.yml
+          sed -i "/edit_uri/c\edit_uri: edit${GITHUB_REF#refs/heads}/docs/" mkdocs.yml
       - name: Build DietPi-Docs
         id: build
         if: always() && steps.mkdocs_config.outcome == 'success'
