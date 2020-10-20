@@ -55,6 +55,7 @@ DHCP
 dialogs
 DietPi
 dietpi
+DietPi's
 DiogoAbu
 diskimager
 DIY
@@ -74,6 +75,7 @@ eMMC
 EmonPi
 exFAT
 FHS
+fileserver
 filesystem
 FOSS
 FreshRSS
@@ -212,7 +214,7 @@ PiSupply
 PiVPN
 Plex
 pre
-ProFTP
+preferenced
 ProFTPD
 Pydio
 pyenv
@@ -264,6 +266,7 @@ SSL
 startx
 StephanStS
 sudo
+symlink
 Syncthing
 systemd
 TasmoAdmin

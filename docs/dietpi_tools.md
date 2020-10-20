@@ -55,7 +55,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
 === "SSH Server"
 
-    This lets you select your preferenced SSH server. Also you can deinstall any SSH server to save memory and to exclude any external ssh based access.
+    This lets you select your preferenced SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
 
     ![dietpi-software-ssh-selection](assets/images/dietpi-software-ssh-selection.jpg){: style="width:550px"}
 
@@ -64,19 +64,19 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
     DietPi-Software allows you to easily choose a method of **accessing the files** on your DietPi system.
     Installing one of DietPi's file server choices will allow you to access and share files on your DietPi system.
 
-    DietPi will then automatically install and setup the fileserver for you. DietPi will also clean and remove any previous fileservers from your system.
+    DietPi will then automatically install and setup the fileserver for you. DietPi will also clean and remove any previous fileserver from your system.
 
     The **default destination** directory for file servers is ***/mnt/dietpi_userdata***.
 
-    The reasons for choosing **ProFTP** over **Samba** may be:
+    The reasons for choosing **ProFTPD** over **Samba** may be:
 
-    - ProFTP outperforms Samba in all aspects of performance.
-    - ProFTP can max out the RPi 100mbit connection with minimal cpu usage.
-    - Samba server on a RPi v1 will hit 100% cpu usage at 40mbit transfer rate.
+    - ProFTPD outperforms Samba in all aspects of performance.
+    - ProFTPD can max out the RPi 100 Mbit connection with minimal CPU usage.
+    - Samba server on a RPi v1 will hit 100% CPU usage at 40 Mbit transfer rate.
 
     ![dietpi-software-fileserver-selection](assets/images/dietpi-software-fileserver-selection.jpg){: style="width:550px"}
 
-    See [fileservers](../software/file_servers/) for further information.
+    See [fileserver](../software/file_servers/) for further information.
 
 === "Log System"
 
@@ -95,15 +95,15 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
     In DietPi, we class user data as:
 
-    - **Data storage for applications**. Some examples are Ownclound/NextCloud data store, BitTorrent downloads and SQL data store (v142+).
-    - The location where your **fileserver** choice will point to, if you install one (eg: Samba Server, Proftpd).
-    - The location where you can upload and store your **media content**, for other applications to use (eg: Kodi, Emby, Plex etc).
+    - **Data storage for applications**. Some examples are ownCloud/Nextcloud data store, BitTorrent downloads and SQL data store (v142+).
+    - The location where your **fileserver** choice will point to, if you install one (e.g.: Samba Server, ProFTPD).
+    - The location where you can upload and store your **media content**, for other applications to use (e.g.: Kodi, Emby, Plex etc).
 
     For all software you install in dietpi-software, you can access your user data with ***/mnt/dietpi_userdata***. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
     To check where the physical location is, you can run the following command:  
     `readlink -f /mnt/dietpi_userdata`
 
-    You can **move your user data** to another location (eg: USB drive). Simply run `dietpi-software` and enter the *User data location* menu option:
+    You can **move your user data** to another location (e.g. USB drive). Simply run `dietpi-software` and enter the *User data location* menu option:
 
     - If you need to setup a new external drive, select *Drive Manager*, to launch *DietPi-Drive Manager*.  
     - Use the *List* option to select from a list of mounted drives, or, select *Manual* for a custom location.
