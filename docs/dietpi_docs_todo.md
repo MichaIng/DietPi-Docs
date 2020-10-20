@@ -1,4 +1,4 @@
-h# Documentation Ideas & Tasks
+# Documentation Ideas & Tasks
 
 ## 1. Development general
 
@@ -266,6 +266,8 @@ Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
 #### Decision?
 
 ## 12. Chapter "Advanced configuration"
+
+### 12.1 Add descriptions
 
 <https://dietpi.com/docs/dietpi_tools/#dietpi-software>
 
