@@ -244,3 +244,14 @@ Describe Backup/Restore:
 - via `dietpi-backup`
 - via different/other backup solutions
   E.g. see <https://www.linuxlinks.com/backup/>
+
+## 11. Optimized software
+
+### 11.1 Harmonization with <https://dietpi.com/dietpi-software.html>
+
+In <https://dietpi.com/dietpi-software.html> are icons of software titles as tiles displayed.  
+This should be consistent to our [optimized software list](https://dietpi.com/docs/dietpi_optimised_software/).
+
+Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
+
+#### Decision?
