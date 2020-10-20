@@ -1,4 +1,4 @@
-# Documentation Ideas & Tasks
+h# Documentation Ideas & Tasks
 
 ## 1. Development general
 
@@ -68,6 +68,15 @@ Then the main order will be:
 6. Community tutorials
 7. Troubleshooting
 8. ...
+
+#### Decision?
+
+### 2.4 Headings of optimized software
+
+Shall the installation number added to every heading of the installation description?  
+See <http://localhost:8000/software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection>: Number \[29\] is added as a prefix of the heading.
+
+Or shall it be added as a postfix?
 
 #### Decision?
 
@@ -188,8 +197,8 @@ See there: <https://dietpi.com/docs/user-guide_tools/>
 
 1. Add a screenshot for *Software Additional*
 
-- [ ] **Todo Stephan:** Move dietpi-software main menu screenshot above the tabs selection
-- [ ] **Todo Stephan:** Add a screenshot for *Software Additional* within the corresponding tab section
+- [x] **Petru:** Move dietpi-software main menu screenshot above the tabs selection
+- [x] **Stephan:** Add a screenshot for *Software Additional* within the corresponding tab section
 
 ## 7. Description of Webserver stacks
 
@@ -253,5 +262,14 @@ In <https://dietpi.com/dietpi-software.html> are icons of software titles as til
 This should be consistent to our [optimized software list](https://dietpi.com/docs/dietpi_optimised_software/).
 
 Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
+
+#### Decision?
+
+## 12. Chapter "Advanced configuration"
+
+<https://dietpi.com/docs/dietpi_tools/#dietpi-software>
+
+- Someone to describe the tab "Search".
+- Someone to describe the tab "Log System".
 
 #### Decision?
