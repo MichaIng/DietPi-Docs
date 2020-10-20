@@ -55,7 +55,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
 === "SSH Server"
 
-    This lets you select your preferenced SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
+    This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
 
     ![dietpi-software-ssh-selection](assets/images/dietpi-software-ssh-selection.jpg){: style="width:550px"}
 
