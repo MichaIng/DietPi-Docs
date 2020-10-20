@@ -214,7 +214,6 @@ PiSupply
 PiVPN
 Plex
 pre
-preferenced
 ProFTPD
 Pydio
 pyenv
