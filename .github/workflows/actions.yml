@@ -34,15 +34,11 @@ jobs:
         id: build
         if: always() && steps.mkdocs_config.outcome == 'success'
         run: mkdocs build -sd build/docs
-      - name: Check links in HTML files
-        id: check_links
+      - name: Check links in HTML and Markdown files
         if: always() && steps.build.outcome == 'success'
-        uses: peter-evans/link-checker@v1
-        with:
-          args: -d build -x http://localhost|http://192.168.0.100|https://github.com -r README.md build/docs
-      - name: Check link check result
-        if: always() && steps.check_links.outcome == 'success'
-        run: exit ${{ steps.check_links.outputs.exit_code }}
+        run: |
+          GO111MODULE=on go get -u github.com/raviqqe/liche
+          $(go env GOPATH)/bin/liche -d build -x http://localhost|http://192.168.0.100|https://github.com -r README.md build/docs
       - name: Check spelling in HTML files
         if: always() && steps.build.outcome == 'success'
         # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
