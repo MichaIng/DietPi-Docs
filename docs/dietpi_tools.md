@@ -49,7 +49,68 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![dietpi-software additional](assets/images/dietpi-software-additional.jpg){: style="width:640px"}
 
+=== "Search"
+
 You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
+
+=== "SSH Server"
+
+    This lets you select your preferenced SSH server. Also you can deinstall any SSH server to save memory and to exclude any external ssh based access.
+
+    ![dietpi-software-ssh-selection](assets/images/dietpi-software-ssh-selection.jpg){: style="width:550px"}
+
+=== "File Server"
+
+    DietPi-Software allows you to easily choose a method of **accessing the files** on your DietPi system.
+    Installing one of DietPi's file server choices will allow you to access and share files on your DietPi system.
+
+    DietPi will then automatically install and setup the fileserver for you. DietPi will also clean and remove any previous fileservers from your system.
+
+    The **default destination** directory for file servers is ***/mnt/dietpi_userdata***.
+
+    The reasons for choosing **ProFTP** over **Samba** may be:
+
+    - ProFTP outperforms Samba in all aspects of performance.
+    - ProFTP can max out the RPi 100mbit connection with minimal cpu usage.
+    - Samba server on a RPi v1 will hit 100% cpu usage at 40mbit transfer rate.
+
+    ![dietpi-software-fileserver-selection](assets/images/dietpi-software-fileserver-selection.jpg){: style="width:550px"}
+
+    See [fileservers](../software/file_servers/) for further information.
+
+=== "Log System"
+
+    ***\[T.b.d.: Add log system description here\]***
+
+    ![dietpi-software-log-system-selection](assets/images/dietpi-software-log-system-selection.jpg){: style="width:550px"}
+
+=== "Webserver Preference"
+
+    The DietPi **Webserver Preference** system allows you to choose your favourite webserver for use in DietPi installations. When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
+    Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
+
+    ![dietpi-software-webserver-preference](assets/images/dietpi-software-webserver-preference.png){: style="width:550px"}
+
+=== "User Data Location"
+
+    In DietPi, we class user data as:
+
+    - **Data storage for applications**. Some examples are Ownclound/NextCloud data store, BitTorrent downloads and SQL data store (v142+).
+    - The location where your **fileserver** choice will point to, if you install one (eg: Samba Server, Proftpd).
+    - The location where you can upload and store your **media content**, for other applications to use (eg: Kodi, Emby, Plex etc).
+
+    For all software you install in dietpi-software, you can access your user data with ***/mnt/dietpi_userdata***. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
+    To check where the physical location is, you can run the following command:  
+    `readlink -f /mnt/dietpi_userdata`
+
+    You can **move your user data** to another location (eg: USB drive). Simply run `dietpi-software` and enter the *User data location* menu option:
+
+    - If you need to setup a new external drive, select *Drive Manager*, to launch *DietPi-Drive Manager*.  
+    - Use the *List* option to select from a list of mounted drives, or, select *Manual* for a custom location.
+
+    DietPi will automatically move your existing user data to your new location.
+
+    ![dietpi-software-user-data-location-selection](assets/images/dietpi-software-user-data-location-selection.jpg){: style="width:550px"}
 
 **Install**  
 Install selected software item(s), and these could come both from **optimised software** list or **additional software** items.
