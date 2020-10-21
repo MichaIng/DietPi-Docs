@@ -8,7 +8,7 @@ It provides an easy access to all DietPi OS tools, and it could be accessed by r
 dietpi-launcher
 ```
 
-![dietpi-launcher](assets/images/dietpi-launcher.jpg)
+![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg)
 
 ## DietPi-Software
 
@@ -20,7 +20,7 @@ dietpi-software
 
 It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../dietpi_optimised_software/) titles.
 
-![dietpi-software](assets/images/dietpi-software.jpg)
+![DietPi-Software screenshot](assets/images/dietpi-software.jpg)
 
 === "Software Optimised"
 
@@ -38,7 +38,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     The software you selected will begin to install at this point. Once the process is completed, you may be asked to restart your device. Press **OK** to confirm.
 
-    ![dietpi-software](assets/images/dietpi-software-optimised.jpg)
+    ![DietPi-Software Software Optimised menu screenshot](assets/images/dietpi-software-optimised.jpg)
 
 === "Software Additional"
 
@@ -47,7 +47,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - software packages that are often used and installed via `apt install <package>`, without additional optimisation from DietPi team.
     - _or_ packages not directly required, but pulled as a dependency, like: build tools, libraries or runtime systems. E.g. packages like *Python3*, *pip*, *tcpdump* or *midnight commander* can be installed using the dialog.
 
-    ![dietpi-software additional](assets/images/dietpi-software-additional.jpg){: style="width:640px"}
+    ![DietPi-Software Software Additional menu screenshot](assets/images/dietpi-software-additional.jpg){: style="width:640px"}
 
 === "Search"
 
@@ -57,7 +57,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
     This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
 
-    ![dietpi-software-ssh-selection](assets/images/dietpi-software-ssh-selection.jpg){: style="width:550px"}
+    ![DietPi-Software SSH Server menu screenshot](assets/images/dietpi-software-ssh-selection.jpg){: style="width:550px"}
 
 === "File Server"
 
@@ -74,22 +74,22 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
     - ProFTPD can max out the RPi 100 Mbit connection with minimal CPU usage.
     - Samba server on a RPi v1 will hit 100% CPU usage at 40 Mbit transfer rate.
 
-    ![dietpi-software-fileserver-selection](assets/images/dietpi-software-fileserver-selection.jpg){: style="width:550px"}
+    ![DietPi-Software File Server menu screenshot](assets/images/dietpi-software-fileserver-selection.jpg){: style="width:550px"}
 
-    See [file server](../software/file_servers/) for further information.
+    See [file servers overview](../software/file_servers/) for further information.
 
 === "Log System"
 
     ***\[T.b.d.: Add log system description here\]***
 
-    ![dietpi-software-log-system-selection](assets/images/dietpi-software-log-system-selection.jpg){: style="width:550px"}
+    ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: style="width:550px"}
 
 === "Webserver Preference"
 
     The DietPi **Webserver Preference** system allows you to choose your favourite webserver for use in DietPi installations. When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
     Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
 
-    ![dietpi-software-webserver-preference](assets/images/dietpi-software-webserver-preference.png){: style="width:550px"}
+    ![DietPi-Software Webserver Preference menu screenshot](assets/images/dietpi-software-webserver-preference.png){: style="width:550px"}
 
 === "User Data Location"
 
@@ -110,7 +110,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
     DietPi will automatically move your existing user data to your new location.
 
-    ![dietpi-software-user-data-location-selection](assets/images/dietpi-software-user-data-location-selection.jpg){: style="width:550px"}
+    ![DietPi-Software User Data Location menu screenshot](assets/images/dietpi-software-user-data-location-selection.jpg){: style="width:550px"}
 
 **Install**  
 Install selected software item(s), and these could come both from **optimised software** list or **additional software** items.
@@ -124,35 +124,35 @@ Select one or more software items which you would like to be removed from your D
 
 : Configure various system settings, from display / audio / network to _auto start_ options.
 
-: ![dietpi-config](assets/images/dietpi-config.jpg)
+: ![DietPi-Config screenshot](assets/images/dietpi-config.jpg)
 
 `dietpi-drive_manager` {: #dietpi-drive_manager }
 
 : Feature-rich drive management utility.
 
-: ![dietpi-drive_manager](assets/images/dietpi-drive-manager.jpg)
+: ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager.jpg)
 
 `dietpi-autostart` {: #dietpi-autostart }
 
 : Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running.
 
-: ![dietpi-autostart](assets/images/dietpi-autostart.jpg)
+: ![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg)
 
 `dietpi-services` {: #dietpi-services }
 
 : Provides service control, priority level tweaks and status print.
 
-: ![dietpi-services](assets/images/dietpi-services.jpg)
+: ![DietPi-Services screenshot](assets/images/dietpi-services.jpg)
 
 `dietpi-led_control` {: #dietpi-led_control }
 
-: ![dietpi-led_control](assets/images/dietpi-ledcontrol.jpg)
+: ![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg)
 
 `dietpi-cron` {: #dietpi-cron }
 
 : Modify the start times of specific cron job groups.
 
-: ![dietpi-cron](assets/images/dietpi-cron.jpg)
+: ![DietPi-Cron screenshot](assets/images/dietpi-cron.jpg)
 
 `dietpi-justboom` {: #dietpi-justboom }
 
@@ -164,7 +164,7 @@ Select one or more software items which you would like to be removed from your D
 
 : Sync or duplicate a directory to another
 
-: ![dietpi-sync](assets/images/dietpi-sync.jpg)
+: ![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg)
 
 ## Update & Backup
 
