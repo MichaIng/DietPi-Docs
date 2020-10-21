@@ -74,7 +74,7 @@ Then the main order will be:
 ### 2.4 Headings of optimized software
 
 Shall the installation number added to every heading of the installation description?  
-See <http://localhost:8000/software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection>: Number \[29\] is added as a prefix of the heading.
+See <https://dietpi.com/docs/software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection>: Number \[29\] is added as a prefix of the heading.
 
 Or shall it be added as a postfix?
 
