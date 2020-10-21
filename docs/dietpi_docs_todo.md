@@ -50,6 +50,36 @@ Open point, has to be cleared.
 
 - [x] Petru to enable new file structure
 
+### 2.3 Content order
+
+**Proposal:** The content of the HOME area is reordered by exchanging Supported SBCs with Optimised software list and Advanced configuration with Community tutorials.  
+This gives the following benefits:
+
+- "Advanced configuration" is nearer to the system usage description
+- All links to DietPi.com forum ("Community tutorials" and "Troubleshooting" are consecutive)
+
+Then the main order will be:
+
+1. Overview
+2. Installation
+3. Getting started
+4. Supported SBCs
+5. Advanced configuration
+6. Community tutorials
+7. Troubleshooting
+8. ...
+
+#### Decision?
+
+### 2.4 Headings of optimized software
+
+Shall the installation number added to every heading of the installation description?  
+See <http://localhost:8000/software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection>: Number \[29\] is added as a prefix of the heading.
+
+Or shall it be added as a postfix?
+
+#### Decision?
+
 ## 3. Installation chapter
 
 ### 3.1 Docu structure
@@ -115,7 +145,7 @@ Harmonize/rearrange order in all sub-chapters:
 
 Actually it is only referenced at the end of the [*Supported SBC* section](https://dietpi.com/docs/hardware-supported_sbc/#make-your-own-distribution).
 
-- [ ] **Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
+- [ ] **ToDo Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
   Basically use *master* branch, use *dev* for hardening/testing Micha's PREP-script.
 
 ### 4.4 Name of .md file
@@ -144,7 +174,7 @@ Proposal:
 - Harmonize naming
 - List in alphabetical order
 
-Decision?
+#### Decision?
 
 ## 5. Desktops
 
@@ -159,7 +189,7 @@ LXQt (<https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweig
 
 1. Add screenshot of desktop
 
-- [ ] **ToDo Stephan:** Add image.
+- [x] **Stephan:** Add image.
 
 ## 6. DietPi Tools
 
@@ -167,8 +197,8 @@ See there: <https://dietpi.com/docs/user-guide_tools/>
 
 1. Add a screenshot for *Software Additional*
 
-- [ ] **Todo Stephan:** Move dietpi-software main menu screenshot above the tabs selection
-- [ ] **Todo Stephan:** Add a screenshot for *Software Additional* within the corresponding tab section
+- [x] **Petru:** Move dietpi-software main menu screenshot above the tabs selection
+- [x] **Stephan:** Add a screenshot for *Software Additional* within the corresponding tab section
 
 ## 7. Description of Webserver stacks
 
@@ -223,3 +253,31 @@ Describe Backup/Restore:
 - via `dietpi-backup`
 - via different/other backup solutions
   E.g. see <https://www.linuxlinks.com/backup/>
+
+## 11. Optimized software
+
+### 11.1 Harmonization with <https://dietpi.com/dietpi-software.html>
+
+In <https://dietpi.com/dietpi-software.html> are icons of software titles as tiles displayed.  
+This should be consistent to our [optimized software list](https://dietpi.com/docs/dietpi_optimised_software/).
+
+Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
+
+#### Decision?
+
+### 11.2 Add section "how do I run..."
+
+In every chapter of "Optimized software" the section "How do I run DietPi-Software and install Optimised software ?" shall be added.
+
+#### Decision?
+
+## 12. Chapter "Advanced configuration"
+
+### 12.1 Add descriptions
+
+<https://dietpi.com/docs/dietpi_tools/#dietpi-software>
+
+- Someone to describe the tab "Search".
+- Someone to describe the tab "Log System".
+
+#### Decision?
