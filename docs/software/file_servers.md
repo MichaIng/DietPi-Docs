@@ -29,7 +29,7 @@
 
 ProFTPD gives you access to files/music/downloads etc. on your DietPi system quickly and efficiently with minimal overhead.
 
-![DietPi file server software ProFTPD](../../assets/images/dietpi-software-fileservers-proftpd.png)
+![DietPi file server software ProFTPD](../assets/images/dietpi-software-fileservers-proftpd.png)
 
 ### Access to ProFTPD
 
@@ -75,7 +75,7 @@ See also <https://en.wikipedia.org/wiki/ProFTPD>.
 
 The Samba server lets you share files on your DietPi system with ease based on the well known SMB networking protocol.
 
-![DietPi fileserver software samba](../../assets/images/dietpi-software-fileservers-samba.png)
+![DietPi fileserver software samba](../assets/images/dietpi-software-fileservers-samba.png)
 
 ### Access to Samba
 
@@ -121,7 +121,7 @@ See also <https://en.wikipedia.org/wiki/Samba_(software)>.
 
 Very secure FTP file server with feature rich security options.
 
-![DietPi fileserver software vsftpd](../../assets/images/dietpi-software-fileservers-vsftpd.png)
+![DietPi fileserver software vsftpd](../assets/images/dietpi-software-fileservers-vsftpd.png)
 
 ### Access to vsftpd
 
@@ -145,7 +145,7 @@ See also <https://en.wikipedia.org/wiki/Vsftpd>.
 
 Network file system server.
 
-![DietPi fileserver software nfs](../../assets/images/dietpi-software-fileservers-nfs.png)
+![DietPi fileserver software nfs](../assets/images/dietpi-software-fileservers-nfs.png)
 
 ### Access to an NFS share
 
