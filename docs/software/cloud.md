@@ -42,7 +42,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Quick start"
 
-    Access the web interface using the next URL when running on SBC (<http://localhost/nextcloud/>) or the IP address / hostname of your DietPi device (e.g.: [http://192.168.0.100/nextcloud/](<http://192.168.0.100/nextcloud/>)).
+    Access the web interface using the next URL when running on SBC (`http://localhost/nextcloud/`) or the IP address / hostname of your DietPi device (e.g.: `http://192.168.0.100/nextcloud/`).
 
     ```
     username = admin

@@ -50,7 +50,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
     Connection Details:
 
-    - Use the IP address of your DietPi device (e.g.: 192.168.0.100). If you can't connect, try connecting to screen 1 (e.g.: 192.168.0.100:1)
+    - Use the IP address of your DietPi device (e.g.: `192.168.0.100`). If you can't connect, try connecting to screen 1 (e.g.: `192.168.0.100:1`)
     - Use the password you entered during the installation. If you would like to change the password run from the console/terminal
     ```
     vncpasswd
