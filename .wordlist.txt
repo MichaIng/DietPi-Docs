@@ -297,7 +297,7 @@ VMware
 VNC
 VNCSERVER
 VPN
-vsFTPD
+vsftpd
 WebIOPi
 Webmin
 webserver
