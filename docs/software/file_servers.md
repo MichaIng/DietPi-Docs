@@ -35,7 +35,7 @@ ProFTPD gives you access to files/music/downloads etc. on your DietPi system qui
 
 The access to ProFTPD with **Windows** is achieved as follows:
 
-- Goto My Computer (Windows Explorer).
+- Go to My Computer (Windows Explorer).
 - In the address bar at the top type `ftp://dietpi:dietpi@192.168.0.100` press enter.
 
 Change 192.168.0.100 to the IP address of your DietPi system.
@@ -44,7 +44,7 @@ The access to ProFTPD with an **FTP client** is achieved as follows:
 
 - username = dietpi (v6.2 and lower = root)
 - password = The same as your root login password. Default is dietpi
-- address = Your ip address (eg: 192.168.0.100)
+- address = Your IP address (e.g.: 192.168.0.100)
 - port = 21
 
 ### Options
@@ -75,7 +75,7 @@ See also <https://en.wikipedia.org/wiki/ProFTPD>.
 
 The Samba server lets you share files on your DietPi system with ease based on the well known SMB networking protocol.
 
-![DietPi fileserver software samba](../assets/images/dietpi-software-fileservers-samba.png)
+![DietPi file server software samba](../assets/images/dietpi-software-fileservers-samba.png)
 
 ### Access to Samba
 
@@ -121,22 +121,22 @@ See also <https://en.wikipedia.org/wiki/Samba_(software)>.
 
 Very secure FTP file server with feature rich security options.
 
-![DietPi fileserver software vsftpd](../assets/images/dietpi-software-fileservers-vsftpd.png)
+![DietPi file server software vsftpd](../assets/images/dietpi-software-fileservers-vsftpd.png)
 
 ### Access to vsftpd
 
 The access to vsftpd with **Windows** is achieved as follows:
 
-- Goto My Computer (Windows Explorer).
+- Go to My Computer (Windows Explorer).
 - In the address bar at the top type `ftp://dietpi:dietpi@192.168.0.100` press enter.
 
 Change 192.168.0.100 to the IP address of your DietPi system.
 
-The access to vsfptd with an **FTP client** is achieved as follows:
+The access to vsftpd with an **FTP client** is achieved as follows:
 
 - username = dietpi (v6.2 and lower = root)
 - password = The same as your root login password. Default is dietpi
-- address = Your ip address (eg: 192.168.0.100)
+- address = Your IP address (e.g.: 192.168.0.100)
 - port = 21
 
 See also <https://en.wikipedia.org/wiki/Vsftpd>.
@@ -145,13 +145,13 @@ See also <https://en.wikipedia.org/wiki/Vsftpd>.
 
 Network file system server.
 
-![DietPi fileserver software nfs](../assets/images/dietpi-software-fileservers-nfs.png)
+![DietPi file server software NFS](../assets/images/dietpi-software-fileservers-nfs.png)
 
 ### Access to an NFS share
 
 The access to the NFS share with an **NFS client** is achieved as follows:
 
-- Address = Ip address of your DietPi system (eg: 192.168.0.100)
+- Address = IP address of your DietPi system (e.g.: 192.168.0.100)
 - Port = 2049
 
 ### Options

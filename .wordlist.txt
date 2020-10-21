@@ -38,6 +38,7 @@ Clonezilla
 Cloudflare
 CloudPrint
 Cloudshell
+conf
 config
 configs
 containerd
@@ -252,6 +253,7 @@ ShareAlike
 Shoutcast
 Signalyst
 SMB
+smb
 sn
 Sonarr
 SPC
