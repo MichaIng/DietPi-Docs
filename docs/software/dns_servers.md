@@ -2,7 +2,7 @@
 
 ## DNS Server
 
-- [**Pi-hole - A DNS/Web server that will block ads for any device on your network**](#pi-hole-a-dnsweb-server-that-will-block-ads-for-any-device-on-your-network)
+- [**Pi-hole - Network-wide Ad Blocking**](#pi-hole-network-wide-ad-blocking)
 
 ## Dynamic DNS Clients
 
@@ -26,9 +26,9 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Pi-hole - A DNS/Web server that will block ads for any device on your network
+## Pi-hole - Network-wide Ad Blocking
 
-Pi-hole is a DNS/Web server that will block ads for any device on your network.
+Pi-hole is a DNS sinkhole with web interface that will block ads for any device on your network.
 
 - Also Installs: [Webserver stack](../webserver_stack/)
 
@@ -92,7 +92,7 @@ If you forgot your login password for the Pi-hole admin web page, you can set it
 
 To allow (OpenVPN or WireGuard) VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`.
 
-See also <https://de.wikipedia.org/wiki/Pi-hole>.
+See also <https://wikipedia.org/wiki/Pi-hole>.
 
 ## No-IP - Dynamic DNS update client
 

@@ -69,7 +69,7 @@ sed -i "/DefaultRoot /c\DefaultRoot ~" /etc/proftpd/proftpd.conf
 systemctl restart proftpd
 ```
 
-See also <https://en.wikipedia.org/wiki/ProFTPD>.
+See also <https://wikipedia.org/wiki/ProFTPD>.
 
 ## Samba - Feature rich file server
 
@@ -115,7 +115,7 @@ sed -i '/path = /c\path = /Path/To/Directory' /etc/samba/smb.conf
 systemctl restart nmbd smbd
 ```
 
-See also <https://en.wikipedia.org/wiki/Samba_(software)>.
+See also <https://wikipedia.org/wiki/Samba_(software)>.
 
 ## vsftpd - Feature rich FTP file server
 
@@ -139,7 +139,7 @@ The access to vsftpd with an **FTP client** is achieved as follows:
 - address = Your IP address (e.g.: 192.168.0.100)
 - port = 21
 
-See also <https://en.wikipedia.org/wiki/Vsftpd>.
+See also <https://wikipedia.org/wiki/Vsftpd>.
 
 ## NFS - Network file system server
 
@@ -169,4 +169,4 @@ By default NFS will allow anyone to connect. You can limit who can access the NF
 
 - Restart services via `systemctl restart nfs-kernel-server`
 
-See also <https://en.wikipedia.org/wiki/Network_File_System>.
+See also <https://wikipedia.org/wiki/Network_File_System>.
