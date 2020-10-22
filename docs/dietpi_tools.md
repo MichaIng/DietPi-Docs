@@ -80,9 +80,14 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
 === "Log System"
 
-    ***\[T.b.d.: Add log system description here\]***
+    Various logging methods can be selected from lightweight to full.
+    If you don’t require log files, get a performance boost. If you need full system logging features, DietPi can do that too.
+
+    The Log System can be changed at any time by selecting a different “Log System” from the menu.
 
     ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: style="width:550px"}
+
+    See also <https://dietpi.com/docs/software/log_system/>.
 
 === "Webserver Preference"
 
