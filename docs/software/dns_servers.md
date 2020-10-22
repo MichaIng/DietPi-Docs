@@ -92,7 +92,7 @@ If you forgot your login password for the Pi-hole admin web page, you can set it
 
 To allow (OpenVPN or WireGuard) VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`.
 
-See also <https://pi-hole.net/>.
+See also <https://de.wikipedia.org/wiki/Pi-hole>.
 
 ## No-IP - Dynamic DNS update client
 
