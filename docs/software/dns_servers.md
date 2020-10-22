@@ -28,7 +28,7 @@
 
 ## Pi-hole - Network-wide Ad Blocking
 
-Pi-hole is a DNS sinkhole with webserver interface that will block ads for any device on your network.
+Pi-hole is a DNS sinkhole with web interface that will block ads for any device on your network.
 
 - Also Installs: [Webserver stack](../webserver_stack/)
 
