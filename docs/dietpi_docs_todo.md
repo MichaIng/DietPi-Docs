@@ -146,3 +146,26 @@ In every chapter of "Optimized software" the section "How do I run DietPi-Softwa
 - Someone to describe the tab "Log System".
 
 #### Decision?
+
+## 10 Compare software lists
+
+The software list between the softwares listed in
+
+- `dietpi-software`
+- <https://dietpi.com/docs/software/desktop/>: All softwares listed below *Optimized Software*
+- <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&sid=8866107ee3f50cf03080607e875fdfd1>: All softwares listed there
+
+need to be checked for consistency.
+
+Softwares which are actually not within `dietpi-software`:
+
+- x
+
+Softwares which are actually not within <https://dietpi.com/docs/software/desktop/>:
+
+- x
+
+Decision is needed, which of these softwares shall be described in the documentation resp. shall be added to the installation via `dietpi-software`.  
+**Proposal:** First, generate the lists above and decide afterwards how to go on.
+
+#### Decision?
