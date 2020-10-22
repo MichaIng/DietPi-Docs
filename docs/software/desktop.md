@@ -1,21 +1,17 @@
 # Desktop environments & utilities
 
-!!! warning "Documentation in progress..."
-
-    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5)). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
-
 ## Desktops
-- [LXDE - Highly optimized ultra lightweight desktop](#lxde-ultra-lightweight-desktop)
-- [LXQt - Slick and optimized lightweight desktop](#lxqt-optimized-lightweight-desktop)
-- [MATE - Popular Gnome 2 desktop](#mate-popular-gnome2-desktop)
-- [Xfce - Lightweight desktop](#mate-popular-gnome2-desktop)
-- [GNUstep - Alternative/unique desktop](#gnustep-alternativeunique-desktop)
+- [**LXDE - Highly optimized ultra lightweight desktop**](#lxde-ultra-lightweight-desktop)
+- [**LXQt - Slick and optimized lightweight desktop**](#lxqt-optimized-lightweight-desktop)
+- [**MATE - Popular Gnome 2 desktop**](#mate-popular-gnome2-desktop)
+- [**Xfce - Lightweight desktop**](#mate-popular-gnome2-desktop)
+- [**GNUstep - Alternative/unique desktop**](#gnustep-alternativeunique-desktop)
 
 ### [Desktop Utilities](#desktop-utilities_1)
-- [Chromium - Web browser](#chromium-web-browser)
-- [GIMP - Image editor](#gimp-image-editor)
-- [QuiteRSS - RSS and Atom news feeds reader](#quiterss-atom-news-feeds-reader)
-- [Xfce4 Power - Power manager with brightness](#xfce4-power-power-manager-with-brightness)
+- [**Chromium - Web browser**](#chromium-web-browser)
+- [**GIMP - Image editor**](#gimp-image-editor)
+- [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss-atom-news-feeds-reader)
+- [**Xfce4 Power - Power manager with brightness**](#xfce4-power-power-manager-with-brightness)
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
@@ -75,6 +71,9 @@ Optimized lightweight desktop without the bloatware. Slick and fluid GUI, howeve
 === "Official documentation"
     [LXQt Wiki](https://wiki.debian.org/LXQt)
 
+![DietPi LXQt](../assets/images/dietpi-software-LXQt_desktop.png)
+
+Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
 
 ## MATE - Popular Gnome2 desktop.
 Popular Gnome2 based desktop environment.

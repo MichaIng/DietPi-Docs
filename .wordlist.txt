@@ -55,6 +55,7 @@ DHCP
 dialogs
 DietPi
 dietpi
+DietPi's
 DiogoAbu
 diskimager
 DIY
@@ -212,7 +213,6 @@ PiSupply
 PiVPN
 Plex
 pre
-ProFTP
 ProFTPD
 Pydio
 pyenv
@@ -264,12 +264,14 @@ SSL
 startx
 StephanStS
 sudo
+symlink
 Syncthing
 systemd
 TasmoAdmin
 Tasmota
 Tautulli
 TCP
+tcpdump
 TigerVNC
 Tonido
 txt
@@ -302,6 +304,7 @@ webserver
 Webservers
 Webserves
 Widevine
+wikimedia
 WireGuard
 WiringPi
 Wordpress

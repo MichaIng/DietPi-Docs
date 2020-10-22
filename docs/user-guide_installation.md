@@ -278,7 +278,7 @@ A login prompt will appear. Use the initial credentials:
     - A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host Name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.
     ![DietPi-ssh](assets/images/dietpi-ssh.jpg)
 
-    - Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address 192.168.1.20 with the one found via scanning the network):  
+    - Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address `192.168.1.20` with the one found via scanning the network):  
     ```
     ssh root@192.168.1.20
     ```

@@ -38,7 +38,7 @@ Key features:
     Search for matching subtitles on a regular basis and upgrade the one you previously downloaded if a better one is found.
 
 === "Quick start"
-    After installation access the web interface using port **6767** (ex: http://192.168.0.100:6767)
+    After installation access the web interface using port **6767** (e.g.: `http://192.168.0.100:6767`)
 
     ![Bazarr](../assets/images/dietpi-software-download-bazarr.jpg)
 
