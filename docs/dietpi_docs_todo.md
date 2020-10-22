@@ -136,7 +136,7 @@ In every chapter of "Optimized software" the section "How do I run DietPi-Softwa
 
 The section with `dietpi-launcher`shall be deleted at all chapters. The result would be:
 
-``````
+``````markdown
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
     To install any of the **DietPi Optimised Software** listed below run from the command line:
 
@@ -157,6 +157,13 @@ The section with `dietpi-launcher`shall be deleted at all chapters. The result w
 
 In <https://dietpi.com/docs/dietpi_tools/#configuration> the various tools (e.g. dietpi-config, dietpi-drive-manager, dietpi-autostart,...) could be moved to tabs and some more explanations from the DietPi forum pages could be added.  
 Can be seen at Stephan's branch ["dev-StS-todo"](https://github.com/StephanStS/DietPi-Docs/tree/dev-StS-todo).
+
+#### Decision?
+
+### 8.4 Optimized software list <http://localhost:8000/dietpi_optimised_software/>
+
+- Ready packages shall occur in bold letters
+- Linking shall show to DietPi-docs pages and not to DietPi forum pages
 
 #### Decision?
 
