@@ -134,6 +134,30 @@ Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
 
 In every chapter of "Optimized software" the section "How do I run DietPi-Software and install Optimised software ?" shall be added.
 
+The section with `dietpi-launcher`shall be deleted at all chapters. The result would be:
+
+``````
+??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
+    To install any of the **DietPi Optimised Software** listed below run from the command line:
+
+    ```
+    dietpi-software
+    ```
+
+    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+
+    ![DietPi software](../assets/images/dietpi-software.jpg)
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+``````
+
+#### Decision?
+
+### 8.3 Tabs for the DietPi tool programs?
+
+In <https://dietpi.com/docs/dietpi_tools/#configuration> the various tools (e.g. dietpi-config, dietpi-drive-manager, dietpi-autostart,...) could be moved to tabs and some more explanations from the DietPi forum pages could be added.  
+Can be seen at Stephan's branch ["dev-StS-todo"](https://github.com/StephanStS/DietPi-Docs/tree/dev-StS-todo).
+
 #### Decision?
 
 ## 9 Chapter "Advanced configuration"
@@ -161,11 +185,11 @@ need to be checked for consistency.
 
 Softwares which are actually not within `dietpi-software`:
 
-- x
+- t.b.d.
 
 Softwares which are actually not within <https://dietpi.com/docs/software/desktop/>:
 
-- x
+- t.b.d.
 
 Decision is needed, which of these softwares shall be described in the documentation resp. shall be added to the installation via `dietpi-software`.  
 **Proposal:** First, generate the lists above and decide afterwards how to go on.
