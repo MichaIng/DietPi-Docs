@@ -141,7 +141,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
 : **Audio Options**
 
-    - Change soundcards with ease (eg: HiFiBerry / Odroid HiFi shield)
+    - Change sound cards with ease (e.g.: HiFiBerry / Odroid HiFi shield)
 
 : **Performance Options**
 
@@ -150,10 +150,10 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
 : **Advanced Settings**
 
-    - Configure Swapfile size
+    - Configure swap file size
     - Update device firmware
     - Toggle serial console
-    - Toggle bluetooth
+    - Toggle Bluetooth
 
 : **Security Options**
 
@@ -165,7 +165,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
 : **Networking Options: Adapters**
 
-    - Scan and connect to your Wifi router with ease
+    - Scan and connect to your WiFi router with ease
     - Change to a static IP address on your network
     - Configure your proxy settings
     - Test internet connection
@@ -175,9 +175,9 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
     - Samba client utility allows you to quickly and easily connect to Windows Shares
     - FTP client utility allows you to quickly and easily connect to FTP servers as a filesystem mount
-    - NoIp client utility. Allows you to quickly and easily setup your website address for your Pi, using a NoIp account
+    - No-IP client utility. Allows you to quickly and easily setup your website address for your Pi, using a No-IP account
 
-: **AutoBoot Options**
+: **AutoStart Options**
 
     - Quickly and easily change what software runs after boot. Kodi, Desktop, console and many more
 

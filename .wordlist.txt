@@ -22,6 +22,7 @@ balenaEtcher
 Bazarr
 Beelink
 Bitcoin
+Bluetooth
 Blynk
 bootable
 bootloader
@@ -99,6 +100,8 @@ harddisk
 Hardkernel
 HC
 hexa
+HiFi
+HiFiBerry
 Hotfix
 hotspot
 Hotspot
@@ -114,6 +117,7 @@ ICMP
 InfluxDB
 ini
 IoT
+IPv
 Jackett
 Jellyfin
 Joulinar
@@ -176,6 +180,7 @@ NAA
 nano
 NanoPC
 NanoPi
+NAS
 natively
 ncc
 NetData
