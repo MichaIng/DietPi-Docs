@@ -201,7 +201,7 @@
 
 - [ProFTPD - Simple, efficient, lightweight FTP file server.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p55)  
 - [Samba - Feature rich file server.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p56)  
-- [vsFTPD - Feature rich FTP file server.](https://dietpi.com/phpbb/viewtopic.php?p=2820#p2820)  
+- [vsftpd - Feature rich FTP file server.](https://dietpi.com/phpbb/viewtopic.php?p=2820#p2820)  
 - [NFS - Network file system server](https://dietpi.com/phpbb/viewtopic.php?p=2821#p2821)  
 
 ## VPN

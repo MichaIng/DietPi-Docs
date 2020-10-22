@@ -38,6 +38,7 @@ Clonezilla
 Cloudflare
 CloudPrint
 Cloudshell
+conf
 config
 configs
 containerd
@@ -105,6 +106,7 @@ HotSpot
 Hotspots
 hostname
 HTPC
+http
 HTTPS
 https
 IceCast
@@ -228,8 +230,9 @@ RDP
 ReadyMedia
 RealVNC
 Remot
-RK
 renderer
+reselect
+RK
 Rockchip
 ROCKPro
 Roon
@@ -252,6 +255,7 @@ ShareAlike
 Shoutcast
 Signalyst
 SMB
+smb
 sn
 Sonarr
 SPC
@@ -297,7 +301,7 @@ VMware
 VNC
 VNCSERVER
 VPN
-vsFTPD
+vsftpd
 WebIOPi
 Webmin
 webserver
@@ -313,6 +317,7 @@ Xfce
 XRDP
 XU
 YaCy
+yourGlobalSoftwarePassword
 ympd
 ZeroPi
 zr
