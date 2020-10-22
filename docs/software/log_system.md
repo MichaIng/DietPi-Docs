@@ -30,7 +30,7 @@ The *Log System* can be changed at any time by running `dietpi-software` and sel
 
 ## DietPi-RAMlog - Lightweight RAM logging
 
-### DietPi-Ramlog #1 (default)
+### DietPi-RAMlog #1 (default)
 
 This option is ideal for users who do not require log files.
 
@@ -44,7 +44,7 @@ Pros/Cons:
 
 Remark: If Rsyslog is required, it can be manually installed with `apt install rsyslog`.
 
-### DietPi-Ramlog #2
+### DietPi-RAMlog #2
 
 This option is ideal for users who require the ability to keep log files, with the benefit of improved performance.
 
@@ -52,7 +52,7 @@ Pros/Cons:
 \+ Mounts */var/log* to RAM  
 \+ Increases overall system performance  
 \+ DietPi will automatically save/update log file data to disk every hour */root/logfile_storage*  
-\+ DietPi will then clear log files in */var/log* (to free memory used by DietPi-Ramlog)  
+\+ DietPi will then clear log files in */var/log* (to free memory used by DietPi-RAMlog)  
 ─ Potential of loosing up to 1 hour of log file data if power is interrupted  
 ─ Will increase SD card write cycles on an hourly basis to save logs  
 ─ Rsyslog is not installed to save resources. This may prevent some programs logging that rely on Rsyslog
@@ -70,5 +70,5 @@ Pros/Cons:
 ─ Mounts */var/log* to DISK  
 ─ Decreases overall system performance  
 ─ Reduces the life of your SD card due to increased filesystem IO (read/write)  
-\+ Comes with both Rsyslog and logrotate installed as standard  
+\+ Comes with both Rsyslog and Logrotate installed as standard  
 \+ The "standard" of Linux logging systems, essential if your log file data is critical to system operation and/or maintenance

@@ -32,7 +32,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
 ### Access to the SSH server
 
-The SSH server can be connected directly from unix with the `ssh` command line program or other SSH client programms:
+The SSH server can be connected directly from Unix with the `ssh` command line program or other SSH client programs:
 
 - address = Your IP address (e.g.: *192.168.0.100*)
 - Port = *22*
@@ -54,9 +54,9 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
 ### Access to the SSH server
 
-The SSH server can be connected directly from unix with the `ssh` command line program or other SSH client programms:
+The SSH server can be connected directly from Unix with the `ssh` command line program or other SSH client programs:
 
-- address = Your Ip address (eg: *192.168.0.100*)
+- address = Your IP address (e.g.: *192.168.0.100*)
 - Username = *root*
 - Password = *dietpi*
 - Port = *22*
