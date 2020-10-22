@@ -32,7 +32,7 @@ Pi-hole is a DNS/Web server that will block ads for any device on your network.
 
 - Also Installs: [Webserver stack](../webserver_stack/)
 
-![DietPi dns server software Pi-hole](../assets/images/dietpi-software-dnsserver-pihole.png){: style="width:500px"}
+![DietPi DNS server software Pi-hole](../assets/images/dietpi-software-dnsserver-pihole.png){: style="width:500px"}
 
 ### Access the web interface
 
@@ -60,7 +60,7 @@ On your routers control panel web page, you will need to find a option called "D
 
 Simply enter the IP address of your Pi-hole device under "DNS server":
 
-![DietPi dns server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: style="width:500px"}
+![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: style="width:500px"}
 
 On your Pi-hole device, you will need to set a different DNS server.  
 Depending on your router configuration, if you don't do this step, the Pi-hole device may not be able to access the internet. It's highly recommended to have the device running Pi-hole, pointing to a DNS server outside your network.
@@ -86,7 +86,7 @@ You can use `pihole -r` to repair or reconfigure your Pi-hole instance.
 
 #### Setting the password for Pi-hole
 
-If you forgot your login password for the Pi-hole admin webpage, you can set it with the shell command `pihole -a -p` on your Pi-hole device.
+If you forgot your login password for the Pi-hole admin web page, you can set it with the shell command `pihole -a -p` on your Pi-hole device.
 
 #### Accessing Pi-hole via OpenVPN or WireGuard
 
@@ -98,13 +98,13 @@ See also <https://pi-hole.net/>.
 
 Use your No-IP account and website URL address to always have it pointing to your DietPi system. Essential if your hosting a website.
 
-![DietPi dns server software No-IP](../assets/images/dietpi-software-dnsserver-noip.jpg){: style="width:200px"}
+![DietPi DNS server software No-IP](../assets/images/dietpi-software-dnsserver-noip.jpg){: style="width:200px"}
 
 The setup of No-IP is done as follows:
 
 - Create your free No-IP account https://www.noip.com/sign-up and select a web address for your account.
 - Type `dietpi-config` in a terminal and press enter.
-- Goto *Networking Options: Misc* and select *No-IP* from the menu.
+- Go to *Networking Options: Misc* and select *No-IP* from the menu.
     If No-IP is not yet installed, confirm the installation and reselect No-IP from the menu once completed.
 - Type in your *username* and *password* details at the prompt.
 - Type in *5* for the interval option.
