@@ -191,18 +191,18 @@
 
 ## DNS Servers
 
-- [Pi-hole - A DNS/Web server that will block ads for any device on your network.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p174)  
+- [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking)  
 
 ### Dynamic DNS Clients
 
-- [No-IP - Website URL Address](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p58)  
+- [**No-IP - Website URL Address**](../software/dns_servers/#no-ip-dynamic-dns-update-client)  
 
 ## File Servers
 
-- [ProFTPD - Simple, efficient, lightweight FTP file server.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p55)  
-- [Samba - Feature rich file server.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p56)  
-- [vsftpd - Feature rich FTP file server.](https://dietpi.com/phpbb/viewtopic.php?p=2820#p2820)  
-- [NFS - Network file system server](https://dietpi.com/phpbb/viewtopic.php?p=2821#p2821)  
+- [**ProFTPD - Simple, efficient, lightweight FTP file server**](../software/file_servers/#proftpd-simple-efficient-lightweight-ftp-file-server)
+- [**Samba - Feature rich file server**](../software/file_servers/#samba-feature-rich-file-server)
+- [**vsftpd - Feature rich FTP file server**](../software/file_servers/#vsftpd-feature-rich-ftp-file-server)
+- [**NFS - Network file system server**](../software/file_servers/#nfs-network-file-system-server)
 
 ## VPN
 
@@ -226,10 +226,10 @@
 
 ## SSH Server Choices
 
-- [Dropbear - Lightweight SSH Server](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p62)  
-- [OpenSSH - Feature rich SSH server with SFTP/SCP support.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p63)  
+- [**Dropbear - Lightweight SSH Server**](../software/ssh/#dropbear-lightweight-ssh-server)
+- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../#openssh-feature-rich-ssh-server-with-sftpscp-support)  
 
 ## Log System Choices
 
-- [DietPi-RAMlog - Lightweight RAM logging.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p68)  
-- [Full - Full logging system with Rsyslog and Logrotate.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p68)
+- [**DietPi-RAMlog - Lightweight RAM logging**](../software/log_system/#dietpi-ramlog-lightweight-ram-logging)
+- [**Full - Full logging system with Rsyslog and Logrotate**](../software/log_system/#full-full-logging-system-with-rsyslog-and-logrotate)
