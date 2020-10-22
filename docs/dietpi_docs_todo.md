@@ -136,7 +136,7 @@ In every chapter of "Optimized software" the section "How do I run DietPi-Softwa
 
 The section with `dietpi-launcher`shall be deleted at all chapters. The result would be:
 
-``````
+``````markdown
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
     To install any of the **DietPi Optimised Software** listed below run from the command line:
 
