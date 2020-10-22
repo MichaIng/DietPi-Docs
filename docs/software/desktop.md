@@ -1,13 +1,15 @@
 # Desktop environments & utilities
 
-## Desktops
+## Overview
+
+### Desktops
 - [**LXDE - Highly optimized ultra lightweight desktop**](#lxde-ultra-lightweight-desktop)
 - [**LXQt - Slick and optimized lightweight desktop**](#lxqt-optimized-lightweight-desktop)
 - [**MATE - Popular Gnome 2 desktop**](#mate-popular-gnome2-desktop)
 - [**Xfce - Lightweight desktop**](#mate-popular-gnome2-desktop)
 - [**GNUstep - Alternative/unique desktop**](#gnustep-alternativeunique-desktop)
 
-### [Desktop Utilities](#desktop-utilities_1)
+### Desktop Utilities
 - [**Chromium - Web browser**](#chromium-web-browser)
 - [**GIMP - Image editor**](#gimp-image-editor)
 - [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss-atom-news-feeds-reader)

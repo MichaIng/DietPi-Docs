@@ -122,6 +122,7 @@ jRiver
 JustBoom
 Kbit
 KiB
+KiTTY
 klick
 Kodi
 Koel
@@ -216,6 +217,7 @@ PiVPN
 Plex
 pre
 ProFTPD
+PuTTY
 Pydio
 pyenv
 qBittorrent
@@ -309,6 +311,7 @@ Webservers
 Webserves
 Widevine
 wikimedia
+WinSCP
 WireGuard
 WiringPi
 Wordpress
