@@ -15,10 +15,6 @@ The *Log System* can be changed at any time by running `dietpi-software` and sel
 ??? info "How do I set the **Log System** ?"
     To select the **Log System** listed below run from the command line:
     ```
-    dietpi-launcher
-    ```
-    and selected _DietPi-Software_. or launch directly the tool:
-    ```
     dietpi-software
     ```
 

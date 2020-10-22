@@ -43,7 +43,7 @@ The SSH server can be connected directly from Unix with the `ssh` command line p
 
 Windows users can download the ready to run DietPi PuTTY/KiTTY SSH Client.
 
-See also <https://en.wikipedia.org/wiki/Dropbear_(software)> resp. <https://matt.ucc.asn.au/dropbear/dropbear.html>.
+See also <https://wikipedia.org/wiki/Dropbear_(software)> resp. <https://matt.ucc.asn.au/dropbear/dropbear.html>.
 
 ## OpenSSH - Feature rich SSH server with SFTP/SCP support
 
@@ -69,4 +69,4 @@ Windows users can download the ready to run DietPi PuTTY/KiTTY SSH Client.
 
 WinSCP will allow you to transfer files and folders on your DietPi device ([WinSCP downloads page](https://winscp.net/eng/download.php)).
 
-See also <https://en.wikipedia.org/wiki/OpenSSH> resp. <https://www.openssh.com/>.
+See also <https://wikipedia.org/wiki/OpenSSH> resp. <https://www.openssh.com/>.
