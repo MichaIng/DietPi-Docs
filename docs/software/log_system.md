@@ -51,7 +51,7 @@ This option is ideal for users who require the ability to keep log files, with t
 Pros/Cons:  
 \+ Mounts */var/log* to RAM  
 \+ Increases overall system performance  
-\+ DietPi will automatically save/update log file data to disk every hour */root/logfile_storage*  
+\+ DietPi will automatically save/update log file data to disk every hour */root/log_file_storage*  
 \+ DietPi will then clear log files in */var/log* (to free memory used by DietPi-RAMlog)  
 ─ Potential of loosing up to 1 hour of log file data if power is interrupted  
 ─ Will increase SD card write cycles on an hourly basis to save logs  
