@@ -41,7 +41,7 @@ The SSH server can be connected directly from Unix with the `ssh` command line p
 
 ### Windows SSH client
 
-Windows users can download the ready to run DietPi PuTTY/KiTTY SSH Client.
+On Windows, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and [KiTTY](http://www.9bis.net/kitty/) are recommended SSH clients.
 
 See also <https://wikipedia.org/wiki/Dropbear_(software)> resp. <https://matt.ucc.asn.au/dropbear/dropbear.html>.
 
@@ -63,7 +63,7 @@ The SSH server can be connected directly from Unix with the `ssh` command line p
 
 ### Windows SSH client
 
-Windows users can download the ready to run DietPi PuTTY/KiTTY SSH Client.
+On Windows, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and [KiTTY](http://www.9bis.net/kitty/) are recommended SSH clients.
 
 ### Windows SFTP/SCP client
 
