@@ -12,7 +12,7 @@ dietpi-launcher
 
 ## DietPi-Software
 
-**dietpi-software** will be automatically displayed on the first login after the installation. It could be accessed at any time running next command:
+**dietpi-software** will be automatically displayed on the first login after the installation. It can be accessed at any time running next command:
 
 ``` bash
 dietpi-software
@@ -110,18 +110,20 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
     You can **move your user data** to another location (e.g. USB drive). Simply run `dietpi-software` and enter the *User data location* menu option:
 
-    - If you need to setup a new external drive, select *Drive Manager*, to launch *DietPi-Drive Manager*.  
+    - If you need to setup a new external drive, select *Drive Manager* to launch *DietPi-Drive Manager*.
     - Use the *List* option to select from a list of mounted drives, or, select *Manual* for a custom location.
 
     DietPi will automatically move your existing user data to your new location.
 
     ![DietPi-Software User Data Location menu screenshot](assets/images/dietpi-software-user-data-location-selection.jpg){: style="width:550px"}
 
-**Install**  
-Install selected software item(s), and these could come both from **optimised software** list or **additional software** items.
+### Install or remove software
 
-**Uninstall**  
-Select one or more software items which you would like to be removed from your DietPi installation.
+=== "Install"
+    Install selected software item(s), and these could come both from **optimised software** list or **additional software** items.
+
+=== "Uninstall"
+    Select one or more software items which you would like to be removed from your DietPi installation.
 
 ## Configuration
 
@@ -130,6 +132,59 @@ Select one or more software items which you would like to be removed from your D
 : Configure various system settings, from display / audio / network to _auto start_ options.
 
 : ![DietPi-Config screenshot](assets/images/dietpi-config.jpg)
+
+: **Display Settings**
+
+    - Set your screen resolution, or go headless to save additional resources
+    - Control your GPU memory splits
+    - Enable/disable the RPi camera
+
+: **Audio Options**
+
+    - Change soundcards with ease (eg: HiFiBerry / Odroid HiFi shield)
+
+: **Performance Options**
+
+    - Overclock your system with a vast selection of overclocking profiles for your device
+    - Change the CPU governor and tweak your ARM temperature limits
+
+: **Advanced Settings**
+
+    - Configure Swapfile size
+    - Update device firmware
+    - Toggle serial console
+    - Toggle bluetooth
+
+: **Security Options**
+
+    - Change password and hostname
+
+: **Regional / Language Options**
+
+    - Set timezone, locale and keyboard options. Everything you'll need to make it feel like home
+
+: **Networking Options: Adapters**
+
+    - Scan and connect to your Wifi router with ease
+    - Change to a static IP address on your network
+    - Configure your proxy settings
+    - Test internet connection
+    - Toggle IPv6 support
+
+: **Networking Options: NAS/Misc**
+
+    - Samba client utility allows you to quickly and easily connect to Windows Shares
+    - FTP client utility allows you to quickly and easily connect to FTP servers as a filesystem mount
+    - NoIp client utility. Allows you to quickly and easily setup your website address for your Pi, using a NoIp account
+
+: **AutoBoot Options**
+
+    - Quickly and easily change what software runs after boot. Kodi, Desktop, console and many more
+
+: **Tools**
+
+    - Filesystem and memory benchmarks
+    - CPU/IO/RAM/DISK Stress tests
 
 `dietpi-drive_manager` {: #dietpi-drive_manager }
 
