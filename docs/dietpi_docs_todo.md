@@ -142,8 +142,8 @@ In every chapter of "Optimized software" the section "How do I run DietPi-Softwa
 
 <https://dietpi.com/docs/dietpi_tools/#dietpi-software>
 
-- Someone to describe the tab "Search".
-- Someone to describe the tab "Log System".
+- [ ] Someone to describe the tab "Search".
+- [x] **Stephan:** Someone to describe the tab "Log System".
 
 #### Decision?
 
