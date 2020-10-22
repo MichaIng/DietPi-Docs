@@ -81,7 +81,7 @@ The Samba server lets you share files on your DietPi system with ease based on t
 
 The access to the Samba file server is achieved as follows:
 
-- Address = \\\192.168.0.100\dietpi or \\\dietpi\dietpi
+- Address = \\\192.168.0.100\dietpi or \\\DietPi\dietpi
 - username = dietpi (DietPi v6.12 and lower = root)
 - password = <your global application password\>
 
@@ -102,7 +102,7 @@ To add/change the valid user do the following steps:
 - Edit /etc/samba/smb.conf
     - Search the entry [dietpi], change `valid users = username_i_require`
     - Add the user to Samba with `smbpasswd -a username_i_require`
-- Restart services with `dietpi-services restart`
+- Restart services with `systemctl restart nmbd smbd`
 
 You can now connect to the samba server with the username and password you entered above.
 
@@ -112,7 +112,7 @@ The destination directory can be changed by replacing **/Path/To/Directory** to 
 
 ```bash
 sed -i '/path = /c\path = /Path/To/Directory' /etc/samba/smb.conf
-dietpi-services restart
+systemctl restart nmbd smbd
 ```
 
 See also <https://en.wikipedia.org/wiki/Samba_(software)>.
@@ -167,6 +167,6 @@ By default NFS will allow anyone to connect. You can limit who can access the NF
 /mnt/dietpi_userdata 192.168.0.*(rw,async,no_root_squash,fsid=0,crossmnt,no_subtree_check)
 ```
 
-- Restart services via `dietpi-services restart`
+- Restart services via `systemctl restart nfs-kernel-server`
 
 See also <https://en.wikipedia.org/wiki/Network_File_System>.
