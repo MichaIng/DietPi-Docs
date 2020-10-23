@@ -48,16 +48,22 @@ In the CUPS web interface, you can add and configure printers by selecting:
 
 Once the printer is setup you only have to run the following command to enable Google Cloud Print authentication on this device:
 
-    cps-auth
+```
+cps-auth
+```
 
 An URL will be generated. Use this URL link in a web browser to complete the authentication.  
 Afterwards restart the services with:
 
-    dietpi-services restart
+```
+dietpi-services restart
+```
 
 If you experience issues, you can check the status of the CloudPrint service for info with:
 
-    systemctl status cloudprintd -l
+```
+systemctl status cloudprintd -l
+```
 
 ### Print
 
@@ -99,6 +105,8 @@ To use this option, run `octoprint` from the command line. Do this as user *octo
 
 If you use a different shell, use:
 
-    sudo -u octoprint octoprint <command>
+```
+sudo -u octoprint octoprint <command>
+```
 
 See also <https://wikipedia.org/wiki/OctoPrint> resp. <https://octoprint.org/>.
