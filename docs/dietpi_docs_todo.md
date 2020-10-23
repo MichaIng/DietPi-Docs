@@ -231,3 +231,8 @@ Add items about
 - TLS-SSL: <https://github.com/MichaIng/DietPi/wiki/TLS-SSL>
 - Security recommendations: <https://github.com/MichaIng/DietPi/wiki/Security-recommendation>
 - Fail2Ban: <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p452>
+
+## 12 Folding@Home
+
+Q: Who knows, whether the issue ***Known limitation of using only little computational power*** is already present?  
+See <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13704> resp. [converted page](https://dietpi.com/docs/software/computational_science/).

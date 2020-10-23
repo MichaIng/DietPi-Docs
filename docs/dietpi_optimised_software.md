@@ -222,7 +222,7 @@
 
 ## Computational Science
 
-- [Folding@Home - Use processing power to assist with disease research](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13704)  
+- [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)  
 
 ## SSH Server Choices
 
