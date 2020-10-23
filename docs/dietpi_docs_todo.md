@@ -160,7 +160,9 @@ Can be seen at Stephan's branch ["dev-StS-todo"](https://github.com/StephanStS/D
 
 #### Decision?
 
-### 8.4 Optimized software list <https://dietpi.com/docs/dietpi_optimised_software/>
+### 8.4 Optimized software list
+
+<https://dietpi.com/docs/dietpi_optimised_software/>
 
 - Ready packages shall occur in bold letters
 - Linking shall show to DietPi-docs pages and not to DietPi forum pages
@@ -211,3 +213,26 @@ Check for this:
   - the warning *Documentation in progress…* should be deleted
   - the links on the top should be bold and link to the headings within the sub-page
 - In every sub-page the section *How do I run DietPi-Software and install Optimised software ?* should be present.
+
+### 10.3 Add software numbers to list?
+
+Q: Shall we add the software numbers to all optimized softwares?  
+Example: [29] TigerVNC Server - Desktop for remote connection
+
+Or shall this be done as a postfix instead of a prefix?
+
+#### Decision?
+
+## 11 Chapter for "hardening the system"?
+
+Add items about
+
+- Let's Encrypt: <https://github.com/MichaIng/DietPi/wiki/Let's-Encrypt---Certbot>
+- TLS-SSL: <https://github.com/MichaIng/DietPi/wiki/TLS-SSL>
+- Security recommendations: <https://github.com/MichaIng/DietPi/wiki/Security-recommendation>
+- Fail2Ban: <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p452>
+
+## 12 Folding@Home
+
+Q: Who knows, whether the issue ***Known limitation of using only little computational power*** is already present?  
+See <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13704> resp. [converted page](https://dietpi.com/docs/software/computational_science/).
