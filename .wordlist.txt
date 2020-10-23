@@ -76,6 +76,7 @@ Emby
 eMMC
 EmonPi
 exFAT
+fahclient
 FHS
 filesystem
 FOSS
@@ -322,6 +323,7 @@ WiringPi
 Wordpress
 www
 Xfce
+xml
 XRDP
 XU
 YaCy
