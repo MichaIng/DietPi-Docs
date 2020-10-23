@@ -50,7 +50,7 @@ Once the printer is setup you only have to run the following command to enable G
 
     cps-auth
 
-An URL will be generated. Use this URL link in a webbrowser to complete the authentication.  
+An URL will be generated. Use this URL link in a web browser to complete the authentication.  
 Afterwards restart the services with:
 
     dietpi-services restart

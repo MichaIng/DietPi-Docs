@@ -160,7 +160,7 @@ Can be seen at Stephan's branch ["dev-StS-todo"](https://github.com/StephanStS/D
 
 #### Decision?
 
-### 8.4 Optimized software list <http://localhost:8000/dietpi_optimised_software/>
+### 8.4 Optimized software list <https://dietpi.com/docs/dietpi_optimised_software/>
 
 - Ready packages shall occur in bold letters
 - Linking shall show to DietPi-docs pages and not to DietPi forum pages

@@ -199,6 +199,7 @@ NZB
 NZBGet
 occ
 OctoPrint
+octoprint
 Odroid
 Odroids
 Ok
