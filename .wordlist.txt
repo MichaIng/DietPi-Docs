@@ -50,6 +50,7 @@ cron
 CSI
 CSM
 Cuberite
+CUPS
 DarkBetter
 DarkIce
 deinstallation
