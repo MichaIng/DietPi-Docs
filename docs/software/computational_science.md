@@ -47,15 +47,12 @@ You can change the configuration with the following steps:
 
 ### Logging information
 
-Folding@Home has its own log file located in */var/log/fahclient.log*.  
-You can display the log file with `cat /var/log/fahclient.log`.
+Folding@Home has a logging feature which outputs into the journal logging system. The logs can be viewed via `journalctl -u fahclient`.
 
-### Known limitation of using only little computational power
+### Option to set the computational power
 
-There is an issue, that only a small percentage of the CPU cores resp. processing power is being used.  
-This is a known limitation and depends on the work units job and how many cores it will support.
-
-You can however, increase the number of jobs that run on the system to compensate it. The example config given below has 3 job slots, ideal for a 6 core CPU (allowing 2 CPU cores per job slot):
+In addition to the *power slider* in the web interface the user can influence the number of jobs that run on the system.  
+The example config given below has 3 job slots, ideal for a 6 core CPU (allowing 2 CPU cores per job slot):
 
 ```html
 <config>
