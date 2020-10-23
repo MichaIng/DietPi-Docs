@@ -24,7 +24,8 @@
 
 ## Folding@Home
 
-[Folding@home](https://foldingathome.org/home/) is a project focused on disease research. The problems we’re solving require so many computer calcul­ations – and we need your help to find the cures!
+[Folding@home](https://foldingathome.org/home/) is a project focused on disease research.  
+The problems which are solved require so many computer calculations that help from the community is needed to find the cures!
 
 *By default, our installation will add you to the DietPi team group, however, you can change this in the web interface at any time.*
 
@@ -33,7 +34,7 @@
 ### Access to the Folding@Home web interface
 
 The web interface is accessible via the port 7396 on the machine running the computation, e.g. this could be:  
-URL = [http://192.168.0.100:7396](http://192.168.0.100:7396)
+URL = `http://192.168.0.100:7396`
 
 ### Configuration of Folding@Home
 
