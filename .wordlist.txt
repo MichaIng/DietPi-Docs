@@ -50,6 +50,7 @@ cron
 CSI
 CSM
 Cuberite
+CUPS
 DarkBetter
 DarkIce
 deinstallation
@@ -199,6 +200,7 @@ NZB
 NZBGet
 occ
 OctoPrint
+octoprint
 Odroid
 Odroids
 Ok
