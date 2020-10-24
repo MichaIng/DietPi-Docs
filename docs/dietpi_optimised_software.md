@@ -31,12 +31,12 @@
 - [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss-atom-news-feeds-reader)
 - [**Xfce4 Power - Power manager with brightness**](../software/desktop/#xfce4-power-power-manager-with-brightness)
 
-## Remote Desktop Access
+## [Remote Desktop Access](../software/remote_desktop/#remote-desktop)
 
 - [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection)
-- [RealVNC Server - Desktop for remote connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4149)
-- [XRDP - Remote desktop server for Windows Remote Desktop Client](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2074)
-- [NoMachine - Feature rich remote desktop connection](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2071)
+- [**RealVNC Server - Desktop for remote connection**](../software/remote_desktop/#realvnc-server-desktop-for-remote-connection)
+- [**XRDP - Remote desktop server for Windows Remote Desktop Client**](../software/remote_desktop/#xrdp-remote-desktop-server-for-windows-remote-desktop-client)
+- [**NoMachine - Feature rich remote desktop connection**](../software/remote_desktop/#nomachine-feature-rich-remote-desktop-connection)
 
 ## Media Systems
 
@@ -151,10 +151,10 @@
 - [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
 - [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
 
-## Remote Access
+## [Remote Access](../software/remote_desktop/#remote-access)
 
-- [Remot3.it - (Weaved) Access your device over the internet.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p188)  
-- [VirtualHere - Share physically attached USB devices from your SBC, over the network.](https://dietpi.com/phpbb/viewtopic.php?p=6709#p6709)  
+- [**Remot3.it - (Weaved) Access your device over the internet**](../software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet)
+- [**VirtualHere - Share physically attached USB devices from your SBC over the network**](../software/remote_desktop/#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)
 
 ## System Stats / Management
 
