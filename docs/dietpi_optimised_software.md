@@ -171,23 +171,35 @@
 - [Fail2Ban - Protects your system from brute-force attacks](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p452)  
 - [Docker - Build, ship, and run distributed applications](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p9120)  
 
-## Webserver Stacks
+## [Web development](../software/dietpi_optimised_software/#web-development)
 
-- [LAMP Webserver - Apache2 / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
+### [Web stacks](../software/webserver_stack/#stacks-for-web-development)
+
+- [**LAMP Webserver - Apache2 / MariaDB / PHP**](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
 - [LASP Webserver - Apache2 / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
 - [LEMP Webserver - Nginx / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
 - [LESP Webserver - Nginx / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
 - [LLMP Webserver - Lighttpd / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
 - [LLSP Webserver - Lighttpd / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
-- [phpMyAdmin - Web interface SQL admin tool](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
-- [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
-- [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
 
-### Webservers
+### [Webservers](../software/webserver_stack/#webservers)
 
 - [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
 - [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
 - [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
+- [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
+
+### Let's encrypt
+
+- [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
+
+### Databases & Data stores
+
+- MariaDB
+- SQlite
+- [phpMyAdmin - Web interface SQL admin tool](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
+- Redis - A non-SQL based data store
+- InfluxDb
 
 ## [DNS Servers & Clients](../software/dns_servers/#dns-servers-clients)
 
