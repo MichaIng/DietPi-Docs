@@ -115,8 +115,8 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
     #### Basics
     By default DietPi will start a virtual VNC session on boot at screen :1 for user root.  
-    The screen index can be changed via `SOFTWARE_VNCSERVER_DISPLAY_INDEX` in */boot/dietpi.txt*.
-    Logs can be viewed via `journalctl -t Xvnc:1 -t vncserver` and in */root/.vnc/*.
+    The screen index can be changed via `SOFTWARE_VNCSERVER_DISPLAY_INDEX` in `/boot/dietpi.txt`.
+    Logs can be viewed via `journalctl -t Xvnc:1 -t vncserver` and in `/root/.vnc/`.
     When you logout (instead of only closing the VNC Viewer window), the session will exit. Restart it via `systemctl restart vncserver`.
 
     #### Autostart
@@ -127,15 +127,15 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
     #### RealVNC enterprise subscription
 
-    If you have an enterprise subscription on RealVNC, you can have virtual VNC sessions spawning automatically ondemand per-client connection and closing once the client disconnects. That way no resource-intense X11/desktop session needs to be persistently active on the server to allow VNC connections.  
+    If you have an enterprise subscription on RealVNC, you can have virtual VNC sessions spawning automatically on demand per-client connection and closing once the client disconnects. That way no resource-intense X11/desktop session needs to be persistently active on the server to allow VNC connections.  
     To enable this, after adding your enterprise subscription credentials, do the following:
 
     - `systemctl disable --now vncserver`. This disables the persistent virtual VNC session on screen :1
-    - `systemctl enable --now vncserver-virtuald`.  This enables the ondemand VNC session daemon
+    - `systemctl enable --now vncserver-virtuald`.  This enables the on demand VNC session daemon
 
 === "Setup the VNC Viewer"
 
-    Simpy select a VNC viewer for your system and download: <https://www.realvnc.com/connect/download/viewer/>
+    Simply select a VNC viewer for your system and download: <https://www.realvnc.com/connect/download/viewer/>
 
     **Connection details:**
 
@@ -162,10 +162,10 @@ XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 === "Connect to your desktop"
 
     To connect to the desktop, open the remote desktop application in Windows (or any other XRDP compatible client).  
-    Enter the IP address of your DietPi device (eg: 192.168.0.100).  
+    Enter the IP address of your DietPi device (e.g.: 192.168.0.100).  
     Click connect and enter the following details once connected:
 
-    - Module = `Xvnc` (Jessie = Sesman-Xvnc)
+    - Module = `Xvnc` (Jessie = `Sesman-Xvnc`)
     - Username = `root`
     - Password = `dietpi`
 
