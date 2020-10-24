@@ -13,14 +13,14 @@ jobs:
         with:
           files: "*.md **/*.md"
       - name: Set up Python 3.7
-        id: python_setup
+        id: python
         if: always() && steps.clone.outcome == 'success'
         uses: actions/setup-python@v2
         with:
           python-version: '3.7'
       - name: Install Python dependencies
         id: python_deps
-        if: always() && steps.python_setup.outcome == 'success'
+        if: always() && steps.python.outcome == 'success'
         run: |
           python3 -m pip install -U pip wheel setuptools
           pip3 install -r requirements.txt
@@ -34,13 +34,13 @@ jobs:
         id: build
         if: always() && steps.mkdocs_config.outcome == 'success'
         run: mkdocs build -sd build/docs
-      - name: Check links in HTML and Markdown files
-        if: always() && steps.build.outcome == 'success'
-        run: |
-          GO111MODULE=on go get -u github.com/raviqqe/liche
-          $(go env GOPATH)/bin/liche -v -x 'https://github.com' -d build -r README.md build/docs
       - name: Check spelling in HTML files
         if: always() && steps.build.outcome == 'success'
         # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
         # .wordlist.txt
         uses: rojopolis/spellcheck-github-actions@0.5.0
+      - name: Check links in HTML and Markdown files
+        if: always() && steps.build.outcome == 'success'
+        run: |
+          GO111MODULE=on go get -u github.com/raviqqe/liche
+          $(go env GOPATH)/bin/liche -v -x 'https://github.com' -d build -r README.md build/docs
