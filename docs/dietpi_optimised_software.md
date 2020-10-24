@@ -217,8 +217,8 @@
 
 ## Printing
 
-- [CloudPrint - CUPS print server, with support for Google cloud printing](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p6630)  
-- [OctoPrint - Web interface for controlling 3D printers](https://dietpi.com/phpbb/viewtopic.php?p=7958#p7958)  
+- [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint-cups-print-server)  
+- [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint-web-interface-for-controlling-3d-printers)  
 
 ## Computational Science
 
@@ -227,7 +227,7 @@
 ## SSH Server Choices
 
 - [**Dropbear - Lightweight SSH Server**](../software/ssh/#dropbear-lightweight-ssh-server)
-- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../#openssh-feature-rich-ssh-server-with-sftpscp-support)  
+- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../software/ssh/#openssh-feature-rich-ssh-server-with-sftpscp-support)  
 
 ## Log System Choices
 
