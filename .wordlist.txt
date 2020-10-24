@@ -333,3 +333,9 @@ yourGlobalSoftwarePassword
 ympd
 ZeroPi
 zr
+de facto
+Imgur
+opensource
+Queneuder
+backend
+balancers

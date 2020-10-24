@@ -208,7 +208,7 @@
 - [PiVPN - OpenVPN server installer & management tool](https://dietpi.com/phpbb/viewtopic.php?p=3469#p3469)  
 - [WireGuard - An extremely simple yet fast and modern VPN](https://dietpi.com/phpbb/viewtopic.php?p=16308#p16308)  
 
-## [Network Load Balancer](../software/load_balancer/#network-load-balancing) 
+## [Network Load Balancer](../software/load_balancer/#network-load-balancing)
 
 - [**HAProxy - High performance TCP/HTTP load balancer**](../software/load_balancer/#haproxy-high-performance-tcphttp-load-balancer)  
 
