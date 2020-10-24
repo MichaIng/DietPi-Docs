@@ -27,7 +27,7 @@
 
 The WiFi HotSpot package turns your device into a wireless hotspot/access point. This allows other wireless devices to connect and share the internet connection.
 
-![DietPi wifi hotspot wifi](../assets/images/dietpi-software-wifihotspot-wifihotspot.png){: style="width:550px"}
+![DietPi WiFi hotspot WiRi](../assets/images/dietpi-software-wifihotspot-wifihotspot.png){: style="width:550px"}
 
 === "Requirements"
 
@@ -60,7 +60,7 @@ It also Installs:
 
 - [WiFi HotSpot](#wifi-hotspot_1)
 
-![DietPi wifi hotspot tor](../assets/images/dietpi-software-wifihotspot-torhotspot.png){: style="width:550px"}
+![DietPi WiFi hotspot tor](../assets/images/dietpi-software-wifihotspot-torhotspot.png){: style="width:550px"}
 
 === "Requirements"
 

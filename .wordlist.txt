@@ -58,6 +58,7 @@ DHCP
 dialogs
 DietPi
 dietpi
+dietpihotspot
 DietPi's
 DiogoAbu
 diskimager
@@ -238,6 +239,7 @@ Raspbian
 Raspcontrol
 RDP
 ReadyMedia
+Realtek
 RealVNC
 Remot
 renderer
