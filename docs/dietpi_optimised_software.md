@@ -125,7 +125,7 @@
 - [OpenBazaar - Decentralized peer to peer market server using Bitcoin](https://dietpi.com/phpbb/viewtopic.php?p=1796#p1796)  
 - [YaCy - Decentralized open source search engine](https://dietpi.com/phpbb/viewtopic.php?p=6202#p6202)
 
-## [WiFi HotSpot](../software/wifi_hotspot/)
+## [WiFi HotSpot](../software/wifi_hotspot)
 
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot_1)  
 - [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/wifi_hotspot/#tor-hotspot)  
@@ -166,10 +166,10 @@
 - [NetData - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p1611)  
 - [Webmin - Remote system management with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3047)  
 
-## System Security
+## [System Security](../software/system_security)
 
-- [Fail2Ban - Protects your system from brute-force attacks](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p452)  
-- [Docker - Build, ship, and run distributed applications](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p9120)  
+- [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)  
+- [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)  
 
 ## Webserver Stacks
 
