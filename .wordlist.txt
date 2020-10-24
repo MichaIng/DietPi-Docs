@@ -330,7 +330,6 @@ xml
 XRDP
 XU
 YaCy
-yourGlobalSoftwarePassword
 ympd
 ZeroPi
 zr

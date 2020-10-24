@@ -67,7 +67,7 @@ It also Installs:
     The requirements are:
 
     - 1x Ethernet connection
-    - 1x Supported USB WiFi adapter or onboard WiFi. This may vary depending on device and available WiFi drivers/modules. However, common adapters (e.g.: Realtek) should be fine.
+    - 1x Supported USB WiFi adapter or onboard WiFi. This may vary depending on device and available WiFi drivers/modules. However, common adapters (e.g.: Atheros) should be fine.
 
 === "Connection credentials"
 
