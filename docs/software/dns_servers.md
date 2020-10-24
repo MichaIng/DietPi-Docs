@@ -34,63 +34,63 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
 ![DietPi DNS server software Pi-hole](../assets/images/dietpi-software-dnsserver-pihole.png){: style="width:500px"}
 
-### Access the web interface
+=== "Access the web interface"
 
-The web interface of Pi-hole can be accessed via:
+    The web interface of Pi-hole can be accessed via:
 
-- URL= http://<your.IP/domain/admin\>
-- Password = <yourGlobalSoftwarePassword\> (default: dietpi)
+    - URL= http://<your.IP/domain/admin\>
+    - Password = <yourGlobalSoftwarePassword\> (default: dietpi)
 
-### Configure devices to use Pi-hole for DNS resolution
+=== "Configuration"
 
-#### Option 1 - Setup single devices to use the Pi-hole DNS server
+    The configuration contains setting devices (e.g. router) to use Pi-hole for DNS resolution.
 
-Simply change your DNS settings to use the IP address of your Pi-hole device. This will need to be done for each device that you want Pi-hole to work with.
+    #### Option 1 - Setup single devices to use the Pi-hole DNS server
 
-Example:
+    Simply change your DNS settings to use the IP address of your Pi-hole device. This will need to be done for each device that you want Pi-hole to work with.
 
-- My Pi-hole device has the IP address of 192.168.0.100
-- On my PC, I would set the DNS address to 192.168.0.100
-- Tutorial [The Ultimate Guide to Changing Your DNS settings](https://www.howtogeek.com/167533/the-ultimate-guide-to-changing-your-dns-server/).
+    Example:
 
-#### Option 2 - Setup your router to use the Pi-hole DNS server
+    - My Pi-hole device has the IP address of 192.168.0.100
+    - On my PC, I would set the DNS address to 192.168.0.100
+    - Tutorial [The Ultimate Guide to Changing Your DNS settings](https://www.howtogeek.com/167533/the-ultimate-guide-to-changing-your-dns-server/).
 
-This method will automatically point every device (that uses DHCP) on your network to Pi-hole.
-On your routers control panel web page, you will need to find a option called "DNS server". This should be located under DHCP settings.
+    #### Option 2 - Setup your router to use the Pi-hole DNS server
 
-Simply enter the IP address of your Pi-hole device under "DNS server":
+    This method will automatically point every device (that uses DHCP) on your network to Pi-hole.
+    On your routers control panel web page, you will need to find a option called "DNS server". This should be located under DHCP settings.
 
-![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: style="width:500px"}
+    Simply enter the IP address of your Pi-hole device under "DNS server":
 
-On your Pi-hole device, you will need to set a different DNS server.  
-Depending on your router configuration, if you don't do this step, the Pi-hole device may not be able to access the internet. It's highly recommended to have the device running Pi-hole, pointing to a DNS server outside your network.
+    ![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: style="width:500px"}
 
-- Run the following command: `dietpi-config 8 1`
-- Select: *Ethernet*
-- If you are running in DHCP mode, select *Change Mode*, then select: *Copy Current address to Static*
-- Select *Static DNS* from the list, then choose a DNS server, or manually enter a custom entry.
-- Once completed, select *Apply* to save the changes.
+    On your Pi-hole device, you will need to set a different DNS server.  
+    Depending on your router configuration, if you don't do this step, the Pi-hole device may not be able to access the internet. It's highly recommended to have the device running Pi-hole, pointing to a DNS server outside your network.
 
-### Further procedures
+    - Run the following command: `dietpi-config 8 1`
+    - Select: *Ethernet*
+    - If you are running in DHCP mode, select *Change Mode*, then select: *Copy Current address to Static*
+    - Select *Static DNS* from the list, then choose a DNS server, or manually enter a custom entry.
+    - Once completed, select *Apply* to save the changes.
 
-#### Updating Pi-hole
+=== "Updating Pi-hole"
 
-Pi-hole can be updated via the shell command `pihole -up`.
+    Pi-hole can be updated via the shell command `pihole -up`.
 
-#### Repairing Pi-hole
+=== "Repairing Pi-hole"
 
-You can use `pihole -r` to repair or reconfigure your Pi-hole instance.
+    You can use `pihole -r` to repair or reconfigure your Pi-hole instance.
 
-!!! warning "No selection of Lighttpd during repair procedure"
-    Do NOT select to install Lighttpd when being asked, as this will mix our own webserver stack setup with a different once provided by the Pi-hole installer, which causes various issues.
+    !!! warning "No selection of Lighttpd during repair procedure"
+        Do NOT select to install Lighttpd when being asked, as this will mix our own webserver stack setup with a different once provided by the Pi-hole installer, which causes various issues.
 
-#### Setting the password for Pi-hole
+=== "Setting the password"
 
-If you forgot your login password for the Pi-hole admin web page, you can set it with the shell command `pihole -a -p` on your Pi-hole device.
+    If you forgot your login password for the Pi-hole admin web page, you can set it with the shell command `pihole -a -p` on your Pi-hole device.
 
-#### Accessing Pi-hole via OpenVPN or WireGuard
+=== "Accessing via OpenVPN or WireGuard"
 
-To allow (OpenVPN or WireGuard) VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`.
+    To allow (OpenVPN or WireGuard) VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`.
 
 See also <https://wikipedia.org/wiki/Pi-hole>.
 

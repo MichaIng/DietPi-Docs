@@ -169,6 +169,15 @@ Can be seen at Stephan's branch ["dev-StS-todo"](https://github.com/StephanStS/D
 
 #### Decision?
 
+### 8.5 Backlink "Return to the Optimised Software list"
+
+Where shall the link be located?
+
+- At the end of every section
+- In the top of every section (before every single package is described)
+
+#### Decision?
+
 ## 9 Chapter "Advanced configuration"
 
 ### 9.1 Add descriptions
