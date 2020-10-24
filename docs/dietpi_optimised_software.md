@@ -79,7 +79,7 @@
 - [Medusa - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3327)
 - [Sonarr - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p7455)
 - [Radarr - Automatically download Movies](https://dietpi.com/phpbb/viewtopic.php?p=7457#p7457)
-- **[Bazarr - Automatically download Subtitles for Sonarr/Radarr](../software/bittorrent/#bazarr)**
+- [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](../software/bittorrent/#bazarr)
 - [Lidarr - Automatically download Music](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13580)
 - [CouchPotato - Automatically download movies.](https://dietpi.com/phpbb/viewtopic.php?p=7212#p7212)
 - [Jackett - API Support for your favourite torrent trackers.](https://dietpi.com/phpbb/viewtopic.php?p=7503#p7503)
@@ -125,10 +125,10 @@
 - [OpenBazaar - Decentralized peer to peer market server using Bitcoin](https://dietpi.com/phpbb/viewtopic.php?p=1796#p1796)  
 - [YaCy - Decentralized open source search engine](https://dietpi.com/phpbb/viewtopic.php?p=6202#p6202)
 
-## WiFi HotSpot
+## [WiFi HotSpot](../software/wifi_hotspot/)
 
-- [WiFi HotSpot - Turn your device into a wireless hotspot/access point.](https://dietpi.com/phpbb/viewtopic.php?p=1207#p1207)  
-- [Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1529)  
+- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot_1)  
+- [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/wifi_hotspot/#tor-hotspot)  
 
 ## Home Automation
 

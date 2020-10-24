@@ -38,8 +38,8 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     The web interface of Pi-hole can be accessed via:
 
-    - URL= http://<your.IP/domain/admin\>
-    - Password = <yourGlobalSoftwarePassword\> (default: dietpi)
+    - URL= `http://<your.IP/domain/admin>`
+    - Password = `<yourGlobalSoftwarePassword>` (default: dietpi)
 
 === "Configuration"
 

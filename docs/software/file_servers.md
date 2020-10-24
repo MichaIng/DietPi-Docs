@@ -44,8 +44,8 @@ ProFTPD gives you access to files/music/downloads etc. on your DietPi system qui
 
     The access to ProFTPD with an **FTP client** is achieved as follows:
 
-    - username = dietpi (v6.2 and lower = root)
-    - password = The same as your root login password. Default is dietpi
+    - username = `dietpi` (v6.2 and lower = root)
+    - password = The same as your root login password. Default is `dietpi`
     - address = Your IP address (e.g.: 192.168.0.100)
     - port = 21
 
@@ -84,8 +84,8 @@ The Samba server lets you share files on your DietPi system with ease based on t
     The access to the Samba file server is achieved as follows:
 
     - Address = \\\192.168.0.100\dietpi or \\\DietPi\dietpi
-    - username = dietpi (DietPi v6.12 and lower = root)
-    - password = <your global application password\>
+    - username = `dietpi` (DietPi v6.12 and lower = root)
+    - password = `<your global application password>`
 
 === "Change the Samba password"
 
@@ -136,8 +136,8 @@ Very secure FTP file server with feature rich security options.
 
     The access to vsftpd with an **FTP client** is achieved as follows:
 
-    - username = dietpi (v6.2 and lower = root)
-    - password = The same as your root login password. Default is dietpi
+    - username = `dietpi` (v6.2 and lower = root)
+    - password = The same as your root login password. Default is `dietpi`
     - address = Your IP address (e.g.: 192.168.0.100)
     - port = 21
 
