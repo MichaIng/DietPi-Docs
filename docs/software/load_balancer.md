@@ -50,7 +50,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 === "Official documentation"
     [Website HAProxy Community Edition](http://www.haproxy.org)
     
-    [HAProxy Documentation](http://www.haproxy.org#docs)
+    [HAProxy Documentation](http://www.haproxy.org/#docs)
 
 ![load-balancing-high-availability](../assets/images/dietpi-software-load-balancing-haproxy2.jpg)
 

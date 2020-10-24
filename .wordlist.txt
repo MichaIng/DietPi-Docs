@@ -334,6 +334,8 @@ ympd
 ZeroPi
 zr
 de facto
+de
+facto
 Imgur
 opensource
 Queneuder
