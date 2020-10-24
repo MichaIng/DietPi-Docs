@@ -189,15 +189,12 @@
 - [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
 - [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
 
-## DNS Servers
+## [DNS Servers & Clients](../software/dns_servers/#dns-servers-clients)
 
 - [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking)  
-
-### Dynamic DNS Clients
-
 - [**No-IP - Website URL Address**](../software/dns_servers/#no-ip-dynamic-dns-update-client)  
 
-## File Servers
+## [File Servers](../software/file_servers/#file-servers)
 
 - [**ProFTPD - Simple, efficient, lightweight FTP file server**](../software/file_servers/#proftpd-simple-efficient-lightweight-ftp-file-server)
 - [**Samba - Feature rich file server**](../software/file_servers/#samba-feature-rich-file-server)
@@ -211,25 +208,25 @@
 - [PiVPN - OpenVPN server installer & management tool](https://dietpi.com/phpbb/viewtopic.php?p=3469#p3469)  
 - [WireGuard - An extremely simple yet fast and modern VPN](https://dietpi.com/phpbb/viewtopic.php?p=16308#p16308)  
 
-## Network Load Balancer
+## [Network Load Balancer](../software/load_balancer/#network-load-balancing) 
 
-- [HAProxy - High performance TCP/HTTP load balancer.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p221)  
+- [**HAProxy - High performance TCP/HTTP load balancer**](../software/load_balancer/#haproxy-high-performance-tcphttp-load-balancer)  
 
-## Printing
+## [Printing](../software/printing/#printing)
 
 - [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint-cups-print-server)  
 - [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint-web-interface-for-controlling-3d-printers)  
 
-## Computational Science
+## [Computational Science](../software/computational_science/#computational-science)
 
 - [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)  
 
-## SSH Server Choices
+## [SSH Servers](../software/ssh/#ssh-server-choices)
 
 - [**Dropbear - Lightweight SSH Server**](../software/ssh/#dropbear-lightweight-ssh-server)
 - [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../software/ssh/#openssh-feature-rich-ssh-server-with-sftpscp-support)  
 
-## Log System Choices
+## [Log System Choices](../software/log_system/#log-system-choices)
 
 - [**DietPi-RAMlog - Lightweight RAM logging**](../software/log_system/#dietpi-ramlog-lightweight-ram-logging)
 - [**Full - Full logging system with Rsyslog and Logrotate**](../software/log_system/#full-full-logging-system-with-rsyslog-and-logrotate)
