@@ -34,14 +34,14 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     The requirements are:
 
     - 1x Ethernet connection
-    - 1x Supported USB WiFi adapter or onboard WiFi. This may vary depending on device and available WiFi drivers/modules. However, common adapters (e.g.: Realtek) should be fine.
+    - 1x Supported USB WiFi adapter or onboard WiFi. This may vary depending on device and available WiFi drivers/modules. However, common adapters (e.g.: Atheros) should be fine.
 
 === "Initial connection credentials"
 
     Use the following credentials to initially connect devices to your hotspot.
 
-    - SSID = *DietPi-HotSpot*
-    - Access Key = *dietpihotspot*
+    - SSID = `DietPi-HotSpot`
+    - Access Key = `dietpihotspot`
 
 === "Change WiFi HotSpot settings"
 

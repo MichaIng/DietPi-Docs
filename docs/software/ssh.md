@@ -36,8 +36,8 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
     - address = Your IP address (e.g.: *192.168.0.100*)
     - Port = *22*
-    - Username = *root*
-    - Password = *dietpi*
+    - Username = `root`
+    - Password = `dietpi`
 
 === "Windows SSH client"
 
@@ -57,8 +57,8 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
     The SSH server can be connected directly from Unix with the `ssh` command line program or other SSH client programs:
 
     - address = Your IP address (e.g.: *192.168.0.100*)
-    - Username = *root*
-    - Password = *dietpi*
+    - Username = `root`
+    - Password = `dietpi`
     - Port = *22*
 
 === "Windows SSH client"

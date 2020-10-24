@@ -35,8 +35,8 @@ Also included is a web interface for CUPS, allowing easy setup of printers.
     The web interface is accessible via port 631 on the machine running the CUPS server, e.g. this could be:  
 
     - URL = `http://192.168.0.100:631`  
-    - user = *root*  
-    - password = *dietpi*
+    - user = `root`  
+    - password = `dietpi`
 
 === "Add a printer"
 
