@@ -32,7 +32,7 @@ We have enabled detection for SSH servers (OpenSSH and Dropbear), however, Fail2
 
 ![DietPi security software Fail2Ban screenshot](../assets/images/dietpi-software-security-fail2ban2.jpg){: style="width:550px"}
 
-Source: [Lostcontrol of Fail2ban wiki](http://www.fail2ban.org/wiki/index.php/File:Fail2ban-screenshot.jpg), [GPL](https://commons.wikimedia.org/w/index.php?curid=19776087)
+Source: [<Lostcontrol\> of Fail2ban wiki](http://www.fail2ban.org/wiki/index.php/File:Fail2ban-screenshot.jpg), [GPL](https://commons.wikimedia.org/w/index.php?curid=19776087)
 
 An IP address is by default ban triggered after 3 failed SSH login attempts. Fail2Ban will ban the source IP address for 10 minutes.
 
@@ -46,7 +46,7 @@ An IP address is by default ban triggered after 3 failed SSH login attempts. Fai
 === "Enable support for additional programs"
 
     Fail2Ban supports brute-force protection for other software (e.g. Apache, ProFTPD etc).  
-    You can enable/disable these features by modifiying the */etc/fail2ban/jail.conf* file, and setting `enable = true` under the *[software]* name.
+    You can enable/disable these features by modifying the */etc/fail2ban/jail.conf* file, and setting `enable = true` under the *[software]* name.
 
 See also <https://www.fail2ban.org>.
 
@@ -58,7 +58,7 @@ Docker is used to build, ship, and run distributed applications.
 
 ![DietPi security software Docker screenshot](../assets/images/dietpi-software-security-docker2.svg){: style="width:400px"}
 
-Source: [User:Maklaan - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
+Source: [<User:Maklaan\> - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
 
 === "Access logs"
 
@@ -68,8 +68,8 @@ Source: [User:Maklaan - Based on a Docker blog post](https://commons.wikimedia.o
 
     The Docker configuration files are:
 
-    - Docker: */etc/docker/daemon.json*
-    - containerd: */etc/containerd/config.toml*
+    - Docker: `/etc/docker/daemon.json`
+    - containerd: `/etc/containerd/config.toml`
 
 === "Official documentation"
 
