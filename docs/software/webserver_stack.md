@@ -2,7 +2,7 @@
 
 ## Stacks for web development
 
-- [**LAMP Webserver - Apache2 / MariaDB / PHP**](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
+- [**LAMP Webserver - Apache2 / MariaDB / PHP**](#lamp-webserver-apache2-mariadb-php)  
 - [LASP Webserver - Apache2 / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
 - [LEMP Webserver - Nginx / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
 - [LESP Webserver - Nginx / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
@@ -21,11 +21,16 @@
 
 ### Databases & Data stores
 
-- MariaDB
-- SQlite
-- [phpMyAdmin - Web interface SQL admin tool](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
-- Redis - A non-SQL based data store
-- InfluxDb
+- MariaDB - Open Source Relational Database
+- [phpMyAdmin - SQL Administration Tool for MariaDB](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
+- SQLite - Small, Fast and High reliable SQL database engine
+- Redis - Open Source In-memory key–value Data Store
+- InfluxDb - Open Source Time Series Database
+
+### Programming & Web development Frameworks
+
+- Python 3 & Flask - Micro web framework powered by Python
+- PHP - scripting language especially suited to web development
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
@@ -35,7 +40,7 @@ If you are you looking for an inexpensive way to operate your web servers or a d
 
 All stacks come with PHP caches (APCU and OPcache). The sizes of which are optimized based on a share of total memory.
 
-## [**LAMP Webserver - Apache2 / MariaDB / PHP**](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)
+## LAMP Webserver - Apache2 / MariaDB / PHP
 
 LAMP stack is a popular open source web platform commonly used to run dynamic web sites and servers. It is considered by many, as the platform of choice for development and deployment of high performance web applications which require a solid and reliable foundation.
 
@@ -57,11 +62,12 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - APC/u = http://192.168.0.100/apc.php
     - Opcache = http://192.168.0.100/opcache.php
 
-    **MySql / MariaDB Details:**
+    **MariaDB Details:**
 
     - username = root
     - password = dietpi
 
+    
 === "Secured access - HTTPS/SSL"
 
     **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#lets-encrypt-ssl-nordvpn-support). This will automate the creation and setup of your free SSL cert.
@@ -105,14 +111,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
                     <Directory /usr/lib/cgi-bin>
                                     SSLOptions +StdEnvVars
                     </Directory>
-
-                    BrowserMatch "MSIE [2-6]" \
-                                    nokeepalive ssl-unclean-shutdown \
-                                    downgrade-1.0 force-response-1.0
-                    BrowserMatch "MSIE [17-9]" ssl-unclean-shutdown
                 </VirtualHost>
             </IfModule>
-        _EOF_
+        '_EOF_'
 
         a2enmod ssl
         service apache2 restart

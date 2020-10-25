@@ -173,9 +173,9 @@
 
 ## [Web development](../software/dietpi_optimised_software/#web-development)
 
-### [Web stacks](../software/webserver_stack/#stacks-for-web-development)
+### [Stacks for web development](../software/webserver_stack/#stacks-for-web-development)
 
-- [**LAMP Webserver - Apache2 / MariaDB / PHP**](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
+- [**LAMP Webserver - Apache2 / MariaDB / PHP**](../software/webserver_stack/#lamp-webserver-apache2-mariadb-php)  
 - [LASP Webserver - Apache2 / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
 - [LEMP Webserver - Nginx / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
 - [LESP Webserver - Nginx / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
@@ -189,17 +189,29 @@
 - [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
 - [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
 
-### Let's encrypt
+### Let's encrypt - Enable HTTPS / SSL
 
 - [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
 
+### Webservers
+
+- [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
+- [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
+- [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
+- [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
+
 ### Databases & Data stores
 
-- MariaDB
-- SQlite
-- [phpMyAdmin - Web interface SQL admin tool](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
-- Redis - A non-SQL based data store
-- InfluxDb
+- MariaDB - Open Source Relational Database
+- [phpMyAdmin - SQL Administration Tool for MariaDB](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
+- SQLite - Small, Fast and High reliable SQL database engine
+- Redis - Open Source In-memory key–value Data Store
+- InfluxDb - Open Source Time Series Database
+
+### Programming & Web development Frameworks
+
+- Python 3 & Flask - Micro web framework powered by Python
+- PHP - scripting language especially suited to web development
 
 ## [DNS Servers & Clients](../software/dns_servers/#dns-servers-clients/)
 

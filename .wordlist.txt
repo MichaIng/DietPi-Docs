@@ -16,8 +16,10 @@ Audiophonics
 Autostart
 autostart
 AutoStart
+backend
 Baïkal
 balancer
+balancers
 Balena
 balenaEtcher
 Bazarr
@@ -32,8 +34,8 @@ Bugreport
 CalDAV
 CardDAV
 CAVA
-changelog
 Certbot
+changelog
 CIFS
 CLI
 Clonezilla
@@ -54,6 +56,7 @@ Cuberite
 CUPS
 DarkBetter
 DarkIce
+de
 deinstallation
 DHCP
 dialogs
@@ -78,6 +81,7 @@ Emby
 eMMC
 EmonPi
 exFAT
+facto
 fahclient
 FHS
 filesystem
@@ -105,18 +109,19 @@ HC
 hexa
 HiFi
 HiFiBerry
+hostname
 Hotfix
 hotspot
 Hotspot
 HotSpot
 Hotspots
-hostname
 HTPC
 http
 HTTPS
 https
 IceCast
 ICMP
+Imgur
 InfluxDB
 ini
 IoT
@@ -165,7 +170,6 @@ MiniDLNA
 Minio
 MIPI
 MkDocs
-nm
 mnt
 Mopidy
 morse
@@ -191,6 +195,7 @@ Nextcloud
 nextcloud
 NFS
 Nginx
+nm
 Nmap
 NoMachine
 NordVPN
@@ -208,6 +213,7 @@ Ok
 OpenBazaar
 OpenGL
 OpenGLES
+opensource
 OpenSSH
 OpenTyrian
 OpenVPN
@@ -230,6 +236,7 @@ PuTTY
 Pydio
 pyenv
 qBittorrent
+Queneuder
 QuiteRSS
 Radarr
 Radxa
@@ -296,8 +303,8 @@ Ubooquity
 UEFI
 UI
 Unarchiver
-upgradable
 Unmount
+upgradable
 UPnP
 upvote
 UrBackup
@@ -334,11 +341,3 @@ YaCy
 ympd
 ZeroPi
 zr
-de facto
-de
-facto
-Imgur
-opensource
-Queneuder
-backend
-balancers
