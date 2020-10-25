@@ -25,7 +25,7 @@
 - [phpMyAdmin - SQL Administration Tool for MariaDB](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
 - SQLite - Small, Fast and High reliable SQL database engine
 - Redis - Open Source In-memory key–value Data Store
-- InfluxDb - Open Source Time Series Database
+- InfluxDB - Open Source Time Series Database
 
 ### Programming & Web development Frameworks
 
@@ -129,10 +129,10 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     - **Webserver**
      
-        Depending on your needs, you may choose the web server that fits best your needs. In case **Apache2** is not the right choice, you could continue with **Ligthppd** which comes automatically installed with DietPi, **Nginx** or **Tomcat**.
+        Depending on your needs, you may choose the web server that fits best your needs. In case **Apache2** is not the right choice, you could continue with **Lighttpd** which comes automatically installed with DietPi, **Nginx** or **Tomcat**.
 
     - Database
 
-        You may choose to install **MariaDb** or other available databases like **InfluxDb**, **Redis**, **SQLlite** 
+        You may choose to install **MariaDb** or other available databases like **InfluxDB**, **Redis**, **SQLite**. 
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

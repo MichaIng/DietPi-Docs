@@ -7,6 +7,7 @@ Allwinner's
 Amiberry
 Ampache
 analytics
+APCU
 APIs
 Armbian
 ARMv
@@ -159,6 +160,8 @@ LXDE
 LXQt
 macOS
 mangas
+memcache
+MariaDb
 Mbit
 Meveric
 MiB
@@ -210,6 +213,7 @@ octoprint
 Odroid
 Odroids
 Ok
+OPcache
 OpenBazaar
 OpenGL
 OpenGLES
@@ -222,6 +226,7 @@ passwd
 PCIe
 php
 phpBB
+phpinfo
 phpMyAdmin
 PhpSysInfo
 Pi-hole
@@ -308,6 +313,7 @@ upgradable
 UPnP
 upvote
 UrBackup
+url
 userdata
 UUID
 VirtualBox
@@ -326,6 +332,7 @@ Webmin
 webserver
 Webservers
 Webserves
+webstack
 Widevine
 wikimedia
 WinSCP

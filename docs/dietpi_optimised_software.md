@@ -171,7 +171,7 @@
 - [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
 - [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)
 
-## [Web development](../software/dietpi_optimised_software/#web-development)
+## [Web development](../software/webserver_stack/#web-development)
 
 ### [Stacks for web development](../software/webserver_stack/#stacks-for-web-development)
 
@@ -206,7 +206,7 @@
 - [phpMyAdmin - SQL Administration Tool for MariaDB](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
 - SQLite - Small, Fast and High reliable SQL database engine
 - Redis - Open Source In-memory key–value Data Store
-- InfluxDb - Open Source Time Series Database
+- InfluxDB - Open Source Time Series Database
 
 ### Programming & Web development Frameworks
 
