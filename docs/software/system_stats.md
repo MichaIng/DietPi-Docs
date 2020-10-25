@@ -35,7 +35,7 @@ CloudShell turns your Odroid Cloudshell, Odroid 3.5 LCD Touchscreen Shield, Wave
 
 ### Sample screenshots
 
-The following screenshots shall give an overwiew over the displaying features of *CloudShell*.
+The following screenshots shall give an overview over the displaying features of *CloudShell*.
 
 === "CPU usage"
 
@@ -75,13 +75,13 @@ Video: <https://youtu.be/O-W8Z33as_U>.
 
     ![DietPi system stat and maintenance software CloudShell scenes configuration](../assets/images/dietpi-software-systemstat-cloudshare-scenes.png){: style="width:600px"}
 
-=== "Powersaving"
+=== "Power saving"
 
     This feature will allow you to automatically power down the screen and disable DietPi-CloudShell processing during a specific time.  
     Please note this feature requires DietPi-CloudShell to be launched with `dietpi-autostart`, or run `dietpi-cloudshell` from the main screen (`tty1`).  
     If you make changes to DietPi-CloudShell over SSH, once saved, please reboot the system to ensure this feature becomes activated.
 
-    Powersaving: `Auto screen off`
+    Power saving: `Auto screen off`
 
 ### Touchscreen support
 
@@ -140,7 +140,7 @@ See also <https://wikipedia.org/wiki/Raspcontrol>.
 
 ## Linux Dash - Web interface system stats
 
-Linux Dash allows you to monitor your system stats from a webpage.
+Linux Dash allows you to monitor your system stats from a web page.
 
 - Also Installs: [LASP webserver stack](../webserver_stack/)
 
@@ -156,7 +156,7 @@ See also <https://github.com/afaqurk/linux-dash/wiki>.
 
 ## phpSysInfo - Web interface system stats
 
-Allows you to monitor your system stats from a web page. The display output can be custimized via an ini file.
+Allows you to monitor your system stats from a web page. The display output can be customized via an ini file.
 
 - Also Installs: [LASP webserver stack](../webserver_stack/)
 
@@ -170,7 +170,7 @@ Allows you to monitor your system stats from a web page. The display output can 
 
 === "Customization"
 
-    This is done via the file phpsysinfo.ini which is located in the phpsysinfo main directory (typical `/var/www/phpsysinfo`). An example file `phpsysinfo.ini.new` is present and gives inline information about all configuration options. Just walk through this file and discover all these bells an whistles.
+    This is done via the file `phpsysinfo.ini` which is located in the phpSysInfo main directory (typical `/var/www/phpsysinfo`). An example file `phpsysinfo.ini.new` is present and gives inline information about all configuration options. Just walk through this file and discover all these bells an whistles.
 
 See also <https://phpsysinfo.github.io/phpsysinfo/>.
 
@@ -250,7 +250,7 @@ The webmin package is a web based feature-rich remote system management tool. Ma
 
 === "System logging"
 
-    The Webmin system logging panel still depends on a classical file logger, like rsyslog. However DietPi will not impose this logging overhead on systems by default. If you need to see system logs via the *webmin online panel*, you can either configure a custom *syslog* daemon or install *rsyslog* manually:  
+    The Webmin system logging panel still depends on a classical file logger, like Rsyslog. However DietPi will not impose this logging overhead on systems by default. If you need to see system logs via the *webmin online panel*, you can either configure a custom *syslog* daemon or install *Rsyslog* manually:  
     `apt install rsyslog`
 
     DietPi comes with *systemd* and the related *journald* system logger, which can be accessed via the command `journalctl`.

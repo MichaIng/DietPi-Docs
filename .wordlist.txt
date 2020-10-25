@@ -39,7 +39,7 @@ CLI
 Clonezilla
 Cloudflare
 CloudPrint
-Cloudshell
+CloudShell
 conf
 config
 configs
@@ -126,6 +126,7 @@ Jellyfin
 Joulinar
 journald
 jRiver
+JSON
 JustBoom
 Kbit
 KiB
@@ -135,6 +136,7 @@ Kodi
 Koel
 Komga
 LASP
+lcd
 LEDs
 LEMP
 LESP
@@ -186,7 +188,7 @@ NanoPi
 NAS
 natively
 ncc
-NetData
+Netdata
 Nextcloud
 nextcloud
 NFS
@@ -202,6 +204,7 @@ NZBGet
 occ
 OctoPrint
 octoprint
+odroid
 Odroid
 Odroids
 Ok
@@ -217,7 +220,7 @@ PCIe
 php
 phpBB
 phpMyAdmin
-PhpSysInfo
+phpSysInfo
 Pi-hole
 PiJuice
 Pinebook
@@ -268,6 +271,7 @@ Signalyst
 SMB
 smb
 sn
+SNMP
 Sonarr
 SPC
 SPI
@@ -281,6 +285,7 @@ StephanStS
 sudo
 symlink
 Syncthing
+syslog
 systemd
 TasmoAdmin
 Tasmota
@@ -314,8 +319,9 @@ VNC
 VNCSERVER
 VPN
 vsftpd
+Waveshare
 WebIOPi
-Webmin
+webmin
 webserver
 Webservers
 Webserves
