@@ -11,6 +11,7 @@ APIs
 Armbian
 ARMv
 ASUS
+Atheros
 Audiophonics
 Autostart
 autostart
@@ -296,6 +297,7 @@ UEFI
 UI
 Unarchiver
 upgradable
+Unmount
 UPnP
 upvote
 UrBackup
@@ -329,7 +331,6 @@ xml
 XRDP
 XU
 YaCy
-yourGlobalSoftwarePassword
 ympd
 ZeroPi
 zr
