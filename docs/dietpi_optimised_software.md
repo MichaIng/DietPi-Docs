@@ -18,25 +18,25 @@
 
 ## [Desktops](../software/desktop/)
 
-- [**LXDE - Highly optimized ultra lightweight desktop**](../software/desktop/#lxde-ultra-lightweight-desktop/)
-- [**LXQt - Slick and optimized lightweight desktop**](../software/desktop/#lxqt-optimized-lightweight-desktop/)
-- [**MATE - Popular Gnome 2 desktop**](../software/desktop/#mate-popular-gnome2-desktop/)
-- [**Xfce - Lightweight desktop**](../software/desktop/#xfce-lightweight-desktop/)
-- [**GNUstep - Alternative/unique desktop**](../software/desktop/#gnustep-alternativeunique-desktop/)
+- [**LXDE - Highly optimized ultra lightweight desktop**](../software/desktop/#lxde-ultra-lightweight-desktop)
+- [**LXQt - Slick and optimized lightweight desktop**](../software/desktop/#lxqt-optimized-lightweight-desktop)
+- [**MATE - Popular Gnome 2 desktop**](../software/desktop/#mate-popular-gnome2-desktop)
+- [**Xfce - Lightweight desktop**](../software/desktop/#xfce-lightweight-desktop)
+- [**GNUstep - Alternative/unique desktop**](../software/desktop/#gnustep-alternativeunique-desktop)
 
 ### [Desktop Utilities](../software/desktop/#desktop-utilities/)
 
-- [**Chromium - Web browser**](../software/desktop/#chromium-web-browser/)
-- [**GIMP - Image editor**](../software/desktop/#gimp-image-editor/)
-- [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss-atom-news-feeds-reader/)
-- [**Xfce4 Power - Power manager with brightness**](../software/desktop/#xfce4-power-power-manager-with-brightness/)
+- [**Chromium - Web browser**](../software/desktop/#chromium-web-browser)
+- [**GIMP - Image editor**](../software/desktop/#gimp-image-editor)
+- [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss-atom-news-feeds-reader)
+- [**Xfce4 Power - Power manager with brightness**](../software/desktop/#xfce4-power-power-manager-with-brightness)
 
 ## [Remote Desktop Access](../software/remote_desktop/#remote-desktop/)
 
-- [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection/)
-- [**RealVNC Server - Desktop for remote connection**](../software/remote_desktop/#realvnc-server-desktop-for-remote-connection/)
-- [**XRDP - Remote desktop server for Windows Remote Desktop Client**](../software/remote_desktop/#xrdp-remote-desktop-server-for-windows-remote-desktop-client/)
-- [**NoMachine - Feature rich remote desktop connection**](../software/remote_desktop/#nomachine-feature-rich-remote-desktop-connection/)
+- [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection)
+- [**RealVNC Server - Desktop for remote connection**](../software/remote_desktop/#realvnc-server-desktop-for-remote-connection)
+- [**XRDP - Remote desktop server for Windows Remote Desktop Client**](../software/remote_desktop/#xrdp-remote-desktop-server-for-windows-remote-desktop-client)
+- [**NoMachine - Feature rich remote desktop connection**](../software/remote_desktop/#nomachine-feature-rich-remote-desktop-connection)
 
 ## Media Systems
 
@@ -79,7 +79,7 @@
 - [Medusa - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3327)
 - [Sonarr - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p7455)
 - [Radarr - Automatically download Movies](https://dietpi.com/phpbb/viewtopic.php?p=7457#p7457)
-- [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](../software/bittorrent/#bazarr/)
+- [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](../software/bittorrent/#bazarr)
 - [Lidarr - Automatically download Music](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13580)
 - [CouchPotato - Automatically download movies.](https://dietpi.com/phpbb/viewtopic.php?p=7212#p7212)
 - [Jackett - API Support for your favourite torrent trackers.](https://dietpi.com/phpbb/viewtopic.php?p=7503#p7503)
@@ -104,7 +104,7 @@
 ## Cloud & Backup systems  
 
 - [ownCloud - Your own personal cloud based backup/data storage system](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p47)  
-- [**Nextcloud - Self-hosted productivity platform**](../software/cloud/#nextcloud-self-hosted-productivity-platform/)  
+- [**Nextcloud - Self-hosted productivity platform**](../software/cloud/#nextcloud-self-hosted-productivity-platform)  
 - [Nextcloud Talk - Video calls via Nextcloud, including TURN server](https://dietpi.com/phpbb/viewtopic.php?p=15227#p15227)  
 - [Pydio - Feature-rich backup and sync server with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=1064#p1064)  
 - [UrBackup Server - Full backups for systems on your network](https://dietpi.com/phpbb/viewtopic.php?p=65#p65)  
@@ -127,8 +127,8 @@
 
 ## [WiFi HotSpot](../software/wifi_hotspot/)
 
-- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot_1/)
-- [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/wifi_hotspot/#tor-hotspot/)
+- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot_1)
+- [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/wifi_hotspot/#tor-hotspot)
 
 ## Home Automation
 
@@ -153,23 +153,23 @@
 
 ## [Remote Access](../software/remote_desktop/#remote-access/)
 
-- [**Remot3.it - (Weaved) Access your device over the internet**](../software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet/)
-- [**VirtualHere - Share physically attached USB devices from your SBC over the network**](../software/remote_desktop/#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network/)
+- [**Remot3.it - (Weaved) Access your device over the internet**](../software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet)
+- [**VirtualHere - Share physically attached USB devices from your SBC over the network**](../software/remote_desktop/#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)
 
-## System Stats / Management
+## [System Stats / Management](../software/system_stats/#system-stats-management/)
 
-- [DietPi-Cloudshell - Lightweight system stats for your LCD display or monitor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p204)  
-- [Raspcontrol - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p89)  
-- [Linux Dash - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p108)  
-- [PhpSysInfo - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p451)  
-- [RPi Monitor - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=50#p1503)  
-- [NetData - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p1611)  
-- [Webmin - Remote system management with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3047)  
+- [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](../software/system_stats/#dietpi-cloudshell-lightweight-system-stats-for-your-lcd-display-or-monitor)
+- [**Raspcontrol - Web interface system stats**](../software/system_stats/#raspcontrol-web-interface-system-stats)
+- [**Linux Dash - Web interface system stats**](../software/system_stats/#linux-dash-web-interface-system-stats)
+- [**phpSysInfo - Web interface system stats**](../software/system_stats/#phpsysinfo-web-interface-system-stats)
+- [**RPi-Monitor - Web interface system stats**](../software/system_stats/#rpi-monitor-web-interface-system-stats)
+- [**Netdata - Web interface system stats**](../software/system_stats/#netdata-web-interface-system-stats)
+- [**webmin - Remote system management with web interface**](../software/system_stats/#webmin-remote-system-management-with-web-interface)
 
 ## [System Security](../software/system_security/)
 
-- [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks/)
-- [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications/)
+- [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
+- [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)
 
 ## Webserver Stacks
 
@@ -191,15 +191,15 @@
 
 ## [DNS Servers & Clients](../software/dns_servers/#dns-servers-clients/)
 
-- [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking/)
-- [**No-IP - Website URL Address**](../software/dns_servers/#no-ip-dynamic-dns-update-client/)
+- [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking)
+- [**No-IP - Website URL Address**](../software/dns_servers/#no-ip-dynamic-dns-update-client)
 
 ## [File Servers](../software/file_servers/#file-servers/)
 
-- [**ProFTPD - Simple, efficient, lightweight FTP file server**](../software/file_servers/#proftpd-simple-efficient-lightweight-ftp-file-server/)
-- [**Samba - Feature rich file server**](../software/file_servers/#samba-feature-rich-file-server/)
-- [**vsftpd - Feature rich FTP file server**](../software/file_servers/#vsftpd-feature-rich-ftp-file-server/)
-- [**NFS - Network file system server**](../software/file_servers/#nfs-network-file-system-server/)
+- [**ProFTPD - Simple, efficient, lightweight FTP file server**](../software/file_servers/#proftpd-simple-efficient-lightweight-ftp-file-server)
+- [**Samba - Feature rich file server**](../software/file_servers/#samba-feature-rich-file-server)
+- [**vsftpd - Feature rich FTP file server**](../software/file_servers/#vsftpd-feature-rich-ftp-file-server)
+- [**NFS - Network file system server**](../software/file_servers/#nfs-network-file-system-server)
 
 ## VPN
 
@@ -210,23 +210,23 @@
 
 ## [Network Load Balancer](../software/load_balancer/#network-load-balancing/)
 
-- [**HAProxy - High performance TCP/HTTP load balancer**](../software/load_balancer/#haproxy-high-performance-tcphttp-load-balancer/)
+- [**HAProxy - High performance TCP/HTTP load balancer**](../software/load_balancer/#haproxy-high-performance-tcphttp-load-balancer)
 
 ## [Printing](../software/printing/#printing/)
 
-- [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint-cups-print-server/)
-- [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint-web-interface-for-controlling-3d-printers/)
+- [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint-cups-print-server)
+- [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint-web-interface-for-controlling-3d-printers)
 
 ## [Computational Science](../software/computational_science/#computational-science/)
 
-- [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome/)
+- [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)
 
 ## [SSH Servers](../software/ssh/#ssh-server-choices/)
 
-- [**Dropbear - Lightweight SSH Server**](../software/ssh/#dropbear-lightweight-ssh-server/)
-- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../software/ssh/#openssh-feature-rich-ssh-server-with-sftpscp-support/)
+- [**Dropbear - Lightweight SSH Server**](../software/ssh/#dropbear-lightweight-ssh-server)
+- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../software/ssh/#openssh-feature-rich-ssh-server-with-sftpscp-support)
 
 ## [Log System Choices](../software/log_system/#log-system-choices/)
 
-- [**DietPi-RAMlog - Lightweight RAM logging**](../software/log_system/#dietpi-ramlog-lightweight-ram-logging/)
-- [**Full - Full logging system with Rsyslog and Logrotate**](../software/log_system/#full-full-logging-system-with-rsyslog-and-logrotate/)
+- [**DietPi-RAMlog - Lightweight RAM logging**](../software/log_system/#dietpi-ramlog-lightweight-ram-logging)
+- [**Full - Full logging system with Rsyslog and Logrotate**](../software/log_system/#full-full-logging-system-with-rsyslog-and-logrotate)
