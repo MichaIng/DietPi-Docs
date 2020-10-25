@@ -60,7 +60,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     **Access memcache info:**
 
     - APC/u = http://192.168.0.100/apc.php
-    - Opcache = http://192.168.0.100/opcache.php
+    - OPcache = http://192.168.0.100/opcache.php
 
     **MariaDB Details:**
 
