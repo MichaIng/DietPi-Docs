@@ -31,7 +31,7 @@
 ## DietPi-CloudShell - Lightweight system stats for your LCD display or monitor
 
 CloudShell is a Network Attached Storage (NAS) solution with RAID support. It supports a color LCD and IR receiver.  
-CloudShell turns your Odroid Cloudshell, Odroid 3.5 LCD Touchscreen Shield, Waveshare32, or monitor into a dedicated lightweight system stats display.
+CloudShell turns your Odroid CloudShell, Odroid 3.5 LCD Touchscreen Shield, Waveshare32, or monitor into a dedicated lightweight system stats display.
 
 ### Sample screenshots
 
@@ -90,7 +90,7 @@ Video: <https://youtu.be/O-W8Z33as_U>.
     See <http://www.waveshare.com/3.2inch-rpi-lcd-b.htm>.  
     This is available for all Raspberry PI and Odroid versions. DietPi will automatically configure your system for the device.  
     Simply run `dietpi-config` -\> *Display Options* then select `waveshare32`.   
-    After a reboot, your *waveshare32* will become active.
+    After a reboot, your `waveshare32` will become active.
 
     ![DietPi system stat and maintenance software CloudShell Waveshare32 touchscreen](../assets/images/dietpi-software-systemstat-cloudshell-wavesharesupport.png){: style="width:400px"}
 
