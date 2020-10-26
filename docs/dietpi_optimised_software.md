@@ -156,15 +156,15 @@
 - [**Remot3.it - (Weaved) Access your device over the internet**](../software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](../software/remote_desktop/#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)
 
-## System Stats / Management
+## [System Stats / Management](../software/system_stats/#system-stats-management/)
 
-- [DietPi-Cloudshell - Lightweight system stats for your LCD display or monitor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p204)  
-- [Raspcontrol - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p89)  
-- [Linux Dash - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p108)  
-- [PhpSysInfo - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p451)  
-- [RPi Monitor - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=50#p1503)  
-- [NetData - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p1611)  
-- [Webmin - Remote system management with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3047)  
+- [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](../software/system_stats/#dietpi-cloudshell-lightweight-system-stats-for-your-lcd-display-or-monitor)
+- [**Raspcontrol - Web interface system stats**](../software/system_stats/#raspcontrol-web-interface-system-stats)
+- [**Linux Dash - Web interface system stats**](../software/system_stats/#linux-dash-web-interface-system-stats)
+- [**phpSysInfo - Web interface system stats**](../software/system_stats/#phpsysinfo-web-interface-system-stats)
+- [**RPi-Monitor - Web interface system stats**](../software/system_stats/#rpi-monitor-web-interface-system-stats)
+- [**Netdata - Web interface system stats**](../software/system_stats/#netdata-web-interface-system-stats)
+- [**webmin - Remote system management with web interface**](../software/system_stats/#webmin-remote-system-management-with-web-interface)
 
 ## [System Security](../software/system_security/)
 
