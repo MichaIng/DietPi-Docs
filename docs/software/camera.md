@@ -55,8 +55,15 @@ It consists of full control of the camera in a web based interface.
 
 ## MotionEye - Camera / Web Interface Surveillance
 
-The *MotionEye* package offers surveillance for your RPi camera resp. USB camera.  
+The *MotionEye* package offers surveillance for your camera.  
 It is mainly focused towards motion detection usage. It contains a web interface.
+
+The software can
+
+- take an image
+- record a video
+- observe based on motion detection
+- record a video with time lapse
 
 ![DietPi camera software MotionEye](../assets/images/dietpi-software-camera-motioneye.png){: style="width:500px"}
 
@@ -66,6 +73,7 @@ It is mainly focused towards motion detection usage. It contains a web interface
 
     - Have any PI supported camera attached
     - Have a Debian supported USB camera attached
+    - Have access to an IP camera (access via network)
 
 === "Access the web interface"
 
