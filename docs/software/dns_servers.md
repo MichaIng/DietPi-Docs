@@ -92,7 +92,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     To allow (OpenVPN or WireGuard) VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`.
 
-=== "Application: Pi-hole & Netdata"
+=== "Pi-hole & Netdata"
 
     The monitoring of a *Pi-hole* system via Netdata is described there: <https://learn.netdata.cloud/guides/monitor/pi-hole-raspberry-pi>.
 

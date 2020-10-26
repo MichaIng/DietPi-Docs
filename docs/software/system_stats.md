@@ -228,7 +228,7 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
     Note that having Netdata accessible to anyone gives potential attackers a bunch of useful information where to start hacking.  
     About how to limit access to Netdata, check as well: <https://docs.netdata.cloud/web/server/>.
 
-=== "Application: Pi-hole & Netdata"
+=== "Pi-hole & Netdata"
 
     The monitoring of a *Pi-hole* system via Netdata is described there: <https://learn.netdata.cloud/guides/monitor/pi-hole-raspberry-pi>.
 
