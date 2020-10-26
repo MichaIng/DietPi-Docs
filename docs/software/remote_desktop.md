@@ -47,7 +47,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     You can monitor the VNC service with:
 
     ```
-    systemctl status vncserver.service
+    systemctl status vncserver
     ```
 
     **Connection Details:**
@@ -91,7 +91,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     At last restart the service to activate the new settings:
 
     ```
-    systemctl restart vncserver.service
+    systemctl restart vncserver
     ```
 
 === "Enable autostart"
@@ -114,6 +114,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 === "VNC Server modes"
 
     #### Basics
+    
     By default DietPi will start a virtual VNC session on boot at screen :1 for user root.  
     The screen index can be changed via `SOFTWARE_VNCSERVER_DISPLAY_INDEX` in `/boot/dietpi.txt`.
     Logs can be viewed via `journalctl -t Xvnc:1 -t vncserver` and in `/root/.vnc/`.

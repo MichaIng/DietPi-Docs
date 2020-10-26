@@ -2,8 +2,8 @@
 
 ## Overview
 
-- [DietPi-RAMlog - Lightweight RAM logging](#dietpi-ramlog-lightweight-ram-logging)
-- [Full - Full logging system with Rsyslog and Logrotate](#full-full-logging-system-with-rsyslog-and-logrotate)
+- [**DietPi-RAMlog - Lightweight RAM logging**](#dietpi-ramlog-lightweight-ram-logging)
+- [**Full - Full logging system with Rsyslog and Logrotate**](#full-full-logging-system-with-rsyslog-and-logrotate)
 
 Various logging methods can be selected from lightweight to full.  
 If you don't require log files, get a performance boost. If you need full system logging features, DietPi can do that too.
