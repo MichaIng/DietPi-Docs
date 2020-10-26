@@ -96,10 +96,10 @@
 - [DXX-Rebirth - Descent 1 & 2 OpenGL port](https://dietpi.com/phpbb/viewtopic.php?p=2963#p2963)
 - [Steam - Steam client](https://dietpi.com/phpbb/viewtopic.php?p=8016#p8016)
 
-## Camera / Surveillance
+## [Camera / Surveillance](../software/camera/)
 
-- [RPi Cam Control - RPi Camera / Web Interface Surveillance](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p48)  
-- [MotionEye - Camera / Web Interface Surveillance](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p6610)  
+- [**RPi Cam Control - RPi Camera / Web Interface Surveillance**](../software/camera/#rpi-cam-control-rpi-camera-web-interface-surveillance)
+- [**MotionEye - Camera / Web Interface Surveillance**](../software/camera/#motioneye-camera-web-interface-surveillance)
 
 ## Cloud & Backup systems  
 
