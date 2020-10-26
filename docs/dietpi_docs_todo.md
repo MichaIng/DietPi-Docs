@@ -232,7 +232,7 @@ Or shall this be done as a postfix instead of a prefix?
 
 #### Decision?
 
-## 11 Chapter for "hardening the system"?
+## 11 Chapter for "hardening the system" or "maintaining the system"?
 
 Add items about
 
@@ -240,6 +240,12 @@ Add items about
 - TLS-SSL: <https://github.com/MichaIng/DietPi/wiki/TLS-SSL>
 - Security recommendations: <https://github.com/MichaIng/DietPi/wiki/Security-recommendation>
 - Fail2Ban: <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p452>
+
+- Backup/Restoring / Synching
+- Updating
+- Logfile viewing
+- Disk space monitoring
+- ...
 
 ## 12 Folding@Home
 

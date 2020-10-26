@@ -16,7 +16,7 @@
 !!! warning "Documentation in progress..."
     The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
 
-## [Desktops](../software/desktop)
+## [Desktops](../software/desktop/)
 
 - [**LXDE - Highly optimized ultra lightweight desktop**](../software/desktop/#lxde-ultra-lightweight-desktop)
 - [**LXQt - Slick and optimized lightweight desktop**](../software/desktop/#lxqt-optimized-lightweight-desktop)
@@ -24,14 +24,14 @@
 - [**Xfce - Lightweight desktop**](../software/desktop/#xfce-lightweight-desktop)
 - [**GNUstep - Alternative/unique desktop**](../software/desktop/#gnustep-alternativeunique-desktop)
 
-### [Desktop Utilities](../software/desktop/#desktop-utilities)
+### [Desktop Utilities](../software/desktop/#desktop-utilities/)
 
 - [**Chromium - Web browser**](../software/desktop/#chromium-web-browser)
 - [**GIMP - Image editor**](../software/desktop/#gimp-image-editor)
 - [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss-atom-news-feeds-reader)
 - [**Xfce4 Power - Power manager with brightness**](../software/desktop/#xfce4-power-power-manager-with-brightness)
 
-## [Remote Desktop Access](../software/remote_desktop/#remote-desktop)
+## [Remote Desktop Access](../software/remote_desktop/#remote-desktop/)
 
 - [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection)
 - [**RealVNC Server - Desktop for remote connection**](../software/remote_desktop/#realvnc-server-desktop-for-remote-connection)
@@ -104,7 +104,7 @@
 ## Cloud & Backup systems  
 
 - [ownCloud - Your own personal cloud based backup/data storage system](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p47)  
-- [**Nextcloud - Self-hosted productivity platform**](../software/cloud/#nextcloud-self-hosted-productivity-platform)  
+- [**Nextcloud - Self-hosted productivity platform**](../software/cloud/#nextcloud-self-hosted-productivity-platform)
 - [Nextcloud Talk - Video calls via Nextcloud, including TURN server](https://dietpi.com/phpbb/viewtopic.php?p=15227#p15227)  
 - [Pydio - Feature-rich backup and sync server with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=1064#p1064)  
 - [UrBackup Server - Full backups for systems on your network](https://dietpi.com/phpbb/viewtopic.php?p=65#p65)  
@@ -127,8 +127,8 @@
 
 ## [WiFi HotSpot](../software/wifi_hotspot/)
 
-- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot_1)  
-- [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/wifi_hotspot/#tor-hotspot)  
+- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot_1)
+- [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/wifi_hotspot/#tor-hotspot)
 
 ## Home Automation
 
@@ -151,50 +151,74 @@
 - [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
 - [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
 
-## [Remote Access](../software/remote_desktop/#remote-access)
+## [Remote Access](../software/remote_desktop/#remote-access/)
 
 - [**Remot3.it - (Weaved) Access your device over the internet**](../software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](../software/remote_desktop/#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)
 
-## System Stats / Management
+## [System Stats / Management](../software/system_stats/#system-stats-management/)
 
-- [DietPi-Cloudshell - Lightweight system stats for your LCD display or monitor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p204)  
-- [Raspcontrol - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p89)  
-- [Linux Dash - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p108)  
-- [PhpSysInfo - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p451)  
-- [RPi Monitor - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=50#p1503)  
-- [NetData - Web interface system stats](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p1611)  
-- [Webmin - Remote system management with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3047)  
+- [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](../software/system_stats/#dietpi-cloudshell-lightweight-system-stats-for-your-lcd-display-or-monitor)
+- [**Raspcontrol - Web interface system stats**](../software/system_stats/#raspcontrol-web-interface-system-stats)
+- [**Linux Dash - Web interface system stats**](../software/system_stats/#linux-dash-web-interface-system-stats)
+- [**phpSysInfo - Web interface system stats**](../software/system_stats/#phpsysinfo-web-interface-system-stats)
+- [**RPi-Monitor - Web interface system stats**](../software/system_stats/#rpi-monitor-web-interface-system-stats)
+- [**Netdata - Web interface system stats**](../software/system_stats/#netdata-web-interface-system-stats)
+- [**webmin - Remote system management with web interface**](../software/system_stats/#webmin-remote-system-management-with-web-interface)
 
-## System Security
+## [System Security](../software/system_security/)
 
-- [Fail2Ban - Protects your system from brute-force attacks](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p452)  
-- [Docker - Build, ship, and run distributed applications](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p9120)  
+- [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
+- [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)
 
-## Webserver Stacks
+## [Web development](../software/webserver_stack/#web-development)
 
-- [LAMP Webserver - Apache2 / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
+### [Stacks for web development](../software/webserver_stack/#stacks-for-web-development)
+
+- [**LAMP Webserver - Apache2 / MariaDB / PHP**](../software/webserver_stack/#lamp-webserver-apache2-mariadb-php)  
 - [LASP Webserver - Apache2 / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
 - [LEMP Webserver - Nginx / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
 - [LESP Webserver - Nginx / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
 - [LLMP Webserver - Lighttpd / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
 - [LLSP Webserver - Lighttpd / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
-- [phpMyAdmin - Web interface SQL admin tool](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
-- [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
+
+### [Webservers](../software/webserver_stack/#webservers)
+
+- [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
+- [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
+- [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
 - [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
+
+### Let's encrypt - Enable HTTPS / SSL
+
+- [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
 
 ### Webservers
 
 - [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
 - [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
 - [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
+- [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
 
-## [DNS Servers & Clients](../software/dns_servers/#dns-servers-clients)
+### Databases & Data stores
 
-- [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking)  
-- [**No-IP - Website URL Address**](../software/dns_servers/#no-ip-dynamic-dns-update-client)  
+- MariaDB - Open Source Relational Database
+- [phpMyAdmin - SQL Administration Tool for MariaDB](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
+- SQLite - Small, Fast and High reliable SQL database engine
+- Redis - Open Source In-memory key–value Data Store
+- InfluxDB - Open Source Time Series Database
 
-## [File Servers](../software/file_servers/#file-servers)
+### Programming & Web development Frameworks
+
+- Python 3 & Flask - Micro web framework powered by Python
+- PHP - scripting language especially suited to web development
+
+## [DNS Servers & Clients](../software/dns_servers/#dns-servers-clients/)
+
+- [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking)
+- [**No-IP - Website URL Address**](../software/dns_servers/#no-ip-dynamic-dns-update-client)
+
+## [File Servers](../software/file_servers/#file-servers/)
 
 - [**ProFTPD - Simple, efficient, lightweight FTP file server**](../software/file_servers/#proftpd-simple-efficient-lightweight-ftp-file-server)
 - [**Samba - Feature rich file server**](../software/file_servers/#samba-feature-rich-file-server)
@@ -208,25 +232,25 @@
 - [PiVPN - OpenVPN server installer & management tool](https://dietpi.com/phpbb/viewtopic.php?p=3469#p3469)  
 - [WireGuard - An extremely simple yet fast and modern VPN](https://dietpi.com/phpbb/viewtopic.php?p=16308#p16308)  
 
-## [Network Load Balancer](../software/load_balancer/#network-load-balancing)
+## [Network Load Balancer](../software/load_balancer/#network-load-balancing/)
 
-- [**HAProxy - High performance TCP/HTTP load balancer**](../software/load_balancer/#haproxy-high-performance-tcphttp-load-balancer)  
+- [**HAProxy - High performance TCP/HTTP load balancer**](../software/load_balancer/#haproxy-high-performance-tcphttp-load-balancer)
 
-## [Printing](../software/printing/#printing)
+## [Printing](../software/printing/#printing/)
 
-- [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint-cups-print-server)  
-- [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint-web-interface-for-controlling-3d-printers)  
+- [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint-cups-print-server)
+- [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint-web-interface-for-controlling-3d-printers)
 
-## [Computational Science](../software/computational_science/#computational-science)
+## [Computational Science](../software/computational_science/#computational-science/)
 
-- [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)  
+- [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)
 
-## [SSH Servers](../software/ssh/#ssh-server-choices)
+## [SSH Servers](../software/ssh/#ssh-server-choices/)
 
 - [**Dropbear - Lightweight SSH Server**](../software/ssh/#dropbear-lightweight-ssh-server)
-- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../software/ssh/#openssh-feature-rich-ssh-server-with-sftpscp-support)  
+- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../software/ssh/#openssh-feature-rich-ssh-server-with-sftpscp-support)
 
-## [Log System Choices](../software/log_system/#log-system-choices)
+## [Log System Choices](../software/log_system/#log-system-choices/)
 
 - [**DietPi-RAMlog - Lightweight RAM logging**](../software/log_system/#dietpi-ramlog-lightweight-ram-logging)
 - [**Full - Full logging system with Rsyslog and Logrotate**](../software/log_system/#full-full-logging-system-with-rsyslog-and-logrotate)
