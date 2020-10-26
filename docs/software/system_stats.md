@@ -39,11 +39,11 @@ The following screenshots shall give an overview over the displaying features of
 
 === "CPU usage"
 
-    ![DietPi system stat and maintenance software CloudShell CPU usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-cpuusage.JPG){: style="width:400px"}
+    ![DietPi system stat and maintenance software CloudShell CPU usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-cpuusage.jpg){: style="width:400px"}
 
 === "Memory usage"
 
-    ![DietPi system stat and maintenance software CloudShell memory usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-memoryusage.JPG){: style="width:400px"}
+    ![DietPi system stat and maintenance software CloudShell memory usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-memoryusage.jpg){: style="width:400px"}
 
 === "Storage details"
 
@@ -51,11 +51,11 @@ The following screenshots shall give an overview over the displaying features of
 
 === "Network details"
 
-    ![DietPi system stat and maintenance software CloudShell network details dialog](../assets/images/dietpi-software-systemstat-cloudshare-networkstats.JPG){: style="width:400px"}
+    ![DietPi system stat and maintenance software CloudShell network details dialog](../assets/images/dietpi-software-systemstat-cloudshare-networkstats.jpg){: style="width:400px"}
 
 === "Pi-hole stats"
 
-    ![DietPi system stat and maintenance software CloudShell Pi-hole dialog](../assets/images/dietpi-software-systemstat-cloudshare-piholestats.JPG){: style="width:400px"}
+    ![DietPi system stat and maintenance software CloudShell Pi-hole dialog](../assets/images/dietpi-software-systemstat-cloudshare-piholestats.jpg){: style="width:400px"}
 
 Video: <https://youtu.be/O-W8Z33as_U>.
 
