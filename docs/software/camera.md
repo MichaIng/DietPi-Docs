@@ -30,7 +30,7 @@ The *RPi Cam Control* package can be used in combination with a Raspberry PI cam
 - take an image
 - record a video
 - observe based on motion detection
-- record a video with timelapse
+- record a video with time lapse
 
 It consists of full control of the camera in a web based interface.
 
@@ -65,7 +65,7 @@ It is mainly focused towards motion detection usage. It contains a web interface
     The requirements are:
 
     - Have any PI supported camera attached
-    - Have a debian supported USB camera attached
+    - Have a Debian supported USB camera attached
 
 === "Access the web interface"
 
@@ -87,6 +87,6 @@ It is mainly focused towards motion detection usage. It contains a web interface
 
 === "Upgrading"
 
-    MotionEye can be upgraded to lastest version via `sudo pip2 install -U motioneye`.
+    MotionEye can be upgraded to latest version via `sudo pip2 install -U motioneye`.
 
 See also <https://github.com/ccrisan/motioneye/wiki>.
