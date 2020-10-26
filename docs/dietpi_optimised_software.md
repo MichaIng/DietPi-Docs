@@ -171,23 +171,47 @@
 - [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
 - [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)
 
-## Webserver Stacks
+## [Web development](../software/webserver_stack/#web-development)
 
-- [LAMP Webserver - Apache2 / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
+### [Stacks for web development](../software/webserver_stack/#stacks-for-web-development)
+
+- [**LAMP Webserver - Apache2 / MariaDB / PHP**](../software/webserver_stack/#lamp-webserver-apache2-mariadb-php)  
 - [LASP Webserver - Apache2 / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
 - [LEMP Webserver - Nginx / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
 - [LESP Webserver - Nginx / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
 - [LLMP Webserver - Lighttpd / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
 - [LLSP Webserver - Lighttpd / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
-- [phpMyAdmin - Web interface SQL admin tool](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
-- [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
+
+### [Webservers](../software/webserver_stack/#webservers)
+
+- [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
+- [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
+- [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
 - [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
+
+### Let's encrypt - Enable HTTPS / SSL
+
+- [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
 
 ### Webservers
 
 - [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
 - [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
 - [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
+- [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
+
+### Databases & Data stores
+
+- MariaDB - Open Source Relational Database
+- [phpMyAdmin - SQL Administration Tool for MariaDB](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
+- SQLite - Small, Fast and High reliable SQL database engine
+- Redis - Open Source In-memory key–value Data Store
+- InfluxDB - Open Source Time Series Database
+
+### Programming & Web development Frameworks
+
+- Python 3 & Flask - Micro web framework powered by Python
+- PHP - scripting language especially suited to web development
 
 ## [DNS Servers & Clients](../software/dns_servers/#dns-servers-clients/)
 

@@ -7,6 +7,7 @@ Allwinner's
 Amiberry
 Ampache
 analytics
+APCU
 APIs
 Armbian
 ARMv
@@ -16,8 +17,10 @@ Audiophonics
 Autostart
 autostart
 AutoStart
+backend
 Baïkal
 balancer
+balancers
 Balena
 balenaEtcher
 Bazarr
@@ -32,8 +35,8 @@ Bugreport
 CalDAV
 CardDAV
 CAVA
-changelog
 Certbot
+changelog
 CIFS
 CLI
 Clonezilla
@@ -54,6 +57,7 @@ Cuberite
 CUPS
 DarkBetter
 DarkIce
+de
 deinstallation
 DHCP
 dialogs
@@ -78,6 +82,7 @@ Emby
 eMMC
 EmonPi
 exFAT
+facto
 fahclient
 FHS
 filesystem
@@ -105,18 +110,19 @@ HC
 hexa
 HiFi
 HiFiBerry
+hostname
 Hotfix
 hotspot
 Hotspot
 HotSpot
 Hotspots
-hostname
 HTPC
 http
 HTTPS
 https
 IceCast
 ICMP
+Imgur
 InfluxDB
 ini
 IoT
@@ -156,6 +162,8 @@ LXDE
 LXQt
 macOS
 mangas
+memcache
+MariaDb
 Mbit
 Meveric
 MiB
@@ -167,7 +175,6 @@ MiniDLNA
 Minio
 MIPI
 MkDocs
-nm
 mnt
 Mopidy
 morse
@@ -193,6 +200,7 @@ Nextcloud
 nextcloud
 NFS
 Nginx
+nm
 Nmap
 NoMachine
 NordVPN
@@ -208,9 +216,11 @@ odroid
 Odroid
 Odroids
 Ok
+OPcache
 OpenBazaar
 OpenGL
 OpenGLES
+opensource
 OpenSSH
 OpenTyrian
 OpenVPN
@@ -219,6 +229,7 @@ passwd
 PCIe
 php
 phpBB
+phpinfo
 phpMyAdmin
 phpSysInfo
 Pi-hole
@@ -233,6 +244,7 @@ PuTTY
 Pydio
 pyenv
 qBittorrent
+Queneuder
 QuiteRSS
 Radarr
 Radxa
@@ -301,11 +313,12 @@ Ubooquity
 UEFI
 UI
 Unarchiver
-upgradable
 Unmount
+upgradable
 UPnP
 upvote
 UrBackup
+url
 userdata
 UUID
 VirtualBox
@@ -325,6 +338,7 @@ webmin
 webserver
 Webservers
 Webserves
+webstack
 Widevine
 wikimedia
 WinSCP
@@ -340,11 +354,3 @@ YaCy
 ympd
 ZeroPi
 zr
-de facto
-de
-facto
-Imgur
-opensource
-Queneuder
-backend
-balancers
