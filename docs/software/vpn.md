@@ -140,6 +140,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 === "Installing as VPN server"
 
     #### General
+    
     You are asked to enter your public IP/domain and the port on which the VPN server should be available. Remember to open/forward the port (UDP) through NAT on your router.  
     During installation, a client configuration file will be automatically created as well at:   
     `/etc/wireguard/wg0-client.conf`.
