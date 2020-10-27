@@ -126,6 +126,8 @@ Imgur
 InfluxDB
 ini
 IoT
+IPsec
+iptables
 IPv
 Jackett
 Jellyfin
@@ -258,6 +260,7 @@ RealVNC
 Remot
 renderer
 reselect
+resolvconf
 RK
 Rockchip
 ROCKPro
@@ -310,9 +313,11 @@ txt
 uae
 UART
 Ubooquity
+UDP
 UEFI
 UI
 Unarchiver
+uncomment
 Unmount
 upgradable
 UPnP
