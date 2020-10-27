@@ -310,6 +310,7 @@ txt
 uae
 UART
 Ubooquity
+UDP
 UEFI
 UI
 Unarchiver
