@@ -165,7 +165,7 @@ LXQt
 macOS
 mangas
 memcache
-MariaDb
+MariaDB
 Mbit
 Meveric
 MiB
@@ -222,7 +222,6 @@ OPcache
 OpenBazaar
 OpenGL
 OpenGLES
-opensource
 OpenSSH
 OpenTyrian
 OpenVPN
