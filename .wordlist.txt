@@ -7,7 +7,7 @@ Allwinner's
 Amiberry
 Ampache
 analytics
-APCU
+APCu
 APIs
 Armbian
 ARMv

@@ -15,13 +15,13 @@ Then the main order will be:
 1. Overview
 2. Installation
 3. Getting started
-4. Supported SBCs
-5. Advanced configuration
+4. Advanced configuration
+5. Supported SBCs
 6. Community tutorials
 7. Troubleshooting
 8. ...
 
-#### Decision?
+- [ ] **ToDo Stephan:** Rearrange items
 
 ### 1.2 Headings of optimized software
 
@@ -30,7 +30,11 @@ See <https://dietpi.com/docs/software/remote_desktop/#29-tigervnc-server-desktop
 
 Or shall it be added as a postfix?
 
-#### Decision?
+- Delete 29 at TigerVNC
+- Add a description "command line based installation of software packages" there <https://dietpi.com/docs/dietpi_tools/> after DietPi-Software\Install or remove software.
+
+- [ ] **ToDo Stephan:** Delete '29'
+- [ ] **ToDo Stephan:** Add a section for the command line software installation
 
 ## 2 Supported Single Board Computers (SBCs)
 
@@ -53,7 +57,19 @@ Proposal:
 - Harmonize naming
 - List in alphabetical order
 
-#### Decision?
+- [ ] **ToDo Stephan:** Sort in alphabetical order
+- [ ] **Open:** Harmonization
+
+### 2.3 Software overview on dietpi.com
+
+There: <https://dietpi.com/dietpi-software.html>
+
+Idea: Add a link to the "new" documentation software pages from the tiles.  
+Rename the basic text for this linking to "Once installed" -> "Further information".
+
+Start with one tile and then review for further decision.
+
+- [ ] **Petru:** Make a first proposal (align with Download area with the tiles there)
 
 ## 3 Desktops
 
@@ -84,7 +100,7 @@ See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>
 3. How to port the stack description to the Webserver stacks section? Idea:
    - Divide the description into sections about webservers, about data bases and about PHP.
 
-- [ ] **Todo Stephan:** Implement points 1. and 2. above
+- [ ] **Todo Petru:** Implement points 1. and 2. above
 - [ ] **Afterwards:** Discuss how to implement point 3. above and decide further steps
 
 ## 6 Gitea software
@@ -119,6 +135,11 @@ Describe Backup/Restore:
 - via different/other backup solutions
   E.g. see <https://www.linuxlinks.com/backup/>
 
+Additional idea:
+
+- Add `timeshift` as an additional software title
+- Use also `timeshift` and have a directory converter for the backup/restore file structure
+
 ## 8 Optimized software
 
 ### 8.1 Harmonization with <https://dietpi.com/dietpi-software.html>
@@ -151,32 +172,28 @@ The section with `dietpi-launcher`shall be deleted at all chapters. The result w
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 ``````
 
-#### Decision?
+- [ ] **ToDo Stephan:** Modify the text passages on the pages
 
 ### 8.3 Tabs for the DietPi tool programs?
 
 In <https://dietpi.com/docs/dietpi_tools/#configuration> the various tools (e.g. dietpi-config, dietpi-drive-manager, dietpi-autostart,...) could be moved to tabs and some more explanations from the DietPi forum pages could be added.  
 Can be seen at Stephan's branch ["dev-StS-todo"](https://github.com/StephanStS/DietPi-Docs/tree/dev-StS-todo).
 
-#### Decision?
+- [ ] **ToDo Stephan:** Introduce tabs
 
-### 8.4 Optimized software list
-
-<https://dietpi.com/docs/dietpi_optimised_software/>
-
-- Ready packages shall occur in bold letters
-- Linking shall show to DietPi-docs pages and not to DietPi forum pages
-
-#### Decision?
-
-### 8.5 Backlink "Return to the Optimised Software list"
+### 8.4 Backlink "Return to the Optimised Software list"
 
 Where shall the link be located?
 
 - At the end of every section
 - In the top of every section (before every single package is described)
 
-#### Decision?
+Decision:
+
+- Keep the link below the "how do I run..." info box
+- Add the link at the bottom of the page
+
+- [ ] **ToDo Stephan:** Add links
 
 ## 9 Chapter "Advanced configuration"
 
@@ -187,7 +204,7 @@ Where shall the link be located?
 - [ ] Someone to describe the tab "Search".
 - [x] **Stephan:** Someone to describe the tab "Log System".
 
-#### Decision?
+- [ ] **Todo Micha:** Describe Search
 
 ## 10 Software lists
 
@@ -209,10 +226,11 @@ Softwares which are actually not within <https://dietpi.com/docs/software/deskto
 
 - t.b.d.
 
-Decision is needed, which of these softwares shall be described in the documentation resp. shall be added to the installation via `dietpi-software`.  
+Decision is needed, which of these softwares shall be described in the documentation resp. shall be added to the installation via `dietpi-software`.
+
 **Proposal:** First, generate the lists above and decide afterwards how to go on.
 
-#### Decision?
+- [ ] **ToDo Stephan:** Check and in case of missing issues list them above for further discussion
 
 ### 10.2 Checks in *Optimized Software*
 
@@ -221,16 +239,7 @@ Check for this:
 - If the sub-page (e.g. <https://dietpi.com/docs/software/desktop/>) is finished
   - the warning *Documentation in progress…* should be deleted
   - the links on the top should be bold and link to the headings within the sub-page
-- In every sub-page the section *How do I run DietPi-Software and install Optimised software ?* should be present.
-
-### 10.3 Add software numbers to list?
-
-Q: Shall we add the software numbers to all optimized softwares?  
-Example: [29] TigerVNC Server - Desktop for remote connection
-
-Or shall this be done as a postfix instead of a prefix?
-
-#### Decision?
+- In every sub-page the section *How do I run DietPi-Software and install Optimised software?* should be present.
 
 ## 11 Chapter for "hardening the system" or "maintaining the system"?
 
@@ -246,8 +255,3 @@ Add items about
 - Logfile viewing
 - Disk space monitoring
 - ...
-
-## 12 Folding@Home
-
-Q: Who knows, whether the issue ***Known limitation of using only little computational power*** is already present?  
-See <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13704> resp. [converted page](https://dietpi.com/docs/software/computational_science/).
