@@ -29,9 +29,9 @@
 
 DietPi-NordVPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all NordVPN users to quickly and easily connect to any NordVPN server in TCP or UDP, using only open source software.
 
-![DietPi vpn software NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
+![DietPi VPN software NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-![DietPi vpn software NordVPN](../assets/images/dietpi-software-vpn-nordvpn.jpg){: style="width:500px"}
+![DietPi VPN software NordVPN](../assets/images/dietpi-software-vpn-nordvpn.jpg){: style="width:500px"}
 
 === "Requires NordVPN Subscription"
 
@@ -49,7 +49,7 @@ See also <https://wikipedia.org/wiki/NordVPN>.
 
 An easy to use VPN server and client system. The DietPi installation of OpenVPN uses a single client file to get you connected with minimal hassle.
 
-![DietPi vpn software OpenVPN logo](../assets/images/dietpi-software-vpn-openvpn-logo.png){: style="width:200px"}
+![DietPi VPN software OpenVPN logo](../assets/images/dietpi-software-vpn-openvpn-logo.png){: style="width:200px"}
 
 === "Client connection file"
 
@@ -117,7 +117,7 @@ See also <https://wikipedia.org/wiki/OpenVPN> resp. <https://openvpn.net/>.
 
 PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a command `pivpn` which allows for simple creation of additional user profiles and configurations.
 
-![DietPi vpn software PiVPN logo](../assets/images/dietpi-software-vpn-pivpn-logo.png){: style="width:100px"}
+![DietPi VPN software PiVPN logo](../assets/images/dietpi-software-vpn-pivpn-logo.png){: style="width:100px"}
 
 === "Using PiVPN"
 
@@ -133,7 +133,7 @@ See also <https://www.pivpn.io/>.
 
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner and more useful than IPsec, while avoiding the massive headache.
 
-![DietPi vpn software WireGuard logo](../assets/images/dietpi-software-vpn-wireguard.svg){: style="width:200px"}
+![DietPi VPN software WireGuard logo](../assets/images/dietpi-software-vpn-wireguard.svg){: style="width:200px"}
 
 When installing using `dietpi-software`, you can choose whether to install WireGuard as VPN server or client.
 
@@ -147,8 +147,8 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     Configure the client configuration to your needs, it contains some informational comments. By default it will pass all clients network traffic through the VPN tunnel, including DNS requests which will be resolved by the servers DNS resolver.  
     If you e.g. want to use the servers Pi-hole instance on the client only, but keep all other traffic outside the VPN tunnel, you would edit the following values:
 
-    - DNS = `192.168.0.100`
-    - AllowedIPs = `192.168.0.100/32` (where the IP needs to match your DietPi servers local IP)
+    - `DNS = 192.168.0.100`
+    - `AllowedIPs = 192.168.0.100/32` (where the IP needs to match your DietPi servers local IP)
 
     If your client is another Linux machine with iptables installed, you can uncomment the two kill switch lines to have all network traffic automatically disabled, when VPN connection is lost.
     If your client is a mobile phone with WireGuard app installed, you can simply apply the config by printing a QR code onto the servers terminal via:  
@@ -157,7 +157,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 
     #### Adding multiple clients
 
-    Navigate to the servers WireGuard config dir: `cd /etc/wireguard`.
+    Navigate to the servers WireGuard configuration directory: `cd /etc/wireguard`.
 
     Create a second client key pair:
 
@@ -176,7 +176,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     G_CONFIG_INJECT 'PrivateKey = ' "PrivateKey = $(<client2_private.key)" wg0-client2.conf
     ```
 
-    Configure wg0.conf (server config) so the last lines match:
+    Configure `wg0.conf` (server config) so the last lines match:
 
     ```
     [Peer]
