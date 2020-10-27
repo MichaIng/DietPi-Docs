@@ -225,12 +225,12 @@
 - [**vsftpd - Feature rich FTP file server**](../software/file_servers/#vsftpd-feature-rich-ftp-file-server)
 - [**NFS - Network file system server**](../software/file_servers/#nfs-network-file-system-server)
 
-## VPN
+## [VPN](../software/vpn/)
 
-- [DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users.](https://dietpi.com/phpbb/viewtopic.php?p=15975#p15975)  
-- [OpenVPN - Easy to use, minimal hassle VPN server](https://dietpi.com/phpbb/viewtopic.php?p=613#p613)  
-- [PiVPN - OpenVPN server installer & management tool](https://dietpi.com/phpbb/viewtopic.php?p=3469#p3469)  
-- [WireGuard - An extremely simple yet fast and modern VPN](https://dietpi.com/phpbb/viewtopic.php?p=16308#p16308)  
+- [**DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users**](../software/vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users)
+- [**OpenVPN - Easy to use, minimal hassle VPN server**](../software/vpn/#openvpn-easy-to-use-minimal-hassle-vpn-server)
+- [**PiVPN - OpenVPN server installer & management tool**](../software/vpn/#pivpn-openvpn-server-installer-and-management-tool)
+- [**WireGuard - An extremely simple yet fast and modern VPN**](../software/vpn/#wireguard-an-extremely-simple-yet-fast-and-modern-vpn)
 
 ## [Network Load Balancer](../software/load_balancer/#network-load-balancing/)
 
