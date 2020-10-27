@@ -36,7 +36,7 @@
 
 ## Overview
 
-If you are you looking for an inexpensive way to operate your web servers or a dynamic websites, you could choose one of the web development stacks. They come with a complete package. Not only will you have the DietPi OS, web server, but you'll have the database software, and also the scripting language. 
+If you are you looking for an inexpensive way to operate your web servers or a dynamic websites, you could choose one of the web development stacks. They come with a complete package. Not only will you have the DietPi OS, web server, but you'll have the database software, and also the scripting language.
 
 All stacks come with PHP caches (APCU and OPcache). The sizes of which are optimized based on a share of total memory.
 
@@ -67,7 +67,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - username = root
     - password = dietpi
 
-    
+
 === "Secured access - HTTPS/SSL"
 
     **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#lets-encrypt-ssl-nordvpn-support). This will automate the creation and setup of your free SSL cert.
@@ -75,8 +75,8 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     ??? note "Alternative way: Manually enable HTTP/SSL by installing a self-signed SSL certificate"
 
         !!! caution ""
-            This method is recommended only in case **Let's encrypt** is not a viable option. 
-    
+            This method is recommended only in case **Let's encrypt** is not a viable option.
+
         **Step 1. Create key**
 
         ``` bash
@@ -120,7 +120,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
         ```
 
     Access website:
-    
+
     - url = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Individual installation"
@@ -128,11 +128,11 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     The web development stack could be also individually installed. This option offers more flexibility giving the opportunity to select:
 
     - **Webserver**
-     
+
         Depending on your needs, you may choose the web server that fits best your needs. In case **Apache2** is not the right choice, you could continue with **Lighttpd** which comes automatically installed with DietPi, **Nginx** or **Tomcat**.
 
     - Database
 
-        You may choose to install **MariaDb** or other available databases like **InfluxDB**, **Redis**, **SQLite**. 
+        You may choose to install **MariaDB** or other available databases like **InfluxDB**, **Redis**, **SQLite**.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

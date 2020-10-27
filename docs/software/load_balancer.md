@@ -2,9 +2,9 @@
 
 ## HAProxy - High performance TCP/HTTP load balancer
 
-HAProxy, which stands for High Availability Proxy, is a popular open source software TCP/HTTP Load Balancer and proxy solution. Its most common use is to improve the performance and reliability of a server environment by distributing the workload across multiple servers (e.g. web, application, database). 
+HAProxy, which stands for High Availability Proxy, is a popular open source software TCP/HTTP Load Balancer and proxy solution. Its most common use is to improve the performance and reliability of a server environment by distributing the workload across multiple servers (e.g. web, application, database).
 
-It is best suited for high traffic web sites and powers quite a number of the world's most visited ones: GitHub, Imgur, Instagram, and Twitter. It has become the de-facto standard opensource load balancer, and it is often deployed by default in cloud platforms. 
+It is best suited for high traffic web sites and powers quite a number of the world's most visited ones: GitHub, Imgur, Instagram, and Twitter. It has become the de-facto standard open-source load balancer, and it is often deployed by default in cloud platforms. 
 
 !!! warning ""
     This software title is recommended ONLY for advanced users !
@@ -44,12 +44,12 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
     Here is a diagram of a basic high availability setup:
     ![load-balancing-high-availability](../assets/images/dietpi-software-load-balancing-high-availability.gif)
-    
+
     Help text extracted from the tutorial: [An Introduction to HAProxy and Load Balancing Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
 
 === "Official documentation"
     [Website HAProxy Community Edition](http://www.haproxy.org)
-    
+
     [HAProxy Documentation](http://www.haproxy.org/#docs)
 
 ![load-balancing-high-availability](../assets/images/dietpi-software-load-balancing-haproxy2.jpg)
