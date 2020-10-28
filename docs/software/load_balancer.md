@@ -4,7 +4,7 @@
 
 HAProxy, which stands for High Availability Proxy, is a popular open source software TCP/HTTP Load Balancer and proxy solution. Its most common use is to improve the performance and reliability of a server environment by distributing the workload across multiple servers (e.g. web, application, database).
 
-It is best suited for high traffic web sites and powers quite a number of the world's most visited ones: GitHub, Imgur, Instagram, and Twitter. It has become the de-facto standard open-source load balancer, and it is often deployed by default in cloud platforms. 
+It is best suited for high traffic web sites and powers quite a number of the world's most visited ones: GitHub, Imgur, Instagram, and Twitter. It has become the de-facto standard open-source load balancer, and it is often deployed by default in cloud platforms.
 
 !!! warning ""
     This software title is recommended ONLY for advanced users !
@@ -19,6 +19,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     ```
 
     Access web interface stats:
+
     ``` bash
     URL = http://<your.local.ip>:1338
     Username = admin

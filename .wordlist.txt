@@ -322,7 +322,6 @@ upgradable
 UPnP
 upvote
 UrBackup
-url
 userdata
 UUID
 VirtualBox

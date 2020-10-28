@@ -38,7 +38,7 @@
 
 If you are you looking for an inexpensive way to operate your web servers or a dynamic websites, you could choose one of the web development stacks. They come with a complete package. Not only will you have the DietPi OS, web server, but you'll have the database software, and also the scripting language.
 
-All stacks come with PHP caches (APCU and OPcache). The sizes of which are optimized based on a share of total memory.
+All stacks come with PHP caches (APCu and OPcache). The sizes of which are optimized based on a share of total memory.
 
 ## LAMP Webserver - Apache2 / MariaDB / PHP
 
@@ -50,16 +50,16 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     **Access website:**
 
-    - url = http://192.168.0.100 (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = http://192.168.0.100 (`http://<your.local.ip>` or `http://<your.host.name>`)
     - local directory = /var/www
 
     **Access phpinfo:**
 
-    - url = http://192.168.0.100/phpinfo.php
+    - URL = http://192.168.0.100/phpinfo.php
 
     **Access memcache info:**
 
-    - APC/u = http://192.168.0.100/apc.php
+    - APCu = http://192.168.0.100/apc.php
     - OPcache = http://192.168.0.100/opcache.php
 
     **MariaDB Details:**
@@ -121,7 +121,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     Access website:
 
-    - url = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Individual installation"
 
