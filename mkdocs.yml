@@ -142,7 +142,7 @@ nav:
       - 'Hardware Projects' : 'software/hardware_projects.md'
       - 'System Stats & Management' : 'software/system_stats.md'
       - 'System Security' : 'software/system_security.md'
-      - 'Web serves & Web stacks' : 'software/webserver_stack.md'
+      - 'Web Development' : 'software/webserver_stack.md'
       - 'DNS Servers' : 'software/dns_servers.md'
       - 'File Servers' : 'software/file_servers.md'
       - 'VPN' : 'software/vpn.md'

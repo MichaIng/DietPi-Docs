@@ -1,141 +1,54 @@
 # Documentation Ideas & Tasks
 
-## 1. Development general
+## 1 Files general
 
-### 1.1 Branching
+### 1.1 Content order
 
-1. Q: Shall we use (personal) branches to push changes directly into the master branch, or shall we use forking mechanisms?
-2. If using branches, which naming conventions shall we use for branch names (e.g. "dev-<short name>-<ChangeArea>". Example: "dev-StS-AddBoardImages" or "dev-MiI-DescribeWebserverStacks")
+**Proposal:** The content of the HOME area is reordered by exchanging Supported SBCs with Optimised software list and Advanced configuration with Community tutorials.  
+This gives the following benefits:
 
-Have branches on MichaIng/DietPi-Docs:
+- "Advanced configuration" is nearer to the system usage description
+- All links to DietPi.com forum ("Community tutorials" and "Troubleshooting" are consecutive)
 
-- master branch: stable
-- dev branch: work on this branch and will be merged into master branch at planned release dates
+Then the main order will be:
 
-Everyone works on his own fork for development. There "private" branches with "private" naming can be chosen.
+1. Overview
+2. Installation
+3. Getting started
+4. Advanced configuration
+5. Supported SBCs
+6. Community tutorials
+7. Troubleshooting
+8. ...
 
-Committing changes from the private fork branch to the dev branch on Micha's repo shall be done via a pull request.
+- [ ] **ToDo Stephan:** Rearrange items
 
-Merging should be done via 4-eyes method when merging to the master branch.
+### 1.2 Headings of optimized software
 
-- [x] Rules are now enabled.
+Shall the installation number added to every heading of the installation description?  
+See <https://dietpi.com/docs/software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection>: Number \[29\] is added as a prefix of the heading.
 
-## 2. Files general
+Or shall it be added as a postfix?
 
-### 2.1 Filenames .md
+- Delete 29 at TigerVNC
+- Add a description "command line based installation of software packages" there <https://dietpi.com/docs/dietpi_tools/> after DietPi-Software\Install or remove software.
 
-Some of the filenames use `-`, others use `_`.  
-e.g. dietpi-software-bittorrent.md vs. user-guide_install.md.  
-I would prefer the latter one: `<docu type>_<chapter contents>.md`.
+- [ ] **ToDo Stephan:** Delete '29'
+- [ ] **ToDo Stephan:** Add a section for the command line software installation
 
-**Style Guide**:
+## 2 Supported Single Board Computers (SBCs)
 
-`<docu type>_<chapter contents>.md`, all lower case
-
-Example: `user-guide_install.md`.
-
-ToDo: Change file names initially.
-Remark: Google search should be considered.
-
-- [x] Petru to enable the new naming rules
-
-### 2.2 File structure
-
-Q: Shall we structure every chapter to subdirs (with own assets sub-subdirs)?
-This could lead to a more general structure if the docu is extending.
-
-Could this lead to problems when chapters or images are used several times?
-
-Open point, has to be cleared.
-
-- [x] Petru to enable new file structure
-
-## 3. Installation chapter
-
-### 3.1 Docu structure
-
-Today:
-
-- Installation (*covers SBC installation* and *First boot on DietPi*)
-- Advanced installation
-  - Install DietPi on native PC
-  - Install DietPi as an Oracle VirtualBox machine
-
-Proposal:
-
-- **Installation** (*covers overview over several options: SBC, PC, virtual machine*)
-- **Installation on SBC** ([contents](https://dietpi.com/docs/user-guide_install/))
-- **Installation on native PC** ([contents](https://dietpi.com/docs/user-guide_install_uefi/))
-- **Installation on VirtualBox machine** ([contents](https://dietpi.com/docs/user-guide_install_VirtualBox/))
-- (later: - **Installation on VmWare virtual machine**)
-- **First boot on DietPi** (move this from the [*Installation on SBC*](https://dietpi.com/docs/user-guide_install/#3-first-boot-on-dietpi) section to here)
-
-Idea:
-
-- Use tabs in the content area ([like there](https://dietpi.com/docs/dietpi-software-desktop/#lxde-ultra-lightweight-desktop) to distinguish between SBC, native PC, VirtualBox,etc. Below the tab area the *First boot on DietPi* section is located.
-
-- [x] **Stephan:** Implement the changed *Installation* structure.
-
-### 3.2 Description of *dietpi-software* usage
-
-1. Move [4. Install software with the DietPi-Software tool](https://dietpi.com/docs/user-guide_install/#4-install-software-with-the-dietpi-software-tool) to [DietPi Optimised software Index](https://dietpi.com/docs/user-optimised-software/) ?  
-*dietpi-software* should not be a tool which is run only once during the installation.
-
-Shall be moved to *Getting started*.
-
-- [x] **Stephan:** Move contents.
-
-*Getting started* shall contain often used procedures. Seldom used procedures shall be in *Advanced configuration & DietPi tools*.
-
-## 4 Supported Single Board Computers (SBCs)
-
-See there: [Supported SBCs](https://dietpi.com/docs/hardware-supported_sbc/).
-
-### 4.1 Structure of chapters
-
-Harmonize/rearrange order in all sub-chapters:
-
-- Heading
-- Hardware description
-- Picture of hardware
-- Link table to images
-
-- [x] **Stephan:** Harmonize sections.
-
-### 4.2 Supported Single Board Computers (SBCs)
-
-1. Move *NanoPi Series (FriendlyARM)* below *ASUS Tinker Board*
-
-- [x] **Stephan:** Change order.
-
-### 4.3 Description of DietPi PREP?
+### 2.1 Description of DietPi PREP?
 
 1. Q: Shall we describe this issue in a comprehensive form?  
    Possibly this will lead to too much questions?
 
 Actually it is only referenced at the end of the [*Supported SBC* section](https://dietpi.com/docs/hardware-supported_sbc/#make-your-own-distribution).
 
-- [ ] **Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
+- [ ] **ToDo Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
   Basically use *master* branch, use *dev* for hardening/testing Micha's PREP-script.
 
-### 4.4 Name of .md file
-
-1. Q: Rename *hardware-supported_sbc.md* to *user-guide_supported_sbc.md*
-
-- [x] **Done** with renaming/restructuring from Petru.
-
-### 4.5 Images
-
-Add images for
-
-- Firefly
-- Sparky SBC (Allo)
-
-The images are available on Dietpi.com\Download.
-
-- [x] **Stephan:** Add images.
-
-### 4.6 Headings of Optimized software list
+### 2.2 Headings of Optimized software list
 
 Compare <https://dietpi.com/docs/dietpi_optimised_software/>, table of contents on the right side with <https://dietpi.com/docs/software/desktop/>, structure on the left side.
 
@@ -144,33 +57,39 @@ Proposal:
 - Harmonize naming
 - List in alphabetical order
 
-Decision?
+- [ ] **ToDo Stephan:** Sort in alphabetical order
+- [ ] **Open:** Harmonization
 
-## 5. Desktops
+### 2.3 Software overview on dietpi.com
 
-Desktop basics [DietPi Desktops](https://dietpi.com/docs/dietpi-software-desktop/):
+There: <https://dietpi.com/dietpi-software.html>
 
-1. Add a section how to setup the ***Autostart options*** via ***dietpi-config*** to start with LightDM
-   - Have it similar to the collapsable description *How do I run DietPi-Software and install Optimised software ?*
+Idea: Add a link to the "new" documentation software pages from the tiles.  
+Rename the basic text for this linking to "Once installed" -> "Further information".
 
-- [x] **No extra description, because this is already described in the tab page *Enable autostart*.**
+Start with one tile and then review for further decision.
+
+- [ ] **Petru:** Make a first proposal (align with Download area with the tiles there)
+
+## 3 Desktops
+
+### 3.1 LXQt
 
 LXQt (<https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweight-desktop>):
 
 1. Add screenshot of desktop
 
-- [ ] **ToDo Stephan:** Add image.
+- [x] **Stephan:** Add image.
 
-## 6. DietPi Tools
+## 4 DietPi Tools
 
 See there: <https://dietpi.com/docs/user-guide_tools/>
 
-1. Add a screenshot for *Software Additional*
+## 4.1 Add a screenshot for *Software Additional*
 
-- [ ] **Todo Stephan:** Move dietpi-software main menu screenshot above the tabs selection
-- [ ] **Todo Stephan:** Add a screenshot for *Software Additional* within the corresponding tab section
+- [x] **Stephan:** Add a screenshot for *Software Additional* within the corresponding tab section
 
-## 7. Description of Webserver stacks
+## 5 Description of Webserver stacks
 
 See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>
 
@@ -181,24 +100,16 @@ See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>
 3. How to port the stack description to the Webserver stacks section? Idea:
    - Divide the description into sections about webservers, about data bases and about PHP.
 
-- [ ] **Todo Stephan:** Implement points 1. and 2. above
+- [ ] **Todo Petru:** Implement points 1. and 2. above
 - [ ] **Afterwards:** Discuss how to implement point 3. above and decide further steps
 
-## 8. Links *Return to the Optimised Software list*
+## 6 Gitea software
 
-See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>  
-At the bottom there is a link to jump back.  
-Q: Is this linking done in all necessary pages? If no, where should it be inserted?
-
-- [x] **Already done in this way.**
-
-## 9. Gitea software
-
-### 9.1 Prerequisites
+### 6.1 Prerequisites
 
 Describe/check user rights of dietpi user and letsencrypt.
 
-### 9.2 Add section "hardening Gitea for external access (behind a router)"
+### 6.2 Add section "hardening Gitea for external access (behind a router)"
 
 - Describe fail2ban usage unter "external access".  
   See: <https://docs.gitea.io/en-us/fail2ban-setup/>
@@ -216,10 +127,131 @@ How to go on?
 - Then describe a bit more general security solutions
 - Then possibly restructure the whole issue
 
-## 10. Backup/Restore
+## 7 Backup/Restore
 
 Describe Backup/Restore:
 
 - via `dietpi-backup`
 - via different/other backup solutions
   E.g. see <https://www.linuxlinks.com/backup/>
+
+Additional idea:
+
+- Add `timeshift` as an additional software title
+- Use also `timeshift` and have a directory converter for the backup/restore file structure
+
+## 8 Optimized software
+
+### 8.1 Harmonization with <https://dietpi.com/dietpi-software.html>
+
+In <https://dietpi.com/dietpi-software.html> are icons of software titles as tiles displayed.  
+This should be consistent to our [optimized software list](https://dietpi.com/docs/dietpi_optimised_software/).
+
+Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
+
+#### Decision?
+
+### 8.2 Add section "how do I run..."
+
+In every chapter of "Optimized software" the section "How do I run DietPi-Software and install Optimised software ?" shall be added.
+
+The section with `dietpi-launcher`shall be deleted at all chapters. The result would be:
+
+``````markdown
+??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
+    To install any of the **DietPi Optimised Software** listed below run from the command line:
+
+    ```
+    dietpi-software
+    ```
+
+    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+
+    ![DietPi software](../assets/images/dietpi-software.jpg)
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+``````
+
+- [ ] **ToDo Stephan:** Modify the text passages on the pages
+
+### 8.3 Tabs for the DietPi tool programs?
+
+In <https://dietpi.com/docs/dietpi_tools/#configuration> the various tools (e.g. dietpi-config, dietpi-drive-manager, dietpi-autostart,...) could be moved to tabs and some more explanations from the DietPi forum pages could be added.  
+Can be seen at Stephan's branch ["dev-StS-todo"](https://github.com/StephanStS/DietPi-Docs/tree/dev-StS-todo).
+
+- [ ] **ToDo Stephan:** Introduce tabs
+
+### 8.4 Backlink "Return to the Optimised Software list"
+
+Where shall the link be located?
+
+- At the end of every section
+- In the top of every section (before every single package is described)
+
+Decision:
+
+- Keep the link below the "how do I run..." info box
+- Add the link at the bottom of the page
+
+- [ ] **ToDo Stephan:** Add links
+
+## 9 Chapter "Advanced configuration"
+
+### 9.1 Add descriptions
+
+<https://dietpi.com/docs/dietpi_tools/#dietpi-software>
+
+- [ ] Someone to describe the tab "Search".
+- [x] **Stephan:** Someone to describe the tab "Log System".
+
+- [ ] **Todo Micha:** Describe Search
+
+## 10 Software lists
+
+### 10.1 Compare software lists
+
+The software list between the softwares listed in
+
+- `dietpi-software`
+- <https://dietpi.com/docs/software/desktop/>: All softwares listed below *Optimized Software*
+- <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&sid=8866107ee3f50cf03080607e875fdfd1>: All softwares listed there
+
+need to be checked for consistency.
+
+Softwares which are actually not within `dietpi-software`:
+
+- t.b.d.
+
+Softwares which are actually not within <https://dietpi.com/docs/software/desktop/>:
+
+- t.b.d.
+
+Decision is needed, which of these softwares shall be described in the documentation resp. shall be added to the installation via `dietpi-software`.
+
+**Proposal:** First, generate the lists above and decide afterwards how to go on.
+
+- [ ] **ToDo Stephan:** Check and in case of missing issues list them above for further discussion
+
+### 10.2 Checks in *Optimized Software*
+
+Check for this:
+
+- If the sub-page (e.g. <https://dietpi.com/docs/software/desktop/>) is finished
+  - the warning *Documentation in progress…* should be deleted
+  - the links on the top should be bold and link to the headings within the sub-page
+- In every sub-page the section *How do I run DietPi-Software and install Optimised software?* should be present.
+
+## 11 Chapter for "hardening the system" or "maintaining the system"?
+
+Add items about
+
+- Let's Encrypt: <https://github.com/MichaIng/DietPi/wiki/Let's-Encrypt---Certbot>
+- TLS-SSL: <https://github.com/MichaIng/DietPi/wiki/TLS-SSL>
+- Security recommendations: <https://github.com/MichaIng/DietPi/wiki/Security-recommendation>
+- Fail2Ban: <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p452>
+
+- Backup/Restoring / Synching
+- Updating
+- Logfile viewing
+- Disk space monitoring
+- ...

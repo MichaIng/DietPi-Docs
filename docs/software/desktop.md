@@ -1,30 +1,27 @@
 # Desktop environments & utilities
 
-!!! warning "Documentation in progress..."
+## Overview
 
-    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5)). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
+### Desktops
 
-## Desktops
-- [LXDE - Highly optimized ultra lightweight desktop](#lxde-ultra-lightweight-desktop)
-- [LXQt - Slick and optimized lightweight desktop](#lxqt-optimized-lightweight-desktop)
-- [MATE - Popular Gnome 2 desktop](#mate-popular-gnome2-desktop)
-- [Xfce - Lightweight desktop](#mate-popular-gnome2-desktop)
-- [GNUstep - Alternative/unique desktop](#gnustep-alternativeunique-desktop)
+- [**LXDE - Highly optimized ultra lightweight desktop**](#lxde-ultra-lightweight-desktop)
+- [**LXQt - Slick and optimized lightweight desktop**](#lxqt-optimized-lightweight-desktop)
+- [**MATE - Popular Gnome 2 desktop**](#mate-popular-gnome2-desktop)
+- [**Xfce - Lightweight desktop**](#mate-popular-gnome2-desktop)
+- [**GNUstep - Alternative/unique desktop**](#gnustep-alternativeunique-desktop)
 
-### [Desktop Utilities](#desktop-utilities_1)
-- [Chromium - Web browser](#chromium-web-browser)
-- [GIMP - Image editor](#gimp-image-editor)
-- [QuiteRSS - RSS and Atom news feeds reader](#quiterss-atom-news-feeds-reader)
-- [Xfce4 Power - Power manager with brightness](#xfce4-power-power-manager-with-brightness)
+### Desktop Utilities
+
+- [**Chromium - Web browser**](#chromium-web-browser)
+- [**GIMP - Image editor**](#gimp-image-editor)
+- [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss-atom-news-feeds-reader)
+- [**Xfce4 Power - Power manager with brightness**](#xfce4-power-power-manager-with-brightness)
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
     To install any of the **DietPi Optimised Software** listed below run from the command line:
-    ```
-    dietpi-launcher
-    ```
-    and selected _DietPi-Software_. or launch directly the tool:
+
     ```
     dietpi-software
     ```
@@ -36,23 +33,23 @@
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
 ## LXDE - ultra lightweight desktop
+
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
 
 === "Quick start"
     After installation, desktop can be run by typing
+
     ```
     startx
     ```
 
 === "Enable autostart"
-    To start different programs when the SBC starts, run from the command line the main DietPi tool:
-    ```
-    dietpi-launcher
-    ```
-    or directly.
+    To start different programs when the SBC starts, run from the command line:
+
     ```
     dietpi-autostart
     ```
+
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
 === "Official documentation"
@@ -61,10 +58,12 @@ LXDE is highly optimized and ultra lightweight desktop. It works well with compu
 ![DietPi LXDE](../assets/images/dietpi-software-LXDE_desktop.jpg)
 
 ## LXQt - Optimized lightweight desktop
+
 Optimized lightweight desktop without the bloatware. Slick and fluid GUI, however, more resource heavy than LXDE.
 
 === "Quick start"
     After installation, desktop can be run by typing
+
     ```
     startx
     ```
@@ -75,12 +74,17 @@ Optimized lightweight desktop without the bloatware. Slick and fluid GUI, howeve
 === "Official documentation"
     [LXQt Wiki](https://wiki.debian.org/LXQt)
 
+![DietPi LXQt](../assets/images/dietpi-software-LXQt_desktop.png)
 
-## MATE - Popular Gnome2 desktop.
+Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
+
+## MATE - Popular Gnome2 desktop
+
 Popular Gnome2 based desktop environment.
 
 === "Quick start"
     After installation, desktop can be run by typing
+
     ```
     startx
     ```
@@ -97,6 +101,7 @@ Popular Gnome2 based desktop environment.
 
 === "Quick start"
     After installation, desktop can be run by typing
+
     ```
     startx
     ```
@@ -113,6 +118,7 @@ Popular Gnome2 based desktop environment.
 
 === "Quick start"
     After installation, desktop can be run by typing
+
     ```
     startx
     ```
@@ -132,6 +138,7 @@ Popular Gnome2 based desktop environment.
 #### Does my device support GPU acceleration?
 
 Not all devices support GPU acceleration with Chromium.
+
 - RPis supports native OpenGL and will be configured during installation.
 - Odroids support OpenGLES and will be configured during installation.
 - Other devices will most likely be limited to software rendering.
@@ -153,9 +160,10 @@ MS Paint on steroids. If you need to edit pixels with a vast number of tools, GI
 
 ![DietPi GIMP](../assets/images/dietpi-software-desktop-tools-gimp.jpg)
 
-https://www.gimp.org/
+<https://www.gimp.org/>
 
 ### QuiteRSS - Atom news feeds reader
+
 QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
 
 ![DietPi QuiteRSS](../assets/images/dietpi-software-desktop-tools-quiterss.jpg)

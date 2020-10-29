@@ -22,10 +22,7 @@
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
     To install any of the **DietPi Optimised Software** listed below run from the command line:
-    ```
-    dietpi-launcher
-    ```
-    and selected _DietPi-Software_. or launch directly the tool:
+
     ```
     dietpi-software
     ```
@@ -42,7 +39,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Quick start"
 
-    Access the web interface using the next URL when running on SBC (<http://localhost/nextcloud/>) or the IP address / hostname of your DietPi device (e.g.: [http://192.168.0.100/nextcloud/](<http://192.168.0.100/nextcloud/>)).
+    Access the web interface using the next URL when running on SBC (`http://localhost/nextcloud/`) or the IP address / hostname of your DietPi device (e.g.: `http://192.168.0.100/nextcloud/`).
 
     ```
     username = admin
@@ -56,6 +53,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/17/admin_manual/configuration_server/occ_command.html).
 
     To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`. Just use inside your terminal:
+
     ```
     ncc [followed by the desired command]
     ```
