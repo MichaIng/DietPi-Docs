@@ -7,11 +7,15 @@ jobs:
       - name: Clone DietPi-Docs repository
         id: clone
         uses: actions/checkout@v2
+      - name: Install latest Node.js
+        run: |
+          npm i -g n
+          n latest
+      - name: Install markdownlint-cli2
+        run: npm i -g --unsafe-perm markdownlint-cli2
       - name: Check Markdown syntax
-        # .markdownlintrc: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
-        uses: nosborn/github-action-markdown-cli@v1.1.1
-        with:
-          files: "*.md **/*.md"
+        # .markdownlint.yaml: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+        run: markdownlint-cli2 **.md
       - name: Set up Python 3.7
         id: python
         if: always() && steps.clone.outcome == 'success'
