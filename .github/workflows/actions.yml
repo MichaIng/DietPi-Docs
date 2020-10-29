@@ -15,7 +15,7 @@ jobs:
         run: sudo npm i -g markdownlint-cli2
       - name: Check Markdown syntax
         # .markdownlint.yaml: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
-        run: markdownlint-cli2 **.md
+        run: markdownlint-cli2 '**.md'
       - name: Set up Python 3.7
         id: python
         if: always() && steps.clone.outcome == 'success'
