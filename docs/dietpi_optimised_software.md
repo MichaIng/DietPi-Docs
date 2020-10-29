@@ -84,15 +84,15 @@
 - [**vsftpd - Feature rich FTP file server**](../software/file_servers/#vsftpd-feature-rich-ftp-file-server)
 - [**NFS - Network file system server**](../software/file_servers/#nfs-network-file-system-server)
 
-## Gaming / Emulation
+## [Gaming / Emulation](../software/gaming/)
 
-- [OpenTyrian - Gaming](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p45)
-- [Cuberite - Fast Minecraft server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2068)
-- [MineOS - Multiple Minecraft servers with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2069)
-- [Nukkit - Server for Minecraft Pocket Edition](https://dietpi.com/phpbb/viewtopic.php?p=10675#p10675)
-- [Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi](https://dietpi.com/phpbb/viewtopic.php?p=64#p64)
-- [DXX-Rebirth - Descent 1 & 2 OpenGL port](https://dietpi.com/phpbb/viewtopic.php?p=2963#p2963)
-- [Steam - Steam client](https://dietpi.com/phpbb/viewtopic.php?p=8016#p8016)
+- [**OpenTyrian - Gaming**](../software/gaming/#opentyrian-gaming)
+- [**Cuberite - Fast Minecraft server with web interface**](../software/gaming/#cuberite-fast-minecraft-server-with-web-interface)
+- [**MineOS - Multiple Minecraft servers with web interface**](../software/gaming/#mineos-multiple-minecraft-servers-with-web-interface)
+- [**Nukkit - Server for Minecraft Pocket Edition**](../software/gaming/#nukkit-server-for-minecraft-pocket-edition)
+- [**Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi**](../software/gaming/#amiberry-amiga-emulation-system-further-developed-optimised-builds-of-uae4arm-rpi)
+- [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](../software/gaming/#dxx-rebirth-descent-1-an-2-opengl-port)
+- [**Steam - Steam client**](../software/gaming/#steam-steam-client)
 
 ## Hardware Projects
 
