@@ -244,7 +244,7 @@ Sparky Single Board Computer (SBC) is a credit card-sized board that can be used
 
 ## ASUS Tinker Board
 
-Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit the [ASUS Tinker Board](https://www.asus.com/Single-Board-Computer/Tinker-Board/) website.
+Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit the [ASUS Tinker Board](https://tinker-board.asus.com/product-series.html) website.
 
 Tinker Board features standard maker connectivity options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
 
