@@ -12,7 +12,7 @@ jobs:
           sudo npm i -g n
           sudo n latest
       - name: Install markdownlint-cli2
-        run: npm i -g --unsafe-perm markdownlint-cli2
+        run: sudo npm i -g markdownlint-cli2
       - name: Check Markdown syntax
         # .markdownlint.yaml: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
         run: markdownlint-cli2 **.md
