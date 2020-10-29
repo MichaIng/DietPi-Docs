@@ -263,13 +263,13 @@ When using a keyboard, the default joystick controls are:
 - Page Up= Fire/Button 2  
 
 **How can I improve performance (frame rate)?**  
-A lower resolution may improve performance on most games. From the emulator main menu:
+A ***lower resolution*** may improve performance on most games. From the emulator main menu:
 
 - On the left hand side, select Display  
 - 640x256 is high resolution  
 - 320x256 is low resolution and should provide improved performance  
 
-Overclocking your system will improve performance. Stability may vary across devices and overclocking is not officially supported:  
+***Overclocking*** your system will improve performance. Stability may vary across devices and overclocking is not officially supported:  
 
 - From a terminal, run dietpi-config
 - Select the Performance Options menu
@@ -321,13 +321,15 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
 
 ### FAQ
 
-- How do I transfer the original Descent full game files?
-    - Before you begin, you will need the original game files, from a legal copy and installation of Descent.
-    - Make sure you have one of DietPi's File Servers installed.
-    - Copy your Descent 1 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_1_game`
-    - Copy your Descent 2 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_2_game`
-- Where can I find more information on the DXX-Rebirth project?
-    - <http://www.dxx-rebirth.com/>
+**How do I transfer the original Descent full game files?**  
+Before you begin, you will need the original game files, from a legal copy and installation of Descent.  
+Make sure you have one of DietPi's File Servers installed.
+
+- Copy your Descent 1 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_1_game`
+- Copy your Descent 2 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_2_game`
+
+**Where can I find more information on the DXX-Rebirth project?**  
+<http://www.dxx-rebirth.com/>
 
 ## Steam - Steam client
 
