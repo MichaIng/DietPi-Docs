@@ -68,7 +68,6 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - username = root
     - password = dietpi
 
-
 === "Secured access - HTTPS/SSL"
 
     **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#lets-encrypt-ssl-nordvpn-support). This will automate the creation and setup of your free SSL cert.
