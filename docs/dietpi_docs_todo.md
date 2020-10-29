@@ -161,7 +161,7 @@ The section with `dietpi-launcher`shall be deleted at all chapters. The result w
 In <https://dietpi.com/docs/dietpi_tools/#configuration> the various tools (e.g. dietpi-config, dietpi-drive-manager, dietpi-autostart,...) could be moved to tabs and some more explanations from the DietPi forum pages could be added.  
 Can be seen at Stephan's branch ["dev-StS-todo"](https://github.com/StephanStS/DietPi-Docs/tree/dev-StS-todo).
 
-- [ ] **ToDo Stephan:** Introduce tabs
+- [x] **ToDo Stephan:** Introduce tabs
 
 ### 6.4 Backlink "Return to the Optimised Software list"
 
@@ -183,7 +183,7 @@ Decision:
 
 <https://dietpi.com/docs/dietpi_tools/#dietpi-software>
 
-- [ ] Someone to describe the tab "Search".
+- [x] Someone to describe the tab "Search".
 - [x] **Stephan:** Someone to describe the tab "Log System".
 
 - [ ] **Todo Micha:** Describe Search

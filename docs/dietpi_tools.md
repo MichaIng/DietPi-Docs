@@ -10,7 +10,7 @@ dietpi-launcher
 
 ![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg)
 
-## DietPi-Software
+## DietPi software
 
 **dietpi-software** will be automatically displayed on the first login after the installation. It can be accessed at any time running next command:
 
@@ -21,6 +21,8 @@ dietpi-software
 It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../dietpi_optimised_software/) titles.
 
 ![DietPi-Software screenshot](assets/images/dietpi-software.jpg)
+
+### Software overview
 
 === "Software Optimised"
 
@@ -127,43 +129,44 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
 ## Configuration
 
-`dietpi-config` {: #DietPi-Config }
+=== "DietPi configuration"
 
-: Configure various system settings, from display / audio / network to _auto start_ options.
+    Configure various system settings, from display / audio / network to _auto start_ options.  
+    Run `dietpi-config`.
 
-: ![DietPi-Config screenshot](assets/images/dietpi-config.jpg)
+    ![DietPi-Config screenshot](assets/images/dietpi-config.jpg)
 
-: **Display Settings**
+    **Display Settings**
 
     - Set your screen resolution, or go headless to save additional resources
     - Control your GPU memory splits
     - Enable/disable the RPi camera
 
-: **Audio Options**
+    **Audio Options**
 
     - Change sound cards with ease (e.g.: HiFiBerry / Odroid HiFi shield)
 
-: **Performance Options**
+    **Performance Options**
 
     - Overclock your system with a vast selection of overclocking profiles for your device
     - Change the CPU governor and tweak your ARM temperature limits
 
-: **Advanced Settings**
+    **Advanced Settings**
 
     - Configure swap file size
     - Update device firmware
     - Toggle serial console
     - Toggle Bluetooth
 
-: **Security Options**
+    **Security Options**
 
     - Change password and hostname
 
-: **Regional / Language Options**
+    **Regional / Language Options**
 
     - Set timezone, locale and keyboard options. Everything you'll need to make it feel like home
 
-: **Networking Options: Adapters**
+    **Networking Options: Adapters**
 
     - Scan and connect to your WiFi router with ease
     - Change to a static IP address on your network
@@ -171,119 +174,141 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
     - Test internet connection
     - Toggle IPv6 support
 
-: **Networking Options: NAS/Misc**
+    **Networking Options: NAS/Misc**
 
     - Samba client utility allows you to quickly and easily connect to Windows Shares
     - FTP client utility allows you to quickly and easily connect to FTP servers as a filesystem mount
     - No-IP client utility. Allows you to quickly and easily setup your website address for your Pi, using a No-IP account
 
-: **AutoStart Options**
+    **AutoStart Options**
 
     - Quickly and easily change what software runs after boot. Kodi, Desktop, console and many more
 
-: **Tools**
+    **Tools**
 
     - Filesystem and memory benchmarks
     - CPU/IO/RAM/DISK Stress tests
 
-`dietpi-drive_manager` {: #dietpi-drive_manager }
+=== "DietPi drive manager"
 
-: Feature-rich drive management utility.
+    Feature-rich drive management utility.  
+    Run `dietpi-drive_manager`.
 
-: ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager.jpg)
+    ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager.jpg)
 
-`dietpi-autostart` {: #dietpi-autostart }
+=== "DietPi autostart"
 
-: Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running.
+    Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running.  
+    Run `dietpi-autostart`.
 
-: ![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg)
+    ![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg)
 
-`dietpi-services` {: #dietpi-services }
+=== "DietPi services"
 
-: Provides service control, priority level tweaks and status print.
+    Provides service control, priority level tweaks and status print.  
+    Run `dietpi-services`.
 
-: ![DietPi-Services screenshot](assets/images/dietpi-services.jpg)
+    ![DietPi-Services screenshot](assets/images/dietpi-services.jpg)
 
-`dietpi-led_control` {: #dietpi-led_control }
+=== "DietPi Led control"
 
-: ![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg)
+    Run `dietpi-led_control`.
 
-`dietpi-cron` {: #dietpi-cron }
+    ![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg)
 
-: Modify the start times of specific cron job groups.
+=== "DietPi cron"
 
-: ![DietPi-Cron screenshot](assets/images/dietpi-cron.jpg)
+    Modify the start times of specific cron job groups.  
+    Run `dietpi-cron`.
 
-`dietpi-justboom` {: #dietpi-justboom }
+    ![DietPi-Cron screenshot](assets/images/dietpi-cron.jpg)
 
-: Change the audio settings
+=== "DietPi JustBoom"
 
-: ![DietPi-JustBoom screenshot](assets/images/dietpi-justboom.jpg)
+    Change the audio settings.  
+    Run `dietpi-justboom`.
 
-`dietpi-sync` {: #dietpi-sync }
+    ![DietPi-JustBoom screenshot](assets/images/dietpi-justboom.jpg)
 
-: Sync or duplicate a directory to another
+=== "DietPi sync"
 
-: ![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg)
+    Sync or duplicate a directory to another.  
+    Run `dietpi-sync`.
+
+    ![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg)
 
 ## Update & Backup
 
-`dietpi-update` {: #dietpi-update }
+=== "DietPi update"
 
-: Update DietPi OS version to the latest version available.
+    Update DietPi OS version to the latest version available.  
+    Run `dietpi-update`.
 
-`dietpi-backup` {: #dietpi-backup }
+=== "DietPi backup"
 
-: Fully backups DietPi setup. It also includes the restore capability from an already made DietPi backup.
+    Fully backups DietPi setup. It also includes the restore capability from an already made DietPi backup.  
+    Run `dietpi-backup`.
 
 ## Let's Encrypt SSL & NordVPN support
 
-`dietpi-letsencrypt` {: #dietpi-letsencrypt }
+=== "DietPi LetsEncrypt"
 
-: Access the frontend for the `Let's Encrypt` integration.
+    Access the frontend for the `Let's Encrypt` integration.  
+    Run `dietpi-letsencrypt`.
 
-: ![DietPi-LetsEncrypt screenshot](assets/images/dietpi-letsencrypt.jpg)
+    ![DietPi-LetsEncrypt screenshot](assets/images/dietpi-letsencrypt.jpg)
 
-`dietpi-nordvpn` {: #dietpi-nordvpn }
+=== "DietPi NordVPN"
 
-: ![DietPi-NordVPN screenshot](assets/images/dietpi-nordvpn.jpg)
+    Run `dietpi-nordvpn`.
+
+    ![DietPi-NordVPN screenshot](assets/images/dietpi-nordvpn.jpg)
 
 ## Miscellaneous
 
-`dietpi-cpuinfo` {: #dietpi-cpuinfo }
+=== "DietPi CPU info"
 
-: Displays CPU temperature, processor frequency, throttle level etc.
+    Displays CPU temperature, processor frequency, throttle level etc.  
+    Run `dietpi-cpuinfo`.
 
-: ![DietPi-CPU_info screenshot](assets/images/dietpi-cpuinfo.jpg)
+    ![DietPi-CPU_info screenshot](assets/images/dietpi-cpuinfo.jpg)
 
-`dietpi-survey` {: #dietpi-survey }
+=== "DietPi survey"
 
-: ![DietPi-Survey screenshot](assets/images/dietpi-survey.jpg)
+    Run `dietpi-survey`.
 
-`dietpi-bugreport` {: #dietpi-bugreport }
+    ![DietPi-Survey screenshot](assets/images/dietpi-survey.jpg)
 
-: ![DietPi-Bugreport screenshot](assets/images/dietpi-bugreport.jpg)
+=== "DietPi bugreport"
 
-`dietpi-morsecode` {: #dietpi-morsecode }
+    Run `dietpi-bugreport`.
 
-: It converts a text file into morse code.
+    ![DietPi-Bugreport screenshot](assets/images/dietpi-bugreport.jpg)
+
+=== "DietPi morse code"
+
+    It converts a text file into morse code.  
+    Run `dietpi-morsecode`.
 
 ## Maintenance
 
-`dietpi-explorer` {: #dietpi-explorer }
+=== "DietPi file explorer"
 
-: Lightweight file manager and explorer
+    Lightweight file manager and explorer.  
+    Run `dietpi-explorer`.
 
-: ![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg)
+    ![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg)
 
-`dietpi-cleaner` {: #dietpi-cleaner }
+=== "DietPi cleaner"
 
-: Clean up not necessary files from the operating system and free up valuable disk space.
+    Clean up not necessary files from the operating system and free up valuable disk space.  
+    Run `dietpi-cleaner`.
 
-: ![DietPi-Cleaner screenshot](assets/images/dietpi-cleaner.jpg)
+    ![DietPi-Cleaner screenshot](assets/images/dietpi-cleaner.jpg)
 
-`dietpi-logclear` {: #dietpi-logclear }
+=== "DietPi log clear"
 
-: Clear log files in /var/log/.
+    Clear log files in /var/log/.  
+    Run `dietpi-logclear`.
 
-: ![DietPi-LogClear screenshot](assets/images/dietpi-logclear.jpg)
+    ![DietPi-LogClear screenshot](assets/images/dietpi-logclear.jpg)
