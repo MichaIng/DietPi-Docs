@@ -150,6 +150,6 @@ nav:
       - 'Web Development' : 'software/webserver_stack.md'
       - 'WiFi Hotspot' : 'software/wifi_hotspot.md'
   - 'COMMUNITY' :
-      - 'DietPi Forums & Community' : 'https://dietpi.com/phpbb/viewforum.php?f=5'
+      - 'DietPi Forums' : 'https://dietpi.com/phpbb/viewforum.php?f=5'
       - 'Community tutorials' : 'https://dietpi.com/phpbb/viewforum.php?f=15'
       - 'Troubleshooting' : 'https://dietpi.com/phpbb/viewforum.php?f=11'
