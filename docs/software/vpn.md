@@ -102,7 +102,6 @@ An easy to use VPN server and client system. The DietPi installation of OpenVPN 
     Method 2 - GUI:  
     If you want to use the OpenVPN GUI, you will need to copy `DietPi_OpenVPN_Client.ovpn` to the OpenVPN config location (e.g.: `C:\Program Files\OpenVPN\config`).
 
-
 === "OpenVPN + Pi-hole"
 
     To allow VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces:  

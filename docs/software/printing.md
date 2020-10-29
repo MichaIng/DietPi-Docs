@@ -105,7 +105,7 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 
     If you use a different shell, use:
 
-    ```
+    ```sh
     sudo -u octoprint octoprint <command>
     ```
 

@@ -11,7 +11,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](#xrdp-remote-desktop-server-for-windows-remote-desktop-client)
 - [**NoMachine - Feature rich remote desktop connection**](#nomachine-feature-rich-remote-desktop-connection)
 
-### Remote Access:
+### Remote Access
 
 - [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it-weaved-access-your-device-over-the-internet)  
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)  
@@ -195,7 +195,6 @@ NoMachine is a remote desktop server with advanced features, such as screen reco
 
     You will now be connected to your device.
 
-
 ## Remot3.it - (Weaved) Access your device over the internet
 
 Remot3.it allows you to easily access your DietPi device over the internet.
@@ -214,7 +213,9 @@ Examples of TCP ports for Remot3.it:
 
     The first run setup is executed once `dietpi-software` has completed the installation and the system is rebooted. Run the following command. Follow the onscreen instructions to setup and link an account:
 
-    - `connectd_installer`
+    ```
+    connectd_installer
+    ```
 
     Once your account is created and linked to this system, you can select a port for Remot3.it to enable remote access.
 

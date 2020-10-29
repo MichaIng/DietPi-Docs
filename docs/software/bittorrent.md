@@ -55,7 +55,6 @@ Key features:
 
     ![Bazarr](../assets/images/dietpi-software-download-bazarr.jpg)
 
-
 === "Advanced"
 
     - Install directory: `/opt/bazarr`
