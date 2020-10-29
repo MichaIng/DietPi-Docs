@@ -240,7 +240,6 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 **Good to GO!**  
 When ready, select Start to launch the emulator. Have fun!
 
-
 ### FAQ
 
 - How can I transfer Kickstarts & Floppy Images to the device?  
