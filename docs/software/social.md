@@ -14,4 +14,17 @@
 - [OpenBazaar - Decentralized peer to peer market server using Bitcoin](https://dietpi.com/phpbb/viewtopic.php?p=1796#p1796)  
 - [YaCy - Decentralized open source search engine](https://dietpi.com/phpbb/viewtopic.php?p=6202#p6202)
 
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
+
+    ```
+    dietpi-software
+    ```
+
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+
+    ![DietPi software](../assets/images/dietpi-software.jpg)
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

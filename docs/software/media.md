@@ -34,4 +34,17 @@
 - [Ubooquity - Free home server for your comics and ebooks library](https://dietpi.com/phpbb/viewtopic.php?p=12969#p12969)
 - [Komga - Free and open source comics/mangas media server with web UI](https://dietpi.com/phpbb/viewtopic.php?p=26858#p26858)
 
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
+
+    ```
+    dietpi-software
+    ```
+
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+
+    ![DietPi software](../assets/images/dietpi-software.jpg)
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

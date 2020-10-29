@@ -21,7 +21,7 @@ Then the main order will be:
 7. Troubleshooting
 8. ...
 
-- [ ] **ToDo Stephan:** Rearrange items
+- [x] **ToDo Stephan:** Rearrange items
 
 ### 1.2 Headings of optimized software
 
@@ -33,7 +33,7 @@ Or shall it be added as a postfix?
 - Delete 29 at TigerVNC
 - Add a description "command line based installation of software packages" there <https://dietpi.com/docs/dietpi_tools/> after DietPi-Software\Install or remove software.
 
-- [ ] **ToDo Stephan:** Delete '29'
+- [x] **ToDo Stephan:** Delete '29'
 - [ ] **ToDo Stephan:** Add a section for the command line software installation
 
 ## 2 Supported Single Board Computers (SBCs)
@@ -57,8 +57,8 @@ Proposal:
 - Harmonize naming
 - List in alphabetical order
 
-- [ ] **ToDo Stephan:** Sort in alphabetical order
-- [ ] **Open:** Harmonization
+- [x] **ToDo Stephan:** Sort in alphabetical order
+- [x] **Open:** Harmonization
 
 ### 2.3 Software overview on dietpi.com
 
@@ -71,25 +71,7 @@ Start with one tile and then review for further decision.
 
 - [ ] **Petru:** Make a first proposal (align with Download area with the tiles there)
 
-## 3 Desktops
-
-### 3.1 LXQt
-
-LXQt (<https://dietpi.com/docs/dietpi-software-desktop/#lxqt-optimized-lightweight-desktop>):
-
-1. Add screenshot of desktop
-
-- [x] **Stephan:** Add image.
-
-## 4 DietPi Tools
-
-See there: <https://dietpi.com/docs/user-guide_tools/>
-
-## 4.1 Add a screenshot for *Software Additional*
-
-- [x] **Stephan:** Add a screenshot for *Software Additional* within the corresponding tab section
-
-## 5 Description of Webserver stacks
+## 3 Description of Webserver stacks
 
 See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>
 
@@ -103,13 +85,13 @@ See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>
 - [ ] **Todo Petru:** Implement points 1. and 2. above
 - [ ] **Afterwards:** Discuss how to implement point 3. above and decide further steps
 
-## 6 Gitea software
+## 4 Gitea software
 
-### 6.1 Prerequisites
+### 4.1 Prerequisites
 
 Describe/check user rights of dietpi user and letsencrypt.
 
-### 6.2 Add section "hardening Gitea for external access (behind a router)"
+### 4.2 Add section "hardening Gitea for external access (behind a router)"
 
 - Describe fail2ban usage unter "external access".  
   See: <https://docs.gitea.io/en-us/fail2ban-setup/>
@@ -127,7 +109,7 @@ How to go on?
 - Then describe a bit more general security solutions
 - Then possibly restructure the whole issue
 
-## 7 Backup/Restore
+## 5 Backup/Restore
 
 Describe Backup/Restore:
 
@@ -140,9 +122,9 @@ Additional idea:
 - Add `timeshift` as an additional software title
 - Use also `timeshift` and have a directory converter for the backup/restore file structure
 
-## 8 Optimized software
+## 6 Optimized software
 
-### 8.1 Harmonization with <https://dietpi.com/dietpi-software.html>
+### 6.1 Harmonization with <https://dietpi.com/dietpi-software.html>
 
 In <https://dietpi.com/dietpi-software.html> are icons of software titles as tiles displayed.  
 This should be consistent to our [optimized software list](https://dietpi.com/docs/dietpi_optimised_software/).
@@ -151,7 +133,7 @@ Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
 
 #### Decision?
 
-### 8.2 Add section "how do I run..."
+### 6.2 Add section "how do I run..."
 
 In every chapter of "Optimized software" the section "How do I run DietPi-Software and install Optimised software ?" shall be added.
 
@@ -172,16 +154,16 @@ The section with `dietpi-launcher`shall be deleted at all chapters. The result w
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 ``````
 
-- [ ] **ToDo Stephan:** Modify the text passages on the pages
+- [x] **ToDo Stephan:** Modify the text passages on the pages
 
-### 8.3 Tabs for the DietPi tool programs?
+### 6.3 Tabs for the DietPi tool programs?
 
 In <https://dietpi.com/docs/dietpi_tools/#configuration> the various tools (e.g. dietpi-config, dietpi-drive-manager, dietpi-autostart,...) could be moved to tabs and some more explanations from the DietPi forum pages could be added.  
 Can be seen at Stephan's branch ["dev-StS-todo"](https://github.com/StephanStS/DietPi-Docs/tree/dev-StS-todo).
 
-- [ ] **ToDo Stephan:** Introduce tabs
+- [x] **ToDo Stephan:** Introduce tabs
 
-### 8.4 Backlink "Return to the Optimised Software list"
+### 6.4 Backlink "Return to the Optimised Software list"
 
 Where shall the link be located?
 
@@ -193,22 +175,22 @@ Decision:
 - Keep the link below the "how do I run..." info box
 - Add the link at the bottom of the page
 
-- [ ] **ToDo Stephan:** Add links
+- [x] **ToDo Stephan:** Add links
 
-## 9 Chapter "Advanced configuration"
+## 7 Chapter "Advanced configuration"
 
-### 9.1 Add descriptions
+### 7.1 Add descriptions
 
 <https://dietpi.com/docs/dietpi_tools/#dietpi-software>
 
-- [ ] Someone to describe the tab "Search".
+- [x] Someone to describe the tab "Search".
 - [x] **Stephan:** Someone to describe the tab "Log System".
 
 - [ ] **Todo Micha:** Describe Search
 
-## 10 Software lists
+## 8 Software lists
 
-### 10.1 Compare software lists
+### 8.1 Compare software lists
 
 The software list between the softwares listed in
 
@@ -232,7 +214,7 @@ Decision is needed, which of these softwares shall be described in the documenta
 
 - [ ] **ToDo Stephan:** Check and in case of missing issues list them above for further discussion
 
-### 10.2 Checks in *Optimized Software*
+### 8.2 Checks in *Optimized Software*
 
 Check for this:
 
@@ -241,7 +223,7 @@ Check for this:
   - the links on the top should be bold and link to the headings within the sub-page
 - In every sub-page the section *How do I run DietPi-Software and install Optimised software?* should be present.
 
-## 11 Chapter for "hardening the system" or "maintaining the system"?
+## 9 Chapter for "hardening the system" or "maintaining the system"?
 
 Add items about
 

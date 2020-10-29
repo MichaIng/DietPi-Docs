@@ -16,18 +16,16 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it-weaved-access-your-device-over-the-internet)  
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)  
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
-
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
 
     ```
     dietpi-software
     ```
 
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi Software](../assets/images/dietpi-software.jpg)
+    ![DietPi software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
@@ -35,7 +33,9 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
     From the list of **Optimised Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
 
-## [29] TigerVNC Server - Desktop for remote connection
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+
+## TigerVNC Server - Desktop for remote connection
 
 ![DietPi remote desktop software TigerVNC](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg){: style="width:600px"}
 
@@ -242,3 +242,5 @@ Once installed, available VirtualHere devices will be shown in the client user i
     - VirtualHere does not take into account mounted drives when selecting them for remote use. This is potentially dangerous for any mounted drive that is in use and may cause data loss.
     - Do not use drives on the client that are mounted on the SBC.  
       Unmount the drive before hand in `dietpi-drive_manager`.
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

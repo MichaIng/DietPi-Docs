@@ -5,14 +5,14 @@
 - [**Fail2Ban - Protects your system from brute-force attacks**](#fail2ban-protects-your-system-from-brute-force-attacks)  
 - [**Docker - Build, ship, and run distributed applications**](#docker-build-ship-and-run-distributed-applications)  
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
 
     ```
     dietpi-software
     ```
 
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi software](../assets/images/dietpi-software.jpg)
 
@@ -74,3 +74,5 @@ Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia
     - Logging: <https://docs.docker.com/config/containers/logging/configure>
 
 See also <https://wikipedia.org/wiki/Docker_(software)> resp. <https://docs.docker.com/get-started/overview>.
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

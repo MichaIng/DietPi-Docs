@@ -5,14 +5,14 @@
 - [**Dropbear - Lightweight SSH Server**](#dropbear-lightweight-ssh-server)  
 - [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](#openssh-feature-rich-ssh-server-with-sftpscp-support)  
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
 
     ```
     dietpi-software
     ```
 
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi software](../assets/images/dietpi-software.jpg)
 
@@ -67,3 +67,5 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
     WinSCP will allow you to transfer files and folders on your DietPi device ([WinSCP downloads page](https://winscp.net/eng/download.php)).
 
 See also <https://wikipedia.org/wiki/OpenSSH> resp. <https://www.openssh.com/>.
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

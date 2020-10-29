@@ -4,14 +4,14 @@
 
 - [**Folding@Home - Use processing power to assist with disease research**](#foldinghome)  
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
 
     ```
     dietpi-software
     ```
 
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi software](../assets/images/dietpi-software.jpg)
 
@@ -65,3 +65,5 @@ The problems which are solved require so many computer calculations that help fr
       <slot id='2' type='CPU'/>
     </config>
     ```
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

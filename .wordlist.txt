@@ -1,3 +1,6 @@
+addictiveness
+ADF
+adf
 AirPlay
 Airsonic
 AIY
@@ -26,6 +29,7 @@ balenaEtcher
 Bazarr
 Beelink
 Bitcoin
+blazingly
 Bluetooth
 Blynk
 bootable
@@ -35,6 +39,7 @@ Bugreport
 CalDAV
 CardDAV
 CAVA
+CDTV
 Certbot
 changelog
 CIFS
@@ -53,6 +58,7 @@ COVID
 cron
 CSI
 CSM
+Ctrl
 Cuberite
 CUPS
 DarkBetter
@@ -64,6 +70,7 @@ dialogs
 DietPi
 dietpi
 DietPi's
+Dimitris
 DiogoAbu
 diskimager
 DIY
@@ -84,13 +91,16 @@ EmonPi
 exFAT
 facto
 fahclient
+FB
 FHS
 filesystem
 FOSS
+FPU
 FreshRSS
 FriendlyARM
 FriendlyARM's
 frontend
+Fullscreen
 Gbit
 GiB
 Gitea
@@ -138,6 +148,8 @@ JSON
 JustBoom
 Kbit
 KiB
+Kickstart
+Kickstarts
 KiTTY
 klick
 Kodi
@@ -225,6 +237,7 @@ OpenSSH
 OpenTyrian
 OpenVPN
 ownCloud
+Panokostas
 passwd
 PCIe
 php
@@ -246,6 +259,7 @@ pyenv
 qBittorrent
 Queneuder
 QuiteRSS
+Qz
 Radarr
 Radxa
 RAMdisk
@@ -262,6 +276,7 @@ resolvconf
 RK
 Rockchip
 ROCKPro
+rom
 Roon
 rpi
 RPi
@@ -275,6 +290,7 @@ SABnzbd
 SBC
 SBCs
 SCP
+scroller
 SDL
 SFTP
 Shairport
@@ -285,6 +301,7 @@ SMB
 smb
 sn
 SNMP
+SoCs
 Sonarr
 SPC
 SPI
@@ -308,6 +325,7 @@ tcpdump
 TigerVNC
 Tonido
 txt
+Tyrian
 uae
 UART
 Ubooquity
@@ -347,6 +365,7 @@ WinSCP
 WireGuard
 WiringPi
 Wordpress
+WSAD
 www
 Xfce
 xml
