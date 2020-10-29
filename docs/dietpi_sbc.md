@@ -39,7 +39,7 @@ Quick intro:
         <tr>
             <td align="left"><a class="table"><strong>Raspberry Pi - ALL models</strong></a></td>
             <td align="left">
-                <strong>Unique DietPi image available for ALL Raspberry Pi models: Raspberry Pi 4 Model B, Raspberry Pi 3 Model A+ / B / B+, Raspberry Pi 2 Model B, Raspberry Pi 1 Model A+ / B+, Raspberry Pi Zero W</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster.7z">Download image</a></li>
+                <strong>Unique DietPi image available for ALL Raspberry Pi models: Raspberry Pi 4 Model B, Raspberry Pi 3 Model A+ / B / B+, Raspberry Pi 2 Model B, Raspberry Pi 1 Model A+ / B+, Raspberry Pi Zero W</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster.7z">Download image</a></li>
             </td>
         </tr>
         </tbody>
@@ -48,7 +48,7 @@ Quick intro:
 
 ## Odroid
 
-ODROID single board computers are powerful, stable, and fast performing. They can function as a home theater set-top box, a general purpose computer for web browsing, gaming and socializing, a compact tool for college or office work, a prototyping device for hardware tinkering, a controller for home automation, a workstation for software development, and much more. For more details visit <a target="_blank" href="https://www.hardkernel.com">Hardkernel.com</a>
+ODROID single board computers are powerful, stable, and fast performing. They can function as a home theater set-top box, a general purpose computer for web browsing, gaming and socializing, a compact tool for college or office work, a prototyping device for hardware tinkering, a controller for home automation, a workstation for software development, and much more. For more details visit <a target="_blank" rel="noopener" href="https://www.hardkernel.com/">Hardkernel.com</a>
 
 ODROID-N2 is one of the supported boards.
 
@@ -66,33 +66,33 @@ It is a new generation single board computer that is more powerful, more stable,
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Odroid C1</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Odroid C1</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_OdroidC1-ARMv7-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC1-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Odroid C2</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Odroid C2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_OdroidC2-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Odroid N1</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Odroid N1</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_OdroidN1-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidN1-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Odroid N2</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Odroid N2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Odroid XU3 / XU4 / MC1 / HC1 / HC2</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Odroid XU3 / XU4 / MC1 / HC1 / HC2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_OdroidXU4-ARMv7-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidXU4-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
@@ -101,7 +101,7 @@ It is a new generation single board computer that is more powerful, more stable,
 
 ## PINE64
 
-This is where PINE64 journey began. The PINE A64 is their first Single Board Computer powered by Allwinner's A64 Quad-Core ARM Cortex A53 64-Bit SOC. For more details visit <a target="_blank" href="https://www.pine64.org">PINE64.org</a>
+This is where PINE64 journey began. The PINE A64 is their first Single Board Computer powered by Allwinner's A64 Quad-Core ARM Cortex A53 64-Bit SOC. For more details visit <a target="_blank" rel="noopener" href="https://www.pine64.org/">PINE64.org</a>
 
 The ROCKPro64 is the most powerful single board computer offered by PINE64.
 
@@ -123,33 +123,33 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>PINE A64</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>PINE A64</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_PineA64-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PineA64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>PINE H64</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>PINE H64</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_PineH64-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PineH64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Pinebook</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Pinebook</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_Pinebook-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Pinebook-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>ROCK64</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>ROCK64</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_Rock64-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Rock64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>ROCKPro64</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>ROCKPro64</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_RockPro64-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RockPro64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
@@ -159,7 +159,7 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
 ## ROCK Pi
 
 **Maker Friendly, IoT connectivity** enabled. Radxa ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
-For more details visit the [Radxa ROCK Pi](http://rockpi.org/) website.
+For more details visit the [**Radxa ROCK Pi**](https://rockpi.org/) website.
 
 One of the supported boards is ROCK Pi 4.
 
@@ -177,15 +177,15 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>ROCK Pi 4</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>ROCK Pi 4</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>ROCK Pi S</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>ROCK Pi S</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
@@ -194,7 +194,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
 
 ## Firefly
 
-**Six-core 64-bit High Performance Open Source Platform**. For more details visit [Firefly RK3399](http://en.t-firefly.com/product/rk3399.html) website.
+**Six-core 64-bit High Performance Open Source Platform**. For more details visit [**Firefly RK3399**](https://en.t-firefly.com/product/rk3399.html) website.
 
 <img src="../assets/images/dietpi-firefly-rk3399.png" title="Firefly RK3399" width="500" />
 
@@ -208,18 +208,18 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Firefly RK3399</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Firefly RK3399</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_FireflyRK3399-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_FireflyRK3399-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
 
-## Sparky SBC
+## Allo Sparky SBC
 
-Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit the [Allo Sparky SBC](https://www.allo.com/sparky/sparky-sbc.html) website.
+Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit the [**Allo Sparky SBC**](https://www.allo.com/sparky/sparky-sbc.html) website.
 
 <img src="../assets/images/dietpi-sparky-sbc.jpg" title="Sparky SBC" width="500" />
 
@@ -233,9 +233,9 @@ Sparky Single Board Computer (SBC) is a credit card-sized board that can be used
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Sparky SBC</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Sparky SBC</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_SparkySBC-ARMv7-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_SparkySBC-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
@@ -244,7 +244,7 @@ Sparky Single Board Computer (SBC) is a credit card-sized board that can be used
 
 ## ASUS Tinker Board
 
-Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit the [ASUS Tinker Board](https://www.asus.com/Single-Board-Computer/Tinker-Board/) website.
+Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit the [**ASUS Tinker Board**](https://tinker-board.asus.com/index.html) website.
 
 Tinker Board features standard maker connectivity options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
 
@@ -264,9 +264,9 @@ Careful consideration went into the design and development of the Tinker Board t
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>ASUS Tinker Board</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>ASUS Tinker Board</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_ASUSTB-ARMv7-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ASUSTB-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
@@ -293,111 +293,111 @@ For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) websi
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi NEO</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO-ARMv7-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO Plus2</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi NEO Plus2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEOPlus2-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEOPlus2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO2</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi NEO2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO2 Black</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi NEO2 Black</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://github.com/MichaIng/DietPi/issues/3333">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://github.com/MichaIng/DietPi/issues/3333">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO3</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi NEO3</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO3-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO3-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi NEO4</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi NEO4</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K1 Plus</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi K1 Plus</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiK1Plus-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiK1Plus-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi K2</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi K2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiK2-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiK2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M1 Plus</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi M1 Plus</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM1Plus-ARMv7-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1Plus-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M1/T1</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi M1/T1</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM1-ARMv7-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M2/T2</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi M2/T2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM2-ARMv7-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM2-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M3/T3</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi M3/T3</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM3-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM3-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi M4V2</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi M4V2</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiM4V2-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4V2-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPC T4</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPC T4</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPC M4</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPC M4</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi Fire3</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi Fire3</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>NanoPi R2S</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>NanoPi R2S</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiR2S-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR2S-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>ZeroPi</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>ZeroPi</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NanoPiZeroPi-ARMv7-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiZeroPi-ARMv7-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
@@ -436,33 +436,33 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
         </thead>
         <tbody>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Native PC for BIOS/CSM</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Native PC for BIOS/CSM</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Native PC UEFI</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Native PC UEFI</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>VMware</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>VMware</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>VirtualBox</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>VirtualBox</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
-                <td align="left"><a class="table" target="_blank" href=""><strong>Hyper-V</strong></a></td>
+                <td align="left"><a class="table" href=""><strong>Hyper-V</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a target="_blank" href="https://github.com/yumiris/DietPi.Hyper-V/blob/master/README.md">DietPi image</a></li>
+                   <strong>Download</strong>: <a target="_blank" rel="noopener" href="https://github.com/yumiris/DietPi.Hyper-V/blob/master/README.md">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>
