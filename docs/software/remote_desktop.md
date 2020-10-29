@@ -11,7 +11,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](#xrdp-remote-desktop-server-for-windows-remote-desktop-client)
 - [**NoMachine - Feature rich remote desktop connection**](#nomachine-feature-rich-remote-desktop-connection)
 
-### Remote Access:
+### Remote Access
 
 - [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it-weaved-access-your-device-over-the-internet)  
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)  
@@ -111,7 +111,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 === "VNC Server modes"
 
     #### Basics
-    
+
     By default DietPi will start a virtual VNC session on boot at screen :1 for user root.  
     The screen index can be changed via `SOFTWARE_VNCSERVER_DISPLAY_INDEX` in `/boot/dietpi.txt`.
     Logs can be viewed via `journalctl -t Xvnc:1 -t vncserver` and in `/root/.vnc/`.
@@ -194,7 +194,6 @@ NoMachine is a remote desktop server with advanced features, such as screen reco
     5. Select `Yes` for *Do you want NoMachine to create a new display*.
 
     You will now be connected to your device.
-
 
 ## Remot3.it - (Weaved) Access your device over the internet
 

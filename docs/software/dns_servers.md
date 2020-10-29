@@ -103,7 +103,7 @@ Use your No-IP account and website URL address to always have it pointing to you
 
 The setup of No-IP is done as follows:
 
-- Create your free No-IP account https://www.noip.com/sign-up and select a web address for your account.
+- Create your free No-IP account <https://www.noip.com/sign-up> and select a web address for your account.
 - Type `dietpi-config` in a terminal and press enter.
 - Go to *Networking Options: Misc* and select *No-IP* from the menu.
     If No-IP is not yet installed, confirm the installation and reselect No-IP from the menu once completed.
