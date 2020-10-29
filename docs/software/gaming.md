@@ -42,9 +42,9 @@ Play a classic addictive game from the console or desktop.
 
 === "Personal Note"
 
-    Tyrian (OpenTyrian) if not the best game in the world, is the best topdown shooter/scroller game ever created.  
+    Tyrian (OpenTyrian) if not the best game in the world, is the best top down shooter/scroller game ever created.  
     OpenTyrian is best experienced by using a mouse and the Enter key to change rear fire mode.  
-    Its old, retro, and a classic etc, but i doubt you'll to find a recent and similar game thats anywhere close to OpenTyrian addictiveness.
+    Its old, retro, and a classic etc, but I doubt you will to find a recent and similar game that is anywhere close to OpenTyrian addictiveness.
 
 ## Cuberite - Fast Minecraft server with web interface
 
@@ -54,7 +54,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
 === "Access the web interface"
 
-    - URL= `http://<your.IP>:1339` (replace with your DietPis local IP)
+    - URL= `http://<your.IP>:1339` (replace with your DietPi's local IP)
     - Username = `admin`
     - Password = your global password
 
@@ -123,7 +123,7 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
     3. Click create new server on the left hand side of screen
     4. Enter a server name, then click create new server at the bottom
     5. Your server will now be visible at the bottom of the dashboard screen, select it
-    6. In the dropdown boxes `Change profile to:` and `Change runnable jar to:` select the entry which contains the server version number you downloaded in profiles
+    6. In the drop down boxes `Change profile to:` and `Change runnable jar to:` select the entry which contains the server version number you downloaded in profiles
     7. Click accept EULA
     8. Click accept EULA again
     9. Click Start
@@ -167,7 +167,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 === "First Run Setup"
 
     - Kickstarts (Amiga BIOS/boot system)  
-      Amiga kickstart ROM images are required to run the system(s) you want to emulate. These can not be bundled due to copyright restrictions.  
+      Amiga Kickstart ROM images are required to run the system(s) you want to emulate. These can not be bundled due to copyright restrictions.  
       If you own the Amiga Forever product, you can legally download and use Kickstarts you are eligible for, from: <https://www.amigaroms.net/>.  
       **Remark:** *Kickstart 1.3 (A500-A2500-A3000-CDTV) is highly recommended to work with most games.*  
       Kickstarts need to be placed in `/mnt/dietpi_userdata/amiberry/kickstarts`
@@ -190,7 +190,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
     Once Amiberry is running, you will need to configure the emulator, to tell it which Amiga system to emulate.
 
-    - Select Quickstart (from the left hand side menu)
+    - Select `Quickstart` (from the left hand side menu)
     - Under Amiga model: Select the Amiga model you'd like to emulate (example A500)
     - Under Config: Select the additional options for the target Amiga model (if required)
     - Click the Set configuration, button to apply changes.
@@ -202,16 +202,16 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
       - Under Main ROM File:, click the browse button (3 dots) ...
       - Navigate to your Kickstarts directory  
         `/mnt/dietpi_userdata/amiberry/kickstarts`  
-        Remark: Amiberry does not currently support symlinks. If you have a dedicated USB drive installation, the location is:  
+        Remark: Amiberry does not currently support symbolic links. If you have a dedicated USB drive installation, the location is:  
         `/mnt/uuid-of-drive/amiberry/kickstarts`
       - Select a Kickstart (1.3 is recommended)
 
     - Select a Floppy disk image (ADF):
       - On the left hand side, select Floppy drives.
-      - Under DF0:, select the browse button the right hand side (3 dots) ...
+      - Under `DF0:`, select the browse button the right hand side (3 dots) ...
       - Navigate to your Floppy image directory, e.g.   
         `/mnt/dietpi_userdata/amiberry/floppy_images`  
-        Remark: Amiberry does not currently support symlinks. If you have a dedicated USB drive installation, the location is:  
+        Remark: Amiberry does not currently support symbolic links. If you have a dedicated USB drive installation, the location is:  
         `/mnt/uuid-of-drive/amiberry/floppy_images`
       - Select the ROM you wish to use.
 
@@ -260,7 +260,7 @@ When ready, select Start to launch the emulator. Have fun!
     - Page Down = Fire/Button 1
     - Page Up= Fire/Button 2
 
-- How can I improve performance (framerate)?  
+- How can I improve performance (frame rate)?  
   A lower resolution may improve performance on most games. From the emulator main menu:
 
     - On the left hand side, select Display
@@ -275,7 +275,7 @@ When ready, select Start to launch the emulator. Have fun!
     - Select an overclocking profile, then reboot the system
 
 - How do i set the floppy drive speed for compatibility?  
-  Floppy drive emulation is to set to "800 %" by default. This reduces loading times by upto 8x. You can lower this to 100 %, increasing compatibility:
+  Floppy drive emulation is to set to "800 %" by default. This reduces loading times by up to 8x. You can lower this to 100 %, increasing compatibility:
 
     - On the left hand side, select Floppy Drives
     - Change the Floppy Drive Emulation Speed value to 100 %
@@ -321,8 +321,8 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
 - How do I transfer the original Descent full game files?
     - Before you begin, you will need the original game files, from a legal copy and installation of Descent.
     - Make sure you have one of DietPi's File Servers installed.
-    - Copy your Descent 1 Game files to /mnt/dietpi_userdata/dxx-rebirth/descent_1_game
-    - Copy your Descent 2 Game files to /mnt/dietpi_userdata/dxx-rebirth/descent_2_game
+    - Copy your Descent 1 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_1_game`
+    - Copy your Descent 2 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_2_game`
 - Where can I find more information on the DXX-Rebirth project?
     - <http://www.dxx-rebirth.com/>
 
