@@ -57,7 +57,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     - URL = http://192.168.0.100/phpinfo.php
 
-    **Access memcache info:**
+    **Access memory cache info:**
 
     - APCu = http://192.168.0.100/apc.php
     - OPcache = http://192.168.0.100/opcache.php
