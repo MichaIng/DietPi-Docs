@@ -337,7 +337,7 @@ Make sure you have one of DietPi's File Servers installed.
 
 ![DietPi gaming software Steam](../assets/images/dietpi-software-games-steam.jpg){: style="width:500px"}
 
-#### Installation notes
+### Installation notes
 
 - Steam is installed to the DietPi user data directory `/mnt/dietpi_userdata/steam`
 - By default, installing games will install them to `/mnt/dietpi_userdata/steam`
