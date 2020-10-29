@@ -19,4 +19,17 @@
 - [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
 - [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
 
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
+
+    ```
+    dietpi-software
+    ```
+
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+
+    ![DietPi software](../assets/images/dietpi-software.jpg)
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

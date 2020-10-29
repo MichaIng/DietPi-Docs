@@ -55,4 +55,17 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
 ![load-balancing-high-availability](../assets/images/dietpi-software-load-balancing-haproxy2.jpg)
 
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
+
+    ```
+    dietpi-software
+    ```
+
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+
+    ![DietPi software](../assets/images/dietpi-software.jpg)
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

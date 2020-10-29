@@ -18,23 +18,20 @@
 - [Minio - S3 compatible distributed object server](https://dietpi.com/phpbb/viewtopic.php?p=9121#p9121)  
 - [Firefox Sync Server - Sync bookmarks, tabs, history & passwords](https://dietpi.com/phpbb/viewtopic.php?p=24713#p24713)  
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
-    ```
-    dietpi-launcher
-    ```
-    and selected _DietPi-Software_. or launch directly the tool:
     ```
     dietpi-software
     ```
 
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi Software](../assets/images/dietpi-software.jpg)
+    ![DietPi software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ## Nextcloud - Self-hosted productivity platform
 
@@ -76,3 +73,5 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     [Nextcloud Website](https://nextcloud.com/athome/)
 
 ![DietPi-Software-Nextcloud](../assets/images/dietpi-software-cloud-nextcloud.jpg)
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

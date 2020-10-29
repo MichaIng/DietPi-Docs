@@ -22,6 +22,19 @@
 - [NZBGet - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
 - [HTPC Manager - combines all your favourite software into one slick interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p8043)
 
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
+
+    ```
+    dietpi-software
+    ```
+
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+
+    ![DietPi software](../assets/images/dietpi-software.jpg)
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ## Bazarr
@@ -62,3 +75,5 @@ Key features:
 
     - [Official docs](https://github.com/morpheus65535/bazarr/wiki)
     - [Source code](https://github.com/morpheus65535/bazarr)
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

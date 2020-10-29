@@ -7,17 +7,14 @@
 - [**PiVPN - OpenVPN server installer and management tool**](#pivpn-openvpn-server-installer-and-management-tool)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](#wireguard-an-extremely-simple-yet-fast-and-modern-vpn)
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
-    ```
-    dietpi-launcher
-    ```
-    and selected _DietPi-Software_. or launch directly the tool:
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
+
     ```
     dietpi-software
     ```
 
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi software](../assets/images/dietpi-software.jpg)
 
@@ -140,7 +137,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 === "Installing as VPN server"
 
     #### General
-    
+
     You are asked to enter your public IP/domain and the port on which the VPN server should be available. Remember to open/forward the port (UDP) through NAT on your router.  
     During installation, a client configuration file will be automatically created as well at:   
     `/etc/wireguard/wg0-client.conf`.
@@ -215,3 +212,5 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     If you update the kernel outside of APT, via `source build` or commands like `rpi-update`, assure that matching kernel headers are installed as well and rebuild the WireGuard module via: `dpkg-reconfigure wireguard-dkms`.
 
 See also <https://wikipedia.org/wiki/WireGuard> resp. <https://www.wireguard.com/>.
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

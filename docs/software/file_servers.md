@@ -7,17 +7,14 @@
 - [**vsftpd - Feature rich FTP file server**](#vsftpd-feature-rich-ftp-file-server)  
 - [**NFS - Network file system server**](#nfs-network-file-system-server)  
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
-    ```
-    dietpi-launcher
-    ```
-    and selected _DietPi-Software_. or launch directly the tool:
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
+
     ```
     dietpi-software
     ```
 
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi software](../assets/images/dietpi-software.jpg)
 
@@ -170,3 +167,5 @@ Network file system server.
     - Restart services via `systemctl restart nfs-kernel-server`
 
 See also <https://wikipedia.org/wiki/Network_File_System>.
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

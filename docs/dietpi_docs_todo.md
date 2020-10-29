@@ -154,7 +154,7 @@ The section with `dietpi-launcher`shall be deleted at all chapters. The result w
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 ``````
 
-- [ ] **ToDo Stephan:** Modify the text passages on the pages
+- [x] **ToDo Stephan:** Modify the text passages on the pages
 
 ### 6.3 Tabs for the DietPi tool programs?
 
@@ -175,7 +175,7 @@ Decision:
 - Keep the link below the "how do I run..." info box
 - Add the link at the bottom of the page
 
-- [ ] **ToDo Stephan:** Add links
+- [x] **ToDo Stephan:** Add links
 
 ## 7 Chapter "Advanced configuration"
 
