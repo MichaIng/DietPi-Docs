@@ -7,11 +7,15 @@ jobs:
       - name: Clone DietPi-Docs repository
         id: clone
         uses: actions/checkout@v2
+      - name: Install latest Node.js
+        run: |
+          sudo npm i -g n
+          sudo n latest
+      - name: Install markdownlint-cli2
+        run: sudo npm i -g markdownlint-cli2
       - name: Check Markdown syntax
-        # .markdownlintrc: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
-        uses: nosborn/github-action-markdown-cli@v1.1.1
-        with:
-          files: "*.md **/*.md"
+        # .markdownlint.yaml: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+        run: markdownlint-cli2 '**.md'
       - name: Set up Python 3.7
         id: python
         if: always() && steps.clone.outcome == 'success'
@@ -22,7 +26,7 @@ jobs:
         id: python_deps
         if: always() && steps.python.outcome == 'success'
         run: |
-          python3 -m pip install -U pip wheel setuptools
+          pip3 install -U pip wheel setuptools
           pip3 install -r requirements.txt
       - name: Configure MkDocs
         id: mkdocs_config
@@ -39,8 +43,10 @@ jobs:
         # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
         # .wordlist.txt
         uses: rojopolis/spellcheck-github-actions@0.5.0
-      - name: Check links in HTML and Markdown files
+      - name: Install liche
+        id: liche
         if: always() && steps.build.outcome == 'success'
-        run: |
-          GO111MODULE=on go get -u github.com/raviqqe/liche
-          $(go env GOPATH)/bin/liche -x 'https://github.com' -d build -r README.md build/docs
+        run: GO111MODULE=on go get -u github.com/raviqqe/liche
+      - name: Check links in HTML and Markdown files
+        if: always() && steps.liche.outcome == 'success'
+        run: $(go env GOPATH)/bin/liche -x 'https://github.com' -d build -r README.md build/docs
