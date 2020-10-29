@@ -275,9 +275,9 @@ Careful consideration went into the design and development of the Tinker Board t
 
 ## NanoPi Series (FriendlyARM)
 
-**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2x1.8GHz A72 cores and 4x1.4GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
+**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2 x 1.8 GHz A72 cores and 4 x 1.4 GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
 
-For more details visit **FriendlyARM** website.
+For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) website.
 
 <img src="../assets/images/dietpi-nanopi-k2.jpg" title="FriendlyARM NanoPi K2" width="500" />
 

@@ -164,7 +164,6 @@ LXDE
 LXQt
 macOS
 mangas
-memcache
 MariaDB
 Mbit
 Meveric
