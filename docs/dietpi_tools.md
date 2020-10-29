@@ -279,7 +279,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
     ![DietPi-Survey screenshot](assets/images/dietpi-survey.jpg)
 
-=== "DietPi bugreport"
+=== "DietPi bug report"
 
     Run `dietpi-bugreport`.
 
