@@ -3,6 +3,7 @@
 ## Overview
 
 ### Desktops
+
 - [**LXDE - Highly optimized ultra lightweight desktop**](#lxde-ultra-lightweight-desktop)
 - [**LXQt - Slick and optimized lightweight desktop**](#lxqt-optimized-lightweight-desktop)
 - [**MATE - Popular Gnome 2 desktop**](#mate-popular-gnome2-desktop)
@@ -10,6 +11,7 @@
 - [**GNUstep - Alternative/unique desktop**](#gnustep-alternativeunique-desktop)
 
 ### Desktop Utilities
+
 - [**Chromium - Web browser**](#chromium-web-browser)
 - [**GIMP - Image editor**](#gimp-image-editor)
 - [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss-atom-news-feeds-reader)
@@ -34,6 +36,7 @@
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
 ## LXDE - ultra lightweight desktop
+
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
 
 === "Quick start"
@@ -59,6 +62,7 @@ LXDE is highly optimized and ultra lightweight desktop. It works well with compu
 ![DietPi LXDE](../assets/images/dietpi-software-LXDE_desktop.jpg)
 
 ## LXQt - Optimized lightweight desktop
+
 Optimized lightweight desktop without the bloatware. Slick and fluid GUI, however, more resource heavy than LXDE.
 
 === "Quick start"
@@ -78,6 +82,7 @@ Optimized lightweight desktop without the bloatware. Slick and fluid GUI, howeve
 Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
 
 ## MATE - Popular Gnome2 desktop.
+
 Popular Gnome2 based desktop environment.
 
 === "Quick start"
@@ -157,6 +162,7 @@ MS Paint on steroids. If you need to edit pixels with a vast number of tools, GI
 https://www.gimp.org/
 
 ### QuiteRSS - Atom news feeds reader
+
 QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
 
 ![DietPi QuiteRSS](../assets/images/dietpi-software-desktop-tools-quiterss.jpg)
