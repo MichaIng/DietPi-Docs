@@ -1,12 +1,12 @@
 default: true
 MD003:
-- style: "atx"
+  style: 'atx'
 MD013: false
 MD024:
-- allow_different_nesting: true
+  allow_different_nesting: true
 MD025:
-- front_matter_title: ""
+  front_matter_title: ''
 MD026:
-- punctuation: ".,;:!"
+  punctuation: '.,;:!'
 MD033: false
 MD046: false
