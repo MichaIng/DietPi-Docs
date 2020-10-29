@@ -16,6 +16,47 @@
 !!! warning "Documentation in progress..."
     The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
 
+## BitTorrent / Download Tools
+
+- [Transmission - Lightweight BitTorrent server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p46)
+- [Deluge - Alternative BitTorrent server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p61)
+- [qBittorrent - Lightweight and fast (c++) BitTorrent server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2272)
+- [rTorrent - BitTorrent server with ruTorrent web interface](https://dietpi.com/phpbb/viewtopic.php?p=2603#p2603)
+- [Aria2 - Download manager with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p6177)
+- [SABnzbd - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p6747)
+- [Medusa - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3327)
+- [Sonarr - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p7455)
+- [Radarr - Automatically download Movies](https://dietpi.com/phpbb/viewtopic.php?p=7457#p7457)
+- [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](../software/bittorrent/#bazarr)
+- [Lidarr - Automatically download Music](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13580)
+- [CouchPotato - Automatically download movies.](https://dietpi.com/phpbb/viewtopic.php?p=7212#p7212)
+- [Jackett - API Support for your favourite torrent trackers.](https://dietpi.com/phpbb/viewtopic.php?p=7503#p7503)
+- [NZBGet - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
+- [HTPC Manager - combines all your favourite software into one slick interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p8043)
+
+## [Camera / Surveillance](../software/camera/)
+
+- [**RPi Cam Control - RPi Camera / Web Interface Surveillance**](../software/camera/#rpi-cam-control-rpi-camera-web-interface-surveillance)
+- [**MotionEye - Camera / Web Interface Surveillance**](../software/camera/#motioneye-camera-web-interface-surveillance)
+
+## Cloud & Backup systems  
+
+- [ownCloud - Your own personal cloud based backup/data storage system](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p47)  
+- [**Nextcloud - Self-hosted productivity platform**](../software/cloud/#nextcloud-self-hosted-productivity-platform)
+- [Nextcloud Talk - Video calls via Nextcloud, including TURN server](https://dietpi.com/phpbb/viewtopic.php?p=15227#p15227)  
+- [Pydio - Feature-rich backup and sync server with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=1064#p1064)  
+- [UrBackup Server - Full backups for systems on your network](https://dietpi.com/phpbb/viewtopic.php?p=65#p65)  
+- [Gogs - GitHub style server, with web interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2187)  
+- [Gitea - GitHub style server, with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=9863#p9863)  
+- [Syncthing - Backup and sync server with web interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2363)  
+- [Tonido - Lightweight backup and sync server with web interface, and, cloud access.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p6476)  
+- [Minio - S3 compatible distributed object server](https://dietpi.com/phpbb/viewtopic.php?p=9121#p9121)  
+- [Firefox Sync Server - Sync bookmarks, tabs, history & passwords](https://dietpi.com/phpbb/viewtopic.php?p=24713#p24713)  
+
+## [Computational Science](../software/computational_science/#computational-science/)
+
+- [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)
+
 ## [Desktops](../software/desktop/)
 
 - [**LXDE - Highly optimized ultra lightweight desktop**](../software/desktop/#lxde-ultra-lightweight-desktop)
@@ -31,12 +72,53 @@
 - [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss-atom-news-feeds-reader)
 - [**Xfce4 Power - Power manager with brightness**](../software/desktop/#xfce4-power-power-manager-with-brightness)
 
-## [Remote Desktop Access](../software/remote_desktop/#remote-desktop/)
+## [DNS Server](../software/dns_servers/#dns-servers-clients/)
 
-- [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection)
-- [**RealVNC Server - Desktop for remote connection**](../software/remote_desktop/#realvnc-server-desktop-for-remote-connection)
-- [**XRDP - Remote desktop server for Windows Remote Desktop Client**](../software/remote_desktop/#xrdp-remote-desktop-server-for-windows-remote-desktop-client)
-- [**NoMachine - Feature rich remote desktop connection**](../software/remote_desktop/#nomachine-feature-rich-remote-desktop-connection)
+- [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking)
+- [**No-IP - Website URL Address**](../software/dns_servers/#no-ip-dynamic-dns-update-client)
+
+## [File Server](../software/file_servers/#file-servers/)
+
+- [**ProFTPD - Simple, efficient, lightweight FTP file server**](../software/file_servers/#proftpd-simple-efficient-lightweight-ftp-file-server)
+- [**Samba - Feature rich file server**](../software/file_servers/#samba-feature-rich-file-server)
+- [**vsftpd - Feature rich FTP file server**](../software/file_servers/#vsftpd-feature-rich-ftp-file-server)
+- [**NFS - Network file system server**](../software/file_servers/#nfs-network-file-system-server)
+
+## Gaming / Emulation
+
+- [OpenTyrian - Gaming](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p45)
+- [Cuberite - Fast Minecraft server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2068)
+- [MineOS - Multiple Minecraft servers with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2069)
+- [Nukkit - Server for Minecraft Pocket Edition](https://dietpi.com/phpbb/viewtopic.php?p=10675#p10675)
+- [Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi](https://dietpi.com/phpbb/viewtopic.php?p=64#p64)
+- [DXX-Rebirth - Descent 1 & 2 OpenGL port](https://dietpi.com/phpbb/viewtopic.php?p=2963#p2963)
+- [Steam - Steam client](https://dietpi.com/phpbb/viewtopic.php?p=8016#p8016)
+
+## Hardware Projects
+
+- [Google AIY - Voice kit "Ok, Google"!.](https://dietpi.com/phpbb/viewtopic.php?p=9486#p9486)  
+- [Mycroft AI - Open source voice assistant](https://dietpi.com/phpbb/viewtopic.php?p=18562#p18562)  
+- [PiJuice - PiSupply UPS/battery power system.](https://dietpi.com/phpbb/viewtopic.php?p=10740#p10740)  
+- [RPi.GPIO - GPIO Interface library for RPi (python).](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=40#p1065)  
+- [WiringPi - GPIO Interface library (c).](https://dietpi.com/phpbb/viewtopic.php?p=1066#p1066)  
+- [WebIOPi - Web interface to control RPi GPIO.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p189)  
+- [Node-RED - Visual tool for wiring together hardware devices, APIs and online services.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4292)  
+- [Mosquitto - Message broker that implements MQTT protocol versions 3.1 and 3.1.1.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p4293)  
+- [Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p5901)  
+- [Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off.](https://dietpi.com/phpbb/viewtopic.php?p=9359#p9359)  
+- [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
+- [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
+
+## Home Automation
+
+- [Home Assistant - Open-source home automation platform running on Python 3.](https://dietpi.com/phpbb/viewtopic.php?p=10416#p10416)  
+- [EmonPi - Lightweight Energy usage stats with EmonPi PCB.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1525)  
+- [Grasshopper - Web App to control Bticino MyHome](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p70)  
+
+## [Logging Systems](../software/log_system/#log-system-choices/)
+
+- [**DietPi-RAMlog - Lightweight RAM logging**](../software/log_system/#dietpi-ramlog-lightweight-ram-logging)
+- [**Full - Full logging system with Rsyslog and Logrotate**](../software/log_system/#full-full-logging-system-with-rsyslog-and-logrotate)
 
 ## Media Systems
 
@@ -68,52 +150,28 @@
 - [Ubooquity - Free home server for your comics and ebooks library](https://dietpi.com/phpbb/viewtopic.php?p=12969#p12969)
 - [Komga - Free and open source comics/mangas media server with web UI](https://dietpi.com/phpbb/viewtopic.php?p=26858#p26858)
 
-## BitTorrent / Download Tools
+## [Network Load Balancer](../software/load_balancer/#network-load-balancing/)
 
-- [Transmission - Lightweight BitTorrent server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p46)
-- [Deluge - Alternative BitTorrent server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p61)
-- [qBittorrent - Lightweight and fast (c++) BitTorrent server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2272)
-- [rTorrent - BitTorrent server with ruTorrent web interface](https://dietpi.com/phpbb/viewtopic.php?p=2603#p2603)
-- [Aria2 - Download manager with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p6177)
-- [SABnzbd - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p6747)
-- [Medusa - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3327)
-- [Sonarr - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p7455)
-- [Radarr - Automatically download Movies](https://dietpi.com/phpbb/viewtopic.php?p=7457#p7457)
-- [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](../software/bittorrent/#bazarr)
-- [Lidarr - Automatically download Music](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13580)
-- [CouchPotato - Automatically download movies.](https://dietpi.com/phpbb/viewtopic.php?p=7212#p7212)
-- [Jackett - API Support for your favourite torrent trackers.](https://dietpi.com/phpbb/viewtopic.php?p=7503#p7503)
-- [NZBGet - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
-- [HTPC Manager - combines all your favourite software into one slick interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p8043)
+- [**HAProxy - High performance TCP/HTTP load balancer**](../software/load_balancer/#haproxy-high-performance-tcphttp-load-balancer)
 
-## Emulation & Gaming
+## [Printing Server](../software/printing/#printing/)
 
-- [OpenTyrian - Gaming](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p45)
-- [Cuberite - Fast Minecraft server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2068)
-- [MineOS - Multiple Minecraft servers with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=60#p2069)
-- [Nukkit - Server for Minecraft Pocket Edition](https://dietpi.com/phpbb/viewtopic.php?p=10675#p10675)
-- [Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi](https://dietpi.com/phpbb/viewtopic.php?p=64#p64)
-- [DXX-Rebirth - Descent 1 & 2 OpenGL port](https://dietpi.com/phpbb/viewtopic.php?p=2963#p2963)
-- [Steam - Steam client](https://dietpi.com/phpbb/viewtopic.php?p=8016#p8016)
+- [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint-cups-print-server)
+- [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint-web-interface-for-controlling-3d-printers)
 
-## [Camera / Surveillance](../software/camera/)
+## [Remote Desktop / Remote Access](../software/remote_desktop/)
 
-- [**RPi Cam Control - RPi Camera / Web Interface Surveillance**](../software/camera/#rpi-cam-control-rpi-camera-web-interface-surveillance)
-- [**MotionEye - Camera / Web Interface Surveillance**](../software/camera/#motioneye-camera-web-interface-surveillance)
+### [Remote Desktop](../software/remote_desktop/#remote-desktop/)
 
-## Cloud & Backup systems  
+- [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection)
+- [**RealVNC Server - Desktop for remote connection**](../software/remote_desktop/#realvnc-server-desktop-for-remote-connection)
+- [**XRDP - Remote desktop server for Windows Remote Desktop Client**](../software/remote_desktop/#xrdp-remote-desktop-server-for-windows-remote-desktop-client)
+- [**NoMachine - Feature rich remote desktop connection**](../software/remote_desktop/#nomachine-feature-rich-remote-desktop-connection)
 
-- [ownCloud - Your own personal cloud based backup/data storage system](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p47)  
-- [**Nextcloud - Self-hosted productivity platform**](../software/cloud/#nextcloud-self-hosted-productivity-platform)
-- [Nextcloud Talk - Video calls via Nextcloud, including TURN server](https://dietpi.com/phpbb/viewtopic.php?p=15227#p15227)  
-- [Pydio - Feature-rich backup and sync server with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=1064#p1064)  
-- [UrBackup Server - Full backups for systems on your network](https://dietpi.com/phpbb/viewtopic.php?p=65#p65)  
-- [Gogs - GitHub style server, with web interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2187)  
-- [Gitea - GitHub style server, with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=9863#p9863)  
-- [Syncthing - Backup and sync server with web interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2363)  
-- [Tonido - Lightweight backup and sync server with web interface, and, cloud access.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p6476)  
-- [Minio - S3 compatible distributed object server](https://dietpi.com/phpbb/viewtopic.php?p=9121#p9121)  
-- [Firefox Sync Server - Sync bookmarks, tabs, history & passwords](https://dietpi.com/phpbb/viewtopic.php?p=24713#p24713)  
+### [Remote Access](../software/remote_desktop/#remote-access/)
+
+- [**Remot3.it - (Weaved) Access your device over the internet**](../software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet)
+- [**VirtualHere - Share physically attached USB devices from your SBC over the network**](../software/remote_desktop/#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)
 
 ## Social / Search
 
@@ -125,36 +183,15 @@
 - [OpenBazaar - Decentralized peer to peer market server using Bitcoin](https://dietpi.com/phpbb/viewtopic.php?p=1796#p1796)  
 - [YaCy - Decentralized open source search engine](https://dietpi.com/phpbb/viewtopic.php?p=6202#p6202)
 
-## [WiFi HotSpot](../software/wifi_hotspot/)
+## [SSH Server](../software/ssh/#ssh-server-choices/)
 
-- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot_1)
-- [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/wifi_hotspot/#tor-hotspot)
+- [**Dropbear - Lightweight SSH Server**](../software/ssh/#dropbear-lightweight-ssh-server)
+- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../software/ssh/#openssh-feature-rich-ssh-server-with-sftpscp-support)
 
-## Home Automation
+## [System Security](../software/system_security/)
 
-- [Home Assistant - Open-source home automation platform running on Python 3.](https://dietpi.com/phpbb/viewtopic.php?p=10416#p10416)  
-- [EmonPi - Lightweight Energy usage stats with EmonPi PCB.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1525)  
-- [Grasshopper - Web App to control Bticino MyHome](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p70)  
-
-## Hardware Projects
-
-- [Google AIY - Voice kit "Ok, Google"!.](https://dietpi.com/phpbb/viewtopic.php?p=9486#p9486)  
-- [Mycroft AI - Open source voice assistant](https://dietpi.com/phpbb/viewtopic.php?p=18562#p18562)  
-- [PiJuice - PiSupply UPS/battery power system.](https://dietpi.com/phpbb/viewtopic.php?p=10740#p10740)  
-- [RPi.GPIO - GPIO Interface library for RPi (python).](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=40#p1065)  
-- [WiringPi - GPIO Interface library (c).](https://dietpi.com/phpbb/viewtopic.php?p=1066#p1066)  
-- [WebIOPi - Web interface to control RPi GPIO.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p189)  
-- [Node-RED - Visual tool for wiring together hardware devices, APIs and online services.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4292)  
-- [Mosquitto - Message broker that implements MQTT protocol versions 3.1 and 3.1.1.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p4293)  
-- [Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p5901)  
-- [Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off.](https://dietpi.com/phpbb/viewtopic.php?p=9359#p9359)  
-- [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
-- [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
-
-## [Remote Access](../software/remote_desktop/#remote-access/)
-
-- [**Remot3.it - (Weaved) Access your device over the internet**](../software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet)
-- [**VirtualHere - Share physically attached USB devices from your SBC over the network**](../software/remote_desktop/#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)
+- [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
+- [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)
 
 ## [System Stats / Management](../software/system_stats/#system-stats-management/)
 
@@ -166,10 +203,12 @@
 - [**Netdata - Web interface system stats**](../software/system_stats/#netdata-web-interface-system-stats)
 - [**webmin - Remote system management with web interface**](../software/system_stats/#webmin-remote-system-management-with-web-interface)
 
-## [System Security](../software/system_security/)
+## [VPN](../software/vpn/)
 
-- [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
-- [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)
+- [**DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users**](../software/vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users)
+- [**OpenVPN - Easy to use, minimal hassle VPN server**](../software/vpn/#openvpn-easy-to-use-minimal-hassle-vpn-server)
+- [**PiVPN - OpenVPN server installer & management tool**](../software/vpn/#pivpn-openvpn-server-installer-and-management-tool)
+- [**WireGuard - An extremely simple yet fast and modern VPN**](../software/vpn/#wireguard-an-extremely-simple-yet-fast-and-modern-vpn)
 
 ## [Web development](../software/webserver_stack/#web-development)
 
@@ -213,44 +252,7 @@
 - Python 3 & Flask - Micro web framework powered by Python
 - PHP - scripting language especially suited to web development
 
-## [DNS Servers & Clients](../software/dns_servers/#dns-servers-clients/)
+## [WiFi HotSpot](../software/wifi_hotspot/)
 
-- [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking)
-- [**No-IP - Website URL Address**](../software/dns_servers/#no-ip-dynamic-dns-update-client)
-
-## [File Servers](../software/file_servers/#file-servers/)
-
-- [**ProFTPD - Simple, efficient, lightweight FTP file server**](../software/file_servers/#proftpd-simple-efficient-lightweight-ftp-file-server)
-- [**Samba - Feature rich file server**](../software/file_servers/#samba-feature-rich-file-server)
-- [**vsftpd - Feature rich FTP file server**](../software/file_servers/#vsftpd-feature-rich-ftp-file-server)
-- [**NFS - Network file system server**](../software/file_servers/#nfs-network-file-system-server)
-
-## [VPN](../software/vpn/)
-
-- [**DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users**](../software/vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users)
-- [**OpenVPN - Easy to use, minimal hassle VPN server**](../software/vpn/#openvpn-easy-to-use-minimal-hassle-vpn-server)
-- [**PiVPN - OpenVPN server installer & management tool**](../software/vpn/#pivpn-openvpn-server-installer-and-management-tool)
-- [**WireGuard - An extremely simple yet fast and modern VPN**](../software/vpn/#wireguard-an-extremely-simple-yet-fast-and-modern-vpn)
-
-## [Network Load Balancer](../software/load_balancer/#network-load-balancing/)
-
-- [**HAProxy - High performance TCP/HTTP load balancer**](../software/load_balancer/#haproxy-high-performance-tcphttp-load-balancer)
-
-## [Printing](../software/printing/#printing/)
-
-- [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint-cups-print-server)
-- [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint-web-interface-for-controlling-3d-printers)
-
-## [Computational Science](../software/computational_science/#computational-science/)
-
-- [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)
-
-## [SSH Servers](../software/ssh/#ssh-server-choices/)
-
-- [**Dropbear - Lightweight SSH Server**](../software/ssh/#dropbear-lightweight-ssh-server)
-- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../software/ssh/#openssh-feature-rich-ssh-server-with-sftpscp-support)
-
-## [Log System Choices](../software/log_system/#log-system-choices/)
-
-- [**DietPi-RAMlog - Lightweight RAM logging**](../software/log_system/#dietpi-ramlog-lightweight-ram-logging)
-- [**Full - Full logging system with Rsyslog and Logrotate**](../software/log_system/#full-full-logging-system-with-rsyslog-and-logrotate)
+- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot_1)
+- [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/wifi_hotspot/#tor-hotspot)

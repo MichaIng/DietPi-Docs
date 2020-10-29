@@ -38,7 +38,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
     From the list of **Optimised Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
 
-## [29] TigerVNC Server - Desktop for remote connection
+## TigerVNC Server - Desktop for remote connection
 
 ![DietPi remote desktop software TigerVNC](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg){: style="width:600px"}
 
@@ -114,7 +114,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 === "VNC Server modes"
 
     #### Basics
-    
+
     By default DietPi will start a virtual VNC session on boot at screen :1 for user root.  
     The screen index can be changed via `SOFTWARE_VNCSERVER_DISPLAY_INDEX` in `/boot/dietpi.txt`.
     Logs can be viewed via `journalctl -t Xvnc:1 -t vncserver` and in `/root/.vnc/`.
