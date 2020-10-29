@@ -64,27 +64,27 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
     - general server settings
 
-        ```bash
+        ```
         /mnt/dietpi_userdata/cubrite/settings.ini
         ```
 
     - settings for the web administration
 
-      ```bash
-      /mnt/dietpi_userdata/cubrite/webadmin.ini
-      ```
+        ```
+        /mnt/dietpi_userdata/cubrite/webadmin.ini
+        ```
 
     - settings for the world
 
-      ```bash
-      /mnt/dietpi_userdata/cubrite/world/world.ini
-      ```
+        ```
+        /mnt/dietpi_userdata/cubrite/world/world.ini
+        ```
 
 === "Restart service"
 
     You can restart the service by running:
 
-    ```bash
+    ```
     systemctl restart cuberite
     ```
 
@@ -97,7 +97,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
     Update to newest version:
 
-    ```bash
+    ```
     dietpi-software reinstall 52
     ```
 
@@ -337,7 +337,7 @@ Make sure you have one of DietPi's File Servers installed.
 
 ![DietPi gaming software Steam](../assets/images/dietpi-software-games-steam.jpg){: style="width:500px"}
 
-Installation notes:
+#### Installation notes
 
 - Steam is installed to the DietPi user data directory `/mnt/dietpi_userdata/steam`
 - By default, installing games will install them to `/mnt/dietpi_userdata/steam`

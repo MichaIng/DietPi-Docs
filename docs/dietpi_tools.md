@@ -164,7 +164,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
     ![DietPi-Config screenshot](assets/images/dietpi-config.jpg)
 
-    **Display Settings**
+    #### Display Settings
 
     - Set your screen resolution, or go headless to save additional resources
     - Control your GPU memory splits
