@@ -122,10 +122,38 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 ### Install or remove software
 
 === "Install"
+
     Install selected software item(s), and these could come both from **optimised software** list or **additional software** items.
 
 === "Uninstall"
+
     Select one or more software items which you would like to be removed from your DietPi installation.
+
+=== "Command line based installation"
+
+    Beside the interactive software installation via `dietpi-software` with checking wanted software packages and installing them, there is the option of installing the software packages via the shell command line.  
+    The usage of `dietpi-software` is:
+
+    ```bash
+    Usage: dietpi-software [<command> [<software_id>...]]
+    Available commands:
+      <empty>			Interactive menu to install or uninstall software
+      install <software_id>...	Install each software given by space-separated list of IDs
+      reinstall <software_id>...	Reinstall each software given by space-separated list of IDs
+      uninstall <software_id>...	Uninstall each software given by space-separated list of IDs
+      list				Print a list with IDs and info for all available software titles
+      free				Print an unused software ID, free for a new software implementation
+    ```
+
+    The <software_id\> which has to be given is the one which is present in the software list within the `dietpi-software` dialogs:
+
+    ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: style="width:400px"}
+
+    E.g. to install Chromium, LXQt and GIMP you have to execute:
+
+    ```bash
+    dietpi-software install 113 173 174
+    ```
 
 ## Configuration
 
