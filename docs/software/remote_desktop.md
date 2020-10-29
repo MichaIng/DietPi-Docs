@@ -11,7 +11,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](#xrdp-remote-desktop-server-for-windows-remote-desktop-client)
 - [**NoMachine - Feature rich remote desktop connection**](#nomachine-feature-rich-remote-desktop-connection)
 
-### Remote Access:
+### Remote Access
 
 - [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it-weaved-access-your-device-over-the-internet)  
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)  

@@ -81,7 +81,7 @@ Optimized lightweight desktop without the bloatware. Slick and fluid GUI, howeve
 
 Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
 
-## MATE - Popular Gnome2 desktop.
+## MATE - Popular Gnome2 desktop
 
 Popular Gnome2 based desktop environment.
 
@@ -138,6 +138,7 @@ Popular Gnome2 based desktop environment.
 #### Does my device support GPU acceleration?
 
 Not all devices support GPU acceleration with Chromium.
+
 - RPis supports native OpenGL and will be configured during installation.
 - Odroids support OpenGLES and will be configured during installation.
 - Other devices will most likely be limited to software rendering.
@@ -159,7 +160,7 @@ MS Paint on steroids. If you need to edit pixels with a vast number of tools, GI
 
 ![DietPi GIMP](../assets/images/dietpi-software-desktop-tools-gimp.jpg)
 
-https://www.gimp.org/
+<https://www.gimp.org/>
 
 ### QuiteRSS - Atom news feeds reader
 
