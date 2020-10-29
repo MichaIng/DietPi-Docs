@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install latest Node.js
         run: |
-          npm i -g n
+          sudo npm i -g n
           n latest
       - name: Install markdownlint-cli2
         run: npm i -g --unsafe-perm markdownlint-cli2
