@@ -9,10 +9,7 @@
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
     To install any of the **DietPi Optimised Software** listed below run from the command line:
-    ```
-    dietpi-launcher
-    ```
-    and selected _DietPi-Software_. or launch directly the tool:
+
     ```
     dietpi-software
     ```
@@ -163,7 +160,7 @@ Network file system server.
     - Edit the following file /etc/exports
     - To only allow users access with an IP address range of 192.168.0.1-255
 
-        ```bash
+    ```bash
     /mnt/dietpi_userdata 192.168.0.*(rw,async,no_root_squash,fsid=0,crossmnt,no_subtree_check)
     ```
 

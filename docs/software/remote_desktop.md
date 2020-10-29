@@ -20,10 +20,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
     To install any of the **DietPi Optimised Software** listed below run from the command line:
-    ```
-    dietpi-launcher
-    ```
-    and selected _DietPi-Software_. or launch directly the tool:
+
     ```
     dietpi-software
     ```
@@ -216,7 +213,9 @@ Examples of TCP ports for Remot3.it:
 
     The first run setup is executed once `dietpi-software` has completed the installation and the system is rebooted. Run the following command. Follow the onscreen instructions to setup and link an account:
 
-    - `connectd_installer`
+    ```
+    connectd_installer
+    ```
 
     Once your account is created and linked to this system, you can select a port for Remot3.it to enable remote access.
 
