@@ -137,12 +137,12 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
     ```bash
     Usage: dietpi-software [<command> [<software_id>...]]
     Available commands:
-      <empty>			Interactive menu to install or uninstall software
-      install <software_id>...	Install each software given by space-separated list of IDs
-      reinstall <software_id>...	Reinstall each software given by space-separated list of IDs
-      uninstall <software_id>...	Uninstall each software given by space-separated list of IDs
-      list				Print a list with IDs and info for all available software titles
-      free				Print an unused software ID, free for a new software implementation
+      <empty>     Interactive menu to install or uninstall software
+      install     <software_id>...	Install each software given by space-separated list of IDs
+      reinstall   <software_id>...	Reinstall each software given by space-separated list of IDs
+      uninstall   <software_id>...	Uninstall each software given by space-separated list of IDs
+      list        Print a list with IDs and info for all available software titles
+      free        Print an unused software ID, free for a new software implementation
     ```
 
     The <software_id\> which has to be given is the one which is present in the software list within the `dietpi-software` dialogs:
