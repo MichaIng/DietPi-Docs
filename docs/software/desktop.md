@@ -19,10 +19,7 @@
 
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
     To install any of the **DietPi Optimised Software** listed below run from the command line:
-    ```
-    dietpi-launcher
-    ```
-    and selected _DietPi-Software_. or launch directly the tool:
+
     ```
     dietpi-software
     ```
@@ -38,19 +35,18 @@ LXDE is highly optimized and ultra lightweight desktop. It works well with compu
 
 === "Quick start"
     After installation, desktop can be run by typing
+
     ```
     startx
     ```
 
 === "Enable autostart"
-    To start different programs when the SBC starts, run from the command line the main DietPi tool:
-    ```
-    dietpi-launcher
-    ```
-    or directly.
+    To start different programs when the SBC starts, run from the command line:
+
     ```
     dietpi-autostart
     ```
+
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
 === "Official documentation"
@@ -63,6 +59,7 @@ Optimized lightweight desktop without the bloatware. Slick and fluid GUI, howeve
 
 === "Quick start"
     After installation, desktop can be run by typing
+
     ```
     startx
     ```
@@ -77,11 +74,12 @@ Optimized lightweight desktop without the bloatware. Slick and fluid GUI, howeve
 
 Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
 
-## MATE - Popular Gnome2 desktop.
+## MATE - Popular Gnome2 desktop
 Popular Gnome2 based desktop environment.
 
 === "Quick start"
     After installation, desktop can be run by typing
+
     ```
     startx
     ```
@@ -98,6 +96,7 @@ Popular Gnome2 based desktop environment.
 
 === "Quick start"
     After installation, desktop can be run by typing
+
     ```
     startx
     ```
@@ -114,6 +113,7 @@ Popular Gnome2 based desktop environment.
 
 === "Quick start"
     After installation, desktop can be run by typing
+
     ```
     startx
     ```
