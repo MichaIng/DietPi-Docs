@@ -2,17 +2,13 @@
 
 ## Overview
 
-!!! warning "Documentation in progress..."
-
-    The links redirect to the old documentation available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
-
-- [FreshRSS - A self-hosted RSS feed aggregator](https://dietpi.com/phpbb/viewtopic.php?p=13918#p13918)  
-- [phpBB - Free flat-forum bulletin board software solution](https://dietpi.com/phpbb/viewtopic.php?p=51#p51)  
-- [Wordpress - Website Blog and Publishing platform](https://dietpi.com/phpbb/viewtopic.php?p=395#p395)  
-- [Image Gallery - Host and browse your images from a web interface.](https://dietpi.com/phpbb/viewtopic.php?p=480#p480)  
-- [Baïkal - Lightweight CalDAV + CardDAV server](https://dietpi.com/phpbb/viewtopic.php?p=1502#p1502)  
-- [OpenBazaar - Decentralized peer to peer market server using Bitcoin](https://dietpi.com/phpbb/viewtopic.php?p=1796#p1796)  
-- [YaCy - Decentralized open source search engine](https://dietpi.com/phpbb/viewtopic.php?p=6202#p6202)
+- [**FreshRSS - A self-hosted RSS feed aggregator**](#freshrss-a-self-hosted-rss-feed-aggregator)  
+- [**phpBB - Free flat-forum bulletin board software solution**](#phpbb-free-flat-forum-bulletin-board-software-solution)  
+- [**Wordpress - Website Blog and Publishing platform**](#wordpress-website-blog-and-publishing-platform)  
+- [**Image Gallery - Host and browse your images from a web interface**](#image-gallery-host-and-browse-your-images-from-a-web-interface)  
+- [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal-lightweight-caldav-carddav-server)  
+- [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](#openbazaar-decentralized-peer-to-peer-market-server-using-bitcoin)  
+- [**YaCy - Decentralized open source search engine**](#yacy-decentralized-open-source-search-engine)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -26,5 +22,229 @@
     ![DietPi software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+
+## FreshRSS - A self-hosted RSS feed aggregator
+
+FreshRSS is a self-hosted RSS feed aggregator.
+
+![DietPi social software FreshRSS](../assets/images/dietpi-software-social-freshrss.jpg){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    - URL = `<http://<your.IP>/freshrss`
+    - Username = `dietpi`
+    - Password = `dietpi`
+
+=== "Usage"
+
+    Please refer to the official online documentation for usage information:  
+    <https://freshrss.github.io/FreshRSS/en/users/02_First_steps.html>
+
+## phpBB - Free flat-forum bulletin board software solution
+
+If you always wanted your very own forum, phpBB is all you need.
+
+Also Installs:
+
+- Webserver
+
+![DietPi social software phpBB](../assets/images/dietpi-software-social-phpbb.png){: style="width:500px"}
+
+### Access Forums
+
+URL = `http://<your.IP>/phpBB3`  
+(from DietPi v6.33 on: `http://<your.IP>/phpbb`)
+
+### First Run Setup
+
+DietPi automatically creates the SQL database for phpBB. Please follow the steps below to enter those details into phpBB to complete the setup.
+
+#### Access to the phpBB website
+
+- URL = `http://<your.IP>/phpBB3`  
+  (from DietPi v6.33 on: `http://<your.IP>/phpbb`)
+- Click the "Install" tab
+- Click "Proceed to next step"
+- Click "Start install"
+
+#### MySQL/MariaDB database details
+
+To enter the MySQL/MariaDB database details:
+
+- Database server hostname or DSN = `localhost`
+- Database username = `phpbb3` (from DietPi v6.33 on: `phpbb`)
+- Database name = `phpbb3` (from DietPi v6.33 on: `phpbb`)
+- Database password = `dietpi` (respectively your chosen global software password)
+
+- Click "Proceed to next step"
+- Click "Proceed to next step"
+
+#### Create your admin account
+
+This account will be used for full access to phpBB forum.
+
+- Click "Proceed to next step"
+- Click "Proceed to next step"
+- Click "Proceed to next step"
+
+#### Email and Server URL settings
+
+Use the default values.
+
+- Click "Proceed to next step"
+- Click "Proceed to next step"
+
+The database tables will now be generated, please wait.
+
+#### Login
+
+Click "Login"  
+Using your admin login details that you created previously, you can now manage and create your forum pages.
+
+As the installation is now completed, you will need to remove the installation folder, before the forum can be live. Run the following command:
+
+```sh
+rm -R /var/www/phpBB3/install
+# from DietPi v6.33 on:
+rm -R /var/www/phpbb/install
+```
+
+Your forum is now ready.
+
+## Wordpress - Website Blog and Publishing platform
+
+WordPress is a state-of-the-art semantic personal publishing platform with a focus on aesthetics, web standards, and usability.
+It allows you to create your own website.
+
+![DietPi social software Wordpress](../assets/images/dietpi-software-social-wordpress.jpg){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    URL = `http://<your.IP>/wordpress`
+
+=== "First time connect"
+
+    The first time you connect, enter the following MySQL database details:
+
+    - Database name = `wordpress`
+    - Username = `wordpress` (Previous to DietPi v6.0 = `root`)
+    - Password = your global application password
+    - Database Host = `localhost`
+    - Table Prefix = `wp_`
+
+## Image Gallery - Host and browse your images from a web interface
+
+*Image Gallery* allows you to host and browse your images from a web interface.
+
+Also Installs:
+
+- LASP Webserver
+
+![DietPi social software Image Gallery](../assets/images/dietpi-software-social-imagegallery.png){: style="width:500px"}
+
+=== "Access to Image Gallery"
+
+    URL = `http://<your.IP>/gallery`
+
+=== "Add images"
+
+    To add your own images:
+
+    - Create your image folder
+
+      ```sh
+      mkdir /var/www/gallery/MyImageFolder
+      ```
+
+    - Put an image file inside your new folder
+
+      ```sh
+      wget http://media.moddb.com/cache/images/articles/1/153/152601/crop_120x90/download.png
+      mv download.png /var/www/gallery/MyImageFolder/
+      ```
+
+## Baïkal - Lightweight CalDAV + CardDAV server
+
+Baïkal is a lightweight CalDAV + CardDAV server.
+
+![DietPi social software Baïkal](../assets/images/dietpi-software-social-baikal.png){: style="width:500px"}
+
+=== "First run setup"
+
+    Access the setup page:
+
+    - URL = `http://<your.IP>/baikal/html`
+    - Enter a new admin password for your account, then click the next/save button.
+
+    Enter MySQL Details:
+
+    - Use MySQL = Yes
+    - MySQL host = `127.0.0.1`
+    - MySQL database name = `baikal`
+    - MySQL username = `baikal`
+    - MySQL password = your global software password (default: `dietpi`)
+
+=== "Access the web interface"
+
+    - URL = `http://<your.IP>/baikal/html/admin`
+    - Username = `admin`
+    - Password = What you set during first run setup above.
+
+## OpenBazaar - Decentralized peer to peer market server using Bitcoin
+
+OpenBazaar is a free decentralised peer to peer market server for all. No fees. Usage of Bitcoins.  
+Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
+
+![DietPi social software OpenBazaar](../assets/images/dietpi-software-social-openbazaar.png){: style="width:500px"}
+
+=== "OpenBazaar Client"
+
+    The client will allow you to browse and trade, within the OpenBazaar market network.  
+    <https://www.openbazaar.org/download/>
+
+=== "Connecting OpenBazaar Client to your OpenBazaar Server"
+
+    Step 1:  
+    During installation, you will be asked to enter a username, password, and allowed IP address.
+
+    Step 2:  
+    Next, you will need to open the OpenBazaar Client and add your server:
+
+    - Click Menu (top right)
+    - Click New Server
+    - Select Standalone
+    - Enter the IP address of your DietPi device, and, the username and password you applied in step 1.
+
+## YaCy - Decentralized open source search engine
+
+YaCy is a decentralized open source search engine.  
+Essentially, it is a "peer-to-peer" Google search engine, not controlled by Google.
+
+![DietPi social software YaCy](../assets/images/dietpi-software-social-yacy.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    URL = `http://<your.IP>:8090`
+
+=== "Admin Interface Login"
+
+    Set password with:
+
+    ```sh
+    /etc/yacy/bin/passwd.sh mypassword
+    ```
+
+    Login details are then:
+
+    - Username = `admin`
+    - Password = `mypassword`
+
+=== "Reduce CPU usage"
+
+    YaCy is extremely CPU intensive, coupled with constant background processing, we highly recommend using `dietpi-services` to reduce process priority.
+
+    Recommended setting: Nice = 19
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
