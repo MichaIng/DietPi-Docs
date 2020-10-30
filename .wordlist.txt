@@ -87,6 +87,7 @@ ebooks
 EEPROM
 Emby
 eMMC
+emoncms
 EmonCMS
 EmonPi
 EmonTH
@@ -113,6 +114,7 @@ GMediaRender
 GNUstep
 Gogs
 GPIO
+GPIOs
 GPL
 GPT
 Grafana
@@ -130,6 +132,7 @@ hotspot
 Hotspot
 HotSpot
 Hotspots
+htop
 HTPC
 http
 HTTPS
