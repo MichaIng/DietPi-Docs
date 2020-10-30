@@ -242,27 +242,32 @@ When ready, select Start to launch the emulator. Have fun!
 
 ### FAQ
 
-**How can I transfer Kickstarts & Floppy Images to the device?**  
+#### How can I transfer Kickstarts & Floppy Images to the device?
+
 Make sure you have one of DietPi's File Servers installed.
 
-- Floppy Disk Image (.adf) directory as chosen before, e.g. `/amiberry/floppy_images`  
+- Floppy Disk Image (.adf) directory as chosen before, e.g. `/amiberry/floppy_images`
 - Kickstarts (.rom) directory = `/amiberry/kickstarts`
 
-**How can I open the configuration window once the emulator has started?**  
+#### How can I open the configuration window once the emulator has started?
+
 The pre-defined key for that is F12.
 
-**How can I reboot the Amiga emulation environment (Amiga reset)?**  
+#### How can I reboot the Amiga emulation environment (Amiga reset)?
+
 Use Ctrl + Left Windows + Right Windows keys.  
 If you don’t have a Right Windows key, try using the menu key instead.
 
-**What are the default controls for Joystick, when using a Keyboard?**  
+#### What are the default controls for Joystick, when using a Keyboard?
+
 When using a keyboard, the default joystick controls are:
 
 - Arrow Keys = Up/Down/Left/Right  
 - Page Down = Fire/Button 1  
 - Page Up= Fire/Button 2  
 
-**How can I improve performance (frame rate)?**  
+#### How can I improve performance (frame rate)?
+
 A ***lower resolution*** may improve performance on most games. From the emulator main menu:
 
 - On the left hand side, select Display  
@@ -276,14 +281,16 @@ A ***lower resolution*** may improve performance on most games. From the emulato
 - Select Overclocking Profiles
 - Select an overclocking profile, then reboot the system
 
-**How do i set the floppy drive speed for compatibility?**  
+#### How do i set the floppy drive speed for compatibility?
+
 Floppy drive emulation is to set to "800 %" by default. This reduces loading times by up to 8x.  
 You can lower this to 100 %, increasing compatibility:
 
 - On the left hand side, select Floppy Drives
 - Change the Floppy Drive Emulation Speed value to 100 %
 
-**Some games are not in full screen**  
+#### Some games are not in full screen
+
 Games run at various resolutions, from the emulator main menu:
 
 - On the left hand side, select Display
