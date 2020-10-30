@@ -168,7 +168,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
     - Kickstarts (Amiga BIOS/boot system)  
       Amiga Kickstart ROM images are required to run the system(s) you want to emulate. These can not be bundled due to copyright restrictions.  
-      If you own the Amiga Forever product, you can legally download and use Kickstarts you are eligible for, from: <https://www.amigaroms.net/>.  
+      If you own the Amiga Forever product, you can legally download and use Kickstarts you are eligible for, from: <https://www.amigaroms.com/>.  
       **Remark:** *Kickstart 1.3 (A500-A2500-A3000-CDTV) is highly recommended to work with most games.*  
       Kickstarts need to be placed in `/mnt/dietpi_userdata/amiberry/kickstarts`
     - Floppy disks (Amiga .adf images)  
@@ -242,49 +242,60 @@ When ready, select Start to launch the emulator. Have fun!
 
 ### FAQ
 
-- How can I transfer Kickstarts & Floppy Images to the device?  
-  Make sure you have one of DietPi's File Servers installed.
+#### How can I transfer Kickstarts & Floppy Images to the device?
 
-    - Floppy Disk Image (.adf) directory as chosen before, e.g. `/amiberry/floppy_images`
-    - Kickstarts (.rom) directory = `/amiberry/kickstarts`
+Make sure you have one of DietPi's File Servers installed.
 
-- How can I open the configuration window once the emulator has started?  
-  The pre-defined key for that is F12.
-- How can I reboot the Amiga emulation environment (Amiga reset)?  
-  Use Ctrl + Left Windows + Right Windows keys. If you don’t have a Right Windows key, try using the menu key instead.
-- What are the default controls for Joystick, when using a Keyboard?
-  When using a keyboard, the default joystick controls are:
+- Floppy Disk Image (.adf) directory as chosen before, e.g. `/amiberry/floppy_images`
+- Kickstarts (.rom) directory = `/amiberry/kickstarts`
 
-    - Arrow Keys = Up/Down/Left/Right
-    - Page Down = Fire/Button 1
-    - Page Up= Fire/Button 2
+#### How can I open the configuration window once the emulator has started?
 
-- How can I improve performance (frame rate)?  
-  A lower resolution may improve performance on most games. From the emulator main menu:
+The pre-defined key for that is F12.
 
-    - On the left hand side, select Display
-    - 640x256 is high resolution
-    - 320x256 is low resolution and should provide improved performance  
+#### How can I reboot the Amiga emulation environment (Amiga reset)?
 
-    Overclocking your system will improve performance. Stability may vary across devices and overclocking is not officially supported:
+Use Ctrl + Left Windows + Right Windows keys.  
+If you don’t have a Right Windows key, try using the menu key instead.
 
-    - From a terminal, run dietpi-config
-    - Select the Performance Options menu
-    - Select Overclocking Profiles
-    - Select an overclocking profile, then reboot the system
+#### What are the default controls for Joystick, when using a Keyboard?
 
-- How do i set the floppy drive speed for compatibility?  
-  Floppy drive emulation is to set to "800 %" by default. This reduces loading times by up to 8x. You can lower this to 100 %, increasing compatibility:
+When using a keyboard, the default joystick controls are:
 
-    - On the left hand side, select Floppy Drives
-    - Change the Floppy Drive Emulation Speed value to 100 %
+- Arrow Keys = Up/Down/Left/Right  
+- Page Down = Fire/Button 1  
+- Page Up= Fire/Button 2  
 
-    Some games are not in full screen:  
-    Games run at various resolutions, from the emulator main menu:
+#### How can I improve performance (frame rate)?
 
-    - On the left hand side, select Display
-    - Change the Height value to 200 or 256
-    - Press the Resume or Start button
+A ***lower resolution*** may improve performance on most games. From the emulator main menu:
+
+- On the left hand side, select Display  
+- 640x256 is high resolution  
+- 320x256 is low resolution and should provide improved performance  
+
+***Overclocking*** your system will improve performance. Stability may vary across devices and overclocking is not officially supported:  
+
+- From a terminal, run dietpi-config
+- Select the Performance Options menu
+- Select Overclocking Profiles
+- Select an overclocking profile, then reboot the system
+
+#### How do i set the floppy drive speed for compatibility?
+
+Floppy drive emulation is to set to "800 %" by default. This reduces loading times by up to 8x.  
+You can lower this to 100 %, increasing compatibility:
+
+- On the left hand side, select Floppy Drives
+- Change the Floppy Drive Emulation Speed value to 100 %
+
+#### Some games are not in full screen
+
+Games run at various resolutions, from the emulator main menu:
+
+- On the left hand side, select Display
+- Change the Height value to 200 or 256
+- Press the Resume or Start button
 
 If you find this installation useful, please donate.
 All donations using this link will be split 50/50 between Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).  
@@ -317,19 +328,23 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
 
 ### FAQ
 
-- How do I transfer the original Descent full game files?
-    - Before you begin, you will need the original game files, from a legal copy and installation of Descent.
-    - Make sure you have one of DietPi's File Servers installed.
-    - Copy your Descent 1 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_1_game`
-    - Copy your Descent 2 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_2_game`
-- Where can I find more information on the DXX-Rebirth project?
-    - <http://www.dxx-rebirth.com/>
+#### How do I transfer the original Descent full game files?
+
+Before you begin, you will need the original game files, from a legal copy and installation of Descent.  
+Make sure you have one of DietPi's File Servers installed.
+
+- Copy your Descent 1 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_1_game`
+- Copy your Descent 2 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_2_game`
+
+#### Where can I find more information on the DXX-Rebirth project?
+
+<http://www.dxx-rebirth.com/>
 
 ## Steam - Steam client
 
 ![DietPi gaming software Steam](../assets/images/dietpi-software-games-steam.jpg){: style="width:500px"}
 
-#### Installation notes
+### Installation notes
 
 - Steam is installed to the DietPi user data directory `/mnt/dietpi_userdata/steam`
 - By default, installing games will install them to `/mnt/dietpi_userdata/steam`

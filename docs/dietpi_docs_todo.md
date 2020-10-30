@@ -34,7 +34,7 @@ Or shall it be added as a postfix?
 - Add a description "command line based installation of software packages" there <https://dietpi.com/docs/dietpi_tools/> after DietPi-Software\Install or remove software.
 
 - [x] **ToDo Stephan:** Delete '29'
-- [ ] **ToDo Stephan:** Add a section for the command line software installation
+- [x] **ToDo Stephan:** Add a section for the command line software installation
 
 ## 2 Supported Single Board Computers (SBCs)
 
