@@ -81,6 +81,7 @@ DPMS
 DRM
 Dropbear
 DSI
+DSN
 DVFS
 DXX
 ebooks
@@ -229,6 +230,7 @@ odroid
 Odroid
 Odroids
 Ok
+Oldschool
 OPcache
 OpenBazaar
 OpenGL

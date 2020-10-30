@@ -73,7 +73,7 @@ DietPi automatically creates the SQL database for phpBB. Please follow the steps
 
 To enter the MySQL/MariaDB database details:
 
-- Database server hostname or DSN = `localhost`
+- Database server hostname or data source name (DSN) = `localhost`
 - Database username = `phpbb3` (from DietPi v6.33 on: `phpbb`)
 - Database name = `phpbb3` (from DietPi v6.33 on: `phpbb`)
 - Database password = `dietpi` (respectively your chosen global software password)
