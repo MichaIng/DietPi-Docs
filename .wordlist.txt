@@ -87,7 +87,10 @@ ebooks
 EEPROM
 Emby
 eMMC
+EmonCMS
 EmonPi
+EmonTH
+EmonTX
 exFAT
 facto
 fahclient
@@ -120,6 +123,7 @@ HC
 hexa
 HiFi
 HiFiBerry
+homeassistant
 hostname
 Hotfix
 hotspot
@@ -253,6 +257,7 @@ PiVPN
 Plex
 pre
 ProFTPD
+PSU
 PuTTY
 Pydio
 pyenv
@@ -324,6 +329,7 @@ TCP
 tcpdump
 TigerVNC
 Tonido
+TRÅDFRI
 txt
 Tyrian
 uae
@@ -359,6 +365,7 @@ webserver
 Webservers
 Webserves
 webstack
+Wh
 Widevine
 wikimedia
 WinSCP

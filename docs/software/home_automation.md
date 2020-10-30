@@ -37,7 +37,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     - Run `htop` and wait until the CPU usage of the homeassistant processes goes down to nearly zero.
     - Run `systemctl restart home-assistant`
     - Run `htop` and wait until the CPU usage of the homeassistant processes goes down to nearly zero.
-    - Open the HA web UI (see below). It will again install some Python modules on first access, which can again take a little while. Always check htop if you are unsure, which reveals any Python/pip module install process, if currently done.
+    - Open the HA web UI (see below). It will again install some Python modules on first access, which can again take a little while. Always check `htop` if you are unsure, which reveals any Python/pip module install process, if currently done.
 
 === "Access to the web interface"
 
@@ -69,7 +69,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     /home/homeassistant/homeassistant-update.sh
     ```
 
-=== "Known additional dependencies for optional integrations"
+=== "Known additional dependencies for device integration"
 
     IKEA TRÅDFRI: `apt install autoconf`
 
@@ -83,28 +83,28 @@ Turn your Raspberry Pi into a energy usage monitor with web interface.
 
 The DietPi optimized installation for EmonPi is aimed at users who want the following:
 
-  - Ultra lightweight alternative installation to the official EmonPi image, with all the optimisations and features of DietPi. Allowing additional uses for your RPi device (eg: ownCloud server): [htop image of RPi Zero @700 Mhz](https://dietpi.com/downloads/misc/EmonPi_Guide/EmonPi_DietPi_zero_700mhz.jpg), running our EmonPi installation.
-  - Realtime and historical energy usage statistics uploaded to the emoncms.org cloud, viewable from a web browser and the [Android App](https://openenergymonitor.org/forum-archive/node/11260.html), from anywhere in the world.
-  - Use an existing RPi, or, do not wish to purchase the full EmonPi package (eg: case).
-  - Comfortable attaching the EmonPi to your Raspberry Pi GPIO. No soldering or wiring is required.
+- Ultra lightweight alternative installation to the official EmonPi image, with all the optimisations and features of DietPi. Allowing additional uses for your RPi device (e.g.: ownCloud server): [htop image of RPi Zero @700 MHz](https://dietpi.com/downloads/misc/EmonPi_Guide/EmonPi_DietPi_zero_700mhz.jpg), running our EmonPi installation.
+- Real time and historical energy usage statistics uploaded to the [emoncms.org](https://emoncms.org/) cloud, viewable from a web browser and the [Android App](https://openenergymonitor.org/forum-archive/node/11260.html), from anywhere in the world.
+- Use an existing RPi, or, do not wish to purchase the full EmonPi package (e.g.: case).
+- Comfortable attaching the EmonPi to your Raspberry Pi GPIO. No soldering or wiring is required.
 
 ### Missing support
 
 The DietPi installation does not support:
 
-  - RF transmission. RF receiver (sensor nodes) is supported (eg: EmonTX/EmonTH)
-  - EmonPi LCD screen.
-  - Local emonCMS webserver on RPi. All EmonPi data is sent to [emoncms.org](https://emoncms.org/) cloud.
+- RF transmission. RF receiver (sensor nodes) is supported (e.g.: EmonTX/EmonTH)
+- EmonPi LCD screen.
+- Local EmonCMS webserver on RPi. All EmonPi data is sent to [emoncms.org](https://emoncms.org/) cloud.
 
 ### Requirements
 
 The following hardware is required:
 
-  - 1x EmonPi PCB - [Order one here](https://shop.openenergymonitor.com/emonpi-shield-kit-no-enclosure/): Select 1 Clip-on CT Current Sensor (all together £33.42), or sensors based on your needs. [Image of what you will receive](https://cdn2.bigcommerce.com/server4400/98a75/product_images/optionset_rule_images/28_zoom_1429716170.jpg).  
-    This installation also supports the optional temperature sensor, but its not required.
-  - 1x Raspberry Pi (any model)
-  - 1x Good quality Raspberry Pi PSU. The EmonPi does not need its own power supply. It will draw power directly through the GPIO's on the RPi.
-  - Alternatively you can power the RPi through the EmonPi shield via GPIO. For this, add the EmonPi PSU to the chart and skip buying a dedicated PSU for the RPi itself.
+- 1x EmonPi PCB - [Order one here](https://shop.openenergymonitor.com/emonpi-shield-kit-no-enclosure/): Select 1 Clip-on CT Current Sensor (all together £33.42), or sensors based on your needs. [Image of what you will receive](https://cdn2.bigcommerce.com/server4400/98a75/product_images/optionset_rule_images/28_zoom_1429716170.jpg).  
+  This installation also supports the optional temperature sensor, but its not required.
+- 1x Raspberry Pi (any model)
+- 1x Good quality Raspberry Pi PSU. The EmonPi does not need its own power supply. It will draw power directly through the GPIOs on the RPi.
+- Alternatively you can power the RPi through the EmonPi shield via GPIO. For this, add the EmonPi PSU to the chart and skip buying a dedicated PSU for the RPi itself.
 
 === "During Installation"
 
@@ -128,7 +128,7 @@ The following hardware is required:
 
     #### Assign a name to your power sensor input
 
-    Inputs are the realtime value of the data received from the EmonPi. We will assign a name to the power value so we can use it later.
+    Inputs are the real time value of the data received from the EmonPi. We will assign a name to the power value so we can use it later.
 
     - Login to your `https://emoncms.org` account
     - Click `Setup` at the top right of screen, then click `Inputs`
