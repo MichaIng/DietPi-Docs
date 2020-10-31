@@ -295,7 +295,7 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
         - Under `Device ID`, paste in the UUID we copied earlier.
         - Under `Device name`, enter any name. e.g.: *My Windows PC*.
         - Under `Share Folders With Device` tick/select DietPi user data, then click `save`.
-    - After a few seconds, go back to the Windows web interface <http://127.0.0.1:8384/>. You should receive a message asking you to confirm the new device, click `Add Device`.
+    - After a few seconds, go back to the Windows web interface `http://127.0.0.1:8384/`. You should receive a message asking you to confirm the new device, click `Add Device`.
         - Under `Share Folders With Device` tick/select DietPi user data, then click `save`.
 
     You devices should now duplicate the user data from your DietPi device to your Windows PC.
