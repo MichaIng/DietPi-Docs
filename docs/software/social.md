@@ -54,8 +54,7 @@ Also Installs:
 
 ### Access Forums
 
-URL = `http://<your.IP>/phpBB3`  
-(from DietPi v6.33 on: `http://<your.IP>/phpbb`)
+URL = `http://<your.IP>/phpbb`
 
 ### First Run Setup
 
@@ -63,8 +62,7 @@ DietPi automatically creates the SQL database for phpBB. Please follow the steps
 
 #### Access to the phpBB website
 
-- URL = `http://<your.IP>/phpBB3`  
-  (from DietPi v6.33 on: `http://<your.IP>/phpbb`)
+- URL = `http://<your.IP>/phpbb`
 - Click the "Install" tab
 - Click "Proceed to next step"
 - Click "Start install"
@@ -74,8 +72,8 @@ DietPi automatically creates the SQL database for phpBB. Please follow the steps
 To enter the MySQL/MariaDB database details:
 
 - Database server hostname or data source name (DSN) = `localhost`
-- Database username = `phpbb3` (from DietPi v6.33 on: `phpbb`)
-- Database name = `phpbb3` (from DietPi v6.33 on: `phpbb`)
+- Database username = `phpbb`
+- Database name = `phpbb`
 - Database password = `dietpi` (respectively your chosen global software password)
 
 - Click "Proceed to next step"
@@ -106,8 +104,6 @@ Using your admin login details that you created previously, you can now manage a
 As the installation is now completed, you will need to remove the installation folder, before the forum can be live. Run the following command:
 
 ```sh
-rm -R /var/www/phpBB3/install
-# from DietPi v6.33 on:
 rm -R /var/www/phpbb/install
 ```
 
@@ -129,7 +125,7 @@ It allows you to create your own website.
     The first time you connect, enter the following MySQL database details:
 
     - Database name = `wordpress`
-    - Username = `wordpress` (Previous to DietPi v6.0 = `root`)
+    - Username = `wordpress`
     - Password = your global application password
     - Database Host = `localhost`
     - Table Prefix = `wp_`
@@ -161,8 +157,8 @@ Also Installs:
     - Put an image file inside your new folder
 
       ```sh
-      wget http://media.moddb.com/cache/images/articles/1/153/152601/crop_120x90/download.png
-      mv download.png /var/www/gallery/MyImageFolder/
+      wget https://dietpi.com/images/dietpi-logo_192x192.png
+      mv dietpi-logo_192x192.png /var/www/gallery/MyImageFolder/
       ```
 
 ## Baïkal - Lightweight CalDAV + CardDAV server
