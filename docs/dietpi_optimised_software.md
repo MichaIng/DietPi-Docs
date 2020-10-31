@@ -39,19 +39,19 @@
 - [**RPi Cam Control - RPi Camera / Web Interface Surveillance**](../software/camera/#rpi-cam-control-rpi-camera-web-interface-surveillance)
 - [**MotionEye - Camera / Web Interface Surveillance**](../software/camera/#motioneye-camera-web-interface-surveillance)
 
-## Cloud & Backup systems  
+## [Cloud & Backup systems](../software/cloud/)
 
-- [ownCloud - Your own personal cloud based backup/data storage system](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p47)  
+- [**ownCloud - Your own personal cloud based backup/data storage system**](../software/cloud/#owncloud-your-own-personal-cloud-based-backupdata-storage-system)
 - [**Nextcloud - Self-hosted productivity platform**](../software/cloud/#nextcloud-self-hosted-productivity-platform)
-- [Nextcloud Talk - Video calls via Nextcloud, including TURN server](https://dietpi.com/phpbb/viewtopic.php?p=15227#p15227)  
-- [Pydio - Feature-rich backup and sync server with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=1064#p1064)  
-- [UrBackup Server - Full backups for systems on your network](https://dietpi.com/phpbb/viewtopic.php?p=65#p65)  
-- [Gogs - GitHub style server, with web interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2187)  
-- [Gitea - GitHub style server, with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=9863#p9863)  
-- [Syncthing - Backup and sync server with web interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2363)  
-- [Tonido - Lightweight backup and sync server with web interface, and, cloud access.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p6476)  
-- [Minio - S3 compatible distributed object server](https://dietpi.com/phpbb/viewtopic.php?p=9121#p9121)  
-- [Firefox Sync Server - Sync bookmarks, tabs, history & passwords](https://dietpi.com/phpbb/viewtopic.php?p=24713#p24713)  
+- [**Nextcloud Talk - Video calls via Nextcloud, including TURN server**](../software/cloud/#nextcloud-talk-video-calls-via-nextcloud-including-turn-server)
+- [**Pydio - Feature-rich backup and sync server with web interface**](../software/cloud/#pydio-feature-rich-backup-and-sync-server-with-web-interface)
+- [**UrBackup Server - Full backups for systems on your network**](../software/cloud/#urbackup-server-full-backups-for-systems-on-your-network)
+- [**Gogs - GitHub style server, with web interface**](../software/cloud/#gogs-github-style-server-with-web-interface)
+- [**Gitea - GitHub style server, with web interface**](../software/cloud/#gitea-github-style-server-with-web-interface)
+- [**Syncthing - Backup and sync server with web interface**](../software/cloud/#syncthing-backup-and-sync-server-with-web-interface)
+- [**Tonido - Lightweight backup and sync server with web interface and cloud access**](../software/cloud/#tonido-lightweight-backup-and-sync-server-with-web-interface-and-cloud-access)
+- [**Minio - S3 compatible distributed object server**](../software/cloud/#minio-s3-compatible-distributed-object-server)
+- [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](../software/cloud/#firefox-sync-server-sync-bookmarks-tabs-history-and-passwords)
 
 ## [Computational Science](../software/computational_science/#computational-science/)
 
