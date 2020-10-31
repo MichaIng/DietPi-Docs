@@ -31,7 +31,7 @@
 
 ## ownCloud - Your own personal cloud based backup/data storage system
 
-The ownCloud package turns your DietPi system into your very own personal cloud based backup/data storage system (eg: Dropbox).
+The ownCloud package turns your DietPi system into your very own personal cloud based backup/data storage system (e.g.: Dropbox).
 
 Also Installs:
 
@@ -154,11 +154,11 @@ Also Installs:
     - The wizard can now be started, click the `start wizard >` button to begin.  
     - Enter and create a new admin account for use with Pydio. Then click the `>>` button.
     - Under database details, enter the following:
-        - Database type = MySQL
-        - Host = localhost
-        - Database = pydio
-        - User = pydio (Previous to DietPi v6.0 = root)
-        - Password = dietpi
+        - Database type = `MySQL`
+        - Host = `localhost`
+        - Database = `pydio`
+        - User = `pydio` (Previous to DietPi v6.0 = `root`)
+        - Password = `dietpi`
         - Use MySqli = No
     - Click test connection, when successful, click the `>>` button.
     - Under advanced options, use the default values, then click the `Install Pydio` button.
@@ -225,12 +225,12 @@ Your very own GitHub style server, with web interface.
         - Log Path = `/var/log/gogs`
         - Email service settings \> From = `anyone@anyemail.com`
     - Scroll to the bottom of page and select Install Gogs
-    - When the web address changes to localhost: and fails to load, you need to reconnect to the webpage using the ip address (eg: `http://<your.IP>:3000`)
+    - When the web address changes to localhost: and fails to load, you need to reconnect to the web page using the IP address (e.g.: `http://<your.IP>:3000`)
     - Once the page has reloaded, you will need to click register to create the admin account
 
 === "External access"
 
-    If you wish to allow external access to your Gogs server, you will need to setup port fowarding on your router, pointing to the IP address of your DietPi device.
+    If you wish to allow external access to your Gogs server, you will need to setup port forwarding on your router, pointing to the IP address of your DietPi device.
 
     - Port = 3000
     - Protocol = TCP+UDP
@@ -255,12 +255,12 @@ Your very own GitHub style server, with web interface.
         - Repository Root Path = `/mnt/dietpi_userdata/gitea/gitea-repositories`
         - Log Path = `/var/log/gitea`
     - Scroll to the bottom of page and select Install Gitea
-    - When the web address changes to localhost: and fails to load, you need to reconnect to the webpage using the ip address (eg: `http://<your.IP>:3000`)
+    - When the web address changes to localhost: and fails to load, you need to reconnect to the web page using the IP address (e.g.: `http://<your.IP>:3000`)
     - Once the page has reloaded, you will need to click register to create the admin account
 
 === "External access"
 
-    If you wish to allow external access to your Gitea server, you will need to setup port fowarding on your router, pointing to the IP address of your DietPi device.
+    If you wish to allow external access to your Gitea server, you will need to setup port forwarding on your router, pointing to the IP address of your DietPi device.
 
     - Port = 3000
     - Protocol = TCP+UDP
@@ -288,12 +288,12 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     In this example we will use a Windows system. The goal is to "sync" the user data from your DietPi device with another system.
 
-    - Download, extract and run the Windows application synthing.exe: <https://syncthing.net/> (located under *Get Started*).
+    - Download, extract and run the Windows application syncthing.exe: <https://syncthing.net/> (located under *Get Started*).
     - Syncthing web interface will load automatically, if not, you can access it via `http://127.0.0.1:8384/`.
         - Click `Actions` at the top right, then select `Show ID`. Copy the UUID code.
     - On the DietPi device, open the web interface and click `Add remote device` (bottom right).
         - Under `Device ID`, paste in the UUID we copied earlier.
-        - Under `Device name`, enter any name. eg: *My Windows PC*.
+        - Under `Device name`, enter any name. e.g.: *My Windows PC*.
         - Under `Share Folders With Device` tick/select DietPi user data, then click `save`.
     - After a few seconds, go back to the Windows web interface <http://127.0.0.1:8384/>. You should receive a message asking you to confirm the new device, click `Add Device`.
         - Under `Share Folders With Device` tick/select DietPi user data, then click `save`.
@@ -316,7 +316,7 @@ Lightweight backup and sync server, includes web interface and external cloud ac
 
     - DietPi installs Tonido to the following location:  
       `/mnt/dietpi_userdata/tonido`
-    - DietPi symlinks Tonido data directories automatically. Therefore, default Tonido sync/userdata locations will point to `/mnt/dietpi_userdata/tonido`:
+    - DietPi install symbolic links to the Tonido data directories automatically. Therefore, default Tonido sync/userdata locations will point to `/mnt/dietpi_userdata/tonido`:
 
     ```sh
     /home/tonido/tonido #PointsTo# /mnt/dietpi_userdata/tonido
@@ -324,7 +324,7 @@ Lightweight backup and sync server, includes web interface and external cloud ac
     /home/tonido/TonidoSyncData #PointsTo# /mnt/dietpi_userdata/tonido/syncdata
     ```
 
-    We created a SystemD service for Tonido, DietPi will automatically start this:  
+    We created a `systemd` service for Tonido, DietPi will automatically start this:  
     `systemctl status tonido`
 
 === "Access to the web interface"
@@ -339,7 +339,7 @@ See also: <https://min.io/>.
 
 ## Firefox Sync Server - Sync bookmarks, tabs, history and passwords
 
-This is Mozilla's Firefox Sync Server which manages syncing Firefox instance bookmarks, history, tabs and passwords across devices. Out of the box it runs on a Python server for small loads and can be configured to run behind nginx or Apache.
+This is Mozilla's Firefox Sync Server which manages syncing Firefox instance bookmarks, history, tabs and passwords across devices. Out of the box it runs on a Python server for small loads and can be configured to run behind Nginx or Apache.
 
 ![DietPi cloud software Firefox Sync Server](../assets/images/dietpi-software-cloud-firefoxsyncserver.png)
 
