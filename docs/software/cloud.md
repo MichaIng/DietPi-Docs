@@ -88,7 +88,9 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/17/admin_manual/configuration_server/occ_command.html).
 
-    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`. Just use inside your terminal:
+    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary  
+    `sudo -u www-data php /var/www/nextcloud/occ`.  
+    Just use inside your terminal:
 
     ```
     ncc [followed by the desired command]
@@ -157,7 +159,7 @@ Also Installs:
         - Database type = `MySQL`
         - Host = `localhost`
         - Database = `pydio`
-        - User = `pydio` (Previous to DietPi v6.0 = `root`)
+        - User = `pydio`
         - Password = `dietpi`
         - Use MySqli = No
     - Click test connection, when successful, click the `>>` button.
@@ -212,7 +214,7 @@ Your very own GitHub style server, with web interface.
 
 === "First run setup"
 
-    Remark: Documentation has been update for, and requires DietPi v6.11 or higher.
+    Remark: Documentation requires DietPi v6.11 or higher.
 
     Has to be done once, when connected to the web interface:
 
@@ -312,7 +314,7 @@ Lightweight backup and sync server, includes web interface and external cloud ac
 
 === "Installation notes"
 
-    Remark: This documentation has been updated for, and requires DietPi v6.12.
+    Remark: This documentation requires DietPi v6.12.
 
     - DietPi installs Tonido to the following location:  
       `/mnt/dietpi_userdata/tonido`
