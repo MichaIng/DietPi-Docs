@@ -288,7 +288,7 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     In this example we will use a Windows system. The goal is to "sync" the user data from your DietPi device with another system.
 
-    - Download, extract and run the Windows application syncthing.exe: <https://syncthing.net/> (located under *Get Started*).
+    - Download, extract and run the Windows application `syncthing.exe`: <https://syncthing.net/> (located under *Get Started*).
     - Syncthing web interface will load automatically, if not, you can access it via `http://127.0.0.1:8384/`.
         - Click `Actions` at the top right, then select `Show ID`. Copy the UUID code.
     - On the DietPi device, open the web interface and click `Add remote device` (bottom right).
