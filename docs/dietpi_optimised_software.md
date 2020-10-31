@@ -109,11 +109,11 @@
 - [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
 - [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
 
-## Home Automation
+## [Home Automation](../software/home_automation/)
 
-- [Home Assistant - Open-source home automation platform running on Python 3.](https://dietpi.com/phpbb/viewtopic.php?p=10416#p10416)  
-- [EmonPi - Lightweight Energy usage stats with EmonPi PCB.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1525)  
-- [Grasshopper - Web App to control Bticino MyHome](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p70)  
+- [**Home Assistant - Open-source home automation platform running on Python 3**](../software/home_automation/#home-assistant-open-source-home-automation-platform-running-on-python-3)
+- [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](../software/home_automation/#emonpi-lightweight-energy-usage-stats-with-emonpi-pcb)
+- [**Grasshopper - Web App to control Bticino MyHome**](../software/home_automation/#grasshopper-web-app-to-control-bticino-myhome)
 
 ## [Logging Systems](../software/log_system/#log-system-choices/)
 
