@@ -113,16 +113,22 @@ The following hardware is required:
 
 === "Attach EmonPi to RPi"
 
-    - Attach GPIO extender/riser to RPi: [Image1](https://dietpi.com/downloads/misc/EmonPi_Guide/emonPi-g2.jpg) [Image2](https://dietpi.com/downloads/misc/EmonPi_Guide/emonPi-g3.jpg)
-    - Attach EmonPi to RPi: [Image](https://dietpi.com/downloads/misc/EmonPi_Guide/emonPi-g5.jpg)
-    - Verify pins are visible: [Image](https://dietpi.com/downloads/misc/EmonPi_Guide/emonPi-g4.jpg)
+    - Attach GPIO extender/riser to RPi:  
+      ![Image1](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g2.jpg){: style="width:400px"}  
+      ![Image2](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g3.jpg){: style="width:400px"}
+    - Attach EmonPi to RPi:  
+      ![Image3](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g5.jpg){: style="width:400px"}
+    - Verify pins are visible:  
+      ![Image4](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g4.jpg){: style="width:400px"}
 
 === "Connect power sensor"
 
     Connect the sensor to measure the power consumption to the EmonPi:
 
-    - Plug the 3.5mm power consumption sensor into the EmonPi: [Image](https://dietpi.com/downloads/misc/EmonPi_Guide/emonPi-g6.jpg)
-    - Clip the power consumption sensor onto a positive (red) cable (cables are live, use caution): [Image](https://dietpi.com/downloads/misc/EmonPi_Guide/emonPi-g7.jpg)
+    - Plug the 3.5mm power consumption sensor into the EmonPi:  
+      ![Image5](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g6.jpg){: style="width:400px"}
+    - Clip the power consumption sensor onto a positive (red) cable (cables are live, use caution):  
+      ![Image6](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g7.jpg){: style="width:400px"}
 
 === "Setup Inputs and feeds for power sensor"
 
@@ -141,8 +147,11 @@ The following hardware is required:
     - Login to your `https://emoncms.org` account
     - Click `Setup` at the top right of screen, then click `Inputs`
     - Select the spanner on the far right of *Power WATT*
-    - Check the screen matches [this image](https://dietpi.com/downloads/misc/EmonPi_Guide/emoncms-emonpi_addfeed.png), then click `add`
-    - To verify the feed is active, click `Setup` at the top right of screen, then click `Inputs`. You should see `log` under *Process list* of *Power WATT*: [Image](https://dietpi.com/downloads/misc/EmonPi_Guide/emoncms-emonpi_inputs.png)
+    - Check the screen matches the following image  
+      ![Image7](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_addfeed.png){: style="width:640px"}  
+      then click `add`
+    - To verify the feed is active, click `Setup` at the top right of screen, then click `Inputs`. You should see `log` under *Process list* of *Power WATT*:  
+      ![Image8](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_inputs.png){: style="width:640px"}  
 
 === "Setup 'My Electric' App"
 
