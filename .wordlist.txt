@@ -87,6 +87,7 @@ DSN
 DVFS
 DXX
 ebooks
+EDL
 EEPROM
 Emby
 eMMC
@@ -95,6 +96,7 @@ EmonCMS
 EmonPi
 EmonTH
 EmonTX
+EPL
 exe
 exFAT
 facto
@@ -155,6 +157,7 @@ Jellyfin
 Joulinar
 journald
 jRiver
+JS
 JSON
 JustBoom
 Kbit
@@ -188,6 +191,7 @@ LXDE
 LXQt
 macOS
 mangas
+marcobrianza
 MariaDB
 Mbit
 Meveric
@@ -341,6 +345,7 @@ TigerVNC
 TLS
 Tonido
 TRÅDFRI
+TTS
 txt
 Tyrian
 uae
@@ -351,6 +356,7 @@ UEFI
 UI
 Unarchiver
 uncomment
+unexperienced
 Unmount
 upgradable
 UPnP

@@ -28,7 +28,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-## Google AIY - Voice kit "Ok, Google"!
+## Google AIY - Voice kit "Ok, Google!"
 
 "Ok Google. Who is your daddy?"
 
@@ -36,7 +36,7 @@
 
     We do not install a desktop environment. User will be required to setup Google API and keys on another system (please see first run setup below).  
     We highly recommend SSH to allow for a quick setup of Google API and device link.  
-    We also recommend one of [DietPi File servers](https://dietpi.com/docs/software/file_servers/), for easy transfer of assistant.json, generated during Google API setup.
+    We also recommend one of [DietPi File servers](https://dietpi.com/docs/software/file_servers/), for easy transfer of `assistant.json`, generated during Google API setup.
 
 ![DietPi hardware projects software Google AIY](../assets/images/dietpi-software-hardwareprojects-googleaiy.jpg){: style="width:500px"}
 
@@ -71,7 +71,6 @@
 
     ![DietPi hardware projects software Google AIY htop screenshot](../assets/images/dietpi-software-hardwareprojects-googleaiy-htop.png){: style="width:500px"}
 
-
 ## Mycroft AI - Open source voice assistant
 
 Mycroft AI is a free and open source voice assistant.
@@ -82,7 +81,7 @@ Mycroft AI is a free and open source voice assistant.
 
     1. Branch selection: For unexperienced users we recommend the master branch as well: `y`
     2. Auto updates: It slows down the the startup process a bit, but it anyway takes a while to load all skills, so we recommend this as well: `y`
-    3. Add Mycroft commands to PATH: Chose *NO* here, since the installer runs as user "mycroft", which is no login user, which is why this has no effect: `n`
+    3. Add Mycroft commands to PATH: Chose *NO* here, since the installer runs as user `mycroft`, which is no login user, which is why this has no effect: `n`
     4. Check code before submitting: If you are an official Mycroft developer, choose `y`, else: `n`
 
 === "Initial setup"
@@ -186,7 +185,7 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
     - Enter the username `webiopi`
     - Enter your new password twice
 
-    You must also restart the webiopi service for your new password to take effect:  
+    You must also restart the `webiopi` service for your new password to take effect:  
     `service webiopi restart`
 
 === "Access WebIOPi over the internet"
@@ -227,12 +226,12 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
     The actual Node-RED version can be read in the programming IDE in the *burger menu* at the right upper corner.
 
 See also <https://nodered.org/>.  
-Especially search through the libs/flows there: <https://flows.nodered.org/>.
+Especially search through the libraries resp. flows there: <https://flows.nodered.org/>.
 
 ## Mosquitto - Message broker that implements MQTT protocol
 
 Eclipse Mosquitto™ is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 3.1 and 3.1.1.  
-MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "Internet of Things" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers like the Arduino.
+MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "Internet of Things" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontroller like the Arduino.
 
 ![DietPi hardware projects software Mosquitto](../assets/images/dietpi-software-hardwareprojects-mosquitto.png){: style="width:100px"}
 
@@ -245,7 +244,7 @@ Platform with iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and
 
 Also installs:
 
-- Blynk JS Libary
+- Blynk JS Library
 
 ![DietPi hardware projects software Blynk Server](../assets/images/dietpi-software-hardwareprojects-blynk.jpg){: style="width:300px"}
 
@@ -260,7 +259,7 @@ Also installs:
     We created a `systemd` service for Blynk, DietPi will automatically start this:  
     `systemctl status blynkserver`
 
-    DietPi will also install ***Blynk JS Libary***, along with this installation. Please skip this section when you reach the Blynk user guide.
+    DietPi will also install ***Blynk JS Library***, along with this installation. Please skip this section when you reach the Blynk user guide.
 
 === "Access to the web admin interface"
 
@@ -287,7 +286,7 @@ Also installs:
 
 === "Run test script"
 
-    Once you create a project in the iOS/Android app, replace the following with your auth code, then run the command:  
+    Once you create a project in the iOS/Android app, replace the following with your `auth code`, then run the command:  
     `blynk-client Replace_With_Your_Auth_Code`
 
 === "Update to the latest version"
@@ -299,7 +298,7 @@ Install Blynk App (Android): <https://play.google.com/store/apps/details?id=cc.b
 
 ## Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off
 
-Power control module for Raspberry Pi which allows you to physically power on/off the system, without the need to run "poweroff".
+Power control module for Raspberry Pi which allows you to physically power on/off the system, without the need to run `poweroff`.
 See <https://www.audiophonics.fr/fr/kits-et-modules-diy/audiophonics-pi-spc-v2-module-de-controle-alimentation-type-atx-pre-assemble-p-11125.html> for further details.
 
 ![DietPi hardware projects software Audiophonics PCB](../assets/images/dietpi-software-hardwareprojects-audiophonis-pcb.jpg){: style="width:400px"}
@@ -316,7 +315,7 @@ Remark: Avoid holding the power button for longer than 2 seconds, as this will h
 ## InfluxDB - Database optimized to save time based data as logs or data from a sensor
 
 InfluxDB is a database optimized to save time based data as logs or data from a sensor.  
-The main interface to the database for management and data transfered are http requests that are handled directly by the `influxdb` service (default port being used is 8086).
+The main interface to the database for management and data transferred are http requests that are handled directly by the `influxdb` service (default port being used is 8086).
 
 The data can be nicely viewed with Grafana.  
 This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).
@@ -364,7 +363,7 @@ Alternative method:
 curl -i -XPOST http://localhost:8086/query?db=mydb --data-urlencode "q=SELECT * FROM temperature"
 ```
 
-####  Authentication
+#### Authentication
 
 By default http authentication is disabled. To enable it, change `auth-enabled = true` in the configuration file `/etc/influxdb/influxdb.conf`. Then restart services with `dietpi-services restart`.
 
@@ -387,7 +386,7 @@ exit
 
 ### Install information
 
-The data location for InfluxDB is stored/symlinked to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`.
+The data location for InfluxDB is stored resp. linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`.
 
 ## Grafana - The open platform for beautiful analytics and monitoring
 
