@@ -83,13 +83,18 @@ DPMS
 DRM
 Dropbear
 DSI
+DSN
 DVFS
 DXX
 ebooks
 EEPROM
 Emby
 eMMC
+emoncms
+EmonCMS
 EmonPi
+EmonTH
+EmonTX
 exe
 exFAT
 facto
@@ -113,6 +118,7 @@ GMediaRender
 GNUstep
 Gogs
 GPIO
+GPIOs
 GPL
 GPT
 Grafana
@@ -123,12 +129,14 @@ HC
 hexa
 HiFi
 HiFiBerry
+homeassistant
 hostname
 Hotfix
 hotspot
 Hotspot
 HotSpot
 Hotspots
+htop
 HTPC
 http
 HTTPS
@@ -234,6 +242,7 @@ odroid
 Odroid
 Odroids
 Ok
+Oldschool
 OPcache
 OpenBazaar
 OpenGL
@@ -258,6 +267,7 @@ PiVPN
 Plex
 pre
 ProFTPD
+PSU
 PuTTY
 Pydio
 pyenv
@@ -330,6 +340,7 @@ tcpdump
 TigerVNC
 TLS
 Tonido
+TRÅDFRI
 txt
 Tyrian
 uae
@@ -365,6 +376,7 @@ webserver
 Webservers
 Webserves
 webstack
+Wh
 Widevine
 wikimedia
 WinSCP

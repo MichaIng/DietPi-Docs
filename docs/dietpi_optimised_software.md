@@ -109,11 +109,11 @@
 - [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
 - [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
 
-## Home Automation
+## [Home Automation](../software/home_automation/)
 
-- [Home Assistant - Open-source home automation platform running on Python 3.](https://dietpi.com/phpbb/viewtopic.php?p=10416#p10416)  
-- [EmonPi - Lightweight Energy usage stats with EmonPi PCB.](https://dietpi.com/phpbb/viewtopic.php?p=1529#p1525)  
-- [Grasshopper - Web App to control Bticino MyHome](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p70)  
+- [**Home Assistant - Open-source home automation platform running on Python 3**](../software/home_automation/#home-assistant-open-source-home-automation-platform-running-on-python-3)
+- [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](../software/home_automation/#emonpi-lightweight-energy-usage-stats-with-emonpi-pcb)
+- [**Grasshopper - Web App to control Bticino MyHome**](../software/home_automation/#grasshopper-web-app-to-control-bticino-myhome)
 
 ## [Logging Systems](../software/log_system/#log-system-choices/)
 
@@ -173,15 +173,15 @@
 - [**Remot3.it - (Weaved) Access your device over the internet**](../software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](../software/remote_desktop/#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)
 
-## Social / Search
+## [Social / Search](../software/social/)
 
-- [FreshRSS - A self-hosted RSS feed aggregator](https://dietpi.com/phpbb/viewtopic.php?p=13918#p13918)
-- [phpBB - Free flat-forum bulletin board software solution](https://dietpi.com/phpbb/viewtopic.php?p=51#p51)  
-- [Wordpress - Website Blog and Publishing platform](https://dietpi.com/phpbb/viewtopic.php?p=395#p395)  
-- [Image Gallery - Host and browse your images from a web interface.](https://dietpi.com/phpbb/viewtopic.php?p=480#p480)  
-- [Baïkal - Lightweight CalDAV + CardDAV server](https://dietpi.com/phpbb/viewtopic.php?p=1502#p1502)  
-- [OpenBazaar - Decentralized peer to peer market server using Bitcoin](https://dietpi.com/phpbb/viewtopic.php?p=1796#p1796)  
-- [YaCy - Decentralized open source search engine](https://dietpi.com/phpbb/viewtopic.php?p=6202#p6202)
+- [**FreshRSS - A self-hosted RSS feed aggregator**](../software/social/#freshrss-a-self-hosted-rss-feed-aggregator)
+- [**phpBB - Free flat-forum bulletin board software solution**](../software/social/#phpbb-free-flat-forum-bulletin-board-software-solution)
+- [**Wordpress - Website Blog and Publishing platform**](../software/social/#wordpress-website-blog-and-publishing-platform)
+- [**Image Gallery - Host and browse your images from a web interface**](../software/social/#image-gallery-host-and-browse-your-images-from-a-web-interface)
+- [**Baïkal - Lightweight CalDAV + CardDAV server**](../software/social/#baikal-lightweight-caldav-carddav-server)
+- [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](../software/social/#openbazaar-decentralized-peer-to-peer-market-server-using-bitcoin)
+- [**YaCy - Decentralized open source search engine**](../software/social/#yacy-decentralized-open-source-search-engine)
 
 ## [SSH Server](../software/ssh/#ssh-server-choices/)
 
