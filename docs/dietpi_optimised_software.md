@@ -94,20 +94,20 @@
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](../software/gaming/#dxx-rebirth-descent-1-an-2-opengl-port)
 - [**Steam - Steam client**](../software/gaming/#steam-steam-client)
 
-## Hardware Projects
+## [Hardware Projects](../software/hardware_projects/)
 
-- [Google AIY - Voice kit "Ok, Google"!.](https://dietpi.com/phpbb/viewtopic.php?p=9486#p9486)  
-- [Mycroft AI - Open source voice assistant](https://dietpi.com/phpbb/viewtopic.php?p=18562#p18562)  
-- [PiJuice - PiSupply UPS/battery power system.](https://dietpi.com/phpbb/viewtopic.php?p=10740#p10740)  
-- [RPi.GPIO - GPIO Interface library for RPi (python).](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=40#p1065)  
-- [WiringPi - GPIO Interface library (c).](https://dietpi.com/phpbb/viewtopic.php?p=1066#p1066)  
-- [WebIOPi - Web interface to control RPi GPIO.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p189)  
-- [Node-RED - Visual tool for wiring together hardware devices, APIs and online services.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4292)  
-- [Mosquitto - Message broker that implements MQTT protocol versions 3.1 and 3.1.1.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p4293)  
-- [Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p5901)  
-- [Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off.](https://dietpi.com/phpbb/viewtopic.php?p=9359#p9359)  
-- [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
-- [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
+- [**Google AIY - Voice kit "Ok, Google"!**](../software/hardware_projects/#google-aiy-voice-kit-ok-google)
+- [**Mycroft AI - Open source voice assistant**](../software/hardware_projects/#mycroft-ai-open-source-voice-assistant)
+- [**PiJuice - PiSupply UPS/battery power system**](../software/hardware_projects/#pijuice-pisupply-upsbattery-power-system)
+- [**RPi.GPIO - GPIO Interface library for RPi (python)**](../software/hardware_projects/#rpigpio-gpio-interface-library-for-rpi-python)
+- [**WiringPi - GPIO Interface library**](../software/hardware_projects/#wiringpi-gpio-interface-library)
+- [**WebIOPi - Web interface to control RPi GPIO**](../software/hardware_projects/#webiopi-web-interface-to-control-rpi-gpio)
+- [**Node-RED - Visual tool for wiring together hardware devices, APIs and online services**](../software/hardware_projects/#node-red-visual-tool-for-wiring-together-hardware-devices-apis-and-online-services)
+- [**Mosquitto - Message broker that implements MQTT protocol**](../software/hardware_projects/#mosquitto-message-broker-that-implements-mqtt-protocol)
+- [**Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet**](../software/hardware_projects/#blynk-server-ios-and-android-apps-to-control-arduino-esp8266-raspberry-pi-and-similar-microcontroller-boards-over-the-internet)
+- [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](../software/hardware_projects/#audiophonics-pi-spc-power-control-module-for-raspberry-pi-allowing-physical-button-power-onoff)
+- [**InfluxDB - Database optimized to save time based data as logs or data from a sensor**](../software/hardware_projects/#influxdb-database-optimized-to-save-time-based-data-as-logs-or-data-from-a-sensor)
+- [**Grafana - The open platform for beautiful analytics and monitoring**](../software/hardware_projects/#grafana-the-open-platform-for-beautiful-analytics-and-monitoring)
 
 ## [Home Automation](../software/home_automation/)
 
