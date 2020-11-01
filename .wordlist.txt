@@ -40,6 +40,7 @@ CalDAV
 CardDAV
 CAVA
 CDTV
+CedArctic
 Certbot
 changelog
 CIFS
@@ -53,6 +54,7 @@ config
 configs
 containerd
 CORS
+coturn
 CouchPotato
 COVID
 cron
@@ -93,6 +95,7 @@ EmonCMS
 EmonPi
 EmonTH
 EmonTX
+exe
 exFAT
 facto
 fahclient
@@ -175,6 +178,7 @@ Lighttpd
 LLMP
 LLSP
 LMS
+localhost
 LogClear
 Logitech
 Logrotate
@@ -209,6 +213,7 @@ multiroom
 Mycroft
 MyHome
 myMPD
+MySqli
 NAA
 nano
 NanoPC
@@ -333,6 +338,7 @@ Tautulli
 TCP
 tcpdump
 TigerVNC
+TLS
 Tonido
 TRÅDFRI
 txt
