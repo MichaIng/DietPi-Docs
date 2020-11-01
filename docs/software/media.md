@@ -2,37 +2,33 @@
 
 ## Overview
 
-!!! warning "Documentation in progress..."
-
-    The links redirect to the old documentation available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
-
-- [Kodi - Media Centre / Player](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5#p43)
-- [ympd - Lightweight web Interface audio player for MPD](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5#p50)
-- [myMPD - Lightweight web Interface audio player for MPD](https://dietpi.com/phpbb/viewtopic.php?p=13978#p13978)
-- [O!MPD - Feature-rich web Interface audio player for MPD](https://dietpi.com/phpbb/viewtopic.php?p=5171#p5171)
-- [CAVA - Optional: Console-based audio visualizer for MPD](https://dietpi.com/phpbb/viewtopic.php?p=3928#p3928)
-- [Mopidy - Web Interface Music /Radio Player](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5&amp;start=80#p3611)
-- [Airsonic - Feature rich media streaming server with web interface](https://dietpi.com/phpbb/viewtopic.php?p=11280#p11280)
-- [Subsonic - Feature rich media streaming server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5&amp;start=30#p213)
-- [Logitech Media Server - aka LMS, Squeezebox Server](https://dietpi.com/phpbb/viewtopic.php?p=1009#p1009)
-- [SqueezeLite - Audio player for Logitech Media Server](https://dietpi.com/phpbb/viewtopic.php?p=1009#p1009)
-- [Shairport Sync - AirPlay audio player with multiroom sync](https://dietpi.com/phpbb/viewtopic.php?p=1221#p1221)
-- [ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5#p49)
-- [Ampache - Web interface media streaming server](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5&amp;start=40#p554)
-- [Emby - Web interface media streaming server](https://dietpi.com/phpbb/viewtopic.php?p=1789#p1789)
-- [Plex Media Server - Web interface media streaming server](https://dietpi.com/phpbb/viewtopic.php?p=1949#p1949)
-- [Tautulli - Monitoring and tracking tool for Plex Media Server](https://dietpi.com/phpbb/viewtopic.php?p=7463#p7463)
-- [Murmur - Mumble VoIP Server](https://dietpi.com/phpbb/viewtopic.php?p=1691#p1691)
-- [Roon Bridge - Turns your device into a Roon capable audio player](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5&amp;start=80#p4153)
-- [Roon Server - Turns your device into a Roon capable audio player and Roon core](https://dietpi.com/phpbb/viewtopic.php?p=7966#p7966)
-- [Roon Extension Manager - Manage extensions from within Roon](https://dietpi.com/phpbb/viewtopic.php?p=13160#p13160)
-- [NAA Daemon - Signalyst Network Audio Adaptor (NAA)](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5&amp;start=90#p4294)
-- [IceCast - Shoutcast Streaming Server, including DarkIce](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5&amp;start=100#p6526)
-- [jRiver - Media Center](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5&amp;start=110#p7536)
-- [Koel - Web interface streaming server](https://dietpi.com/phpbb/viewtopic.php?f=8&amp;t=5&amp;start=100#p7305)
-- [GMediaRender - Resource efficient UPnP/DLNA renderer](https://dietpi.com/phpbb/viewtopic.php?p=9012#p9012)
-- [Ubooquity - Free home server for your comics and ebooks library](https://dietpi.com/phpbb/viewtopic.php?p=12969#p12969)
-- [Komga - Free and open source comics/mangas media server with web UI](https://dietpi.com/phpbb/viewtopic.php?p=26858#p26858)
+- [**Kodi - Media Centre / Player**](#kodi-media-centre-player)
+- [**ympd - Lightweight web Interface audio player for MPD**](#ympd-lightweight-web-interface-audio-player-for-mpd)
+- [**myMPD - Lightweight web Interface audio player for MPD**](#mympd-lightweight-web-interface-audio-player-for-mpd)
+- [**O!MPD - Feature-rich web Interface audio player for MPD**](#ompd-feature-rich-web-interface-audio-player-for-mpd)
+- [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava-optional-console-based-audio-visualizer-for-mpd)
+- [**Mopidy - Web Interface Music /Radio Player**](#mopidy-web-interface-music-radio-player)
+- [**Airsonic - Feature rich media streaming server with web interface**](#airsonic-feature-rich-media-streaming-server-with-web-interface)
+- [**Subsonic - Feature rich media streaming server with web interface**](#subsonic-feature-rich-media-streaming-server-with-web-interface)
+- [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server-aka-lms-squeezebox-server)
+- [**SqueezeLite - Audio player for Logitech Media Server**](#squeezelite-audio-player-for-logitech-media-server)
+- [**Shairport Sync - AirPlay audio player with multiroom sync**](#shairport-sync-airplay-audio-player-with-multiroom-sync)
+- [**ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)**](#readymedia-minidlna-media-streaming-server-dlna-upnp)
+- [**Ampache - Web interface media streaming server**](#ampache-web-interface-media-streaming-server)
+- [**Emby - Web interface media streaming server**](#emby-web-interface-media-streaming-server)
+- [**Plex Media Server - Web interface media streaming server**](#plex-media-server-web-interface-media-streaming-server)
+- [**Tautulli - Monitoring and tracking tool for Plex Media Server**](#tautulli-monitoring-and-tracking-tool-for-plex-media-server)
+- [**Murmur - Mumble VoIP Server**](#murmur-mumble-voip-server)
+- [**Roon Bridge - Turns your device into a Roon capable audio player**](#roon-bridge-turns-your-device-into-a-roon-capable-audio-player)
+- [**Roon Server - Turns your device into a Roon capable audio player and Roon core**](#roon-server-turns-your-device-into-a-roon-capable-audio-player-and-roon-core)
+- [**Roon Extension Manager - Manage extensions from within Roon**](#roon-extension-manager-manage-extensions-from-within-roon)
+- [**NAA Daemon - Signalyst Network Audio Adaptor (NAA)**](#naa-daemon-signalyst-network-audio-adaptor-naa)
+- [**IceCast - Shoutcast Streaming Server, including DarkIce**](#icecast-shoutcast-streaming-server-including-darkice)
+- [**jRiver - Media Center**](#jriver-media-center)
+- [**Koel - Web interface streaming server**](#koel-web-interface-streaming-server)
+- [**GMediaRender - Resource efficient UPnP/DLNA renderer**](#gmediarender-resource-efficient-upnpdlna-renderer)
+- [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity-free-home-server-for-your-comics-and-ebooks-library)
+- [**Komga - Free and open source comics/mangas media server with web UI**](#komga-free-and-open-source-comicsmangas-media-server-with-web-ui)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -46,5 +42,59 @@
     ![DietPi software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
+## Kodi - Media Centre / Player
+
+## ympd - Lightweight web Interface audio player for MPD
+
+## myMPD - Lightweight web Interface audio player for MPD
+
+## O!MPD - Feature-rich web Interface audio player for MPD
+
+## CAVA - Optional: Console-based audio visualizer for MPD
+
+## Mopidy - Web Interface Music /Radio Player
+
+## Airsonic - Feature rich media streaming server with web interface
+
+## Subsonic - Feature rich media streaming server with web interface
+
+## Logitech Media Server - aka LMS, Squeezebox Server
+
+## SqueezeLite - Audio player for Logitech Media Server
+
+## Shairport Sync - AirPlay audio player with multiroom sync
+
+## ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)
+
+## Ampache - Web interface media streaming server
+
+## Emby - Web interface media streaming server
+
+## Plex Media Server - Web interface media streaming server
+
+## Tautulli - Monitoring and tracking tool for Plex Media Server
+
+## Murmur - Mumble VoIP Server
+
+## Roon Bridge - Turns your device into a Roon capable audio player
+
+## Roon Server - Turns your device into a Roon capable audio player and Roon core
+
+## Roon Extension Manager - Manage extensions from within Roon
+
+## NAA Daemon - Signalyst Network Audio Adaptor (NAA)
+
+## IceCast - Shoutcast Streaming Server, including DarkIce
+
+## jRiver - Media Center
+
+## Koel - Web interface streaming server
+
+## GMediaRender - Resource efficient UPnP/DLNA renderer
+
+## Ubooquity - Free home server for your comics and ebooks library
+
+## Komga - Free and open source comics/mangas media server with web UI
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
