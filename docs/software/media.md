@@ -748,7 +748,7 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
 
     This is disabled by default.
 
-    - A recording of the stream can be enabled by editing `/etc/darkice.cfg`, then uncommenting `localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg`
+    - A recording of the stream can be enabled by edit of `/etc/darkice.cfg`, then uncomment `localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg`
     - Restart services:  
       `dietpi-services restart`
     - A recording will then be saved in the following location:  
