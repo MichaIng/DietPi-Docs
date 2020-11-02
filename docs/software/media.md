@@ -49,7 +49,7 @@ The only media centre/player you'll ever need.
 
 ![DietPi media server software Kodi](../assets/images/dietpi-software-media-kodi.jpg){: style="width:500px"}
 
-If you did not select Kodi to start from boot, you can modify the AutoStart options in `dietpi-autoStart`:
+If you did not select Kodi to start from boot, you can modify the autoStart options in `dietpi-autoStart`:
 
 - Desktop = Kodi is available via the LXDE start menu, and, desktop.
 - Console = Kodi can also be run by typing `startkodi`.
@@ -72,7 +72,7 @@ Also installs:
 
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used:
-    
+
     - local = `/mnt/dietpi_userdata/Music`  
       accessed from fileserver = `/Music`
 
@@ -133,19 +133,118 @@ Also installs:
 
 ## O!MPD - Feature-rich web Interface audio player for MPD
 
+A feature-rich web interface audio player for MPD. Includes song/album scraping, ideal for music catalog browsing.
+
+Also installs:
+
+- MPD (music player daemon)
+- Web server
+
 ![DietPi media server software O!MPD](../assets/images/dietpi-software-media-ompd.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>/ompd`
+    - Username = `admin`
+    - Password = `admin`
+
+=== "Transfer/add music"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by O!MPD:
+
+    - local = `/mnt/dietpi_userdata/Music`  
+      accessed from fileserver = `/Music`
+
+=== "Update/scan library"
+
+    Click the `settings` button (cog, top right).  
+    Click `update`.
 
 ## CAVA - Optional: Console-based audio visualizer for MPD
 
+Console-based Audio Visualizer for MPD. Can be displayed in SSH terminals, consoles and LCD HATS.
+
+Also installs:
+
+- MPD (music player daemon)
+
 ![DietPi media server software CAVA](../assets/images/dietpi-software-media-cava.gif){: style="width:500px"}
+
+=== "Autostart option"
+
+    If you did not select CAVA to start from boot:
+
+    - Cava can also be run by typing cava. Use `CTRL+C` to terminate.
+    - You can modify the autoStart options in `dietpi-autostart`.
+
+=== "DietPi-JustBoom control panel"
+
+    - Tweak CAVA options on the fly with the panel.
+    - Simply run `dietpi-justboom` from the command line to launch it.
+
+    ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
 
 ## Mopidy - Web Interface Music /Radio Player
 
+Mopidy is a python based music player web based user interface for MPD.
+
 ![DietPi media server software Mopidy](../assets/images/dietpi-software-media-mopidy.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IPY>:6680/musicbox_webclient` or just `http://<your.IPY>:6680`
+
+=== "Transfer/add music"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by Mopidy:
+
+    - local = `/mnt/dietpi_userdata/Music`  
+      accessed from fileserver = `/Music`
+
+=== "Refresh music files / database"
+
+    This is done automatic, however, you can force an update using the command  
+    `mopidyctl local scan`.
+
+=== "Adding Mopidy extensions"
+
+    Mopidy is highly customizable and supports various extensions from Web extensions to Backend extensions. See [*Extensions*](https://mopidy.com/ext/) for a list.
+
+    See [*Installing extensions*](https://docs.mopidy.com/en/latest/installation/debian/?highlight=backend%20extensions#installing-extensions) for installation details.
+
+=== "Support of codecs"
+
+    Enable support for vast number of codecs like .m4a.   
+    Many thanks to Roth for [this hint](https://dietpi.com/phpbb/viewtopic.php?f=12&t=785&p=3743#p3742).
 
 ## Airsonic - Feature rich media streaming server with web interface
 
+Feature rich media streaming server with a web interface. Coded in Java.
+
 ![DietPi media server software Airsonic](../assets/images/dietpi-software-media-airsonic.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IPY>:8080/airsonic`
+    - Username = `admin`
+    - Password = `admin`
+
+=== "First run setup"
+
+    Once connected to the web interface, we need to configure the Music directory:
+
+    - Click the `Settings` button
+    - Under `Media Folders`, replace the current music folder entry with `/mnt/dietpi_userdata/Music`, then select `Save`
+    - Select `Scan media folders now` to update the library
+
+=== "Transfer/add music"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by Mopidy:
+
+    - folder = `/mnt/dietpi_userdata/Music`  
 
 ## Subsonic - Feature rich media streaming server with web interface
 
