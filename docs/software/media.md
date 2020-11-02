@@ -45,15 +45,91 @@
 
 ## Kodi - Media Centre / Player
 
+The only media centre/player you'll ever need.
+
 ![DietPi media server software Kodi](../assets/images/dietpi-software-media-kodi.jpg){: style="width:500px"}
+
+If you did not select Kodi to start from boot, you can modify the AutoStart options in `dietpi-autoStart`:
+
+- Desktop = Kodi is available via the LXDE start menu, and, desktop.
+- Console = Kodi can also be run by typing `startkodi`.
 
 ## ympd - Lightweight web Interface audio player for MPD
 
+A lightweight, bare-bones, no frills Hifi music player with a web based interface. ympd is a front end for MPD.
+
+Also installs:
+
+- MPD (music player daemon)
+
 ![DietPi media server software ympd](../assets/images/dietpi-software-media-ympd.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    URL = `http://<your.IP>:1337`
+
+=== "Transfer/add music"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used:
+    
+    - local = `/mnt/dietpi_userdata/Music`  
+      accessed from fileserver = `/Music`
+
+=== "Refresh music files / database"
+
+    Simply select the `Update DB` button from the settings menu in ympd.
+
+=== "DietPi-JustBoom control panel"
+
+    - Tweak audio options on the fly with the panel.
+    - Simply run `dietpi-justboom` from the command line to launch it.
+
+    ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
 
 ## myMPD - Lightweight web Interface audio player for MPD
 
+A lightweight, bare-bones, no frills Hifi music player with a web based interface. myMPD is a front end for MPD, and a recent fork of ympd.
+
+Also installs:
+
+- MPD (music player daemon)
+
 ![DietPi media server software myMPD](../assets/images/dietpi-software-media-mympd.gif){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    URL = `http://<your.IP>:1333`
+
+=== "Installation notes"
+
+    We have disabled SSL and its redirect by default with the DietPi install. This is to prevent redirects to the hostname.  
+    To re-enable the SSL connection and redirect option:
+
+    - Edit `/etc/mympd.conf`
+    - Replace `ssl = false` with `ssl = true`
+    - Save changes and exit
+    - Restart services with `dietpi-services restart`
+    - Use the same URL address above, it will redirect to HTTPS during connection
+
+=== "Transfer/add music"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used:
+
+    - local = `/mnt/dietpi_userdata/Music`  
+      accessed from fileserver = `/Music`
+
+=== "Refresh music files / database"
+
+    Simply select the `Update database` option from the settings menu in myMPD.
+
+=== "DietPi-JustBoom control panel"
+
+    - Tweak audio options on the fly with the panel.
+    - Simply run `dietpi-justboom` from the command line to launch it.
+
+    ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
 
 ## O!MPD - Feature-rich web Interface audio player for MPD
 
