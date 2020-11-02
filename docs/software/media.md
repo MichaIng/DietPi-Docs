@@ -268,7 +268,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 === "Jetty http 404 error"
 
     This is a known issue with Subsonic and is out of my control.  
-    If you experience this error while accessing the Subsonic webpage, you can resolve the issue by running the following:
+    If you experience this error while accessing the Subsonic web page, you can resolve the issue by running the following:
 
     ```sh
     systemctl stop subsonic
@@ -427,7 +427,9 @@ Stream your shared media to any DLNA/UPnP capable device.
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by ReadyMedia:
 
-    - folder = `/Music /Pictures /Video`
+    - `/Music`
+    - `/Pictures`
+    - `/Video`
 
 === "Refresh the ReadyMedia database"
 
@@ -442,11 +444,68 @@ For a list of available UPnP clients: See
 
 ## Ampache - Web interface media streaming server
 
+A web based audio/video streaming application and file manager allowing you to access your music & videos from anywhere, using almost any internet enabled device.
+
+Also Installs:
+
+- Webserver stack
+
 ![DietPi media server software Ampache](../assets/images/dietpi-software-media-ampacheinterface.png){: style="width:500px"}
 
-![DietPi media server software Ampache update catalog](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png){: style="width:500px"}
+=== "Access to the web interface"
 
-![DietPi media server software Ampache add catalog](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: style="width:500px"}
+    - URL = `http://<your.IP>/ampache`
+    - Username = `admin`
+    - Password = `dietpi`
+
+=== "Transfer media files to ReadyMedia"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by Ampache:
+
+    - audio = `/mnt/dietpi_userdata/Music`
+    - videos = `/mnt/dietpi_userdata/Video`
+
+
+=== "Scan for media, update Ampache database"
+
+    DietPi will automatically add various catalogue directories to Ampache during installation. You can modify these directories as needed before running your first scan.  
+    To start the scan and import your media into Ampache:
+
+    - Select the `admin` button.
+    - Select `show catalogues` from the left hand side.
+    - Select `Update all`.
+
+    ![DietPi media server software Ampache update catalog](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png){: style="width:500px"}
+
+=== "Add custom media folders"
+
+    - Select the `admin` button.
+    - Select `add a catalogue` from the left hand side.
+    - Enter the details of your path (See the image example below to add your USB drive music folder to Ampache).
+    - Select the `add catalogue` button.
+
+    Remark: For Ampache to access custom directories, you must ensure read access to the folder, e.g. by:
+
+    ```sh
+    chmod -R 775 /my/directory
+    ```
+
+    ![DietPi media server software Ampache add catalog](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: style="width:500px"}
+
+=== "Enable additional file formats via transcoding"
+
+    - <https://github.com/ampache/ampache/wiki/Transcoding>
+    - E.g. to allow .m4a playback:
+
+      ```sh
+      G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /var/www/ampache/config/ampache.cfg.php
+      ```
+
+=== "Update Ampache"
+
+    To update Ampache to the current version, execute  
+    `dietpi-software reinstall 40`.
 
 ## Emby - Web interface media streaming server
 
