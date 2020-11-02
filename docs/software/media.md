@@ -73,8 +73,8 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used:
 
-    - local = `/mnt/dietpi_userdata/Music`  
-      accessed from file server = `/Music`
+    - local = `/mnt/dietpi_userdata/Music`
+    - accessed from file server = `/Music`
 
 === "Refresh music files / database"
 
@@ -117,8 +117,8 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used:
 
-    - local = `/mnt/dietpi_userdata/Music`  
-      accessed from file server = `/Music`
+    - local = `/mnt/dietpi_userdata/Music`
+    - accessed from file server = `/Music`
 
 === "Refresh music files / database"
 
@@ -153,8 +153,8 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by O!MPD:
 
-    - local = `/mnt/dietpi_userdata/Music`  
-      accessed from file server = `/Music`
+    - local = `/mnt/dietpi_userdata/Music`
+    - accessed from file server = `/Music`
 
 === "Update/scan library"
 
@@ -200,8 +200,8 @@ Mopidy is a python based music player web based user interface for MPD.
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by Mopidy:
 
-    - local = `/mnt/dietpi_userdata/Music`  
-      accessed from file server = `/Music`
+    - local = `/mnt/dietpi_userdata/Music`
+    - accessed from file server = `/Music`
 
 === "Refresh music files / database"
 
@@ -624,7 +624,7 @@ Turn your device into a lightweight Mumble VoIP server.
 
 Turns your SBC into a Roon capable audio player. By using the main Roon application on another device, you can stream your music catalog directly to the Roon Bridge running on your SBC.
 
-![DietPi media server software Roon logog](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
 
 ![DietPi media server software Roon Bridge](../assets/images/dietpi-software-media-roonbridge.png){: style="width:500px"}
 
@@ -641,7 +641,7 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 
 Turns your device into a Roon capable audio player and core server.
 
-![DietPi media server software Roon logog](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
 
 ![DietPi media server software Roon Server](../assets/images/dietpi-software-media-roonserver.png){: style="width:500px"}
 
@@ -660,8 +660,8 @@ Turns your device into a Roon capable audio player and core server.
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by Roon Server:
 
-    - Music folder = `/mnt/dietpi_userdata/Music`  
-      accessed from fileserver = `/Music`
+    - Music folder = `/mnt/dietpi_userdata/Music`
+    - Accessed from file server = `/Music`
 
 ## Roon Extension Manager - Manage extensions from within Roon
 
@@ -669,7 +669,7 @@ At startup the Roon Extension Manager accesses a repository containing the commu
 
 Many thanks to @JanKoudijs for contributing this into DietPi
 
-![DietPi media server software Roon logog](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
 
 ![DietPi media server software Roon Extension Manager](../assets/images/dietpi-software-media-roonextmanager.jpg){: style="width:500px"}
 
@@ -678,30 +678,183 @@ Details and usage information see
 
 ## NAA Daemon - Signalyst Network Audio Adaptor (NAA)
 
+Signalyst Network Audio Adapter (NAA) daemon allows you to stream music from an HQPlayer source (like Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (like 192Khz) and more.
+
+More information on HQPlayer/NAA Daemon: <https://www.signalyst.eu/consumer.html>  
+Also works with Roon.
+
 ![DietPi media server software NAA Daemon](../assets/images/dietpi-software-media-naa.png){: style="width:500px"}
+
+=== "HQPlayer Desktop (Windows)"
+
+    This will allow you to stream audio from your Windows PC, to the NAA Daemon on the DietPi device.
+
+    - Download and install HQPlayer Desktop for Windows:  
+      <https://www.signalyst.eu/consumer.html>
+    - Run the program
+    - To configure HQPlayer to use the NAA Daemon on the DietPi device:
+        - Select `File` then `Settings`
+        - Under `Backend`, select `NetworkAudioAdapter`. The DietPi device should be detected automatically.
+        - Click `Ok` to save changes
+
+=== "How do I use Roon and HQPlayer together?"
+
+    Guide: <https://help.roonlabs.com/portal/en/kb/articles/faq-how-do-i-use-roon-and-hqplayer-together>
+
+=== "Update method"
+
+    `dietpi-software reinstall 124`
 
 ## IceCast - Shoutcast Streaming Server, including DarkIce
 
+Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
+
 ![DietPi media server software IceCast](../assets/images/dietpi-software-media-icecast.png){: style="width:500px"}
+
+=== "Installation notes"
+
+    DietPi will attempt to detect mic input during installation, and apply to DarkIce. If a microphone was not available, or you experience issue, check available microphones with:
+
+      `arecord -l`
+
+      - Then edit the device entry in `/etc/darkice.cfg`, or  
+      - Simple copy and paste:
+
+        ```sh
+        sed -i "/^device[[:space:]]/c\device = hw:$(arecord -l | grep -m1 'card' | awk '{print $2}' | sed 's/://'),0" /etc/darkice.cfg
+        ```
+
+      - Restart services
+
+        ```sh
+        dietpi-services restart
+        ```
+
+    We created a `systemd` service for DarkIce, DietPi will automatically start this:  
+    `systemctl status darkice -l`
+
+=== "Access IceCast web interface"
+
+    - URL = `http://<your.IP>:8000`
+    - Source password = `dietpi`
+    - Relay password = `dietpi`
+    - Admin password = randomly generated, use code below to view:
+
+        ```sh
+        cat /etc/icecast2/icecast.xml | grep admin-password
+        ```
+
+=== "Access Recording File"
+
+    This is disabled by default.
+
+    - A recording of the stream can be enabled by editing `/etc/darkice.cfg`, then un-commenting `localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg`
+    - Restart services:  
+      `dietpi-services restart`
+    - A recording will then be saved in the following location:  
+      `/mnt/dietpi_userdata/darkice_recording.ogg`
 
 ## jRiver - Media Center
 
+Media center.
+
 ![DietPi media server software jRiver](../assets/images/dietpi-software-media-jriver.png){: style="width:500px"}
+
+If you did not select JRiver to start from boot:
+
+- Desktop = JRiver available via the LXDE start menu, under "Multimedia"
+- Console = JRiver can also be run by typing `xinit mediacenter22`
+
+You can modify the AutoStart options in `dietpi-autostart`.
 
 ## Koel - Web interface streaming server
 
+Web interface music streamer.
+
 ![DietPi media server software Koel](../assets/images/dietpi-software-media-koel.png){: style="width:500px"}
 
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>:8000`
+    - Email address = The one you entered during installation
+    - Password = The one you entered during installation
+
+=== "First run setup"
+
+    Configure Koel to use the DietPi user data (music) directory:
+
+    - In the web interface, on the left hand side click `settings`
+    - Under `Media Path`, enter `/mnt/dietpi_userdata/Music`
+    - Then click `Scan`
+
+=== "Transfer media files to your device"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by Koel:
+
+    - local = `/mnt/dietpi_userdata/Music`
+    - accessed from file server = `/Music`
+
 ## GMediaRender - Resource efficient UPnP/DLNA renderer
+
+A DLNA audio render/endpoint. Allows you to stream and play music, from another device, such as [BubbleUPnP](https://play.google.com/store/apps/details?id=com.bubblesoft.android.bubbleupnp).
 
 ![DietPi media server software GMediaRender](../assets/images/dietpi-software-media-gmediarender.png){: style="width:150px"}
 
 ## Ubooquity - Free home server for your comics and ebooks library
 
+Ubooquity is a free home server for your comics and ebooks library, with remote web interface viewing.
+
 ![DietPi media server software Ubooquity](../assets/images/dietpi-software-media-ubooquity.jpg){: style="width:600px"}
+
+=== "Access to the web interface"
+
+    - Admin page = `http://<your.IP>:2038/admin`
+    - Library view page = `http://<your.IP>:2039`
+
+=== "Transfer ebooks/comics to your device"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+
+    - Use the following folders = `/mnt/dietpi_userdata/ebooks` and `/mnt/dietpi_userdata/comics`
+    - Then use the admin page, to set the above locations for ebook and comic storage
+    - Run a scan in the admin page to update the database
+
+=== "Update to the latest version"
+
+    `dietpi-software reinstall 80`
 
 ## Komga - Free and open source comics/mangas media server with web UI
 
+Free and open source comics/mangas media server with web UI.
+
 ![DietPi media server software Komga](../assets/images/dietpi-software-media-komga.jpg){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>:2037`
+
+=== "Data directory"
+
+    `/mnt/dietpi_userdata/komga`
+
+=== "Configuration file"
+
+    `/mnt/dietpi_userdata/komga/application.yml`
+
+=== "View logs"
+
+    `journalctl -u komga`
+
+    If you require file logging, set a path via `config` file, like `logging:` \> `file:` \> `name: /var/log/komga/komga.log`, assure that the directory exists and the "komga" user or group has write permissions.
+
+=== "Update to latest version"
+
+    `dietpi-software reinstall 179`
+
+See also
+
+- Official documentation: <https://komga.org/guides/>
+- Source code: <https://github.com/gotson/komga>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

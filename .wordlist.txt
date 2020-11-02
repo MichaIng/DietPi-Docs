@@ -156,6 +156,7 @@ iptables
 IPv
 iZotope
 Jackett
+JanKoudijs
 Jellyfin
 Joulinar
 journald
