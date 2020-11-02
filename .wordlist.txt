@@ -35,6 +35,7 @@ Blynk
 bootable
 bootloader
 Bticino
+BubbleUPnP
 Bugreport
 CalDAV
 CardDAV
@@ -82,12 +83,14 @@ DLNA
 DNS
 Domoticz
 DPMS
+DRC
 DRM
 Dropbear
 DSI
 DSN
 DVFS
 DXX
+ebook
 ebooks
 EEPROM
 Emby
@@ -140,6 +143,7 @@ hotspot
 Hotspot
 HotSpot
 Hotspots
+HQPlayer
 htop
 HTPC
 http
