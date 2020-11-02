@@ -678,7 +678,7 @@ Details and usage information see
 
 ## NAA Daemon - Signalyst Network Audio Adaptor (NAA)
 
-Signalyst Network Audio Adapter (NAA) daemon allows you to stream music from an HQPlayer source (like Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (like 192Khz) and more.
+Signalyst Network Audio Adapter (NAA) daemon allows you to stream music from an HQPlayer source (like Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (like 192 kHz) and more.
 
 More information on HQPlayer/NAA Daemon: <https://www.signalyst.eu/consumer.html>  
 Also works with Roon.
@@ -748,7 +748,7 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
 
     This is disabled by default.
 
-    - A recording of the stream can be enabled by editing `/etc/darkice.cfg`, then un-commenting `localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg`
+    - A recording of the stream can be enabled by editing `/etc/darkice.cfg`, then uncommenting `localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg`
     - Restart services:  
       `dietpi-services restart`
     - A recording will then be saved in the following location:  
@@ -846,7 +846,7 @@ Free and open source comics/mangas media server with web UI.
 
     `journalctl -u komga`
 
-    If you require file logging, set a path via `config` file, like `logging:` \> `file:` \> `name: /var/log/komga/komga.log`, assure that the directory exists and the "komga" user or group has write permissions.
+    If you require file logging, set a path via `config` file, like `logging:` \> `file:` \> `name: /var/log/komga/komga.log`, assure that the directory exists and the `komga` user or group has write permissions.
 
 === "Update to latest version"
 
