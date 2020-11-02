@@ -49,14 +49,14 @@ The only media centre/player you'll ever need.
 
 ![DietPi media server software Kodi](../assets/images/dietpi-software-media-kodi.jpg){: style="width:500px"}
 
-If you did not select Kodi to start from boot, you can modify the autoStart options in `dietpi-autoStart`:
+If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autoStart`:
 
 - Desktop = Kodi is available via the LXDE start menu, and, desktop.
 - Console = Kodi can also be run by typing `startkodi`.
 
 ## ympd - Lightweight web Interface audio player for MPD
 
-A lightweight, bare-bones, no frills Hifi music player with a web based interface. ympd is a front end for MPD.
+A lightweight, bare-bones, no frills HiFi music player with a web based interface. ympd is a front end for MPD.
 
 Also installs:
 
@@ -74,7 +74,7 @@ Also installs:
     Folders used:
 
     - local = `/mnt/dietpi_userdata/Music`  
-      accessed from fileserver = `/Music`
+      accessed from file server = `/Music`
 
 === "Refresh music files / database"
 
@@ -89,7 +89,7 @@ Also installs:
 
 ## myMPD - Lightweight web Interface audio player for MPD
 
-A lightweight, bare-bones, no frills Hifi music player with a web based interface. myMPD is a front end for MPD, and a recent fork of ympd.
+A lightweight, bare-bones, no frills HiFi music player with a web based interface. myMPD is a front end for MPD, and a recent fork of ympd.
 
 Also installs:
 
@@ -118,7 +118,7 @@ Also installs:
     Folders used:
 
     - local = `/mnt/dietpi_userdata/Music`  
-      accessed from fileserver = `/Music`
+      accessed from file server = `/Music`
 
 === "Refresh music files / database"
 
@@ -154,7 +154,7 @@ Also installs:
     Folders used by O!MPD:
 
     - local = `/mnt/dietpi_userdata/Music`  
-      accessed from fileserver = `/Music`
+      accessed from file server = `/Music`
 
 === "Update/scan library"
 
@@ -175,8 +175,8 @@ Also installs:
 
     If you did not select CAVA to start from boot:
 
-    - Cava can also be run by typing cava. Use `CTRL+C` to terminate.
-    - You can modify the autoStart options in `dietpi-autostart`.
+    - CAVA can also be run by typing `cava`. Use `CTRL+C` to terminate.
+    - You can modify the autostart options in `dietpi-autostart`.
 
 === "DietPi-JustBoom control panel"
 
@@ -201,7 +201,7 @@ Mopidy is a python based music player web based user interface for MPD.
     Folders used by Mopidy:
 
     - local = `/mnt/dietpi_userdata/Music`  
-      accessed from fileserver = `/Music`
+      accessed from file server = `/Music`
 
 === "Refresh music files / database"
 
@@ -256,11 +256,11 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 ## SqueezeLite - Audio player for Logitech Media Server
 
-![DietPi media server software SqeezeLite](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
+![DietPi media server software SqueezeLite](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
 
 ## Shairport Sync - AirPlay audio player with multiroom sync
 
-![DietPi media server software Shairpoirt Sync](../assets/images/dietpi-software-media-shairportsync.png){: style="width:500px"}
+![DietPi media server software Shairport Sync](../assets/images/dietpi-software-media-shairportsync.png){: style="width:500px"}
 
 ## ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)
 
