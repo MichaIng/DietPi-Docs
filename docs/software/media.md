@@ -341,7 +341,7 @@ SqueezeLite is the audio player for the Logitech Media Server.
     - Run `dietpi-services`
     - Select `squeezelite`
     - Select `Edit`
-    - Unset and re-set the ExecStart entry:
+    - Unset and re-set the `ExecStart` entry:
       :
       ```sh
       ExecStart=
