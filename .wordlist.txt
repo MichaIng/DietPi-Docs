@@ -327,6 +327,7 @@ Sonarr
 Soxr
 SPC
 SPI
+Spotify
 SqueezeLite
 SSD
 SSHFS
@@ -389,6 +390,7 @@ webstack
 Wh
 Widevine
 wikimedia
+Winamp
 WinSCP
 WireGuard
 WiringPi

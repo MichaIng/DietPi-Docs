@@ -508,31 +508,173 @@ Also Installs:
 
 ## Emby - Web interface media streaming server
 
+A web interface media streaming server. Think Kodi, but using any device with a web browser.
+
+??? note "Transcoding performance on SBC"
+
+    Video transcoding performance on SBC devices is sluggish and may stutter, even on the RPi 3:  
+    <https://github.com/MichaIng/DietPi/issues/310#issuecomment-216262850>  
+    SBCs should be fine for Music only.  
+    A Virtual Machine is highly recommended for Video transcoding:  
+    <https://github.com/MichaIng/DietPi/issues/310#issuecomment-219067830>
+
 ![DietPi media server software Emby](../assets/images/dietpi-software-media-embyserver.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    URL = `http://<your.IP>:8096`
+
+=== "First run setup"
+
+    Once connected to the web interface, simply follow the on screen instructions.  
+    When you reach Setup your media libraries:
+
+    ```sh
+    /mnt/dietpi_userdata/Music
+    /mnt/dietpi_userdata/Video
+    ```
+
+    You can also mount Samba/NFS shares by running `dietpi-drive_manager` and selecting `Mount network drive` from the menu.
+
+=== "Transfer media files to your device"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by Emby:
+
+    - audio = `/mnt/dietpi_userdata/Music`
+    - videos = `/mnt/dietpi_userdata/Video`
+
+=== "Update"
+
+    To update the Emby Server version simply reinstall Emby Server to update it to newest version. It will preserve any existing data and settings:  
+    `dietpi-software reinstall 41`
 
 ## Plex Media Server - Web interface media streaming server
 
+Plex organizes your video, music, and photo collections and streams them to all of your screens. Also known as a "Web interface media streaming server".
+
 ![DietPi media server software Plex Media Server](../assets/images/dietpi-software-media-plexmediaserver.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    URL = `http://<your.IP>:32400/web`
+
+=== "First run setup"
+
+    Please follow the onscreen instructions to complete the setup wizard:
+
+    - Create your Plex account by signing up.
+    - Give your server a name (e.g.: `DietPi-Plex`)
+    - Click `library` to setup your media locations:
+
+    ```sh
+    /mnt/dietpi_userdata/Music
+    /mnt/dietpi_userdata/Video
+    ```
+
+    You can also mount Samba/NFS shares by running `dietpi-drive_manager` and selecting `Mount network drive` from the menu.
+
+=== "Transfer media files to your device"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by Plex Media Server:
+
+    - audio = `/mnt/dietpi_userdata/Music`
+    - videos = `/mnt/dietpi_userdata/Video`
 
 ## Tautulli - Monitoring and tracking tool for Plex Media Server
 
+A Python-based monitoring and tracking tool for Plex Media Server.
+
 ![DietPi media server software Tautulli](../assets/images/dietpi-software-media-tautulli.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    URL = `http://<your.IP>:8181`
+
+=== "Access to the log files"
+
+    `/mnt/dietpi_userdata/plexpy/logs/`
 
 ## Murmur - Mumble VoIP Server
 
-![DietPi media server software Murmur](../assets/images/dietpi-software-media-murmur.png){: style="width:150px"}
+Turn your device into a lightweight Mumble VoIP server.
+
+![DietPi media server software Murmur](../assets/images/dietpi-software-media-murmur.png){: style="width:100px"}
+
+=== "Murmur Server connection details"
+
+    Use the following credentials to connect clients to the Murmur server:
+
+    - URL = `http://<your.IP>:64738`
+    - Password = No password required
+    - Superuser Password = `dietpi`
+
+=== "Change Murmur Server settings"
+
+    You will need to edit the Murmur config file:
+
+    ```sh
+    nano /etc/mumble-server.ini
+    #Restart service
+    service mumble-server restart
+    ```
 
 ## Roon Bridge - Turns your device into a Roon capable audio player
 
+Turns your SBC into a Roon capable audio player. By using the main Roon application on another device, you can stream your music catalog directly to the Roon Bridge running on your SBC.
+
+![DietPi media server software Roon logog](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+
 ![DietPi media server software Roon Bridge](../assets/images/dietpi-software-media-roonbridge.png){: style="width:500px"}
+
+=== "More information on Roon"
+
+    Can be found there: <https://roonlabs.com/index.html>
+
+=== "Requirements"
+
+    Roon on another system (e.g.: Windows PC) to control the player.  
+    [Roon License](https://roonlabs.com/pricing) (free trial is also available).
 
 ## Roon Server - Turns your device into a Roon capable audio player and Roon core
 
+Turns your device into a Roon capable audio player and core server.
+
+![DietPi media server software Roon logog](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+
 ![DietPi media server software Roon Server](../assets/images/dietpi-software-media-roonserver.png){: style="width:500px"}
+
+=== "Install a Roon Remote on another system"
+
+    You can use the Roon Remote apps to control and configure the Roon Server:  
+    <https://roonlabs.com/downloads.html>
+
+=== "Recommended Music Storage Directory"
+
+    When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer Music below), and storing the music on your Roon Server system:  
+    `/mnt/dietpi_userdata/Music`
+
+=== "Transfer media files to your device"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by Roon Server:
+
+    - Music folder = `/mnt/dietpi_userdata/Music`  
+      accessed from fileserver = `/Music`
 
 ## Roon Extension Manager - Manage extensions from within Roon
 
+At startup the Roon Extension Manager accesses a repository containing the community developed extensions. Via `Settings` \> `Extensions` within Roon the repository can be viewed and an extension can be selected to perform a certain action.
+
+Many thanks to @JanKoudijs for contributing this into DietPi
+
+![DietPi media server software Roon logog](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+
 ![DietPi media server software Roon Extension Manager](../assets/images/dietpi-software-media-roonextmanager.jpg){: style="width:500px"}
+
+Details and usage information see  
+<https://community.roonlabs.com/t/roon-extension-manager-v0-11-8/26632>.
 
 ## NAA Daemon - Signalyst Network Audio Adaptor (NAA)
 
