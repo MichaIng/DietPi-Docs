@@ -248,7 +248,37 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 ## Subsonic - Feature rich media streaming server with web interface
 
+Feature rich media streaming server with a web interface. Coded in Java.
+
 ![DietPi media server software Subsonic](../assets/images/dietpi-software-media-subsonic.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IPY>:4040`
+    - Username = `admin`
+    - Password = `admin`
+
+    === "Transfer/add music"
+
+        Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+        Folders used by Mopidy:
+
+        - folder = `/mnt/dietpi_userdata/Music`  
+
+=== "Jetty http 404 error"
+
+    This is a known issue with Subsonic and is out of my control.  
+    If you experience this error while accessing the Subsonic webpage, you can resolve the issue by running the following:
+
+    ```sh
+    systemctl stop subsonic
+    rm -R /var/subsonic/jetty
+    systemctl restart subsonic
+    ```
+
+=== "GitHub Contributions"
+
+    Many thanks to 'thechildofroth' for his testing and fixes with the Subsonic installation.
 
 ## Logitech Media Server - aka LMS, Squeezebox Server
 
