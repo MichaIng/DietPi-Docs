@@ -193,7 +193,7 @@ Mopidy is a python based music player web based user interface for MPD.
 
 === "Access to the web interface"
 
-    - URL = `http://<your.IPY>:6680/musicbox_webclient` or just `http://<your.IPY>:6680`
+    - URL = `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
 
 === "Transfer/add music"
 
@@ -227,7 +227,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 === "Access to the web interface"
 
-    - URL = `http://<your.IPY>:8080/airsonic`
+    - URL = `http://<your.IP>:8080/airsonic`
     - Username = `admin`
     - Password = `admin`
 
@@ -254,16 +254,16 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 === "Access to the web interface"
 
-    - URL = `http://<your.IPY>:4040`
+    - URL = `http://<your.IP>:4040`
     - Username = `admin`
     - Password = `admin`
 
-    === "Transfer/add music"
+=== "Transfer/add music"
 
-        Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
-        Folders used by Mopidy:
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by Mopidy:
 
-        - folder = `/mnt/dietpi_userdata/Music`  
+    - folder = `/mnt/dietpi_userdata/Music`  
 
 === "Jetty http 404 error"
 
@@ -282,19 +282,163 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 ## Logitech Media Server - aka LMS, Squeezebox Server
 
+Logitech Media Server is the server software that enables web interface control of:
+
+- Software audio players: SqueezeLite
+- Hardware audio players from Logitech: Squeezebox, SlimDevices
+
+Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting SqueezeLite for installation in `dietpi-software`.
+
 ![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>:9000`
+
+=== "Transfer/add music"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by Mopidy:
+
+    - folder = `/mnt/dietpi_userdata/Music`  
+
+=== "Change SqueezeLite command line options"
+
+    - Run `dietpi-services`
+    - Select `squeezelite`
+    - Select `Edit`
+    - Unset and re-set the ExecStart entry:
+      :
+      ```sh
+      ExecStart=
+      ExecStart=/usr/bin/squeezelite [<your custom arguments>]
+      ```
+
+      : The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
+
+    - Save changes with `CTRL+o` and exit `dietpi-services`
+    - Restart the service: `systemctl restart squeezelite`
 
 ## SqueezeLite - Audio player for Logitech Media Server
 
-![DietPi media server software SqueezeLite](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
+SqueezeLite is the audio player for the Logitech Media Server.
+
+![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>:9000`
+
+=== "Transfer/add music"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by Mopidy:
+
+    - folder = `/mnt/dietpi_userdata/Music`  
+
+=== "Change SqueezeLite command line options"
+
+    - Run `dietpi-services`
+    - Select `squeezelite`
+    - Select `Edit`
+    - Unset and re-set the ExecStart entry:
+      :
+      ```sh
+      ExecStart=
+      ExecStart=/usr/bin/squeezelite [<your custom arguments>]
+      ```
+
+      : The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
+
+    - Save changes with `CTRL+o` and exit `dietpi-services`
+    - Restart the service: `systemctl restart squeezelite`
 
 ## Shairport Sync - AirPlay audio player with multiroom sync
 
-![DietPi media server software Shairport Sync](../assets/images/dietpi-software-media-shairportsync.png){: style="width:500px"}
+Shairport Sync is an AirPlay audio player which plays audio streamed from iTunes, iOS devices and third-party AirPlay sources such as ForkedDaapd and Airfoil.  
+Audio played by a Shairport Sync-powered device stays synchronised with the source and hence with similar devices playing the same source. This allows for synchronised multi-room audio on multiple devices.
+
+![DietPi media server software Shairport Sync](../assets/images/dietpi-software-media-shairportsync.png){: style="width:400px"}
+
+=== "AirPlay device name"
+
+    When searching for an Airplay device, execute `shairport-sync` on DietPi.
+
+=== "Stream from Android and iPad/iPhone"
+
+    There are many AirPlay players available for Android (e.g. [AirPlay For Android](https://play.google.com/store/apps/details?id=com.screen.mirroring.airplay.streamtotv&hl=de)) and iPad/iPhone (e.g. [AirPlay](https://support.apple.com/en-gb/HT204289)).  
+    Download and use the player of your choice.
+
+=== "Stream from a Windows/Mac PC"
+
+    Airfoil is an application that will let you stream audio playback directly to any Shairport Sync device. Press play on your favourite music player (eg: winamp/spotify) and click the speaker next to the DietPi device.
+
+=== "Audiophiles - Master music in realtime"
+
+    By using a PC + Airfoil, you can master the music in realtime using the PCs CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.  
+    FuzonMp3 is a lightweight music player coded in C++ that sounds "as it should" and supports VST plugins. iZotope Ozone 5 is highly recommended for audiophiles.
+
+=== "Multiple Shairport devices / Change Shairport Sync name"
+
+    If you are planning to use multiple Shairport devices on the same network, please make sure the hostname of each device is unique. The hostname will also effect the `shairport-sync` name.  
+    This can be completed in `dietpi-config` \> `Security Options` \> `Change Hostname`.
+
+=== "Soxr interpolation"
+
+    Soxr interpolation will improve the output audio quality on Shairport. However, it is extremely CPU intensive.  
+    Enable Soxr:
+
+    ```sh
+    sed -i '/interpolation = /c\interpolation = "soxr";' /usr/local/etc/shairport-sync.conf
+    systemctl restart shairport-sync
+    ```
+
+    Disable Soxr:
+
+    ```sh
+    sed -i '/interpolation = /c\\/\/interpolation = "soxr";' /usr/local/etc/shairport-sync.conf
+    systemctl restart shairport-sync
+    ```
+
+    If you have choppy playback using Soxr:  
+    Increasing the `shairplay-sync` process priority (nice) may resolve the issue.
+
+    - Run `dietpi-services` from the terminal
+    - Select `shairport-sync` via up/down buttons then press `Enter`
+    - Select `CPU Nice` via up/down buttons then press `Enter`
+    - Select `-20 : (Highest priority)` via up button, then press `Enter`
+
+    DietPi will then automatically apply and set the nice level.
+
+    If the choppy playback continues, the CPU most likely is insufficient for the processing required for soxr. Then soxr should be disabled.
 
 ## ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)
 
+Stream your shared media to any DLNA/UPnP capable device.
+
 ![DietPi media server software ReadyMedia](../assets/images/dietpi-software-media-readymedia.jpg){: style="width:200px"}
+
+=== "Access to ReadyMedia status"
+
+    - URL = `http://<your.IP>:8200`
+
+=== "Transfer media files to ReadyMedia"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Folders used by ReadyMedia:
+
+    - folder = `/Music /Pictures /Video`
+
+=== "Refresh the ReadyMedia database"
+
+    The database can be refreshed with this command:
+
+    ```sh
+    rm -r /mnt/dietpi_userdata/.MiniDLNA_Cache/* && systemctl restart minidlna
+    ```
+
+For a list of available UPnP clients: See  
+<https://.wikipedia.org/wiki/List_of_UPnP_AV_media_servers_and_clients#UPnP_AV_clients>.
 
 ## Ampache - Web interface media streaming server
 
