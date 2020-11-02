@@ -307,7 +307,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
     - Run `dietpi-services`
     - Select `squeezelite`
     - Select `Edit`
-    - Unset and re-set the ExecStart entry:
+    - Unset and re-set the `ExecStart` entry:
       :
       ```sh
       ExecStart=
@@ -371,11 +371,11 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
 
 === "Stream from a Windows/Mac PC"
 
-    Airfoil is an application that will let you stream audio playback directly to any Shairport Sync device. Press play on your favourite music player (eg: winamp/spotify) and click the speaker next to the DietPi device.
+    Airfoil is an application that will let you stream audio playback directly to any Shairport Sync device. Press play on your favourite music player (e.g.: Winamp/Spotify) and click the speaker next to the DietPi device.
 
-=== "Audiophiles - Master music in realtime"
+=== "Audiophiles - Master music in real time"
 
-    By using a PC + Airfoil, you can master the music in realtime using the PCs CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.  
+    By using a PC + Airfoil, you can master the music in real time using the PCs CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.  
     FuzonMp3 is a lightweight music player coded in C++ that sounds "as it should" and supports VST plugins. iZotope Ozone 5 is highly recommended for audiophiles.
 
 === "Multiple Shairport devices / Change Shairport Sync name"
@@ -410,7 +410,7 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
 
     DietPi will then automatically apply and set the nice level.
 
-    If the choppy playback continues, the CPU most likely is insufficient for the processing required for soxr. Then soxr should be disabled.
+    If the choppy playback continues, the CPU most likely is insufficient for the processing required for Soxr. Then Soxr should be disabled.
 
 ## ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)
 
@@ -440,7 +440,7 @@ Stream your shared media to any DLNA/UPnP capable device.
     ```
 
 For a list of available UPnP clients: See  
-<https://.wikipedia.org/wiki/List_of_UPnP_AV_media_servers_and_clients#UPnP_AV_clients>.
+<https://www.wikipedia.org/wiki/List_of_UPnP_AV_media_servers_and_clients#UPnP_AV_clients>.
 
 ## Ampache - Web interface media streaming server
 
@@ -465,7 +465,6 @@ Also Installs:
 
     - audio = `/mnt/dietpi_userdata/Music`
     - videos = `/mnt/dietpi_userdata/Video`
-
 
 === "Scan for media, update Ampache database"
 

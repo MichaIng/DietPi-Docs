@@ -104,6 +104,7 @@ fahclient
 FB
 FHS
 filesystem
+ForkedDaapd
 FOSS
 FPU
 FreshRSS
@@ -111,6 +112,7 @@ FriendlyARM
 FriendlyARM's
 frontend
 Fullscreen
+FuzonMp
 Gbit
 GiB
 Gitea
@@ -152,6 +154,7 @@ IoT
 IPsec
 iptables
 IPv
+iZotope
 Jackett
 Jellyfin
 Joulinar
@@ -314,12 +317,14 @@ Shairport
 ShareAlike
 Shoutcast
 Signalyst
+SlimDevices
 SMB
 smb
 sn
 SNMP
 SoCs
 Sonarr
+Soxr
 SPC
 SPI
 SqueezeLite
@@ -339,9 +344,11 @@ Tasmota
 Tautulli
 TCP
 tcpdump
+thechildofroth
 TigerVNC
 TLS
 Tonido
+transcoding
 TRÅDFRI
 txt
 Tyrian
@@ -371,6 +378,7 @@ VNC
 VNCSERVER
 VPN
 vsftpd
+VST
 Waveshare
 WebIOPi
 webmin
