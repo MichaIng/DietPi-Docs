@@ -163,7 +163,7 @@
 
 ### [Remote Desktop](../software/remote_desktop/#remote-desktop/)
 
-- [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection)
+- [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#tigervnc-server-desktop-for-remote-connection)
 - [**RealVNC Server - Desktop for remote connection**](../software/remote_desktop/#realvnc-server-desktop-for-remote-connection)
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](../software/remote_desktop/#xrdp-remote-desktop-server-for-windows-remote-desktop-client)
 - [**NoMachine - Feature rich remote desktop connection**](../software/remote_desktop/#nomachine-feature-rich-remote-desktop-connection)
