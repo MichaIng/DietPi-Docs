@@ -35,7 +35,7 @@
 
 ## Transmission - Lightweight BitTorrent server with web interface
 
-Transmission, the lightweight web interface BitTorrent server that allows you to download bittorrent files.
+Transmission, the lightweight web interface BitTorrent server that allows you to download Bittorrent files.
 
 ??? hint "USB dedicated hard drive highly recommended"
 
@@ -68,19 +68,19 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
     - Load up the transmission web interface
     - Click the `settings` button (bottom left spanner)
     - Click the `network` tab
-    - Where is says `Use port forwarding on my router`, untick this box.
+    - Where is says `Use port forwarding on my router`, uncheck this box.
 
     Simply close and reopen this screen to refresh the port status.
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## Deluge - Alternative BitTorrent server with web interface
 
-Deluge, the web interface BitTorrent server that allows you to download bittorrent files. This python coded bittorrent server is an alternative to the [Lightweight Transmission](#transmission-lightweight-bittorrent-server-with-web-interface) option.
+Deluge, the web interface BitTorrent server that allows you to download Bittorrent files. This python coded Bittorrent server is an alternative to the [Lightweight Transmission](#transmission-lightweight-bittorrent-server-with-web-interface) option.
 
 ??? hint "USB dedicated hard drive highly recommended"
 
@@ -100,10 +100,10 @@ Deluge, the web interface BitTorrent server that allows you to download bittorre
 === "Connect using your desktop Deluge client"
 
     - Open up Deluge client on your other system
-    - Select `Preferences` \> `Interface` and disable (untick) `Classic Mode`. Save changes and restart Deluge
+    - Select `Preferences` \> `Interface` and disable (uncheck) `Classic Mode`. Save changes and restart Deluge
     - When the connection manager appears, select `Add`.
     - Enter the following details:
-        - Hostname = Your device's IP address (eg: 192.168.0.100)
+        - Hostname = Your device's IP address (e.g.: 192.168.0.100)
         - Port = 58846
         - Username = `root`
         - Password = `dietpi`
@@ -119,13 +119,13 @@ Deluge, the web interface BitTorrent server that allows you to download bittorre
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## qBittorrent - Lightweight and fast (C++) BitTorrent server with web interface
 
-qBitTorrent is a lightweight BitTorrent server with a slick web interface. As its coded in C++ (Qt), it offers excellent performance on any device.
+qBittorrent is a lightweight BitTorrent server with a slick web interface. As its coded in C++ (Qt), it offers excellent performance on any device.
 
 ??? hint "USB dedicated hard drive highly recommended"
 
@@ -147,12 +147,12 @@ qBitTorrent is a lightweight BitTorrent server with a slick web interface. As it
 
 === "Using of search plugins"
 
-    Before activating search plugins within qBitTorrent, you would need to install Python first. Afterwards you can search and activate the plugins.
+    Before activating search plugins within qBittorrent, you would need to install Python first. Afterwards you can search and activate the plugins.
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## rTorrent - BitTorrent server with ruTorrent web interface
@@ -191,8 +191,8 @@ Also installs:
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## Aria2 - Download manager with web interface
@@ -236,10 +236,9 @@ Also installs:
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
-
 
 ## SABnzbd - NZB download manager with web interface
 
@@ -289,8 +288,8 @@ NZB download manager with web interface.
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## Medusa - Automatically download TV shows
@@ -340,8 +339,8 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## Sonarr - Automatically download TV shows
@@ -362,11 +361,11 @@ Automatically download your favorite TV shows, as they become available.
 
     Before you can add TV shows, you'll need to select a search indexer to use from the web interface:
 
-    - Simply goto `Settings` \> `Indexer` then choose at least one indexer.
+    - Simply go to `Settings` \> `Indexer` then choose at least one indexer.
 
     Setup your download client:
 
-    - Simply goto `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
+    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
 
     Setup file creation mask:  
     If you require write access from other applications (e.g. Plex subtitle downloads), you'll also need to set the file/folder creation mask to allow this.
@@ -393,19 +392,19 @@ Automatically download your favorite TV shows, as they become available.
     1. Run `dietpi-services` from console
     2. Select `sonarr`
     3. Select `Edit`
-    4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=``
+    4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=`
     5. Add your custom path to the end of this line, separated by one space
     6. Press `CTRL+o` buttons to save and `CTRL+x` to exit
 
 === "Link databases to RAM"
 
-    Link the Sonarr info/settings database to RAM to increase access performance, reduce disk I/O and avoide constant external HDD spinning due to the very regular access to these files:  
+    Link the Sonarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files:  
     <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5828>
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## Radarr - Automatically download Movies
@@ -426,11 +425,11 @@ Automatically download your favorite movies, as they become available.
 
     Before you can add movies, you'll need to select a search indexer to use from the web interface:
 
-    - Simply goto `Settings` \> `Indexer` then choose at least one indexer.
+    - Simply go to `Settings` \> `Indexer` then choose at least one indexer.
 
     Setup your download client:
 
-    - Simply goto `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
+    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
 
     Setup file creation mask:  
     If you require write access from other applications (e.g. Plex subtitle downloads), you'll also need to set the file/folder creation mask to allow this.
@@ -457,19 +456,19 @@ Automatically download your favorite movies, as they become available.
     1. Run `dietpi-services` from console
     2. Select `radarr`
     3. Select `Edit`
-    4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=``
+    4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=`
     5. Add your custom path to the end of this line, separated by one space
     6. Press `CTRL+o` buttons to save and `CTRL+x` to exit
 
 === "Link databases to RAM"
 
-    Link the Radarr info/settings database to RAM to increase access performance, reduce disk I/O and avoide constant external HDD spinning due to the very regular access to these files:  
+    Link the Radarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files:  
     <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5828>
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## Bazarr- Automatically download Subtitles for Sonarr/Radarr
@@ -531,11 +530,11 @@ Automatically download your favorite music.
 
     Before you can music, you'll need to select a search indexer to use from the web interface:
 
-    - Simply goto `Settings` \> `Indexer` then choose at least one indexer.
+    - Simply go to `Settings` \> `Indexer` then choose at least one indexer.
 
     Setup your download client:
 
-    - Simply goto `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
+    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
 
     Setup file creation mask:  
     If you require write access from other applications (e.g. Plex subtitle downloads), you'll also need to set the file/folder creation mask to allow this.
@@ -562,19 +561,19 @@ Automatically download your favorite music.
     1. Run `dietpi-services` from console
     2. Select `lidarr`
     3. Select `Edit`
-    4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=``
+    4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=`
     5. Add your custom path to the end of this line, separated by one space
     6. Press `CTRL+o` buttons to save and `CTRL+x` to exit
 
 === "Link databases to RAM"
 
-    Link the Lidarr info/settings database to RAM to increase access performance, reduce disk I/O and avoide constant external HDD spinning due to the very regular access to these files:  
+    Link the Lidarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files:  
     <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5828>
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## CouchPotato - Automatically download movies
@@ -607,15 +606,15 @@ Recommend additional software:
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## Jackett - API Support for your favourite torrent trackers
 
 API Support for your favorite torrent trackers.
 
-Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato) into tracker-site-specific http queries, parses the html response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.
+Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato) into tracker-site-specific http queries, parses the HTML response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.
 
 ![DietPi download software Jackett](../assets/images/dietpi-software-download-jackett.png){: style="width:500px"}
 
@@ -625,8 +624,8 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## NZBGet - NZB download manager with web interface
@@ -651,8 +650,8 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and peice of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and upto 6 devices on a single account.  
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
 ## HTPC Manager - combines all your favourite software into one slick interface

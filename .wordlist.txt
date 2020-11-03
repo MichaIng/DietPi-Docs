@@ -303,6 +303,7 @@ Rockchip
 ROCKPro
 rom
 Roon
+rpc
 rpi
 RPi
 RPis
@@ -321,6 +322,7 @@ SFTP
 Shairport
 ShareAlike
 Shoutcast
+SickRage
 Signalyst
 SlimDevices
 SMB
