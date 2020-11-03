@@ -49,7 +49,7 @@ The only media centre/player you'll ever need.
 
 ![DietPi media server software Kodi](../assets/images/dietpi-software-media-kodi.jpg){: style="width:500px"}
 
-If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autoStart`:
+If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autostart`:
 
 - Desktop = Kodi is available via the LXDE start menu, and, desktop.
 - Console = Kodi can also be run by typing `startkodi`.
@@ -109,7 +109,7 @@ Also installs:
     - Edit `/etc/mympd.conf`
     - Replace `ssl = false` with `ssl = true`
     - Save changes and exit
-    - Restart services with `dietpi-services restart`
+    - Restart services with `systemctl restart mympd`
     - Use the same URL address above, it will redirect to HTTPS during connection
 
 === "Transfer/add music"
@@ -617,7 +617,7 @@ Turn your device into a lightweight Mumble VoIP server.
     ```sh
     nano /etc/mumble-server.ini
     #Restart service
-    service mumble-server restart
+    systemctl restart mumble-server
     ```
 
 ## Roon Bridge - Turns your device into a Roon capable audio player
