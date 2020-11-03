@@ -29,6 +29,7 @@ balenaEtcher
 Bazarr
 Beelink
 Bitcoin
+Bittorrent
 blazingly
 Bluetooth
 Blynk
@@ -367,6 +368,7 @@ UDP
 UEFI
 UI
 Unarchiver
+uncheck
 uncomment
 Unmount
 upgradable
