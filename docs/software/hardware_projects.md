@@ -52,6 +52,7 @@
         - If using SSH = `/mnt/dietpi_userdata/voice-recognizer-raspi/assistant.json`
         - If using File Server = `voice-recognizer-raspi/assistant.json`
     - Run the command below, then follow the onscreen link/instructions to setup verification:
+
       ```sh
       sudo -u dietpi /mnt/dietpi_userdata/voice-recognizer-raspi/env/bin/python3 -u /mnt/dietpi_userdata/voice-recognizer-raspi/src/main.py
       ```
