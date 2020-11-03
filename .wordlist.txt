@@ -29,7 +29,6 @@ balenaEtcher
 Bazarr
 Beelink
 Bitcoin
-Bittorrent
 blazingly
 Bluetooth
 Blynk

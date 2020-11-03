@@ -35,7 +35,7 @@
 
 ## Transmission - Lightweight BitTorrent server with web interface
 
-Transmission, the lightweight web interface BitTorrent server that allows you to download Bittorrent files.
+Transmission, the lightweight web interface BitTorrent server that allows you to download BitTorrent files.
 
 ??? hint "USB dedicated hard drive highly recommended"
 
@@ -80,7 +80,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
 ## Deluge - Alternative BitTorrent server with web interface
 
-Deluge, the web interface BitTorrent server that allows you to download Bittorrent files. This python coded Bittorrent server is an alternative to the [Lightweight Transmission](#transmission-lightweight-bittorrent-server-with-web-interface) option.
+Deluge, the web interface BitTorrent server that allows you to download BitTorrent files. This python coded BitTorrent server is an alternative to the [Lightweight Transmission](#transmission-lightweight-bittorrent-server-with-web-interface) option.
 
 ??? hint "USB dedicated hard drive highly recommended"
 
@@ -228,9 +228,9 @@ Also installs:
 
     Please note, the `aria2-webui` does not support saving settings after session shutdown, this is a known limitation with the software, please use the file `aria2.conf` to make changes:
 
-    - Stop services with `dietpi-services stop`
+    - Stop services with `systemctl stop aria2`
     - Edit the following configuration file: `/mnt/dietpi_userdata/aria2/aria2.conf`, making your required changes.
-    - Start services with `dietpi-services start`
+    - Start services with `systemctl start aria2`
 
     Full list of `aria2.conf` settings: <https://aria2.github.io/manual/en/html/aria2c.html>
 
