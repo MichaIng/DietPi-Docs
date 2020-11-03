@@ -2,25 +2,21 @@
 
 ## Overview
 
-!!! warning "Documentation in progress..."
-
-    The links redirect to the old documentation available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
-
-- [Transmission - Lightweight BitTorrent server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5#p46)
-- [Deluge - Alternative BitTorrent server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p61)
-- [qBittorrent - Lightweight and fast (c++) BitTorrent server with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=70#p2272)
-- [rTorrent - BitTorrent server with ruTorrent web interface](https://dietpi.com/phpbb/viewtopic.php?p=2603#p2603)
-- [Aria2 - Download manager with web interface](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p6177)
-- [SABnzbd - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p6747)
-- [Medusa - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p3327)
-- [Sonarr - Automatically download TV shows](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=100#p7455)
-- [Radarr - Automatically download Movies](https://dietpi.com/phpbb/viewtopic.php?p=7457#p7457)
-- **[Bazarr - Automatically download Subtitles for Sonarr/Radarr](#bazarr)**
-- [Lidarr - Automatically download Music](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p13580)
-- [CouchPotato - Automatically download movies.](https://dietpi.com/phpbb/viewtopic.php?p=7212#p7212)
-- [Jackett - API Support for your favourite torrent trackers.](https://dietpi.com/phpbb/viewtopic.php?p=7503#p7503)
-- [NZBGet - NZB download manager with web interface.](https://dietpi.com/phpbb/viewtopic.php?p=7575#p7575)
-- [HTPC Manager - combines all your favourite software into one slick interface.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=110#p8043)
+- [**Transmission - Lightweight BitTorrent server with web interface**](#transmission-lightweight-bittorrent-server-with-web-interface)
+- [**Deluge - Alternative BitTorrent server with web interface**](#deluge-alternative-bittorrent-server-with-web-interface)
+- [**qBittorrent - Lightweight and fast (C++) BitTorrent server with web interface**](#qbittorrent-lightweight-and-fast-c-bittorrent-server-with-web-interface)
+- [**rTorrent - BitTorrent server with ruTorrent web interface**](#rtorrent-bittorrent-server-with-rutorrent-web-interface)
+- [**Aria2 - Download manager with web interface**](#aria2-download-manager-with-web-interface)
+- [**SABnzbd - NZB download manager with web interface**](#sabnzbd-nzb-download-manager-with-web-interface)
+- [**Medusa - Automatically download TV shows**](#medusa-automatically-download-tv-shows)
+- [**Sonarr - Automatically download TV shows**](#sonarr-automatically-download-tv-shows)
+- [**Radarr - Automatically download Movies**](#radarr-automatically-download-movies)
+- [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](#bazarr-automatically-download-subtitles-for-sonarrradarr)
+- [**Lidarr - Automatically download Music**](#lidarr-automatically-download-music)
+- [**CouchPotato - Automatically download movies**](#couchpotato-automatically-download-movies)
+- [**Jackett - API Support for your favourite torrent trackers**](#jackett-api-support-for-your-favourite-torrent-trackers)
+- [**NZBGet - NZB download manager with web interface**](#nzbget-nzb-download-manager-with-web-interface)
+- [**HTPC Manager - combines all your favourite software into one slick interface**](#htpc-manager-combines-all-your-favourite-software-into-one-slick-interface)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -37,7 +33,25 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Bazarr
+## Transmission - Lightweight BitTorrent server with web interface
+
+## Deluge - Alternative BitTorrent server with web interface
+
+## qBittorrent - Lightweight and fast (C++) BitTorrent server with web interface
+
+## rTorrent - BitTorrent server with ruTorrent web interface
+
+## Aria2 - Download manager with web interface
+
+## SABnzbd - NZB download manager with web interface
+
+## Medusa - Automatically download TV shows
+
+## Sonarr - Automatically download TV shows
+
+## Radarr - Automatically download Movies
+
+## Bazarr- Automatically download Subtitles for Sonarr/Radarr
 
 Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
 
@@ -74,5 +88,15 @@ Key features:
 
     - [Official docs](https://github.com/morpheus65535/bazarr/wiki)
     - [Source code](https://github.com/morpheus65535/bazarr)
+
+## Lidarr - Automatically download Music
+
+## CouchPotato - Automatically download movies
+
+## Jackett - API Support for your favourite torrent trackers
+
+## NZBGet - NZB download manager with web interface
+
+## HTPC Manager - combines all your favourite software into one slick interface
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
