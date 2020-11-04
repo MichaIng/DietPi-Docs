@@ -62,6 +62,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - markdownextradata:
   - minify:
       minify_html: true
       htmlmin_opts:
@@ -110,8 +111,15 @@ extra:
       link: https://dietpi.com/
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/DietPi_
+  item076:
+      name: LAMP Webstack
+      display_name: LAMP Webstack - Apache2 / MariaDB / PHP
+      long_desc: LAMP stack is a popular open source web platform commonly used to run dynamic web sites and servers. It is considered by many, as the platform of choice for development and deployment of high performance web applications which require a solid and reliable foundation.
+      docs_url: software/webserver_stack/#lamp-webstack
+      web_note: DietPi will automatically install a web server stack if any software requires it. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.
+      web_image: images/dietpi-software/lighttpd_0.jpg 
 
-extra_css:
+  extra_css:
    - css/custom.css
 
 nav:
