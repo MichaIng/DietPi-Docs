@@ -6,7 +6,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 ### Remote Desktop
 
-- [**TigerVNC Server - Desktop for remote connection**](#29-tigervnc-server-desktop-for-remote-connection)
+- [**TigerVNC Server - Desktop for remote connection**](#tigervnc-server-desktop-for-remote-connection)
 - [**RealVNC Server - Desktop for remote connection**](#realvnc-server-desktop-for-remote-connection)
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](#xrdp-remote-desktop-server-for-windows-remote-desktop-client)
 - [**NoMachine - Feature rich remote desktop connection**](#nomachine-feature-rich-remote-desktop-connection)
@@ -47,30 +47,32 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     systemctl status vncserver
     ```
 
-    **Connection Details:**
+    Although any VNC viewer may work, the latest official TigerVNC viewer can be downloaded here: <https://bintray.com/tigervnc/stable/tigervnc/>
 
-    - Use the IP address of your DietPi device (e.g.: `192.168.0.100`).  
-      If you can't connect, try connecting to screen 1 (e.g.: `192.168.0.100:1`).
-    - Use the password you entered during the installation. If you would like to change the password execute from the console/terminal `vncpasswd`.
-    - The default port is 5901.  
+    #### Connection Details
+
+    - Use the IP address of your DietPi device, e.g.: `192.168.0.100`.  
+      If you can't connect, try connecting to screen `1`, e.g.: `192.168.0.100:1`.
+    - Use the password you entered during the installation. If you would like to change the password execute from the console/terminal, run `vncpasswd`.
+    - The default port is **5901**.  
       **Note:** To enable access from outside of your local network, this port needs to be forwarded from your router.
 
-=== "VNC Server settings"
+=== "Config options"
 
-    #### VNC Server - Shared desktop
+    #### Shared desktop
 
-    The *shared desktop* mode is used to have more than one single VNC viewer connected to the VNC server. To enable this mode, edit dietpi.txt (e.g. via `nano /boot/dietpi.txt`).  
-    Change to value 1 the following line
+    The *shared desktop* mode is used to have more than one single VNC viewer connected to the same desktop session. To enable this mode, edit **/boot/dietpi.txt**, e.g. via `nano /boot/dietpi.txt`.
+    Change to value `1` the following line:
 
     ```
     SOFTWARE_VNCSERVER_SHARE_DESKTOP=1
     ```
 
-    A running desktop is required in this mode, therefore set the desktop to autostart from boot via `dietpi-autostart`.
+    A running desktop is required for this mode, therefore enable deskop autostart via `dietpi-autostart 2`, or assure that a local desktop session is active before starting TigerVNC manually.
 
-    #### VNC Server - Resolution settings
+    #### Resolution settings
 
-    The following shows an example how to run VNC server on screen :1 by creating a new desktop with 1280x720 resolution by editing dietpi.txt:
+    The following shows an example how to run VNC server on screen **:1** by creating a new desktop with 1280x720 resolution by editing **/boot/dietpi.txt**:
 
     ```
     nano /boot/dietpi.txt
@@ -91,16 +93,15 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     systemctl restart vncserver
     ```
 
-=== "Enable autostart"
+=== "Autostart"
 
-    VNC servers start automatically during boot, unless you have selected **Desktop** from the `dietpi-autostart` configuration tool.
+    TigerVNC is enabled by default to start automatically at boot. Run `systemctl disable vncserver` to disable this beheviour and `systemctl start vncserver` to start it manually from console.
 
-    To enable a different startup setup, run from the command line the main DietPi tool `dietpi-autostart`. To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools) section.
+    To re-enabled TigerVNC autostart, run `systemctl enable vncserver`, to stop it manually `systemctl stop vncserver` can be used.
 
-=== "Official documentation"
-
-    - [LXDE Website](https://www.lxde.org)
-    - [LXDE Wiki](https://wiki.lxde.org/en/Main_Page)
+See also <https://tigervnc.org/>.
+Man page: <https://tigervnc.org/doc/Xvnc.html>
+Source code: <https://github.com/TigerVNC/tigervnc>
 
 ## RealVNC Server - Desktop for remote connection
 
@@ -112,12 +113,12 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
     #### Basics
 
-    By default DietPi will start a virtual VNC session on boot at screen :1 for user root.  
+    By default DietPi will start a virtual VNC session on boot at screen **:1** for user **root**.  
     The screen index can be changed via `SOFTWARE_VNCSERVER_DISPLAY_INDEX` in `/boot/dietpi.txt`.
     Logs can be viewed via `journalctl -t Xvnc:1 -t vncserver` and in `/root/.vnc/`.
     When you logout (instead of only closing the VNC Viewer window), the session will exit. Restart it via `systemctl restart vncserver`.
 
-    #### Autostart
+    #### Shared desktop
 
     If you set `SOFTWARE_VNCSERVER_SHARE_DESKTOP=1` in /boot/dietpi.txt or select desktop auto login via `dietpi-autostart` (index 2), RealVNC server will be started on boot in shared desktop mode, attaching to the first found local desktop session.  
     Check the service status via `systemctl status vncserver-x11-serviced`.
@@ -128,14 +129,14 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
     If you have an enterprise subscription on RealVNC, you can have virtual VNC sessions spawning automatically on demand per-client connection and closing once the client disconnects. That way no resource-intense X11/desktop session needs to be persistently active on the server to allow VNC connections.  
     To enable this, after adding your enterprise subscription credentials, do the following:
 
-    - `systemctl disable --now vncserver`. This disables the persistent virtual VNC session on screen :1
-    - `systemctl enable --now vncserver-virtuald`.  This enables the on demand VNC session daemon
+    - `systemctl disable --now vncserver` disables the persistent virtual VNC session on screen **:1**.
+    - `systemctl enable --now vncserver-virtuald` enables the on demand VNC session daemon.
 
 === "Setup the VNC Viewer"
 
     Simply select a VNC viewer for your system and download: <https://www.realvnc.com/connect/download/viewer/>
 
-    **Connection details:**
+    #### Connection details
 
     - To connect on the persistent VNC session on screen :1, add the screen index to your local IP or hostname, e.g. `192.168.0.100:1`.
     - To connect to a shared desktop session, skip the screen index, e.g. `192.168.0.100`.
@@ -147,8 +148,8 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
      This may be the case e.g. if you want to run Minecraft remotely.
 
     - Enable shared desktop mode:
-        - Run `dietpi-autostart`
-        - Select *Desktops autostart* option, exit, then reboot system
+        - Run `dietpi-autostart 2` to autostart into a desktop session and have RealVNC attached to it automatically.
+        - Then `reboot` the system to have the changes taking effect.
     - Follow the instructions within the section *Running directly rendered apps such as Minecraft remotely* in <https://www.realvnc.com/docs/raspberry-pi.html>.
 
 ## XRDP - Remote desktop server for Windows Remote Desktop Client
@@ -169,7 +170,7 @@ XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 
 === "Access from outside your local network"
 
-    XRDP uses port 3389 by default, so you need to open/forward it from your router to DietPi.
+    XRDP uses port **3389** by default, so you need to open/forward it from your router to DietPi.
 
 ## NoMachine - Feature rich remote desktop connection
 
