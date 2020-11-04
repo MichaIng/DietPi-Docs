@@ -35,6 +35,7 @@ Blynk
 bootable
 bootloader
 Bticino
+BubbleUPnP
 Bugreport
 CalDAV
 CardDAV
@@ -49,6 +50,7 @@ Clonezilla
 Cloudflare
 CloudPrint
 CloudShell
+codecs
 conf
 config
 configs
@@ -63,6 +65,7 @@ CSM
 Ctrl
 Cuberite
 CUPS
+customizable
 DarkBetter
 DarkIce
 de
@@ -80,12 +83,14 @@ DLNA
 DNS
 Domoticz
 DPMS
+DRC
 DRM
 Dropbear
 DSI
 DSN
 DVFS
 DXX
+ebook
 ebooks
 EDL
 EEPROM
@@ -104,6 +109,7 @@ fahclient
 FB
 FHS
 filesystem
+ForkedDaapd
 FOSS
 FPU
 FreshRSS
@@ -111,6 +117,7 @@ FriendlyARM
 FriendlyARM's
 frontend
 Fullscreen
+FuzonMp
 Gbit
 GiB
 Gitea
@@ -138,6 +145,7 @@ hotspot
 Hotspot
 HotSpot
 Hotspots
+HQPlayer
 htop
 HTPC
 http
@@ -152,7 +160,9 @@ IoT
 IPsec
 iptables
 IPv
+iZotope
 Jackett
+JanKoudijs
 Jellyfin
 Joulinar
 journald
@@ -316,14 +326,17 @@ Shairport
 ShareAlike
 Shoutcast
 Signalyst
+SlimDevices
 SMB
 smb
 sn
 SNMP
 SoCs
 Sonarr
+Soxr
 SPC
 SPI
+Spotify
 SqueezeLite
 SSD
 SSHFS
@@ -341,9 +354,11 @@ Tasmota
 Tautulli
 TCP
 tcpdump
+thechildofroth
 TigerVNC
 TLS
 Tonido
+transcoding
 TRÅDFRI
 TTS
 txt
@@ -375,6 +390,7 @@ VNC
 VNCSERVER
 VPN
 vsftpd
+VST
 Waveshare
 WebIOPi
 webmin
@@ -385,6 +401,7 @@ webstack
 Wh
 Widevine
 wikimedia
+Winamp
 WinSCP
 WireGuard
 WiringPi
