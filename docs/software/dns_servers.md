@@ -8,14 +8,14 @@
 
 - [**No-IP - Dynamic DNS update client**](#no-ip-dynamic-dns-update-client)
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
 
     ```
     dietpi-software
     ```
 
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi software](../assets/images/dietpi-software.jpg)
 
@@ -114,3 +114,5 @@ If successful, the No-IP current status will change to: *Online*.
 You will need to enable port forwarding on your router for all programs your require and point them to DietPi. E.g.: TCP port 80/443 for websites, pointing to 192.168.0.100.
 
 See also <https://www.noip.com/>.
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

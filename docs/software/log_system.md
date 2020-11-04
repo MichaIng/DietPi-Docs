@@ -69,3 +69,5 @@ Pros/Cons:
 ─ Reduces the life of your SD card due to increased filesystem IO (read/write)  
 \+ Comes with both Rsyslog and Logrotate installed as standard  
 \+ The "standard" of Linux logging systems, essential if your log file data is critical to system operation and/or maintenance
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

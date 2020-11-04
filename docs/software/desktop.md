@@ -17,20 +17,20 @@
 - [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss-atom-news-feeds-reader)
 - [**Xfce4 Power - Power manager with brightness**](#xfce4-power-power-manager-with-brightness)
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
-
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
 
     ```
     dietpi-software
     ```
 
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi Software](../assets/images/dietpi-software.jpg)
+    ![DietPi software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 ## LXDE - ultra lightweight desktop
 
@@ -173,3 +173,5 @@ QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the 
 Enables laptop users to set up a power profile for two different modes `on battery power` and `on AC Power` while still allowing desktop users to at least change the DPMS settings and CPU frequency using the settings dialogue.
 
 ![DietPi Xfce4 Power manager](../assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg)
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)

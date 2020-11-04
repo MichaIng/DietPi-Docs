@@ -107,7 +107,7 @@ The ROCKPro64 is the most powerful single board computer offered by PINE64.
 
 <img src="../assets/images/dietpi-rockpro64.jpg" title="PINE64 ROCKPro64" width="500" />
 
-It features a Rockchip RK3399 hexa-core SOC and up-to 4 GiB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C  with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UART and GPIO.
+It features a Rockchip RK3399 hexa-core SOC and up-to 4 GiB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UART and GPIO.
 
 The board is backwards compatible with many of the existing PINE64 peripherals, including the WiFi/Bluetooth module, camera module and LCD panel but an array of new peripherals specific for the board is also available. All this in the exact same model “A” dimension as the original PINE A64.
 
@@ -125,13 +125,13 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
             <tr>
                 <td align="left"><a class="table" href=""><strong>PINE A64</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PineA64-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PINEA64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
                 <td align="left"><a class="table" href=""><strong>PINE H64</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PineH64-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PINEH64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
@@ -143,13 +143,13 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
             <tr>
                 <td align="left"><a class="table" href=""><strong>ROCK64</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Rock64-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
                 <td align="left"><a class="table" href=""><strong>ROCKPro64</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RockPro64-ARMv8-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPro64-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
         </tbody>

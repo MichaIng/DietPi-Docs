@@ -2,21 +2,437 @@
 
 ## Overview
 
-!!! warning "Documentation in progress..."
+- [**Google AIY - Voice kit "Ok, Google"!**](#google-aiy-voice-kit-ok-google)
+- [**Mycroft AI - Open source voice assistant**](#mycroft-ai-open-source-voice-assistant)
+- [**PiJuice - PiSupply UPS/battery power system**](#pijuice-pisupply-upsbattery-power-system)
+- [**RPi.GPIO - GPIO Interface library for RPi (python)**](#rpigpio-gpio-interface-library-for-rpi-python)
+- [**WiringPi - GPIO Interface library**](#wiringpi-gpio-interface-library)
+- [**WebIOPi - Web interface to control RPi GPIO**](#webiopi-web-interface-to-control-rpi-gpio)
+- [**Node-RED - Visual tool for wiring together hardware devices, APIs and online services**](#node-red-visual-tool-for-wiring-together-hardware-devices-apis-and-online-services)
+- [**Mosquitto - Message broker that implements MQTT protocol**](#mosquitto-message-broker-that-implements-mqtt-protocol)
+- [**Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet**](#blynk-server-ios-and-android-apps-to-control-arduino-esp8266-raspberry-pi-and-similar-microcontroller-boards-over-the-internet)
+- [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](#audiophonics-pi-spc-power-control-module-for-raspberry-pi-allowing-physical-button-power-onoff)
+- [**InfluxDB - Database optimized to save time based data as logs or data from a sensor**](#influxdb-database-optimized-to-save-time-based-data-as-logs-or-data-from-a-sensor)
+- [**Grafana - The open platform for beautiful analytics and monitoring**](#grafana-the-open-platform-for-beautiful-analytics-and-monitoring)
 
-    The links redirect to the old documentation available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5). **We need your help to create and update this documentation ! Thank you** :octicons-heart-16: :octicons-heart-16:
+??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+    To install any of the **DietPi optimised software** listed below run from the command line:
 
-- [Google AIY - Voice kit "Ok, Google"!.](https://dietpi.com/phpbb/viewtopic.php?p=9486#p9486)  
-- [Mycroft AI - Open source voice assistant](https://dietpi.com/phpbb/viewtopic.php?p=18562#p18562)  
-- [PiJuice - PiSupply UPS/battery power system.](https://dietpi.com/phpbb/viewtopic.php?p=10740#p10740)  
-- [RPi.GPIO - GPIO Interface library for RPi (python).](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=40#p1065)  
-- [WiringPi - GPIO Interface library (c).](https://dietpi.com/phpbb/viewtopic.php?p=1066#p1066)  
-- [WebIOPi - Web interface to control RPi GPIO.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=20#p189)  
-- [Node-RED - Visual tool for wiring together hardware devices, APIs and online services.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=80#p4292)  
-- [Mosquitto - Message broker that implements MQTT protocol versions 3.1 and 3.1.1.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p4293)  
-- [Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=90#p5901)  
-- [Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off.](https://dietpi.com/phpbb/viewtopic.php?p=9359#p9359)  
-- [InfluxDB - Database optimized to save time based data as logs or data from a sensor.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=120#p12523)  
-- [Grafana - The open platform for beautiful analytics and monitoring.](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=130#p12524)  
+    ```
+    dietpi-software
+    ```
+
+    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+
+    ![DietPi software](../assets/images/dietpi-software.jpg)
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
+## Google AIY - Voice kit "Ok, Google!"
+
+"Ok Google. Who is your daddy?"
+
+???+ note "Our installation is highly optimized and lightweight"
+
+    We do not install a desktop environment. User will be required to setup Google API and keys on another system (please see first run setup below).  
+    We highly recommend SSH to allow for a quick setup of Google API and device link.  
+    We also recommend one of [DietPi File servers](https://dietpi.com/docs/software/file_servers/), for easy transfer of `assistant.json`, generated during Google API setup.
+
+![DietPi hardware projects software Google AIY](../assets/images/dietpi-software-hardwareprojects-googleaiy.jpg){: style="width:500px"}
+
+=== "First run setup"
+
+    Once DietPi has installed the Google AIY voice kit, and rebooted, you will need to setup your Google API account and link the device.
+
+    - Follow the link below, to setup Google API and download client keys, required to enable the speech API:  
+      <https://aiyprojects.withgoogle.com/voice#users-guide-1-2--turn-on-the-google-assistant-api>  
+      Remark: When setting up the activity controls, ensure you also enable "Include Chrome browsing history and activity from websites and apps that use Google services", else she will not function ;)
+    - Make sure you have one of [DietPi's File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+      Once completed, download the `client_secret.json` and save it to:
+        - If using SSH = `/mnt/dietpi_userdata/voice-recognizer-raspi/assistant.json`
+        - If using File Server = `voice-recognizer-raspi/assistant.json`
+    - Run the command below, then follow the onscreen link/instructions to setup verification:
+
+      ```sh
+      sudo -u dietpi /mnt/dietpi_userdata/voice-recognizer-raspi/env/bin/python3 -u /mnt/dietpi_userdata/voice-recognizer-raspi/src/main.py
+      ```
+
+    - Once the "Ok, Google" prompt appears, test the device. Then you can terminate the program with `CTRL+C` and restart the services:  
+      `dietpi-services restart`
+
+=== "Installation notes"
+
+    The voice software is located there:  
+    `/mnt/dietpi_userdata/voice-recognizer-raspi`
+
+=== "Check service status"
+
+    To check the status of the service run:  
+    `dietpi-services status`
+
+    ![DietPi hardware projects software Google AIY htop screenshot](../assets/images/dietpi-software-hardwareprojects-googleaiy-htop.png){: style="width:500px"}
+
+## Mycroft AI - Open source voice assistant
+
+Mycroft AI is a free and open source voice assistant.
+
+![DietPi hardware projects software Mycroft AI](../assets/images/dietpi-software-hardwareprojects-mycroftai.png){: style="width:200px"}
+
+=== "Interactive install"
+
+    1. Branch selection: For unexperienced users we recommend the master branch as well: `y`
+    2. Auto updates: It slows down the the startup process a bit, but it anyway takes a while to load all skills, so we recommend this as well: `y`
+    3. Add Mycroft commands to PATH: Chose *NO* here, since the installer runs as user `mycroft`, which is no login user, which is why this has no effect: `n`
+    4. Check code before submitting: If you are an official Mycroft developer, choose `y`, else: `n`
+
+=== "Initial setup"
+
+    1. If you did no reboot after install, load Mycroft commands to current shell session: `./etc/bashrc.d/mycroft.sh`
+    2. Start CLI client: `mycroft-cli-client`
+    3. You should see and at best hear the invitation to pair your device, e.g.: `PairingSkill - INFO - Pairing code: XXYYZZ`
+    4. Visit <https://home.mycroft.ai/> to start pairing and configuring your device and skills.
+
+=== "Build Mimic for offline TTS support (optional)""
+
+    Remark: this requires about 3 GB of RAM and takes a while, so assure that you have enough memory (4 GB recommended), in case increase your swap file size and grab yourself a coffee.
+
+    ```sh
+    cd /mnt/dietpi_userdata/mycroft-core/scripts
+    sudo -u mycroft ./install-mimic.sh
+    ```
+
+## PiJuice - PiSupply UPS/battery power system
+
+PiJuice is an all in one, battery based power supply HAT for the RPi, featuring UPS capabilities and battery run time.
+
+![DietPi hardware projects software PiJuice](../assets/images/dietpi-software-hardwareprojects-pijuice.jpg){: style="width:300px"}
+
+=== "Basic information"
+
+    Our default installation does not include the desktop application. If required, please install a desktop first, then execute the following command to install the GUI afterwards:
+
+    ```sh
+    G_AGI pijuice-gui
+    ```
+
+    The PiJuice program can then be launched (LXDE) from LXDE start \> Preferences
+
+    - SW1 = Power on unit
+    - SW2 = Power off unit (runs a sample script which can be modified `/var/lib/dietpi/dietpi-software/installed/pijuice/pijuice_func1.sh`)
+    - Additional configuration can be made via editing the following file (Full list of available config options):
+
+    ```sh
+    nano /var/lib/pijuice/pijuice_config.JSON
+    ```
+
+    Restart services to apply any changes:  
+    `dietpi-services restart`
+
+=== "Update firmware"
+
+    At the time of writing, this will update firmware on the device to `V1.1_2018_01_15`, however, please replace the firmware link with the latest version:
+
+    ```sh
+    wget https://github.com/PiSupply/PiJuice/raw/master/Firmware/PiJuice-V1.1_2018_01_15.elf.binary -O package.binary
+    chmod +x package.binary
+    pijuiceboot 14 package.binary
+    ```
+
+## RPi.GPIO - GPIO Interface library for RPi (python)
+
+The standard, well known GPIO interface library for the RPi (Python). Bring out the engineer in you!
+
+![DietPi hardware projects software RPI.GPIO](../assets/images/dietpi-software-hardwareprojects-gpio.png){: style="width:250px"}
+
+See also <https://pypi.python.org/pypi/RPi.GPIO>.
+
+## WiringPi - GPIO Interface library
+
+Alternative GPIO interface library based on C. Bring out the engineer in you!
+
+![DietPi hardware projects software WiringPi](../assets/images/dietpi-software-hardwareprojects-wiringpi.png){: style="width:250px"}
+
+=== "View installed examples/documentation"
+
+    ```sh
+    cd /root/wiringPi*
+    ls -l
+    ```
+
+=== "Test/view GPIO"
+
+    ```sh
+    gpio -v
+    gpio readall
+    ```
+
+See also <http://wiringpi.com/>.
+
+## WebIOPi - Web interface to control RPi GPIO
+
+WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web interface.
+
+![DietPi hardware projects software WebIOPi](../assets/images/dietpi-software-hardwareprojects-webiopi.png){: style="width:200px"}
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>:8000`
+    - Username = `webiopi`
+    - Password = `raspberry`
+
+=== "Change the login password"
+
+    - Run `webiopi-passwd`
+    - Enter the username `webiopi`
+    - Enter your new password twice
+
+    You must also restart the `webiopi` service for your new password to take effect:  
+    `service webiopi restart`
+
+=== "Access WebIOPi over the internet"
+
+    To be able to access your WebIOPi interface over the internet, you may install [Remot3.it (Weaved)](https://dietpi.com/docs/software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet).
+
+## Node-RED - Visual tool for wiring together hardware devices, APIs and online services
+
+Node-RED is a visual tool for wiring together hardware devices, APIs and online services in new and interesting ways. Node-RED uses a standalone web server that can be accessed remotely.
+
+![DietPi hardware projects software Node-RED](../assets/images/dietpi-software-hardwareprojects-nodered.png){: style="width:500px"}
+
+=== "Access to the programming IDE"
+
+    Use port number 1880:  
+    `https://<your.IP>:1880`
+
+=== "Access to the dashboard"
+
+    To connect to the dashboard (user interface of Node-RED) enter in your browser:  
+    `https://<your.IP>:1880/ui`
+
+=== "Data directory for Node-Red"
+
+    All Node-RED data is stored in the following location:  
+    `/mnt/dietpi_userdata/node-red`
+
+=== "Update to current version"
+
+    You can update Node-RED by entering:
+
+    ```sh
+    systemctl stop node-red
+    npm up -g --unsafe-perm node-red
+    systemctl start node-red
+    ```
+
+    The actual Node-RED version can be read in the programming IDE in the *burger menu* at the right upper corner.
+
+See also <https://nodered.org/>.  
+Especially search through the libraries resp. flows there: <https://flows.nodered.org/>.
+
+## Mosquitto - Message broker that implements MQTT protocol
+
+Eclipse Mosquitto™ is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 3.1 and 3.1.1.  
+MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "Internet of Things" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontroller like the Arduino.
+
+![DietPi hardware projects software Mosquitto](../assets/images/dietpi-software-hardwareprojects-mosquitto.png){: style="width:100px"}
+
+Using Mosquitto:  
+Please use the following link for online documentation: <https://mosquitto.org/documentation/>.
+
+## Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet
+
+Platform with iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet.
+
+Also installs:
+
+- Blynk JS Library
+
+![DietPi hardware projects software Blynk Server](../assets/images/dietpi-software-hardwareprojects-blynk.jpg){: style="width:300px"}
+
+=== "Installation notes"
+
+    DietPi installs Blynk (including user data and config file) to the following location:  
+    `/mnt/dietpi_userdata/blynk`
+
+    Log files can be found in:  
+    `/var/log/blynk`
+
+    We created a `systemd` service for Blynk, DietPi will automatically start this:  
+    `systemctl status blynkserver`
+
+    DietPi will also install ***Blynk JS Library***, along with this installation. Please skip this section when you reach the Blynk user guide.
+
+=== "Access to the web admin interface"
+
+    - URL = `https://<your.IP>:9443/admin`
+    - Default user: `admin@blynk.cc`
+    - Default password: `admin`
+
+    These values can be adjusted by editing the config file below.
+
+=== "Server configuration"
+
+    Remark: The config file changes in the web UI do not have an effect yet: <https://github.com/blynkkk/blynk-server/issues/1318>
+
+    To change settings you need to edit  
+    `/mnt/dietpi_userdata/blynk/server.properties`  
+    and restart the Blynk server:  
+    `systemctl restart blynkserver`
+
+=== "Getting started with Blynk app"
+
+    To log into your own server, press `Log In`, then the three dots at the bottom and switch the slider to `CUSTOM`. There you can enter your own Blynk servers IP/domain and use the above login credentials.
+
+    You can then skip creating an external Blynk account and instead go on and create a new project directly: <https://docs.blynk.cc/#getting-started-getting-started-with-the-blynk-app-2-create-a-new-project>
+
+=== "Run test script"
+
+    Once you create a project in the iOS/Android app, replace the following with your `auth code`, then run the command:  
+    `blynk-client Replace_With_Your_Auth_Code`
+
+=== "Update to the latest version"
+
+    Update Blynk with: `dietpi-software reinstall 131`.
+
+Official documentation: <http://docs.blynk.cc/>.  
+Install Blynk App (Android): <https://play.google.com/store/apps/details?id=cc.blynk>.
+
+## Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off
+
+Power control module for Raspberry Pi which allows you to physically power on/off the system, without the need to run `poweroff`.
+See <https://www.audiophonics.fr/fr/kits-et-modules-diy/audiophonics-pi-spc-v2-module-de-controle-alimentation-type-atx-pre-assemble-p-11125.html> for further details.
+
+![DietPi hardware projects software Audiophonics PCB](../assets/images/dietpi-software-hardwareprojects-audiophonis-pcb.jpg){: style="width:400px"}
+
+???+ notes "Ensure correct GPIO pins!"
+
+    Please ensure the correct GPIO pins are used, when connecting Pi-SPC to RPi (see image below).  
+
+    ![DietPi hardware projects software Audiophonics GPIO](../assets/images/dietpi-software-hardwareprojects-audiophonics-gpionumbers.png){: style="width:300px"}
+
+To power off the system begin the shutdown process: Hold the power button for < 0.5 seconds. If you don't have a button, you can also close the pins `BP PIN C` and `BP PIN NO`, with your favorite electrically conductive metal (e.g.: tweezers).  
+Remark: Avoid holding the power button for longer than 2 seconds, as this will hard power off the system (same effect as pulling the power cord). Doing so will create file-system corruptions, during shutdown IO operations.
+
+## InfluxDB - Database optimized to save time based data as logs or data from a sensor
+
+InfluxDB is a database optimized to save time based data as logs or data from a sensor.  
+The main interface to the database for management and data transferred are http requests that are handled directly by the `influxdb` service (default port being used is 8086).
+
+The data can be nicely viewed with Grafana.  
+This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).
+
+![DietPi hardware projects software InfluxDB](../assets/images/dietpi-software-hardwareprojects-influxdb.jpg){: style="width:200px"}
+
+### Usage
+
+The package comes with a command line tool `influx` for database management operations.  
+This tool also uses http so it can manage a database on a remote machine setting the -host option.
+
+Official documentation can be found at <https://docs.influxdata.com/influxdb/>.
+
+#### Create a database
+
+To create a database execute:
+
+```sh
+influx -execute 'create database mydb'
+```
+
+Alternative method:
+
+```sh
+curl -i -XPOST http://localhost:8086/query --data-urlencode "q=CREATE DATABASE mydb"
+```
+
+#### Posting data
+
+Data can be posted by executing:
+
+```sh
+curl -i -XPOST 'http://localhost:8086/write?db=mydb' --data-binary 'temperature value=20.12'
+```
+
+#### Show data
+
+```sh
+influx -database mydb -execute 'SELECT * FROM temperature'
+```
+
+Alternative method:
+
+```sh
+curl -i -XPOST http://localhost:8086/query?db=mydb --data-urlencode "q=SELECT * FROM temperature"
+```
+
+#### Authentication
+
+By default http authentication is disabled. To enable it, change `auth-enabled = true` in the configuration file `/etc/influxdb/influxdb.conf`. Then restart services with `dietpi-services restart`.
+
+#### Create users and authorizations from `influx` CLI
+
+To start the InfluxDB database management interface enter:
+
+```sh
+influx -username admin -password admin01
+```
+
+Then create the database entries:
+
+```sh
+CREATE USER admin WITH PASSWORD 'admin01' WITH ALL PRIVILEGES
+CREATE USER test_user WITH PASSWORD 'test_user01'
+GRANT ALL ON mydb TO test_user
+exit
+```
+
+### Install information
+
+The data location for InfluxDB is stored resp. linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`.
+
+## Grafana - The open platform for beautiful analytics and monitoring
+
+The open platform for beautiful analytics and monitoring.
+
+This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).  
+Remark: Grafana binaries are specific to the CPU architecture, therefore, swapping SD cards between RPi 1 <> 2+, is not recommended.
+
+![DietPi hardware projects software Grafana](../assets/images/dietpi-software-hardwareprojects-grafana.png){: style="width:600px"}
+
+=== "Prerequisites"
+
+    A database server is required for Grafana. As Grafana offers many options (InfluxDB/MySQL), we have not automatically installed either as manual configuration may be preferred.  
+    However, we highly recommend installing InfluxDB:  
+    `dietpi-software install 74`
+
+    Then follow the database creation guide [here](#influxdb-database-optimized-to-save-time-based-data-as-logs-or-data-from-a-sensor).
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>:3001`
+    - Username = `admin`
+    - Password = `dietpi`
+
+=== "Usage information"
+
+    If you have created a database as per the InfluxDB online documentation, please follow these instructions:
+
+    - From the Home Dashboard click `Add data source`, then enter the following information:
+        - Type = `InfluxDB`
+        - URL = `http://localhost:8086`
+        - Database = `mydb`
+        - Username = `test_user`
+        - Password = `test_password01`
+        - Leave the remaining items with the default values.
+    - Click `Save & Test`
+    - From the Home Dashboard
+        - click `New dashboard`
+        - click `Graph`
+        - click on the example graph
+        - Press `e` to edit the Data Source and the custom query
+
+=== "Installation information"
+
+    The data location for Grafana is stored resp. linked with symbolic links to the DietPi userdata directory:  
+    `/mnt/dietpi_userdata/grafana`.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
