@@ -307,6 +307,7 @@ Rockchip
 ROCKPro
 rom
 Roon
+rpc
 rpi
 RPi
 RPis
@@ -325,6 +326,7 @@ SFTP
 Shairport
 ShareAlike
 Shoutcast
+SickRage
 Signalyst
 SlimDevices
 SMB
@@ -370,6 +372,7 @@ UDP
 UEFI
 UI
 Unarchiver
+uncheck
 uncomment
 unexperienced
 Unmount
