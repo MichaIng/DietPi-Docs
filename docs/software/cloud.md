@@ -50,6 +50,18 @@ Also Installs:
     If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).  
     We added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`: Just use `occ` followed by the desired command inside your terminal.
 
+=== "Update ownCloud to the latest version"
+
+    1. Option: Use the web-based updater from within the ownCloud web UI settings.
+    2. Option: Use the updater script from console (recommended):
+
+        ```sh
+        sudo -u www-data php /var/www/owncloud/updater/application.php
+        1
+        ```
+
+    3. Follow the official documentation for a manual upgrade process: <https://doc.owncloud.com/server/admin_manual/maintenance/manual_upgrade.html>
+
 === "FAQ"
 
     #### Where is my data stored?
@@ -68,6 +80,8 @@ Also Installs:
 
     Your userdata directory will stay after deinstallation.  
     As well a database backup will be saved to your userdata directory. Thus you can easily restore your instance by reinstalling ownCloud and restore the database dump.
+
+See also <https://owncloud.com/> resp. <https://doc.owncloud.org/server/admin_manual/>.
 
 ## Nextcloud - Self-hosted productivity platform
 
@@ -95,6 +109,24 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     ```
     ncc [followed by the desired command]
     ```
+
+=== "Update Nextcloud to the latest version"
+
+    1. Option: Use the web-based updater from within the Nextcloud web UI settings.
+    2. Option: Use the updater script from console (recommended):
+
+        ```sh
+        phpenmod phar # The PHP Phar module is required
+        sudo -u www-data php /var/www/nextcloud/updater/updater.phar
+        y # Starts download and install of files
+        y # Starts the internal database upgrade and migration steps
+        ```
+
+    3. Follow the official documentation for a manual upgrade process: <https://docs.nextcloud.com/server/latest/admin_manual/maintenance/manual_upgrade.html>
+
+=== "Official documentation"
+
+    <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>
 
 === "FAQ"
 
@@ -125,6 +157,8 @@ Also installs:
 - coturn
 
 ![DietPi cloud software Nextcloud Talk](../assets/images/dietpi-software-cloud-nextcloudtalk.png)
+
+See also <https://nextcloud.com/talk/>.
 
 ### Installation notes
 
@@ -176,6 +210,8 @@ Also Installs:
         - User = The "admin" user you setup in initial setup.
         - Password = The "admin" password you setup in initial setup.
 
+See also <https://pydio.com/>.
+
 ## UrBackup Server - Full backups for systems on your network
 
 UrBackup Server is an Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.  
@@ -201,6 +237,8 @@ Basically, it allows you to create a complete system backup, using a simple web 
 
     Install the appropriate client on the systems you wish to backup from  
     <https://www.urbackup.org/download.html#client_windows>.
+
+See also <https://www.urbackup.org/index.html>.
 
 ## Gogs - GitHub style server, with web interface
 
@@ -237,6 +275,8 @@ Your very own GitHub style server, with web interface.
     - Port = 3000
     - Protocol = TCP+UDP
 
+See also <https://gogs.io/>.
+
 ## Gitea - GitHub style server, with web interface
 
 Your very own GitHub style server, with web interface.
@@ -267,6 +307,8 @@ Your very own GitHub style server, with web interface.
     - Port = 3000
     - Protocol = TCP+UDP
 
+See also <https://gitea.io/>.
+
 ## Syncthing - Backup and sync server with web interface
 
 Backup and sync server with web interface. Extremely lightweight and efficient as no webserver is required.
@@ -290,7 +332,7 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     In this example we will use a Windows system. The goal is to "sync" the user data from your DietPi device with another system.
 
-    - Download, extract and run the Windows application `syncthing.exe`: <https://syncthing.net/> (located under *Get Started*).
+    - Download, extract and run the Windows application `syncthing.exe`: <https://syncthing.net/downloads/>.
     - Syncthing web interface will load automatically, if not, you can access it via `http://127.0.0.1:8384/`.
         - Click `Actions` at the top right, then select `Show ID`. Copy the UUID code.
     - On the DietPi device, open the web interface and click `Add remote device` (bottom right).
@@ -301,6 +343,8 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
         - Under `Share Folders With Device` tick/select DietPi user data, then click `save`.
 
     You devices should now duplicate the user data from your DietPi device to your Windows PC.
+
+See also <https://syncthing.net/>.
 
 ## Tonido - Lightweight backup and sync server with web interface and cloud access
 
@@ -332,6 +376,8 @@ Lightweight backup and sync server, includes web interface and external cloud ac
 === "Access to the web interface"
 
     URL = `http://<your.IP>:10001`
+
+See also <https://www.tonido.com/>.
 
 ## Minio - S3 compatible distributed object server
 
