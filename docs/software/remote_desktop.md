@@ -68,7 +68,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     SOFTWARE_VNCSERVER_SHARE_DESKTOP=1
     ```
 
-    A running desktop is required for this mode, therefore enable deskop autostart via `dietpi-autostart 2`, or assure that a local desktop session is active before starting TigerVNC manually.
+    A running desktop is required for this mode, therefore enable desktop autostart via `dietpi-autostart 2`, or assure that a local desktop session is active before starting TigerVNC manually.
 
     #### Resolution settings
 
@@ -95,7 +95,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 === "Autostart"
 
-    TigerVNC is enabled by default to start automatically at boot. Run `systemctl disable vncserver` to disable this beheviour and `systemctl start vncserver` to start it manually from console.
+    TigerVNC is enabled by default to start automatically at boot. Run `systemctl disable vncserver` to disable this behaviour and `systemctl start vncserver` to start it manually from console.
 
     To re-enabled TigerVNC autostart, run `systemctl enable vncserver`, to stop it manually `systemctl stop vncserver` can be used.
 
