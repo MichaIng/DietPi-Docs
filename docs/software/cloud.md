@@ -50,6 +50,18 @@ Also Installs:
     If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).  
     We added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`: Just use `occ` followed by the desired command inside your terminal.
 
+=== "Update ownCloud to the latest version"
+
+    1. Option: Use the web-based updater from within the ownCloud web UI settings.
+    2. Option: Use the updater script from console (recommended):
+
+        ```sh
+        sudo -u www-data php /var/www/owncloud/updater/application.php
+        1
+        ```
+
+    3. Follow the official documentation for a manual upgrade process: <https://doc.owncloud.com/server/admin_manual/maintenance/manual_upgrade.html>
+
 === "FAQ"
 
     #### Where is my data stored?
@@ -69,7 +81,7 @@ Also Installs:
     Your userdata directory will stay after deinstallation.  
     As well a database backup will be saved to your userdata directory. Thus you can easily restore your instance by reinstalling ownCloud and restore the database dump.
 
-See also <https://owncloud.com/>.
+See also <https://owncloud.com/> resp. <https://doc.owncloud.org/server/admin_manual/>.
 
 ## Nextcloud - Self-hosted productivity platform
 
@@ -97,6 +109,24 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     ```
     ncc [followed by the desired command]
     ```
+
+=== "Update Nextcloud to the latest version"
+
+    1. Option: Use the web-based updater from within the Nextcloud web UI settings.
+    2. Option: Use the updater script from console (recommended):
+
+        ```sh
+        phpenmod phar # The PHP Phar module is required
+        sudo -u www-data php /var/www/nextcloud/updater/updater.phar
+        y # Starts download and install of files
+        y # Starts the internal database upgrade and migration steps
+        ```
+
+    3. Follow the official documentation for a manual upgrade process: <https://docs.nextcloud.com/server/latest/admin_manual/maintenance/manual_upgrade.html>
+
+=== "Official documentation"
+
+    <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>
 
 === "FAQ"
 

@@ -59,6 +59,7 @@ Proposal:
 
 - [x] **ToDo Stephan:** Sort in alphabetical order
 - [x] **Open:** Harmonization
+- [ ] **ToDo Stephan:** Use ampersand signs consequently for software categories
 
 ### 2.3 Software overview on dietpi.com
 
@@ -122,6 +123,8 @@ Additional idea:
 - Add `timeshift` as an additional software title
 - Use also `timeshift` and have a directory converter for the backup/restore file structure
 
+- [ ] **ToDo Stephan**
+
 ## 6 Optimized software
 
 ### 6.1 Harmonization with <https://dietpi.com/dietpi-software.html>
@@ -131,7 +134,8 @@ This should be consistent to our [optimized software list](https://dietpi.com/do
 
 Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
 
-#### Decision?
+- [ ] **Petru:** Make a first proposal (align with Download area with the tiles there)
+- [ ] **ToDo:** Check back rights to use software logos for tiles
 
 ### 6.2 Add section "how do I run..."
 
@@ -139,7 +143,7 @@ In every chapter of "Optimized software" the section "How do I run DietPi-Softwa
 
 The section with `dietpi-launcher`shall be deleted at all chapters. The result would be:
 
-``````markdown
+```````markdown
 ??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
     To install any of the **DietPi Optimised Software** listed below run from the command line:
 
@@ -152,7 +156,7 @@ The section with `dietpi-launcher`shall be deleted at all chapters. The result w
     ![DietPi software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
-``````
+```````
 
 - [x] **ToDo Stephan:** Modify the text passages on the pages
 
@@ -196,7 +200,8 @@ The software list between the softwares listed in
 
 - `dietpi-software`
 - <https://dietpi.com/docs/software/desktop/>: All softwares listed below *Optimized Software*
-- <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&sid=8866107ee3f50cf03080607e875fdfd1>: All softwares listed there
+- <https://dietpi.com/phpbb/viewtopic.php?t=5>: All softwares listed there
+- <https://github.com/MichaIng/DietPi/wiki/DietPi-Software-list>
 
 need to be checked for consistency.
 
@@ -213,6 +218,7 @@ Decision is needed, which of these softwares shall be described in the documenta
 **Proposal:** First, generate the lists above and decide afterwards how to go on.
 
 - [ ] **ToDo Stephan:** Check and in case of missing issues list them above for further discussion
+- [ ] **ToDo Petru:** Test to create website content based on JSON file (or similar)
 
 ### 8.2 Checks in *Optimized Software*
 
@@ -223,6 +229,12 @@ Check for this:
   - the links on the top should be bold and link to the headings within the sub-page
 - In every sub-page the section *How do I run DietPi-Software and install Optimised software?* should be present.
 
+### 8.3 Shorten software title headers
+
+To shorten/simplify links to the individual software title docs.
+
+- [ ] **ToDo Stephan (and others)**
+
 ## 9 Chapter for "hardening the system" or "maintaining the system"?
 
 Add items about
@@ -230,7 +242,7 @@ Add items about
 - Let's Encrypt: <https://github.com/MichaIng/DietPi/wiki/Let's-Encrypt---Certbot>
 - TLS-SSL: <https://github.com/MichaIng/DietPi/wiki/TLS-SSL>
 - Security recommendations: <https://github.com/MichaIng/DietPi/wiki/Security-recommendation>
-- Fail2Ban: <https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=30#p452>
+- Fail2Ban: <https://dietpi.com/phpbb/viewtopic.php?p=452#p452>
 
 - Backup/Restoring / Synching
 - Updating
