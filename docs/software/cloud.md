@@ -62,10 +62,6 @@ Also Installs:
 
     3. Follow the official documentation for a manual upgrade process: <https://doc.owncloud.com/server/admin_manual/maintenance/manual_upgrade.html>
 
-=== "Official documentation"
-
-    <https://doc.owncloud.org/server/admin_manual/>
-
 === "FAQ"
 
     #### Where is my data stored?
@@ -85,7 +81,7 @@ Also Installs:
     Your userdata directory will stay after deinstallation.  
     As well a database backup will be saved to your userdata directory. Thus you can easily restore your instance by reinstalling ownCloud and restore the database dump.
 
-See also <https://owncloud.com/>.
+See also <https://owncloud.com/> resp. <https://doc.owncloud.org/server/admin_manual/>.
 
 ## Nextcloud - Self-hosted productivity platform
 
