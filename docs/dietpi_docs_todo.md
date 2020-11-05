@@ -25,7 +25,7 @@ Proposal:
 
 - [x] **ToDo Stephan:** Sort in alphabetical order
 - [x] **Open:** Harmonization
-- [ ] **ToDo Stephan:** Use ampersand signs consequently for software categories
+- [x] **ToDo Stephan:** Use ampersand signs consequently for software categories
 
 ### 2.3 Software overview on dietpi.com
 
