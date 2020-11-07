@@ -103,7 +103,6 @@ plugins:
           'dietpi-software-computational-science.md' : 'software/computational_science.md'
           'dietpi-software-ssh.md' : 'software/ssh.md'
           'dietpi-software-log-system.md' : 'software/log_system.md'
-
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -114,7 +113,6 @@ extra:
       link: https://twitter.com/DietPi_
   extra_css:
    - css/custom.css
- 
 nav:
   - 'HOME' :
       - 'Overview' : index.md
