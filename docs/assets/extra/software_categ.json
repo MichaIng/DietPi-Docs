@@ -1,0 +1,12 @@
+{
+    "WebDev": {
+        "name" : "Web Development",
+        "docs_url": "software/webserver_stack/#web-development",
+        "id" : 1,
+        "WebStacks" : {
+            "name" : "Stacks for web development",
+            "docs_url": "software/webserver_stack/#stacks-for-web-development",
+            "id" : 2
+        }
+    }
+}

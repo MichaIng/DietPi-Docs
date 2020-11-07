@@ -1,0 +1,15 @@
+{
+    "LAMP": {
+        "app_id": 76,
+        "app_type" : "software.optimised",
+        "category_id" : 2,
+        "name" : "LAMP Webstack",
+        "short_desc" : "LAMP Webstack - Apache2 / MariaDB / PHP",
+        "long_desc" : "LAMP stack is a popular open source web platform commonly used to run dynamic web sites and servers. It is considered by many, as the platform of choice for development and deployment of high performance web applications which require a solid and reliable foundation.",
+        "note" : "DietPi will automatically install a web server stack if any software requires it. By default this is Lighttpd, however, you can change this in the DietPi-Software menu.",
+        "docs_url" : "software/webserver_stack/#lamp-webstack",
+        "web_image" : "images/dietpi-software/lighttpd_0.jpg",
+        "logo" : "path to logo",
+        "screenshot" : "path to screenshot"
+    }
+}

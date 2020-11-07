@@ -1,8 +1,8 @@
-# Web Development
+# {{ software_categ.WebDev.name }}
 
-## Stacks for web development
+## {{ software_categ.WebDev.WebStacks.name }}
 
-- [**{{item076.display_name}}**](../../{{item076.docs_url}})  
+- [**{{ software.LAMP.short_desc }}**](../../{{ software.LAMP.docs_url }})  
 - [LASP Webserver - Apache2 / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
 - [LEMP Webserver - Nginx / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
 - [LESP Webserver - Nginx / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
@@ -54,9 +54,9 @@ If you are you looking for an inexpensive way to operate your web servers or a d
 
 All stacks come with PHP caches (APCu and OPcache). The sizes of which are optimized based on a share of total memory.
 
-## {{item076.name}}
+## {{ software.LAMP.name }}
 
-{{item076.long_desc}}
+{{ software.LAMP.long_desc }}
 
 ![dietpi-webstack-lamp](../assets/images/dietpi-software-webstack-lamp.jpg)
 
