@@ -220,7 +220,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     #### Tools
 
-    - Perform CPU, RAM and file system and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark> 
+    - Perform CPU, RAM, file system and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark> 
     - Perform CPU/IO/RAM/DISK **stress tests** to test the stability of your system, e.g. after applying some overclocking.
 
 === "DietPi drive manager"
