@@ -245,6 +245,7 @@ Nmap
 NoMachine
 NordVPN
 NTFS
+NTP
 NUC
 Nukkit
 NZB

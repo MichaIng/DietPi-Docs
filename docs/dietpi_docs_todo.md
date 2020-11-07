@@ -111,8 +111,7 @@ Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
 
 - [x] Someone to describe the tab "Search".
 - [x] **Stephan:** Someone to describe the tab "Log System".
-
-- [ ] **Todo Micha:** Describe Search
+- [x] **Todo Micha:** Describe Search
 
 ## 8 Software lists
 
@@ -165,9 +164,7 @@ Add items about
 - TLS-SSL: <https://github.com/MichaIng/DietPi/wiki/TLS-SSL>
 - Security recommendations: <https://github.com/MichaIng/DietPi/wiki/Security-recommendation>
 - Fail2Ban: <https://dietpi.com/phpbb/viewtopic.php?p=452#p452>
-
 - Backup/Restoring / Synching
 - Updating
 - Logfile viewing
 - Disk space monitoring
-- ...
