@@ -1,0 +1,11 @@
+{
+    "raspberrypi": {
+        "id": 1,
+        "name" : "Raspberry Pi",
+        "web_desc" : "The Raspberry Pi is quite possibly the single SBC that started the IoT era. While the Raspberry Pi may be a few years behind other SBC manufacturers in terms of performance, it's widely available, affordable, has a large community, active kernel development for all models and will always have a place in our hearts.",
+        "docs_url" : "dietpi_sbc/#raspberry-pi",
+        "web_image" : "assets/images/raspberry-pi-4-labelled.png",
+        "logo" : "path to logo",
+        "screenshot" : "path to screenshot"
+    }
+}

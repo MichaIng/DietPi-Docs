@@ -5,7 +5,7 @@ title: DietPi Supported SBCs
 
 # Supported Single Board Computers (SBCs)
 
-## Raspberry Pi
+## {{ hardware.raspberrypi.name }}
 
 The Raspberry Pi has sold more than 31 million units since it launched in 2012. Any Raspberry Pi can serve as a secondary computer for email and web surfing. The real fun starts when you use your Pi for projects, which can range from robots to retro arcade machines to home media servers, security cameras and so on.
 
@@ -13,7 +13,7 @@ You can install DietPi by following the step by step [Starting guide](../user-gu
 
 DietPi runs very well on latest model **Raspberry Pi 4 Model B** (launched in 2019 / 2020)
 
-<img src="../assets/images/raspberry-pi-4-labelled.png" title="Raspberry Pi model 4B" width="500" />
+![Raspberry Pi model 4B]({{ hardware.raspberrypi.web_image }})
 
 as well as on one of the first models **Raspberry Pi 1** (launched in 2012)
 
