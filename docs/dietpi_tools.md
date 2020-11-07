@@ -180,10 +180,10 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     #### Performance Options
 
-    - Overclock your system with a vast selection of overclocking profiles for your device
-    - Change the CPU governor and tweak your ARM temperature limits
+    - Overclock your system with a vast selection of overclocking profiles for your device.
+    - Change the CPU governor and tweak your ARM temperature limits.
 
-    #### Advanced Settings
+    #### Advanced Options
 
     - Configure swap file size
     - Update device firmware
@@ -206,11 +206,13 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - Test internet connection
     - Toggle IPv6 support
 
-    #### Network Options: NAS/Misc
+    #### Network Options: Misc
 
-    - Samba client utility allows you to quickly and easily connect to Windows Shares
-    - FTP client utility allows you to quickly and easily connect to FTP servers as a filesystem mount
-    - No-IP client utility. Allows you to quickly and easily setup your website address for your Pi, using a No-IP account
+    - Select an **APT mirror** to connect the the Debian (or Raspbian) APT repository.
+    - Select an **NTP mirror** to synchronise your system time.
+    - Choose timeouts for network and URL connection tests.
+    - **Network Drives** redirects you to the **DietPi-Drive_Manager** which allows you to mount Samba and NFS shares on your DietPi system.
+    - **No-IP** is a [dynamic DNS](https://wikipedia.org/wiki/Dynamic_DNS) provider which allows you to access your home network/server with a static domain name. The client is required to inform No-IP of your current dynamic external IP on a regular basis.
 
     #### AutoStart Options
 
@@ -218,8 +220,8 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     #### Tools
 
-    - Filesystem and memory benchmarks
-    - CPU/IO/RAM/DISK Stress tests
+    - Perform CPU, RAM and file system and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark> 
+    - Perform CPU/IO/RAM/DISK **stress tests** to test the stability of your system, e.g. after applying some overclocking.
 
 === "DietPi drive manager"
 
