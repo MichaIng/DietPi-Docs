@@ -53,7 +53,11 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "Search"
 
-You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
+    DietPi supports a large number of software titles. Instead of scrolling through the **Software Optimised** list to find a specific software title, you may use the **Search** option. Type in the software ID or any keyword form its title or description and you'll get a list filtered by matching results.
+
+    ![DietPi-Software Search menu screenshot](assets/images/dietpi-software-search.png)
+
+### Quick selections
 
 === "SSH Server"
 
@@ -102,9 +106,9 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
     In DietPi, we class user data as:
 
-    - **Data storage for applications**. Some examples are ownCloud/Nextcloud data store, BitTorrent downloads and SQL data store (v142+).
-    - The location where your **file server** choice will point to, if you install one (e.g.: Samba Server, ProFTPD).
-    - The location where you can upload and store your **media content**, for other applications to use (e.g.: Kodi, Emby, Plex etc).
+    - **Data storage for applications**. Some examples are ownCloud/Nextcloud data store, BitTorrent downloads and SQL data store.
+    - The location where your **File Server** choice will point to, if you install one, like Samba Server or ProFTPD.
+    - The location where you can upload and store your **media content**, for other applications to use, like Kodi, Emby or Plex.
 
     For all software you install in dietpi-software, you can access your user data with ***/mnt/dietpi_userdata***. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
     To check where the physical location is, you can run the following command:  
@@ -123,11 +127,11 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
 === "Install"
 
-    Install selected software item(s), and these could come both from **optimised software** list or **additional software** items.
+    Install software item(s) which have been selected via **Optimised Software** or **Additional Software** lists, or via **SSH Server**, **File Server** or **Log System** choices.
 
 === "Uninstall"
 
-    Select one or more software items which you would like to be removed from your DietPi installation.
+    Select one or more software items which you would like to be removed from your DietPi system.
 
 === "Command line based installation"
 
@@ -164,37 +168,37 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
     ![DietPi-Config screenshot](assets/images/dietpi-config.jpg)
 
-    #### Display Settings
+    #### Display Options
 
     - Set your screen resolution, or go headless to save additional resources
     - Control your GPU memory splits
     - Enable/disable the RPi camera
 
-    **Audio Options**
+    #### Audio Options
 
     - Change sound cards with ease (e.g.: HiFiBerry / Odroid HiFi shield)
 
-    **Performance Options**
+    #### Performance Options
 
-    - Overclock your system with a vast selection of overclocking profiles for your device
-    - Change the CPU governor and tweak your ARM temperature limits
+    - Overclock your system with a vast selection of overclocking profiles for your device.
+    - Change the CPU governor and tweak your ARM temperature limits.
 
-    **Advanced Settings**
+    #### Advanced Options
 
     - Configure swap file size
     - Update device firmware
     - Toggle serial console
     - Toggle Bluetooth
 
-    **Security Options**
+    #### Security Options
 
     - Change password and hostname
 
-    **Regional / Language Options**
+    #### Language/Regional Options
 
     - Set timezone, locale and keyboard options. Everything you'll need to make it feel like home
 
-    **Networking Options: Adapters**
+    #### Network Options: Adapters
 
     - Scan and connect to your WiFi router with ease
     - Change to a static IP address on your network
@@ -202,20 +206,22 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
     - Test internet connection
     - Toggle IPv6 support
 
-    **Networking Options: NAS/Misc**
+    #### Network Options: Misc
 
-    - Samba client utility allows you to quickly and easily connect to Windows Shares
-    - FTP client utility allows you to quickly and easily connect to FTP servers as a filesystem mount
-    - No-IP client utility. Allows you to quickly and easily setup your website address for your Pi, using a No-IP account
+    - Select an **APT mirror** to connect to the Debian (or Raspbian) APT repository.
+    - Select an **NTP mirror** to synchronise your system time.
+    - Choose timeouts for network and URL connection tests.
+    - **Network Drives** redirects you to the **DietPi-Drive_Manager** which allows you to mount Samba and NFS shares on your DietPi system.
+    - **No-IP** is a [dynamic DNS](https://wikipedia.org/wiki/Dynamic_DNS) provider which allows you to access your home network/server with a static domain name. The client is required to inform No-IP of your current dynamic external IP on a regular basis.
 
-    **AutoStart Options**
+    #### AutoStart Options
 
     - Quickly and easily change what software runs after boot. Kodi, Desktop, console and many more
 
-    **Tools**
+    #### Tools
 
-    - Filesystem and memory benchmarks
-    - CPU/IO/RAM/DISK Stress tests
+    - Perform CPU, RAM, file system and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark> 
+    - Perform CPU/IO/RAM/DISK **stress tests** to test the stability of your system, e.g. after applying some overclocking.
 
 === "DietPi drive manager"
 
@@ -240,6 +246,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
 === "DietPi Led control"
 
+    Change triggers for the status LEDs on your SBC/motherboard.
     Run `dietpi-led_control`.
 
     ![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg)
@@ -336,7 +343,7 @@ You can return to the **DietPi-Software** tool to make further changes at any ti
 
 === "DietPi log clear"
 
-    Clear log files in /var/log/.  
+    Clear log files in `/var/log/`.  
     Run `dietpi-logclear`.
 
     ![DietPi-LogClear screenshot](assets/images/dietpi-logclear.jpg)
