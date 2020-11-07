@@ -208,7 +208,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     #### Network Options: Misc
 
-    - Select an **APT mirror** to connect the the Debian (or Raspbian) APT repository.
+    - Select an **APT mirror** to connect to the Debian (or Raspbian) APT repository.
     - Select an **NTP mirror** to synchronise your system time.
     - Choose timeouts for network and URL connection tests.
     - **Network Drives** redirects you to the **DietPi-Drive_Manager** which allows you to mount Samba and NFS shares on your DietPi system.
