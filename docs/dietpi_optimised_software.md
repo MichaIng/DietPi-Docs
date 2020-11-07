@@ -16,7 +16,7 @@
 !!! warning "Documentation in progress..."
     The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
 
-## [BitTorrent / Download Tools](../software/bittorrent/)
+## [BitTorrent & Download Tools](../software/bittorrent/)
 
 - [**Transmission - Lightweight BitTorrent server with web interface**](../software/bittorrent/#transmission-lightweight-bittorrent-server-with-web-interface)
 - [**Deluge - Alternative BitTorrent server with web interface**](../software/bittorrent/#deluge-alternative-bittorrent-server-with-web-interface)
@@ -34,7 +34,7 @@
 - [**NZBGet - NZB download manager with web interface**](../software/bittorrent/#nzbget-nzb-download-manager-with-web-interface)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](../software/bittorrent/#htpc-manager-combines-all-your-favourite-software-into-one-slick-interface)
 
-## [Camera / Surveillance](../software/camera/)
+## [Camera & Surveillance](../software/camera/)
 
 - [**RPi Cam Control - RPi Camera / Web Interface Surveillance**](../software/camera/#rpi-cam-control-rpi-camera-web-interface-surveillance)
 - [**MotionEye - Camera / Web Interface Surveillance**](../software/camera/#motioneye-camera-web-interface-surveillance)
@@ -84,7 +84,7 @@
 - [**vsftpd - Feature rich FTP file server**](../software/file_servers/#vsftpd-feature-rich-ftp-file-server)
 - [**NFS - Network file system server**](../software/file_servers/#nfs-network-file-system-server)
 
-## [Gaming / Emulation](../software/gaming/)
+## [Gaming & Emulation](../software/gaming/)
 
 - [**OpenTyrian - Gaming**](../software/gaming/#opentyrian-gaming)
 - [**Cuberite - Fast Minecraft server with web interface**](../software/gaming/#cuberite-fast-minecraft-server-with-web-interface)
@@ -159,7 +159,7 @@
 - [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint-cups-print-server)
 - [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint-web-interface-for-controlling-3d-printers)
 
-## [Remote Desktop / Remote Access](../software/remote_desktop/)
+## [Remote Desktop & Remote Access](../software/remote_desktop/)
 
 ### [Remote Desktop](../software/remote_desktop/#remote-desktop/)
 
@@ -173,7 +173,7 @@
 - [**Remot3.it - (Weaved) Access your device over the internet**](../software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](../software/remote_desktop/#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)
 
-## [Social / Search](../software/social/)
+## [Social & Search](../software/social/)
 
 - [**FreshRSS - A self-hosted RSS feed aggregator**](../software/social/#freshrss-a-self-hosted-rss-feed-aggregator)
 - [**phpBB - Free flat-forum bulletin board software solution**](../software/social/#phpbb-free-flat-forum-bulletin-board-software-solution)
@@ -193,7 +193,7 @@
 - [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
 - [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)
 
-## [System Stats / Management](../software/system_stats/#system-stats-management/)
+## [System Stats & Management](../software/system_stats/#system-stats-management/)
 
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](../software/system_stats/#dietpi-cloudshell-lightweight-system-stats-for-your-lcd-display-or-monitor)
 - [**Raspcontrol - Web interface system stats**](../software/system_stats/#raspcontrol-web-interface-system-stats)
