@@ -109,7 +109,7 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
 === "Access to web interface"
 
-    - URL = `http://<your.IP>:8443`  
+    - URL = `https://<your.IP>:8443`  
       You can safely ignore the certificate "warning" if one appears.
     - username = `root` (v6.11 and lower `mineos`)
     - password = <your global application password\>
