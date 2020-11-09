@@ -302,7 +302,7 @@ If you find this installation useful, please donate.
 All donations using this link will be split 50/50 between Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).  
 [PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69B4QPASRQNNE)
 
-## DXX-Rebirth - Descent 1 an 2 OpenGL port
+## DXX-Rebirth - Descent 1 and 2 OpenGL port
 
 Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth project. Play Descent as true to the original with OpenGL/ES rendering.
 
