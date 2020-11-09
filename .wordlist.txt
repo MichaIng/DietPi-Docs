@@ -298,6 +298,7 @@ RAMdisk
 RAMlog
 Raspbian
 Raspcontrol
+rcon
 RDP
 ReadyMedia
 RealVNC
