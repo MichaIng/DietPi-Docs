@@ -352,13 +352,31 @@ Make sure you have one of DietPi's File Servers installed.
 
 ## PaperMC
 
-A highly optimized Minecraft server with plugins, written in Java.
+A highly optimized Minecraft server with plugins, written in Java.  
+PaperMC by default runs a single server, available on LAN, but can be port forwarded so other people can connect.
 
 ![DietPi gaming software PaperMC](../assets/images/dietpi-software-games-papermc.jpg){: style="width:150px"}
 
-=== "Info"
+=== "Default server/query port"
 
-    PaperMC by default runs a single server, available on LAN, but can be port forewarded so other people can connect.
+    - The default server/query port is: `25565`
+
+=== "Console access via rcon"
+
+    - Port: `25575`
+    - Password: `<globalSoftwarePassword>` (default: `dietpi`)
+    - From DietPi: `mcrcon -p <globalSoftwarePassword>`
+
+=== "File locations"
+
+    - Install directory: `/opt/papermc`
+    - Config/data directory: `/mnt/dietpi_userdata/papermc`
+    - Main configuration file: `/mnt/dietpi_userdata/papermc/server.properties`
+
+=== "View logs"
+
+    - Service: `journalctl -u papermc`
+    - File: `/var/log/papermc/latest.log`
 
 === "Tweaking"
 
@@ -369,6 +387,12 @@ A highly optimized Minecraft server with plugins, written in Java.
 
     You can restart the service by running:  
     `systemctl restart papermc`
+
+=== "Update to latest version"
+
+    `dietpi-software reinstall 181`
+
+See also <https://paper.readthedocs.io/> resp. <https://github.com/PaperMC/Paper>.
 
 ### FAQ
 
