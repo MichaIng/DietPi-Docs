@@ -9,7 +9,7 @@
 - [**Amiberry - Amiga emulation system**](#amiberry-amiga-emulation-system-further-developed-optimised-builds-of-uae4arm-rpi)
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth-descent-1-an-2-opengl-port)
 - [**Steam - Steam client**](#steam-steam-client)
-- [**PaperMC - Fast and optimized Minecraft server**](#papermc-fast-and-optimized-minecraft-server-extendable-with-plugins)
+- [**PaperMC - Fast and optimized Minecraft server**](#papermc)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -350,15 +350,11 @@ Make sure you have one of DietPi's File Servers installed.
 - Steam is installed to the DietPi user data directory `/mnt/dietpi_userdata/steam`
 - By default, installing games will install them to `/mnt/dietpi_userdata/steam`
 
-## PaperMC - Fast and Optimized Minecraft Server, Extendable with Plugins
+## PaperMC
 
-Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth project. Play Descent as true to the original with OpenGL/ES rendering.
+A highly optimized Minecraft server with plugins, written in Java.
 
-- DietPi will install the Demo and Shareware versions of Descent. Please see the FAQ below to transfer the full game.
-- Keyboard + Mouse is highly recommended
-- We have compiled the latest version of DXX-Rebirth (0.58.1) with support for FB and RPi OpenGL.
-
-![DietPi gaming software DXX-Rebirth](../assets/images/dietpi-software-games-papermc.jpg){: style="width:500px"}
+![DietPi gaming software PaperMC](../assets/images/dietpi-software-games-papermc.jpg){: style="width:150px"}
 
 === "Info"
 
@@ -372,13 +368,13 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
 === "Restart service"
 
     You can restart the service by running:  
-    `dietpi-services restart`
+    `systemctl restart papermc`
 
 ### FAQ
 
 #### How do I interface with the server's console?
 
-Use the installed tool McRCON.  `mcrcon -p GLOBAL_PW`
+Use the installed tool MCrcon: `mcrcon -p GLOBAL_PW`.
 
 #### How do I find and install plugins?
 
@@ -390,6 +386,6 @@ Just move the downloaded JAR file to the `/opt/papermc/plugins` directory.
 
 PaperMC is built to run on Java edition, however with the optional Geyser and Floodgate plugins, it can run on Bedrock edition as well.
 
-Just choose to install them at the beginning
+Just choose to install them at the beginning.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

@@ -93,7 +93,7 @@
 - [**Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi**](../software/gaming/#amiberry-amiga-emulation-system-further-developed-optimised-builds-of-uae4arm-rpi)
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](../software/gaming/#dxx-rebirth-descent-1-an-2-opengl-port)
 - [**Steam - Steam client**](../software/gaming/#steam-steam-client)
-- [**PaperMC - Fast and optimized Minecraft server**](../software/gaming/#papermc-fast-and-optimized-minecraft-server-extendable-with-plugins)
+- [**PaperMC - Fast and optimized Minecraft server**](../software/gaming/#papermc)
 
 ## [Hardware Projects](../software/hardware_projects/)
 
