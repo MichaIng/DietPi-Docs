@@ -9,6 +9,7 @@
 - [**Amiberry - Amiga emulation system**](#amiberry-amiga-emulation-system-further-developed-optimised-builds-of-uae4arm-rpi)
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth-descent-1-an-2-opengl-port)
 - [**Steam - Steam client**](#steam-steam-client)
+- [**PaperMC - Fast and optimized Minecraft server**](#papermc)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -301,7 +302,7 @@ If you find this installation useful, please donate.
 All donations using this link will be split 50/50 between Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).  
 [PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69B4QPASRQNNE)
 
-## DXX-Rebirth - Descent 1 an 2 OpenGL port
+## DXX-Rebirth - Descent 1 and 2 OpenGL port
 
 Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth project. Play Descent as true to the original with OpenGL/ES rendering.
 
@@ -348,5 +349,43 @@ Make sure you have one of DietPi's File Servers installed.
 
 - Steam is installed to the DietPi user data directory `/mnt/dietpi_userdata/steam`
 - By default, installing games will install them to `/mnt/dietpi_userdata/steam`
+
+## PaperMC
+
+A highly optimized Minecraft server with plugins, written in Java.
+
+![DietPi gaming software PaperMC](../assets/images/dietpi-software-games-papermc.jpg){: style="width:150px"}
+
+=== "Info"
+
+    PaperMC by default runs a single server, available on LAN, but can be port forewarded so other people can connect.
+
+=== "Tweaking"
+
+    Tweak the server settings by modifying the following file or any file that ends in `.yml`:  
+    `/opt/papermc/server.properties`
+
+=== "Restart service"
+
+    You can restart the service by running:  
+    `systemctl restart papermc`
+
+### FAQ
+
+#### How do I interface with the server's console?
+
+Use the installed tool MCrcon: `mcrcon -p GLOBAL_PW`.
+
+#### How do I find and install plugins?
+
+<http://https://www.spigotmc.org/resources/categories/spigot.4//>
+
+Just move the downloaded JAR file to the `/opt/papermc/plugins` directory.
+
+#### What version of Minecraft does this work on
+
+PaperMC is built to run on Java edition, however with the optional Geyser and Floodgate plugins, it can run on Bedrock edition as well.
+
+Just choose to install them at the beginning.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
