@@ -577,7 +577,11 @@ After this, the script runs a couple of minutes, finally the following message o
 
 ![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: style="width:550px"}
 
-Then you can restart your system (`reboot`), alternatively you can copy the SC card (via `dd`) to an image (`.img`) to duplicate your base installation.
+If you did not use branch `master` the last step is to edit file `/boot/dietpi.txt` and edit the entry  
+`DEV_GITBRANCH=master`  
+which is near the end of the file.
+
+After this you can restart your system (`reboot`), alternatively you can copy the SC card (via `dd`) to an image (`.img`) to duplicate your base installation.
 
 A further step can be to generate a compressed DietPi image via the `dietpi-imager` script (located in the `.meta` subdirectory in the [GitHub DietPi share](https://github.com/MichaIng/DietPi/) or via  
 `sudo bash -c "$(curl -s https://raw.githubusercontent.com/MichaIng/DietPi/dev/.meta/dietpi-imager)"`).
