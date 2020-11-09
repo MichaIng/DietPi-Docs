@@ -59,6 +59,7 @@ CORS
 coturn
 CouchPotato
 COVID
+cpu
 cron
 CSI
 CSM
@@ -323,6 +324,7 @@ SBCs
 SCP
 scroller
 SDL
+serverless
 SFTP
 Shairport
 ShareAlike
@@ -361,6 +363,7 @@ thechildofroth
 TigerVNC
 TLS
 Tonido
+transactional
 transcoding
 TRÅDFRI
 TTS

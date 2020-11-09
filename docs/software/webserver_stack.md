@@ -156,7 +156,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 ## LASP web stack
 
-LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing SQLite instead of MariaDb. 
+LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing SQLite instead of MariaDB. 
 
 SQLite is an embedded relational database engine. The documentation calls it _a self-contained, serverless, zero-configuration and transactional SQL database engine_. It is very popular and there are hundreds of millions copies worldwide in use today. Together with Apache2 and PHP could be a good candidate for single board computer.
 
@@ -430,7 +430,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - **Webserver**
 
-        Depending on your needs, you may choose the web server that fits best your needs. In case **Lighttpd** is not the right choice, you could continue with **Apache Web Server**, **Nginx** or **Tomcat WebServer**.
+        Depending on your needs, you may choose the web server that fits best your needs. In case **Lighttpd** is not the right choice, you could continue with **Apache Web Server**, **Nginx** or **Tomcat webwerver**.
 
     - Database
 
@@ -485,7 +485,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - **Webserver**
 
-        Depending on your needs, you may choose the web server that fits best your needs. In case **Lighttpd** is not the right choice, you could continue with **Apache Web Server**, **Nginx** or **Tomcat WebServer**.
+        Depending on your needs, you may choose the web server that fits best your needs. In case **Lighttpd** is not the right choice, you could continue with **Apache Web Server**, **Nginx** or **Tomcat webserver**.
 
     - Database
 
