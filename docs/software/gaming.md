@@ -402,7 +402,7 @@ Use the installed tool MCrcon: `mcrcon -p GLOBAL_PW`.
 
 #### How do I find and install plugins?
 
-<http://https://www.spigotmc.org/resources/categories/spigot.4/>
+<https://www.spigotmc.org/resources/categories/spigot.4/>
 
 Just move the downloaded JAR file to the `/opt/papermc/plugins` directory.
 
