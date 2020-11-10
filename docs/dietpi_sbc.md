@@ -472,11 +472,11 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
 ## Make your own distribution
 
 Unable to find an available image for your device?  
-Don't worry, DietPi contains a script which can be used to generate an image for your device.
+Don't worry, DietPi contains a script which can be used to turn an installed Debian-based OS into DietPi.
 
 !!! attention "Advanced Linux knowledge required"
     To generate your own SBC support, an advanced Linux knowledge is required.  
-    There is no guarantee that this will work for every SBC. Use the DietPi image generation script at your own risk!
+    There is no guarantee that this will work for every system. Use the DietPi image generation script at your own risk!
 
 !!! info "Limited end user support"
     End user support will be limited to issues that are DietPi specific (which excludes Kernel, GPU, onboard Bluetooth, WiFi, Audio, etc. from our support). GPU features are disabled for other devices (e.g.: Kodi, Desktop), ideal for server usage.  
@@ -501,13 +501,13 @@ Basically there are three options for the image generation:
 - based on the `beta` branch of DietPi
 - based on the `dev` branch of DietPi
 
-It is recommended using the `master` or `dev` branch. Using the `dev` branch helps hardening the upcoming DietPi release, so this is appreciated.
+It is recommended using the `master` or `beta` branch. Using the `beta` branch helps hardening the upcoming DietPi release, so this is appreciated.
 
 ### Prerequisites
 
 **Requirement 1:** Ensure a Debian/Raspbian OS is running on the system:
 
-- For best results, we recommend a fresh/clean minimal Debian/Raspbian installation
+- For best results, we recommend a fresh/clean minimal Debian/Raspbian installation.
 - Native PC users: Please install Debian stable before hand: <https://www.debian.org/distrib/netinst>
 - Desktop images should work, however, the minimal the image, the quicker the installation, as less packages will need to be removed.  
   Remark: We do not support Ubuntu, or have any plans to do so.
@@ -518,7 +518,7 @@ It is recommended using the `master` or `dev` branch. Using the `dev` branch hel
 
     ```sh
     apt update
-    apt install -y systemd-sysv ca-certificates sudo wget locales --reinstall
+    apt install -y systemd-sysv ca-certificates sudo curl locales
     ```
 
 ### Script execution
@@ -528,26 +528,26 @@ It is recommended using the `master` or `dev` branch. Using the `dev` branch hel
     That will "pull the ground from under your feet".
 
 !!! important "Needed: Root rights"
-    Ensure you have elevated privileges (e.g.: login as `root`, or use `sudo` resp. `su`).
+    Ensure you have elevated privileges (e.g.: login as `root`, or use `sudo`).
 
-The following procedure is explained with the use of the `dev` branch. Unless otherwise noted, the procedure is identical to the `beta` and the `master` branches.
+The following procedure is explained with the use of the `master` branch. Unless otherwise noted, the procedure is identical to the `beta` and the `dev` branches.
 
-Execute the following shell command to get the script (`dev` branch):
+Execute the following shell command to get the script (`master` branch):
 
 ```sh
-wget https://raw.githubusercontent.com/MichaIng/DietPi/dev/PREP_SYSTEM_FOR_DIETPI.sh -O PREP_SYSTEM_FOR_DIETPI.sh
+curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/PREP_SYSTEM_FOR_DIETPI.sh -o PREP_SYSTEM_FOR_DIETPI.sh
 ```
 
 In case of using the `beta` branch execute:
 
 ```sh
-wget https://raw.githubusercontent.com/MichaIng/DietPi/beta/PREP_SYSTEM_FOR_DIETPI.sh -O PREP_SYSTEM_FOR_DIETPI.sh
+curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/beta/PREP_SYSTEM_FOR_DIETPI.sh -o PREP_SYSTEM_FOR_DIETPI.sh
 ```
 
-In case of using the `master` branch execute:
+In case of using the `dev` branch execute:
 
 ```sh
-wget https://raw.githubusercontent.com/MichaIng/DietPi/master/PREP_SYSTEM_FOR_DIETPI.sh -O PREP_SYSTEM_FOR_DIETPI.sh
+curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/dev/PREP_SYSTEM_FOR_DIETPI.sh -o PREP_SYSTEM_FOR_DIETPI.sh
 ```
 
 As the next step, execute
@@ -584,4 +584,4 @@ which is near the end of the file.
 After this you can restart your system (`reboot`), alternatively you can copy the SC card (via `dd`) to an image (`.img`) to duplicate your base installation.
 
 A further step can be to generate a compressed DietPi image via the `dietpi-imager` script (located in the `.meta` subdirectory in the [GitHub DietPi share](https://github.com/MichaIng/DietPi/) or via  
-`sudo bash -c "$(curl -s https://raw.githubusercontent.com/MichaIng/DietPi/dev/.meta/dietpi-imager)"`).
+`sudo bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager)"`).
