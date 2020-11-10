@@ -205,6 +205,7 @@ mangas
 marcobrianza
 MariaDB
 Mbit
+MCrcon
 Meveric
 MiB
 MichaIng
@@ -270,6 +271,7 @@ OpenTyrian
 OpenVPN
 ownCloud
 Panokostas
+PaperMC
 passwd
 PCIe
 php
@@ -299,6 +301,7 @@ RAMdisk
 RAMlog
 Raspbian
 Raspcontrol
+rcon
 RDBMS
 RDP
 ReadyMedia
