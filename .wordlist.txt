@@ -226,6 +226,7 @@ MQTT
 MTA
 multiroom
 Multithreaded
+multithreading
 Mycroft
 MyHome
 myMPD
