@@ -164,6 +164,7 @@ iZotope
 Jackett
 JanKoudijs
 Jellyfin
+Jessie
 Joulinar
 journald
 jRiver
@@ -225,6 +226,8 @@ MPD
 MQTT
 MTA
 multiroom
+Multithreaded
+multithreading
 Mycroft
 MyHome
 myMPD
@@ -299,6 +302,7 @@ RAMlog
 Raspbian
 Raspcontrol
 rcon
+RDBMS
 RDP
 ReadyMedia
 RealVNC
@@ -350,6 +354,7 @@ SSID
 SSL
 startx
 StephanStS
+subdirectory
 sudo
 symlink
 Syncthing
