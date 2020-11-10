@@ -36,7 +36,8 @@ Rename the basic text for this linking to "Once installed" -> "Further informati
 
 Start with one tile and then review for further decision.
 
-- [ ] **Petru:** Make a first proposal (align with Download area with the tiles there)
+- [x] **Petru:** Make a first proposal (align with Download area with the tiles there)
+- [ ] **Petru:** Continue to work and discuss on this topic
 
 ## 3 Description of Webserver stacks
 
@@ -100,7 +101,7 @@ This should be consistent to our [optimized software list](https://dietpi.com/do
 
 Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
 
-- [ ] **Petru:** Make a first proposal (align with Download area with the tiles there)
+- [x] **Petru:** Make a first proposal (align with Download area with the tiles there)
 - [ ] **ToDo:** Check back rights to use software logos for tiles
 
 ## 7 Chapter "Advanced configuration"
