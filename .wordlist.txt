@@ -225,6 +225,7 @@ MPD
 MQTT
 MTA
 multiroom
+Multithreaded
 Mycroft
 MyHome
 myMPD
@@ -297,6 +298,7 @@ RAMdisk
 RAMlog
 Raspbian
 Raspcontrol
+RDBMS
 RDP
 ReadyMedia
 RealVNC
