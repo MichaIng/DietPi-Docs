@@ -164,6 +164,7 @@ iZotope
 Jackett
 JanKoudijs
 Jellyfin
+Jessie
 Joulinar
 journald
 jRiver
@@ -347,6 +348,7 @@ SSID
 SSL
 startx
 StephanStS
+subdirectory
 sudo
 symlink
 Syncthing
