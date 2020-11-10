@@ -122,7 +122,7 @@ The latter is used only in the case of the first webserver background installati
 
     - Memory use = **Low** | Multithreaded = **Optional** - Some drawbacks
 
-    Lighttpd is extremely lightweight and is generally considered to offer the "best" webserver performance on Linux for SBC's (single board computers). It is recommended for users who expect low webserver traffic and/or personal use.  
+    Lighttpd is extremely lightweight and is generally considered to offer the "best" webserver performance on Linux for SBCs (single board computers). It is recommended for users who expect low webserver traffic and/or personal use.  
     Although the DietPi installation of Lighttpd is set to single threaded, do not be put off by this, in low usage scenarios (<10 users) it will still outperform Nginx and Apache2. Activation of multithreading is described in the Lighttpd package description.
 
     **Further reading & benchmarks**
@@ -135,7 +135,7 @@ The latter is used only in the case of the first webserver background installati
     MariaDB is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.
 
     **SQLite**  
-    SQLite is an RDBMS, also compatible to MySQL. It offeres a broader language support (i.e. more bindings to programming languages) compared to MariaDB. SQLite has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
+    SQLite is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to MariaDB. SQLite has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
 
 ## Webstack description
 
@@ -258,7 +258,6 @@ T.b.d.
 ### Certbot - Free, automated SSL cert creation and setup, allowing https
 
 T.b.d.
-
 
 ## Webservers
 
