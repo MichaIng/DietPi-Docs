@@ -17,7 +17,6 @@ ARMv
 ASUS
 Atheros
 Audiophonics
-Autostart
 autostart
 AutoStart
 backend
@@ -142,9 +141,8 @@ homeassistant
 hostname
 Hotfix
 hotspot
-Hotspot
 HotSpot
-Hotspots
+hotspots
 HQPlayer
 htop
 HTPC
@@ -164,7 +162,6 @@ iZotope
 Jackett
 JanKoudijs
 Jellyfin
-Jessie
 Joulinar
 journald
 jRiver
@@ -226,7 +223,7 @@ MPD
 MQTT
 MTA
 multiroom
-Multithreaded
+multithreaded
 multithreading
 Mycroft
 MyHome
@@ -407,8 +404,6 @@ Waveshare
 WebIOPi
 webmin
 webserver
-Webservers
-Webserves
 webstack
 Wh
 Widevine
