@@ -572,7 +572,6 @@ Depending on whether you want to use the WiFi feature later on, you have to sele
 ![DietPi-PREP WiFi selection](assets/images/dietpi-prep-wifiselection.png){: style="width:550px"}
 
 The last selection is the target Debian version (the actual **Buster** or the upcoming **Bullseye**).  
-For the older version **Jessie** you need to use a different branch (branch `jessie` instead of `master`, `beta`, or `dev`).  
 After this, the script runs a couple of minutes, finally the following message occurs:
 
 ![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: style="width:550px"}
