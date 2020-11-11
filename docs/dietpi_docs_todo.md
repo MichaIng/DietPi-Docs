@@ -2,40 +2,6 @@
 
 ## 1 Files general
 
-### 1.1 Content order
-
-**Proposal:** The content of the HOME area is reordered by exchanging Supported SBCs with Optimised software list and Advanced configuration with Community tutorials.  
-This gives the following benefits:
-
-- "Advanced configuration" is nearer to the system usage description
-- All links to DietPi.com forum ("Community tutorials" and "Troubleshooting" are consecutive)
-
-Then the main order will be:
-
-1. Overview
-2. Installation
-3. Getting started
-4. Advanced configuration
-5. Supported SBCs
-6. Community tutorials
-7. Troubleshooting
-8. ...
-
-- [x] **ToDo Stephan:** Rearrange items
-
-### 1.2 Headings of optimized software
-
-Shall the installation number added to every heading of the installation description?  
-See <https://dietpi.com/docs/software/remote_desktop/#29-tigervnc-server-desktop-for-remote-connection>: Number \[29\] is added as a prefix of the heading.
-
-Or shall it be added as a postfix?
-
-- Delete 29 at TigerVNC
-- Add a description "command line based installation of software packages" there <https://dietpi.com/docs/dietpi_tools/> after DietPi-Software\Install or remove software.
-
-- [x] **ToDo Stephan:** Delete '29'
-- [x] **ToDo Stephan:** Add a section for the command line software installation
-
 ## 2 Supported Single Board Computers (SBCs)
 
 ### 2.1 Description of DietPi PREP?
@@ -45,7 +11,7 @@ Or shall it be added as a postfix?
 
 Actually it is only referenced at the end of the [*Supported SBC* section](https://dietpi.com/docs/hardware-supported_sbc/#make-your-own-distribution).
 
-- [ ] **ToDo Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
+- [x] **ToDo Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
   Basically use *master* branch, use *dev* for hardening/testing Micha's PREP-script.
 
 ### 2.2 Headings of Optimized software list
@@ -59,7 +25,7 @@ Proposal:
 
 - [x] **ToDo Stephan:** Sort in alphabetical order
 - [x] **Open:** Harmonization
-- [ ] **ToDo Stephan:** Use ampersand signs consequently for software categories
+- [x] **ToDo Stephan:** Use ampersand signs consequently for software categories
 
 ### 2.3 Software overview on dietpi.com
 
@@ -70,7 +36,8 @@ Rename the basic text for this linking to "Once installed" -> "Further informati
 
 Start with one tile and then review for further decision.
 
-- [ ] **Petru:** Make a first proposal (align with Download area with the tiles there)
+- [x] **Petru:** Make a first proposal (align with Download area with the tiles there)
+- [ ] **Petru:** Continue to work and discuss on this topic
 
 ## 3 Description of Webserver stacks
 
@@ -134,52 +101,8 @@ This should be consistent to our [optimized software list](https://dietpi.com/do
 
 Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
 
-- [ ] **Petru:** Make a first proposal (align with Download area with the tiles there)
+- [x] **Petru:** Make a first proposal (align with Download area with the tiles there)
 - [ ] **ToDo:** Check back rights to use software logos for tiles
-
-### 6.2 Add section "how do I run..."
-
-In every chapter of "Optimized software" the section "How do I run DietPi-Software and install Optimised software ?" shall be added.
-
-The section with `dietpi-launcher`shall be deleted at all chapters. The result would be:
-
-```````markdown
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line:
-
-    ```
-    dietpi-software
-    ```
-
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi software](../assets/images/dietpi-software.jpg)
-
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
-```````
-
-- [x] **ToDo Stephan:** Modify the text passages on the pages
-
-### 6.3 Tabs for the DietPi tool programs?
-
-In <https://dietpi.com/docs/dietpi_tools/#configuration> the various tools (e.g. dietpi-config, dietpi-drive-manager, dietpi-autostart,...) could be moved to tabs and some more explanations from the DietPi forum pages could be added.  
-Can be seen at Stephan's branch ["dev-StS-todo"](https://github.com/StephanStS/DietPi-Docs/tree/dev-StS-todo).
-
-- [x] **ToDo Stephan:** Introduce tabs
-
-### 6.4 Backlink "Return to the Optimised Software list"
-
-Where shall the link be located?
-
-- At the end of every section
-- In the top of every section (before every single package is described)
-
-Decision:
-
-- Keep the link below the "how do I run..." info box
-- Add the link at the bottom of the page
-
-- [x] **ToDo Stephan:** Add links
 
 ## 7 Chapter "Advanced configuration"
 
@@ -189,8 +112,7 @@ Decision:
 
 - [x] Someone to describe the tab "Search".
 - [x] **Stephan:** Someone to describe the tab "Log System".
-
-- [ ] **Todo Micha:** Describe Search
+- [x] **Todo Micha:** Describe Search
 
 ## 8 Software lists
 
@@ -243,9 +165,7 @@ Add items about
 - TLS-SSL: <https://github.com/MichaIng/DietPi/wiki/TLS-SSL>
 - Security recommendations: <https://github.com/MichaIng/DietPi/wiki/Security-recommendation>
 - Fail2Ban: <https://dietpi.com/phpbb/viewtopic.php?p=452#p452>
-
 - Backup/Restoring / Synching
 - Updating
 - Logfile viewing
 - Disk space monitoring
-- ...

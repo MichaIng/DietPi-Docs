@@ -17,7 +17,6 @@ ARMv
 ASUS
 Atheros
 Audiophonics
-Autostart
 autostart
 AutoStart
 backend
@@ -142,9 +141,8 @@ homeassistant
 hostname
 Hotfix
 hotspot
-Hotspot
 HotSpot
-Hotspots
+hotspots
 HQPlayer
 htop
 HTPC
@@ -204,6 +202,7 @@ mangas
 marcobrianza
 MariaDB
 Mbit
+MCrcon
 Meveric
 MiB
 MichaIng
@@ -224,6 +223,8 @@ MPD
 MQTT
 MTA
 multiroom
+multithreaded
+multithreading
 Mycroft
 MyHome
 myMPD
@@ -245,6 +246,7 @@ Nmap
 NoMachine
 NordVPN
 NTFS
+NTP
 NUC
 Nukkit
 NZB
@@ -266,6 +268,7 @@ OpenTyrian
 OpenVPN
 ownCloud
 Panokostas
+PaperMC
 passwd
 PCIe
 php
@@ -295,6 +298,8 @@ RAMdisk
 RAMlog
 Raspbian
 Raspcontrol
+rcon
+RDBMS
 RDP
 ReadyMedia
 RealVNC
@@ -346,6 +351,7 @@ SSID
 SSL
 startx
 StephanStS
+subdirectory
 sudo
 symlink
 Syncthing
@@ -398,8 +404,7 @@ Waveshare
 WebIOPi
 webmin
 webserver
-Webservers
-Webserves
+webservers
 webstack
 Wh
 Widevine
