@@ -1,33 +1,8 @@
 # Documentation Ideas & Tasks
 
-## 1 Files general
+## 1 Supported Single Board Computers (SBCs)
 
-## 2 Supported Single Board Computers (SBCs)
-
-### 2.1 Description of DietPi PREP?
-
-1. Q: Shall we describe this issue in a comprehensive form?  
-   Possibly this will lead to too much questions?
-
-Actually it is only referenced at the end of the [*Supported SBC* section](https://dietpi.com/docs/hardware-supported_sbc/#make-your-own-distribution).
-
-- [x] **ToDo Stephan:** Make a proposal with some more screenshots.  Add a fat disclaimer/hint that advanced linux knowledge has to be present. No guarantee that this will work for every SBC.
-  Basically use *master* branch, use *dev* for hardening/testing Micha's PREP-script.
-
-### 2.2 Headings of Optimized software list
-
-Compare <https://dietpi.com/docs/dietpi_optimised_software/>, table of contents on the right side with <https://dietpi.com/docs/software/desktop/>, structure on the left side.
-
-Proposal:
-
-- Harmonize naming
-- List in alphabetical order
-
-- [x] **ToDo Stephan:** Sort in alphabetical order
-- [x] **Open:** Harmonization
-- [x] **ToDo Stephan:** Use ampersand signs consequently for software categories
-
-### 2.3 Software overview on dietpi.com
+### 1.1 Software overview on dietpi.com
 
 There: <https://dietpi.com/dietpi-software.html>
 
@@ -39,7 +14,7 @@ Start with one tile and then review for further decision.
 - [x] **Petru:** Make a first proposal (align with Download area with the tiles there)
 - [ ] **Petru:** Continue to work and discuss on this topic
 
-## 3 Description of Webserver stacks
+## 2 Description of Webserver stacks
 
 See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>
 
@@ -53,13 +28,13 @@ See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>
 - [ ] **Todo Petru:** Implement points 1. and 2. above
 - [ ] **Afterwards:** Discuss how to implement point 3. above and decide further steps
 
-## 4 Gitea software
+## 3 Gitea software
 
-### 4.1 Prerequisites
+### 3.1 Prerequisites
 
 Describe/check user rights of dietpi user and letsencrypt.
 
-### 4.2 Add section "hardening Gitea for external access (behind a router)"
+### 3.2 Add section "hardening Gitea for external access (behind a router)"
 
 - Describe fail2ban usage unter "external access".  
   See: <https://docs.gitea.io/en-us/fail2ban-setup/>
@@ -77,7 +52,7 @@ How to go on?
 - Then describe a bit more general security solutions
 - Then possibly restructure the whole issue
 
-## 5 Backup/Restore
+## 4 Backup/Restore
 
 Describe Backup/Restore:
 
@@ -92,9 +67,9 @@ Additional idea:
 
 - [ ] **ToDo Stephan**
 
-## 6 Optimized software
+## 5 Optimized software
 
-### 6.1 Harmonization with <https://dietpi.com/dietpi-software.html>
+### 5.1 Harmonization with <https://dietpi.com/dietpi-software.html>
 
 In <https://dietpi.com/dietpi-software.html> are icons of software titles as tiles displayed.  
 This should be consistent to our [optimized software list](https://dietpi.com/docs/dietpi_optimised_software/).
@@ -104,19 +79,9 @@ Proposal: Vor every software title one tile. Add tiles to dietpi-software.html.
 - [x] **Petru:** Make a first proposal (align with Download area with the tiles there)
 - [ ] **ToDo:** Check back rights to use software logos for tiles
 
-## 7 Chapter "Advanced configuration"
+## 6 Software lists
 
-### 7.1 Add descriptions
-
-<https://dietpi.com/docs/dietpi_tools/#dietpi-software>
-
-- [x] Someone to describe the tab "Search".
-- [x] **Stephan:** Someone to describe the tab "Log System".
-- [x] **Todo Micha:** Describe Search
-
-## 8 Software lists
-
-### 8.1 Compare software lists
+### 6.1 Compare software lists
 
 The software list between the softwares listed in
 
@@ -142,7 +107,7 @@ Decision is needed, which of these softwares shall be described in the documenta
 - [ ] **ToDo Stephan:** Check and in case of missing issues list them above for further discussion
 - [ ] **ToDo Petru:** Test to create website content based on JSON file (or similar)
 
-### 8.2 Checks in *Optimized Software*
+### 6.2 Checks in *Optimized Software*
 
 Check for this:
 
@@ -151,13 +116,13 @@ Check for this:
   - the links on the top should be bold and link to the headings within the sub-page
 - In every sub-page the section *How do I run DietPi-Software and install Optimised software?* should be present.
 
-### 8.3 Shorten software title headers
+### 6.3 Shorten software title headers
 
 To shorten/simplify links to the individual software title docs.
 
 - [ ] **ToDo Stephan (and others)**
 
-## 9 Chapter for "hardening the system" or "maintaining the system"?
+## 7 Chapter for "hardening the system" or "maintaining the system"?
 
 Add items about
 
