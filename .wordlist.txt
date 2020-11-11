@@ -404,6 +404,7 @@ Waveshare
 WebIOPi
 webmin
 webserver
+webservers
 webstack
 Wh
 Widevine
