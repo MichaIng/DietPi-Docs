@@ -14,15 +14,14 @@ jobs:
       - name: Install markdownlint-cli2
         run: sudo npm i -g markdownlint-cli2
       - name: Check Markdown syntax
-        # .markdownlint.yaml: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
         run: markdownlint-cli2 '**.md'
-      - name: Set up Python 3.7
+      - name: Set up Python 3.7 for MkDocs and PySpelling
         id: python
         if: always() && steps.clone.outcome == 'success'
         uses: actions/setup-python@v2
         with:
           python-version: '3.7'
-      - name: Install Python dependencies
+      - name: Install MkDocs Python dependencies
         id: python_deps
         if: always() && steps.python.outcome == 'success'
         run: |
@@ -38,15 +37,26 @@ jobs:
         id: build
         if: always() && steps.mkdocs_config.outcome == 'success'
         run: mkdocs build -sd build/docs
-      - name: Check spelling in HTML files
+      - name: Install PySpelling
+        id: pyspelling
         if: always() && steps.build.outcome == 'success'
-        # .spellcheck.yml: https://github.com/marketplace/actions/github-spellcheck-action#spellcheck-configuration-file
-        # .wordlist.txt
-        uses: rojopolis/spellcheck-github-actions@0.5.0
+        run: |
+          pip3 install -U pyspelling
+          sudo apt-get -q update
+          sudo apt-get -qq --no-install-recommends install aspell aspell-en
+      - name: Check spelling in HTML files
+        if: always() && steps.pyspelling.outcome == 'success'
+        run: pyspelling -vc .spellcheck.yml
+      - name: Setup Go 1.15 for liche
+        id: go
+        if: always() && steps.build.outcome == 'success'
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.15
       - name: Install liche
         id: liche
-        if: always() && steps.build.outcome == 'success'
+        if: always() && steps.go.outcome == 'success'
         run: GO111MODULE=on go get -u github.com/raviqqe/liche
       - name: Check links in HTML and Markdown files
         if: always() && steps.liche.outcome == 'success'
-        run: $(go env GOPATH)/bin/liche -x 'https://github.com' -d build -r README.md build/docs
+        run: liche -x 'https://github.com' -d build -r README.md build/docs
