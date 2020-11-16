@@ -327,9 +327,12 @@ Your very own GitHub style server, with web interface.
       logpath = /var/log/gitea/gitea.log
       backend = auto
       ```
-      As not specified here, Fail2Ban uses properties like `maxretry`, `bantime`, etc. from `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` (if present).
-    - Restart Fail2Ban (`service fail2ban restart`, e.g.)
-    - See also <https://docs.gitea.io/en-us/fail2ban-setup/>
+    As not specified here, Fail2Ban uses properties like `maxretry`, `bantime`, etc. from `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` (if present). Note the setting `backend = auto`. By default, `backend` is set to `systemd` in `/etc/fail2ban/jail.conf`. As a result, Fail2Ban ignores the `logpath` entry here in the jail `gitea.conf`, with the consequence, that Fail2Ban does not recognize an attack on Gitea (port 3000) even though attacks are listed in `/var/log/gitea/gitea.log`.
+    - Restart Fail2Ban (`systemctl restart fail2ban`, e.g.)
+    - Test your settings by trying to sign in multiple times from a remote PC with a wrong user or password. After `maxretry` attempts your IP must be banned for `bantime` seconds (DietPi does not respond anymore) as the default action by Fail2Ban is `route`, specified in `/etc/fail2ban/action.d/route.conf`. You can check the current status on your DietPi with `fail2ban-client status gitea`.
+    - See also:
+        - [Fail2Ban](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
+        - <https://docs.gitea.io/en-us/fail2ban-setup/>
 
 See also <https://gitea.io/>.
 
