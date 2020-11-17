@@ -14,6 +14,15 @@ Start with one tile and then review for further decision.
 - [x] **Petru:** Make a first proposal (align with Download area with the tiles there)
 - [ ] **Petru:** Continue to work and discuss on this topic
 
+### 1.2 Position of Let's Encrypt
+
+Proposal to move *Let's Encrypt / CertBot* from ***Web Development*** chapter to ***System Security*** chapter.  
+In the *System Security* chapter there is also *Fail2Ban* located.
+
+Optionally, also move chapters ***SSH Server*** and ***VPN*** also to *System Security*?
+
+**Decision?**
+
 ## 2 Description of Webserver stacks
 
 See there: <https://dietpi.com/docs/dietpi-software-webserver-stack/>
@@ -51,6 +60,10 @@ How to go on?
 - First do a description about gitea hardening
 - Then describe a bit more general security solutions
 - Then possibly restructure the whole issue
+
+ToDos:
+
+- [x] **ToDo Stephan:** Describe gitea & Fail2Ban
 
 ## 4 Backup/Restore
 
