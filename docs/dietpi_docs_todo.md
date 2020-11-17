@@ -16,7 +16,7 @@ Start with one tile and then review for further decision.
 
 ### 1.2 Position of Let's Encrypt
 
-Proposal to move *Let's Encrypt / CertBot* from ***Web Development*** chapter to ***System Security*** chapter.  
+*Let's Encrypt / CertBot* moved from ***Web Development*** chapter to ***System Security*** chapter.  
 In the *System Security* chapter there is also *Fail2Ban* located.
 
 Optionally, also move chapters ***SSH Server*** and ***VPN*** also to *System Security*?

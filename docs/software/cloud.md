@@ -307,6 +307,8 @@ Your very own GitHub style server, with web interface.
     - Port = 3000
     - Protocol = TCP+UDP
 
+    If an external access is used, the activation of the package [Let’s Encrypt - Enable HTTPS / SSL](../system_security/#lets-encrypt-enable-https-ssl) is strongly recommended to increase your system security.
+
 === "Fail2Ban integration"
 
     Block users after failed login attempts.

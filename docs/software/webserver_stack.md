@@ -11,10 +11,6 @@
 - [LLMP Webserver - Lighttpd / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
 - [LLSP Webserver - Lighttpd / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
 
-### Let's encrypt - Enable HTTPS / SSL
-
-- [Certbot - Free, automated SSL cert creation and setup, allowing https](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
-
 ### Webservers
 
 - [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
@@ -250,12 +246,6 @@ T.b.d.
 T.b.d.
 
 ### LLSP Webserver - Lighttpd / SQLite / PHP
-
-T.b.d.
-
-## Let's encrypt - Enable HTTPS / SSL
-
-### Certbot - Free, automated SSL cert creation and setup, allowing https
 
 T.b.d.
 
