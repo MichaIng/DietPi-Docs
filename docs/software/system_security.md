@@ -21,22 +21,22 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Let’s Encrypt & CertBot - Enable HTTPS / SSL
+## Let’s Encrypt & Certbot - Enable HTTPS / SSL
 
 Let's Encrypt is a free SSL certificate provider. Certbot is the official client to apply Let's Encrypt SSL certificates to your webserver. This will allow you to have `https://` (encrypted and authenticated) access to your websites.
 
 ### Requirements
 
-To use CertBot you need:
+To use Certbot you need:
 
 - A working Apache2, Nginx or Lighttpd webserver
-- A URL/domain (e.g.: mysite.org). No-IP can be used for a URL/domain that points to your device.
+- A URL/domain (e.g.: `mysite.org`). No-IP can be used for a URL/domain that points to your device.
 - Ports 80 and 443 (TCP) need to be forwarded to your device. This is typically set within your router.
 
-???+ important "Keep port 80 open for CertBot renewal"
+???+ important "Keep port 80 open for Certbot renewal"
     Even when you use only HTTPS on port 443, Let's Encrypt requires port 80 to stay opened for certificate renewals (in your router's forwarding functionality).
 
-![DietPi security software CertBot screenshot](../assets/images/dietpi-software-security-certbot.png){: style="width:550px"}
+![DietPi security software Certbot screenshot](../assets/images/dietpi-software-security-certbot.png){: style="width:550px"}
 
 ### Create and apply your cert
 
