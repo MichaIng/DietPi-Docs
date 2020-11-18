@@ -191,6 +191,7 @@
 
 ## [System Security](../software/system_security/)
 
+- [**Let’s Encrypt - Enable HTTPS / SSL**](../software/system_security/#lets-encrypt-enable-https-ssl)
 - [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
 - [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)
 
@@ -228,10 +229,6 @@
 - [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
 - [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
 - [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
-
-### Let's encrypt - Enable HTTPS / SSL
-
-- [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
 
 ### Webservers
 
