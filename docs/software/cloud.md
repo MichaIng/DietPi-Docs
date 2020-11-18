@@ -117,6 +117,7 @@ xxx
     Block users after failed login attempts.
 
     - Create new filter `/etc/fail2ban/filter.d/gitea.conf`:
+
       ```ini
       # Fail2Ban filter for Gitea
 
@@ -124,7 +125,9 @@ xxx
       failregex =  .*Failed authentication attempt for .* from <HOST>
       ignoreregex =
       ```
+
     - Create new jail `/etc/fail2ban/jail.d/gitea.conf`:
+
       ```ini
       [gitea]
       enabled = true
@@ -132,6 +135,7 @@ xxx
       logpath = /var/log/gitea/gitea.log
       backend = auto
       ```
+
     As not specified here, Fail2Ban uses properties like `maxretry`, `bantime`, etc. from `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` (if present). Note the setting `backend = auto`. By default, `backend` is set to `systemd` in `/etc/fail2ban/jail.conf`. As a result, Fail2Ban ignores the `logpath` entry here in the jail `gitea.conf`, with the consequence, that Fail2Ban does not recognize an attack on Gitea (port 3000) even though attacks are listed in `/var/log/gitea/gitea.log`.
     - Restart Fail2Ban: `systemctl restart fail2ban`.
     - Test your settings by trying to sign in multiple times from a remote PC with a wrong user or password. After `maxretry` attempts your IP must be banned for `bantime` seconds (DietPi does not respond anymore) as the default action by Fail2Ban is `route`, specified in `/etc/fail2ban/action.d/route.conf`.
@@ -140,13 +144,11 @@ xxx
         - [Fail2Ban](../system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
         - <https://docs.gitea.io/en-us/fail2ban-setup/>
 
-
 https://apps.nextcloud.com/apps/bruteforcesettings
 
 https://help.nextcloud.com/t/repeated-login-attempts-from-china/6510/11?u=michaing
 
 https://www.c-rieger.de/nextcloud-installationsanleitung/#c06
-
 
 === "Update Nextcloud to the latest version"
 
