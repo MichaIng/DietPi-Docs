@@ -92,13 +92,13 @@ Mycroft AI is a free and open source voice assistant.
     3. You should see and at best hear the invitation to pair your device, e.g.: `PairingSkill - INFO - Pairing code: XXYYZZ`
     4. Visit <https://home.mycroft.ai/> to start pairing and configuring your device and skills.
 
-=== "Build Mimic for offline TTS support (optional)""
+=== "Build Mimic for offline TTS (British Male) support (optional)""
 
-    Remark: this requires about 3 GB of RAM and takes a while, so assure that you have enough memory (4 GB recommended), in case increase your swap file size and grab yourself a coffee.
+    Remark: this requires about 3 GiB of RAM and takes a while, so assure that you have enough memory (4 GiB recommended), in case increase your swap file size and grab yourself a coffee.
 
     ```sh
-    cd /mnt/dietpi_userdata/mycroft-core/scripts
-    sudo -u mycroft ./install-mimic.sh
+    cd /mnt/dietpi_userdata/mycroft-core
+    sudo -u mycroft ./scripts/install-mimic.sh $(nproc)
     ```
 
 ## PiJuice - PiSupply UPS/battery power system
