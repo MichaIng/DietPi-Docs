@@ -117,7 +117,10 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     This protection can be extended with Fail2Ban (see following tab).
 
-    See also: <https://apps.nextcloud.com/apps/bruteforcesettings>
+    See also: 
+    
+    - <https://apps.nextcloud.com/apps/bruteforcesettings>
+    - <https://docs.nextcloud.com/server/20/admin_manual/configuration_server/bruteforce_configuration.html>
 
 === "Fail2Ban integration"
 
