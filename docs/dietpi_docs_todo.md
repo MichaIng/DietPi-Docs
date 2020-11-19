@@ -105,19 +105,31 @@ The software list between the softwares listed in
 
 need to be checked for consistency.
 
+#### Result
+
 Softwares which are actually not within `dietpi-software`:
 
-- t.b.d.
+- [jRiver](https://dietpi.com/docs/software/media/#jriver-media-center)
+- [OpenTyrian](https://dietpi.com/docs/software/gaming/#opentyrian-gaming)
+- [PaperMC](https://dietpi.com/docs/software/gaming/#papermc)
+- [Raspcontrol](https://dietpi.com/docs/software/system_stats/#raspcontrol-web-interface-system-stats)
+- [Grasshopper](https://dietpi.com/docs/software/home_automation/#grasshopper-web-app-to-control-bticino-myhome)
 
-Softwares which are actually not within <https://dietpi.com/docs/software/desktop/>:
+Softwares which are actually not within <https://dietpi.com/docs/dietpi_optimised_software/>:
 
-- t.b.d.
+- [BruteFIR](https://dietpi.com/phpbb/viewtopic.php?p=57#p57)
+- [Spotify Connect Web](https://dietpi.com/phpbb/viewtopic.php?p=7013#p7013)
+- [Raspotify](https://dietpi.com/phpbb/viewtopic.php?p=9368#p9368)
+- [TasmoAdmin](https://dietpi.com/phpbb/viewtopic.php?p=20584#p20584)
+- [Domoticz](https://dietpi.com/phpbb/viewtopic.php?p=23065#p23065)
+- Redis (only in `dietpi-software`)
+- FuguHub: Lightweight WebDAV cloud (eg: dropbox) with a CMS (only in `dietpi-software`)
 
 Decision is needed, which of these softwares shall be described in the documentation resp. shall be added to the installation via `dietpi-software`.
 
 **Proposal:** First, generate the lists above and decide afterwards how to go on.
 
-- [ ] **ToDo Stephan:** Check and in case of missing issues list them above for further discussion
+- [x] **ToDo Stephan:** Check and in case of missing issues list them above for further discussion
 - [ ] **ToDo Petru:** Test to create website content based on JSON file (or similar)
 
 ### 6.2 Checks in *Optimized Software*

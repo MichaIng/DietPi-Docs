@@ -220,7 +220,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     #### Tools
 
-    - Perform CPU, RAM, file system and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark> 
+    - Perform CPU, RAM, file system and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark>
     - Perform CPU/IO/RAM/DISK **stress tests** to test the stability of your system, e.g. after applying some overclocking.
 
 === "DietPi drive manager"
@@ -324,6 +324,19 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     It converts a text file into morse code.  
     Run `dietpi-morsecode`.
+
+=== "Useful DietPi global commands (apt etc.)"
+
+    There are a couple of general commands which have a shortcut in DietPi:
+
+    - `cpu` - Print CPU clocks, temperature and governor info
+    - `G_TREESIZE` - Shows current directory/file sizes, recursive
+    - `G_AGI` - `apt-get install`
+    - `G_AGP` - `apt-get purge`
+    - `G_AGA` - `apt-get autoremove --purge`
+    - `G_AGUP` - `apt-get update`
+    - `G_AGUG` - `apt-get upgrade`
+    - `G_AGDUG` - `apt-get dist-upgrade`
 
 ## Maintenance
 
