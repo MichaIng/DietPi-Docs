@@ -112,19 +112,18 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Nextcloud 'Brute force protection'"
 
-    Nextcloud offeres built in brute force protection and addtionally a plugin ***Brute-force settings***.  
+    Nextcloud offers built in brute force protection and additionally a plugin ***Brute-force settings***.  
     This will delay your login rate in case of several failed login attempts.
 
     This protection can be extended with Fail2Ban (see following tab).
 
     See also: <https://apps.nextcloud.com/apps/bruteforcesettings>
 
-
 === "Fail2Ban integration"
 
     Using Fail2Ban your can block users after failed login attempts. This hardens your system, e.g. against brute force attacks.
 
-    - Set options in the ***Nextcloud configuration file*** (typ. `/var/www/nextcloud/config/config.php`):
+    - Set options in the ***Nextcloud configuration file*** (typical `/var/www/nextcloud/config/config.php`):
 
         - Add trusted domains if not already set via the `'trusted_domains'` entry.
 
@@ -136,9 +135,9 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
              ),
             ```
 
-        - Check resp. edit the logfile options.  
+        - Check resp. edit the log file options.  
           Set the `logtimezone` to the value of your system.  
-          Check whether the logfile path matches the entry done in the *Fail2Ban jail file* (`nextcloud.local`, see below).
+          Check whether the `logfile` path matches the entry done in the *Fail2Ban jail file* (`nextcloud.local`, see below).
 
             ```ini
             'log_type' => 'file',
