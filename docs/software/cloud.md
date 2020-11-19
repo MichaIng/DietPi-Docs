@@ -473,11 +473,11 @@ Lightweight backup and sync server, includes web interface and external cloud ac
       `/mnt/dietpi_userdata/tonido`
     - DietPi install symbolic links to the Tonido data directories automatically. Therefore, default Tonido sync/userdata locations will point to `/mnt/dietpi_userdata/tonido`:
 
-    ```sh
-    /home/tonido/tonido #PointsTo# /mnt/dietpi_userdata/tonido
-    /home/tonido/TonidoSync #PointsTo# /mnt/dietpi_userdata/tonido/sync
-    /home/tonido/TonidoSyncData #PointsTo# /mnt/dietpi_userdata/tonido/syncdata
-    ```
+        ```sh
+        /home/tonido/tonido #PointsTo# /mnt/dietpi_userdata/tonido
+        /home/tonido/TonidoSync #PointsTo# /mnt/dietpi_userdata/tonido/sync
+        /home/tonido/TonidoSyncData #PointsTo# /mnt/dietpi_userdata/tonido/syncdata
+        ```
 
     We created a `systemd` service for Tonido, DietPi will automatically start this:
     `systemctl status tonido`
