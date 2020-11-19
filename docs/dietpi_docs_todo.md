@@ -109,11 +109,7 @@ need to be checked for consistency.
 
 Softwares which are actually not within `dietpi-software`:
 
-- [jRiver](https://dietpi.com/docs/software/media/#jriver-media-center)
-- [OpenTyrian](https://dietpi.com/docs/software/gaming/#opentyrian-gaming)
 - [PaperMC](https://dietpi.com/docs/software/gaming/#papermc)
-- [Raspcontrol](https://dietpi.com/docs/software/system_stats/#raspcontrol-web-interface-system-stats)
-- [Grasshopper](https://dietpi.com/docs/software/home_automation/#grasshopper-web-app-to-control-bticino-myhome)
 
 Softwares which are actually not within <https://dietpi.com/docs/dietpi_optimised_software/>:
 
