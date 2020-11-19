@@ -340,7 +340,6 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - `G_AGUG` - `apt-get upgrade`
     - `G_AGDUG` - `apt-get dist-upgrade`
 
-
 ## Maintenance
 
 === "DietPi file explorer"
