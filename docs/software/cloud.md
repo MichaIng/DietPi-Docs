@@ -112,15 +112,15 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Nextcloud 'Brute force protection'"
 
-    Nextcloud offers built in brute force protection and additionally a plugin ***Brute-force settings***.  
+    Nextcloud offers built-in brute force protection and additionally a plugin ***Brute-force settings***.  
     This will delay your login rate in case of several failed login attempts.
 
     This protection can be extended with Fail2Ban (see following tab).
 
-    See also: 
-    
+    See also:
+
     - <https://apps.nextcloud.com/apps/bruteforcesettings>
-    - <https://docs.nextcloud.com/server/20/admin_manual/configuration_server/bruteforce_configuration.html>
+    - <https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/bruteforce_configuration.html>
 
 === "Fail2Ban integration"
 
@@ -138,16 +138,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
              ),
             ```
 
-        - Check resp. edit the log file options.  
-          Set the `logtimezone` to the value of your system.  
-          Check whether the `logfile` path matches the entry done in the *Fail2Ban jail file* (`nextcloud.local`, see below).
-
-            ```ini
-            'log_type' => 'file',
-            'logtimezone' => 'Europe/Berlin',
-            'logfile' => '/var/log/nextcloud.log',
-            'loglevel' => 2,
-            ```
+        - log file options: These are set to appropriate values by default (e.g. `log_level`, `log_type`) resp. DietPi defaults (`logfile` via `SOFTWARE_NEXTCLOUD_DATADIR` within `/boot/dietpi.txt`), so that they do not need to be set as sometimes otherwise described.
 
     - Create new ***Fail2Ban filter*** (e.g. `/etc/fail2ban/filter.d/nextcloud.conf`):
 
@@ -172,12 +163,12 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
         filter = nextcloud
         maxretry = 5
         bantime = 600
-        logpath = /var/log/nextcloud.log
+        logpath = /mnt/dietpi_userdata/nextcloud_data/nextcloud.log
         ```
 
         Check whether the `logpath` is identical to the value in the Nextcloud configuration file (`config.php`see above).
 
-        As not specified here, Fail2Ban uses properties like `maxretry`, `bantime`, etc. from `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` (if present). Note the setting `backend = auto`. By default, `backend` is set to `systemd` in `/etc/fail2ban/jail.conf`. As a result, Fail2Ban ignores the `logpath` entry here in the jail `nextcloud.conf`, with the consequence, that Fail2Ban does not recognize an attack on Nextcloud (port 80, 443) even though attacks are listed in `/var/log/nextcloud.log`.
+        As not specified here, Fail2Ban uses properties like `maxretry`, `bantime`, etc. from `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` (if present). Note the setting `backend = auto`. By default, `backend` is set to `systemd` in `/etc/fail2ban/jail.conf`. As a result, Fail2Ban ignores the `logpath` entry here in the jail `nextcloud.conf`, with the consequence, that Fail2Ban does not recognize an attack on Nextcloud (port 80, 443) even though attacks are listed in `/mnt/dietpi_userdata/nextcloud_data/nextcloud.log`.
 
     - Restart Fail2Ban: `systemctl restart fail2ban`.
     - Test your settings by trying to sign in multiple times from a remote PC with a wrong user or password. After `maxretry` attempts your IP must be banned for `bantime` seconds (DietPi does not respond anymore) as the default action by Fail2Ban is `route`, specified in `/etc/fail2ban/action.d/route.conf`.
