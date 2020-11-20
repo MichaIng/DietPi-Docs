@@ -168,25 +168,4 @@ The following hardware is required:
     Then click `Save`.  
     Press `F5` to refresh the page and view your energy consumption.
 
-## Grasshopper - Web App to control Bticino MyHome
-
-Grasshopper is an open source and free (speech & beer) responsive-design web application to control Bticino MyHome.
-
-Also Installs:
-
-- LASP Webserver
-
-![DietPi home automation software Grasshopper](../assets/images/dietpi-software-homeautomation-grasshopper.jpg){: style="width:500px"}
-
-=== "Access Grasshopper"
-
-    URL = `http://<your.IP>`
-
-=== "Setup Grasshopper"
-
-    URL = `http://<your.IP>/setup`
-
-**Grasshopper Project Website:**  
-<https://sourceforge.net/projects/grasshopperwebapp/>
-
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
