@@ -147,3 +147,14 @@ Add items about
 - Updating
 - Logfile viewing
 - Disk space monitoring
+
+## 8 Add chapter "Development" in "Software optimized"
+
+Add an own chapter for programming languages.  
+The following programming languages shall be added:
+
+- Go (golang)
+- Python (moved from "Web Development")
+- PHP? (moved from "Web Development")
+
+**Decision?**
