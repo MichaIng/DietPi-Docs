@@ -24,7 +24,6 @@
 - [**Roon Extension Manager - Manage extensions from within Roon**](#roon-extension-manager-manage-extensions-from-within-roon)
 - [**NAA Daemon - Signalyst Network Audio Adaptor (NAA)**](#naa-daemon-signalyst-network-audio-adaptor-naa)
 - [**IceCast - Shoutcast Streaming Server, including DarkIce**](#icecast-shoutcast-streaming-server-including-darkice)
-- [**jRiver - Media Center**](#jriver-media-center)
 - [**Koel - Web interface streaming server**](#koel-web-interface-streaming-server)
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](#gmediarender-resource-efficient-upnpdlna-renderer)
 - [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity-free-home-server-for-your-comics-and-ebooks-library)
@@ -753,19 +752,6 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
       `dietpi-services restart`
     - A recording will then be saved in the following location:  
       `/mnt/dietpi_userdata/darkice_recording.ogg`
-
-## jRiver - Media Center
-
-Media center.
-
-![DietPi media server software jRiver](../assets/images/dietpi-software-media-jriver.png){: style="width:500px"}
-
-If you did not select JRiver to start from boot:
-
-- Desktop = JRiver available via the LXDE start menu, under "Multimedia"
-- Console = JRiver can also be run by typing `xinit mediacenter22`
-
-You can modify the AutoStart options in `dietpi-autostart`.
 
 ## Koel - Web interface streaming server
 
