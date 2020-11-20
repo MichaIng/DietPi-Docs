@@ -138,6 +138,9 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
              ),
             ```
 
+            The entry of the trusted domains is important, because one of the Fail2Ban regular expressions in the Fail2Ban filter file ("Trusted domain error", see below) deals with trusted domain login errors. By default, if you login via a non trusted domain, Nextcloud will show an error login dialog.  
+            I.e. if you use this `failregex` option and you then reload the page several times (\> maxretry value in the Fail2Ban jail file) you lockout yourself also for logging in via a trusted domain.
+
         - log file options: These are set to appropriate values by default (e.g. `log_level`, `log_type`) resp. DietPi defaults (`logfile` via `SOFTWARE_NEXTCLOUD_DATADIR` within `/boot/dietpi.txt`), so that they do not need to be set as sometimes otherwise described.
 
     - Create new ***Fail2Ban filter*** (e.g. `/etc/fail2ban/filter.d/nextcloud.conf`):
