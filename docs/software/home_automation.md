@@ -4,6 +4,8 @@
 
 - [**Home Assistant - Open-source home automation platform running on Python 3**](#home-assistant-open-source-home-automation-platform-running-on-python-3)
 - [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](#emonpi-lightweight-energy-usage-stats-with-emonpi-pcb)
+- [**Domoticz - Multi platform Home Automation System**](#domoticz-multi-platform-home-automation-system)
+- [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin-administrative-website-for-tasmota-devices)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -166,5 +168,49 @@ The following hardware is required:
 
     Then click `Save`.  
     Press `F5` to refresh the page and view your energy consumption.
+
+## Domoticz - Multi platform Home Automation System
+
+Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.
+
+![DietPi home automation software Domoticz](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: style="width:600px"}
+
+=== "Access to the web interface"
+
+    - HTTP: `http://<your.IP>:8124`
+    - HTTPS: `https://<your.IP>:8424`
+
+=== "View logs"
+
+    `journalctl -u domoticz`
+
+=== "Install directory"
+
+    `/opt/domoticz`
+
+=== "Data directory"
+
+    `/mnt/dietpi_userdata/domoticz`
+
+See also: <https://github.com/domoticz/domoticz>
+
+## TasmoAdmin - Administrative website for Tasmota devices
+
+TasmoAdmin is an administrative website for devices flashed with Tasmota to be used for smart home systems.
+
+Also installs:
+
+- Webserver (based on your preference)
+- PHP
+
+![DietPi home automation software TasmoAdmin](../assets/images/dietpi-software-homeautomation-tasmoadmin.png){: style="width:200px"}
+
+=== "Access to the web interface"
+
+    `http://<your.IP>/tasmoadmin`
+
+Implemented by: [`svh1985`](https://github.com/svh1985)
+
+Source code: <https://github.com/reloxx13/TasmoAdmin>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

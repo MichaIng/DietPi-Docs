@@ -114,6 +114,8 @@
 
 - [**Home Assistant - Open-source home automation platform running on Python 3**](../software/home_automation/#home-assistant-open-source-home-automation-platform-running-on-python-3)
 - [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](../software/home_automation/#emonpi-lightweight-energy-usage-stats-with-emonpi-pcb)
+- [**Domoticz - Multi platform Home Automation System**](../software/home_automation/#domoticz-multi-platform-home-automation-system)
+- [**TasmoAdmin - Administrative website for Tasmota devices**](../software/home_automation/#tasmoadmin-administrative-website-for-tasmota-devices)
 
 ## [Logging Systems](../software/log_system/#log-system-choices/)
 
