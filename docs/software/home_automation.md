@@ -209,7 +209,7 @@ Also installs:
 
     `http://<your.IP>/tasmoadmin`
 
-Implemented by: [@svh1985](https://github.com/svh1985)
+Implemented by: [`svh1985`](https://github.com/svh1985)
 
 Source code: <https://github.com/reloxx13/TasmoAdmin>
 
