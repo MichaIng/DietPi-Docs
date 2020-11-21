@@ -53,9 +53,9 @@
         - If using File Server = `voice-recognizer-raspi/assistant.json`
     - Run the command below, then follow the onscreen link/instructions to setup verification:
 
-      ```sh
-      sudo -u dietpi /mnt/dietpi_userdata/voice-recognizer-raspi/env/bin/python3 -u /mnt/dietpi_userdata/voice-recognizer-raspi/src/main.py
-      ```
+        ```sh
+        sudo -u dietpi /mnt/dietpi_userdata/voice-recognizer-raspi/env/bin/python3 -u /mnt/dietpi_userdata/voice-recognizer-raspi/src/main.py
+        ```
 
     - Once the "Ok, Google" prompt appears, test the device. Then you can terminate the program with `CTRL+C` and restart the services:  
       `dietpi-services restart`
@@ -121,9 +121,9 @@ PiJuice is an all in one, battery based power supply HAT for the RPi, featuring 
     - SW2 = Power off unit (runs a sample script which can be modified `/var/lib/dietpi/dietpi-software/installed/pijuice/pijuice_func1.sh`)
     - Additional configuration can be made via editing the following file (Full list of available config options):
 
-    ```sh
-    nano /var/lib/pijuice/pijuice_config.JSON
-    ```
+        ```sh
+        nano /var/lib/pijuice/pijuice_config.JSON
+        ```
 
     Restart services to apply any changes:  
     `dietpi-services restart`

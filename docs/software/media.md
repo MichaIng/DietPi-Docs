@@ -85,7 +85,7 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-    ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
 
 ## myMPD - Lightweight web Interface audio player for MPD
 
@@ -129,7 +129,7 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-    ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
 
 ## O!MPD - Feature-rich web Interface audio player for MPD
 
@@ -183,7 +183,7 @@ Also installs:
     - Tweak CAVA options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-    ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
 
 ## Mopidy - Web Interface Music /Radio Player
 
@@ -567,10 +567,10 @@ Plex organizes your video, music, and photo collections and streams them to all 
     - Give your server a name (e.g.: `DietPi-Plex`)
     - Click `library` to setup your media locations:
 
-    ```sh
-    /mnt/dietpi_userdata/Music
-    /mnt/dietpi_userdata/Video
-    ```
+        ```sh
+        /mnt/dietpi_userdata/Music
+        /mnt/dietpi_userdata/Video
+        ```
 
     You can also mount Samba/NFS shares by running `dietpi-drive_manager` and selecting `Mount network drive` from the menu.
 
