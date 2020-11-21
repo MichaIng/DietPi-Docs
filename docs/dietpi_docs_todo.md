@@ -1,5 +1,8 @@
 # Documentation Ideas & Tasks
 
+- [ ] **ToDo Stephan:** Move issues to <https://github.com/MichaIng/DietPi-Docs/issues>. Add every point x.y as an own issue.  
+  E.g. Issue 3.x Gitea: Add it as an issue and finish it as resolved.
+
 ## 1 Supported Single Board Computers (SBCs)
 
 ### 1.1 Software overview on dietpi.com
@@ -19,9 +22,9 @@ Start with one tile and then review for further decision.
 *Let's Encrypt / CertBot* moved from ***Web Development*** chapter to ***System Security*** chapter.  
 In the *System Security* chapter there is also *Fail2Ban* located.
 
-Optionally, also move chapters ***SSH Server*** and ***VPN*** also to *System Security*?
+Let's Encrpyt move to "System Security" and reference it at further positions like "Web Development", "gitea", "nextcloud", etc.
 
-**Decision?**
+- [ ] **ToDo Stephan:** Move and introduce Certbot to System Security.
 
 ## 2 Description of Webserver stacks
 
@@ -58,10 +61,6 @@ Alternative:
 How to go on?
 
 - First do a description about gitea hardening
-- Then describe a bit more general security solutions
-- Then possibly restructure the whole issue
-
-ToDos:
 
 - [x] **ToDo Stephan:** Describe gitea & Fail2Ban
 
@@ -109,7 +108,7 @@ need to be checked for consistency.
 
 Softwares which are actually not within `dietpi-software`:
 
-- [PaperMC](https://dietpi.com/docs/software/gaming/#papermc)
+- [PaperMC](https://dietpi.com/docs/software/gaming/#papermc): No problem, will be in the next DiePi release
 
 Softwares which are actually not within <https://dietpi.com/docs/dietpi_optimised_software/>:
 
@@ -118,6 +117,8 @@ Softwares which are actually not within <https://dietpi.com/docs/dietpi_optimise
 - [Raspotify](https://dietpi.com/phpbb/viewtopic.php?p=9368#p9368)
 - [TasmoAdmin](https://dietpi.com/phpbb/viewtopic.php?p=20584#p20584)
 - [Domoticz](https://dietpi.com/phpbb/viewtopic.php?p=23065#p23065)
+
+
 - Redis (only in `dietpi-software`)
 - FuguHub: Lightweight WebDAV cloud (eg: dropbox) with a CMS (only in `dietpi-software`)
 
@@ -126,7 +127,12 @@ Decision is needed, which of these softwares shall be described in the documenta
 **Proposal:** First, generate the lists above and decide afterwards how to go on.
 
 - [x] **ToDo Stephan:** Check and in case of missing issues list them above for further discussion
-- [ ] **ToDo Petru:** Test to create website content based on JSON file (or similar)
+- [ ] **ToDo Petru:** Describe Redis in "Optimized Software", "Web Development"
+- [ ] **ToDo Micha:** FuguHub: Test install to find about logging, location.
+- [ ] **ToDo Petru:** Add "FuguHub" to the "Optimized Software", "Cloud & Backup" and add a description
+- [ ] **ToDo Stephan:** Add Domoticz description to "Home Automation": <https://dietpi.com/phpbb/viewtopic.php?p=23065#p23065>
+- [ ] **ToDo Stephan:** Add TasmoAdmin description to "Home Automation": <https://dietpi.com/phpbb/viewtopic.php?p=20584#p20584>
+- [ ] **ToDo Stephan:** BruteFIR, Stopify Connect Web, Raspotivy: Add to the documentation ("Media Systems")
 
 ### 6.2 Checks in *Optimized Software*
 
@@ -155,3 +161,27 @@ Add items about
 - Updating
 - Logfile viewing
 - Disk space monitoring
+
+## 8 Add chapter "Development" in "Software optimized"
+
+Add an own chapter for programming languages.  
+The following programming languages shall be added:
+
+- Go (golang)
+- Java
+- Python3 / pip3 (moved from "Web Development")
+- .NET Core
+- Mono
+- Docker
+- node.js (-> Web Development)
+
+Next Steps:
+
+- [ ] **ToDo Stephan:** Add Substructure "Development & Programming"
+- [ ] **ToDo Stephan:** Move Python to there
+- [ ] **ToDo Stephan:** Move Docker to there
+- [ ] **ToDo Stephan:** Add Go as a first language (look at <https://github.com/MichaIng/DietPi/blob/dev/dietpi/dietpi-software>)
+- [ ] **ToDo Petru:** Add .NET Core installation description
+- [ ] **ToDo N.N:** Describe Java, Mono
+
+Afterwards decide whether the `dietpi-software` ("Additional Software") may be moved to the "Optimized Software".
