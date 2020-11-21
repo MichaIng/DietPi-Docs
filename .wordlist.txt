@@ -164,7 +164,6 @@ JanKoudijs
 Jellyfin
 Joulinar
 journald
-jRiver
 JS
 JSON
 JustBoom
@@ -297,7 +296,6 @@ Radxa
 RAMdisk
 RAMlog
 Raspbian
-Raspcontrol
 rcon
 RDBMS
 RDP

@@ -3,7 +3,6 @@
 ## Overview
 
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](#dietpi-cloudshell-lightweight-system-stats-for-your-lcd-display-or-monitor)
-- [**Raspcontrol - Web interface system stats**](#raspcontrol-web-interface-system-stats)
 - [**Linux Dash - Web interface system stats**](#linux-dash-web-interface-system-stats)
 - [**phpSysInfo - Web interface system stats**](#phpsysinfo-web-interface-system-stats)
 - [**RPi-Monitor - Web interface system stats**](#rpi-monitor-web-interface-system-stats)
@@ -109,31 +108,6 @@ See also
 - <https://www.hardkernel.com/shop/cloudshell-for-xu4/>
 - <https://www.hardkernel.com/shop/cloudshell-2-for-xu4/>
 - <https://wiki.odroid.com/accessory/add-on_boards/xu4_cloudshell2/xu4_cloudshell2>
-
-## Raspcontrol - Web interface system stats
-
-Raspcontrol allows you to monitor your system stats from a web page. It also supports restarting and powering off your device.
-
-![DietPi system stat and maintenance software Raspcontrol](../assets/images/dietpi-software-systemstat-raspcontrol.png){: style="width:500px"}
-
-=== "Access to Raspcontrol"
-
-    The web interface of *Raspcontrol* can be accessed via:
-
-    - URL = `http://<your.IP>/raspcontrol`
-    - Username = `root`
-    - Password = `dietpi`
-
-=== "Change login credentials"
-
-    The login credentials can be modified editing the file `/etc/raspcontrol/database.aptmnt`.
-
-=== "Troubleshooting"
-
-    If no page is displayed: Raspcontrol will only work if OpenSSH-Server is installed.  
-    Run `dietpi-software` and select OpenSSH-Server from the menu to change.
-
-See also <https://wikipedia.org/wiki/Raspcontrol>.
 
 ## Linux Dash - Web interface system stats
 
