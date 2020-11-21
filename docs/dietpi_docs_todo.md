@@ -118,7 +118,6 @@ Softwares which are actually not within <https://dietpi.com/docs/dietpi_optimise
 - [TasmoAdmin](https://dietpi.com/phpbb/viewtopic.php?p=20584#p20584)
 - [Domoticz](https://dietpi.com/phpbb/viewtopic.php?p=23065#p23065)
 
-
 - Redis (only in `dietpi-software`)
 - FuguHub: Lightweight WebDAV cloud (eg: dropbox) with a CMS (only in `dietpi-software`)
 
