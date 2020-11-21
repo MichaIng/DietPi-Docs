@@ -329,13 +329,16 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     There are a couple of general commands which have a shortcut in DietPi:
 
-    - `cpu` - Print CPU clocks, temperature and governor info
+    - `cpu` - Print CPU clocks, temperature and governor info. Sample output:
+
+        ![DietPi-Software cpu info screenshot](assets/images/dietpi-tools-cpuinfo.png)
+
     - `G_OBTAIN_CPU_TEMP`- print integer format CPU temp in degree Celsius (for monitoring probably better than full `cpu` output)
     - `G_OBTAIN_CPU_USAGE` - CPU usage in percent in [x]y.z format
     - `G_TREESIZE` - Shows current directory/file sizes, recursive
 
     The following commands are non-interactive, but error-handled wrappers for `apt-get` commands, useful for scripts which shall run non-interactive but allow interactive repeat and solution attempts:
-    
+
     - `G_AGI` - `apt-get install`
     - `G_AGP` - `apt-get purge`
     - `G_AGA` - `apt-get autoremove --purge`
