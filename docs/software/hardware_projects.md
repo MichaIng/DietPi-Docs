@@ -53,9 +53,9 @@
         - If using File Server = `voice-recognizer-raspi/assistant.json`
     - Run the command below, then follow the onscreen link/instructions to setup verification:
 
-      ```sh
-      sudo -u dietpi /mnt/dietpi_userdata/voice-recognizer-raspi/env/bin/python3 -u /mnt/dietpi_userdata/voice-recognizer-raspi/src/main.py
-      ```
+        ```sh
+        sudo -u dietpi /mnt/dietpi_userdata/voice-recognizer-raspi/env/bin/python3 -u /mnt/dietpi_userdata/voice-recognizer-raspi/src/main.py
+        ```
 
     - Once the "Ok, Google" prompt appears, test the device. Then you can terminate the program with `CTRL+C` and restart the services:  
       `dietpi-services restart`
@@ -92,13 +92,13 @@ Mycroft AI is a free and open source voice assistant.
     3. You should see and at best hear the invitation to pair your device, e.g.: `PairingSkill - INFO - Pairing code: XXYYZZ`
     4. Visit <https://home.mycroft.ai/> to start pairing and configuring your device and skills.
 
-=== "Build Mimic for offline TTS support (optional)""
+=== "Build Mimic for offline TTS (British Male) support (optional)""
 
-    Remark: this requires about 3 GB of RAM and takes a while, so assure that you have enough memory (4 GB recommended), in case increase your swap file size and grab yourself a coffee.
+    Remark: this requires about 3 GiB of RAM and takes a while, so assure that you have enough memory (4 GiB recommended), in case increase your swap file size and grab yourself a coffee.
 
     ```sh
-    cd /mnt/dietpi_userdata/mycroft-core/scripts
-    sudo -u mycroft ./install-mimic.sh
+    cd /mnt/dietpi_userdata/mycroft-core
+    sudo -u mycroft ./scripts/install-mimic.sh $(nproc)
     ```
 
 ## PiJuice - PiSupply UPS/battery power system
@@ -121,9 +121,9 @@ PiJuice is an all in one, battery based power supply HAT for the RPi, featuring 
     - SW2 = Power off unit (runs a sample script which can be modified `/var/lib/dietpi/dietpi-software/installed/pijuice/pijuice_func1.sh`)
     - Additional configuration can be made via editing the following file (Full list of available config options):
 
-    ```sh
-    nano /var/lib/pijuice/pijuice_config.JSON
-    ```
+        ```sh
+        nano /var/lib/pijuice/pijuice_config.JSON
+        ```
 
     Restart services to apply any changes:  
     `dietpi-services restart`

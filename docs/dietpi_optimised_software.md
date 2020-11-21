@@ -114,7 +114,6 @@
 
 - [**Home Assistant - Open-source home automation platform running on Python 3**](../software/home_automation/#home-assistant-open-source-home-automation-platform-running-on-python-3)
 - [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](../software/home_automation/#emonpi-lightweight-energy-usage-stats-with-emonpi-pcb)
-- [**Grasshopper - Web App to control Bticino MyHome**](../software/home_automation/#grasshopper-web-app-to-control-bticino-myhome)
 
 ## [Logging Systems](../software/log_system/#log-system-choices/)
 
@@ -145,7 +144,6 @@
 - [**Roon Extension Manager - Manage extensions from within Roon**](../software/media/#roon-extension-manager-manage-extensions-from-within-roon)
 - [**NAA Daemon - Signalyst Network Audio Adaptor (NAA)**](../software/media/#naa-daemon-signalyst-network-audio-adaptor-naa)
 - [**IceCast - Shoutcast Streaming Server, including DarkIce**](../software/media/#icecast-shoutcast-streaming-server-including-darkice)
-- [**jRiver - Media Center**](../software/media/#jriver-media-center)
 - [**Koel - Web interface streaming server**](../software/media/#koel-web-interface-streaming-server)
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](../software/media/#gmediarender-resource-efficient-upnpdlna-renderer)
 - [**Ubooquity - Free home server for your comics and ebooks library**](../software/media/#ubooquity-free-home-server-for-your-comics-and-ebooks-library)
@@ -198,7 +196,6 @@
 ## [System Stats & Management](../software/system_stats/#system-stats-management/)
 
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](../software/system_stats/#dietpi-cloudshell-lightweight-system-stats-for-your-lcd-display-or-monitor)
-- [**Raspcontrol - Web interface system stats**](../software/system_stats/#raspcontrol-web-interface-system-stats)
 - [**Linux Dash - Web interface system stats**](../software/system_stats/#linux-dash-web-interface-system-stats)
 - [**phpSysInfo - Web interface system stats**](../software/system_stats/#phpsysinfo-web-interface-system-stats)
 - [**RPi-Monitor - Web interface system stats**](../software/system_stats/#rpi-monitor-web-interface-system-stats)
