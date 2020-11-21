@@ -24,7 +24,7 @@ In the *System Security* chapter there is also *Fail2Ban* located.
 
 Let's Encrpyt move to "System Security" and reference it at further positions like "Web Development", "gitea", "nextcloud", etc.
 
-- [ ] **ToDo Stephan:** Move and introduce Certbot to System Security.
+- [x] **ToDo Stephan:** Move and introduce Certbot to System Security.
 
 ## 2 Description of Webserver stacks
 
@@ -130,8 +130,8 @@ Decision is needed, which of these softwares shall be described in the documenta
 - [ ] **ToDo Petru:** Describe Redis in "Optimized Software", "Web Development"
 - [ ] **ToDo Micha:** FuguHub: Test install to find about logging, location.
 - [ ] **ToDo Petru:** Add "FuguHub" to the "Optimized Software", "Cloud & Backup" and add a description
-- [ ] **ToDo Stephan:** Add Domoticz description to "Home Automation": <https://dietpi.com/phpbb/viewtopic.php?p=23065#p23065>
-- [ ] **ToDo Stephan:** Add TasmoAdmin description to "Home Automation": <https://dietpi.com/phpbb/viewtopic.php?p=20584#p20584>
+- [x] **ToDo Stephan:** Add Domoticz description to "Home Automation": <https://dietpi.com/phpbb/viewtopic.php?p=23065#p23065>
+- [x] **ToDo Stephan:** Add TasmoAdmin description to "Home Automation": <https://dietpi.com/phpbb/viewtopic.php?p=20584#p20584>
 - [ ] **ToDo Stephan:** BruteFIR, Stopify Connect Web, Raspotivy: Add to the documentation ("Media Systems")
 
 ### 6.2 Checks in *Optimized Software*
