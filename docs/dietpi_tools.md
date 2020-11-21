@@ -331,7 +331,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     - `cpu` - Print CPU clocks, temperature and governor info. Sample output:
 
-        ![DietPi-Software cpu info screenshot](assets/images/dietpi-tools-cpuinfo.png)
+        ![DietPi-Software CPU info screenshot](assets/images/dietpi-tools-cpuinfo.png)
 
     - `G_OBTAIN_CPU_TEMP`- print integer format CPU temp in degree Celsius (for monitoring probably better than full `cpu` output)
     - `G_OBTAIN_CPU_USAGE` - CPU usage in percent in [x]y.z format
