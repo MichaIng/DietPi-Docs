@@ -75,6 +75,7 @@
 ## [DNS Server](../software/dns_servers/#dns-servers-clients/)
 
 - [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking)
+- [**Unbound - A validating, recursive, and caching DNS resolver**](../software/dns_servers/#unbound-a-validating-recursive-and-caching-dns-resolver)
 - [**No-IP - Website URL Address**](../software/dns_servers/#no-ip-dynamic-dns-update-client)
 
 ## [File Server](../software/file_servers/#file-servers/)

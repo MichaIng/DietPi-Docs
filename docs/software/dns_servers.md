@@ -3,6 +3,7 @@
 ## DNS Server
 
 - [**Pi-hole - Network-wide Ad Blocking**](#pi-hole-network-wide-ad-blocking)
+- [**Unbound - A validating, recursive, and caching DNS resolver**](#unbound-a-validating-recursive-and-caching-dns-resolver)
 
 ## Dynamic DNS Clients
 
@@ -94,6 +95,33 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     The monitoring of a *Pi-hole* system via Netdata is described there: <https://learn.netdata.cloud/guides/monitor/pi-hole-raspberry-pi>.
 
 See also <https://wikipedia.org/wiki/Pi-hole>.
+
+## Unbound - A validating, recursive, and caching DNS resolver
+
+Unbound is a validating, recursive, caching DNS resolver.  
+For more details see [unbound "about" description](https://nlnetlabs.nl/projects/unbound/about/).
+
+![DietPi DNS server software unbound](../assets/images/dietpi-software-dnsserver-unbound.svg){: style="width:250px"}
+
+=== "Default DNS ports"
+
+    - Default DNS port: 53
+    - DNS port when Pi-hole is installed: 5353
+
+=== "Configuration directory"
+
+    The configuration directory is located there: `/etc/unbound`
+
+=== "View logs"
+
+    View the log files: `journalctl -u unbound`
+
+=== "Updating unbound"
+
+    Update to latest version: `apt update && apt upgrade`
+
+Source code: <https://github.com/NLnetLabs/unbound>.  
+See also <https://nlnetlabs.nl/documentation/unbound/> resp. <https://nlnetlabs.nl/documentation/unbound/unbound/>.
 
 ## No-IP - Dynamic DNS update client
 
