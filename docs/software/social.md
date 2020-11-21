@@ -150,16 +150,16 @@ Also Installs:
 
     - Create your image folder
 
-      ```sh
-      mkdir /var/www/gallery/MyImageFolder
-      ```
+        ```sh
+        mkdir /var/www/gallery/MyImageFolder
+        ```
 
     - Put an image file inside your new folder
 
-      ```sh
-      wget https://dietpi.com/images/dietpi-logo_192x192.png
-      mv dietpi-logo_192x192.png /var/www/gallery/MyImageFolder/
-      ```
+        ```sh
+        wget https://dietpi.com/images/dietpi-logo_192x192.png
+        mv dietpi-logo_192x192.png /var/www/gallery/MyImageFolder/
+        ```
 
 ## Baïkal - Lightweight CalDAV + CardDAV server
 
