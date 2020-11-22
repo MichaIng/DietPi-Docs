@@ -224,7 +224,7 @@ Examples of TCP ports for Remot3.it:
 
     Sign into your Remot3.it account to access your devices remotely:
 
-    - URL = <https://www.remot3.it>
+    - URL = <https://www.remote.it>
 
 ## VirtualHere - Share physically attached USB devices from your SBC over the network
 
