@@ -1,6 +1,6 @@
 # Documentation Ideas & Tasks
 
-- [ ] **ToDo Stephan:** Move issues to <https://github.com/MichaIng/DietPi-Docs/issues>. Add every point x.y as an own issue.  
+- [x] **ToDo Stephan:** Move issues to <https://github.com/MichaIng/DietPi-Docs/issues>. Add every point x.y as an own issue.  
   E.g. Issue 3.x Gitea: Add it as an issue and finish it as resolved.
 
 ## 1 Supported Single Board Computers (SBCs)
