@@ -75,6 +75,7 @@
 ## [DNS Server](../software/dns_servers/#dns-servers-clients/)
 
 - [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking)
+- [**Unbound - A validating, recursive, and caching DNS resolver**](../software/dns_servers/#unbound-a-validating-recursive-and-caching-dns-resolver)
 - [**No-IP - Website URL Address**](../software/dns_servers/#no-ip-dynamic-dns-update-client)
 
 ## [File Server](../software/file_servers/#file-servers/)
@@ -93,6 +94,7 @@
 - [**Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi**](../software/gaming/#amiberry-amiga-emulation-system-further-developed-optimised-builds-of-uae4arm-rpi)
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](../software/gaming/#dxx-rebirth-descent-1-an-2-opengl-port)
 - [**Steam - Steam client**](../software/gaming/#steam-steam-client)
+- [**PaperMC - Fast and optimized Minecraft server**](../software/gaming/#papermc)
 
 ## [Hardware Projects](../software/hardware_projects/)
 
@@ -113,7 +115,8 @@
 
 - [**Home Assistant - Open-source home automation platform running on Python 3**](../software/home_automation/#home-assistant-open-source-home-automation-platform-running-on-python-3)
 - [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](../software/home_automation/#emonpi-lightweight-energy-usage-stats-with-emonpi-pcb)
-- [**Grasshopper - Web App to control Bticino MyHome**](../software/home_automation/#grasshopper-web-app-to-control-bticino-myhome)
+- [**Domoticz - Multi platform Home Automation System**](../software/home_automation/#domoticz-multi-platform-home-automation-system)
+- [**TasmoAdmin - Administrative website for Tasmota devices**](../software/home_automation/#tasmoadmin-administrative-website-for-tasmota-devices)
 
 ## [Logging Systems](../software/log_system/#log-system-choices/)
 
@@ -144,7 +147,6 @@
 - [**Roon Extension Manager - Manage extensions from within Roon**](../software/media/#roon-extension-manager-manage-extensions-from-within-roon)
 - [**NAA Daemon - Signalyst Network Audio Adaptor (NAA)**](../software/media/#naa-daemon-signalyst-network-audio-adaptor-naa)
 - [**IceCast - Shoutcast Streaming Server, including DarkIce**](../software/media/#icecast-shoutcast-streaming-server-including-darkice)
-- [**jRiver - Media Center**](../software/media/#jriver-media-center)
 - [**Koel - Web interface streaming server**](../software/media/#koel-web-interface-streaming-server)
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](../software/media/#gmediarender-resource-efficient-upnpdlna-renderer)
 - [**Ubooquity - Free home server for your comics and ebooks library**](../software/media/#ubooquity-free-home-server-for-your-comics-and-ebooks-library)
@@ -190,13 +192,13 @@
 
 ## [System Security](../software/system_security/)
 
+- [**Let’s Encrypt - Enable HTTPS / SSL**](../software/system_security/#lets-encrypt-enable-https-ssl)
 - [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
 - [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)
 
 ## [System Stats & Management](../software/system_stats/#system-stats-management/)
 
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](../software/system_stats/#dietpi-cloudshell-lightweight-system-stats-for-your-lcd-display-or-monitor)
-- [**Raspcontrol - Web interface system stats**](../software/system_stats/#raspcontrol-web-interface-system-stats)
 - [**Linux Dash - Web interface system stats**](../software/system_stats/#linux-dash-web-interface-system-stats)
 - [**phpSysInfo - Web interface system stats**](../software/system_stats/#phpsysinfo-web-interface-system-stats)
 - [**RPi-Monitor - Web interface system stats**](../software/system_stats/#rpi-monitor-web-interface-system-stats)
@@ -227,10 +229,6 @@
 - [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
 - [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
 - [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
-
-### Let's encrypt - Enable HTTPS / SSL
-
-- [Certbot - Free, automated SSL cert creation and setup, allowing https.](https://dietpi.com/phpbb/viewtopic.php?p=1061#p1062)  
 
 ### Webservers
 

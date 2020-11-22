@@ -1,3 +1,4 @@
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
 default: true
 MD003:
   style: 'atx'

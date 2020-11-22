@@ -1,3 +1,4 @@
+# https://facelessuser.github.io/pyspelling/configuration/
 matrix:
 - name: HTML
   aspell:
