@@ -1,35 +1,35 @@
 # Web Development
 
-## Software components
+## Overview
 
-### Stacks for web development
+[**Stacks for Web Development**](./#stacks-for-web-development)
 
-- [**LAMP** web stack - **Apache2 / MariaDB / PHP**](#lamp-web-stack)
-- [**LASP** web stack - **Apache2 / SQLite / PHP**](#lasp-web-stack)
-- [**LEMP** web stack - **Nginx / MariaDB / PHP**](#lemp-web-stack)
-- [**LESP** web stack - **Nginx / SQLite / PHP**](#lesp-web-stack)  
-- [**LLMP** web stack - **Lighttpd / MariaDB / PHP**](#llmp-web-stack)
-- [**LLSP** web stack - **Lighttpd / SQLite / PHP**](#llsp-web-stack)
+- [**LAMP** web stack - **Apache2 / MariaDB / PHP**](./#lamp-web-stack)
+- [**LASP** web stack - **Apache2 / SQLite / PHP**](./#lasp-web-stack)
+- [**LEMP** web stack - **Nginx / MariaDB / PHP**](./#lemp-web-stack)
+- [**LESP** web stack - **Nginx / SQLite / PHP**](./#lesp-web-stack)  
+- [**LLMP** web stack - **Lighttpd / MariaDB / PHP**](./#llmp-web-stack)
+- [**LLSP** web stack - **Lighttpd / SQLite / PHP**](./#llsp-web-stack)
 
-### Webservers
+[**Web Servers**](./#webservers)
 
-- [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
-- [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
-- [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
-- [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
+- [**Apache2** - Feature-rich webserver](./#apache2)  
+- [**Nginx** - High performance web server, load balancer & reverse proxy](./#nginx)  
+- [**Lighttpd** - Extremely lightweight webserver](./lighttpd)
+- [**Tomcat8** - Apache Tomcat server](./#tomcat)  
 
-### Databases & Data stores
+[**Databases & Data stores**](./#databases-data-stores)
 
-- MariaDB - Open Source Relational Database
-- [phpMyAdmin - SQL Administration Tool for MariaDB](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p54)  
-- SQLite - Small, Fast and High reliable SQL database engine
-- Redis - Open Source In-memory key–value Data Store
-- InfluxDB - Open Source Time Series Database
+- [**MariaDB** - Open Source Relational Database](./#mariadb)
+    - [**phpMyAdmin** - SQL Administration Tool for MariaDB](./#phpmyadmin)  
+- [**SQLite** - Small, Fast and High reliable SQL database engine](./#sqlite)
+- [**Redis** - Open Source In-memory key–value Data Store](./#redis)
+- [**InfluxDB** - Open Source Time Series Database](./#influxdb)
 
-### Programming & Web development Frameworks
+[**Web development - Programming & Frameworks**](./#web-development-programming-frameworks)
 
-- Python 3 & Flask - Micro web framework powered by Python
-- PHP - scripting language especially suited to web development
+- [**Flask** - Micro web framework powered by Python](./#flask)
+- [**PHP** - scripting language especially suited to web development](./#php)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -46,62 +46,30 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## One-click web stack installation
+## Stacks for Web Development
 
-### Webstack overview
+DietPi offers an **one-click-installation** of the following web development stacks:
 
-A web stack consists of three items: A webserver, a database and the PHP scripting language.  
-DietPi offers a one-click-installation of the following web stacks:
+- [**LAMP** web stack - **Apache2 / MariaDB / PHP**](#lamp-web-stack)
+- [**LASP** web stack - **Apache2 / SQLite / PHP**](#lasp-web-stack)
+- [**LEMP** web stack - **Nginx / MariaDB / PHP**](#lemp-web-stack)
+- [**LESP** web stack - **Nginx / SQLite / PHP**](#lesp-web-stack)  
+- [**LLMP** web stack - **Lighttpd / MariaDB / PHP**](#llmp-web-stack)
+- [**LLSP** web stack - **Lighttpd / SQLite / PHP**](#llsp-web-stack)
 
-- [**LAMP:** Webserver - Apache2 / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
-- [**LASP:** Webserver - Apache2 / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p52)  
-- [**LEMP:** Webserver - Nginx / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
-- [**LESP:** Webserver - Nginx / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5&start=10#p53)  
-- [**LLMP:** Webserver - Lighttpd / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
-- [**LLSP:** Webserver - Lighttpd / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
-
-??? hint "Meaning of the acronyms *LAMP*, *LASP*, *LEMP*, *LESP*, *LLMP*, *LLSP*"
+!!! hint "Meaning of the acronyms *LAMP*, *LASP*, *LEMP*, *LESP*, *LLMP*, *LLSP*"
 
     - OS: **L** for Linux
     - Webserver: **A** for Apache2, **E** for Nginx, **L** for Lighttpd
     - Database: **M** for MariaDB, **S** for SQLite
     - Scripting language: **P** for PHP
 
-All stacks come with PHP caches (APCu and OPcache). The sizes of which are optimized based on a share of total memory.
+!!! hint ""
+    All stacks come with **PHP caches** (APCu and OPcache), being optimized based on a share of the total memory.
 
-## LAMP web stack
-### Web stack selection
+### Which Web Application Stack is best for you ?
 
-DietPi contains the option to choose the web stack of your favourite.  
-
-Basically choosing the web stack resp. webserver, you have two options within `dietpi-software`:
-
-- Selection via ***Software Optimized*** or
-- Selection via ***Webserver Preference***
-
-The latter is used only in the case of the first webserver background installation.
-
-=== "Selection via Software Optimized"
-
-    ![DietPi webserver selection software optimized](../assets/images/dietpi-software-webstack-selection.png)
-
-    Using this option you select the complete web stack for installation.  
-    Just select the web stack you want to install and do the installation via the *Install* execution within `dietpi-software`.
-
-    ??? hint "Basically no need to select a web stack"
-        Unless you specifically need a web stack, it is recommended that you allow DietPi to install web stacks automatically. This will ensure compatibility and stability on your system, for the webserver choice you have made.
-
-=== "Selection via Webserver Preference"
-
-    ![DietPi webserver selection webserver preference](../assets/images/dietpi-software-webserver-preference.png){: style="width:500px"}
-
-    Using this option you only select the webserver for use in DietPi installations.  
-    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MySQL](https://wikipedia.org/wiki/MySQL)/[SQLite](https://wikipedia.org/wiki/SQLite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
-
-    ???+ info "No webserver change if already installed"
-        This setting "Webserver Preference* can NOT be changed if an existing webserver is installed on the system.
-
-=== "Which webserver to choose?"
+=== "Which WEBSERVER to CHOOSE ?"
 
     **Apache2**
 
@@ -124,9 +92,9 @@ The latter is used only in the case of the first webserver background installati
 
     **Further reading & benchmarks**
 
-    See <https://detechter.com/the-battle-of-the-web-servers-apache-vs-nginx-vs-lighttpd-2/>.
+    See <https://detechter.com/the-battle-of-the-web-servers-apache-vs-Nginx-vs-lighttpd-2/>.
 
-=== "Which data base to choose?"
+=== "Which DATABASE to CHOOSE ?"
 
     **MariaDB**  
     MariaDB is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.
@@ -134,9 +102,35 @@ The latter is used only in the case of the first webserver background installati
     **SQLite**  
     SQLite is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to MariaDB. SQLite has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
 
-## Webstack description
+### How to install ?
 
-### LAMP Webserver - Apache2 / MariaDB / PHP
+DietPi contains the option to choose the web stack of your favourite. Basically choosing the web stack resp. webserver, you have two options within `dietpi-software`:
+
+- Selection via ***Software Optimized*** or
+- Selection via ***Webserver Preference***
+
+The latter is used only in the case of the first webserver background installation.
+
+=== "Selection via Software Optimized"
+
+    ![DietPi webserver selection software optimized](../assets/images/dietpi-software-webstack-selection.png)
+
+    Using this option you select the complete web stack for installation. Just select the web stack you want to install and do the installation via the *Install* execution within `dietpi-software`.
+
+    !!! hint ""
+        Unless you _specifically_ need a web stack, it is recommended that you allow DietPi to install the default web stack automatically. This ensures compatibility and stability of your system.
+
+=== "Selection via Webserver Preference"
+
+    ![DietPi webserver selection webserver preference](../assets/images/dietpi-software-webserver-preference.png){: style="width:500px"}
+
+    Using this option you only select the webserver for use in DietPi installations.  
+    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MySQL](https://wikipedia.org/wiki/MySQL)/[SQLite](https://wikipedia.org/wiki/SQLite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
+
+    ???+ info "No webserver change if already installed"
+        This setting "Webserver Preference* can NOT be changed if an existing webserver is installed on the system.
+
+### LAMP Web Stack
 
 LAMP stack is a popular open source web platform commonly used to run dynamic web sites and servers. It is considered by many, as the platform of choice for development and deployment of high performance web applications which require a solid and reliable foundation.
 
@@ -218,25 +212,13 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
 
-=== "Individual installation"
-
-    The web development stack could be also individually installed. This option offers more flexibility giving the opportunity to select:
-
-    - **Webserver**
-
-        Depending on your needs, you may choose the web server that fits best your needs. In case **Apache2** is not the right choice, you could continue with **Lighttpd** which comes automatically installed with DietPi, **Nginx** or **Tomcat**.
-
-    - Database
-
-        You may choose to install **MariaDB** or other available databases like **InfluxDB**, **Redis**, **SQLite**.
-
 === "Official documentation"
 
     - Apache HTTP Web Server - [http://httpd.apache.org](http://httpd.apache.org)
     - MariaDB Server - [https://mariadb.org](https://mariadb.org)
     - PHP - [https://www.php.net](https://www.php.net)
 
-## LASP web stack
+### LASP Web Stack
 
 LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing SQLite instead of MariaDB. 
 
@@ -309,29 +291,17 @@ SQLite is an embedded relational database engine. The documentation calls it _a 
 
     - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
 
-=== "Individual installation"
-
-    The web development stack could be also individually installed. This option offers more flexibility giving the opportunity to select:
-
-    - **Webserver**
-
-        Depending on your needs, you may choose the web server that fits best your needs. In case **Apache2** is not the right choice, you could continue with **Lighttpd** which comes automatically installed with DietPi, **Nginx** or **Tomcat**.
-
-    - Database
-
-        You may choose to install **SQLite** or other available databases like **InfluxDB**, **Redis**, **MariaDB**.
-
 === "Official documentation"
 
     - Apache HTTP Web Server - [http://httpd.apache.org](http://httpd.apache.org)
     - SQLite Server - [https://www.sqlite.org](https://www.sqlite.org)
     - PHP - [https://www.php.net](https://www.php.net)
 
-## LEMP web stack
+### LEMP Web Stack
 
 LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Nginx instead of Apache2 web server. 
 
-**NGINX** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment. 
+**Nginx** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment. 
 
 === "Quick start"
 
@@ -408,29 +378,17 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
 
-=== "Individual installation"
-
-    The web development stack could be also individually installed. This option offers more flexibility giving the opportunity to select:
-
-    - **Webserver**
-
-        Depending on your needs, you may choose the web server that fits best your needs. In case **Nginx** is not the right choice, you could continue with **Lighttpd** which comes automatically installed with DietPi, **Apache2** or **Tomcat**.
-
-    - Database
-
-        You may choose to install **SQLite** or other available databases like **InfluxDB**, **Redis**, **MariaDB**.
-
 === "Official documentation"
 
-    - Nginx - [https://www.nginx.com](https://www.nginx.com)
+    - Nginx - [https://www.Nginx.com](https://www.Nginx.com)
     - MariaDB Server - [https://mariadb.org](https://mariadb.org)
     - PHP - [https://www.php.net](https://www.php.net)
 
-## LESP web stack
+### LESP Web Stack
 
 LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Nginx instead of Apache2 web server, and SQLite instead of MariaDB. 
 
-**NGINX** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment. 
+**Nginx** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment. 
 
 **SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://www.sqlite.org/mostdeployed.html)). 
 
@@ -453,25 +411,13 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
 
-=== "Individual installation"
-
-    The web development stack could be also individually installed. This option offers more flexibility giving the opportunity to select:
-
-    - **Webserver**
-
-        Depending on your needs, you may choose the web server that fits best your needs. In case **Nginx** is not the right choice, you could continue with **Lighttpd** which comes automatically installed with DietPi, **Apache2** or **Tomcat**.
-
-    - Database
-
-        You may choose to install **SQLite** or other available databases like **InfluxDB**, **Redis**, **MariaDB**.
-
 === "Official documentation"
 
-    - Nginx - [https://www.nginx.com](https://www.nginx.com)
+    - Nginx - [https://www.Nginx.com](https://www.Nginx.com)
     - SQLite Server - [https://www.sqlite.org](https://www.sqlite.org)
     - PHP - [https://www.php.net](https://www.php.net)
 
-## LLMP web stack
+### LLMP Web Stack
 
 LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Lighttpd instead of Apache2 web server. 
 
@@ -506,25 +452,13 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
 
-=== "Individual installation"
-
-    The web development stack could be also individually installed. This option offers more flexibility giving the opportunity to select:
-
-    - **Webserver**
-
-        Depending on your needs, you may choose the web server that fits best your needs. In case **Lighttpd** is not the right choice, you could continue with **Apache Web Server**, **Nginx** or **Tomcat webwerver**.
-
-    - Database
-
-        You may choose to install **MariaDB** or other available databases like **InfluxDB**, **Redis**, **SQLite**.
-
 === "Official documentation"
 
     - Lighttpd - [https://www.lighttpd.net](https://www.lighttpd.net)
     - MariaDB Server - [https://mariadb.org](https://mariadb.org)
     - PHP - [https://www.php.net](https://www.php.net)
 
-## LLSP web stack
+### LLSP web stack
 
 LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **Lighttpd** instead of Apache2 web server and **SQLite** instead of MariaDB. 
 
@@ -578,74 +512,68 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Lighttpd - [https://www.lighttpd.net](https://www.lighttpd.net)
     - SQLite Server - [https://www.sqlite.org](https://www.sqlite.org)
     - PHP - [https://www.php.net](https://www.php.net)
-### LASP Webserver - Apache2 / SQLite / PHP
 
-T.b.d.
+## WebServers
 
-### LEMP Webserver - Nginx / MariaDB / PHP
+### Apache2
 
-T.b.d.
+Apache is open source and it is the most commonly used Web server on Linux systems. 
 
-### LESP Webserver - Nginx / SQLite / PHP
+Web servers are used to serve Web pages requested by client computers. Clients typically request and view Web pages using Web browser applications such as Firefox, Opera, Chromium, Microsoft Edge, Internet Explorer etc.
 
-T.b.d.
+Apache is a Apache Software Foundation project. The goal is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
 
-### LLMP Webserver - Lighttpd / MariaDB / PHP
+### Nginx
 
-T.b.d.
+**nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, Wordpress.com, FastMail.FM.[^1]
 
-### LLSP Webserver - Lighttpd / SQLite / PHP
+The innovation of Nginx compared to earlier servers such as Apache was to use an asynchronous, event-driven architecture. Nginx is blazing fast, being extremely efficient when it comes to hardware utilization, allowing servers to get more speed out of their limited CPU and RAM. As a result, it is one of the fastest web server options for serving static content.
 
-T.b.d.
+### Lighttpd
 
-## Webservers
+**Lighttpd** is a web server for UNIX/Linux and Windows operating systems. It is an alternative to Apache web server. It is also called Lighty.
 
-### Apache2 - Feature-rich webserver
+It is designed to be secure, fast, standards-compliant, and flexible while being optimized for speed-critical environments. Its low memory footprint compared to other web servers, light CPU load and its speed goals make lighttpd a perfect candidate for SBCs.
 
-T.b.d.
+### Tomcat
 
-### Nginx - Lightweight webserver
-
-T.b.d.
-
-### Lighttpd - Extremely lightweight webserver
-
-T.b.d.
-
-### Tomcat8 - Apache Tomcat server
-
-T.b.d.
+What is **Apache Tomcat**? Essentially it’s an open-source Java servlet and Java Server Page container that lets developers implement an array of enterprise Java applications. Tomcat also runs a HTTP web server environment in which Java code can run.
 
 ## Databases & Data stores
 
-### MariaDB - Open Source Relational Database
+### MariaDB
+
+**MariaDB** Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source [^2]. It is part of most cloud offerings and the default in most Linux distributions.
+
+#### phpMyAdmin
 
 T.b.d.
 
-### phpMyAdmin - SQL Administration Tool for MariaDB
+### SQLite
 
 T.b.d.
 
-### SQLite - Small, Fast and High reliable SQL database engine
+### Redis
 
 T.b.d.
 
-### Redis - Open Source In-memory key–value Data Store
+### InfluxDB
 
 T.b.d.
 
-### InfluxDB - Open Source Time Series Database
+## Web development - Programming & Frameworks
+
+### Flask
 
 T.b.d.
 
-## Programming & Web development Frameworks
-
-### Python 3 & Flask - Micro web framework powered by Python
+### PHP
 
 T.b.d.
 
-### PHP - scripting language especially suited to web development
-
-T.b.d.
+[^1]:
+    Find out more about the success stories of Nginx on the [Nginx.org/en/](https://Nginx.org/en/).
+[^2]:
+    ["Dead database walking: MySQL's creator on why the future belongs to MariaDB - MariaDB, open source, mysql, Oracle"](https://www2.computerworld.com.au/article/457551/dead_database_walking_mysql_creator_why_future_belongs_mariadb/). Computerworld. Retrieved 22 November 2020.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
