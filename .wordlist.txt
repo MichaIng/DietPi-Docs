@@ -50,6 +50,7 @@ Cloudflare
 CloudPrint
 CloudShell
 codecs
+Computerworld
 conf
 config
 configs
@@ -106,6 +107,7 @@ exe
 exFAT
 facto
 fahclient
+FastMail
 FB
 FHS
 filesystem
@@ -186,6 +188,7 @@ LetsEncrypt
 Lidarr
 LightDM
 Lighttpd
+Lighty
 LLMP
 LLSP
 LMS
@@ -229,6 +232,7 @@ Mycroft
 MyHome
 myMPD
 MySqli
+mysql
 NAA
 nano
 NanoPC
@@ -241,6 +245,7 @@ Nextcloud
 nextcloud
 NFS
 Nginx
+nginx
 nm
 Nmap
 NoMachine
@@ -327,6 +332,7 @@ SCP
 scroller
 SDL
 serverless
+servlet
 SFTP
 Shairport
 ShareAlike
@@ -406,6 +412,7 @@ WebIOPi
 webmin
 webserver
 webservers
+WebServers
 webstack
 Wh
 Widevine

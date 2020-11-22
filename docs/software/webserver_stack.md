@@ -15,13 +15,13 @@
 
 - [**Apache2** - Feature-rich webserver](./#apache2)  
 - [**Nginx** - High performance web server, load balancer & reverse proxy](./#nginx)  
-- [**Lighttpd** - Extremely lightweight webserver](./lighttpd)
+- [**Lighttpd** - Extremely lightweight webserver](./#lighttpd)
 - [**Tomcat8** - Apache Tomcat server](./#tomcat)  
 
 [**Databases & Data stores**](./#databases-data-stores)
 
 - [**MariaDB** - Open Source Relational Database](./#mariadb)
-    - [**phpMyAdmin** - SQL Administration Tool for MariaDB](./#phpmyadmin)  
+  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](./#phpmyadmin)  
 - [**SQLite** - Small, Fast and High reliable SQL database engine](./#sqlite)
 - [**Redis** - Open Source In-memory key–value Data Store](./#redis)
 - [**InfluxDB** - Open Source Time Series Database](./#influxdb)
@@ -220,7 +220,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 ### LASP Web Stack
 
-LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing SQLite instead of MariaDB. 
+LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing SQLite instead of MariaDB.
 
 SQLite is an embedded relational database engine. The documentation calls it _a self-contained, serverless, zero-configuration and transactional SQL database engine_. It is very popular and there are hundreds of millions copies worldwide in use today. Together with Apache2 and PHP could be a good candidate for single board computer.
 
@@ -299,9 +299,9 @@ SQLite is an embedded relational database engine. The documentation calls it _a 
 
 ### LEMP Web Stack
 
-LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Nginx instead of Apache2 web server. 
+LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Nginx instead of Apache2 web server.
 
-**Nginx** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment. 
+**Nginx** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
 === "Quick start"
 
@@ -386,11 +386,11 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LESP Web Stack
 
-LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Nginx instead of Apache2 web server, and SQLite instead of MariaDB. 
+LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Nginx instead of Apache2 web server, and SQLite instead of MariaDB.
 
-**Nginx** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment. 
+**Nginx** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
-**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://www.sqlite.org/mostdeployed.html)). 
+**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://www.sqlite.org/mostdeployed.html)).
 
 === "Quick start"
 
@@ -419,7 +419,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LLMP Web Stack
 
-LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Lighttpd instead of Apache2 web server. 
+LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Lighttpd instead of Apache2 web server.
 
 **Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the cpu-load.
 
@@ -460,11 +460,11 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LLSP web stack
 
-LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **Lighttpd** instead of Apache2 web server and **SQLite** instead of MariaDB. 
+LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **Lighttpd** instead of Apache2 web server and **SQLite** instead of MariaDB.
 
 **Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the cpu-load.
 
-**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://www.sqlite.org/mostdeployed.html)). 
+**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://www.sqlite.org/mostdeployed.html)).
 
 === "Quick start"
 
@@ -517,7 +517,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### Apache2
 
-Apache is open source and it is the most commonly used Web server on Linux systems. 
+Apache is open source and it is the most commonly used Web server on Linux systems.
 
 Web servers are used to serve Web pages requested by client computers. Clients typically request and view Web pages using Web browser applications such as Firefox, Opera, Chromium, Microsoft Edge, Internet Explorer etc.
 
@@ -533,7 +533,7 @@ The innovation of Nginx compared to earlier servers such as Apache was to use an
 
 **Lighttpd** is a web server for UNIX/Linux and Windows operating systems. It is an alternative to Apache web server. It is also called Lighty.
 
-It is designed to be secure, fast, standards-compliant, and flexible while being optimized for speed-critical environments. Its low memory footprint compared to other web servers, light CPU load and its speed goals make lighttpd a perfect candidate for SBCs.
+It is designed to be secure, fast, standards-compliant, and flexible while being optimized for speed-critical environments. Its low memory footprint compared to other web servers, light CPU load and its speed goals make Lighttpd a perfect candidate for SBCs.
 
 ### Tomcat
 
