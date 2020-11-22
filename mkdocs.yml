@@ -25,28 +25,36 @@ theme:
   favicon: https://dietpi.com/favicon.ico
 
 markdown_extensions:
-  #- markdown.extensions.abbr # Abbreviations <abbr>
   - markdown.extensions.admonition # Highlighted warning/info blocks
   - markdown.extensions.attr_list # Set custom HTML attributes
   - markdown.extensions.codehilite: # Highlight syntax in code blocks
       guess_lang: false # Language must always be defined for syntax highlighting
   - markdown.extensions.def_list # Definition lists
-  #- markdown.extensions.footnotes # Footnotes
-  #- markdown.markdown.md_in_html # Allow Markdown syntax inside of HTML tags
   - markdown.extensions.meta # Define meta data (page title and description) at the top of the Markdown document
   - markdown.extensions.smarty # Automatically convert dashes, underscore, three-dots and quotes to text symbols
   - markdown.extensions.tables # Tables
   - markdown.extensions.toc: # Add HTML id attribute to headers
       permalink: true # Headers are links to themselves
-  #- pymdownx.arithmatex # LaTeX math term support
   - pymdownx.betterem: # More intuitive emphasis handling
       smart_enable: all # Even smarter for both (asterisk and underscore) syntax => GitHub-like
-  #- pymdownx.caret # Superscript <sup> and intert <ins> via caret ^
-  #- pymdownx.critic # Comment, highlight, add or strikethrough text
   - pymdownx.details # Collapsible details blocks
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences # Indended code blocks, e.g. within lists, admonition, details or tabbed blocks
+  - pymdownx.tabbed # Tabbed content blocks
+  - pymdownx.tasklist: # Task list support
+      custom_checkbox: true # Custom icons
+  - markdown.extensions.footnotes # Footnotes
+
+  #  Markdown Extensions which could be used in the future
+  #
+  #- pymdownx.tilde # Subscript <sub> and strikethrough <del> text via tilde ~
+  #- markdown.extensions.abbr # Abbreviations <abbr>
+  #- markdown.markdown.md_in_html # Allow Markdown syntax inside of HTML tags
+  #- pymdownx.arithmatex # LaTeX math term support
+  #- pymdownx.caret # Superscript <sup> and intert <ins> via caret ^
+  #- pymdownx.critic # Comment, highlight, add or strikethrough text
   #- pymdownx.highlight # Configure code highlighting for all code detinitions, fenced, inline and blocked by indentation
   #- pymdownx.inlinehilite # Highlight syntax in inline code
   #- pymdownx.keys # Keyboard key symbols
@@ -54,11 +62,6 @@ markdown_extensions:
   #- pymdownx.mark # Mark text <mark> via ==text==
   #- pymdownx.smartsymbols # Easy symbols syntax (trademark, copyright, arrows, ...)
   #- pymdownx.snippets # Insert Markdown files into others
-  - pymdownx.superfences # Indended code blocks, e.g. within lists, admonition, details or tabbed blocks
-  - pymdownx.tabbed # Tabbed content blocks
-  - pymdownx.tasklist: # Task list support
-      custom_checkbox: true # Custom icons
-  #- pymdownx.tilde # Subscript <sub> and strikethrough <del> text via tilde ~
 
 plugins:
   - search
