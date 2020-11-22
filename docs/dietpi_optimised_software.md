@@ -148,7 +148,7 @@
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](../software/media/#gmediarender-resource-efficient-upnpdlna-renderer)
 - [**Ubooquity - Free home server for your comics and ebooks library**](../software/media/#ubooquity-free-home-server-for-your-comics-and-ebooks-library)
 - [**Komga - Free and open source comics/mangas media server with web UI**](../software/media/#komga-free-and-open-source-comicsmangas-media-server-with-web-ui)
-- [**BruteFIR - Digital Room Correction via ALSA loopback in realtime**](../software/media/#brutefir-digital-room-correction-via-alsa-loopback-in-realtime)
+- [**BruteFIR - Digital Room Correction via ALSA loopback in real time**](../software/media/#brutefir-digital-room-correction-via-alsa-loopback-in-real-time)
 - [**Raspotify - Spotify Connect client**](../software/media/#raspotify-spotify-connect-client)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web-web-interface-client-and-player-for-spotify-premium)
 

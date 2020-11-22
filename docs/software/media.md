@@ -28,7 +28,7 @@
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](#gmediarender-resource-efficient-upnpdlna-renderer)
 - [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity-free-home-server-for-your-comics-and-ebooks-library)
 - [**Komga - Free and open source comics/mangas media server with web UI**](#komga-free-and-open-source-comicsmangas-media-server-with-web-ui)
-- [**BruteFIR - Digital Room Correction via ALSA loopback in realtime**](#brutefir-digital-room-correction-via-alsa-loopback-in-realtime)
+- [**BruteFIR - Digital Room Correction via ALSA loopback in real time**](#brutefir-digital-room-correction-via-alsa-loopback-in-real-time)
 - [**Raspotify - Spotify Connect client**](#raspotify-spotify-connect-client)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web-web-interface-client-and-player-for-spotify-premium)
 
@@ -846,17 +846,17 @@ See also
 - Official documentation: <https://komga.org/guides/>
 - Source code: <https://github.com/gotson/komga>
 
-## BruteFIR - Digital Room Correction via ALSA loopback in realtime
+## BruteFIR - Digital Room Correction via ALSA loopback in real time
 
 The DietPi installation of BruteFIR was created specifically for the GiBi project with Jean and Gilles. Details of which will be disclosed at a later date.
 
-BruteFIR applies Digital Room Correction (DRC) via ALSA loopback in realtime. This will allow you to highly customize and tweak audio for a specific location, whilst having it applied to all audio played on your device.  
+BruteFIR applies Digital Room Correction (DRC) via ALSA loopback in real time. This will allow you to highly customize and tweak audio for a specific location, whilst having it applied to all audio played on your device.  
 For true audiophiles!
 
 Recommendations:
 
 - BruteFIR can be CPU intensive as it processes both L and R channels separately. A Raspberry Pi 2 or faster is highly recommended.
-- A HifiBerry/external 24bit soundcard for maximum audio quality.
+- A HiFiBerry/external 24bit sound card for maximum audio quality.
 
 ![DietPi media server software BruteFIR](../assets/images/dietpi-software-media-brutefir.gif){: style="width:500px"}
 
@@ -866,8 +866,8 @@ Recommendations:
 
     - `/etc/BruteFIR/null-65k48-l.pcm`: Null DRC filter (left channel)
     - `/etc/BruteFIR/null-65k48-r.pcm`: Null DRC filter (right channel)
-    - `/etc/BruteFIR/highpass_l.pcm`: Highpass DRC filter for testing (left channel)
-    - `/etc/BruteFIR/highpass_r.pcm`: Highpass DRC filter for testing (right channel)
+    - `/etc/BruteFIR/highpass_l.pcm`: High pass DRC filter for testing (left channel)
+    - `/etc/BruteFIR/highpass_r.pcm`: High pass DRC filter for testing (right channel)
     - `/etc/asound.conf`: Contains the BruteFIR ALSA loopback settings.
     - `/var/log/brutefir`: Contains the BruteFIR log file.
     - `/etc/BruteFIR/brutefir_config`: This file contains the EQ and DRC `.pcm` file location settings to be used.
@@ -882,9 +882,9 @@ Recommendations:
     dietpi-services restart
     ```
 
-=== "HiFiBerry / External soundcard"
+=== "HiFiBerry / External sound card"
 
-    If you are running a 24 bit external soundcard, you can increase the sound quality by using `S32_LE` instead of `S16_LE`.
+    If you are running a 24 bit external sound card, you can increase the sound quality by using `S32_LE` instead of `S16_LE`.
 
     Change all `S16_LE` references to `S32_LE` in the following files:
 
@@ -921,26 +921,26 @@ See also: <https://github.com/dtcooper/raspotify>.
 
 ## Spotify Connect Web - Web interface, client and player for Spotify Premium
 
-Spotify Connect Weg is a console client and player for Spotify Connect including a web frontend.
+Spotify Connect Web is a console client and player for Spotify Connect including a web frontend.
 
 === "Access to the web interface"
 
     - URL = `http://<your.IP>:4000`
 
-=== "Generate spotify_appkey.key"
+=== "Generate the Spotify API key"
 
-    This is required to allow the application, access to Spotify API using your account.
+    The generation of the `spotify_appkey.key` is required to allow the application, access to Spotify API using your account.
 
     Fill out the application form <https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app>.  
     Wait for it to be "accepted"
 
-=== "Transfer spotify_appkey.key"
+=== "Transfer Spotify API key"
 
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
-    Copy spotify_appkey.key to the following folder:
+    Copy the `spotify_appkey.key` to the following folder:
 
     - folder = `/mnt/dietpi_userdata/spotify-connect-web`
-    - accessed from fileserver = `/spotify-connect-web`
+    - accessed from file server = `/spotify-connect-web`
 
 See also:
 

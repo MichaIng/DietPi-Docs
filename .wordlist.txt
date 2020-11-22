@@ -5,6 +5,7 @@ AirPlay
 Airsonic
 AIY
 Allo
+ALSA
 Allwinner
 Allwinner's
 Amiberry
@@ -33,6 +34,7 @@ Bluetooth
 Blynk
 bootable
 bootloader
+BruteFIR
 Bticino
 BubbleUPnP
 Bugreport
@@ -101,6 +103,7 @@ EmonPi
 EmonTH
 EmonTX
 EPL
+EQ
 exe
 exFAT
 facto
@@ -119,6 +122,8 @@ Fullscreen
 FuzonMp
 Gbit
 GiB
+GiBi
+Gilles
 Gitea
 github
 GlusterFS
@@ -192,6 +197,7 @@ localhost
 LogClear
 Logitech
 Logrotate
+loopback
 LPDDR
 LTS
 LXDE
@@ -296,6 +302,7 @@ Radxa
 RAMdisk
 RAMlog
 Raspbian
+Raspotify
 rcon
 RDBMS
 RDP
