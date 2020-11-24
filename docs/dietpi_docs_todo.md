@@ -176,9 +176,9 @@ The following programming languages shall be added:
 
 Next Steps:
 
-- [ ] **ToDo Stephan:** Add Substructure "Development & Programming"
-- [ ] **ToDo Stephan:** Move Python to there
-- [ ] **ToDo Stephan:** Move Docker to there
+- [x] **ToDo Stephan:** Add Substructure "Development & Programming"
+- [x] **ToDo Stephan:** Move Python to there
+- [x] **ToDo Stephan:** Move Docker to there
 - [ ] **ToDo Stephan:** Add Go as a first language (look at <https://github.com/MichaIng/DietPi/blob/dev/dietpi/dietpi-software>)
 - [ ] **ToDo Petru:** Add .NET Core installation description
 - [ ] **ToDo N.N:** Describe Java, Mono

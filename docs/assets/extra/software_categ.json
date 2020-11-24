@@ -1,0 +1,13 @@
+{
+    "WebDev": {
+        "name" : "Web Development",
+        "name_dietpi_software" : "Web Development",        
+        "docs_url": "software/webserver_stack/#web-development",
+        "id" : 0,
+        "WebStacks" : {
+            "name" : "Stacks for web development",
+            "docs_url": "software/webserver_stack/#stacks-for-web-development",
+            "id" : 0
+        }
+    }
+}
