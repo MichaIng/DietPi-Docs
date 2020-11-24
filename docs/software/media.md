@@ -28,7 +28,6 @@
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](#gmediarender-resource-efficient-upnpdlna-renderer)
 - [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity-free-home-server-for-your-comics-and-ebooks-library)
 - [**Komga - Free and open source comics/mangas media server with web UI**](#komga-free-and-open-source-comicsmangas-media-server-with-web-ui)
-- [**BruteFIR - Digital Room Correction via ALSA loopback in real time**](#brutefir-digital-room-correction-via-alsa-loopback-in-real-time)
 - [**Raspotify - Spotify Connect client**](#raspotify-spotify-connect-client)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web-web-interface-client-and-player-for-spotify-premium)
 
@@ -846,55 +845,6 @@ See also
 - Official documentation: <https://komga.org/guides/>
 - Source code: <https://github.com/gotson/komga>
 
-## BruteFIR - Digital Room Correction via ALSA loopback in real time
-
-The DietPi installation of BruteFIR was created specifically for the GiBi project with Jean and Gilles. Details of which will be disclosed at a later date.
-
-BruteFIR applies Digital Room Correction (DRC) via ALSA loopback in real time. This will allow you to highly customize and tweak audio for a specific location, whilst having it applied to all audio played on your device.  
-For true audiophiles!
-
-Recommendations:
-
-- BruteFIR can be CPU intensive as it processes both L and R channels separately. A Raspberry Pi 2 or faster is highly recommended.
-- A HiFiBerry/external 24bit sound card for maximum audio quality.
-
-![DietPi media server software BruteFIR](../assets/images/dietpi-software-media-brutefir.gif){: style="width:500px"}
-
-=== "Configuration and Settings"
-
-    The configuration and settings are located there:
-
-    - `/etc/BruteFIR/null-65k48-l.pcm`: Null DRC filter (left channel)
-    - `/etc/BruteFIR/null-65k48-r.pcm`: Null DRC filter (right channel)
-    - `/etc/BruteFIR/highpass_l.pcm`: High pass DRC filter for testing (left channel)
-    - `/etc/BruteFIR/highpass_r.pcm`: High pass DRC filter for testing (right channel)
-    - `/etc/asound.conf`: Contains the BruteFIR ALSA loopback settings.
-    - `/var/log/brutefir`: Contains the BruteFIR log file.
-    - `/etc/BruteFIR/brutefir_config`: This file contains the EQ and DRC `.pcm` file location settings to be used.
-
-    If you make any changes, you will need to restart BruteFIR for the changes to take effect.
-
-=== "Restart BruteFIR service"
-
-    Restart the BruteFIR service with:
-
-    ```sh
-    dietpi-services restart
-    ```
-
-=== "HiFiBerry / External sound card"
-
-    If you are running a 24 bit external sound card, you can increase the sound quality by using `S32_LE` instead of `S16_LE`.
-
-    Change all `S16_LE` references to `S32_LE` in the following files:
-
-    - `/etc/asound.conf`
-    - `/etc/BruteFIR/brutefir_config`
-
-    Then restart BruteFIR.
-
-See also <https://torger.se/anders/brutefir.html>.
-
 ## Raspotify - Spotify Connect client
 
 Spotify Connect client for the Raspberry Pi that Just Works™.
@@ -914,7 +864,7 @@ Raspotify should work straight out of the box.
     Then restart services with:
 
     ```sh
-    dietpi-services restart
+    systemctl restart raspotify
     ```
 
 See also: <https://github.com/dtcooper/raspotify>.
@@ -941,6 +891,36 @@ Spotify Connect Web is a console client and player for Spotify Connect including
 
     - folder = `/mnt/dietpi_userdata/spotify-connect-web`
     - accessed from file server = `/spotify-connect-web`
+
+=== "View service logs"
+
+    View the service logs via:
+
+    ```sh
+    journalctl -u spotify-connect-web
+    ```
+
+=== "Service handling"
+
+    There are some typical service tasks available:
+
+    - Manually start the service:
+
+        ```sh
+        systemctl start spotify-connect-web
+        ```
+
+    - Manually stop the service
+
+        ```sh
+        systemctl stop spotify-connect-web
+        ```
+
+    - Manually restart the service
+
+        ```sh
+        systemctl restart spotify-connect-web
+        ```
 
 See also:
 
