@@ -69,6 +69,11 @@
 - [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss-atom-news-feeds-reader)
 - [**Xfce4 Power - Power manager with brightness**](../software/desktop/#xfce4-power-power-manager-with-brightness)
 
+## [Development & Programming](../software/programming/)
+
+- [**Python - high-level interpreted programming language**](../software/programming/#python-high-level-interpreted-programming-language)
+- [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker-build-ship-and-run-distributed-applications)
+
 ## [DNS Server](../software/dns_servers/#dns-servers-clients/)
 
 - [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole-network-wide-ad-blocking)
@@ -193,7 +198,6 @@
 
 - [**Let’s Encrypt - Enable HTTPS / SSL**](../software/system_security/#lets-encrypt-enable-https-ssl)
 - [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
-- [**Docker - Build, ship, and run distributed applications**](../software/system_security/#docker-build-ship-and-run-distributed-applications)
 
 ## [System Stats & Management](../software/system_stats/#system-stats-management/)
 

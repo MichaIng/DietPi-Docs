@@ -132,6 +132,7 @@ nav:
       - 'Cloud & Backup systems' : 'software/cloud.md'
       - 'Computational Science' : 'software/computational_science.md'
       - 'Desktops & Utilities' : 'software/desktop.md'
+      - 'Development & Programming' : 'software/programming.md'
       - 'DNS Server' : 'software/dns_servers.md'
       - 'File Server' : 'software/file_servers.md'
       - 'Gaming & Emulation' : 'software/gaming.md'

@@ -3,8 +3,7 @@
 ## Overview
 
 - [**Let’s Encrypt - Enable HTTPS / SSL**](#lets-encrypt-enable-https-ssl)
-- [**Fail2Ban - Protects your system from brute-force attacks**](#fail2ban-protects-your-system-from-brute-force-attacks)  
-- [**Docker - Build, ship, and run distributed applications**](#docker-build-ship-and-run-distributed-applications)  
+- [**Fail2Ban - Protects your system from brute-force attacks**](#fail2ban-protects-your-system-from-brute-force-attacks)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -77,33 +76,5 @@ An IP address is by default ban triggered after 3 failed SSH login attempts. Fai
     You can enable/disable these features by modifying the */etc/fail2ban/jail.conf* file, and setting `enable = true` under the *[software]* name.
 
 See also <https://www.fail2ban.org>.
-
-## Docker - Build, ship, and run distributed applications
-
-Docker is used to build, ship, and run distributed applications.
-
-![DietPi security software Docker](../assets/images/dietpi-software-security-docker1.svg){: style="width:200px"}
-
-![DietPi security software Docker screenshot](../assets/images/dietpi-software-security-docker2.svg){: style="width:400px"}
-
-Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
-
-=== "Access logs"
-
-    Access logs can be viewed with this command: `journalctl -u docker -u containerd`
-
-=== "Config files"
-
-    The Docker configuration files are:
-
-    - Docker: `/etc/docker/daemon.json`
-    - containerd: `/etc/containerd/config.toml`
-
-=== "Official documentation"
-
-    - Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>
-    - Logging: <https://docs.docker.com/config/containers/logging/configure>
-
-See also <https://wikipedia.org/wiki/Docker_(software)> resp. <https://docs.docker.com/get-started/overview>.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
