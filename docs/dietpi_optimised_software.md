@@ -13,9 +13,6 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools) section.
 
-!!! warning "Documentation in progress..."
-    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
-
 ## [BitTorrent & Download Tools](../software/bittorrent/)
 
 - [**Transmission - Lightweight BitTorrent server with web interface**](../software/bittorrent/#transmission-lightweight-bittorrent-server-with-web-interface)
@@ -151,6 +148,8 @@
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](../software/media/#gmediarender-resource-efficient-upnpdlna-renderer)
 - [**Ubooquity - Free home server for your comics and ebooks library**](../software/media/#ubooquity-free-home-server-for-your-comics-and-ebooks-library)
 - [**Komga - Free and open source comics/mangas media server with web UI**](../software/media/#komga-free-and-open-source-comicsmangas-media-server-with-web-ui)
+- [**Raspotify - Spotify Connect client**](../software/media/#raspotify-spotify-connect-client)
+- [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web-web-interface-client-and-player-for-spotify-premium)
 
 ## [Network Load Balancer](../software/load_balancer/#network-load-balancing/)
 
@@ -213,6 +212,9 @@
 - [**WireGuard - An extremely simple yet fast and modern VPN**](../software/vpn/#wireguard-an-extremely-simple-yet-fast-and-modern-vpn)
 
 ## [Web development](../software/webserver_stack/#web-development)
+
+!!! warning "Documentation in progress..."
+    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?f=8&t=5))  
 
 ### [Stacks for web development](../software/webserver_stack/#stacks-for-web-development)
 

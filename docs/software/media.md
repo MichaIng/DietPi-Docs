@@ -28,6 +28,8 @@
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](#gmediarender-resource-efficient-upnpdlna-renderer)
 - [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity-free-home-server-for-your-comics-and-ebooks-library)
 - [**Komga - Free and open source comics/mangas media server with web UI**](#komga-free-and-open-source-comicsmangas-media-server-with-web-ui)
+- [**Raspotify - Spotify Connect client**](#raspotify-spotify-connect-client)
+- [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web-web-interface-client-and-player-for-spotify-premium)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -842,5 +844,87 @@ See also
 
 - Official documentation: <https://komga.org/guides/>
 - Source code: <https://github.com/gotson/komga>
+
+## Raspotify - Spotify Connect client
+
+Spotify Connect client for the Raspberry Pi that Just Works™.
+
+!!! note "You will need a Spotify Premium account in order to use the Spotify Connect client."
+
+![DietPi media server software Raspotify](../assets/images/dietpi-software-media-raspotify.png){: style="width:250px"}
+
+Raspotify should work straight out of the box.
+
+=== "Changing options"
+
+    However, you can change the available options in:
+
+    - `/etc/default/raspotify`
+
+    Then restart services with:
+
+    ```sh
+    systemctl restart raspotify
+    ```
+
+See also: <https://github.com/dtcooper/raspotify>.
+
+## Spotify Connect Web - Web interface, client and player for Spotify Premium
+
+Spotify Connect Web is a console client and player for Spotify Connect including a web frontend.
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>:4000`
+
+=== "Generate the Spotify API key"
+
+    The generation of the `spotify_appkey.key` is required to allow the application, access to Spotify API using your account.
+
+    Fill out the application form <https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app>.  
+    Wait for it to be "accepted"
+
+=== "Transfer Spotify API key"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Copy the `spotify_appkey.key` to the following folder:
+
+    - folder = `/mnt/dietpi_userdata/spotify-connect-web`
+    - accessed from file server = `/spotify-connect-web`
+
+=== "View service logs"
+
+    View the service logs via:
+
+    ```sh
+    journalctl -u spotify-connect-web
+    ```
+
+=== "Service handling"
+
+    There are some typical service tasks available:
+
+    - Manually start the service:
+
+        ```sh
+        systemctl start spotify-connect-web
+        ```
+
+    - Manually stop the service
+
+        ```sh
+        systemctl stop spotify-connect-web
+        ```
+
+    - Manually restart the service
+
+        ```sh
+        systemctl restart spotify-connect-web
+        ```
+
+See also:
+
+- <https://github.com/Fornoth/spotify-connect-web>
+- <https://developer.spotify.com/documentation/web-api/quick-start/>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

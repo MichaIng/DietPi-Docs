@@ -1,6 +1,6 @@
 # Documentation Ideas & Tasks
 
-- [ ] **ToDo Stephan:** Move issues to <https://github.com/MichaIng/DietPi-Docs/issues>. Add every point x.y as an own issue.  
+- [x] **ToDo Stephan:** Move issues to <https://github.com/MichaIng/DietPi-Docs/issues>. Add every point x.y as an own issue.  
   E.g. Issue 3.x Gitea: Add it as an issue and finish it as resolved.
 
 ## 1 Supported Single Board Computers (SBCs)
@@ -131,7 +131,7 @@ Decision is needed, which of these softwares shall be described in the documenta
 - [ ] **ToDo Petru:** Add "FuguHub" to the "Optimized Software", "Cloud & Backup" and add a description
 - [x] **ToDo Stephan:** Add Domoticz description to "Home Automation": <https://dietpi.com/phpbb/viewtopic.php?p=23065#p23065>
 - [x] **ToDo Stephan:** Add TasmoAdmin description to "Home Automation": <https://dietpi.com/phpbb/viewtopic.php?p=20584#p20584>
-- [ ] **ToDo Stephan:** BruteFIR, Spotify Connect Web, Raspotify: Add to the documentation ("Media Systems")
+- [x] **ToDo Stephan:** BruteFIR, Spotify Connect Web, Raspotify: Add to the documentation ("Media Systems")
 
 ### 6.2 Checks in *Optimized Software*
 
