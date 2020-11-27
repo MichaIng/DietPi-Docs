@@ -539,49 +539,37 @@ Bitwarden_RS is an unoffical Bitwarden password manager server with web interfac
     - During install, a self-signed 4096-bit RSA TLS certificate is created to allow encrypted HTTPS access, which is required for access with most Bitwarden clients and reasonable as of the sensitivity of the data a password manager handles.
     - Most web browsers will warn you on access that the certificate is not trusted, although usually you can choose to ignore that and still access the web vault.
     - Most Bitwarden clients on the other hand will deny to access your server, as long as the certificate is not trusted.
-
-        #### How to add a self-signed certificate to the OS' Trusted Root Certification Authorities store
-
-        === "Windows 10"
-
-            0. In your browser, next to the address bar, select the warning or lock icon.
-            1. Select the certificate button to open Windows' Certificate view.
-            2. Switch to the "Details" tab.
-
-            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
-
-            3. Select "Save to file".
-            4. In the newly opened window, select "Continue".
-
-            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_2.png)
-
-            5. Leave default DER coding and select "Continue".
-            6. Select "Browse" to chose a target file location.
-
-            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_3.png)
-
-            7. Choose a target file location and name, it is only required temporarily.
-            8. Select "Continue".
-            9. Select "Finish".
-
-            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_4.png)
-
-            10. Double-click the created certificate file and select "Install certificate".
-            11. Select "Local system".
-            12. Select "Continue", which requires administrator permissions.
-
-            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_5.png)
-
-            13. Choose "Save all certificates to the following store".
-            14. Select "Browse".
-            15. Select "Trusted Root Certification Authorities".
-            16. Select "Ok".
-            17. Select "Continue".
-            18. Select "Finish".
-
-            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_6.png)
-
     - As fast as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via dietpi-letsencrypt and setup either a reverse proxy, or configure Bitwarden_RS to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
+
+    #### How to add a self-signed certificate to the OS' Trusted Root Certification Authorities store
+
+    === "Windows 10"
+
+        0. In your browser, next to the address bar, select the warning or lock icon.
+        1. Select the certificate button to open Windows' Certificate view.
+        2. Switch to the "Details" tab.
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
+        3. Select "Save to file".
+        4. In the newly opened window, select "Continue".
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_2.png)
+        5. Leave default DER coding and select "Continue".
+        6. Select "Browse" to chose a target file location.
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_3.png)
+        7. Choose a target file location and name, it is only required temporarily.
+        8. Select "Continue".
+        9. Select "Finish".
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_4.png)
+        10. Double-click the created certificate file and select "Install certificate".
+        11. Select "Local system".
+        12. Select "Continue", which requires administrator permissions.
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_5.png)
+        13. Choose "Save all certificates to the following store".
+        14. Select "Browse".
+        15. Select "Trusted Root Certification Authorities".
+        16. Select "Ok".
+        17. Select "Continue".
+        18. Select "Finish".
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_6.png)
 
 === "Web access"
 
