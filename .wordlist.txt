@@ -29,6 +29,7 @@ balenaEtcher
 Bazarr
 Beelink
 Bitcoin
+Bitwarden
 blazingly
 Bluetooth
 Blynk
@@ -38,6 +39,7 @@ BruteFIR
 Bticino
 BubbleUPnP
 Bugreport
+CactiChameleon9
 CalDAV
 CardDAV
 CAVA
@@ -73,6 +75,7 @@ DarkBetter
 DarkIce
 de
 deinstallation
+DER
 DHCP
 dialogs
 DietPi
@@ -136,6 +139,7 @@ Gogs
 GPIO
 GPIOs
 GPL
+GPLv
 GPT
 Grafana
 HAProxy
@@ -327,6 +331,7 @@ rpc
 rpi
 RPi
 RPis
+RSA
 RSS
 Rsyslog
 rTorrent
