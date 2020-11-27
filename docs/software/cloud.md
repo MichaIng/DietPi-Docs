@@ -545,8 +545,8 @@ Bitwarden_RS is an unoffical Bitwarden password manager server with web interfac
 
     === "Windows 10"
 
-        0. In your browser, next to the address bar, select the warning or lock icon.
-        1. Select the certificate button to open Windows' Certificate view.
+        1. In your browser, next to the address bar, select the warning or lock icon.
+            Select the certificate button to open Windows' Certificate view.
         2. Switch to the "Details" tab.
             ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
         3. Select "Save to file".
