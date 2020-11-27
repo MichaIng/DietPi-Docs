@@ -39,7 +39,7 @@ BruteFIR
 Bticino
 BubbleUPnP
 Bugreport
-CactiChameleon9
+CactiChameleon
 CalDAV
 CardDAV
 CAVA
