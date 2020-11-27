@@ -542,44 +542,44 @@ Bitwarden_RS is an unoffical Bitwarden password manager server with web interfac
 
         #### How to add a self-signed certificate to the OS' Trusted Root Certification Authorities store
 
-            === "Windows 10"
+        === "Windows 10"
 
-                0. In your browser, next to the address bar, select the warning or lock icon.
-                1. Select the certificate button to open Windows' Certificate view.
-                2. Switch to the "Details" tab.
+            0. In your browser, next to the address bar, select the warning or lock icon.
+            1. Select the certificate button to open Windows' Certificate view.
+            2. Switch to the "Details" tab.
 
-                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
 
-                3. Select "Save to file".
-                4. In the newly opened window, select "Continue".
+            3. Select "Save to file".
+            4. In the newly opened window, select "Continue".
 
-                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_2.png)
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_2.png)
 
-                5. Leave default DER coding and select "Continue".
-                6. Select "Browse" to chose a target file location.
+            5. Leave default DER coding and select "Continue".
+            6. Select "Browse" to chose a target file location.
 
-                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_3.png)
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_3.png)
 
-                7. Choose a target file location and name, it is only required temporarily.
-                8. Select "Continue".
-                9. Select "Finish".
+            7. Choose a target file location and name, it is only required temporarily.
+            8. Select "Continue".
+            9. Select "Finish".
 
-                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_4.png)
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_4.png)
 
-                10. Double-click the created certificate file and select "Install certificate".
-                11. Select "Local system".
-                12. Select "Continue", which requires administrator permissions.
+            10. Double-click the created certificate file and select "Install certificate".
+            11. Select "Local system".
+            12. Select "Continue", which requires administrator permissions.
 
-                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_5.png)
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_5.png)
 
-                13. Choose "Save all certificates to the following store".
-                14. Select "Browse".
-                15. Select "Trusted Root Certification Authorities".
-                16. Select "Ok".
-                17. Select "Continue".
-                18. Select "Finish".
+            13. Choose "Save all certificates to the following store".
+            14. Select "Browse".
+            15. Select "Trusted Root Certification Authorities".
+            16. Select "Ok".
+            17. Select "Continue".
+            18. Select "Finish".
 
-                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_6.png)
+            ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_6.png)
 
     - As fast as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via dietpi-letsencrypt and setup either a reverse proxy, or configure Bitwarden_RS to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
 
@@ -604,11 +604,15 @@ Bitwarden_RS is an unoffical Bitwarden password manager server with web interfac
 
 === "View logs"
 
-    `journalctl -u bitwarden_rs`
+    ```sh
+    journalctl -u bitwarden_rs
+    ```
 
 === "Update to latest version"
 
-    `dietpi-software reinstall 183`
+    ```sh
+    dietpi-software reinstall 183
+    ```
 
 ### Official links
 
