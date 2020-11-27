@@ -13,7 +13,7 @@
 - [**Tonido - Lightweight backup and sync server with web interface and cloud access**](#tonido-lightweight-backup-and-sync-server-with-web-interface-and-cloud-access)
 - [**Minio - S3 compatible distributed object server**](#minio-s3-compatible-distributed-object-server)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server-sync-bookmarks-tabs-history-and-passwords)
-- [**Bitwarden_RS - Unoffical Bitwarden password manager server written in Rust**](#bitwarden_rs)
+- [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](#bitwarden_rs)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -530,7 +530,7 @@ Credits: This software title has been added to DietPi-Software by CedArctic, man
 
 ## Bitwarden_RS
 
-Bitwarden_RS is an unoffical Bitwarden password manager server with web interface, written in Rust.
+Bitwarden_RS is an unofficial Bitwarden password manager server with web interface, written in Rust.
 
 ![Bitwarden_RS web vault screenshot](../assets/images/dietpi-software-cloud-bitwarden_rs.png)
 
@@ -539,7 +539,7 @@ Bitwarden_RS is an unoffical Bitwarden password manager server with web interfac
     - During install, a self-signed 4096-bit RSA TLS certificate is created to allow encrypted HTTPS access, which is required for access with most Bitwarden clients and reasonable as of the sensitivity of the data a password manager handles.
     - Most web browsers will warn you on access that the certificate is not trusted, although usually you can choose to ignore that and still access the web vault.
     - Most Bitwarden clients on the other hand will deny to access your server, as long as the certificate is not trusted.
-    - As fast as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via dietpi-letsencrypt and setup either a reverse proxy, or configure Bitwarden_RS to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
+    - As fast as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via `dietpi-letsencrypt` and setup either a reverse proxy, or configure Bitwarden_RS to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
 
     #### How to add a self-signed certificate to the OS' Trusted Root Certification Authorities store
 
