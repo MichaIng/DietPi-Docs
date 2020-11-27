@@ -49,7 +49,7 @@
 - [**Tonido - Lightweight backup and sync server with web interface and cloud access**](../software/cloud/#tonido-lightweight-backup-and-sync-server-with-web-interface-and-cloud-access)
 - [**Minio - S3 compatible distributed object server**](../software/cloud/#minio-s3-compatible-distributed-object-server)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](../software/cloud/#firefox-sync-server-sync-bookmarks-tabs-history-and-passwords)
-- [**Bitwarden_RS - Unoffical Bitwarden password manager server written in Rust**](../software/cloud/#bitwarden_rs)
+- [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#bitwarden_rs)
 
 ## [Computational Science](../software/computational_science/#computational-science/)
 
