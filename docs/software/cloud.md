@@ -573,7 +573,7 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
 === "Web access"
 
-    - URL = `https://<your.IP>:8000`
+    - URL = `https://<your.IP>:8001`
     - On first access, you need to create an account, either via web UI or via client (see "Client access" tab).
 
 === "Client access"
@@ -581,7 +581,7 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
     Any official Bitwarden client will work: <https://bitwarden.com/download/>
 
     1. Select the settings gear at the top left of the window.
-    2. Add `https://<your.IP>:8000` into the custom server field.
+    2. Add `https://<your.IP>:8001` into the custom server field.
     3. Create a new account, which will be created on your own server only.
 
 === "Directories"
