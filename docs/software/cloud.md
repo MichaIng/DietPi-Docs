@@ -330,9 +330,9 @@ Your very own GitHub style server, with web interface.
     Has to be done once, when connected to the web interface:
 
     - Change the following values only:
-        - Host = `/run/mysqld/mysqld.sock`
+        - Database = `MySQL`
         - User = `gogs`
-        - Database password = `dietpi`
+        - Database password = `<your global password>`
         - Repository Root Path = `/mnt/dietpi_userdata/gogs-repo`
         - Run User = `gogs`
         - Log Path = `/var/log/gogs`
