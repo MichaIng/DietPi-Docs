@@ -28,7 +28,6 @@
 
 [**Web development - Programming & Frameworks**](./#web-development-programming-frameworks)
 
-- [**Flask** - Micro web framework powered by Python](./#flask)
 - [**PHP** - scripting language especially suited to web development](./#php)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
@@ -562,10 +561,6 @@ T.b.d.
 T.b.d.
 
 ## Web development - Programming & Frameworks
-
-### Flask
-
-T.b.d.
 
 ### PHP
 
