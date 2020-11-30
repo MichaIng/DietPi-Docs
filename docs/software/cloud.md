@@ -539,7 +539,7 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
     - During install, a self-signed 4096-bit RSA TLS certificate is created to allow encrypted HTTPS access, which is required for access with most Bitwarden clients and reasonable as of the sensitivity of the data a password manager handles.
     - Most web browsers will warn you on access that the certificate is not trusted, although usually you can choose to ignore that and still access the web vault.
     - Most Bitwarden clients on the other hand will deny to access your server, as long as the certificate is not trusted.
-    - As fast as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via `dietpi-letsencrypt` and setup either a reverse proxy, or configure Bitwarden_RS to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
+    - As far as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via `dietpi-letsencrypt` and setup either a reverse proxy, or configure Bitwarden_RS to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
 
     #### How to add a self-signed certificate to the OS' Trusted Root Certification Authorities store
 
@@ -580,7 +580,7 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
     Any official Bitwarden client will work: <https://bitwarden.com/download/>
 
-    1. Select the settings gear at the top left of the window.
+    1. Select the settings cog at the top left of the window.
     2. Add `https://<your.IP>:8001` into the custom server field.
     3. Create a new account, which will be created on your own server only.
 
