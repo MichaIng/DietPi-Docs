@@ -1,8 +1,8 @@
-# WiFi HotSpot
+# WiFi Access Points
 
 ## Overview
 
-- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](#wifi-hotspot_1)  
+- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](#wifi-hotspot)  
 - [**Tor HotSpot - Optional: Routes all WiFi HotSpot traffic through the Tor network**](#tor-hotspot)  
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
