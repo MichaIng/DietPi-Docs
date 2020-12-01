@@ -257,7 +257,7 @@
 - Python 3 & Flask - Micro web framework powered by Python
 - PHP - scripting language especially suited to web development
 
-## [WiFi HotSpot](../software/wifi_hotspot/)
+## [WiFi Access Points](../software/wifi_hotspot/)
 
-- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot_1)
+- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/wifi_hotspot/#tor-hotspot)
