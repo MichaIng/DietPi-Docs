@@ -13,6 +13,7 @@
 - [**Tonido - Lightweight backup and sync server with web interface and cloud access**](#tonido-lightweight-backup-and-sync-server-with-web-interface-and-cloud-access)
 - [**Minio - S3 compatible distributed object server**](#minio-s3-compatible-distributed-object-server)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server-sync-bookmarks-tabs-history-and-passwords)
+- [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](#bitwarden_rs)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -497,7 +498,7 @@ See also: <https://min.io/>.
 
 This is Mozilla's Firefox Sync Server which manages syncing Firefox instance bookmarks, history, tabs and passwords across devices. Out of the box it runs on a Python server for small loads and can be configured to run behind Nginx or Apache.
 
-![DietPi cloud software Firefox Sync Server](../assets/images/dietpi-software-cloud-firefoxsyncserver.png)
+![Firefox Sync Logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png)
 
 === "Configure Firefox"
 
@@ -526,5 +527,104 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 Source code can be found at <https://github.com/mozilla-services/syncserver>.
 
 Credits: This software title has been added to DietPi-Software by CedArctic, many thanks! :D
+
+## Bitwarden_RS
+
+Bitwarden_RS is an unofficial Bitwarden password manager server with web interface, written in Rust.
+
+![Bitwarden_RS web vault screenshot](../assets/images/dietpi-software-cloud-bitwarden_rs.png)
+
+=== "First access"
+
+    - During install, a self-signed 4096-bit RSA TLS certificate is created to allow encrypted HTTPS access, which is required for access with most Bitwarden clients and reasonable as of the sensitivity of the data a password manager handles.
+    - Most web browsers will warn you on access that the certificate is not trusted, although usually you can choose to ignore that and still access the web vault.
+    - Most Bitwarden clients on the other hand will deny to access your server, as long as the certificate is not trusted.
+    - As far as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via `dietpi-letsencrypt` and setup either a reverse proxy, or configure Bitwarden_RS to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
+
+    ??? info "How do I add a self-signed certificate to the OS' Trusted Root Certification Authorities store?"
+
+        === "Windows 10"
+
+            1. In your browser, next to the address bar, select the warning or lock icon.
+                Then select the certificate button to open Windows' Certificate view.
+            2. Switch to the "Details" tab.
+
+                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
+
+            3. Select "Save to file".
+            4. In the newly opened window, select "Continue".
+
+                ![Import certificate on Windows 10, screenshot 2](../assets/images/import_cert_windows_2.png)
+
+            5. Leave default DER coding and select "Continue".
+            6. Select "Browse" to chose a target file location.
+
+                ![Import certificate on Windows 10, screenshot 3](../assets/images/import_cert_windows_3.png)
+
+            7. Choose a target file location and name, it is only required temporarily.
+            8. Select "Continue".
+            9. Select "Finish".
+
+                ![Import certificate on Windows 10, screenshot 4](../assets/images/import_cert_windows_4.png)
+
+            10. Double-click the created certificate file and select "Install certificate".
+            11. Select "Local system".
+            12. Select "Continue", which requires administrator permissions.
+
+                ![Import certificate on Windows 10, screenshot 5](../assets/images/import_cert_windows_5.png)
+
+            13. Choose "Save all certificates to the following store".
+            14. Select "Browse".
+            15. Select "Trusted Root Certification Authorities".
+            16. Select "Ok".
+            17. Select "Continue".
+            18. Select "Finish".
+
+                ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png)
+
+=== "Web access"
+
+    - URL = `https://<your.IP>:8001`
+    - On first access, you need to create an account, either via web UI or via client (see "Client access" tab).
+
+=== "Client access"
+
+    Any official Bitwarden client will work: <https://bitwarden.com/download/>
+
+    1. Select the settings cog at the top left of the window.
+    2. Add `https://<your.IP>:8001` into the custom server field.
+    3. Create a new account, which will be created on your own server only.
+
+=== "Directories"
+
+    - Install directory: `/opt/bitwarden_rs`
+    - Data directory: `/mnt/dietpi_userdata/bitwarden_rs`
+    - Config file: `/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env`
+
+=== "View logs"
+
+    ```sh
+    journalctl -u bitwarden_rs
+    ```
+
+=== "Update to latest version"
+
+    ```sh
+    dietpi-software reinstall 183
+    ```
+
+### Official links
+
+Documentation: <https://github.com/dani-garcia/bitwarden_rs/wiki>
+
+Forum: <https://bitwardenrs.discourse.group/>
+
+Source code: <https://github.com/dani-garcia/bitwarden_rs>
+
+Open-source license: [GPLv3](https://github.com/dani-garcia/bitwarden_rs/blob/master/LICENSE.txt)
+
+### Credits
+
+This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9), many thanks! :D
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
