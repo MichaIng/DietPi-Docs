@@ -2,8 +2,8 @@
 
 ## Overview
 
-- [**RPi Cam Control - RPi Camera / Web Interface Surveillance**](#rpi-cam-control-rpi-camera-web-interface-surveillance)
-- [**MotionEye - Camera / Web Interface Surveillance**](#motioneye-camera-web-interface-surveillance)
+- [**RPi Cam Control - RPi Camera / Web Interface Surveillance**](#rpi-cam-control)
+- [**MotionEye - Camera / Web Interface Surveillance**](#motioneye)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -20,7 +20,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## RPi Cam Control - RPi Camera / Web Interface Surveillance
+## RPi Cam Control
 
 The *RPi Cam Control* package can be used in combination with a Raspberry PI camera module to
 
@@ -50,7 +50,7 @@ It consists of full control of the camera in a web based interface.
     The recorded media files are stored in the directory  
     `/mnt/dietpi_userdata/rpicam`
 
-## MotionEye - Camera / Web Interface Surveillance
+## MotionEye
 
 The *MotionEye* package offers surveillance for your camera.  
 It is mainly focused towards motion detection usage. It contains a web interface.
