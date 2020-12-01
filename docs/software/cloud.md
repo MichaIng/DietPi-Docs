@@ -548,27 +548,38 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
             1. In your browser, next to the address bar, select the warning or lock icon.
                 Then select the certificate button to open Windows' Certificate view.
             2. Switch to the "Details" tab.
+
                 ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
+
             3. Select "Save to file".
             4. In the newly opened window, select "Continue".
+
                 ![Import certificate on Windows 10, screenshot 2](../assets/images/import_cert_windows_2.png)
+
             5. Leave default DER coding and select "Continue".
             6. Select "Browse" to chose a target file location.
+
                 ![Import certificate on Windows 10, screenshot 3](../assets/images/import_cert_windows_3.png)
+
             7. Choose a target file location and name, it is only required temporarily.
             8. Select "Continue".
             9. Select "Finish".
+
                 ![Import certificate on Windows 10, screenshot 4](../assets/images/import_cert_windows_4.png)
+
             10. Double-click the created certificate file and select "Install certificate".
             11. Select "Local system".
             12. Select "Continue", which requires administrator permissions.
+
                 ![Import certificate on Windows 10, screenshot 5](../assets/images/import_cert_windows_5.png)
+
             13. Choose "Save all certificates to the following store".
             14. Select "Browse".
             15. Select "Trusted Root Certification Authorities".
             16. Select "Ok".
             17. Select "Continue".
             18. Select "Finish".
+
                 ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png)
 
 === "Web access"
