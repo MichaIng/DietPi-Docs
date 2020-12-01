@@ -2,10 +2,10 @@
 
 ## Overview
 
-- [**Home Assistant - Open-source home automation platform running on Python 3**](#home-assistant-open-source-home-automation-platform-running-on-python-3)
-- [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](#emonpi-lightweight-energy-usage-stats-with-emonpi-pcb)
-- [**Domoticz - Multi platform Home Automation System**](#domoticz-multi-platform-home-automation-system)
-- [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin-administrative-website-for-tasmota-devices)
+- [**Home Assistant - Open-source home automation platform running on Python 3**](#home-assistant)
+- [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](#emonpi)
+- [**Domoticz - Multi platform Home Automation System**](#domoticz)
+- [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -22,7 +22,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Home Assistant - Open-source home automation platform running on Python 3
+## Home Assistant
 
 Home Assistant is an open-source home automation platform running on Python 3. Track and control all devices at home and automate control. Perfect to run on a Raspberry Pi.
 
@@ -74,7 +74,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
     IKEA TRÅDFRI: `apt install autoconf`
 
-## EmonPi - Lightweight Energy usage stats with EmonPi PCB
+## EmonPi
 
 Turn your Raspberry Pi into a energy usage monitor with web interface.
 
@@ -169,7 +169,7 @@ The following hardware is required:
     Then click `Save`.  
     Press `F5` to refresh the page and view your energy consumption.
 
-## Domoticz - Multi platform Home Automation System
+## Domoticz
 
 Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.
 
@@ -194,7 +194,7 @@ Domoticz is a Home Automation System that lets you monitor and configure various
 
 See also: <https://github.com/domoticz/domoticz>
 
-## TasmoAdmin - Administrative website for Tasmota devices
+## TasmoAdmin
 
 TasmoAdmin is an administrative website for devices flashed with Tasmota to be used for smart home systems.
 
