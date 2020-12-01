@@ -137,7 +137,7 @@
 - [**Airsonic - Feature rich media streaming server with web interface**](../software/media/#airsonic)
 - [**Subsonic - Feature rich media streaming server with web interface**](../software/media/#subsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](../software/media/#logitech-media-server)
-- [**SqueezeLite - Audio player for Logitech Media Server**](../software/media/#squeezelite)
+- [**Squeezelite - Audio player for Logitech Media Server**](../software/media/#squeezelite)
 - [**Shairport Sync - AirPlay audio player with multiroom sync**](../software/media/#shairport-sync)
 - [**ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)**](../software/media/#readymedia)
 - [**Ampache - Web interface media streaming server**](../software/media/#ampache)
