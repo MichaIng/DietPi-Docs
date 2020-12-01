@@ -2,8 +2,8 @@
 
 ## Overview
 
-- [**Python - high-level interpreted programming language**](#python-high-level-interpreted-programming-language)
-- [**Docker - Build, ship, and run distributed applications**](#docker-build-ship-and-run-distributed-applications)  
+- [**Python - high-level interpreted programming language**](#python)
+- [**Docker - Build, ship, and run distributed applications**](#docker)  
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -20,7 +20,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Python - high-level interpreted programming language
+## Python
 
 Python is a text based interpreted programming language with object oriented programming options for general purpose applications.  
 
@@ -30,7 +30,7 @@ Source: By [www.python.org](http://www.python.org/community/logos/), [GPL](https
 
 See also: <https://wikipedia.org/wiki/Python_(programming_language)>.
 
-## Docker - Build, ship, and run distributed applications
+## Docker
 
 Docker is used to build, ship, and run distributed applications.
 
