@@ -285,10 +285,10 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 Logitech Media Server (aka LMS, Squeezebox Server) is the server software that enables web interface control of:
 
-- Software audio players: SqueezeLite
+- Software audio players: Squeezelite
 - Hardware audio players from Logitech: Squeezebox, SlimDevices
 
-Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting SqueezeLite for installation in `dietpi-software`.
+Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting Squeezelite for installation in `dietpi-software`.
 
 ![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
 
@@ -303,7 +303,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
     - folder = `/mnt/dietpi_userdata/Music`  
 
-=== "Change SqueezeLite command line options"
+=== "Change Squeezelite command line options"
 
     - Run `dietpi-services`
     - Select `squeezelite`
