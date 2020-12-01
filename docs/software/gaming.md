@@ -2,13 +2,13 @@
 
 ## Overview
 
-- [**OpenTyrian - Gaming**](#opentyrian-gaming)
-- [**Cuberite - Fast Minecraft server with web interface**](#cuberite-fast-minecraft-server-with-web-interface)
-- [**MineOS - Multiple Minecraft servers with web interface**](#mineos-multiple-minecraft-servers-with-web-interface)
-- [**Nukkit - Server for Minecraft Pocket Edition**](#nukkit-server-for-minecraft-pocket-edition)
-- [**Amiberry - Amiga emulation system**](#amiberry-amiga-emulation-system-further-developed-optimised-builds-of-uae4arm-rpi)
-- [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth-descent-1-an-2-opengl-port)
-- [**Steam - Steam client**](#steam-steam-client)
+- [**OpenTyrian - open-source port of the DOS game Tyrian**](#opentyrian)
+- [**Cuberite - Fast Minecraft server with web interface**](#cuberite)
+- [**MineOS - Multiple Minecraft servers with web interface**](#mineos)
+- [**Nukkit - Server for Minecraft Pocket Edition**](#nukkit)
+- [**Amiberry - Amiga emulation system**](#amiberry)
+- [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth)
+- [**Steam - Steam client**](#steam)
 - [**PaperMC - Fast and optimized Minecraft server**](#papermc)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
@@ -26,9 +26,11 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## OpenTyrian - Gaming
+## OpenTyrian
 
-Play a classic addictive game from the console or desktop.
+Tyrian is an arcade-style vertical scrolling shooter.  The story is set
+in 20,031 where you play as Trent Hawkins, a skilled fighter-pilot employed
+to fight MicroSol and save the galaxy.
 
 ![DietPi gaming software OpenTyrian](../assets/images/dietpi-software-games-opentyrian.jpg){: style="width:500px"}
 
@@ -47,7 +49,7 @@ Play a classic addictive game from the console or desktop.
     OpenTyrian is best experienced by using a mouse and the Enter key to change rear fire mode.  
     Its old, retro, and a classic etc, but I doubt you will to find a recent and similar game that is anywhere close to OpenTyrian addictiveness.
 
-## Cuberite - Fast Minecraft server with web interface
+## Cuberite
 
 Cuberite allows you to create a single, blazingly fast Minecraft server, which utilizes the performance benefits of C++ (instead of Java). Also comes with a handy web interface.
 
@@ -102,7 +104,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
     dietpi-software reinstall 52
     ```
 
-## MineOS - Multiple Minecraft servers with web interface
+## MineOS
 
 MineOS allows you to create multiple Minecraft servers with ease, using a simple web interface.
 
@@ -131,7 +133,7 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
     Your server should now be running, on the default port 25565.
 
-## Nukkit - Server for Minecraft Pocket Edition
+## Nukkit
 
 Nukkit is Java based server for Minecraft Pocket Edition.
 
@@ -151,7 +153,7 @@ Nukkit is Java based server for Minecraft Pocket Edition.
     You can restart the service by running:  
     `dietpi-services restart`
 
-## Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi
+## Amiberry
 
 Amiberry is an optimised Amiga emulator for the Raspberry PI and other ARM-based SoCs, that brings you the highest performance Amiga emulation. Be it a classic A500, A1200, CD32 or up to a high-end model equipped with a 68040 and a graphics card, we have got you covered.
 
@@ -302,7 +304,7 @@ If you find this installation useful, please donate.
 All donations using this link will be split 50/50 between Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).  
 [PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69B4QPASRQNNE)
 
-## DXX-Rebirth - Descent 1 and 2 OpenGL port
+## DXX-Rebirth
 
 Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth project. Play Descent as true to the original with OpenGL/ES rendering.
 
@@ -341,7 +343,7 @@ Make sure you have one of DietPi's File Servers installed.
 
 <http://www.dxx-rebirth.com/>
 
-## Steam - Steam client
+## Steam
 
 ![DietPi gaming software Steam](../assets/images/dietpi-software-games-steam.jpg){: style="width:500px"}
 
