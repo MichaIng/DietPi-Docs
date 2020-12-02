@@ -2,18 +2,18 @@
 
 ## Overview
 
-- [**Google AIY - Voice kit "Ok, Google"!**](#google-aiy-voice-kit-ok-google)
-- [**Mycroft AI - Open source voice assistant**](#mycroft-ai-open-source-voice-assistant)
-- [**PiJuice - PiSupply UPS/battery power system**](#pijuice-pisupply-upsbattery-power-system)
-- [**RPi.GPIO - GPIO Interface library for RPi (python)**](#rpigpio-gpio-interface-library-for-rpi-python)
-- [**WiringPi - GPIO Interface library**](#wiringpi-gpio-interface-library)
-- [**WebIOPi - Web interface to control RPi GPIO**](#webiopi-web-interface-to-control-rpi-gpio)
-- [**Node-RED - Visual tool for wiring together hardware devices, APIs and online services**](#node-red-visual-tool-for-wiring-together-hardware-devices-apis-and-online-services)
-- [**Mosquitto - Message broker that implements MQTT protocol**](#mosquitto-message-broker-that-implements-mqtt-protocol)
-- [**Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet**](#blynk-server-ios-and-android-apps-to-control-arduino-esp8266-raspberry-pi-and-similar-microcontroller-boards-over-the-internet)
-- [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](#audiophonics-pi-spc-power-control-module-for-raspberry-pi-allowing-physical-button-power-onoff)
-- [**InfluxDB - Database optimized to save time based data as logs or data from a sensor**](#influxdb-database-optimized-to-save-time-based-data-as-logs-or-data-from-a-sensor)
-- [**Grafana - The open platform for beautiful analytics and monitoring**](#grafana-the-open-platform-for-beautiful-analytics-and-monitoring)
+- [**Google AIY - Voice kit "Ok, Google"!**](#google-aiy)
+- [**Mycroft AI - Open source voice assistant**](#mycroft-ai)
+- [**PiJuice - PiSupply UPS/battery power system**](#pijuice)
+- [**RPi.GPIO - GPIO Interface library for RPi (python)**](#rpigpio)
+- [**WiringPi - GPIO Interface library**](#wiringpi)
+- [**WebIOPi - Web interface to control RPi GPIO**](#webiopi)
+- [**Node-RED - Visual tool for wiring together hardware devices, APIs and online services**](#node-red)
+- [**Mosquitto - Message broker that implements MQTT protocol**](#mosquitto)
+- [**Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet**](#blynk-server)
+- [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](#audiophonics-pi-spc)
+- [**InfluxDB - Database optimized to save time based data as logs or data from a sensor**](#influxdb)
+- [**Grafana - The open platform for beautiful analytics and monitoring**](#grafana)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -28,7 +28,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-## Google AIY - Voice kit "Ok, Google!"
+## Google AIY
 
 "Ok Google. Who is your daddy?"
 
@@ -72,7 +72,7 @@
 
     ![DietPi hardware projects software Google AIY htop screenshot](../assets/images/dietpi-software-hardwareprojects-googleaiy-htop.png){: style="width:500px"}
 
-## Mycroft AI - Open source voice assistant
+## Mycroft AI
 
 Mycroft AI is a free and open source voice assistant.
 
@@ -101,7 +101,7 @@ Mycroft AI is a free and open source voice assistant.
     sudo -u mycroft ./scripts/install-mimic.sh $(nproc)
     ```
 
-## PiJuice - PiSupply UPS/battery power system
+## PiJuice
 
 PiJuice is an all in one, battery based power supply HAT for the RPi, featuring UPS capabilities and battery run time.
 
@@ -138,7 +138,7 @@ PiJuice is an all in one, battery based power supply HAT for the RPi, featuring 
     pijuiceboot 14 package.binary
     ```
 
-## RPi.GPIO - GPIO Interface library for RPi (python)
+## RPi.GPIO
 
 The standard, well known GPIO interface library for the RPi (Python). Bring out the engineer in you!
 
@@ -146,7 +146,7 @@ The standard, well known GPIO interface library for the RPi (Python). Bring out 
 
 See also <https://pypi.python.org/pypi/RPi.GPIO>.
 
-## WiringPi - GPIO Interface library
+## WiringPi
 
 Alternative GPIO interface library based on C. Bring out the engineer in you!
 
@@ -168,7 +168,7 @@ Alternative GPIO interface library based on C. Bring out the engineer in you!
 
 See also <http://wiringpi.com/>.
 
-## WebIOPi - Web interface to control RPi GPIO
+## WebIOPi
 
 WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web interface.
 
@@ -193,7 +193,7 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
 
     To be able to access your WebIOPi interface over the internet, you may install [Remot3.it (Weaved)](https://dietpi.com/docs/software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet).
 
-## Node-RED - Visual tool for wiring together hardware devices, APIs and online services
+## Node-RED
 
 Node-RED is a visual tool for wiring together hardware devices, APIs and online services in new and interesting ways. Node-RED uses a standalone web server that can be accessed remotely.
 
@@ -229,7 +229,7 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 See also <https://nodered.org/>.  
 Especially search through the libraries resp. flows there: <https://flows.nodered.org/>.
 
-## Mosquitto - Message broker that implements MQTT protocol
+## Mosquitto
 
 Eclipse Mosquitto™ is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 3.1 and 3.1.1.  
 MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "Internet of Things" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontroller like the Arduino.
@@ -239,7 +239,7 @@ MQTT provides a lightweight method of carrying out messaging using a publish/sub
 Using Mosquitto:  
 Please use the following link for online documentation: <https://mosquitto.org/documentation/>.
 
-## Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet
+## Blynk Server
 
 Platform with iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet.
 
@@ -297,7 +297,7 @@ Also installs:
 Official documentation: <http://docs.blynk.cc/>.  
 Install Blynk App (Android): <https://play.google.com/store/apps/details?id=cc.blynk>.
 
-## Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off
+## Audiophonics PI-SPC
 
 Power control module for Raspberry Pi which allows you to physically power on/off the system, without the need to run `poweroff`.
 See <https://www.audiophonics.fr/fr/kits-et-modules-diy/audiophonics-pi-spc-v2-module-de-controle-alimentation-type-atx-pre-assemble-p-11125.html> for further details.
@@ -313,7 +313,7 @@ See <https://www.audiophonics.fr/fr/kits-et-modules-diy/audiophonics-pi-spc-v2-m
 To power off the system begin the shutdown process: Hold the power button for < 0.5 seconds. If you don't have a button, you can also close the pins `BP PIN C` and `BP PIN NO`, with your favorite electrically conductive metal (e.g.: tweezers).  
 Remark: Avoid holding the power button for longer than 2 seconds, as this will hard power off the system (same effect as pulling the power cord). Doing so will create file-system corruptions, during shutdown IO operations.
 
-## InfluxDB - Database optimized to save time based data as logs or data from a sensor
+## InfluxDB
 
 InfluxDB is a database optimized to save time based data as logs or data from a sensor.  
 The main interface to the database for management and data transferred are http requests that are handled directly by the `influxdb` service (default port being used is 8086).
@@ -389,7 +389,7 @@ exit
 
 The data location for InfluxDB is stored resp. linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`.
 
-## Grafana - The open platform for beautiful analytics and monitoring
+## Grafana
 
 The open platform for beautiful analytics and monitoring.
 

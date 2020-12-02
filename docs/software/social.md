@@ -2,13 +2,13 @@
 
 ## Overview
 
-- [**FreshRSS - A self-hosted RSS feed aggregator**](#freshrss-a-self-hosted-rss-feed-aggregator)  
-- [**phpBB - Free flat-forum bulletin board software solution**](#phpbb-free-flat-forum-bulletin-board-software-solution)  
-- [**Wordpress - Website Blog and Publishing platform**](#wordpress-website-blog-and-publishing-platform)  
-- [**Image Gallery - Host and browse your images from a web interface**](#image-gallery-host-and-browse-your-images-from-a-web-interface)  
-- [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal-lightweight-caldav-carddav-server)  
-- [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](#openbazaar-decentralized-peer-to-peer-market-server-using-bitcoin)  
-- [**YaCy - Decentralized open source search engine**](#yacy-decentralized-open-source-search-engine)
+- [**FreshRSS - A self-hosted RSS feed aggregator**](#freshrss)
+- [**phpBB - Free flat-forum bulletin board software solution**](#phpbb)
+- [**Wordpress - Website Blog and Publishing platform**](#wordpress)
+- [**Image Gallery - Host and browse your images from a web interface**](#image-gallery)
+- [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
+- [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](#openbazaar)
+- [**YaCy - Decentralized open source search engine**](#yacy)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -25,7 +25,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## FreshRSS - A self-hosted RSS feed aggregator
+## FreshRSS
 
 FreshRSS is a self-hosted RSS feed aggregator.
 
@@ -42,7 +42,7 @@ FreshRSS is a self-hosted RSS feed aggregator.
     Please refer to the official online documentation for usage information:  
     <https://freshrss.github.io/FreshRSS/en/users/02_First_steps.html>
 
-## phpBB - Free flat-forum bulletin board software solution
+## phpBB
 
 If you always wanted your very own forum, phpBB is all you need.
 
@@ -109,7 +109,7 @@ rm -R /var/www/phpbb/install
 
 Your forum is now ready.
 
-## Wordpress - Website Blog and Publishing platform
+## Wordpress
 
 WordPress is a state-of-the-art semantic personal publishing platform with a focus on aesthetics, web standards, and usability.
 It allows you to create your own website.
@@ -130,7 +130,7 @@ It allows you to create your own website.
     - Database Host = `localhost`
     - Table Prefix = `wp_`
 
-## Image Gallery - Host and browse your images from a web interface
+## Image Gallery
 
 *Image Gallery* allows you to host and browse your images from a web interface.
 
@@ -161,7 +161,7 @@ Also Installs:
         mv dietpi-logo_192x192.png /var/www/gallery/MyImageFolder/
         ```
 
-## Baïkal - Lightweight CalDAV + CardDAV server
+## Baïkal
 
 Baïkal is a lightweight CalDAV + CardDAV server.
 
@@ -188,7 +188,7 @@ Baïkal is a lightweight CalDAV + CardDAV server.
     - Username = `admin`
     - Password = What you set during first run setup above.
 
-## OpenBazaar - Decentralized peer to peer market server using Bitcoin
+## OpenBazaar
 
 OpenBazaar is a free decentralised peer to peer market server for all. No fees. Usage of Bitcoins.  
 Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
@@ -213,7 +213,7 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
     - Select Standalone
     - Enter the IP address of your DietPi device, and, the username and password you applied in step 1.
 
-## YaCy - Decentralized open source search engine
+## YaCy
 
 YaCy is a decentralized open source search engine.  
 Essentially, it is a "peer-to-peer" Google search engine, not controlled by Google.

@@ -2,8 +2,8 @@
 
 ## Overview
 
-- [**Let’s Encrypt - Enable HTTPS / SSL**](#lets-encrypt-enable-https-ssl)
-- [**Fail2Ban - Protects your system from brute-force attacks**](#fail2ban-protects-your-system-from-brute-force-attacks)
+- [**Let’s Encrypt - Enable HTTPS / SSL**](#lets-encrypt)
+- [**Fail2Ban - Protects your system from brute-force attacks**](#fail2ban)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -20,7 +20,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Let’s Encrypt & Certbot - Enable HTTPS / SSL
+## Let’s Encrypt
 
 Let's Encrypt is a free SSL certificate provider. Certbot is the official client to apply Let's Encrypt SSL certificates to your webserver. This will allow you to have `https://` (encrypted and authenticated) access to your websites.
 
@@ -50,7 +50,7 @@ Let's Encrypt is that simple!
 
 See also <https://letsencrypt.org/>.
 
-## Fail2Ban - Protects your system from brute-force attacks
+## Fail2Ban
 
 Fail2Ban protects your system from brute-force attacks by banning the source IP address.  
 We have enabled detection for SSH servers (OpenSSH and Dropbear), however, Fail2Ban also supports additional software.

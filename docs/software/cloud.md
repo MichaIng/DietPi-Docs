@@ -2,17 +2,17 @@
 
 ## Overview
 
-- [**ownCloud - Your own personal cloud based backup/data storage system**](#owncloud-your-own-personal-cloud-based-backupdata-storage-system)
-- [**Nextcloud - Self-hosted productivity platform**](#nextcloud-self-hosted-productivity-platform)
-- [**Nextcloud Talk - Video calls via Nextcloud, including TURN server**](#nextcloud-talk-video-calls-via-nextcloud-including-turn-server)
-- [**Pydio - Feature-rich backup and sync server with web interface**](#pydio-feature-rich-backup-and-sync-server-with-web-interface)
-- [**UrBackup Server - Full backups for systems on your network**](#urbackup-server-full-backups-for-systems-on-your-network)
-- [**Gogs - GitHub style server, with web interface**](#gogs-github-style-server-with-web-interface)
-- [**Gitea - GitHub style server, with web interface**](#gitea-github-style-server-with-web-interface)
-- [**Syncthing - Backup and sync server with web interface**](#syncthing-backup-and-sync-server-with-web-interface)
-- [**Tonido - Lightweight backup and sync server with web interface and cloud access**](#tonido-lightweight-backup-and-sync-server-with-web-interface-and-cloud-access)
-- [**Minio - S3 compatible distributed object server**](#minio-s3-compatible-distributed-object-server)
-- [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server-sync-bookmarks-tabs-history-and-passwords)
+- [**ownCloud - Your own personal cloud based backup/data storage system**](#owncloud)
+- [**Nextcloud - Self-hosted productivity platform**](#nextcloud)
+- [**Nextcloud Talk - Video calls via Nextcloud, including TURN server**](#nextcloud-talk)
+- [**Pydio - Feature-rich backup and sync server with web interface**](#pydio)
+- [**UrBackup Server - Full backups for systems on your network**](#urbackup)
+- [**Gogs - GitHub style server, with web interface**](#gogs)
+- [**Gitea - GitHub style server, with web interface**](#gitea)
+- [**Syncthing - Backup and sync server with web interface**](#syncthing)
+- [**Tonido - Lightweight backup and sync server with web interface and cloud access**](#tonido)
+- [**Minio - S3 compatible distributed object server**](#minio)
+- [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](#bitwarden_rs)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
@@ -30,7 +30,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## ownCloud - Your own personal cloud based backup/data storage system
+## ownCloud
 
 The ownCloud package turns your DietPi system into your very own personal cloud based backup/data storage system (e.g.: Dropbox).
 
@@ -84,7 +84,7 @@ Also Installs:
 
 See also <https://owncloud.com/> resp. <https://doc.owncloud.org/server/admin_manual/>.
 
-## Nextcloud - Self-hosted productivity platform
+## Nextcloud
 
 Nextcloud gives you access to all your files wherever you are. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust.
 
@@ -221,7 +221,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 See also <https://nextcloud.com/athome>.
 
-## Nextcloud Talk - Video calls via Nextcloud, including TURN server
+## Nextcloud Talk
 
 Host video calls on your own Nextcloud instance. The TURN server ***coturn*** will be installed and configured as well to allow reliable video calls through outside the local network, NAT and firewall setups.
 
@@ -243,7 +243,7 @@ coturn by default will listen to non-TLS requests as well on the port configured
 
 coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
 
-## Pydio - Feature-rich backup and sync server with web interface
+## Pydio
 
 Pydio is a feature-rich backup and sync server with web interface. Similar to ownCloud with vast configuration options to meet your "cloud" needs.
 
@@ -286,7 +286,7 @@ Also Installs:
 
 See also <https://pydio.com/>.
 
-## UrBackup Server - Full backups for systems on your network
+## UrBackup
 
 UrBackup Server is an Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
 Basically, it allows you to create a complete system backup, using a simple web interface, for systems on your network.
@@ -314,7 +314,7 @@ Basically, it allows you to create a complete system backup, using a simple web 
 
 See also <https://www.urbackup.org/index.html>.
 
-## Gogs - GitHub style server, with web interface
+## Gogs
 
 Your very own GitHub style server, with web interface.
 
@@ -351,7 +351,7 @@ Your very own GitHub style server, with web interface.
 
 See also <https://gogs.io/>.
 
-## Gitea - GitHub style server, with web interface
+## Gitea
 
 Your very own GitHub style server, with web interface.
 
@@ -418,7 +418,7 @@ Your very own GitHub style server, with web interface.
 
 See also <https://gitea.io/>.
 
-## Syncthing - Backup and sync server with web interface
+## Syncthing
 
 Backup and sync server with web interface. Extremely lightweight and efficient as no webserver is required.
 
@@ -455,7 +455,7 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
 See also <https://syncthing.net/>.
 
-## Tonido - Lightweight backup and sync server with web interface and cloud access
+## Tonido
 
 Lightweight backup and sync server, includes web interface and external cloud access.
 
@@ -488,13 +488,13 @@ Lightweight backup and sync server, includes web interface and external cloud ac
 
 See also <https://www.tonido.com/>.
 
-## Minio - S3 compatible distributed object server
+## Minio
 
 T.b.d.
 
 See also: <https://min.io/>.
 
-## Firefox Sync Server - Sync bookmarks, tabs, history and passwords
+## Firefox Sync Server
 
 This is Mozilla's Firefox Sync Server which manages syncing Firefox instance bookmarks, history, tabs and passwords across devices. Out of the box it runs on a Python server for small loads and can be configured to run behind Nginx or Apache.
 

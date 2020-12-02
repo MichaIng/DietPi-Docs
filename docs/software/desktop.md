@@ -4,18 +4,18 @@
 
 ### Desktops
 
-- [**LXDE - Highly optimized ultra lightweight desktop**](#lxde-ultra-lightweight-desktop)
-- [**LXQt - Slick and optimized lightweight desktop**](#lxqt-optimized-lightweight-desktop)
-- [**MATE - Popular Gnome 2 desktop**](#mate-popular-gnome2-desktop)
-- [**Xfce - Lightweight desktop**](#mate-popular-gnome2-desktop)
-- [**GNUstep - Alternative/unique desktop**](#gnustep-alternativeunique-desktop)
+- [**LXDE - Highly optimized ultra lightweight desktop**](#lxde)
+- [**LXQt - Slick and optimized lightweight desktop**](#lxqt)
+- [**MATE - Popular Gnome 2 desktop**](#mate)
+- [**Xfce - Lightweight desktop**](#xfce)
+- [**GNUstep - Alternative/unique desktop**](#gnustep)
 
 ### Desktop Utilities
 
-- [**Chromium - Web browser**](#chromium-web-browser)
-- [**GIMP - Image editor**](#gimp-image-editor)
-- [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss-atom-news-feeds-reader)
-- [**Xfce4 Power - Power manager with brightness**](#xfce4-power-power-manager-with-brightness)
+- [**Chromium - Web browser**](#chromium)
+- [**GIMP - Image editor**](#gimp)
+- [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss)
+- [**Xfce4 Power - Power manager with brightness**](#xfce4-power)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -32,7 +32,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## LXDE - ultra lightweight desktop
+## LXDE
 
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
 
@@ -57,7 +57,7 @@ LXDE is highly optimized and ultra lightweight desktop. It works well with compu
 
 ![DietPi LXDE](../assets/images/dietpi-software-LXDE_desktop.jpg)
 
-## LXQt - Optimized lightweight desktop
+## LXQt
 
 Optimized lightweight desktop without the bloatware. Slick and fluid GUI, however, more resource heavy than LXDE.
 
@@ -78,7 +78,7 @@ Optimized lightweight desktop without the bloatware. Slick and fluid GUI, howeve
 
 Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
 
-## MATE - Popular Gnome2 desktop
+## MATE
 
 Popular Gnome2 based desktop environment.
 
@@ -97,7 +97,7 @@ Popular Gnome2 based desktop environment.
 
 ![DietPi LXDE](../assets/images/dietpi-software-mate-desktop.jpg)
 
-## Xfce - Lightweight desktop
+## Xfce
 
 === "Quick start"
     After installation, desktop can be run by typing
@@ -114,7 +114,7 @@ Popular Gnome2 based desktop environment.
 
 ![DietPi Xfce](../assets/images/dietpi-software-xfce-desktop.jpg)
 
-## GNUstep - Alternative/unique desktop
+## GNUstep
 
 === "Quick start"
     After installation, desktop can be run by typing
@@ -133,7 +133,7 @@ Popular Gnome2 based desktop environment.
 
 ## Desktop utilities
 
-### Chromium - Web browser
+### Chromium
 
 #### Does my device support GPU acceleration?
 
@@ -154,7 +154,7 @@ Once Chromium is running, simply go to the following address: <chrome://gpu>
 
 ![DietPi GIMP](../assets/images/dietpi-software-desktop-tools-chromium.jpg)
 
-### GIMP - Image editor
+### GIMP
 
 MS Paint on steroids. If you need to edit pixels with a vast number of tools, GIMP is the only program you'll need.
 
@@ -162,13 +162,13 @@ MS Paint on steroids. If you need to edit pixels with a vast number of tools, GI
 
 <https://www.gimp.org/>
 
-### QuiteRSS - Atom news feeds reader
+### QuiteRSS
 
 QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
 
 ![DietPi QuiteRSS](../assets/images/dietpi-software-desktop-tools-quiterss.jpg)
 
-### Xfce4 Power - Power manager with brightness
+### Xfce4 Power
 
 Enables laptop users to set up a power profile for two different modes `on battery power` and `on AC Power` while still allowing desktop users to at least change the DPMS settings and CPU frequency using the settings dialogue.
 

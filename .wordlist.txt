@@ -220,6 +220,7 @@ Meveric
 MiB
 MichaIng
 microcontroller
+MicroSol
 Minecraft
 MineOS
 MiniDLNA
@@ -362,7 +363,7 @@ Soxr
 SPC
 SPI
 Spotify
-SqueezeLite
+Squeezelite
 SSD
 SSHFS
 SSID
@@ -383,6 +384,7 @@ tcpdump
 thechildofroth
 TigerVNC
 TLS
+tmpfs
 Tonido
 transactional
 transcoding
