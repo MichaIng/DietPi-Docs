@@ -29,7 +29,6 @@ markdown_extensions:
   - markdown.extensions.attr_list # Set custom HTML attributes
   - markdown.extensions.codehilite: # Highlight syntax in code blocks
       guess_lang: false # Language must always be defined for syntax highlighting
-  - markdown.extensions.footnotes # Footnotes
   - markdown.extensions.meta # Define meta data (page title and description) at the top of the Markdown document
   - markdown.extensions.smarty # Automatically convert dashes, underscore, three-dots and quotes to text symbols
   - markdown.extensions.tables # Tables
@@ -50,6 +49,7 @@ markdown_extensions:
   #
   #- markdown.extensions.abbr # Abbreviations <abbr>
   #- markdown.extensions.def_list # Definition lists
+  #- markdown.extensions.footnotes # Footnotes
   #- markdown.markdown.md_in_html # Allow Markdown syntax inside of HTML tags
   #- pymdownx.arithmatex # LaTeX math term support
   #- pymdownx.caret # Superscript <sup> and intert <ins> via caret ^
