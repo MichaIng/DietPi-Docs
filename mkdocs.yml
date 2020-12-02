@@ -28,8 +28,8 @@ markdown_extensions:
   - markdown.extensions.admonition # Highlighted warning/info blocks
   - markdown.extensions.attr_list # Set custom HTML attributes {: }
   - markdown.extensions.codehilite: # Highlight syntax in code blocks
-  - markdown.extensions.footnotes # Footnotes [^1]
       guess_lang: false # Language must always be defined for syntax highlighting
+  - markdown.extensions.footnotes # Footnotes [^1]
   - markdown.extensions.meta # Define meta data (page title and description) at the top of the Markdown document
   - markdown.extensions.smarty # Automatically convert dashes, underscore, three-dots and quotes to text symbols
   - markdown.extensions.tables # Tables
