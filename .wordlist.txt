@@ -5,6 +5,7 @@ AirPlay
 Airsonic
 AIY
 Allo
+ALSA
 Allwinner
 Allwinner's
 Amiberry
@@ -17,7 +18,6 @@ ARMv
 ASUS
 Atheros
 Audiophonics
-Autostart
 autostart
 AutoStart
 backend
@@ -29,14 +29,17 @@ balenaEtcher
 Bazarr
 Beelink
 Bitcoin
+Bitwarden
 blazingly
 Bluetooth
 Blynk
 bootable
 bootloader
+BruteFIR
 Bticino
 BubbleUPnP
 Bugreport
+CactiChameleon
 CalDAV
 CardDAV
 CAVA
@@ -51,6 +54,7 @@ Cloudflare
 CloudPrint
 CloudShell
 codecs
+Computerworld
 conf
 config
 configs
@@ -59,6 +63,7 @@ CORS
 coturn
 CouchPotato
 COVID
+cpu
 cron
 CSI
 CSM
@@ -70,6 +75,7 @@ DarkBetter
 DarkIce
 de
 deinstallation
+DER
 DHCP
 dialogs
 DietPi
@@ -102,10 +108,12 @@ EmonPi
 EmonTH
 EmonTX
 EPL
+EQ
 exe
 exFAT
 facto
 fahclient
+FastMail
 FB
 FHS
 filesystem
@@ -120,6 +128,8 @@ Fullscreen
 FuzonMp
 Gbit
 GiB
+GiBi
+Gilles
 Gitea
 github
 GlusterFS
@@ -129,6 +139,7 @@ Gogs
 GPIO
 GPIOs
 GPL
+GPLv
 GPT
 Grafana
 HAProxy
@@ -142,9 +153,8 @@ homeassistant
 hostname
 Hotfix
 hotspot
-Hotspot
 HotSpot
-Hotspots
+hotspots
 HQPlayer
 htop
 HTPC
@@ -166,7 +176,6 @@ JanKoudijs
 Jellyfin
 Joulinar
 journald
-jRiver
 JS
 JSON
 JustBoom
@@ -188,6 +197,7 @@ LetsEncrypt
 Lidarr
 LightDM
 Lighttpd
+Lighty
 LLMP
 LLSP
 LMS
@@ -195,6 +205,7 @@ localhost
 LogClear
 Logitech
 Logrotate
+loopback
 LPDDR
 LTS
 LXDE
@@ -204,10 +215,12 @@ mangas
 marcobrianza
 MariaDB
 Mbit
+MCrcon
 Meveric
 MiB
 MichaIng
 microcontroller
+MicroSol
 Minecraft
 MineOS
 MiniDLNA
@@ -224,10 +237,13 @@ MPD
 MQTT
 MTA
 multiroom
+multithreaded
+multithreading
 Mycroft
 MyHome
 myMPD
 MySqli
+mysql
 NAA
 nano
 NanoPC
@@ -240,6 +256,7 @@ Nextcloud
 nextcloud
 NFS
 Nginx
+nginx
 nm
 Nmap
 NoMachine
@@ -267,6 +284,7 @@ OpenTyrian
 OpenVPN
 ownCloud
 Panokostas
+PaperMC
 passwd
 PCIe
 php
@@ -295,7 +313,9 @@ Radxa
 RAMdisk
 RAMlog
 Raspbian
-Raspcontrol
+Raspotify
+rcon
+RDBMS
 RDP
 ReadyMedia
 RealVNC
@@ -312,6 +332,7 @@ rpc
 rpi
 RPi
 RPis
+RSA
 RSS
 Rsyslog
 rTorrent
@@ -323,6 +344,8 @@ SBCs
 SCP
 scroller
 SDL
+serverless
+servlet
 SFTP
 Shairport
 ShareAlike
@@ -340,13 +363,14 @@ Soxr
 SPC
 SPI
 Spotify
-SqueezeLite
+Squeezelite
 SSD
 SSHFS
 SSID
 SSL
 startx
 StephanStS
+subdirectory
 sudo
 symlink
 Syncthing
@@ -360,7 +384,9 @@ tcpdump
 thechildofroth
 TigerVNC
 TLS
+tmpfs
 Tonido
+transactional
 transcoding
 TRÅDFRI
 TTS
@@ -399,8 +425,8 @@ Waveshare
 WebIOPi
 webmin
 webserver
-Webservers
-Webserves
+webservers
+WebServers
 webstack
 Wh
 Widevine

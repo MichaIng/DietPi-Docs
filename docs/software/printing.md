@@ -2,8 +2,8 @@
 
 ## Overview
 
-- [**CloudPrint - CUPS print server, with support for Google cloud printing**](#cloudprint-cups-print-server)
-- [**OctoPrint - Web interface for controlling 3D printers**](#octoprint-web-interface-for-controlling-3d-printers)
+- [**CloudPrint - CUPS print server, with support for Google cloud printing**](#cloudprint)
+- [**OctoPrint - Web interface for controlling 3D printers**](#octoprint)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -20,7 +20,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## CloudPrint - CUPS print server
+## CloudPrint
 
 The package is based on the CUPS print server. It supports also the Google cloud printing.  
 Also included is a web interface for CUPS, allowing easy setup of printers.
@@ -68,7 +68,7 @@ Also included is a web interface for CUPS, allowing easy setup of printers.
 
 See also <https://wikipedia.org/wiki/Common_Unix_Printing_System> resp. <https://www.cups.org/>.
 
-## OctoPrint - Web interface for controlling 3D printers
+## OctoPrint
 
 OctoPrint provides a web interface for controlling consumer 3D printers.
 

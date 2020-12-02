@@ -2,8 +2,8 @@
 
 ## Overview
 
-- [**Fail2Ban - Protects your system from brute-force attacks**](#fail2ban-protects-your-system-from-brute-force-attacks)  
-- [**Docker - Build, ship, and run distributed applications**](#docker-build-ship-and-run-distributed-applications)  
+- [**Let’s Encrypt - Enable HTTPS / SSL**](#lets-encrypt)
+- [**Fail2Ban - Protects your system from brute-force attacks**](#fail2ban)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -20,7 +20,37 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Fail2Ban - Protects your system from brute-force attacks
+## Let’s Encrypt
+
+Let's Encrypt is a free SSL certificate provider. Certbot is the official client to apply Let's Encrypt SSL certificates to your webserver. This will allow you to have `https://` (encrypted and authenticated) access to your websites.
+
+### Requirements
+
+To use Certbot you need:
+
+- A working Apache2, Nginx or Lighttpd webserver
+- A URL/domain (e.g.: `mysite.org`). No-IP can be used for a URL/domain that points to your device.
+- Ports 80 and 443 (TCP) need to be forwarded to your device. This is typically set within your router.
+
+???+ important "Keep port 80 open for Certbot renewal"
+    Even when you use only HTTPS on port 443, Let's Encrypt requires port 80 to stay opened for certificate renewals (in your router's forwarding functionality).
+
+![DietPi security software Certbot screenshot](../assets/images/dietpi-software-security-certbot.png){: style="width:550px"}
+
+### Create and apply your cert
+
+Once Certbot has been installed from `dietpi-software`, run `dietpi-letsencrypt` to configure, create and apply your SSL certificate:
+
+```sh
+dietpi-letsencrypt
+```
+
+Simply enter the details and settings you require, then select `Apply`.  
+Let's Encrypt is that simple!
+
+See also <https://letsencrypt.org/>.
+
+## Fail2Ban
 
 Fail2Ban protects your system from brute-force attacks by banning the source IP address.  
 We have enabled detection for SSH servers (OpenSSH and Dropbear), however, Fail2Ban also supports additional software.
@@ -46,33 +76,5 @@ An IP address is by default ban triggered after 3 failed SSH login attempts. Fai
     You can enable/disable these features by modifying the */etc/fail2ban/jail.conf* file, and setting `enable = true` under the *[software]* name.
 
 See also <https://www.fail2ban.org>.
-
-## Docker - Build, ship, and run distributed applications
-
-Docker is used to build, ship, and run distributed applications.
-
-![DietPi security software Docker](../assets/images/dietpi-software-security-docker1.svg){: style="width:200px"}
-
-![DietPi security software Docker screenshot](../assets/images/dietpi-software-security-docker2.svg){: style="width:400px"}
-
-Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
-
-=== "Access logs"
-
-    Access logs can be viewed with this command: `journalctl -u docker -u containerd`
-
-=== "Config files"
-
-    The Docker configuration files are:
-
-    - Docker: `/etc/docker/daemon.json`
-    - containerd: `/etc/containerd/config.toml`
-
-=== "Official documentation"
-
-    - Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>
-    - Logging: <https://docs.docker.com/config/containers/logging/configure>
-
-See also <https://wikipedia.org/wiki/Docker_(software)> resp. <https://docs.docker.com/get-started/overview>.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

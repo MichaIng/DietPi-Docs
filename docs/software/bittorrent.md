@@ -2,21 +2,21 @@
 
 ## Overview
 
-- [**Transmission - Lightweight BitTorrent server with web interface**](#transmission-lightweight-bittorrent-server-with-web-interface)
-- [**Deluge - Alternative BitTorrent server with web interface**](#deluge-alternative-bittorrent-server-with-web-interface)
-- [**qBittorrent - Lightweight and fast (C++) BitTorrent server with web interface**](#qbittorrent-lightweight-and-fast-c-bittorrent-server-with-web-interface)
-- [**rTorrent - BitTorrent server with ruTorrent web interface**](#rtorrent-bittorrent-server-with-rutorrent-web-interface)
-- [**Aria2 - Download manager with web interface**](#aria2-download-manager-with-web-interface)
-- [**SABnzbd - NZB download manager with web interface**](#sabnzbd-nzb-download-manager-with-web-interface)
-- [**Medusa - Automatically download TV shows**](#medusa-automatically-download-tv-shows)
-- [**Sonarr - Automatically download TV shows**](#sonarr-automatically-download-tv-shows)
-- [**Radarr - Automatically download Movies**](#radarr-automatically-download-movies)
-- [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](#bazarr-automatically-download-subtitles-for-sonarrradarr)
-- [**Lidarr - Automatically download Music**](#lidarr-automatically-download-music)
-- [**CouchPotato - Automatically download movies**](#couchpotato-automatically-download-movies)
-- [**Jackett - API Support for your favourite torrent trackers**](#jackett-api-support-for-your-favourite-torrent-trackers)
-- [**NZBGet - NZB download manager with web interface**](#nzbget-nzb-download-manager-with-web-interface)
-- [**HTPC Manager - combines all your favourite software into one slick interface**](#htpc-manager-combines-all-your-favourite-software-into-one-slick-interface)
+- [**Transmission - Lightweight BitTorrent server with web interface**](#transmission)
+- [**Deluge - Alternative BitTorrent server with web interface**](#deluge)
+- [**qBittorrent - Lightweight and fast (C++) BitTorrent server with web interface**](#qbittorrent)
+- [**rTorrent - BitTorrent server with ruTorrent web interface**](#rtorrent)
+- [**Aria2 - Download manager with web interface**](#aria2)
+- [**SABnzbd - NZB download manager with web interface**](#sabnzbd)
+- [**Medusa - Automatically download TV shows**](#medusa)
+- [**Sonarr - Automatically download TV shows**](#sonarr)
+- [**Radarr - Automatically download Movies**](#radarr)
+- [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](#bazarr)
+- [**Lidarr - Automatically download Music**](#lidarr)
+- [**CouchPotato - Automatically download movies**](#couchpotato)
+- [**Jackett - API Support for your favourite torrent trackers**](#jackett)
+- [**NZBGet - NZB download manager with web interface**](#nzbget)
+- [**HTPC Manager - combines all your favourite software into one slick interface**](#htpc-manager)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -33,7 +33,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Transmission - Lightweight BitTorrent server with web interface
+## Transmission
 
 Transmission, the lightweight web interface BitTorrent server that allows you to download BitTorrent files.
 
@@ -78,7 +78,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## Deluge - Alternative BitTorrent server with web interface
+## Deluge
 
 Deluge, the web interface BitTorrent server that allows you to download BitTorrent files. This python coded BitTorrent server is an alternative to the [Lightweight Transmission](#transmission-lightweight-bittorrent-server-with-web-interface) option.
 
@@ -123,7 +123,7 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## qBittorrent - Lightweight and fast (C++) BitTorrent server with web interface
+## qBittorrent
 
 qBittorrent is a lightweight BitTorrent server with a slick web interface. As its coded in C++ (Qt), it offers excellent performance on any device.
 
@@ -155,7 +155,7 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## rTorrent - BitTorrent server with ruTorrent web interface
+## rTorrent
 
 rTorrent is a BitTorrent server. ruTorrent is also installed to allow for web interface access and control.  
 
@@ -195,7 +195,7 @@ Also installs:
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## Aria2 - Download manager with web interface
+## Aria2
 
 Download manager, with a slick web UI interface. Also supports BitTorrent downloads.
 
@@ -240,7 +240,7 @@ Also installs:
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## SABnzbd - NZB download manager with web interface
+## SABnzbd
 
 NZB download manager with web interface.
 
@@ -292,7 +292,7 @@ NZB download manager with web interface.
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## Medusa - Automatically download TV shows
+## Medusa
 
 Automatically download your favorite TV shows, as they become available.  
 Searches both Bit Torrent and Usenet, has a feature to automatically download and organise the download, with your favorite Bit Torrent app.
@@ -343,7 +343,7 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## Sonarr - Automatically download TV shows
+## Sonarr
 
 Automatically download your favorite TV shows, as they become available.
 
@@ -407,7 +407,7 @@ Automatically download your favorite TV shows, as they become available.
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## Radarr - Automatically download Movies
+## Radarr
 
 Automatically download your favorite movies, as they become available.
 
@@ -471,7 +471,7 @@ Automatically download your favorite movies, as they become available.
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## Bazarr- Automatically download Subtitles for Sonarr/Radarr
+## Bazarr
 
 Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
 
@@ -512,7 +512,7 @@ Key features:
     - [Official docs](https://github.com/morpheus65535/bazarr/wiki)
     - [Source code](https://github.com/morpheus65535/bazarr)
 
-## Lidarr - Automatically download Music
+## Lidarr
 
 Automatically download your favorite music.
 
@@ -543,7 +543,7 @@ Automatically download your favorite music.
     - Toggle to `Advanced settings` slider (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-      ![DietPi download software Lidarr permissions](../assets/images/dietpi-software-download-lidarrpermissions.png){: style="width:400px"}
+        ![DietPi download software Lidarr permissions](../assets/images/dietpi-software-download-lidarrpermissions.png){: style="width:400px"}
 
     - Save changes
 
@@ -576,7 +576,7 @@ Automatically download your favorite music.
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## CouchPotato - Automatically download movies
+## CouchPotato
 
 Automatically download movies as they are released.
 
@@ -610,7 +610,7 @@ Recommend additional software:
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## Jackett - API Support for your favourite torrent trackers
+## Jackett
 
 API Support for your favorite torrent trackers.
 
@@ -628,7 +628,7 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## NZBGet - NZB download manager with web interface
+## NZBGet
 
 Extremely efficient and fast NZB download manager with web interface. Coded in C++.
 
@@ -654,7 +654,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
 
-## HTPC Manager - combines all your favourite software into one slick interface
+## HTPC Manager
 
 HTPC Manager combines all your favourite software into one slick interface.  
 Do all your HTPC tasks without using 5 different interfaces!

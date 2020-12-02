@@ -2,8 +2,8 @@
 
 ## Overview
 
-- [**Dropbear - Lightweight SSH Server**](#dropbear-lightweight-ssh-server)  
-- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](#openssh-feature-rich-ssh-server-with-sftpscp-support)  
+- [**Dropbear - Lightweight SSH Server**](#dropbear)  
+- [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](#openssh)  
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -20,7 +20,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Dropbear - Lightweight SSH Server
+## Dropbear
 
 Dropbear is a lightweight SSH server, installed by default on DietPi systems.  
 Remark: You can swap or change your SSH server at any time using *DietPi-Software*.
@@ -42,7 +42,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
 See also <https://wikipedia.org/wiki/Dropbear_(software)> resp. <https://matt.ucc.asn.au/dropbear/dropbear.html>.
 
-## OpenSSH - Feature rich SSH server with SFTP/SCP support
+## OpenSSH
 
 OpenSSH offers a feature rich SSH server with SFTP/SCP support.  
 Remark: You can swap or change your SSH server at any time using *DietPi-Software*.

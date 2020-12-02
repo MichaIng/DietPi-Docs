@@ -2,10 +2,10 @@
 
 ## Overview
 
-- [**ProFTPD - Simple, efficient, lightweight FTP file server**](#proftpd-simple-efficient-lightweight-ftp-file-server)  
-- [**Samba - Feature rich file server**](#samba-feature-rich-file-server)  
-- [**vsftpd - Feature rich FTP file server**](#vsftpd-feature-rich-ftp-file-server)  
-- [**NFS - Network file system server**](#nfs-network-file-system-server)  
+- [**ProFTPD - Simple, efficient, lightweight FTP file server**](#proftpd)
+- [**Samba - Feature rich file server**](#samba)
+- [**vsftpd - Feature rich FTP file server**](#vsftpd)
+- [**NFS - Network file system server**](#nfs)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -22,7 +22,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## ProFTPD - Simple, efficient, lightweight FTP file server
+## ProFTPD
 
 ProFTPD gives you access to files/music/downloads etc. on your DietPi system quickly and efficiently with minimal overhead.
 
@@ -70,7 +70,7 @@ ProFTPD gives you access to files/music/downloads etc. on your DietPi system qui
 
 See also <https://wikipedia.org/wiki/ProFTPD>.
 
-## Samba - Feature rich file server
+## Samba
 
 The Samba server lets you share files on your DietPi system with ease based on the well known SMB networking protocol.
 
@@ -114,7 +114,7 @@ The Samba server lets you share files on your DietPi system with ease based on t
 
 See also <https://wikipedia.org/wiki/Samba_(software)>.
 
-## vsftpd - Feature rich FTP file server
+## vsftpd
 
 Very secure FTP file server with feature rich security options.
 
@@ -140,7 +140,7 @@ Very secure FTP file server with feature rich security options.
 
 See also <https://wikipedia.org/wiki/Vsftpd>.
 
-## NFS - Network file system server
+## NFS
 
 Network file system server.
 

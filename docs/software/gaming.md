@@ -2,13 +2,14 @@
 
 ## Overview
 
-- [**OpenTyrian - Gaming**](#opentyrian-gaming)
-- [**Cuberite - Fast Minecraft server with web interface**](#cuberite-fast-minecraft-server-with-web-interface)
-- [**MineOS - Multiple Minecraft servers with web interface**](#mineos-multiple-minecraft-servers-with-web-interface)
-- [**Nukkit - Server for Minecraft Pocket Edition**](#nukkit-server-for-minecraft-pocket-edition)
-- [**Amiberry - Amiga emulation system**](#amiberry-amiga-emulation-system-further-developed-optimised-builds-of-uae4arm-rpi)
-- [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth-descent-1-an-2-opengl-port)
-- [**Steam - Steam client**](#steam-steam-client)
+- [**OpenTyrian - open-source port of the DOS game Tyrian**](#opentyrian)
+- [**Cuberite - Fast Minecraft server with web interface**](#cuberite)
+- [**MineOS - Multiple Minecraft servers with web interface**](#mineos)
+- [**Nukkit - Server for Minecraft Pocket Edition**](#nukkit)
+- [**Amiberry - Amiga emulation system**](#amiberry)
+- [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth)
+- [**Steam - Steam client**](#steam)
+- [**PaperMC - Fast and optimized Minecraft server**](#papermc)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -25,9 +26,11 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## OpenTyrian - Gaming
+## OpenTyrian
 
-Play a classic addictive game from the console or desktop.
+Tyrian is an arcade-style vertical scrolling shooter.  The story is set
+in 20,031 where you play as Trent Hawkins, a skilled fighter-pilot employed
+to fight MicroSol and save the galaxy.
 
 ![DietPi gaming software OpenTyrian](../assets/images/dietpi-software-games-opentyrian.jpg){: style="width:500px"}
 
@@ -46,7 +49,7 @@ Play a classic addictive game from the console or desktop.
     OpenTyrian is best experienced by using a mouse and the Enter key to change rear fire mode.  
     Its old, retro, and a classic etc, but I doubt you will to find a recent and similar game that is anywhere close to OpenTyrian addictiveness.
 
-## Cuberite - Fast Minecraft server with web interface
+## Cuberite
 
 Cuberite allows you to create a single, blazingly fast Minecraft server, which utilizes the performance benefits of C++ (instead of Java). Also comes with a handy web interface.
 
@@ -101,7 +104,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
     dietpi-software reinstall 52
     ```
 
-## MineOS - Multiple Minecraft servers with web interface
+## MineOS
 
 MineOS allows you to create multiple Minecraft servers with ease, using a simple web interface.
 
@@ -109,7 +112,7 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
 === "Access to web interface"
 
-    - URL = `http://<your.IP>:8443`  
+    - URL = `https://<your.IP>:8443`  
       You can safely ignore the certificate "warning" if one appears.
     - username = `root` (v6.11 and lower `mineos`)
     - password = <your global application password\>
@@ -130,7 +133,7 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
     Your server should now be running, on the default port 25565.
 
-## Nukkit - Server for Minecraft Pocket Edition
+## Nukkit
 
 Nukkit is Java based server for Minecraft Pocket Edition.
 
@@ -150,7 +153,7 @@ Nukkit is Java based server for Minecraft Pocket Edition.
     You can restart the service by running:  
     `dietpi-services restart`
 
-## Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi
+## Amiberry
 
 Amiberry is an optimised Amiga emulator for the Raspberry PI and other ARM-based SoCs, that brings you the highest performance Amiga emulation. Be it a classic A500, A1200, CD32 or up to a high-end model equipped with a 68040 and a graphics card, we have got you covered.
 
@@ -301,7 +304,7 @@ If you find this installation useful, please donate.
 All donations using this link will be split 50/50 between Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).  
 [PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69B4QPASRQNNE)
 
-## DXX-Rebirth - Descent 1 an 2 OpenGL port
+## DXX-Rebirth
 
 Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth project. Play Descent as true to the original with OpenGL/ES rendering.
 
@@ -340,7 +343,7 @@ Make sure you have one of DietPi's File Servers installed.
 
 <http://www.dxx-rebirth.com/>
 
-## Steam - Steam client
+## Steam
 
 ![DietPi gaming software Steam](../assets/images/dietpi-software-games-steam.jpg){: style="width:500px"}
 
@@ -348,5 +351,67 @@ Make sure you have one of DietPi's File Servers installed.
 
 - Steam is installed to the DietPi user data directory `/mnt/dietpi_userdata/steam`
 - By default, installing games will install them to `/mnt/dietpi_userdata/steam`
+
+## PaperMC
+
+A highly optimized Minecraft server with plugins, written in Java.  
+PaperMC by default runs a single server, available on LAN, but can be port forwarded so other people can connect.
+
+![DietPi gaming software PaperMC](../assets/images/dietpi-software-games-papermc.jpg){: style="width:150px"}
+
+=== "Default server/query port"
+
+    - The default server/query port is: `25565`
+
+=== "Console access via rcon"
+
+    - Port: `25575`
+    - Password: `<globalSoftwarePassword>` (default: `dietpi`)
+    - From DietPi: `mcrcon -p <globalSoftwarePassword>`
+
+=== "File locations"
+
+    - Install directory: `/opt/papermc`
+    - Config/data directory: `/mnt/dietpi_userdata/papermc`
+    - Main configuration file: `/mnt/dietpi_userdata/papermc/server.properties`
+
+=== "View logs"
+
+    - Service: `journalctl -u papermc`
+    - File: `/var/log/papermc/latest.log`
+
+=== "Tweaking"
+
+    Tweak the server settings by modifying the following file or any file that ends in `.yml`:  
+    `/opt/papermc/server.properties`
+
+=== "Restart service"
+
+    You can restart the service by running:  
+    `systemctl restart papermc`
+
+=== "Update to latest version"
+
+    `dietpi-software reinstall 181`
+
+See also <https://paper.readthedocs.io/> resp. <https://github.com/PaperMC/Paper>.
+
+### FAQ
+
+#### How do I interface with the server's console?
+
+Use the installed tool MCrcon: `mcrcon -p GLOBAL_PW`.
+
+#### How do I find and install plugins?
+
+<https://www.spigotmc.org/resources/categories/spigot.4/>
+
+Just move the downloaded JAR file to the `/opt/papermc/plugins` directory.
+
+#### What version of Minecraft does this work on
+
+PaperMC is built to run on Java edition, however with the optional Geyser and Floodgate plugins, it can run on Bedrock edition as well.
+
+Just choose to install them at the beginning.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

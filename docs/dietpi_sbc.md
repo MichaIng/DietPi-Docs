@@ -471,9 +471,116 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
 
 ## Make your own distribution
 
-Unable to find an available image for your device? No worries, DietPi can be easily installed on any device!
+Unable to find an available image for your device?  
+Don't worry, DietPi contains a script which can be used to turn an installed Debian-based OS into DietPi.
 
-Simply run the DietPi PREP script [click for details](https://github.com/MichaIng/DietPi/issues/1285#issue-280771944) and follow the onscreen instructions.
+!!! attention "Advanced Linux knowledge required"
+    To generate your own SBC support, an advanced Linux knowledge is required.  
+    There is no guarantee that this will work for every system. Use the DietPi image generation script at your own risk!
 
 !!! info "Limited end user support"
-    End user support will be limited to issues that are DietPi specific (which excludes Kernel, GPU, onboard Bluetooth, WiFi, Audio, etc. from our support). GPU features are disabled for other devices (e.g.: Kodi, Desktop), ideal for server usage.
+    End user support will be limited to issues that are DietPi specific (which excludes Kernel, GPU, onboard Bluetooth, WiFi, Audio, etc. from our support). GPU features are disabled for other devices (e.g.: Kodi, Desktop), ideal for server usage.  
+    Generally in case of troubles it may be necessary that you search the root cause of problems by your own due to non existent SBCs at the DietPi team.
+
+!!! tip "Use an extra SD card to test the DietPi image generation"
+    It may be a good idea not to use your "productive and working SD card" to execute the DietPi image generation script.  
+    You should use an own SD card and may copy it before via the `dd` command to a SD card for your tests.
+
+### Basic information
+
+The image generation is based on a shell script (**PREP_SYSTEM_FOR_DIETPI.sh**, located on [GitHub DietPi share](https://github.com/MichaIng/DietPi/)):
+
+- **The script will** convert any 'bloated' Debian/Raspbian installation into a lightweight DietPi system.  
+- **The script will NOT** support converting existing installed software (e.g. Nextcloud, Plex Media Server) over to the DietPi system.
+- **All existing software (APT) and user data will be deleted.**
+
+The script has to be executed on the target system which you want to convert to a lightweight DietPi system.  
+Basically there are three options for the image generation:
+
+- based on the `master` branch of DietPi
+- based on the `beta` branch of DietPi
+- based on the `dev` branch of DietPi
+
+It is recommended using the `master` or `beta` branch. Using the `beta` branch helps hardening the upcoming DietPi release, so this is appreciated.
+
+### Prerequisites
+
+**Requirement 1:** Ensure a Debian/Raspbian OS is running on the system:
+
+- For best results, we recommend a fresh/clean minimal Debian/Raspbian installation.
+- Native PC users: Please install Debian stable before hand: <https://www.debian.org/distrib/netinst>
+- Desktop images should work, however, the minimal the image, the quicker the installation, as less packages will need to be removed.  
+  Remark: We do not support Ubuntu, or have any plans to do so.
+
+**Requirement 2:** Packages which have to be installed in advance:
+
+- Needed packages should already exist on most systems, however pure minimal images may require the following installations:
+
+    ```sh
+    apt update
+    apt install -y systemd-sysv ca-certificates sudo curl locales
+    ```
+
+### Script execution
+
+!!! important "Needed: Run script within SSH command or local term"
+    Do not run the script within any desktop environment, because the desktop is uninstalled during the script execution.  
+    That will "pull the ground from under your feet".
+
+!!! important "Needed: Root rights"
+    Ensure you have elevated privileges (e.g.: login as `root`, or use `sudo`).
+
+The following procedure is explained with the use of the `master` branch. Unless otherwise noted, the procedure is identical to the `beta` and the `dev` branches.
+
+Execute the following shell command to get the script (`master` branch):
+
+```sh
+curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/PREP_SYSTEM_FOR_DIETPI.sh -o PREP_SYSTEM_FOR_DIETPI.sh
+```
+
+In case of using the `beta` branch execute:
+
+```sh
+curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/beta/PREP_SYSTEM_FOR_DIETPI.sh -o PREP_SYSTEM_FOR_DIETPI.sh
+```
+
+In case of using the `dev` branch execute:
+
+```sh
+curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/dev/PREP_SYSTEM_FOR_DIETPI.sh -o PREP_SYSTEM_FOR_DIETPI.sh
+```
+
+As the next step, execute
+
+```sh
+chmod +x PREP_SYSTEM_FOR_DIETPI.sh
+./PREP_SYSTEM_FOR_DIETPI.sh
+```
+
+In the following dialog you have to select the DietPi installer branch. Choose the same branch as the DietPi `PREP_SYSTEM_FOR_DIETPI.sh` script:
+
+![DietPi-PREP branch selection](assets/images/dietpi-prep-selectbranch.png){: style="width:550px"}
+
+In the following dialogs enter your name and afterwards the actual image base and the device (SBC or PC) the system is running on:
+
+![DietPi-PREP pre-image entry](assets/images/dietpi-prep-preimage.png){: style="width:550px"}
+
+![DietPi-PREP device selection](assets/images/dietpi-prep-deviceselection.png){: style="width:550px"}
+
+Depending on whether you want to use the WiFi feature later on, you have to select the option to keep or purge the WiFi package. To keep the package could be the case if your hardware has an onboard WiFi or you add the WiFi e.g. via an USB WiFi adapter.
+
+![DietPi-PREP WiFi selection](assets/images/dietpi-prep-wifiselection.png){: style="width:550px"}
+
+The last selection is the target Debian version (the actual **Buster** or the upcoming **Bullseye**).  
+After this, the script runs a couple of minutes, finally the following message occurs:
+
+![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: style="width:550px"}
+
+If you did not use branch `master` the last step is to edit file `/boot/dietpi.txt` and edit the entry  
+`DEV_GITBRANCH=master`  
+which is near the end of the file.
+
+After this you can restart your system (`reboot`), alternatively you can copy the SC card (via `dd`) to an image (`.img`) to duplicate your base installation.
+
+A further step can be to generate a compressed DietPi image via the `dietpi-imager` script (located in the `.meta` subdirectory in the [GitHub DietPi share](https://github.com/MichaIng/DietPi/) or via  
+`sudo bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager)"`).
