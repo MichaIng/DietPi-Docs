@@ -43,12 +43,12 @@ Also Installs:
 
 === "Access to the web interface"
 
-    - URL = `http://localhost/owncloud`
+    - URL = `http://localhost/owncloud`  
       where 'localhost' can be substituted by local server IP or hostname, to access remotely.
     - Username = `admin`
     - Password = <your global password\>
 
-    If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).
+    If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).  
     We added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`: Just use `occ` followed by the desired command inside your terminal.
 
 === "Update ownCloud to the latest version"
@@ -79,7 +79,7 @@ Also Installs:
 
     #### Will my data be saved after deinstallation?
 
-    Your userdata directory will stay after deinstallation.
+    Your userdata directory will stay after deinstallation.  
     As well a database backup will be saved to your userdata directory. Thus you can easily restore your instance by reinstalling ownCloud and restore the database dump.
 
 See also <https://owncloud.com/> resp. <https://doc.owncloud.org/server/admin_manual/>.
@@ -103,9 +103,8 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/17/admin_manual/configuration_server/occ_command.html).
 
-    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary
-    `sudo -u www-data php /var/www/nextcloud/occ`.
-    Just use inside your terminal:
+    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`.
+    Just use inside your terminal:  
 
     ```
     ncc [followed by the desired command]
@@ -238,7 +237,7 @@ See also <https://nextcloud.com/talk/>.
 
 During installation you will be asked to enter the external server domain and a port, that you want to use for the coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
 
-If HTTPS was or is enabled via `dietpi-letsencrypt`, coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.
+If HTTPS was or is enabled via `dietpi-letsencrypt`, coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
 coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
 
 coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
@@ -259,7 +258,7 @@ Also Installs:
 
 === "First time connect"
 
-    - Ignore the warnings and click the button titled `CLICK HERE TO CONTINUE TO PYDIO`.
+    - Ignore the warnings and click the button titled `CLICK HERE TO CONTINUE TO PYDIO`.  
       Remark: If you require SSL access, please use LetsEncrypt to set this up.
     - The wizard can now be started, click the `start wizard >` button to begin.
     - Enter and create a new admin account for use with Pydio. Then click the `>>` button.
@@ -288,14 +287,14 @@ See also <https://pydio.com/>.
 
 ## UrBackup
 
-UrBackup Server is an Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.
+UrBackup Server is an Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.  
 Basically, it allows you to create a complete system backup, using a simple web interface, for systems on your network.
 
 ![DietPi cloud software UrBackup Server](../assets/images/dietpi-software-cloud-urbackup.png)
 
 === "Access to the web interface"
 
-    URL = `http://<your.IP>:55414`
+    URL = `http://<your.IP>:55414`  
     Remark: Change the IP address for your system.
 
 === "Backup storage location"
@@ -309,8 +308,7 @@ Basically, it allows you to create a complete system backup, using a simple web 
 
 === "Download the client"
 
-    Install the appropriate client on the systems you wish to backup from
-    <https://www.urbackup.org/download.html#client_windows>.
+    Install the appropriate client on the systems you wish to backup from <https://www.urbackup.org/download.html#client_windows>.
 
 See also <https://www.urbackup.org/index.html>.
 
@@ -469,8 +467,7 @@ Lightweight backup and sync server, includes web interface and external cloud ac
 
     Remark: This documentation requires DietPi v6.12.
 
-    - DietPi installs Tonido to the following location:
-      `/mnt/dietpi_userdata/tonido`
+    - DietPi installs Tonido to the following location: `/mnt/dietpi_userdata/tonido`
     - DietPi install symbolic links to the Tonido data directories automatically. Therefore, default Tonido sync/userdata locations will point to `/mnt/dietpi_userdata/tonido`:
 
         ```sh
@@ -479,8 +476,7 @@ Lightweight backup and sync server, includes web interface and external cloud ac
         /home/tonido/TonidoSyncData #PointsTo# /mnt/dietpi_userdata/tonido/syncdata
         ```
 
-    We created a `systemd` service for Tonido, DietPi will automatically start this:
-    `systemctl status tonido`
+    We created a `systemd` service for Tonido, DietPi will automatically start this: `systemctl status tonido`
 
 === "Access to the web interface"
 
@@ -548,38 +544,27 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
             1. In your browser, next to the address bar, select the warning or lock icon.
                 Then select the certificate button to open Windows' Certificate view.
             2. Switch to the "Details" tab.
-
                 ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
-
             3. Select "Save to file".
             4. In the newly opened window, select "Continue".
-
                 ![Import certificate on Windows 10, screenshot 2](../assets/images/import_cert_windows_2.png)
-
             5. Leave default DER coding and select "Continue".
             6. Select "Browse" to chose a target file location.
-
                 ![Import certificate on Windows 10, screenshot 3](../assets/images/import_cert_windows_3.png)
-
             7. Choose a target file location and name, it is only required temporarily.
             8. Select "Continue".
             9. Select "Finish".
-
                 ![Import certificate on Windows 10, screenshot 4](../assets/images/import_cert_windows_4.png)
-
             10. Double-click the created certificate file and select "Install certificate".
             11. Select "Local system".
             12. Select "Continue", which requires administrator permissions.
-
                 ![Import certificate on Windows 10, screenshot 5](../assets/images/import_cert_windows_5.png)
-
             13. Choose "Save all certificates to the following store".
             14. Select "Browse".
             15. Select "Trusted Root Certification Authorities".
             16. Select "Ok".
             17. Select "Continue".
             18. Select "Finish".
-
                 ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png)
 
 === "Web access"
