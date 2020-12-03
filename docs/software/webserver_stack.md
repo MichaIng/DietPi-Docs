@@ -576,7 +576,7 @@ Web interface SQL admin tool for webserver installations.
 
 ![DietPi Webstack software SQLite logo](../assets/images/dietpi-software-webstack-sqlite.svg){: style="width:150px"}
 
-Source: Part of the SQLite documentation, which has been released by author D. Richard Hipp to the public domain. SVG conversion by Mike Toews. - SVG created from sqlite370.eps, distributed with version 3.7.2 documentation, [Public Domain](https://commons.wikimedia.org/w/index.php?curid=11675072)
+Source: Part of the SQLite documentation, which has been released by author D. Richard Hipp to the public domain. SVG conversion by Mike Toews. [Public Domain](https://commons.wikimedia.org/w/index.php?curid=11675072)
 
 ### Redis
 
