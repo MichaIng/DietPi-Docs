@@ -28,6 +28,11 @@ Python is a text based interpreted programming language with object oriented pro
 
 Source: By [www.python.org](http://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
+The install option explicitly only installs Python 3.  
+The `pip` resp. `pip3` Python package manager and development headers are included.
+
+To use the `pip` package manager, a typical usage will be `pip3 install -U <module>`.
+
 See also: <https://wikipedia.org/wiki/Python_(programming_language)>.
 
 ## Docker
