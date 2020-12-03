@@ -598,6 +598,7 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
 
 ![DietPi Webstack software PHP logo](../assets/images/dietpi-software-webstack-php.svg){: style="width:150px"}
 
+Source: [Colin Viebrock](http://php.net/logos), [CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=9632398).
 
 [^1]:
     Find out more about the success stories of Nginx on the [Nginx.org/en/](https://Nginx.org/en/).
