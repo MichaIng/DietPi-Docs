@@ -128,7 +128,6 @@ nav:
       - 'Release notes' : 'release-notes.md'
       - 'Request features' : 'https://github.com/MichaIng/DietPi/issues/new/choose'
       - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
-      - 'Documentation tasks' : 'dietpi_docs_todo.md'
   - 'OPTIMISED SOFTWARE' :
       - 'BitTorrent & Download Tools' : 'software/bittorrent.md'
       - 'Camera & Surveillance' : 'software/camera.md'
