@@ -2,10 +2,10 @@
 
 ## Overview
 
-- [**DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users**](#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users)
-- [**OpenVPN - Easy to use, minimal hassle VPN server**](#openvpn-easy-to-use-minimal-hassle-vpn-server)
-- [**PiVPN - OpenVPN server installer and management tool**](#pivpn-openvpn-server-installer-and-management-tool)
-- [**WireGuard - An extremely simple yet fast and modern VPN**](#wireguard-an-extremely-simple-yet-fast-and-modern-vpn)
+- [**DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users**](#dietpi-nordvpn)
+- [**OpenVPN - Easy to use, minimal hassle VPN server**](#openvpn)
+- [**PiVPN - OpenVPN server installer and management tool**](#pivpn)
+- [**WireGuard - An extremely simple yet fast and modern VPN**](#wireguard)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -22,7 +22,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users
+## DietPi-NordVPN
 
 DietPi-NordVPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all NordVPN users to quickly and easily connect to any NordVPN server in TCP or UDP, using only open source software.
 
@@ -42,7 +42,7 @@ DietPi-NordVPN is a combination of OpenVPN installation and DietPi front end GUI
 
 See also <https://wikipedia.org/wiki/NordVPN>.
 
-## OpenVPN - Easy to use, minimal hassle VPN server
+## OpenVPN
 
 An easy to use VPN server and client system. The DietPi installation of OpenVPN uses a single client file to get you connected with minimal hassle.
 
@@ -109,7 +109,7 @@ An easy to use VPN server and client system. The DietPi installation of OpenVPN 
 
 See also <https://wikipedia.org/wiki/OpenVPN> resp. <https://openvpn.net/>.
 
-## PiVPN - OpenVPN server installer and management tool
+## PiVPN
 
 PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a command `pivpn` which allows for simple creation of additional user profiles and configurations.
 
@@ -125,7 +125,7 @@ PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a c
 
 See also <https://www.pivpn.io/>.
 
-## WireGuard - An extremely simple yet fast and modern VPN
+## WireGuard
 
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner and more useful than IPsec, while avoiding the massive headache.
 

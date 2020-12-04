@@ -2,13 +2,12 @@
 
 ## Overview
 
-- [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](#dietpi-cloudshell-lightweight-system-stats-for-your-lcd-display-or-monitor)
-- [**Raspcontrol - Web interface system stats**](#raspcontrol-web-interface-system-stats)
-- [**Linux Dash - Web interface system stats**](#linux-dash-web-interface-system-stats)
-- [**phpSysInfo - Web interface system stats**](#phpsysinfo-web-interface-system-stats)
-- [**RPi-Monitor - Web interface system stats**](#rpi-monitor-web-interface-system-stats)
-- [**Netdata - Web interface system stats**](#netdata-web-interface-system-stats)
-- [**webmin - Remote system management with web interface**](#webmin-remote-system-management-with-web-interface)
+- [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](#dietpi-cloudshell)
+- [**Linux Dash - Web interface system stats**](#linux-dash)
+- [**phpSysInfo - Web interface system stats**](#phpsysinfo)
+- [**RPi-Monitor - Web interface system stats**](#rpi-monitor)
+- [**Netdata - Web interface system stats**](#netdata)
+- [**webmin - Remote system management with web interface**](#webmin)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -25,7 +24,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## DietPi-CloudShell - Lightweight system stats for your LCD display or monitor
+## DietPi-CloudShell
 
 CloudShell is a Network Attached Storage (NAS) solution with RAID support. It supports a color LCD and IR receiver.  
 CloudShell turns your Odroid CloudShell, Odroid 3.5 LCD Touchscreen Shield, Waveshare32, or monitor into a dedicated lightweight system stats display.
@@ -110,32 +109,7 @@ See also
 - <https://www.hardkernel.com/shop/cloudshell-2-for-xu4/>
 - <https://wiki.odroid.com/accessory/add-on_boards/xu4_cloudshell2/xu4_cloudshell2>
 
-## Raspcontrol - Web interface system stats
-
-Raspcontrol allows you to monitor your system stats from a web page. It also supports restarting and powering off your device.
-
-![DietPi system stat and maintenance software Raspcontrol](../assets/images/dietpi-software-systemstat-raspcontrol.png){: style="width:500px"}
-
-=== "Access to Raspcontrol"
-
-    The web interface of *Raspcontrol* can be accessed via:
-
-    - URL = `http://<your.IP>/raspcontrol`
-    - Username = `root`
-    - Password = `dietpi`
-
-=== "Change login credentials"
-
-    The login credentials can be modified editing the file `/etc/raspcontrol/database.aptmnt`.
-
-=== "Troubleshooting"
-
-    If no page is displayed: Raspcontrol will only work if OpenSSH-Server is installed.  
-    Run `dietpi-software` and select OpenSSH-Server from the menu to change.
-
-See also <https://wikipedia.org/wiki/Raspcontrol>.
-
-## Linux Dash - Web interface system stats
+## Linux Dash
 
 Linux Dash allows you to monitor your system stats from a web page.
 
@@ -151,7 +125,7 @@ Linux Dash allows you to monitor your system stats from a web page.
 
 See also <https://github.com/afaqurk/linux-dash/wiki>.
 
-## phpSysInfo - Web interface system stats
+## phpSysInfo
 
 Allows you to monitor your system stats from a web page. The display output can be customized via an ini file.
 
@@ -171,7 +145,7 @@ Allows you to monitor your system stats from a web page. The display output can 
 
 See also <https://phpsysinfo.github.io/phpsysinfo/>.
 
-## RPi-Monitor - Web interface system stats
+## RPi-Monitor
 
 RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
@@ -199,7 +173,7 @@ RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
 See also <https://github.com/XavierBerger/RPi-Monitor>.
 
-## Netdata - Web interface system stats
+## Netdata
 
 Netdata is a slick and feature-rich system stats monitor, with web interface.
 
@@ -231,7 +205,7 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
 
 See also <https://wikipedia.org/wiki/Netdata> resp. <https://learn.netdata.cloud/docs/overview/what-is-netdata>.
 
-## webmin - Remote system management with web interface
+## webmin
 
 The webmin package is a web based feature-rich remote system management tool. Many system settings can easily be set using the web interface dialogs.
 

@@ -5,6 +5,7 @@ AirPlay
 Airsonic
 AIY
 Allo
+ALSA
 Allwinner
 Allwinner's
 Amiberry
@@ -28,14 +29,17 @@ balenaEtcher
 Bazarr
 Beelink
 Bitcoin
+Bitwarden
 blazingly
 Bluetooth
 Blynk
 bootable
 bootloader
+BruteFIR
 Bticino
 BubbleUPnP
 Bugreport
+CactiChameleon
 CalDAV
 CardDAV
 CAVA
@@ -50,6 +54,7 @@ Cloudflare
 CloudPrint
 CloudShell
 codecs
+Computerworld
 conf
 config
 configs
@@ -58,6 +63,7 @@ CORS
 coturn
 CouchPotato
 COVID
+cpu
 cron
 CSI
 CSM
@@ -69,6 +75,7 @@ DarkBetter
 DarkIce
 de
 deinstallation
+DER
 DHCP
 dialogs
 DietPi
@@ -101,10 +108,12 @@ EmonPi
 EmonTH
 EmonTX
 EPL
+EQ
 exe
 exFAT
 facto
 fahclient
+FastMail
 FB
 FHS
 filesystem
@@ -119,6 +128,8 @@ Fullscreen
 FuzonMp
 Gbit
 GiB
+GiBi
+Gilles
 Gitea
 github
 GlusterFS
@@ -128,6 +139,7 @@ Gogs
 GPIO
 GPIOs
 GPL
+GPLv
 GPT
 Grafana
 HAProxy
@@ -137,6 +149,7 @@ HC
 hexa
 HiFi
 HiFiBerry
+Hipp
 homeassistant
 hostname
 Hotfix
@@ -152,6 +165,7 @@ https
 IceCast
 ICMP
 Imgur
+InfluxData
 InfluxDB
 ini
 IoT
@@ -164,7 +178,6 @@ JanKoudijs
 Jellyfin
 Joulinar
 journald
-jRiver
 JS
 JSON
 JustBoom
@@ -183,9 +196,11 @@ LEDs
 LEMP
 LESP
 LetsEncrypt
+LGPL
 Lidarr
 LightDM
 Lighttpd
+Lighty
 LLMP
 LLSP
 LMS
@@ -193,6 +208,7 @@ localhost
 LogClear
 Logitech
 Logrotate
+loopback
 LPDDR
 LTS
 LXDE
@@ -207,6 +223,7 @@ Meveric
 MiB
 MichaIng
 microcontroller
+MicroSol
 Minecraft
 MineOS
 MiniDLNA
@@ -229,6 +246,7 @@ Mycroft
 MyHome
 myMPD
 MySqli
+mysql
 NAA
 nano
 NanoPC
@@ -241,6 +259,7 @@ Nextcloud
 nextcloud
 NFS
 Nginx
+nginx
 nm
 Nmap
 NoMachine
@@ -284,6 +303,7 @@ PiVPN
 Plex
 pre
 ProFTPD
+Prioglio
 PSU
 PuTTY
 Pydio
@@ -297,7 +317,7 @@ Radxa
 RAMdisk
 RAMlog
 Raspbian
-Raspcontrol
+Raspotify
 rcon
 RDBMS
 RDP
@@ -316,6 +336,7 @@ rpc
 rpi
 RPi
 RPis
+RSA
 RSS
 Rsyslog
 rTorrent
@@ -327,6 +348,8 @@ SBCs
 SCP
 scroller
 SDL
+serverless
+servlet
 SFTP
 Shairport
 ShareAlike
@@ -344,7 +367,7 @@ Soxr
 SPC
 SPI
 Spotify
-SqueezeLite
+Squeezelite
 SSD
 SSHFS
 SSID
@@ -353,6 +376,7 @@ startx
 StephanStS
 subdirectory
 sudo
+SVG
 symlink
 Syncthing
 syslog
@@ -365,7 +389,10 @@ tcpdump
 thechildofroth
 TigerVNC
 TLS
+tmpfs
+Toews
 Tonido
+transactional
 transcoding
 TRÅDFRI
 TTS
@@ -388,6 +415,7 @@ upvote
 UrBackup
 userdata
 UUID
+Viebrock
 VirtualBox
 VirtualHere
 virtualised
@@ -405,6 +433,7 @@ WebIOPi
 webmin
 webserver
 webservers
+WebServers
 webstack
 Wh
 Widevine

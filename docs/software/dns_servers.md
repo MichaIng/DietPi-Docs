@@ -2,11 +2,12 @@
 
 ## DNS Server
 
-- [**Pi-hole - Network-wide Ad Blocking**](#pi-hole-network-wide-ad-blocking)
+- [**Pi-hole - Network-wide Ad Blocking**](#pi-hole)
+- [**Unbound - A validating, recursive, and caching DNS resolver**](#unbound)
 
 ## Dynamic DNS Clients
 
-- [**No-IP - Dynamic DNS update client**](#no-ip-dynamic-dns-update-client)
+- [**No-IP - Dynamic DNS update client**](#no-ip)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -23,7 +24,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Pi-hole - Network-wide Ad Blocking
+## Pi-hole
 
 Pi-hole is a DNS sinkhole with web interface that will block ads for any device on your network.
 
@@ -95,7 +96,34 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
 See also <https://wikipedia.org/wiki/Pi-hole>.
 
-## No-IP - Dynamic DNS update client
+## Unbound
+
+Unbound is a validating, recursive, caching DNS resolver.  
+For more details see [unbound "about" description](https://nlnetlabs.nl/projects/unbound/about/).
+
+![DietPi DNS server software unbound](../assets/images/dietpi-software-dnsserver-unbound.svg){: style="width:250px"}
+
+=== "Default DNS ports"
+
+    - Default DNS port: 53
+    - DNS port when Pi-hole is installed: 5353
+
+=== "Configuration directory"
+
+    The configuration directory is located there: `/etc/unbound`
+
+=== "View logs"
+
+    View the log files: `journalctl -u unbound`
+
+=== "Updating unbound"
+
+    Update to latest version: `apt update && apt upgrade`
+
+Source code: <https://github.com/NLnetLabs/unbound>.  
+See also <https://nlnetlabs.nl/documentation/unbound/> resp. <https://nlnetlabs.nl/documentation/unbound/unbound/>.
+
+## No-IP
 
 Use your No-IP account and website URL address to always have it pointing to your DietPi system. Essential if your hosting a website.
 

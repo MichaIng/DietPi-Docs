@@ -1,6 +1,6 @@
 # Network Load Balancing
 
-## HAProxy - High performance TCP/HTTP load balancer
+## HAProxy
 
 HAProxy, which stands for High Availability Proxy, is a popular open source software TCP/HTTP Load Balancer and proxy solution. Its most common use is to improve the performance and reliability of a server environment by distributing the workload across multiple servers (e.g. web, application, database).
 

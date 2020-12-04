@@ -2,33 +2,34 @@
 
 ## Overview
 
-- [**Kodi - Media Centre / Player**](#kodi-media-centre-player)
-- [**ympd - Lightweight web Interface audio player for MPD**](#ympd-lightweight-web-interface-audio-player-for-mpd)
-- [**myMPD - Lightweight web Interface audio player for MPD**](#mympd-lightweight-web-interface-audio-player-for-mpd)
-- [**O!MPD - Feature-rich web Interface audio player for MPD**](#ompd-feature-rich-web-interface-audio-player-for-mpd)
-- [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava-optional-console-based-audio-visualizer-for-mpd)
-- [**Mopidy - Web Interface Music /Radio Player**](#mopidy-web-interface-music-radio-player)
-- [**Airsonic - Feature rich media streaming server with web interface**](#airsonic-feature-rich-media-streaming-server-with-web-interface)
-- [**Subsonic - Feature rich media streaming server with web interface**](#subsonic-feature-rich-media-streaming-server-with-web-interface)
-- [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server-aka-lms-squeezebox-server)
-- [**SqueezeLite - Audio player for Logitech Media Server**](#squeezelite-audio-player-for-logitech-media-server)
-- [**Shairport Sync - AirPlay audio player with multiroom sync**](#shairport-sync-airplay-audio-player-with-multiroom-sync)
-- [**ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)**](#readymedia-minidlna-media-streaming-server-dlna-upnp)
-- [**Ampache - Web interface media streaming server**](#ampache-web-interface-media-streaming-server)
-- [**Emby - Web interface media streaming server**](#emby-web-interface-media-streaming-server)
-- [**Plex Media Server - Web interface media streaming server**](#plex-media-server-web-interface-media-streaming-server)
-- [**Tautulli - Monitoring and tracking tool for Plex Media Server**](#tautulli-monitoring-and-tracking-tool-for-plex-media-server)
-- [**Murmur - Mumble VoIP Server**](#murmur-mumble-voip-server)
-- [**Roon Bridge - Turns your device into a Roon capable audio player**](#roon-bridge-turns-your-device-into-a-roon-capable-audio-player)
-- [**Roon Server - Turns your device into a Roon capable audio player and Roon core**](#roon-server-turns-your-device-into-a-roon-capable-audio-player-and-roon-core)
-- [**Roon Extension Manager - Manage extensions from within Roon**](#roon-extension-manager-manage-extensions-from-within-roon)
-- [**NAA Daemon - Signalyst Network Audio Adaptor (NAA)**](#naa-daemon-signalyst-network-audio-adaptor-naa)
-- [**IceCast - Shoutcast Streaming Server, including DarkIce**](#icecast-shoutcast-streaming-server-including-darkice)
-- [**jRiver - Media Center**](#jriver-media-center)
-- [**Koel - Web interface streaming server**](#koel-web-interface-streaming-server)
-- [**GMediaRender - Resource efficient UPnP/DLNA renderer**](#gmediarender-resource-efficient-upnpdlna-renderer)
-- [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity-free-home-server-for-your-comics-and-ebooks-library)
-- [**Komga - Free and open source comics/mangas media server with web UI**](#komga-free-and-open-source-comicsmangas-media-server-with-web-ui)
+- [**Kodi - Media Centre / Player**](#kodi)
+- [**ympd - Lightweight web Interface audio player for MPD**](#ympd)
+- [**myMPD - Lightweight web Interface audio player for MPD**](#mympd)
+- [**O!MPD - Feature-rich web Interface audio player for MPD**](#ompd)
+- [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava)
+- [**Mopidy - Web Interface Music /Radio Player**](#mopidy)
+- [**Airsonic - Feature rich media streaming server with web interface**](#airsonic)
+- [**Subsonic - Feature rich media streaming server with web interface**](#subsonic)
+- [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
+- [**Squeezelite - Audio player for Logitech Media Server**](#squeezelite)
+- [**Shairport Sync - AirPlay audio player with multiroom sync**](#shairport-sync)
+- [**ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)**](#readymedia)
+- [**Ampache - Web interface media streaming server**](#ampache)
+- [**Emby - Web interface media streaming server**](#emby)
+- [**Plex Media Server - Web interface media streaming server**](#plex-media-server)
+- [**Tautulli - Monitoring and tracking tool for Plex Media Server**](#tautulli)
+- [**Murmur - Mumble VoIP Server**](#murmur)
+- [**Roon Bridge - Turns your device into a Roon capable audio player**](#roon-bridge)
+- [**Roon Server - Turns your device into a Roon capable audio player and Roon core**](#roon-server)
+- [**Roon Extension Manager - Manage extensions from within Roon**](#roon-extension-manager)
+- [**NAA Daemon - Signalyst Network Audio Adaptor (NAA)**](#naa-daemon)
+- [**IceCast - Shoutcast Streaming Server, including DarkIce**](#icecast)
+- [**Koel - Web interface streaming server**](#koel)
+- [**GMediaRender - Resource efficient UPnP/DLNA renderer**](#gmediarender)
+- [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity)
+- [**Komga - Free and open source comics/mangas media server with web UI**](#komga)
+- [**Raspotify - Spotify Connect client**](#raspotify)
+- [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -43,7 +44,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-## Kodi - Media Centre / Player
+## Kodi
 
 The only media centre/player you'll ever need.
 
@@ -54,7 +55,7 @@ If you did not select Kodi to start from boot, you can modify the autostart opti
 - Desktop = Kodi is available via the LXDE start menu, and, desktop.
 - Console = Kodi can also be run by typing `startkodi`.
 
-## ympd - Lightweight web Interface audio player for MPD
+## ympd
 
 A lightweight, bare-bones, no frills HiFi music player with a web based interface. ympd is a front end for MPD.
 
@@ -85,9 +86,9 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-    ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
 
-## myMPD - Lightweight web Interface audio player for MPD
+## myMPD
 
 A lightweight, bare-bones, no frills HiFi music player with a web based interface. myMPD is a front end for MPD, and a recent fork of ympd.
 
@@ -129,9 +130,9 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-    ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
 
-## O!MPD - Feature-rich web Interface audio player for MPD
+## O!MPD
 
 A feature-rich web interface audio player for MPD. Includes song/album scraping, ideal for music catalog browsing.
 
@@ -161,7 +162,7 @@ Also installs:
     Click the `settings` button (cog, top right).  
     Click `update`.
 
-## CAVA - Optional: Console-based audio visualizer for MPD
+## CAVA
 
 Console-based Audio Visualizer for MPD. Can be displayed in SSH terminals, consoles and LCD HATS.
 
@@ -183,9 +184,9 @@ Also installs:
     - Tweak CAVA options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-    ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
 
-## Mopidy - Web Interface Music /Radio Player
+## Mopidy
 
 Mopidy is a python based music player web based user interface for MPD.
 
@@ -219,7 +220,7 @@ Mopidy is a python based music player web based user interface for MPD.
     Enable support for vast number of codecs like .m4a.   
     Many thanks to Roth for [this hint](https://dietpi.com/phpbb/viewtopic.php?f=12&t=785&p=3743#p3742).
 
-## Airsonic - Feature rich media streaming server with web interface
+## Airsonic
 
 Feature rich media streaming server with a web interface. Coded in Java.
 
@@ -246,7 +247,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
     - folder = `/mnt/dietpi_userdata/Music`  
 
-## Subsonic - Feature rich media streaming server with web interface
+## Subsonic
 
 Feature rich media streaming server with a web interface. Coded in Java.
 
@@ -280,14 +281,14 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
     Many thanks to 'thechildofroth' for his testing and fixes with the Subsonic installation.
 
-## Logitech Media Server - aka LMS, Squeezebox Server
+## Logitech Media Server
 
-Logitech Media Server is the server software that enables web interface control of:
+Logitech Media Server (aka LMS, Squeezebox Server) is the server software that enables web interface control of:
 
-- Software audio players: SqueezeLite
+- Software audio players: Squeezelite
 - Hardware audio players from Logitech: Squeezebox, SlimDevices
 
-Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting SqueezeLite for installation in `dietpi-software`.
+Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting Squeezelite for installation in `dietpi-software`.
 
 ![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
 
@@ -302,7 +303,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
     - folder = `/mnt/dietpi_userdata/Music`  
 
-=== "Change SqueezeLite command line options"
+=== "Change Squeezelite command line options"
 
     - Run `dietpi-services`
     - Select `squeezelite`
@@ -319,9 +320,9 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
     - Save changes with `CTRL+o` and exit `dietpi-services`
     - Restart the service: `systemctl restart squeezelite`
 
-## SqueezeLite - Audio player for Logitech Media Server
+## Squeezelite
 
-SqueezeLite is the audio player for the Logitech Media Server.
+Squeezelite is the audio player for the Logitech Media Server.
 
 ![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
 
@@ -336,7 +337,7 @@ SqueezeLite is the audio player for the Logitech Media Server.
 
     - folder = `/mnt/dietpi_userdata/Music`  
 
-=== "Change SqueezeLite command line options"
+=== "Change Squeezelite command line options"
 
     - Run `dietpi-services`
     - Select `squeezelite`
@@ -353,7 +354,7 @@ SqueezeLite is the audio player for the Logitech Media Server.
     - Save changes with `CTRL+o` and exit `dietpi-services`
     - Restart the service: `systemctl restart squeezelite`
 
-## Shairport Sync - AirPlay audio player with multiroom sync
+## Shairport Sync
 
 Shairport Sync is an AirPlay audio player which plays audio streamed from iTunes, iOS devices and third-party AirPlay sources such as ForkedDaapd and Airfoil.  
 Audio played by a Shairport Sync-powered device stays synchronised with the source and hence with similar devices playing the same source. This allows for synchronised multi-room audio on multiple devices.
@@ -412,7 +413,7 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
 
     If the choppy playback continues, the CPU most likely is insufficient for the processing required for Soxr. Then Soxr should be disabled.
 
-## ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)
+## ReadyMedia
 
 Stream your shared media to any DLNA/UPnP capable device.
 
@@ -442,7 +443,7 @@ Stream your shared media to any DLNA/UPnP capable device.
 For a list of available UPnP clients: See  
 <https://www.wikipedia.org/wiki/List_of_UPnP_AV_media_servers_and_clients#UPnP_AV_clients>.
 
-## Ampache - Web interface media streaming server
+## Ampache
 
 A web based audio/video streaming application and file manager allowing you to access your music & videos from anywhere, using almost any internet enabled device.
 
@@ -506,7 +507,7 @@ Also Installs:
     To update Ampache to the current version, execute  
     `dietpi-software reinstall 40`.
 
-## Emby - Web interface media streaming server
+## Emby
 
 A web interface media streaming server. Think Kodi, but using any device with a web browser.
 
@@ -549,7 +550,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
     To update the Emby Server version simply reinstall Emby Server to update it to newest version. It will preserve any existing data and settings:  
     `dietpi-software reinstall 41`
 
-## Plex Media Server - Web interface media streaming server
+## Plex Media Server
 
 Plex organizes your video, music, and photo collections and streams them to all of your screens. Also known as a "Web interface media streaming server".
 
@@ -567,10 +568,10 @@ Plex organizes your video, music, and photo collections and streams them to all 
     - Give your server a name (e.g.: `DietPi-Plex`)
     - Click `library` to setup your media locations:
 
-    ```sh
-    /mnt/dietpi_userdata/Music
-    /mnt/dietpi_userdata/Video
-    ```
+        ```sh
+        /mnt/dietpi_userdata/Music
+        /mnt/dietpi_userdata/Video
+        ```
 
     You can also mount Samba/NFS shares by running `dietpi-drive_manager` and selecting `Mount network drive` from the menu.
 
@@ -582,7 +583,7 @@ Plex organizes your video, music, and photo collections and streams them to all 
     - audio = `/mnt/dietpi_userdata/Music`
     - videos = `/mnt/dietpi_userdata/Video`
 
-## Tautulli - Monitoring and tracking tool for Plex Media Server
+## Tautulli
 
 A Python-based monitoring and tracking tool for Plex Media Server.
 
@@ -596,7 +597,7 @@ A Python-based monitoring and tracking tool for Plex Media Server.
 
     `/mnt/dietpi_userdata/plexpy/logs/`
 
-## Murmur - Mumble VoIP Server
+## Murmur
 
 Turn your device into a lightweight Mumble VoIP server.
 
@@ -620,7 +621,7 @@ Turn your device into a lightweight Mumble VoIP server.
     systemctl restart mumble-server
     ```
 
-## Roon Bridge - Turns your device into a Roon capable audio player
+## Roon Bridge
 
 Turns your SBC into a Roon capable audio player. By using the main Roon application on another device, you can stream your music catalog directly to the Roon Bridge running on your SBC.
 
@@ -637,7 +638,7 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
     Roon on another system (e.g.: Windows PC) to control the player.  
     [Roon License](https://roonlabs.com/pricing) (free trial is also available).
 
-## Roon Server - Turns your device into a Roon capable audio player and Roon core
+## Roon Server
 
 Turns your device into a Roon capable audio player and core server.
 
@@ -663,7 +664,7 @@ Turns your device into a Roon capable audio player and core server.
     - Music folder = `/mnt/dietpi_userdata/Music`
     - Accessed from file server = `/Music`
 
-## Roon Extension Manager - Manage extensions from within Roon
+## Roon Extension Manager
 
 At startup the Roon Extension Manager accesses a repository containing the community developed extensions. Via `Settings` \> `Extensions` within Roon the repository can be viewed and an extension can be selected to perform a certain action.
 
@@ -676,7 +677,7 @@ Many thanks to @JanKoudijs for contributing this into DietPi
 Details and usage information see  
 <https://community.roonlabs.com/t/roon-extension-manager-v0-11-8/26632>.
 
-## NAA Daemon - Signalyst Network Audio Adaptor (NAA)
+## NAA Daemon
 
 Signalyst Network Audio Adapter (NAA) daemon allows you to stream music from an HQPlayer source (like Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (like 192 kHz) and more.
 
@@ -705,7 +706,7 @@ Also works with Roon.
 
     `dietpi-software reinstall 124`
 
-## IceCast - Shoutcast Streaming Server, including DarkIce
+## IceCast
 
 Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
 
@@ -754,20 +755,7 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
     - A recording will then be saved in the following location:  
       `/mnt/dietpi_userdata/darkice_recording.ogg`
 
-## jRiver - Media Center
-
-Media center.
-
-![DietPi media server software jRiver](../assets/images/dietpi-software-media-jriver.png){: style="width:500px"}
-
-If you did not select JRiver to start from boot:
-
-- Desktop = JRiver available via the LXDE start menu, under "Multimedia"
-- Console = JRiver can also be run by typing `xinit mediacenter22`
-
-You can modify the AutoStart options in `dietpi-autostart`.
-
-## Koel - Web interface streaming server
+## Koel
 
 Web interface music streamer.
 
@@ -795,13 +783,13 @@ Web interface music streamer.
     - local = `/mnt/dietpi_userdata/Music`
     - accessed from file server = `/Music`
 
-## GMediaRender - Resource efficient UPnP/DLNA renderer
+## GMediaRender
 
 A DLNA audio render/endpoint. Allows you to stream and play music, from another device, such as [BubbleUPnP](https://play.google.com/store/apps/details?id=com.bubblesoft.android.bubbleupnp).
 
 ![DietPi media server software GMediaRender](../assets/images/dietpi-software-media-gmediarender.png){: style="width:150px"}
 
-## Ubooquity - Free home server for your comics and ebooks library
+## Ubooquity
 
 Ubooquity is a free home server for your comics and ebooks library, with remote web interface viewing.
 
@@ -824,7 +812,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
     `dietpi-software reinstall 80`
 
-## Komga - Free and open source comics/mangas media server with web UI
+## Komga
 
 Free and open source comics/mangas media server with web UI.
 
@@ -856,5 +844,87 @@ See also
 
 - Official documentation: <https://komga.org/guides/>
 - Source code: <https://github.com/gotson/komga>
+
+## Raspotify
+
+Spotify Connect client for the Raspberry Pi that Just Works™.
+
+!!! note "You will need a Spotify Premium account in order to use the Spotify Connect client."
+
+![DietPi media server software Raspotify](../assets/images/dietpi-software-media-raspotify.png){: style="width:250px"}
+
+Raspotify should work straight out of the box.
+
+=== "Changing options"
+
+    However, you can change the available options in:
+
+    - `/etc/default/raspotify`
+
+    Then restart services with:
+
+    ```sh
+    systemctl restart raspotify
+    ```
+
+See also: <https://github.com/dtcooper/raspotify>.
+
+## Spotify Connect Web
+
+Spotify Connect Web is a console client and player for Spotify Connect including a web frontend.
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>:4000`
+
+=== "Generate the Spotify API key"
+
+    The generation of the `spotify_appkey.key` is required to allow the application, access to Spotify API using your account.
+
+    Fill out the application form <https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app>.  
+    Wait for it to be "accepted"
+
+=== "Transfer Spotify API key"
+
+    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Copy the `spotify_appkey.key` to the following folder:
+
+    - folder = `/mnt/dietpi_userdata/spotify-connect-web`
+    - accessed from file server = `/spotify-connect-web`
+
+=== "View service logs"
+
+    View the service logs via:
+
+    ```sh
+    journalctl -u spotify-connect-web
+    ```
+
+=== "Service handling"
+
+    There are some typical service tasks available:
+
+    - Manually start the service:
+
+        ```sh
+        systemctl start spotify-connect-web
+        ```
+
+    - Manually stop the service
+
+        ```sh
+        systemctl stop spotify-connect-web
+        ```
+
+    - Manually restart the service
+
+        ```sh
+        systemctl restart spotify-connect-web
+        ```
+
+See also:
+
+- <https://github.com/Fornoth/spotify-connect-web>
+- <https://developer.spotify.com/documentation/web-api/quick-start/>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

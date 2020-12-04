@@ -2,9 +2,10 @@
 
 ## Overview
 
-- [**Home Assistant - Open-source home automation platform running on Python 3**](#home-assistant-open-source-home-automation-platform-running-on-python-3)
-- [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](#emonpi-lightweight-energy-usage-stats-with-emonpi-pcb)
-- [**Grasshopper - Web App to control Bticino MyHome**](#grasshopper-web-app-to-control-bticino-myhome)
+- [**Home Assistant - Open-source home automation platform running on Python 3**](#home-assistant)
+- [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](#emonpi)
+- [**Domoticz - Multi platform Home Automation System**](#domoticz)
+- [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -21,7 +22,7 @@
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## Home Assistant - Open-source home automation platform running on Python 3
+## Home Assistant
 
 Home Assistant is an open-source home automation platform running on Python 3. Track and control all devices at home and automate control. Perfect to run on a Raspberry Pi.
 
@@ -73,7 +74,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
     IKEA TRÅDFRI: `apt install autoconf`
 
-## EmonPi - Lightweight Energy usage stats with EmonPi PCB
+## EmonPi
 
 Turn your Raspberry Pi into a energy usage monitor with web interface.
 
@@ -168,25 +169,48 @@ The following hardware is required:
     Then click `Save`.  
     Press `F5` to refresh the page and view your energy consumption.
 
-## Grasshopper - Web App to control Bticino MyHome
+## Domoticz
 
-Grasshopper is an open source and free (speech & beer) responsive-design web application to control Bticino MyHome.
+Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.
 
-Also Installs:
+![DietPi home automation software Domoticz](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: style="width:600px"}
 
-- LASP Webserver
+=== "Access to the web interface"
 
-![DietPi home automation software Grasshopper](../assets/images/dietpi-software-homeautomation-grasshopper.jpg){: style="width:500px"}
+    - HTTP: `http://<your.IP>:8124`
+    - HTTPS: `https://<your.IP>:8424`
 
-=== "Access Grasshopper"
+=== "View logs"
 
-    URL = `http://<your.IP>`
+    `journalctl -u domoticz`
 
-=== "Setup Grasshopper"
+=== "Install directory"
 
-    URL = `http://<your.IP>/setup`
+    `/opt/domoticz`
 
-**Grasshopper Project Website:**  
-<https://sourceforge.net/projects/grasshopperwebapp/>
+=== "Data directory"
+
+    `/mnt/dietpi_userdata/domoticz`
+
+See also: <https://github.com/domoticz/domoticz>
+
+## TasmoAdmin
+
+TasmoAdmin is an administrative website for devices flashed with Tasmota to be used for smart home systems.
+
+Also installs:
+
+- Webserver (based on your preference)
+- PHP
+
+![DietPi home automation software TasmoAdmin](../assets/images/dietpi-software-homeautomation-tasmoadmin.png){: style="width:200px"}
+
+=== "Access to the web interface"
+
+    `http://<your.IP>/tasmoadmin`
+
+Implemented by: [`svh1985`](https://github.com/svh1985)
+
+Source code: <https://github.com/reloxx13/TasmoAdmin>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

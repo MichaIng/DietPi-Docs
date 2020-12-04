@@ -6,15 +6,15 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 ### Remote Desktop
 
-- [**TigerVNC Server - Desktop for remote connection**](#tigervnc-server-desktop-for-remote-connection)
-- [**RealVNC Server - Desktop for remote connection**](#realvnc-server-desktop-for-remote-connection)
-- [**XRDP - Remote desktop server for Windows Remote Desktop Client**](#xrdp-remote-desktop-server-for-windows-remote-desktop-client)
-- [**NoMachine - Feature rich remote desktop connection**](#nomachine-feature-rich-remote-desktop-connection)
+- [**TigerVNC Server - Desktop for remote connection**](#tigervnc-server)
+- [**RealVNC Server - Desktop for remote connection**](#realvnc-server)
+- [**XRDP - Remote desktop server for Windows Remote Desktop Client**](#xrdp)
+- [**NoMachine - Feature rich remote desktop connection**](#nomachine)
 
 ### Remote Access
 
-- [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it-weaved-access-your-device-over-the-internet)  
-- [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere-share-physically-attached-usb-devices-from-your-sbc-over-the-network)  
+- [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it)
+- [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -35,7 +35,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
-## TigerVNC Server - Desktop for remote connection
+## TigerVNC Server
 
 ![DietPi remote desktop software TigerVNC](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg){: style="width:600px"}
 
@@ -103,7 +103,7 @@ See also <https://tigervnc.org/>.
 Man page: <https://tigervnc.org/doc/Xvnc.html>
 Source code: <https://github.com/TigerVNC/tigervnc>
 
-## RealVNC Server - Desktop for remote connection
+## RealVNC Server
 
 RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share the desktop or control the computer running the VNC Server.
 
@@ -152,7 +152,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
         - Then `reboot` the system to have the changes taking effect.
     - Follow the instructions within the section *Running directly rendered apps such as Minecraft remotely* in <https://www.realvnc.com/docs/raspberry-pi.html>.
 
-## XRDP - Remote desktop server for Windows Remote Desktop Client
+## XRDP
 
 XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 
@@ -172,7 +172,7 @@ XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 
     XRDP uses port **3389** by default, so you need to open/forward it from your router to DietPi.
 
-## NoMachine - Feature rich remote desktop connection
+## NoMachine
 
 NoMachine is a remote desktop server with advanced features, such as screen recording. The client also scans for all available NoMachine servers on your network, allowing easy connection and maintenance of your remote desktops.
 
@@ -196,7 +196,7 @@ NoMachine is a remote desktop server with advanced features, such as screen reco
 
     You will now be connected to your device.
 
-## Remot3.it - (Weaved) Access your device over the internet
+## Remot3.it
 
 Remot3.it allows you to easily access your DietPi device over the internet.
 
@@ -224,9 +224,9 @@ Examples of TCP ports for Remot3.it:
 
     Sign into your Remot3.it account to access your devices remotely:
 
-    - URL = <https://www.remot3.it>
+    - URL = <https://www.remote.it>
 
-## VirtualHere - Share physically attached USB devices from your SBC over the network
+## VirtualHere
 
 The VirtualHere package is used to share physically attached USB devices from your SBC over the network to other systems.
 
