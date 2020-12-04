@@ -157,9 +157,10 @@
 - [**Raspotify - Spotify Connect client**](../software/media/#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web)
 
-## [Network Load Balancer](../software/load_balancer/#network-load-balancing/)
+## [Advanced Networking](../software/advanced_networking/#network-load-balancing/)
 
-- [**HAProxy - High performance TCP/HTTP load balancer**](../software/load_balancer/#haproxy)
+- [**HAProxy - High performance TCP/HTTP load balancer**](../software/advanced_networking/#haproxy)
+- [**Tor Relay - Add a node to the Tor network**](../software/advanced_networking/#tor-relay)
 
 ## [Printing Server](../software/printing/#printing/)
 

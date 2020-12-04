@@ -142,7 +142,7 @@ nav:
       - 'Home Automation' : 'software/home_automation.md'
       - 'Logging Systems' : 'software/log_system.md'
       - 'Media Systems': 'software/media.md'
-      - 'Network Load Balancer' : 'software/load_balancer.md'
+      - 'Advanced Networking' : 'software/advanced_networking.md'
       - 'Printing Server' : 'software/printing.md'
       - 'Remote Desktop & Remote Access' : 'software/remote_desktop.md'
       - 'Social & Search' : 'software/social.md'
