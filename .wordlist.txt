@@ -149,6 +149,7 @@ HC
 hexa
 HiFi
 HiFiBerry
+Hipp
 homeassistant
 hostname
 Hotfix
@@ -164,6 +165,7 @@ https
 IceCast
 ICMP
 Imgur
+InfluxData
 InfluxDB
 ini
 IoT
@@ -194,6 +196,7 @@ LEDs
 LEMP
 LESP
 LetsEncrypt
+LGPL
 Lidarr
 LightDM
 Lighttpd
@@ -300,6 +303,7 @@ PiVPN
 Plex
 pre
 ProFTPD
+Prioglio
 PSU
 PuTTY
 Pydio
@@ -372,6 +376,7 @@ startx
 StephanStS
 subdirectory
 sudo
+SVG
 symlink
 Syncthing
 syslog
@@ -385,6 +390,7 @@ thechildofroth
 TigerVNC
 TLS
 tmpfs
+Toews
 Tonido
 transactional
 transcoding
@@ -409,6 +415,7 @@ upvote
 UrBackup
 userdata
 UUID
+Viebrock
 VirtualBox
 VirtualHere
 virtualised

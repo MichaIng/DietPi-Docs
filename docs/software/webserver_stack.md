@@ -518,6 +518,8 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 Apache is open source and it is the most commonly used Web server on Linux systems.
 
+![DietPi Webstack software Apache2 logo](../assets/images/dietpi-software-webstack-apache2.jpg){: style="width:150px"}
+
 Web servers are used to serve Web pages requested by client computers. Clients typically request and view Web pages using Web browser applications such as Firefox, Opera, Chromium, Microsoft Edge, Internet Explorer etc.
 
 Apache is a Apache Software Foundation project. The goal is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
@@ -526,11 +528,17 @@ Apache is a Apache Software Foundation project. The goal is to provide a secure,
 
 **nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, Wordpress.com, FastMail.FM.[^1]
 
+![DietPi Webstack software Nginx logo](../assets/images/dietpi-software-webstack-nginx.gif){: style="width:150px"}
+
 The innovation of Nginx compared to earlier servers such as Apache was to use an asynchronous, event-driven architecture. Nginx is blazing fast, being extremely efficient when it comes to hardware utilization, allowing servers to get more speed out of their limited CPU and RAM. As a result, it is one of the fastest web server options for serving static content.
 
 ### Lighttpd
 
 **Lighttpd** is a web server for UNIX/Linux and Windows operating systems. It is an alternative to Apache web server. It is also called Lighty.
+
+![DietPi Webstack software Lighttpd logo](../assets/images/dietpi-software-webstack-lighttpd.svg){: style="width:100px"}
+
+Source: Fair use, <https://en.wikipedia.org/w/index.php?curid=10881730>.
 
 It is designed to be secure, fast, standards-compliant, and flexible while being optimized for speed-critical environments. Its low memory footprint compared to other web servers, light CPU load and its speed goals make Lighttpd a perfect candidate for SBCs.
 
@@ -538,33 +546,59 @@ It is designed to be secure, fast, standards-compliant, and flexible while being
 
 What is **Apache Tomcat**? Essentially it’s an open-source Java servlet and Java Server Page container that lets developers implement an array of enterprise Java applications. Tomcat also runs a HTTP web server environment in which Java code can run.
 
+![DietPi Webstack software Tomcat logo](../assets/images/dietpi-software-webstack-tomcat.svg){: style="width:100px"}
+
+Source: [The Apache Software Foundation](http://svn.apache.org/viewvc/jakarta/site/xdocs/images/logos/tomcat.eps), [Apache License 2.0](https://commons.wikimedia.org/w/index.php?curid=11302180).
+
 ## Databases & Data stores
 
 ### MariaDB
 
 **MariaDB** Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source [^2]. It is part of most cloud offerings and the default in most Linux distributions.
 
+![DietPi Webstack software MariaDB logo](../assets/images/dietpi-software-webstack-mariadb.png){: style="width:150px"}
+
+Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/index.php?curid=55946550).
+
 #### phpMyAdmin
 
-T.b.d.
+Web interface SQL admin tool for webserver installations.
+
+![DietPi Webstack software phpMyAdmin logo](../assets/images/dietpi-software-webstack-phpmyadmin.png){: style="width:150px"}
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>/phpmyadmin`
+    - Username = `phpmyadmin`
+    - Password = The same as your root login password. Default is `dietpi`
 
 ### SQLite
 
-T.b.d.
+![DietPi Webstack software SQLite logo](../assets/images/dietpi-software-webstack-sqlite.svg){: style="width:150px"}
+
+Source: Part of the SQLite documentation, which has been released by author D. Richard Hipp to the public domain. SVG conversion by Mike Toews. [Public Domain](https://commons.wikimedia.org/w/index.php?curid=11675072)
 
 ### Redis
 
-T.b.d.
+A non-SQL based (alternative) data store.
+
+![DietPi Webstack software Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: style="width:150px"}
+
+Source: [Carlos Prioglio](http://redis.io/images/redis-logo.svg), [licence](https://commons.wikimedia.org/w/index.php?curid=95020509).
 
 ### InfluxDB
 
-T.b.d.
+![DietPi Webstack software InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: style="width:200px"}
+
+Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding-docs/img/influxdb/preview.svg), [Public Domain](https://commons.wikimedia.org/w/index.php?curid=55056027).
 
 ## Web development - Programming & Frameworks
 
 ### PHP
 
-T.b.d.
+![DietPi Webstack software PHP logo](../assets/images/dietpi-software-webstack-php.svg){: style="width:150px"}
+
+Source: [Colin Viebrock](http://php.net/logos), [CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=9632398).
 
 [^1]:
     Find out more about the success stories of Nginx on the [Nginx.org/en/](https://Nginx.org/en/).
