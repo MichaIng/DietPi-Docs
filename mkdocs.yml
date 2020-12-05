@@ -81,6 +81,7 @@ plugins:
           'user-guide_install_VirtualBox.md' : 'user-guide_installation.md'
           'hardware-supported_sbc.md' : 'dietpi_sbc.md'
           'user-guide_tools.md' : 'dietpi_tools.md'
+          'release-notes-updates.md' : 'release-notes.md'
           'dietpi-software-desktop.md' : 'software/desktop.md'
           'dietpi-software-media.md' : 'software/media.md'
           'dietpi-software-remote-desktop.md' : 'software/remote_desktop.md'
