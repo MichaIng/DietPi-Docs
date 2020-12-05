@@ -436,6 +436,7 @@ webservers
 WebServers
 webstack
 Wh
+WHOIS
 Widevine
 wikimedia
 Winamp
