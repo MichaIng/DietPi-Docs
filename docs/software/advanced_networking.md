@@ -2,8 +2,11 @@
 
 ## Overview
 
+- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](#wifi-hotspot)  
+- [**Tor HotSpot - Optional: Routes all WiFi HotSpot traffic through the Tor network**](#tor-hotspot)  
 - [**HAProxy - High performance TCP/HTTP load balancer**](#haproxy)
 - [**Tor Relay - Add a node to the Tor network**](#tor-relay)
+- [**No-IP - Dynamic DNS update client**](#no-ip)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -17,6 +20,65 @@
     ![DietPi software](../assets/images/dietpi-software.jpg)
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+
+[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+
+## WiFi HotSpot
+
+The WiFi HotSpot package turns your device into a wireless hotspot/access point. This allows other wireless devices to connect and share the internet connection.
+
+![DietPi WiFi hotspot WiFi](../assets/images/dietpi-software-advanced-networking-wifihotspot.png){: style="width:550px"}
+
+=== "Requirements"
+
+    The requirements are:
+
+    - 1x Ethernet connection
+    - 1x Supported USB WiFi adapter or onboard WiFi. This may vary depending on device and available WiFi drivers/modules. However, common adapters (e.g.: Atheros) should be fine.
+
+=== "Initial connection credentials"
+
+    Use the following credentials to initially connect devices to your hotspot.
+
+    - SSID = `DietPi-HotSpot`
+    - Access Key = `dietpihotspot`
+
+=== "Change WiFi HotSpot settings"
+
+    Once installed, you can change the WiFi HotSpot settings (SSID/Key/Channel) at any time:
+
+    1. Run `dietpi-config`
+    2. Navigate to *Networking Options: Adapters*, then select *WiFi*
+    3. Whilst in this menu, it is highly recommended you set the Country Code to your country. Depending on your country regulations, this could allow for channels 12/13 and increased power output (range) for the hotspot
+
+## Tor HotSpot
+
+The Tor HotSpot package turns your device into a WiFi HotSpot/Access Point with Tor routing. All WiFi HotSpot traffic for all connected WiFi devices will be routed through the Tor network.  
+This is perfect for users requiring anonymity and privacy.
+
+It also Installs:
+
+- [WiFi HotSpot](#wifi-hotspot_1)
+
+![DietPi WiFi hotspot tor](../assets/images/dietpi-software-advanced-networking-torhotspot.png){: style="width:550px"}
+
+=== "Requirements"
+
+    The requirements are:
+
+    - 1x Ethernet connection
+    - 1x Supported USB WiFi adapter or onboard WiFi. This may vary depending on device and available WiFi drivers/modules. However, common adapters (e.g.: Atheros) should be fine.
+
+=== "Connection credentials"
+
+    These are identical to the [WiFi HotSpot credentials](#wifi-hotspot_1).
+
+=== "Verification"
+
+    To verify that the traffic is being routed through Tor you can check the following:  
+    On the connected WiFi device, go to the following URL: <https://check.torproject.org>
+
+See also <https://wikipedia.org/wiki/Tor_(anonymity_network)>.
 
 ## HAProxy
 
@@ -104,5 +166,25 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
 === "Official documentation"
 
     [Tor Relay Documentation](https://community.torproject.org/relay/setup/)
+
+## No-IP
+
+Use your No-IP account and website URL address to always have it pointing to your DietPi system. Essential if your hosting a website.
+
+![DietPi DNS server software No-IP](../assets/images/dietpi-software-advanced-networking-noip.jpg){: style="width:200px"}
+
+The setup of No-IP is done as follows:
+
+- Create your free No-IP account <https://www.noip.com/sign-up> and select a web address for your account.
+- Type `dietpi-config` in a terminal and press enter.
+- Go to *Networking Options: Misc* and select *No-IP* from the menu.
+    If No-IP is not yet installed, confirm the installation and reselect No-IP from the menu once completed.
+- Type in your *username* and *password* details at the prompt.
+- Type in *5* for the interval option.
+
+If successful, the No-IP current status will change to: *Online*.  
+You will need to enable port forwarding on your router for all programs your require and point them to DietPi. E.g.: TCP port 80/443 for websites, pointing to 192.168.0.100.
+
+See also <https://www.noip.com/>.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

@@ -1,13 +1,9 @@
-# DNS Servers & Clients
+# DNS Servers
 
-## DNS Server
+## Overview
 
 - [**Pi-hole - Network-wide Ad Blocking**](#pi-hole)
 - [**Unbound - A validating, recursive, and caching DNS resolver**](#unbound)
-
-## Dynamic DNS Clients
-
-- [**No-IP - Dynamic DNS update client**](#no-ip)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -122,25 +118,5 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 
 Source code: <https://github.com/NLnetLabs/unbound>.  
 See also <https://nlnetlabs.nl/documentation/unbound/> resp. <https://nlnetlabs.nl/documentation/unbound/unbound/>.
-
-## No-IP
-
-Use your No-IP account and website URL address to always have it pointing to your DietPi system. Essential if your hosting a website.
-
-![DietPi DNS server software No-IP](../assets/images/dietpi-software-dnsserver-noip.jpg){: style="width:200px"}
-
-The setup of No-IP is done as follows:
-
-- Create your free No-IP account <https://www.noip.com/sign-up> and select a web address for your account.
-- Type `dietpi-config` in a terminal and press enter.
-- Go to *Networking Options: Misc* and select *No-IP* from the menu.
-    If No-IP is not yet installed, confirm the installation and reselect No-IP from the menu once completed.
-- Type in your *username* and *password* details at the prompt.
-- Type in *5* for the interval option.
-
-If successful, the No-IP current status will change to: *Online*.  
-You will need to enable port forwarding on your router for all programs your require and point them to DietPi. E.g.: TCP port 80/443 for websites, pointing to 192.168.0.100.
-
-See also <https://www.noip.com/>.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
