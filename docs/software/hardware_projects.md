@@ -410,7 +410,7 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
 
     - URL = `http://<your.IP>:3001`
     - Username = `admin`
-    - Password = `dietpi`
+    - Password = `<your global password>`
 
 === "Usage information"
 
