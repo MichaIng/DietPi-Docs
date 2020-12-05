@@ -171,7 +171,7 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
 
 Use your No-IP account and website URL address to always have it pointing to your DietPi system. Essential if your hosting a website.
 
-![DietPi DNS server software No-IP](../assets/images/dietpi-software-dnsserver-noip.jpg){: style="width:200px"}
+![DietPi DNS server software No-IP](../assets/images/dietpi-software-advanced-networking-noip.jpg){: style="width:200px"}
 
 The setup of No-IP is done as follows:
 
