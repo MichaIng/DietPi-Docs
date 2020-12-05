@@ -1,6 +1,6 @@
-# DNS Servers & Clients
+# DNS Servers
 
-## DNS Server
+## Overview
 
 - [**Pi-hole - Network-wide Ad Blocking**](#pi-hole)
 - [**Unbound - A validating, recursive, and caching DNS resolver**](#unbound)
