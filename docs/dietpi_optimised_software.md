@@ -51,7 +51,7 @@
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](../software/cloud/#firefox-sync-server)
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#bitwarden_rs)
 
-## [Computational Science](../software/computational_science/#computational-science/)
+## [Computational Science](../software/computational_science/)
 
 - [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)
 
@@ -63,7 +63,7 @@
 - [**Xfce - Lightweight desktop**](../software/desktop/#xfce)
 - [**GNUstep - Alternative/unique desktop**](../software/desktop/#gnustep)
 
-### [Desktop Utilities](../software/desktop/#desktop-utilities/)
+### [Desktop Utilities](../software/desktop/)
 
 - [**Chromium - Web browser**](../software/desktop/#chromium)
 - [**GIMP - Image editor**](../software/desktop/#gimp)
@@ -75,13 +75,13 @@
 - [**Python - high-level interpreted programming language**](../software/programming/#python)
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
 
-## [DNS Server](../software/dns_servers/#dns-servers-clients/)
+## [DNS Server](../software/dns_servers/)
 
 - [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole)
 - [**Unbound - A validating, recursive, and caching DNS resolver**](../software/dns_servers/#unbound)
 - [**No-IP - Website URL Address**](../software/dns_servers/#no-ip)
 
-## [File Server](../software/file_servers/#file-servers/)
+## [File Server](../software/file_servers/)
 
 - [**ProFTPD - Simple, efficient, lightweight FTP file server**](../software/file_servers/#proftpd)
 - [**Samba - Feature rich file server**](../software/file_servers/#samba)
@@ -121,7 +121,7 @@
 - [**Domoticz - Multi platform Home Automation System**](../software/home_automation/#domoticz)
 - [**TasmoAdmin - Administrative website for Tasmota devices**](../software/home_automation/#tasmoadmin)
 
-## [Logging Systems](../software/log_system/#log-system-choices/)
+## [Logging Systems](../software/log_system/)
 
 - [**DietPi-RAMlog - Lightweight RAM logging**](../software/log_system/#dietpi-ramlog)
 - [**Full - Full logging system with Rsyslog and Logrotate**](../software/log_system/#full-logging)
@@ -157,25 +157,26 @@
 - [**Raspotify - Spotify Connect client**](../software/media/#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web)
 
-## [Network Load Balancer](../software/load_balancer/#network-load-balancing/)
+## [Advanced Networking](../software/advanced_networking/)
 
-- [**HAProxy - High performance TCP/HTTP load balancer**](../software/load_balancer/#haproxy)
+- [**HAProxy - High performance TCP/HTTP load balancer**](../software/advanced_networking/#haproxy)
+- [**Tor Relay - Add a node to the Tor network**](../software/advanced_networking/#tor-relay)
 
-## [Printing Server](../software/printing/#printing/)
+## [Printing Server](../software/printing/)
 
 - [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint)
 - [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint)
 
 ## [Remote Desktop & Remote Access](../software/remote_desktop/)
 
-### [Remote Desktop](../software/remote_desktop/#remote-desktop/)
+### [Remote Desktop](../software/remote_desktop/#remote-desktop)
 
 - [**TigerVNC Server - Desktop for remote connection**](../software/remote_desktop/#tigervnc-server)
 - [**RealVNC Server - Desktop for remote connection**](../software/remote_desktop/#realvnc-server)
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](../software/remote_desktop/#xrdp)
 - [**NoMachine - Feature rich remote desktop connection**](../software/remote_desktop/#nomachine)
 
-### [Remote Access](../software/remote_desktop/#remote-access/)
+### [Remote Access](../software/remote_desktop/#remote-access)
 
 - [**Remot3.it - (Weaved) Access your device over the internet**](../software/remote_desktop/#remot3it)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](../software/remote_desktop/#virtualhere)
@@ -190,7 +191,7 @@
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](../software/social/#openbazaar)
 - [**YaCy - Decentralized open source search engine**](../software/social/#yacy)
 
-## [SSH Server](../software/ssh/#ssh-server-choices/)
+## [SSH Server](../software/ssh/)
 
 - [**Dropbear - Lightweight SSH Server**](../software/ssh/#dropbear)
 - [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](../software/ssh/#openssh)
@@ -200,7 +201,7 @@
 - [**Let’s Encrypt - Enable HTTPS / SSL**](../software/system_security/#lets-encrypt)
 - [**Fail2Ban - Protects your system from brute-force attacks**](../software/system_security/#fail2ban)
 
-## [System Stats & Management](../software/system_stats/#system-stats-management/)
+## [System Stats & Management](../software/system_stats/)
 
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](../software/system_stats/#dietpi-cloudshell)
 - [**Linux Dash - Web interface system stats**](../software/system_stats/#linux-dash)
@@ -216,7 +217,7 @@
 - [**PiVPN - OpenVPN server installer & management tool**](../software/vpn/#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](../software/vpn/#wireguard)
 
-## [Web development](../software/webserver_stack/#web-development)
+## [Web development](../software/webserver_stack/)
 
 !!! warning "Documentation in progress..."
     The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?t=5))  
@@ -237,14 +238,7 @@
 - [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
 - [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
 
-### Webservers
-
-- [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
-- [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
-- [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
-- [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
-
-### Databases & Data stores
+### [Databases & Data stores](../software/webserver_stack/#databases-data-stores)
 
 - MariaDB - Open Source Relational Database
 - [phpMyAdmin - SQL Administration Tool for MariaDB](https://dietpi.com/phpbb/viewtopic.php?p=54#p54)  
@@ -252,7 +246,7 @@
 - Redis - Open Source In-memory key–value Data Store
 - InfluxDB - Open Source Time Series Database
 
-### Programming & Web development Frameworks
+### [Programming & Web development Frameworks](../software/webserver_stack/#web-development-programming-frameworks)
 
 - Python 3 & Flask - Micro web framework powered by Python
 - PHP - scripting language especially suited to web development

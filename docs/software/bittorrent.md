@@ -45,7 +45,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
     - URL = `http://<your.IP>:9091`
     - Username = `root`
-    - Password = `dietpi`
+    - Password = `<your global password>`
 
 === "Access Downloads"
 
@@ -89,7 +89,7 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 === "Access to the web interface"
 
     - URL = `http://<your.IP>:8112`
-    - Password = `dietpi`
+    - Password = `<your global password>`
 
     Select the host 127.0.0.1 and click `connect`.
 
@@ -106,7 +106,7 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
         - Hostname = Your device's IP address (e.g.: 192.168.0.100)
         - Port = 58846
         - Username = `root`
-        - Password = `dietpi`
+        - Password = `<your global password>`
     - Simply select and connect to the new entry
 
 === "Access Downloads"
@@ -171,7 +171,7 @@ Also installs:
 
     - URL = `http://<your.IP>/rutorrent`
     - Username = `root`
-    - Password = `dietpi`
+    - Password = `<your global password>`
 
 === "Access Downloads"
 
@@ -208,7 +208,7 @@ Also installs:
 === "Access to the web interface"
 
     - URL = `http://<your.IP>/aria2/docs`
-    - rpc secret password = `dietpi`
+    - rpc secret password = `<your global password>`
 
     This needs to be entered in the following location, in the web interface:
 
@@ -524,7 +524,7 @@ Automatically download your favorite music.
 
 === "Access to the web interface"
 
-    - URL= `http://<your.IP>:8686`
+    - URL = `http://<your.IP>:8686`
 
 === "First run setup"
 
