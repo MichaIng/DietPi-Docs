@@ -5,7 +5,7 @@
 - [**FreshRSS - A self-hosted RSS feed aggregator**](#freshrss)
 - [**phpBB - Free flat-forum bulletin board software solution**](#phpbb)
 - [**Wordpress - Website Blog and Publishing platform**](#wordpress)
-- [**Image Gallery - Host and browse your images from a web interface**](#image-gallery)
+- [**Single File PHP Gallery - Host and browse your images from a web interface**](#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](#openbazaar)
 - [**YaCy - Decentralized open source search engine**](#yacy)
@@ -130,9 +130,9 @@ It allows you to create your own website.
     - Database Host = `localhost`
     - Table Prefix = `wp_`
 
-## Image Gallery
+## Single File PHP Gallery
 
-*Image Gallery* allows you to host and browse your images from a web interface.
+*Single File PHP Gallery* allows you to host and browse your images from a web interface.
 
 Also Installs:
 
@@ -160,6 +160,8 @@ Also Installs:
         wget https://dietpi.com/images/dietpi-logo_192x192.png
         mv dietpi-logo_192x192.png /var/www/gallery/MyImageFolder/
         ```
+
+See also <https://sye.dk/sfpg/>.
 
 ## Baïkal
 
