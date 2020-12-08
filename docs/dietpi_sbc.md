@@ -39,7 +39,17 @@ Quick intro:
         <tr>
             <td align="left"><a class="table"><strong>Raspberry Pi - ALL models</strong></a></td>
             <td align="left">
-                <strong>Unique DietPi image available for ALL Raspberry Pi models: Raspberry Pi 4 Model B, Raspberry Pi 3 Model A+ / B / B+, Raspberry Pi 2 Model B, Raspberry Pi 1 Model A+ / B+, Raspberry Pi Zero W</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster.7z">Download image</a></li>
+                <strong>Unique DietPi image available for ALL Raspberry Pi models: </strong><a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster.7z">Download image</a>
+                <strong>
+                <ul>
+                  <li>Raspberry Pi 400</li>
+                  <li>Raspberry Pi 4 Model B</li>
+                  <li>Raspberry Pi 3 Model A+ / B / B+</li>
+                  <li>Raspberry Pi 2 Model B / B v1.2</li>
+                  <li>Raspberry Pi 1 Model A+ / B+</li>
+                  <li>Raspberry Pi Zero / Zero W/WH</li>
+                </ul>
+                </strong>
             </td>
         </tr>
         </tbody>
