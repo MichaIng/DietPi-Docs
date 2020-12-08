@@ -131,6 +131,7 @@ nav:
       - 'Request features' : 'https://github.com/MichaIng/DietPi/issues/new/choose'
       - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
   - 'OPTIMISED SOFTWARE' :
+      - 'Advanced Networking' : 'software/advanced_networking.md'
       - 'BitTorrent & Download Tools' : 'software/bittorrent.md'
       - 'Camera & Surveillance' : 'software/camera.md'
       - 'Cloud & Backup Systems' : 'software/cloud.md'
@@ -144,7 +145,6 @@ nav:
       - 'Home Automation' : 'software/home_automation.md'
       - 'Logging Systems' : 'software/log_system.md'
       - 'Media Systems': 'software/media.md'
-      - 'Advanced Networking' : 'software/advanced_networking.md'
       - 'Printing Servers' : 'software/printing.md'
       - 'Remote Desktop & Remote Access' : 'software/remote_desktop.md'
       - 'Social & Search' : 'software/social.md'

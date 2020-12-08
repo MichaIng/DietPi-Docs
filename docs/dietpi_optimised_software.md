@@ -13,6 +13,14 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools) section.
 
+## [Advanced Networking](../software/advanced_networking/)
+
+- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/advanced_networking/#wifi-hotspot)
+- [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/advanced_networking/#tor-hotspot)
+- [**Tor Relay - Add a node to the Tor network**](../software/advanced_networking/#tor-relay)
+- [**HAProxy - High performance TCP/HTTP load balancer**](../software/advanced_networking/#haproxy)
+- [**No-IP - Website URL Address**](../software/advanced_networking/#no-ip)
+
 ## [BitTorrent & Download Tools](../software/bittorrent/)
 
 - [**Transmission - Lightweight BitTorrent server with web interface**](../software/bittorrent/#transmission)
@@ -79,7 +87,6 @@
 
 - [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole)
 - [**Unbound - A validating, recursive, and caching DNS resolver**](../software/dns_servers/#unbound)
-- [**No-IP - Website URL Address**](../software/dns_servers/#no-ip)
 
 ## [File Server](../software/file_servers/)
 
@@ -157,14 +164,8 @@
 - [**Raspotify - Spotify Connect client**](../software/media/#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web)
 
-## [Advanced Networking](../software/advanced_networking/)
-
-- [**HAProxy - High performance TCP/HTTP load balancer**](../software/advanced_networking/#haproxy)
-- [**Tor Relay - Add a node to the Tor network**](../software/advanced_networking/#tor-relay)
-
 ## [Printing Server](../software/printing/)
 
-- [**CloudPrint - CUPS print server, with support for Google cloud printing**](../software/printing/#cloudprint)
 - [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint)
 
 ## [Remote Desktop & Remote Access](../software/remote_desktop/)
@@ -250,8 +251,3 @@
 
 - Python 3 & Flask - Micro web framework powered by Python
 - PHP - scripting language especially suited to web development
-
-## [WiFi Access Points](../software/wifi_hotspot/)
-
-- [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/wifi_hotspot/#wifi-hotspot)
-- [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/wifi_hotspot/#tor-hotspot)
