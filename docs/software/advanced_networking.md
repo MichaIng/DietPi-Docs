@@ -103,7 +103,7 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
 
 === "Monitoring"
 
-    The simplest way to monitor the Tor relay is to use the DietPi-CloudShell scene.
+    The simplest way to monitor the Tor relay is to use the DietPi-CloudShell scene, for this run `dietpi-cloudshell` from command line and select the "Tor Relay" scene. It uses the Tor monitor [nyx](https://nyx.torproject.org/) which can be called in standalone mode by executing `nix` from command line.
 
 === "Keeping up-to-date"
 
