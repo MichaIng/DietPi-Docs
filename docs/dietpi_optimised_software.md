@@ -83,12 +83,12 @@
 - [**Python - high-level interpreted programming language**](../software/programming/#python)
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
 
-## [DNS Server](../software/dns_servers/)
+## [DNS Servers](../software/dns_servers/)
 
 - [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole)
 - [**Unbound - A validating, recursive, and caching DNS resolver**](../software/dns_servers/#unbound)
 
-## [File Server](../software/file_servers/)
+## [File Servers](../software/file_servers/)
 
 - [**ProFTPD - Simple, efficient, lightweight FTP file server**](../software/file_servers/#proftpd)
 - [**Samba - Feature rich file server**](../software/file_servers/#samba)
