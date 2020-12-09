@@ -82,7 +82,7 @@ See also <https://wikipedia.org/wiki/Tor_(anonymity_network)>.
 
 ## Tor Relay
 
-![advanced-networking-tor](../assets/images/dietpi-software-advanced-networking-tor.png){: style="width:500px"}
+![advanced-networking-tor](../assets/images/dietpi-software-advanced-networking-tor.png){: style="width:150px"}
 
 Contribute a node to the Tor network, which allows people to be anonymous on the internet.
 
