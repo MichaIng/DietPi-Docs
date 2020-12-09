@@ -163,6 +163,7 @@
 - [**Komga - Free and open source comics/mangas media server with web UI**](../software/media/#komga)
 - [**Raspotify - Spotify Connect client**](../software/media/#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web)
+- [**Jellyfin - Media streaming server including live TV**](../software/media/#jellyfin)
 
 ## [Printing Server](../software/printing/)
 
