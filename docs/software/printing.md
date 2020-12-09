@@ -2,7 +2,6 @@
 
 ## Overview
 
-- [**CloudPrint - CUPS print server, with support for Google cloud printing**](#cloudprint)
 - [**OctoPrint - Web interface for controlling 3D printers**](#octoprint)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
@@ -19,54 +18,6 @@
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
-
-## CloudPrint
-
-The package is based on the CUPS print server. It supports also the Google cloud printing.  
-Also included is a web interface for CUPS, allowing easy setup of printers.
-
-![DietPi print server software CUPS](../assets/images/dietpi-software-printserver-cups.png){: style="width:550px"}
-
-=== "Access the web interface"
-
-    The web interface is accessible via port 631 on the machine running the CUPS server, e.g. this could be:  
-
-    - URL = `http://192.168.0.100:631`  
-    - user = `root`  
-    - password = `dietpi`
-
-=== "Add a printer"
-
-    In the CUPS web interface, you can add and configure printers by selecting:
-
-    - *Home* \> *Adding Printers and Classes*
-
-=== "Enable CloudPrint"
-
-    Once the printer is setup you only have to run the following command to enable Google Cloud Print authentication on this device:
-
-    ```
-    cps-auth
-    ```
-
-    An URL will be generated. Use this URL link in a web browser to complete the authentication.  
-    Afterwards restart the services with:
-
-    ```
-    dietpi-services restart
-    ```
-
-    If you experience issues, you can check the status of the CloudPrint service for info with:
-
-    ```
-    systemctl status cloudprintd -l
-    ```
-
-=== "Print"
-
-    Your printer should now be available from <https://www.google.com/cloudprint/#printers>.
-
-See also <https://wikipedia.org/wiki/Common_Unix_Printing_System> resp. <https://www.cups.org/>.
 
 ## OctoPrint
 

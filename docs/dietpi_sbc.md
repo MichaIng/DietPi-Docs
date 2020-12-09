@@ -37,9 +37,19 @@ Quick intro:
         </thead>
         <tbody>
         <tr>
-            <td align="left"><a class="table"><strong>Raspberry Pi - ALL models</strong></a></td>
+            <td align="left"><a class="table"><strong>Raspberry Pi - ALL models</strong><br>Single board computer (SBC)<br>Compute Module (CM)<br>Complete PC</a></td>
             <td align="left">
-                <strong>Unique DietPi image available for ALL Raspberry Pi models: Raspberry Pi 4 Model B, Raspberry Pi 3 Model A+ / B / B+, Raspberry Pi 2 Model B, Raspberry Pi 1 Model A+ / B+, Raspberry Pi Zero W</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster.7z">Download image</a></li>
+                <strong>Unique DietPi image available for ALL Raspberry Pi models: </strong><a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster.7z">Download image</a>
+                <strong>
+                <ul>
+                  <li>Raspberry Pi 400</li>
+                  <li>Raspberry Pi 4 Model B <br>Compute Module 4</li>
+                  <li>Raspberry Pi 3 Model A+ / B / B+ <br>Compute Module 3 / CM 3+</li>
+                  <li>Raspberry Pi 2 Model B / B v1.2</li>
+                  <li>Raspberry Pi 1 Model A+ / B+ <br>Compute Module 1</li>
+                  <li>Raspberry Pi Zero / Zero W/WH</li>
+                </ul>
+                </strong>
             </td>
         </tr>
         </tbody>
