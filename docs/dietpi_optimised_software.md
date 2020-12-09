@@ -187,7 +187,7 @@
 - [**FreshRSS - A self-hosted RSS feed aggregator**](../software/social/#freshrss)
 - [**phpBB - Free flat-forum bulletin board software solution**](../software/social/#phpbb)
 - [**Wordpress - Website Blog and Publishing platform**](../software/social/#wordpress)
-- [**Image Gallery - Host and browse your images from a web interface**](../software/social/#image-gallery)
+- [**Single File PHP Gallery - Host and browse your images from a web interface**](../software/social/#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](../software/social/#baikal)
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](../software/social/#openbazaar)
 - [**YaCy - Decentralized open source search engine**](../software/social/#yacy)
