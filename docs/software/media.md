@@ -30,6 +30,7 @@
 - [**Komga - Free and open source comics/mangas media server with web UI**](#komga)
 - [**Raspotify - Spotify Connect client**](#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web)
+- [**Jellyfin - Media streaming server including live TV**](#jellyfin)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -714,46 +715,48 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
 
 === "Installation notes"
 
-    DietPi will attempt to detect mic input during installation, and apply to DarkIce. If a microphone was not available, or you experience issue, check available microphones with:
+    DietPi will attempt to detect mic input during installation, and apply to DarkIce. If a microphone was not available, or you experience issue, check available microphones with: `arecord -l`
 
-      `arecord -l`
-
-      - Then edit the device entry in `/etc/darkice.cfg`, or  
-      - Simple copy and paste:
+    - Then edit the device entry in `/etc/darkice.cfg`, or  
+    - Simple copy and paste:
 
         ```sh
-        sed -i "/^device[[:space:]]/c\device = hw:$(arecord -l | grep -m1 'card' | awk '{print $2}' | sed 's/://'),0" /etc/darkice.cfg
+        sed -i "/^device[[:blank:]]/c\device = hw:$(arecord -l | mawk -F'[ :]' '/card/{print $2;exit}'),0" /etc/darkice.cfg
         ```
 
-      - Restart services
+    - Restart services: `dietpi-services restart`
 
-        ```sh
-        dietpi-services restart
-        ```
+    We created a `systemd` service for DarkIce, DietPi will automatically start it. You can check its status by running the following command:
 
-    We created a `systemd` service for DarkIce, DietPi will automatically start this:  
-    `systemctl status darkice -l`
+    ```sh
+    systemctl -l status darkice
+    ```
 
 === "Access IceCast web interface"
 
     - URL = `http://<your.IP>:8000`
-    - Source password = `dietpi`
-    - Relay password = `dietpi`
+    - Admin user = `admin`
     - Admin password = randomly generated, use code below to view:
 
         ```sh
-        cat /etc/icecast2/icecast.xml | grep admin-password
+        grep admin-password /etc/icecast2/icecast.xml
         ```
+
+    - Source password = `dietpi`
+    - Relay password = `dietpi`
 
 === "Access Recording File"
 
     This is disabled by default.
 
-    - A recording of the stream can be enabled by edit of `/etc/darkice.cfg`, then uncomment `localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg`
-    - Restart services:  
-      `dietpi-services restart`
-    - A recording will then be saved in the following location:  
-      `/mnt/dietpi_userdata/darkice_recording.ogg`
+    - A recording of the stream can be enabled by edit of `/etc/darkice.cfg`, then uncomment
+    
+        ```
+        localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg
+        ```
+
+    - Restart services: `dietpi-services restart`
+    - A recording will then be saved in the following location: `/mnt/dietpi_userdata/darkice_recording.ogg`
 
 ## Koel
 
@@ -926,5 +929,40 @@ See also:
 
 - <https://github.com/Fornoth/spotify-connect-web>
 - <https://developer.spotify.com/documentation/web-api/quick-start/>
+
+## Jellyfin
+
+A FOSS web interface media streaming server, including live TV, forked from Emby.
+
+![DietPi media server software Jellyfin](../assets/images/dietpi-software-media-jellyfin.jpg){: style="width:600px"}
+
+=== "Access to the web interface"
+
+    URL = `http://<your.IP>:8096`
+
+=== "View service logs"
+
+    - Service:
+
+        ```sh
+        journalctl -u jellyfin
+        ```
+
+    - Binary: `/var/log/jellyfin/`
+
+=== "Data directory"
+
+    `/mnt/dietpi_userdata/jellyfin`
+
+=== "Update to latest version"
+
+    Code: Select all
+
+    ```
+    apt update
+    apt install jellyfin jellyfin-ffmpeg
+    ```
+
+Source code: <https://github.com/jellyfin/jellyfin>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
