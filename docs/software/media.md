@@ -720,13 +720,17 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
     - Then edit the device entry in `/etc/darkice.cfg`, or  
     - Simple copy and paste:
 
-      ```sh
-      sed -i "/^device[[:blank:]]/c\device = hw:$(arecord -l | mawk -F'[ :]' '/card/{print $2;exit}'),0" /etc/darkice.cfg
-      ```
+        ```sh
+        sed -i "/^device[[:blank:]]/c\device = hw:$(arecord -l | mawk -F'[ :]' '/card/{print $2;exit}'),0" /etc/darkice.cfg
+        ```
 
     - Restart services: `dietpi-services restart`
 
-    We created a `systemd` service for DarkIce, DietPi will automatically start this: `systemctl -l status darkice`
+    We created a `systemd` service for DarkIce, DietPi will automatically start it. You can check its status by running the following command:
+
+    ```sh
+    systemctl -l status darkice
+    ```
 
 === "Access IceCast web interface"
 
@@ -745,7 +749,12 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
 
     This is disabled by default.
 
-    - A recording of the stream can be enabled by edit of `/etc/darkice.cfg`, then uncomment `localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg`
+    - A recording of the stream can be enabled by edit of `/etc/darkice.cfg`, then uncomment
+    
+        ```
+        localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg
+        ```
+
     - Restart services: `dietpi-services restart`
     - A recording will then be saved in the following location: `/mnt/dietpi_userdata/darkice_recording.ogg`
 
