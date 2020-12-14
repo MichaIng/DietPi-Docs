@@ -48,7 +48,6 @@ markdown_extensions:
   - pymdownx.magiclink: # Auto-links non angle bracket URLs and email addresses and allows to shorten and visualise Git repo links
       repo_url_shortener: true
       repo_url_shorthand: true
-      social_url_shorthand: true
       social_url_shortener: true
 
   #  Markdown Extensions which could be used in the future
