@@ -14,9 +14,9 @@ As a summary of 2020, DietPi had **8 releases** with over **175 000** downloads.
 
 **Portainer** - **Docker container management**
 
-It is a new software package included in the DietPi optimised list. Portainer simplifies you Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
+It is a new software package included in the DietPi optimised list. Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
 
-For more details check the _documentation page_.
+For more details check the [documentation page](../software/programming/#portainer).
 
 ![DietPi Optimised Software Portainer](assets/images/dietpi-software-portainer.jpg)
 
