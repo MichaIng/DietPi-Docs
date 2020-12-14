@@ -6,7 +6,7 @@
 
 Welcome to **December 2020 release** :octicons-gift-16: of DietPi. This release includes **5 new software titles** :octicons-paper-airplane-16:, full support for newly launched **Raspberry Pi 400**, and more interesting features and bug fixes.
 
-As a summary of 2020, DietPi had **8 releases** with over **175 000** downloads. It brought 128 :octicons-light-bulb-16: improvements and changes, as well as 119 :octicons-issue-closed-16: bug fixes. 
+As a summary of 2020, DietPi had **8 releases** with over **175 000** downloads. It brought 128 :octicons-light-bulb-16: improvements and changes, as well as 119 :octicons-issue-closed-16: bug fixes.
 
 ![DietPi Release in 2020](assets/images/dietpi-release-gift.jpg){: width=65% }
 
@@ -14,7 +14,7 @@ As a summary of 2020, DietPi had **8 releases** with over **175 000** downloads.
 
 **Portainer** - **Docker container management**
 
-It is a new software package included in the DietPi optimised list. Portainer simplifies you Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility. 
+It is a new software package included in the DietPi optimised list. Portainer simplifies you Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
 
 For more details check the _documentation page_.
 
@@ -22,9 +22,9 @@ For more details check the _documentation page_.
 
 Many thanks to @Joulinar for implementing this software option - more details here: MichaIng/DietPi#3933
 
-**PaperMC** - **Highly optimised Minecraft server** 
+**PaperMC** - **Highly optimised Minecraft server**
 
-PaperMC extends the list of Minecraft servers supported by DietPi. It is a high performance fork of the Spigot Minecraft Server that aims to fix gameplay and mechanics inconsistencies as well as to improve performance. It is written in Java, and it is extensible via plugins, now available for install. 
+PaperMC extends the list of Minecraft servers supported by DietPi. It is a high performance fork of the Spigot Minecraft Server that aims to fix gameplay and mechanics inconsistencies as well as to improve performance. It is written in Java, and it is extensible via plugins, now available for install.
 
 For more details check the [documentation page](../software/gaming/#papermc).
 
@@ -32,7 +32,7 @@ For more details check the [documentation page](../software/gaming/#papermc).
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3828
 
-**Tor Relay** 
+**Tor Relay**
 
 Become part of the Tor Project and turn your DietPi into a Tor relay to help others surf the Internet safely and privately. 
 
@@ -40,11 +40,11 @@ For more details check the [documentation page](../software/advanced_networking/
 
 ![advanced-networking-tor](../assets/images/dietpi-software-advanced-networking-tor.png){: style="width:150px"}
 
-Many thanks to @ravenclaw900 for implementing this software option: https://github.com/MichaIng/DietPi/pull/3921
+Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3921.
 
 **Unbound** - **Open Source DNS resolverr**
 
-Validating, recursive, caching DNS resolver is now available for install and integrate with [Pi-hole](../software/dns_servers/#pi-hole). 
+Validating, recursive, caching DNS resolver is now available for install and integrate with [Pi-hole](../software/dns_servers/#pi-hole).
 
 For more details check the [documentation page](../software/dns_servers/#unbound)
 
@@ -52,7 +52,7 @@ For more details check the [documentation page](../software/dns_servers/#unbound
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3872
 
-**Bitwarden_RS** - **password manager server** 
+**Bitwarden_RS** - **password manager server**
 
 Bitwarden_RS is a an unofficial Bitwarden password manager server with web UI, written in Rust and it is perfect for self-hosted deployments.
 
@@ -60,35 +60,35 @@ For more details check the [documentation page](../software/cloud/#bitwarden_rs)
 
 ![Bitwarden_RS](../assets/images/dietpi-software-bitwarden_rs.jpg)
 
-Many thanks to @CactiChameleon9 for implementing this software option: https://github.com/MichaIng/DietPi/issues/3724
+Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/DietPi!3724).
 
 ### New supported SBC
 
  New [Raspberry Pi 400](https://www.raspberrypi.org/blog/raspberry-pi-400-the-70-desktop-pc/) is now fully supported. Inspired by the home computers of the 1980s, Raspberry Pi 400 is a complete personal computer, built into a compact keyboard.
- 
- For more details on how to install DietPi, check the [documentation](../dietpi_sbc/#raspberry-pi). 
+
+ For more details on how to install DietPi, check the [documentation](../dietpi_sbc/#raspberry-pi).
 
  ![DietPi Raspberry Pi 400](../assets/images/dietpi-raspberry-pi-400-back.jpg)
 
 ### Changes / Improvements / Optimisations
 
-- **Enable automated APT package update checks and even upgrade them on a daily bases**. By setting the new dietpi.txt setting 
+- **Enable automated APT package update checks and even upgrade them on a daily bases**. By setting the new **dietpi.txt** setting
 
     ```bash
     CONFIG_CHECK_APT_UPDATES = 1
     ```
     
-    you can enable daily APT update checks (default value). The result is shown in the DietPi login banner, in a similar way an available DietPi update is presented. 
+    you can enable daily APT update checks (default value). The result is shown in the DietPi login banner, in a similar way an available DietPi update is presented.
 
     **Add image**
 
-    Set 
+    Set
     
     ```bash
-    CONFIG_CHECK_APT_UPDATES=2
+    CONFIG_CHECK_APT_UPDATES = 2
     ```
     
-    to have _APT packages upgraded automatically_ on a daily basis with logs saved in next file `/var/tmp/dietpi/logs/dietpi-update_apt.log`. Cron is used for the schedule, which means that you can control the execution time via `dietpi-cron > "cron.daily"`. 
+    to have _APT packages upgraded automatically_ on a daily basis with logs saved in next file `/var/tmp/dietpi/logs/dietpi-update_apt.log`. Cron is used for the schedule, which means that you can control the execution time via `dietpi-cron > "cron.daily"`.
     
     Many thanks to @ravenclaw900 for implementing this feature: https://github.com/MichaIng/DietPi/pull/3899
 
@@ -96,15 +96,15 @@ Many thanks to @CactiChameleon9 for implementing this software option: https://g
 
     ![DietPi Documentation](../assets/images/dietpi-docs-categories.jpg)
 
-- **DietPi-Globals** :octicons-arrow-right-16: In DietPi scripts, the PATH variable is now overwritten with the Debian/bash system default to assure that no broken or manipulated PATH can be passed via e.g. "su" or "sudo -E". 
+- **DietPi-Globals** :octicons-arrow-right-16: In DietPi scripts, the PATH variable is now overwritten with the Debian/bash system default to assure that no broken or manipulated PATH can be passed via e.g. "su" or "sudo -E".
 
-    This means that overrides must be placed in /usr/local/(s)bin now, which as well was the only save location for system-wide overrides before. Many thanks to @tandy-1000 for reporting a related issue: https://github.com/MichaIng/DietPi/issues/3873
+    This means that overrides must be placed in /usr/local/(s)bin now, which as well was the only save location for system-wide overrides before. Many thanks to @tandy-1000 for reporting a related issue (MichaIng/DietPi!3873).
 
-- **DietPi-Set_swapfile** :octicons-arrow-right-16: Hardened permissions of the /dev/zram0 zram-swap device to be only accessible by root user (mode 0600) and interpret input argument "/dev/zram0" and "zram0" as zram-swap as well, aside of "zram" only. Many thanks to @hansjuergenmay for reporting a related issue: https://github.com/MichaIng/DietPi/issues/3869
+- **DietPi-Set_swapfile** :octicons-arrow-right-16: Hardened permissions of the /dev/zram0 zram-swap device to be only accessible by root user (mode 0600) and interpret input argument "/dev/zram0" and "zram0" as zram-swap as well, aside of "zram" only. Many thanks to @hansjuergenmay for reporting a related issue (MichaIng/DietPi!3869).
 
 - **DietPi-NordVPN** :octicons-arrow-right-16: A function has been added update the NordVPN server list, e.g. when new servers are available that are closer to your location.
 
-- **DietPi-JustBoom** :octicons-arrow-right-16: The ALSA equalizer settings are not stored to /var/lib/dietpi/dietpi-config/.alsaequal.bin where all users/services can read it and all members of the "dietpi" group (or root) can create and write to it. Many thanks to @wowcut for reporting this issue: https://github.com/MichaIng/DietPi/issues/3950
+- **DietPi-JustBoom** :octicons-arrow-right-16: The ALSA equalizer settings are not stored to /var/lib/dietpi/dietpi-config/.alsaequal.bin where all users/services can read it and all members of the "dietpi" group (or root) can create and write to it. Many thanks to @wowcut for reporting this issue (MichaIng/DietPi!3950).
 
 - **DietPi-Config** :octicons-arrow-right-16: RPi: When applying less than 32 MiB GPU memory, the VCSM (VideoCore Shared Memory) device and kernel module are disabled now. The automatically loaded cut-down firmware files do not support it which leads to currently 5 expected kernel error messages. Disabling it in the first place might marginally speed up boot and reduce memory usage, but more importantly reduces confusion or worries induced by to the error messages.
 

@@ -11,7 +11,7 @@ The Raspberry Pi has sold more than 31 million units since it launched in 2012. 
 
 You can install DietPi by following the step by step [Starting guide](../user-guide_installation/).
 
-DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400/?resellerType=home) 
+DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400/?resellerType=home)
 
 ![DietPi Raspberry Pi 400](../assets/images/dietpi-raspberry-pi-400-back.jpg)
 
