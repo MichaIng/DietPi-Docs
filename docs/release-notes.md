@@ -77,13 +77,14 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
     ```bash
     CONFIG_CHECK_APT_UPDATES = 1
     ```
+
     you can enable daily APT update checks (default value). The result is shown in the DietPi login banner, in a similar way an available DietPi update is presented.
 
     dietpi-automated_APT_package_update
     ![dietpi Automated APT packages update](../assets/images/dietpi-automated_APT_package_update.jpg)
 
     Set
-    
+
     ```bash
     CONFIG_CHECK_APT_UPDATES = 2
     ```
@@ -179,8 +180,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 - **DietPi-Software** | **Ampache** :octicons-arrow-right-16: Resolved an issue where the install failed due to an incompatible PHP composer version and it was not possible to update the configuration file to a new version through the web interface. Many thanks to [phpBB:kk345](https://dietpi.com/phpbb/memberlist.php?username=kk345) for reporting these issues: <https://dietpi.com/phpbb/viewtopic.php?t=8367>
 
-
-As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: https://github.com/MichaIng/DietPi/pull/XXXX
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub.
 
 ### Known/Outstanding Issues
 
@@ -194,7 +194,7 @@ As always, many smaller code performance and stability improvements, visual and 
 
 - DietPi-Software | Sonarr/Radarr/Mono :octicons-arrow-right-16: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: <https://github.com/MichaIng/DietPi/issues/3179>.
 
-For all additional issues that may appear after release, please see the following link for active tickets: https://github.com/MichaIng/DietPi/issues
+For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
 
 ## October 2020 (version 6.33)
 
@@ -322,7 +322,7 @@ For all additional issues that may appear after release, please see the followin
 
 - **DietPi-Software** :octicons-commit-24: **Fail2Ban** :octicons-arrow-right-16: Resolved an issue where the service could have failed to start due to a missing variable declaration in our default config. Many thanks to [phpBB:mafioso12dk](https://dietpi.com/phpbb/memberlist.php?username=mafioso12dk) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=8147>
 
-- **DietPi-Software** :octicons-commit-24: **DietPi-RAMlog** :octicons-arrow-right-16: Resolved an issue where /var/log content was not restored when reinstalling DietPi-RAMlog, e.g. when swiching logging mode from #1 to #2. This could have led to service start issues, when those rely on log files or directories being present. 
+- **DietPi-Software** :octicons-commit-24: **DietPi-RAMlog** :octicons-arrow-right-16: Resolved an issue where /var/log content was not restored when reinstalling DietPi-RAMlog, e.g. when swiching logging mode from #1 to #2. This could have led to service start issues, when those rely on log files or directories being present.
 
     Many thanks to [phpBB:djashdj](https://dietpi.com/phpbb/memberlist.php?username=djashdj) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=8163>
 
