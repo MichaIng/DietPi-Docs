@@ -13,7 +13,7 @@ You can install DietPi by following the step by step [Starting guide](../user-gu
 
 DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400/?resellerType=home)
 
-![DietPi Raspberry Pi 400](../assets/images/dietpi-raspberry-pi-400-back.jpg)
+![DietPi Raspberry Pi 400](./assets/images/dietpi-raspberry-pi-400-back.jpg)
 
 , or the most recent **Raspberry Pi 4 Model B** boards, launched in 2019, as well as in 2020.
 
