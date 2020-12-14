@@ -32,9 +32,9 @@ For more details check the [documentation page](../software/gaming/#papermc).
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3828
 
-**Tor Relay**
+**Tor Relay** - **Become part of the Tor Project**
 
-Become part of the Tor Project and turn your DietPi into a Tor relay to help others surf the Internet safely and privately. 
+Become part of the Tor Project and turn your DietPi into a Tor relay to help others surf the Internet safely and privately.
 
 For more details check the [documentation page](../software/advanced_networking/#tor-relay).
 
@@ -77,7 +77,6 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
     ```bash
     CONFIG_CHECK_APT_UPDATES = 1
     ```
-    
     you can enable daily APT update checks (default value). The result is shown in the DietPi login banner, in a similar way an available DietPi update is presented.
 
     dietpi-automated_APT_package_update
@@ -88,10 +87,10 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
     ```bash
     CONFIG_CHECK_APT_UPDATES = 2
     ```
-    
+
     to have _APT packages upgraded automatically_ on a daily basis with logs saved in next file `/var/tmp/dietpi/logs/dietpi-update_apt.log`. Cron is used for the schedule, which means that you can control the execution time via `dietpi-cron > "cron.daily"`.
     
-    Many thanks to @ravenclaw900 for implementing this feature: https://github.com/MichaIng/DietPi/pull/3899
+    Many thanks to @ravenclaw900 for implementing this feature: <https://github.com/MichaIng/DietPi/pull/3899>
 
 - **DietPi Documentation** has been extended. It covers now all the **DietPi Optimised Software** categories. Many thanks to @StephanStS for bringing all these updates.
 
@@ -120,53 +119,80 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 - **DietPi-Software** :octicons-arrow-right-16: **Mycroft AI**: By default, the ALSA automatic conversions plugin is enabled now on install, which enables OOTB compatibility with all wav sound formats and sound card. Additionally listener sampling rate override (48000 Hz) has been removed, reverting to Mycroft default (16000 Hz), which might solve an issue with hanging microphone level in CLI and related failing voice detection.
 
-- **DietPi-Software** :octicons-arrow-right-16: **Gogs**: Has been enabled for ARMv8 boards and on ARMv7 boards the newest version is installed again, which was not the case since Gogs v0.12. due to changed download names. Many thanks to [phpBB:MadKernel](https://dietpi.com/phpbb/memberlist.php?username=MadKernel) for bringing ARMv8 support back to our attention: https://dietpi.com/phpbb/viewtopic.php?t=8276
+- **DietPi-Software** :octicons-arrow-right-16: **Gogs**: Has been enabled for ARMv8 boards and on ARMv7 boards the newest version is installed again, which was not the case since Gogs v0.12. due to changed download names. Many thanks to [phpBB:MadKernel](https://dietpi.com/phpbb/memberlist.php?username=MadKernel) for bringing ARMv8 support back to our attention: <https://dietpi.com/phpbb/viewtopic.php?t=8276>
 
 - **DietPi-Software** :octicons-arrow-right-16: **Folding@Home** : Is now available for ARMv8 (arm64) boards. Donate your idle CPU power to help researchers fighting against diseases like Cancer, Alzheimer, Ebola and COVID-19.
 
 - **DietPi-Software** :octicons-arrow-right-16: **Radarr**: Has been upgraded to the newest major version 3, including the required branch migration (from "develop" to "master") and, for non-ARMv6 boards, a migration to the now available .NET-based build away from Mono. This change is applied to all DietPi systems via Radarr reinstall, preserving your data and configs of course.
 
-- **DietPi-Software** :octicons-arrow-right-16: **OctoPrint**: Is now available via PyPI repository, hence can be installed and updated easier and faster without downloading and building from the sources. Git is not required anymore, as the internal updater as well uses Python pip only. We migrate all DietPi OctoPrint instances to the new version and new install method, so that the Git/install directory /opt/octoprint is obsolete and removed. All your data will be preserved, of course. Many thanks to @Stinocon for reporting issues related to our previous implementation: https://github.com/MichaIng/DietPi/issues/3940
+- **DietPi-Software** :octicons-arrow-right-16: **OctoPrint**: Is now available via PyPI repository, hence can be installed and updated easier and faster without downloading and building from the sources. Git is not required anymore, as the internal updater as well uses Python pip only. We migrate all DietPi OctoPrint instances to the new version and new install method, so that the Git/install directory /opt/octoprint is obsolete and removed. All your data will be preserved, of course. Many thanks to @Stinocon for reporting issues related to our previous implementation: <https://github.com/MichaIng/DietPi/issues/3940>
 
 ### Removed Software Packages
 
-- **DietPi-Software** | **CloudPrint** :octicons-arrow-right-16: This software option has been removed, since the Google Cloud Print service will be shut down at the end of 2020 and we don't want to offer software options which will work for at most two months. Please migrate to another printing solution in time. Already installed CloudPrint instances will remain installed and the system service remains functional until the end of the year. With the first DietPi release in 2021 we will remove service handling and offer the package removal during the update process. Further information can be found here: https://www.google.com/cloudprint/learn/
+- **DietPi-Software** | **CloudPrint** :octicons-arrow-right-16: This software option has been removed, since the Google Cloud Print service will be shut down at the end of 2020 and we don't want to offer software options which will work for at most two months. Please migrate to another printing solution in time. Already installed CloudPrint instances will remain installed and the system service remains functional until the end of the year. With the first DietPi release in 2021 we will remove service handling and offer the package removal during the update process. Further information can be found here: <https://www.google.com/cloudprint/learn/>
+
 - **DietPi-Software** | **Tonido** :octicons-arrow-right-16: This software option has been removed, since it is not developed anymore fore three years, no sources have been found and the latest binaries require ancient library versions which fail to be easily installed on currently supported Debian versions.
 
 ### Bug Fixes
 
-- **DietPi-Config** :octicons-arrow-right-16: Resolved an issue on RPi where the onboard 3.5mm jack selection did not work if an HDMI screen was attached. When selecting explicit either HDMI audio or onboard 3.5mm jack, the other one is now disabled on device tree level, which means it cannot be switched without reboot. This is currently the only known way to assure that 3.5mm jack is used for audio output regardless of now or later attached or detached HDMI screens. Many thanks to @corasaniti for reporting this issue: https://github.com/MichaIng/DietPi/issues/3887
-- **DietPi-Config** :octicons-arrow-right-16: Resolved an issue on RPi where selecting the waveshare32 LCD panel installed an outdated device tree overlay, incompatible with the current Linux 5.4 kernel. Many thanks to @black00019 for reporting this issue: https://github.com/MichaIng/DietPi/issues/3881
+- **DietPi-Config** :octicons-arrow-right-16: Resolved an issue on RPi where the onboard 3.5mm jack selection did not work if an HDMI screen was attached. When selecting explicit either HDMI audio or onboard 3.5mm jack, the other one is now disabled on device tree level, which means it cannot be switched without reboot. This is currently the only known way to assure that 3.5mm jack is used for audio output regardless of now or later attached or detached HDMI screens. Many thanks to @corasaniti for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3887>
+
+- **DietPi-Config** :octicons-arrow-right-16: Resolved an issue on RPi where selecting the waveshare32 LCD panel installed an outdated device tree overlay, incompatible with the current Linux 5.4 kernel. Many thanks to @black00019 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3881>
+
 - **DietPi-Services** :octicons-arrow-right-16: Resolved an issue where CPU affinity selection failed due to a syntax error.
+
 - **DietPi-Bugreport** :octicons-arrow-right-16: Resolved an issue where bug report uploads were cancelled if connection test on port 80/443 failed even that uploads are done via SFTP on port 22.
+
 - **DietPi-Cleaner** :octicons-arrow-right-16: Resolved an issue where cleaner selection failed with a syntax error.
-- **DietPi-Sync** :octicons-arrow-right-16: Resolved an issue where setting the delete mode to "On" did not have any effect on it. Many thanks to [phpBB:mafioso12dk](https://dietpi.com/phpbb/memberlist.php?username=mafioso12dk) for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?t=8226
-- **DietPi-Banner** + **DietPi-NordVPN** :octicons-arrow-right-16: Resolved an issue where WAN IP changed to a multi-line output. Many thanks to @maartenlangeveld for reporting this issue: https://github.com/MichaIng/DietPi/issues/3908
-- **DietPi-CloudShell** :octicons-arrow-right-16: Resolved an issue where scene selection failed with a syntax error. Many thanks to @ravenclaw900 for reporting this issue: https://github.com/MichaIng/DietPi/issues/3880
-- **DietPi-Software** | **PiVPN** :octicons-arrow-right-16: Resolved an issue where the installer hang since the interactive whiptail dialogues were not shown on console. Many thanks to @kelliegator for reporting this issue: https://github.com/MichaIng/DietPi/issues/3844
-- **DietPi-Software** | **Medusa** :octicons-arrow-right-16: Resolved an issue where Medusa failed to start after install. Many thanks to @Luan7805 for reporting this issue: https://github.com/MichaIng/DietPi/issues/3842
-- **DietPi-Software** | **Webservers** :octicons-arrow-right-16: Resolved an issue where reinstall failed if /var/www/html did not exist.
+
+- **DietPi-Sync** :octicons-arrow-right-16: Resolved an issue where setting the delete mode to "On" did not have any effect on it. Many thanks to [phpBB:mafioso12dk](https://dietpi.com/phpbb/memberlist.php?username=mafioso12dk) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8226>
+
+- **DietPi-Banner** + **DietPi-NordVPN** :octicons-arrow-right-16: Resolved an issue where WAN IP changed to a multi-line output. Many thanks to @maartenlangeveld for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3908>
+
+- **DietPi-CloudShell** :octicons-arrow-right-16: Resolved an issue where scene selection failed with a syntax error. Many thanks to @ravenclaw900 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3880>
+
+- **DietPi-Software** | **PiVPN** :octicons-arrow-right-16: Resolved an issue where the installer hang since the interactive whiptail dialogues were not shown on console. Many thanks to @kelliegator for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3844>
+
+- **DietPi-Software** | **Medusa** :octicons-arrow-right-16: Resolved an issue where Medusa failed to start after install. Many thanks to @Luan7805 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3842>
+
+- **DietPi-Software** | **Webservers** :octicons-arrow-right-16: Resolved an issue where reinstall failed if `/var/www/html` did not exist.
+
 - **DietPi-Software** | **Lighttpd** :octicons-arrow-right-16: Resolved an issue where (re)install failed if the fastcgi or fastcgi-php module was enabled already.
+
 - **DietPi-Software** | **O!MPD** :octicons-arrow-right-16: Resolved an issue where the URL check for youtube-dl failed.
-- **DietPi-Software** | **Single File PHP Gallery** :octicons-arrow-right-16: Resolved an issue where directory previews were not shown due to missing permissions. Many thanks to [phpBB:tallbastard](https://dietpi.com/phpbb/memberlist.php?username=tallbastard) for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=28155#p28155 
+
+- **DietPi-Software** | **Single File PHP Gallery** :octicons-arrow-right-16: Resolved an issue where directory previews were not shown due to missing permissions. Many thanks to [phpBB:tallbastard](https://dietpi.com/phpbb/memberlist.php?username=tallbastard) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?p=28155#p28155>
+
 - **DietPi-Software** | **WebIOPi** :octicons-arrow-right-16: Resolved an issue where the download and install failed.
+
 - **DietPi-Software** | **Nginx** :octicons-arrow-right-16: Resolved an issue where the amount of worker processes was not set to the amount of CPU threads as intended.
-- **DietPi-Software** | **MineOS** :octicons-arrow-right-16: Resolved an issue where the Node.js downgrade an hence the web UI compiling failed. Many thanks to @CactiChameleon9 for reporting this issue: https://github.com/MichaIng/DietPi/issues/3901
-- **DietPi-Software** | **Mycroft AI** :octicons-arrow-right-16: Resolved an issue where skill installs failed due to missing permissions. Many thanks to [phpBB:GreenGentleman](https://dietpi.com/phpbb/memberlist.php?username=GreenGentleman) for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=28464#p28464
-- **DietPi-Software** | **Jellyfin** :octicons-arrow-right-16: Resolved an issue where Jellyfin did not run on ARMv6 (RPi 1 and Zero models). ARMv6/Raspbian-compatible binaries are now shipped via different APT repository. Many thanks to [phpBB:Shiivu](https://dietpi.com/phpbb/memberlist.php?username=Shiivu) for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?t=8263
-- **DietPi-Software** | **WiFi Hotspot** :octicons-arrow-right-16: Resolved an issue on RPi with WiFi adapters using an RTL8188C* chip, where the service failed to start due to an invalid driver. Many thanks to [phpBB:yerc](https://dietpi.com/phpbb/memberlist.php?username=yerc) for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=28984#p28984
+
+- **DietPi-Software** | **MineOS** :octicons-arrow-right-16: Resolved an issue where the Node.js downgrade an hence the web UI compiling failed. Many thanks to @CactiChameleon9 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3901>
+
+- **DietPi-Software** | **Mycroft AI** :octicons-arrow-right-16: Resolved an issue where skill installs failed due to missing permissions. Many thanks to [phpBB:GreenGentleman](https://dietpi.com/phpbb/memberlist.php?username=GreenGentleman) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?p=28464#p28464>
+
+- **DietPi-Software** | **Jellyfin** :octicons-arrow-right-16: Resolved an issue where Jellyfin did not run on ARMv6 (RPi 1 and Zero models). ARMv6/Raspbian-compatible binaries are now shipped via different APT repository. Many thanks to [phpBB:Shiivu](https://dietpi.com/phpbb/memberlist.php?username=Shiivu) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8263>
+
+- **DietPi-Software** | **WiFi Hotspot** :octicons-arrow-right-16: Resolved an issue on RPi with WiFi adapters using an RTL8188C* chip, where the service failed to start due to an invalid driver. Many thanks to [phpBB:yerc](https://dietpi.com/phpbb/memberlist.php?username=yerc) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?p=28984#p28984>
+
 - **DietPi-Software** | **OctoPrint** :octicons-arrow-right-16: Resolved an issue where the service and system could not be restarted anymore via OctoPrint web UI and, on RPi, the CPU throttling state could not be derived.
-- **DietPi-Software** | **Ampache** :octicons-arrow-right-16: Resolved an issue where the install failed due to an incompatible PHP composer version and it was not possible to update the configuration file to a new version through the web interface. Many thanks to [phpBB:kk345](https://dietpi.com/phpbb/memberlist.php?username=kk345) for reporting these issues: https://dietpi.com/phpbb/viewtopic.php?t=8367
+
+- **DietPi-Software** | **Ampache** :octicons-arrow-right-16: Resolved an issue where the install failed due to an incompatible PHP composer version and it was not possible to update the configuration file to a new version through the web interface. Many thanks to [phpBB:kk345](https://dietpi.com/phpbb/memberlist.php?username=kk345) for reporting these issues: <https://dietpi.com/phpbb/viewtopic.php?t=8367>
+
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: https://github.com/MichaIng/DietPi/pull/XXXX
 
 ### Known/Outstanding Issues
 
-- DietPi-Config :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: https://github.com/MichaIng/DietPi/issues/2103
-- DietPi-Software | Node-RED :octicons-arrow-right-16: Pre-installed modules cannot be updated via web UI: https://github.com/MichaIng/DietPi/issues/2073
-- DietPi-Software | Raspimjpeg :octicons-arrow-right-16: With Lighttpd, streaming mjpeg does not work: https://github.com/MichaIng/DietPi/issues/1747
-- DietPi-Software | MATE desktop :octicons-arrow-right-16: When logging in as root, desktop items and right-click context menu is missing: https://github.com/MichaIng/DietPi/issues/3160
-- DietPi-Software | Sonarr/Radarr/Mono :octicons-arrow-right-16: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: https://github.com/MichaIng/DietPi/issues/3179
+- DietPi-Config :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
+
+- DietPi-Software | Node-RED :octicons-arrow-right-16: Pre-installed modules cannot be updated via web UI: <https://github.com/MichaIng/DietPi/issues/2073>
+
+- DietPi-Software | Raspimjpeg :octicons-arrow-right-16: With Lighttpd, streaming mjpeg does not work: <https://github.com/MichaIng/DietPi/issues/1747>
+
+- DietPi-Software | MATE desktop :octicons-arrow-right-16: When logging in as root, desktop items and right-click context menu is missing: <https://github.com/MichaIng/DietPi/issues/3160>
+
+- DietPi-Software | Sonarr/Radarr/Mono :octicons-arrow-right-16: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: <https://github.com/MichaIng/DietPi/issues/3179>.
 
 For all additional issues that may appear after release, please see the following link for active tickets: https://github.com/MichaIng/DietPi/issues
 
