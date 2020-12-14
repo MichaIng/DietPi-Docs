@@ -45,6 +45,9 @@ markdown_extensions:
   - pymdownx.tabbed # Tabbed content blocks
   - pymdownx.tasklist: # Task list support
       custom_checkbox: true # Custom icons
+  - pymdownx.magiclink: # Auto-links non angle bracket URLs and email addresses and allows to shorten and visualise Git repo links
+      repo_url_shortener: true
+      repo_url_shorthand: true
 
   #  Markdown Extensions which could be used in the future
   #
@@ -57,7 +60,6 @@ markdown_extensions:
   #- pymdownx.highlight # Configure code highlighting for all code detinitions, fenced, inline and blocked by indentation
   #- pymdownx.inlinehilite # Highlight syntax in inline code
   #- pymdownx.keys # Keyboard key symbols
-  #- pymdownx.magiclink # Auto-links non angle bracket URLs and email addresses and allows to shorten and visualise Git repo links
   #- pymdownx.mark # Mark text <mark> via ==text==
   #- pymdownx.smartsymbols # Easy symbols syntax (trademark, copyright, arrows, ...)
   #- pymdownx.snippets # Insert Markdown files into others
