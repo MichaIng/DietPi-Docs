@@ -76,9 +76,9 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 === "Quick start"
 
-    - Start Portainer using next url in the browser (`https://<your.local.ip>:9002` or `https://<your.host.name>:9002`)[^1].
+    - It starts automatically after installation. View Portainer web interface by opening the browser using next url: `http://<your.local.ip>:9002` [^1]. 
 
-    - If you have basic questions about how to use Portainer, use the next beginner guide to Portainer: <https://codeopolis.com/posts/beginners-guide-to-portainer/>.
+    - If you have basic questions on how to use **Portainer**, please read the beginner guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>.
 
 === "Official documentation"
 
@@ -89,4 +89,4 @@ Portainer simplifies your Docker container management via Portainer web interfac
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
 [^1]:
-    [Logitech Media Server](../media/#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. Container internal port needs to stay `9000`, and the actual command is `docker run -d -p 9002:9000`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
+    [Logitech Media Server](../media/#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
