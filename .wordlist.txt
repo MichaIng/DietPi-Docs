@@ -302,6 +302,7 @@ Pinebook
 PiSupply
 PiVPN
 Plex
+Portainer
 pre
 ProFTPD
 Prioglio
@@ -414,6 +415,7 @@ upgradable
 UPnP
 upvote
 UrBackup
+url
 userdata
 UUID
 Viebrock
@@ -454,4 +456,5 @@ XU
 YaCy
 ympd
 ZeroPi
+zlib
 zr
