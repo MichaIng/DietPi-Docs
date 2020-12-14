@@ -90,7 +90,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
     ```
 
     to have _APT packages upgraded automatically_ on a daily basis with logs saved in next file `/var/tmp/dietpi/logs/dietpi-update_apt.log`. Cron is used for the schedule, which means that you can control the execution time via `dietpi-cron > "cron.daily"`.
-    
+
     Many thanks to @ravenclaw900 for implementing this feature: <https://github.com/MichaIng/DietPi/pull/3899>
 
 - **DietPi Documentation** has been extended. It covers now all the **DietPi Optimised Software** categories. Many thanks to @StephanStS for bringing all these updates.
