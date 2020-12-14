@@ -38,7 +38,7 @@ Become part of the Tor Project and turn your DietPi into a Tor relay to help oth
 
 For more details check the [documentation page](../software/advanced_networking/#tor-relay).
 
-![advanced-networking-tor](../assets/images/dietpi-software-advanced-networking-tor.png){: style="width:150px"}
+![advanced-networking-tor](./assets/images/dietpi-software-advanced-networking-tor.png){: style="width:150px"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3921.
 
@@ -48,7 +48,7 @@ Validating, recursive, caching DNS resolver is now available for install and int
 
 For more details check the [documentation page](../software/dns_servers/#unbound)
 
-![unbound](../assets/images/dietpi-software-unbound.jpg)
+![unbound](./assets/images/dietpi-software-unbound.jpg)
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3872
 
@@ -58,7 +58,7 @@ Bitwarden_RS is a an unofficial Bitwarden password manager server with web UI, w
 
 For more details check the [documentation page](../software/cloud/#bitwarden_rs)
 
-![Bitwarden_RS](../assets/images/dietpi-software-bitwarden_rs.jpg)
+![Bitwarden_RS](./assets/images/dietpi-software-bitwarden_rs.jpg)
 
 Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/DietPi!3724).
 
@@ -68,7 +68,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
  For more details on how to install DietPi, check the [documentation](../dietpi_sbc/#raspberry-pi).
 
- ![DietPi Raspberry Pi 400](../assets/images/dietpi-raspberry-pi-400-back.jpg)
+ ![DietPi Raspberry Pi 400](./assets/images/dietpi-raspberry-pi-400-back.jpg)
 
 ### Changes / Improvements / Optimisations
 
@@ -81,7 +81,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
     you can enable daily APT update checks (default value). The result is shown in the DietPi login banner, in a similar way an available DietPi update is presented.
 
     dietpi-automated_APT_package_update
-    ![dietpi Automated APT packages update](../assets/images/dietpi-automated_APT_package_update.jpg)
+    ![dietpi Automated APT packages update](./assets/images/dietpi-automated_APT_package_update.jpg)
 
     Set
 
@@ -95,7 +95,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 - **DietPi Documentation** has been extended. It covers now all the **DietPi Optimised Software** categories. Many thanks to @StephanStS for bringing all these updates.
 
-    ![DietPi Documentation](../assets/images/dietpi-docs-categories.jpg)
+    ![DietPi Documentation](./assets/images/dietpi-docs-categories.jpg)
 
 - **DietPi-Globals** :octicons-arrow-right-16: In DietPi scripts, the PATH variable is now overwritten with the Debian/bash system default to assure that no broken or manipulated PATH can be passed via e.g. "su" or "sudo -E".
 
