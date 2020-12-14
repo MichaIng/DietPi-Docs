@@ -80,7 +80,8 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
     
     you can enable daily APT update checks (default value). The result is shown in the DietPi login banner, in a similar way an available DietPi update is presented.
 
-    **Add image**
+    dietpi-automated_APT_package_update
+    ![dietpi Automated APT packages update](../assets/images/dietpi-automated_APT_package_update.jpg)
 
     Set
     
@@ -119,7 +120,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 - **DietPi-Software** :octicons-arrow-right-16: **Mycroft AI**: By default, the ALSA automatic conversions plugin is enabled now on install, which enables OOTB compatibility with all wav sound formats and sound card. Additionally listener sampling rate override (48000 Hz) has been removed, reverting to Mycroft default (16000 Hz), which might solve an issue with hanging microphone level in CLI and related failing voice detection.
 
-- **DietPi-Software** :octicons-arrow-right-16: **Gogs**: Has been enabled for ARMv8 boards and on ARMv7 boards the newest version is installed again, which was not the case since Gogs v0.12. due to changed download names. Many thanks to @MadKernel for bringing ARMv8 support back to our attention: https://dietpi.com/phpbb/viewtopic.php?t=8276
+- **DietPi-Software** :octicons-arrow-right-16: **Gogs**: Has been enabled for ARMv8 boards and on ARMv7 boards the newest version is installed again, which was not the case since Gogs v0.12. due to changed download names. Many thanks to [phpBB:MadKernel](https://dietpi.com/phpbb/memberlist.php?username=MadKernel) for bringing ARMv8 support back to our attention: https://dietpi.com/phpbb/viewtopic.php?t=8276
 
 - **DietPi-Software** :octicons-arrow-right-16: **Folding@Home** : Is now available for ARMv8 (arm64) boards. Donate your idle CPU power to help researchers fighting against diseases like Cancer, Alzheimer, Ebola and COVID-19.
 
@@ -139,7 +140,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 - **DietPi-Services** :octicons-arrow-right-16: Resolved an issue where CPU affinity selection failed due to a syntax error.
 - **DietPi-Bugreport** :octicons-arrow-right-16: Resolved an issue where bug report uploads were cancelled if connection test on port 80/443 failed even that uploads are done via SFTP on port 22.
 - **DietPi-Cleaner** :octicons-arrow-right-16: Resolved an issue where cleaner selection failed with a syntax error.
-- **DietPi-Sync** :octicons-arrow-right-16: Resolved an issue where setting the delete mode to "On" did not have any effect on it. Many thanks to @mafioso12dk for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?t=8226
+- **DietPi-Sync** :octicons-arrow-right-16: Resolved an issue where setting the delete mode to "On" did not have any effect on it. Many thanks to [phpBB:mafioso12dk](https://dietpi.com/phpbb/memberlist.php?username=mafioso12dk) for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?t=8226
 - **DietPi-Banner** + **DietPi-NordVPN** :octicons-arrow-right-16: Resolved an issue where WAN IP changed to a multi-line output. Many thanks to @maartenlangeveld for reporting this issue: https://github.com/MichaIng/DietPi/issues/3908
 - **DietPi-CloudShell** :octicons-arrow-right-16: Resolved an issue where scene selection failed with a syntax error. Many thanks to @ravenclaw900 for reporting this issue: https://github.com/MichaIng/DietPi/issues/3880
 - **DietPi-Software** | **PiVPN** :octicons-arrow-right-16: Resolved an issue where the installer hang since the interactive whiptail dialogues were not shown on console. Many thanks to @kelliegator for reporting this issue: https://github.com/MichaIng/DietPi/issues/3844
@@ -147,15 +148,15 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 - **DietPi-Software** | **Webservers** :octicons-arrow-right-16: Resolved an issue where reinstall failed if /var/www/html did not exist.
 - **DietPi-Software** | **Lighttpd** :octicons-arrow-right-16: Resolved an issue where (re)install failed if the fastcgi or fastcgi-php module was enabled already.
 - **DietPi-Software** | **O!MPD** :octicons-arrow-right-16: Resolved an issue where the URL check for youtube-dl failed.
-- **DietPi-Software** | **Single File PHP Gallery** :octicons-arrow-right-16: Resolved an issue where directory previews were not shown due to missing permissions. Many thanks to @tallbastard for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=28155#p28155
+- **DietPi-Software** | **Single File PHP Gallery** :octicons-arrow-right-16: Resolved an issue where directory previews were not shown due to missing permissions. Many thanks to [phpBB:tallbastard](https://dietpi.com/phpbb/memberlist.php?username=tallbastard) for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=28155#p28155 
 - **DietPi-Software** | **WebIOPi** :octicons-arrow-right-16: Resolved an issue where the download and install failed.
 - **DietPi-Software** | **Nginx** :octicons-arrow-right-16: Resolved an issue where the amount of worker processes was not set to the amount of CPU threads as intended.
 - **DietPi-Software** | **MineOS** :octicons-arrow-right-16: Resolved an issue where the Node.js downgrade an hence the web UI compiling failed. Many thanks to @CactiChameleon9 for reporting this issue: https://github.com/MichaIng/DietPi/issues/3901
-- **DietPi-Software** | **Mycroft AI** :octicons-arrow-right-16: Resolved an issue where skill installs failed due to missing permissions. Many thanks to @GreenGentleman for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=28464#p28464
-- **DietPi-Software** | **Jellyfin** :octicons-arrow-right-16: Resolved an issue where Jellyfin did not run on ARMv6 (RPi 1 and Zero models). ARMv6/Raspbian-compatible binaries are now shipped via different APT repository. Many thanks to @Shiivu for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?t=8263
-- **DietPi-Software** | **WiFi Hotspot** :octicons-arrow-right-16: Resolved an issue on RPi with WiFi adapters using an RTL8188C* chip, where the service failed to start due to an invalid driver. Many thanks to @yerc for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=28984#p28984
+- **DietPi-Software** | **Mycroft AI** :octicons-arrow-right-16: Resolved an issue where skill installs failed due to missing permissions. Many thanks to [phpBB:GreenGentleman](https://dietpi.com/phpbb/memberlist.php?username=GreenGentleman) for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=28464#p28464
+- **DietPi-Software** | **Jellyfin** :octicons-arrow-right-16: Resolved an issue where Jellyfin did not run on ARMv6 (RPi 1 and Zero models). ARMv6/Raspbian-compatible binaries are now shipped via different APT repository. Many thanks to [phpBB:Shiivu](https://dietpi.com/phpbb/memberlist.php?username=Shiivu) for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?t=8263
+- **DietPi-Software** | **WiFi Hotspot** :octicons-arrow-right-16: Resolved an issue on RPi with WiFi adapters using an RTL8188C* chip, where the service failed to start due to an invalid driver. Many thanks to [phpBB:yerc](https://dietpi.com/phpbb/memberlist.php?username=yerc) for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=28984#p28984
 - **DietPi-Software** | **OctoPrint** :octicons-arrow-right-16: Resolved an issue where the service and system could not be restarted anymore via OctoPrint web UI and, on RPi, the CPU throttling state could not be derived.
-- **DietPi-Software** | **Ampache** :octicons-arrow-right-16: Resolved an issue where the install failed due to an incompatible PHP composer version and it was not possible to update the configuration file to a new version through the web interface. Many thanks to @kk345 for reporting these issues: https://dietpi.com/phpbb/viewtopic.php?t=8367
+- **DietPi-Software** | **Ampache** :octicons-arrow-right-16: Resolved an issue where the install failed due to an incompatible PHP composer version and it was not possible to update the configuration file to a new version through the web interface. Many thanks to [phpBB:kk345](https://dietpi.com/phpbb/memberlist.php?username=kk345) for reporting these issues: https://dietpi.com/phpbb/viewtopic.php?t=8367
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: https://github.com/MichaIng/DietPi/pull/XXXX
 
@@ -287,15 +288,17 @@ For all additional issues that may appear after release, please see the followin
 
 - **DietPi-Software** :octicons-commit-24: **Home Assistant** :octicons-arrow-right-16: Resolved an issue where install failed on ARM due to missing new build dependency.
 
-    Many thanks to @pbutterworth for reporting and @novitibo for providing the solution: [Issue Forum](https://dietpi.com/phpbb/viewtopic.php?f=11&t=8095)
+    Many thanks to @pbutterworth for reporting and [phpBB:novitibo](https://dietpi.com/phpbb/memberlist.php?username=novitibo) for providing the solution: [Issue Forum](https://dietpi.com/phpbb/viewtopic.php?f=11&t=8095)
 
 - **DietPi-Software** :octicons-commit-24: **Kodi** :octicons-arrow-right-16: Resolved an issue on Odroid XU4 where install failed due to missing librockchip-mpp1 package which instead was aimed to be installed on Odroid N1 only.
 
 - **DietPi-Software** :octicons-commit-24: **TigerVNC+LXDE** :octicons-arrow-right-16: Resolved an issue where `lxappearance` start ("Customize Look and Feel") hangs within TigerVNC sessions.
 
-- **DietPi-Software** :octicons-commit-24: **Fail2Ban** :octicons-arrow-right-16: Resolved an issue where the service could have failed to start due to a missing variable declaration in our default config. Many thanks to @mafioso12dk for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=8147>
+- **DietPi-Software** :octicons-commit-24: **Fail2Ban** :octicons-arrow-right-16: Resolved an issue where the service could have failed to start due to a missing variable declaration in our default config. Many thanks to [phpBB:mafioso12dk](https://dietpi.com/phpbb/memberlist.php?username=mafioso12dk) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=8147>
 
-- **DietPi-Software** :octicons-commit-24: **DietPi-RAMlog** :octicons-arrow-right-16: Resolved an issue where /var/log content was not restored when reinstalling DietPi-RAMlog, e.g. when swiching logging mode from #1 to #2. This could have led to service start issues, when those rely on log files or directories being present. Many thanks to @djashdj for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=8163>
+- **DietPi-Software** :octicons-commit-24: **DietPi-RAMlog** :octicons-arrow-right-16: Resolved an issue where /var/log content was not restored when reinstalling DietPi-RAMlog, e.g. when swiching logging mode from #1 to #2. This could have led to service start issues, when those rely on log files or directories being present. 
+
+    Many thanks to [phpBB:djashdj](https://dietpi.com/phpbb/memberlist.php?username=djashdj) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=8163>
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/XXXX>
 
