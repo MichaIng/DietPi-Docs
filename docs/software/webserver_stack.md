@@ -139,17 +139,17 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     **Access website:**
 
-    - URL = http://192.168.0.100 (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
     - local directory = /var/www
 
     **Access phpinfo:**
 
-    - URL = http://192.168.0.100/phpinfo.php
+    - URL = `http://192.168.0.100/phpinfo.php`
 
     **Access memory cache info:**
 
-    - APCu = http://192.168.0.100/apc.php
-    - OPcache = http://192.168.0.100/opcache.php
+    - APCu = `http://192.168.0.100/apc.php`
+    - OPcache = `http://192.168.0.100/opcache.php`
 
     **MariaDB Details:**
 
@@ -227,13 +227,13 @@ SQLite is an embedded relational database engine. The documentation calls it _a 
 
     **Access website:**
 
-    - URL = http://192.168.0.100 (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
     - local directory = /var/www
 
     **Access memory cache info:**
 
-    - APCu = http://192.168.0.100/apc.php
-    - OPcache = http://192.168.0.100/opcache.php
+    - APCu = `http://192.168.0.100/apc.php`
+    - OPcache = `http://192.168.0.100/opcache.php`
 
 === "Secured access - HTTPS/SSL"
 
@@ -306,16 +306,16 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     **Access website:**
 
-    - URL = http://192.168.0.100 (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
 
     **Access phpinfo:**
 
-    - URL = http://192.168.0.100/phpinfo.php
+    - URL = `http://192.168.0.100/phpinfo.php`
 
     **Access memory cache info:**
 
-    - APCu = http://192.168.0.100/apc.php
-    - OPcache = http://192.168.0.100/opcache.php
+    - APCu = `http://192.168.0.100/apc.php`
+    - OPcache = `http://192.168.0.100/opcache.php`
 
     **MariaDB Details:**
 
@@ -395,12 +395,12 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     **Access website:**
 
-    - URL = http://192.168.0.100 (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
 
     **Access memory cache info:**
 
-    - APCu = http://192.168.0.100/apc.php
-    - OPcache = http://192.168.0.100/opcache.php
+    - APCu = `http://192.168.0.100/apc.php`
+    - OPcache = `http://192.168.0.100/opcache.php`
 
 === "Secured access - HTTPS/SSL"
 
@@ -408,7 +408,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Official documentation"
 
@@ -426,17 +426,17 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     **Access website:**
 
-    - URL = http://192.168.0.100 (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
     - local directory = /var/www
 
     **Access phpinfo:**
 
-    - URL = http://192.168.0.100/phpinfo.php
+    - URL = `http://192.168.0.100/phpinfo.php`
 
     **Access memory cache info:**
 
-    - APCu = http://192.168.0.100/apc.php
-    - OPcache = http://192.168.0.100/opcache.php
+    - APCu = `http://192.168.0.100/apc.php`
+    - OPcache = `http://192.168.0.100/opcache.php`
 
     **MariaDB Details:**
 
@@ -469,17 +469,17 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     **Access website:**
 
-    - URL = http://192.168.0.100 (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
     - local directory = /var/www
 
     **Access phpinfo:**
 
-    - URL = http://192.168.0.100/phpinfo.php
+    - URL = `http://192.168.0.100/phpinfo.php`
 
     **Access memory cache info:**
 
-    - APCu = http://192.168.0.100/apc.php
-    - OPcache = http://192.168.0.100/opcache.php
+    - APCu = `http://192.168.0.100/apc.php`
+    - OPcache = `http://192.168.0.100/opcache.php`
 
     **MariaDB Details:**
 
