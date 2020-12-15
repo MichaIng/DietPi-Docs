@@ -140,9 +140,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     **Access website:**
 
     - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
-    - local directory = /var/www
+    - Local directory = `/var/www`
 
-    **Access phpinfo:**
+    **Access PHP info page:**
 
     - URL = `http://192.168.0.100/phpinfo.php`
 
@@ -208,7 +208,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Official documentation"
 
@@ -227,7 +227,7 @@ SQLite is an embedded relational database engine. The documentation calls it _a 
     **Access website:**
 
     - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
-    - local directory = /var/www
+    - Local directory = `/var/www`
 
     **Access memory cache info:**
 
@@ -418,16 +418,16 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Lighttpd instead of Apache2 web server.
 
-**Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the cpu-load.
+**Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the CPU load.
 
 === "Quick start"
 
     **Access website:**
 
     - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
-    - local directory = /var/www
+    - Local directory = `/var/www`
 
-    **Access phpinfo:**
+    **Access PHP info page:**
 
     - URL = `http://192.168.0.100/phpinfo.php`
 
@@ -458,7 +458,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **Lighttpd** instead of Apache2 web server and **SQLite** instead of MariaDB.
 
-**Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the cpu-load.
+**Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the CPU load.
 
 **SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://www.sqlite.org/mostdeployed.html)).
 
@@ -467,9 +467,9 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     **Access website:**
 
     - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
-    - local directory = /var/www
+    - Local directory = `/var/www`
 
-    **Access phpinfo:**
+    **Access PHP info page:**
 
     - URL = `http://192.168.0.100/phpinfo.php`
 
@@ -522,7 +522,7 @@ Apache is a Apache Software Foundation project. The goal is to provide a secure,
 
 ### Nginx
 
-**nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, Wordpress.com, FastMail.FM.[^1]
+**Nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, Wordpress.com, FastMail.FM.[^1]
 
 ![DietPi Webstack software Nginx logo](../assets/images/dietpi-software-webstack-nginx.gif){: style="width:150px"}
 
