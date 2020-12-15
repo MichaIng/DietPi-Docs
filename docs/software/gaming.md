@@ -357,7 +357,9 @@ Make sure you have one of DietPi's File Servers installed.
 A highly optimized Minecraft server with plugins, written in Java.  
 PaperMC by default runs a single server, available on LAN, but can be port forwarded so other people can connect.
 
-![DietPi gaming software PaperMC](../assets/images/dietpi-software-games-papermc.jpg){: style="width:150px"}
+![DietPi gaming software PaperMC logo](../assets/images/dietpi-software-games-papermc.jpg){: style="width:70px"}
+
+![DietPi gaming software PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg){: style="width:500px"}
 
 === "Default server/query port"
 
