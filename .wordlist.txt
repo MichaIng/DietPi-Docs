@@ -1,4 +1,5 @@
 addictiveness
+ADF
 AirPlay
 Airsonic
 AIY
@@ -73,6 +74,7 @@ de
 deinstallation
 DER
 DHCP
+dietpi
 DietPi
 DietPi's
 Dimitris
@@ -123,6 +125,7 @@ GiB
 GiBi
 Gilles
 Gitea
+github
 GlusterFS
 GMediaRender
 GNUstep
@@ -146,6 +149,7 @@ hotfix
 hotspot
 HotSpot
 hotspots
+htop
 HQPlayer
 HTPC
 HTTPS
