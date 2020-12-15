@@ -35,9 +35,9 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
     After `dietpi-software` has finished and the service starts the first time, please go through the following steps manually:
 
-    - Run `htop` and wait until the CPU usage of the homeassistant processes goes down to nearly zero.
+    - Run `htop` and wait until the CPU usage of the `homeassistant` processes goes down to nearly zero.
     - Run `systemctl restart home-assistant`
-    - Run `htop` and wait until the CPU usage of the homeassistant processes goes down to nearly zero.
+    - Run `htop` and wait until the CPU usage of the `homeassistant` processes goes down to nearly zero.
     - Open the HA web UI (see below). It will again install some Python modules on first access, which can again take a little while. Always check `htop` if you are unsure, which reveals any Python/pip module install process, if currently done.
 
 === "Access to the web interface"
