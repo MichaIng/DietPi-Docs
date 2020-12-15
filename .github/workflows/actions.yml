@@ -43,10 +43,10 @@ jobs:
         run: |
           pip3 install -U pyspelling
           sudo apt-get -q update
-          sudo apt-get -qq --no-install-recommends install aspell aspell-en
+          sudo apt-get -qq --no-install-recommends install aspell-en
       - name: Check spelling in HTML files
         if: always() && steps.pyspelling.outcome == 'success'
-        run: pyspelling -vc .spellcheck.yml
+        run: pyspelling -c .spellcheck.yml
       - name: Setup Go 1.15 for liche
         id: go
         if: always() && steps.build.outcome == 'success'
