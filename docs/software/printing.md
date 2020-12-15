@@ -40,11 +40,11 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
         - Restart system = `reboot`
         - Shutdown system = `poweroff`
     - Section: *Software Updates*:
-        - OctoPrint checkout folder = **/opt/octoprint** (since DietPi v6.33)
+        - OctoPrint checkout folder = `/opt/octoprint` (since DietPi v6.33)
 
 === "OctoPrint data/config directory"
 
-    The data/config information is located in */mnt/dietpi_userdata/octoprint* (since DietPi v6.33).
+    The data/config information is located in `/mnt/dietpi_userdata/octoprint` (since DietPi v6.33).
 
 === "Command line interface (CLI)"
 
@@ -52,7 +52,7 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
         The CLI is relevant since DietPi v6.33.
 
     OctoPrint also offers a command line interface to execute OctoPrint commands.  
-    To use this option, run `octoprint` from the command line. Do this as user *octoprint* to invoke the correct config/data directory. In a regular bash shell session this is the case automatically via alias and sudo, see: `/etc/bashrc.d/dietpi-octoprint.sh`.
+    To use this option, run `octoprint` from the command line. Do this as user `octoprint` to invoke the correct config/data directory. In a regular bash shell session this is the case automatically via alias and sudo, see: `/etc/bashrc.d/dietpi-octoprint.sh`.
 
     If you use a different shell, use:
 
