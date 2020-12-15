@@ -124,7 +124,7 @@ The latter is used only in the case of the first webserver background installati
     ![DietPi webserver selection webserver preference](../assets/images/dietpi-software-webserver-preference.png){: style="width:500px"}
 
     Using this option you only select the webserver for use in DietPi installations.  
-    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MySQL](https://wikipedia.org/wiki/MySQL)/[SQLite](https://wikipedia.org/wiki/SQLite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
+    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](https://wikipedia.org/wiki/MariaDB)/[SQLite](https://wikipedia.org/wiki/SQLite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
 
     ???+ info "No webserver change if already installed"
         This setting "Webserver Preference* can NOT be changed if an existing webserver is installed on the system.
@@ -212,9 +212,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 === "Official documentation"
 
-    - Apache HTTP Web Server - [http://httpd.apache.org](http://httpd.apache.org)
-    - MariaDB Server - [https://mariadb.org](https://mariadb.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Apache HTTP Web Server - <http://httpd.apache.org>
+    - MariaDB Server - <https://mariadb.org>
+    - PHP - <https://www.php.net>
 
 ### LASP Web Stack
 
@@ -287,13 +287,13 @@ SQLite is an embedded relational database engine. The documentation calls it _a 
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Official documentation"
 
-    - Apache HTTP Web Server - [http://httpd.apache.org](http://httpd.apache.org)
-    - SQLite Server - [https://www.sqlite.org](https://www.sqlite.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Apache HTTP Web Server - <http://httpd.apache.org>
+    - SQLite Server - <https://www.sqlite.org>
+    - PHP - <https://www.php.net>
 
 ### LEMP Web Stack
 
@@ -377,9 +377,9 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Official documentation"
 
-    - Nginx - [https://www.Nginx.com](https://www.Nginx.com)
-    - MariaDB Server - [https://mariadb.org](https://mariadb.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Nginx - <https://www.Nginx.com>
+    - MariaDB Server - <https://mariadb.org>
+    - PHP - <https://www.php.net>
 
 ### LESP Web Stack
 
@@ -410,9 +410,9 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Official documentation"
 
-    - Nginx - [https://www.Nginx.com](https://www.Nginx.com)
-    - SQLite Server - [https://www.sqlite.org](https://www.sqlite.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Nginx - <https://www.Nginx.com>
+    - SQLite Server - <https://www.sqlite.org>
+    - PHP - <https://www.php.net>
 
 ### LLMP Web Stack
 
@@ -450,9 +450,9 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Official documentation"
 
-    - Lighttpd - [https://www.lighttpd.net](https://www.lighttpd.net)
-    - MariaDB Server - [https://mariadb.org](https://mariadb.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Lighttpd - <https://www.lighttpd.net>
+    - MariaDB Server - <https://mariadb.org>
+    - PHP - <https://www.php.net>
 
 ### LLSP web stack
 
@@ -488,7 +488,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Individual installation"
 
@@ -504,9 +504,9 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Official documentation"
 
-    - Lighttpd - [https://www.lighttpd.net](https://www.lighttpd.net)
-    - SQLite Server - [https://www.sqlite.org](https://www.sqlite.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Lighttpd - <https://www.lighttpd.net>
+    - SQLite Server - <https://www.sqlite.org>
+    - PHP - <https://www.php.net>
 
 ## WebServers
 
@@ -597,7 +597,7 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
 Source: [Colin Viebrock](http://php.net/logos), [CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=9632398).
 
 [^1]:
-    Find out more about the success stories of Nginx on the [Nginx.org/en/](https://Nginx.org/en/).
+    Find out more about the success stories of Nginx on: <https://Nginx.org/en/>
 [^2]:
     ["Dead database walking: MySQL's creator on why the future belongs to MariaDB - MariaDB, open source, mysql, Oracle"](https://www2.computerworld.com.au/article/457551/dead_database_walking_mysql_creator_why_future_belongs_mariadb/). Computerworld. Retrieved 22 November 2020.
 
