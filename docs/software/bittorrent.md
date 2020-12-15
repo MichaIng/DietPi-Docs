@@ -385,7 +385,7 @@ Automatically download your favorite TV shows, as they become available.
     - Once found, under path use the following location `/mnt/dietpi_userdata/downloads`
     - Change any further options (such as video quality) if needed, then select `+`
 
-=== "Using custom download/media directories outside of /mnt/"
+=== "Using custom download/media directories outside of `/mnt/`"
 
     By default Sonarr has strict permissions to only access download and media directories inside `/mnt/`. If you need to use a different location, please do the following:
 
@@ -449,7 +449,7 @@ Automatically download your favorite movies, as they become available.
     - Once found, under `path` use the following location `/mnt/dietpi_userdata/downloads`
     - Change any further options (such as video quality) if needed, then select `+`
 
-=== "Using custom download/media directories outside of /mnt/"
+=== "Using custom download/media directories outside of `/mnt/`"
 
     By default Radarr has strict permissions to only access download and media directories inside `/mnt/`. If you need to use a different location, please do the following:
 
@@ -554,7 +554,7 @@ Automatically download your favorite music.
     - Once found, under root folder, use the following location `/mnt/dietpi_userdata/downloads`
     - Change any other settings as required, then select `Add`
 
-=== "Using custom download/media directories outside of /mnt/"
+=== "Using custom download/media directories outside of `/mnt/`"
 
     By default Lidarr has strict permissions to only access download and media directories inside `/mnt/`. If you need to use a different location, please do the following:
 
@@ -614,7 +614,7 @@ Recommend additional software:
 
 API Support for your favorite torrent trackers.
 
-Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato) into tracker-site-specific http queries, parses the HTML response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.
+Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato) into tracker-site-specific HTTP queries, parses the HTML response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.
 
 ![DietPi download software Jackett](../assets/images/dietpi-software-download-jackett.png){: style="width:500px"}
 
