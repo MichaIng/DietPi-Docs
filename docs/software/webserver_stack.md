@@ -151,10 +151,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - APCu = `http://192.168.0.100/apc.php`
     - OPcache = `http://192.168.0.100/opcache.php`
 
-    **MariaDB Details:**
+    **MariaDB CLI:**
 
-    - username = root
-    - password = dietpi
+    - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
 === "Secured access - HTTPS/SSL"
 
@@ -317,10 +316,9 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://192.168.0.100/apc.php`
     - OPcache = `http://192.168.0.100/opcache.php`
 
-    **MariaDB Details:**
+    **MariaDB CLI:**
 
-    - username = root
-    - password = dietpi
+    - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
 === "Secured access - HTTPS/SSL"
 
@@ -438,10 +436,9 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://192.168.0.100/apc.php`
     - OPcache = `http://192.168.0.100/opcache.php`
 
-    **MariaDB Details:**
+    **MariaDB CLI:**
 
-    - username = root
-    - password = dietpi
+    - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
 === "Secured access - HTTPS/SSL"
 
@@ -481,10 +478,9 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://192.168.0.100/apc.php`
     - OPcache = `http://192.168.0.100/opcache.php`
 
-    **MariaDB Details:**
+    **MariaDB CLI:**
 
-    - username = root
-    - password = dietpi
+    - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
 === "Secured access - HTTPS/SSL"
 
