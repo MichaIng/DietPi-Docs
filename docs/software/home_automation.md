@@ -54,7 +54,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 === "Customize Python environment"
 
     Home Assistant is installed within a dedicated Python environment, powered by: <https://github.com/pyenv/pyenv>.  
-    This places a standalone Python instance which runs completely independent from any other installed Python instance or modules. If you need to install additional Python modules into this pyenv environment, update Python itself or similar, you need to open a shell as user homeassistant and activate the pyenv environment:
+    This places a standalone Python instance which runs completely independent from any other installed Python instance or modules. If you need to install additional Python modules into this pyenv environment, update Python itself or similar, you need to open a shell as user `homeassistant` and activate the pyenv environment:
 
     ```sh
     sudo -u homeassistant bash
