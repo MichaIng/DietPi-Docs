@@ -12,7 +12,7 @@ dietpi-launcher
 
 ## DietPi software
 
-**dietpi-software** will be automatically displayed on the first login after the installation. It can be accessed at any time running next command:
+`dietpi-software` will be automatically displayed on the first login after the installation. It can be accessed at any time running next command:
 
 ``` bash
 dietpi-software
@@ -72,7 +72,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     DietPi will then automatically install and setup the file server for you. DietPi will also clean and remove any previous file server from your system.
 
-    The **default destination** directory for file servers is ***/mnt/dietpi_userdata***.
+    The **default destination** directory for file servers is `/mnt/dietpi_userdata`.
 
     The reasons for choosing **ProFTPD** over **Samba** may be:
 
@@ -110,7 +110,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - The location where your **File Server** choice will point to, if you install one, like Samba Server or ProFTPD.
     - The location where you can upload and store your **media content**, for other applications to use, like Kodi, Emby or Plex.
 
-    For all software you install in dietpi-software, you can access your user data with ***/mnt/dietpi_userdata***. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
+    For all software you install in dietpi-software, you can access your user data with `/mnt/dietpi_userdata`. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
     To check where the physical location is, you can run the following command:  
     `readlink -f /mnt/dietpi_userdata`
 
@@ -149,7 +149,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
       free        Print an unused software ID, free for a new software implementation
     ```
 
-    The <software_id\> which has to be given is the one which is present in the software list within the `dietpi-software` dialogs:
+    The <software_id\> which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:
 
     ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: style="width:400px"}
 
