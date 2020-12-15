@@ -249,7 +249,7 @@ When ready, select Start to launch the emulator. Have fun!
 
 Make sure you have one of DietPi's File Servers installed.
 
-- Floppy Disk Image (.adf) directory as chosen before, e.g. `/amiberry/floppy_images`
+- Floppy Disk Image (`.adf`) directory as chosen before, e.g. `/amiberry/floppy_images`
 - Kickstarts (`.rom`) directory = `/amiberry/kickstarts`
 
 #### How can I open the configuration window once the emulator has started?
