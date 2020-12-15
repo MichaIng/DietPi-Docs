@@ -212,9 +212,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 === "Official documentation"
 
-    - Apache HTTP Web Server - <http://httpd.apache.org>
-    - MariaDB Server - <https://mariadb.org>
-    - PHP - <https://www.php.net>
+    - Apache HTTP Web Server - <https://httpd.apache.org/>
+    - MariaDB Server - <https://mariadb.org/>
+    - PHP - <https://www.php.net/>
 
 ### LASP Web Stack
 
@@ -291,9 +291,9 @@ SQLite is an embedded relational database engine. The documentation calls it _a 
 
 === "Official documentation"
 
-    - Apache HTTP Web Server - <http://httpd.apache.org>
-    - SQLite Server - <https://www.sqlite.org>
-    - PHP - <https://www.php.net>
+    - Apache HTTP Web Server - <https://httpd.apache.org/>
+    - SQLite Server - <https://sqlite.org/>
+    - PHP - <https://www.php.net/>
 
 ### LEMP Web Stack
 
@@ -377,9 +377,9 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Official documentation"
 
-    - Nginx - <https://www.Nginx.com>
-    - MariaDB Server - <https://mariadb.org>
-    - PHP - <https://www.php.net>
+    - Nginx - <https://www.nginx.com/>
+    - MariaDB Server - <https://mariadb.org/>
+    - PHP - <https://www.php.net/>
 
 ### LESP Web Stack
 
@@ -387,7 +387,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 **Nginx** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
-**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://www.sqlite.org/mostdeployed.html)).
+**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://sqlite.org/mostdeployed.html)).
 
 === "Quick start"
 
@@ -410,9 +410,9 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Official documentation"
 
-    - Nginx - <https://www.Nginx.com>
-    - SQLite Server - <https://www.sqlite.org>
-    - PHP - <https://www.php.net>
+    - Nginx - <https://www.nginx.com/>
+    - SQLite Server - <https://sqlite.org/>
+    - PHP - <https://www.php.net/>
 
 ### LLMP Web Stack
 
@@ -446,13 +446,13 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Official documentation"
 
-    - Lighttpd - <https://www.lighttpd.net>
-    - MariaDB Server - <https://mariadb.org>
-    - PHP - <https://www.php.net>
+    - Lighttpd - <https://www.lighttpd.net/>
+    - MariaDB Server - <https://mariadb.org/>
+    - PHP - <https://www.php.net/>
 
 ### LLSP web stack
 
@@ -460,7 +460,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 **Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the CPU load.
 
-**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://www.sqlite.org/mostdeployed.html)).
+**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://sqlite.org/mostdeployed.html)).
 
 === "Quick start"
 
@@ -504,9 +504,9 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Official documentation"
 
-    - Lighttpd - <https://www.lighttpd.net>
-    - SQLite Server - <https://www.sqlite.org>
-    - PHP - <https://www.php.net>
+    - Lighttpd - <https://www.lighttpd.net/>
+    - SQLite Server - <https://sqlite.org/>
+    - PHP - <https://www.php.net/>
 
 ## WebServers
 
