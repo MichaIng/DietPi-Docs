@@ -307,7 +307,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
 
-    **Access phpinfo:**
+    **Access PHP info page:**
 
     - URL = `http://192.168.0.100/phpinfo.php`
 
@@ -373,7 +373,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Official documentation"
 
