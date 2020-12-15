@@ -528,7 +528,7 @@ Credits: This software title has been added to DietPi-Software by CedArctic, man
 
 Bitwarden_RS is an unofficial Bitwarden password manager server with web interface, written in Rust.
 
-![Bitwarden_RS web valut screenshot](../assets/images/dietpi-software-bitwarden_rs.jpg){: style="width:600px"}
+![Bitwarden_RS web vault screenshot](../assets/images/dietpi-software-bitwarden_rs.jpg){: style="width:600px"}
 
 === "First access"
 
