@@ -61,7 +61,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
     #### Shared desktop
 
-    The *shared desktop* mode is used to have more than one single VNC viewer connected to the same desktop session. To enable this mode, edit **/boot/dietpi.txt**, e.g. via `nano /boot/dietpi.txt`.
+    The *shared desktop* mode is used to have more than one single VNC viewer connected to the same desktop session. To enable this mode, edit `/boot/dietpi.txt`, e.g. via `nano /boot/dietpi.txt`.
     Change to value `1` the following line:
 
     ```
@@ -72,7 +72,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
     #### Resolution settings
 
-    The following shows an example how to run VNC server on screen **:1** by creating a new desktop with 1280x720 resolution by editing **/boot/dietpi.txt**:
+    The following shows an example how to run VNC server on screen **:1** by creating a new desktop with 1280x720 resolution by editing `/boot/dietpi.txt`:
 
     ```
     nano /boot/dietpi.txt
@@ -120,7 +120,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
     #### Shared desktop
 
-    If you set `SOFTWARE_VNCSERVER_SHARE_DESKTOP=1` in /boot/dietpi.txt or select desktop auto login via `dietpi-autostart` (index 2), RealVNC server will be started on boot in shared desktop mode, attaching to the first found local desktop session.  
+    If you set `SOFTWARE_VNCSERVER_SHARE_DESKTOP=1` in `/boot/dietpi.txt` or select desktop auto login via `dietpi-autostart` (index 2), RealVNC server will be started on boot in shared desktop mode, attaching to the first found local desktop session.  
     Check the service status via `systemctl status vncserver-x11-serviced`.
     Check all logs via `journalctl -u vncserver-x11-serviced`.
 
