@@ -174,7 +174,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
       If you own the Amiga Forever product, you can legally download and use Kickstarts you are eligible for, from: <https://www.amigaroms.com/>.  
       **Remark:** *Kickstart 1.3 (A500-A2500-A3000-CDTV) is highly recommended to work with most games.*  
       Kickstarts need to be placed in `/mnt/dietpi_userdata/amiberry/kickstarts`
-    - Floppy disks (Amiga .adf images)  
+    - Floppy disks (Amiga `.adf` images)  
       Amiga's floppy disk images have a .adf file extension.  
       You will need obtain at least one ADF image to start your Amiga experience.  
       Load your ADF from or place them where every you want it, e.g. create and use:  
