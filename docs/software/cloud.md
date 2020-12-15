@@ -75,7 +75,7 @@ Also Installs:
 
     - 32bit systems can handle 2 GB
     - 64bit systems can handle 8796 PB, yep, in petabyte
-    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024))MB"``
+    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024))MB"`
 
     #### Will my data be saved after deinstallation?
 
