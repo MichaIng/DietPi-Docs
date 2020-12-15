@@ -575,7 +575,7 @@ In the following dialog you have to select the DietPi installer branch. Choose t
 
 ![DietPi-PREP branch selection](assets/images/dietpi-prep-selectbranch.png){: style="width:550px"}
 
-In the following dialogs enter your name and afterwards the actual image base and the device (SBC or PC) the system is running on:
+In the following dialogues enter your name and afterwards the actual image base and the device (SBC or PC) the system is running on:
 
 ![DietPi-PREP pre-image entry](assets/images/dietpi-prep-preimage.png){: style="width:550px"}
 
