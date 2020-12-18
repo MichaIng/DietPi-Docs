@@ -377,8 +377,7 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
 
 === "Audiophiles - Master music in real time"
 
-    By using a PC + Airfoil, you can master the music in real time using the PCs CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.  
-    FuzonMp3 is a lightweight music player coded in C++ that sounds "as it should" and supports VST plugins. iZotope Ozone 5 is highly recommended for audiophiles.
+    By using a PC + [Airfoil](https://www.rogueamoeba.com/airfoil/), you can master the music in real time using the PCs CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.
 
 === "Multiple Shairport devices / Change Shairport Sync name"
 

@@ -101,7 +101,7 @@
 - [**Cuberite - Fast Minecraft server with web interface**](../software/gaming/#cuberite)
 - [**MineOS - Multiple Minecraft servers with web interface**](../software/gaming/#mineos)
 - [**Nukkit - Server for Minecraft Pocket Edition**](../software/gaming/#nukkit)
-- [**Amiberry - Amiga emulation system, further developed optimised builds of uae4arm-rpi**](../software/gaming/#amiberry)
+- [**Amiberry - Optimised Amiga emulator for ARM-based SoCs**](../software/gaming/#amiberry)
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](../software/gaming/#dxx-rebirth)
 - [**Steam - Steam client**](../software/gaming/#steam)
 - [**PaperMC - Fast and optimized Minecraft server**](../software/gaming/#papermc)
@@ -210,7 +210,7 @@
 - [**phpSysInfo - Web interface system stats**](../software/system_stats/#phpsysinfo)
 - [**RPi-Monitor - Web interface system stats**](../software/system_stats/#rpi-monitor)
 - [**Netdata - Web interface system stats**](../software/system_stats/#netdata)
-- [**webmin - Remote system management with web interface**](../software/system_stats/#webmin)
+- [**Webmin - Remote system management with web interface**](../software/system_stats/#webmin)
 
 ## [VPN](../software/vpn/)
 

@@ -35,9 +35,9 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
     After `dietpi-software` has finished and the service starts the first time, please go through the following steps manually:
 
-    - Run `htop` and wait until the CPU usage of the homeassistant processes goes down to nearly zero.
+    - Run `htop` and wait until the CPU usage of the `homeassistant` processes goes down to nearly zero.
     - Run `systemctl restart home-assistant`
-    - Run `htop` and wait until the CPU usage of the homeassistant processes goes down to nearly zero.
+    - Run `htop` and wait until the CPU usage of the `homeassistant` processes goes down to nearly zero.
     - Open the HA web UI (see below). It will again install some Python modules on first access, which can again take a little while. Always check `htop` if you are unsure, which reveals any Python/pip module install process, if currently done.
 
 === "Access to the web interface"
@@ -54,7 +54,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 === "Customize Python environment"
 
     Home Assistant is installed within a dedicated Python environment, powered by: <https://github.com/pyenv/pyenv>.  
-    This places a standalone Python instance which runs completely independent from any other installed Python instance or modules. If you need to install additional Python modules into this pyenv environment, update Python itself or similar, you need to open a shell as user homeassistant and activate the pyenv environment:
+    This places a standalone Python instance which runs completely independent from any other installed Python instance or modules. If you need to install additional Python modules into this pyenv environment, update Python itself or similar, you need to open a shell as user `homeassistant` and activate the pyenv environment:
 
     ```sh
     sudo -u homeassistant bash

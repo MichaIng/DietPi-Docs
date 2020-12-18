@@ -75,7 +75,7 @@ Also Installs:
 
     - 32bit systems can handle 2 GB
     - 64bit systems can handle 8796 PB, yep, in petabyte
-    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024))MB"``
+    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024))MB"`
 
     #### Will my data be saved after deinstallation?
 
@@ -222,12 +222,12 @@ See also <https://nextcloud.com/athome>.
 
 ## Nextcloud Talk
 
-Host video calls on your own Nextcloud instance. The TURN server ***coturn*** will be installed and configured as well to allow reliable video calls through outside the local network, NAT and firewall setups.
+Host video calls on your own Nextcloud instance. The TURN server ***Coturn*** will be installed and configured as well to allow reliable video calls through outside the local network, NAT and firewall setups.
 
 Also installs:
 
 - Nextcloud
-- coturn
+- Coturn
 
 ![DietPi cloud software Nextcloud Talk](../assets/images/dietpi-software-cloud-nextcloudtalk.png)
 
@@ -235,12 +235,12 @@ See also <https://nextcloud.com/talk/>.
 
 ### Installation notes
 
-During installation you will be asked to enter the external server domain and a port, that you want to use for the coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
+During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
 
-If HTTPS was or is enabled via `dietpi-letsencrypt`, coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
-coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
+If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
+Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
 
-coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
+Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
 
 ## Pydio
 

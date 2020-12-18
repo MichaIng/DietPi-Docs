@@ -35,11 +35,11 @@ The problems which are solved require so many computer calculations that help fr
 
 === "Configuration"
 
-    The configuration is located in the file **/mnt/dietpi_userdata/fahclient/config.xml**.  
+    The configuration is located in the file `/mnt/dietpi_userdata/fahclient/config.xml`.  
     You can change the configuration with the following steps:
 
     1. Stop services with `dietpi-services stop`
-    2. Edit */mnt/dietpi_userdata/fahclient/config.xml*
+    2. Edit `/mnt/dietpi_userdata/fahclient/config.xml`
     3. Save changes and restart services with `dietpi-services start`
 
 === "Logging"
