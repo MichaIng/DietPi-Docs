@@ -76,7 +76,7 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 === "Quick start"
 
-    - It starts automatically after installation. View Portainer web interface by opening the browser using next url: `http://<your.local.ip>:9002` [^1]. 
+    - It starts automatically after installation. View Portainer web interface by opening the browser using next URL: `http://<your.local.ip>:9002` [^1]. 
 
     - If you have basic questions on how to use **Portainer**, please read the beginner guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>.
 

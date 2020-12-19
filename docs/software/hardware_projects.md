@@ -316,7 +316,7 @@ Remark: Avoid holding the power button for longer than 2 seconds, as this will h
 ## InfluxDB
 
 InfluxDB is a database optimized to save time based data as logs or data from a sensor.  
-The main interface to the database for management and data transferred are http requests that are handled directly by the `influxdb` service (default port being used is 8086).
+The main interface to the database for management and data transferred are HTTP requests that are handled directly by the `influxdb` service (default port being used is 8086).
 
 The data can be nicely viewed with Grafana.  
 This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).
@@ -326,7 +326,7 @@ This installation and documentation was possible, thanks to [@marcobrianza](http
 ### Usage
 
 The package comes with a command line tool `influx` for database management operations.  
-This tool also uses http so it can manage a database on a remote machine setting the -host option.
+This tool also uses HTTP so it can manage a database on a remote machine setting the -host option.
 
 Official documentation can be found at <https://docs.influxdata.com/influxdb/>.
 
@@ -366,7 +366,7 @@ curl -i -XPOST http://localhost:8086/query?db=mydb --data-urlencode "q=SELECT * 
 
 #### Authentication
 
-By default http authentication is disabled. To enable it, change `auth-enabled = true` in the configuration file `/etc/influxdb/influxdb.conf`. Then restart services with `dietpi-services restart`.
+By default HTTP authentication is disabled. To enable it, change `auth-enabled = true` in the configuration file `/etc/influxdb/influxdb.conf`. Then restart services with `dietpi-services restart`.
 
 #### Create users and authorizations from `influx` CLI
 

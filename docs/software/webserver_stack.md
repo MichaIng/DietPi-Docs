@@ -124,7 +124,7 @@ The latter is used only in the case of the first webserver background installati
     ![DietPi webserver selection webserver preference](../assets/images/dietpi-software-webserver-preference.png){: style="width:500px"}
 
     Using this option you only select the webserver for use in DietPi installations.  
-    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MySQL](https://wikipedia.org/wiki/MySQL)/[SQLite](https://wikipedia.org/wiki/SQLite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
+    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](https://wikipedia.org/wiki/MariaDB)/[SQLite](https://wikipedia.org/wiki/SQLite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
 
     ???+ info "No webserver change if already installed"
         This setting "Webserver Preference* can NOT be changed if an existing webserver is installed on the system.
@@ -140,9 +140,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     **Access website:**
 
     - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
-    - local directory = /var/www
+    - Local directory = `/var/www`
 
-    **Access phpinfo:**
+    **Access PHP info page:**
 
     - URL = `http://192.168.0.100/phpinfo.php`
 
@@ -151,10 +151,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - APCu = `http://192.168.0.100/apc.php`
     - OPcache = `http://192.168.0.100/opcache.php`
 
-    **MariaDB Details:**
+    **MariaDB CLI:**
 
-    - username = root
-    - password = dietpi
+    - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
 === "Secured access - HTTPS/SSL"
 
@@ -209,13 +208,13 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Official documentation"
 
-    - Apache HTTP Web Server - [http://httpd.apache.org](http://httpd.apache.org)
-    - MariaDB Server - [https://mariadb.org](https://mariadb.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Apache HTTP Web Server - <https://httpd.apache.org/>
+    - MariaDB Server - <https://mariadb.org/>
+    - PHP - <https://www.php.net/>
 
 ### LASP Web Stack
 
@@ -228,7 +227,7 @@ SQLite is an embedded relational database engine. The documentation calls it _a 
     **Access website:**
 
     - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
-    - local directory = /var/www
+    - Local directory = `/var/www`
 
     **Access memory cache info:**
 
@@ -288,13 +287,13 @@ SQLite is an embedded relational database engine. The documentation calls it _a 
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Official documentation"
 
-    - Apache HTTP Web Server - [http://httpd.apache.org](http://httpd.apache.org)
-    - SQLite Server - [https://www.sqlite.org](https://www.sqlite.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Apache HTTP Web Server - <https://httpd.apache.org/>
+    - SQLite Server - <https://sqlite.org/>
+    - PHP - <https://www.php.net/>
 
 ### LEMP Web Stack
 
@@ -308,7 +307,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
 
-    **Access phpinfo:**
+    **Access PHP info page:**
 
     - URL = `http://192.168.0.100/phpinfo.php`
 
@@ -317,10 +316,9 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://192.168.0.100/apc.php`
     - OPcache = `http://192.168.0.100/opcache.php`
 
-    **MariaDB Details:**
+    **MariaDB CLI:**
 
-    - username = root
-    - password = dietpi
+    - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
 === "Secured access - HTTPS/SSL"
 
@@ -375,13 +373,13 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Official documentation"
 
-    - Nginx - [https://www.Nginx.com](https://www.Nginx.com)
-    - MariaDB Server - [https://mariadb.org](https://mariadb.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Nginx - <https://www.nginx.com/>
+    - MariaDB Server - <https://mariadb.org/>
+    - PHP - <https://www.php.net/>
 
 ### LESP Web Stack
 
@@ -389,7 +387,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 **Nginx** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
-**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://www.sqlite.org/mostdeployed.html)).
+**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://sqlite.org/mostdeployed.html)).
 
 === "Quick start"
 
@@ -412,24 +410,24 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Official documentation"
 
-    - Nginx - [https://www.Nginx.com](https://www.Nginx.com)
-    - SQLite Server - [https://www.sqlite.org](https://www.sqlite.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Nginx - <https://www.nginx.com/>
+    - SQLite Server - <https://sqlite.org/>
+    - PHP - <https://www.php.net/>
 
 ### LLMP Web Stack
 
 LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing Lighttpd instead of Apache2 web server.
 
-**Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the cpu-load.
+**Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the CPU load.
 
 === "Quick start"
 
     **Access website:**
 
     - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
-    - local directory = /var/www
+    - Local directory = `/var/www`
 
-    **Access phpinfo:**
+    **Access PHP info page:**
 
     - URL = `http://192.168.0.100/phpinfo.php`
 
@@ -438,10 +436,9 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://192.168.0.100/apc.php`
     - OPcache = `http://192.168.0.100/opcache.php`
 
-    **MariaDB Details:**
+    **MariaDB CLI:**
 
-    - username = root
-    - password = dietpi
+    - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
 === "Secured access - HTTPS/SSL"
 
@@ -449,30 +446,30 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Official documentation"
 
-    - Lighttpd - [https://www.lighttpd.net](https://www.lighttpd.net)
-    - MariaDB Server - [https://mariadb.org](https://mariadb.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Lighttpd - <https://www.lighttpd.net/>
+    - MariaDB Server - <https://mariadb.org/>
+    - PHP - <https://www.php.net/>
 
 ### LLSP web stack
 
 LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **Lighttpd** instead of Apache2 web server and **SQLite** instead of MariaDB.
 
-**Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the cpu-load.
+**Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the CPU load.
 
-**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://www.sqlite.org/mostdeployed.html)).
+**SQLite** implements a small, fast, self-contained, high-reliability SQL database engine, being one the most used database engine in the world ([see reference](https://sqlite.org/mostdeployed.html)).
 
 === "Quick start"
 
     **Access website:**
 
     - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
-    - local directory = /var/www
+    - Local directory = `/var/www`
 
-    **Access phpinfo:**
+    **Access PHP info page:**
 
     - URL = `http://192.168.0.100/phpinfo.php`
 
@@ -481,10 +478,9 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://192.168.0.100/apc.php`
     - OPcache = `http://192.168.0.100/opcache.php`
 
-    **MariaDB Details:**
+    **MariaDB CLI:**
 
-    - username = root
-    - password = dietpi
+    - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
 === "Secured access - HTTPS/SSL"
 
@@ -492,7 +488,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = **https**://192.168.0.100 (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
 
 === "Individual installation"
 
@@ -508,9 +504,9 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Official documentation"
 
-    - Lighttpd - [https://www.lighttpd.net](https://www.lighttpd.net)
-    - SQLite Server - [https://www.sqlite.org](https://www.sqlite.org)
-    - PHP - [https://www.php.net](https://www.php.net)
+    - Lighttpd - <https://www.lighttpd.net/>
+    - SQLite Server - <https://sqlite.org/>
+    - PHP - <https://www.php.net/>
 
 ## WebServers
 
@@ -526,7 +522,7 @@ Apache is a Apache Software Foundation project. The goal is to provide a secure,
 
 ### Nginx
 
-**nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, Wordpress.com, FastMail.FM.[^1]
+**Nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, Wordpress.com, FastMail.FM.[^1]
 
 ![DietPi Webstack software Nginx logo](../assets/images/dietpi-software-webstack-nginx.gif){: style="width:150px"}
 
@@ -601,7 +597,7 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
 Source: [Colin Viebrock](http://php.net/logos), [CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=9632398).
 
 [^1]:
-    Find out more about the success stories of Nginx on the [Nginx.org/en/](https://Nginx.org/en/).
+    Find out more about the success stories of Nginx on: <https://Nginx.org/en/>
 [^2]:
     ["Dead database walking: MySQL's creator on why the future belongs to MariaDB - MariaDB, open source, mysql, Oracle"](https://www2.computerworld.com.au/article/457551/dead_database_walking_mysql_creator_why_future_belongs_mariadb/). Computerworld. Retrieved 22 November 2020.
 

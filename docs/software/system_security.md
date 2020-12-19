@@ -59,7 +59,7 @@ We have enabled detection for SSH servers (OpenSSH and Dropbear), however, Fail2
 
 ![DietPi security software Fail2Ban screenshot](../assets/images/dietpi-software-security-fail2ban2.jpg){: style="width:550px"}
 
-Source: [`Lostcontrol` of Fail2ban wiki](http://www.fail2ban.org/wiki/index.php/File:Fail2ban-screenshot.jpg), [GPL](https://commons.wikimedia.org/w/index.php?curid=19776087)
+Source: [`Lostcontrol` of Fail2ban wiki](https://fail2ban.org/wiki/index.php/File:Fail2ban-screenshot.jpg), [GPL](https://commons.wikimedia.org/w/index.php?curid=19776087)
 
 An IP address is by default ban triggered after 3 failed SSH login attempts. Fail2Ban will ban the source IP address for 10 minutes.
 
@@ -75,6 +75,6 @@ An IP address is by default ban triggered after 3 failed SSH login attempts. Fai
     Fail2Ban supports brute-force protection for other software (e.g. Apache, ProFTPD etc).  
     You can enable/disable these features by modifying the */etc/fail2ban/jail.conf* file, and setting `enable = true` under the *[software]* name.
 
-See also <https://www.fail2ban.org>.
+See also <https://fail2ban.org/wiki/index.php/Main_Page>.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
