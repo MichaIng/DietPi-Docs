@@ -38,7 +38,7 @@ Become part of the Tor Project and turn your DietPi into a Tor relay to help oth
 
 For more details check the [documentation page](../software/advanced_networking/#tor-relay).
 
-![advanced-networking-tor](./assets/images/dietpi-software-advanced-networking-tor.png){: style="width:150px"}
+![advanced-networking-tor](assets/images/dietpi-software-advanced-networking-tor.png){: style="width:150px"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3921.
 
@@ -48,7 +48,7 @@ Validating, recursive, caching DNS resolver is now available for install and int
 
 For more details check the [documentation page](../software/dns_servers/#unbound)
 
-![unbound](./assets/images/dietpi-software-unbound.jpg)
+![unbound](assets/images/dietpi-software-unbound.jpg)
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3872
 
@@ -58,7 +58,7 @@ Bitwarden_RS is a an unofficial Bitwarden password manager server with web UI, w
 
 For more details check the [documentation page](../software/cloud/#bitwarden_rs)
 
-![Bitwarden_RS](./assets/images/dietpi-software-bitwarden_rs.jpg)
+![Bitwarden_RS](assets/images/dietpi-software-bitwarden_rs.jpg)
 
 Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/DietPi!3724).
 
@@ -68,7 +68,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
  For more details on how to install DietPi, check the [documentation](../dietpi_sbc/#raspberry-pi).
 
- ![DietPi Raspberry Pi 400](./assets/images/dietpi-raspberry-pi-400-back.jpg)
+ ![DietPi Raspberry Pi 400](assets/images/dietpi-raspberry-pi-400-back.jpg)
 
 ### Changes / Improvements / Optimisations
 
@@ -81,7 +81,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
     you can enable daily APT update checks (default value). The result is shown in the DietPi login banner, in a similar way an available DietPi update is presented.
 
     dietpi-automated_APT_package_update
-    ![dietpi Automated APT packages update](./assets/images/dietpi-automated_APT_package_update.jpg)
+    ![dietpi Automated APT packages update](assets/images/dietpi-automated_APT_package_update.jpg)
 
     Set
 
@@ -95,7 +95,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 - **DietPi Documentation** has been extended. It covers now all the **[DietPi Optimised Software](../dietpi_optimised_software/#dietpi-optimised-software-index)** categories. Many thanks to @StephanStS for bringing all these updates.
 
-    ![DietPi Documentation](./assets/images/dietpi-docs-categories.jpg)
+    ![DietPi Documentation](assets/images/dietpi-docs-categories.jpg)
 
 - **DietPi-Globals** :octicons-arrow-right-16: In DietPi scripts, the PATH variable is now overwritten with the Debian/bash system default to assure that no broken or manipulated PATH can be passed via e.g. "su" or "sudo -E".
 
@@ -140,7 +140,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 - **[DietPi-Config](../dietpi_tools/#configuration)** :octicons-arrow-right-16: Resolved an issue on RPi where selecting the waveshare32 LCD panel installed an outdated device tree overlay, incompatible with the current Linux 5.4 kernel. Many thanks to @black00019 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3881>
 
-- **[DietPi-Services]((../dietpi_tools/#configuration))** :octicons-arrow-right-16: Resolved an issue where CPU affinity selection failed due to a syntax error.
+- **[DietPi-Services](../dietpi_tools/#configuration)** :octicons-arrow-right-16: Resolved an issue where CPU affinity selection failed due to a syntax error.
 
 - **DietPi-Bugreport** :octicons-arrow-right-16: Resolved an issue where bug report uploads were cancelled if connection test on port 80/443 failed even that uploads are done via SFTP on port 22.
 
@@ -172,7 +172,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 - **[DietPi-Software | Mycroft AI](../software/hardware_projects/#mycroft-ai)** :octicons-arrow-right-16: Resolved an issue where skill installs failed due to missing permissions. Many thanks to [phpBB:GreenGentleman](https://dietpi.com/phpbb/memberlist.php?username=GreenGentleman) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?p=28464#p28464>
 
-- **[DietPi-Software | Jellyfin](../docs/software/media/#jellyfin)** :octicons-arrow-right-16: Resolved an issue where Jellyfin did not run on ARMv6 (RPi 1 and Zero models). ARMv6/Raspbian-compatible binaries are now shipped via different APT repository. Many thanks to [phpBB:Shiivu](https://dietpi.com/phpbb/memberlist.php?username=Shiivu) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8263>
+- **[DietPi-Software | Jellyfin](../software/media/#jellyfin)** :octicons-arrow-right-16: Resolved an issue where Jellyfin did not run on ARMv6 (RPi 1 and Zero models). ARMv6/Raspbian-compatible binaries are now shipped via different APT repository. Many thanks to [phpBB:Shiivu](https://dietpi.com/phpbb/memberlist.php?username=Shiivu) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8263>
 
 - **[DietPi-Software | WiFi Hotspot](../software/advanced_networking/#wifi-hotspot)** :octicons-arrow-right-16: Resolved an issue on RPi with WiFi adapters using an RTL8188C* chip, where the service failed to start due to an invalid driver. Many thanks to [phpBB:yerc](https://dietpi.com/phpbb/memberlist.php?username=yerc) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?p=28984#p28984>
 
@@ -466,23 +466,23 @@ Last but certainly not least, a big **Thank You** to the following people who co
 - @nosyaardvark - Many thanks for reporting this issue: [Fix 3583](https://github.com/MichaIng/DietPi/issues/3583#issuecomment-643583664)
 - @sdomotica & @Joulinar - Many thanks for reporting this issue: [Fix 3600](https://github.com/MichaIng/DietPi/issues/3600#issuecomment-643261670)
 - @FrostyMisa - Many thanks for reporting this issue: [Fix 3636](https://github.com/MichaIng/DietPi/issues/3636)
-- @lone - Many thanks for reporting this issue: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?f=9&t=7804)
+- @lone - Many thanks for reporting this issue: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?t=7804)
 - @Pain-Patate - Many thanks to  for reporting this issue: [Fix 3588](https://github.com/MichaIng/DietPi/issues/3588)
 - @fnsnyc - Many thanks for reporting this issue: [Fix 3519](https://github.com/MichaIng/DietPi/issues/3519)
-- @yahoo456 - Many thanks for reporting this issue: [Wireguard client not starting](https://dietpi.com/phpbb/viewtopic.php?f=11&t=7783)
+- @yahoo456 - Many thanks for reporting this issue: [Wireguard client not starting](https://dietpi.com/phpbb/viewtopic.php?t=7783)
 - @repomanz - Many thanks for reporting this issue: [Fix 3577](https://github.com/MichaIng/DietPi/issues/3577)
-- @Mr.Roboto - Many thanks for making this suggestion: [Ubooquity Update](https://dietpi.com/phpbb/viewtopic.php?f=12&t=7786)
+- @Mr.Roboto - Many thanks for making this suggestion: [Ubooquity Update](https://dietpi.com/phpbb/viewtopic.php?t=7786)
 - @larsno - Many thanks for reporting this issue: [Fix 3614](https://github.com/MichaIng/DietPi/issues/3614)
 
 **Contributions to DietPi:**
 
 - @FusionPlmH: [Fix 3570](https://github.com/MichaIng/DietPi/issues/3570) - many thanks to  for doing this request
-- @notwork: Many thanks for doing this suggestion: [How to add manual entries for sshfs in fstab](https://dietpi.com/phpbb/viewtopic.php?f=9&t=7781)
+- @notwork: Many thanks for doing this suggestion: [How to add manual entries for sshfs in fstab](https://dietpi.com/phpbb/viewtopic.php?t=7781)
 - @CedArctic: Many thanks and all credits for implementing this software title - [Fix 3471](https://github.com/MichaIng/DietPi/pull/3471)
 - @ricardoandren: Many thanks for doing this suggestion - [Fix 3561](https://github.com/MichaIng/DietPi/issues/3561)
 - @volpone: Many thanks for doing the update request - [Fix 2386](https://github.com/MichaIng/DietPi/issues/2386)
-- @PiTech and @vorrac: Many thanks for reporting and fixing this issue: [Fixing Rtorrent on latest dietpi version Pi4](https://dietpi.com/phpbb/viewtopic.php?f=15&t=7613), [Rtorrent not working](https://dietpi.com/phpbb/viewtopic.php?f=11&t=7607)
-- @Taloth from Sonarr: Many thanks, including all the others who reported, investigated and finally solved the mystery: [Sonarr/Radarr services failed on v6.29.2](https://dietpi.com/phpbb/viewtopic.php?f=11&t=7598)
+- @PiTech and @vorrac: Many thanks for reporting and fixing this issue: [Fixing Rtorrent on latest dietpi version Pi4](https://dietpi.com/phpbb/viewtopic.php?t=7613), [Rtorrent not working](https://dietpi.com/phpbb/viewtopic.php?t=7607)
+- @Taloth from Sonarr: Many thanks, including all the others who reported, investigated and finally solved the mystery: [Sonarr/Radarr services failed on v6.29.2](https://dietpi.com/phpbb/viewtopic.php?t=7598)
 
 ## May 2020 (version 6.30)
 
@@ -616,7 +616,7 @@ For all additional issues that may appear after release, please see the followin
 - **DietPi-Software** | **Home Assistant** :octicons-arrow-right-16: Python3.8 will be installed for the pyenv from now on due to Python3.6 deprecation. Many thanks to @sdomotica for providing this information: <https://github.com/MichaIng/DietPi/issues/3219>
 - **DietPi-Software** | **Home Assistant** :octicons-arrow-right-16: When selecting for install, one will be informed about possibly long install/build times. Many thanks to @Gill-Bates for doing this suggestion to avoid users assuming their install process being stuck: <https://github.com/MichaIng/DietPi/issues/2897>
 - **DietPi-Software** | **Home Assistant** :octicons-arrow-right-16: Vastly reduced Home Assistant dependencies and install complexity. It does not run inside a virtualenv of pyenv anymore, since it has already its unique pyenv Python instance. pyenv is still required due to the large amount of specific module versions, required for HA and its integrations. The alternative would be a venv from a globally installed Python instance, but this requires further thoughts and discussion. The amount of development libraries and tools, installed via APT, has been updated and reduced to a minimum to build Python and Home Assistant inside the pyenv without errors and warnings. There is a slightly increased chance that certain HA components need additional development packages. To cover this, two new settings have been added to dietpi.txt: "SOFTWARE_HOMEASSISTANT_APT_DEPS" and "SOFTWARE_HOMEASSISTANT_PIP_DEPS". Add a space-separated list of APT packages and pip modules respectively, to have those installed automatically with Home Assistant. As well activating the pyenv environment from console is now easier possible via "source /home/homeassistant/pyenv-activate.sh" as user "homeassistant". Additionally "/home/homeassistant/homeassistant-update.sh" has been added, which can be called by any sudo-capable user to update Home Assistant easily.
-- **DietPi-Software** | **Node-RED** :octicons-arrow-right-16: Access permissions to I2C is now enabled by default on RPi and other SBCs which ship a configured "i2c" group by default. Many thanks to @NastySpill for reporting an underlying issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=6862>
+- **DietPi-Software** | **Node-RED** :octicons-arrow-right-16: Access permissions to I2C is now enabled by default on RPi and other SBCs which ship a configured "i2c" group by default. Many thanks to @NastySpill for reporting an underlying issue: <https://dietpi.com/phpbb/viewtopic.php?t=6862>
 - **DietPi-Software** | **Gitea** :octicons-arrow-right-16: The latest version will now be pulled from GitHub automatically.
 - **DietPi-Software** | **Amiberry** :octicons-arrow-right-16: Updated to v3.0.9, a large update from v2.25 with many improvements, see: <https://github.com/midwan/amiberry/releases>
 - **DietPi-Software** | **Amiberry** :octicons-arrow-right-16: Since we ship a tailored SDL2 version, this has now been merged right into the Amiberry download archive and install directory, to not interfere with other system-wide installed SDL2 instances.
@@ -629,16 +629,16 @@ DietPi-Software | phpMyAdmin: The APT package install has been replaced by an up
 ### Bug Fixes
 
 - **DietPi-PREP** :octicons-arrow-right-16: Resolved an issue, where in rare cases a wrong $PATH variable could break command calls. Many thanks to @dtm2001 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3206>
-- **DietPi-Explorer** :octicons-arrow-right-16: Resolved an issue where handling of file/directory paths with white spaces failed. Many thanks to @gabboman for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=7046>
-- **DietPi-Drive_Manager** :octicons-arrow-right-16: Resolved an issue where, after transferring the root file system, the script itself could revert the fstab entry, since a reboot was not forced anymore since v6.22. This change has been reverted, hence a reboot cannot be skipped to avoid any fstab revert and inconsistency with cmdline. Many thanks to @DutchFlash for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=6645>
+- **DietPi-Explorer** :octicons-arrow-right-16: Resolved an issue where handling of file/directory paths with white spaces failed. Many thanks to @gabboman for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=7046>
+- **DietPi-Drive_Manager** :octicons-arrow-right-16: Resolved an issue where, after transferring the root file system, the script itself could revert the fstab entry, since a reboot was not forced anymore since v6.22. This change has been reverted, hence a reboot cannot be skipped to avoid any fstab revert and inconsistency with cmdline. Many thanks to @DutchFlash for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=6645>
 - **DietPi-Drive_Manager** :octicons-arrow-right-16: Resolved an issue where, in rare cases, all drives were mounted as R/O on boot. Many thanks to @samolego for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3268>
 - **DietPi-Autostart** :octicons-arrow-right-16: Resolved an issue where non-interactive script calls, e.g. done by dietpi-software installs, reset prior made auto login user choices. Many thanks to @zedrdave for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3242>
 - **DietPi-Config** | **RPi** :octicons-arrow-right-16:  Resolved an issue where PSU noise reduction state always shows "[Off]". HDMI output will now be toggled immediately, hence no reboot is required for changes to take effect. Many thanks to @maartenlangeveld for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3187>
 - **DietPi-Software** | **ownCloud/Nextcloud** :octicons-arrow-right-16:  An important security fix has been applied to our ownCloud/Nextcloud Nginx configs. This has been merged into our other GitHub branches as well, hence all fresh installs wont be affected. Read more about it: <https://nextcloud.com/blog/urgent-security-issue-in-nginx-php-fpm/>
 - **DietPi-Software** | **WireGuard** :octicons-arrow-right-16: Resolved an issue where wg0 server fails to start if network has not yet fully initialised. Many thanks to @Joulinar for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3175>
 - **DietPi-Software** | **Syncthing** :octicons-arrow-right-16: Resolved an issue where fresh install failed to start due to missing permissions. Many thanks to @ralban, @mowestusa and @g7kse for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3180>
-- **DietPi-Software** | **Gitea** :octicons-arrow-right-16: Resolved an issue where fresh Gitea installs failed to start due to missing permissions. Many thanks to @NZRob for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=6550>
-- **DietPi-Software** | **Home Assistant** :octicons-arrow-right-16: Resolved on issue where fresh install failed to started to start due to missing permissions. Many thanks to @slopsjon, @tyjtyj and @pakikje for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=6531>, <https://dietpi.com/phpbb/viewtopic.php?p=20408#p20408>
+- **DietPi-Software** | **Gitea** :octicons-arrow-right-16: Resolved an issue where fresh Gitea installs failed to start due to missing permissions. Many thanks to @NZRob for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=6550>
+- **DietPi-Software** | **Home Assistant** :octicons-arrow-right-16: Resolved on issue where fresh install failed to started to start due to missing permissions. Many thanks to @slopsjon, @tyjtyj and @pakikje for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=6531>, <https://dietpi.com/phpbb/viewtopic.php?p=20408#p20408>
 - **DietPi-Software** | **Google AIY** :octicons-arrow-right-16: Resolved an issue where fresh install failed to start due to missing permissions
 - **DietPi-Software** | **Grafana** :octicons-arrow-right-16: Resolved an issue where install failed on RPi 1/Zero Buster systems. The fix includes an update of Grafana to the latest official version for those models. Many thanks to @TBail for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3213>
 - **DietPi-Software** | **Jackett** :octicons-arrow-right-16: Resolved an issue where the internal updater broke the Jackett instance. Automated updates can be safely enabled again. Many thanks to @ngosang for providing the workaround: <https://github.com/MichaIng/DietPi/issues/2593>
