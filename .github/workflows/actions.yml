@@ -49,7 +49,7 @@ jobs:
         run: pyspelling -c .spellcheck.yml
       - name: Download lychee
         id: lychee
-        if: always() && steps.rust.outcome == 'success'
+        if: always() && steps.build.outcome == 'success'
         run: |
           curl -sSfL "$(curl -sSfL https://api.github.com/repos/lycheeverse/lychee/releases/latest | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-gnu.tar.gz"/{print $4;exit}')" -o lychee.tar.gz
           tar xf lychee.tar.gz
