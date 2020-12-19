@@ -28,7 +28,8 @@
 
 [**Web development - Programming & Frameworks**](./#web-development-programming-frameworks)
 
-- [**PHP** - scripting language especially suited to web development](./#php)
+- [**Flask - Micro web framework powered by Python**](./#flask)
+- [**PHP** - Scripting language suited to web development](./#php)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -96,10 +97,10 @@ DietPi offers an **one-click-installation** of the following web development sta
 === "Which DATABASE to CHOOSE ?"
 
     **MariaDB**  
-    MariaDB is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.
+    [MariaDB](./#mariadb) is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.
 
     **SQLite**  
-    SQLite is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to MariaDB. SQLite has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
+    SQLite is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](./#mariadb). SQLite has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
 
 ### How to install ?
 
@@ -124,7 +125,7 @@ The latter is used only in the case of the first webserver background installati
     ![DietPi webserver selection webserver preference](../assets/images/dietpi-software-webserver-preference.png){: style="width:500px"}
 
     Using this option you only select the webserver for use in DietPi installations.  
-    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](https://wikipedia.org/wiki/MariaDB)/[SQLite](https://wikipedia.org/wiki/SQLite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
+    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](./#mariadb) / [SQLite](https://wikipedia.org/wiki/SQLite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
 
     ???+ info "No webserver change if already installed"
         This setting "Webserver Preference* can NOT be changed if an existing webserver is installed on the system.
@@ -139,19 +140,19 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     **Access website:**
 
-    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
 
     **Access PHP info page:**
 
-    - URL = `http://192.168.0.100/phpinfo.php`
+    - URL = `http://<your.IP>/phpinfo.php`
 
     **Access memory cache info:**
 
-    - APCu = `http://192.168.0.100/apc.php`
-    - OPcache = `http://192.168.0.100/opcache.php`
+    - APCu = `http://<your.IP>/apc.php`
+    - OPcache = `http://<your.IP>/opcache.php`
 
-    **MariaDB CLI:**
+    **[MariaDB](./#mariadb) CLI:**
 
     - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
@@ -208,7 +209,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     Access website:
 
-    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://<your.IP>` or `https://<your.host.name>`
 
 === "Official documentation"
 
@@ -218,7 +219,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 ### LASP Web Stack
 
-LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing SQLite instead of MariaDB.
+LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing SQLite instead of [MariaDB](./#mariadb).
 
 SQLite is an embedded relational database engine. The documentation calls it _a self-contained, serverless, zero-configuration and transactional SQL database engine_. It is very popular and there are hundreds of millions copies worldwide in use today. Together with Apache2 and PHP could be a good candidate for single board computer.
 
@@ -226,13 +227,13 @@ SQLite is an embedded relational database engine. The documentation calls it _a 
 
     **Access website:**
 
-    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
 
     **Access memory cache info:**
 
-    - APCu = `http://192.168.0.100/apc.php`
-    - OPcache = `http://192.168.0.100/opcache.php`
+    - APCu = `http://<your.IP>/apc.php`
+    - OPcache = `http://<your.IP>/opcache.php`
 
 === "Secured access - HTTPS/SSL"
 
@@ -287,7 +288,7 @@ SQLite is an embedded relational database engine. The documentation calls it _a 
 
     Access website:
 
-    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://<your.IP>` or `https://<your.host.name>`
 
 === "Official documentation"
 
@@ -305,16 +306,16 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     **Access website:**
 
-    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://<your.IP>` or `http://<your.host.name>`
 
     **Access PHP info page:**
 
-    - URL = `http://192.168.0.100/phpinfo.php`
+    - URL = `http://<your.IP>/phpinfo.php`
 
     **Access memory cache info:**
 
-    - APCu = `http://192.168.0.100/apc.php`
-    - OPcache = `http://192.168.0.100/opcache.php`
+    - APCu = `http://<your.IP>/apc.php`
+    - OPcache = `http://<your.IP>/opcache.php`
 
     **MariaDB CLI:**
 
@@ -373,7 +374,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://<your.IP>` or `https://<your.host.name>`
 
 === "Official documentation"
 
@@ -393,12 +394,12 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     **Access website:**
 
-    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://<your.IP>` or `http://<your.host.name>`
 
     **Access memory cache info:**
 
-    - APCu = `http://192.168.0.100/apc.php`
-    - OPcache = `http://192.168.0.100/opcache.php`
+    - APCu = `http://<your.IP>/apc.php`
+    - OPcache = `http://<your.IP>/opcache.php`
 
 === "Secured access - HTTPS/SSL"
 
@@ -406,7 +407,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://<your.IP>` or `https://<your.host.name>`
 
 === "Official documentation"
 
@@ -424,19 +425,19 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     **Access website:**
 
-    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
 
     **Access PHP info page:**
 
-    - URL = `http://192.168.0.100/phpinfo.php`
+    - URL = `http://<your.IP>/phpinfo.php`
 
     **Access memory cache info:**
 
-    - APCu = `http://192.168.0.100/apc.php`
-    - OPcache = `http://192.168.0.100/opcache.php`
+    - APCu = `http://<your.IP>/apc.php`
+    - OPcache = `http://<your.IP>/opcache.php`
 
-    **MariaDB CLI:**
+    **[MariaDB](./#mariadb) CLI:**
 
     - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
@@ -446,7 +447,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://<your.IP>` or `https://<your.host.name>`
 
 === "Official documentation"
 
@@ -456,7 +457,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LLSP web stack
 
-LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **Lighttpd** instead of Apache2 web server and **SQLite** instead of MariaDB.
+LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **Lighttpd** instead of Apache2 web server and **SQLite** instead of [MariaDB](./#mariadb).
 
 **Lighttpd** is designed and optimized for high performance environments. It comes with a small memory footprint compared to other web-servers and it provides an effective management of the CPU load.
 
@@ -466,19 +467,19 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     **Access website:**
 
-    - URL = `http://192.168.0.100` (`http://<your.local.ip>` or `http://<your.host.name>`)
+    - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
 
     **Access PHP info page:**
 
-    - URL = `http://192.168.0.100/phpinfo.php`
+    - URL = `http://<your.IP>/phpinfo.php`
 
     **Access memory cache info:**
 
-    - APCu = `http://192.168.0.100/apc.php`
-    - OPcache = `http://192.168.0.100/opcache.php`
+    - APCu = `http://<your.IP>/apc.php`
+    - OPcache = `http://<your.IP>/opcache.php`
 
-    **MariaDB CLI:**
+    **[MariaDB](./#mariadb) CLI:**
 
     - As root user, run `mariadb` from command line, no separate authentication required. But note that this won't work via `sudo`, but an interactive root user shell session is required.
 
@@ -488,7 +489,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     Access website:
 
-    - URL = `https://192.168.0.100` (`https://<your.local.ip>` or `https://<your.host.name>`)
+    - URL = `https://<your.IP>` or `https://<your.host.name>`
 
 === "Individual installation"
 
@@ -500,7 +501,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - Database
 
-        You may choose to install **MariaDB** or other available databases like **InfluxDB**, **Redis**, **SQLite**.
+        You may choose to install **[MariaDB](./#mariadb)** or other available databases like **InfluxDB**, **Redis**, **SQLite**.
 
 === "Official documentation"
 
@@ -556,17 +557,36 @@ Source: [The Apache Software Foundation](http://svn.apache.org/viewvc/jakarta/si
 
 Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/index.php?curid=55946550).
 
-#### phpMyAdmin
+=== "Quick access"
 
-Web interface SQL admin tool for webserver installations.
+    As `root` user, run `mariadb` from command line, no separate authentication required. But note that this won’t work via sudo, but an interactive root user shell session is required.
+
+    - username = `root`
+    - password = The same as your root login password, default is `dietpi`
+
+=== "Official documentation"
+
+    - [MariaDB website: mariadb.org](https://mariadb.org)
+    - [Getting started documentation](https://mariadb.org/documentation/#getting-started)  
+
+#### phpMyAdmin
 
 ![DietPi Webstack software phpMyAdmin logo](../assets/images/dietpi-software-webstack-phpmyadmin.png){: style="width:150px"}
 
-=== "Access to the web interface"
+**phpMyAdmin** is a free software tool written in PHP, intended to handle the administration of MySQL / MariaDB over the Web.
+
+Frequently used operations (_such as: managing databases, tables, columns, relations, indexes etc._) can be performed via the web user interface. Using the same application you could also directly execute any SQL statement.
+
+=== "Quick access"
 
     - URL = `http://<your.IP>/phpmyadmin`
     - Username = `phpmyadmin`
-    - Password = The same as your root login password. Default is `dietpi`
+    - Password = The same as your root login password, default is `dietpi`
+
+=== "Official documentation"
+
+    - [phpMyAdmin website](https://www.phpmyadmin.net)
+    - [phpMyAdmin documentation](https://www.phpmyadmin.net/docs/)  
 
 ### SQLite
 
@@ -576,11 +596,19 @@ Source: Part of the SQLite documentation, which has been released by author D. R
 
 ### Redis
 
-A non-SQL based (alternative) data store.
+A non-SQL based data store.
 
 ![DietPi Webstack software Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: style="width:150px"}
 
 Source: [Carlos Prioglio](http://redis.io/images/redis-logo.svg), [licence](https://commons.wikimedia.org/w/index.php?curid=95020509).
+
+**Redis** is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
+
+**Redis** is in the family of databases called key-value stores. The essence of a key-value store is the ability to store some data, called a value, inside a key. This data can later be retrieved only if we know the exact key used to store it.
+
+=== "Official documentation"
+
+    <https://redis.io>
 
 ### InfluxDB
 
@@ -588,13 +616,103 @@ Source: [Carlos Prioglio](http://redis.io/images/redis-logo.svg), [licence](http
 
 Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding-docs/img/influxdb/preview.svg), [Public Domain](https://commons.wikimedia.org/w/index.php?curid=55056027).
 
+**InfluxDB** is a _time series_ database designed to handle high write and query loads. InfluxDB is not only a time series platform, but it provides also an Web UI and dashboarding tools, background processing and monitoring agent.
+
+=== "Quick start"
+
+    After the installation, the data transfers are made via the http requests, and are handled directly by the InfluxDB service running on `http://<your.IP>:8086`.
+
+    - Create a database using `influxdb` via command line tool.
+      ``` bash
+      influx -execute 'create database myfirstdb'
+      ``` 
+
+    - Create a database using a HTTP request and `curl` tool:
+      ``` bash
+      curl -i -XPOST http://<your.IP>:8086/query --data-urlencode "q=CREATE DATABASE myfirstdb"
+      ```
+
+    - Post data
+      ``` bash
+      curl -i -XPOST 'http://<your.IP>:8086/write?db=myfirstdb' --data-binary 'temperature value=20.12'
+      ```
+    
+    - Retrieve and display data from the database
+    ``` bash
+    influx -database myfirstdb -execute 'SELECT * FROM temperature'
+    ```    
+
+=== "Users and security"
+
+    Create users and authorizations from influx CLI
+
+    ``` bash
+    influx -username admin -password admin01
+    ```
+
+    ``` bash
+    CREATE USER admin WITH PASSWORD 'admin01' WITH ALL PRIVILEGES
+    CREATE USER test_user WITH PASSWORD 'test_user01'
+    GRANT ALL ON mydb TO test_user  
+    exit
+    ```
+
+    !!! hint "How to enabled secured access (HTTPS)"
+        By default the _http_ authentication is disabled. To enable it, follow next two steps:
+
+        1. Change next setting in the configuration file `/etc/influxdb/influxdb.conf`:
+        ``` bash
+        auth-enabled = true
+        ```
+        2. Restart services
+        ``` bash
+        dietpi-services restart
+        ```
+
+=== "Official documentation"
+
+    - [InfluxDB Get Started](https://docs.influxdata.com/influxdb/v2.0/get-started/#set-up-influxdb)
+    - [InfluxDB website](https://www.influxdata.com/products/influxdb/)
+
+
 ## Web development - Programming & Frameworks
 
 ### PHP
 
-![DietPi Webstack software PHP logo](../assets/images/dietpi-software-webstack-php.svg){: style="width:150px"}
+![DietPi Webstack software PHP logo](../assets/images/dietpi-software-webstack-php.svg){: style="width:150px"} 
 
 Source: [Colin Viebrock](http://php.net/logos), [CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=9632398).
+
+First introduced by Rasmus Lerdorf, PHP is an open-source, server-side general scripting language that has now become a de-facto coding standard in the web development industry. 
+
+=== "Quick start"
+
+    - There are many tutorials - here is the official [_Getting started_](https://www.php.net/manual/en/getting-started.php) from PHP documentation.
+
+=== "Official documentation"
+
+    - [PHP website](https://www.php.net)
+    - [PHP manual](https://www.php.net/manual/en/index.php)
+
+
+### Flask
+
+Flask is a lightweight web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications and it has become one of the most popular Python web application frameworks.
+
+=== "Quick start"
+
+    In order to use **Flask** it is first required first to install the Python Package Manager - [see Python Pip 3](../programming/#python). Then run the next command.
+
+    ``` bash
+    pip3 install -U Flask
+    ```
+
+=== "Official documentation"
+
+    - [User's guide & Documentation](https://flask.palletsprojects.com/en/1.1.x/)
+    - [Flask website](https://palletsprojects.com/p/flask/)
+    - [PyPi package page](https://pypi.org/project/Flask)
+    
 
 [^1]:
     Find out more about the success stories of Nginx on: <https://Nginx.org/en/>

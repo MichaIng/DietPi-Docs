@@ -221,34 +221,31 @@
 
 ## [Web development](../software/webserver_stack/)
 
-!!! warning "Documentation in progress..."
-    The **Optimised Software** links marked in **bold** have a more detailed description. The other links redirect to the old documentation (available on [DietPi.com Forum](https://dietpi.com/phpbb/viewtopic.php?t=5))  
-
 ### [Stacks for web development](../software/webserver_stack/#stacks-for-web-development)
 
-- [**LAMP Webserver - Apache2 / MariaDB / PHP**](../software/webserver_stack/#lamp-webserver-apache2-mariadb-php)  
-- [LASP Webserver - Apache2 / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?p=52#p52)  
-- [LEMP Webserver - Nginx / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?p=53#p53)  
-- [LESP Webserver - Nginx / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?p=53#p53)  
-- [LLMP Webserver - Lighttpd / MariaDB / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
-- [LLSP Webserver - Lighttpd / SQLite / PHP](https://dietpi.com/phpbb/viewtopic.php?p=1335#p1335)  
+- [**LAMP** web stack - **Apache2 / MariaDB / PHP**](../software/webserver_stack/#lamp-web-stack)
+- [**LASP** web stack - **Apache2 / SQLite / PHP**](../software/webserver_stack/#lasp-web-stack)
+- [**LEMP** web stack - **Nginx / MariaDB / PHP**](../software/webserver_stack/#lemp-web-stack)
+- [**LESP** web stack - **Nginx / SQLite / PHP**](../software/webserver_stack/#lesp-web-stack)  
+- [**LLMP** web stack - **Lighttpd / MariaDB / PHP**](../software/webserver_stack/#llmp-web-stack)
+- [**LLSP** web stack - **Lighttpd / SQLite / PHP**](../software/webserver_stack/#llsp-web-stack)
 
 ### [Webservers](../software/webserver_stack/#webservers)
 
-- [Apache2 - Feature-rich webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
-- [Nginx - Lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)  
-- [Lighttpd - Extremely lightweight webserver](https://dietpi.com/phpbb/viewtopic.php?p=1549#p1549)
-- [Tomcat8 - Apache Tomcat server](https://dietpi.com/phpbb/viewtopic.php?p=4316#p4316)  
+- [**Apache2** - Feature-rich webserver](../software/webserver_stack/#apache2)  
+- [**Nginx** - High performance web server, load balancer & reverse proxy](../software/webserver_stack/#nginx)  
+- [**Lighttpd** - Extremely lightweight webserver](../software/webserver_stack/#lighttpd)
+- [**Tomcat8** - Apache Tomcat server](../software/webserver_stack/#tomcat)  
 
 ### [Databases & Data stores](../software/webserver_stack/#databases-data-stores)
 
-- MariaDB - Open Source Relational Database
-- [phpMyAdmin - SQL Administration Tool for MariaDB](https://dietpi.com/phpbb/viewtopic.php?p=54#p54)  
-- SQLite - Small, Fast and High reliable SQL database engine
-- Redis - Open Source In-memory key–value Data Store
-- InfluxDB - Open Source Time Series Database
+- [**MariaDB** - Open Source Relational Database](../software/webserver_stack/#mariadb)
+  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](../software/webserver_stack/#phpmyadmin)  
+- [**SQLite** - Small, Fast and High reliable SQL database engine](../software/webserver_stack/#sqlite)
+- [**Redis** - Open Source In-memory key–value Data Store](../software/webserver_stack/#redis)
+- [**InfluxDB** - Open Source Time Series Database](../software/webserver_stack/#influxdb)
 
 ### [Programming & Web development Frameworks](../software/webserver_stack/#web-development-programming-frameworks)
 
-- Python 3 & Flask - Micro web framework powered by Python
-- PHP - scripting language especially suited to web development
+- [**Flask** - Micro web framework powered by Python](../software/webserver_stack/#flask)
+- [**PHP** - Scripting language especially suited to web development](../software/webserver_stack/#php)
