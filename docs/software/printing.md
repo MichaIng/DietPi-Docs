@@ -58,6 +58,6 @@ Official website: <https://octoprint.org/>
 
 Official documentation: <https://docs.octoprint.org/>
 
-Official forum: https://community.octoprint.org/
+Official forum: <https://community.octoprint.org/>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
