@@ -23,43 +23,41 @@
 
 OctoPrint provides a web interface for controlling consumer 3D printers.
 
-![DietPi print server software OctoPrint](../assets/images/dietpi-software-printserver-octoprint.png){: style="width:550px"}
+![OctoPrint web interface screenshot](../assets/images/dietpi-software-printserver-octoprint.png){: style="width:550px"}
 
 === "Access the web interface"
 
-    The web interface is accessible via port 5000 on the machine running the OctoPrint server, e.g. this could be:  
+    The web interface is accessible via port `5000` on the machine running the OctoPrint server:  
 
-    - URL = `http://192.168.0.100:5000`  
+    - URL = `http://<your.IP>:5000`  
 
 === "First run setup"
 
-    Once you are connected to the web interface, simply run through the setup wizard and configure the software/printers as needed:
+    Once you are connected to the web interface, simply run through the setup wizard and configure the software and printers as needed. A login user and password needs to be created, but it does not need to match any existing UNIX login user, i.e. can be freely chosen.
 
-    - Section: *Server Commands*:
-        - Restart OctoPrint = `systemctl restart octoprint`
-        - Restart system = `reboot`
-        - Shutdown system = `poweroff`
-    - Section: *Software Updates*:
-        - OctoPrint checkout folder = `/opt/octoprint` (since DietPi v6.33)
+=== "OctoPrint directories"
 
-=== "OctoPrint data/config directory"
+    - Base directory: `/mnt/dietpi_userdata/octoprint`
+    - Data and config: `/mnt/dietpi_userdata/octoprint/.octoprint`
+    - Main config file: `/mnt/dietpi_userdata/octoprint/.octoprint/config.yaml`
+    - Binaries and plugins: `/mnt/dietpi_userdata/octoprint/.local`
 
-    The data/config information is located in `/mnt/dietpi_userdata/octoprint` (since DietPi v6.33).
+=== "View logs"
+
+    - Service and core logs: `journalctl -u octoprint`
+    - Log files and plugin logs: `/mnt/dietpi_userdata/octoprint/.octoprint/logs/`
+    - Configure logging via web interface > **Settings** > **Logging**
 
 === "Command line interface (CLI)"
 
-    !!! hint ""
-        The CLI is relevant since DietPi v6.33.
+    OctoPrint offers a command line interface to execute OctoPrint commands. To use it, simply run `octoprint --help` from the command line.
 
-    OctoPrint also offers a command line interface to execute OctoPrint commands.  
-    To use this option, run `octoprint` from the command line. Do this as user `octoprint` to invoke the correct config/data directory. In a regular bash shell session this is the case automatically via alias and sudo, see: `/etc/bashrc.d/dietpi-octoprint.sh`.
+    The current shell needs to be `bash` and the user needs to be allowed to use `sudo`, as the above command is an alias to call a local OctoPrint binary as system user `octoprint`. The alias is defined in `/etc/bashrc.d/dietpi-octoprint.sh`, which is loaded automatically from bash shells. But you can as well load it from non-bash shells, if required.
 
-    If you use a different shell, use:
+Official website: <https://octoprint.org/>
 
-    ```sh
-    sudo -u octoprint octoprint <command>
-    ```
+Official documentation: <https://docs.octoprint.org/>
 
-See also <https://wikipedia.org/wiki/OctoPrint> resp. <https://octoprint.org/>.
+Official forum: <https://community.octoprint.org/>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
