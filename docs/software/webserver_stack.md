@@ -170,7 +170,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
         **Step 1. Create key**
 
-        ``` bash
+        ```sh
         mkdir -p /etc/apache2/ssl
         openssl req -x509 -nodes -days 1000 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
         ```
@@ -243,14 +243,14 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
         **Step 1. Create key**
 
-        ``` bash
+        ```sh
         mkdir -p /etc/apache2/ssl
         openssl req -x509 -nodes -days 1000 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
         ```
 
         **Step 2. Enable SSL config and restart Apache**
 
-        ``` bash
+        ```sh
         chmod 600 /etc/apache2/ssl/*
         cat << _EOF_ > /etc/apache2/sites-enabled/default-ssl.conf
 
@@ -321,14 +321,14 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
         **Step 1. Create key**
 
-        ``` bash
+        ```sh
         mkdir -p /etc/apache2/ssl
         openssl req -x509 -nodes -days 1000 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
         ```
 
         **Step 2. Enable SSL config and restart Apache**
 
-        ``` bash
+        ```sh
         chmod 600 /etc/apache2/ssl/*
         cat << _EOF_ > /etc/apache2/sites-enabled/default-ssl.conf
 
@@ -508,14 +508,14 @@ It is designed to be secure, fast, standards-compliant, and flexible while being
 
     Multithreading is supported by Lighttpd and can be enabled in the configuration file `/etc/lighttpd/lighttpd.conf`. Change the value of `4` to your total core count:
 
-    ```bash
+    ```
     server.max-worker = 4
     ```
 
     Then restart services:
 
-    ```bash
-    dietpi-services restart
+    ```sh
+    systemctl restart lighttpd
     ```
 
 === "Official documentation"
@@ -528,7 +528,7 @@ What is **Apache Tomcat**? Essentially it’s an open-source Java servlet and Ja
 
 ![DietPi Webstack software Tomcat logo](../assets/images/dietpi-software-webstack-tomcat.svg){: style="width:100px"}
 
-Source: [The Apache Software Foundation](http://svn.apache.org/viewvc/jakarta/site/xdocs/images/logos/tomcat.eps), [Apache License 2.0](https://commons.wikimedia.org/w/index.php?curid=11302180).
+Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/site/xdocs/images/logos/tomcat.eps), [Apache License 2.0](https://commons.wikimedia.org/w/index.php?curid=11302180).
 
 === "Quick access"
 
@@ -536,7 +536,7 @@ Source: [The Apache Software Foundation](http://svn.apache.org/viewvc/jakarta/si
 
 === "Official documentation"
 
-    - [Apache Tomcat website](http://tomcat.apache.org/index.html)
+    - [Apache Tomcat website](https://tomcat.apache.org/)
 
 ## Databases & Data stores
 
@@ -552,8 +552,8 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
 
     As `root` user, run `mariadb` from command line, no separate authentication required. But note that this won’t work via sudo, but an interactive root user shell session is required.
 
-    - username = `root`
-    - password = The same as your root login password, default is `dietpi`
+    - Username = `root`
+    - Password = The same as your root login password, default is `dietpi`
 
 === "Official documentation"
 
@@ -602,7 +602,7 @@ A non-SQL based data store.
 
 ![DietPi Webstack software Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: style="width:150px"}
 
-Source: [Carlos Prioglio](http://redis.io/images/redis-logo.svg), [licence](https://commons.wikimedia.org/w/index.php?curid=95020509).
+Source: [Carlos Prioglio](https://redis.io/images/redis-logo.svg), [licence](https://commons.wikimedia.org/w/index.php?curid=95020509).
 
 **Redis** is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
 
@@ -612,7 +612,7 @@ Source: [Carlos Prioglio](http://redis.io/images/redis-logo.svg), [licence](http
 
     The first thing to do in order to check Redis is working properly is sending a PING command:
 
-    ``` bash
+    ```sh
     redis-cli ping
     ```
 
@@ -634,25 +634,25 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
 
 === "Quick start"
 
-    After the installation, the data transfers are made via the http requests, and are handled directly by the InfluxDB service running on `http://<your.IP>:8086`.
+    After the installation, the data transfers are made via the HTTP requests, and are handled directly by the InfluxDB service running on `http://<your.IP>:8086`.
 
     - Create a database using `influxdb` via command line tool.
-      ``` bash
+      ```sh
       influx -execute 'create database myfirstdb'
       ``` 
 
     - Create a database using a HTTP request and `curl` tool:
-      ``` bash
+      ```sh
       curl -i -XPOST http://<your.IP>:8086/query --data-urlencode "q=CREATE DATABASE myfirstdb"
       ```
 
     - Post data
-      ``` bash
+      ```sh
       curl -i -XPOST 'http://<your.IP>:8086/write?db=myfirstdb' --data-binary 'temperature value=20.12'
       ```
     
     - Retrieve and display data from the database
-    ``` bash
+    ```sh
     influx -database myfirstdb -execute 'SELECT * FROM temperature'
     ```    
 
@@ -660,11 +660,11 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
 
     Create users and authorizations from influx CLI
 
-    ``` bash
+    ```sh
     influx -username admin -password admin01
     ```
 
-    ``` bash
+    ```sql
     CREATE USER admin WITH PASSWORD 'admin01' WITH ALL PRIVILEGES
     CREATE USER test_user WITH PASSWORD 'test_user01'
     GRANT ALL ON mydb TO test_user  
@@ -672,15 +672,15 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
     ```
 
     !!! hint "How to enabled secured access (HTTPS)"
-        By default the _http_ authentication is disabled. To enable it, follow next two steps:
+        By default the _HTTP_ authentication is disabled. To enable it, follow next two steps:
 
         1. Change next setting in the configuration file `/etc/influxdb/influxdb.conf`:
-        ``` bash
+        ```
         auth-enabled = true
         ```
-        2. Restart services
-        ``` bash
-        dietpi-services restart
+        2. Restart service
+        ```sh
+        systemctl restart influxdb
         ```
 
 === "Official documentation"
@@ -715,7 +715,7 @@ Flask is a lightweight web application framework. It is designed to make getting
 
     In order to use **Flask** it is first required first to install the Python Package Manager - [see Python Pip 3](../programming/#python). Then run the next command.
 
-    ``` bash
+    ```sh
     pip3 install -U Flask
     ```
 
@@ -723,10 +723,10 @@ Flask is a lightweight web application framework. It is designed to make getting
 
     - [User's guide & Documentation](https://flask.palletsprojects.com/en/1.1.x/)
     - [Flask website](https://palletsprojects.com/p/flask/)
-    - [PyPi package page](https://pypi.org/project/Flask)
+    - [PyPI package page](https://pypi.org/project/Flask)
 
 [^1]:
-    Find out more about the success stories of Nginx on: <https://Nginx.org/en/>
+    Find out more about the success stories of Nginx on: <https://nginx.org/en/>
 [^2]:
     ["Dead database walking: MySQL's creator on why the future belongs to MariaDB - MariaDB, open source, mysql, Oracle"](https://www2.computerworld.com.au/article/457551/dead_database_walking_mysql_creator_why_future_belongs_mariadb/). Computerworld. Retrieved 22 November 2020.
 [^3]:
