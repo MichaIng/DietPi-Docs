@@ -17,7 +17,6 @@
 - [**Nginx** - High performance web server, load balancer & reverse proxy](#nginx)  
 - [**Lighttpd** - Extremely lightweight webserver](#lighttpd)
 - [**Tomcat8** - Apache Tomcat server](#tomcat)
-- [**Web server preference**]()
 
 [**Databases & Data stores**](#databases-data-stores)
 
@@ -92,9 +91,13 @@ DietPi offers an **one-click-installation** of the following web development sta
     
     Although the DietPi installation of Lighttpd is set to single threaded, do not be put off by this, in low usage scenarios (<10 users) it will still outperform [Nginx](#nginx) and [Apache2](#apache2). Activation of multithreading is described in the [Lighttpd](#lighttpd) package description.
 
-    **Further reading & benchmarks**
+    !!! hint "DietPi - Webserver Preference"
+        
+        The DietPi webserver preference screen allows you to choose your favourite webserver for use in DietPi installations. Check more the **Web Preference** in the [Advanced configuration](../../dietpi_tools/#quick-selections).
 
-    See <https://detechter.com/the-battle-of-the-web-servers-apache-vs-Nginx-vs-lighttpd-2/>.
+    !!! info ""
+    
+        For further details see [The battle of the web servers Apache vs. Nginx vs. Lighttpd 2](https://detechter.com/the-battle-of-the-web-servers-apache-vs-Nginx-vs-lighttpd-2/).
 
 === "Which DATABASE to CHOOSE ?"
 
@@ -535,12 +538,6 @@ Source: [The Apache Software Foundation](http://svn.apache.org/viewvc/jakarta/si
 === "Official documentation"
 
     - [Apache Tomcat website](http://tomcat.apache.org/index.html)
-
-### Webserver Preference
-
-The DietPi webserver preference screen allows you to choose your favourite webserver for use in DietPi installations.
-
-Check more the **Web Preference** in the [Advanced configuration](../../dietpi_tools/#quick-selections).
 
 ## Databases & Data stores
 
