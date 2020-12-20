@@ -504,7 +504,7 @@ It is designed to be secure, fast, standards-compliant, and flexible while being
 
     After the installation, check if Lighttpd service is running on `http://<your.IP>`.
 
-=== "Scale to multiple CPUs"
+=== "Scale to multiple CPU"
 
     Multithreading is supported by Lighttpd and can be enabled in the configuration file `/etc/lighttpd/lighttpd.conf`. Change the value of `4` to your total core count:
 
@@ -517,7 +517,6 @@ It is designed to be secure, fast, standards-compliant, and flexible while being
     ```bash
     dietpi-services restart
     ```
-
 
 === "Official documentation"
 
