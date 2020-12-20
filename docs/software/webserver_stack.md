@@ -437,7 +437,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - OPcache = `http://<your.IP>/opcache.php`
 
     For database, check **[MariaDB](#mariadb)** details.
-    
+
 === "Secured access - HTTPS/SSL"
 
     **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#lets-encrypt-ssl-nordvpn-support). This will automate the creation and setup of your free SSL cert.
@@ -485,6 +485,7 @@ The innovation of Nginx compared to earlier servers such as Apache was to use an
 === "Official documentation"
 
     - <https://www.nginx.com>
+
 ### Lighttpd
 
 **Lighttpd** is a web server for UNIX/Linux and Windows operating systems. It is an alternative to Apache web server. It is also called Lighty.
@@ -502,6 +503,7 @@ It is designed to be secure, fast, standards-compliant, and flexible while being
 === "Official documentation"
 
     - <https://www.lighttpd.net>
+
 ### Tomcat
 
 What is **Apache Tomcat**? Essentially it’s an open-source Java servlet and Java Server Page container that lets developers implement an array of enterprise Java applications. Tomcat also runs a HTTP web server environment in which Java code can run.
@@ -575,6 +577,7 @@ Source: Part of the SQLite documentation, which has been released by author D. R
 
     - [SQLite.org](https://www.sqlite.org/index.html)
     - [SQLite.org documentation](https://www.sqlite.org/docs.html)
+
 ### Redis
 
 A non-SQL based data store.
@@ -667,16 +670,15 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
     - [InfluxDB Get Started](https://docs.influxdata.com/influxdb/v2.0/get-started/#set-up-influxdb)
     - [InfluxDB website](https://www.influxdata.com/products/influxdb/)
 
-
 ## Web development - Programming & Frameworks
 
 ### PHP
 
-![DietPi Webstack software PHP logo](../assets/images/dietpi-software-webstack-php.svg){: style="width:150px"} 
+![DietPi Webstack software PHP logo](../assets/images/dietpi-software-webstack-php.svg){: style="width:150px"}
 
-Source: [Colin Viebrock](http://php.net/logos), [CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=9632398).
+Source: [Colin Viebrock](https://www.php.net/download-logos.php), [CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=9632398).
 
-First introduced by Rasmus Lerdorf, PHP is an open-source, server-side general scripting language that has now become a de-facto coding standard in the web development industry. 
+First introduced by Rasmus Lerdorf, PHP is an open-source, server-side general scripting language that has now become a de-facto coding standard in the web development industry.
 
 === "Quick start"
 
@@ -686,7 +688,6 @@ First introduced by Rasmus Lerdorf, PHP is an open-source, server-side general s
 
     - [PHP website](https://www.php.net)
     - [PHP manual](https://www.php.net/manual/en/index.php)
-
 
 ### Flask
 
@@ -706,7 +707,6 @@ Flask is a lightweight web application framework. It is designed to make getting
     - [Flask website](https://palletsprojects.com/p/flask/)
     - [PyPi package page](https://pypi.org/project/Flask)
     
-
 [^1]:
     Find out more about the success stories of Nginx on: <https://Nginx.org/en/>
 [^2]:
