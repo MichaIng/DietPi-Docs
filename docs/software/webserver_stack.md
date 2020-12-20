@@ -539,7 +539,7 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
 
 === "Official documentation"
 
-    - [MariaDB website: mariadb.org](https://mariadb.org)
+    - [MariaDB website](https://mariadb.org)
     - [Getting started documentation](https://mariadb.org/documentation/#getting-started)  
 
 #### phpMyAdmin
@@ -592,7 +592,7 @@ Source: [Carlos Prioglio](http://redis.io/images/redis-logo.svg), [licence](http
 
 === "Quick start"
 
-    The first thing to do in order to check Redis is working properly is sending a PING command using redis-cli:
+    The first thing to do in order to check Redis is working properly is sending a PING command:
 
     ``` bash
     redis-cli ping
@@ -612,7 +612,7 @@ Source: [Carlos Prioglio](http://redis.io/images/redis-logo.svg), [licence](http
 
 Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding-docs/img/influxdb/preview.svg), [Public Domain](https://commons.wikimedia.org/w/index.php?curid=55056027).
 
-**InfluxDB** is a _time series_ database designed to handle high write and query loads. InfluxDB is not only a time series platform, but it provides also an Web UI and dashboarding tools, background processing and monitoring agent.
+**InfluxDB** is a _time series_ database designed to handle high write and query loads. InfluxDB is not only a time series platform, but it provides also an Web UI and dashboard tools, background processing and monitoring agent.
 
 === "Quick start"
 
@@ -706,7 +706,7 @@ Flask is a lightweight web application framework. It is designed to make getting
     - [User's guide & Documentation](https://flask.palletsprojects.com/en/1.1.x/)
     - [Flask website](https://palletsprojects.com/p/flask/)
     - [PyPi package page](https://pypi.org/project/Flask)
-    
+
 [^1]:
     Find out more about the success stories of Nginx on: <https://Nginx.org/en/>
 [^2]:
