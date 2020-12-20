@@ -16,7 +16,8 @@
 - [**Apache2** - Feature-rich webserver](#apache2)  
 - [**Nginx** - High performance web server, load balancer & reverse proxy](#nginx)  
 - [**Lighttpd** - Extremely lightweight webserver](#lighttpd)
-- [**Tomcat8** - Apache Tomcat server](#tomcat)  
+- [**Tomcat8** - Apache Tomcat server](#tomcat)
+- [**Web server preference**]()
 
 [**Databases & Data stores**](#databases-data-stores)
 
@@ -500,6 +501,21 @@ It is designed to be secure, fast, standards-compliant, and flexible while being
 
     After the installation, check if Lighttpd service is running on `http://<your.IP>`.
 
+=== "Scale to multiple CPUs"
+
+    Multithreading is supported by Lighttpd and can be enabled in the configuration file `/etc/lighttpd/lighttpd.conf`. Change the value of `4` to your total core count:
+
+    ```bash
+    server.max-worker = 4
+    ```
+
+    Then restart services:
+
+    ```bash
+    dietpi-services restart
+    ```
+
+
 === "Official documentation"
 
     - <https://www.lighttpd.net>
@@ -519,6 +535,12 @@ Source: [The Apache Software Foundation](http://svn.apache.org/viewvc/jakarta/si
 === "Official documentation"
 
     - [Apache Tomcat website](http://tomcat.apache.org/index.html)
+
+### Webserver Preference
+
+The DietPi webserver preference screen allows you to choose your favourite webserver for use in DietPi installations.
+
+Check more the **Web Preference** in the [Advanced configuration](../../dietpi_tools/#quick-selections).
 
 ## Databases & Data stores
 

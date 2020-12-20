@@ -97,8 +97,13 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "Webserver Preference"
 
-    The DietPi **Webserver Preference** system allows you to choose your favourite webserver for use in DietPi installations. When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
-    Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
+    The DietPi **Webserver Preference** system allows you to choose your favourite webserver for use in DietPi installations. If not decided, read more on [Which WEBSERVER to CHOOSE ?](../software/webserver_stack/#which-web-application-stack-is-best-for-you)
+    
+    !!! hint "Automatic selection"
+
+        When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
+    
+        As a result you will not need to manually select/install a webserver stack. DietPi will do it all for you.
 
     ![DietPi-Software Webserver Preference menu screenshot](assets/images/dietpi-software-webserver-preference.png){: style="width:550px"}
 
