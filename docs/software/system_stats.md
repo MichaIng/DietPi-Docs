@@ -7,7 +7,7 @@
 - [**phpSysInfo - Web interface system stats**](#phpsysinfo)
 - [**RPi-Monitor - Web interface system stats**](#rpi-monitor)
 - [**Netdata - Web interface system stats**](#netdata)
-- [**webmin - Remote system management with web interface**](#webmin)
+- [**Webmin - Remote system management with web interface**](#webmin)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -95,7 +95,7 @@ Video: <https://youtu.be/O-W8Z33as_U>.
     See <https://www.hardkernel.com/shop/c1-3-2inch-tfttouchscreen-shield/>.  
     This is available for all Odroid versions. DietPi will automatically configure your system for the device.  
     Simply run `dietpi-config` -\> *Display Options* then select `odroid-lcd35`.   
-    After a reboot, your *odroid-lcd35* will become active.
+    After a reboot, your *Odroid 3.5 LCD* will become active.
 
     ![DietPi system stat and maintenance software CloudShell general touchscreen](../assets/images/dietpi-software-systemstat-cloudshell-touchscreensupport.jpg){: style="width:400px"}
 
@@ -127,7 +127,7 @@ See also <https://github.com/afaqurk/linux-dash/wiki>.
 
 ## phpSysInfo
 
-Allows you to monitor your system stats from a web page. The display output can be customized via an ini file.
+Allows you to monitor your system stats from a web page. The display output can be customized via an `.ini` file.
 
 - Also Installs: [LASP webserver stack](../webserver_stack/)
 
@@ -205,27 +205,27 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
 
 See also <https://wikipedia.org/wiki/Netdata> resp. <https://learn.netdata.cloud/docs/overview/what-is-netdata>.
 
-## webmin
+## Webmin
 
-The webmin package is a web based feature-rich remote system management tool. Many system settings can easily be set using the web interface dialogs.
+Webmin is a web-based feature-rich remote system management tool. Many system settings can easily be set using the web interface dialogues.
 
-![DietPi system stat and maintenance software webmin](../assets/images/dietpi-software-systemstat-webmin.png){: style="width:500px"}
+![DietPi system stat and maintenance software Webmin](../assets/images/dietpi-software-systemstat-webmin.png){: style="width:500px"}
 
-=== "Access to webmin"
+=== "Access to Webmin"
 
-    The web interface of *webmin* can be accessed via:
+    The web interface of *Webmin* can be accessed via:
 
     - URL = `https://<your.IP>:10000`
     - Username = `root`
     - Password = root password at time of installation (default: `dietpi`)
 
-    ???+ hint "Use https"
+    ???+ hint "Use HTTPS"
 
-        Please ensure https URL is typed, http will not function
+        Please ensure `https://` URL is typed, `http://` will not function
 
 === "System logging"
 
-    The Webmin system logging panel still depends on a classical file logger, like Rsyslog. However DietPi will not impose this logging overhead on systems by default. If you need to see system logs via the *webmin online panel*, you can either configure a custom *syslog* daemon or install *Rsyslog* manually:  
+    The Webmin system logging panel still depends on a classical file logger, like Rsyslog. However DietPi will not impose this logging overhead on systems by default. If you need to see system logs via the *Webmin online panel*, you can either configure a custom *syslog* daemon or install *Rsyslog* manually:  
     `apt install rsyslog`
 
     DietPi comes with *systemd* and the related *journald* system logger, which can be accessed via the command `journalctl`.

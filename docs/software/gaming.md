@@ -174,8 +174,8 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
       If you own the Amiga Forever product, you can legally download and use Kickstarts you are eligible for, from: <https://www.amigaroms.com/>.  
       **Remark:** *Kickstart 1.3 (A500-A2500-A3000-CDTV) is highly recommended to work with most games.*  
       Kickstarts need to be placed in `/mnt/dietpi_userdata/amiberry/kickstarts`
-    - Floppy disks (Amiga .adf images)  
-      Amiga's floppy disk images have a .adf file extension.  
+    - Floppy disks (Amiga `.adf` images)  
+      Amiga's floppy disk images have a `.adf` file extension.  
       You will need obtain at least one ADF image to start your Amiga experience.  
       Load your ADF from or place them where every you want it, e.g. create and use:  
       `/mnt/dietpi_userdata/amiberry/floppy_images`  
@@ -249,8 +249,8 @@ When ready, select Start to launch the emulator. Have fun!
 
 Make sure you have one of DietPi's File Servers installed.
 
-- Floppy Disk Image (.adf) directory as chosen before, e.g. `/amiberry/floppy_images`
-- Kickstarts (.rom) directory = `/amiberry/kickstarts`
+- Floppy Disk Image (`.adf`) directory as chosen before, e.g. `/amiberry/floppy_images`
+- Kickstarts (`.rom`) directory = `/amiberry/kickstarts`
 
 #### How can I open the configuration window once the emulator has started?
 
@@ -279,7 +279,7 @@ A ***lower resolution*** may improve performance on most games. From the emulato
 
 ***Overclocking*** your system will improve performance. Stability may vary across devices and overclocking is not officially supported:  
 
-- From a terminal, run dietpi-config
+- From a terminal, run `dietpi-config`
 - Select the Performance Options menu
 - Select Overclocking Profiles
 - Select an overclocking profile, then reboot the system
@@ -357,7 +357,9 @@ Make sure you have one of DietPi's File Servers installed.
 A highly optimized Minecraft server with plugins, written in Java.  
 PaperMC by default runs a single server, available on LAN, but can be port forwarded so other people can connect.
 
-![DietPi gaming software PaperMC](../assets/images/dietpi-software-games-papermc.jpg){: style="width:150px"}
+![DietPi gaming software PaperMC logo](../assets/images/dietpi-software-games-papermc.jpg){: style="width:70px"}
+
+![DietPi gaming software PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg){: style="width:500px"}
 
 === "Default server/query port"
 

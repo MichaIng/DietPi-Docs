@@ -12,7 +12,7 @@ dietpi-launcher
 
 ## DietPi software
 
-**dietpi-software** will be automatically displayed on the first login after the installation. It can be accessed at any time running next command:
+`dietpi-software` will be automatically displayed on the first login after the installation. It can be accessed at any time running next command:
 
 ``` bash
 dietpi-software
@@ -72,7 +72,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     DietPi will then automatically install and setup the file server for you. DietPi will also clean and remove any previous file server from your system.
 
-    The **default destination** directory for file servers is ***/mnt/dietpi_userdata***.
+    The **default destination** directory for file servers is `/mnt/dietpi_userdata`.
 
     The reasons for choosing **ProFTPD** over **Samba** may be:
 
@@ -97,8 +97,13 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "Webserver Preference"
 
-    The DietPi **Webserver Preference** system allows you to choose your favourite webserver for use in DietPi installations. When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
-    Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
+    The DietPi **Webserver Preference** system allows you to choose your favourite webserver for use in DietPi installations. If not decided, read more on [Which WEBSERVER to CHOOSE ?](../software/webserver_stack/#which-web-application-stack-is-best-for-you)
+    
+    !!! hint "Automatic selection"
+
+        When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
+    
+        As a result you will not need to manually select/install a webserver stack. DietPi will do it all for you.
 
     ![DietPi-Software Webserver Preference menu screenshot](assets/images/dietpi-software-webserver-preference.png){: style="width:550px"}
 
@@ -110,7 +115,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - The location where your **File Server** choice will point to, if you install one, like Samba Server or ProFTPD.
     - The location where you can upload and store your **media content**, for other applications to use, like Kodi, Emby or Plex.
 
-    For all software you install in dietpi-software, you can access your user data with ***/mnt/dietpi_userdata***. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
+    For all software you install in dietpi-software, you can access your user data with `/mnt/dietpi_userdata`. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
     To check where the physical location is, you can run the following command:  
     `readlink -f /mnt/dietpi_userdata`
 
@@ -149,7 +154,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
       free        Print an unused software ID, free for a new software implementation
     ```
 
-    The <software_id\> which has to be given is the one which is present in the software list within the `dietpi-software` dialogs:
+    The <software_id\> which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:
 
     ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: style="width:400px"}
 

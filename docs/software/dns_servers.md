@@ -33,7 +33,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     The web interface of Pi-hole can be accessed via:
 
     - URL= `http://<your.IP>/admin`
-    - Password = `<yourGlobalSoftwarePassword>` (default: dietpi)
+    - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
 === "Configuration"
 
@@ -97,7 +97,9 @@ See also <https://wikipedia.org/wiki/Pi-hole>.
 Unbound is a validating, recursive, caching DNS resolver.  
 For more details see [unbound "about" description](https://nlnetlabs.nl/projects/unbound/about/).
 
-![DietPi DNS server software unbound](../assets/images/dietpi-software-dnsserver-unbound.svg){: style="width:250px"}
+![DietPi DNS server software unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: style="width:150px"}
+
+![DietPi DNS server software unbound screenshot](../assets/images/dietpi-software-unbound.jpg){: style="width:500px"}
 
 === "Default DNS ports"
 

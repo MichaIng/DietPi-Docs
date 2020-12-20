@@ -11,11 +11,15 @@ The Raspberry Pi has sold more than 31 million units since it launched in 2012. 
 
 You can install DietPi by following the step by step [Starting guide](../user-guide_installation/).
 
-DietPi runs very well on latest model **Raspberry Pi 4 Model B** (launched in 2019 / 2020)
+DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400/?resellerType=home)
+
+![DietPi Raspberry Pi 400](./assets/images/dietpi-raspberry-pi-400-back.jpg)
+
+, or the most recent **Raspberry Pi 4 Model B** boards, launched in 2019, as well as in 2020.
 
 <img src="../assets/images/raspberry-pi-4-labelled.png" title="Raspberry Pi model 4B" width="500" />
 
-as well as on one of the first models **Raspberry Pi 1** (launched in 2012)
+DietPi runs also on one of the first models **Raspberry Pi 1**, launched in 2012
 
 <img src="../assets/images/raspberry-pi-1b.jpg" title="Raspberry Pi model 1B" width="500" />
 
@@ -571,7 +575,7 @@ In the following dialog you have to select the DietPi installer branch. Choose t
 
 ![DietPi-PREP branch selection](assets/images/dietpi-prep-selectbranch.png){: style="width:550px"}
 
-In the following dialogs enter your name and afterwards the actual image base and the device (SBC or PC) the system is running on:
+In the following dialogues enter your name and afterwards the actual image base and the device (SBC or PC) the system is running on:
 
 ![DietPi-PREP pre-image entry](assets/images/dietpi-prep-preimage.png){: style="width:550px"}
 

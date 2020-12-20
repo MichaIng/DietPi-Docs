@@ -17,13 +17,10 @@ DietPi is a **highly optimised & minimal Debian-based Linux distribution**. Diet
 
 Setting up a single board computer (SBC) or even a computer, for both regular or server use, takes time and skill. DietPi provides an **easy way to install and run favourite software you choose**.
 
-<!--
-our images start at 400MB in size (3x lighter than 'Raspbian Lite'). With features of low process/memory footprint, DietPi allows you to get the maximum performance from your device. -->
-
 !!! quote
     "Just wanted to say thank you for DietPi. As someone who's intermediate at best with Linux and SBCs in general, its made everything so much more accessible. I don't have that much time to tinker and I need things to generally work out of the box with little fuss. DietPi has made it possible for me to be running Nextcloud, Pi-hole, NZBGet and more on a Raspberry Pi 4 with minimal effort. Sure Docker could do the same but there is something about running things natively that I like.
 
-    Automation features like Dietpi Backup and Drive Manager are just the icing on the cake to a great ecosystem.
+    Automation features like DietPi-Backup and Drive Manager are just the icing on the cake to a great ecosystem.
 
     Thank you for DietPi."
     Reds, DietPi Forum

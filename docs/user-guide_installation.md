@@ -11,7 +11,7 @@ The installation of DietPi consists of few steps:
 - Get the DietPi image (and put it on the installation media)
 - Boot up the DietPi device and go through one time installation steps
 
-Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/#dietpi-software).
+Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [`dietpi-software`](../dietpi_tools/#dietpi-software).
 
 Select the following tabs for the installation description of your target.
 
@@ -35,7 +35,7 @@ Select the following tabs for the installation description of your target.
 
     ## 1. Download and extract the DietPi disk image
 
-    Open [dietpi.com](https://dietpi.com/#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally.
+    Open [`dietpi.com`](https://dietpi.com/#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally.
 
     _Example:_
     ![DietPi for Raspberry Pi download page](assets/images/DietPi-RaspberryPi-image.jpg)
@@ -119,7 +119,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi installer image** from [dietpi.com](https://dietpi.com/#download) and
+    Download the **DietPi installer image** from [`dietpi.com`](https://dietpi.com/#download) and
     unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi-download-image](assets/images/dietpi-download-nativepc.jpg)
@@ -163,7 +163,7 @@ Select the following tabs for the installation description of your target.
 
     You can select the default settings. In case of problems, please select "Safe graphic settings".
 
-    Once this step is completed, you will able to select a different keyboard. If necessary, change your keyboard settings and go through the appropriate dialogs.
+    Once this step is completed, you will able to select a different keyboard. If necessary, change your keyboard settings and go through the appropriate dialogues.
 
     Then the installation process begins with the help of the wonderful Clonezilla tool.
 
@@ -209,7 +209,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi VirtualBox file** "DietPi_VirtualBox-x86_64-Buster.7z" from [dietpi.com](https://dietpi.com/#download) and   
+    Download the **DietPi VirtualBox file** "DietPi_VirtualBox-x86_64-Buster.7z" from [`dietpi.com`](https://dietpi.com/#download) and   
     unzip the downloaded file to a local!!! info "DietPi Survey" folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi-download-image](assets/images/dietpi-VirtualBox-Download.png)
@@ -248,8 +248,8 @@ After the system has booted up, you can continue following the instructions on t
 
 A login prompt will appear. Use the initial credentials:
 
-- login: **root**
-- password: **dietpi**
+- login: `root`
+- password: `dietpi`
 
 ??? hint "Click here if you want to connect via network (running a _headless install_)"
 
@@ -276,7 +276,7 @@ A login prompt will appear. Use the initial credentials:
     **Connect to DietPi via SSH**
 
     - A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host Name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.
-    ![DietPi-ssh](assets/images/dietpi-ssh.jpg)
+    ![DietPi-SSH](assets/images/dietpi-ssh.jpg)
 
     - Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address `192.168.1.20` with the one found via scanning the network):  
     ```
@@ -292,7 +292,7 @@ DietPi will then immediately begin to search for and install updated software pa
 Once the packages have been updated, DietPi will ask you to confirm whether you would like to enable user analytics.
 
 !!! info "DietPi Survey"
-    DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/) page. Checkout and see how DietPi is used!
+    DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [`dietpi.com/survey`](https://dietpi.com/survey/) page. Checkout and see how DietPi is used!
 
 ![dietpi-data](assets/images/dietpi-data-policy.jpg)
 

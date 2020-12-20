@@ -4,6 +4,7 @@
 
 - [**Python - high-level interpreted programming language**](#python)
 - [**Docker - Build, ship, and run distributed applications**](#docker)  
+- [**Portainer - Docker container management**](#portainer)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -67,4 +68,25 @@ Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia
 
 See also <https://wikipedia.org/wiki/Docker_(software)> resp. <https://docs.docker.com/get-started/overview>.
 
+## Portainer
+
+Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
+
+![DietPi Optimised Software Portainer](../assets/images/dietpi-software-portainer.jpg)
+
+=== "Quick start"
+
+    - It starts automatically after installation. View Portainer web interface by opening the browser using next URL: `http://<your.local.ip>:9002` [^1]. 
+
+    - If you have basic questions on how to use **Portainer**, please read the beginner guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>.
+
+=== "Official documentation"
+
+    - Documentation: <https://documentation.portainer.io/>
+    - Source code: <https://github.com/portainer/portainer>
+    - Open-source license: zlib
+
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
+
+[^1]:
+    [Logitech Media Server](../media/#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
