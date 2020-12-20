@@ -150,6 +150,7 @@ hotspot
 HotSpot
 hotspots
 htop
+http
 HQPlayer
 HTPC
 HTTPS
@@ -184,6 +185,7 @@ LASP
 lcd
 LEDs
 LEMP
+Lerdorf
 LESP
 LetsEncrypt
 LGPL
@@ -291,6 +293,7 @@ PSU
 PuTTY
 Pydio
 pyenv
+PyPi
 qBittorrent
 Queneuder
 QuiteRSS
@@ -299,6 +302,7 @@ Radarr
 Radxa
 RAMdisk
 RAMlog
+Rasmus
 Raspbian
 Raspotify
 rcon
