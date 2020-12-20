@@ -149,7 +149,6 @@ hotspot
 HotSpot
 hotspots
 htop
-http
 HQPlayer
 HTPC
 HTTPS
@@ -292,7 +291,7 @@ PSU
 PuTTY
 Pydio
 pyenv
-PyPi
+PyPI
 qBittorrent
 Queneuder
 QuiteRSS
