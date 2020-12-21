@@ -55,7 +55,7 @@
 - [**Gitea - GitHub style server, with web interface**](../software/cloud/#gitea)
 - [**Syncthing - Backup and sync server with web interface**](../software/cloud/#syncthing)
 - [**Tonido - Lightweight backup and sync server with web interface and cloud access**](../software/cloud/#tonido)
-- [**Minio - S3 compatible distributed object server**](../software/cloud/#minio)
+- [**MinIO - S3 compatible distributed object server**](../software/cloud/#minio)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](../software/cloud/#firefox-sync-server)
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#bitwarden_rs)
 - [**FuguHub - Your Own Personal Cloud Server**](../software/cloud/#fuguhub)
