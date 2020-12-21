@@ -497,9 +497,9 @@ Source: [MinIO website](https://min.io/product/overview)
 
     Open the web browser using next link: `http://<your.IP>:9000`.
 
-    - [MinIO Server Quickstart Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
-    - [Python Client Quickstart Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
-    - [JavaScript Client Quickstart Guide - MinIO](https://docs.min.io/docs/javascript-client-quickstart-guide.html)
+    - [MinIO Server Quick Start Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
+    - [Python Client Quick Start Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
+    - [JavaScript Client Quick Start Guide - MinIO](https://docs.min.io/docs/javascript-client-quickstart-guide.html)
 
 === "Official documentation"
 
@@ -631,20 +631,20 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 ![FuguHub logo](https://fuguhub.com/images/FuguHub.png)
 
 === "Quick access"
-    
+
     Open the browser `http://<your.IP>/`. On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
     
     !!! warning ""
         
         FuguHub runs by default on port 80 and optional 443. As a result it may be incompatible with a regular webserver using the default setup.
 
-    ![fuguhub](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png)
+    ![FuguHub Application](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png)
 
 === "Interactive install"
 
     1. Press `ENTER` to continue
     2. Press `y` to accept license
-    3. Press `y `for VPS or `n` for home/office server
+    3. Press `y `for `VPS` or `n` for `home/office` server
     4. Choose whether to install an internal BitTorrent client.
     
     !!! warning ""
