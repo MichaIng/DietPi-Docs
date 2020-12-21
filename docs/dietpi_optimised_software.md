@@ -58,6 +58,7 @@
 - [**Minio - S3 compatible distributed object server**](../software/cloud/#minio)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](../software/cloud/#firefox-sync-server)
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#bitwarden_rs)
+- [**FuguHub - Your Own Personal Cloud Server**](../software/cloud/#fuguhub)
 
 ## [Computational Science](../software/computational_science/)
 

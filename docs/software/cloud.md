@@ -11,9 +11,10 @@
 - [**Gitea - GitHub style server, with web interface**](#gitea)
 - [**Syncthing - Backup and sync server with web interface**](#syncthing)
 - [**Tonido - Lightweight backup and sync server with web interface and cloud access**](#tonido)
-- [**Minio - S3 compatible distributed object server**](#minio)
+- [**MinIO - S3 compatible distributed object server**](#minio)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](#bitwarden_rs)
+- [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -353,7 +354,7 @@ See also <https://gogs.io/>.
 
 Your very own GitHub style server, with web interface.
 
-![DietPi cloud software Gitea](../assets/images/dietpi-software-cloud-gitea.jpg)
+![DietPi cloud software Gitea](../assets/images/dietpi-software-cloud-gitea.jpg){: style="width:200px"}
 
 === "Access to the web interface"
 
@@ -484,17 +485,32 @@ Lightweight backup and sync server, includes web interface and external cloud ac
 
 See also <https://www.tonido.com/>.
 
-## Minio
+## MinIO
 
-T.b.d.
+It is an open source Kubernetes Native, High Performance Object Storage (S3 Compatible). It helps building cloud-native data infrastructure for machine learning, analytics and application data workloads.
 
-See also: <https://min.io/>.
+![DietPi MinIO](../assets/images/dietpi-software-cloud-minio.jpg)
+
+Source: [MinIO website](https://min.io/product/overview)
+
+=== "Quick start"
+
+    Open the web browser using next link: `http://<your.IP>:9000`.
+
+    - [MinIO Server Quickstart Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
+    - [Python Client Quickstart Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
+    - [JavaScript Client Quickstart Guide - MinIO](https://docs.min.io/docs/javascript-client-quickstart-guide.html)
+
+=== "Official documentation"
+
+    - Documentation: <https://docs.min.io>
+    - Website: <https://min.io/product/overview>
 
 ## Firefox Sync Server
 
 This is Mozilla's Firefox Sync Server which manages syncing Firefox instance bookmarks, history, tabs and passwords across devices. Out of the box it runs on a Python server for small loads and can be configured to run behind Nginx or Apache.
 
-![Firefox Sync Logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png)
+![Firefox Sync Logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png){: style="width:200px"}
 
 === "Configure Firefox"
 
@@ -600,16 +616,53 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
 ### Official links
 
-Documentation: <https://github.com/dani-garcia/bitwarden_rs/wiki>
+- Documentation: <https://github.com/dani-garcia/bitwarden_rs/wiki>
+- Forum: <https://bitwardenrs.discourse.group/>
+- Source code: <https://github.com/dani-garcia/bitwarden_rs>
+- Open-source license: [GPLv3](https://github.com/dani-garcia/bitwarden_rs/blob/master/LICENSE.txt)
 
-Forum: <https://bitwardenrs.discourse.group/>
+!!! hint "Credits"
+    This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9). Thank you !
 
-Source code: <https://github.com/dani-garcia/bitwarden_rs>
+## FuguHub
 
-Open-source license: [GPLv3](https://github.com/dani-garcia/bitwarden_rs/blob/master/LICENSE.txt)
+FuguHub transforms your DietPi device into a secure online storage system, letting you access and share files from any connected computer or device.
 
-### Credits
+![FuguHub logo](https://fuguhub.com/images/FuguHub.png)
 
-This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9), many thanks! :D
+=== "Quick access"
+    
+    Open the browser `http://<your.IP>/`. On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
+    
+    !!! warning ""
+        
+        FuguHub runs by default on port 80 and optional 443. As a result it may be incompatible with a regular webserver using the default setup.
+
+    ![fuguhub](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png)
+
+=== "Interactive install"
+
+    1. Press `ENTER` to continue
+    2. Press `y` to accept license
+    3. Press `y `for VPS or `n` for home/office server
+    4. Choose whether to install an internal BitTorrent client.
+    
+    !!! warning ""
+        
+        It is recommended to use the standard supported DietPi BitTorrent clients - more details on [BitTorrent / Download Tools](../bittorrent/#bittorrent-download-tools).
+
+    Setup details:
+
+    - Install directory: `/home/bd`
+    - Config file: `/home/bd/bdd.conf`
+    - Data directory: `/mnt/dietpi_userdata/fuguhub-data`
+
+=== "Logging"
+    - Service: `journalctl -u bdd`
+    - Trace: `/home/bd/trace/` # It contains an info about the database creation only, even after playing around with the web UI a bid.
+
+=== "Official documentation"
+
+    - Website and Documentation: <https://fuguhub.com/>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
