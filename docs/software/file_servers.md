@@ -80,7 +80,7 @@ The Samba server lets you share files on your DietPi system with ease based on t
 
     The access to the Samba file server is achieved as follows:
 
-    - Address = `\\\192.168.0.100\dietpi`
+    - Address = `\\192.168.0.100\dietpi`
     - Username = `dietpi`
     - Password = `<your global application password>` (default: `dietpi`)
 
