@@ -85,6 +85,14 @@ Portainer simplifies your Docker container management via Portainer web interfac
     - Documentation: <https://documentation.portainer.io/>
     - Source code: <https://github.com/portainer/portainer>
     - Open-source license: zlib
+    
+=== "Update"
+
+    Update to latest version:
+
+    ```
+    dietpi-software reinstall 185
+    ```
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 
