@@ -161,10 +161,10 @@ XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 === "Connect to your desktop"
 
     To connect to the desktop, open the remote desktop application in Windows (or any other XRDP compatible client).  
-    Enter the IP address of your DietPi device (e.g.: 192.168.0.100).  
+    Enter the IP address of your DietPi device, e.g. `192.168.0.100`.  
     Click connect and enter the following details once connected:
 
-    - Module = `Xvnc` (Jessie = `Sesman-Xvnc`)
+    - Module = `Xorg`
     - Username = `root`
     - Password = `dietpi`
 
