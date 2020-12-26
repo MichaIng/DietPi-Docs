@@ -504,6 +504,9 @@ It is designed to be secure, fast, standards-compliant, and flexible while being
 
     After the installation, check if Lighttpd service is running on `http://<your.IP>`.
 
+    How much time do you have to set up Lighttpd ? 5 minutes? 10 minutes? or more ? Find here a quick start documentation: [link](https://redmine.lighttpd.net/projects/1/wiki/TutorialConfiguration).
+
+
 === "Scale to multiple CPU"
 
     Multithreading is supported by Lighttpd and can be enabled in the configuration file `/etc/lighttpd/lighttpd.conf`. Change the value of `4` to your total core count:
@@ -520,7 +523,8 @@ It is designed to be secure, fast, standards-compliant, and flexible while being
 
 === "Official documentation"
 
-    - <https://www.lighttpd.net>
+    - Documentation: [Welcome to Lighttpd](https://redmine.lighttpd.net/projects/lighttpd/wiki)
+    - Website : <https://www.lighttpd.net>
 
 ### Tomcat
 
