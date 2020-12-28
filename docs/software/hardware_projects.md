@@ -87,7 +87,7 @@ Mycroft AI is a free and open source voice assistant.
 
 === "Initial setup"
 
-    1. If you did no reboot after install, load Mycroft commands to current shell session: `./etc/bashrc.d/mycroft.sh`
+    1. If you did no reboot after install, load Mycroft commands to current shell session: `. /etc/bashrc.d/mycroft.sh`
     2. Start CLI client: `mycroft-cli-client`
     3. You should see and at best hear the invitation to pair your device, e.g.: `PairingSkill - INFO - Pairing code: XXYYZZ`
     4. Visit <https://home.mycroft.ai/> to start pairing and configuring your device and skills.
