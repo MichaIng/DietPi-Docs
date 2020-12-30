@@ -1,4 +1,4 @@
- # Gaming & Emulation
+# Gaming & Emulation
 
 ## Overview
 

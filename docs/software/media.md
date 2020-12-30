@@ -678,7 +678,6 @@ At startup the Roon Extension Manager accesses a repository containing the commu
 Details and usage information: <https://community.roonlabs.com/t/roon-extension-manager-v0-11-8/26632>  
 Credits: Many thanks to @JanKoudijs for contributing this into DietPi
 
-
 ## NAA Daemon
 
 Signalyst Network Audio Adapter (NAA) daemon allows you to stream music from an HQPlayer source (like Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (like 192 kHz) and more.  
