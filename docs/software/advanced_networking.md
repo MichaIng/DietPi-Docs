@@ -78,7 +78,9 @@ It also Installs:
     To verify that the traffic is being routed through Tor you can check the following:  
     On the connected WiFi device, go to the following URL: <https://check.torproject.org>
 
-See also <https://wikipedia.org/wiki/Tor_(anonymity_network)>.
+***
+
+Wikipedia: <https://wikipedia.org/wiki/Tor_(anonymity_network)>
 
 ## Tor Relay
 
@@ -109,15 +111,17 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
 
     Keeping Tor relays updated is important to the safety of both the users and the operator. Because of this, automated upgrades are recommended and asked about when first installing. Otherwise, use `apt-get update && apt-get upgrade`
 
-=== "Official documentation"
+***
 
-    [Tor Relay Documentation](https://community.torproject.org/relay/setup/)
+Official documentation: <https://community.torproject.org/relay/setup>
 
 ## HAProxy
 
 HAProxy, which stands for High Availability Proxy, is a popular open source software TCP/HTTP Load Balancer and proxy solution. Its most common use is to improve the performance and reliability of a server environment by distributing the workload across multiple servers (e.g. web, application, database).
 
 It is best suited for high traffic web sites and powers quite a number of the world's most visited ones: GitHub, Imgur, Instagram, and Twitter. It has become the de-facto standard open-source load balancer, and it is often deployed by default in cloud platforms.
+
+![advanced-networking-high-availability](../assets/images/dietpi-software-advanced-networking-haproxy2.jpg)
 
 !!! warning ""
     This software title is recommended ONLY for advanced users !
@@ -162,13 +166,10 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
     Help text extracted from the tutorial: [An Introduction to HAProxy and Load Balancing Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
 
-=== "Official documentation"
+***
 
-    [Website HAProxy Community Edition](http://www.haproxy.org)
-
-    [HAProxy Documentation](http://www.haproxy.org/#docs)
-
-![advanced-networking-high-availability](../assets/images/dietpi-software-advanced-networking-haproxy2.jpg)
+Website: <http://www.haproxy.org>  
+Official documentation: <http://www.haproxy.org/#docs>
 
 ## No-IP
 
@@ -188,6 +189,8 @@ The setup of No-IP is done as follows:
 If successful, the No-IP current status will change to: *Online*.  
 You will need to enable port forwarding on your router for all programs your require and point them to DietPi. E.g.: TCP port 80/443 for websites, pointing to 192.168.0.100.
 
-See also <https://www.noip.com/>.
+***
+
+Website: <https://www.noip.com>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

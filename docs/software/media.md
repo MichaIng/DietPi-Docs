@@ -440,8 +440,9 @@ Stream your shared media to any DLNA/UPnP capable device.
     rm -r /mnt/dietpi_userdata/.MiniDLNA_Cache/* && systemctl restart minidlna
     ```
 
-For a list of available UPnP clients: See  
-<https://www.wikipedia.org/wiki/List_of_UPnP_AV_media_servers_and_clients#UPnP_AV_clients>.
+***
+
+Available UPnP clients: <https://www.wikipedia.org/wiki/List_of_UPnP_AV_media_servers_and_clients#UPnP_AV_clients>
 
 ## Ampache
 
@@ -668,20 +669,19 @@ Turns your device into a Roon capable audio player and core server.
 
 At startup the Roon Extension Manager accesses a repository containing the community developed extensions. Via `Settings` \> `Extensions` within Roon the repository can be viewed and an extension can be selected to perform a certain action.
 
-Many thanks to @JanKoudijs for contributing this into DietPi
-
 ![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
 
 ![DietPi media server software Roon Extension Manager](../assets/images/dietpi-software-media-roonextmanager.jpg){: style="width:500px"}
 
-Details and usage information see  
-<https://community.roonlabs.com/t/roon-extension-manager-v0-11-8/26632>.
+***
+
+Details and usage information: <https://community.roonlabs.com/t/roon-extension-manager-v0-11-8/26632>  
+Credits: Many thanks to @JanKoudijs for contributing this into DietPi
+
 
 ## NAA Daemon
 
-Signalyst Network Audio Adapter (NAA) daemon allows you to stream music from an HQPlayer source (like Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (like 192 kHz) and more.
-
-More information on HQPlayer/NAA Daemon: <https://www.signalyst.eu/consumer.html>  
+Signalyst Network Audio Adapter (NAA) daemon allows you to stream music from an HQPlayer source (like Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (like 192 kHz) and more.  
 Also works with Roon.
 
 ![DietPi media server software NAA Daemon](../assets/images/dietpi-software-media-naa.png){: style="width:500px"}
@@ -696,7 +696,7 @@ Also works with Roon.
     - To configure HQPlayer to use the NAA Daemon on the DietPi device:
         - Select `File` then `Settings`
         - Under `Backend`, select `NetworkAudioAdapter`. The DietPi device should be detected automatically.
-        - Click `Ok` to save changes
+        - Click `OK` to save changes
 
 === "How do I use Roon and HQPlayer together?"
 
@@ -705,6 +705,10 @@ Also works with Roon.
 === "Update method"
 
     `dietpi-software reinstall 124`
+
+***
+
+Website: <https://www.signalyst.eu/consumer.html>  
 
 ## IceCast
 
@@ -749,7 +753,7 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
     This is disabled by default.
 
     - A recording of the stream can be enabled by edit of `/etc/darkice.cfg`, then uncomment
-    
+
         ```
         localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg
         ```
@@ -842,10 +846,10 @@ Free and open source comics/mangas media server with web UI.
 
     `dietpi-software reinstall 179`
 
-See also
+***
 
-- Official documentation: <https://komga.org/guides/>
-- Source code: <https://github.com/gotson/komga>
+Official documentation: <https://komga.org/guides>  
+Source code: <https://github.com/gotson/komga>
 
 ## Raspotify
 
@@ -869,7 +873,9 @@ Raspotify should work straight out of the box.
     systemctl restart raspotify
     ```
 
-See also: <https://github.com/dtcooper/raspotify>.
+***
+
+Source code: <https://github.com/dtcooper/raspotify>
 
 ## Spotify Connect Web
 
@@ -924,10 +930,10 @@ Spotify Connect Web is a console client and player for Spotify Connect including
         systemctl restart spotify-connect-web
         ```
 
-See also:
+***
 
-- <https://github.com/Fornoth/spotify-connect-web>
-- <https://developer.spotify.com/documentation/web-api/quick-start/>
+Source code: <https://github.com/Fornoth/spotify-connect-web>  
+Quick start documentation: <https://developer.spotify.com/documentation/web-api/quick-start>
 
 ## Jellyfin
 
@@ -961,6 +967,8 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
     apt update
     apt install jellyfin jellyfin-ffmpeg
     ```
+
+***
 
 Source code: <https://github.com/jellyfin/jellyfin>
 

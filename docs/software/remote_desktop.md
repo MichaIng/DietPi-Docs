@@ -99,8 +99,10 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
     To re-enabled TigerVNC autostart, run `systemctl enable vncserver`, to stop it manually `systemctl stop vncserver` can be used.
 
-See also <https://tigervnc.org/>.
-Man page: <https://tigervnc.org/doc/Xvnc.html>
+***
+
+See also <https://tigervnc.org>  
+Man page: <https://tigervnc.org/doc/Xvnc.html>  
 Source code: <https://github.com/TigerVNC/tigervnc>
 
 ## RealVNC Server

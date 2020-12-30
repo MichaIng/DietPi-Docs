@@ -74,6 +74,10 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
     IKEA TRÅDFRI: `apt install autoconf`
 
+***
+
+Official documentation: <https://home-assistant.io/docs>
+
 ## EmonPi
 
 Turn your Raspberry Pi into a energy usage monitor with web interface.
@@ -192,7 +196,9 @@ Domoticz is a Home Automation System that lets you monitor and configure various
 
     `/mnt/dietpi_userdata/domoticz`
 
-See also: <https://github.com/domoticz/domoticz>
+***
+
+Source code: <https://github.com/domoticz/domoticz>
 
 ## TasmoAdmin
 
@@ -209,8 +215,9 @@ Also installs:
 
     `http://<your.IP>/tasmoadmin`
 
-Implemented by: [`svh1985`](https://github.com/svh1985)
+***
 
-Source code: <https://github.com/reloxx13/TasmoAdmin>
+Source code: <https://github.com/reloxx13/TasmoAdmin>  
+Credits: Implemented by [`svh1985`](https://github.com/svh1985)
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

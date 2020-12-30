@@ -53,7 +53,9 @@ The following screenshots shall give an overview over the displaying features of
 
     ![DietPi system stat and maintenance software CloudShell Pi-hole dialog](../assets/images/dietpi-software-systemstat-cloudshare-piholestats.jpg){: style="width:400px"}
 
-Video: <https://youtu.be/O-W8Z33as_U>.
+***
+
+Video: <https://youtu.be/O-W8Z33as_U>
 
 ### Configuration
 
@@ -103,11 +105,11 @@ Video: <https://youtu.be/O-W8Z33as_U>.
 
     The display feature of *CloudShell* works generally with any LCD display or monitor with a resolution of at least 320x240.
 
-See also
+***
 
-- <https://www.hardkernel.com/shop/cloudshell-for-xu4/>
-- <https://www.hardkernel.com/shop/cloudshell-2-for-xu4/>
-- <https://wiki.odroid.com/accessory/add-on_boards/xu4_cloudshell2/xu4_cloudshell2>
+Official documentation: <https://wiki.odroid.com/accessory/add-on_boards/xu4_cloudshell2/xu4_cloudshell2>  
+Website Cloudshell: <https://www.hardkernel.com/shop/cloudshell-for-xu4>  
+Website Cloudshell 2: <https://www.hardkernel.com/shop/cloudshell-2-for-xu4>
 
 ## Linux Dash
 
@@ -123,7 +125,9 @@ Linux Dash allows you to monitor your system stats from a web page.
 
     - URL = `http://<your.IP>/linuxdash/app`
 
-See also <https://github.com/afaqurk/linux-dash/wiki>.
+***
+
+Official documentation: <https://github.com/afaqurk/linux-dash/wiki>
 
 ## phpSysInfo
 
@@ -143,7 +147,9 @@ Allows you to monitor your system stats from a web page. The display output can 
 
     This is done via the file `phpsysinfo.ini` which is located in the phpSysInfo main directory (typical `/var/www/phpsysinfo`). An example file `phpsysinfo.ini.new` is present and gives inline information about all configuration options. Just walk through this file and discover all these bells an whistles.
 
-See also <https://phpsysinfo.github.io/phpsysinfo/>.
+***
+
+Website: <https://phpsysinfo.github.io/phpsysinfo>
 
 ## RPi-Monitor
 
@@ -171,7 +177,9 @@ RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
     The configuration is described there: <https://xavierberger.github.io/RPi-Monitor-docs/20_index.html>.  
 
-See also <https://github.com/XavierBerger/RPi-Monitor>.
+***
+
+Website: <https://github.com/XavierBerger/RPi-Monitor>.
 
 ## Netdata
 
@@ -203,7 +211,10 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
 
     The monitoring of a *Pi-hole* system via Netdata is described there: <https://learn.netdata.cloud/guides/monitor/pi-hole-raspberry-pi>.
 
-See also <https://wikipedia.org/wiki/Netdata> resp. <https://learn.netdata.cloud/docs/overview/what-is-netdata>.
+***
+
+Official documentation: <https://learn.netdata.cloud/docs/overview/what-is-netdata>  
+Wikipedia: <https://wikipedia.org/wiki/Netdata>
 
 ## Webmin
 
@@ -230,6 +241,9 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
 
     DietPi comes with *systemd* and the related *journald* system logger, which can be accessed via the command `journalctl`.
 
-See also <https://wikipedia.org/wiki/Webmin> resp. <https://www.webmin.com/>.
+***
+
+Website: <https://www.webmin.com>  
+Wikipedia: <https://wikipedia.org/wiki/Webmin>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

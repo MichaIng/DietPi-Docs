@@ -36,6 +36,8 @@
 
 LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
 
+![DietPi LXDE](../assets/images/dietpi-software-LXDE_desktop.jpg)
+
 === "Quick start"
     After installation, desktop can be run by typing
 
@@ -52,15 +54,19 @@ LXDE is highly optimized and ultra lightweight desktop. It works well with compu
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-=== "Official documentation"
-    [LXDE Website](https://www.lxde.org) - [LXDE Wiki](https://wiki.lxde.org/en/Main_Page)
+***
 
-![DietPi LXDE](../assets/images/dietpi-software-LXDE_desktop.jpg)
+Website: <https://www.lxde.org>  
+Official documentation: <https://wiki.lxde.org/en/Main_Page>
 
 ## LXQt
 
 Optimized lightweight desktop without the bloatware. Slick and fluid GUI, however, more resource heavy than LXDE.
 
+![DietPi LXQt](../assets/images/dietpi-software-LXQt_desktop.png)
+
+Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
+
 === "Quick start"
     After installation, desktop can be run by typing
 
@@ -69,19 +75,18 @@ Optimized lightweight desktop without the bloatware. Slick and fluid GUI, howeve
     ```
 
 === "Enable autostart"
-    Using `dietpi-autostart` you can have DietPi boot directly to the desktop
+    Using `dietpi-autostart` you can have DietPi boot directly to the desktop.
 
-=== "Official documentation"
-    [LXQt Wiki](https://wiki.debian.org/LXQt)
+***
 
-![DietPi LXQt](../assets/images/dietpi-software-LXQt_desktop.png)
-
-Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
+Official documentation: <https://wiki.debian.org/LXQt>  
 
 ## MATE
 
 Popular Gnome2 based desktop environment.
 
+![DietPi LXDE](../assets/images/dietpi-software-mate-desktop.jpg)
+
 === "Quick start"
     After installation, desktop can be run by typing
 
@@ -92,13 +97,14 @@ Popular Gnome2 based desktop environment.
 === "Enable autostart"
     Using `dietpi-autostart` you can have DietPi boot directly to the desktop
 
-=== "Official documentation"
-    [MATE Desktop website](https://mate-desktop.org/)
+***
 
-![DietPi LXDE](../assets/images/dietpi-software-mate-desktop.jpg)
+Website: <https://mate-desktop.org>
 
 ## Xfce
 
+![DietPi Xfce](../assets/images/dietpi-software-xfce-desktop.jpg)
+
 === "Quick start"
     After installation, desktop can be run by typing
 
@@ -109,13 +115,14 @@ Popular Gnome2 based desktop environment.
 === "Enable autostart"
     Using `dietpi-autostart` you can have DietPi boot directly to the desktop
 
-=== "Official documentation"
-    [Xfce website](https://wiki.debian.org/Xfce)
+***
 
-![DietPi Xfce](../assets/images/dietpi-software-xfce-desktop.jpg)
+Website: <https://wiki.debian.org/Xfce>
 
 ## GNUstep
 
+![DietPi GNUstep](../assets/images/dietpi-software-gnustep-desktop.jpg)
+
 === "Quick start"
     After installation, desktop can be run by typing
 
@@ -126,10 +133,9 @@ Popular Gnome2 based desktop environment.
 === "Enable autostart"
     Using `dietpi-autostart` you can have DietPi boot directly to the desktop
 
-=== "Official documentation"
-    [GNUstep website](http://gnustep.org/)
+***
 
-![DietPi GNUstep](../assets/images/dietpi-software-gnustep-desktop.jpg)
+Website: <http://gnustep.org>
 
 ## Desktop utilities
 
@@ -152,7 +158,7 @@ Once Chromium is running, simply go to the following address: <chrome://gpu>
 - Manually: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
 - with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... many-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
 
-![DietPi GIMP](../assets/images/dietpi-software-desktop-tools-chromium.jpg)
+![DietPi Chromium](../assets/images/dietpi-software-desktop-tools-chromium.jpg)
 
 ### GIMP
 
@@ -160,7 +166,9 @@ MS Paint on steroids. If you need to edit pixels with a vast number of tools, GI
 
 ![DietPi GIMP](../assets/images/dietpi-software-desktop-tools-gimp.jpg)
 
-<https://www.gimp.org/>
+***
+
+Website: <https://www.gimp.org>
 
 ### QuiteRSS
 
