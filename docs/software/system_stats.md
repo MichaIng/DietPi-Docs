@@ -108,8 +108,8 @@ Video: <https://youtu.be/O-W8Z33as_U>
 ***
 
 Official documentation: <https://wiki.odroid.com/accessory/add-on_boards/xu4_cloudshell2/xu4_cloudshell2>  
-Website Cloudshell: <https://www.hardkernel.com/shop/cloudshell-for-xu4>  
-Website Cloudshell 2: <https://www.hardkernel.com/shop/cloudshell-2-for-xu4>
+Website CloudShell: <https://www.hardkernel.com/shop/cloudshell-for-xu4>  
+Website CloudShell 2: <https://www.hardkernel.com/shop/cloudshell-2-for-xu4>
 
 ## Linux Dash
 
