@@ -68,7 +68,9 @@ ProFTPD gives you access to files/music/downloads etc. on your DietPi system qui
     systemctl start proftpd
     ```
 
-See also <https://wikipedia.org/wiki/ProFTPD>.
+***
+
+Wikipedia: <https://wikipedia.org/wiki/ProFTPD>
 
 ## Samba
 
@@ -112,7 +114,9 @@ The Samba server lets you share files on your DietPi system with ease based on t
     systemctl restart nmbd smbd
     ```
 
-See also <https://wikipedia.org/wiki/Samba_(software)>.
+***
+
+Wikipedia: <https://wikipedia.org/wiki/Samba_(software)>
 
 ## vsftpd
 
@@ -138,7 +142,9 @@ Very secure FTP file server with feature rich security options.
     - Address = Your IP address (e.g.: 192.168.0.100)
     - Port = 21
 
-See also <https://wikipedia.org/wiki/Vsftpd>.
+***
+
+Wikipedia: <https://wikipedia.org/wiki/Vsftpd>
 
 ## NFS
 
@@ -166,6 +172,8 @@ Network file system server.
 
     - Restart services via `systemctl restart nfs-kernel-server`
 
-See also <https://wikipedia.org/wiki/Network_File_System>.
+***
+
+Wikipedia: <https://wikipedia.org/wiki/Network_File_System>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

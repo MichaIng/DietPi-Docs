@@ -240,6 +240,8 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     - On the left hand side, select Configurations.
     - Enter the name, e.g. autostart, then click Save
 
+***
+
 **Good to GO!**  
 When ready, select Start to launch the emulator. Have fun!
 
@@ -329,6 +331,8 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
     - F = Launch flare
     - ALT+F2 = Save game
 
+***
+
 ### FAQ
 
 #### How do I transfer the original Descent full game files?
@@ -396,7 +400,10 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
     `dietpi-software reinstall 181`
 
-See also <https://paper.readthedocs.io/> resp. <https://github.com/PaperMC/Paper>.
+***
+
+Website: <https://paper.readthedocs.io>  
+Source code: <https://github.com/PaperMC/Paper>
 
 ### FAQ
 

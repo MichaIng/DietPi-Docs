@@ -40,7 +40,10 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
     On Windows, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and [KiTTY](http://www.9bis.net/kitty/) are recommended SSH clients.
 
-See also <https://wikipedia.org/wiki/Dropbear_(software)> resp. <https://matt.ucc.asn.au/dropbear/dropbear.html>.
+***
+
+Website: <https://matt.ucc.asn.au/dropbear/dropbear.html>  
+Wikipedia: <https://wikipedia.org/wiki/Dropbear_(software)>
 
 ## OpenSSH
 
@@ -66,6 +69,9 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
     WinSCP will allow you to transfer files and folders on your DietPi device ([WinSCP downloads page](https://winscp.net/eng/download.php)).
 
-See also <https://wikipedia.org/wiki/OpenSSH> resp. <https://www.openssh.com/>.
+***
+
+Website: <https://www.openssh.com>  
+Wikipedia: <https://wikipedia.org/wiki/OpenSSH>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

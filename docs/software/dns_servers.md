@@ -90,7 +90,9 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     The monitoring of a *Pi-hole* system via Netdata is described there: <https://learn.netdata.cloud/guides/monitor/pi-hole-raspberry-pi>.
 
-See also <https://wikipedia.org/wiki/Pi-hole>.
+***
+
+Wikipedia: <https://wikipedia.org/wiki/Pi-hole>
 
 ## Unbound
 
@@ -118,7 +120,9 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 
     Update to latest version: `apt update && apt upgrade`
 
+***
+
 Source code: <https://github.com/NLnetLabs/unbound>.  
-See also <https://nlnetlabs.nl/documentation/unbound/> resp. <https://nlnetlabs.nl/documentation/unbound/unbound/>.
+Official documentation: <https://nlnetlabs.nl/documentation/unbound> resp. <https://nlnetlabs.nl/documentation/unbound/unbound>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
