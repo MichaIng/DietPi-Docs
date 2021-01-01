@@ -34,7 +34,9 @@ The `pip` resp. `pip3` Python package manager and development headers are includ
 
 To use the `pip` package manager, a typical usage will be `pip3 install -U <module>`.
 
-See also: <https://wikipedia.org/wiki/Python_(programming_language)>.
+***
+
+Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
 
 ## Docker
 
@@ -61,12 +63,12 @@ Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia
     - Docker: `/etc/docker/daemon.json`
     - containerd: `/etc/containerd/config.toml`
 
-=== "Official documentation"
+***
 
-    - Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>
-    - Logging: <https://docs.docker.com/config/containers/logging/configure>
-
-See also <https://wikipedia.org/wiki/Docker_(software)> resp. <https://docs.docker.com/get-started/overview>.
+Website: <https://docs.docker.com/get-started/overview>  
+Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
+Logging: <https://docs.docker.com/config/containers/logging/configure>  
+Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
 
 ## Portainer
 
@@ -76,15 +78,23 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 === "Quick start"
 
-    - It starts automatically after installation. View Portainer web interface by opening the browser using next URL: `http://<your.local.ip>:9002` [^1]. 
+    - It starts automatically after installation. View Portainer web interface by opening the browser using next URL: `http://<your.local.ip>:9002` [^1].
 
     - If you have basic questions on how to use **Portainer**, please read the beginner guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>.
 
-=== "Official documentation"
+=== "Update"
 
-    - Documentation: <https://documentation.portainer.io/>
-    - Source code: <https://github.com/portainer/portainer>
-    - Open-source license: zlib
+    Update to latest version:
+
+    ```
+    dietpi-software reinstall 185
+    ```
+
+***
+
+Official documentation: <https://documentation.portainer.io>  
+Source code: <https://github.com/portainer/portainer>  
+Open-source license: zlib
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
 

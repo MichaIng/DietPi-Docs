@@ -54,10 +54,10 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 
     The current shell needs to be `bash` and the user needs to be allowed to use `sudo`, as the above command is an alias to call a local OctoPrint binary as system user `octoprint`. The alias is defined in `/etc/bashrc.d/dietpi-octoprint.sh`, which is loaded automatically from bash shells. But you can as well load it from non-bash shells, if required.
 
-Official website: <https://octoprint.org/>
+***
 
-Official documentation: <https://docs.octoprint.org/>
-
-Official forum: <https://community.octoprint.org/>
+Website: <https://octoprint.org>  
+Official documentation: <https://docs.octoprint.org>  
+Forum: <https://community.octoprint.org>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

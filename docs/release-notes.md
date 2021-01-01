@@ -42,7 +42,7 @@ For more details check the [documentation page](../software/advanced_networking/
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3921.
 
-**[Unbound - Open Source DNS resolverr](../software/dns_servers/#unbound)**
+**[Unbound - Open Source DNS resolver](../software/dns_servers/#unbound)**
 
 Validating, recursive, caching DNS resolver is now available for install and integrate with [Pi-hole](../software/dns_servers/#pi-hole).
 

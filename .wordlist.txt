@@ -119,6 +119,7 @@ FriendlyARM
 FriendlyARM's
 frontend
 fullscreen
+FuguHub
 Gbit
 GiB
 GiBi
@@ -179,6 +180,7 @@ klick
 Kodi
 Koel
 Komga
+Kubernetes
 LASP
 lcd
 LEDs
@@ -217,7 +219,7 @@ MicroSol
 Minecraft
 MineOS
 MiniDLNA
-Minio
+MinIO
 MIPI
 MkDocs
 Mopidy

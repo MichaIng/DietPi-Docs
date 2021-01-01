@@ -88,15 +88,15 @@ DietPi offers an **one-click-installation** of the following web development sta
     - Memory use = **Low** | Multithreaded = **Optional** - Some drawbacks
 
     It is extremely lightweight and is generally considered to offer the "best" webserver performance on Linux for SBCs (single board computers). It is recommended for users who expect low webserver traffic and/or personal use.  
-    
+
     Although the DietPi installation of Lighttpd is set to single threaded, do not be put off by this, in low usage scenarios (<10 users) it will still outperform [Nginx](#nginx) and [Apache2](#apache2). Activation of multithreading is described in the [Lighttpd](#lighttpd) package description.
 
     !!! hint "DietPi - Webserver Preference"
-        
+
         The DietPi webserver preference screen allows you to choose your favourite webserver for use in DietPi installations. Check more the **Web Preference** in the [Advanced configuration](../../dietpi_tools/#quick-selections).
 
     !!! info ""
-    
+
         For further details see [The battle of the web servers Apache vs. Nginx vs. Lighttpd 2](https://detechter.com/the-battle-of-the-web-servers-apache-vs-Nginx-vs-lighttpd-2/).
 
 === "Which DATABASE to CHOOSE ?"
@@ -106,6 +106,8 @@ DietPi offers an **one-click-installation** of the following web development sta
 
     **[SQLite](#sqlite)**  
     It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](#mariadb). [SQLite](#sqlite) has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
+
+***
 
 ### How to install ?
 
@@ -134,6 +136,8 @@ The latter is used only in the case of the first webserver background installati
 
     ???+ info "No webserver change if already installed"
         This setting "Webserver Preference* can NOT be changed if an existing webserver is installed on the system.
+
+***
 
 ### LAMP Web Stack
 
@@ -214,6 +218,8 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
 
+***
+
 ### LASP Web Stack
 
 LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [SQLite](#sqlite) instead of [MariaDB](#mariadb).
@@ -286,6 +292,8 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+
+***
 
 ### LEMP Web Stack
 
@@ -365,6 +373,8 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
 
+***
+
 ### LESP Web Stack
 
 LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache2](#apache2) web server, and [SQLite](#sqlite) instead of MariaDB.
@@ -389,6 +399,8 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+
+***
 
 ### LLMP Web Stack
 
@@ -419,6 +431,8 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+
+***
 
 ### LLSP web stack
 
@@ -474,9 +488,9 @@ Web servers are used to serve Web pages requested by client computers. Clients t
 
 Apache is a Apache Software Foundation project. The goal is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
 
-=== "Official documentation"
+***
 
-    - <https://httpd.apache.org/docs/>
+Official documentation: <https://httpd.apache.org/docs>
 
 ### Nginx
 
@@ -486,9 +500,9 @@ Apache is a Apache Software Foundation project. The goal is to provide a secure,
 
 The innovation of Nginx compared to earlier servers such as Apache was to use an asynchronous, event-driven architecture. Nginx is blazing fast, being extremely efficient when it comes to hardware utilization, allowing servers to get more speed out of their limited CPU and RAM. As a result, it is one of the fastest web server options for serving static content.
 
-=== "Official documentation"
+***
 
-    - <https://www.nginx.com>
+Official documentation: <https://www.nginx.com>
 
 ### Lighttpd
 
@@ -518,9 +532,9 @@ It is designed to be secure, fast, standards-compliant, and flexible while being
     systemctl restart lighttpd
     ```
 
-=== "Official documentation"
+***
 
-    - <https://www.lighttpd.net>
+Official documentation: <https://www.lighttpd.net>
 
 ### Tomcat
 
@@ -534,9 +548,9 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
 
     After the installation, check if Tomcat service is running on `http://<your.IP>:8080`.
 
-=== "Official documentation"
+***
 
-    - [Apache Tomcat website](https://tomcat.apache.org/)
+Official documentation: <https://tomcat.apache.org>
 
 ## Databases & Data stores
 
@@ -555,10 +569,10 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
     - Username = `root`
     - Password = The same as your root login password, default is `dietpi`
 
-=== "Official documentation"
+***
 
-    - [MariaDB website](https://mariadb.org)
-    - [Getting started documentation](https://mariadb.org/documentation/#getting-started)  
+Official documentation: <https://mariadb.org>  
+Getting started documentation: <https://mariadb.org/documentation/#getting-started>
 
 #### phpMyAdmin
 
@@ -574,10 +588,10 @@ Frequently used operations (_such as: managing databases, tables, columns, relat
     - Username = `phpmyadmin`
     - Password = The same as your root login password, default is `dietpi`
 
-=== "Official documentation"
+***
 
-    - [phpMyAdmin website](https://www.phpmyadmin.net)
-    - [phpMyAdmin documentation](https://www.phpmyadmin.net/docs/)  
+Website: <https://www.phpmyadmin.net>  
+Official documentation:  <https://www.phpmyadmin.net/docs/>
 
 ### SQLite
 
@@ -591,10 +605,10 @@ Source: Part of the SQLite documentation, which has been released by author D. R
 
     To create a database and run commands, use the [quick start documentation](https://www.sqlite.org/quickstart.html).
 
-=== "Official documentation"
+***
 
-    - [SQLite.org](https://www.sqlite.org/index.html)
-    - [SQLite.org documentation](https://www.sqlite.org/docs.html)
+Website: <https://www.sqlite.org/index.html>  
+Official documentation: <https://www.sqlite.org/docs.html>
 
 ### Redis
 
@@ -618,11 +632,11 @@ Source: [Carlos Prioglio](https://redis.io/images/redis-logo.svg), [licence](htt
 
     For more commands and an introduction to Redis data types and commands, read the [quick start documentation](https://redis.io/topics/data-types-intro).
 
-=== "Official documentation"
+***
 
-    - Documentation: <https://redis.io/documentation>
-    - Commands: <https://redis.io/commands>
-    - Redis website: <https://redis.io>
+Website: <https://redis.io>  
+Official documentation: <https://redis.io/documentation>  
+Commands: <https://redis.io/commands>
 
 ### InfluxDB
 
@@ -639,7 +653,7 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
     - Create a database using `influxdb` via command line tool.
       ```sh
       influx -execute 'create database myfirstdb'
-      ``` 
+      ```
 
     - Create a database using a HTTP request and `curl` tool:
       ```sh
@@ -650,7 +664,7 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
       ```sh
       curl -i -XPOST 'http://<your.IP>:8086/write?db=myfirstdb' --data-binary 'temperature value=20.12'
       ```
-    
+
     - Retrieve and display data from the database
     ```sh
     influx -database myfirstdb -execute 'SELECT * FROM temperature'
@@ -683,10 +697,10 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
         systemctl restart influxdb
         ```
 
-=== "Official documentation"
+***
 
-    - [InfluxDB Get Started](https://docs.influxdata.com/influxdb/v2.0/get-started/#set-up-influxdb)
-    - [InfluxDB website](https://www.influxdata.com/products/influxdb/)
+Website: <https://www.influxdata.com/products/influxdb>  
+Getting started: <https://docs.influxdata.com/influxdb/v2.0/get-started/#set-up-influxdb>
 
 ## Web development - Programming & Frameworks
 
@@ -702,10 +716,10 @@ First introduced by Rasmus Lerdorf, PHP is an open-source, server-side general s
 
     - There are many tutorials - here is the official [_Getting started_](https://www.php.net/manual/en/getting-started.php) from PHP documentation.
 
-=== "Official documentation"
+***
 
-    - [PHP website](https://www.php.net)
-    - [PHP manual](https://www.php.net/manual/en/index.php)
+Website: <https://www.php.net>  
+Official documentation: <https://www.php.net/manual/en/index.php>
 
 ### Flask
 
@@ -719,11 +733,11 @@ Flask is a lightweight web application framework. It is designed to make getting
     pip3 install -U Flask
     ```
 
-=== "Official documentation"
+***
 
-    - [User's guide & Documentation](https://flask.palletsprojects.com/en/1.1.x/)
-    - [Flask website](https://palletsprojects.com/p/flask/)
-    - [PyPI package page](https://pypi.org/project/Flask)
+Website: <https://palletsprojects.com/p/flask>  
+Official documentation: <https://flask.palletsprojects.com/en/1.1.x>  
+PyPI package page: <https://pypi.org/project/Flask>
 
 [^1]:
     Find out more about the success stories of Nginx on: <https://nginx.org/en/>

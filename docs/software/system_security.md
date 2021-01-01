@@ -48,7 +48,9 @@ dietpi-letsencrypt
 Simply enter the details and settings you require, then select `Apply`.  
 Let's Encrypt is that simple!
 
-See also <https://letsencrypt.org/>.
+***
+
+Website: <https://letsencrypt.org>
 
 ## Fail2Ban
 
@@ -75,6 +77,8 @@ An IP address is by default ban triggered after 3 failed SSH login attempts. Fai
     Fail2Ban supports brute-force protection for other software (e.g. Apache, ProFTPD etc).  
     You can enable/disable these features by modifying the */etc/fail2ban/jail.conf* file, and setting `enable = true` under the *[software]* name.
 
-See also <https://fail2ban.org/wiki/index.php/Main_Page>.
+***
+
+Website: <https://fail2ban.org/wiki/index.php/Main_Page>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

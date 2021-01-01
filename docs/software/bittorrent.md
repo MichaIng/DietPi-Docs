@@ -507,10 +507,10 @@ Key features:
 
     - Use the internal web based updater
 
-=== "Official documentation"
+***
 
-    - [Official docs](https://github.com/morpheus65535/bazarr/wiki)
-    - [Source code](https://github.com/morpheus65535/bazarr)
+Official documentation: <https://github.com/morpheus65535/bazarr/wiki>  
+Source code: <https://github.com/morpheus65535/bazarr>
 
 ## Lidarr
 

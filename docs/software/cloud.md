@@ -11,9 +11,10 @@
 - [**Gitea - GitHub style server, with web interface**](#gitea)
 - [**Syncthing - Backup and sync server with web interface**](#syncthing)
 - [**Tonido - Lightweight backup and sync server with web interface and cloud access**](#tonido)
-- [**Minio - S3 compatible distributed object server**](#minio)
+- [**MinIO - S3 compatible distributed object server**](#minio)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](#bitwarden_rs)
+- [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -82,7 +83,10 @@ Also Installs:
     Your userdata directory will stay after deinstallation.  
     As well a database backup will be saved to your userdata directory. Thus you can easily restore your instance by reinstalling ownCloud and restore the database dump.
 
-See also <https://owncloud.com/> resp. <https://doc.owncloud.org/server/admin_manual/>.
+***
+
+Website: <https://owncloud.com>  
+Official documentation: <https://doc.owncloud.org/server/admin_manual>
 
 ## Nextcloud
 
@@ -197,10 +201,6 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     3. Follow the official documentation for a manual upgrade process: <https://docs.nextcloud.com/server/latest/admin_manual/maintenance/manual_upgrade.html>
 
-=== "Official documentation"
-
-    <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>
-
 === "FAQ"
 
     #### Where is my data stored?
@@ -218,7 +218,10 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     Your user data directory will stay after deinstallation. As well a database backup will be saved to your user data directory. Thus you can easily restore your instance by reinstalling Nextcloud and restore the database dump.
 
-See also <https://nextcloud.com/athome>.
+***
+
+Website: <https://nextcloud.com/athome>  
+Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>
 
 ## Nextcloud Talk
 
@@ -231,8 +234,6 @@ Also installs:
 
 ![DietPi cloud software Nextcloud Talk](../assets/images/dietpi-software-cloud-nextcloudtalk.png)
 
-See also <https://nextcloud.com/talk/>.
-
 ### Installation notes
 
 During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
@@ -241,6 +242,10 @@ If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured t
 Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
 
 Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
+
+***
+
+Website: <https://nextcloud.com/talk>
 
 ## Pydio
 
@@ -283,7 +288,9 @@ Also Installs:
         - User = The "admin" user you setup in initial setup.
         - Password = The "admin" password you setup in initial setup.
 
-See also <https://pydio.com/>.
+***
+
+Website: <https://pydio.com>
 
 ## UrBackup
 
@@ -310,7 +317,8 @@ Basically, it allows you to create a complete system backup, using a simple web 
 
     Install the appropriate client on the systems you wish to backup from <https://www.urbackup.org/download.html#client_windows>.
 
-See also <https://www.urbackup.org/index.html>.
+***
+Website: <https://www.urbackup.org/index.html>
 
 ## Gogs
 
@@ -347,13 +355,15 @@ Your very own GitHub style server, with web interface.
     - Port = 3000
     - Protocol = TCP+UDP
 
-See also <https://gogs.io/>.
+***
+
+Website: <https://gogs.io>
 
 ## Gitea
 
 Your very own GitHub style server, with web interface.
 
-![DietPi cloud software Gitea](../assets/images/dietpi-software-cloud-gitea.jpg)
+![DietPi cloud software Gitea](../assets/images/dietpi-software-cloud-gitea.jpg){: style="width:200px"}
 
 === "Access to the web interface"
 
@@ -412,9 +422,11 @@ Your very own GitHub style server, with web interface.
     - Check the current status on your DietPi with `fail2ban-client status gitea`.
     - See also:
         - [Fail2Ban](../system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
-        - <https://docs.gitea.io/en-us/fail2ban-setup/>
+        - <https://docs.gitea.io/en-us/fail2ban-setup>
 
-See also <https://gitea.io/>.
+***
+
+Website: <https://gitea.io>
 
 ## Syncthing
 
@@ -451,7 +463,9 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     You devices should now duplicate the user data from your DietPi device to your Windows PC.
 
-See also <https://syncthing.net/>.
+***
+
+Website: <https://syncthing.net>
 
 ## Tonido
 
@@ -482,19 +496,34 @@ Lightweight backup and sync server, includes web interface and external cloud ac
 
     URL = `http://<your.IP>:10001`
 
-See also <https://www.tonido.com/>.
+***
 
-## Minio
+Website: <https://www.tonido.com>
 
-T.b.d.
+## MinIO
 
-See also: <https://min.io/>.
+It is an open source Kubernetes Native, High Performance Object Storage (S3 Compatible). It helps building cloud-native data infrastructure for machine learning, analytics and application data workloads.
+
+![DietPi MinIO](../assets/images/dietpi-software-cloud-minio.jpg)
+
+=== "Quick start"
+
+    Open the web browser using next link: `http://<your.IP>:9000`.
+
+    - [MinIO Server Quick Start Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
+    - [Python Client Quick Start Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
+    - [JavaScript Client Quick Start Guide - MinIO](https://docs.min.io/docs/javascript-client-quickstart-guide.html)
+
+***
+
+Website: <https://min.io/product/overview>  
+Official documentation: <https://docs.min.io>
 
 ## Firefox Sync Server
 
 This is Mozilla's Firefox Sync Server which manages syncing Firefox instance bookmarks, history, tabs and passwords across devices. Out of the box it runs on a Python server for small loads and can be configured to run behind Nginx or Apache.
 
-![Firefox Sync Logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png)
+![Firefox Sync Logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png){: style="width:200px"}
 
 === "Configure Firefox"
 
@@ -520,9 +549,11 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
     `/mnt/dietpi_userdata/firefox-sync`
 
-Source code can be found at <https://github.com/mozilla-services/syncserver>.
+***
 
-Credits: This software title has been added to DietPi-Software by CedArctic, many thanks! :D
+Source code: <https://github.com/mozilla-services/syncserver>
+
+Credits: This software title has been added to DietPi-Software by [CedArctic](https://github.com/CedArctic), many thanks! :D
 
 ## Bitwarden_RS
 
@@ -574,7 +605,7 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
 === "Client access"
 
-    Any official Bitwarden client will work: <https://bitwarden.com/download/>
+    Any official Bitwarden client will work: <https://bitwarden.com/download>
 
     1. Select the settings cog at the top left of the window.
     2. Add `https://<your.IP>:8001` into the custom server field.
@@ -598,18 +629,54 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
     dietpi-software reinstall 183
     ```
 
-### Official links
+***
 
-Documentation: <https://github.com/dani-garcia/bitwarden_rs/wiki>
-
-Forum: <https://bitwardenrs.discourse.group/>
-
-Source code: <https://github.com/dani-garcia/bitwarden_rs>
-
+Official documentation: <https://github.com/dani-garcia/bitwarden_rs/wiki>  
+Forum: <https://bitwardenrs.discourse.group>  
+Source code: <https://github.com/dani-garcia/bitwarden_rs>  
 Open-source license: [GPLv3](https://github.com/dani-garcia/bitwarden_rs/blob/master/LICENSE.txt)
 
-### Credits
+Credits: This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9). Thank you !
 
-This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9), many thanks! :D
+## FuguHub
+
+FuguHub transforms your DietPi device into a secure online storage system, letting you access and share files from any connected computer or device.
+
+![FuguHub logo](https://fuguhub.com/images/FuguHub.png)
+
+=== "Quick access"
+
+    Open the browser `http://<your.IP>`. On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
+
+    !!! warning ""
+
+        FuguHub runs by default on port 80 and optional 443. As a result it may be incompatible with a regular webserver using the default setup.
+
+    ![FuguHub Application](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png)
+
+=== "Interactive install"
+
+    1. Press `ENTER` to continue
+    2. Press `y` to accept license
+    3. Press `y `for `VPS` or `n` for `home/office` server
+    4. Choose whether to install an internal BitTorrent client.
+
+    !!! warning ""
+
+        It is recommended to use the standard supported DietPi BitTorrent clients - more details on [BitTorrent / Download Tools](../bittorrent/#bittorrent-download-tools).
+
+    Setup details:
+
+    - Install directory: `/home/bd`
+    - Config file: `/home/bd/bdd.conf`
+    - Data directory: `/mnt/dietpi_userdata/fuguhub-data`
+
+=== "Logging"
+    - Service: `journalctl -u bdd`
+    - Trace: `/home/bd/trace/` # It contains an info about the database creation only, even after playing around with the web UI a bid.
+
+***
+
+Website: <https://fuguhub.com>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

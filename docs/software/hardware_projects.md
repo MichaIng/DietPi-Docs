@@ -87,7 +87,7 @@ Mycroft AI is a free and open source voice assistant.
 
 === "Initial setup"
 
-    1. If you did no reboot after install, load Mycroft commands to current shell session: `./etc/bashrc.d/mycroft.sh`
+    1. If you did no reboot after install, load Mycroft commands to current shell session: `. /etc/bashrc.d/mycroft.sh`
     2. Start CLI client: `mycroft-cli-client`
     3. You should see and at best hear the invitation to pair your device, e.g.: `PairingSkill - INFO - Pairing code: XXYYZZ`
     4. Visit <https://home.mycroft.ai/> to start pairing and configuring your device and skills.
@@ -144,7 +144,9 @@ The standard, well known GPIO interface library for the RPi (Python). Bring out 
 
 ![DietPi hardware projects software RPI.GPIO](../assets/images/dietpi-software-hardwareprojects-gpio.png){: style="width:250px"}
 
-See also <https://pypi.python.org/pypi/RPi.GPIO>.
+***
+
+Website: <https://pypi.python.org/pypi/RPi.GPIO>
 
 ## WiringPi
 
@@ -166,7 +168,9 @@ Alternative GPIO interface library based on C. Bring out the engineer in you!
     gpio readall
     ```
 
-See also <http://wiringpi.com/>.
+***
+
+Website: <http://wiringpi.com>
 
 ## WebIOPi
 
@@ -192,6 +196,10 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
 === "Access WebIOPi over the internet"
 
     To be able to access your WebIOPi interface over the internet, you may install [Remot3.it (Weaved)](https://dietpi.com/docs/software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet).
+
+***
+
+Website: <https://webiopi.trouch.com>
 
 ## Node-RED
 
@@ -226,8 +234,10 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 
     The actual Node-RED version can be read in the programming IDE in the *burger menu* at the right upper corner.
 
-See also <https://nodered.org/>.  
-Especially search through the libraries resp. flows there: <https://flows.nodered.org/>.
+***
+
+Website: <https://nodered.org>  
+Libraries resp. flows: <https://flows.nodered.org>
 
 ## Mosquitto
 
@@ -236,8 +246,9 @@ MQTT provides a lightweight method of carrying out messaging using a publish/sub
 
 ![DietPi hardware projects software Mosquitto](../assets/images/dietpi-software-hardwareprojects-mosquitto.png){: style="width:100px"}
 
-Using Mosquitto:  
-Please use the following link for online documentation: <https://mosquitto.org/documentation/>.
+***
+
+Official documentation: <https://mosquitto.org/documentation>
 
 ## Blynk Server
 
@@ -294,8 +305,10 @@ Also installs:
 
     Update Blynk with: `dietpi-software reinstall 131`.
 
-Official documentation: <http://docs.blynk.cc/>.  
-Install Blynk App (Android): <https://play.google.com/store/apps/details?id=cc.blynk>.
+***
+
+Official documentation: <http://docs.blynk.cc>  
+Install Blynk App (Android): <https://play.google.com/store/apps/details?id=cc.blynk>
 
 ## Audiophonics PI-SPC
 
@@ -327,8 +340,6 @@ This installation and documentation was possible, thanks to [@marcobrianza](http
 
 The package comes with a command line tool `influx` for database management operations.  
 This tool also uses HTTP so it can manage a database on a remote machine setting the -host option.
-
-Official documentation can be found at <https://docs.influxdata.com/influxdb/>.
 
 #### Create a database
 
@@ -388,6 +399,10 @@ exit
 ### Install information
 
 The data location for InfluxDB is stored resp. linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`.
+
+***
+
+Official documentation: <https://docs.influxdata.com/influxdb>
 
 ## Grafana
 
