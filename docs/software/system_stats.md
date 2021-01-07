@@ -55,7 +55,7 @@ The following screenshots shall give an overview over the displaying features of
 
 ***
 
-YouTube video tutorial: *DietPi Cloudshell (RPi / Odroid XU4)*
+YouTube video tutorial: *DietPi CloudShell (RPi / Odroid XU4)*
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/O-W8Z33as_U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
