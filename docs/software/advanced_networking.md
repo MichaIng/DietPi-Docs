@@ -53,7 +53,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
 ***
 
-YouTube video #1 (german language): [Raspberry Hotspot: Internet Sperren umgehen mit eigenen WiFi Hotspot unter DietPi (für alle Geräte)](https://www.youtube.com/watch?v=3ZROq90tM_s)
+YouTube video #1 (german language): [`Raspberry Hotspot: Internet Sperren umgehen mit eigenen WiFi Hotspot unter DietPi (für alle Geräte)`](https://www.youtube.com/watch?v=3ZROq90tM_s)
 
 ## Tor HotSpot
 

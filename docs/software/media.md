@@ -590,7 +590,7 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 ***
 
-YouTube video (german language): [Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)](https://www.youtube.com/watch?v=EElrNjXc3aA&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=4)
+YouTube video (german language): [`Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)`](https://www.youtube.com/watch?v=EElrNjXc3aA&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=4)
 
 ## Tautulli
 

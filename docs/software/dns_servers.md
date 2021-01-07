@@ -93,10 +93,10 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 ***
 
 Wikipedia: <https://wikipedia.org/wiki/Pi-hole>  
-YouTube video #1: [Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!](https://www.youtube.com/watch?v=RO2_eZlVrj4)  
-YouTube video #2: [Block ads everywhere with Pi-hole and PiVPN on DietPi](https://www.youtube.com/watch?v=qbLEHlKkGiE)  
-YouTube video #3 (german language): [Raspberry Pi & DietPi : PiHole der Werbeblocker für Netzwerke mit Anleitung für AVM FritzBox](https://www.youtube.com/watch?v=vXUvFWhXW6c&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=6)  
-YouTube video #4 (german language): [Raspberry Pi Zero W mit PiHole - günstiger Werbeblocker & Schritt für Schritt Anleitung unter DietPi](https://www.youtube.com/watch?v=IxWuMHu9IYk&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=2)
+YouTube video #1: [`Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!`](https://www.youtube.com/watch?v=RO2_eZlVrj4)  
+YouTube video #2: [`Block ads everywhere with Pi-hole and PiVPN on DietPi`](https://www.youtube.com/watch?v=qbLEHlKkGiE)  
+YouTube video #3 (german language): [`Raspberry Pi & DietPi : Pi-hole der Werbeblocker für Netzwerke mit Anleitung für AVM FritzBox`](https://www.youtube.com/watch?v=vXUvFWhXW6c&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=6)  
+YouTube video #4 (german language): [`Raspberry Pi Zero W mit Pi-hole - günstiger Werbeblocker & Schritt für Schritt Anleitung unter DietPi`](https://www.youtube.com/watch?v=IxWuMHu9IYk&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=2)
 
 ## Unbound
 
