@@ -5,7 +5,7 @@ Links to special software packages are located at the end of the according softw
 
 ## General links
 
-- Twitter: <https://twitter.com/dietpi_>
+- Twitter: <https://twitter.com/DietPi_>
 - Facebook: <https://www.facebook.com/groups/167403007229675>
 
 ## General articles
