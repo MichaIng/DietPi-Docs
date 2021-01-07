@@ -122,7 +122,6 @@ frontend
 fullscreen
 FuguHub
 Gbit
-german
 GiB
 GiBi
 Gilles

@@ -323,4 +323,4 @@ Further videos:
 - YouTube video #2: [`How Install Diet Pi Raspberry Pi 4 Or Any SBC - Install Set Up Configure`](https://www.youtube.com/watch?v=qH0YsFNIyFo)
 - YouTube video #3: [`Headless install of Dietpi | No Monitor, No LAN, No router login | Pre Configure WiFi`](https://www.youtube.com/watch?v=vlMpn9u0Y4o)
 - YouTube video #4: [`Installing DietPi on Raspberry Pi, First Boot and Configuration`](https://www.youtube.com/watch?v=LzJpAUufyy0)
-- YouTube video #5 (german language): [`Raspberry Pi 4 & DietPi - die schnelle Alternative - Grundinstallation einfach erklärt`](https://www.youtube.com/watch?v=J5yPeJFLSO0&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=7)
+- YouTube video #5 (German language): [`Raspberry Pi 4 & DietPi - die schnelle Alternative - Grundinstallation einfach erklärt`](https://www.youtube.com/watch?v=J5yPeJFLSO0&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=7)

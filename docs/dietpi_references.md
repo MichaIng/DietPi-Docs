@@ -12,9 +12,9 @@ Links to special software packages are located at the end of the according softw
 
 - Raspberry Pi Foundation: [DietPi | Minimal image, highly extensible](https://www.raspberrypi.org/forums/viewtopic.php?t=285096)
 - Hardkernel ODROID: [[OS] DietPi | Minimal image, highly extensible](https://forum.odroid.com/viewtopic.php?t=40392)
-- PC Welt (german language): [`Diet Pi ist erste Wahl für Headlessplatinen`](https://www.pcwelt.de/a/diet-pi-ist-erste-wahl-fuer-headlessplatinen,3452321)
-- Raspberry Pi GEEK (german language): [`Schlankes Raspbian-Derivat DietPi`](https://www.raspberry-pi-geek.de/ausgaben/rpg/2017/10/schlankes-raspbian-derivat-dietpi/)
-- `Onkel Jordi` (german language): [`DietPi: Klein, schlank und schnell (2019)`](https://onkeljordi.de/2019/01/dietpi-klein-schlank-und-schnell-2019/)
+- PC Welt (German language): [`Diet Pi ist erste Wahl für Headlessplatinen`](https://www.pcwelt.de/a/diet-pi-ist-erste-wahl-fuer-headlessplatinen,3452321)
+- Raspberry Pi GEEK (German language): [`Schlankes Raspbian-Derivat DietPi`](https://www.raspberry-pi-geek.de/ausgaben/rpg/2017/10/schlankes-raspbian-derivat-dietpi/)
+- `Onkel Jordi` (German language): [`DietPi: Klein, schlank und schnell (2019)`](https://onkeljordi.de/2019/01/dietpi-klein-schlank-und-schnell-2019/)
 
 ## General videos
 
