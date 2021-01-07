@@ -139,7 +139,9 @@ The latter is used only in the case of the first webserver background installati
 
 ***
 
-YouTube video: [DietPi Web Server Tutorial | Host a website from Home | Raspberry Pi](https://www.youtube.com/watch?v=nB-i959ZGzQ)
+YouTube video tutorial: *DietPi Web Server Tutorial | Host a website from Home | Raspberry Pi*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nB-i959ZGzQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ***
 

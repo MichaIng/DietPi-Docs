@@ -131,8 +131,11 @@ PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a c
 
 ***
 
-Website: <https://www.pivpn.io>  
-YouTube video: [DietPi PiVPN Server Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=0t0bwskZJFw)
+Website: <https://www.pivpn.io>
+
+YouTube video tutorial: *DietPi PiVPN Server Setup on Raspberry Pi 3 B Plus*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0t0bwskZJFw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## WireGuard
 
@@ -222,7 +225,10 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 ***
 
 Website: <https://www.wireguard.com>  
-Wikipedia: <https://wikipedia.org/wiki/WireGuard>  
-YouTube video (German language): [`Raspberry Pi & PiVPN mit WireGuard: Installation unter DietPi mit NoIP und AVM Fritzbox`](https://www.youtube.com/watch?v=yRkdzGmnvA4&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=5)
+Wikipedia: <https://wikipedia.org/wiki/WireGuard>
+
+YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: Installation unter DietPi mit NoIP und AVM Fritzbox`.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yRkdzGmnvA4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

@@ -135,7 +135,9 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
 ***
 
-YouTube video: [How to Install MineOS on Raspberry Pi 4 using Diet Pi OS](https://www.youtube.com/watch?v=5WxRBTmXbwk)
+YouTube video tutorial: *How to Install MineOS on Raspberry Pi 4 using Diet Pi OS*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5WxRBTmXbwk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Nukkit
 
@@ -312,8 +314,11 @@ All donations using this link will be split 50/50 between Dimitris Panokostas (A
 
 ***
 
-YouTube video #1: [Amiga on the Raspberry Pi with DietPi and Amiberry: I got the Pi 400 to work!](https://www.youtube.com/watch?v=osBU7iVSQ78)  
-YouTube video #2: [Amiga on the Raspberry Pi with DietPi and Amiberry: Workbench and Autobooting](https://www.youtube.com/watch?v=LU-G0PRNffQ)
+YouTube video tutorial #1: *Amiga on the Raspberry Pi with DietPi and Amiberry: I got the Pi 400 to work!*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/osBU7iVSQ78" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+YouTube video tutorial #2: [Amiga on the Raspberry Pi with DietPi and Amiberry: Workbench and Autobooting](https://www.youtube.com/watch?v=LU-G0PRNffQ)
 
 ## DXX-Rebirth
 

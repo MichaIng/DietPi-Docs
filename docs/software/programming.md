@@ -68,8 +68,11 @@ Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia
 Website: <https://docs.docker.com/get-started/overview>  
 Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
 Logging: <https://docs.docker.com/config/containers/logging/configure>  
-Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>  
-YouTube video: [DietPi Docker Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=y_VfLOGm5nA)
+Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
+
+YouTube video tutorial: *DietPi Docker Setup on Raspberry Pi 3 B Plus*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/y_VfLOGm5nA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Portainer
 
