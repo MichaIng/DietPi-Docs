@@ -132,6 +132,7 @@ nav:
       - 'Release notes' : 'release-notes.md'
       - 'Request features' : 'https://github.com/MichaIng/DietPi/issues/new/choose'
       - 'Report issues' : 'https://github.com/MichaIng/DietPi/issues'
+      - 'References' : 'dietpi_references.md'
   - 'OPTIMISED SOFTWARE' :
       - 'Advanced Networking' : 'software/advanced_networking.md'
       - 'BitTorrent & Download Tools' : 'software/bittorrent.md'

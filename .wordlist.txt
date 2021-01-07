@@ -17,6 +17,7 @@ ARMv
 ASUS
 Atheros
 Audiophonics
+Autobooting
 autostart
 AutoStart
 backend

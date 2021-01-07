@@ -407,6 +407,10 @@ Automatically download your favorite TV shows, as they become available.
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     [![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png)](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902){: style="width:200px"}
 
+***
+
+YouTube video: [How to install and configure Sonarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=3h0GvdKcR0Y)
+
 ## Radarr
 
 Automatically download your favorite movies, as they become available.
@@ -470,6 +474,10 @@ Automatically download your favorite movies, as they become available.
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     [![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png)](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902){: style="width:200px"}
+
+***
+
+YouTube video: [How to install and configure Radarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=ji9CgSBcf5E)
 
 ## Bazarr
 
@@ -609,6 +617,10 @@ Recommend additional software:
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     [![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png)](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902){: style="width:200px"}
+
+***
+
+YouTube video: [How to install and configure CouchPotato on Raspberry Pi | Download all movies at once](https://www.youtube.com/watch?v=PkDcVy8cvkg&has_verified=1)
 
 ## Jackett
 

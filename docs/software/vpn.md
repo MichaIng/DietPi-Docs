@@ -112,7 +112,8 @@ An easy to use VPN server and client system. The DietPi installation of OpenVPN 
 ***
 
 Website: <https://openvpn.net>  
-Wikipedia: <https://wikipedia.org/wiki/OpenVPN>
+Wikipedia: <https://wikipedia.org/wiki/OpenVPN>  
+Installation article (German language): [`PiVPN: Raspberry Pi mit OpenVPN – Raspberry Pi Teil3`](https://www.kuketz-blog.de/pivpn-raspberry-pi-mit-openvpn-raspberry-pi-teil3/)
 
 ## PiVPN
 
@@ -130,7 +131,8 @@ PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a c
 
 ***
 
-Website: <https://www.pivpn.io>
+Website: <https://www.pivpn.io>  
+YouTube video: [DietPi PiVPN Server Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=0t0bwskZJFw)
 
 ## WireGuard
 
@@ -220,6 +222,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 ***
 
 Website: <https://www.wireguard.com>  
-Wikipedia: <https://wikipedia.org/wiki/WireGuard>
+Wikipedia: <https://wikipedia.org/wiki/WireGuard>  
+YouTube video (German language): [`Raspberry Pi & PiVPN mit WireGuard: Installation unter DietPi mit NoIP und AVM Fritzbox`](https://www.youtube.com/watch?v=yRkdzGmnvA4&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=5)
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

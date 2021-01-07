@@ -133,6 +133,10 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
     Your server should now be running, on the default port 25565.
 
+***
+
+YouTube video: [How to Install MineOS on Raspberry Pi 4 using Diet Pi OS](https://www.youtube.com/watch?v=5WxRBTmXbwk)
+
 ## Nukkit
 
 Nukkit is Java based server for Minecraft Pocket Edition.
@@ -305,6 +309,11 @@ Games run at various resolutions, from the emulator main menu:
 If you find this installation useful, please donate.
 All donations using this link will be split 50/50 between Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).  
 [PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69B4QPASRQNNE)
+
+***
+
+YouTube video #1: [Amiga on the Raspberry Pi with DietPi and Amiberry: I got the Pi 400 to work!](https://www.youtube.com/watch?v=osBU7iVSQ78)  
+YouTube video #2: [Amiga on the Raspberry Pi with DietPi and Amiberry: Workbench and Autobooting](https://www.youtube.com/watch?v=LU-G0PRNffQ)
 
 ## DXX-Rebirth
 
