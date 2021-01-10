@@ -409,7 +409,9 @@ Automatically download your favorite TV shows, as they become available.
 
 ***
 
-YouTube video: [How to install and configure Sonarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=3h0GvdKcR0Y)
+YouTube video tutorial: *How to install and configure Sonarr on Raspberry Pi with DietPi*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3h0GvdKcR0Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Radarr
 
@@ -477,7 +479,9 @@ Automatically download your favorite movies, as they become available.
 
 ***
 
-YouTube video: [How to install and configure Radarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=ji9CgSBcf5E)
+YouTube video tutorial: *How to install and configure Radarr on Raspberry Pi with DietPi*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ji9CgSBcf5E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Bazarr
 
@@ -620,7 +624,9 @@ Recommend additional software:
 
 ***
 
-YouTube video: [How to install and configure CouchPotato on Raspberry Pi | Download all movies at once](https://www.youtube.com/watch?v=PkDcVy8cvkg&has_verified=1)
+YouTube video tutorial: *How to install and configure CouchPotato on Raspberry Pi | Download all movies at once*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PkDcVy8cvkg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Jackett
 

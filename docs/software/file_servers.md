@@ -116,8 +116,11 @@ The Samba server lets you share files on your DietPi system with ease based on t
 
 ***
 
-Wikipedia: <https://wikipedia.org/wiki/Samba_(software)>  
-YouTube video (German language): [`Raspberry Pi als Datei-Server - einfache Installation eines Fileservers Samba unter DietPi`](https://www.youtube.com/watch?v=XB2F_Gyjw0s&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=3)
+Wikipedia: <https://wikipedia.org/wiki/Samba_(software)>
+
+YouTube video tutorial (German language): `Raspberry Pi als Datei-Server - einfache Installation eines Fileservers Samba unter DietPi`.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XB2F_Gyjw0s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## vsftpd
 

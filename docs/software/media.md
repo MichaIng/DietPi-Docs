@@ -553,7 +553,9 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
 ***
 
-YouTube video: [DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=zEcNNLCFngI)
+YouTube video tutorial: *DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zEcNNLCFngI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Plex Media Server
 
@@ -590,7 +592,9 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 ***
 
-YouTube video (German language): [`Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)`](https://www.youtube.com/watch?v=EElrNjXc3aA&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=4)
+YouTube video tutorial (German language): `Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)`.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EElrNjXc3aA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Tautulli
 
@@ -828,7 +832,9 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
 ***
 
-YouTube video: [DietPi Ubooquity Comics and Ebook Reader on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=xUewleo7f2Q)
+YouTube video tutorial: *DietPi Ubooquity Comics and Ebook Reader on Raspberry Pi 3 B Plus*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xUewleo7f2Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Komga
 

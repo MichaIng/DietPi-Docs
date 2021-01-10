@@ -53,7 +53,9 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
 ***
 
-YouTube video #1 (German language): [`Raspberry Hotspot: Internet Sperren umgehen mit eigenen WiFi Hotspot unter DietPi (für alle Geräte)`](https://www.youtube.com/watch?v=3ZROq90tM_s)
+YouTube video tutorial (German language): `Raspberry Hotspot: Internet Sperren umgehen mit eigenen WiFi Hotspot unter DietPi (für alle Geräte)`.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3ZROq90tM_s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Tor HotSpot
 
@@ -85,7 +87,9 @@ It also Installs:
 ***
 
 Wikipedia: <https://wikipedia.org/wiki/Tor_(anonymity_network)>  
-YouTube video: [DietPi Tor Hotspot Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=rik-ABzSoHM)
+YouTube video tutorial: *DietPi Tor Hotspot Setup on Raspberry Pi 3 B Plus*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rik-ABzSoHM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Tor Relay
 
