@@ -387,13 +387,13 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
     - Port: `25575`
     - Password: `<globalSoftwarePassword>` (default: `dietpi`)
-    - From DietPi: `mcrcon -p <globalSoftwarePassword>`
+    - Console command: `mcrcon -p <globalSoftwarePassword>`
 
-=== "File locations"
+=== "Directories"
 
-    - Install directory: `/opt/papermc`
-    - Config/data directory: `/mnt/dietpi_userdata/papermc`
-    - Main configuration file: `/mnt/dietpi_userdata/papermc/server.properties`
+    - Launcher: `/opt/papermc`
+    - Config and data: `/mnt/dietpi_userdata/papermc`
+    - Logs: `/var/log/papermc`
 
 === "View logs"
 
@@ -403,7 +403,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 === "Tweaking"
 
     Tweak the server settings by modifying the following file or any file that ends in `.yml`:  
-    `/opt/papermc/server.properties`
+    `/mnt/dietpi_userdata/papermc/server.properties`
 
 === "Restart service"
 
@@ -423,13 +423,13 @@ Source code: <https://github.com/PaperMC/Paper>
 
 #### How do I interface with the server's console?
 
-Use the installed tool MCrcon: `mcrcon -p GLOBAL_PW`.
+Use the installed tool MCrcon: `mcrcon -p <globalSoftwarePassword>`.
 
 #### How do I find and install plugins?
 
 <https://www.spigotmc.org/resources/categories/spigot.4/>
 
-Just move the downloaded JAR file to the `/opt/papermc/plugins` directory.
+Just move the downloaded JAR file to the `/mnt/dietpi_userdata/papermc/plugins` directory.
 
 #### What version of Minecraft does this work on
 
