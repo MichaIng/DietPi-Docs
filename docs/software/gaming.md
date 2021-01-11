@@ -393,6 +393,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
     - Launcher: `/opt/papermc`
     - Config and data: `/mnt/dietpi_userdata/papermc`
+    - Logs: `/var/log/papermc`
 
 === "View logs"
 
