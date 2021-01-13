@@ -228,6 +228,12 @@ Examples of TCP ports for Remot3.it:
 
     - URL = <https://www.remote.it>
 
+***
+
+YouTube video tutorial (German language): `Raspberry Pi einfach fernsteuern: Remote.It SSH ohne VPN von überall - Installation unter DietPi`.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V5MZXBo3hGw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## VirtualHere
 
 The VirtualHere package is used to share physically attached USB devices from your SBC over the network to other systems.

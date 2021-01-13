@@ -88,6 +88,10 @@ Also Installs:
 Website: <https://owncloud.com>  
 Official documentation: <https://doc.owncloud.org/server/admin_manual>
 
+YouTube video tutorial: *How to Install DietPi OwnCloud on Raspberry Pi*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-OatWtH1Z9c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Nextcloud
 
 Nextcloud gives you access to all your files wherever you are. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust.
@@ -222,6 +226,12 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 Website: <https://nextcloud.com/athome>  
 Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>
+
+YouTube video tutorial #1: *DietPi Nextcloud Setup on Raspberry Pi 3 B Plus*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Q3R2RqFSyE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+YouTube video tutorial #2: [DietPi Docker Nextcloud External Storage Setup with SAMBA SERVER on RPI3B](https://www.youtube.com/watch?v=NOb12BuNpZ8)
 
 ## Nextcloud Talk
 

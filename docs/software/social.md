@@ -164,6 +164,10 @@ Also Installs:
 
 Website: <https://sye.dk/sfpg>
 
+YouTube video tutorial: *DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0by117lpq_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Baïkal
 
 Baïkal is a lightweight CalDAV + CardDAV server.

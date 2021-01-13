@@ -133,6 +133,12 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
     Your server should now be running, on the default port 25565.
 
+***
+
+YouTube video tutorial: *How to Install MineOS on Raspberry Pi 4 using Diet Pi OS*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5WxRBTmXbwk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Nukkit
 
 Nukkit is Java based server for Minecraft Pocket Edition.
@@ -306,6 +312,14 @@ If you find this installation useful, please donate.
 All donations using this link will be split 50/50 between Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).  
 [PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69B4QPASRQNNE)
 
+***
+
+YouTube video tutorial #1: *Amiga on the Raspberry Pi with DietPi and Amiberry: I got the Pi 400 to work!*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/osBU7iVSQ78" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+YouTube video tutorial #2: [Amiga on the Raspberry Pi with DietPi and Amiberry: Workbench and Autobooting](https://www.youtube.com/watch?v=LU-G0PRNffQ)
+
 ## DXX-Rebirth
 
 Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth project. Play Descent as true to the original with OpenGL/ES rendering.
@@ -373,13 +387,13 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
     - Port: `25575`
     - Password: `<globalSoftwarePassword>` (default: `dietpi`)
-    - From DietPi: `mcrcon -p <globalSoftwarePassword>`
+    - Console command: `mcrcon -p <globalSoftwarePassword>`
 
-=== "File locations"
+=== "Directories"
 
-    - Install directory: `/opt/papermc`
-    - Config/data directory: `/mnt/dietpi_userdata/papermc`
-    - Main configuration file: `/mnt/dietpi_userdata/papermc/server.properties`
+    - Launcher: `/opt/papermc`
+    - Config and data: `/mnt/dietpi_userdata/papermc`
+    - Logs: `/var/log/papermc`
 
 === "View logs"
 
@@ -389,7 +403,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 === "Tweaking"
 
     Tweak the server settings by modifying the following file or any file that ends in `.yml`:  
-    `/opt/papermc/server.properties`
+    `/mnt/dietpi_userdata/papermc/server.properties`
 
 === "Restart service"
 
@@ -409,13 +423,13 @@ Source code: <https://github.com/PaperMC/Paper>
 
 #### How do I interface with the server's console?
 
-Use the installed tool MCrcon: `mcrcon -p GLOBAL_PW`.
+Use the installed tool MCrcon: `mcrcon -p <globalSoftwarePassword>`.
 
 #### How do I find and install plugins?
 
 <https://www.spigotmc.org/resources/categories/spigot.4/>
 
-Just move the downloaded JAR file to the `/opt/papermc/plugins` directory.
+Just move the downloaded JAR file to the `/mnt/dietpi_userdata/papermc/plugins` directory.
 
 #### What version of Minecraft does this work on
 

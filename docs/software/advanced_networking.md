@@ -51,6 +51,12 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     2. Navigate to *Networking Options: Adapters*, then select *WiFi*
     3. Whilst in this menu, it is highly recommended you set the Country Code to your country. Depending on your country regulations, this could allow for channels 12/13 and increased power output (range) for the hotspot
 
+***
+
+YouTube video tutorial (German language): `Raspberry Hotspot: Internet Sperren umgehen mit eigenen WiFi Hotspot unter DietPi (für alle Geräte)`.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3ZROq90tM_s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Tor HotSpot
 
 The Tor HotSpot package turns your device into a WiFi HotSpot/Access Point with Tor routing. All WiFi HotSpot traffic for all connected WiFi devices will be routed through the Tor network.  
@@ -80,7 +86,10 @@ It also Installs:
 
 ***
 
-Wikipedia: <https://wikipedia.org/wiki/Tor_(anonymity_network)>
+Wikipedia: <https://wikipedia.org/wiki/Tor_(anonymity_network)>  
+YouTube video tutorial: *DietPi Tor Hotspot Setup on Raspberry Pi 3 B Plus*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rik-ABzSoHM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Tor Relay
 
