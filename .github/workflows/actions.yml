@@ -2,10 +2,12 @@ name: Build test and quality checks
 on: push
 jobs:
   Actions:
+    # https://github.com/actions/virtual-environments
     runs-on: ubuntu-20.04
     steps:
       - name: Clone DietPi-Docs repository
         id: clone
+        # https://github.com/actions/checkout/releases
         uses: actions/checkout@v2
       - name: Install latest Node.js
         run: |
@@ -18,6 +20,7 @@ jobs:
       - name: Set up Python 3.9 for MkDocs and PySpelling
         id: python
         if: always() && steps.clone.outcome == 'success'
+        # https://github.com/actions/setup-python/releases
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
@@ -50,13 +53,14 @@ jobs:
       - name: Setup Go 1.15 for liche
         id: go
         if: always() && steps.build.outcome == 'success'
+        # https://github.com/actions/setup-go/releases
         uses: actions/setup-go@v2
         with:
-          go-version: 1.15
+          go-version: '1.15'
       - name: Install liche
         id: liche
         if: always() && steps.go.outcome == 'success'
         run: GO111MODULE=on go get -u github.com/raviqqe/liche
       - name: Check links in HTML and Markdown files
         if: always() && steps.liche.outcome == 'success'
-        run: liche -c 128 -x 'https://(github|twitter).com' -d build -r README.md build/docs
+        run: liche -c 64 -x 'https://(github|twitter).com' -d build -r README.md build/docs
