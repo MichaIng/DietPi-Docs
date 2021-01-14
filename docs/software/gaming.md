@@ -243,7 +243,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     It is recommended to save your settings. This will ensure the settings are applied on next startup of Amiberry.
 
     - On the left hand side, select **Configurations**.
-    - Enterthe name, e.g. "autostart", then click **Save**.
+    - Enter the name, e.g. "autostart", then click **Save**.
 
 === "FAQ"
 
