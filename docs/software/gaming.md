@@ -229,9 +229,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     On the left hand side, select Display.  
     Ensure the Fullscreen option is enabled.
 
-### Optional configurations
-
-=== "Set CPU speed to fastest (recommended)"
+=== "Optional: Set CPU speed to fastest (recommended)"
 
     This will emulate the Amiga as fast as possible, ensuring you get the maximum FPS for your SBC hardware.
 
@@ -239,78 +237,76 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     - Under CPU Speed, select the fastest option.
     - If you find this change slows down the emulation, try using the fixed value of 25 MHz
 
-=== "Save configuration (recommended)"
+=== "Optional: Save configuration (recommended)"
 
     It is recommended to save your settings. This will ensure the settings are applied on next startup of Amiberry
 
     - On the left hand side, select Configurations.
     - Enter the name, e.g. autostart, then click Save
 
-***
+=== "FAQ"
+
+    #### How can I transfer Kickstarts & Floppy Images to the device?
+
+    Make sure you have one of DietPi's File Servers installed.
+
+    - Floppy Disk Image (`.adf`) directory as chosen before, e.g. `/amiberry/floppy_images`
+    - Kickstarts (`.rom`) directory = `/amiberry/kickstarts`
+
+    #### How can I open the configuration window once the emulator has started?
+
+    The pre-defined key for that is F12.
+
+    #### How can I reboot the Amiga emulation environment (Amiga reset)?
+
+    Use Ctrl + Left Windows + Right Windows keys.  
+    If you don’t have a Right Windows key, try using the menu key instead.
+
+    #### What are the default controls for Joystick, when using a Keyboard?
+
+    When using a keyboard, the default joystick controls are:
+
+    - Arrow Keys = Up/Down/Left/Right  
+    - Page Down = Fire/Button 1  
+    - Page Up= Fire/Button 2  
+
+    #### How can I improve performance (frame rate)?
+
+    A ***lower resolution*** may improve performance on most games. From the emulator main menu:
+
+    - On the left hand side, select Display  
+    - 640x256 is high resolution  
+    - 320x256 is low resolution and should provide improved performance  
+
+    ***Overclocking*** your system will improve performance. Stability may vary across devices and overclocking is not officially supported:  
+
+    - From a terminal, run `dietpi-config`
+    - Select the Performance Options menu
+    - Select Overclocking Profiles
+    - Select an overclocking profile, then reboot the system
+
+    #### How do i set the floppy drive speed for compatibility?
+
+    Floppy drive emulation is to set to "800 %" by default. This reduces loading times by up to 8x.  
+    You can lower this to 100 %, increasing compatibility:
+
+    - On the left hand side, select Floppy Drives
+    - Change the Floppy Drive Emulation Speed value to 100 %
+
+    #### Some games are not in full screen
+
+    Games run at various resolutions, from the emulator main menu:
+
+    - On the left hand side, select Display
+    - Change the Height value to 200 or 256
+    - Press the Resume or Start button
+
+    If you find this installation useful, please donate.
+    All donations using this link will be split 50/50 between Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).  
+    [PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69B4QPASRQNNE)
 
 **Good to GO!**  
 When ready, select Start to launch the emulator. Have fun!
-
-### FAQ
-
-#### How can I transfer Kickstarts & Floppy Images to the device?
-
-Make sure you have one of DietPi's File Servers installed.
-
-- Floppy Disk Image (`.adf`) directory as chosen before, e.g. `/amiberry/floppy_images`
-- Kickstarts (`.rom`) directory = `/amiberry/kickstarts`
-
-#### How can I open the configuration window once the emulator has started?
-
-The pre-defined key for that is F12.
-
-#### How can I reboot the Amiga emulation environment (Amiga reset)?
-
-Use Ctrl + Left Windows + Right Windows keys.  
-If you don’t have a Right Windows key, try using the menu key instead.
-
-#### What are the default controls for Joystick, when using a Keyboard?
-
-When using a keyboard, the default joystick controls are:
-
-- Arrow Keys = Up/Down/Left/Right  
-- Page Down = Fire/Button 1  
-- Page Up= Fire/Button 2  
-
-#### How can I improve performance (frame rate)?
-
-A ***lower resolution*** may improve performance on most games. From the emulator main menu:
-
-- On the left hand side, select Display  
-- 640x256 is high resolution  
-- 320x256 is low resolution and should provide improved performance  
-
-***Overclocking*** your system will improve performance. Stability may vary across devices and overclocking is not officially supported:  
-
-- From a terminal, run `dietpi-config`
-- Select the Performance Options menu
-- Select Overclocking Profiles
-- Select an overclocking profile, then reboot the system
-
-#### How do i set the floppy drive speed for compatibility?
-
-Floppy drive emulation is to set to "800 %" by default. This reduces loading times by up to 8x.  
-You can lower this to 100 %, increasing compatibility:
-
-- On the left hand side, select Floppy Drives
-- Change the Floppy Drive Emulation Speed value to 100 %
-
-#### Some games are not in full screen
-
-Games run at various resolutions, from the emulator main menu:
-
-- On the left hand side, select Display
-- Change the Height value to 200 or 256
-- Press the Resume or Start button
-
-If you find this installation useful, please donate.
-All donations using this link will be split 50/50 between Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).  
-[PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69B4QPASRQNNE)
 
 ***
 
@@ -345,21 +341,19 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
     - F = Launch flare
     - ALT+F2 = Save game
 
+=== "FAQ"
+
+    #### How do I transfer the original Descent full game files?
+
+    Before you begin, you will need the original game files, from a legal copy and installation of Descent.  
+    Make sure you have one of DietPi's File Servers installed.
+
+    - Copy your Descent 1 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_1_game`
+    - Copy your Descent 2 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_2_game`
+
 ***
 
-### FAQ
-
-#### How do I transfer the original Descent full game files?
-
-Before you begin, you will need the original game files, from a legal copy and installation of Descent.  
-Make sure you have one of DietPi's File Servers installed.
-
-- Copy your Descent 1 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_1_game`
-- Copy your Descent 2 Game files to `/mnt/dietpi_userdata/dxx-rebirth/descent_2_game`
-
-#### Where can I find more information on the DXX-Rebirth project?
-
-<http://www.dxx-rebirth.com/>
+Website: <http://www.dxx-rebirth.com/>
 
 ## Steam
 
@@ -414,27 +408,27 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
     `dietpi-software reinstall 181`
 
+=== "FAQ"
+
+    #### How do I interface with the server's console?
+
+    Use the installed tool MCrcon: `mcrcon -p <globalSoftwarePassword>`.
+
+    #### How do I find and install plugins?
+
+    <https://www.spigotmc.org/resources/categories/spigot.4/>
+
+    Just move the downloaded JAR file to the `/mnt/dietpi_userdata/papermc/plugins` directory.
+
+    #### What version of Minecraft does this work on
+
+    PaperMC is built to run on Java edition, however with the optional Geyser and Floodgate plugins, it can run on Bedrock edition as well.
+
+    Just choose to install them at the beginning.
+
 ***
 
 Website: <https://paper.readthedocs.io>  
 Source code: <https://github.com/PaperMC/Paper>
-
-### FAQ
-
-#### How do I interface with the server's console?
-
-Use the installed tool MCrcon: `mcrcon -p <globalSoftwarePassword>`.
-
-#### How do I find and install plugins?
-
-<https://www.spigotmc.org/resources/categories/spigot.4/>
-
-Just move the downloaded JAR file to the `/mnt/dietpi_userdata/papermc/plugins` directory.
-
-#### What version of Minecraft does this work on
-
-PaperMC is built to run on Java edition, however with the optional Geyser and Floodgate plugins, it can run on Bedrock edition as well.
-
-Just choose to install them at the beginning.
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
