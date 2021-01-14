@@ -41,12 +41,12 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences # Indended code blocks, e.g. within lists, admonition, details or tabbed blocks
+  - pymdownx.tabbed # Tabbed content blocks
   - pymdownx.keys # Keyboard key symbols
   - pymdownx.magiclink: # Auto-links non angle bracket URLs and email addresses and allows to shorten and visualise Git repo links
       repo_url_shortener: true
       repo_url_shorthand: true
-  - pymdownx.superfences # Indended code blocks, e.g. within lists, admonition, details or tabbed blocks
-  - pymdownx.tabbed # Tabbed content blocks
 
   #  Markdown Extensions which could be used in the future
   #
