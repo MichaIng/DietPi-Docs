@@ -43,7 +43,7 @@ to fight MicroSol and save the galaxy.
 === "Personal note"
 
     Tyrian (OpenTyrian) if not the best game in the world, is the best top down shooter/scroller game ever created.  
-    OpenTyrian is best experienced by using a mouse and the ENTER key to change rear fire mode.  
+    OpenTyrian is best experienced by using a mouse and the ++enter++ key to change rear fire mode.  
     It's old, retro, and a classic etc, but I doubt you will to find a similar recent game that is anywhere close to OpenTyrian addictiveness.
 
 ## Cuberite
@@ -243,7 +243,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     It is recommended to save your settings. This will ensure the settings are applied on next startup of Amiberry.
 
     - On the left hand side, select **Configurations**.
-    - Enter the name, e.g. "autostart", then click **Save**.
+    - Enterthe name, e.g. "autostart", then click **Save**.
 
 === "FAQ"
 
@@ -256,28 +256,28 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
     #### How can I open the configuration window once the emulator has started?
 
-    The pre-defined key for that is F12.
+    The pre-defined key for that is ++f12++.
 
     #### How can I reboot the Amiga emulation environment (Amiga reset)?
 
-    Use Ctrl + Left Windows + Right Windows keys.  
-    If you don’t have a Right Windows key, try using the menu key instead.
+    Use ++ctrl+lwin+rwin++ keys.  
+    If you don't have an ++rwin++ key, try using the ++menu++ key instead.
 
     #### What are the default controls for Joystick, when using a Keyboard?
 
     When using a keyboard, the default joystick controls are:
 
-    - Arrow Keys = Up/Down/Left/Right  
-    - Page Down = Fire/Button 1  
-    - Page Up= Fire/Button 2  
+    - ++up++/++down++/++left++/++right++ = Up/Down/Left/Right
+    - ++page-down++ = Fire/Button 1
+    - ++page-up++ = Fire/Button 2
 
     #### How can I improve performance (frame rate)?
 
     A ***lower resolution*** may improve performance on most games. From the emulator main menu:
 
-    - On the left hand side, select Display  
-    - 640x256 is high resolution  
-    - 320x256 is low resolution and should provide improved performance  
+    - On the left hand side, select Display
+    - 640x256 is high resolution
+    - 320x256 is low resolution and should provide improved performance
 
     ***Overclocking*** your system will improve performance. Stability may vary across devices and overclocking is not officially supported:  
 
@@ -414,7 +414,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
         ExecStart=/usr/bin/java -Xms1G -Xmx1G -jar /opt/papermc/paperclip.jar --nogui --noconsole
         ```
 
-    5. Use `CTRL`+`O` and `ENTER` to save the file, then `CTRL`+`X` to return to the `dietpi-services` menu. On exit, it will ask whether you want to restart the service to apply the changes.
+    5. Use ++ctrl+o++ and ++enter++ to save the file, then ++ctrl+x++ to return to the `dietpi-services` menu. On exit, it will ask whether you want to restart the service to apply the changes.
 
     !!! warning "Do not keep your swap file on an SD card!"
         If the used system memory exceeds the physical RAM of your SBC, we highly recommend to **not** store the swap file on an SD card, but on an external drive, in case, as SD cards usually won't survive regularly used swap file writes for long, leading to server crashes and data loss in worst case.
