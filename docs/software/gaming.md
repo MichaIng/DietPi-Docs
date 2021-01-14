@@ -230,9 +230,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     On the left hand side, select **Display**.  
     Ensure the **Fullscreen** option is enabled.
 
-=== "Optional configurations"
-
-    **Set CPU speed to fastest (recommended)**  
+=== "Optional: Set CPU speed to fastest (recommended)"
 
     This will emulate the Amiga as fast as possible, ensuring you get the maximum FPS for your SBC hardware.
 
@@ -240,7 +238,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     - Under CPU Speed, select the fastest option.
     - If you find this change slows down the emulation, try using the fixed value of 25 MHz
 
-    **Save configuration (recommended)**  
+=== "Optional: Save configuration (recommended)"
 
     It is recommended to save your settings. This will ensure the settings are applied on next startup of Amiberry.
 
