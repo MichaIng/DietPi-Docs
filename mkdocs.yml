@@ -20,7 +20,7 @@ theme:
 
   language: en
   features:
-   - navigation.tabs
+    - navigation.tabs
   #logo: assets/images/logo.png
   favicon: https://dietpi.com/favicon.ico
 
@@ -117,7 +117,7 @@ extra:
       link: https://twitter.com/DietPi_
 
 extra_css:
-   - css/custom.css
+  - css/custom.css
 
 nav:
   - 'HOME' :
