@@ -37,7 +37,7 @@ to fight MicroSol and save the galaxy.
 === "Start the game"
 
     - Console: To run OpenTyrian from console, use the following command: `opentyrian`
-    - Desktop: To run OpenTyrian from destop, a desktop icon and start menu entry have been added.
+    - Desktop: To run OpenTyrian from desktop, a desktop icon and start menu entry have been added.
     - Autostart: To run OpenTyrian automatically at boot, select it from `dietpi-autostart` menu or directly via: `dietpi-autostart 4`
 
 === "Personal note"
