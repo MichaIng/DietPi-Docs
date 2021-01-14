@@ -2,14 +2,14 @@
 
 ## Overview
 
-- [**OpenTyrian - open-source port of the DOS game Tyrian**](#opentyrian)
+- [**OpenTyrian - Open-source port of the DOS game Tyrian**](#opentyrian)
 - [**Cuberite - Fast Minecraft server with web interface**](#cuberite)
 - [**MineOS - Multiple Minecraft servers with web interface**](#mineos)
 - [**Nukkit - Server for Minecraft Pocket Edition**](#nukkit)
 - [**Amiberry - Amiga emulation system**](#amiberry)
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth)
 - [**Steam - Steam client**](#steam)
-- [**PaperMC - Fast and optimized Minecraft server**](#papermc)
+- [**PaperMC - Fast and optimised Minecraft server**](#papermc)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -28,56 +28,53 @@
 
 ## OpenTyrian
 
-Tyrian is an arcade-style vertical scrolling shooter.  The story is set
-in 20,031 where you play as Trent Hawkins, a skilled fighter-pilot employed
+Tyrian is an arcade-style vertical scrolling shooter. The story is set
+in 20,031 where you play as Trent Hawkins, a skilled fighter pilot employed
 to fight MicroSol and save the galaxy.
 
-![DietPi gaming software OpenTyrian](../assets/images/dietpi-software-games-opentyrian.jpg){: style="width:500px"}
+![OpenTyrian screenshot](../assets/images/dietpi-software-games-opentyrian.jpg){: style="width:500px"}
 
 === "Start the game"
 
-    If you did not select OpenTyrian to start from boot:
+    - Console: To run OpenTyrian from console, use the following command: `opentyrian`
+    - Desktop: To run OpenTyrian from desktop, a desktop icon and start menu entry have been added.
+    - Autostart: To run OpenTyrian automatically at boot, select it from `dietpi-autostart` menu or directly via: `dietpi-autostart 4`
 
-    - Console = OpenTyrian can also be run by typing `opentyrian`.
-    - Desktop = Use the OpenTyrian icons available in the start menu and desktop.
-
-    You can modify the AutoStart options in `dietpi-autoStart`.
-
-=== "Personal Note"
+=== "Personal note"
 
     Tyrian (OpenTyrian) if not the best game in the world, is the best top down shooter/scroller game ever created.  
-    OpenTyrian is best experienced by using a mouse and the Enter key to change rear fire mode.  
-    Its old, retro, and a classic etc, but I doubt you will to find a recent and similar game that is anywhere close to OpenTyrian addictiveness.
+    OpenTyrian is best experienced by using a mouse and the ++enter++ key to change rear fire mode.  
+    It's old, retro, and a classic etc, but I doubt you will to find a similar recent game that is anywhere close to OpenTyrian addictiveness.
 
 ## Cuberite
 
-Cuberite allows you to create a single, blazingly fast Minecraft server, which utilizes the performance benefits of C++ (instead of Java). Also comes with a handy web interface.
+Cuberite allows you to create a single, blazingly fast Minecraft server, which utilizes the performance benefits of C++ (instead of Java) and comes with a handy web interface.
 
-![DietPi gaming software Cuberite](../assets/images/dietpi-software-games-cuberite.png){: style="width:500px"}
+![Cuberite web interface view](../assets/images/dietpi-software-games-cuberite.png){: style="width:500px"}
 
 === "Access the web interface"
 
-    - URL= `http://<your.IP>:1339` (replace with your DietPi's local IP)
+    - URL = `http://<your.IP>:1339`
     - Username = `admin`
-    - Password = your global password
+    - Password = `<globalSoftwarePassword>` (default: `dietpi`)
 
 === "Tweaking"
 
-    Tweak the server settings by modifying the following files: (yes we recognised the typo which will be fixed with DietPi v6.33 ;))
+    Tweak the server settings by modifying the following files:
 
-    - general server settings
+    - General server settings:
 
         ```
         /mnt/dietpi_userdata/cubrite/settings.ini
         ```
 
-    - settings for the web administration
+    - Settings for the web administration:
 
         ```
         /mnt/dietpi_userdata/cubrite/webadmin.ini
         ```
 
-    - settings for the world
+    - Settings for the world:
 
         ```
         /mnt/dietpi_userdata/cubrite/world/world.ini
@@ -93,7 +90,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
 === "View logs"
 
-    - Log files: ``/mnt/dietpi_userdata/cubrite/logs/``
+    - Log files: `/mnt/dietpi_userdata/cubrite/logs/`
     - Service logs: `journalctl -u cuberite`
 
 === "Update"
@@ -108,14 +105,14 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
 MineOS allows you to create multiple Minecraft servers with ease, using a simple web interface.
 
-![DietPi gaming software MineOS](../assets/images/dietpi-software-games-mineos.png){: style="width:500px"}
+![MineOS web interface view](../assets/images/dietpi-software-games-mineos.png){: style="width:500px"}
 
 === "Access to web interface"
 
     - URL = `https://<your.IP>:8443`  
       You can safely ignore the certificate "warning" if one appears.
-    - username = `root` (v6.11 and lower `mineos`)
-    - password = <your global application password\>
+    - Username = `root`
+    - Password = `<globalSoftwarePassword>` (default: `dietpi`)
 
 === "1st run setup"
 
@@ -141,9 +138,9 @@ YouTube video tutorial: *How to Install MineOS on Raspberry Pi 4 using Diet Pi O
 
 ## Nukkit
 
-Nukkit is Java based server for Minecraft Pocket Edition.
+Nukkit is Java-based server for Minecraft Pocket Edition.
 
-![DietPi gaming software Nukkit](../assets/images/dietpi-software-games-nukkit.png){: style="width:500px"}
+![Nukkit screenshot](../assets/images/dietpi-software-games-nukkit.png){: style="width:500px"}
 
 === "Info"
 
@@ -151,36 +148,40 @@ Nukkit is Java based server for Minecraft Pocket Edition.
 
 === "Tweaking"
 
-    Tweak the server settings by modifying the following file:  
-    `/usr/local/bin/nukkit/server.properties`
+    Tweak the server settings by modifying the following file:
+
+    ```
+    /usr/local/bin/nukkit/server.properties
+    ```
 
 === "Restart service"
 
-    You can restart the service by running:  
-    `dietpi-services restart`
+    You can restart the service by running:
+
+    ```
+    systemctl restart nukkit
+    ```
 
 ## Amiberry
 
-Amiberry is an optimised Amiga emulator for the Raspberry PI and other ARM-based SoCs, that brings you the highest performance Amiga emulation. Be it a classic A500, A1200, CD32 or up to a high-end model equipped with a 68040 and a graphics card, we have got you covered.
+Amiberry is an optimised Amiga emulator for the Raspberry Pi and other ARM-based SoCs, that brings you the highest performance Amiga emulation. Be it a classic A500, A1200, CD32 or up to a high-end model equipped with a 68040 and a graphics card, we have got you covered.
 
 This installation is possible due to a collaboration with Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).
 
-- Keyboard + Mouse is highly recommended.
+- Keyboard + mouse is highly recommended.
 - We also offer a completely automated installation image for Amiberry. Please see: <https://blitterstudio.com/amiberry/>.
 - Direct download link: <https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster_Amiberry.7z>.
 
-![DietPi gaming software Amiberry](../assets/images/dietpi-software-games-amiberry.jpg){: style="width:500px"}
+![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: style="width:500px"}
 
-### Setup steps
+=== "1st run setup"
 
-=== "First Run Setup"
-
-    - Kickstarts (Amiga BIOS/boot system)  
+    - **Kickstarts (Amiga BIOS/boot system)**  
       Amiga Kickstart ROM images are required to run the system(s) you want to emulate. These can not be bundled due to copyright restrictions.  
-      If you own the Amiga Forever product, you can legally download and use Kickstarts you are eligible for, from: <https://www.amigaroms.com/>.  
+      If you own the Amiga Forever product, you can legally download and use Kickstarts you are eligible for, from: <https://www.amigaroms.com/>  
       **Remark:** *Kickstart 1.3 (A500-A2500-A3000-CDTV) is highly recommended to work with most games.*  
-      Kickstarts need to be placed in `/mnt/dietpi_userdata/amiberry/kickstarts`
-    - Floppy disks (Amiga `.adf` images)  
+      Kickstarts can be placed in `/mnt/dietpi_userdata/amiberry/kickstarts`.
+    - **Floppy disks (Amiga `.adf` images)**  
       Amiga's floppy disk images have a `.adf` file extension.  
       You will need obtain at least one ADF image to start your Amiga experience.  
       Load your ADF from or place them where every you want it, e.g. create and use:  
@@ -190,10 +191,10 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
 === "Starting"
 
-    - Amiberry can be started by running `systemctl start amiberry`
+    - Amiberry can be started by running: `systemctl start amiberry`
     - Optionally, you can enable Amiberry autostart to boot straight into the Amiga environment as fast as possible, with the least possible interference from Linux.  
-      Simply run `dietpi-autostart` and select *Amiberry fast boot* then reboot your system.  
-      If you face issues with the fast boot option or need to have other service starting up first, use Amiberry standard boot.
+      Run `dietpi-autostart 6` from console or `dietpi-autostart` and select *Amiberry fast boot* from the menu, then reboot your system.  
+      If you face issues with the fast boot option or need to have other services starting up first, use `dietpi-autostart 8` or select *Amiberry standard boot* respectively.
 
 === "Create an Amiga configuration"
 
@@ -224,10 +225,10 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
         `/mnt/uuid-of-drive/amiberry/floppy_images`
       - Select the ROM you wish to use.
 
-=== "Enable Fullscreen output"
+=== "Enable fullscreen output"
 
-    On the left hand side, select Display.  
-    Ensure the Fullscreen option is enabled.
+    On the left hand side, select **Display**.  
+    Ensure the **Fullscreen** option is enabled.
 
 === "Optional: Set CPU speed to fastest (recommended)"
 
@@ -239,10 +240,10 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
 === "Optional: Save configuration (recommended)"
 
-    It is recommended to save your settings. This will ensure the settings are applied on next startup of Amiberry
+    It is recommended to save your settings. This will ensure the settings are applied on next startup of Amiberry.
 
-    - On the left hand side, select Configurations.
-    - Enter the name, e.g. autostart, then click Save
+    - On the left hand side, select **Configurations**.
+    - Enter the name, e.g. "autostart", then click **Save**.
 
 === "FAQ"
 
@@ -255,28 +256,28 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
     #### How can I open the configuration window once the emulator has started?
 
-    The pre-defined key for that is F12.
+    The pre-defined key for that is ++f12++.
 
     #### How can I reboot the Amiga emulation environment (Amiga reset)?
 
-    Use Ctrl + Left Windows + Right Windows keys.  
-    If you don’t have a Right Windows key, try using the menu key instead.
+    Use ++ctrl+lwin+rwin++ keys.  
+    If you don't have an ++rwin++ key, try using the ++menu++ key instead.
 
     #### What are the default controls for Joystick, when using a Keyboard?
 
     When using a keyboard, the default joystick controls are:
 
-    - Arrow Keys = Up/Down/Left/Right  
-    - Page Down = Fire/Button 1  
-    - Page Up= Fire/Button 2  
+    - ++up++/++down++/++left++/++right++ = Up/Down/Left/Right
+    - ++page-down++ = Fire/Button 1
+    - ++page-up++ = Fire/Button 2
 
     #### How can I improve performance (frame rate)?
 
     A ***lower resolution*** may improve performance on most games. From the emulator main menu:
 
-    - On the left hand side, select Display  
-    - 640x256 is high resolution  
-    - 320x256 is low resolution and should provide improved performance  
+    - On the left hand side, select Display
+    - 640x256 is high resolution
+    - 320x256 is low resolution and should provide improved performance
 
     ***Overclocking*** your system will improve performance. Stability may vary across devices and overclocking is not officially supported:  
 
@@ -301,12 +302,11 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     - Change the Height value to 200 or 256
     - Press the Resume or Start button
 
-    If you find this installation useful, please donate.
-    All donations using this link will be split 50/50 between Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).  
-    [PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69B4QPASRQNNE)
+    If you find this installation useful, please donate. Use the below link and select **Donate for DietPi and Amiberry 50:50** to have it split between Dimitris Panokostas (Amiberry) and DietPi.  
+    [PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DVBECXRW3TAA)
 
 **Good to GO!**  
-When ready, select Start to launch the emulator. Have fun!
+When ready, select **Start** to launch the emulator. Have fun!
 
 ***
 
@@ -318,28 +318,28 @@ YouTube video tutorial #2: [Amiga on the Raspberry Pi with DietPi and Amiberry: 
 
 ## DXX-Rebirth
 
-Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth project. Play Descent as true to the original with OpenGL/ES rendering.
+Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth project. Play Descent as true to the original with OpenGLES rendering.
 
 - DietPi will install the Demo and Shareware versions of Descent. Please see the FAQ below to transfer the full game.
-- Keyboard + Mouse is highly recommended
+- Keyboard + mouse is highly recommended
 - We have compiled the latest version of DXX-Rebirth (0.58.1) with support for FB and RPi OpenGL.
 
-![DietPi gaming software DXX-Rebirth](../assets/images/dietpi-software-games-dxxrebirth.png){: style="width:500px"}
+![DXX-Rebirth logo and screenshot](../assets/images/dietpi-software-games-dxxrebirth.png){: style="width:500px"}
 
 === "Starting DXX-Rebirth"
 
     DXX-Rebirth can be started by running `dxx-rebirth`.  
-    Auto start option is available. Simply run `dietpi-autostart` and select `DXX-Rebith (Descent 1/2)` then reboot your system.
+    To automatically start DXX-Rebirth at boot, simply run `dietpi-autostart 7` from console or `dietpi-autostart` and select `DXX-Rebith (Descent 1/2)` from the menu, then reboot your system.
 
-=== "Choosing a Pilot"
+=== "Choosing a pilot"
 
-    We have created a Pilot called DietPi. The config has been setup for WSAD style play and is recommended for FPS players who use WSAD + Mouse.
+    We have created a pilot called DietPi. The config has been setup for WSAD style play and is recommended for FPS players who use WSAD + mouse.
 
-    - WSAD = Forward/Backwards/left/right
-    - QZ = Up/down
-    - ER = Rotate Z (forward) axis
-    - F = Launch flare
-    - ALT+F2 = Save game
+    - ++w++/++a++/++s++/++d++ = Forward/Backwards/Left/Right
+    - ++q++/++z++ = Up/Down
+    - ++e++/++r++ = Rotate Z (forward) axis
+    - ++f++ = Launch flare
+    - ++alt+f2++ = Save game
 
 === "FAQ"
 
@@ -357,7 +357,7 @@ Website: <http://www.dxx-rebirth.com/>
 
 ## Steam
 
-![DietPi gaming software Steam](../assets/images/dietpi-software-games-steam.jpg){: style="width:500px"}
+![Steam on Linux logo](../assets/images/dietpi-software-games-steam.jpg){: style="width:500px"}
 
 ### Installation notes
 
@@ -369,9 +369,9 @@ Website: <http://www.dxx-rebirth.com/>
 A highly optimized Minecraft server with plugins, written in Java.  
 PaperMC by default runs a single server, available on LAN, but can be port forwarded so other people can connect.
 
-![DietPi gaming software PaperMC logo](../assets/images/dietpi-software-games-papermc.jpg){: style="width:70px"}
+![PaperMC logo](../assets/images/dietpi-software-games-papermc.jpg){: style="width:70px"}
 
-![DietPi gaming software PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg){: style="width:500px"}
+![PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg){: style="width:500px"}
 
 === "Default server/query port"
 
@@ -396,23 +396,48 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
 === "Tweaking"
 
-    Tweak the server settings by modifying the following file or any file that ends in `.yml`:  
+    Tweak the server settings by modifying the following file or any file within the config directory that ends in `.yml`:  
     `/mnt/dietpi_userdata/papermc/server.properties`
+
+=== "Memory management"
+
+    Since PaperMC runs as Java application, it's system memory demand highly depends on the Java heap size, that can be adjusted. The absolute minimum head size that is required to run PaperMC is 512 MiB, which will result in ~850 MiB overall used system memory. We recommend to raise it to a minimum of 1 GiB (~1.35 GiB overall memory usage) for production use, or higher, depending on the amount of users and installed plugins.
+
+    To change the Java heap size, do the following:
+
+    1. Run `dietpi-services` from console.
+    2. Select `papermc`.
+    3. Select `Edit`.
+    4. Uncomment the line that starts with `#ExecStart=` (remove the leading `#`) and add/change e.g. `-Xms1G -Xmx1G` right behind the `java` command to apply 1 GiB heap size, so that the line looks like this:
+
+        ```
+        ExecStart=/usr/bin/java -Xms1G -Xmx1G -jar /opt/papermc/paperclip.jar --nogui --noconsole
+        ```
+
+    5. Use ++ctrl+o++ and ++enter++ to save the file, then ++ctrl+x++ to return to the `dietpi-services` menu. On exit, it will ask whether you want to restart the service to apply the changes.
+
+    !!! warning "Do not keep your swap file on an SD card!"
+        If the used system memory exceeds the physical RAM of your SBC, we highly recommend to **not** store the swap file on an SD card, but on an external drive, in case, as SD cards usually won't survive regularly used swap file writes for long, leading to server crashes and data loss in worst case.
 
 === "Restart service"
 
-    You can restart the service by running:  
-    `systemctl restart papermc`
+    You can restart the service by running:
+
+    ```sh
+    systemctl restart papermc
+    ```
 
 === "Update to latest version"
 
-    `dietpi-software reinstall 181`
+    ```sh
+    dietpi-software reinstall 181
+    ```
 
 === "FAQ"
 
     #### How do I interface with the server's console?
 
-    Use the installed tool MCrcon: `mcrcon -p <globalSoftwarePassword>`.
+    Use the installed tool MCrcon: `mcrcon -p <globalSoftwarePassword>`
 
     #### How do I find and install plugins?
 
@@ -420,10 +445,9 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
     Just move the downloaded JAR file to the `/mnt/dietpi_userdata/papermc/plugins` directory.
 
-    #### What version of Minecraft does this work on
+    #### What version of Minecraft does this work on?
 
-    PaperMC is built to run on Java edition, however with the optional Geyser and Floodgate plugins, it can run on Bedrock edition as well.
-
+    PaperMC is built to run on Java edition, however with the optional Geyser and Floodgate plugins, it can run on Bedrock edition as well.  
     Just choose to install them at the beginning.
 
 ***
