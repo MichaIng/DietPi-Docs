@@ -335,11 +335,11 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
 
     We have created a pilot called DietPi. The config has been setup for WSAD style play and is recommended for FPS players who use WSAD + mouse.
 
-    - WSAD = Forward/Backwards/left/right
-    - QZ = Up/down
-    - ER = Rotate Z (forward) axis
-    - F = Launch flare
-    - ALT+F2 = Save game
+    - ++w++/++a++/++s++/++d++ = Forward/Backwards/Left/Right
+    - ++q++/++z++ = Up/Down
+    - ++e++/++r++ = Rotate Z (forward) axis
+    - ++f++ = Launch flare
+    - ++alt+f2++ = Save game
 
 === "FAQ"
 
