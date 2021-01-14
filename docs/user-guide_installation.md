@@ -18,7 +18,7 @@ Select the following tabs for the installation description of your target.
 === "Install on SBC"
 
     ## Introduction
-    
+
     Single board computers (SBCs) based on the well known Raspberry PI ARM based architecture gained more and more friends in the last years. The low cost in combination with the power and hardware flexibility makes these SBCs optimal for embedded systems, like e.g. home automation or cloud applications.
 
     ![raspberry-pi-1-model-b](assets/images/raspberry-pi-1b.jpg)
@@ -311,8 +311,16 @@ If you want to make further changes to your DietPi configuration, you can run `d
 
 For more details, check [DietPi Tools](../dietpi_tools) section.
 
-## YouTube tutorial (made by community)
+## YouTube tutorials (made by community)
 
 A video tutorial on _How to install and initially configure DietPi_ made by Roberto Jorge.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Me0PfuNLl-Q?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+
+Further videos:
+
+- YouTube video #1: [`Installing DietPi : Fast Linux For Any Raspberry Pi!!!`](https://www.youtube.com/watch?v=U-UXenzA2m8)
+- YouTube video #2: [`How Install Diet Pi Raspberry Pi 4 Or Any SBC - Install Set Up Configure`](https://www.youtube.com/watch?v=qH0YsFNIyFo)
+- YouTube video #3: [`Headless install of Dietpi | No Monitor, No LAN, No router login | Pre Configure WiFi`](https://www.youtube.com/watch?v=vlMpn9u0Y4o)
+- YouTube video #4: [`Installing DietPi on Raspberry Pi, First Boot and Configuration`](https://www.youtube.com/watch?v=LzJpAUufyy0)
+- YouTube video #5 (German language): [`Raspberry Pi 4 & DietPi - die schnelle Alternative - Grundinstallation einfach erklärt`](https://www.youtube.com/watch?v=J5yPeJFLSO0&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=7)

@@ -17,6 +17,7 @@ ARMv
 ASUS
 Atheros
 Audiophonics
+Autobooting
 autostart
 AutoStart
 backend
@@ -66,7 +67,6 @@ CSI
 CSM
 Ctrl
 Cuberite
-CUPS
 customizable
 DarkBetter
 DarkIce
@@ -120,6 +120,7 @@ FriendlyARM
 FriendlyARM's
 frontend
 fullscreen
+FuguHub
 Gbit
 GiB
 GiBi
@@ -180,10 +181,12 @@ klick
 Kodi
 Koel
 Komga
+Kubernetes
 LASP
 lcd
 LEDs
 LEMP
+Lerdorf
 LESP
 LetsEncrypt
 LGPL
@@ -217,7 +220,7 @@ MicroSol
 Minecraft
 MineOS
 MiniDLNA
-Minio
+MinIO
 MIPI
 MkDocs
 Mopidy
@@ -291,6 +294,7 @@ PSU
 PuTTY
 Pydio
 pyenv
+PyPI
 qBittorrent
 Queneuder
 QuiteRSS
@@ -299,6 +303,7 @@ Radarr
 Radxa
 RAMdisk
 RAMlog
+Rasmus
 Raspbian
 Raspotify
 rcon

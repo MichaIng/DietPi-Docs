@@ -2,58 +2,55 @@ name: Build test and quality checks
 on: push
 jobs:
   Actions:
+    # https://github.com/actions/virtual-environments
     runs-on: ubuntu-20.04
     steps:
-      - name: Clone DietPi-Docs repository
-        id: clone
-        uses: actions/checkout@v2
-      - name: Install latest Node.js
-        run: |
-          sudo npm i -g n
-          sudo n latest
-      - name: Install markdownlint-cli2
-        run: sudo npm i -g markdownlint-cli2
-      - name: Check Markdown syntax
-        run: markdownlint-cli2 '**.md'
-      - name: Set up Python 3.7 for MkDocs and PySpelling
-        id: python
-        if: always() && steps.clone.outcome == 'success'
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.7'
-      - name: Install MkDocs Python dependencies
-        id: python_deps
-        if: always() && steps.python.outcome == 'success'
-        run: |
-          pip3 install -U pip wheel setuptools
-          pip3 install -r requirements.txt
-      - name: Configure MkDocs
-        id: mkdocs_config
-        if: always() && steps.python_deps.outcome == 'success'
-        run: |
-          sed -i "/repo_url/c\repo_url: https://github.com/$GITHUB_REPOSITORY" mkdocs.yml
-          sed -i "/edit_uri/c\edit_uri: edit${GITHUB_REF#refs/heads}/docs/" mkdocs.yml
-      - name: Build DietPi-Docs
-        id: build
-        if: always() && steps.mkdocs_config.outcome == 'success'
-        run: mkdocs build -sd build/docs
-      - name: Install PySpelling
-        id: pyspelling
-        if: always() && steps.build.outcome == 'success'
-        run: |
-          pip3 install -U pyspelling
-          sudo apt-get -q update
-          sudo apt-get -qq --no-install-recommends install aspell-en
-      - name: Check spelling in HTML files
-        if: always() && steps.pyspelling.outcome == 'success'
-        run: pyspelling -c .spellcheck.yml
-      - name: Download lychee
-        id: lychee
-        if: always() && steps.build.outcome == 'success'
-        run: |
-          curl -sSfL "$(curl -sSfL https://api.github.com/repos/lycheeverse/lychee/releases/latest | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-gnu.tar.gz"/{print $4;exit}')" -o lychee.tar.gz
-          tar xf lychee.tar.gz
-          rm lychee.tar.gz
-      - name: Check links in README and HTML files
-        if: always() && steps.lychee.outcome == 'success'
-        run: ./lychee -v --github-token '${{ secrets.GITHUB_TOKEN }}' --exclude 'https://twitter.com' README.md 'build/**/*.html'
+    - name: Clone DietPi-Docs repository
+      id: clone
+      # https://github.com/actions/checkout/releases
+      uses: actions/checkout@v2
+    - name: Install latest Node.js for markdownlint-cli2
+      run: |
+        sudo npm i -g n
+        sudo n latest
+    - name: Install markdownlint-cli2
+      run: sudo npm i -g markdownlint-cli2
+    - name: Check Markdown syntax
+      run: markdownlint-cli2 '**.md'
+    - name: Set up Python 3.9 for MkDocs and PySpelling
+      id: python
+      if: always() && steps.clone.outcome == 'success'
+      # https://github.com/actions/setup-python/releases
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Install MkDocs Python dependencies
+      id: python_deps
+      if: always() && steps.python.outcome == 'success'
+      run: |
+        pip3 install -U pip wheel setuptools
+        pip3 install -r requirements.txt
+    - name: Build DietPi-Docs
+      id: build
+      if: always() && steps.python_deps.outcome == 'success'
+      run: mkdocs build -sd build/docs
+    - name: Install PySpelling
+      id: pyspelling
+      if: always() && steps.build.outcome == 'success'
+      run: |
+        pip3 install -U pyspelling
+        sudo apt-get -q update
+        sudo apt-get -qq --no-install-recommends install aspell-en
+    - name: Check spelling in HTML files
+      if: always() && steps.pyspelling.outcome == 'success'
+      run: pyspelling -c .spellcheck.yml
+    - name: Download lychee
+      id: lychee
+      if: always() && steps.build.outcome == 'success'
+      run: |
+        curl -sSfL "$(curl -sSfL https://api.github.com/repos/lycheeverse/lychee/releases/latest | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-gnu.tar.gz"/{print $4;exit}')" -o lychee.tar.gz
+        tar xf lychee.tar.gz
+        rm lychee.tar.gz
+    - name: Check links in README and HTML files
+      if: always() && steps.lychee.outcome == 'success'
+      run: ./lychee -X head -v --github-token '${{ secrets.GITHUB_TOKEN }}' --exclude 'https://twitter.com' README.md 'build/**/*.html'

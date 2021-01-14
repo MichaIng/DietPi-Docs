@@ -407,6 +407,12 @@ Automatically download your favorite TV shows, as they become available.
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     [![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png)](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902){: style="width:200px"}
 
+***
+
+YouTube video tutorial: *How to install and configure Sonarr on Raspberry Pi with DietPi*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3h0GvdKcR0Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Radarr
 
 Automatically download your favorite movies, as they become available.
@@ -471,6 +477,12 @@ Automatically download your favorite movies, as they become available.
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     [![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png)](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902){: style="width:200px"}
 
+***
+
+YouTube video tutorial: *How to install and configure Radarr on Raspberry Pi with DietPi*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ji9CgSBcf5E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Bazarr
 
 Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
@@ -507,10 +519,10 @@ Key features:
 
     - Use the internal web based updater
 
-=== "Official documentation"
+***
 
-    - [Official docs](https://github.com/morpheus65535/bazarr/wiki)
-    - [Source code](https://github.com/morpheus65535/bazarr)
+Official documentation: <https://github.com/morpheus65535/bazarr/wiki>  
+Source code: <https://github.com/morpheus65535/bazarr>
 
 ## Lidarr
 
@@ -609,6 +621,12 @@ Recommend additional software:
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
     [![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png)](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902){: style="width:200px"}
+
+***
+
+YouTube video tutorial: *How to install and configure CouchPotato on Raspberry Pi | Download all movies at once*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PkDcVy8cvkg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Jackett
 

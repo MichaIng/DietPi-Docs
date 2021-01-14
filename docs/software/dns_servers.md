@@ -90,7 +90,17 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     The monitoring of a *Pi-hole* system via Netdata is described there: <https://learn.netdata.cloud/guides/monitor/pi-hole-raspberry-pi>.
 
-See also <https://wikipedia.org/wiki/Pi-hole>.
+***
+
+Wikipedia: <https://wikipedia.org/wiki/Pi-hole>
+
+YouTube video tutorial #1: *Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RO2_eZlVrj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+YouTube video tutorial #2: [`Block ads everywhere with Pi-hole and PiVPN on DietPi`](https://www.youtube.com/watch?v=qbLEHlKkGiE)  
+YouTube video tutorial #3 (German language): [`Raspberry Pi & DietPi : Pi-hole der Werbeblocker für Netzwerke mit Anleitung für AVM FritzBox`](https://www.youtube.com/watch?v=vXUvFWhXW6c&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=6)  
+YouTube video tutorial #4 (German language): [`Raspberry Pi Zero W mit Pi-hole - günstiger Werbeblocker & Schritt für Schritt Anleitung unter DietPi`](https://www.youtube.com/watch?v=IxWuMHu9IYk&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=2)
 
 ## Unbound
 
@@ -118,7 +128,9 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 
     Update to latest version: `apt update && apt upgrade`
 
+***
+
 Source code: <https://github.com/NLnetLabs/unbound>.  
-See also <https://nlnetlabs.nl/documentation/unbound/> resp. <https://nlnetlabs.nl/documentation/unbound/unbound/>.
+Official documentation: <https://nlnetlabs.nl/documentation/unbound> resp. <https://nlnetlabs.nl/documentation/unbound/unbound>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

@@ -37,10 +37,9 @@ FreshRSS is a self-hosted RSS feed aggregator.
     - Username = `dietpi`
     - Password = `dietpi`
 
-=== "Usage"
+***
 
-    Please refer to the official online documentation for usage information:  
-    <https://freshrss.github.io/FreshRSS/en/users/02_First_steps.html>
+Official documentation: <https://freshrss.github.io/FreshRSS/en/users/02_First_steps.html>
 
 ## phpBB
 
@@ -161,7 +160,13 @@ Also Installs:
         mv dietpi-logo_192x192.png /var/www/gallery/MyImageFolder/
         ```
 
-See also <https://sye.dk/sfpg/>.
+***
+
+Website: <https://sye.dk/sfpg>
+
+YouTube video tutorial: *DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0by117lpq_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Baïkal
 

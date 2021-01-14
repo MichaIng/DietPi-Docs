@@ -40,7 +40,9 @@ DietPi-NordVPN is a combination of OpenVPN installation and DietPi front end GUI
     Once installed using `dietpi-software`, simply run `dietpi-nordvpn` to use the GUI, allowing you to setup your connection.  
     DietPi will also automatically start and connect the VPN during system boot.
 
-See also <https://wikipedia.org/wiki/NordVPN>.
+***
+
+Wikipedia: <https://wikipedia.org/wiki/NordVPN>
 
 ## OpenVPN
 
@@ -107,7 +109,11 @@ An easy to use VPN server and client system. The DietPi installation of OpenVPN 
     To allow VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces:  
     `pihole -a -i local`
 
-See also <https://wikipedia.org/wiki/OpenVPN> resp. <https://openvpn.net/>.
+***
+
+Website: <https://openvpn.net>  
+Wikipedia: <https://wikipedia.org/wiki/OpenVPN>  
+Installation article (German language): [`PiVPN: Raspberry Pi mit OpenVPN – Raspberry Pi Teil3`](https://www.kuketz-blog.de/pivpn-raspberry-pi-mit-openvpn-raspberry-pi-teil3/)
 
 ## PiVPN
 
@@ -123,7 +129,13 @@ PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a c
 
     Simply run the command `pivpn -a`.
 
-See also <https://www.pivpn.io/>.
+***
+
+Website: <https://www.pivpn.io>
+
+YouTube video tutorial: *DietPi PiVPN Server Setup on Raspberry Pi 3 B Plus*.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0t0bwskZJFw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## WireGuard
 
@@ -210,6 +222,13 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     The WireGuard kernel module needs to rebuild whenever the kernel is updated. On most devices this will be done automatically, when the kernel (+headers) is updated via APT package, which then usually triggers the module rebuild.  
     If you update the kernel outside of APT, via `source build` or commands like `rpi-update`, assure that matching kernel headers are installed as well and rebuild the WireGuard module via: `dpkg-reconfigure wireguard-dkms`.
 
-See also <https://wikipedia.org/wiki/WireGuard> resp. <https://www.wireguard.com/>.
+***
+
+Website: <https://www.wireguard.com>  
+Wikipedia: <https://wikipedia.org/wiki/WireGuard>
+
+YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: Installation unter DietPi mit NoIP und AVM Fritzbox`.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yRkdzGmnvA4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)

@@ -99,8 +99,10 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
     To re-enabled TigerVNC autostart, run `systemctl enable vncserver`, to stop it manually `systemctl stop vncserver` can be used.
 
-See also <https://tigervnc.org/>.
-Man page: <https://tigervnc.org/doc/Xvnc.html>
+***
+
+See also <https://tigervnc.org>  
+Man page: <https://tigervnc.org/doc/Xvnc.html>  
 Source code: <https://github.com/TigerVNC/tigervnc>
 
 ## RealVNC Server
@@ -161,10 +163,10 @@ XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 === "Connect to your desktop"
 
     To connect to the desktop, open the remote desktop application in Windows (or any other XRDP compatible client).  
-    Enter the IP address of your DietPi device (e.g.: 192.168.0.100).  
+    Enter the IP address of your DietPi device, e.g. `192.168.0.100`.  
     Click connect and enter the following details once connected:
 
-    - Module = `Xvnc` (Jessie = `Sesman-Xvnc`)
+    - Module = `Xorg`
     - Username = `root`
     - Password = `dietpi`
 
@@ -225,6 +227,12 @@ Examples of TCP ports for Remot3.it:
     Sign into your Remot3.it account to access your devices remotely:
 
     - URL = <https://www.remote.it>
+
+***
+
+YouTube video tutorial (German language): `Raspberry Pi einfach fernsteuern: Remote.It SSH ohne VPN von überall - Installation unter DietPi`.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V5MZXBo3hGw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## VirtualHere
 
