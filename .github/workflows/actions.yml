@@ -53,4 +53,4 @@ jobs:
         rm lychee.tar.gz
     - name: Check links in README and HTML files
       if: always() && steps.lychee.outcome == 'success'
-      run: ./lychee -X head -v --github-token '${{ secrets.GITHUB_TOKEN }}' --exclude 'https://twitter.com' README.md 'build/**/*.html'
+      run: ./lychee -X head --github-token '${{ secrets.GITHUB_TOKEN }}' --exclude 'https://twitter.com' -v README.md 'build/**/*.html'
