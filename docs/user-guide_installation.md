@@ -283,7 +283,7 @@ A login prompt will appear. Use the initial credentials:
     ssh root@192.168.1.20
     ```
 
-To further proceed you’ll need to accept the DietPi GPL license. Hit the Enter key on your keyboard to do this.
+To further proceed you’ll need to accept the DietPi GPL license. Hit the ++enter++ key on your keyboard to do this.
 
 ![dietpi-login01](assets/images/dietpi-login01.jpg)
 
@@ -296,7 +296,7 @@ Once the packages have been updated, DietPi will ask you to confirm whether you 
 
 ![dietpi-data](assets/images/dietpi-data-policy.jpg)
 
-The default DietPi password is public, so you’ll be asked to change this at the next stage for both the `root` and `dietpi` user accounts. Select OK and hit enter, then provide your password (twice) to confirm.
+The default DietPi password is public, so you’ll be asked to change this at the next stage for both the `root` and `dietpi` user accounts. Select OK and hit ++enter++, then provide your password (twice) to confirm.
 
 You can change the password again later by typing `passwd` at the terminal or also via the command line script `dietpi-config` (within the "Security options").
 

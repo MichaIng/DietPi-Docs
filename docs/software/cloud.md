@@ -49,8 +49,14 @@ Also Installs:
     - Username = `admin`
     - Password = <your global password\>
 
-    If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).  
-    We added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`: Just use `occ` followed by the desired command inside your terminal.
+    If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).
+
+    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`.  
+    Just use inside your terminal:
+
+    ```
+    occ [followed by the desired command]
+    ```
 
 === "Update ownCloud to the latest version"
 
@@ -666,9 +672,9 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
 === "Interactive install"
 
-    1. Press `ENTER` to continue
-    2. Press `y` to accept license
-    3. Press `y `for `VPS` or `n` for `home/office` server
+    1. Press ++enter++ to continue
+    2. Press ++y++ to accept license
+    3. Press ++y++ for `VPS` or ++n++ for `home/office` server
     4. Choose whether to install an internal BitTorrent client.
 
     !!! warning ""
@@ -683,7 +689,8 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
 === "Logging"
     - Service: `journalctl -u bdd`
-    - Trace: `/home/bd/trace/` # It contains an info about the database creation only, even after playing around with the web UI a bid.
+    - Trace: `/home/bd/trace/`  
+      It contains an info about the database creation only, even after playing around with the web UI a bit.
 
 ***
 

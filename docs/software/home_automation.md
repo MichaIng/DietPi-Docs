@@ -171,7 +171,7 @@ The following hardware is required:
     - Enter your unit costs for your electric (optional).
 
     Then click `Save`.  
-    Press `F5` to refresh the page and view your energy consumption.
+    Press ++f5++ to refresh the page and view your energy consumption.
 
 ## Domoticz
 
@@ -186,7 +186,9 @@ Domoticz is a Home Automation System that lets you monitor and configure various
 
 === "View logs"
 
-    `journalctl -u domoticz`
+    ```sh
+    journalctl -u domoticz
+    ```
 
 === "Install directory"
 

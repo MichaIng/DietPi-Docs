@@ -26,17 +26,17 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "Software Optimised"
 
-    - Begin by selecting **Software Optimized** in the main menu list and hit Enter.
+    - Begin by selecting **Software Optimized** in the main menu list and hit ++enter++.
 
     - Scroll through the list of available software - for more details check [DietPi Optimised Software](../dietpi_optimised_software/).
 
     The list of optimised software is long. You either browse the list or use the option **Search**.
 
-    - To install software on your DietPi, select it in the list and press the **space bar** to add it to the installation list. If you change your mind, hit space again to remove it.
+    - To install software on your DietPi, select it in the list and press ++space++ to add it to the installation list. If you change your mind, hit ++space++ again to remove it.
 
-    - Once you’ve selected the software you wish to install, press the tab key on your keyboard to switch to the confirmation options at the bottom. Select **OK**, then hit enter on your keyboard to confirm.
+    - Once you’ve selected the software you wish to install, press ++tab++ to switch to the confirmation options at the bottom. Select **OK**, then hit ++enter++ to confirm.
 
-    - To begin installing your software, select **Install** from the main menu list, then hit the Enter key. DietPi will ask you to confirm your choice(s). Select **OK**, then hit enter to begin the installation.
+    - To begin installing your software, select **Install** from the main menu list, then hit ++enter++. DietPi will ask you to confirm your choice(s). Select **OK**, then hit ++enter++ to begin the installation.
 
     The software you selected will begin to install at this point. Once the process is completed, you may be asked to restart your device. Press **OK** to confirm.
 
@@ -98,11 +98,11 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 === "Webserver Preference"
 
     The DietPi **Webserver Preference** system allows you to choose your favourite webserver for use in DietPi installations. If not decided, read more on [Which WEBSERVER to CHOOSE ?](../software/webserver_stack/#which-web-application-stack-is-best-for-you)
-    
+
     !!! hint "Automatic selection"
 
         When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
-    
+
         As a result you will not need to manually select/install a webserver stack. DietPi will do it all for you.
 
     ![DietPi-Software Webserver Preference menu screenshot](assets/images/dietpi-software-webserver-preference.png){: style="width:550px"}
@@ -117,7 +117,10 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     For all software you install in dietpi-software, you can access your user data with `/mnt/dietpi_userdata`. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
     To check where the physical location is, you can run the following command:  
-    `readlink -f /mnt/dietpi_userdata`
+
+    ```sh
+    readlink -f /mnt/dietpi_userdata
+    ```
 
     You can **move your user data** to another location (e.g. USB drive). Simply run `dietpi-software` and enter the *User data location* menu option:
 
@@ -251,7 +254,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "DietPi Led control"
 
-    Change triggers for the status LEDs on your SBC/motherboard.
+    Change triggers for the status LEDs on your SBC/motherboard.  
     Run `dietpi-led_control`.
 
     ![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg)
@@ -315,6 +318,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "DietPi survey"
 
+    This option will upload information on a anonymous base. The aggregated results of all uploads can be seen on the [DietPi survey statistics website](https://dietpi.com/survey/).  
     Run `dietpi-survey`.
 
     ![DietPi-Survey screenshot](assets/images/dietpi-survey.jpg)

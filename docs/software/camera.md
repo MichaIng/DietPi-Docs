@@ -92,7 +92,11 @@ The software can
 
 === "Upgrading"
 
-    MotionEye can be upgraded to latest version via `sudo pip2 install -U motioneye`.
+    MotionEye can be upgraded to latest version via
+
+    ```sh
+    sudo pip2 install -U motioneye
+    ```
 
 See also <https://github.com/ccrisan/motioneye/wiki>.
 
