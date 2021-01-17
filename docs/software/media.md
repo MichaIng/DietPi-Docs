@@ -177,7 +177,7 @@ Also installs:
 
     If you did not select CAVA to start from boot:
 
-    - CAVA can also be run by typing `cava`. Use `CTRL+C` to terminate.
+    - CAVA can also be run by typing `cava`. Use ++ctrl+c++ to terminate.
     - You can modify the autostart options in `dietpi-autostart`.
 
 === "DietPi-JustBoom control panel"
@@ -207,8 +207,11 @@ Mopidy is a python based music player web based user interface for MPD.
 
 === "Refresh music files / database"
 
-    This is done automatic, however, you can force an update using the command  
-    `mopidyctl local scan`.
+    This is done automatic, however, you can force an update using the command
+
+    ```sh
+    mopidyctl local scan
+    ```
 
 === "Adding Mopidy extensions"
 
@@ -280,7 +283,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 === "GitHub Contributions"
 
-    Many thanks to 'thechildofroth' for his testing and fixes with the Subsonic installation.
+    Many thanks to [thechildofroth](https://github.com/thechildofroth) for his testing and fixes with the Subsonic installation.
 
 ## Logitech Media Server
 
@@ -318,7 +321,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
       : The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
 
-    - Save changes with `CTRL+o` and exit `dietpi-services`
+    - Save changes with ++ctrl+o++ and exit `dietpi-services`
     - Restart the service: `systemctl restart squeezelite`
 
 ## Squeezelite
@@ -352,7 +355,7 @@ Squeezelite is the audio player for the Logitech Media Server.
 
       : The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
 
-    - Save changes with `CTRL+o` and exit `dietpi-services`
+    - Save changes with ++ctrl+o++ and exit `dietpi-services`
     - Restart the service: `systemctl restart squeezelite`
 
 ## Shairport Sync
@@ -405,9 +408,9 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
     Increasing the `shairplay-sync` process priority (nice) may resolve the issue.
 
     - Run `dietpi-services` from the terminal
-    - Select `shairport-sync` via up/down buttons then press `Enter`
-    - Select `CPU Nice` via up/down buttons then press `Enter`
-    - Select `-20 : (Highest priority)` via up button, then press `Enter`
+    - Select `shairport-sync` via up/down buttons then press ++enter++
+    - Select `CPU Nice` via up/down buttons then press ++enter++
+    - Select `-20 : (Highest priority)` via up button, then press ++enter++
 
     DietPi will then automatically apply and set the nice level.
 
@@ -505,8 +508,11 @@ Also Installs:
 
 === "Update Ampache"
 
-    To update Ampache to the current version, execute  
-    `dietpi-software reinstall 40`.
+    To update Ampache to the current version, execute
+
+    ```sh
+    dietpi-software reinstall 40
+    ```
 
 ## Emby
 
@@ -548,8 +554,11 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
 === "Update"
 
-    To update the Emby Server version simply reinstall Emby Server to update it to newest version. It will preserve any existing data and settings:  
-    `dietpi-software reinstall 41`
+    To update the Emby Server version simply reinstall Emby Server to update it to newest version. It will preserve any existing data and settings:
+
+    ```sh
+    dietpi-software reinstall 41
+    ```
 
 ***
 
@@ -716,7 +725,9 @@ Also works with Roon.
 
 === "Update method"
 
-    `dietpi-software reinstall 124`
+    ```sh
+    dietpi-software reinstall 124
+    ```
 
 ***
 
@@ -828,7 +839,9 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
 === "Update to the latest version"
 
-    `dietpi-software reinstall 80`
+    ```sh
+    dietpi-software reinstall 80
+    ```
 
 ***
 
@@ -856,13 +869,17 @@ Free and open source comics/mangas media server with web UI.
 
 === "View logs"
 
-    `journalctl -u komga`
+    ```sh
+    journalctl -u komga
+    ```
 
     If you require file logging, set a path via `config` file, like `logging:` \> `file:` \> `name: /var/log/komga/komga.log`, assure that the directory exists and the `komga` user or group has write permissions.
 
 === "Update to latest version"
 
-    `dietpi-software reinstall 179`
+    ```sh
+    dietpi-software reinstall 179
+    ```
 
 ***
 
