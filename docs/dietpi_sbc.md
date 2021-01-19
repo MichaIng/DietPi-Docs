@@ -11,11 +11,11 @@ The Raspberry Pi has sold more than 31 million units since it launched in 2012. 
 
 You can install DietPi by following the step by step [Starting guide](../user-guide_installation/).
 
-DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400/?resellerType=home)
+DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400/?resellerType=home),
 
 ![DietPi Raspberry Pi 400](./assets/images/dietpi-raspberry-pi-400-back.jpg)
 
-, or the most recent **Raspberry Pi 4 Model B** boards, launched in 2019, as well as in 2020.
+or the most recent **Raspberry Pi 4 Model B** boards, launched in 2019, as well as in 2020.
 
 <img src="../assets/images/raspberry-pi-4-labelled.png" title="Raspberry Pi model 4B" width="500" />
 
@@ -590,11 +590,14 @@ After this, the script runs a couple of minutes, finally the following message o
 
 ![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: style="width:550px"}
 
-If you did not use branch `master` the last step is to edit file `/boot/dietpi.txt` and edit the entry  
+If you did not use branch `master` the last step is to edit file `/boot/dietpi.txt` and edit the  
 `DEV_GITBRANCH=master`  
 which is near the end of the file.
 
 After this you can restart your system (`reboot`), alternatively you can copy the SC card (via `dd`) to an image (`.img`) to duplicate your base installation.
 
-A further step can be to generate a compressed DietPi image via the `dietpi-imager` script (located in the `.meta` subdirectory in the [GitHub DietPi share](https://github.com/MichaIng/DietPi/) or via  
-`sudo bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager)"`).
+A further step can be to generate a compressed DietPi image via the `dietpi-imager` script. This script is located in the `.meta` subdirectory in the [GitHub DietPi share](https://github.com/MichaIng/DietPi/) or can be executed via
+
+```sh
+sudo bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager)"
+```

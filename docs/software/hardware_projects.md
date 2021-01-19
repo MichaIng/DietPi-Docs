@@ -57,8 +57,11 @@
         sudo -u dietpi /mnt/dietpi_userdata/voice-recognizer-raspi/env/bin/python3 -u /mnt/dietpi_userdata/voice-recognizer-raspi/src/main.py
         ```
 
-    - Once the "Ok, Google" prompt appears, test the device. Then you can terminate the program with `CTRL+C` and restart the services:  
-      `dietpi-services restart`
+    - Once the "Ok, Google" prompt appears, test the device. Then you can terminate the program with ++ctrl+c++ and restart the services:
+
+      ```sh
+      dietpi-services restart
+      ```
 
 === "Installation notes"
 
@@ -67,8 +70,11 @@
 
 === "Check service status"
 
-    To check the status of the service run:  
-    `dietpi-services status`
+    To check the status of the service run:
+
+    ```sh
+    dietpi-services status
+    ```
 
     ![DietPi hardware projects software Google AIY htop screenshot](../assets/images/dietpi-software-hardwareprojects-googleaiy-htop.png){: style="width:500px"}
 
@@ -80,10 +86,10 @@ Mycroft AI is a free and open source voice assistant.
 
 === "Interactive install"
 
-    1. Branch selection: For unexperienced users we recommend the master branch as well: `y`
-    2. Auto updates: It slows down the the startup process a bit, but it anyway takes a while to load all skills, so we recommend this as well: `y`
-    3. Add Mycroft commands to PATH: Chose *NO* here, since the installer runs as user `mycroft`, which is no login user, which is why this has no effect: `n`
-    4. Check code before submitting: If you are an official Mycroft developer, choose `y`, else: `n`
+    1. Branch selection: For unexperienced users we recommend the master branch as well: ++y++
+    2. Auto updates: It slows down the the startup process a bit, but it anyway takes a while to load all skills, so we recommend this as well: ++y++
+    3. Add Mycroft commands to PATH: Chose *NO* here, since the installer runs as user `mycroft`, which is no login user, which is why this has no effect: ++n++
+    4. Check code before submitting: If you are an official Mycroft developer, choose ++y++, else: ++n++
 
 === "Initial setup"
 
@@ -443,7 +449,7 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
         - click `New dashboard`
         - click `Graph`
         - click on the example graph
-        - Press `e` to edit the Data Source and the custom query
+        - Press ++e++ to edit the Data Source and the custom query
 
 === "Installation information"
 

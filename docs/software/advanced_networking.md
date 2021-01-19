@@ -118,7 +118,7 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
 
 === "Keeping up-to-date"
 
-    Keeping Tor relays updated is important to the safety of both the users and the operator. Because of this, automated upgrades are recommended and asked about when first installing. Otherwise, use `apt-get update && apt-get upgrade`
+    Keeping Tor relays updated is important to the safety of both the users and the operator. Because of this, automated upgrades are recommended and asked about when first installing. Otherwise, use `apt-get update && apt-get upgrade`.
 
 ***
 
@@ -189,7 +189,7 @@ Use your No-IP account and website URL address to always have it pointing to you
 The setup of No-IP is done as follows:
 
 - Create your free No-IP account <https://www.noip.com/sign-up> and select a web address for your account.
-- Type `dietpi-config` in a terminal and press enter.
+- Type `dietpi-config` in a terminal and press ++enter++.
 - Go to *Networking Options: Misc* and select *No-IP* from the menu.
     If No-IP is not yet installed, confirm the installation and reselect No-IP from the menu once completed.
 - Type in your *username* and *password* details at the prompt.

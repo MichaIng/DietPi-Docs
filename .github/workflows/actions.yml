@@ -5,62 +5,56 @@ jobs:
     # https://github.com/actions/virtual-environments
     runs-on: ubuntu-20.04
     steps:
-      - name: Clone DietPi-Docs repository
-        id: clone
-        # https://github.com/actions/checkout/releases
-        uses: actions/checkout@v2
-      - name: Install latest Node.js
-        run: |
-          sudo npm i -g n
-          sudo n latest
-      - name: Install markdownlint-cli2
-        run: sudo npm i -g markdownlint-cli2
-      - name: Check Markdown syntax
-        run: markdownlint-cli2 '**.md'
-      - name: Set up Python 3.9 for MkDocs and PySpelling
-        id: python
-        if: always() && steps.clone.outcome == 'success'
-        # https://github.com/actions/setup-python/releases
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-      - name: Install MkDocs Python dependencies
-        id: python_deps
-        if: always() && steps.python.outcome == 'success'
-        run: |
-          pip3 install -U pip wheel setuptools
-          pip3 install -r requirements.txt
-      - name: Configure MkDocs
-        id: mkdocs_config
-        if: always() && steps.python_deps.outcome == 'success'
-        run: |
-          sed -i "/repo_url/c\repo_url: https://github.com/$GITHUB_REPOSITORY" mkdocs.yml
-          sed -i "/edit_uri/c\edit_uri: edit${GITHUB_REF#refs/heads}/docs/" mkdocs.yml
-      - name: Build DietPi-Docs
-        id: build
-        if: always() && steps.mkdocs_config.outcome == 'success'
-        run: mkdocs build -sd build/docs
-      - name: Install PySpelling
-        id: pyspelling
-        if: always() && steps.build.outcome == 'success'
-        run: |
-          pip3 install -U pyspelling
-          sudo apt-get -q update
-          sudo apt-get -qq --no-install-recommends install aspell-en
-      - name: Check spelling in HTML files
-        if: always() && steps.pyspelling.outcome == 'success'
-        run: pyspelling -c .spellcheck.yml
-      - name: Setup Go 1.15 for liche
-        id: go
-        if: always() && steps.build.outcome == 'success'
-        # https://github.com/actions/setup-go/releases
-        uses: actions/setup-go@v2
-        with:
-          go-version: '1.15'
-      - name: Install liche
-        id: liche
-        if: always() && steps.go.outcome == 'success'
-        run: GO111MODULE=on go get -u github.com/raviqqe/liche
-      - name: Check links in HTML and Markdown files
-        if: always() && steps.liche.outcome == 'success'
-        run: liche -c 64 -x 'https://(github|twitter).com' -d build -r README.md build/docs
+    - name: Clone DietPi-Docs repository
+      id: clone
+      # https://github.com/actions/checkout/releases
+      uses: actions/checkout@v2
+    - name: Install latest Node.js for markdownlint-cli2
+      run: |
+        sudo npm i -g n
+        sudo n latest
+    - name: Install markdownlint-cli2
+      run: sudo npm i -g markdownlint-cli2
+    - name: Check Markdown syntax
+      run: markdownlint-cli2 '**.md'
+    - name: Set up Python 3.9 for MkDocs and PySpelling
+      id: python
+      if: always() && steps.clone.outcome == 'success'
+      # https://github.com/actions/setup-python/releases
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Install MkDocs Python dependencies
+      id: python_deps
+      if: always() && steps.python.outcome == 'success'
+      run: |
+        pip3 install -U pip wheel setuptools
+        pip3 install -r requirements.txt
+    - name: Build DietPi-Docs
+      id: build
+      if: always() && steps.python_deps.outcome == 'success'
+      run: mkdocs build -sd build/docs
+    - name: Install PySpelling
+      id: pyspelling
+      if: always() && steps.build.outcome == 'success'
+      run: |
+        pip3 install -U pyspelling
+        sudo apt-get -q update
+        sudo apt-get -qq --no-install-recommends install aspell-en
+    - name: Check spelling in HTML files
+      if: always() && steps.pyspelling.outcome == 'success'
+      run: pyspelling -c .spellcheck.yml
+    - name: Setup Go 1.15 for liche
+      id: go
+      if: always() && steps.build.outcome == 'success'
+      # https://github.com/actions/setup-go/releases
+      uses: actions/setup-go@v2
+      with:
+        go-version: '1.15'
+    - name: Install liche
+      id: liche
+      if: always() && steps.go.outcome == 'success'
+      run: GO111MODULE=on go get -u github.com/raviqqe/liche
+    - name: Check links in README.md and HTML files
+      if: always() && steps.liche.outcome == 'success'
+      run: liche -c 64 -x 'https://(github.com|twitter.com|www.spigotmc.org)' -d build -r README.md build/docs

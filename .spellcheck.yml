@@ -16,6 +16,7 @@ matrix:
       - code
       - pre
       - .nospellcheck
+      - a.magiclink
   - pyspelling.filters.url:
   sources:
   - 'build/**/*.html|!build/docs/release-notes/index.html'

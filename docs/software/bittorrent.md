@@ -95,7 +95,9 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 
 === "Access Deluge console"
 
-    `sudo -u debian-deluged deluge-console`
+    ```sh
+    sudo -u debian-deluged deluge-console
+    ```
 
 === "Connect using your desktop Deluge client"
 
@@ -182,7 +184,7 @@ Also installs:
     - local folder = `/mnt/dietpi_userdata/downloads`
 
     Important note:  
-    rTorrent creates a lock file based on the systems hostname. When the hostname is changed (e.g. via `dietpi-config` \> ? Security Options`), then the old lock file needs to be removed to allow rTorrent creating a new one based on the new hostname:
+    rTorrent creates a lock file based on the systems hostname. When the hostname is changed (e.g. via `dietpi-config` \> `Security Options`), then the old lock file needs to be removed to allow rTorrent creating a new one based on the new hostname:
 
     ```sh
     rm /mnt/dietpi_userdata/downloads/.session/rtorrent.lock
@@ -283,8 +285,11 @@ NZB download manager with web interface.
     Requires compile install, please see:  
     <https://sabnzbd.org/wiki/installation/multicore-par2>
 
-    Remark: The steps require a Git client and build tools. You can install these via:  
-    `dietpi-software install 16 17`
+    Remark: The steps require a Git client and build tools. You can install these via:
+
+    ```sh
+    dietpi-software install 16 17`
+    ```
 
 === "Recommended: Protect your privacy with a VPN"
 
@@ -394,7 +399,7 @@ Automatically download your favorite TV shows, as they become available.
     3. Select `Edit`
     4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=`
     5. Add your custom path to the end of this line, separated by one space
-    6. Press `CTRL+o` buttons to save and `CTRL+x` to exit
+    6. Press ++ctrl+o++ buttons to save and ++ctrl+x++ to exit
 
 === "Link databases to RAM"
 
@@ -464,7 +469,7 @@ Automatically download your favorite movies, as they become available.
     3. Select `Edit`
     4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=`
     5. Add your custom path to the end of this line, separated by one space
-    6. Press `CTRL+o` buttons to save and `CTRL+x` to exit
+    6. Press ++ctrl+o++ buttons to save and ++ctrl+x++ to exit
 
 === "Link databases to RAM"
 
@@ -575,7 +580,7 @@ Automatically download your favorite music.
     3. Select `Edit`
     4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=`
     5. Add your custom path to the end of this line, separated by one space
-    6. Press `CTRL+o` buttons to save and `CTRL+x` to exit
+    6. Press ++ctrl+o++ buttons to save and ++ctrl+x++ to exit
 
 === "Link databases to RAM"
 
@@ -655,8 +660,8 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 === "Access to the web interface"
 
     - URL= `http://<your.IP>:6789`
-    Username = `admin`
-    Password = `<your global password>`
+    - Username = `admin`
+    - Password = `<your global password>`
 
 === "Access Downloads"
 
@@ -685,6 +690,8 @@ Do all your HTPC tasks without using 5 different interfaces!
 
 === "Update to latest version"
 
-    `dietpi-software reinstall 155`
+    ```sh
+    dietpi-software reinstall 155
+    ```
 
 [Return to the **Optimised Software list**](../../dietpi_optimised_software)
