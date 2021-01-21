@@ -324,6 +324,14 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
     - Save changes with ++ctrl+o++ and exit `dietpi-services`
     - Restart the service: `systemctl restart squeezelite`
 
+=== "Update"
+
+    To update Logitech Media Server to the current version, execute
+
+    ```sh
+    dietpi-software reinstall 35
+    ```
+
 ## Squeezelite
 
 Squeezelite is the audio player for the Logitech Media Server.
