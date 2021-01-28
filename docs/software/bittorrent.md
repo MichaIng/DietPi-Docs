@@ -31,7 +31,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## Transmission
 
@@ -694,4 +694,4 @@ Do all your HTPC tasks without using 5 different interfaces!
     dietpi-software reinstall 155
     ```
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

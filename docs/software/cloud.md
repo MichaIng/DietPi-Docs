@@ -29,7 +29,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## ownCloud
 
@@ -696,4 +696,4 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
 Website: <https://fuguhub.com>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

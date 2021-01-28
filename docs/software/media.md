@@ -1007,4 +1007,4 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
 Source code: <https://github.com/jellyfin/jellyfin>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

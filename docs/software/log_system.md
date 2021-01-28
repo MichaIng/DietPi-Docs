@@ -22,7 +22,7 @@ The *Log System* can be changed at any time by running `dietpi-software` and sel
 
     ![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg){: style="width:400px"}
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## DietPi-RAMlog
 
@@ -71,4 +71,4 @@ Pros/Cons:
 \+ Comes with both Rsyslog and Logrotate installed as standard  
 \+ The "standard" of Linux logging systems, essential if your log file data is critical to system operation and/or maintenance
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

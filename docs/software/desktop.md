@@ -30,7 +30,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## LXDE
 
@@ -182,4 +182,4 @@ Enables laptop users to set up a power profile for two different modes `on batte
 
 ![DietPi Xfce4 Power manager](../assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg)
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

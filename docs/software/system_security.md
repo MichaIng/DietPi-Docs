@@ -18,7 +18,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## Let’s Encrypt
 
@@ -81,4 +81,4 @@ An IP address is by default ban triggered after 3 failed SSH login attempts. Fai
 
 Website: <https://fail2ban.org/wiki/index.php/Main_Page>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
