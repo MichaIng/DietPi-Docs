@@ -20,7 +20,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## Home Assistant
 
@@ -222,4 +222,4 @@ Also installs:
 Source code: <https://github.com/reloxx13/TasmoAdmin>  
 Credits: Implemented by [`svh1985`](https://github.com/svh1985)
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

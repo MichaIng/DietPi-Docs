@@ -21,7 +21,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## WiFi HotSpot
 
@@ -202,4 +202,4 @@ You will need to enable port forwarding on your router for all programs your req
 
 Website: <https://www.noip.com>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

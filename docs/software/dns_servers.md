@@ -18,7 +18,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## Pi-hole
 
@@ -133,4 +133,4 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 Source code: <https://github.com/NLnetLabs/unbound>.  
 Official documentation: <https://nlnetlabs.nl/documentation/unbound> resp. <https://nlnetlabs.nl/documentation/unbound/unbound>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

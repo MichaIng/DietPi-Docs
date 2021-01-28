@@ -18,7 +18,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## Dropbear
 
@@ -74,4 +74,4 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 Website: <https://www.openssh.com>  
 Wikipedia: <https://wikipedia.org/wiki/OpenSSH>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

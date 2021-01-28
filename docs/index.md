@@ -1,5 +1,5 @@
 ---
-description: How to install DietPi on SBCs and virtualized environments. Install & configure optimised software and much more.  
+description: How to install DietPi on SBCs and virtualized environments. Install & configure optimised software and much more.
 title: DietPi Documentation
 ---
 
@@ -27,15 +27,15 @@ Setting up a single board computer (SBC) or even a computer, for both regular or
 
 ## Getting started
 
-If you are **new to DietPi**, the [_Install_](user-guide_installation) provides a tutorial for everything you need to get DietPi running.
+If you are **new to DietPi**, the [_Install_](install/) provides a tutorial for everything you need to get DietPi running.
 
-If you **need help**, and have read through [_Getting Started_](user-guide_overview), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11).
+If you **need help**, and have read through [_Getting Started_](getting_started/), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11).
 
 For more details visit the [_DietPi Community Forum_](https://dietpi.com/phpbb/viewforum.php?f=5).
 
 ## Easy to install popular software
 
-You can **quickly and easily install popular software** ! All of them are **READY TO RUN** and optimised for your system. The list of available apps is long , and for the full list checkout [_DietPi Optimised Software_](dietpi_optimised_software) page. Here are few highlights:
+You can **quickly and easily install popular software** ! All of them are **READY TO RUN** and optimised for your system. The list of available apps is long , and for the full list checkout [_DietPi Optimised Software_](software/) page. Here are few highlights:
 
 - Desktops (MATE/Xfce)
 - Remote Desktop (VNC/NoMachine)
@@ -44,13 +44,13 @@ You can **quickly and easily install popular software** ! All of them are **READ
 - Cloud/Backup (Nextcloud/Syncthing)
 - Gaming (Amiberry/MineOS)
 - Social, Surveillance, Hotspots, System Stats, Hardware Projects, Stacks (LAMP/LEMP), Pi-hole, VPN, File Servers, Home Automation and Printing
-and [much more...](dietpi_optimised_software)
+and [much more...](software/)
 
 DietPi does everything for you, giving you more time to enjoy the software you need.
 
 ## What is supported?
 
-Check [_Supported SBCs_](hardware-supported_sbc) page for recently supported list.
+Check [_Supported SBCs_](hardware/) page for recently supported list.
 
 **_Note:_** “Supported” is not a guarantee. “Supported” implies a particular SBC is at a high level of software maturity, but has no intention to support all possible SBC functions.
 

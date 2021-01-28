@@ -33,7 +33,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
     From the list of **Optimised Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## TigerVNC Server
 
@@ -252,4 +252,4 @@ Once installed, available VirtualHere devices will be shown in the client user i
     - Do not use drives on the client that are mounted on the SBC.  
       Unmount the drive before hand in `dietpi-drive_manager`.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

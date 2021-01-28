@@ -24,7 +24,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## OpenTyrian
 
@@ -455,4 +455,4 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 Website: <https://paper.readthedocs.io>  
 Source code: <https://github.com/PaperMC/Paper>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

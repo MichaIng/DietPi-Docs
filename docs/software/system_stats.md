@@ -22,7 +22,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## DietPi-CloudShell
 
@@ -248,4 +248,4 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
 Website: <https://www.webmin.com>  
 Wikipedia: <https://wikipedia.org/wiki/Webmin>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

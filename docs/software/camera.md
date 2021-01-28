@@ -18,7 +18,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## RPi Cam Control
 
@@ -100,4 +100,4 @@ The software can
 
 See also <https://github.com/ccrisan/motioneye/wiki>.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
