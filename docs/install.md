@@ -27,7 +27,7 @@ Select the following tabs for the installation description of your target.
 
     To follow this tutorial, you will need the next hardware list:
 
-    - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](../hardware-supported_sbc/)
+    - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](../hardware/)
     - An SD card of at least 4 GiB, and a way to write it on your computer (integrated slot or external SD card reader)
     - Optional: Ethernet (network) cable
 
@@ -304,7 +304,7 @@ You can change the password again later by typing `passwd` at the terminal or al
 
 ## 5. Further steps
 
-The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use: Just run `dietpi-software` and install [**DietPi Optimised Software**](../dietpi_optimised_software).  
+The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use: Just run `dietpi-software` and install [**DietPi Optimised Software**](../software/).  
 You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
 
 If you want to make further changes to your DietPi configuration, you can run `dietpi-launcher` at the terminal to view all the available DietPi tools, including **DietPi-Update** to update your device and **DietPi-Backup** to back up your device.

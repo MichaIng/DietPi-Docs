@@ -74,38 +74,12 @@ plugins:
       reduce_boolean_attributes: true
 - redirects:
     redirect_maps:
-      dietpi-software-bittorrent.md: software/bittorrent.md
-      user-optimised-software.md: dietpi_optimised_software.md
-      user-guide_install.md: user-guide_installation.md
-      user-guide_install_uefi.md: user-guide_installation.md
-      user-guide_install_VirtualBox.md: user-guide_installation.md
-      hardware-supported_sbc.md: dietpi_sbc.md
-      user-guide_tools.md: dietpi_tools.md
-      release-notes-updates.md: release-notes.md
-      dietpi-software-desktop.md: software/desktop.md
-      dietpi-software-media.md: software/media.md
-      dietpi-software-remote-desktop.md: software/remote_desktop.md
-      dietpi-software-cloud.md: software/cloud.md
-      dietpi-software_bittorrent.md: software/bittorrent.md
-      dietpi-software-gaming.md: software/gaming.md
-      dietpi-software-camera.md: software/camera.md
-      dietpi-software-social.md: software/social.md
-      dietpi-software-wifi-hotspot.md: software/advanced_networking.md
-      software/wifi_hotspot.md: software/advanced_networking.md
-      dietpi-software-home-automation.md: software/home_automation.md
-      dietpi-software-hardware-projects.md: software/hardware_projects.md
-      dietpi-software-system-stats.md: software/system_stats.md
-      dietpi-software-system-security.md: software/system_security.md
-      dietpi-software-webserver-stack.md: software/webserver_stack.md
-      dietpi-software-dns-servers.md: software/dns_servers.md
-      dietpi-software-file-servers.md: software/file_servers.md
-      dietpi-software-vpn.md: software/vpn.md
-      dietpi-software-load-balancer.md: software/advanced_networking.md
-      software/load_balancer.md: software/advanced_networking.md
-      dietpi-software-printing.md: software/printing.md
-      dietpi-software-computational-science.md: software/computational_science.md
-      dietpi-software-ssh.md: software/ssh.md
-      dietpi-software-log-system.md: software/log_system.md
+      user-guide_installation.md: install.md
+      user-guide_overview.md: getting_started.md
+      dietpi_optimised_software.md: software.md
+      dietpi_sbc.md: hardware.md
+      release-notes.md: releases.md
+      dietpi_references.md: references.md
 
 extra:
   social:
@@ -122,15 +96,15 @@ extra_css:
 nav:
 - HOME:
   - Overview: index.md
-  - Installation: user-guide_installation.md
-  - Getting started: user-guide_overview.md
-  - Optimised software list: dietpi_optimised_software.md
-  - Advanced configuration: dietpi_tools.md
-  - Supported SBCs: dietpi_sbc.md
-  - Release notes: release-notes.md
+  - Installation: install.md
+  - Getting started: getting_started.md
+  - Software options: software.md
+  - DietPi tools: dietpi_tools.md
+  - Supported hardware: hardware.md
+  - Releases: releases.md
   - Request features: https://github.com/MichaIng/DietPi/issues/new/choose
   - Report issues: https://github.com/MichaIng/DietPi/issues
-  - References: dietpi_references.md
+  - References: references.md
 - OPTIMISED SOFTWARE:
   - Advanced Networking: software/advanced_networking.md
   - BitTorrent & Download Tools: software/bittorrent.md

@@ -1,4 +1,4 @@
-# DietPi Updates
+# DietPi releases
 
 ## December 2020 (version 6.34)
 
@@ -66,7 +66,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
  New [Raspberry Pi 400](https://www.raspberrypi.org/blog/raspberry-pi-400-the-70-desktop-pc/) is now fully supported. Inspired by the home computers of the 1980s, Raspberry Pi 400 is a complete personal computer, built into a compact keyboard.
 
- For more details on how to install DietPi, check the [documentation](../dietpi_sbc/#raspberry-pi).
+ For more details on how to install DietPi, check the [documentation](../hardware/#raspberry-pi).
 
  ![DietPi Raspberry Pi 400](assets/images/dietpi-raspberry-pi-400-back.jpg)
 
@@ -93,7 +93,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
     Many thanks to @ravenclaw900 for implementing this feature: <https://github.com/MichaIng/DietPi/pull/3899>
 
-- **DietPi Documentation** has been extended. It covers now all the **[DietPi Optimised Software](../dietpi_optimised_software/#dietpi-optimised-software-index)** categories. Many thanks to @StephanStS for bringing all these updates.
+- **DietPi Documentation** has been extended. It covers now all the **[DietPi Optimised Software](../software/)** categories. Many thanks to @StephanStS for bringing all these updates.
 
     ![DietPi Documentation](assets/images/dietpi-docs-categories.jpg)
 
@@ -347,7 +347,7 @@ For all additional issues that may appear after release, please see the followin
 
 ### Improvements
 
-- **New SBC cards supported:** **NanoPi NEO3** · **NanoPi R2S** · **NanoPi K2** :octicons-heart-16: [see NanoPi series](../hardware-supported_sbc/#nanopi-series-friendlyarm)
+- **New SBC cards supported:** **NanoPi NEO3** · **NanoPi R2S** · **NanoPi K2** :octicons-heart-16: [see NanoPi series](../hardware/#nanopi-series-friendlyarm)
 - **DietPi-Set_swapfile** :octicons-arrow-right-16: Added support for zram-based swap space. Use "zram" as swap location to have a zram device created (persistently via udev rule) at /dev/zram0 and used for compressed in-memory swap space. The auto-size option "1" will result in a zram size of 50% of physical RAM size, else the MiB value will be used, as long as its smaller than physical RAM size. Many thanks to @rickalm for pushing this topic with an initial implementation: [#3705](https://github.com/MichaIng/DietPi/pull/3705)
 - **DietPi-Drive_Manager** :octicons-arrow-right-16: For NTFS mounts, the "big_writes" mount option is now added by default, which reduces CPU load and by this may increase performance. Many thanks to @balexandrov for suggesting this enhancement: [#3330](https://github.com/MichaIng/DietPi/issues/3330#issuecomment-654072107)
 - **DietPi-Config** :octicons-arrow-right-16: Added selection of schedutil and userspace CPU frequency governors. Schedutil is a modern dynmic governor which sets frequency tightly related and according to metrics of the CPU scheduling driver itself. Userspace is a no-op governor, i.e. it does not touch CPU frequencies at all which allows setting manual/custom frequencies according to own metrics or via scripts. Read more about native Linux CPU frequency scaling [kernel.org - Generic scaling](https://www.kernel.org/doc/html/latest/admin-guide/pm/cpufreq.html#generic-scaling-governors)

@@ -18,7 +18,7 @@ dietpi-launcher
 dietpi-software
 ```
 
-It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../dietpi_optimised_software/) titles.
+It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../software/) titles.
 
 ![DietPi-Software screenshot](assets/images/dietpi-software.jpg)
 
@@ -28,7 +28,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     - Begin by selecting **Software Optimized** in the main menu list and hit ++enter++.
 
-    - Scroll through the list of available software - for more details check [DietPi Optimised Software](../dietpi_optimised_software/).
+    - Scroll through the list of available software - for more details check [DietPi Optimised Software](../software/).
 
     The list of optimised software is long. You either browse the list or use the option **Search**.
 

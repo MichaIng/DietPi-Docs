@@ -2,7 +2,7 @@
 
 ## Overview
 
-Once you did the [DietPi Installation](../user-guide_installation) you could choose to install one or more [Optimised software](../dietpi_optimised_software) items or run one of the [DietPi tools](../dietpi_tools).
+Once you did the [DietPi Installation](../install/) you could choose to install one or more [Optimised software](../software/) items or run one of the [DietPi tools](../dietpi_tools/).
 
 ## Initial start
 
@@ -18,7 +18,7 @@ Once you run `dietpi-launcher` you could see all available DietPi tools. It prov
 
 ## DietPi-Software -- Choose the software you need
 
-The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use. If you’re unsure what software to install, checkout [DietPi Optimised Software](../dietpi_optimised_software) page for more details.  
+The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use. If you’re unsure what software to install, checkout [DietPi Optimised Software](../software/) page for more details.  
 
 The list of optimised software includes:
 
@@ -36,7 +36,7 @@ The list of optimised software includes:
 - File Servers
 - Home Automation
 - Printing
-- and [much more...](../dietpi_optimised_software).
+- and [much more...](../software/).
 
 To install and configure them use `dietpi-software` tool - [click for more details](../dietpi_tools/#dietpi-software).
 
@@ -44,4 +44,4 @@ To install and configure them use `dietpi-software` tool - [click for more detai
 
 ## Supported SBC
 
-See the list of [Supported Single Board Computers (SBCs)](../hardware-supported_sbc)
+See the list of [Supported Single Board Computers (SBCs)](../hardware/)

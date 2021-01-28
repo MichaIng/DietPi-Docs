@@ -20,7 +20,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## ProFTPD
 
@@ -180,4 +180,4 @@ Network file system server.
 
 Wikipedia: <https://wikipedia.org/wiki/Network_File_System>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

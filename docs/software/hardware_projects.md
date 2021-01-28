@@ -456,4 +456,4 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
     The data location for Grafana is stored resp. linked with symbolic links to the DietPi userdata directory:  
     `/mnt/dietpi_userdata/grafana`.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

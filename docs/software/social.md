@@ -23,7 +23,7 @@
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## FreshRSS
 
@@ -250,4 +250,4 @@ Essentially, it is a "peer-to-peer" Google search engine, not controlled by Goog
 
     Recommended setting: Nice = 19
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

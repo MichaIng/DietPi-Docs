@@ -1,4 +1,4 @@
-# DietPi Optimised software Index
+# DietPi software options
 
 ## Overview
 
