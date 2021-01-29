@@ -613,6 +613,28 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
             17. Select "Continue".
             18. Select "Finish".
                 ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png)
+        
+        === "macOS"
+
+            1. In your browser (note that this cannot be done in Safari), next to the address bar, select the warning or lock icon.
+                Then select the "Certificate (Invalid)" button.
+                ![Import certificate on macOS, screenshot 1](../assets/images/import_cert_mac_1.png)
+            2. Drag the certificate icon to your desktop, it is only required temporarily.
+            3. Double-click on the certificate file.
+                ![Import certificate on macOS, screenshot 2](../assets/images/import_cert_mac_2.png)
+            4. On the "Keychain" dropdown, select "System".
+            5. Select "Add".
+            6. Enter an administratior username and password.
+            7. Select "Modify Keychain".
+                ![Import certificate on macOS, screenshot 3](../assets/images/import_cert_mac_3.png)
+            8. Double-click on the certificate in the list.
+            9. Select "Trust".
+                ![Import certificate on macOS, screenshot 4](../assets/images/import_cert_mac_4.png)
+            10. On the "Secure Sockets Layer (SSL)" dropdown, select "Always Trust".
+            11. Click the red button in the top left corner of the window.
+            12. Enter an administratior username and password.
+            13. Select "Update Settings".
+                ![Import certificate on macOS, screenshot 5](../assets/images/import_cert_mac_5.png)
 
 === "Web access"
 
