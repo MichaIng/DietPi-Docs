@@ -82,6 +82,15 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     If you forgot your login password for the Pi-hole admin web page, you can set it with the shell command `pihole -a -p` on your Pi-hole device.
 
+=== "Blocklists and whitelists"
+
+    There are many sites in the web giving blocklists and whitelists for Pi-hole. They can be used when you want to have more blocking as the standard installation gives you. Here are some examples:
+
+    - [The Big Blocklist Collection from WaLLy3K](https://firebog.net)
+    - [Blocklists from Pi-Hole forum](https://discourse.pi-hole.net/t/update-the-best-blocking-lists-for-the-pi-hole-alternative-dns-servers-2019/13620)
+    - [Phishing Army blocklist](https://phishing.army)
+    - [anudeepNDs whitelist](https://github.com/anudeepND/whitelist)
+
 === "Accessing via OpenVPN or WireGuard"
 
     To allow (OpenVPN or WireGuard) VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`.

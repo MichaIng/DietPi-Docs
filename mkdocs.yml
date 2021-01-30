@@ -102,9 +102,9 @@ nav:
   - DietPi tools: dietpi_tools.md
   - Supported hardware: hardware.md
   - Releases: releases.md
+  - References: references.md
   - Request features: https://github.com/MichaIng/DietPi/issues/new/choose
   - Report issues: https://github.com/MichaIng/DietPi/issues
-  - References: references.md
 - OPTIMISED SOFTWARE:
   - Advanced Networking: software/advanced_networking.md
   - BitTorrent & Download Tools: software/bittorrent.md
