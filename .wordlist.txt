@@ -32,6 +32,7 @@ Bitcoin
 Bitwarden
 blazingly
 blocklist
+blocklists
 Bluetooth
 Blynk
 bootable
