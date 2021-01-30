@@ -9,7 +9,7 @@ Various logging methods can be selected from lightweight to full. If you don't r
 
 The *Log System* can be changed at any time by running `dietpi-software` and selecting "Log System" from the menu.
 
-![DietPi log system selection](../assets/images/dietpi-software-log-system.png){: style="width:200px"}
+![DietPi log system selection](../assets/images/dietpi-software-log-system.png){: width="200px"}
 
 ??? info "How do I set the **Log System** ?"
     To select the **Log System** listed below run from the command line:
@@ -20,7 +20,7 @@ The *Log System* can be changed at any time by running `dietpi-software` and sel
 
     Choose **Log System** and select the desired item. Finally click on `Install`. DietPi will do all the necessary steps to change to the desired log system.
 
-    ![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg){: style="width:400px"}
+    ![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg){: width="400px"}
 
 [Return to the **Optimised Software list**](../../software/)
 

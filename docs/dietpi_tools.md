@@ -49,7 +49,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - software packages that are often used and installed via `apt install <package>`, without additional optimisation from DietPi team.
     - _or_ packages not directly required, but pulled as a dependency, like: build tools, libraries or runtime systems. E.g. packages like *Python3*, *pip*, *tcpdump* or *midnight commander* can be installed using the dialog.
 
-    ![DietPi-Software Software Additional menu screenshot](assets/images/dietpi-software-additional.jpg){: style="width:640px"}
+    ![DietPi-Software Software Additional menu screenshot](assets/images/dietpi-software-additional.jpg){: width="640px"}
 
 === "Search"
 
@@ -63,7 +63,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
 
-    ![DietPi-Software SSH Server menu screenshot](assets/images/dietpi-software-ssh-selection.jpg){: style="width:550px"}
+    ![DietPi-Software SSH Server menu screenshot](assets/images/dietpi-software-ssh-selection.jpg){: width="550px"}
 
 === "File Server"
 
@@ -80,7 +80,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - ProFTPD can max out the RPi 100 Mbit connection with minimal CPU usage.
     - Samba server on a RPi v1 will hit 100% CPU usage at 40 Mbit transfer rate.
 
-    ![DietPi-Software File Server menu screenshot](assets/images/dietpi-software-fileserver-selection.jpg){: style="width:550px"}
+    ![DietPi-Software File Server menu screenshot](assets/images/dietpi-software-fileserver-selection.jpg){: width="550px"}
 
     See [file servers overview](../software/file_servers/) for further information.
 
@@ -91,7 +91,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     The Log System can be changed at any time by selecting a different “Log System” from the menu.
 
-    ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: style="width:550px"}
+    ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: width="550px"}
 
     See also <https://dietpi.com/docs/software/log_system/>.
 
@@ -105,7 +105,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
         As a result you will not need to manually select/install a webserver stack. DietPi will do it all for you.
 
-    ![DietPi-Software Webserver Preference menu screenshot](assets/images/dietpi-software-webserver-preference.png){: style="width:550px"}
+    ![DietPi-Software Webserver Preference menu screenshot](assets/images/dietpi-software-webserver-preference.png){: width="550px"}
 
 === "User Data Location"
 
@@ -129,7 +129,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     DietPi will automatically move your existing user data to your new location.
 
-    ![DietPi-Software User Data Location menu screenshot](assets/images/dietpi-software-user-data-location-selection.jpg){: style="width:550px"}
+    ![DietPi-Software User Data Location menu screenshot](assets/images/dietpi-software-user-data-location-selection.jpg){: width="550px"}
 
 ### Install or remove software
 
@@ -159,7 +159,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     The <software_id\> which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:
 
-    ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: style="width:400px"}
+    ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: width="400px"}
 
     E.g. to install Chromium, LXQt and GIMP you have to execute:
 

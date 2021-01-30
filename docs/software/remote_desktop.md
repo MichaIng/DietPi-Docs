@@ -37,7 +37,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 ## TigerVNC Server
 
-![DietPi remote desktop software TigerVNC](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg){: style="width:600px"}
+![DietPi remote desktop software TigerVNC](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg){: width="600px"}
 
 === "Quick start"
 
@@ -109,7 +109,7 @@ Source code: <https://github.com/TigerVNC/tigervnc>
 
 RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share the desktop or control the computer running the VNC Server.
 
-![DietPi remote desktop software RealVNC](../assets/images/dietpi-software-remotedesktop-realvnc.png){: style="width:600px"}
+![DietPi remote desktop software RealVNC](../assets/images/dietpi-software-remotedesktop-realvnc.png){: width="600px"}
 
 === "VNC Server modes"
 
@@ -158,7 +158,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
 XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 
-![DietPi remote desktop software XRDP](../assets/images/dietpi-software-remotedesktop-xrdp.png){: style="width:600px"}
+![DietPi remote desktop software XRDP](../assets/images/dietpi-software-remotedesktop-xrdp.png){: width="600px"}
 
 === "Connect to your desktop"
 
@@ -178,7 +178,7 @@ XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 
 NoMachine is a remote desktop server with advanced features, such as screen recording. The client also scans for all available NoMachine servers on your network, allowing easy connection and maintenance of your remote desktops.
 
-![DietPi remote desktop software NoMachine](../assets/images/dietpi-software-remotedesktop-nomachine.png){: style="width:600px"}
+![DietPi remote desktop software NoMachine](../assets/images/dietpi-software-remotedesktop-nomachine.png){: width="600px"}
 
 === "Download NoMachine Client"
 
@@ -202,7 +202,7 @@ NoMachine is a remote desktop server with advanced features, such as screen reco
 
 Remot3.it allows you to easily access your DietPi device over the internet.
 
-![DietPi remote desktop software Remot3.it](../assets/images/dietpi-software-remotedesktop-remot3it.png){: style="width:600px"}
+![DietPi remote desktop software Remot3.it](../assets/images/dietpi-software-remotedesktop-remot3it.png){: width="600px"}
 
 Weaved works by connecting you to a specific TCP port on your device, all of which can be customized during first run setup.
 
@@ -238,7 +238,7 @@ YouTube video tutorial (German language): `Raspberry Pi einfach fernsteuern: Rem
 
 The VirtualHere package is used to share physically attached USB devices from your SBC over the network to other systems.
 
-![DietPi remote desktop software VirtualHere](../assets/images/dietpi-software-remotedesktop-virtualhere.png){: style="width:600px"}
+![DietPi remote desktop software VirtualHere](../assets/images/dietpi-software-remotedesktop-virtualhere.png){: width="600px"}
 
 Download the client for your PC from:
 

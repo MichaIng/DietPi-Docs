@@ -129,7 +129,7 @@ The latter is used only in the case of the first webserver background installati
 
 === "Selection via Webserver Preference"
 
-    ![DietPi webserver selection webserver preference](../assets/images/dietpi-software-webserver-preference.png){: style="width:500px"}
+    ![DietPi webserver selection webserver preference](../assets/images/dietpi-software-webserver-preference.png){: width="500px"}
 
     Using this option you only select the webserver for use in DietPi installations.  
     When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](#mariadb) / [SQLite](#sqlite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
@@ -488,7 +488,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 Apache is open source and it is the most commonly used Web server on Linux systems.
 
-![DietPi Webstack software Apache2 logo](../assets/images/dietpi-software-webstack-apache2.jpg){: style="width:150px"}
+![DietPi Webstack software Apache2 logo](../assets/images/dietpi-software-webstack-apache2.jpg){: width="150px"}
 
 Web servers are used to serve Web pages requested by client computers. Clients typically request and view Web pages using Web browser applications such as Firefox, Opera, Chromium, Microsoft Edge, Internet Explorer etc.
 
@@ -514,7 +514,7 @@ Official documentation: <https://www.nginx.com>
 
 **Lighttpd** is a web server for UNIX/Linux and Windows operating systems. It is an alternative to Apache web server. It is also called Lighty.
 
-![DietPi Webstack software Lighttpd logo](../assets/images/dietpi-software-webstack-lighttpd.svg){: style="width:100px"}
+![DietPi Webstack software Lighttpd logo](../assets/images/dietpi-software-webstack-lighttpd.svg){: width="100px"}
 
 Source: Fair use, <https://en.wikipedia.org/w/index.php?curid=10881730>.
 
@@ -546,7 +546,7 @@ Official documentation: <https://www.lighttpd.net>
 
 What is **Apache Tomcat**? Essentially it’s an open-source Java servlet and Java Server Page container that lets developers implement an array of enterprise Java applications. Tomcat also runs a HTTP web server environment in which Java code can run.
 
-![DietPi Webstack software Tomcat logo](../assets/images/dietpi-software-webstack-tomcat.svg){: style="width:100px"}
+![DietPi Webstack software Tomcat logo](../assets/images/dietpi-software-webstack-tomcat.svg){: width="100px"}
 
 Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/site/xdocs/images/logos/tomcat.eps), [Apache License 2.0](https://commons.wikimedia.org/w/index.php?curid=11302180).
 
@@ -564,7 +564,7 @@ Official documentation: <https://tomcat.apache.org>
 
 **MariaDB** Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source [^2]. It is part of most cloud offerings and the default in most Linux distributions.
 
-![DietPi Webstack software MariaDB logo](../assets/images/dietpi-software-webstack-mariadb.png){: style="width:150px"}
+![DietPi Webstack software MariaDB logo](../assets/images/dietpi-software-webstack-mariadb.png){: width="150px"}
 
 Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/index.php?curid=55946550).
 
@@ -582,7 +582,7 @@ Getting started documentation: <https://mariadb.org/documentation/#getting-start
 
 #### phpMyAdmin
 
-![DietPi Webstack software phpMyAdmin logo](../assets/images/dietpi-software-webstack-phpmyadmin.png){: style="width:150px"}
+![DietPi Webstack software phpMyAdmin logo](../assets/images/dietpi-software-webstack-phpmyadmin.png){: width="150px"}
 
 **phpMyAdmin** is a free software tool written in [PHP](#php), intended to handle the administration of MySQL / MariaDB over the Web.
 
@@ -601,7 +601,7 @@ Official documentation:  <https://www.phpmyadmin.net/docs/>
 
 ### SQLite
 
-![DietPi Webstack software SQLite logo](../assets/images/dietpi-software-webstack-sqlite.svg){: style="width:150px"}
+![DietPi Webstack software SQLite logo](../assets/images/dietpi-software-webstack-sqlite.svg){: width="150px"}
 
 Source: Part of the SQLite documentation, which has been released by author D. Richard Hipp to the public domain. SVG conversion by Mike Toews. [Public Domain](https://commons.wikimedia.org/w/index.php?curid=11675072)
 
@@ -620,7 +620,7 @@ Official documentation: <https://www.sqlite.org/docs.html>
 
 A non-SQL based data store.
 
-![DietPi Webstack software Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: style="width:150px"}
+![DietPi Webstack software Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: width="150px"}
 
 Source: [Carlos Prioglio](https://redis.io/images/redis-logo.svg), [licence](https://commons.wikimedia.org/w/index.php?curid=95020509).
 
@@ -646,7 +646,7 @@ Commands: <https://redis.io/commands>
 
 ### InfluxDB
 
-![DietPi Webstack software InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: style="width:200px"}
+![DietPi Webstack software InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: width="200px"}
 
 Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding-docs/img/influxdb/preview.svg), [Public Domain](https://commons.wikimedia.org/w/index.php?curid=55056027).
 
@@ -712,7 +712,7 @@ Getting started: <https://docs.influxdata.com/influxdb/v2.0/get-started/#set-up-
 
 ### PHP
 
-![DietPi Webstack software PHP logo](../assets/images/dietpi-software-webstack-php.svg){: style="width:150px"}
+![DietPi Webstack software PHP logo](../assets/images/dietpi-software-webstack-php.svg){: width="150px"}
 
 Source: [Colin Viebrock](https://www.php.net/download-logos.php), [CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=9632398).
 

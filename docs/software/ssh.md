@@ -25,7 +25,7 @@
 Dropbear is a lightweight SSH server, installed by default on DietPi systems.  
 Remark: You can swap or change your SSH server at any time using *DietPi-Software*.
 
-![DietPi ssh server software Dropbear](../assets/images/dietpi-software-sshserver-dropbear.jpg){: style="width:150px"}
+![DietPi ssh server software Dropbear](../assets/images/dietpi-software-sshserver-dropbear.jpg){: width="150px"}
 
 === "Access the web interface"
 

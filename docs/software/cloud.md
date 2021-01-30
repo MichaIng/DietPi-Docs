@@ -379,7 +379,7 @@ Website: <https://gogs.io>
 
 Your very own GitHub style server, with web interface.
 
-![DietPi cloud software Gitea](../assets/images/dietpi-software-cloud-gitea.jpg){: style="width:200px"}
+![DietPi cloud software Gitea](../assets/images/dietpi-software-cloud-gitea.jpg){: width="200px"}
 
 === "Access to the web interface"
 
@@ -539,7 +539,7 @@ Official documentation: <https://docs.min.io>
 
 This is Mozilla's Firefox Sync Server which manages syncing Firefox instance bookmarks, history, tabs and passwords across devices. Out of the box it runs on a Python server for small loads and can be configured to run behind Nginx or Apache.
 
-![Firefox Sync Logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png){: style="width:200px"}
+![Firefox Sync Logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png){: width="200px"}
 
 === "Configure Firefox"
 
@@ -575,7 +575,7 @@ Credits: This software title has been added to DietPi-Software by [CedArctic](ht
 
 Bitwarden_RS is an unofficial Bitwarden password manager server with web interface, written in Rust.
 
-![Bitwarden_RS web vault screenshot](../assets/images/dietpi-software-bitwarden_rs.jpg){: style="width:600px"}
+![Bitwarden_RS web vault screenshot](../assets/images/dietpi-software-bitwarden_rs.jpg){: width="600px"}
 
 === "First access"
 

@@ -26,9 +26,9 @@
 
 DietPi-NordVPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all NordVPN users to quickly and easily connect to any NordVPN server in TCP or UDP, using only open source software.
 
-![DietPi VPN software NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
+![DietPi VPN software NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="200px"}
 
-![DietPi VPN software NordVPN](../assets/images/dietpi-software-vpn-nordvpn.jpg){: style="width:500px"}
+![DietPi VPN software NordVPN](../assets/images/dietpi-software-vpn-nordvpn.jpg){: width="500px"}
 
 === "Requires NordVPN Subscription"
 
@@ -48,7 +48,7 @@ Wikipedia: <https://wikipedia.org/wiki/NordVPN>
 
 An easy to use VPN server and client system. The DietPi installation of OpenVPN uses a single client file to get you connected with minimal hassle.
 
-![DietPi VPN software OpenVPN logo](../assets/images/dietpi-software-vpn-openvpn-logo.png){: style="width:200px"}
+![DietPi VPN software OpenVPN logo](../assets/images/dietpi-software-vpn-openvpn-logo.png){: width="200px"}
 
 === "Client connection file"
 
@@ -119,7 +119,7 @@ Installation article (German language): [`PiVPN: Raspberry Pi mit OpenVPN – Ra
 
 PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a command `pivpn` which allows for simple creation of additional user profiles and configurations.
 
-![DietPi VPN software PiVPN logo](../assets/images/dietpi-software-vpn-pivpn-logo.png){: style="width:100px"}
+![DietPi VPN software PiVPN logo](../assets/images/dietpi-software-vpn-pivpn-logo.png){: width="100px"}
 
 === "Using PiVPN"
 
@@ -141,7 +141,7 @@ YouTube video tutorial: *DietPi PiVPN Server Setup on Raspberry Pi 3 B Plus*.
 
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner and more useful than IPsec, while avoiding the massive headache.
 
-![DietPi VPN software WireGuard logo](../assets/images/dietpi-software-vpn-wireguard.svg){: style="width:200px"}
+![DietPi VPN software WireGuard logo](../assets/images/dietpi-software-vpn-wireguard.svg){: width="200px"}
 
 When installing using `dietpi-software`, you can choose whether to install WireGuard as VPN server or client.
 
