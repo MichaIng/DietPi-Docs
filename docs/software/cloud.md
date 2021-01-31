@@ -379,7 +379,7 @@ Website: <https://gogs.io>
 
 Your very own GitHub style server, with web interface.
 
-![DietPi cloud software Gitea](../assets/images/dietpi-software-cloud-gitea.jpg){: style="width:200px"}
+![DietPi cloud software Gitea](../assets/images/dietpi-software-cloud-gitea.jpg){: width="200px"}
 
 === "Access to the web interface"
 
@@ -539,7 +539,7 @@ Official documentation: <https://docs.min.io>
 
 This is Mozilla's Firefox Sync Server which manages syncing Firefox instance bookmarks, history, tabs and passwords across devices. Out of the box it runs on a Python server for small loads and can be configured to run behind Nginx or Apache.
 
-![Firefox Sync Logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png){: style="width:200px"}
+![Firefox Sync Logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png){: width="200px"}
 
 === "Configure Firefox"
 
@@ -575,7 +575,7 @@ Credits: This software title has been added to DietPi-Software by [CedArctic](ht
 
 Bitwarden_RS is an unofficial Bitwarden password manager server with web interface, written in Rust.
 
-![Bitwarden_RS web vault screenshot](../assets/images/dietpi-software-bitwarden_rs.jpg){: style="width:600px"}
+![Bitwarden_RS web vault screenshot](../assets/images/dietpi-software-bitwarden_rs.jpg){: width="600px"}
 
 === "First access"
 
@@ -590,29 +590,51 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
             1. In your browser, next to the address bar, select the warning or lock icon.
                 Then select the certificate button to open Windows' Certificate view.
-            2. Switch to the "Details" tab.
+            2. Switch to the "Details" tab.  
                 ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
             3. Select "Save to file".
-            4. In the newly opened window, select "Continue".
+            4. In the newly opened window, select "Continue".  
                 ![Import certificate on Windows 10, screenshot 2](../assets/images/import_cert_windows_2.png)
             5. Leave default DER coding and select "Continue".
-            6. Select "Browse" to chose a target file location.
+            6. Select "Browse" to chose a target file location.  
                 ![Import certificate on Windows 10, screenshot 3](../assets/images/import_cert_windows_3.png)
             7. Choose a target file location and name, it is only required temporarily.
             8. Select "Continue".
-            9. Select "Finish".
+            9. Select "Finish".  
                 ![Import certificate on Windows 10, screenshot 4](../assets/images/import_cert_windows_4.png)
             10. Double-click the created certificate file and select "Install certificate".
             11. Select "Local system".
-            12. Select "Continue", which requires administrator permissions.
+            12. Select "Continue", which requires administrator permissions.  
                 ![Import certificate on Windows 10, screenshot 5](../assets/images/import_cert_windows_5.png)
             13. Choose "Save all certificates to the following store".
             14. Select "Browse".
             15. Select "Trusted Root Certification Authorities".
             16. Select "Ok".
             17. Select "Continue".
-            18. Select "Finish".
+            18. Select "Finish".  
                 ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png)
+        
+        === "macOS"
+
+            1. In your browser (note that this cannot be done in Safari), next to the address bar, select the warning or lock icon.
+                Then select the "Certificate (Invalid)" button.  
+                ![Import certificate on macOS, screenshot 1](../assets/images/import_cert_mac_1.png){: width="250px"}
+            2. Drag the certificate icon to your desktop, it is only required temporarily.
+            3. Double-click on the certificate file.  
+                ![Import certificate on macOS, screenshot 2](../assets/images/import_cert_mac_2.png)
+            4. On the "Keychain" dropdown, select "System".
+            5. Select "Add".
+            6. Enter an administratior username and password.
+            7. Select "Modify Keychain".  
+                ![Import certificate on macOS, screenshot 3](../assets/images/import_cert_mac_3.png)
+            8. Double-click on the certificate in the list.
+            9. Select "Trust".  
+                ![Import certificate on macOS, screenshot 4](../assets/images/import_cert_mac_4.png)
+            10. On the "Secure Sockets Layer (SSL)" dropdown, select "Always Trust".
+            11. Click the red button in the top left corner of the window.
+            12. Enter an administratior username and password.
+            13. Select "Update Settings".  
+                ![Import certificate on macOS, screenshot 5](../assets/images/import_cert_mac_5.png)
 
 === "Web access"
 

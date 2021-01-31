@@ -38,7 +38,7 @@ Become part of the Tor Project and turn your DietPi into a Tor relay to help oth
 
 For more details check the [documentation page](../software/advanced_networking/#tor-relay).
 
-![advanced-networking-tor](assets/images/dietpi-software-advanced-networking-tor.png){: style="width:150px"}
+![advanced-networking-tor](assets/images/dietpi-software-advanced-networking-tor.png){: width="150px"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3921.
 

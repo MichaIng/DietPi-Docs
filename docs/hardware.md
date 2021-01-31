@@ -573,22 +573,22 @@ chmod +x PREP_SYSTEM_FOR_DIETPI.sh
 
 In the following dialog you have to select the DietPi installer branch. Choose the same branch as the DietPi `PREP_SYSTEM_FOR_DIETPI.sh` script:
 
-![DietPi-PREP branch selection](assets/images/dietpi-prep-selectbranch.png){: style="width:550px"}
+![DietPi-PREP branch selection](assets/images/dietpi-prep-selectbranch.png){: width="550px"}
 
 In the following dialogues enter your name and afterwards the actual image base and the device (SBC or PC) the system is running on:
 
-![DietPi-PREP pre-image entry](assets/images/dietpi-prep-preimage.png){: style="width:550px"}
+![DietPi-PREP pre-image entry](assets/images/dietpi-prep-preimage.png){: width="550px"}
 
-![DietPi-PREP device selection](assets/images/dietpi-prep-deviceselection.png){: style="width:550px"}
+![DietPi-PREP device selection](assets/images/dietpi-prep-deviceselection.png){: width="550px"}
 
 Depending on whether you want to use the WiFi feature later on, you have to select the option to keep or purge the WiFi package. To keep the package could be the case if your hardware has an onboard WiFi or you add the WiFi e.g. via an USB WiFi adapter.
 
-![DietPi-PREP WiFi selection](assets/images/dietpi-prep-wifiselection.png){: style="width:550px"}
+![DietPi-PREP WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550px"}
 
 The last selection is the target Debian version (the actual **Buster** or the upcoming **Bullseye**).  
 After this, the script runs a couple of minutes, finally the following message occurs:
 
-![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: style="width:550px"}
+![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: width="550px"}
 
 If you did not use branch `master` the last step is to edit file `/boot/dietpi.txt` and edit the  
 `DEV_GITBRANCH=master`  

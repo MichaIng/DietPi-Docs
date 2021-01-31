@@ -31,7 +31,7 @@ The *RPi Cam Control* package can be used in combination with a Raspberry PI cam
 
 It consists of full control of the camera in a web based interface.
 
-![DietPi camera software RPi Cam Control](../assets/images/dietpi-software-camera-rpicamcontrol.png){: style="width:500px"}
+![DietPi camera software RPi Cam Control](../assets/images/dietpi-software-camera-rpicamcontrol.png){: width="500px"}
 
 === "Requirements"
 
@@ -62,7 +62,7 @@ The software can
 - observe based on motion detection
 - record a video with time lapse
 
-![DietPi camera software MotionEye](../assets/images/dietpi-software-camera-motioneye.png){: style="width:500px"}
+![DietPi camera software MotionEye](../assets/images/dietpi-software-camera-motioneye.png){: width="500px"}
 
 === "Requirements"
 

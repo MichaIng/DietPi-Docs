@@ -26,7 +26,7 @@ The problems which are solved require so many computer calculations that help fr
 
 *By default, our installation will add you to the DietPi team group, however, you can change this in the web interface at any time.*
 
-![DietPi computational science software Folding@Home](../assets/images/dietpi-software-computationalscience-foldingathome.png){: style="width:550px"}
+![DietPi computational science software Folding@Home](../assets/images/dietpi-software-computationalscience-foldingathome.png){: width="550px"}
 
 === "Access the web interface"
 

@@ -32,7 +32,7 @@ Tyrian is an arcade-style vertical scrolling shooter. The story is set
 in 20,031 where you play as Trent Hawkins, a skilled fighter pilot employed
 to fight MicroSol and save the galaxy.
 
-![OpenTyrian screenshot](../assets/images/dietpi-software-games-opentyrian.jpg){: style="width:500px"}
+![OpenTyrian screenshot](../assets/images/dietpi-software-games-opentyrian.jpg){: width="500px"}
 
 === "Start the game"
 
@@ -50,7 +50,7 @@ to fight MicroSol and save the galaxy.
 
 Cuberite allows you to create a single, blazingly fast Minecraft server, which utilizes the performance benefits of C++ (instead of Java) and comes with a handy web interface.
 
-![Cuberite web interface view](../assets/images/dietpi-software-games-cuberite.png){: style="width:500px"}
+![Cuberite web interface view](../assets/images/dietpi-software-games-cuberite.png){: width="500px"}
 
 === "Access the web interface"
 
@@ -105,7 +105,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
 MineOS allows you to create multiple Minecraft servers with ease, using a simple web interface.
 
-![MineOS web interface view](../assets/images/dietpi-software-games-mineos.png){: style="width:500px"}
+![MineOS web interface view](../assets/images/dietpi-software-games-mineos.png){: width="500px"}
 
 === "Access to web interface"
 
@@ -140,7 +140,7 @@ YouTube video tutorial: *How to Install MineOS on Raspberry Pi 4 using Diet Pi O
 
 Nukkit is Java-based server for Minecraft Pocket Edition.
 
-![Nukkit screenshot](../assets/images/dietpi-software-games-nukkit.png){: style="width:500px"}
+![Nukkit screenshot](../assets/images/dietpi-software-games-nukkit.png){: width="500px"}
 
 === "Info"
 
@@ -172,7 +172,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 - We also offer a completely automated installation image for Amiberry. Please see: <https://blitterstudio.com/amiberry/>.
 - Direct download link: <https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster_Amiberry.7z>.
 
-![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: style="width:500px"}
+![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: width="500px"}
 
 === "1st run setup"
 
@@ -324,7 +324,7 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
 - Keyboard + mouse is highly recommended
 - We have compiled the latest version of DXX-Rebirth (0.58.1) with support for FB and RPi OpenGL.
 
-![DXX-Rebirth logo and screenshot](../assets/images/dietpi-software-games-dxxrebirth.png){: style="width:500px"}
+![DXX-Rebirth logo and screenshot](../assets/images/dietpi-software-games-dxxrebirth.png){: width="500px"}
 
 === "Starting DXX-Rebirth"
 
@@ -357,7 +357,7 @@ Website: <http://www.dxx-rebirth.com/>
 
 ## Steam
 
-![Steam on Linux logo](../assets/images/dietpi-software-games-steam.jpg){: style="width:500px"}
+![Steam on Linux logo](../assets/images/dietpi-software-games-steam.jpg){: width="500px"}
 
 ### Installation notes
 
@@ -371,7 +371,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
 ![PaperMC logo](../assets/images/dietpi-software-games-papermc.jpg){: style="width:70px"}
 
-![PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg){: style="width:500px"}
+![PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg){: width="500px"}
 
 === "Default server/query port"
 
