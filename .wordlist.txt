@@ -90,6 +90,7 @@ DPMS
 DRC
 DRM
 Dropbear
+dropdown
 DSI
 DSN
 DVFS
@@ -175,6 +176,7 @@ JS
 JSON
 JustBoom
 Kbit
+Keychain
 KiB
 kickstart
 kickstarts
