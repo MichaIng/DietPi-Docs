@@ -31,6 +31,8 @@ Beelink
 Bitcoin
 Bitwarden
 blazingly
+blocklist
+blocklists
 Bluetooth
 Blynk
 bootable
@@ -234,6 +236,7 @@ MTA
 multiroom
 multithreaded
 multithreading
+Munin
 Mycroft
 MyHome
 myMPD

@@ -21,3 +21,10 @@ Links to special software packages are located at the end of the according softw
 - [Dietpi Raspberry Pi 4 First Look](https://www.youtube.com/watch?v=LoKBZ-a4JNE)
 - [The BEST Operating System for Raspberry Pi 4](https://www.youtube.com/watch?v=g8oiM_21gX8)
 - German tutorial videos can be found in the YouTube channel [`LOGIN TechBlog`](https://www.youtube.com/channel/UCpq1BGhcC6UZZUH-dst8YMg).
+
+## Articles about software packages not part of the DietPi software installation system
+
+- [Munin monitoring on Raspberry Pi/DietPi](https://advanxer.com/blog/2019/02/munin-monitoring-on-raspberrypi-dietpi/)  
+  Munin - a network resource monitoring tool analyzing your resources on the network to avoid trouble.  
+  Many thanks to `advanxer.com` for generating this nice description  
+  See also <http://munin-monitoring.org>, <https://github.com/munin-monitoring/munin>
