@@ -175,9 +175,9 @@ The following hardware is required:
 
 ## Domoticz
 
-Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electral, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.
+Domoticz is a Home Automation System that lets you monitor and configure various devices like lights, switches, various sensors/meters like for temperature, rain, wind, UV radiation, electric fields, gas, water and much more. Notifications/Alerts can be sent to any mobile device.
 
-![DietPi home automation software Domoticz](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: width="600px"}
+![Domoticz web interface screenshot](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: width="600px"}
 
 === "Access to the web interface"
 
@@ -188,6 +188,22 @@ Domoticz is a Home Automation System that lets you monitor and configure various
 
     ```sh
     journalctl -u domoticz
+    ```
+
+=== "Service handling"
+
+    Use the following commands to control the Domoticz system service:
+    ```sh
+    systemctl status domoticz
+    ```
+    ```sh
+    systemctl stop domoticz
+    ```
+    ```sh
+    systemctl start domoticz
+    ```
+    ```sh
+    systemctl restart domoticz
     ```
 
 === "Install directory"
