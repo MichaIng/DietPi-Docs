@@ -609,6 +609,8 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 ***
 
+Tutorial: [Setup Guide for Plex on Raspberry Pi](https://blog.barnettjones.com/2020/11/26/dietpi-plex-setup/)
+
 YouTube video tutorial (German language): `Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)`.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EElrNjXc3aA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

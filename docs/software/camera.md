@@ -98,6 +98,9 @@ The software can
     sudo pip2 install -U motioneye
     ```
 
-See also <https://github.com/ccrisan/motioneye/wiki>.
+***
+
+Github page: <https://github.com/ccrisan/motioneye/wiki>  
+Tutorial: [MotionEye on DietPi on Raspberry Pi: keeping an eye on things](https://mansfield-devine.com/speculatrix/2018/12/motioneye-on-dietpi-on-raspberry-pi/)
 
 [Return to the **Optimised Software list**](../../software/)
