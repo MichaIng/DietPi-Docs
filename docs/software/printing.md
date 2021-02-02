@@ -23,7 +23,7 @@
 
 OctoPrint provides a web interface for controlling consumer 3D printers.
 
-![OctoPrint web interface screenshot](../assets/images/dietpi-software-printserver-octoprint.png){: style="width:550px"}
+![OctoPrint web interface screenshot](../assets/images/dietpi-software-printserver-octoprint.png){: width="550px"}
 
 === "Access the web interface"
 

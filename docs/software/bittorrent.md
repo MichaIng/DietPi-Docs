@@ -39,7 +39,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
 ??? hint "USB dedicated hard drive highly recommended"
 
-![DietPi download software Transmission](../assets/images/dietpi-software-download-transmission.png){: style="width:500px"}
+![DietPi download software Transmission](../assets/images/dietpi-software-download-transmission.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -84,7 +84,7 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 
 ??? hint "USB dedicated hard drive highly recommended"
 
-![DietPi download software Deluge](../assets/images/dietpi-software-download-deluge.png){: style="width:500px"}
+![DietPi download software Deluge](../assets/images/dietpi-software-download-deluge.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -131,7 +131,7 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
 ??? hint "USB dedicated hard drive highly recommended"
 
-![DietPi download software qBittorrent](../assets/images/dietpi-software-download-qbittorrent.png){: style="width:500px"}
+![DietPi download software qBittorrent](../assets/images/dietpi-software-download-qbittorrent.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -167,7 +167,7 @@ Also installs:
 
 ??? hint "USB dedicated hard drive highly recommended"
 
-![DietPi download software rTorrent](../assets/images/dietpi-software-download-rtorrent.png){: style="width:500px"}
+![DietPi download software rTorrent](../assets/images/dietpi-software-download-rtorrent.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -205,7 +205,7 @@ Also installs:
 
 - Webserver
 
-![DietPi download software Aria2](../assets/images/dietpi-software-download-aria2.png){: style="width:500px"}
+![DietPi download software Aria2](../assets/images/dietpi-software-download-aria2.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -246,7 +246,7 @@ Also installs:
 
 NZB download manager with web interface.
 
-![DietPi download software SABnzbd](../assets/images/dietpi-software-download-sabnzbd.png){: style="width:500px"}
+![DietPi download software SABnzbd](../assets/images/dietpi-software-download-sabnzbd.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -306,7 +306,7 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
-![DietPi download software Medusa](../assets/images/dietpi-software-download-medusa.jpg){: style="width:500px"}
+![DietPi download software Medusa](../assets/images/dietpi-software-download-medusa.jpg){: width="500px"}
 
 === "Access to the web interface"
 
@@ -356,7 +356,7 @@ Automatically download your favorite TV shows, as they become available.
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
-![DietPi download software Sonarr](../assets/images/dietpi-software-download-sonarr.png){: style="width:500px"}
+![DietPi download software Sonarr](../assets/images/dietpi-software-download-sonarr.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -379,7 +379,7 @@ Automatically download your favorite TV shows, as they become available.
     - Toggle to `Advanced settings` slider (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-      ![DietPi download software Sonarr permissions](../assets/images/dietpi-software-download-sonarrpermissions.png){: style="width:400px"}
+      ![DietPi download software Sonarr permissions](../assets/images/dietpi-software-download-sonarrpermissions.png){: width="400px"}
 
     - Save changes
 
@@ -426,7 +426,7 @@ Automatically download your favorite movies, as they become available.
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
-![DietPi download software Radarr](../assets/images/dietpi-software-download-radarr.png){: style="width:500px"}
+![DietPi download software Radarr](../assets/images/dietpi-software-download-radarr.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -449,7 +449,7 @@ Automatically download your favorite movies, as they become available.
     - Toggle to `Advanced settings` slider (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-      ![DietPi download software Radarr permissions](../assets/images/dietpi-software-download-sonarrpermissions.png){: style="width:400px"}
+      ![DietPi download software Radarr permissions](../assets/images/dietpi-software-download-sonarrpermissions.png){: width="400px"}
 
     - Save changes
 
@@ -537,7 +537,7 @@ Automatically download your favorite music.
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
-![DietPi download software Lidarr](../assets/images/dietpi-software-download-lidarr.jpg){: style="width:500px"}
+![DietPi download software Lidarr](../assets/images/dietpi-software-download-lidarr.jpg){: width="500px"}
 
 === "Access to the web interface"
 
@@ -560,7 +560,7 @@ Automatically download your favorite music.
     - Toggle to `Advanced settings` slider (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-        ![DietPi download software Lidarr permissions](../assets/images/dietpi-software-download-lidarrpermissions.png){: style="width:400px"}
+        ![DietPi download software Lidarr permissions](../assets/images/dietpi-software-download-lidarrpermissions.png){: width="400px"}
 
     - Save changes
 
@@ -602,7 +602,7 @@ Recommend additional software:
 - Transmission: For torrent download support
 - SABnzbd: For NZB download support
 
-![DietPi download software CouchPotato](../assets/images/dietpi-software-download-couchpotato.png){: style="width:500px"}
+![DietPi download software CouchPotato](../assets/images/dietpi-software-download-couchpotato.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -639,7 +639,7 @@ API Support for your favorite torrent trackers.
 
 Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato) into tracker-site-specific HTTP queries, parses the HTML response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.
 
-![DietPi download software Jackett](../assets/images/dietpi-software-download-jackett.png){: style="width:500px"}
+![DietPi download software Jackett](../assets/images/dietpi-software-download-jackett.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -649,13 +649,13 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
 
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
     We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
+    ![DietPi download software VPN NordVPN](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="200px"}
 
 ## NZBGet
 
 Extremely efficient and fast NZB download manager with web interface. Coded in C++.
 
-![DietPi download software NZBGet](../assets/images/dietpi-software-download-nzbget.jpg){: style="width:500px"}
+![DietPi download software NZBGet](../assets/images/dietpi-software-download-nzbget.jpg){: width="500px"}
 
 === "Access to the web interface"
 
@@ -682,7 +682,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 HTPC Manager combines all your favourite software into one slick interface.  
 Do all your HTPC tasks without using 5 different interfaces!
 
-![DietPi download software HTPC Manager](../assets/images/dietpi-software-download-htpc-manager.png){: style="width:500px"}
+![DietPi download software HTPC Manager](../assets/images/dietpi-software-download-htpc-manager.png){: width="500px"}
 
 === "Access to the web interface"
 

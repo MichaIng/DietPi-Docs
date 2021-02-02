@@ -102,8 +102,6 @@ nav:
   - DietPi tools: dietpi_tools.md
   - Supported hardware: hardware.md
   - Releases: releases.md
-  - Request features: https://github.com/MichaIng/DietPi/issues/new/choose
-  - Report issues: https://github.com/MichaIng/DietPi/issues
   - References: references.md
 - OPTIMISED SOFTWARE:
   - Advanced Networking: software/advanced_networking.md
@@ -129,6 +127,9 @@ nav:
   - VPN: software/vpn.md
   - Web Development: software/webserver_stack.md
 - COMMUNITY:
+  - DietPi GitHub page: https://github.com/MichaIng/DietPi
+  - Report issues: https://github.com/MichaIng/DietPi/issues
+  - Request features: https://github.com/MichaIng/DietPi/issues/new/choose
   - DietPi Forums: https://dietpi.com/phpbb/viewforum.php?f=5
   - Community tutorials: https://dietpi.com/phpbb/viewforum.php?f=15
   - Troubleshooting: https://dietpi.com/phpbb/viewforum.php?f=11

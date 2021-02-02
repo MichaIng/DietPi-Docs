@@ -31,6 +31,8 @@ Beelink
 Bitcoin
 Bitwarden
 blazingly
+blocklist
+blocklists
 Bluetooth
 Blynk
 bootable
@@ -88,6 +90,7 @@ DPMS
 DRC
 DRM
 Dropbear
+dropdown
 DSI
 DSN
 DVFS
@@ -173,6 +176,7 @@ JS
 JSON
 JustBoom
 Kbit
+Keychain
 KiB
 kickstart
 kickstarts
@@ -234,6 +238,7 @@ MTA
 multiroom
 multithreaded
 multithreading
+Munin
 Mycroft
 MyHome
 myMPD

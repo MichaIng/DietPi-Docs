@@ -27,7 +27,7 @@
 
 The WiFi HotSpot package turns your device into a wireless hotspot/access point. This allows other wireless devices to connect and share the internet connection.
 
-![DietPi WiFi hotspot WiFi](../assets/images/dietpi-software-advanced-networking-wifihotspot.png){: style="width:550px"}
+![DietPi WiFi hotspot WiFi](../assets/images/dietpi-software-advanced-networking-wifihotspot.png){: width="550px"}
 
 === "Requirements"
 
@@ -66,7 +66,7 @@ It also Installs:
 
 - [WiFi HotSpot](#wifi-hotspot_1)
 
-![DietPi WiFi hotspot tor](../assets/images/dietpi-software-advanced-networking-torhotspot.png){: style="width:550px"}
+![DietPi WiFi hotspot tor](../assets/images/dietpi-software-advanced-networking-torhotspot.png){: width="550px"}
 
 === "Requirements"
 
@@ -93,7 +93,7 @@ YouTube video tutorial: *DietPi Tor Hotspot Setup on Raspberry Pi 3 B Plus*.
 
 ## Tor Relay
 
-![advanced-networking-tor](../assets/images/dietpi-software-advanced-networking-tor.png){: style="width:150px"}
+![advanced-networking-tor](../assets/images/dietpi-software-advanced-networking-tor.png){: width="150px"}
 
 Contribute a node to the Tor network, which allows people to be anonymous on the internet.
 
@@ -114,7 +114,7 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
 
 === "Monitoring"
 
-    The simplest way to monitor the Tor relay is to use the DietPi-CloudShell scene, for this run `dietpi-cloudshell` from command line and select the "Tor Relay" scene. It uses the Tor monitor [nyx](https://nyx.torproject.org/) which can be called in standalone mode by executing `nix` from command line.
+    The simplest way to monitor the Tor relay is to use the DietPi-CloudShell scene, for this run `dietpi-cloudshell` from command line and select the "Tor Relay" scene. It uses the Tor monitor [nyx](https://nyx.torproject.org/) which can be called in standalone mode by executing `nyx` from command line.
 
 === "Keeping up-to-date"
 
@@ -184,7 +184,7 @@ Official documentation: <http://www.haproxy.org/#docs>
 
 Use your No-IP account and website URL address to always have it pointing to your DietPi system. Essential if your hosting a website.
 
-![DietPi DNS server software No-IP](../assets/images/dietpi-software-advanced-networking-noip.jpg){: style="width:200px"}
+![DietPi DNS server software No-IP](../assets/images/dietpi-software-advanced-networking-noip.jpg){: width="200px"}
 
 The setup of No-IP is done as follows:
 

@@ -29,7 +29,7 @@
 
 FreshRSS is a self-hosted RSS feed aggregator.
 
-![DietPi social software FreshRSS](../assets/images/dietpi-software-social-freshrss.jpg){: style="width:500px"}
+![DietPi social software FreshRSS](../assets/images/dietpi-software-social-freshrss.jpg){: width="500px"}
 
 === "Access to the web interface"
 
@@ -49,7 +49,7 @@ Also Installs:
 
 - Webserver
 
-![DietPi social software phpBB](../assets/images/dietpi-software-social-phpbb.png){: style="width:500px"}
+![DietPi social software phpBB](../assets/images/dietpi-software-social-phpbb.png){: width="500px"}
 
 ### Access Forums
 
@@ -113,7 +113,7 @@ Your forum is now ready.
 WordPress is a state-of-the-art semantic personal publishing platform with a focus on aesthetics, web standards, and usability.
 It allows you to create your own website.
 
-![DietPi social software Wordpress](../assets/images/dietpi-software-social-wordpress.jpg){: style="width:500px"}
+![DietPi social software Wordpress](../assets/images/dietpi-software-social-wordpress.jpg){: width="500px"}
 
 === "Access to the web interface"
 
@@ -137,7 +137,7 @@ Also Installs:
 
 - LASP Webserver
 
-![DietPi social software Image Gallery](../assets/images/dietpi-software-social-imagegallery.png){: style="width:500px"}
+![DietPi social software Image Gallery](../assets/images/dietpi-software-social-imagegallery.png){: width="500px"}
 
 === "Access to Image Gallery"
 
@@ -172,7 +172,7 @@ YouTube video tutorial: *DietPi: Easily set up Raspberry Pi projects (e.g. a sha
 
 Baïkal is a lightweight CalDAV + CardDAV server.
 
-![DietPi social software Baïkal](../assets/images/dietpi-software-social-baikal.png){: style="width:500px"}
+![DietPi social software Baïkal](../assets/images/dietpi-software-social-baikal.png){: width="500px"}
 
 === "First run setup"
 
@@ -200,7 +200,7 @@ Baïkal is a lightweight CalDAV + CardDAV server.
 OpenBazaar is a free decentralised peer to peer market server for all. No fees. Usage of Bitcoins.  
 Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
 
-![DietPi social software OpenBazaar](../assets/images/dietpi-software-social-openbazaar.png){: style="width:500px"}
+![DietPi social software OpenBazaar](../assets/images/dietpi-software-social-openbazaar.png){: width="500px"}
 
 === "OpenBazaar Client"
 
@@ -225,7 +225,7 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
 YaCy is a decentralized open source search engine.  
 Essentially, it is a "peer-to-peer" Google search engine, not controlled by Google.
 
-![DietPi social software YaCy](../assets/images/dietpi-software-social-yacy.png){: style="width:500px"}
+![DietPi social software YaCy](../assets/images/dietpi-software-social-yacy.png){: width="500px"}
 
 === "Access to the web interface"
 

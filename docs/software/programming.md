@@ -25,7 +25,7 @@
 
 Python is a text based interpreted programming language with object oriented programming options for general purpose applications.  
 
-![DietPi programming software Python](../assets/images/dietpi-software-programming-pythonlogo.png){: style="width:200px"}
+![DietPi programming software Python](../assets/images/dietpi-software-programming-pythonlogo.png){: width="200px"}
 
 Source: By [www.python.org](http://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
@@ -42,9 +42,9 @@ Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
 
 Docker is used to build, ship, and run distributed applications.
 
-![DietPi programming software Docker](../assets/images/dietpi-software-programming-docker1.svg){: style="width:200px"}
+![DietPi programming software Docker](../assets/images/dietpi-software-programming-docker1.svg){: width="200px"}
 
-![DietPi programming software Docker screenshot](../assets/images/dietpi-software-programming-docker2.svg){: style="width:400px"}
+![DietPi programming software Docker screenshot](../assets/images/dietpi-software-programming-docker2.svg){: width="400px"}
 
 Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
 

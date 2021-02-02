@@ -26,7 +26,7 @@
 
 Home Assistant is an open-source home automation platform running on Python 3. Track and control all devices at home and automate control. Perfect to run on a Raspberry Pi.
 
-![DietPi home automation software Home Assistant](../assets/images/dietpi-software-homeautomation-homeassistant.png){: style="width:500px"}
+![DietPi home automation software Home Assistant](../assets/images/dietpi-software-homeautomation-homeassistant.png){: width="500px"}
 
 === "Initial install and access"
 
@@ -82,7 +82,7 @@ Official documentation: <https://home-assistant.io/docs>
 
 Turn your Raspberry Pi into a energy usage monitor with web interface.
 
-![DietPi home automation software EmonPi](../assets/images/dietpi-software-homeautomation-emonpi.png){: style="width:500px"}
+![DietPi home automation software EmonPi](../assets/images/dietpi-software-homeautomation-emonpi.png){: width="500px"}
 
 ### Installation
 
@@ -119,21 +119,21 @@ The following hardware is required:
 === "Attach EmonPi to RPi"
 
     - Attach GPIO extender/riser to RPi:  
-      ![Image1](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g2.jpg){: style="width:400px"}  
-      ![Image2](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g3.jpg){: style="width:400px"}
+      ![Image1](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g2.jpg){: width="400px"}  
+      ![Image2](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g3.jpg){: width="400px"}
     - Attach EmonPi to RPi:  
-      ![Image3](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g5.jpg){: style="width:400px"}
+      ![Image3](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g5.jpg){: width="400px"}
     - Verify pins are visible:  
-      ![Image4](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g4.jpg){: style="width:400px"}
+      ![Image4](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g4.jpg){: width="400px"}
 
 === "Connect power sensor"
 
     Connect the sensor to measure the power consumption to the EmonPi:
 
     - Plug the 3.5mm power consumption sensor into the EmonPi:  
-      ![Image5](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g6.jpg){: style="width:400px"}
+      ![Image5](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g6.jpg){: width="400px"}
     - Clip the power consumption sensor onto a positive (red) cable (cables are live, use caution):  
-      ![Image6](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g7.jpg){: style="width:400px"}
+      ![Image6](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g7.jpg){: width="400px"}
 
 === "Setup Inputs and feeds for power sensor"
 
@@ -153,10 +153,10 @@ The following hardware is required:
     - Click `Setup` at the top right of screen, then click `Inputs`
     - Select the spanner on the far right of *Power WATT*
     - Check the screen matches the following image  
-      ![Image7](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_addfeed.png){: style="width:640px"}  
+      ![Image7](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_addfeed.png){: width="640px"}  
       then click `add`
     - To verify the feed is active, click `Setup` at the top right of screen, then click `Inputs`. You should see `log` under *Process list* of *Power WATT*:  
-      ![Image8](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_inputs.png){: style="width:640px"}  
+      ![Image8](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_inputs.png){: width="640px"}  
 
 === "Setup 'My Electric' App"
 
@@ -175,9 +175,9 @@ The following hardware is required:
 
 ## Domoticz
 
-Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.
+Domoticz is a Home Automation System that lets you monitor and configure various devices like lights, switches, various sensors/meters like for temperature, rain, wind, UV radiation, electric fields, gas, water and much more. Notifications/Alerts can be sent to any mobile device.
 
-![DietPi home automation software Domoticz](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: style="width:600px"}
+![Domoticz web interface screenshot](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: width="600px"}
 
 === "Access to the web interface"
 
@@ -188,6 +188,22 @@ Domoticz is a Home Automation System that lets you monitor and configure various
 
     ```sh
     journalctl -u domoticz
+    ```
+
+=== "Service handling"
+
+    Use the following commands to control the Domoticz system service:
+    ```sh
+    systemctl status domoticz
+    ```
+    ```sh
+    systemctl stop domoticz
+    ```
+    ```sh
+    systemctl start domoticz
+    ```
+    ```sh
+    systemctl restart domoticz
     ```
 
 === "Install directory"
@@ -211,7 +227,7 @@ Also installs:
 - Webserver (based on your preference)
 - PHP
 
-![DietPi home automation software TasmoAdmin](../assets/images/dietpi-software-homeautomation-tasmoadmin.png){: style="width:200px"}
+![DietPi home automation software TasmoAdmin](../assets/images/dietpi-software-homeautomation-tasmoadmin.png){: width="200px"}
 
 === "Access to the web interface"
 

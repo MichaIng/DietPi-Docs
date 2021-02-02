@@ -49,7 +49,7 @@
 
 The only media centre/player you'll ever need.
 
-![DietPi media server software Kodi](../assets/images/dietpi-software-media-kodi.jpg){: style="width:500px"}
+![DietPi media server software Kodi](../assets/images/dietpi-software-media-kodi.jpg){: width="500px"}
 
 If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autostart`:
 
@@ -64,7 +64,7 @@ Also installs:
 
 - MPD (music player daemon)
 
-![DietPi media server software ympd](../assets/images/dietpi-software-media-ympd.png){: style="width:500px"}
+![DietPi media server software ympd](../assets/images/dietpi-software-media-ympd.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -87,7 +87,7 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="300px"}
 
 ## myMPD
 
@@ -131,7 +131,7 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="300px"}
 
 ## O!MPD
 
@@ -142,7 +142,7 @@ Also installs:
 - MPD (music player daemon)
 - Web server
 
-![DietPi media server software O!MPD](../assets/images/dietpi-software-media-ompd.png){: style="width:500px"}
+![DietPi media server software O!MPD](../assets/images/dietpi-software-media-ompd.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -185,13 +185,13 @@ Also installs:
     - Tweak CAVA options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="300px"}
 
 ## Mopidy
 
 Mopidy is a python based music player web based user interface for MPD.
 
-![DietPi media server software Mopidy](../assets/images/dietpi-software-media-mopidy.png){: style="width:500px"}
+![DietPi media server software Mopidy](../assets/images/dietpi-software-media-mopidy.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -228,7 +228,7 @@ Mopidy is a python based music player web based user interface for MPD.
 
 Feature rich media streaming server with a web interface. Coded in Java.
 
-![DietPi media server software Airsonic](../assets/images/dietpi-software-media-airsonic.png){: style="width:500px"}
+![DietPi media server software Airsonic](../assets/images/dietpi-software-media-airsonic.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -255,7 +255,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 Feature rich media streaming server with a web interface. Coded in Java.
 
-![DietPi media server software Subsonic](../assets/images/dietpi-software-media-subsonic.png){: style="width:500px"}
+![DietPi media server software Subsonic](../assets/images/dietpi-software-media-subsonic.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -294,7 +294,7 @@ Logitech Media Server (aka LMS, Squeezebox Server) is the server software that e
 
 Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting Squeezelite for installation in `dietpi-software`.
 
-![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
+![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -336,7 +336,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 Squeezelite is the audio player for the Logitech Media Server.
 
-![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
+![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -371,7 +371,7 @@ Squeezelite is the audio player for the Logitech Media Server.
 Shairport Sync is an AirPlay audio player which plays audio streamed from iTunes, iOS devices and third-party AirPlay sources such as ForkedDaapd and Airfoil.  
 Audio played by a Shairport Sync-powered device stays synchronised with the source and hence with similar devices playing the same source. This allows for synchronised multi-room audio on multiple devices.
 
-![DietPi media server software Shairport Sync](../assets/images/dietpi-software-media-shairportsync.png){: style="width:400px"}
+![DietPi media server software Shairport Sync](../assets/images/dietpi-software-media-shairportsync.png){: width="400px"}
 
 === "AirPlay device name"
 
@@ -428,7 +428,7 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
 
 Stream your shared media to any DLNA/UPnP capable device.
 
-![DietPi media server software ReadyMedia](../assets/images/dietpi-software-media-readymedia.jpg){: style="width:200px"}
+![DietPi media server software ReadyMedia](../assets/images/dietpi-software-media-readymedia.jpg){: width="200px"}
 
 === "Access to ReadyMedia status"
 
@@ -463,7 +463,7 @@ Also Installs:
 
 - Webserver stack
 
-![DietPi media server software Ampache](../assets/images/dietpi-software-media-ampacheinterface.png){: style="width:500px"}
+![DietPi media server software Ampache](../assets/images/dietpi-software-media-ampacheinterface.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -488,7 +488,7 @@ Also Installs:
     - Select `show catalogues` from the left hand side.
     - Select `Update all`.
 
-    ![DietPi media server software Ampache update catalog](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png){: style="width:500px"}
+    ![DietPi media server software Ampache update catalog](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png){: width="500px"}
 
 === "Add custom media folders"
 
@@ -503,7 +503,7 @@ Also Installs:
     chmod -R 775 /my/directory
     ```
 
-    ![DietPi media server software Ampache add catalog](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: style="width:500px"}
+    ![DietPi media server software Ampache add catalog](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="500px"}
 
 === "Enable additional file formats via transcoding"
 
@@ -534,7 +534,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
     A Virtual Machine is highly recommended for Video transcoding:  
     <https://github.com/MichaIng/DietPi/issues/310#issuecomment-219067830>
 
-![DietPi media server software Emby](../assets/images/dietpi-software-media-embyserver.png){: style="width:500px"}
+![DietPi media server software Emby](../assets/images/dietpi-software-media-embyserver.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -578,7 +578,7 @@ YouTube video tutorial: *DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus
 
 Plex organizes your video, music, and photo collections and streams them to all of your screens. Also known as a "Web interface media streaming server".
 
-![DietPi media server software Plex Media Server](../assets/images/dietpi-software-media-plexmediaserver.png){: style="width:500px"}
+![DietPi media server software Plex Media Server](../assets/images/dietpi-software-media-plexmediaserver.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -609,6 +609,8 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 ***
 
+Tutorial: [Setup Guide for Plex on Raspberry Pi](https://blog.barnettjones.com/2020/11/26/dietpi-plex-setup/)
+
 YouTube video tutorial (German language): `Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)`.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EElrNjXc3aA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -617,7 +619,7 @@ YouTube video tutorial (German language): `Raspberry Pi 4 - Plex TV Media Server
 
 A Python-based monitoring and tracking tool for Plex Media Server.
 
-![DietPi media server software Tautulli](../assets/images/dietpi-software-media-tautulli.png){: style="width:500px"}
+![DietPi media server software Tautulli](../assets/images/dietpi-software-media-tautulli.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -631,7 +633,7 @@ A Python-based monitoring and tracking tool for Plex Media Server.
 
 Turn your device into a lightweight Mumble VoIP server.
 
-![DietPi media server software Murmur](../assets/images/dietpi-software-media-murmur.png){: style="width:100px"}
+![DietPi media server software Murmur](../assets/images/dietpi-software-media-murmur.png){: width="100px"}
 
 === "Murmur Server connection details"
 
@@ -655,9 +657,9 @@ Turn your device into a lightweight Mumble VoIP server.
 
 Turns your SBC into a Roon capable audio player. By using the main Roon application on another device, you can stream your music catalog directly to the Roon Bridge running on your SBC.
 
-![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150px"}
 
-![DietPi media server software Roon Bridge](../assets/images/dietpi-software-media-roonbridge.png){: style="width:500px"}
+![DietPi media server software Roon Bridge](../assets/images/dietpi-software-media-roonbridge.png){: width="500px"}
 
 === "More information on Roon"
 
@@ -673,9 +675,9 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 
 Turns your device into a Roon capable audio player and core server.
 
-![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150px"}
 
-![DietPi media server software Roon Server](../assets/images/dietpi-software-media-roonserver.png){: style="width:500px"}
+![DietPi media server software Roon Server](../assets/images/dietpi-software-media-roonserver.png){: width="500px"}
 
 === "Install a Roon Remote on another system"
 
@@ -699,9 +701,9 @@ Turns your device into a Roon capable audio player and core server.
 
 At startup the Roon Extension Manager accesses a repository containing the community developed extensions. Via `Settings` \> `Extensions` within Roon the repository can be viewed and an extension can be selected to perform a certain action.
 
-![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150px"}
 
-![DietPi media server software Roon Extension Manager](../assets/images/dietpi-software-media-roonextmanager.jpg){: style="width:500px"}
+![DietPi media server software Roon Extension Manager](../assets/images/dietpi-software-media-roonextmanager.jpg){: width="500px"}
 
 ***
 
@@ -713,7 +715,7 @@ Credits: Many thanks to @JanKoudijs for contributing this into DietPi
 Signalyst Network Audio Adapter (NAA) daemon allows you to stream music from an HQPlayer source (like Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (like 192 kHz) and more.  
 Also works with Roon.
 
-![DietPi media server software NAA Daemon](../assets/images/dietpi-software-media-naa.png){: style="width:500px"}
+![DietPi media server software NAA Daemon](../assets/images/dietpi-software-media-naa.png){: width="500px"}
 
 === "HQPlayer Desktop (Windows)"
 
@@ -745,7 +747,7 @@ Website: <https://www.signalyst.eu/consumer.html>
 
 Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
 
-![DietPi media server software IceCast](../assets/images/dietpi-software-media-icecast.png){: style="width:500px"}
+![DietPi media server software IceCast](../assets/images/dietpi-software-media-icecast.png){: width="500px"}
 
 === "Installation notes"
 
@@ -796,7 +798,7 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
 
 Web interface music streamer.
 
-![DietPi media server software Koel](../assets/images/dietpi-software-media-koel.png){: style="width:500px"}
+![DietPi media server software Koel](../assets/images/dietpi-software-media-koel.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -824,13 +826,13 @@ Web interface music streamer.
 
 A DLNA audio render/endpoint. Allows you to stream and play music, from another device, such as [BubbleUPnP](https://play.google.com/store/apps/details?id=com.bubblesoft.android.bubbleupnp).
 
-![DietPi media server software GMediaRender](../assets/images/dietpi-software-media-gmediarender.png){: style="width:150px"}
+![DietPi media server software GMediaRender](../assets/images/dietpi-software-media-gmediarender.png){: width="150px"}
 
 ## Ubooquity
 
 Ubooquity is a free home server for your comics and ebooks library, with remote web interface viewing.
 
-![DietPi media server software Ubooquity](../assets/images/dietpi-software-media-ubooquity.jpg){: style="width:600px"}
+![DietPi media server software Ubooquity](../assets/images/dietpi-software-media-ubooquity.jpg){: width="600px"}
 
 === "Access to the web interface"
 
@@ -861,7 +863,7 @@ YouTube video tutorial: *DietPi Ubooquity Comics and Ebook Reader on Raspberry P
 
 Free and open source comics/mangas media server with web UI.
 
-![DietPi media server software Komga](../assets/images/dietpi-software-media-komga.jpg){: style="width:500px"}
+![DietPi media server software Komga](../assets/images/dietpi-software-media-komga.jpg){: width="500px"}
 
 === "Access to the web interface"
 
@@ -900,7 +902,7 @@ Spotify Connect client for the Raspberry Pi that Just Works™.
 
 !!! note "You will need a Spotify Premium account in order to use the Spotify Connect client."
 
-![DietPi media server software Raspotify](../assets/images/dietpi-software-media-raspotify.png){: style="width:250px"}
+![DietPi media server software Raspotify](../assets/images/dietpi-software-media-raspotify.png){: width="250px"}
 
 Raspotify should work straight out of the box.
 
@@ -982,7 +984,7 @@ Quick start documentation: <https://developer.spotify.com/documentation/web-api/
 
 A FOSS web interface media streaming server, including live TV, forked from Emby.
 
-![DietPi media server software Jellyfin](../assets/images/dietpi-software-media-jellyfin.jpg){: style="width:600px"}
+![DietPi media server software Jellyfin](../assets/images/dietpi-software-media-jellyfin.jpg){: width="600px"}
 
 === "Access to the web interface"
 

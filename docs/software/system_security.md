@@ -35,7 +35,7 @@ To use Certbot you need:
 ???+ important "Keep port 80 open for Certbot renewal"
     Even when you use only HTTPS on port 443, Let's Encrypt requires port 80 to stay opened for certificate renewals (in your router's forwarding functionality).
 
-![DietPi security software Certbot screenshot](../assets/images/dietpi-software-security-certbot.png){: style="width:550px"}
+![DietPi security software Certbot screenshot](../assets/images/dietpi-software-security-certbot.png){: width="550px"}
 
 ### Create and apply your cert
 
@@ -57,9 +57,9 @@ Website: <https://letsencrypt.org>
 Fail2Ban protects your system from brute-force attacks by banning the source IP address.  
 We have enabled detection for SSH servers (OpenSSH and Dropbear), however, Fail2Ban also supports additional software.
 
-![DietPi security software Fail2Ban](../assets/images/dietpi-software-security-fail2ban1.jpg){: style="width:100px"}
+![DietPi security software Fail2Ban](../assets/images/dietpi-software-security-fail2ban1.jpg){: width="100px"}
 
-![DietPi security software Fail2Ban screenshot](../assets/images/dietpi-software-security-fail2ban2.jpg){: style="width:550px"}
+![DietPi security software Fail2Ban screenshot](../assets/images/dietpi-software-security-fail2ban2.jpg){: width="550px"}
 
 Source: [`Lostcontrol` of Fail2ban wiki](https://fail2ban.org/wiki/index.php/File:Fail2ban-screenshot.jpg), [GPL](https://commons.wikimedia.org/w/index.php?curid=19776087)
 

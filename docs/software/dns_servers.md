@@ -26,7 +26,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
 - Also Installs: [Webserver stack](../webserver_stack/)
 
-![DietPi DNS server software Pi-hole](../assets/images/dietpi-software-dnsserver-pihole.png){: style="width:500px"}
+![DietPi DNS server software Pi-hole](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500px"}
 
 === "Access the web interface"
 
@@ -56,7 +56,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     Simply enter the IP address of your Pi-hole device under "DNS server":
 
-    ![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: style="width:500px"}
+    ![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: width="500px"}
 
     On your Pi-hole device, you will need to set a different DNS server.  
     Depending on your router configuration, if you don't do this step, the Pi-hole device may not be able to access the internet. It's highly recommended to have the device running Pi-hole, pointing to a DNS server outside your network.
@@ -81,6 +81,15 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 === "Setting the password"
 
     If you forgot your login password for the Pi-hole admin web page, you can set it with the shell command `pihole -a -p` on your Pi-hole device.
+
+=== "Blocklists and whitelists"
+
+    There are many sites in the web giving blocklists and whitelists for Pi-hole. They can be used when you want to have more blocking as the standard installation gives you. Here are some examples:
+
+    - [The Big Blocklist Collection from `WaLLy3K`](https://firebog.net)
+    - [Blocklists from Pi-Hole forum](https://discourse.pi-hole.net/t/update-the-best-blocking-lists-for-the-pi-hole-alternative-dns-servers-2019/13620)
+    - [Phishing Army blocklist](https://phishing.army)
+    - [`anudeepND` whitelist](https://github.com/anudeepND/whitelist)
 
 === "Accessing via OpenVPN or WireGuard"
 
@@ -107,9 +116,9 @@ YouTube video tutorial #4 (German language): [`Raspberry Pi Zero W mit Pi-hole -
 Unbound is a validating, recursive, caching DNS resolver.  
 For more details see [unbound "about" description](https://nlnetlabs.nl/projects/unbound/about/).
 
-![DietPi DNS server software unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: style="width:150px"}
+![DietPi DNS server software unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: width="150px"}
 
-![DietPi DNS server software unbound screenshot](../assets/images/dietpi-software-unbound.jpg){: style="width:500px"}
+![DietPi DNS server software unbound screenshot](../assets/images/dietpi-software-unbound.jpg){: width="500px"}
 
 === "Default DNS ports"
 
