@@ -18,6 +18,8 @@ It builds the static HTML pages into a temporary directory and starts a local we
 
 <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
+This website shows logos of 3rd party software and providers which are excluded from the above license. They may only be used related to their product, for details, check individual trademark rules and licenses.
+
 ## Contributing
 
 There are many ways in which you can participate in this project, for example:
