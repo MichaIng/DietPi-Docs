@@ -402,6 +402,7 @@ UPnP
 upvote
 UrBackup
 userdata
+userspace
 UUID
 Viebrock
 VirtualBox
