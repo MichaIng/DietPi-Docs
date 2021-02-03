@@ -10,6 +10,7 @@
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth)
 - [**Steam - Steam client**](#steam)
 - [**PaperMC - Fast and optimised Minecraft server**](#papermc)
+- [**Box86 - x86 userspace emulation for ARM**](#box86)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -138,7 +139,7 @@ YouTube video tutorial: *How to Install MineOS on Raspberry Pi 4 using Diet Pi O
 
 ## Nukkit
 
-Nukkit is Java-based server for Minecraft Pocket Edition.
+Nukkit is a Java-based server for Minecraft Pocket Edition.
 
 ![Nukkit screenshot](../assets/images/dietpi-software-games-nukkit.png){: width="500px"}
 
@@ -359,10 +360,19 @@ Website: <http://www.dxx-rebirth.com/>
 
 ![Steam on Linux logo](../assets/images/dietpi-software-games-steam.jpg){: width="500px"}
 
-### Installation notes
+=== "Installation notes"
 
-- Steam is installed to the DietPi user data directory `/mnt/dietpi_userdata/steam`
-- By default, installing games will install them to `/mnt/dietpi_userdata/steam`
+    - Steam is installed to the DietPi user data directory `/mnt/dietpi_userdata/steam`
+    - By default, installing games will install them to `/mnt/dietpi_userdata/steam`
+
+=== "Steam on ARM"
+    Steam, and many Steam games that have Linux versions, can be run on ARM with the help of [Box86](#box86). Note that 2D games are the best to play, and more complex ones may require overclocking your device.
+
+    ??? warning "Known issues"
+        
+        - Only small mode supported
+        - Hence no possibility to search/add games from the client, which needs to be done from the website store (doesn't work for free games) or a different client
+        - Stopping the client via small mode menu does not really stop it
 
 ## PaperMC
 
@@ -454,5 +464,9 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
 Website: <https://paper.readthedocs.io>  
 Source code: <https://github.com/PaperMC/Paper>
+
+## Box86
+
+Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux, like ARM. Note that this only works on ARMv7. To use it just run an x86 file or run `box86 /path/to/file`.
 
 [Return to the **Optimised Software list**](../../software/)
