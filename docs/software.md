@@ -77,7 +77,7 @@
 - [**Chromium - Web browser**](../software/desktop/#chromium)
 - [**GIMP - Image editor**](../software/desktop/#gimp)
 - [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss)
-- [**Xfce4 Power - Power manager with brightness**](../software/desktop/#xfce4-power)
+- [**Xfce Power Manager - Power manager with brightness control**](../software/desktop/#xfce-power-manager)
 
 ## [Development & Programming](../software/programming/)
 
