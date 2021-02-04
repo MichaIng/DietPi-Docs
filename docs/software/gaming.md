@@ -360,19 +360,16 @@ Website: <http://www.dxx-rebirth.com/>
 
 ![Steam on Linux logo](../assets/images/dietpi-software-games-steam.jpg){: width="500px"}
 
-=== "Installation notes"
+Steam is a gaming client and store made by Valve.
 
-    - Steam is installed to the DietPi user data directory `/mnt/dietpi_userdata/steam`
-    - By default, installing games will install them to `/mnt/dietpi_userdata/steam`
-
-=== "Steam on ARM"
-    Steam, and many Steam games that have Linux versions, can be run on ARM with the help of [Box86](#box86). Note that 2D games are the best to play, and more complex ones may require overclocking your device.
+### Steam on ARM
+    Steam is made for x86, but it, and many Steam games that have Linux versions, can be run on ARM with the help of [Box86](#box86). Note that 2D games are the best to play, and more complex ones may require overclocking your device.
 
     ??? warning "Known issues"
         
         - Only small mode supported
         - Hence no possibility to search/add games from the client, which needs to be done from the website store (doesn't work for free games) or a different client
-        - Stopping the client via small mode menu does not really stop it
+        - Quitting the Steam client only works by running `killall steam.sh` from a console
 
 ## PaperMC
 
