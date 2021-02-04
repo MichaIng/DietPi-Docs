@@ -367,7 +367,7 @@ Steam is a gaming client and store made by Valve.
 Steam is made for x86, but it, and many Steam games that have Linux versions, can be run on ARM with the help of [Box86](#box86). Note that 2D games are the best to play, and more complex ones may require overclocking your device.
 
 ??? warning "Known issues on ARM"
-        
+
     - Only small mode (the mini games list) is supported, as the internal library browser depends on 64-bit components.
     - Hence it is not possible to search/add games from the client, which needs to be done from the website store (doesn't work for free games) or a different client.
     - Quitting the Steam client only works by running `killall steam.sh` from a console. Using the exit button from the menu or panel icon will hang Steam.
