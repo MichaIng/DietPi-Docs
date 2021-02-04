@@ -83,6 +83,8 @@
 
 - [**Python - high-level interpreted programming language**](../software/programming/#python)
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
+- [**Docker-Compose - run multi-container applications on Docker**](../software/programming/#docker-compose)
+- [**Portainer - Docker container management**](../software/programming/#portainer)
 
 ## [DNS Servers](../software/dns_servers/)
 
