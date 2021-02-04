@@ -3,7 +3,8 @@
 ## Overview
 
 - [**Python - high-level interpreted programming language**](#python)
-- [**Docker - Build, ship, and run distributed applications**](#docker)  
+- [**Docker - Build, ship, and run distributed applications**](#docker)
+- [**Docker-Compose - run multi-container applications on Docker**](#docker-compose)
 - [**Portainer - Docker container management**](#portainer)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
@@ -73,6 +74,17 @@ Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
 YouTube video tutorial: *DietPi Docker Setup on Raspberry Pi 3 B Plus*.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/y_VfLOGm5nA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Docker-Compose
+
+Docker Compose is a tool for running multi-container applications on Docker defined using the Compose file format.
+
+![DietPi programming software Docker-Compose](https://raw.githubusercontent.com/docker/compose/master/logo.png)
+
+***
+
+Official documentation: <https://docs.docker.com/compose>
+Getting started: <https://docs.docker.com/compose/gettingstarted>
 
 ## Portainer
 
