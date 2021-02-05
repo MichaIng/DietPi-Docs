@@ -426,10 +426,62 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "DietPi survey"
 
-    This option will upload information on a anonymous base. The aggregated results of all uploads can be seen on the [DietPi survey statistics website](https://dietpi.com/survey/).  
-    Run `dietpi-survey`.
+    #### What is DietPi Survey?
+
+    DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software.
 
     ![DietPi-Survey screenshot](assets/images/dietpi-survey.jpg)
+
+    - No private data is sent. No one can identify you. No IP address is obtained.
+    - This data allows the DietPi project team to focus and improve areas based on popularity. Ensuring the most common devices and software titles will receive the most support and improvements.
+    - By opting out, you are potentially preventing DietPi from achieving the best future possible experience for everyone.
+
+    #### How often does DietPi Survey data get sent?
+
+    The DietPi Survey data file is sent when you install software with `dietpi-software` and update DietPi.
+
+    #### How big is the data upload?
+    The data we upload is tiny (1 kB) and won't effect your internet bandwidth or system performance.
+
+    #### What Data is sent?
+    In the command `dietpi-survey` the exact copy of the data we receive can be viewe. The file we receive is written in bash code to allow us faster report page creation for <https://dietpi.com/survey>.
+
+    Following is an example how this file may look like. It is from a very basic system, so only two software packages (#103, #104) are installed.
+
+    ```sh
+    #!/bin/bash
+    ((aDIETPI_VERSION[6.34]++))
+    ((aGIT_BRANCH[MichaIng/master]++))
+    ((aDEVICE_NAME[Virtual Machine (x86_64)]++))
+    ((aCPU_ARCH[x86_64]++))
+    ((aCPU_COUNT[2]++))
+    ((aDISTRO_VERSION[buster]++))
+    ((aAUTOSTART_OPTION[${aAUTOSTART_NAME[0]:=0}]++))
+    ((aAUTO_SETUP_AUTOMATED[0]++))
+    ((aNETWORK_INTERFACE[eth0]++))
+    # -------------------------
+    # DietPi-Software installs
+    # -------------------------
+    ((aSOFTWARE[${aSOFTWARE_NAME6_34[103]:=103}]++))
+    ((aSOFTWARE[${aSOFTWARE_NAME6_34[104]:=104}]++))
+    ```
+
+    #### How do I Opt-Out?
+
+    By staying Opted in, you are supporting the DietPi project with no impact to your system or private data.
+    You can opt out of DietPi Survey by running the following command:
+
+    ```sh
+    dietpi-survey
+    ```
+
+    #### How do I check my current Opted status?
+
+    Simply run the program. The current mode will be pre-selected and highlighted.
+
+    ```sh
+    dietpi-survey
+    ```
 
 === "DietPi bug report"
 
