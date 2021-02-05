@@ -81,6 +81,14 @@ Docker Compose is a tool for running multi-container applications on Docker defi
 
 ![DietPi programming software Docker-Compose](https://raw.githubusercontent.com/docker/compose/master/logo.png)
 
+=== "Update"
+
+    Update to latest version:
+
+    ```
+    sudo pip3 install docker-compose --upgrade
+    ```
+
 ***
 
 Official documentation: <https://docs.docker.com/compose>
