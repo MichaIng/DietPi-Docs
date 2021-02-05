@@ -441,10 +441,10 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     The DietPi Survey data file is sent when you install software with `dietpi-software` and update DietPi.
 
     #### How big is the data upload?
-    The data we upload is tiny (1 kB) and won't effect your internet bandwidth or system performance.
+    The data we upload is tiny (1 KB) and won't effect your internet bandwidth or system performance.
 
     #### What Data is sent?
-    In the command `dietpi-survey` the exact copy of the data we receive can be viewe. The file we receive is written in bash code to allow us faster report page creation for <https://dietpi.com/survey>.
+    In the command `dietpi-survey` the exact copy of the data we receive can be viewed. The file we receive is written in bash code to allow us faster report page creation for <https://dietpi.com/survey>.
 
     Following is an example how this file may look like. It is from a very basic system, so only two software packages (#103, #104) are installed.
 
