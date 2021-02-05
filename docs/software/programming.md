@@ -2,9 +2,9 @@
 
 ## Overview
 
-- [**Python - high-level interpreted programming language**](#python)
+- [**Python - High-level interpreted programming language**](#python)
 - [**Docker - Build, ship, and run distributed applications**](#docker)
-- [**Docker-Compose - run multi-container applications on Docker**](#docker-compose)
+- [**Docker-Compose - Run multi-container applications on Docker**](#docker-compose)
 - [**Portainer - Docker container management**](#portainer)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
@@ -91,7 +91,7 @@ Docker Compose is a tool for running multi-container applications on Docker defi
 
 ***
 
-Official documentation: <https://docs.docker.com/compose>
+Official documentation: <https://docs.docker.com/compose>  
 Getting started: <https://docs.docker.com/compose/gettingstarted>
 
 ## Portainer
