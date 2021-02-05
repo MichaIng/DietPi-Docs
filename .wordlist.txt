@@ -245,6 +245,7 @@ myMPD
 MySqli
 mysql
 NAA
+NAND
 nano
 NanoPC
 NanoPi
@@ -324,6 +325,7 @@ RK
 Rockchip
 ROCKPro
 Roon
+RootFS
 rpc
 RPi
 RPis
@@ -356,6 +358,7 @@ Sonarr
 Soxr
 SPC
 SPI
+spindown
 Spotify
 Squeezelite
 SSD

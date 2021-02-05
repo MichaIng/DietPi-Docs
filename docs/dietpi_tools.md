@@ -236,11 +236,11 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     Feature-rich drive management utility. It is a lightweight program that allows you to:
 
     - Manage drives: Mount, format external drives
-    - Maintenance drives: Check and repair drives, resize (expand) filesystem, change reserved blocks count
-    - Set drive attributes: Set read only filesystems, set idle spindown time
+    - Maintenance drives: Check and repair drives, resize (expand) file system, change reserved blocks count
+    - Set drive attributes: Set read only file systems, set idle spindown time
     - Move DietPi User data
     - Transfer RootFS to external drive (Raspberry Pi and some ODROID boards only)
-    - Disable swapfile, change swapfile size
+    - Disable swap file, change swap file size
     - Run benchmarks on drives
 
     Run `dietpi-drive_manager`.
@@ -258,17 +258,17 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_2.png){: width="600px"}
 
-        If needed, format the drive before usage selecting the `Format` option (filesystem type description see below).  
+        If needed, format the drive before usage selecting the `Format` option (file system type description see below).  
         Remark: Formatting drives can only be done unmounted.
 
         If needed, mount the drive via the `Mount` selection. If mounted, commands `Unmount`, `Benchmark`, `User data`, `Swapfile` and `Read only` are present.
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_3.png){: width="600px"}
 
-    #### Move the location of user data and swapfile
+    #### Move the location of user data and swap file
 
-    You can move the location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swapfile to a different location on a target drive. This may be useful if your filesystem containing the DietPi user data resp. swapfile has only little space left.
-    Therefore execute the following steps (example user data, swapfile is quite similar):
+    You can move the location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swap file to a different location on a target drive. This may be useful if your file system containing the DietPi user data resp. swap file has only little space left.
+    Therefore execute the following steps (example user data, swap file is quite similar):
 
     1. Run `dietpi-drive_manager` to bring up the main menu.
     1. Have the target drive connected and mounted (see description above).
@@ -279,51 +279,51 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_4.png){: width="500px"}
 
-        - Change swapfile size:
+        - Change swap file size:
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_5.png){: width="500px"}
 
-    #### Format filesystem types
+    #### Format file system types
 
-    Formatting file systems lead you to these dialogs:
+    Formatting file systems lead you to these dialogues:
 
     ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_6.png){: width="500px"}
     ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_7.png){: width="500px"}
 
-    In the latter dialog you have to choose the filesystem type. The following selections may be chosen:
+    In the latter dialog you have to choose the file system type. The following selections may be chosen:
 
-    - EXT4 (Default)  
+    - `EXT4` (Default)  
       Recommended for users who plan to use this drive solely on the DietPi system (e.g. dedicated drive).  
       `+` The standard for Linux file systems  
       `-` Not compatible on a Windows system
 
-    - NTFS  
+    - `NTFS`  
       Recommended for users who plan to use this drive on a Windows system.  
       `+` Compatible on a Windows system  
       `-` High CPU usage during transfers (spawns a process)
 
-    - FAT32  
+    - `FAT32`  
       Recommended for users who want high compatibility across multiples operating systems.  
       `+` Highly compatible with all OS  
       `-` 4GB file size limit  
       `-` 2TB drive size limit  
       `-` Does not support file/folder permissions  
-      `-` Does not support symlinks
+      `-` Does not support symbolic links
 
-    - HFS+  
+    - `HFS+`  
       Recommended for Mac owners.  
-      `+` Mac OS filesystem
+      `+` Mac OS file system
 
-    - BTRFS  
-      A modern Linux filesystem.  
+    - `BTRFS`  
+      A modern Linux file system.  
       `+` <https://github.com/Fourdee/DietPi/issues/271#issuecomment-247173250>
 
-    - F2FS  
-      Linux filesystem designed for flash/NAND based drives.  
+    - `F2FS`  
+      Linux file system designed for flash/NAND based drives.  
       `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>
 
-    - exFAT  
-      Windows file system, intended for external drives, e.g. USB flash drives or SDcards  
+    - `exFAT`  
+      Windows file system, intended for external drives, e.g. USB flash drives or SD cards  
       `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>
 
     #### Move DietPi system to a larger SD card
@@ -333,8 +333,8 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     1. Shutdown your system and put the SD card into a card reader of a different systems.
     1. Copy the SD card contents to the new (larger) SD card. This can e.g. be done using
         - the `dd` command (command line option)
-        - [balenaEtcher](https://etcher.io/) or [Rufus](https://rufus.ie/) (graphical user interface option)
-        - gnome-disks (graphical user interface option)
+        - [`balenaEtcher`](https://etcher.io/) or [`Rufus`](https://rufus.ie/) (graphical user interface option)
+        - `gnome-disks` (graphical user interface option)
     1. Boot the system with the copied memory card.
     1. Run `dietpi-drive_manager` to bring up the main menu.
     1. Select the disk containing the root (`/`) partition and press ++enter++.
@@ -342,9 +342,9 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_8.png){: width="500px"}
 
-    1. Reboot your system to expand the root filesystem to use the whole space of the new memory card.
+    1. Reboot your system to expand the root file system to use the whole space of the new memory card.
 
-    A similar procedure may be used when moving the SD card contents to a smaller SD card. During this procedure you typically need to shrink the partition size (e.g. with parted or gparted) before copying the partition image to a different memory card. Also, do the resize to use the full space on the new card.
+    A similar procedure may be used when moving the SD card contents to a smaller SD card. During this procedure you typically need to shrink the partition size (e.g. with `parted` or `gparted`) before copying the partition image to a different memory card. Also, do the resize to use the full space on the new card.
 
 === "DietPi autostart"
 
