@@ -447,7 +447,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     #### Uploaded amount of data
 
-    The uploaded data is tiny (about 1 KB) and won't effect your internet bandwidth or system performance.
+    The uploaded data is tiny (about 1 KB) and won't affect your internet bandwidth or system performance.
 
     #### Transmitted data contents
 
