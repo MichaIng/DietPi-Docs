@@ -428,18 +428,21 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software.
 
+    ???+ important "Privacy and goals"
+
+        The following privacy rules and goals are considered:
+
+        - No private data is sent. No one can identify you. No IP address is obtained.
+        - DietPi Survey is an ***Opt-in*** system, which means that it won't send any data without your explicit interactive permission.
+        - On your first interactive login on a fresh DietPi system, you will be asked once for the *Opt-in*/*Opt-out* mode.
+        - The transmitted data allows the DietPi project team to achieve the best future possible experience for everyone to
+            - focus and improve especially popular areas,
+            - ensure the most common devices and software titles will receive support and improvements,
+            - keep up support for software and hardware that you use.
+
+        **In short words:** By selecting ***Opt IN***, you are supporting the DietPi project with no impact to your system or private data.
+
     ![DietPi Survey screenshot](assets/images/dietpi-survey.jpg)
-
-    #### Privacy and goals
-
-    The following privacy rules and goals are considered:
-
-    - No private data is sent. No one can identify you. No IP address is obtained.
-    - Basically DietPi Survey is an ***opt OUT*** system. By selecting ***opt IN***, you are helping us.
-    - The transmitted data allows the DietPi project team to achieve the best future possible experience for everyone to
-        - focus and improve especially popular areas,
-        - ensure the most common devices and software titles will receive support and improvements,
-        - keep up support for software and hardware that you use.
 
     #### Data transmission events
 
@@ -488,24 +491,17 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     id 104 | =2 | dropbear: lightweight ssh server | | https://dietpi.com/phpbb/viewtopic.php?p=62#p62
     ```
 
-    #### Opt IN and Opt OUT
+    #### Selecting Opt-in or Opt-out
 
-    By staying ***opt IN***, you are supporting the DietPi project with no impact to your system or private data.
-    You can ***opt OUT*** of DietPi Survey by running the following command and follow the instructions:
-
-    ```sh
-    dietpi-survey
-    ```
-
-    #### Check current *opt IN* / *opt OUT* status
-
-    The actual status can be checked by simply run
+    You can select ***Opt-in*** or ***Opt-out*** of DietPi Survey by running the following command and follow the instructions:
 
     ```sh
     dietpi-survey
     ```
 
-    The current mode will be pre-selected and highlighted.  
+    This may also be achieved by setting `SURVEY_OPTED_IN=0` (*Opt-out*) or `SURVEY_OPTED_IN=1` (*Opt-in*) in `/boot/dietpi.txt` before the first system boot.
+
+    To check the actual status, `dietpi-survey` may be called. The current mode will be pre-selected and highlighted.  
     Alternatively you can use
 
     ```sh
