@@ -227,6 +227,10 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 Website: <https://www.wireguard.com>  
 Wikipedia: <https://wikipedia.org/wiki/WireGuard>
 
+YouTube video tutorial: *VPN configuration using Raspiberry PI and DietPi*.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aYPaDeqtMG8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: Installation unter DietPi mit NoIP und AVM Fritzbox`.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yRkdzGmnvA4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
