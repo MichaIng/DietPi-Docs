@@ -29,5 +29,5 @@ Links to special software packages are located at the end of the according softw
 
     ![advanxer.com logo](assets/images/dietpi-references-advanxer.com-logo.png){: width=150px}
 
-    Many thanks to `advanxer.com` for generating this nice description  
-    See also <http://munin-monitoring.org>, <https://github.com/munin-monitoring/munin>
+    Many thanks to `advanxer.com` for generating this nice description.  
+    See also <http://munin-monitoring.org>, <https://github.com/munin-monitoring/munin>.
