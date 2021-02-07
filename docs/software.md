@@ -81,8 +81,10 @@
 
 ## [Development & Programming](../software/programming/)
 
-- [**Python - high-level interpreted programming language**](../software/programming/#python)
+- [**Python - High-level interpreted programming language**](../software/programming/#python)
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
+- [**Docker-Compose - Run multi-container applications on Docker**](../software/programming/#docker-compose)
+- [**Portainer - Docker container management**](../software/programming/#portainer)
 
 ## [DNS Servers](../software/dns_servers/)
 
@@ -98,7 +100,7 @@
 
 ## [Gaming & Emulation](../software/gaming/)
 
-- [**OpenTyrian - open-source port of the DOS game Tyrian**](../software/gaming/#opentyrian)
+- [**OpenTyrian - Open-source port of the DOS game Tyrian**](../software/gaming/#opentyrian)
 - [**Cuberite - Fast Minecraft server with web interface**](../software/gaming/#cuberite)
 - [**MineOS - Multiple Minecraft servers with web interface**](../software/gaming/#mineos)
 - [**Nukkit - Server for Minecraft Pocket Edition**](../software/gaming/#nukkit)

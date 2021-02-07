@@ -424,12 +424,96 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-CPU_info screenshot](assets/images/dietpi-cpuinfo.jpg)
 
-=== "DietPi survey"
+=== "DietPi Survey"
 
-    This option will upload information on a anonymous base. The aggregated results of all uploads can be seen on the [DietPi survey statistics website](https://dietpi.com/survey/).  
-    Run `dietpi-survey`.
+    DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software.
 
-    ![DietPi-Survey screenshot](assets/images/dietpi-survey.jpg)
+    ???+ important "Privacy and goals"
+
+        The following privacy rules and goals are considered:
+
+        - No private data is sent. No one can identify you. No IP address is obtained.
+        - DietPi Survey is an ***Opt-in*** system, which means that it won't send any data without your explicit interactive permission.
+        - On your first interactive login on a fresh DietPi system, you will be asked once for the *Opt-in*/*Opt-out* mode.
+        - The transmitted data allows the DietPi project team to achieve the best future possible experience for everyone to
+            - focus and improve especially popular areas,
+            - ensure the most common devices and software titles will receive support and improvements,
+            - keep up support for software and hardware that you use.
+
+        **In short words:** By selecting ***Opt IN***, you are supporting the DietPi project with no impact to your system or private data.
+
+    ![DietPi Survey screenshot](assets/images/dietpi-survey.jpg)
+
+    #### Data transmission events
+
+    The DietPi Survey data file is sent when you install software with `dietpi-software` and update DietPi with `dietpi-update`.
+
+    #### Uploaded amount of data
+
+    The uploaded data is tiny (about 1 KB) and won't affect your internet bandwidth or system performance.
+
+    #### Transmitted data contents
+
+    Within the command line program `dietpi-survey` the exact copy of the transmitted data can be viewed. The transmitted file is written in bash code to allow us faster report page creation (e.g. done for <https://dietpi.com/survey>).
+
+    Following is an example how this file may look like:
+
+    ```sh
+    #!/bin/bash
+    ((aDIETPI_VERSION[6.34]++))
+    ((aGIT_BRANCH[MichaIng/master]++))
+    ((aDEVICE_NAME[Virtual Machine (x86_64)]++))
+    ((aCPU_ARCH[x86_64]++))
+    ((aCPU_COUNT[2]++))
+    ((aDISTRO_VERSION[buster]++))
+    ((aAUTOSTART_OPTION[${aAUTOSTART_NAME[0]:=0}]++))
+    ((aAUTO_SETUP_AUTOMATED[0]++))
+    ((aNETWORK_INTERFACE[eth0]++))
+    # -------------------------
+    # DietPi-Software installs
+    # -------------------------
+    ((aSOFTWARE[${aSOFTWARE_NAME6_34[103]:=103}]++))
+    ((aSOFTWARE[${aSOFTWARE_NAME6_34[104]:=104}]++))
+    ```
+
+    The tail of the file lists installed software packages by their IDs. The example above shows a very basic system, so only two software packages (`#103`: DietPi-RAMlog, `#104`: Dropbear) are installed.
+    To find out the names of the installed software package IDs installed via `dietpi-software` you can execute
+
+    ```sh
+    dietpi-software list | grep ' =2'
+    ```
+
+    This gives the IDs, names and info of software. The above example would show
+
+    ```sh
+    root@dietpi:~# dietpi-software list | grep ' =2'
+    id 103 | =2 | dietpi-ramlog: minimal, optimised logging | | https://dietpi.com/phpbb/viewtopic.php?p=68#p68
+    id 104 | =2 | dropbear: lightweight ssh server | | https://dietpi.com/phpbb/viewtopic.php?p=62#p62
+    ```
+
+    #### Selecting Opt-in or Opt-out
+
+    You can select ***Opt-in*** or ***Opt-out*** of DietPi Survey by running the following command and follow the instructions:
+
+    ```sh
+    dietpi-survey
+    ```
+
+    This may also be achieved by setting `SURVEY_OPTED_IN=0` (*Opt-out*) or `SURVEY_OPTED_IN=1` (*Opt-in*) in `/boot/dietpi.txt` before the first system boot.
+
+    To check the actual status, `dietpi-survey` may be called. The current mode will be pre-selected and highlighted.  
+    Alternatively you can use
+
+    ```sh
+    grep 'SURVEY_OPTED_IN' /boot/dietpi.txt
+    ```
+
+    which displays the status like
+
+    ```
+    root@dietpi:~# grep 'SURVEY_OPTED_IN' /boot/dietpi.txt
+    SURVEY_OPTED_IN=1
+    ```
 
 === "DietPi bug report"
 
