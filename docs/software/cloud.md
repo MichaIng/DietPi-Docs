@@ -674,6 +674,11 @@ Forum: <https://bitwardenrs.discourse.group>
 Source code: <https://github.com/dani-garcia/bitwarden_rs>  
 Open-source license: [GPLv3](https://github.com/dani-garcia/bitwarden_rs/blob/master/LICENSE.txt)
 
+For the moment the smartphone apps for ANDROID and IOS can not be used on the Bitwarden server on Dietpi.
+Cert. Problem will be fixed on next release 6.35. 
+https://github.com/MichaIng/DietPi/issues/3724#issuecomment-750883187
+https://github.com/MichaIng/DietPi/issues/4098
+
 Credits: This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9). Thank you !
 
 ## FuguHub
