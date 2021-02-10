@@ -1,9 +1,3 @@
----
-title: socialmedia.md
-summary: Brief description of Blog platform, Twitter, Facebook, ...
-date: 2021-02-08  
----
-
 # Social media
 
 ## DietPi on Twitter

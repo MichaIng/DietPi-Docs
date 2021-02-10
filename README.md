@@ -1,20 +1,20 @@
 <html>
-	<h1 align="center">
-		<img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi Logo">
-	</h1>
-	<p align="center">
-		<b>Lightweight justice for your single-board computer!</b>
-		<br><br>
-		optimised • simplified • for everyone
-		<br><br>
-		<a href="https://dietpi.com/">Website</a> • <a href="https://dietpi.com/docs/">Documentation</a> • <a href="https://dietpi.com/#download">View all supported platforms</a> • <a href="https://dietpi.com/phpbb">Forums</a>
-	</p>
-	<hr>
-	<p align="center">
-		<strong>Ready to run</strong> optimised software choices with <a href="https://dietpi.com/dietpi-software.html"><strong>dietpi-software</strong></a>
-		<br>Feature-rich configuration tool for your device with <strong>dietpi-config</strong>.
-	</p>
-	<hr>
+  <h1 align="center">
+    <img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi Logo">
+  </h1>
+  <p align="center">
+    <b>Lightweight justice for your single-board computer!</b>
+    <br><br>
+    optimised • simplified • for everyone
+    <br><br>
+    <a href="https://dietpi.com/">Website</a> • <a href="https://dietpi.com/docs/">Documentation</a> • <a href="https://dietpi.com/#download">View all supported platforms</a> • <a href="https://dietpi.com/phpbb">Forums</a>
+  </p>
+  <hr>
+  <p align="center">
+    <strong>Ready to run</strong> optimised software choices with <a href="https://dietpi.com/dietpi-software.html"><strong>dietpi-software</strong></a>
+    <br>Feature-rich configuration tool for your device with <strong>dietpi-config</strong>.
+  </p>
+  <hr>
 </html>
 
 ## Introduction
@@ -62,4 +62,3 @@ If you need help:
 <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
 This website shows logos of 3rd party software and providers which are excluded from the above license. They may only be used related to their product, for details, check individual trademark rules and licenses.
-
