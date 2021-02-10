@@ -4,7 +4,7 @@
 
 - [**Python - High-level interpreted programming language**](#python)
 - [**Docker - Build, ship, and run distributed applications**](#docker)
-- [**Docker-Compose - Run multi-container applications on Docker**](#docker-compose)
+- [**Docker Compose - Run multi-container applications on Docker**](#docker-compose)
 - [**Portainer - Docker container management**](#portainer)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
@@ -43,9 +43,9 @@ Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
 
 Docker is used to build, ship, and run distributed applications.
 
-![DietPi programming software Docker](../assets/images/dietpi-software-programming-docker1.svg){: width="200px"}
+<!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200px"} -->
 
-![DietPi programming software Docker screenshot](../assets/images/dietpi-software-programming-docker2.svg){: width="400px"}
+![Docker functional block diagram](../assets/images/dietpi-software-programming-docker2.svg){: width="400px"}
 
 Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
 
@@ -75,11 +75,11 @@ YouTube video tutorial: *DietPi Docker Setup on Raspberry Pi 3 B Plus*.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/y_VfLOGm5nA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Docker-Compose
+## Docker Compose
 
 Docker Compose is a tool for running multi-container applications on Docker defined using the Compose file format.
 
-![DietPi programming software Docker-Compose](https://raw.githubusercontent.com/docker/compose/master/logo.png)
+<!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/master/logo.png) -->
 
 === "Update"
 
@@ -98,7 +98,7 @@ Getting started: <https://docs.docker.com/compose/gettingstarted>
 
 Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
 
-![DietPi Optimised Software Portainer](../assets/images/dietpi-software-portainer.jpg)
+![Portainer screenshot](../assets/images/dietpi-software-portainer.jpg)
 
 === "Quick start"
 
