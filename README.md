@@ -1,4 +1,5 @@
-<html>
+# <html>
+
   <h1 align="center">
     <img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi Logo">
   </h1>
@@ -33,11 +34,12 @@ It builds the static HTML pages into a temporary directory and starts a local we
 
 ## Contributing
 
-There are many ways you could contribute to DietPi project. You could work on the DietPi project, extend the documentation, or just run different tests. 
+There are many ways you could contribute to DietPi project. You could work on the DietPi project, extend the documentation, or just run different tests.
 
 If you have experience with GitHub, you could either look for existent issue to start with or report a new one. Documentation updates should be done directly on GitHub, using the development branch: **[dev](https://github.com/MichaIng/DietPi-Docs/tree/dev)**, creating a Pull Request (PR).
 
 If you need help:
+
 - Send an email: micha@dietpi.com
 - Read the documentation: <https://dietpi.com/docs>
 
