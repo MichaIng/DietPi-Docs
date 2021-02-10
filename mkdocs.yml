@@ -127,6 +127,9 @@ nav:
   - VPN: software/vpn.md
   - Web Development: software/webserver_stack.md
 - COMMUNITY:
+  # The first file "socialmedia.md" is added, otherwise in some browsers klicking on "Community" jumps directly to the first entry
+  # That was the case that a klick directly jumped to the github page. (Then you leave our genious dietpi.com/docs site...) :-)
+  - Social media: socialmedia.md
   - DietPi GitHub page: https://github.com/MichaIng/DietPi
   - Report issues: https://github.com/MichaIng/DietPi/issues
   - Request features: https://github.com/MichaIng/DietPi/issues/new/choose
