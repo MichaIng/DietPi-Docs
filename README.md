@@ -1,6 +1,25 @@
-# DietPi Documentation
+<html>
+	<h1 align="center">
+		<img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi Logo">
+	</h1>
+	<p align="center">
+		<b>Lightweight justice for your single-board computer!</b>
+		<br><br>
+		optimised • simplified • for everyone
+		<br><br>
+		<a href="https://dietpi.com/">Website</a> • <a href="https://dietpi.com/docs/">Documentation</a> • <a href="https://dietpi.com/#download">View all supported platforms</a> • <a href="https://dietpi.com/phpbb">Forums</a>
+	</p>
+	<hr>
+	<p align="center">
+		<strong>Ready to run</strong> optimised software choices with <a href="https://dietpi.com/dietpi-software.html"><strong>dietpi-software</strong></a>
+		<br>Feature-rich configuration tool for your device with <strong>dietpi-config</strong>.
+	</p>
+	<hr>
+</html>
 
-This is the source code repository for the [DietPi documentation website](https://dietpi.com/docs/).
+## Introduction
+
+This is the source code repository for the [DietPi Documentation website](https://dietpi.com/docs/).
 It uses extended Markdown, as implemented by [MkDocs](https://www.mkdocs.org/).
 
 [![CodeFactor](https://www.codefactor.io/repository/github/michaing/dietpi-docs/badge)](https://www.codefactor.io/repository/github/michaing/dietpi-docs)
@@ -12,21 +31,16 @@ It uses extended Markdown, as implemented by [MkDocs](https://www.mkdocs.org/).
 
 It builds the static HTML pages into a temporary directory and starts a local web server at `http://localhost:8000`. If you have troubles accessing the MkDocs website, you could also listen on a specific IP address or all IP addresses, e.g. `mkdocs serve -a 0.0.0.0:8000`.
 
-## License
-
-<a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/docs/">DietPi-Docs</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/">DietPi</a> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License - <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
-
-<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
-
-This website shows logos of 3rd party software and providers which are excluded from the above license. They may only be used related to their product, for details, check individual trademark rules and licenses.
-
 ## Contributing
 
-There are many ways in which you can participate in this project, for example:
+There are many ways you could contribute to DietPi project. You could work on the DietPi project, extend the documentation, or just run different tests. To see the full list of possibilities, please check first the [Contribution](https://dietpi.com/contribute.html) page.
 
-- Review the [DietPi documentation website](https://dietpi.com/docs/) and make pull requests for anything from typos to new content.
-- Submit issues or ideas via [GitHub issue](https://github.com/MichaIng/DietPi-Docs/issues), and help us verify as they are checked in.
-- You may also review the [DietPi main website](https://dietpi.com/) and contribute on its [repository](https://github.com/MichaIng/DietPi-Website).
+If you have experience with GitHub, you could either look for existent issue to start with or report a new one. Documentation updates should be done directly on GitHub, using the development branch: **[dev](https://github.com/MichaIng/DietPi-Docs/tree/dev)**, creating a Pull Request (PR).
+
+If you need help:
+- Send an email: micha@dietpi.com
+- View Contribute page: <https://dietpi.com/contribute.html>
+- Read the documentation: <https://dietpi.com/docs>
 
 ## Feedback
 
@@ -40,3 +54,12 @@ There are many ways in which you can participate in this project, for example:
 - DietPi: <https://github.com/MichaIng/DietPi>
 - Documentation: <https://github.com/MichaIng/DietPi-Docs>
 - Website: <https://github.com/MichaIng/DietPi-Website>
+
+## License
+
+<a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/docs/">DietPi-Docs</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/">DietPi</a> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License - <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+
+<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+
+This website shows logos of 3rd party software and providers which are excluded from the above license. They may only be used related to their product, for details, check individual trademark rules and licenses.
+
