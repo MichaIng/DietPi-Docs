@@ -6,10 +6,6 @@ date: 2021-02-08
 
 # Social media
 
-## DietPi Blog
-
-T.b.d.
-
 ## DietPi on Twitter
 
 DietPi announces are done via Twitter: <https://twitter.com/DietPi_>.
