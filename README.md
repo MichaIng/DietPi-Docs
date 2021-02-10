@@ -1,10 +1,11 @@
 <h1 align="center"><img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi Logo"></h1>
+
 <p align="center">
   <b>Lightweight justice for your single-board computer!</b>
   <br><br>
   optimised • simplified • for everyone
   <br><br>
-  <a href="https://dietpi.com/">Website</a> • <a href="https://dietpi.com/docs/">Documentation</a> • <a href="https://dietpi.com/#download">View all supported platforms</a> • <a href="https://dietpi.com/phpbb">Forums</a>
+  <a href="https://dietpi.com/">Website</a> • <a href="https://dietpi.com/docs/">Documentation</a> • <a href="https://dietpi.com/#download">View all supported platforms</a> • <a href="https://dietpi.com/phpbb/">Forums</a>
 </p>
 <hr>
 <p align="center">
