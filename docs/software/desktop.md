@@ -15,7 +15,7 @@
 - [**Chromium - Web browser**](#chromium)
 - [**GIMP - Image editor**](#gimp)
 - [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss)
-- [**Xfce4 Power - Power manager with brightness**](#xfce4-power)
+- [**Xfce Power Manager - Power manager with brightness control**](#xfce-power-manager)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -176,10 +176,10 @@ QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the 
 
 ![DietPi QuiteRSS](../assets/images/dietpi-software-desktop-tools-quiterss.jpg)
 
-### Xfce4 Power
+### Xfce Power Manager
 
 Enables laptop users to set up a power profile for two different modes `on battery power` and `on AC Power` while still allowing desktop users to at least change the DPMS settings and CPU frequency using the settings dialogue.
 
-![DietPi Xfce4 Power manager](../assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg)
+![Xfce Power Manager screenshot](../assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg)
 
 [Return to the **Optimised Software list**](../../software/)

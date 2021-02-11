@@ -233,10 +233,118 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "DietPi drive manager"
 
-    Feature-rich drive management utility.  
+    Feature-rich drive management utility. It is a lightweight program that allows you to:
+
+    - Manage drives: Mount, format external drives
+    - Maintenance drives: Check and repair drives, resize (expand) file system, change reserved blocks count
+    - Set drive attributes: Set read only file systems, set idle spindown time
+    - Move DietPi User data
+    - Transfer RootFS to external drive (Raspberry Pi and some ODROID boards only)
+    - Disable swap file, change swap file size
+    - Run benchmarks on drives
+
     Run `dietpi-drive_manager`.
 
     ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager.jpg)
+
+    #### Setup a dedicated drive for DietPi
+
+    To use an additional drive (example USB drive) the following steps have to be done:
+
+    1. Run `dietpi-drive_manager` to bring up the main menu.
+    1. Plug in the drive you wish to use.
+    1. Select `Refresh` from the menu (if it doesn't show up straight away, give it a few seconds for system to update, then try again).
+    1. Select the drive you wish to use from the list, then press ++enter++.
+
+        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_2.png){: width="600px"}
+
+        If needed, format the drive before usage selecting the `Format` option (file system type description see below).  
+        Remark: Formatting drives can only be done unmounted.
+
+        If needed, mount the drive via the `Mount` selection. If mounted, commands `Unmount`, `Benchmark`, `User data`, `Swapfile` and `Read only` are present.
+
+        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_3.png){: width="600px"}
+
+    #### Move the location of user data and swap file
+
+    You can move the location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swap file to a different location on a target drive. This may be useful if your file system containing the DietPi user data resp. swap file has only little space left.
+    Therefore execute the following steps (example user data, swap file is quite similar):
+
+    1. Run `dietpi-drive_manager` to bring up the main menu.
+    1. Have the target drive connected and mounted (see description above).
+    1. Select the target drive and press ++enter++.
+    1. In the drives menu select `User data` resp. `Swapfile` and follow the instructions.
+
+        - Move user data:
+
+        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_4.png){: width="500px"}
+
+        - Change swap file size:
+
+        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_5.png){: width="500px"}
+
+    #### Format file system types
+
+    Formatting file systems lead you to these dialogues:
+
+    ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_6.png){: width="500px"}
+    ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_7.png){: width="500px"}
+
+    In the latter dialog you have to choose the file system type. The following selections may be chosen:
+
+    - `EXT4` (Default)  
+      Recommended for users who plan to use this drive solely on the DietPi system (e.g. dedicated drive).  
+      `+` The standard for Linux file systems  
+      `-` Not compatible on a Windows system
+
+    - `NTFS`  
+      Recommended for users who plan to use this drive on a Windows system.  
+      `+` Compatible on a Windows system  
+      `-` High CPU usage during transfers (spawns a process)
+
+    - `FAT32`  
+      Recommended for users who want high compatibility across multiples operating systems.  
+      `+` Highly compatible with all OS  
+      `-` 4GB file size limit  
+      `-` 2TB drive size limit  
+      `-` Does not support file/folder permissions  
+      `-` Does not support symbolic links
+
+    - `HFS+`  
+      Recommended for Mac owners.  
+      `+` Mac OS file system
+
+    - `BTRFS`  
+      A modern Linux file system.  
+      `+` <https://github.com/Fourdee/DietPi/issues/271#issuecomment-247173250>
+
+    - `F2FS`  
+      Linux file system designed for flash/NAND based drives.  
+      `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>
+
+    - `exFAT`  
+      Windows file system, intended for external drives, e.g. USB flash drives or SD cards  
+      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>
+
+    #### Move DietPi system to a larger SD card
+
+    If you want to extend your DietPi SD card space by moving the system to a larger memory card, this can be achieved by the following steps:
+
+    1. Shutdown your system and put the SD card into a card reader of a different systems.
+    1. Copy the SD card contents to the new (larger) SD card. This can e.g. be done using
+        - the `dd` command (command line option)
+        - [`balenaEtcher`](https://etcher.io/) or [`Rufus`](https://rufus.ie/) (graphical user interface option)
+        - `gnome-disks` (graphical user interface option)
+    1. Boot the system with the copied memory card.
+    1. Run `dietpi-drive_manager` to bring up the main menu.
+    1. Select the disk containing the root (`/`) partition and press ++enter++.
+    1. Select `Resize` and press ++enter++.
+
+        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_8.png){: width="500px"}
+
+    1. Reboot your system to expand the root file system to use the whole space of the new memory card.
+
+    A similar procedure may be used when moving the SD card contents to a smaller SD card. During this procedure you typically need to shrink the partition size (e.g. with `parted` or `gparted`) before copying the partition image to a different memory card. Also, do the resize to use the full space on the new card.
 
 === "DietPi autostart"
 
@@ -316,12 +424,96 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-CPU_info screenshot](assets/images/dietpi-cpuinfo.jpg)
 
-=== "DietPi survey"
+=== "DietPi Survey"
 
-    This option will upload information on a anonymous base. The aggregated results of all uploads can be seen on the [DietPi survey statistics website](https://dietpi.com/survey/).  
-    Run `dietpi-survey`.
+    DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software.
 
-    ![DietPi-Survey screenshot](assets/images/dietpi-survey.jpg)
+    ???+ important "Privacy and goals"
+
+        The following privacy rules and goals are considered:
+
+        - No private data is sent. No one can identify you. No IP address is obtained.
+        - DietPi Survey is an ***Opt-in*** system, which means that it won't send any data without your explicit interactive permission.
+        - On your first interactive login on a fresh DietPi system, you will be asked once for the *Opt-in*/*Opt-out* mode.
+        - The transmitted data allows the DietPi project team to achieve the best future possible experience for everyone to
+            - focus and improve especially popular areas,
+            - ensure the most common devices and software titles will receive support and improvements,
+            - keep up support for software and hardware that you use.
+
+        **In short words:** By selecting ***Opt IN***, you are supporting the DietPi project with no impact to your system or private data.
+
+    ![DietPi Survey screenshot](assets/images/dietpi-survey.jpg)
+
+    #### Data transmission events
+
+    The DietPi Survey data file is sent when you install software with `dietpi-software` and update DietPi with `dietpi-update`.
+
+    #### Uploaded amount of data
+
+    The uploaded data is tiny (about 1 KB) and won't affect your internet bandwidth or system performance.
+
+    #### Transmitted data contents
+
+    Within the command line program `dietpi-survey` the exact copy of the transmitted data can be viewed. The transmitted file is written in bash code to allow us faster report page creation (e.g. done for <https://dietpi.com/survey>).
+
+    Following is an example how this file may look like:
+
+    ```sh
+    #!/bin/bash
+    ((aDIETPI_VERSION[6.34]++))
+    ((aGIT_BRANCH[MichaIng/master]++))
+    ((aDEVICE_NAME[Virtual Machine (x86_64)]++))
+    ((aCPU_ARCH[x86_64]++))
+    ((aCPU_COUNT[2]++))
+    ((aDISTRO_VERSION[buster]++))
+    ((aAUTOSTART_OPTION[${aAUTOSTART_NAME[0]:=0}]++))
+    ((aAUTO_SETUP_AUTOMATED[0]++))
+    ((aNETWORK_INTERFACE[eth0]++))
+    # -------------------------
+    # DietPi-Software installs
+    # -------------------------
+    ((aSOFTWARE[${aSOFTWARE_NAME6_34[103]:=103}]++))
+    ((aSOFTWARE[${aSOFTWARE_NAME6_34[104]:=104}]++))
+    ```
+
+    The tail of the file lists installed software packages by their IDs. The example above shows a very basic system, so only two software packages (`#103`: DietPi-RAMlog, `#104`: Dropbear) are installed.
+    To find out the names of the installed software package IDs installed via `dietpi-software` you can execute
+
+    ```sh
+    dietpi-software list | grep ' =2'
+    ```
+
+    This gives the IDs, names and info of software. The above example would show
+
+    ```sh
+    root@dietpi:~# dietpi-software list | grep ' =2'
+    id 103 | =2 | dietpi-ramlog: minimal, optimised logging | | https://dietpi.com/phpbb/viewtopic.php?p=68#p68
+    id 104 | =2 | dropbear: lightweight ssh server | | https://dietpi.com/phpbb/viewtopic.php?p=62#p62
+    ```
+
+    #### Selecting Opt-in or Opt-out
+
+    You can select ***Opt-in*** or ***Opt-out*** of DietPi Survey by running the following command and follow the instructions:
+
+    ```sh
+    dietpi-survey
+    ```
+
+    This may also be achieved by setting `SURVEY_OPTED_IN=0` (*Opt-out*) or `SURVEY_OPTED_IN=1` (*Opt-in*) in `/boot/dietpi.txt` before the first system boot.
+
+    To check the actual status, `dietpi-survey` may be called. The current mode will be pre-selected and highlighted.  
+    Alternatively you can use
+
+    ```sh
+    grep 'SURVEY_OPTED_IN' /boot/dietpi.txt
+    ```
+
+    which displays the status like
+
+    ```
+    root@dietpi:~# grep 'SURVEY_OPTED_IN' /boot/dietpi.txt
+    SURVEY_OPTED_IN=1
+    ```
 
 === "DietPi bug report"
 

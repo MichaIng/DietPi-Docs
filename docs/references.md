@@ -26,5 +26,8 @@ Links to special software packages are located at the end of the according softw
 
 - [Munin monitoring on Raspberry Pi/DietPi](https://advanxer.com/blog/2019/02/munin-monitoring-on-raspberrypi-dietpi/)  
   Munin - a network resource monitoring tool analyzing your resources on the network to avoid trouble.  
-  Many thanks to `advanxer.com` for generating this nice description  
-  See also <http://munin-monitoring.org>, <https://github.com/munin-monitoring/munin>
+
+    ![advanxer.com logo](assets/images/dietpi-references-advanxer.com-logo.png){: width=150px}
+
+    Many thanks to `advanxer.com` for generating this nice description.  
+    See also <http://munin-monitoring.org>, <https://github.com/munin-monitoring/munin>.

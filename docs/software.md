@@ -77,12 +77,14 @@
 - [**Chromium - Web browser**](../software/desktop/#chromium)
 - [**GIMP - Image editor**](../software/desktop/#gimp)
 - [**QuiteRSS - RSS and Atom news feeds reader**](../software/desktop/#quiterss)
-- [**Xfce4 Power - Power manager with brightness**](../software/desktop/#xfce4-power)
+- [**Xfce Power Manager - Power manager with brightness control**](../software/desktop/#xfce-power-manager)
 
 ## [Development & Programming](../software/programming/)
 
-- [**Python - high-level interpreted programming language**](../software/programming/#python)
+- [**Python - High-level interpreted programming language**](../software/programming/#python)
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
+- [**Docker-Compose - Run multi-container applications on Docker**](../software/programming/#docker-compose)
+- [**Portainer - Docker container management**](../software/programming/#portainer)
 
 ## [DNS Servers](../software/dns_servers/)
 
@@ -98,7 +100,7 @@
 
 ## [Gaming & Emulation](../software/gaming/)
 
-- [**OpenTyrian - open-source port of the DOS game Tyrian**](../software/gaming/#opentyrian)
+- [**OpenTyrian - Open-source port of the DOS game Tyrian**](../software/gaming/#opentyrian)
 - [**Cuberite - Fast Minecraft server with web interface**](../software/gaming/#cuberite)
 - [**MineOS - Multiple Minecraft servers with web interface**](../software/gaming/#mineos)
 - [**Nukkit - Server for Minecraft Pocket Edition**](../software/gaming/#nukkit)
@@ -106,6 +108,7 @@
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](../software/gaming/#dxx-rebirth)
 - [**Steam - Steam client**](../software/gaming/#steam)
 - [**PaperMC - Fast and optimized Minecraft server**](../software/gaming/#papermc)
+- [**Box86 - x86 userspace emulation for ARM**](../software/gaming/#box86)
 
 ## [Hardware Projects](../software/hardware_projects/)
 

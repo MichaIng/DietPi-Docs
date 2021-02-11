@@ -1,5 +1,6 @@
 addictiveness
 ADF
+advanxer
 AirPlay
 Airsonic
 AIY
@@ -245,6 +246,7 @@ myMPD
 MySqli
 mysql
 NAA
+NAND
 nano
 NanoPC
 NanoPi
@@ -324,6 +326,7 @@ RK
 Rockchip
 ROCKPro
 Roon
+RootFS
 rpc
 RPi
 RPis
@@ -356,6 +359,7 @@ Sonarr
 Soxr
 SPC
 SPI
+spindown
 Spotify
 Squeezelite
 SSD
@@ -402,6 +406,7 @@ UPnP
 upvote
 UrBackup
 userdata
+userspace
 UUID
 Viebrock
 VirtualBox
