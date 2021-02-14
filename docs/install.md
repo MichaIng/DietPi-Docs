@@ -190,7 +190,7 @@ Select the following tabs for the installation description of your target.
 
     Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
-    One big advantage of such a VM is that id needs only a couple of minutes coming to a running DietPi system.
+    One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
 
     One of the options of a virtual machine is [__Oracle VirtualBox__](https://www.oracle.com/virtualization/virtualbox/).
 
@@ -244,7 +244,7 @@ Select the following tabs for the installation description of your target.
 
     Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
-    One big advantage of such a VM is that id needs only a couple of minutes coming to a running DietPi system.
+    One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
 
     One of the options of a virtual machine is [__VMware Workstation Player__](https://www.vmware.com/de/products/workstation-player/workstation-player-evaluation.html).
 
@@ -282,7 +282,7 @@ Select the following tabs for the installation description of your target.
 
     ![VMware file open screenshot](assets/images/dietpi-VMware-import1.png)
 
-    In the following dialog the user has to navigate to the directory where the `.vmx` and `.vdmk` file were stored. Then choose DietPi_VMware-x86_64-Buster(`.vmx`) as the file which shall be opened.  
+    In the following dialog the user has to navigate to the directory where the `.vmx` and `.vmdk` file were stored. Then choose DietPi_VMware-x86_64-Buster(`.vmx`) as the file which shall be opened.  
     After this the DietPi VMware virtual machine is present and can be started:
 
     ![VMware virtual machine list screenshot](assets/images/dietpi-VMware-VM-Machine.png)
