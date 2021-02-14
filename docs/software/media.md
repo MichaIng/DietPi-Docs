@@ -221,7 +221,12 @@ Mopidy is a python based music player web based user interface for MPD.
 
 === "Support of codecs"
 
-    Enable support for vast number of codecs like .m4a.   
+    Enable support for vast number of codecs like .m4a. Execute the following installation procedure:
+
+    ```sh
+    apt-get install -y gstreamer1.0-plugins-bad
+    ```
+
     Many thanks to Roth for [this hint](https://dietpi.com/phpbb/viewtopic.php?f=12&t=785&p=3743#p3742).
 
 ## Airsonic
