@@ -100,6 +100,7 @@ nav:
   - Getting started: getting_started.md
   - Software options: software.md
   - DietPi tools: dietpi_tools.md
+  - DietPi tools temp: dietpi_tools_temp.md
   - Supported hardware: hardware.md
   - Releases: releases.md
   - References: references.md
