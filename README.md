@@ -39,6 +39,8 @@ If you need help:
 - Send an email: micha@dietpi.com
 - Read the documentation: <https://dietpi.com/docs>
 
+To see the full list of possibilities, please check the [Contribution](https://dietpi.com/contribute.html) page.
+
 ## Feedback
 
 - Ask a question on our [forum](https://dietpi.com/phpbb/).
