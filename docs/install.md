@@ -113,7 +113,7 @@ Select the following tabs for the installation description of your target.
     You would need the next:
 
     - one **working PC with internet access**, helping to flash the boot media
-    - one **bootable USB flash drive** (at least 2 GB), to hold the DietPi installer image and to boot the target PC
+    - one **bootable USB flash drive** (at least 2 GiB), to hold the DietPi installer image and to boot the target PC
     - **target PC** to be installed
 
 
