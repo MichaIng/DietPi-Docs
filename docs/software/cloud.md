@@ -10,7 +10,6 @@
 - [**Gogs - GitHub style server, with web interface**](#gogs)
 - [**Gitea - GitHub style server, with web interface**](#gitea)
 - [**Syncthing - Backup and sync server with web interface**](#syncthing)
-- [**Tonido - Lightweight backup and sync server with web interface and cloud access**](#tonido)
 - [**MinIO - S3 compatible distributed object server**](#minio)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](#bitwarden_rs)
@@ -482,39 +481,6 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 ***
 
 Website: <https://syncthing.net>
-
-## Tonido
-
-Lightweight backup and sync server, includes web interface and external cloud access.
-
-??? note "Windows app not supported for ARMv7!"
-
-    Windows sync app is not supported for ARMv7 (RPi). See <https://github.com/MichaIng/DietPi/issues/592#issuecomment-290915782> for details.
-
-![DietPi cloud software Tonido](../assets/images/dietpi-software-cloud-tonido.png)
-
-=== "Installation notes"
-
-    Remark: This documentation requires DietPi v6.12.
-
-    - DietPi installs Tonido to the following location: `/mnt/dietpi_userdata/tonido`
-    - DietPi install symbolic links to the Tonido data directories automatically. Therefore, default Tonido sync/userdata locations will point to `/mnt/dietpi_userdata/tonido`:
-
-        ```sh
-        /home/tonido/tonido #PointsTo# /mnt/dietpi_userdata/tonido
-        /home/tonido/TonidoSync #PointsTo# /mnt/dietpi_userdata/tonido/sync
-        /home/tonido/TonidoSyncData #PointsTo# /mnt/dietpi_userdata/tonido/syncdata
-        ```
-
-    We created a `systemd` service for Tonido, DietPi will automatically start this: `systemctl status tonido`
-
-=== "Access to the web interface"
-
-    URL = `http://<your.IP>:10001`
-
-***
-
-Website: <https://www.tonido.com>
 
 ## MinIO
 
