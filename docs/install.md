@@ -272,17 +272,17 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi VMware download image](assets/images/dietpi-VMware-Download.png)
 
-    The zip file contains a couple of files, the important two are the .vmx and .vmdk file which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
+    The zip file contains a couple of files, the important two are the `.vmx` and `.vmdk` file which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
 
     ![DietPi VMware 7zip archive content](assets/images/dietpi-VMware-7zip-file.png)
 
     <font size="+2">2. Add the files in VMware</font>
 
-    As next, the VMware virtual machine is setup by just opening the .vmx file (via ***Open a Virtual Machine***):
+    As next, the VMware virtual machine is setup by just opening the `.vmx` file (via ***Open a Virtual Machine***):
 
     ![VMware file open screenshot](assets/images/dietpi-VMware-import1.png)
 
-    In the following dialog the user has to navigate to the directory where the .vmx and .vdmk file were stored. Then choose DietPi_VMware-x86_64-Buster(.vmx) as the file which shall be opened.  
+    In the following dialog the user has to navigate to the directory where the `.vmx` and `.vdmk` file were stored. Then choose DietPi_VMware-x86_64-Buster(.vmx) as the file which shall be opened.  
     After this the DietPi VMware virtual machine is present and can be started:
 
     ![VMware virtual machine list screenshot](assets/images/dietpi-VMware-VM-Machine.png)
