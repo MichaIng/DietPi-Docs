@@ -196,27 +196,26 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi-VirtualBox-program](assets/images/dietpi-VirtualBox-program.png)
 
-
     <font size="+2">Prerequisites</font>
 
     As a starting point you need a **PC with a running VirtualBox software** on which the DietPi system will run.  
     On this PC a free harddisk space of about  
 
-    - 1.2 GB for a minimal running system  
-    - 5 - 10 GB for a typical running system with X11  
+    - 1.2 GiB for a minimal running system  
+    - 5 - 10 GiB for a typical running system with X11  
 
-    is needed. A recommended size is at least a free space of 10 GB.
+    is needed. A recommended size is at least a free space of 10 GiB.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
     Download the **DietPi VirtualBox file** "DietPi_VirtualBox-x86_64-Buster.7z" from [`dietpi.com`](https://dietpi.com/#download) and   
-    unzip the downloaded file to a local!!! info "DietPi Survey" folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
-    ![DietPi-download-image](assets/images/dietpi-VirtualBox-Download.png)
+    ![DietPi-VirtualBox-download-image](assets/images/dietpi-VirtualBox-Download.png)
 
     The zip file contains a couple of files, the important one is the .ova file which has to be imported into VirtualBox.
 
-    ![DietPi 7zip archive content](assets/images/dietpi-VirtualBox-7zip-file.png)
+    ![DietPi VirtualBox 7zip archive content](assets/images/dietpi-VirtualBox-7zip-file.png)
 
     <font size="+2">2. Import of the .ova file in VirtualBox</font>
 
@@ -237,6 +236,60 @@ Select the following tabs for the installation description of your target.
     <font size="+2">3. First boot of the new VirtualBox image</font>
 
     Press the start button (green arrow) to 'boot up' your system based on the DietPi image.
+    If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
+
+=== "Install in VMware Player"
+
+    <font size="+2">Introduction</font>
+
+    Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
+
+    One big advantage of such a VM is that id needs only a couple of minutes coming to a running DietPi system.
+
+    One of the options of a virtual machine is [__VMware Workstation Player__](https://www.vmware.com/de/products/workstation-player/workstation-player-evaluation.html).
+
+    ![DietPi-VMware-program](assets/images/dietpi-VMware-program.png)
+
+    !!! info "Tested with Windows 10"
+        This description relates to VMware Workstation 16 Player on a Microsoft Windows system.  
+        ***VMware Workstation Pro*** as well as ***VMware Fusion for MAC*** were not tested but should work also.
+
+    <font size="+2">Prerequisites</font>
+
+    As a starting point you need a **PC with a running VMware Workstation Player software** on which the DietPi system will run.
+
+    On this PC a free harddisk space of about  
+
+    - 3 GiB for a minimal running system (1.5 GiB in switched off state)
+    - 5 - 10 GiB for a typical running system with X11  
+
+    is needed. A recommended size is at least a free space of 10 GiB.
+
+    <font size="+2">1. Download and extract the DietPi disk image</font>
+
+    Download the **DietPi VMware file** "DietPi_VMware-x86_64-Buster.7z" from [`dietpi.com`](https://dietpi.com/#download) and   
+    unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+
+    ![DietPi VMware download image](assets/images/dietpi-VMware-Download.png)
+
+    The zip file contains a couple of files, the important two are the .vmx and .vmdk file which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
+
+    ![DietPi VMware 7zip archive content](assets/images/dietpi-VMware-7zip-file.png)
+
+    <font size="+2">2. Add the files in VMware</font>
+
+    As next, the VMware virtual machine is setup by just opening the .vmx file (via ***Open a Virtual Machine***):
+
+    ![VMware file open screenshot](assets/images/dietpi-VMware-import1.png)
+
+    In the following dialog the user has to navigate to the directory where the .vmx and .vdmk file were stored. Then choose DietPi_VMware-x86_64-Buster(.vmx) as the file which shall be opened.  
+    After this the DietPi VMware virtual machine is present and can be started:
+
+    ![VMware virtual machine list screenshot](assets/images/dietpi-VMware-VM-Machine.png)
+
+    <font size="+2">3. First boot of the new VMware image</font>
+
+    Press the ***Play virtual machine*** (green arrow) to 'boot up' your system based on the DietPi image.
     If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
 
 ## 4. First logon on DietPi
