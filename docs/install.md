@@ -289,7 +289,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">3. First boot of the new VMware image</font>
 
-    Press the ***Play virtual machine*** (green arrow) to 'boot up' your system based on the DietPi image.
+    Press the ***Play virtual machine*** (green arrow) to 'boot up' your system based on the DietPi image. Possibly you have to acknowledge in an appearing dialog "I Copied it" and go on.
     If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
 
 ## 4. First logon on DietPi
