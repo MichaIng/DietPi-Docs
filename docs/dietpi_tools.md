@@ -1,6 +1,6 @@
 # DietPi Tools
 
-## DietPi-Launcher
+## DietPi launcher
 
 It provides an easy access to all DietPi OS tools, and it could be accessed by running next command:
 
@@ -56,6 +56,8 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     DietPi supports a large number of software titles. Instead of scrolling through the **Software Optimised** list to find a specific software title, you may use the **Search** option. Type in the software ID or any keyword form its title or description and you'll get a list filtered by matching results.
 
     ![DietPi-Software Search menu screenshot](assets/images/dietpi-software-search.png)
+
+---
 
 ### Quick selections
 
@@ -131,6 +133,8 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-Software User Data Location menu screenshot](assets/images/dietpi-software-user-data-location-selection.jpg){: width="550px"}
 
+---
+
 ### Install or remove software
 
 === "Install"
@@ -167,46 +171,75 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     dietpi-software install 113 173 174
     ```
 
-## Configuration
+---
 
-=== "DietPi configuration"
+### DietPi LetsEncrypt
 
-    Configure various system settings, from display / audio / network to _auto start_ options.  
-    Run `dietpi-config`.
+Access the frontend for the `Let's Encrypt` integration.  
+Run `dietpi-letsencrypt`.
 
-    ![DietPi-Config screenshot](assets/images/dietpi-config.jpg)
+![DietPi-LetsEncrypt screenshot](assets/images/dietpi-letsencrypt.jpg)
 
-    #### Display Options
+### DietPi NordVPN
 
-    - Set your screen resolution, or go headless to save additional resources
-    - Control your GPU memory splits
-    - Enable/disable the RPi camera
+Run `dietpi-nordvpn`.
 
-    #### Audio Options
+![DietPi-NordVPN screenshot](assets/images/dietpi-nordvpn.jpg)
 
-    - Change sound cards with ease (e.g.: HiFiBerry / Odroid HiFi shield)
+## System configuration
 
-    #### Performance Options
+### DietPi configuration
+
+Configure various system settings, from display / audio / network to _auto start_ options.  
+Run `dietpi-config`.
+
+![DietPi-Config screenshot](assets/images/dietpi-config.jpg)
+
+=== "Display Options"
+
+    The display options are used to
+
+    - Set your screen resolution, or go headless to save additional resources.  
+    - Control your GPU memory splits.  
+    - Enable/disable the RPi camera.
+
+=== "Audio Options"
+
+    The audio options are used to
+
+    - Change sound cards with ease (e.g.: HiFiBerry / Odroid HiFi shield).
+
+=== "Performance Options"
+
+    The performance options are used to
 
     - Overclock your system with a vast selection of overclocking profiles for your device.
     - Change the CPU governor and tweak your ARM temperature limits.
 
-    #### Advanced Options
+=== "Advanced Options"
+
+    The advanced options are used to
 
     - Configure swap file size
     - Update device firmware
     - Toggle serial console
     - Toggle Bluetooth
 
-    #### Security Options
+=== "Security Options"
+
+    The security options are used to
 
     - Change password and hostname
 
-    #### Language/Regional Options
+=== "Language/Regional Options"
 
-    - Set timezone, locale and keyboard options. Everything you'll need to make it feel like home
+    The language/regional options are used to
 
-    #### Network Options: Adapters
+    - Set timezone, locale and keyboard options. Everything you will need to make it feel like home
+
+=== "Network Options: Adapters"
+
+    The network options are used to
 
     - Scan and connect to your WiFi router with ease
     - Change to a static IP address on your network
@@ -214,7 +247,9 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - Test internet connection
     - Toggle IPv6 support
 
-    #### Network Options: Misc
+=== "Network Options: Misc"
+
+    The miscellaneous network options options are used to
 
     - Select an **APT mirror** to connect to the Debian (or Raspbian) APT repository.
     - Select an **NTP mirror** to synchronise your system time.
@@ -222,32 +257,38 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - **Network Drives** redirects you to the **DietPi-Drive_Manager** which allows you to mount Samba and NFS shares on your DietPi system.
     - **No-IP** is a [dynamic DNS](https://wikipedia.org/wiki/Dynamic_DNS) provider which allows you to access your home network/server with a static domain name. The client is required to inform No-IP of your current dynamic external IP on a regular basis.
 
-    #### AutoStart Options
+=== "AutoStart Options"
+
+    The autostart options are used to
 
     - Quickly and easily change what software runs after boot. Kodi, Desktop, console and many more
 
-    #### Tools
+=== "Tools"
+
+    The tools options are used to
 
     - Perform CPU, RAM, file system and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark>
     - Perform CPU/IO/RAM/DISK **stress tests** to test the stability of your system, e.g. after applying some overclocking.
 
-=== "DietPi drive manager"
+---
 
-    Feature-rich drive management utility. It is a lightweight program that allows you to:
+### DietPi drive manager
 
-    - Manage drives: Mount, format external drives
-    - Maintenance drives: Check and repair drives, resize (expand) file system, change reserved blocks count
-    - Set drive attributes: Set read only file systems, set idle spindown time
-    - Move DietPi User data
-    - Transfer RootFS to external drive (Raspberry Pi and some ODROID boards only)
-    - Disable swap file, change swap file size
-    - Run benchmarks on drives
+Feature-rich drive management utility. It is a lightweight program that allows you to:
 
-    Run `dietpi-drive_manager`.
+- Manage drives: Mount, format external drives
+- Maintenance drives: Check and repair drives, resize (expand) file system, change reserved blocks count
+- Set drive attributes: Set read only file systems, set idle spindown time
+- Move DietPi User data
+- Transfer RootFS to external drive (Raspberry Pi and some ODROID boards only)
+- Disable swap file, change swap file size
+- Run benchmarks on drives
 
-    ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager.jpg)
+Run `dietpi-drive_manager`.
 
-    #### Setup a dedicated drive for DietPi
+![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager.jpg)
+
+=== "Setup a dedicated drive for DietPi"
 
     To use an additional drive (example USB drive) the following steps have to be done:
 
@@ -265,7 +306,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_3.png){: width="600px"}
 
-    #### Move the location of user data and swap file
+=== "Move the location of user data and swap file"
 
     You can move the location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swap file to a different location on a target drive. This may be useful if your file system containing the DietPi user data resp. swap file has only little space left.
     Therefore execute the following steps (example user data, swap file is quite similar):
@@ -283,7 +324,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_5.png){: width="500px"}
 
-    #### Format file system types
+=== "Format file system types"
 
     Formatting file systems lead you to these dialogues:
 
@@ -326,7 +367,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
       Windows file system, intended for external drives, e.g. USB flash drives or SD cards  
       `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>
 
-    #### Move DietPi system to a larger SD card
+=== "Move DietPi system to a larger SD card"
 
     If you want to extend your DietPi SD card space by moving the system to a larger memory card, this can be achieved by the following steps:
 
@@ -346,113 +387,80 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     A similar procedure may be used when moving the SD card contents to a smaller SD card. During this procedure you typically need to shrink the partition size (e.g. with `parted` or `gparted`) before copying the partition image to a different memory card. Also, do the resize to use the full space on the new card.
 
-=== "DietPi autostart"
+---
 
-    Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running.  
-    Run `dietpi-autostart`.
+### DietPi autostart
 
-    ![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg)
+Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running.  
+Run `dietpi-autostart`.
 
-=== "DietPi services"
+![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg)
 
-    Provides service control, priority level tweaks and status print.  
-    Run `dietpi-services`.
+### DietPi services
 
-    ![DietPi-Services screenshot](assets/images/dietpi-services.jpg)
+Provides service control, priority level tweaks and status print.  
+Run `dietpi-services`.
 
-=== "DietPi Led control"
+![DietPi-Services screenshot](assets/images/dietpi-services.jpg)
 
-    Change triggers for the status LEDs on your SBC/motherboard.  
-    Run `dietpi-led_control`.
+### DietPi LED control
 
-    ![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg)
+Change triggers for the status LEDs on your SBC/motherboard.  
+Run `dietpi-led_control`.
 
-=== "DietPi cron"
+![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg)
 
-    Modify the start times of specific cron job groups.  
-    Run `dietpi-cron`.
+### DietPi cron
 
-    ![DietPi-Cron screenshot](assets/images/dietpi-cron.jpg)
+Modify the start times of specific cron job groups.  
+Run `dietpi-cron`.
 
-=== "DietPi JustBoom"
+![DietPi-Cron screenshot](assets/images/dietpi-cron.jpg)
 
-    Change the audio settings.  
-    Run `dietpi-justboom`.
+### DietPi JustBoom
 
-    ![DietPi-JustBoom screenshot](assets/images/dietpi-justboom.jpg)
+Change the audio settings.  
+Run `dietpi-justboom`.
 
-=== "DietPi sync"
+If the sound output is configured, the following dialog appears:
 
-    Sync or duplicate a directory to another.  
-    Run `dietpi-sync`.
+![DietPi-JustBoom screenshot](assets/images/dietpi-justboom_2.jpg)
 
-    ![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg)
+If no sound output is configured, the following dialog appears:
 
-## Update & Backup
+![DietPi-JustBoom screenshot](assets/images/dietpi-justboom.jpg)
 
-=== "DietPi update"
+In this case you have to e.g. install a sound program package via `dietpi-software` or configure the sound output e.g. via `dietpi-config`.
 
-    Update DietPi OS version to the latest version available.  
-    Run `dietpi-update`.
+### DietPi survey
 
-=== "DietPi backup"
+DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software.
 
-    Fully backups DietPi setup. It also includes the restore capability from an already made DietPi backup.  
-    Run `dietpi-backup`.
+???+ important "Privacy and goals"
 
-## Let's Encrypt SSL & NordVPN support
+    The following privacy rules and goals are considered:
 
-=== "DietPi LetsEncrypt"
+    - No private data is sent. No one can identify you. No IP address is obtained.
+    - DietPi Survey is an ***Opt-in*** system, which means that it won't send any data without your explicit interactive permission.
+    - On your first interactive login on a fresh DietPi system, you will be asked once for the *Opt-in*/*Opt-out* mode.
+    - The transmitted data allows the DietPi project team to achieve the best future possible experience for everyone to
+        - focus and improve especially popular areas,
+        - ensure the most common devices and software titles will receive support and improvements,
+        - keep up support for software and hardware that you use.
 
-    Access the frontend for the `Let's Encrypt` integration.  
-    Run `dietpi-letsencrypt`.
+    **In short words:** By selecting ***Opt IN***, you are supporting the DietPi project with no impact to your system or private data.
 
-    ![DietPi-LetsEncrypt screenshot](assets/images/dietpi-letsencrypt.jpg)
+![DietPi Survey screenshot](assets/images/dietpi-survey.jpg)
 
-=== "DietPi NordVPN"
-
-    Run `dietpi-nordvpn`.
-
-    ![DietPi-NordVPN screenshot](assets/images/dietpi-nordvpn.jpg)
-
-## Miscellaneous
-
-=== "DietPi CPU info"
-
-    Displays CPU temperature, processor frequency, throttle level etc.  
-    Run `dietpi-cpuinfo`.
-
-    ![DietPi-CPU_info screenshot](assets/images/dietpi-cpuinfo.jpg)
-
-=== "DietPi Survey"
-
-    DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software.
-
-    ???+ important "Privacy and goals"
-
-        The following privacy rules and goals are considered:
-
-        - No private data is sent. No one can identify you. No IP address is obtained.
-        - DietPi Survey is an ***Opt-in*** system, which means that it won't send any data without your explicit interactive permission.
-        - On your first interactive login on a fresh DietPi system, you will be asked once for the *Opt-in*/*Opt-out* mode.
-        - The transmitted data allows the DietPi project team to achieve the best future possible experience for everyone to
-            - focus and improve especially popular areas,
-            - ensure the most common devices and software titles will receive support and improvements,
-            - keep up support for software and hardware that you use.
-
-        **In short words:** By selecting ***Opt IN***, you are supporting the DietPi project with no impact to your system or private data.
-
-    ![DietPi Survey screenshot](assets/images/dietpi-survey.jpg)
-
-    #### Data transmission events
+=== "Data transmission events"
 
     The DietPi Survey data file is sent when you install software with `dietpi-software` and update DietPi with `dietpi-update`.
 
-    #### Uploaded amount of data
+=== "Uploaded amount of data"
 
-    The uploaded data is tiny (about 1 KB) and won't affect your internet bandwidth or system performance.
+    The uploaded data is tiny (about 1 KB) and will not affect your internet bandwidth or system performance.
 
-    #### Transmitted data contents
+=== "Transmitted data contents"
 
     Within the command line program `dietpi-survey` the exact copy of the transmitted data can be viewed. The transmitted file is written in bash code to allow us faster report page creation (e.g. done for <https://dietpi.com/survey>).
 
@@ -491,7 +499,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     id 104 | =2 | dropbear: lightweight ssh server | | https://dietpi.com/phpbb/viewtopic.php?p=62#p62
     ```
 
-    #### Selecting Opt-in or Opt-out
+=== "Selecting Opt-in or Opt-out"
 
     You can select ***Opt-in*** or ***Opt-out*** of DietPi Survey by running the following command and follow the instructions:
 
@@ -515,57 +523,89 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     SURVEY_OPTED_IN=1
     ```
 
-=== "DietPi bug report"
+---
 
-    Run `dietpi-bugreport`.
+## System maintenance
 
-    ![DietPi-Bugreport screenshot](assets/images/dietpi-bugreport.jpg)
+### DietPi update
 
-=== "DietPi morse code"
+Update DietPi OS version to the latest version available and informs when updates for `apt upgrade` are available.  
+Run `dietpi-update`.
 
-    It converts a text file into morse code.  
-    Run `dietpi-morsecode`.
+### DietPi cleaner
 
-=== "Useful DietPi global commands (apt etc.)"
+Clean up not necessary files from the operating system and free up valuable disk space.  
+Run `dietpi-cleaner`.
 
-    There are a couple of general commands which have a shortcut in DietPi:
+![DietPi-Cleaner screenshot](assets/images/dietpi-cleaner.jpg)
 
-    - `cpu` - Print CPU clocks, temperature and governor info. Sample output:
+### DietPi log clear
 
-        ![DietPi-Software CPU info screenshot](assets/images/dietpi-tools-cpuinfo.png)
+Clear log files in `/var/log/`.  
+Run `dietpi-logclear`.
 
-    - `G_OBTAIN_CPU_TEMP`- print integer format CPU temp in degree Celsius (for monitoring probably better than full `cpu` output)
-    - `G_OBTAIN_CPU_USAGE` - CPU usage in percent in [x]y.z format
-    - `G_TREESIZE` - Shows current directory/file sizes, recursive
+![DietPi-LogClear screenshot](assets/images/dietpi-logclear.jpg)
 
-    The following commands are non-interactive, but error-handled wrappers for `apt-get` commands, useful for scripts which shall run non-interactive but allow interactive repeat and solution attempts:
+### DietPi backup (backup/restore)
 
-    - `G_AGI` - `apt-get install`
-    - `G_AGP` - `apt-get purge`
-    - `G_AGA` - `apt-get autoremove --purge`
-    - `G_AGUP` - `apt-get update`
-    - `G_AGUG` - `apt-get upgrade`
-    - `G_AGDUG` - `apt-get dist-upgrade`
+Fully backups DietPi setup. It also includes the restore capability from an already made DietPi backup.  
+Run `dietpi-backup`.
 
-## Maintenance
+![DietPi-Backup screenshot](assets/images/dietpi-backup_1.png)
 
-=== "DietPi file explorer"
+Remark: In the case that `rsync` is not installed, it is installed.
 
-    Lightweight file manager and explorer.  
-    Run `dietpi-explorer`.
+### DietPi file explorer
 
-    ![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg)
+Lightweight file manager and explorer.  
+Run `dietpi-explorer`.
 
-=== "DietPi cleaner"
+![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg)
 
-    Clean up not necessary files from the operating system and free up valuable disk space.  
-    Run `dietpi-cleaner`.
+### DietPi sync
 
-    ![DietPi-Cleaner screenshot](assets/images/dietpi-cleaner.jpg)
+Sync or duplicate a directory to another.  
+Run `dietpi-sync`.
 
-=== "DietPi log clear"
+![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg)
 
-    Clear log files in `/var/log/`.  
-    Run `dietpi-logclear`.
+## Misc tools
 
-    ![DietPi-LogClear screenshot](assets/images/dietpi-logclear.jpg)
+### Useful DietPi global commands (apt etc.)
+
+There are a couple of general commands which have a shortcut in DietPi:
+
+- `cpu` - Print CPU clocks, temperature and governor info. Sample output:
+
+    ![DietPi-Software CPU info screenshot](assets/images/dietpi-tools-cpuinfo.png)
+
+- `G_OBTAIN_CPU_TEMP`- print integer format CPU temp in degree Celsius (for monitoring probably better than full `cpu` output)
+- `G_OBTAIN_CPU_USAGE` - CPU usage in percent in [x]y.z format
+- `G_TREESIZE` - Shows current directory/file sizes, recursive
+
+The following commands are non-interactive, but error-handled wrappers for `apt-get` commands, useful for scripts which shall run non-interactive but allow interactive repeat and solution attempts:
+
+- `G_AGI` - `apt-get install`
+- `G_AGP` - `apt-get purge`
+- `G_AGA` - `apt-get autoremove --purge`
+- `G_AGUP` - `apt-get update`
+- `G_AGUG` - `apt-get upgrade`
+- `G_AGDUG` - `apt-get dist-upgrade`
+
+### DietPi CPU info
+
+Displays CPU temperature, processor frequency, throttle level etc.  
+Run `dietpi-cpuinfo`.
+
+![DietPi-CPU_info screenshot](assets/images/dietpi-tools-cpuinfo.png)
+
+### DietPi morse code
+
+It converts a text file into morse code.  
+Run `dietpi-morsecode`.
+
+### DietPi bug report
+
+Run `dietpi-bugreport`.
+
+![DietPi-Bugreport screenshot](assets/images/dietpi-bugreport.jpg)
