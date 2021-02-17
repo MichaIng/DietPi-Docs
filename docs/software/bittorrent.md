@@ -37,7 +37,7 @@
 
 Transmission, the lightweight web interface BitTorrent server that allows you to download BitTorrent files.
 
-??? hint "USB dedicated hard drive highly recommended"
+!!! hint "USB dedicated hard drive highly recommended"
 
 ![DietPi download software Transmission](../assets/images/dietpi-software-download-transmission.png){: width="500px"}
 
@@ -82,7 +82,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
 Deluge, the web interface BitTorrent server that allows you to download BitTorrent files. This python coded BitTorrent server is an alternative to the [Lightweight Transmission](#transmission-lightweight-bittorrent-server-with-web-interface) option.
 
-??? hint "USB dedicated hard drive highly recommended"
+!!! hint "USB dedicated hard drive highly recommended"
 
 ![DietPi download software Deluge](../assets/images/dietpi-software-download-deluge.png){: width="500px"}
 
@@ -129,7 +129,7 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 
 qBittorrent is a lightweight BitTorrent server with a slick web interface. As its coded in C++ (Qt), it offers excellent performance on any device.
 
-??? hint "USB dedicated hard drive highly recommended"
+!!! hint "USB dedicated hard drive highly recommended"
 
 ![DietPi download software qBittorrent](../assets/images/dietpi-software-download-qbittorrent.png){: width="500px"}
 
@@ -165,7 +165,7 @@ Also installs:
 
 - Webserver
 
-??? hint "USB dedicated hard drive highly recommended"
+!!! hint "USB dedicated hard drive highly recommended"
 
 ![DietPi download software rTorrent](../assets/images/dietpi-software-download-rtorrent.png){: width="500px"}
 
