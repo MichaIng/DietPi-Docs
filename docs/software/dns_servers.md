@@ -123,7 +123,7 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 === "Default DNS ports"
 
     - Default DNS port: 53
-    - DNS port when Pi-hole is installed: 5353
+    - DNS port when Pi-hole is installed: 5335
 
 === "Configuration directory"
 
