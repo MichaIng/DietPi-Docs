@@ -215,30 +215,44 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 
 === "Access to the programming IDE"
 
-    Use port number 1880:  
-    `https://<your.IP>:1880`
+    Use the port number **1880**:  
+    `http://<your.IP>:1880`
 
 === "Access to the dashboard"
 
-    To connect to the dashboard (user interface of Node-RED) enter in your browser:  
-    `https://<your.IP>:1880/ui`
+    To install the Node-RED dashboard, the user interface of Node-RED, use settings "Manage palette" from programming IDE or run the following command from console:
 
-=== "Data directory for Node-Red"
+    ```sh
+    node-red-admin install node-red-dashboard
+    ```
 
-    All Node-RED data is stored in the following location:  
+    Use the following URL to connect to the dashboard from your browser:  
+    `https://<your.IP>:1880/ui/`
+
+=== "Data and config directory"
+
+    Node-RED, all configs and data is stored in the following location:  
     `/mnt/dietpi_userdata/node-red`
+
+=== "Logging"
+
+    To view Node-RED service logs, run the following command from console:
+
+    ```sh
+    journalctl -u node-red
+    ```
 
 === "Update to current version"
 
-    You can update Node-RED by entering:
+    You can update Node-RED modules via programming IDE. To update the "node-red" core module, run the following command from console:
 
     ```sh
     systemctl stop node-red
-    npm up -g --unsafe-perm node-red
+    sudo -u nodered npm up node-red
     systemctl start node-red
     ```
 
-    The actual Node-RED version can be read in the programming IDE in the *burger menu* at the right upper corner.
+    The current Node-RED version can be read in the programming IDE in the *burger menu* at the right upper corner.
 
 ***
 
