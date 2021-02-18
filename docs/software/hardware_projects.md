@@ -248,6 +248,7 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 
     ```sh
     systemctl stop node-red
+    cd /mnt/dietpi_userdata/node-red
     sudo -u nodered npm up node-red
     systemctl start node-red
     ```
