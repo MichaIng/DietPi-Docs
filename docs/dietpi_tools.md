@@ -190,7 +190,7 @@ When you execute the certificate installation it also installs it for your selec
 
 !!! info "Port forwarding on your router"
     To be accessible from the internet, typically your router needs a port forwarding configuration to route incoming HTTP and HTTPS accesses to your DietPi system.  
-    Although you only need a HTTPS protocol forwarding (typ. port 433), you also need to forward the HTTP protocol (typ. port 80) to your DietPi system, otherwise the certification renewal procedure will fail (due to the fact that the certification renewal procedure takes place several months later you may have forgotten this issue).
+    Although you only need a HTTPS protocol forwarding (typically port 433), you also need to forward the HTTP protocol (typically port 80) to your DietPi system, otherwise the certification renewal procedure will fail (due to the fact that the certification renewal procedure takes place several months later you may have forgotten this issue).
 
 ### DietPi NordVPN
 
@@ -408,7 +408,7 @@ Run `dietpi-autostart`.
 
 ![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg)
 
-!!! info "Autostart option in dietpi.txt"
+!!! info "Autostart option in `dietpi.txt`"
     The autostart option can also be set via the file `dietpi.txt`. See option  
     `AUTO_SETUP_AUTOSTART_TARGET_INDEX=`  
     for further information.  
@@ -595,7 +595,7 @@ Run `dietpi-sync`.
 
 ![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg)
 
-Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then, select a target location. The target location can be anything from a networked samba fileserver, or even an FTP server.  
+Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then, select a target location. The target location can be anything from a networked samba file server, or even an FTP server.  
 Each sync includes a leading dry run, after which you can check the expected result before deciding if you want to continue with the actual sync.
 
 ## Misc tools
