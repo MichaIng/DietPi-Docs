@@ -216,12 +216,15 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 === "Access to the programming IDE"
 
     Use port number 1880:  
-    `https://<your.IP>:1880`
+    `http://<your.IP>:1880`
 
 === "Access to the dashboard"
 
     To connect to the dashboard (user interface of Node-RED) enter in your browser:  
-    `https://<your.IP>:1880/ui`
+    `http://<your.IP>:1880/ui`
+
+    !!! info "Node-Red dashboard installation"
+        The dashboard can be installed via the palette manager (accessible in the programming IDE via the *burger menu* at the right upper corner): Just install `node-red-dashboard`.
 
 === "Data directory for Node-Red"
 
