@@ -178,7 +178,19 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 Access the frontend for the `Let's Encrypt` integration.  
 Run `dietpi-letsencrypt`.
 
+In case of a non installed Certbot package it is installed at first:
+
 ![DietPi-LetsEncrypt screenshot](assets/images/dietpi-letsencrypt.jpg)
+
+In the installation dialog some entries have to be made which are needed for the certificate (domain, Email), the other entries are configuration options. It is recommended to leave the key size at 4096 bits.
+
+![DietPi-LetsEncrypt configuration screenshot](assets/images/dietpi-letsencrypt_2.png){: width="640px"}
+
+When you execute the certificate installation it also installs it for your selected web server, i.e. you do not have to edit your web server configuration files, the installation routine does all for you.
+
+!!! info "Port forwarding on your router"
+    To be accessible from the internet, typically your router needs a port forwarding configuration to route incoming HTTP and HTTPS accesses to your DietPi system.  
+    Although you only need a HTTPS protocol forwarding (typically port 433), you also need to forward the HTTP protocol (typically port 80) to your DietPi system, otherwise the certification renewal procedure will fail (due to the fact that the certification renewal procedure takes place several months later you may have forgotten this issue).
 
 ### DietPi NordVPN
 
@@ -396,6 +408,12 @@ Run `dietpi-autostart`.
 
 ![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg)
 
+!!! info "Autostart option in `dietpi.txt` (first initial boot)"
+    When booting the DietPi system the first time, the autostart option can also be set via the file `dietpi.txt`. See option  
+    `AUTO_SETUP_AUTOSTART_TARGET_INDEX=`  
+    for further information.  
+    The numbers shown on the left in the `dietpi-autostart` command correspond to the values in `dietpi.txt`.
+
 ### DietPi services
 
 Provides service control, priority level tweaks and status print.  
@@ -403,12 +421,20 @@ Run `dietpi-services`.
 
 ![DietPi-Services screenshot](assets/images/dietpi-services.jpg)
 
+The dialog to tweak a service is entered by highlighting the service (keys ++arrow-up++ and ++arrow-down++) and pressing ++enter++. The configuration dialog (example: cron service) looks like this:
+
+![DietPi-Services tweaking screenshot](assets/images/dietpi-services_2.png){: width="640px"}
+
+!!! caution "Be careful at tweaking the services."
+
 ### DietPi LED control
 
 Change triggers for the status LEDs on your SBC/motherboard.  
 Run `dietpi-led_control`.
 
 ![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg)
+
+Depending on your used hardware, the number of entries in the dialog will change.
 
 ### DietPi cron
 
@@ -549,11 +575,17 @@ Run `dietpi-logclear`.
 ### DietPi backup (backup/restore)
 
 Fully backups DietPi setup. It also includes the restore capability from an already made DietPi backup.  
+`DietPi-Backup` allows you to Backup and Restore your DietPi system. Same effect as *Windows system restore*. A snapshot of the system that you can restore at any time.  
+You can also customize which files/folders are included and excluded through the GUI.
+
+If you have *broken* your system, or want to reset your system to an earlier date, this can all be done with `DietPi-Backup`. Just make sure you create a backup first.  
 Run `dietpi-backup`.
 
 ![DietPi-Backup screenshot](assets/images/dietpi-backup_1.png)
 
 Remark: In the case that `rsync` is not installed, it is installed.
+
+!!! info "DietPi-Backup is purely based on `Rsync`"
 
 ### DietPi file explorer
 
@@ -564,10 +596,13 @@ Run `dietpi-explorer`.
 
 ### DietPi sync
 
-Sync or duplicate a directory to another.  
+DietPi-Sync allows you to duplicate a directory from one location (*Source Location*) to another (*Target Location*).  
 Run `dietpi-sync`.
 
 ![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg)
+
+Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then, select a target location. The target location can be anything from a networked samba file server, or even an FTP server.  
+Each sync includes a leading dry run, after which you can check the expected result before deciding if you want to continue with the actual sync.
 
 ## Misc tools
 
