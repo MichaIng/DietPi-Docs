@@ -4,7 +4,7 @@
 
 It provides an easy access to all DietPi OS tools, and it could be accessed by running next command:
 
-``` bash
+```sh
 dietpi-launcher
 ```
 
@@ -14,7 +14,7 @@ dietpi-launcher
 
 `dietpi-software` will be automatically displayed on the first login after the installation. It can be accessed at any time running next command:
 
-``` bash
+```sh
 dietpi-software
 ```
 
@@ -167,7 +167,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     E.g. to install Chromium, LXQt and GIMP you have to execute:
 
-    ```bash
+    ```sh
     dietpi-software install 113 173 174
     ```
 
@@ -545,7 +545,7 @@ DietPi Survey allows the DietPi project to obtain general information regarding 
     which displays the status like
 
     ```
-    root@dietpi:~# grep 'SURVEY_OPTED_IN' /boot/dietpi.txt
+    # grep 'SURVEY_OPTED_IN' /boot/dietpi.txt
     SURVEY_OPTED_IN=1
     ```
 
@@ -606,17 +606,13 @@ Each sync includes a leading dry run, after which you can check the expected res
 
 ## Misc tools
 
-### Useful DietPi global commands (apt etc.)
+### Useful DietPi shell functions
 
 There are a couple of general commands which have a shortcut in DietPi:
 
-- `cpu` - Print CPU clocks, temperature and governor info. Sample output:
-
-    ![DietPi-Software CPU info screenshot](assets/images/dietpi-tools-cpuinfo.png)
-
-- `G_OBTAIN_CPU_TEMP`- print integer format CPU temp in degree Celsius (for monitoring probably better than full `cpu` output)
-- `G_OBTAIN_CPU_USAGE` - CPU usage in percent in [x]y.z format
-- `G_TREESIZE` - Shows current directory/file sizes, recursive
+- `G_OBTAIN_CPU_TEMP` - Prints integer format CPU temp in degree Celsius, for monitoring probably better than full `cpu` output
+- `G_OBTAIN_CPU_USAGE` - Prints CPU usage in percent in [x]x.x format
+- `G_TREESIZE` - Shows current directory/file sizes, recursively
 
 The following commands are non-interactive, but error-handled wrappers for `apt-get` commands, useful for scripts which shall run non-interactive but allow interactive repeat and solution attempts:
 
@@ -629,8 +625,9 @@ The following commands are non-interactive, but error-handled wrappers for `apt-
 
 ### DietPi CPU info
 
-Displays CPU temperature, processor frequency, throttle level etc.  
-Run `dietpi-cpuinfo`.
+Displays CPU temperature, processor frequency, throttle level etc.
+
+Run `cpu`. 
 
 ![DietPi-CPU_info screenshot](assets/images/dietpi-tools-cpuinfo.png)
 
