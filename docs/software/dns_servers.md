@@ -123,7 +123,7 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 === "Default DNS ports"
 
     - Default DNS port: 53
-    - DNS port when Pi-hole is installed: 5353
+    - DNS port when Pi-hole is installed: 5335
 
 === "Configuration directory"
 
@@ -136,6 +136,37 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 === "Updating unbound"
 
     Update to latest version: `apt update && apt upgrade`
+
+=== "Activating DNS over TLS (DoT)"
+
+    If required, you can activate DoT. Simply copy/execute following section: 
+    
+    ```
+    cat << '_EOF_' > /etc/unbound/unbound.conf.d/dietpi-dot.conf
+    # Adding DNS-over-TLS support 
+    server:
+    tls-cert-bundle: /etc/ssl/certs/ca-certificates.crt
+    forward-zone:
+    name: "."
+    forward-tls-upstream: yes
+    ## Cloudflare
+    forward-addr: 1.1.1.1@853#cloudflare-dns.com
+    forward-addr: 1.0.0.1@853#cloudflare-dns.com
+    ## Quad9
+    forward-addr: 9.9.9.9@853#dns.quad9.net
+    forward-addr: 149.112.112.112@853#dns.quad9.net
+    _EOF_
+    ```
+
+    Once done, Unbound service would need to be restarted
+    
+    ```
+    systemctl restart unbound
+    ```
+
+    The used DNS servers are examples only and can be replaced by your favorite one. A list of public DNS providers, their IPs and their in cases included ad blocking / adult content blocking features are available on Wikipedia:
+    
+    - https://wikipedia.org/wiki/Public_recursive_name_server
 
 ***
 
