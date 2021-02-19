@@ -539,7 +539,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
     A Virtual Machine is highly recommended for Video transcoding:  
     <https://github.com/MichaIng/DietPi/issues/310#issuecomment-219067830>
 
-![DietPi media server software Emby](../assets/images/dietpi-software-media-embyserver.png){: width="500px"}
+![Emby web interface screenshot](../assets/images/dietpi-software-media-embyserver.png){: width="500px"}
 
 === "Access to the web interface"
 
@@ -562,8 +562,16 @@ A web interface media streaming server. Think Kodi, but using any device with a 
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by Emby:
 
-    - audio = `/mnt/dietpi_userdata/Music`
-    - videos = `/mnt/dietpi_userdata/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`
+    - Videos: `/mnt/dietpi_userdata/Video`
+
+=== "Logging"
+
+    To view Emby server logs, run the following command from console:
+
+    ```sh
+    journalctl -u emby-server
+    ```
 
 === "Update"
 
