@@ -139,7 +139,7 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 
 === "Activating DNS over TLS (DoT)"
 
-    If requird, you can activate DoT. Simply copy/execute following section: 
+    If required, you can activate DoT. Simply copy/execute following section: 
     
     ```
     cat << '_EOF_' > /etc/unbound/unbound.conf.d/dietpi-dot.conf
@@ -164,7 +164,8 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
     systemctl restart unbound
     ```
 
-    The used DNS servers are examples only and can be replaced by your favorite one. A list of public DNS providers, their IPs and their in cases included ad blocking / adult content blocking features are available on Wikipedia: 
+    The used DNS servers are examples only and can be replaced by your favorite one. A list of public DNS providers, their IPs and their in cases included ad blocking / adult content blocking features are available on Wikipedia:
+    
     - https://wikipedia.org/wiki/Public_recursive_name_server
 
 ***
