@@ -520,9 +520,9 @@ DietPi Survey allows the DietPi project to obtain general information regarding 
     This gives the IDs, names and info of software. The above example would show
 
     ```sh
-    root@dietpi:~# dietpi-software list | grep ' =2'
-    id 103 | =2 | dietpi-ramlog: minimal, optimised logging | | https://dietpi.com/phpbb/viewtopic.php?p=68#p68
-    id 104 | =2 | dropbear: lightweight ssh server | | https://dietpi.com/phpbb/viewtopic.php?p=62#p62
+    # dietpi-software list | grep ' =2'
+    id 103 | =2 | dietpi-ramlog: minimal, optimised logging | | https://dietpi.com/docs/software/log_system/#dietpi-ramlog
+    id 104 | =2 | dropbear: lightweight ssh server | | https://dietpi.com/docs/software/ssh/#dropbear
     ```
 
 === "Selecting Opt-in or Opt-out"
