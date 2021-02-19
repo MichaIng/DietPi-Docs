@@ -625,8 +625,7 @@ The following commands are non-interactive, but error-handled wrappers for `apt-
 
 ### DietPi CPU info
 
-Displays CPU temperature, processor frequency, throttle level etc.
-
+Displays CPU temperature, processor frequency, throttle level etc.  
 Run `cpu`. 
 
 ![DietPi-CPU_info screenshot](assets/images/dietpi-tools-cpuinfo.png)
