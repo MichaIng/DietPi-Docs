@@ -408,8 +408,8 @@ Run `dietpi-autostart`.
 
 ![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg)
 
-!!! info "Autostart option in `dietpi.txt` (first boot)"
-    At the very first system boot the autostart option can also be set via the file `dietpi.txt`. See option  
+!!! info "Autostart option in `dietpi.txt` (first initial boot)"
+    When booting the DietPi system the first time, the autostart option can also be set via the file `dietpi.txt`. See option  
     `AUTO_SETUP_AUTOSTART_TARGET_INDEX=`  
     for further information.  
     The numbers shown on the left in the `dietpi-autostart` command correspond to the values in `dietpi.txt`.
