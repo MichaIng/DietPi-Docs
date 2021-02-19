@@ -561,9 +561,24 @@ Run `dietpi-update`.
 ### DietPi cleaner
 
 Clean up not necessary files from the operating system and free up valuable disk space.  
+Think of it as lightweight CCleaner for DietPi and Linux.  
 Run `dietpi-cleaner`.
 
 ![DietPi-Cleaner screenshot](assets/images/dietpi-cleaner.jpg)
+
+By simulating the cleaner process (via menu entry `Test`) you get a preview of the deletions the cleaner does before you start the cleaning process (via menu entry `Run`).
+
+#### Cleaner Types
+
+DietPi-Cleaner uses modules which you can be switched on or off before running the cleaning process. Select them via the main menue entry `Cleaners`.
+
+![DietPi-Cleaner types screenshot](assets/images/dietpi-cleaner_2.png){: width="640px"}
+
+#### Files cleaner
+
+The files cleaner allows you to customize a list of filenames to search and remove, during the cleaning process. Select them via the main menue entry `Files`.
+
+![DietPi-Cleaner types screenshot](assets/images/dietpi-cleaner_3.png){: width="640px"}
 
 ### DietPi log clear
 
