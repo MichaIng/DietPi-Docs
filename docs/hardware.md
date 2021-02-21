@@ -17,7 +17,7 @@ DietPi runs on the full range of Raspberry Pi boards and computers. This include
 
 or the most recent **Raspberry Pi 4 Model B** boards, launched in 2019, as well as in 2020.
 
-![Raspberry Pi 4 Model B photo](assets/images/dietpi-raspberry-pi-400-back.jpg){: width="500" height="292" loading="lazy"}
+![Raspberry Pi 4 Model B photo](assets/images/raspberry-pi-4-labelled.png){: width="500" height="292" loading="lazy"}
 
 DietPi runs also on one of the first models **Raspberry Pi 1**, launched in 2012
 
