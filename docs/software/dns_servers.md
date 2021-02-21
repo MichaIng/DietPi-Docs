@@ -105,7 +105,7 @@ Wikipedia: <https://wikipedia.org/wiki/Pi-hole>
 
 YouTube video tutorial #1: *Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!*.
 
-<iframe src="https://www.youtube-nocookie.com/embed/RO2_eZlVrj4" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/RO2_eZlVrj4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 YouTube video tutorial #2: [`Block ads everywhere with Pi-hole and PiVPN on DietPi`](https://www.youtube.com/watch?v=qbLEHlKkGiE)  
 YouTube video tutorial #3 (German language): [`Raspberry Pi & DietPi : Pi-hole der Werbeblocker für Netzwerke mit Anleitung für AVM FritzBox`](https://www.youtube.com/watch?v=vXUvFWhXW6c&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=6)  
