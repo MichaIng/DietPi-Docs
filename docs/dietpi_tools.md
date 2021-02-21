@@ -55,7 +55,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     DietPi supports a large number of software titles. Instead of scrolling through the **Software Optimised** list to find a specific software title, you may use the **Search** option. Type in the software ID or any keyword form its title or description and you'll get a list filtered by matching results.
 
-    ![DietPi-Software Search menu screenshot](assets/images/dietpi-software-search.png){: loading="lazy"}
+    ![DietPi-Software Search menu screenshot](assets/images/dietpi-software-search.png){: with="752" height="321" loading="lazy"}
 
 ---
 
