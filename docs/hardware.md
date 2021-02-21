@@ -29,7 +29,7 @@ and even on the compact form **Raspberry Pi Zero W**
 
 Quick intro:
 
-<iframe src="https://www.youtube-nocookie.com/embed/sajBySPeYH0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/sajBySPeYH0?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 <div class="md-typeset__table">
     <table>
