@@ -46,6 +46,7 @@ CactiChameleon
 CalDAV
 CardDAV
 CAVA
+CCleaner
 CDTV
 CedArctic
 Certbot
@@ -165,7 +166,6 @@ Imgur
 InfluxData
 InfluxDB
 IoT
-IPs
 IPsec
 iptables
 IPv

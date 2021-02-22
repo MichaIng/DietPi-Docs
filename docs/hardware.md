@@ -13,23 +13,23 @@ You can install DietPi by following the step by step [Starting guide](../install
 
 DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400/?resellerType=home),
 
-![DietPi Raspberry Pi 400](./assets/images/dietpi-raspberry-pi-400-back.jpg)
+![Raspberry Pi 400 photo](assets/images/dietpi-raspberry-pi-400-back.jpg){: width="800" height="571" loading="lazy"}
 
 or the most recent **Raspberry Pi 4 Model B** boards, launched in 2019, as well as in 2020.
 
-<img src="../assets/images/raspberry-pi-4-labelled.png" title="Raspberry Pi model 4B" width="500" />
+![Raspberry Pi 4 Model B photo](assets/images/raspberry-pi-4-labelled.png){: width="500" height="292" loading="lazy"}
 
 DietPi runs also on one of the first models **Raspberry Pi 1**, launched in 2012
 
-<img src="../assets/images/raspberry-pi-1b.jpg" title="Raspberry Pi model 1B" width="500" />
+![Raspberry Pi 1 Model B photo](assets/images/raspberry-pi-1b.jpg){: width="500" height="242" loading="lazy"}
 
 and even on the compact form **Raspberry Pi Zero W**
 
-<img src="../assets/images/raspberry-pi-zero-w.jpg" title="Raspberry Pi zero W" width="500" />
+![Raspberry Pi Zero W photo](assets/images/raspberry-pi-zero-w.jpg){: width="500" height="333" loading="lazy"}
 
 Quick intro:
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sajBySPeYH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/sajBySPeYH0?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 <div class="md-typeset__table">
     <table>
@@ -66,7 +66,7 @@ ODROID single board computers are powerful, stable, and fast performing. They ca
 
 ODROID-N2 is one of the supported boards.
 
-<img src="../assets/images/dietpi-odroid-n2-plus.jpg" title="Odroid N2+" width="500" />
+![Odroid N2 photo](assets/images/dietpi-odroid-n2-plus.jpg){: width="500" height="353" loading="lazy"}
 
 It is a new generation single board computer that is more powerful, more stable, and faster performing than N1. The main CPU of the N2 is based on big. Thanks to the modern 12nm silicon technology, the A73 cores runs at 1.8 GHz without thermal throttling using the stock metal-housing heat sink allowing a robust and quiet computer.
 
@@ -119,7 +119,7 @@ This is where PINE64 journey began. The PINE A64 is their first Single Board Com
 
 The ROCKPro64 is the most powerful single board computer offered by PINE64.
 
-<img src="../assets/images/dietpi-rockpro64.jpg" title="PINE64 ROCKPro64" width="500" />
+![PINE64 ROCKPro64 photo](assets/images/dietpi-rockpro64.jpg){: width="500" height="375" loading="lazy"}
 
 It features a Rockchip RK3399 hexa-core SOC and up-to 4 GiB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UART and GPIO.
 
@@ -177,7 +177,7 @@ For more details visit the [**Radxa ROCK Pi**](https://rockpi.org/) website.
 
 One of the supported boards is ROCK Pi 4.
 
-<img src="../assets/images/dietpi-rockpi-4b.jpg" title="Radxa ROCK Pi 4B" width="500" />
+![Radxa ROCK Pi 4 photo](assets/images/dietpi-rockpi-4b.jpg){: width="500" height="375" loading="lazy"}
 
 ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
 
@@ -210,7 +210,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
 
 **Six-core 64-bit High Performance Open Source Platform**. For more details visit [**Firefly RK3399**](https://en.t-firefly.com/product/rk3399.html) website.
 
-<img src="../assets/images/dietpi-firefly-rk3399.png" title="Firefly RK3399" width="500" />
+![Firefly RK3399 photo](assets/images/dietpi-firefly-rk3399.png){: width="413" height="331" loading="lazy"}
 
 <div class="md-typeset__table">
     <table>
@@ -235,7 +235,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
 
 Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit the [**Allo Sparky SBC**](https://www.allo.com/sparky/sparky-sbc.html) website.
 
-<img src="../assets/images/dietpi-sparky-sbc.jpg" title="Sparky SBC" width="500" />
+![Allo Sparky SBC photo](assets/images/dietpi-sparky-sbc.jpg){: width="500" height="412" loading="lazy"}
 
 <div class="md-typeset__table">
     <table>
@@ -262,7 +262,7 @@ Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that
 
 Tinker Board features standard maker connectivity options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
 
-<img src="../assets/images/dietpi-tinkerboard.jpg" title="ASUS Tinker Board" width="500" />
+![ASUS Tinker Board photo](assets/images/dietpi-tinkerboard.jpg){: width="500" height="353" loading="lazy"}
 
 Tinker Board is equipped with one DSI MIPI connection for displays and touchscreens. The secondary CSI MIPI connection is for connection to compatible cameras allowing for computer vision, and much more.
 
@@ -293,7 +293,7 @@ Careful consideration went into the design and development of the Tinker Board t
 
 For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) website.
 
-<img src="../assets/images/dietpi-nanopi-k2.jpg" title="FriendlyARM NanoPi K2" width="500" />
+![FriendlyARM NanoPi K2 photo](assets/images/dietpi-nanopi-k2.jpg){: width="500" height="350" loading="lazy"}
 
 **NanoPi K2** supports DVFS and it can smooth play high-definition video streams, and it is very well suited for applications such as advertisement machines, TV boxes, home entertainment appliances or multimedia devices.
 
@@ -430,7 +430,7 @@ The VMware virtual machine is great for those occasions where SBC performance ju
 
 ### VirtualBox
 
-![Oracle VirtualBox](assets/images/vbox.jpg)
+![Oracle VirtualBox logo](assets/images/vbox.jpg){: width="267" height="273" loading="lazy"}
 
 VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at server, desktop and embedded use.
 
@@ -573,22 +573,22 @@ chmod +x PREP_SYSTEM_FOR_DIETPI.sh
 
 In the following dialog you have to select the DietPi installer branch. Choose the same branch as the DietPi `PREP_SYSTEM_FOR_DIETPI.sh` script:
 
-![DietPi-PREP branch selection](assets/images/dietpi-prep-selectbranch.png){: width="550px"}
+![DietPi-PREP branch selection](assets/images/dietpi-prep-selectbranch.png){: width="550" height="266" loading="lazy"}
 
 In the following dialogues enter your name and afterwards the actual image base and the device (SBC or PC) the system is running on:
 
-![DietPi-PREP pre-image entry](assets/images/dietpi-prep-preimage.png){: width="550px"}
+![DietPi-PREP pre-image entry](assets/images/dietpi-prep-preimage.png){: width="550" height="218" loading="lazy"}
 
-![DietPi-PREP device selection](assets/images/dietpi-prep-deviceselection.png){: width="550px"}
+![DietPi-PREP device selection](assets/images/dietpi-prep-deviceselection.png){: width="550" height="290" loading="lazy"}
 
 Depending on whether you want to use the WiFi feature later on, you have to select the option to keep or purge the WiFi package. To keep the package could be the case if your hardware has an onboard WiFi or you add the WiFi e.g. via an USB WiFi adapter.
 
-![DietPi-PREP WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550px"}
+![DietPi-PREP WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550" height="184" loading="lazy"}
 
 The last selection is the target Debian version (the actual **Buster** or the upcoming **Bullseye**).  
 After this, the script runs a couple of minutes, finally the following message occurs:
 
-![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: width="550px"}
+![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}
 
 If you did not use branch `master` the last step is to edit file `/boot/dietpi.txt` and edit the  
 `DEV_GITBRANCH=master`  
