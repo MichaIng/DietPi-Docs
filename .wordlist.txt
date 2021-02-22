@@ -166,7 +166,6 @@ Imgur
 InfluxData
 InfluxDB
 IoT
-IPs
 IPsec
 iptables
 IPv
