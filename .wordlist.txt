@@ -87,6 +87,7 @@ DIY
 DLNA
 DNS
 Domoticz
+DoT
 DPMS
 DRC
 DRM
@@ -164,6 +165,7 @@ Imgur
 InfluxData
 InfluxDB
 IoT
+IPs
 IPsec
 iptables
 IPv
