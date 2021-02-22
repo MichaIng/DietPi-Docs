@@ -21,7 +21,7 @@ Select the following tabs for the installation description of your target.
 
     Single board computers (SBCs) based on the well known Raspberry PI ARM based architecture gained more and more friends in the last years. The low cost in combination with the power and hardware flexibility makes these SBCs optimal for embedded systems, like e.g. home automation or cloud applications.
 
-    ![raspberry-pi-1-model-b](assets/images/raspberry-pi-1b.jpg)
+    ![raspberry-pi-1-model-b](assets/images/raspberry-pi-1b.jpg){: width="300px"}
 
     ## Prerequisites
 
@@ -98,28 +98,33 @@ Select the following tabs for the installation description of your target.
     ???+ hint "Initial boot duration"
         Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the SD card size, SD card speed and system speed.
 
-=== "Install on native PC (UEFI)"
+=== "Install on native PC (UEFI/GPT installer image)"
 
     <font size="+2">Introduction</font>
 
     The Native PC images are great for those occasions where SBC performance is just not enough. One example could be [Intel NUC Kit](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits.html?page=2). It is a small, versatile, upgradable, and affordable desktop PC with the same basic feature set as that of a much larger machine.
 
-    ![DietPi-Intel-NUC](assets/images/dietpi-nuc8.jpg)
+    ![DietPi-Intel-NUC](assets/images/dietpi-nuc8.jpg){: width="300px"}
 
     It could be also a great way to make use of an old computer that’s not capable of running the latest version of Windows or macOS.
+
+    !!! question "**UEFI** or **BIOS**?"
+        First, you have to find out whether your PC contains **UEFI** ([Unified Extensible Firmware Interface](https://wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)) or **BIOS** ([Basic Input/Output System](https://wikipedia.org/wiki/BIOS)). In case of a BIOS based PC you have to use the image "**Native PC for BIOS**" (installation description see different tab).
+
+    !!! question "**Installer image** or **Root drive image**?"
+        This "**UEFI/GPT installer image**" is used to boot from and install the DietPi system on a different target boot drive (storage medium). In contrary to that a root drive image exists which is used to be written directly to the target DietPi boot drive. In this case use the image "**UEFI/GPT root drive image**" from the download area (installation description see different tab).
 
     <font size="+2">Prerequisites</font>
 
     You would need the next:
 
-    - one **working PC with internet access**, helping to flash the boot media
-    - one **bootable USB flash drive** (at least 2 GiB), to hold the DietPi installer image and to boot the target PC
+    - one **working PC with internet access**, helping to write the boot media
+    - one **bootable USB drive** (e.g. flash disk, at least 2 GiB), to hold the DietPi installer image and to boot the target PC
     - **target PC** to be installed
 
+    <font size="+2">1. Download and extract the DietPi installer image</font>
 
-    <font size="+2">1. Download and extract the DietPi disk image</font>
-
-    Download the **DietPi installer image** from [`dietpi.com`](https://dietpi.com/#download) and
+    Download the **DietPi installer image** "DietPi_NativePC-UEFI-x86_64-Buster_Installer.7z" from [`dietpi.com`](https://dietpi.com/#download) and
     unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi-download-image](assets/images/dietpi-download-nativepc.jpg)
@@ -129,22 +134,22 @@ Select the following tabs for the installation description of your target.
     !!! warning "Be careful if you run alternative applications!"
         While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
 
-    <font size="+2">2. Flash image to USB drive</font>
+    <font size="+2">2. Write image to USB drive</font>
 
     Start [Rufus](https://rufus.ie/) application and make sure you have your USB drive inserted into your computer. Follow the next steps:
 
-    - (1) Select the USB device
-    - (2) Select the downloaded **DietPi** image
-    - (3) Select GPT as partition scheme
-    - (4) Select UEFI as target system
-    - (5) Click on _Start_ button
+    1. Select the USB device
+    2. Select the downloaded **DietPi** image
+    3. Select GPT as partition scheme
+    4. Select UEFI as target system
+    5. Click on _Start_ button
 
-    Ensure that the USB medium selected is the correct one.
+    Ensure that the selected USB medium is the correct one.
 
-    !!! warning "All data on the USB medium and on the target PCs harddisk will be erased!"
+    !!! warning "All data on the USB medium and later on the target PCs harddisk will be erased!"
         Before starting the installation first make a backup of the data available on the target PC and USB drive if you need it later again!
 
-    ![Rufus UEFI selections screenshot](assets/images/dietpi-rufus-uefi.jpg)
+    ![Rufus UEFI installer image selections screenshot](assets/images/dietpi-rufus-uefi-installer.png)
 
     <font size="+2">3. Boot the target PC and install the image on the local disk</font>
 
@@ -183,6 +188,91 @@ Select the following tabs for the installation description of your target.
     At the end the system executes a shutdown.
 
     For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
+
+=== "Install on native PC (UEFI/GPT root drive image)"
+
+    <font size="+2">Introduction</font>
+
+    The Native PC images are great for those occasions where SBC performance is just not enough. One example could be [Intel NUC Kit](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits.html?page=2). It is a small, versatile, upgradable, and affordable desktop PC with the same basic feature set as that of a much larger machine.
+
+    ![DietPi-Intel-NUC](assets/images/dietpi-nuc8.jpg){: width="300px"}
+
+    It could be also a great way to make use of an old computer that’s not capable of running the latest version of Windows or macOS.
+
+    !!! question "**UEFI** or **BIOS**?"
+        First, you have to find out whether your PC contains **UEFI** ([Unified Extensible Firmware Interface](https://wikipedia.org/wiki/Unified_Extensible_Firmware_Interface)) or **BIOS** ([Basic Input/Output System](https://wikipedia.org/wiki/BIOS)). In case of an BIOS based PC you have to use the image "**Native PC for BIOS**" (installation description see different tab).
+
+    !!! question "**Installer image** or **Root drive image**?"
+        This "**UEFI/GPT root drive image**" is used to be written directly to the target DietPi system boot drive. In contrary to that an istaller image exists which is used to boot from and install the DietPi system on a different target boot drive (storage medium). In this case use the image "**UEFI/GPT installer image**" from the download area (installation description see different tab).
+
+    <font size="+2">Prerequisites</font>
+
+    You would need the next:
+
+    - one **working PC with internet access**, helping to write the boot media
+    - one **disc drive**, to hold the DietPi system. It is written with the root drive image and will be the disk drive in the DietPi system.
+    - **target PC** to be installed
+
+    <font size="+2">1. Download and extract the DietPi root drive image</font>
+
+    Download the **DietPi root drive image** "DietPi_NativePC-UEFI-x86_64-Buster_RootDrive.7z" from [`dietpi.com`](https://dietpi.com/#download) and
+    unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+
+    ![DietPi-download-image](assets/images/dietpi-download-nativepc.jpg)
+
+    Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
+
+    !!! warning "Be careful if you run alternative applications!"
+        While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
+
+    <font size="+2">2. Write image to disc drive</font>
+
+    Start [Rufus](https://rufus.ie/) application and make sure you have your disc drive connected into your computer. This may e.g. be done using an USB to SATA controller if you use a SATA disc drive. Follow the next steps:
+
+    1. Select the disc drive device
+    2. Select the downloaded **DietPi** image
+    3. Show advanced drive properties and select **List USB hard drives**  
+      (in case that you have connected your disc drive via a USB adapter)
+    4. Click on _Start_ button
+
+    Ensure that the selected disc drive is the correct one.
+
+    !!! warning "All data on the disc drive will be erased!"
+        Before starting the installation first make a backup of the data available on the disc drive if you need it later again!
+
+    ![Rufus UEFI root drive image selections screenshot](assets/images/dietpi-rufus-uefi-rootimage.png)
+
+    <font size="+2">3. Boot the target PC </font>
+
+    For the first boot up of your PC disconnect your disc drive from your working PC and connect it to the target PC. Then power on the target PC to login and execute the first boot procedure.
+
+=== "Install on native PC (BIOS installer image)"
+
+    T.b.d.
+
+    <font size="+2">Introduction</font>
+
+    <font size="+2">Prerequisites</font>
+
+    <font size="+2">1. Download and extract the DietPi installer image</font>
+
+    <font size="+2">2. Write image to USB drive</font>
+
+    <font size="+2">3. Boot the target PC and install the image on the local disk</font>
+
+=== "Install on native PC (BIOS direct flash image)"
+
+    T.b.d.
+
+    <font size="+2">Introduction</font>
+
+    <font size="+2">Prerequisites</font>
+
+    <font size="+2">1. Download and extract the DietPi root drive image</font>
+
+    <font size="+2">2. Write image to disc drive</font>
+
+    <font size="+2">3. Boot the target PC </font>
 
 === "Install in VirtualBox"
 
