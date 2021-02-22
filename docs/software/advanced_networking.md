@@ -116,6 +116,11 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
 
     The simplest way to monitor the Tor relay is to use the DietPi-CloudShell scene, for this run `dietpi-cloudshell` from command line and select the "Tor Relay" scene. It uses the Tor monitor [nyx](https://nyx.torproject.org/) which can be called in standalone mode by executing `nyx` from command line.
 
+    You can also monitor it with the [Tor relay search](https://metrics.torproject.org/rs.html). Just paste either the fingerprint (found at `/var/lib/tor/fingerprint`) or nickname of your relay.
+
+    ??? info "Note for bridge operators"
+        The Tor relay search will not always work for bridges, sometimes showing them as down when they are running.  In that case, use the specific Tor bridge monitoring URL, `https://bridges.torproject.org/status?type=obfs4&id=<FINGERPRINT>`.
+
 === "Keeping up-to-date"
 
     Keeping Tor relays updated is important to the safety of both the users and the operator. Because of this, automated upgrades are recommended and asked about when first installing. Otherwise, use `apt-get update && apt-get upgrade`.

@@ -570,13 +570,13 @@ By simulating the cleaner process (via menu entry `Test`) you get a preview of t
 
 #### Cleaner Types
 
-DietPi-Cleaner uses modules which you can be switched on or off before running the cleaning process. Select them via the main menue entry `Cleaners`.
+DietPi-Cleaner uses modules which you can be switched on or off before running the cleaning process. Select them via the main menu entry `Cleaners`.
 
 ![DietPi-Cleaner types screenshot](assets/images/dietpi-cleaner_2.png){: width="640px"}
 
 #### Files cleaner
 
-The files cleaner allows you to customize a list of filenames to search and remove, during the cleaning process. Select them via the main menue entry `Files`.
+The files cleaner allows you to customize a list of filenames to search and remove, during the cleaning process. Select them via the main menu entry `Files`.
 
 ![DietPi-Cleaner types screenshot](assets/images/dietpi-cleaner_3.png){: width="640px"}
 
