@@ -98,92 +98,6 @@ Select the following tabs for the installation description of your target.
     ???+ hint "Initial boot duration"
         Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the SD card size, SD card speed and system speed.
 
-=== "Install on native PC (UEFI)"
-
-    <font size="+2">Introduction</font>
-
-    The Native PC images are great for those occasions where SBC performance is just not enough. One example could be [Intel NUC Kit](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits.html?page=2). It is a small, versatile, upgradable, and affordable desktop PC with the same basic feature set as that of a much larger machine.
-
-    ![DietPi-Intel-NUC](assets/images/dietpi-nuc8.jpg){: width="825" height="550" loading="lazy"}
-
-    It could be also a great way to make use of an old computer that’s not capable of running the latest version of Windows or macOS.
-
-    <font size="+2">Prerequisites</font>
-
-    You would need the next:
-
-    - one **working PC with internet access**, helping to flash the boot media
-    - one **bootable USB flash drive** (at least 2 GiB), to hold the DietPi installer image and to boot the target PC
-    - **target PC** to be installed
-
-
-    <font size="+2">1. Download and extract the DietPi disk image</font>
-
-    Download the **DietPi installer image** from [`dietpi.com`](https://dietpi.com/#download) and
-    unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
-
-    ![DietPi-download-image](assets/images/dietpi-download-nativepc.jpg){: width="1152" height="337" loading="lazy"}
-
-    Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
-
-    !!! warning "Be careful if you run alternative applications!"
-        While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
-
-    <font size="+2">2. Flash image to USB drive</font>
-
-    Start [Rufus](https://rufus.ie/) application and make sure you have your USB drive inserted into your computer. Follow the next steps:
-
-    - (1) Select the USB device
-    - (2) Select the downloaded **DietPi** image
-    - (3) Select GPT as partition scheme
-    - (4) Select UEFI as target system
-    - (5) Click on _Start_ button
-
-    Ensure that the USB medium selected is the correct one.
-
-    !!! warning "All data on the USB medium and on the target PCs harddisk will be erased!"
-        Before starting the installation first make a backup of the data available on the target PC and USB drive if you need it later again!
-
-    ![Rufus UEFI selections screenshot](assets/images/dietpi-rufus-uefi.jpg){: width="474" height="580" loading="lazy"}
-
-    <font size="+2">3. Boot the target PC and install the image on the local disk</font>
-
-    Boot the **target PC** from USB image and install the image on the local disk / harddisk. Put the USB stick into the target PC and boot from this USB stick  
-
-    !!! note "BIOS settings"
-        It may be necessary to change BIOS settings to enable the UEFI boot. This action is not described here.
-
-    During the initial boot, the following dialog may appear to boot from the USB stick:
-
-    ![Bootloader menu screenshot](assets/images/dietpi-uefi-boot.jpg){: width="483" height="230" loading="lazy"}
-
-    After booting the graphics selection dialog appears:
-
-    ![Clonezilla main menu screenshot](assets/images/dietpi-uefi-boot-graphic.jpg){: width="834" height="394" loading="lazy"}
-
-    You can select the default settings. In case of problems, please select "Safe graphic settings".
-
-    Once this step is completed, you will able to select a different keyboard. If necessary, change your keyboard settings and go through the appropriate dialogues.
-
-    Then the installation process begins with the help of the wonderful Clonezilla tool.
-
-    Select the image file to be installed on the target PCs harddisk. Normally you should only see one single option:
-
-    ![Clonezilla source image selection screenshot](assets/images/dietpi-boot-clonezilla.jpg){: width="656" height="198" loading="lazy"}
-
-    After this, you have to select the target PCs harddisk where your DietPi shall be installed. In this example there is only one harddisk present:
-
-    ![Clonezilla target drive selection screenshot](assets/images/dietpi-boot-clonezilla-run.jpg){: width="853" height="181" loading="lazy"}
-
-    After this, the installation process starts with several steps, e.g. showing the process of the image copying:
-
-    ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg){: width="657" height="467" loading="lazy"}
-
-    These steps take some time, be patient! Otherwise buy an SSD. :-)  
-    At the end the system executes a shutdown.
-
-    For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
-
 === "Install in VirtualBox"
 
     <font size="+2">Introduction</font>
@@ -298,7 +212,7 @@ Select the following tabs for the installation description of your target.
 
     The Native PC images are great for those occasions where SBC performance is just not enough. One example could be [Intel NUC Kit](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits.html?page=2). It is a small, versatile, upgradable, and affordable desktop PC with the same basic feature set as that of a much larger machine.
 
-    ![DietPi-Intel-NUC](assets/images/dietpi-nuc8.jpg){: width="300px"}
+    ![DietPi-Intel-NUC](assets/images/dietpi-nuc8.jpg){: width="300" height="200" loading="lazy"}
 
     It could be also a great way to make use of an old computer that’s not capable of running the latest version of Windows or macOS.
 
@@ -326,7 +240,7 @@ Select the following tabs for the installation description of your target.
         Download the **UEFI installer image** `DietPi_NativePC-UEFI-x86_64-Buster_Installer.7z` from [`dietpi.com`](https://dietpi.com/#download) and
         unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
-        ![DietPi download UEFI installer image](assets/images/dietpi-download-nativepc-uefi.jpg)
+        ![DietPi download UEFI installer image](assets/images/dietpi-download-nativepc-uefi.jpg){: width="722" height="211" loading="lazy"}
 
         Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
@@ -348,7 +262,7 @@ Select the following tabs for the installation description of your target.
         !!! warning "All data on the USB medium and later on the target PCs harddisk will be erased!"
             Before starting the installation first make a backup of the data available on the target PC and USB drive if you need it later again!
 
-        ![Rufus UEFI installer image selections screenshot](assets/images/dietpi-rufus-uefi-installer.png)
+        ![Rufus UEFI installer image selections screenshot](assets/images/dietpi-rufus-uefi-installer.png){: width="473" height="579" loading="lazy"}
 
         <font size="+2">3. Boot the target PC and install the image on the local disk</font>
 
@@ -359,11 +273,11 @@ Select the following tabs for the installation description of your target.
 
         During the initial boot, the following dialog may appear to boot from the USB stick:
 
-        ![Bootloader menu screenshot](assets/images/dietpi-uefi-boot.jpg)
+        ![Bootloader menu screenshot](assets/images/dietpi-uefi-boot.jpg){: width="483" height="230" loading="lazy"}
 
         After booting the graphics selection dialog appears:
 
-        ![Clonezilla main menu screenshot](assets/images/dietpi-uefi-boot-graphic.jpg)
+        ![Clonezilla main menu screenshot](assets/images/dietpi-uefi-boot-graphic.jpg){: width="834" height="394" loading="lazy"}
 
         You can select the default settings. In case of problems, please select "Safe graphic settings".
 
@@ -373,15 +287,15 @@ Select the following tabs for the installation description of your target.
 
         Select the image file to be installed on the target PCs harddisk. Normally you should only see one single option:
 
-        ![Clonezilla source image selection screenshot](assets/images/dietpi-boot-clonezilla.jpg)
+        ![Clonezilla source image selection screenshot](assets/images/dietpi-boot-clonezilla.jpg){: width="656" height="198" loading="lazy"}
 
         After this, you have to select the target PCs harddisk where your DietPi shall be installed. In this example there is only one harddisk present:
 
-        ![Clonezilla target drive selection screenshot](assets/images/dietpi-boot-clonezilla-run.jpg)
+        ![Clonezilla target drive selection screenshot](assets/images/dietpi-boot-clonezilla-run.jpg){: width="853" height="181" loading="lazy"}
 
         After this, the installation process starts with several steps, e.g. showing the process of the image copying:
 
-        ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg)
+        ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg){: width="500" height="350" loading="lazy"}
 
         These steps take some time, be patient! Otherwise buy an SSD. :-)  
         At the end the system executes a shutdown.
@@ -405,7 +319,7 @@ Select the following tabs for the installation description of your target.
         Download the **BIOS installer image** `DietPi_NativePC-BIOS-x86_64-Buster_Installer.7z` from [`dietpi.com`](https://dietpi.com/#download) and
         unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
-        ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg)
+        ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
 
         Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
@@ -423,7 +337,7 @@ Select the following tabs for the installation description of your target.
         !!! warning "All data on the USB medium and later on the target PCs harddisk will be erased!"
             Before starting the installation first make a backup of the data available on the target PC and USB drive if you need it later again!
 
-        ![Rufus BIOS installer image selections screenshot](assets/images/dietpi-rufus-bios-installer.png)
+        ![Rufus BIOS installer image selections screenshot](assets/images/dietpi-rufus-bios-installer.png){: width="474" height="580" loading="lazy"}
 
         <font size="+2">3. Boot the target PC and install the image on the local disk</font>
 
@@ -434,7 +348,7 @@ Select the following tabs for the installation description of your target.
 
         After booting the graphics selection dialog appears:
 
-        ![Clonezilla main menu screenshot](assets/images/dietpi-uefi-boot-graphic.jpg)
+        ![Clonezilla main menu screenshot](assets/images/dietpi-uefi-boot-graphic.jpg){: width="834" height="394" loading="lazy"}
 
         You can select the default settings. In case of problems, please select "Safe graphic settings".
 
@@ -444,15 +358,15 @@ Select the following tabs for the installation description of your target.
 
         Select the image file to be installed on the target PCs harddisk. Normally you should only see one single option:
 
-        ![Clonezilla source image selection screenshot](assets/images/dietpi-boot-clonezilla.jpg)
+        ![Clonezilla source image selection screenshot](assets/images/dietpi-boot-clonezilla.jpg){: width="656" height="198" loading="lazy"}
 
         After this, you have to select the target PCs harddisk where your DietPi shall be installed. In this example there is only one harddisk present:
 
-        ![Clonezilla target drive selection screenshot](assets/images/dietpi-boot-clonezilla-run.jpg)
+        ![Clonezilla target drive selection screenshot](assets/images/dietpi-boot-clonezilla-run.jpg){: width="853" height="181" loading="lazy"}
 
         After this, the installation process starts with several steps, e.g. showing the process of the image copying:
 
-        ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg)
+        ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg){: width="500" height="350" loading="lazy"}
 
         These steps take some time, be patient! Otherwise buy an SSD. :-)  
         At the end the system executes a shutdown.
@@ -474,7 +388,7 @@ Select the following tabs for the installation description of your target.
         Download the **BIOS direct write image** `DietPi_NativePC-BIOS-x86_64-Buster.7z` from [`dietpi.com`](https://dietpi.com/#download) and
         unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
-        ![DietPi download BIOS direct write image](assets/images/dietpi-download-nativepc-bios.jpg)
+        ![DietPi download BIOS direct write image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
 
         Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
@@ -493,7 +407,7 @@ Select the following tabs for the installation description of your target.
         !!! warning "All data on the disc drive will be erased!"
             Before starting the installation first make a backup of the data available on the disc drive if you need it later again!
 
-        ![Rufus BIOS direct write image selections screenshot](assets/images/dietpi-rufus-bios-direct-write-image.png)
+        ![Rufus BIOS direct write image selections screenshot](assets/images/dietpi-rufus-bios-direct-write-image.png){: width="474" height="607" loading="lazy"}
 
         <font size="+2">3. Boot the target PC </font>
 
