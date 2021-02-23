@@ -8,7 +8,7 @@ It provides an easy access to all DietPi OS tools, and it could be accessed by r
 dietpi-launcher
 ```
 
-![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg)
+![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="366" loading="lazy"}
 
 ## DietPi software
 
@@ -20,7 +20,7 @@ dietpi-software
 
 It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../software/) titles.
 
-![DietPi-Software screenshot](assets/images/dietpi-software.jpg)
+![DietPi-Software screenshot](assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
 ### Software overview
 
@@ -40,7 +40,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     The software you selected will begin to install at this point. Once the process is completed, you may be asked to restart your device. Press **OK** to confirm.
 
-    ![DietPi-Software Software Optimised menu screenshot](assets/images/dietpi-software-optimised.jpg)
+    ![DietPi-Software Software Optimised menu screenshot](assets/images/dietpi-software-optimised.jpg){: width="643" height="365" loading="lazy"}
 
 === "Software Additional"
 
@@ -49,13 +49,13 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - software packages that are often used and installed via `apt install <package>`, without additional optimisation from DietPi team.
     - _or_ packages not directly required, but pulled as a dependency, like: build tools, libraries or runtime systems. E.g. packages like *Python3*, *pip*, *tcpdump* or *midnight commander* can be installed using the dialog.
 
-    ![DietPi-Software Software Additional menu screenshot](assets/images/dietpi-software-additional.jpg){: width="640px"}
+    ![DietPi-Software Software Additional menu screenshot](assets/images/dietpi-software-additional.jpg){: width="640" height="485" loading="lazy"}
 
 === "Search"
 
     DietPi supports a large number of software titles. Instead of scrolling through the **Software Optimised** list to find a specific software title, you may use the **Search** option. Type in the software ID or any keyword form its title or description and you'll get a list filtered by matching results.
 
-    ![DietPi-Software Search menu screenshot](assets/images/dietpi-software-search.png)
+    ![DietPi-Software Search menu screenshot](assets/images/dietpi-software-search.png){: with="752" height="321" loading="lazy"}
 
 ---
 
@@ -65,7 +65,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
 
-    ![DietPi-Software SSH Server menu screenshot](assets/images/dietpi-software-ssh-selection.jpg){: width="550px"}
+    ![DietPi-Software SSH Server menu screenshot](assets/images/dietpi-software-ssh-selection.jpg){: width="550" height="320" loading="lazy"}
 
 === "File Server"
 
@@ -82,7 +82,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     - ProFTPD can max out the RPi 100 Mbit connection with minimal CPU usage.
     - Samba server on a RPi v1 will hit 100% CPU usage at 40 Mbit transfer rate.
 
-    ![DietPi-Software File Server menu screenshot](assets/images/dietpi-software-fileserver-selection.jpg){: width="550px"}
+    ![DietPi-Software File Server menu screenshot](assets/images/dietpi-software-fileserver-selection.jpg){: width="550" height="342" loading="lazy"}
 
     See [file servers overview](../software/file_servers/) for further information.
 
@@ -93,7 +93,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     The Log System can be changed at any time by selecting a different “Log System” from the menu.
 
-    ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: width="550px"}
+    ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: width="550" height="370" loading="lazy"}
 
     See also <https://dietpi.com/docs/software/log_system/>.
 
@@ -107,7 +107,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
         As a result you will not need to manually select/install a webserver stack. DietPi will do it all for you.
 
-    ![DietPi-Software Webserver Preference menu screenshot](assets/images/dietpi-software-webserver-preference.png){: width="550px"}
+    ![DietPi-Software Webserver Preference menu screenshot](assets/images/dietpi-software-webserver-preference.png){: width="550" height="340" loading="lazy"}
 
 === "User Data Location"
 
@@ -131,7 +131,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     DietPi will automatically move your existing user data to your new location.
 
-    ![DietPi-Software User Data Location menu screenshot](assets/images/dietpi-software-user-data-location-selection.jpg){: width="550px"}
+    ![DietPi-Software User Data Location menu screenshot](assets/images/dietpi-software-user-data-location-selection.jpg){: width="550" height="287" loading="lazy"}
 
 ---
 
@@ -163,7 +163,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     The <software_id\> which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:
 
-    ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: width="400px"}
+    ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: width="454" height="129" loading="lazy"}
 
     E.g. to install Chromium, LXQt and GIMP you have to execute:
 
@@ -180,11 +180,11 @@ Run `dietpi-letsencrypt`.
 
 In case of a non installed Certbot package it is installed at first:
 
-![DietPi-LetsEncrypt screenshot](assets/images/dietpi-letsencrypt.jpg)
+![DietPi-LetsEncrypt screenshot](assets/images/dietpi-letsencrypt.jpg){: width="642" height="216" loading="lazy"}
 
 In the installation dialog some entries have to be made which are needed for the certificate (domain, Email), the other entries are configuration options. It is recommended to leave the key size at 4096 bits.
 
-![DietPi-LetsEncrypt configuration screenshot](assets/images/dietpi-letsencrypt_2.png){: width="640px"}
+![DietPi-LetsEncrypt configuration screenshot](assets/images/dietpi-letsencrypt_2.png){: width="642" height="279" loading="lazy"}
 
 When you execute the certificate installation it also installs it for your selected web server, i.e. you do not have to edit your web server configuration files, the installation routine does all for you.
 
@@ -196,7 +196,7 @@ When you execute the certificate installation it also installs it for your selec
 
 Run `dietpi-nordvpn`.
 
-![DietPi-NordVPN screenshot](assets/images/dietpi-nordvpn.jpg)
+![DietPi-NordVPN screenshot](assets/images/dietpi-nordvpn.jpg){: width="642" height="207" loading="lazy"}
 
 ## System configuration
 
@@ -205,7 +205,7 @@ Run `dietpi-nordvpn`.
 Configure various system settings, from display / audio / network to _auto start_ options.  
 Run `dietpi-config`.
 
-![DietPi-Config screenshot](assets/images/dietpi-config.jpg)
+![DietPi-Config screenshot](assets/images/dietpi-config.jpg){: width="643" height="335" loading="lazy"}
 
 === "Display Options"
 
@@ -298,7 +298,7 @@ Feature-rich drive management utility. It is a lightweight program that allows y
 
 Run `dietpi-drive_manager`.
 
-![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager.jpg)
+![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager.jpg){: width="643" height="327" loading="lazy"}
 
 === "Setup a dedicated drive for DietPi"
 
@@ -309,14 +309,14 @@ Run `dietpi-drive_manager`.
     1. Select `Refresh` from the menu (if it doesn't show up straight away, give it a few seconds for system to update, then try again).
     1. Select the drive you wish to use from the list, then press ++enter++.
 
-        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_2.png){: width="600px"}
+        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_2.png){: width="600" height="297" loading="lazy"}
 
         If needed, format the drive before usage selecting the `Format` option (file system type description see below).  
         Remark: Formatting drives can only be done unmounted.
 
         If needed, mount the drive via the `Mount` selection. If mounted, commands `Unmount`, `Benchmark`, `User data`, `Swapfile` and `Read only` are present.
 
-        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_3.png){: width="600px"}
+        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_3.png){: width="600" height="395" loading="lazy"}
 
 === "Move the location of user data and swap file"
 
@@ -330,18 +330,18 @@ Run `dietpi-drive_manager`.
 
         - Move user data:
 
-        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_4.png){: width="500px"}
+        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_4.png){: width="500" height="139" loading="lazy"}
 
         - Change swap file size:
 
-        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_5.png){: width="500px"}
+        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_5.png){: width="500" height="188" loading="lazy"}
 
 === "Format file system types"
 
     Formatting file systems lead you to these dialogues:
 
-    ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_6.png){: width="500px"}
-    ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_7.png){: width="500px"}
+    ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_6.png){: width="500" height="137" loading="lazy"}
+    ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_7.png){: width="500" height="326" loading="lazy"}
 
     In the latter dialog you have to choose the file system type. The following selections may be chosen:
 
@@ -393,7 +393,7 @@ Run `dietpi-drive_manager`.
     1. Select the disk containing the root (`/`) partition and press ++enter++.
     1. Select `Resize` and press ++enter++.
 
-        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_8.png){: width="500px"}
+        ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_8.png){: width="500" height="138" loading="lazy"}
 
     1. Reboot your system to expand the root file system to use the whole space of the new memory card.
 
@@ -406,7 +406,7 @@ Run `dietpi-drive_manager`.
 Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running.  
 Run `dietpi-autostart`.
 
-![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg)
+![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg){: width="644" height="368" loading="lazy"}
 
 !!! info "Autostart option in `dietpi.txt` (first initial boot)"
     When booting the DietPi system the first time, the autostart option can also be set via the file `dietpi.txt`. See option  
@@ -419,11 +419,11 @@ Run `dietpi-autostart`.
 Provides service control, priority level tweaks and status print.  
 Run `dietpi-services`.
 
-![DietPi-Services screenshot](assets/images/dietpi-services.jpg)
+![DietPi-Services screenshot](assets/images/dietpi-services.jpg){: width="644" height="341" loading="lazy"}
 
 The dialog to tweak a service is entered by highlighting the service (keys ++arrow-up++ and ++arrow-down++) and pressing ++enter++. The configuration dialog (example: cron service) looks like this:
 
-![DietPi-Services tweaking screenshot](assets/images/dietpi-services_2.png){: width="640px"}
+![DietPi-Services tweaking screenshot](assets/images/dietpi-services_2.png){: width="644" height="461" loading="lazy"}
 
 !!! caution "Be careful at tweaking the services."
 
@@ -432,7 +432,7 @@ The dialog to tweak a service is entered by highlighting the service (keys ++arr
 Change triggers for the status LEDs on your SBC/motherboard.  
 Run `dietpi-led_control`.
 
-![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg)
+![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg){: width="643" height="269" loading="lazy"}
 
 Depending on your used hardware, the number of entries in the dialog will change.
 
@@ -441,7 +441,7 @@ Depending on your used hardware, the number of entries in the dialog will change
 Modify the start times of specific cron job groups.  
 Run `dietpi-cron`.
 
-![DietPi-Cron screenshot](assets/images/dietpi-cron.jpg)
+![DietPi-Cron screenshot](assets/images/dietpi-cron.jpg){: width="643" height="357" loading="lazy"}
 
 ### DietPi JustBoom
 
@@ -450,11 +450,11 @@ Run `dietpi-justboom`.
 
 If the sound output is configured, the following dialog appears:
 
-![DietPi-JustBoom screenshot](assets/images/dietpi-justboom_2.jpg)
+![DietPi-JustBoom screenshot](assets/images/dietpi-justboom_2.jpg){: width="642" height="223" loading="lazy"}
 
 If no sound output is configured, the following dialog appears:
 
-![DietPi-JustBoom screenshot](assets/images/dietpi-justboom.jpg)
+![DietPi-JustBoom screenshot](assets/images/dietpi-justboom.jpg){: width="642" height="228" loading="lazy"}
 
 In this case you have to e.g. install a sound program package via `dietpi-software` or configure the sound output e.g. via `dietpi-config`.
 
@@ -476,7 +476,7 @@ DietPi Survey allows the DietPi project to obtain general information regarding 
 
     **In short words:** By selecting ***Opt IN***, you are supporting the DietPi project with no impact to your system or private data.
 
-![DietPi Survey screenshot](assets/images/dietpi-survey.jpg)
+![DietPi Survey screenshot](assets/images/dietpi-survey.jpg){: width="645" height="368" loading="lazy"}
 
 === "Data transmission events"
 
@@ -564,28 +564,28 @@ Clean up not necessary files from the operating system and free up valuable disk
 Think of it as lightweight CCleaner for DietPi and Linux.  
 Run `dietpi-cleaner`.
 
-![DietPi-Cleaner screenshot](assets/images/dietpi-cleaner.jpg)
+![DietPi-Cleaner screenshot](assets/images/dietpi-cleaner.jpg){: width="644" height="284" loading="lazy"}
 
 By simulating the cleaner process (via menu entry `Test`) you get a preview of the deletions the cleaner does before you start the cleaning process (via menu entry `Run`).
 
 #### Cleaner Types
 
-DietPi-Cleaner uses modules which you can be switched on or off before running the cleaning process. Select them via the main menue entry `Cleaners`.
+DietPi-Cleaner uses modules which you can be switched on or off before running the cleaning process. Select them via the main menu entry `Cleaners`.
 
-![DietPi-Cleaner types screenshot](assets/images/dietpi-cleaner_2.png){: width="640px"}
+![DietPi-Cleaner types screenshot](assets/images/dietpi-cleaner_2.png){: width="644" height="242" loading="lazy"}
 
 #### Files cleaner
 
-The files cleaner allows you to customize a list of filenames to search and remove, during the cleaning process. Select them via the main menue entry `Files`.
+The files cleaner allows you to customize a list of filenames to search and remove, during the cleaning process. Select them via the main menu entry `Files`.
 
-![DietPi-Cleaner types screenshot](assets/images/dietpi-cleaner_3.png){: width="640px"}
+![DietPi-Cleaner types screenshot](assets/images/dietpi-cleaner_3.png){: width="644" height="388" loading="lazy"}
 
 ### DietPi log clear
 
 Clear log files in `/var/log/`.  
 Run `dietpi-logclear`.
 
-![DietPi-LogClear screenshot](assets/images/dietpi-logclear.jpg)
+![DietPi-LogClear screenshot](assets/images/dietpi-logclear.jpg){: width="643" height="198" loading="lazy"}
 
 ### DietPi backup (backup/restore)
 
@@ -596,7 +596,7 @@ You can also customize which files/folders are included and excluded through the
 If you have *broken* your system, or want to reset your system to an earlier date, this can all be done with `DietPi-Backup`. Just make sure you create a backup first.  
 Run `dietpi-backup`.
 
-![DietPi-Backup screenshot](assets/images/dietpi-backup_1.png)
+![DietPi-Backup screenshot](assets/images/dietpi-backup_1.png){: width="643" height="298" loading="lazy"}
 
 Remark: In the case that `rsync` is not installed, it is installed.
 
@@ -607,14 +607,14 @@ Remark: In the case that `rsync` is not installed, it is installed.
 Lightweight file manager and explorer.  
 Run `dietpi-explorer`.
 
-![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg)
+![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg){: width="646" height="355" loading="lazy"}
 
 ### DietPi sync
 
 DietPi-Sync allows you to duplicate a directory from one location (*Source Location*) to another (*Target Location*).  
 Run `dietpi-sync`.
 
-![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg)
+![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg){: width="646" height="322" loading="lazy"}
 
 Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then, select a target location. The target location can be anything from a networked samba file server, or even an FTP server.  
 Each sync includes a leading dry run, after which you can check the expected result before deciding if you want to continue with the actual sync.
@@ -643,7 +643,7 @@ The following commands are non-interactive, but error-handled wrappers for `apt-
 Displays CPU temperature, processor frequency, throttle level etc.  
 Run `cpu`.
 
-![DietPi-CPU_info screenshot](assets/images/dietpi-tools-cpuinfo.png)
+![DietPi-CPU_info screenshot](assets/images/dietpi-tools-cpuinfo.png){: width="741" height="299" loading="lazy"}
 
 ### DietPi morse code
 
@@ -654,4 +654,4 @@ Run `dietpi-morsecode`.
 
 Run `dietpi-bugreport`.
 
-![DietPi-Bugreport screenshot](assets/images/dietpi-bugreport.jpg)
+![DietPi-Bugreport screenshot](assets/images/dietpi-bugreport.jpg){: width="646" height="352" loading="lazy"}

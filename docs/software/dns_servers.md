@@ -14,9 +14,9 @@
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -26,7 +26,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
 - Also Installs: [Webserver stack](../webserver_stack/)
 
-![DietPi DNS server software Pi-hole](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500px"}
+![DietPi DNS server software Pi-hole](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500" height="410" loading="lazy"}
 
 === "Access the web interface"
 
@@ -56,7 +56,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     Simply enter the IP address of your Pi-hole device under "DNS server":
 
-    ![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: width="500px"}
+    ![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: width="400" height="240" loading="lazy"}
 
     On your Pi-hole device, you will need to set a different DNS server.  
     Depending on your router configuration, if you don't do this step, the Pi-hole device may not be able to access the internet. It's highly recommended to have the device running Pi-hole, pointing to a DNS server outside your network.
@@ -105,7 +105,7 @@ Wikipedia: <https://wikipedia.org/wiki/Pi-hole>
 
 YouTube video tutorial #1: *Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RO2_eZlVrj4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/RO2_eZlVrj4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 YouTube video tutorial #2: [`Block ads everywhere with Pi-hole and PiVPN on DietPi`](https://www.youtube.com/watch?v=qbLEHlKkGiE)  
 YouTube video tutorial #3 (German language): [`Raspberry Pi & DietPi : Pi-hole der Werbeblocker für Netzwerke mit Anleitung für AVM FritzBox`](https://www.youtube.com/watch?v=vXUvFWhXW6c&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=6)  
@@ -116,9 +116,9 @@ YouTube video tutorial #4 (German language): [`Raspberry Pi Zero W mit Pi-hole -
 Unbound is a validating, recursive, caching DNS resolver.  
 For more details see [unbound "about" description](https://nlnetlabs.nl/projects/unbound/about/).
 
-![DietPi DNS server software unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: width="150px"}
+![DietPi DNS server software unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: width="150" height="34" loading="lazy"}
 
-![DietPi DNS server software unbound screenshot](../assets/images/dietpi-software-unbound.jpg){: width="500px"}
+![DietPi DNS server software unbound screenshot](../assets/images/dietpi-software-unbound.jpg){: width="500" height="274" loading="lazy"}
 
 === "Default DNS ports"
 
@@ -164,7 +164,7 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
     systemctl restart unbound
     ```
 
-    The used DNS servers are examples only and can be replaced by your favorite one. A list of public DNS providers, their IPs and their in cases included ad blocking / adult content blocking features are available on Wikipedia:
+    The used DNS servers are examples only and can be replaced by your favorite one. A list of public DNS providers, their IP addresses and their in cases included ad blocking / adult content blocking features are available on Wikipedia:
     
     - https://wikipedia.org/wiki/Public_recursive_name_server
 

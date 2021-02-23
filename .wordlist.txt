@@ -46,6 +46,7 @@ CactiChameleon
 CalDAV
 CardDAV
 CAVA
+CCleaner
 CDTV
 CedArctic
 Certbot
@@ -87,6 +88,7 @@ DIY
 DLNA
 DNS
 Domoticz
+DoT
 DPMS
 DRC
 DRM

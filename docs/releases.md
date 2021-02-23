@@ -8,7 +8,7 @@ Welcome to **December 2020 release** :octicons-gift-16: of DietPi. This release 
 
 As a summary of 2020, DietPi had **8 releases** with over **175 000** downloads. It brought 128 :octicons-light-bulb-16: improvements and changes, as well as 119 :octicons-issue-closed-16: bug fixes.
 
-![DietPi Release in 2020](assets/images/dietpi-release-gift.jpg){: width=65% }
+![DietPi Release in 2020](assets/images/dietpi-release-gift.jpg){: width="447" height="298" loading="lazy"}
 
 ### New optimised software packages
 
@@ -18,7 +18,7 @@ It is a new software package included in the DietPi optimised list. Portainer si
 
 For more details check the [documentation page](../software/programming/#portainer).
 
-![DietPi Optimised Software Portainer](assets/images/dietpi-software-portainer.jpg)
+![Portainer screenshot](assets/images/dietpi-software-portainer.jpg){: width="1159" height="636" loading="lazy"}
 
 Many thanks to @Joulinar for implementing this software option - more details here: MichaIng/DietPi#3933
 
@@ -28,7 +28,7 @@ PaperMC extends the list of Minecraft servers supported by DietPi. It is a high 
 
 For more details check the [documentation page](../software/gaming/#papermc).
 
-![DietPi Optimised Software PaperMC](assets/images/dietpi-software-papermc.jpg)
+![Minecraft screenshot](assets/images/dietpi-software-papermc.jpg){: width="606" height="363" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3828
 
@@ -38,7 +38,7 @@ Become part of the Tor Project and turn your DietPi into a Tor relay to help oth
 
 For more details check the [documentation page](../software/advanced_networking/#tor-relay).
 
-![advanced-networking-tor](assets/images/dietpi-software-advanced-networking-tor.png){: width="150px"}
+![advanced-networking-tor](assets/images/dietpi-software-advanced-networking-tor.png){: width="200" height="121" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3921.
 
@@ -48,7 +48,7 @@ Validating, recursive, caching DNS resolver is now available for install and int
 
 For more details check the [documentation page](../software/dns_servers/#unbound)
 
-![unbound](assets/images/dietpi-software-unbound.jpg)
+![Unbound monitor screenshot](assets/images/dietpi-software-unbound.jpg){: width="603" height="331" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3872
 
@@ -58,7 +58,7 @@ Bitwarden_RS is a an unofficial Bitwarden password manager server with web UI, w
 
 For more details check the [documentation page](../software/cloud/#bitwarden_rs)
 
-![Bitwarden_RS](assets/images/dietpi-software-bitwarden_rs.jpg)
+![Bitwarden_RS](assets/images/dietpi-software-bitwarden_rs.jpg){: width="2000" height="823" loading="lazy"}
 
 Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/DietPi!3724).
 
@@ -68,7 +68,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
  For more details on how to install DietPi, check the [documentation](../hardware/#raspberry-pi).
 
- ![DietPi Raspberry Pi 400](assets/images/dietpi-raspberry-pi-400-back.jpg)
+ ![Raspberry Pi 400 photo](assets/images/dietpi-raspberry-pi-400-back.jpg){: width="800" height="571" loading="lazy"}
 
 ### Changes / Improvements / Optimisations
 
@@ -81,7 +81,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
     you can enable daily APT update checks (default value). The result is shown in the DietPi login banner, in a similar way an available DietPi update is presented.
 
     dietpi-automated_APT_package_update
-    ![dietpi Automated APT packages update](assets/images/dietpi-automated_APT_package_update.jpg)
+    ![dietpi Automated APT packages update](assets/images/dietpi-automated_APT_package_update.jpg){: width="670" height="326" loading="lazy"}
 
     Set
 
@@ -95,7 +95,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 - **DietPi Documentation** has been extended. It covers now all the **[DietPi Optimised Software](../software/)** categories. Many thanks to @StephanStS for bringing all these updates.
 
-    ![DietPi Documentation](assets/images/dietpi-docs-categories.jpg)
+    ![DietPi Documentation](assets/images/dietpi-docs-categories.jpg){: width="1335" height="667" loading="lazy"}
 
 - **DietPi-Globals** :octicons-arrow-right-16: In DietPi scripts, the PATH variable is now overwritten with the Debian/bash system default to assure that no broken or manipulated PATH can be passed via e.g. "su" or "sudo -E".
 
@@ -205,7 +205,8 @@ For all additional issues that may appear after release, please see the followin
 
 - **Bazarr** is the latest application from DietPi optimised software portfolio. It is a companion application to Sonarr and Radarr, and manages and downloads subtitles based on defined requirements.
 
-    ![DietPi-Software Bazarr](assets/images/dietpi-software_bazarr.jpg)
+    ![DietPi-Software Bazarr](assets/images/dietpi-software_bazarr.jpg){: width="1898" height="1080" loading="lazy"}
+
     For more details on installation and configuration open [DietPi Optimised Software - Bazarr](../software/bittorrent#bazarr) page.
 
     Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent#bazarr) page in [Optimised software](../software/).
