@@ -249,7 +249,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi Hyper-V file** from [`dietpi.com`](https://dietpi.com/#download) (will be redirected to [GitHub/yumiris](https://github.com/yumiris/DietPi.Hyper-V/blob/master/README.md)) and   
+    Download the **DietPi Hyper-V file** from [`dietpi.com`](https://dietpi.com/#download) (will be redirected to [`GitHub/yumiris`](https://github.com/yumiris/DietPi.Hyper-V/blob/master/README.md)) and   
     unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi Hyper-V download image](assets/images/dietpi-HyperV-Download.jpg){: width="722" height="463" loading="lazy"}
@@ -268,7 +268,7 @@ Select the following tabs for the installation description of your target.
     2. Select the Hyper-V Generation: Select **Generation 1**
     3. Choose your RAM size (e.g. 2048 MB)
     4. If you have already configured a network, select your network. Otherwise let it "Not connected" and change it afterwards
-    5. Chosse to use extracted `.vhdx` Hyper-V disc file (see above)
+    5. Choose to use extracted `.vhdx` Hyper-V disc file (see above)
 
     If you have not set up any network connection, go on with the manager for virtual switches and add a network. Select that network in your virtual machine settings afterwards.  
 
@@ -285,6 +285,8 @@ Select the following tabs for the installation description of your target.
     ![DietPi Hyper-V machine start](assets/images/dietpi-HyperV-start-machine.png){: width="550" height="420" loading="lazy"}
 
     After this, your machine should boot up.
+
+    <font size="+2">Additional information / troubleshooting</font>
 
     In the case that you did not setup your network configuration properly, the booting procedure will not find a network connection and may respond with this boot console output:
 
