@@ -206,6 +206,10 @@ Select the following tabs for the installation description of your target.
     Press the ***Play virtual machine*** (green arrow) to 'boot up' your system based on the DietPi image. Possibly you have to acknowledge in an appearing dialog "I Copied it" and go on.
     If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
 
+    <font size="+2">Additional information</font>
+
+    For informations about running DietPi in an VMware ESXi environment, you can read this article: [Running the DietPi VMware image on ESXi 6.7](https://ccie.tv/running-dietpi-vmware-image-on-esxi-6-7).
+
 === "Install in Hyper-V"
 
     <font size="+2">Introduction</font>
