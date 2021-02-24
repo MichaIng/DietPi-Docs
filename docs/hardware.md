@@ -458,7 +458,7 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td align="left"><a class="table" href=""><strong>Native PC UEFI</strong></a></td>
                 <td align="left">
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Buster.7z">DietPi image</a></li>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Buster_Installer.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
