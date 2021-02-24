@@ -98,16 +98,6 @@ Select the following tabs for the installation description of your target.
     ???+ hint "Initial boot duration"
         Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the SD card size, SD card speed and system speed.
 
-=== "Install in virtual machines"
-
-    <font size="+2">Introduction</font>
-
-=== "Install on native PC"
-
-    <font size="+2">Introduction</font>
-
----
-
 === "Install in VirtualBox"
 
     <font size="+2">Introduction</font>
