@@ -98,6 +98,16 @@ Select the following tabs for the installation description of your target.
     ???+ hint "Initial boot duration"
         Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the SD card size, SD card speed and system speed.
 
+=== "Install in virtual machines"
+
+    <font size="+2">Introduction</font>
+
+=== "Install on native PC"
+
+    <font size="+2">Introduction</font>
+
+---
+
 === "Install in VirtualBox"
 
     <font size="+2">Introduction</font>
@@ -205,6 +215,88 @@ Select the following tabs for the installation description of your target.
 
     Press the ***Play virtual machine*** (green arrow) to 'boot up' your system based on the DietPi image. Possibly you have to acknowledge in an appearing dialog "I Copied it" and go on.
     If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
+
+=== "Install in Hyper-V"
+
+    <font size="+2">Introduction</font>
+
+    Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
+
+    One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
+
+    One of the options of a virtual machine is [__Microsoft Hyper-V__](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview).
+
+    ![DietPi-Hyper-V-program](assets/images/dietpi-HyperV-program.png){: width="722" height="450" loading="lazy"}
+
+    !!! info "Tested with Windows 10"
+        This description relates to Hyper-V on a Microsoft Windows system.
+
+    <font size="+2">Prerequisites</font>
+
+    As a starting point you need a **PC with a activated Hyper-V** on which the DietPi system will run.
+
+    ??? info "Hyper-V activation within Windows"
+        Hyper-V needs to be activated within Windows (e.g. [see there](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)). The activation is done by enabling all Hyper-V features in the ***Turn Windows features on or off*** within the ***Apps and Features*** area in the Windows settings.
+
+        ![Hyper-V activation](assets/images/dietpi-HyperV-activation.png){: width="367" height="328" loading="lazy"}
+
+    On this PC a free harddisk space of about  
+
+    - xxx GiB for a minimal running system (1.5 GiB in switched off state)
+    - xxx - 10 GiB for a typical running system with X11  
+
+    is needed. A recommended size is at least a free space of xxx GiB.
+
+    <font size="+2">1. Download and extract the DietPi disk image</font>
+
+    Download the **DietPi Hyper-V file** from [`dietpi.com`](https://dietpi.com/#download) (will be redirected to [GitHub/yumiris](https://github.com/yumiris/DietPi.Hyper-V/blob/master/README.md)) and   
+    unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+
+    ![DietPi Hyper-V download image](assets/images/dietpi-HyperV-Download.jpg){: width="722" height="463" loading="lazy"}
+
+    The zip file contains a couple of files, the important is the `.vhdx` file which have to be copied to a Hyper-V machine folder (The folder can be located anywhere on the PCs harddisk).
+
+    <font size="+2">2. Add a Hyper-V virtual machine</font>
+
+    As next, a Hyper-V machine is generated. Right click on your PCs node in the left tree and open the dialog wizard for the machine generation:
+
+    ![DietPi Hyper-V machine generation](assets/images/dietpi-HyperV-VM-generation.png){: width="450" height="364" loading="lazy"}
+
+    In the following wizard you have to set the following:
+
+    1. Give your machine a name
+    2. Select the Hyper-V Generation: Select **Generation 1**
+    3. Choose your RAM size (e.g. 2048 MB)
+    4. If you have already configured a network, select your network. Otherwise let it "Not connected" and change it afterwards
+    5. Chosse to use extracted `.vhdx` Hyper-V disc file (see above)
+
+    If you have not set up any network connection, go on with the manager for virtual switches and add a network. Select that network in your virtual machine settings afterwards.  
+
+    ![DietPi Hyper-V network management](assets/images/dietpi-HyperV-manage-network.png){: width="250" height="284" loading="lazy"}
+
+    <font size="+2">3. First boot of the new Hyper-V machine</font>
+
+    First, click on ***Connect*** to open a window of the virtual machine:
+
+    ![DietPi Hyper-V open machine windows](assets/images/dietpi-HyperV-connect-machine.png){: width="450" height="205" loading="lazy"}
+
+    Then press ***Start*** to boot up the machine:
+
+    ![DietPi Hyper-V machine start](assets/images/dietpi-HyperV-start-machine.png){: width="550" height="420" loading="lazy"}
+
+    After this, your machine should boot up.
+
+    In the case that you did not setup your network configuration properly, the booting procedure will not find a network connection and may respond with this boot console output:
+
+    ![DietPi Hyper-V boot without network](assets/images/dietpi-HyperV-boot-wo-network.jpg){: width="722" height="164" loading="lazy"}
+
+    Then you have to check and repair your Hyper-V virtual switch configuration.
+
+    It may also be necessary to deselect the "Safe start" option in your virtual machine settings:
+
+    ![DietPi Hyper-V safe start option](assets/images/dietpi-HyperV-safe-start.png){: width="600" height="240" loading="lazy"}
+
+    Another option is to generate your own Hyper-V virtual machine (e.g. Generation 2 with UEFI) using the **UEFI installer image** from the **Native PC** installation like you would do it on a PC. This procedure is not described here.
 
 === "Install on native PC"
 
