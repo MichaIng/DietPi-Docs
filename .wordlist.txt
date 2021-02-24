@@ -218,6 +218,7 @@ mangas
 marcobrianza
 MariaDB
 Mbit
+MBR
 MCrcon
 Meveric
 MiB
@@ -339,6 +340,7 @@ rTorrent
 runtime
 ruTorrent
 SABnzbd
+SATA
 SBC
 SBCs
 SCP
