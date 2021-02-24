@@ -208,7 +208,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">Additional information</font>
 
-    For informations about running DietPi in an VMware ESXi environment, you can read this article: [Running the DietPi VMware image on ESXi 6.7](https://ccie.tv/running-dietpi-vmware-image-on-esxi-6-7).
+    For information about running DietPi in an VMware ESXi environment, you can read this article: [Running the DietPi VMware image on ESXi 6.7](https://ccie.tv/running-dietpi-vmware-image-on-esxi-6-7).
 
 === "Install in Hyper-V"
 
