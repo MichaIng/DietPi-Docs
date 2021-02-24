@@ -24,7 +24,7 @@
 
 - **DietPi-Banner**  :octicons-arrow-right-16: Running the script without input argument will now open the menu instead of printing the banner. The console alias has been adjusted accordingly, so that it is now possible to run "dietpi-banner 0" and "dietpi-banner 1" from console to have full and short banner versions printed. The "dietpi-banner" console command remains opening the menu.
 
-### Fixes:
+### Fixes
 
 - **DietPi-Set_swapfile**  :octicons-arrow-right-16: Resolve an issue where "zram"/"zram0" dietpi.txt path entries were dropped, when running the script without input arguments. This especially broke applying zram-swap on first boot. Many thanks to @Dr0bac for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4002>
 - **DietPi-Software** | **Bitwarden_RS**  :octicons-arrow-right-16: Resolved an issue where the self-signed TLS certificate could not be imported on iOS. To apply this fix to an existing instance, the configuration file "/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env" needs to be removed or moved to a different location, so "dietpi-software reinstall 183" will re-create the configuration and TLS certificate.
@@ -374,17 +374,17 @@ For all additional issues that may appear after release, please see the followin
 
 - **DietPi-Software** :octicons-commit-24: **Home Assistant** :octicons-arrow-right-16: Resolved an issue where install failed on ARM due to missing new build dependency.
 
-    Many thanks to @pbutterworth for reporting and [phpBB:novitibo](https://dietpi.com/phpbb/memberlist.php?username=novitibo) for providing the solution: [Issue Forum](https://dietpi.com/phpbb/viewtopic.php?f=11&t=8095)
+    Many thanks to @pbutterworth for reporting and [phpBB:novitibo](https://dietpi.com/phpbb/memberlist.php?username=novitibo) for providing the solution: [Issue Forum](https://dietpi.com/phpbb/viewtopic.php?&t=8095)
 
 - **DietPi-Software** :octicons-commit-24: **Kodi** :octicons-arrow-right-16: Resolved an issue on Odroid XU4 where install failed due to missing librockchip-mpp1 package which instead was aimed to be installed on Odroid N1 only.
 
 - **DietPi-Software** :octicons-commit-24: **TigerVNC+LXDE** :octicons-arrow-right-16: Resolved an issue where `lxappearance` start ("Customize Look and Feel") hangs within TigerVNC sessions.
 
-- **DietPi-Software** :octicons-commit-24: **Fail2Ban** :octicons-arrow-right-16: Resolved an issue where the service could have failed to start due to a missing variable declaration in our default config. Many thanks to [phpBB:mafioso12dk](https://dietpi.com/phpbb/memberlist.php?username=mafioso12dk) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=8147>
+- **DietPi-Software** :octicons-commit-24: **Fail2Ban** :octicons-arrow-right-16: Resolved an issue where the service could have failed to start due to a missing variable declaration in our default config. Many thanks to [phpBB:mafioso12dk](https://dietpi.com/phpbb/memberlist.php?username=mafioso12dk) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8147>
 
 - **DietPi-Software** :octicons-commit-24: **DietPi-RAMlog** :octicons-arrow-right-16: Resolved an issue where /var/log content was not restored when reinstalling DietPi-RAMlog, e.g. when swiching logging mode from #1 to #2. This could have led to service start issues, when those rely on log files or directories being present.
 
-    Many thanks to [phpBB:djashdj](https://dietpi.com/phpbb/memberlist.php?username=djashdj) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=8163>
+    Many thanks to [phpBB:djashdj](https://dietpi.com/phpbb/memberlist.php?username=djashdj) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8163>
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/XXXX>
 
@@ -583,7 +583,7 @@ Last but certainly not least, a big **Thank You** to the following people who co
 
 ### Improvements
 
-- NanoPi M4V2 | Initial hardware identifier (ID: 58) and support for this device has been added to DietPi. Many thanks to @purist doing this request: viewtopic.php?f=12&t=6451
+- NanoPi M4V2 | Initial hardware identifier (ID: 58) and support for this device has been added to DietPi. Many thanks to @purist doing this request: <https://dietpi.com/phpbb/viewtopic.php?t=6451>
 - NanoPi NEO Plus2 | Initial hardware identifier (ID: 57) and support for this device has been added to DietPi. Many thanks to @StephanStS for doing this request and creating an image: #2979 (comment)
 - PINE H64 | Initial hardware identifier (ID: 45) and support for this device has been added to DietPi. Many thanks to @unixino for doing this request: #3286
 - ROCK Pi S | Initial hardware identifier (ID: 73) and support for this device has been added to DietPi. Many thanks to @lwqcz for doing this request: #3365
@@ -595,7 +595,7 @@ Last but certainly not least, a big **Thank You** to the following people who co
 - DietPi-Cron | Allows now to set the cron job output mail recipient. Cron mails are disabled by default since no MTA is preconfigured on DietPi. Additionally the execution times are now shown more clearly in 24h format.
 - DietPi-Autostart | When selecting a non-root autologin user, some required tasks, like permissions, are now applied automatically, based on autostart option. This especially allows non-root users to launch Kodi without applying permissions manually. Many thanks to @sbrl for requesting this feature: #3351
 - DietPi-Drive_Manager | GlusterFS fstab entries are now preserved. Many thanks to @Sudrien for implementing this addition: #3374
-- DietPi-Software | Domoticz: open-source home automation platform is now available for install. Many thanks to @andyb for doing this request a long time ago: viewtopic.php?f=12&t=222
+- DietPi-Software | Domoticz: open-source home automation platform is now available for install. Many thanks to @andyb for doing this request a long time ago: <https://dietpi.com/phpbb/viewtopic.php?t=222>
 - DietPi-Software | phpBB: Updated to v3.3.0 which has PHP7.3 support, hence can be installed on all hardware models and distro versions.
 - DietPi-Software | Sonarr/Radarr/Lidarr: Enhanced install and uninstall steps. On reinstalls, the install dir is left unchanged now, suggesting to use the internal updater instead, which is generally safer and now does not require a manual service restart (see bug fix below). In case of a broken instance, the install dir /opt/ needs to be removed manually now, to have reinstalls downloading and installing the newest binaries.
 - DietPi-Software | Sonarr/Radarr/Lidarr: The service now runs with hardened permissions, by default blocking access to directories outside of /opt/ /mnt /var/log/ and /tmp. If writing to other directories is wanted, the service file needs to be edited, easiest with "dietpi-services" > "" > "Edit" and adding an additional "ReadWritePaths=/path/to/custom/dir".
@@ -615,7 +615,7 @@ Last but certainly not least, a big **Thank You** to the following people who co
 - DietPi-Globals | CPU temperature readout on Intel Mini PCs has been fixed. Many thanks to @Iv711 and @kt1024 for reporting this issue: #3172, #3412
 - DietPi-Drive_Manager | Resolved an issue where the chosen spindown timeout was not applied correctly on boot. Many thanks to @tesseract241 and @lukaszm89 for reporting this issue: #3309, #3420
 - DietPi-Drive_Manager | Resolved an issue where NFS pre-v3 mounts could have failed on boot. They are now automounted on first mountpoint access, like NFSv3 and Samba shares do already. Many thanks to @Joulinar for reporting and debugging this issue: #1898 (comment)
-- DietPi-Drive_Manager | Resolved an issue where Samba/SMB/CIFS mounts failed if the shares name contained white spaces. Many thanks to @SNG for reporting this issue: viewtopic.php?f=11&t=7518
+- DietPi-Drive_Manager | Resolved an issue where Samba/SMB/CIFS mounts failed if the shares name contained white spaces. Many thanks to @SNG for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=7518>
 - DietPi-Software | Resolved an issue where extraction of zip archives to current directory failed. Many thanks to @en0rism for reporting this issue: #3320
 - DietPi-Software | Redis: Resolved an issue where service start fails on Stretch systems. Many thanks to @drieksje for reporting this issue: #3314
 - DietPi-Software | Sonarr/Radarr/Lidarr: Resolved an issue where a manual service restart was required after the internal updater has been used.
