@@ -1,5 +1,61 @@
-# DietPi releases
+# DietPi Releases
 
+## February 2021 (version 7.0) - Beta
+
+### New optimised software packages
+
+- **DietPi-Software** | **Docker Compose** :octicons-arrow-right-16:  A tool to define and run multi-container Docker applications can now be installed through our software selection. Docker will be pulled in as dependency automatically. For more details check the [documentation page](../software/programming/#docker-compose).
+- **DietPi-Software** | **Box86** :octicons-arrow-right-16:  An x86 wrapper/emulator for ARMv7 systems is now available for install. Thanks to it's ability to wrap ARMv7 shared system libraries to be used with i386 binaries, often no additional libraries need to be installed. Thanks to binfmt, it will be invoked automatically when an i386 binary is executed. For more details check the [documentation page](../software/gaming/#box86).
+- **DietPi-Software** | **Steam** :octicons-arrow-right-16:  By automatically pulling in Box86 as dependency, Steam can now be installed on ARMv7 boards. It won't run perfectly stable yet and has limited features and game support, but we're optimistic that further improvements will address this in the future. For more details check the [documentation page](../software/gaming/#steam).
+- **DietPi-Software** | **mjpg-streamer** :octicons-arrow-right-16: Lightweight multi-source and multi-output plugin JPEG streamer, now available for install. By default your attached camera capture will be streamed to a custom HTTP port. When installed along with OctoPrint, both will be automatically configured to work together. The Raspberry Pi camera module support is enabled by default, when installed on Raspberry Pi.
+
+### Changes / Improvements / Optimisations
+
+- **DietPi-Update**  :octicons-arrow-right-16: A new update check system has been implemented, which checks for a minimum required Debian and DietPi version and migrates systems with either too old Debian version or too old DietPi version to a different Git branch automatically. This especially smoothens the migration of our code base to newer Debian versions and the alternative branch can be used to inform and support Debian distribution upgrades and to upgrade the DietPi code to an intermediate version from where the system can be migrated back to the regular stable/master branch. Since this change required a new repository version file, we took the chance and incremented the DietPi core version to v7.0. This however has no further meaning, all previously supported DietPi and Debian versions remain supported and the change enables us to not require fresh image installs for major upgrades, like the upgrade from v159 to v6.0 did a few years ago.
+- **DietPi-Backup** :octicons-arrow-right-16: Support for XFS and ZFS target file system types has been added, which fully support the required symlink and POSIX permissions capabilities.
+- **DietPi-Software**  :octicons-arrow-right-16: The mandatory reboot after installs has been removed. Installed services, which are not controlled by DietPi-Services, but would start automatically on reboot, are now started at the end of installs instead. A manual reboot is still a good idea, but strictly required only in rare cases. Many thanks to @Games-Crack for doing this suggesting: <https://github.com/MichaIng/DietPi/issues/4032>
+- **DietPi-Software**  :octicons-arrow-right-16: Installs do not imply all APT package upgrades anymore. While we recommend to keep all APT packages upgraded regularly, the new daily APT check and info within the DietPi-Banner, helps to keep you informed to do the best decision youself whether and when to apply which package upgrade. On first run installs the full upgrade is however kept, to assure each image starts in fully upgraded state, and packages which are required for the actual software choices you're installing, are upgraded as well, when installed already.
+- **DietPi-Software**  :octicons-arrow-right-16: Uninstalls do not stop other services anymore. E.g. your webserver or media streaming server will stay active while you uninstall that other software that you don't require anymore. Since uninstalls do not require much RAM or CPU resources, this is perfectly fine. Many thanks to @mrgreaper giving the hint: <https://github.com/MichaIng/DietPi/issues/4116>
+- **DietPi-Software** - **Unbound** :octicons-arrow-right-16: On install in combination with Pi-hole, no additional configuration file will be created anymore but the adjusted interface binding and port will be applied to "/etc/unbound/unbound.conf.d/dietpi.conf". Declaring "interface" in two configuration files do not override each other but lead to two concurrent bindings, which is not intended. The two files, if present, will be merged as well on DietPi update. It is hence intended that admins change "dietpi.conf" directly, if required, and this file won't be overwritten on reinstalls to preserve local changes. Additionally, on new installs, the configuration file will be better sorted and contain comments to explain their purpose.
+- **DietPi-Software** - **Unbound** :octicons-arrow-right-16:  On new installs, by default access is now granted to all private IPv4 and IPv6 address ranges instead of to the 192.168.0.0/16 subnet only, which includes VPNs, containers and cases of multiple local networks the server is attached to.
+- **DietPi-Software** - **Unbound** :octicons-arrow-right-16: A monthly cron job is now created to keep the root hints file updated. Many thanks to @APraxx for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4077>
+
+### Interface updates
+
+- **DietPi-Banner**  :octicons-arrow-right-16: Running the script without input argument will now open the menu instead of printing the banner. The console alias has been adjusted accordingly, so that it is now possible to run "dietpi-banner 0" and "dietpi-banner 1" from console to have full and short banner versions printed. The "dietpi-banner" console command remains opening the menu.
+
+### Fixes
+
+- **DietPi-Set_swapfile**  :octicons-arrow-right-16: Resolve an issue where "zram"/"zram0" dietpi.txt path entries were dropped, when running the script without input arguments. This especially broke applying zram-swap on first boot. Many thanks to @Dr0bac for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4002>
+- **DietPi-Software** | **Bitwarden_RS**  :octicons-arrow-right-16: Resolved an issue where the self-signed TLS certificate could not be imported on iOS. To apply this fix to an existing instance, the configuration file "/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env" needs to be removed or moved to a different location, so "dietpi-software reinstall 183" will re-create the configuration and TLS certificate.
+- **DietPi-Software** | **Unbound** :octicons-arrow-right-16:  Resolved an issue where during install in combination with Pi-hole the service restart could have failed. Many thanks to @Ernstian for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2409#issuecomment-739154892>
+- **DietPi-Software** | **Unbound**  :octicons-arrow-right-16:  Resolved an issue where the service start failed if the host system had a local IP address outside of the 192.168.0.0/16 subnet. Many thanks to @faxesystem for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2409#issuecomment-749174984>
+- **DietPi-Software** | **ReadyMedia**  :octicons-arrow-right-16: Resolved an issue where the media library was not rescanned on service start. Many thanks to @AdamFarnsworth0 for reporting this issue: <https://twitter.com/AdamFarnsworth0/status/1347977813635305475>
+- **DietPi-Software** | **WiFi Hotspot** :octicons-arrow-right-16:  Resolved an issue where the install on Armbian-based images with RTL8188C* WiFi chip failed. Many thanks to @smogan71 for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8523>
+- **DietPi-Software** | **Medusa** :octicons-arrow-right-16:  This software option has been disabled on Stretch systems, since it now requires Python >=3.6, which is not available in the Debian Stretch repository. If you run Medusa on a Stretch system, it will continue to work, but updating will either not be possible or break it. Many thanks to @aermak for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3991>
+- **DietPi-Software** | **WiringPi** :octicons-arrow-right-16:  Resolved an issue where the install failed, if the /usr/local/bin directory was not present. Many thanks to @bruz for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8609>
+- **DietPi-Software** | **PaperMC**  :octicons-arrow-right-16:  Resolved an issue where the install failed due to changed download URLs and stabilised service start and config creation by setting the Java heap size and allowing more time for the startup on smaller SBCs. Many thanks to @omavoss for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?p=30191#p30191>
+- **DietPi-Software** | **OpenTyrian**  :octicons-arrow-right-16: The install option has been disabled on x86_64, since the Debian package comes with a different file structure and it has been disabled on 64-bit RPi systems, since the binary has been compiled for armhf.
+- **DietPi-Software** | **Domoticz** :octicons-arrow-right-16: Resolved an issue where saving custom scripts and starting with a template did not work. Many thanks to @tec13 for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8627>
+- **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where for ruTorrent, Koel and Bitwarden_RS the automatic newest version detection failed and instead a possibly older fallback was used. Many thanks to @kelvmod for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4105>
+- **DietPi-Software** | **LXQt** :octicons-arrow-right-16: Resolved visual issues with our default configuration of Debian Buster, drastically simplified and cleaned up the files we ship.
+
+!!! hint ""
+
+    As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4126>
+
+### Known/Outstanding Issues
+
+- DietPi-Config  :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
+- DietPi-Software | Node-RED  :octicons-arrow-right-16:  Pre-installed modules cannot be updated via web UI: <https://github.com/MichaIng/DietPi/issues/2073>
+- DietPi-Software | Raspimjpeg  :octicons-arrow-right-16:  With Lighttpd, streaming mjpeg does not work: <https://github.com/MichaIng/DietPi/issues/1747>
+- DietPi-Software | MATE desktop  :octicons-arrow-right-16:  When logging in as root, desktop items and right-click context menu is missing: <https://github.com/MichaIng/DietPi/issues/3160>
+- DietPi-Software | Sonarr/Radarr/Mono: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: <https://github.com/MichaIng/DietPi/issues/3179>
+
+!!! hint ""
+
+    For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
+  
 ## December 2020 (version 6.34)
 
 ### Overview
@@ -8,7 +64,7 @@ Welcome to **December 2020 release** :octicons-gift-16: of DietPi. This release 
 
 As a summary of 2020, DietPi had **8 releases** with over **175 000** downloads. It brought 128 :octicons-light-bulb-16: improvements and changes, as well as 119 :octicons-issue-closed-16: bug fixes.
 
-![DietPi Release in 2020](assets/images/dietpi-release-gift.jpg){: width=65% }
+![DietPi Release in 2020](assets/images/dietpi-release-gift.jpg){: width="447" height="298" loading="lazy"}
 
 ### New optimised software packages
 
@@ -18,7 +74,7 @@ It is a new software package included in the DietPi optimised list. Portainer si
 
 For more details check the [documentation page](../software/programming/#portainer).
 
-![DietPi Optimised Software Portainer](assets/images/dietpi-software-portainer.jpg)
+![Portainer screenshot](assets/images/dietpi-software-portainer.jpg){: width="1159" height="636" loading="lazy"}
 
 Many thanks to @Joulinar for implementing this software option - more details here: MichaIng/DietPi#3933
 
@@ -28,7 +84,7 @@ PaperMC extends the list of Minecraft servers supported by DietPi. It is a high 
 
 For more details check the [documentation page](../software/gaming/#papermc).
 
-![DietPi Optimised Software PaperMC](assets/images/dietpi-software-papermc.jpg)
+![Minecraft screenshot](assets/images/dietpi-software-papermc.jpg){: width="606" height="363" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3828
 
@@ -38,7 +94,7 @@ Become part of the Tor Project and turn your DietPi into a Tor relay to help oth
 
 For more details check the [documentation page](../software/advanced_networking/#tor-relay).
 
-![advanced-networking-tor](assets/images/dietpi-software-advanced-networking-tor.png){: width="150px"}
+![advanced-networking-tor](assets/images/dietpi-software-advanced-networking-tor.png){: width="200" height="121" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3921.
 
@@ -48,7 +104,7 @@ Validating, recursive, caching DNS resolver is now available for install and int
 
 For more details check the [documentation page](../software/dns_servers/#unbound)
 
-![unbound](assets/images/dietpi-software-unbound.jpg)
+![Unbound monitor screenshot](assets/images/dietpi-software-unbound.jpg){: width="603" height="331" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3872
 
@@ -58,7 +114,7 @@ Bitwarden_RS is a an unofficial Bitwarden password manager server with web UI, w
 
 For more details check the [documentation page](../software/cloud/#bitwarden_rs)
 
-![Bitwarden_RS](assets/images/dietpi-software-bitwarden_rs.jpg)
+![Bitwarden_RS](assets/images/dietpi-software-bitwarden_rs.jpg){: width="2000" height="823" loading="lazy"}
 
 Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/DietPi!3724).
 
@@ -68,7 +124,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
  For more details on how to install DietPi, check the [documentation](../hardware/#raspberry-pi).
 
- ![DietPi Raspberry Pi 400](assets/images/dietpi-raspberry-pi-400-back.jpg)
+ ![Raspberry Pi 400 photo](assets/images/dietpi-raspberry-pi-400-back.jpg){: width="800" height="571" loading="lazy"}
 
 ### Changes / Improvements / Optimisations
 
@@ -81,7 +137,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
     you can enable daily APT update checks (default value). The result is shown in the DietPi login banner, in a similar way an available DietPi update is presented.
 
     dietpi-automated_APT_package_update
-    ![dietpi Automated APT packages update](assets/images/dietpi-automated_APT_package_update.jpg)
+    ![dietpi Automated APT packages update](assets/images/dietpi-automated_APT_package_update.jpg){: width="670" height="326" loading="lazy"}
 
     Set
 
@@ -95,7 +151,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 - **DietPi Documentation** has been extended. It covers now all the **[DietPi Optimised Software](../software/)** categories. Many thanks to @StephanStS for bringing all these updates.
 
-    ![DietPi Documentation](assets/images/dietpi-docs-categories.jpg)
+    ![DietPi Documentation](assets/images/dietpi-docs-categories.jpg){: width="1335" height="667" loading="lazy"}
 
 - **DietPi-Globals** :octicons-arrow-right-16: In DietPi scripts, the PATH variable is now overwritten with the Debian/bash system default to assure that no broken or manipulated PATH can be passed via e.g. "su" or "sudo -E".
 
@@ -205,7 +261,8 @@ For all additional issues that may appear after release, please see the followin
 
 - **Bazarr** is the latest application from DietPi optimised software portfolio. It is a companion application to Sonarr and Radarr, and manages and downloads subtitles based on defined requirements.
 
-    ![DietPi-Software Bazarr](assets/images/dietpi-software_bazarr.jpg)
+    ![DietPi-Software Bazarr](assets/images/dietpi-software_bazarr.jpg){: width="1898" height="1080" loading="lazy"}
+
     For more details on installation and configuration open [DietPi Optimised Software - Bazarr](../software/bittorrent#bazarr) page.
 
     Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent#bazarr) page in [Optimised software](../software/).
@@ -317,17 +374,17 @@ For all additional issues that may appear after release, please see the followin
 
 - **DietPi-Software** :octicons-commit-24: **Home Assistant** :octicons-arrow-right-16: Resolved an issue where install failed on ARM due to missing new build dependency.
 
-    Many thanks to @pbutterworth for reporting and [phpBB:novitibo](https://dietpi.com/phpbb/memberlist.php?username=novitibo) for providing the solution: [Issue Forum](https://dietpi.com/phpbb/viewtopic.php?f=11&t=8095)
+    Many thanks to @pbutterworth for reporting and [phpBB:novitibo](https://dietpi.com/phpbb/memberlist.php?username=novitibo) for providing the solution: [Issue Forum](https://dietpi.com/phpbb/viewtopic.php?&t=8095)
 
 - **DietPi-Software** :octicons-commit-24: **Kodi** :octicons-arrow-right-16: Resolved an issue on Odroid XU4 where install failed due to missing librockchip-mpp1 package which instead was aimed to be installed on Odroid N1 only.
 
 - **DietPi-Software** :octicons-commit-24: **TigerVNC+LXDE** :octicons-arrow-right-16: Resolved an issue where `lxappearance` start ("Customize Look and Feel") hangs within TigerVNC sessions.
 
-- **DietPi-Software** :octicons-commit-24: **Fail2Ban** :octicons-arrow-right-16: Resolved an issue where the service could have failed to start due to a missing variable declaration in our default config. Many thanks to [phpBB:mafioso12dk](https://dietpi.com/phpbb/memberlist.php?username=mafioso12dk) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=8147>
+- **DietPi-Software** :octicons-commit-24: **Fail2Ban** :octicons-arrow-right-16: Resolved an issue where the service could have failed to start due to a missing variable declaration in our default config. Many thanks to [phpBB:mafioso12dk](https://dietpi.com/phpbb/memberlist.php?username=mafioso12dk) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8147>
 
 - **DietPi-Software** :octicons-commit-24: **DietPi-RAMlog** :octicons-arrow-right-16: Resolved an issue where /var/log content was not restored when reinstalling DietPi-RAMlog, e.g. when swiching logging mode from #1 to #2. This could have led to service start issues, when those rely on log files or directories being present.
 
-    Many thanks to [phpBB:djashdj](https://dietpi.com/phpbb/memberlist.php?username=djashdj) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?f=11&t=8163>
+    Many thanks to [phpBB:djashdj](https://dietpi.com/phpbb/memberlist.php?username=djashdj) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8163>
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/XXXX>
 
@@ -526,7 +583,7 @@ Last but certainly not least, a big **Thank You** to the following people who co
 
 ### Improvements
 
-- NanoPi M4V2 | Initial hardware identifier (ID: 58) and support for this device has been added to DietPi. Many thanks to @purist doing this request: viewtopic.php?f=12&t=6451
+- NanoPi M4V2 | Initial hardware identifier (ID: 58) and support for this device has been added to DietPi. Many thanks to @purist doing this request: <https://dietpi.com/phpbb/viewtopic.php?t=6451>
 - NanoPi NEO Plus2 | Initial hardware identifier (ID: 57) and support for this device has been added to DietPi. Many thanks to @StephanStS for doing this request and creating an image: #2979 (comment)
 - PINE H64 | Initial hardware identifier (ID: 45) and support for this device has been added to DietPi. Many thanks to @unixino for doing this request: #3286
 - ROCK Pi S | Initial hardware identifier (ID: 73) and support for this device has been added to DietPi. Many thanks to @lwqcz for doing this request: #3365
@@ -538,7 +595,7 @@ Last but certainly not least, a big **Thank You** to the following people who co
 - DietPi-Cron | Allows now to set the cron job output mail recipient. Cron mails are disabled by default since no MTA is preconfigured on DietPi. Additionally the execution times are now shown more clearly in 24h format.
 - DietPi-Autostart | When selecting a non-root autologin user, some required tasks, like permissions, are now applied automatically, based on autostart option. This especially allows non-root users to launch Kodi without applying permissions manually. Many thanks to @sbrl for requesting this feature: #3351
 - DietPi-Drive_Manager | GlusterFS fstab entries are now preserved. Many thanks to @Sudrien for implementing this addition: #3374
-- DietPi-Software | Domoticz: open-source home automation platform is now available for install. Many thanks to @andyb for doing this request a long time ago: viewtopic.php?f=12&t=222
+- DietPi-Software | Domoticz: open-source home automation platform is now available for install. Many thanks to @andyb for doing this request a long time ago: <https://dietpi.com/phpbb/viewtopic.php?t=222>
 - DietPi-Software | phpBB: Updated to v3.3.0 which has PHP7.3 support, hence can be installed on all hardware models and distro versions.
 - DietPi-Software | Sonarr/Radarr/Lidarr: Enhanced install and uninstall steps. On reinstalls, the install dir is left unchanged now, suggesting to use the internal updater instead, which is generally safer and now does not require a manual service restart (see bug fix below). In case of a broken instance, the install dir /opt/ needs to be removed manually now, to have reinstalls downloading and installing the newest binaries.
 - DietPi-Software | Sonarr/Radarr/Lidarr: The service now runs with hardened permissions, by default blocking access to directories outside of /opt/ /mnt /var/log/ and /tmp. If writing to other directories is wanted, the service file needs to be edited, easiest with "dietpi-services" > "" > "Edit" and adding an additional "ReadWritePaths=/path/to/custom/dir".
@@ -558,7 +615,7 @@ Last but certainly not least, a big **Thank You** to the following people who co
 - DietPi-Globals | CPU temperature readout on Intel Mini PCs has been fixed. Many thanks to @Iv711 and @kt1024 for reporting this issue: #3172, #3412
 - DietPi-Drive_Manager | Resolved an issue where the chosen spindown timeout was not applied correctly on boot. Many thanks to @tesseract241 and @lukaszm89 for reporting this issue: #3309, #3420
 - DietPi-Drive_Manager | Resolved an issue where NFS pre-v3 mounts could have failed on boot. They are now automounted on first mountpoint access, like NFSv3 and Samba shares do already. Many thanks to @Joulinar for reporting and debugging this issue: #1898 (comment)
-- DietPi-Drive_Manager | Resolved an issue where Samba/SMB/CIFS mounts failed if the shares name contained white spaces. Many thanks to @SNG for reporting this issue: viewtopic.php?f=11&t=7518
+- DietPi-Drive_Manager | Resolved an issue where Samba/SMB/CIFS mounts failed if the shares name contained white spaces. Many thanks to @SNG for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=7518>
 - DietPi-Software | Resolved an issue where extraction of zip archives to current directory failed. Many thanks to @en0rism for reporting this issue: #3320
 - DietPi-Software | Redis: Resolved an issue where service start fails on Stretch systems. Many thanks to @drieksje for reporting this issue: #3314
 - DietPi-Software | Sonarr/Radarr/Lidarr: Resolved an issue where a manual service restart was required after the internal updater has been used.

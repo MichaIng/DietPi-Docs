@@ -1,5 +1,4 @@
 <h1 align="center"><img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi Logo"></h1>
-
 <p align="center">
   <b>Lightweight justice for your single-board computer!</b>
   <br><br>
@@ -37,9 +36,9 @@ If you have experience with GitHub, you could either look for existent issue to 
 If you need help:
 
 - Send an email: micha@dietpi.com
-- Read the documentation: <https://dietpi.com/docs>
+- Read the documentation: <https://dietpi.com/docs/>
 
-To see the full list of possibilities, please check the [Contribution](https://dietpi.com/contribute.html) page.
+To see the full list of possibilities, please check our [contribution](https://dietpi.com/contribute.html) page.
 
 ## Feedback
 
@@ -58,6 +57,6 @@ To see the full list of possibilities, please check the [Contribution](https://d
 
 <a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/docs/">DietPi-Docs</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/">DietPi</a> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License - <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
 
-<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
 
 This website shows logos of 3rd party software and providers which are excluded from the above license. They may only be used related to their product, for details, check individual trademark rules and licenses.
