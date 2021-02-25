@@ -236,10 +236,10 @@ Select the following tabs for the installation description of your target.
 
     On this PC a free harddisk space of about  
 
-    - xxx GiB for a minimal running system (1.5 GiB in switched off state)
-    - xxx - 10 GiB for a typical running system with X11  
+    - 3 GiB for a minimal running system (1.5 GiB in switched off state)
+    - 8 - 10 GiB for a typical running system with X11  
 
-    is needed. A recommended size is at least a free space of xxx GiB.
+    is needed. A recommended size is at least a free space of 10 GiB.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
