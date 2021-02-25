@@ -252,19 +252,19 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">2. Add a Hyper-V virtual machine</font>
 
-    As next, a Hyper-V machine is generated. Right click on your PCs node in the left tree and open the dialog wizard for the machine generation:
+    As next, a Hyper-V machine is generated. Right click on your PCs node in the left tree and open the dialog wizard for the machine generation ("New" -> "Virtual Machine"):
 
     ![DietPi Hyper-V machine generation](assets/images/dietpi-HyperV-VM-generation.png){: width="450" height="364" loading="lazy"}
 
     In the following wizard you have to set the following:
 
-    1. Give your machine a name
-    2. Select the Hyper-V Generation: Select **Generation 1**
+    1. Give your machine a name ("Specify Name and Location")
+    2. Select the Hyper-V Generation: Select **Generation 1** ("Specify Generation")
     3. Choose your RAM size (e.g. 2048 MB)
     4. If you have already configured a network, select your network. Otherwise let it "Not connected" and change it afterwards
     5. Choose to use extracted `.vhdx` Hyper-V disc file (see above)
 
-    If you have not set up any network connection, go on with the manager for virtual switches and add a network. Select that network in your virtual machine settings afterwards.  
+    If you have not set up any network connection, go on with the **Virtual Switch Manager** and add a network. Select that network in your virtual machine settings afterwards.  
 
     ![DietPi Hyper-V network management](assets/images/dietpi-HyperV-manage-network.png){: width="250" height="284" loading="lazy"}
 
@@ -286,9 +286,9 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi Hyper-V boot without network](assets/images/dietpi-HyperV-boot-wo-network.jpg){: width="722" height="164" loading="lazy"}
 
-    Then you have to check and repair your Hyper-V virtual switch configuration.
+    Then you have to check and repair your network configuration within the **Virtual Switch Manager**.
 
-    It may also be necessary to deselect the "Safe start" option in your virtual machine settings:
+    It may also be necessary to deselect the "Enable Secure Boot" option in your virtual machine settings (at least select "Microsoft UEFI Certificate Authority"):
 
     ![DietPi Hyper-V safe start option](assets/images/dietpi-HyperV-safe-start.png){: width="600" height="240" loading="lazy"}
 
