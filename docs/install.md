@@ -282,17 +282,20 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">Additional information / troubleshooting</font>
 
+    <font size="+1">**Network connection not found**</font>  
     In the case that you did not setup your network configuration properly, the booting procedure will not find a network connection and may respond with this boot console output:
 
     ![DietPi Hyper-V boot without network](assets/images/dietpi-HyperV-boot-wo-network.jpg){: width="722" height="164" loading="lazy"}
 
     Then you have to check and repair your network configuration within the **Virtual Switch Manager**.
 
+    <font size="+1">**Enable Secure Boot option (machines of generation 2)**</font>  
     It may also be necessary to deselect the "Enable Secure Boot" option in your virtual machine settings (at least select "Microsoft UEFI Certificate Authority"):
 
     ![DietPi Hyper-V safe start option](assets/images/dietpi-HyperV-safe-start.png){: width="600" height="240" loading="lazy"}
 
-    Another option is to generate your own Hyper-V virtual machine (e.g. Generation 2 with UEFI) using the **UEFI installer image** from the **Native PC** installation like you would do it on a PC. This procedure is not described here.
+    <font size="+1">**Generate a Hyper-V virtual machine of generation 2**</font>  
+    An option to get a Hyper-V generation 2 machine is to generate your own Hyper-V virtual machine via a **Debian netinst installation** (booting the Hyper-V machine from a Debian netinst.iso like you would do it on a PC). Install a minimal Debian machine (i.e. no X11 desktops, etc.). Afterwards run the procedure described in [Make your own distribution](https://dietpi.com/docs/hardware/#make-your-own-distribution).
 
 === "Install on native PC"
 
