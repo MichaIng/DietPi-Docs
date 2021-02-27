@@ -295,7 +295,7 @@ Select the following tabs for the installation description of your target.
     ![DietPi Hyper-V safe start option](assets/images/dietpi-HyperV-safe-start.png){: width="600" height="240" loading="lazy"}
 
     <font size="+1">**Generate a Hyper-V virtual machine of generation 2**</font>  
-    An option to get a Hyper-V generation 2 machine is to generate your own Hyper-V virtual machine via a **Debian network installation** (booting the Hyper-V machine from a Debian `netinst.iso` like you would do it on a PC). Install a minimal Debian machine (i.e. no X11 desktops, etc.). Afterwards run the procedure described in [Make your own distribution](https://dietpi.com/docs/hardware/#make-your-own-distribution).
+    An option to get a Hyper-V generation 2 machine is to generate your own Hyper-V virtual machine via a **Debian network installation** (booting the Hyper-V machine from a Debian `netinst.iso` like you would do it on a PC). Install a minimal Debian machine (i.e. no X11 desktops, etc.). Afterwards run the procedure described in section ["Make your own distribution"](https://dietpi.com/docs/hardware/#make-your-own-distribution).
 
 === "Install on native PC"
 
