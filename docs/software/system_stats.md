@@ -72,7 +72,7 @@ YouTube video tutorial: *DietPi CloudShell (RPi / Odroid XU4)*
 
 === "Scenes"
 
-    *CloudShell* offers scenes with predefined display outputs resp. layouts.  
+    DietPi-CloudShell offers scenes with predefined display outputs resp. layouts.  
     Scenes are configured in the *Scenes* dialog within `dietpi-cloudshell`.
 
     ![DietPi-CloudShell scenes menu](../assets/images/dietpi-software-systemstat-cloudshare-scenes.png){: width="600" height="283" loading="lazy"}
@@ -226,7 +226,7 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
 
     ???+ hint "Use HTTPS"
 
-        Please ensure `https://` URL is typed, `http://` will not work!
+        Please ensure `https://` URL is typed, `http://` won't work!
 
 === "System logging"
 
