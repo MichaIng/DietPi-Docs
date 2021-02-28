@@ -2,10 +2,12 @@
 
 ## Overview
 
-- [**Python - High-level interpreted programming language**](#python)
-- [**Docker - Build, ship, and run distributed applications**](#docker)
-- [**Docker Compose - Run multi-container applications on Docker**](#docker-compose)
-- [**Portainer - Docker container management**](#portainer)
+- [Development & Programming](#development--programming)
+  - [Overview](#overview)
+  - [Python](#python)
+  - [Docker](#docker)
+  - [Docker Compose](#docker-compose)
+  - [Portainer](#portainer)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -41,58 +43,51 @@ Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
 
 ## Docker
 
-Docker is used to build, ship, and run distributed applications.
+In 2013, Docker introduced containers. These are a standardized unit of software that allows developers to isolate their application from the environment. Docker is de facto standard to build and share containerized apps - from single bord computers (SBC), to desktop or cloud.
 
-<!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200px"} -->
+A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
 
-![Docker functional block diagram](../assets/images/dietpi-software-programming-docker2.svg){: width="400px"}
+=== "How to access the logs"
 
-Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
-
-=== "Access logs"
-
-    Access logs can be viewed with this command:
+    Logs can be viewed using next command:
 
     ```sh
     journalctl -u docker -u containerd
     ```
 
-=== "Config files"
+=== "Configuration files"
 
-    The Docker configuration files are:
+    The Docker configuration files location:
 
     - Docker: `/etc/docker/daemon.json`
     - containerd: `/etc/containerd/config.toml`
 
 ***
 
-Website: <https://docs.docker.com/get-started/overview>  
-Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
-Logging: <https://docs.docker.com/config/containers/logging/configure>  
-Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
+- Website: <https://docs.docker.com/get-started/overview>  
+- Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
+- Logging: <https://docs.docker.com/config/containers/logging/configure>  
 
-YouTube video tutorial: *DietPi Docker Setup on Raspberry Pi 3 B Plus*.
+For a quick intro, see **DietPi Docker Setup on Raspberry Pi 3 B Plus**:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/y_VfLOGm5nA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Docker Compose
 
-Docker Compose is a tool for running multi-container applications on Docker defined using the Compose file format.
+Docker Compose is a [Docker](#docker) tool used to define and run multi-container applications. With Compose, you use a `YAML` file to create and configure your application's services from this configuration file.
 
-<!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/master/logo.png) -->
+`docker-compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments. 
 
-=== "Update"
+=== "Update to latest version"
 
-    Update to latest version:
-
-    ```
+    ```bash
     sudo pip3 install docker-compose --upgrade
     ```
 
 ***
 
-Official documentation: <https://docs.docker.com/compose>  
-Getting started: <https://docs.docker.com/compose/gettingstarted>
+- Official documentation: <https://docs.docker.com/compose>  
+- Getting started: <https://docs.docker.com/compose/gettingstarted>
 
 ## Portainer
 
