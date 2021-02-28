@@ -1,6 +1,6 @@
 # DietPi Releases
 
-## February 2021 (version 7.0) - Beta
+## February 2021 (version 7.0)
 
 ### Overview
 
