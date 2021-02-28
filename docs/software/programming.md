@@ -26,7 +26,7 @@
 
 Python is a text based interpreted programming language with object oriented programming options for general purpose applications.  
 
-![DietPi programming software Python](../assets/images/dietpi-software-programming-pythonlogo.png){: width="200" height="59" loading="lazy"} 
+![Python logo](../assets/images/dietpi-software-programming-pythonlogo.png){: width="200" height="59" loading="lazy"}
 
 Source: By [www.python.org](http://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
