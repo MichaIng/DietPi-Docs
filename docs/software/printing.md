@@ -4,16 +4,16 @@
 
 - [**OctoPrint - Web interface for controlling 3D printers**](#octoprint)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
@@ -23,7 +23,7 @@
 
 OctoPrint provides a web interface for controlling consumer 3D printers.
 
-![OctoPrint web interface screenshot](../assets/images/dietpi-software-printserver-octoprint.png){: width="550px"}
+![OctoPrint web interface screenshot](../assets/images/dietpi-software-printserver-octoprint.png){: width="400" height="297" loading="lazy"}
 
 === "Access the web interface"
 

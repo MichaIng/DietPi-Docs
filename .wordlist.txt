@@ -111,6 +111,7 @@ EmonTH
 EmonTX
 EPL
 EQ
+ESXi
 exFAT
 facto
 FAHClient
