@@ -134,7 +134,7 @@ Steam JPEG frames from various sources to various possible outputs. With the def
     1. run `dietpi-services`
     2. Select `mjpg-streamer`
     3. Select `Edit` to open a service override config with the `nano` command line editor.
-    4. In the `[Service]` section, uncomment the `ExecStart=` line and add ` -c "username:password"` to the last single quote `'` block, with username and password of your choice.
+    4. In the `[Service]` section, uncomment the `ExecStart=` line and add ` -c username:password` to the last single quote `'` block, with username and password of your choice.
     5. Above that line you need to add another `ExecStart=` without any content, which is to remove the original start command, so that yours is effectively replacing it. The file may finally look like this:
  
         ```systemd
