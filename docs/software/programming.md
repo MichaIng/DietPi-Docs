@@ -2,12 +2,12 @@
 
 ## Overview
 
-- [Development & Programming](#development--programming)
-  - [Overview](#overview)
   - [Python](#python)
-  - [Docker](#docker)
-  - [Docker Compose](#docker-compose)
-  - [Portainer](#portainer)
+  - [Docker -  Create, deploy, and run applications using containers](#docker)
+  - [Docker Compose - Define and run multi-container Docker applications](#docker-compose)
+  - [Portainer - Lightweight management UI, managing your Docker host or Swarm cluster](#portainer)
+
+## Install
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** ?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -32,14 +32,15 @@ Python is a text based interpreted programming language with object oriented pro
 
 Source: By [www.python.org](http://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
-The install option explicitly only installs Python 3.  
-The `pip` resp. `pip3` Python package manager and development headers are included.
+The install option explicitly installs only **Python 3**.  
+The `pip` and `pip3` Python package manager and development headers are included.
 
 To use the `pip` package manager, a typical usage will be `pip3 install -U <module>`.
 
 ***
 
-Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
+- Python website: <https://www.python.org>
+- Python documentation, from beginner to advanced: <https://www.python.org/doc/>
 
 ## Docker
 
@@ -49,7 +50,7 @@ A Docker container image is a lightweight, standalone, executable package of sof
 
 === "How to access the logs"
 
-    Logs can be viewed using next command:
+    The Docker is available after the installation. Docker logs can be accessed using next command:
 
     ```sh
     journalctl -u docker -u containerd
@@ -57,14 +58,14 @@ A Docker container image is a lightweight, standalone, executable package of sof
 
 === "Configuration files"
 
-    The Docker configuration files location:
+    The location of the Docker configuration files:
 
     - Docker: `/etc/docker/daemon.json`
     - containerd: `/etc/containerd/config.toml`
 
 ***
 
-- Website: <https://docs.docker.com/get-started/overview>  
+- Docker website: <https://docs.docker.com/get-started/overview>  
 - Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
 - Logging: <https://docs.docker.com/config/containers/logging/configure>  
 
@@ -78,7 +79,13 @@ Docker Compose is a [Docker](#docker) tool used to define and run multi-contain
 
 `docker-compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments. 
 
+![docker compose](../assets/images/dietpi-docker-compose.png){: style="width:500px" loading="lazy"}
+
+_Docker (individual container) vs. Docker-Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa/)_ 
+
 === "Update to latest version"
+
+    The tool is available soon after the installation. In case you need to upgrade it, here is the command:
 
     ```bash
     sudo pip3 install docker-compose --upgrade
@@ -88,6 +95,8 @@ Docker Compose is a [Docker](#docker) tool used to define and run multi-contain
 
 - Official documentation: <https://docs.docker.com/compose>  
 - Getting started: <https://docs.docker.com/compose/gettingstarted>
+- Sample apps with Compose: <https://docs.docker.com/compose/samples-for-compose/>
+- Docker Compose release notes: <https://docs.docker.com/compose/release-notes/>
 
 ## Portainer
 
@@ -97,7 +106,7 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 === "Quick start"
 
-    - It starts automatically after installation. View Portainer web interface by opening the browser using next URL: `http://<your.local.ip>:9002` [^1].
+    - Portainer starts automatically after installation. To view the web interface, open the web browser using next URL: `http://<your.local.ip>:9002` [^1].
 
     - If you have basic questions on how to use **Portainer**, please read the beginner guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>.
 
@@ -111,9 +120,8 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 ***
 
-Official documentation: <https://documentation.portainer.io>  
-Source code: <https://github.com/portainer/portainer>  
-Open-source license: zlib
+- Official documentation: <https://documentation.portainer.io>  
+- Source code: <https://github.com/portainer/portainer>  
 
 [Return to the **Optimised Software list**](../../software/)
 

@@ -2,12 +2,58 @@
 
 ## February 2021 (version 7.0) - Beta
 
+### Overview
+
+Welcome to **February 2021 release** :octicons-heart-16: of **DietPi**. With this release we changed the version number, becoming **Version 7** ! We expect a smooth upgrade :octicons-thumbsup-16:  
+
+![DietPi version 7](assets/images/dietpi-version7.jpg){: width="300" loading="lazy"}
+
+This version includes **4 new software titles** :octicons-paper-airplane-16:
+
 ### New optimised software packages
 
-- **DietPi-Software** | **Docker Compose** :octicons-arrow-right-16:  A tool to define and run multi-container Docker applications can now be installed through our software selection. Docker will be pulled in as dependency automatically. For more details check the [documentation page](../software/programming/#docker-compose).
-- **DietPi-Software** | **Box86** :octicons-arrow-right-16:  An x86 wrapper/emulator for ARMv7 systems is now available for install. Thanks to it's ability to wrap ARMv7 shared system libraries to be used with i386 binaries, often no additional libraries need to be installed. Thanks to binfmt, it will be invoked automatically when an i386 binary is executed. For more details check the [documentation page](../software/gaming/#box86).
-- **DietPi-Software** | **Steam** :octicons-arrow-right-16:  By automatically pulling in Box86 as dependency, Steam can now be installed on ARMv7 boards. It won't run perfectly stable yet and has limited features and game support, but we're optimistic that further improvements will address this in the future. For more details check the [documentation page](../software/gaming/#steam).
-- **DietPi-Software** | **mjpg-streamer** :octicons-arrow-right-16: Lightweight multi-source and multi-output plugin JPEG streamer, now available for install. By default your attached camera capture will be streamed to a custom HTTP port. When installed along with OctoPrint, both will be automatically configured to work together. The Raspberry Pi camera module support is enabled by default, when installed on Raspberry Pi.
+**[Docker Compose](../software/programming/#docker-compose)**
+
+Docker Compose is a tool to define and run multi-container Docker applications. It can now be installed through our software selection. [Docker](../software/programming/#docker) will be pulled-in automatically (as dependency). 
+
+**What would Docker Compose bring to you ?**
+
+Whenever you have multiple containers :octicons-server-16: , there are many tasks you need to do: deploy and configure each individual container, and configure them to talk to each other as well. This will be tedious even with few containers. 
+
+[Docker Compose](../software/programming/#docker-compose) lets you automate the deployment of multiple containers using an YAML file. This file enable you to configure your application’s services and create all the app’s services from this configuration.
+
+![docker compose](assets/images/dietpi-docker-compose.png){: style="width:500px" loading="lazy"}
+
+Find sample applications using Docker Compose and more details in the [documentation page](../software/programming/#docker-compose). 
+
+**[Steam](../software/gaming/#steam)**  & **[Box86](../software/gaming/#box86)** 
+
+[Steam](../software/gaming/#steam) can now be installed using DietPi (running on ARMv7 boards), with [Box86](../software/gaming/#box86) being installed automatically, as dependency.
+
+The Steam platform is one of the largest digital distribution platform for gaming. Still, on ARMv7 boards it has limited features and game support. Here are few sample games running with [Box86](../software/gaming/#box86):
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/z-4aGNqZ724" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+!!! info ""
+    
+    **Caution:** Steam may not run perfectly stable yet :octicons-beaker-16:. It could also crash when trying to allocate space for the games and it would resume the downloads once started again.
+    
+    We're optimistic that further improvements will address these issues and more enhancements will be available in the future :octicons-heart-16: 
+
+[Box86](../software/gaming/#box86) is a x86 wrapper/emulator for ARMv7 systems, and it is now available for install. Thanks to it's ability to wrap ARMv7 shared system libraries to be used with i386 binaries, often no additional libraries are needed to be installed. 
+
+!!! info ""
+    
+    Thanks to <https://github.com/tbinfm>, it will be invoked automatically when an i386 binary is executed. 
+
+**mjpg-streamer** 
+
+Lightweight multi-source and multi-output plugin JPEG streamer, now available for install. It can be used to stream JPEG files over an IP-based network from a webcam to various types of viewers such as Chrome, Firefox, Cambozola, VLC, mplayer, and other software capable of receiving MJPG streams.
+
+By default your attached camera capture will be streamed to a custom HTTP port
+
+- When installed along with OctoPrint, both will be automatically configured to work together. 
+- When installed on Raspberry Pi, the Raspberry Pi camera module support is enabled by default, .
 
 ### Changes / Improvements / Optimisations
 
