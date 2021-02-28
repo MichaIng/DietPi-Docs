@@ -38,7 +38,7 @@ Find sample applications using Docker Compose and more details in the [documenta
 
 **[Steam](../software/gaming/#steam)**  & **[Box86](../software/gaming/#box86)**
 
-[Steam](../software/gaming/#steam) for ARM processors has been a feature request for many years. Since it became possible to install on ARM boards, it's now available also on DietPi. [Box86](../software/gaming/#box86) is installed automatically, as dependency. 
+[Steam](../software/gaming/#steam) for ARM processors has been a feature request for many years. Since it became possible to install on ARM boards, it's now available also on DietPi. [Box86](../software/gaming/#box86) is installed automatically, as dependency.
 
 The Steam platform is one of the largest digital distribution platform for gaming. Still, on ARMv7 boards it has limited features and game support. Here are few sample games running with [Box86](../software/gaming/#box86):
 
@@ -66,35 +66,41 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 
 ### Changes / Improvements / Optimisations
 
-- **Network** :octicons-arrow-right-16: A change has been implemented on the order in which network-related systemd service targets are reached. "`network.target`" and "`network-online.target`" are now reach after all network interfaces have been configured, rather then already after only the loopback interface "lo" has been configured. 
+- **Network** :octicons-arrow-right-16: A change has been implemented on the order in which network-related systemd service targets are reached. "`network.target`" and "`network-online.target`" are now reach after all network interfaces have been configured, rather then already after only the loopback interface "lo" has been configured.
 
     This affects only `systemd` services which are not started by [DietPi-Services](../dietpi_tools/#dietpi-services), e.g. SSH/DNS/VPN/VNC servers, with the effect that they are assured to be able to bind to interfaces/IPs, where currently they would fail. The downside is, if one has an Ethernet adapter configured via dietpi-config or /etc/network/interfaces (as allow-hotplug device), but the cable not connected, affected services may be delayed until the interface bring-up timed out.
 
-- [DietPi-Backup](../dietpi_tools/#dietpi-backup-backuprestore) :octicons-arrow-right-16: A new feature has been added which allows to automatically restore a dietpi-backup on first boot. 
+- [DietPi-Backup](../dietpi_tools/#dietpi-backup-backuprestore) :octicons-arrow-right-16: A new feature has been added which allows to automatically restore a dietpi-backup on first boot.
 
     For this set the new `dietpi.txt` option
+
     ```bash
     AUTO_SETUP_BACKUP_RESTORE = 1
     ```
-    , to get a list of found backups to select from (this does not work in combination with `AUTO_SETUP_AUTOMATED = 1`). 
 
-    All attached drives are mounted temporarily and seached automatically. 
-    Set 
-    ```bash  
-    AUTO_SETUP_BACKUP_RESTORE = 2 
+    , to get a list of found backups to select from (this does not work in combination with `AUTO_SETUP_AUTOMATED = 1`).
+
+    All attached drives are mounted temporarily and seached automatically.
+    Set
+
+    ```bash
+    AUTO_SETUP_BACKUP_RESTORE = 2
     ```
-    to have the first found backup restored non-interactively (this works in combination with `AUTO_SETUP_AUTOMATED = 1`). 
+
+    to have the first found backup restored non-interactively (this works in combination with `AUTO_SETUP_AUTOMATED = 1`).
     
-    The restore runs after the initial update, hence works with older images as well and can be done via SSH connection. Credits go to @ravenclaw900 for implementing this feature: https://github.com/MichaIng/DietPi/pull/4112
+    The restore runs after the initial update, hence works with older images as well and can be done via SSH connection. Credits go to @ravenclaw900 for implementing this feature: <https://github.com/MichaIng/DietPi/pull/4112>,
 
 - **DietPi-Backup** :octicons-arrow-right-16: Support for XFS and ZFS target file system types has been added, which fully support the required symlink and POSIX permissions capabilities.
-- **DietPi-Config** | **RPi** :octicons-arrow-right-16: An option has been added to toggle the SPI interface. Many thanks to @incanus for resurrecting this old feature request: <https://github.com/MichaIng/DietPi/issues/98#issuecomment-783650204>
-- **DietPi-Software**  :octicons-arrow-right-16: The mandatory reboot after installs has been removed. Installed services, which are not controlled by DietPi-Services, but would start automatically on reboot, are now started at the end of installs instead. A manual reboot is still a good idea, but strictly required only in rare cases. Many thanks to @Games-Crack for doing this suggesting: <https://github.com/MichaIng/DietPi/issues/4032>
+
+- **DietPi-Config** | **RPi** :octicons-arrow-right-16: An option has been added to toggle the SPI interface. Many thanks to @incanus for resurrecting this old feature request: <https://github.com/MichaIng/DietPi/issues/98#issuecomment-783650204>.
+
+- **DietPi-Software**  :octicons-arrow-right-16: The mandatory reboot after installs has been removed. Installed services, which are not controlled by DietPi-Services, but would start automatically on reboot, are now started at the end of installs instead. A manual reboot is still a good idea, but strictly required only in rare cases. Many thanks to @Games-Crack for doing this suggesting: <https://github.com/MichaIng/DietPi/issues/4032>.
 - **DietPi-Software**  :octicons-arrow-right-16: Installs do not imply all APT package upgrades anymore. While we recommend to keep all APT packages upgraded regularly, the new daily APT check and info within the DietPi-Banner, helps to keep you informed to do the best decision youself whether and when to apply which package upgrade. On first run installs the full upgrade is however kept, to assure each image starts in fully upgraded state, and packages which are required for the actual software choices you're installing, are upgraded as well, when installed already.
 - **DietPi-Software**  :octicons-arrow-right-16: Uninstalls do not stop other services anymore. E.g. your webserver or media streaming server will stay active while you uninstall that other software that you don't require anymore. Since uninstalls do not require much RAM or CPU resources, this is perfectly fine. Many thanks to @mrgreaper giving the hint: <https://github.com/MichaIng/DietPi/issues/4116>.
 - **DietPi-Software** - **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16: On install in combination with Pi-hole, no additional configuration file will be created anymore but the adjusted interface binding and port will be applied to "/etc/unbound/unbound.conf.d/dietpi.conf". Declaring "interface" in two configuration files do not override each other but lead to two concurrent bindings, which is not intended. The two files, if present, will be merged as well on DietPi update. It is hence intended that admins change "dietpi.conf" directly, if required, and this file won't be overwritten on reinstalls to preserve local changes. Additionally, on new installs, the configuration file will be better sorted and contain comments to explain their purpose.
 - **DietPi-Software** - **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16:  On new installs, by default access is now granted to all private IPv4 and IPv6 address ranges instead of to the 192.168.0.0/16 subnet only, which includes VPNs, containers and cases of multiple local networks the server is attached to.
-- **DietPi-Software** - **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16: A monthly cron job is now created to keep the root hints file updated. Many thanks to @APraxx for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4077>
+- **DietPi-Software** - **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16: A monthly cron job is now created to keep the root hints file updated. Many thanks to @APraxx for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4077>.
 
 - **DietPi-Software** | **Python 3 pip**: `pip` and pip-based installs on ARMv6 and ARMv7 boards will have the piwheels.org repository for pre-compiled wheels added automatically, which can reduce build dependencies and compile time dramatically.
 
@@ -109,6 +115,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 - **DietPi-Banner**  :octicons-arrow-right-16: Running the script without input argument will now open the menu instead of printing the banner. The console alias has been adjusted accordingly, so that it is now possible to run "dietpi-banner 0" and "dietpi-banner 1" from console to have full and short banner versions printed. The "dietpi-banner" console command remains opening the menu.
 
 ### Fixes
+
 - **Audio** :octicons-arrow-right-16: Resolved a bug with Debian Buster, where the ALSA state daemon was always running, even when it was not configured.
 - **DietPi-Globals** | `G_OBTAIN_CPU_TEMP` :octicons-arrow-right-16: Negative temperatures are not trusted anymore, "N/A" will be printed instead. This allows a generic approach to fix/allow temperature estimation on further SBC models. Many thanks to @Thanapat for reporting a related issue on Roseapple Pi: <https://dietpi.com/phpbb/viewtopic.php?t=8677>
 - **DietPi-Set_swapfile**  :octicons-arrow-right-16: Resolve an issue where "zram"/"zram0" dietpi.txt path entries were dropped, when running the script without input arguments. This especially broke applying zram-swap on first boot. Many thanks to @Dr0bac for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4002>
