@@ -8,10 +8,10 @@
 - [**HAProxy - High performance TCP/HTTP load balancer**](#haproxy)
 - [**No-IP - Dynamic DNS update client**](#no-ip)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
@@ -19,7 +19,7 @@
 
     ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -143,7 +143,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
     After installation, you need to manually modify the `haproxy.cfg` to best fit your network requirements. Check the configuration manual [here](http://www.haproxy.org/#docs).
 
-    ``` bash
+    ```sh
     systemctl stop haproxy
     nano /etc/haproxy/haproxy.cfg
     systemctl start haproxy    
