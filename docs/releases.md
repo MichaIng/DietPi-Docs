@@ -56,7 +56,29 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 
 ### Changes / Improvements / Optimisations
 
-- **DietPi-Update**  :octicons-arrow-right-16: A new update check system has been implemented, which checks for a minimum required Debian and DietPi version and migrates systems with either too old Debian version or too old DietPi version to a different Git branch automatically. This especially smoothens the migration of our code base to newer Debian versions and the alternative branch can be used to inform and support Debian distribution upgrades and to upgrade the DietPi code to an intermediate version from where the system can be migrated back to the regular stable/master branch. Since this change required a new repository version file, we took the chance and incremented the DietPi core version to v7.0. This however has no further meaning, all previously supported DietPi and Debian versions remain supported and the change enables us to not require fresh image installs for major upgrades, like the upgrade from v159 to v6.0 did a few years ago.
+- **DietPi-Update** :octicons-arrow-right-16: A new update check system has been implemented, which checks for a minimum required Debian and DietPi version and migrates systems with either too old Debian version or too old DietPi version to a different Git branch automatically. This especially smoothens the migration of our code base to newer Debian versions and the alternative branch can be used to inform and support Debian distribution upgrades and to upgrade the DietPi code to an intermediate version from where the system can be migrated back to the regular stable/master branch. Since this change required a new repository version file, we took the chance and incremented the DietPi core version to v7.0. This however has no further meaning, all previously supported DietPi and Debian versions remain supported and the change enables us to not require fresh image installs for major upgrades, like the upgrade from v159 to v6.0 did a few years ago.
+
+- **Network** :octicons-arrow-right-16: A change has been implemented on the order in which network-related systemd service targets are reached. "`network.target`" and "`network-online.target`" are now reach after all network interfaces have been configured, rather then already after only the loopback interface "lo" has been configured. 
+
+    This affects only `systemd` services which are not started by [DietPi-Services](../dietpi_tools/#dietpi-services), e.g. SSH/DNS/VPN/VNC servers, with the effect that they are assured to be able to bind to interfaces/IPs, where currently they would fail. The downside is, if one has an Ethernet adapter configured via dietpi-config or /etc/network/interfaces (as allow-hotplug device), but the cable not connected, affected services may be delayed until the interface bring-up timed out.
+
+- [DietPi-Backup](../dietpi_tools/#dietpi-backup-backuprestore) :octicons-arrow-right-16: A new feature has been added which allows to automatically restore a dietpi-backup on first boot. 
+
+    For this set the new `dietpi.txt` option
+    ```bash
+    AUTO_SETUP_BACKUP_RESTORE = 1
+    ```
+    , to get a list of found backups to select from (this does not work in combination with `AUTO_SETUP_AUTOMATED = 1`). 
+
+    All attached drives are mounted temporarily and seached automatically. 
+    Set 
+    ```bash  
+    AUTO_SETUP_BACKUP_RESTORE = 2 
+    ```
+    to have the first found backup restored non-interactively (this works in combination with `AUTO_SETUP_AUTOMATED = 1`). 
+    
+    The restore runs after the initial update, hence works with older images as well and can be done via SSH connection. Credits go to @ravenclaw900 for implementing this feature: https://github.com/MichaIng/DietPi/pull/4112
+
 - **DietPi-Backup** :octicons-arrow-right-16: Support for XFS and ZFS target file system types has been added, which fully support the required symlink and POSIX permissions capabilities.
 - **DietPi-Software**  :octicons-arrow-right-16: The mandatory reboot after installs has been removed. Installed services, which are not controlled by DietPi-Services, but would start automatically on reboot, are now started at the end of installs instead. A manual reboot is still a good idea, but strictly required only in rare cases. Many thanks to @Games-Crack for doing this suggesting: <https://github.com/MichaIng/DietPi/issues/4032>
 - **DietPi-Software**  :octicons-arrow-right-16: Installs do not imply all APT package upgrades anymore. While we recommend to keep all APT packages upgraded regularly, the new daily APT check and info within the DietPi-Banner, helps to keep you informed to do the best decision youself whether and when to apply which package upgrade. On first run installs the full upgrade is however kept, to assure each image starts in fully upgraded state, and packages which are required for the actual software choices you're installing, are upgraded as well, when installed already.
@@ -84,6 +106,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 - **DietPi-Software** | **[Domoticz](../software/home_automation/#domoticz)** :octicons-arrow-right-16: Resolved an issue where saving custom scripts and starting with a template did not work. Many thanks to @tec13 for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8627>
 - **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where for [ruTorrent](../software/bittorrent/#rtorrent), [Koel](../software/media/#koel) and [Bitwarden_RS](../software/cloud/#bitwarden_rs) the automatic newest version detection failed and instead a possibly older fallback was used. Many thanks to @kelvmod for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4105>
 - **DietPi-Software** | **[LXQt](../software/desktop/#lxqt)** :octicons-arrow-right-16: Resolved visual issues with our default configuration of Debian Buster, drastically simplified and cleaned up the files we ship.
+- **DietPi-Software** | **[SABnzbd](../software/bittorrent/#sabnzbd)**: Resolved an issue on Stretch where the install failed due to raised minimum [Python](../software/programming/#python) version with SABnzbd v3.2.0. If Python 3.5 is installed, SABnzbd v3.1.1 will be installed now to allow keeping the install option enabled for now. Many thanks to @19eighties for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2762#issuecomment-787118995>
 
 !!! hint ""
 
