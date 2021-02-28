@@ -1,4 +1,4 @@
-# System Stats / Management
+# System Stats & Management
 
 ## Overview
 
@@ -9,71 +9,73 @@
 - [**Netdata - Web interface system stats**](#netdata)
 - [**Webmin - Remote system management with web interface**](#webmin)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
 ## DietPi-CloudShell
 
-CloudShell is a Network Attached Storage (NAS) solution with RAID support. It supports a color LCD and IR receiver.  
-CloudShell turns your Odroid CloudShell, Odroid 3.5 LCD Touchscreen Shield, Waveshare32, or monitor into a dedicated lightweight system stats display.
+DietPi-CloudShell turns your console or LCD screen into a lightweight system stats display.
 
 ### Sample screenshots
 
-The following screenshots shall give an overview over the displaying features of *CloudShell*.
+The following screenshots shall give an overview over the displaying features of *DietPi-CloudShell*.
 
 === "CPU usage"
 
-    ![DietPi system stat and maintenance software CloudShell CPU usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-cpuusage.jpg){: width="400px"}
+    ![DietPi-CloudShell CPU usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-cpuusage.jpg){: width="400" height="305" loading="lazy"}
 
 === "Memory usage"
 
-    ![DietPi system stat and maintenance software CloudShell memory usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-memoryusage.jpg){: width="400px"}
+    ![DietPi-CloudShell memory usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-memoryusage.jpg){: width="400" height="293" loading="lazy"}
 
 === "Storage details"
 
-    ![DietPi system stat and maintenance software CloudShell storage details dialog](../assets/images/dietpi-software-systemstat-cloudshare-storagedetails.png){: width="400px"}
+    ![DietPi-CloudShell storage details dialog](../assets/images/dietpi-software-systemstat-cloudshare-storagedetails.png){: width="400" height="292" loading="lazy"}
 
 === "Network details"
 
-    ![DietPi system stat and maintenance software CloudShell network details dialog](../assets/images/dietpi-software-systemstat-cloudshare-networkstats.jpg){: width="400px"}
+    ![DietPi-CloudShell network details dialog](../assets/images/dietpi-software-systemstat-cloudshare-networkstats.jpg){: width="400" height="303" loading="lazy"}
 
 === "Pi-hole stats"
 
-    ![DietPi system stat and maintenance software CloudShell Pi-hole dialog](../assets/images/dietpi-software-systemstat-cloudshare-piholestats.jpg){: width="400px"}
+    ![DietPi-CloudShell Pi-hole dialog](../assets/images/dietpi-software-systemstat-cloudshare-piholestats.jpg){: width="400" height="305" loading="lazy"}
 
 ***
 
 YouTube video tutorial: *DietPi CloudShell (RPi / Odroid XU4)*
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/O-W8Z33as_U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/O-W8Z33as_U?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ### Configuration
 
 === "Configuration"
 
-    Launch the DietPi-CloudShell control panel:  
-    `dietpi-cloudshell`
+    Launch the DietPi-CloudShell control panel:
 
-    ![DietPi system stat and maintenance software CloudShell configuration](../assets/images/dietpi-software-systemstat-cloudshare-configuration.png){: width="600px"}
+    ```sh
+    dietpi-cloudshell
+    ```
+
+    ![DietPi-CloudShell main menu](../assets/images/dietpi-software-systemstat-cloudshare-configuration.png){: width="600" height="298" loading="lazy"}
 
 === "Scenes"
 
-    *CloudShell* offers scenes with predefined display outputs resp. layouts.  
+    DietPi-CloudShell offers scenes with predefined display outputs resp. layouts.  
     Scenes are configured in the *Scenes* dialog within `dietpi-cloudshell`.
 
-    ![DietPi system stat and maintenance software CloudShell scenes configuration](../assets/images/dietpi-software-systemstat-cloudshare-scenes.png){: width="600px"}
+    ![DietPi-CloudShell scenes menu](../assets/images/dietpi-software-systemstat-cloudshare-scenes.png){: width="600" height="283" loading="lazy"}
 
 === "Power saving"
 
@@ -88,30 +90,24 @@ YouTube video tutorial: *DietPi CloudShell (RPi / Odroid XU4)*
 === "Waveshare32"
 
     See <http://www.waveshare.com/3.2inch-rpi-lcd-b.htm>.  
-    This is available for all Raspberry PI and Odroid versions. DietPi will automatically configure your system for the device.  
-    Simply run `dietpi-config` -\> *Display Options* then select `waveshare32`.   
-    After a reboot, your `waveshare32` will become active.
+    This is available for all Raspberry Pi and Odroid versions. DietPi will automatically configure your system for the device.  
+    Simply run `dietpi-config`, select `Display Options`, then select `waveshare32`.   
+    After a reboot, your *Waveshare32* will become active.
 
-    ![DietPi system stat and maintenance software CloudShell Waveshare32 touchscreen](../assets/images/dietpi-software-systemstat-cloudshell-wavesharesupport.png){: width="400px"}
+    ![DietPi-CloudShell on Waveshare32 touchscreen photo](../assets/images/dietpi-software-systemstat-cloudshell-wavesharesupport.png){: width="400" height="258" loading="lazy"}
 
 === "Odroid 3.5 LCD shield"
 
     See <https://www.hardkernel.com/shop/c1-3-2inch-tfttouchscreen-shield/>.  
     This is available for all Odroid versions. DietPi will automatically configure your system for the device.  
-    Simply run `dietpi-config` -\> *Display Options* then select `odroid-lcd35`.   
+    Simply run `dietpi-config`, select `Display Options`, then select `odroid-lcd35`.   
     After a reboot, your *Odroid 3.5 LCD* will become active.
 
-    ![DietPi system stat and maintenance software CloudShell general touchscreen](../assets/images/dietpi-software-systemstat-cloudshell-touchscreensupport.jpg){: width="400px"}
+    ![DietPi-CloudShell on Odroid 3.5 LCD photo](../assets/images/dietpi-software-systemstat-cloudshell-touchscreensupport.jpg){: width="400" height="224" loading="lazy"}
 
 === "Other touchscreens"
 
-    The display feature of *CloudShell* works generally with any LCD display or monitor with a resolution of at least 320x240.
-
-***
-
-Official documentation: <https://wiki.odroid.com/accessory/add-on_boards/xu4_cloudshell2/xu4_cloudshell2>  
-Website CloudShell: <https://www.hardkernel.com/shop/cloudshell-for-xu4>  
-Website CloudShell 2: <https://www.hardkernel.com/shop/cloudshell-2-for-xu4>
+    The display feature of *DietPi-CloudShell* works generally with any LCD display or monitor with a resolution of at least 320x240 pixels.
 
 ## Linux Dash
 
@@ -119,7 +115,7 @@ Linux Dash allows you to monitor your system stats from a web page.
 
 - Also Installs: [LASP webserver stack](../webserver_stack/)
 
-![DietPi system stat and maintenance software Linux Dash](../assets/images/dietpi-software-systemstat-linuxdash.png){: width="500px"}
+![Linux Dash web interface screenshot](../assets/images/dietpi-software-systemstat-linuxdash.png){: width="500" height="270" loading="lazy"}
 
 === "Access to Linux Dash"
 
@@ -137,7 +133,7 @@ Allows you to monitor your system stats from a web page. The display output can 
 
 - Also Installs: [LASP webserver stack](../webserver_stack/)
 
-![DietPi system stat and maintenance software phpSysInfo](../assets/images/dietpi-software-systemstat-phpsysinfo.png){: width="500px"}
+![phpSysInfo web interface screenshot](../assets/images/dietpi-software-systemstat-phpsysinfo.png){: width="500" height="268" loading="lazy"}
 
 === "Access to phpSysInfo"
 
@@ -157,7 +153,7 @@ Website: <https://phpsysinfo.github.io/phpsysinfo>
 
 RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
-![DietPi system stat and maintenance software RPi-Monitor](../assets/images/dietpi-software-systemstat-rpimonitor.png){: width="500px"}
+![RPi-Monitor web interface screenshot](../assets/images/dietpi-software-systemstat-rpimonitor.png){: width="500" height="364" loading="lazy"}
 
 === "Main features"
 
@@ -187,7 +183,7 @@ Website: <https://github.com/XavierBerger/RPi-Monitor>.
 
 Netdata is a slick and feature-rich system stats monitor, with web interface.
 
-![DietPi system stat and maintenance software Netdata](../assets/images/dietpi-software-systemstat-netdata.png){: width="500px"}
+![Netdata web interface screenshot](../assets/images/dietpi-software-systemstat-netdata.png){: width="500" height="260" loading="lazy"}
 
 === "Access to Netdata"
 
@@ -209,10 +205,6 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
     Note that having Netdata accessible to anyone gives potential attackers a bunch of useful information where to start hacking.  
     About how to limit access to Netdata, check as well: <https://docs.netdata.cloud/web/server/>.
 
-=== "Pi-hole & Netdata"
-
-    The monitoring of a *Pi-hole* system via Netdata is described there: <https://learn.netdata.cloud/guides/monitor/pi-hole-raspberry-pi>.
-
 ***
 
 Official documentation: <https://learn.netdata.cloud/docs/overview/what-is-netdata>  
@@ -222,7 +214,7 @@ Wikipedia: <https://wikipedia.org/wiki/Netdata>
 
 Webmin is a web-based feature-rich remote system management tool. Many system settings can easily be set using the web interface dialogues.
 
-![DietPi system stat and maintenance software Webmin](../assets/images/dietpi-software-systemstat-webmin.png){: width="500px"}
+![Webmin interface screenshot](../assets/images/dietpi-software-systemstat-webmin.png){: width="500" height="276" loading="lazy"}
 
 === "Access to Webmin"
 
@@ -230,16 +222,19 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
 
     - URL = `https://<your.IP>:10000`
     - Username = `root`
-    - Password = root password at time of installation (default: `dietpi`)
+    - Password = `<your software password>` (default: `dietpi`)
 
     ???+ hint "Use HTTPS"
 
-        Please ensure `https://` URL is typed, `http://` will not function
+        Please ensure `https://` URL is typed, `http://` won't work!
 
 === "System logging"
 
-    The Webmin system logging panel still depends on a classical file logger, like Rsyslog. However DietPi will not impose this logging overhead on systems by default. If you need to see system logs via the *Webmin online panel*, you can either configure a custom *syslog* daemon or install *Rsyslog* manually:  
-    `apt install rsyslog`
+    The Webmin system logging panel still depends on a classical file logger, like Rsyslog. However DietPi will not impose this logging overhead on systems by default. If you need to see system logs via the *Webmin online panel*, you can either configure a custom *syslog* daemon or install *Rsyslog* manually:
+
+    ```sh
+    apt install rsyslog
+    ```
 
     DietPi comes with *systemd* and the related *journald* system logger, which can be accessed via the command `journalctl`.
 

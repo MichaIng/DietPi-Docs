@@ -8,18 +8,18 @@
 - [**HAProxy - High performance TCP/HTTP load balancer**](#haproxy)
 - [**No-IP - Dynamic DNS update client**](#no-ip)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -27,7 +27,7 @@
 
 The WiFi HotSpot package turns your device into a wireless hotspot/access point. This allows other wireless devices to connect and share the internet connection.
 
-![DietPi WiFi hotspot WiFi](../assets/images/dietpi-software-advanced-networking-wifihotspot.png){: width="550px"}
+![DietPi WiFi hotspot WiFi](../assets/images/dietpi-software-advanced-networking-wifihotspot.png){: width="550" height="345" loading="lazy"}
 
 === "Requirements"
 
@@ -55,7 +55,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
 YouTube video tutorial (German language): `Raspberry Hotspot: Internet Sperren umgehen mit eigenen WiFi Hotspot unter DietPi (für alle Geräte)`.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3ZROq90tM_s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/3ZROq90tM_s?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ## Tor HotSpot
 
@@ -66,7 +66,7 @@ It also Installs:
 
 - [WiFi HotSpot](#wifi-hotspot_1)
 
-![DietPi WiFi hotspot tor](../assets/images/dietpi-software-advanced-networking-torhotspot.png){: width="550px"}
+![DietPi WiFi hotspot tor](../assets/images/dietpi-software-advanced-networking-torhotspot.png){: width="550" height="308" loading="lazy"}
 
 === "Requirements"
 
@@ -89,11 +89,11 @@ It also Installs:
 Wikipedia: <https://wikipedia.org/wiki/Tor_(anonymity_network)>  
 YouTube video tutorial: *DietPi Tor Hotspot Setup on Raspberry Pi 3 B Plus*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rik-ABzSoHM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/rik-ABzSoHM?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ## Tor Relay
 
-![advanced-networking-tor](../assets/images/dietpi-software-advanced-networking-tor.png){: width="150px"}
+![Tor logo](../assets/images/dietpi-software-advanced-networking-tor.png){: width="150" height="91" loading="lazy"}
 
 Contribute a node to the Tor network, which allows people to be anonymous on the internet.
 
@@ -135,16 +135,15 @@ HAProxy, which stands for High Availability Proxy, is a popular open source soft
 
 It is best suited for high traffic web sites and powers quite a number of the world's most visited ones: GitHub, Imgur, Instagram, and Twitter. It has become the de-facto standard open-source load balancer, and it is often deployed by default in cloud platforms.
 
-![advanced-networking-high-availability](../assets/images/dietpi-software-advanced-networking-haproxy2.jpg)
+![HAProxy statistics web page](../assets/images/dietpi-software-advanced-networking-haproxy2.jpg){: width="1898" height="650" loading="lazy"}
 
-!!! warning ""
-    This software title is recommended ONLY for advanced users !
+!!! warning "This software title is recommended ONLY for advanced users!"
 
 === "Quick start"
 
     After installation, you need to manually modify the `haproxy.cfg` to best fit your network requirements. Check the configuration manual [here](http://www.haproxy.org/#docs).
 
-    ``` bash
+    ```sh
     systemctl stop haproxy
     nano /etc/haproxy/haproxy.cfg
     systemctl start haproxy    
@@ -152,20 +151,17 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
     Access web interface stats:
 
-    ``` bash
-    URL = http://<your.local.ip>:1338
-    Username = admin
-    Password = dietpi
-    ```
+    - URL = `http://<your.IP>:1338`
+    - Username = `admin`
+    - Password = `dietpi`
 
-    !!! hint ""
-        This installation was made possible by Jerome Queneuder, who provided the methods for compiling and installation.
+    !!! hint "This installation was made possible by Jerome Queneuder, who provided the methods for compiling and installation."
 
 === "Load balancing"
 
     The simplest way to load balance network traffic to multiple servers is to use layer 4 (transport layer) load balancing. Load balancing this way will forward user traffic based on IP range and port.
 
-    ![advanced-networking-layer4](../assets/images/dietpi-software-advanced-networking-layer4.jpg)
+    ![Layer 4 load balancing pictogram](../assets/images/dietpi-software-advanced-networking-layer4.jpg){: width="690" height="248" loading="lazy"}
 
     The user accesses the load balancer, which forwards the user’s request to the web-backend group of backend servers. Whichever backend server is selected will respond directly to the user’s request.
 
@@ -176,7 +172,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     A high availability (HA) setup is an infrastructure without a single point of failure. It prevents a single server failure from being a downtime event by adding redundancy to every layer of your architecture. A load balancer facilitates redundancy for the backend layer (web/app servers), but for a true high availability setup, you need to have redundant load balancers as well.
 
     Here is a diagram of a basic high availability setup:
-    ![advanced-networking-high-availability](../assets/images/dietpi-software-advanced-networking-high-availability.gif)
+    ![Animated high availability setup diagram](../assets/images/dietpi-software-advanced-networking-high-availability.gif){: width="1200" height="577" loading="lazy"}
 
     Help text extracted from the tutorial: [An Introduction to HAProxy and Load Balancing Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
 
@@ -189,7 +185,7 @@ Official documentation: <http://www.haproxy.org/#docs>
 
 Use your No-IP account and website URL address to always have it pointing to your DietPi system. Essential if your hosting a website.
 
-![DietPi DNS server software No-IP](../assets/images/dietpi-software-advanced-networking-noip.jpg){: width="200px"}
+![No-IP logo](../assets/images/dietpi-software-advanced-networking-noip.jpg){: width="200" height="72" loading="lazy"}
 
 The setup of No-IP is done as follows:
 

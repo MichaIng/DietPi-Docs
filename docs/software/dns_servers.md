@@ -5,10 +5,10 @@
 - [**Pi-hole - Network-wide Ad Blocking**](#pi-hole)
 - [**Unbound - A validating, recursive, and caching DNS resolver**](#unbound)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
@@ -26,7 +26,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
 - Also Installs: [Webserver stack](../webserver_stack/)
 
-![DietPi DNS server software Pi-hole](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500" height="410" loading="lazy"}
+![Pi-hole web interface screenshot](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500" height="410" loading="lazy"}
 
 === "Access the web interface"
 
@@ -95,9 +95,9 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     To allow (OpenVPN or WireGuard) VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`.
 
-=== "Pi-hole & Netdata"
+=== "Monitor Pi-hole"
 
-    The monitoring of a *Pi-hole* system via Netdata is described there: <https://learn.netdata.cloud/guides/monitor/pi-hole-raspberry-pi>.
+    [DietPi-CloudShell](../system_stats/#dietpi-cloudshell) has a Pi-hole scene included, which can be used to monitor the most important DNS query and block statistics. Simply run `dietpi-cloudshell`, select `Scenes` and assure that `8 Pi-hole` is selected. Toggle `Output Display` to choose whether to print the output to the current console or the main screen, then select `Start / Restart` to start the output.
 
 ***
 
@@ -116,9 +116,9 @@ YouTube video tutorial #4 (German language): [`Raspberry Pi Zero W mit Pi-hole -
 Unbound is a validating, recursive, caching DNS resolver.  
 For more details see [unbound "about" description](https://nlnetlabs.nl/projects/unbound/about/).
 
-![DietPi DNS server software unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: width="150" height="34" loading="lazy"}
+![Unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: width="150" height="34" loading="lazy"}
 
-![DietPi DNS server software unbound screenshot](../assets/images/dietpi-software-unbound.jpg){: width="500" height="274" loading="lazy"}
+![Unbound monitor screenshot](../assets/images/dietpi-software-unbound.jpg){: width="500" height="274" loading="lazy"}
 
 === "Default DNS ports"
 

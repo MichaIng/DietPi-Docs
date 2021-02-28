@@ -111,6 +111,7 @@ EmonTH
 EmonTX
 EPL
 EQ
+ESXi
 exFAT
 facto
 FAHClient
@@ -230,6 +231,7 @@ MineOS
 MiniDLNA
 MinIO
 MIPI
+mjpg
 MkDocs
 Mopidy
 morse
