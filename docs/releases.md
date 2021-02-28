@@ -35,7 +35,7 @@ The Steam platform is one of the largest digital distribution platform for gamin
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/z-4aGNqZ724" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 !!! info ""
-    
+
     **Caution:** Steam may not run perfectly stable yet :octicons-beaker-16:. It could also crash when trying to allocate space for the games and it would resume the downloads once started again.
     
     We're optimistic that further improvements will address these issues and more enhancements will be available in the future :octicons-heart-16: 
@@ -43,12 +43,12 @@ The Steam platform is one of the largest digital distribution platform for gamin
 [Box86](../software/gaming/#box86) is a x86 wrapper/emulator for ARMv7 systems, and it is now available for install. Thanks to it's ability to wrap ARMv7 shared system libraries to be used with i386 binaries, often no additional libraries are needed to be installed.
 
 !!! info ""
-    
+
     Thanks to <https://github.com/tbinfm>, it will be invoked automatically when an i386 binary is executed. 
 
 **[mjpg-streamer](../software/camera/#mjpg-streamer)**
 
-**mjpg-streamer** is a lightweight multi-source and multi-output plugin JPEG streamer and it is now available for install. It can be used to stream JPEG files over an IP-based network from a webcam to various types of viewers. 
+**mjpg-streamer** is a lightweight multi-source and multi-output plugin JPEG streamer and it is now available for install. It can be used to stream JPEG files over an IP-based network from a webcam to various types of viewers.
 
 By default your attached camera capture will be streamed to a custom HTTP port. If [OctoPrint](../software/printing/#octoprint) is installed, mjpg-streamer will be automatically configured to work together. When installed on [Raspberry Pi](../hardware/#raspberry-pi), the Raspberry Pi camera module support will be enabled by default.
 

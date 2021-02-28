@@ -2,10 +2,10 @@
 
 ## Overview
 
-  - [**Python - High-level interpreted programming language**](#python)
-  - [**Docker -  Create, deploy, and run applications using containers**](#docker)
-  - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
-  - [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
+- [**Python - High-level interpreted programming language**](#python)
+- [**Docker -  Create, deploy, and run applications using containers**](#docker)
+- [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
+- [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
 
 ## Install
 
@@ -47,7 +47,7 @@ Official documentation, from beginner to advanced: <https://www.python.org/doc/>
 
 <!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200px"} -->
 
-In 2013, Docker introduced containers. These are a standardized unit of software that allows developers to isolate their application from the environment. Docker is de facto standard to build and share containerized apps - from single bord computers (SBC), to desktop or cloud.
+In 2013, Docker introduced containers. These are a standardized unit of software that allows developers to isolate their application from the environment. Docker is de facto standard to build and share containerized apps - from single board computers (SBC), to desktop or cloud.
 
 A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
 
@@ -81,11 +81,11 @@ For a quick intro, see **DietPi Docker Setup on Raspberry Pi 3 B Plus**:
 
 Docker Compose is a [Docker](#docker) tool used to define and run multi-container applications. With Compose, you use a `YAML` file to create and configure your application's services from this configuration file.
 
-`docker-compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments. 
+`docker-compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments.
 
 ![docker compose](../assets/images/dietpi-docker-compose.png){: style="width:500px" loading="lazy"}
 
-_Docker (individual container) vs. Docker-Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa/)_ 
+_Docker (individual container) vs. Docker-Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa/)_
 
 === "Update to latest version"
 
@@ -126,8 +126,8 @@ Portainer simplifies your Docker container management via Portainer web interfac
 ***
 
 Official documentation: <https://documentation.portainer.io>  
-Source code: <https://github.com/portainer/portainer> 
-Open-source license: [zlib](https://github.com/portainer/portainer/blob/develop/LICENSE) 
+Source code: <https://github.com/portainer/portainer>
+Open-source license: [zlib](https://github.com/portainer/portainer/blob/develop/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)
 
