@@ -80,6 +80,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
     The restore runs after the initial update, hence works with older images as well and can be done via SSH connection. Credits go to @ravenclaw900 for implementing this feature: https://github.com/MichaIng/DietPi/pull/4112
 
 - **DietPi-Backup** :octicons-arrow-right-16: Support for XFS and ZFS target file system types has been added, which fully support the required symlink and POSIX permissions capabilities.
+- **DietPi-Config** | **RPi** :octicons-arrow-right-16: An option has been added to toggle the SPI interface. Many thanks to @incanus for resurrecting this old feature request: <https://github.com/MichaIng/DietPi/issues/98#issuecomment-783650204>
 - **DietPi-Software**  :octicons-arrow-right-16: The mandatory reboot after installs has been removed. Installed services, which are not controlled by DietPi-Services, but would start automatically on reboot, are now started at the end of installs instead. A manual reboot is still a good idea, but strictly required only in rare cases. Many thanks to @Games-Crack for doing this suggesting: <https://github.com/MichaIng/DietPi/issues/4032>
 - **DietPi-Software**  :octicons-arrow-right-16: Installs do not imply all APT package upgrades anymore. While we recommend to keep all APT packages upgraded regularly, the new daily APT check and info within the DietPi-Banner, helps to keep you informed to do the best decision youself whether and when to apply which package upgrade. On first run installs the full upgrade is however kept, to assure each image starts in fully upgraded state, and packages which are required for the actual software choices you're installing, are upgraded as well, when installed already.
 - **DietPi-Software**  :octicons-arrow-right-16: Uninstalls do not stop other services anymore. E.g. your webserver or media streaming server will stay active while you uninstall that other software that you don't require anymore. Since uninstalls do not require much RAM or CPU resources, this is perfectly fine. Many thanks to @mrgreaper giving the hint: <https://github.com/MichaIng/DietPi/issues/4116>.
@@ -87,12 +88,21 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 - **DietPi-Software** - **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16:  On new installs, by default access is now granted to all private IPv4 and IPv6 address ranges instead of to the 192.168.0.0/16 subnet only, which includes VPNs, containers and cases of multiple local networks the server is attached to.
 - **DietPi-Software** - **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16: A monthly cron job is now created to keep the root hints file updated. Many thanks to @APraxx for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4077>
 
+- **DietPi-Software** | **Python 3 pip**: `pip` and pip-based installs on ARMv6 and ARMv7 boards will have the piwheels.org repository for pre-compiled wheels added automatically, which can reduce build dependencies and compile time dramatically.
+
+- **DietPi-Software** | **[Node-RED](../software/hardware_projects/#node-red)**: New installs and reinstalls with setup [Node-RED](../software/hardware_projects/#node-red) as local module for the "nodered" service user, rather than as global system module/command. This allows upgrading and removing all related Node modules through the web interface, instead of just the ones which were installed via web interface. 
+
+    Additionally a console alias for the "node-red-admin" CLI command has been added so that running this command with any user will call the local Node-RED instance as "nodered" service user.
+
+- **DietPi-Software** | **[Docker](../software/programming/#docker)**: The Docker APT repository is now installed manually instead of using the official Docker installer. This allows us to enable the Docker install option for Debian Bullseye systems, if only to allow widened testing of this upcoming Debian release with DietPi.
+
 ### Interface updates
 
 - **DietPi-Banner**  :octicons-arrow-right-16: Running the script without input argument will now open the menu instead of printing the banner. The console alias has been adjusted accordingly, so that it is now possible to run "dietpi-banner 0" and "dietpi-banner 1" from console to have full and short banner versions printed. The "dietpi-banner" console command remains opening the menu.
 
 ### Fixes
-
+- **Audio** :octicons-arrow-right-16: Resolved a bug with Debian Buster, where the ALSA state daemon was always running, even when it was not configured.
+- **DietPi-Globals** | `G_OBTAIN_CPU_TEMP` :octicons-arrow-right-16: Negative temperatures are not trusted anymore, "N/A" will be printed instead. This allows a generic approach to fix/allow temperature estimation on further SBC models. Many thanks to @Thanapat for reporting a related issue on Roseapple Pi: <https://dietpi.com/phpbb/viewtopic.php?t=8677>
 - **DietPi-Set_swapfile**  :octicons-arrow-right-16: Resolve an issue where "zram"/"zram0" dietpi.txt path entries were dropped, when running the script without input arguments. This especially broke applying zram-swap on first boot. Many thanks to @Dr0bac for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4002>
 - **DietPi-Software** | **[Bitwarden_RS](../software/cloud/#bitwarden_rs)**  :octicons-arrow-right-16: Resolved an issue where the self-signed TLS certificate could not be imported on iOS. To apply this fix to an existing instance, the configuration file "/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env" needs to be removed or moved to a different location, so "dietpi-software reinstall 183" will re-create the configuration and TLS certificate.
 - **DietPi-Software** | **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16:  Resolved an issue where during install in combination with Pi-hole the service restart could have failed. Many thanks to @Ernstian for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2409#issuecomment-739154892>
@@ -116,7 +126,6 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 
 - DietPi-Config  :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
 - DietPi-Software | [Node-RED](../software/hardware_projects/#node-red)  :octicons-arrow-right-16:  Pre-installed modules cannot be updated via web UI: <https://github.com/MichaIng/DietPi/issues/2073>
-- DietPi-Software | Raspimjpeg  :octicons-arrow-right-16:  With Lighttpd, streaming mjpeg does not work: <https://github.com/MichaIng/DietPi/issues/1747>
 - DietPi-Software | [MATE desktop](../software/desktop/#mate)  :octicons-arrow-right-16:  When logging in as root, desktop items and right-click context menu is missing: <https://github.com/MichaIng/DietPi/issues/3160>
 - DietPi-Software | [Sonarr](../software/bittorrent/#sonarr)/[Radarr](../software/bittorrent/#radarr)/Mono: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: <https://github.com/MichaIng/DietPi/issues/3179>
 
@@ -460,7 +469,7 @@ As always, many smaller code performance and stability improvements, visual and 
 
 - **DietPi-Config** :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: [Issue #2103](https://github.com/MichaIng/DietPi/issues/2103)
 - **Odroid C2** :octicons-arrow-right-16: Some WiFi adapters do no work as hotspot: [Issue #1955](https://github.com/MichaIng/DietPi/issues/1955)
-- **DietPi-Software** :octicons-commit-24: **Node-RED** :octicons-arrow-right-16: Pre-installed modules cannot be updated via web UI: [Issue #2073](https://github.com/MichaIng/DietPi/issues/2073)
+- **DietPi-Software** :octicons-commit-24: **[Node-RED](../software/hardware_projects/#node-red)** :octicons-arrow-right-16: Pre-installed modules cannot be updated via web UI: [Issue #2073](https://github.com/MichaIng/DietPi/issues/2073)
 - **DietPi-Software** :octicons-commit-24: **Raspimjpeg** :octicons-arrow-right-16: With Lighttpd, streaming mjpeg does not work: [Issue #1747](https://github.com/MichaIng/DietPi/issues/1747)
 - **DietPi-Software** :octicons-commit-24: **MATE desktop** :octicons-arrow-right-16: When logging in as root, desktop items and right-click context menu is missing: [Issue #3160](https://github.com/MichaIng/DietPi/issues/3160)
 - **DietPi-Software** :octicons-commit-24: **Sonarr/Radarr/Mono** :octicons-arrow-right-16: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: [Issue #3179](https://github.com/MichaIng/DietPi/issues/3179)
@@ -517,7 +526,7 @@ As always, many smaller code performance and stability improvements, visual and 
 - **DietPi-Config** :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: [#2103](https://github.com/MichaIng/DietPi/issues/2103)
 - **RPi** :octicons-arrow-right-16: On TigerVNC virtual desktop, LXAppearance hangs on dbus-launch: [#1791](https://github.com/MichaIng/DietPi/issues/1791)
 - **Odroid C2** :octicons-arrow-right-16: Some WiFi adapters do no work as hotspot: [#1955](https://github.com/MichaIng/DietPi/issues/1955)
-- **DietPi-Software** :octicons-commit-24: **Node-RED** :octicons-arrow-right-16: Pre-installed modules cannot be updated via web UI: [#2073](https://github.com/MichaIng/DietPi/issues/2073)
+- **DietPi-Software** :octicons-commit-24: **[Node-RED](../software/hardware_projects/#node-red)** :octicons-arrow-right-16: Pre-installed modules cannot be updated via web UI: [#2073](https://github.com/MichaIng/DietPi/issues/2073)
 - **DietPi-Software** :octicons-commit-24: **Raspimjpeg** :octicons-arrow-right-16: With Lighttpd, streaming mjpeg does not work: [#1747](https://github.com/MichaIng/DietPi/issues/1747)
 - **DietPi-Software** :octicons-commit-24: **MATE desktop** :octicons-arrow-right-16: When logging in as root, desktop items and right-click context menu is missing: [#3610](https://github.com/MichaIng/DietPi/issues/3160)
 - **DietPi-Software** :octicons-commit-24: **Sonarr/Mono** :octicons-arrow-right-16: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: [#3179](https://github.com/MichaIng/DietPi/issues/3179)
@@ -572,7 +581,7 @@ As always, many smaller code performance and stability improvements, visual and 
 - **DietPi-Config** - Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases - [Issue 2103](https://github.com/MichaIng/DietPi/issues/2103)
 - **Raspberry Pi** - On TigerVNC virtual desktop, LXAppearance hangs on dbus-launch - [Issue 1791](https://github.com/MichaIng/DietPi/issues/1791)
 - **Odroid C2** - Some WiFi adapters do no work as hotspot -  [Issue 1955](https://github.com/MichaIng/DietPi/issues/1955)
-- **DietPi-Software - Node-RED** - Pre-installed modules cannot be updated via web UI - [Issue 2073](https://github.com/MichaIng/DietPi/issues/2073)
+- **DietPi-Software - [Node-RED](../software/hardware_projects/#node-red)** - Pre-installed modules cannot be updated via web UI - [Issue 2073](https://github.com/MichaIng/DietPi/issues/2073)
 - **DietPi-Software - Raspimjpeg** - With Lighttpd, streaming mjpeg does not work: [Issue 1747](https://github.com/MichaIng/DietPi/issues/1747)
 - **DietPi-Software - MATE desktop** - When logging in as root, desktop items and right-click context menu is missing - [Issue 3160](https://github.com/MichaIng/DietPi/issues/3160)
 - **DietPi-Software - Sonarr/Mono** - With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: [Issue 3179](https://github.com/MichaIng/DietPi/issues/3179)
