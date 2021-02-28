@@ -115,7 +115,7 @@ License: [GPLv3](https://github.com/ccrisan/motioneye/blob/dev/LICENSE)
 
 Steam JPEG frames from various sources to various possible outputs. With the default setup it streams an attached camera image to a simple HTML page with the included webserver plugin.
 
-![mjpg-streamer HTML stream screenshot](../assets/images/mjpg-streamer.jpg){: width="500" height="395" loading="lazy"}
+![mjpg-streamer HTML stream GIF](../assets/images/mjpg-streamer.gif){: width="500" height="400" loading="lazy"}
 
 === "Access the HTML stream"
 
