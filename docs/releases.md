@@ -8,7 +8,17 @@ Welcome to **February 2021 release** :octicons-heart-16: of **DietPi**. With thi
 
 ![DietPi version 7](assets/images/dietpi-version7.jpg){: width="300" loading="lazy"}
 
-This version includes **4 new software titles** :octicons-paper-airplane-16:
+!!! info "Why this upgrade to version 7 ?"
+
+    A new check of the system updates has been implemented. This checks for a minimum required Debian and DietPi version and migrates systems with either too old Debian version or too old DietPi version to a different Git branch automatically. This process smoothens the migration of our code base to newer Debian versions. 
+    
+    The alternative branch can be used to inform and support Debian distribution upgrades and to upgrade the DietPi code to an intermediate version from where the system can be migrated back to the regular stable/master branch. 
+
+    Since this change required a new repository version file, we incremented the DietPi core version to v7.0. The change to version 7 is also motivated by the long list of improvments brought in 2020. All of these qualify the system to be upgraded to a new version.
+
+    This change has NO side effects ! We encourage you to do it. All previously supported DietPi and Debian versions remain supported ! This change enables us to NOT require fresh image installs for major upgrades (like we did a few years ago when an upgrade from v159 to v6.0 was required).
+
+This new version includes **4 new software titles** :octicons-paper-airplane-16:
 
 ### New optimised software packages
 
@@ -55,8 +65,6 @@ By default your attached camera capture will be streamed to a custom HTTP port. 
 For more details check the documentation page: [mjpg-streamer](../software/camera/#mjpg-streamer).
 
 ### Changes / Improvements / Optimisations
-
-- **DietPi-Update** :octicons-arrow-right-16: A new update check system has been implemented, which checks for a minimum required Debian and DietPi version and migrates systems with either too old Debian version or too old DietPi version to a different Git branch automatically. This especially smoothens the migration of our code base to newer Debian versions and the alternative branch can be used to inform and support Debian distribution upgrades and to upgrade the DietPi code to an intermediate version from where the system can be migrated back to the regular stable/master branch. Since this change required a new repository version file, we took the chance and incremented the DietPi core version to v7.0. This however has no further meaning, all previously supported DietPi and Debian versions remain supported and the change enables us to not require fresh image installs for major upgrades, like the upgrade from v159 to v6.0 did a few years ago.
 
 - **Network** :octicons-arrow-right-16: A change has been implemented on the order in which network-related systemd service targets are reached. "`network.target`" and "`network-online.target`" are now reach after all network interfaces have been configured, rather then already after only the loopback interface "lo" has been configured. 
 
