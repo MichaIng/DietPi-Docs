@@ -140,7 +140,6 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 ### Known/Outstanding Issues
 
 - DietPi-Config  :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
-- DietPi-Software | [Node-RED](../software/hardware_projects/#node-red)  :octicons-arrow-right-16:  Pre-installed modules cannot be updated via web UI: <https://github.com/MichaIng/DietPi/issues/2073>
 - DietPi-Software | [MATE desktop](../software/desktop/#mate)  :octicons-arrow-right-16:  When logging in as root, desktop items and right-click context menu is missing: <https://github.com/MichaIng/DietPi/issues/3160>
 - DietPi-Software | [Sonarr](../software/bittorrent/#sonarr)/[Radarr](../software/bittorrent/#radarr)/Mono: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: <https://github.com/MichaIng/DietPi/issues/3179>
 
