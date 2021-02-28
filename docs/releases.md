@@ -28,11 +28,11 @@ Find sample applications using Docker Compose and more details in the [documenta
 
 **[Steam](../software/gaming/#steam)**  & **[Box86](../software/gaming/#box86)**
 
-[Steam](../software/gaming/#steam) can now be installed using DietPi (running on ARMv7 boards), with [Box86](../software/gaming/#box86) being installed automatically, as dependency.
+[Steam](../software/gaming/#steam) for ARM processors has been a feature request for many years. Since it became possible to install on ARM boards, it's now available also on DietPi. [Box86](../software/gaming/#box86) is installed automatically, as dependency. 
 
 The Steam platform is one of the largest digital distribution platform for gaming. Still, on ARMv7 boards it has limited features and game support. Here are few sample games running with [Box86](../software/gaming/#box86):
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/z-4aGNqZ724" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/z-4aGNqZ724?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 !!! info ""
 
@@ -323,8 +323,6 @@ As always, many smaller code performance and stability improvements, visual and 
 - DietPi-Config :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
 
 - [DietPi-Software | Node-RED](../software/hardware_projects/#node-red) :octicons-arrow-right-16: Pre-installed modules cannot be updated via web UI: <https://github.com/MichaIng/DietPi/issues/2073>
-
-- DietPi-Software | Raspimjpeg :octicons-arrow-right-16: With Lighttpd, streaming mjpeg does not work: <https://github.com/MichaIng/DietPi/issues/1747>
 
 - [DietPi-Software | MATE desktop](../software/desktop/#mate) :octicons-arrow-right-16: When logging in as root, desktop items and right-click context menu is missing: <https://github.com/MichaIng/DietPi/issues/3160>
 
