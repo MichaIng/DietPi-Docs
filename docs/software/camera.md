@@ -5,18 +5,18 @@
 - [**RPi Cam Control - RPi Camera / Web Interface Surveillance**](#rpi-cam-control)
 - [**MotionEye - Camera / Web Interface Surveillance**](#motioneye)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -31,13 +31,13 @@ The *RPi Cam Control* package can be used in combination with a Raspberry PI cam
 
 It consists of full control of the camera in a web based interface.
 
-![DietPi camera software RPi Cam Control](../assets/images/dietpi-software-camera-rpicamcontrol.png){: width="500px"}
+![RPi Cam Control web interface screenshot](../assets/images/dietpi-software-camera-rpicamcontrol.png){: width="500" height="395" loading="lazy"}
 
 === "Requirements"
 
     The requirements are:
 
-    - Have any PI supported camera attached
+    - Have any RPi-supported camera attached
 
 === "Access the web interface"
 
@@ -62,14 +62,14 @@ The software can
 - observe based on motion detection
 - record a video with time lapse
 
-![DietPi camera software MotionEye](../assets/images/dietpi-software-camera-motioneye.png){: width="500px"}
+![MotionEye web interface screenshot](../assets/images/dietpi-software-camera-motioneye.png){: width="500" height="246" loading="lazy"}
 
 === "Requirements"
 
     The requirements are:
 
-    - Have any PI supported camera attached
-    - Have a Debian supported USB camera attached
+    - Have any RPi-supported camera attached
+    - Have a Debian-supported USB camera attached
     - Have access to an IP camera (access via network)
 
 === "Access the web interface"
