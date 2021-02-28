@@ -16,7 +16,7 @@
 
     ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -37,7 +37,7 @@ It consists of full control of the camera in a web based interface.
 
     The requirements are:
 
-    - Have any PI supported camera attached
+    - Have any RPi-supported camera attached
 
 === "Access the web interface"
 
@@ -68,8 +68,8 @@ The software can
 
     The requirements are:
 
-    - Have any PI supported camera attached
-    - Have a Debian supported USB camera attached
+    - Have any RPi-supported camera attached
+    - Have a Debian-supported USB camera attached
     - Have access to an IP camera (access via network)
 
 === "Access the web interface"
