@@ -231,6 +231,7 @@ MineOS
 MiniDLNA
 MinIO
 MIPI
+mjpg
 MkDocs
 Mopidy
 morse
