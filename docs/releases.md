@@ -71,7 +71,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 
     For this set the new `dietpi.txt` option
 
-    ```
+    ```sh
     AUTO_SETUP_BACKUP_RESTORE=1
     ```
 
@@ -80,7 +80,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
     All attached drives are mounted temporarily and seached automatically.
     Set
 
-    ```
+    ```sh
     AUTO_SETUP_BACKUP_RESTORE=2
     ```
 
@@ -211,7 +211,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 - **Enable automated APT package update checks and even upgrade them on a daily bases**. By setting the new **dietpi.txt** setting
 
-    ```
+    ```sh
     CONFIG_CHECK_APT_UPDATES=1
     ```
 
@@ -222,7 +222,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
     Set
 
-    ```
+    ```sh
     CONFIG_CHECK_APT_UPDATES=2
     ```
 
