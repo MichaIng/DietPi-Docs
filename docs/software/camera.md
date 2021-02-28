@@ -113,7 +113,7 @@ License: [GPLv3](https://github.com/ccrisan/motioneye/blob/dev/LICENSE)
 
 ## mjpg-streamer
 
-Steam JPEG frames from various sources to various possible outputs. With the default setup it streams an attached camera image to a simple HTML page with the included webserver plugin.
+Stream JPEG frames from various sources to various possible outputs. With the default setup it streams an attached camera image to a simple HTML page with the included webserver plugin.
 
 ![mjpg-streamer HTML stream GIF](../assets/images/mjpg-streamer.gif){: width="500" height="400" loading="lazy"}
 
