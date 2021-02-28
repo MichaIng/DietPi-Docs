@@ -88,8 +88,8 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
     ```
 
     to have the first found backup restored non-interactively (this works in combination with `AUTO_SETUP_AUTOMATED = 1`).
-    
-    The restore runs after the initial update, hence works with older images as well and can be done via SSH connection. Credits go to @ravenclaw900 for implementing this feature: <https://github.com/MichaIng/DietPi/pull/4112>,
+
+    The restore runs after the initial update, hence works with older images as well and can be done via SSH connection. Credits go to @ravenclaw900 for implementing this feature: <https://github.com/MichaIng/DietPi/pull/4112>.
 
 - **DietPi-Backup** :octicons-arrow-right-16: Support for XFS and ZFS target file system types has been added, which fully support the required symlink and POSIX permissions capabilities.
 
@@ -104,7 +104,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 
 - **DietPi-Software** | **Python 3 pip**: `pip` and pip-based installs on ARMv6 and ARMv7 boards will have the piwheels.org repository for pre-compiled wheels added automatically, which can reduce build dependencies and compile time dramatically.
 
-- **DietPi-Software** | **[Node-RED](../software/hardware_projects/#node-red)**: New installs and reinstalls with setup [Node-RED](../software/hardware_projects/#node-red) as local module for the "nodered" service user, rather than as global system module/command. This allows upgrading and removing all related Node modules through the web interface, instead of just the ones which were installed via web interface. 
+- **DietPi-Software** | **[Node-RED](../software/hardware_projects/#node-red)**: New installs and reinstalls with setup [Node-RED](../software/hardware_projects/#node-red) as local module for the "nodered" service user, rather than as global system module/command. This allows upgrading and removing all related Node modules through the web interface, instead of just the ones which were installed via web interface.
 
     Additionally a console alias for the "node-red-admin" CLI command has been added so that running this command with any user will call the local Node-RED instance as "nodered" service user.
 
