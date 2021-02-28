@@ -2,10 +2,10 @@
 
 ## Overview
 
-  - [Python](#python)
-  - [Docker -  Create, deploy, and run applications using containers](#docker)
-  - [Docker Compose - Define and run multi-container Docker applications](#docker-compose)
-  - [Portainer - Lightweight management UI, managing your Docker host or Swarm cluster](#portainer)
+  - [**Python - High-level interpreted programming language**](#python)
+  - [**Docker -  Create, deploy, and run applications using containers**](#docker)
+  - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
+  - [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
 
 ## Install
 
@@ -39,10 +39,13 @@ To use the `pip` package manager, a typical usage will be `pip3 install -U <modu
 
 ***
 
-- Python website: <https://www.python.org>
-- Python documentation, from beginner to advanced: <https://www.python.org/doc/>
+Website: <https://www.python.org>
+Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
+Official documentation, from beginner to advanced: <https://www.python.org/doc/>
 
 ## Docker
+
+<!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200px"} -->
 
 In 2013, Docker introduced containers. These are a standardized unit of software that allows developers to isolate their application from the environment. Docker is de facto standard to build and share containerized apps - from single bord computers (SBC), to desktop or cloud.
 
@@ -65,9 +68,10 @@ A Docker container image is a lightweight, standalone, executable package of sof
 
 ***
 
-- Docker website: <https://docs.docker.com/get-started/overview>  
-- Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
-- Logging: <https://docs.docker.com/config/containers/logging/configure>  
+Official documentation: <https://docs.docker.com/get-started/overview>
+Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
+Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>
+Logging: <https://docs.docker.com/config/containers/logging/configure>
 
 For a quick intro, see **DietPi Docker Setup on Raspberry Pi 3 B Plus**:
 
@@ -93,10 +97,11 @@ _Docker (individual container) vs. Docker-Compose (several containers) - source:
 
 ***
 
-- Official documentation: <https://docs.docker.com/compose>  
-- Getting started: <https://docs.docker.com/compose/gettingstarted>
-- Sample apps with Compose: <https://docs.docker.com/compose/samples-for-compose/>
-- Docker Compose release notes: <https://docs.docker.com/compose/release-notes/>
+Official documentation: <https://docs.docker.com/compose>  
+Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
+Getting started: <https://docs.docker.com/compose/gettingstarted>
+Sample apps with Compose: <https://docs.docker.com/compose/samples-for-compose/>
+Release notes: <https://docs.docker.com/compose/release-notes/>
 
 ## Portainer
 
@@ -120,8 +125,9 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 ***
 
-- Official documentation: <https://documentation.portainer.io>  
-- Source code: <https://github.com/portainer/portainer>  
+Official documentation: <https://documentation.portainer.io>  
+Source code: <https://github.com/portainer/portainer> 
+Open-source license: [zlib](https://github.com/portainer/portainer/blob/develop/LICENSE) 
 
 [Return to the **Optimised Software list**](../../software/)
 
