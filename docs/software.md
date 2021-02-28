@@ -41,8 +41,9 @@
 
 ## [Camera & Surveillance](../software/camera/)
 
-- [**RPi Cam Control - RPi Camera / Web Interface Surveillance**](../software/camera/#rpi-cam-control)
-- [**MotionEye - Camera / Web Interface Surveillance**](../software/camera/#motioneye)
+- [**RPi Cam Control - Web interface & controls for your RPi camera**](../software/camera/#rpi-cam-control)
+- [**MotionEye - Web interface & surveillance for your camera**](../software/camera/#motioneye)
+- [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](../software/camera/#mjpg-streamer)
 
 ## [Cloud & Backup systems](../software/cloud/)
 
