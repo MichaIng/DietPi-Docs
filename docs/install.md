@@ -150,7 +150,15 @@ Select the following tabs for the installation description of your target.
     <font size="+2">3. First boot of the new VirtualBox image</font>
 
     Press the start button (green arrow) to 'boot up' your system based on the DietPi image.
-    If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
+
+    <font size="+1">3.1 Configuration hints: IPv6</font>
+
+    In some cases the system does not find the update servers (e.g. at the very first update run). This is signaled during the "apt update" procedure of the first boot startup.  
+    To overcome this, open a subshell (or an additional ssh window), start `dietpi-config` and disable **IPv6** within the Network options.
+
+    ![VirtualBox virtual machine IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
+
+    Then exit `dietpi-config`and reboot. After this the first time installer procedure should run again from the start.
 
 === "Install in VMware Player"
 
@@ -393,6 +401,9 @@ Select the following tabs for the installation description of your target.
 
         For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
 
+        If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).  
+        You need to set these values before you boot up the PC for the first time (initial boot).
+
     === "BIOS installer image"
 
         <font size="+2">Prerequisites</font>
@@ -464,6 +475,9 @@ Select the following tabs for the installation description of your target.
 
         For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
 
+        If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).  
+        You need to set these values before you boot up the PC for the first time (initial boot).
+
     === "BIOS direct write image"
 
         <font size="+2">Prerequisites</font>
@@ -503,6 +517,9 @@ Select the following tabs for the installation description of your target.
         <font size="+2">3. Boot the target PC </font>
 
         For the first boot up of your PC disconnect your disc drive from your working PC and connect it to the target PC. Then power on the target PC to login and execute the first boot procedure.
+
+        If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).  
+        You need to set these values before you boot up the PC for the first time (initial boot).
 
 ## 4. First logon on DietPi
 
