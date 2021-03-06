@@ -14,7 +14,7 @@
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
@@ -86,10 +86,9 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     There are many sites in the web giving blocklists and whitelists for Pi-hole. They can be used when you want to have more blocking as the standard installation gives you. Here are some examples:
 
-    - [The Big Blocklist Collection from `WaLLy3K`](https://firebog.net)
-    - [Blocklists from Pi-Hole forum](https://discourse.pi-hole.net/t/update-the-best-blocking-lists-for-the-pi-hole-alternative-dns-servers-2019/13620)
-    - [Phishing Army blocklist](https://phishing.army)
-    - [`anudeepND` whitelist](https://github.com/anudeepND/whitelist)
+    - [The Big Blocklist Collection by `WaLLy3K`](https://firebog.net/)
+    - [Phishing Army blocklist](https://phishing.army/)
+    - [Whitelist collection by `anudeepND`](https://github.com/anudeepND/whitelist)
 
 === "Accessing via OpenVPN or WireGuard"
 
@@ -141,7 +140,7 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 
     If required, you can activate DoT. Simply copy/execute following section: 
     
-    ```
+    ```sh
     cat << '_EOF_' > /etc/unbound/unbound.conf.d/dietpi-dot.conf
     # Adding DNS-over-TLS support 
     server:
@@ -160,7 +159,7 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 
     Once done, Unbound service would need to be restarted
     
-    ```
+    ```sh
     systemctl restart unbound
     ```
 
