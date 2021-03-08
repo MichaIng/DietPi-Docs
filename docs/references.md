@@ -20,7 +20,8 @@ Links to special software packages are located at the end of the according softw
 
 - [Dietpi Raspberry Pi 4 First Look](https://www.youtube.com/watch?v=LoKBZ-a4JNE)
 - [The BEST Operating System for Raspberry Pi 4](https://www.youtube.com/watch?v=g8oiM_21gX8)
-- German tutorial videos can be found in the YouTube channel [`LOGIN TechBlog`](https://www.youtube.com/channel/UCpq1BGhcC6UZZUH-dst8YMg).
+- [DietPi Install Guide - Create a Raspberry Pi Server in Minutes, Apache, Node-Red. MQTT, OctoPrint](https://www.youtube.com/watch?v=RsyFqvtsBHg)
+- German tutorial videos can be found in the YouTube channel [`LOGIN TechBlog`](https://www.youtube.com/channel/UCpq1BGhcC6UZZUH-dst8YMg)
 
 ## Articles about software packages not part of the DietPi software installation system
 
