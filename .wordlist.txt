@@ -374,6 +374,7 @@ SSID
 SSL
 StephanStS
 subdirectory
+subshell
 sudo
 SVG
 symlink
