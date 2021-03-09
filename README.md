@@ -43,8 +43,7 @@ To see the full list of possibilities, please check our [contribution](https://d
 ## Feedback
 
 - Ask a question on our [forum](https://dietpi.com/phpbb/).
-- [Request a new feature or vote for popular feature requests](https://feathub.com/MichaIng/DietPi)
-- [File an issue](https://github.com/MichaIng/DietPi-Docs/issues)
+- [File a bug report or request](https://github.com/MichaIng/DietPi-Docs/issues)
 - Follow [@DietPi_](https://twitter.com/DietPi_) and let us know what you think!
 
 ### GitHub Projects
