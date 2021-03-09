@@ -82,7 +82,7 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi-Etcher-install-03](assets/images/DietPi-Etcher-install-03.jpg){: width="796" height="478" loading="lazy"}
 
-    ??? info "Click here if you want to pre-configure WiFi network "
+    ??? info "Click here if you want to use a WiFi connection"
         To setup the WiFi, open the SD card folder, and update next two files using a text editor of your choice:
 
         1.  Open the file named `dietpi.txt`. Find `AUTO_SETUP_NET_WIFI_ENABLED` and set to value 1.
@@ -417,10 +417,16 @@ Select the following tabs for the installation description of your target.
         These steps take some time, be patient! Otherwise buy an SSD. :-)  
         At the end the system executes a shutdown.
 
-        For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
+        ??? info "Click here if you want to use a WiFi connection"
+            To setup the WiFi, you have to change the network settings matching to your environment:
 
-        If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).  
-        You need to set these values before you boot up the PC for the first time (initial boot).
+            1.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+            2.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
+            3.  Save and close the files
+
+            You need to set these values before you boot up the PC for the first time (initial boot).
+
+        For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
 
     === "BIOS installer image"
 
@@ -491,10 +497,16 @@ Select the following tabs for the installation description of your target.
         These steps take some time, be patient! Otherwise buy an SSD. :-)  
         At the end the system executes a shutdown.
 
-        For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
+        ??? info "Click here if you want to use a WiFi connection"
+            To setup the WiFi, you have to change the network settings matching to your environment:
 
-        If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).  
-        You need to set these values before you boot up the PC for the first time (initial boot).
+            1.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+            2.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
+            3.  Save and close the files
+
+            You need to set these values before you boot up the PC for the first time (initial boot).
+
+        For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
 
     === "BIOS direct write image"
 
@@ -534,10 +546,16 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">3. Boot the target PC </font>
 
-        For the first boot up of your PC disconnect your disc drive from your working PC and connect it to the target PC. Then power on the target PC to login and execute the first boot procedure.
+        ??? info "Click here if you want to use a WiFi connection"
+            To setup the WiFi, you have to change the network settings matching to your environment:
 
-        If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).  
-        You need to set these values before you boot up the PC for the first time (initial boot).
+            1.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+            2.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
+            3.  Save and close the files
+
+            You need to set these values before you boot up the PC for the first time (initial boot).
+
+        For the first boot up of your PC disconnect your disc drive from your working PC and connect it to the target PC. Then power on the target PC to login and execute the first boot procedure.
 
 ## 4. First logon on DietPi
 
