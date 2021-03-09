@@ -173,7 +173,7 @@ Network file system server.
     After changing the access configuration, the export information can be re-read via command
 
     ```
-    /usr/sbin/exportfs -ra
+    exportfs -ra
     ```
 
     Alternatively you can restart the service (`systemctl restart nfs-kernel-server`).
@@ -181,7 +181,7 @@ Network file system server.
     The actual access configuration can be displayed with the command
 
     ```
-    /usr/sbin/exportfs
+    exportfs
     ```
 
     On the client side you can query the mountable exports with the command
