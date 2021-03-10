@@ -15,7 +15,7 @@
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
@@ -113,25 +113,25 @@ License: [GPLv3](https://github.com/ccrisan/motioneye/blob/dev/LICENSE)
 
 ## mjpg-streamer
 
-Stream JPEG frames from various sources to various possible outputs. With the default setup it streams an attached camera image to a simple HTML page with the included webserver plugin.
+Stream JPEG frames from various sources to various possible outputs. With the default setup it streams an attached camera image to a simple web page with the included HTTP plugin.
 
 ![mjpg-streamer HTML stream GIF](../assets/images/mjpg-streamer.gif){: width="500" height="400" loading="lazy"}
 
-=== "Access the HTML stream"
+=== "Access the HTTP stream"
 
     - Stream: `http://<your.IP>:8082/?action=stream`
     - Snapshot: `http://<your.IP>:8082/?action=snapshot`
-    - Plugin documentation: <https://github.com/jacksonliam/mjpg-streamer/blob/master/mjpg-streamer-experimental/plugins/output_http/README.md>
+    - HTTP plugin docs: <https://github.com/jacksonliam/mjpg-streamer/blob/master/mjpg-streamer-experimental/plugins/output_http/README.md>
 
 === "Setup for OctoPrint"
 
-    When [OctoPrint](../printing/#octprint) is installed, it will be automatically configured to use the mjpg-streamer HTML stream and snapshots, as this is the major use case this software title was requested for. You can review and test the setup from within the OctoPrint web interface settings.
+    When [OctoPrint](../printing/#octprint) is installed, it will be automatically configured to use the mjpg-streamer HTTP stream and snapshots, as this is the major use case this software title was requested for. You can review and test the setup from within the OctoPrint web interface settings.
 
 === "HTML authentication"
 
-    By default, the HTML stream is accessible on port **8082** without any authentication. This is required when you embed it into [OctoPrint](../printing/#octprint), since the browser sends the request and cannot pass credentials currently. If you however use the stream otherwise, especially when you expose it to the world-wide-web, we recommend to setup a password. For this:
+    By default, the HTTP stream is accessible on port **8082** without any authentication. This is required when you embed it into [OctoPrint](../printing/#octprint), since the browser sends the request and cannot pass credentials currently. If you however use the stream otherwise, especially when you expose it to the world-wide-web, we recommend to setup a password. For this:
 
-    1. run `dietpi-services`
+    1. Run `dietpi-services`
     2. Select `mjpg-streamer`
     3. Select `Edit` to open a service override config with the `nano` command line editor.
     4. In the `[Service]` section, uncomment the `ExecStart=` line and add ` -c username:password` to the last single quote `'` block, with username and password of your choice.
@@ -148,7 +148,7 @@ Stream JPEG frames from various sources to various possible outputs. With the de
         #User=mjpg-streamer
         #WorkingDirectory=/opt/mjpg-streamer
         ExecStart=
-        ExecStart=/opt/mjpg-streamer/mjpg_streamer -i '$input' -o 'output_http.so -p 8082 -n -c micha:youNeverGuessThis!'
+        ExecStart=/opt/mjpg-streamer/mjpg_streamer -i 'input_uvc.so -d /dev/video0' -o 'output_http.so -p 8082 -n -c micha:youNeverGuessThis!'
 
         # Hardening
         #ProtectSystem=strict
@@ -169,6 +169,20 @@ Stream JPEG frames from various sources to various possible outputs. With the de
 
     ```sh
     dietpi-software reinstall 137
+    ```
+
+=== "Logging"
+
+    You can view the service logs via
+
+    ```sh
+    journalctl -u mjpg-streamer
+    ```
+
+    and the service status via
+
+    ```sh
+    systemctl status mjpg-streamer
     ```
 
 ***

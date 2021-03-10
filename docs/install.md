@@ -82,7 +82,7 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi-Etcher-install-03](assets/images/DietPi-Etcher-install-03.jpg){: width="796" height="478" loading="lazy"}
 
-    ??? info "Click here if you want to pre-configure WiFi network "
+    ??? info "Click here if you want to use a WiFi connection"
         To setup the WiFi, open the SD card folder, and update next two files using a text editor of your choice:
 
         1.  Open the file named `dietpi.txt`. Find `AUTO_SETUP_NET_WIFI_ENABLED` and set to value 1.
@@ -150,7 +150,15 @@ Select the following tabs for the installation description of your target.
     <font size="+2">3. First boot of the new VirtualBox image</font>
 
     Press the start button (green arrow) to 'boot up' your system based on the DietPi image.
-    If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
+
+    ??? attention "You must disable IPv6 when the host uses WiFi"
+        Sometimes the VM has difficulties to connect to the internet. This is reported in a network bridged mode and when the host connects to the internet via WiFi: In these cases the IPv6 routing between the VM and the internet fails (e.g. see [there](https://communities.vmware.com/t5/VMware-Fusion-Discussions/IPv6-Bridged-Wireless/td-p/2038235)).  
+        A typical result is, that the system does not find the update server (e.g. at the very first update run). This is then signaled during the "apt update" procedure of the first boot startup.  
+        To overcome this, open a subshell (or an additional ssh window), start `dietpi-config` and disable **IPv6** within the Network options.
+
+        ![IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
+
+        Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
 
 === "Install in VMware Player"
 
@@ -204,7 +212,16 @@ Select the following tabs for the installation description of your target.
     <font size="+2">3. First boot of the new VMware image</font>
 
     Press the ***Play virtual machine*** (green arrow) to 'boot up' your system based on the DietPi image. Possibly you have to acknowledge in an appearing dialog "I Copied it" and go on.
-    If you do not have a wired LAN connection you have to change the network settings matching to your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
+    If you want to use a WiFi connection you have to change the network settings matching your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
+
+    ??? attention "You must disable IPv6 when the host uses WiFi"
+        Sometimes the VM has difficulties to connect to the internet. This is reported in a network bridged mode and when the host connects to the internet via WiFi: In these cases the IPv6 routing between the VM and the internet fails (e.g. see [there](https://communities.vmware.com/t5/VMware-Fusion-Discussions/IPv6-Bridged-Wireless/td-p/2038235)).  
+        A typical result is, that the system does not find the update server (e.g. at the very first update run). This is then signaled during the "apt update" procedure of the first boot startup.  
+        To overcome this, open a subshell (or an additional ssh window), start `dietpi-config` and disable **IPv6** within the Network options.
+
+        ![IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
+
+        Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
 
     <font size="+2">Additional information</font>
 
@@ -279,6 +296,15 @@ Select the following tabs for the installation description of your target.
     ![DietPi Hyper-V machine start](assets/images/dietpi-HyperV-start-machine.png){: width="550" height="420" loading="lazy"}
 
     After this, your machine should boot up.
+
+    ??? attention "You must disable IPv6 when the host uses WiFi"
+        Sometimes the VM has difficulties to connect to the internet. This is reported in a network bridged mode and when the host connects to the internet via WiFi: In these cases the IPv6 routing between the VM and the internet fails (e.g. see [there](https://communities.vmware.com/t5/VMware-Fusion-Discussions/IPv6-Bridged-Wireless/td-p/2038235)).  
+        A typical result is, that the system does not find the update server (e.g. at the very first update run). This is then signaled during the "apt update" procedure of the first boot startup.  
+        To overcome this, open a subshell (or an additional ssh window), start `dietpi-config` and disable **IPv6** within the Network options.
+
+        ![IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
+
+        Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
 
     <font size="+2">Additional information / troubleshooting</font>
 
@@ -391,6 +417,15 @@ Select the following tabs for the installation description of your target.
         These steps take some time, be patient! Otherwise buy an SSD. :-)  
         At the end the system executes a shutdown.
 
+        ??? info "Click here if you want to use a WiFi connection"
+            To setup the WiFi, you have to change the network settings matching to your environment:
+
+            1.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+            2.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
+            3.  Save and close the files
+
+            You need to set these values before you boot up the PC for the first time (initial boot).
+
         For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
 
     === "BIOS installer image"
@@ -462,6 +497,15 @@ Select the following tabs for the installation description of your target.
         These steps take some time, be patient! Otherwise buy an SSD. :-)  
         At the end the system executes a shutdown.
 
+        ??? info "Click here if you want to use a WiFi connection"
+            To setup the WiFi, you have to change the network settings matching to your environment:
+
+            1.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+            2.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
+            3.  Save and close the files
+
+            You need to set these values before you boot up the PC for the first time (initial boot).
+
         For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
 
     === "BIOS direct write image"
@@ -501,6 +545,15 @@ Select the following tabs for the installation description of your target.
         ![Rufus BIOS direct write image selections screenshot](assets/images/dietpi-rufus-bios-direct-write-image.png){: width="474" height="607" loading="lazy"}
 
         <font size="+2">3. Boot the target PC </font>
+
+        ??? info "Click here if you want to use a WiFi connection"
+            To setup the WiFi, you have to change the network settings matching to your environment:
+
+            1.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+            2.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
+            3.  Save and close the files
+
+            You need to set these values before you boot up the PC for the first time (initial boot).
 
         For the first boot up of your PC disconnect your disc drive from your working PC and connect it to the target PC. Then power on the target PC to login and execute the first boot procedure.
 

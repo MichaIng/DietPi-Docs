@@ -557,7 +557,7 @@ Automatically download your favorite music.
     - Toggle to `Advanced settings` slider (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-        ![DietPi download software Lidarr permissions](../assets/images/dietpi-software-download-lidarrpermissions.png){: width="400px"}
+        ![Lidarr permissions options](../assets/images/dietpi-software-download-lidarrpermissions.png){: width="400" height="257" loading="lazy"}
 
     - Save changes
 

@@ -163,18 +163,47 @@ Network file system server.
     - Address = IP address of your DietPi system (e.g.: 192.168.0.100)
     - Port = 2049
 
-=== "Increase security"
+=== "Access configuration"
 
-    By default NFS will allow anyone to connect. You can limit who can access the NFS share by setting a IP address range:
+    The NFS access configuration is done via **export files**.  
+    You can edit the `/etc/exports` file as well as adding further export files within the `/etc/exports.d` directory.
 
-    - Edit the following file: `/etc/exports`
+    **Explanations of the export file format** are available in the internet or can be read in the man pages (use `man exports`, therefore the package **man** needs to be installed).
+
+    After changing the access configuration, the export information can be re-read via command
+
+    ```
+    exportfs -ra
+    ```
+
+    Alternatively you can restart the service (`systemctl restart nfs-kernel-server`).
+
+    The actual access configuration can be displayed with the command
+
+    ```
+    exportfs
+    ```
+
+    On the client side you can query the mountable exports with the command
+
+    ```
+    showmount -e <NFS_SERVER>
+    ```
+
+=== "Default configuration / increase security"
+
+    By default the DietPi NFS installation exports the directory `/mnt/dietpi_userdata` for everyone. This is configured in `/etc/exports.d/dietpi.exports`. You can edit this file to restrict the access.
+
+    E.g. you could limit the access to the NFS share by setting a IP address range:
+
+    - Edit the following file: `/etc/exports.d/dietpi.exports`
     - To only allow users access with an IP address range of 192.168.0.1-255
 
         ```
         /mnt/dietpi_userdata 192.168.0.*(rw,async,no_root_squash,fsid=0,crossmnt,no_subtree_check)
         ```
 
-    - Restart services via `systemctl restart nfs-kernel-server`
+    - Activate the new configuration (`systemctl restart nfs-kernel-server` or `exportfs -ra`)
 
 ***
 
