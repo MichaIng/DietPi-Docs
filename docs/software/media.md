@@ -646,7 +646,7 @@ A Python-based monitoring and tracking tool for Plex Media Server.
 
 Turn your device into a lightweight Mumble VoIP server.
 
-![BLE logo](../assets/images/dietpi-software-media-murmur.png){: width="100" height="100" loading="lazy"}
+![Mumble logo](../assets/images/dietpi-software-media-murmur.png){: width="100" height="100" loading="lazy"}
 
 === "Murmur Server connection details"
 
