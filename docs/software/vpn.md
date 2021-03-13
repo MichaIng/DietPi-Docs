@@ -26,7 +26,7 @@
 
 DietPi-NordVPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all NordVPN users to quickly and easily connect to any NordVPN server in TCP or UDP, using only open source software.
 
-!NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="200" height="52" loading="lazy"}
+![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="200" height="52" loading="lazy"}
 
 ![DietPi-NordVPN menu screenshot](../assets/images/dietpi-software-vpn-nordvpn.jpg){: width="400" height="254" loading="lazy"}
 
