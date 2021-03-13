@@ -109,6 +109,10 @@ from any RPi camera, USB camera or an IP camera network stream.
 Github page: <https://github.com/ccrisan/motioneye>  
 Wiki: <https://github.com/ccrisan/motioneye/wiki>  
 Tutorial: [MotionEye on DietPi on Raspberry Pi: keeping an eye on things](https://mansfield-devine.com/speculatrix/2018/12/motioneye-on-dietpi-on-raspberry-pi/)  
+YouTube video tutorial (German language): `DietPi & MotionEye - Vollautomatische Installation inkl. Wlan Konfiguration, Updates und Anwendung`.
+
+<iframe src="https://www.youtube.com/embed/vQxL3TfQK5E" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+
 License: [GPLv3](https://github.com/ccrisan/motioneye/blob/dev/LICENSE)
 
 ## mjpg-streamer
@@ -136,7 +140,7 @@ Stream JPEG frames from various sources to various possible outputs. With the de
     3. Select `Edit` to open a service override config with the `nano` command line editor.
     4. In the `[Service]` section, uncomment the `ExecStart=` line and add ` -c username:password` to the last single quote `'` block, with username and password of your choice.
     5. Above that line you need to add another `ExecStart=` without any content, which is to remove the original start command, so that yours is effectively replacing it. The file may finally look like this:
- 
+
         ```systemd
         [Unit]
         #Description=mjpg-streamer (DietPi)
