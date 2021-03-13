@@ -355,7 +355,7 @@ The main interface to the database for management and data transferred are HTTP 
 The data can be nicely viewed with Grafana.  
 This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).
 
-![InfluxDB logo](../assets/images/dietpi-software-hardwareprojects-influxdb.jpg){: width="200" height="73" loading="lazy"}
+![InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: width="300" height="112" loading="lazy"}
 
 ### Usage
 
