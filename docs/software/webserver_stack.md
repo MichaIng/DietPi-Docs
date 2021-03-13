@@ -31,18 +31,18 @@
 - [**Flask - Micro web framework powered by Python**](#flask)
 - [**PHP** - Scripting language suited to web development](#php)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -118,9 +118,9 @@ DietPi contains the option to choose the web stack of your favourite. Basically 
 
 The latter is used only in the case of the first webserver background installation.
 
-=== "Selection via Software Optimized"
+=== "Selection via Software Optimised"
 
-    ![DietPi webserver selection software optimized](../assets/images/dietpi-software-webstack-selection.png)
+    ![DietPi-Software menu software list](../assets/images/dietpi-software-webstack-selection.png){: width="680" height="162" loading="lazy"}
 
     Using this option you select the complete web stack for installation. Just select the web stack you want to install and do the installation via the *Install* execution within `dietpi-software`.
 
@@ -129,7 +129,7 @@ The latter is used only in the case of the first webserver background installati
 
 === "Selection via Webserver Preference"
 
-    ![DietPi webserver selection webserver preference](../assets/images/dietpi-software-webserver-preference.png){: width="500px"}
+    ![DietPi-Software webserver preference menu](../assets/images/dietpi-software-webserver-preference.png){: width="500" height="309" loading="lazy"}
 
     Using this option you only select the webserver for use in DietPi installations.  
     When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](#mariadb) / [SQLite](#sqlite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
@@ -141,7 +141,7 @@ The latter is used only in the case of the first webserver background installati
 
 YouTube video tutorial: *DietPi Web Server Tutorial | Host a website from Home | Raspberry Pi*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nB-i959ZGzQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/nB-i959ZGzQ?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ***
 
@@ -149,7 +149,7 @@ YouTube video tutorial: *DietPi Web Server Tutorial | Host a website from Home |
 
 LAMP stack is a popular open source web platform commonly used to run dynamic web sites and servers. It is considered by many, as the platform of choice for development and deployment of high performance web applications which require a solid and reliable foundation.
 
-![dietpi-webstack-lamp](../assets/images/dietpi-software-webstack-lamp.jpg)
+![LAMP stack component logos](../assets/images/dietpi-software-webstack-lamp.jpg){: width="702" height="369" loading="lazy"}
 
 === "Quick start"
 
@@ -171,12 +171,11 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#lets-encrypt-ssl-nordvpn-support). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     ??? note "Alternative way: Manually enable HTTP/SSL by installing a self-signed SSL certificate"
 
-        !!! caution ""
-            This method is recommended only in case **Let's encrypt** is not a viable option.
+        !!! caution "Recommended only in case **Let's encrypt** is not a viable option."
 
         **Step 1. Create key**
 
@@ -189,8 +188,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
         ```sh
         chmod 600 /etc/apache2/ssl/*
-        cat << _EOF_ > /etc/apache2/sites-enabled/default-ssl.conf
-
+        cat << '_EOF_' > /etc/apache2/sites-enabled/default-ssl.conf
         <IfModule mod_ssl.c>
             <VirtualHost _default_:443>
                     ServerAdmin webmaster@localhost
@@ -214,10 +212,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
                     </Directory>
                 </VirtualHost>
             </IfModule>
-        '_EOF_'
-
-        a2enmod ssl
-        service apache2 restart
+        _EOF_
+        a2ensite ssl
+        systemctl restart apache2
         ```
 
     Access website:
@@ -246,12 +243,11 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#lets-encrypt-ssl-nordvpn-support). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     ??? note "Alternative way: Manually enable HTTP/SSL by installing a self-signed SSL certificate"
 
-        !!! caution ""
-            This method is recommended only in case **Let's encrypt** is not a viable option.
+        !!! caution "Recommended only in case **Let's encrypt** is not a viable option."
 
         **Step 1. Create key**
 
@@ -264,8 +260,7 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
         ```sh
         chmod 600 /etc/apache2/ssl/*
-        cat << _EOF_ > /etc/apache2/sites-enabled/default-ssl.conf
-
+        cat << '_EOF_' > /etc/apache2/sites-enabled/default-ssl.conf
         <IfModule mod_ssl.c>
             <VirtualHost _default_:443>
                     ServerAdmin webmaster@localhost
@@ -289,10 +284,9 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
                     </Directory>
                 </VirtualHost>
             </IfModule>
-        '_EOF_'
-
-        a2enmod ssl
-        service apache2 restart
+        _EOF_
+        a2ensite ssl
+        systemctl restart apache2
         ```
 
     Access website:
@@ -326,12 +320,11 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#lets-encrypt-ssl-nordvpn-support). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     ??? note "Alternative way: Manually enable HTTP/SSL by installing a self-signed SSL certificate"
 
-        !!! caution ""
-            This method is recommended only in case **Let's encrypt** is not a viable option.
+        !!! caution "Recommended only in case **Let's encrypt** is not a viable option."
 
         **Step 1. Create key**
 
@@ -344,8 +337,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
         ```sh
         chmod 600 /etc/apache2/ssl/*
-        cat << _EOF_ > /etc/apache2/sites-enabled/default-ssl.conf
-
+        cat << '_EOF_' > /etc/apache2/sites-enabled/default-ssl.conf
         <IfModule mod_ssl.c>
             <VirtualHost _default_:443>
                     ServerAdmin webmaster@localhost
@@ -369,10 +361,9 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
                     </Directory>
                 </VirtualHost>
             </IfModule>
-        '_EOF_'
-
-        a2enmod ssl
-        service apache2 restart
+        _EOF_
+        a2ensite ssl
+        systemctl restart apache2
         ```
 
     Access website:
@@ -400,7 +391,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#lets-encrypt-ssl-nordvpn-support). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     Access website:
 
@@ -432,7 +423,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#lets-encrypt-ssl-nordvpn-support). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     Access website:
 
@@ -464,7 +455,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#lets-encrypt-ssl-nordvpn-support). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     Access website:
 
@@ -488,7 +479,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 Apache is open source and it is the most commonly used Web server on Linux systems.
 
-![DietPi Webstack software Apache2 logo](../assets/images/dietpi-software-webstack-apache2.jpg){: width="150px"}
+![Apache2 logo](../assets/images/dietpi-software-webstack-apache2.jpg){: width="200" height="109" loading="lazy"}
 
 Web servers are used to serve Web pages requested by client computers. Clients typically request and view Web pages using Web browser applications such as Firefox, Opera, Chromium, Microsoft Edge, Internet Explorer etc.
 
@@ -502,7 +493,7 @@ Official documentation: <https://httpd.apache.org/docs>
 
 **Nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, Wordpress.com, FastMail.FM.[^1]
 
-![DietPi Webstack software Nginx logo](../assets/images/dietpi-software-webstack-nginx.gif){: style="width:150px"}
+![Nginx logo](../assets/images/dietpi-software-webstack-nginx.gif){: width="200" height="85" loading="lazy"}
 
 The innovation of Nginx compared to earlier servers such as Apache was to use an asynchronous, event-driven architecture. Nginx is blazing fast, being extremely efficient when it comes to hardware utilization, allowing servers to get more speed out of their limited CPU and RAM. As a result, it is one of the fastest web server options for serving static content.
 
@@ -514,7 +505,7 @@ Official documentation: <https://www.nginx.com>
 
 **Lighttpd** is a web server for UNIX/Linux and Windows operating systems. It is an alternative to Apache web server. It is also called Lighty.
 
-![DietPi Webstack software Lighttpd logo](../assets/images/dietpi-software-webstack-lighttpd.svg){: width="100px"}
+![Lighttpd logo](../assets/images/dietpi-software-webstack-lighttpd.svg){: width="200" height="163" loading="lazy"}
 
 Source: Fair use, <https://en.wikipedia.org/w/index.php?curid=10881730>.
 
@@ -546,7 +537,7 @@ Official documentation: <https://www.lighttpd.net>
 
 What is **Apache Tomcat**? Essentially it’s an open-source Java servlet and Java Server Page container that lets developers implement an array of enterprise Java applications. Tomcat also runs a HTTP web server environment in which Java code can run.
 
-![DietPi Webstack software Tomcat logo](../assets/images/dietpi-software-webstack-tomcat.svg){: width="100px"}
+![Tomcat logo](../assets/images/dietpi-software-webstack-tomcat.svg){: width="200" height="133" loading="lazy"}
 
 Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/site/xdocs/images/logos/tomcat.eps), [Apache License 2.0](https://commons.wikimedia.org/w/index.php?curid=11302180).
 
@@ -564,7 +555,7 @@ Official documentation: <https://tomcat.apache.org>
 
 **MariaDB** Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source [^2]. It is part of most cloud offerings and the default in most Linux distributions.
 
-![DietPi Webstack software MariaDB logo](../assets/images/dietpi-software-webstack-mariadb.png){: width="150px"}
+![MariaDB logo](../assets/images/dietpi-software-webstack-mariadb.png){: width="200" height="61" loading="lazy"}
 
 Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/index.php?curid=55946550).
 
@@ -582,7 +573,7 @@ Getting started documentation: <https://mariadb.org/documentation/#getting-start
 
 #### phpMyAdmin
 
-![DietPi Webstack software phpMyAdmin logo](../assets/images/dietpi-software-webstack-phpmyadmin.png){: width="150px"}
+![phpMyAdmin logo](../assets/images/dietpi-software-webstack-phpmyadmin.png){: width="160" height="120" loading="lazy"}
 
 **phpMyAdmin** is a free software tool written in [PHP](#php), intended to handle the administration of MySQL / MariaDB over the Web.
 
@@ -601,7 +592,7 @@ Official documentation:  <https://www.phpmyadmin.net/docs/>
 
 ### SQLite
 
-![DietPi Webstack software SQLite logo](../assets/images/dietpi-software-webstack-sqlite.svg){: width="150px"}
+![SQLite logo](../assets/images/dietpi-software-webstack-sqlite.svg){: width="200" height="95" loading="lazy"}
 
 Source: Part of the SQLite documentation, which has been released by author D. Richard Hipp to the public domain. SVG conversion by Mike Toews. [Public Domain](https://commons.wikimedia.org/w/index.php?curid=11675072)
 
@@ -620,7 +611,7 @@ Official documentation: <https://www.sqlite.org/docs.html>
 
 A non-SQL based data store.
 
-![DietPi Webstack software Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: width="150px"}
+![Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: width="200" height="67" loading="lazy"}
 
 Source: [Carlos Prioglio](https://redis.io/images/redis-logo.svg), [licence](https://commons.wikimedia.org/w/index.php?curid=95020509).
 
@@ -646,7 +637,7 @@ Commands: <https://redis.io/commands>
 
 ### InfluxDB
 
-![DietPi Webstack software InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: width="200px"}
+![InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: width="300" height="112" loading="lazy"}
 
 Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding-docs/img/influxdb/preview.svg), [Public Domain](https://commons.wikimedia.org/w/index.php?curid=55056027).
 
@@ -657,24 +648,28 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
     After the installation, the data transfers are made via the HTTP requests, and are handled directly by the InfluxDB service running on `http://<your.IP>:8086`.
 
     - Create a database using `influxdb` via command line tool.
+
       ```sh
       influx -execute 'create database myfirstdb'
       ```
 
     - Create a database using a HTTP request and `curl` tool:
+
       ```sh
       curl -i -XPOST http://<your.IP>:8086/query --data-urlencode "q=CREATE DATABASE myfirstdb"
       ```
 
     - Post data
+
       ```sh
       curl -i -XPOST 'http://<your.IP>:8086/write?db=myfirstdb' --data-binary 'temperature value=20.12'
       ```
 
     - Retrieve and display data from the database
-    ```sh
-    influx -database myfirstdb -execute 'SELECT * FROM temperature'
-    ```    
+
+      ```sh
+      influx -database myfirstdb -execute 'SELECT * FROM temperature'
+      ```    
 
 === "Users and security"
 
@@ -695,10 +690,13 @@ Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding
         By default the _HTTP_ authentication is disabled. To enable it, follow next two steps:
 
         1. Change next setting in the configuration file `/etc/influxdb/influxdb.conf`:
+
         ```
         auth-enabled = true
         ```
+
         2. Restart service
+
         ```sh
         systemctl restart influxdb
         ```
@@ -712,7 +710,7 @@ Getting started: <https://docs.influxdata.com/influxdb/v2.0/get-started/#set-up-
 
 ### PHP
 
-![DietPi Webstack software PHP logo](../assets/images/dietpi-software-webstack-php.svg){: width="150px"}
+![PHP logo](../assets/images/dietpi-software-webstack-php.svg){: width="200" height="108" loading="lazy"}
 
 Source: [Colin Viebrock](https://www.php.net/download-logos.php), [CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=9632398).
 
@@ -733,7 +731,7 @@ Flask is a lightweight web application framework. It is designed to make getting
 
 === "Quick start"
 
-    In order to use **Flask** it is first required first to install the Python Package Manager - [see Python Pip 3](../programming/#python). Then run the next command.
+    In order to use **Flask** it is first required first to install the Python Package Manager - [see Python pip 3](../programming/#python). Then run the next command.
 
     ```sh
     pip3 install -U Flask
