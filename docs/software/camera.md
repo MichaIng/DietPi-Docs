@@ -111,7 +111,7 @@ Wiki: <https://github.com/ccrisan/motioneye/wiki>
 Tutorial: [MotionEye on DietPi on Raspberry Pi: keeping an eye on things](https://mansfield-devine.com/speculatrix/2018/12/motioneye-on-dietpi-on-raspberry-pi/)  
 YouTube video tutorial (German language): `DietPi & MotionEye - Vollautomatische Installation inkl. Wlan Konfiguration, Updates und Anwendung`.
 
-<iframe src="https://www.youtube.com/embed/vQxL3TfQK5E" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/vQxL3TfQK5E?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 License: [GPLv3](https://github.com/ccrisan/motioneye/blob/dev/LICENSE)
 
