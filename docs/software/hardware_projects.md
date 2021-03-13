@@ -15,18 +15,18 @@
 - [**InfluxDB - Database optimized to save time based data as logs or data from a sensor**](#influxdb)
 - [**Grafana - The open platform for beautiful analytics and monitoring**](#grafana)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 ## Google AIY
 
@@ -38,7 +38,7 @@
     We highly recommend SSH to allow for a quick setup of Google API and device link.  
     We also recommend one of [DietPi File servers](https://dietpi.com/docs/software/file_servers/), for easy transfer of `assistant.json`, generated during Google API setup.
 
-![DietPi hardware projects software Google AIY](../assets/images/dietpi-software-hardwareprojects-googleaiy.jpg){: width="500px"}
+![Google AIY logo](../assets/images/dietpi-software-hardwareprojects-googleaiy.jpg){: width="400" height="239" loading="lazy"}
 
 === "First run setup"
 
@@ -82,7 +82,7 @@
 
 Mycroft AI is a free and open source voice assistant.
 
-![DietPi hardware projects software Mycroft AI](../assets/images/dietpi-software-hardwareprojects-mycroftai.png){: width="200px"}
+![Mycroft AI logo](../assets/images/dietpi-software-hardwareprojects-mycroftai.png){: width="200" height="33" loading="lazy"}
 
 === "Interactive install"
 
@@ -111,14 +111,14 @@ Mycroft AI is a free and open source voice assistant.
 
 PiJuice is an all in one, battery based power supply HAT for the RPi, featuring UPS capabilities and battery run time.
 
-![DietPi hardware projects software PiJuice](../assets/images/dietpi-software-hardwareprojects-pijuice.jpg){: width="300px"}
+![PiJuice logo](../assets/images/dietpi-software-hardwareprojects-pijuice.jpg){: width="400" height="300" loading="lazy"}
 
 === "Basic information"
 
     Our default installation does not include the desktop application. If required, please install a desktop first, then execute the following command to install the GUI afterwards:
 
     ```sh
-    G_AGI pijuice-gui
+    apt install pijuice-gui
     ```
 
     The PiJuice program can then be launched (LXDE) from LXDE start \> Preferences
@@ -148,7 +148,7 @@ PiJuice is an all in one, battery based power supply HAT for the RPi, featuring 
 
 The standard, well known GPIO interface library for the RPi (Python). Bring out the engineer in you!
 
-![DietPi hardware projects software RPI.GPIO](../assets/images/dietpi-software-hardwareprojects-gpio.png){: width="250px"}
+![Raspberry Pi GPIO pictogram](../assets/images/dietpi-software-hardwareprojects-gpio.png){: width="250" height="186" loading="lazy"}
 
 ***
 
@@ -158,7 +158,7 @@ Website: <https://pypi.python.org/pypi/RPi.GPIO>
 
 Alternative GPIO interface library based on C. Bring out the engineer in you!
 
-![DietPi hardware projects software WiringPi](../assets/images/dietpi-software-hardwareprojects-wiringpi.png){: width="250px"}
+![Raspberry Pi GPIO pictogram](../assets/images/dietpi-software-hardwareprojects-wiringpi.png){: width="250" height="186" loading="lazy"}
 
 === "View installed examples/documentation"
 
@@ -182,7 +182,7 @@ Website: <http://wiringpi.com>
 
 WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web interface.
 
-![DietPi hardware projects software WebIOPi](../assets/images/dietpi-software-hardwareprojects-webiopi.png){: width="200px"}
+![Raspberry Pi GPIO scheme](../assets/images/dietpi-software-hardwareprojects-webiopi.png){: width="200" height="212" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -211,7 +211,7 @@ Website: <https://webiopi.trouch.com>
 
 Node-RED is a visual tool for wiring together hardware devices, APIs and online services in new and interesting ways. Node-RED uses a standalone web server that can be accessed remotely.
 
-![DietPi hardware projects software Node-RED](../assets/images/dietpi-software-hardwareprojects-nodered.png){: width="500px"}
+![Node-RED web interface screenshot](../assets/images/dietpi-software-hardwareprojects-nodered.png){: width="400" height="286" loading="lazy"}
 
 === "Access to the programming IDE"
 
@@ -265,7 +265,7 @@ Libraries resp. flows: <https://flows.nodered.org>
 Eclipse Mosquitto™ is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 3.1 and 3.1.1.  
 MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "Internet of Things" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontroller like the Arduino.
 
-![DietPi hardware projects software Mosquitto](../assets/images/dietpi-software-hardwareprojects-mosquitto.png){: width="100px"}
+![Mosquitto logo](../assets/images/dietpi-software-hardwareprojects-mosquitto.png){: width="100" height="76" loading="lazy"}
 
 ***
 
@@ -279,7 +279,7 @@ Also installs:
 
 - Blynk JS Library
 
-![DietPi hardware projects software Blynk Server](../assets/images/dietpi-software-hardwareprojects-blynk.jpg){: width="300px"}
+![Blynk app on a smartphone](../assets/images/dietpi-software-hardwareprojects-blynk.jpg){: width="375" height="400" loading="lazy"}
 
 === "Installation notes"
 
@@ -336,13 +336,13 @@ Install Blynk App (Android): <https://play.google.com/store/apps/details?id=cc.b
 Power control module for Raspberry Pi which allows you to physically power on/off the system, without the need to run `poweroff`.
 See <https://www.audiophonics.fr/fr/kits-et-modules-diy/audiophonics-pi-spc-v2-module-de-controle-alimentation-type-atx-pre-assemble-p-11125.html> for further details.
 
-![DietPi hardware projects software Audiophonics PCB](../assets/images/dietpi-software-hardwareprojects-audiophonis-pcb.jpg){: width="400px"}
+![Audiophonics PCB photo](../assets/images/dietpi-software-hardwareprojects-audiophonis-pcb.jpg){: width="400" height="400" loading="lazy"}
 
 ???+ notes "Ensure correct GPIO pins!"
 
     Please ensure the correct GPIO pins are used, when connecting Pi-SPC to RPi (see image below).  
 
-    ![DietPi hardware projects software Audiophonics GPIO](../assets/images/dietpi-software-hardwareprojects-audiophonics-gpionumbers.png){: width="300px"}
+    ![Raspberry Pi GPIO scheme](../assets/images/dietpi-software-hardwareprojects-audiophonics-gpionumbers.png){: width="400" height="119" loading="lazy"}
 
 To power off the system begin the shutdown process: Hold the power button for < 0.5 seconds. If you don't have a button, you can also close the pins `BP PIN C` and `BP PIN NO`, with your favorite electrically conductive metal (e.g.: tweezers).  
 Remark: Avoid holding the power button for longer than 2 seconds, as this will hard power off the system (same effect as pulling the power cord). Doing so will create file-system corruptions, during shutdown IO operations.
@@ -355,7 +355,7 @@ The main interface to the database for management and data transferred are HTTP 
 The data can be nicely viewed with Grafana.  
 This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).
 
-![DietPi hardware projects software InfluxDB](../assets/images/dietpi-software-hardwareprojects-influxdb.jpg){: width="200px"}
+![InfluxDB logo](../assets/images/dietpi-software-hardwareprojects-influxdb.jpg){: width="200" height="73" loading="lazy"}
 
 ### Usage
 
@@ -432,7 +432,7 @@ The open platform for beautiful analytics and monitoring.
 This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).  
 Remark: Grafana binaries are specific to the CPU architecture, therefore, swapping SD cards between RPi 1 <> 2+, is not recommended.
 
-![DietPi hardware projects software Grafana](../assets/images/dietpi-software-hardwareprojects-grafana.png){: width="600px"}
+![Grafana web interface screenshot](../assets/images/dietpi-software-hardwareprojects-grafana.png){: width="400" height="197" loading="lazy"}
 
 === "Prerequisites"
 
