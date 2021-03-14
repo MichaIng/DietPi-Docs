@@ -7,18 +7,18 @@
 - [**Domoticz - Multi platform Home Automation System**](#domoticz)
 - [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -26,7 +26,7 @@
 
 Home Assistant is an open-source home automation platform running on Python 3. Track and control all devices at home and automate control. Perfect to run on a Raspberry Pi.
 
-![DietPi home automation software Home Assistant](../assets/images/dietpi-software-homeautomation-homeassistant.png){: width="500px"}
+![Home Assistant pictogram](../assets/images/dietpi-software-homeautomation-homeassistant.png){: width="500" height="184" loading="lazy"}
 
 === "Initial install and access"
 
@@ -82,7 +82,7 @@ Official documentation: <https://home-assistant.io/docs>
 
 Turn your Raspberry Pi into a energy usage monitor with web interface.
 
-![DietPi home automation software EmonPi](../assets/images/dietpi-software-homeautomation-emonpi.png){: width="500px"}
+![EmonPi wen interface screenshot](../assets/images/dietpi-software-homeautomation-emonpi.png){: width="400" height="237" loading="lazy"}
 
 ### Installation
 
@@ -119,21 +119,21 @@ The following hardware is required:
 === "Attach EmonPi to RPi"
 
     - Attach GPIO extender/riser to RPi:  
-      ![Image1](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g2.jpg){: width="400px"}  
-      ![Image2](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g3.jpg){: width="400px"}
+      ![Raspberry Pi EmonPi attachment photo 1](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g2.jpg){: width="400" height="322" loading="lazy"}  
+      ![Raspberry Pi EmonPi attachment photo 2](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g3.jpg){: width="400" height="277" loading="lazy"}
     - Attach EmonPi to RPi:  
-      ![Image3](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g5.jpg){: width="400px"}
+      ![Raspberry Pi EmonPi attachment photo 3](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g5.jpg){: width="400" height="478" loading="lazy"}
     - Verify pins are visible:  
-      ![Image4](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g4.jpg){: width="400px"}
+      ![Raspberry Pi EmonPi attachment photo 4](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g4.jpg){: width="400" height="300" loading="lazy"}
 
 === "Connect power sensor"
 
     Connect the sensor to measure the power consumption to the EmonPi:
 
     - Plug the 3.5mm power consumption sensor into the EmonPi:  
-      ![Image5](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g6.jpg){: width="400px"}
+      ![Raspberry Pi EmonPi attachment photo 5](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g6.jpg){: width="400" height="714" loading="lazy"}
     - Clip the power consumption sensor onto a positive (red) cable (cables are live, use caution):  
-      ![Image6](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g7.jpg){: width="400px"}
+      ![Raspberry Pi EmonPi attachment photo 6](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g7.jpg){: width="400" height="234" loading="lazy"}
 
 === "Setup Inputs and feeds for power sensor"
 
@@ -153,10 +153,10 @@ The following hardware is required:
     - Click `Setup` at the top right of screen, then click `Inputs`
     - Select the spanner on the far right of *Power WATT*
     - Check the screen matches the following image  
-      ![Image7](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_addfeed.png){: width="640px"}  
+      ![EmonPi setup screenshot 1](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_addfeed.png){: width="1079" height="89" loading="lazy"}  
       then click `add`
     - To verify the feed is active, click `Setup` at the top right of screen, then click `Inputs`. You should see `log` under *Process list* of *Power WATT*:  
-      ![Image8](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_inputs.png){: width="640px"}  
+      ![EmonPi setup screenshot 2](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_inputs.png){: width="731" height="79" loading="lazy"}  
 
 === "Setup 'My Electric' App"
 
@@ -177,7 +177,7 @@ The following hardware is required:
 
 Domoticz is a Home Automation System that lets you monitor and configure various devices like lights, switches, various sensors/meters like for temperature, rain, wind, UV radiation, electric fields, gas, water and much more. Notifications/Alerts can be sent to any mobile device.
 
-![Domoticz web interface screenshot](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: width="600px"}
+![Domoticz web interface screenshot](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: width="600" height="226" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -193,15 +193,19 @@ Domoticz is a Home Automation System that lets you monitor and configure various
 === "Service handling"
 
     Use the following commands to control the Domoticz system service:
+
     ```sh
     systemctl status domoticz
     ```
+
     ```sh
     systemctl stop domoticz
     ```
+
     ```sh
     systemctl start domoticz
     ```
+
     ```sh
     systemctl restart domoticz
     ```
@@ -227,7 +231,7 @@ Also installs:
 - Webserver (based on your preference)
 - PHP
 
-![DietPi home automation software TasmoAdmin](../assets/images/dietpi-software-homeautomation-tasmoadmin.png){: width="200px"}
+![TasmoAdmin logo](../assets/images/dietpi-software-homeautomation-tasmoadmin.png){: width="302" height="184" loading="lazy"}
 
 === "Access to the web interface"
 
