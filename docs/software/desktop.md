@@ -17,42 +17,42 @@
 - [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss)
 - [**Xfce Power Manager - Power manager with brightness control**](#xfce-power-manager)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
+??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
 ## LXDE
 
-LXDE is highly optimized and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
+LXDE is highly optimised and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
 
-![DietPi LXDE](../assets/images/dietpi-software-LXDE_desktop.jpg)
+![LXDE screenshot](../assets/images/dietpi-software-LXDE_desktop.jpg){: width="795" height="600" loading="lazy"}
 
 === "Quick start"
     After installation, desktop can be run by typing
 
-    ```
+    ```sh
     startx
     ```
 
 === "Enable autostart"
-    To start different programs when the SBC starts, run from the command line:
+    To start different programs when the system boots, run from the command line:
 
-    ```
+    ```sh
     dietpi-autostart
     ```
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 ***
 
@@ -61,21 +61,27 @@ Official documentation: <https://wiki.lxde.org/en/Main_Page>
 
 ## LXQt
 
-Optimized lightweight desktop without the bloatware. Slick and fluid GUI, however, more resource heavy than LXDE.
+Optimised lightweight desktop without the bloatware. Slick and fluid GUI, however, more resource heavy than LXDE.
 
-![DietPi LXQt](../assets/images/dietpi-software-LXQt_desktop.png)
+![LXQt screenshot](../assets/images/dietpi-software-LXQt_desktop.png){: width="1280" height="720" loading="lazy"}
 
 Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
 
 === "Quick start"
     After installation, desktop can be run by typing
 
-    ```
+    ```sh
     startx
     ```
 
 === "Enable autostart"
-    Using `dietpi-autostart` you can have DietPi boot directly to the desktop.
+    To start different programs when the system boots, run from the command line:
+
+    ```sh
+    dietpi-autostart
+    ```
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 ***
 
@@ -85,17 +91,23 @@ Official documentation: <https://wiki.debian.org/LXQt>
 
 Popular Gnome2 based desktop environment.
 
-![DietPi LXDE](../assets/images/dietpi-software-mate-desktop.jpg)
+![MATE screenshot](../assets/images/dietpi-software-mate-desktop.jpg){: width="1280" height="960" loading="lazy"}
 
 === "Quick start"
     After installation, desktop can be run by typing
 
-    ```
+    ```sh
     startx
     ```
 
 === "Enable autostart"
-    Using `dietpi-autostart` you can have DietPi boot directly to the desktop
+    To start different programs when the system boots, run from the command line:
+
+    ```sh
+    dietpi-autostart
+    ```
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 ***
 
@@ -103,17 +115,23 @@ Website: <https://mate-desktop.org>
 
 ## Xfce
 
-![DietPi Xfce](../assets/images/dietpi-software-xfce-desktop.jpg)
+![Xfce screenshot](../assets/images/dietpi-software-xfce-desktop.jpg){: width="800" height="450" loading="lazy"}
 
 === "Quick start"
     After installation, desktop can be run by typing
 
-    ```
+    ```sh
     startx
     ```
 
 === "Enable autostart"
-    Using `dietpi-autostart` you can have DietPi boot directly to the desktop
+    To start different programs when the system boots, run from the command line:
+
+    ```sh
+    dietpi-autostart
+    ```
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 ***
 
@@ -121,17 +139,23 @@ Website: <https://wiki.debian.org/Xfce>
 
 ## GNUstep
 
-![DietPi GNUstep](../assets/images/dietpi-software-gnustep-desktop.jpg)
+![GNUstep screenshot](../assets/images/dietpi-software-gnustep-desktop.jpg){: width="885" height="720" loading="lazy"}
 
 === "Quick start"
     After installation, desktop can be run by typing
 
-    ```
+    ```sh
     startx
     ```
 
 === "Enable autostart"
-    Using `dietpi-autostart` you can have DietPi boot directly to the desktop
+    To start different programs when the system boots, run from the command line:
+
+    ```sh
+    dietpi-autostart
+    ```
+
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 ***
 
@@ -158,13 +182,13 @@ Once Chromium is running, simply go to the following address: <chrome://gpu>
 - Manually: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
 - with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... many-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
 
-![DietPi Chromium](../assets/images/dietpi-software-desktop-tools-chromium.jpg)
+![Chromium screenshot](../assets/images/dietpi-software-desktop-tools-chromium.jpg){: width="1376" height="858" loading="lazy"}
 
 ### GIMP
 
 MS Paint on steroids. If you need to edit pixels with a vast number of tools, GIMP is the only program you'll need.
 
-![DietPi GIMP](../assets/images/dietpi-software-desktop-tools-gimp.jpg)
+![GIMP screenshot](../assets/images/dietpi-software-desktop-tools-gimp.jpg){: width="960" height="587" loading="lazy"}
 
 ***
 
@@ -174,12 +198,12 @@ Website: <https://www.gimp.org>
 
 QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
 
-![DietPi QuiteRSS](../assets/images/dietpi-software-desktop-tools-quiterss.jpg)
+![QuiteRSS screenshot](../assets/images/dietpi-software-desktop-tools-quiterss.jpg){: width="760" height="564" loading="lazy"}
 
 ### Xfce Power Manager
 
 Enables laptop users to set up a power profile for two different modes `on battery power` and `on AC Power` while still allowing desktop users to at least change the DPMS settings and CPU frequency using the settings dialogue.
 
-![Xfce Power Manager screenshot](../assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg)
+![Xfce Power Manager screenshot](../assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg){: width="799" height="569" loading="lazy"}
 
 [Return to the **Optimised Software list**](../../software/)
