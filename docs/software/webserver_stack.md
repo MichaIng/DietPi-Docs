@@ -543,7 +543,9 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
 
 === "Quick access"
 
-    After the installation, check if Tomcat service is running on `http://<your.IP>:8080`.
+    The web interface is accessible via port **8080**:
+
+    - URL = `http://<your.IP>:8080`
 
 ***
 

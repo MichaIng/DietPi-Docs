@@ -30,8 +30,9 @@ The problems which are solved require so many computer calculations that help fr
 
 === "Access the web interface"
 
-    The web interface is accessible via the port 7396 on the machine running the computation, e.g. this could be:  
-    URL = `http://<your.IP>:7396`
+    The web interface is accessible via the port **7396** on the machine running the computation, e.g. this could be:  
+
+    - URL = `http://<your.IP>:7396`
 
 === "Configuration"
 

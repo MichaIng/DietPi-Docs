@@ -55,6 +55,8 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
 === "Access the web interface"
 
+    The web interface is accessible via port **1339**:
+
     - URL = `http://<your.IP>:1339`
     - Username = `admin`
     - Password = `<globalSoftwarePassword>` (default: `dietpi`)
@@ -109,6 +111,8 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 ![MineOS web interface view](../assets/images/dietpi-software-games-mineos.png){: width="400" height="208" loading="lazy"}
 
 === "Access to web interface"
+
+    The web interface is accessible via port **8443**:
 
     - URL = `https://<your.IP>:8443`  
       You can safely ignore the certificate "warning" if one appears.
@@ -383,11 +387,11 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
 === "Default server/query port"
 
-    - The default server/query port is: `25565`
+    - The default server/query port is: **25565**
 
 === "Console access via rcon"
 
-    - Port: `25575`
+    - Port: **25575**
     - Password: `<globalSoftwarePassword>` (default: `dietpi`)
     - Console command: `mcrcon -p <globalSoftwarePassword>`
 

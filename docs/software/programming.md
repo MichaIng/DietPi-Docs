@@ -16,7 +16,7 @@
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"} 
+    ![DietPi-Software menu](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
@@ -113,6 +113,8 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 === "Quick start"
 
+    The web interface is accessible via port **9002**:
+    
     - Portainer starts automatically after installation. To view the web interface, open the web browser using next URL: `http://<your.local.ip>:9002` [^1].
     - If you have basic questions on how to use **Portainer**, please read the beginner guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>.
 

@@ -186,6 +186,8 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **8000**:
+
     - URL = `http://<your.IP>:8000`
     - Username = `webiopi`
     - Password = `raspberry`
@@ -215,8 +217,9 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 
 === "Access to the programming IDE"
 
-    Use the port number **1880**:  
-    `http://<your.IP>:1880`
+    The web interface is accessible via port **1880**:
+
+    - URL = `http://<your.IP>:1880`
 
 === "Access to the dashboard"
 
@@ -289,12 +292,17 @@ Also installs:
     Log files can be found in:  
     `/var/log/blynk`
 
-    We created a `systemd` service for Blynk, DietPi will automatically start this:  
-    `systemctl status blynkserver`
+    We created a `systemd` service for Blynk, DietPi will automatically start this:
+
+    ```sh
+    systemctl status blynkserver
+    ```
 
     DietPi will also install ***Blynk JS Library***, along with this installation. Please skip this section when you reach the Blynk user guide.
 
 === "Access to the web admin interface"
+
+    The web interface uses port **9443**:
 
     - URL = `https://<your.IP>:9443/admin`
     - Default user: `admin@blynk.cc`
@@ -308,8 +316,11 @@ Also installs:
 
     To change settings you need to edit  
     `/mnt/dietpi_userdata/blynk/server.properties`  
-    and restart the Blynk server:  
-    `systemctl restart blynkserver`
+    and restart the Blynk server:
+
+    ```sh
+    systemctl restart blynkserver
+    ```
 
 === "Getting started with Blynk app"
 
@@ -443,6 +454,8 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
     Then follow the database creation guide [here](#influxdb-database-optimized-to-save-time-based-data-as-logs-or-data-from-a-sensor).
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **3001**:
 
     - URL = `http://<your.IP>:3001`
     - Username = `admin`

@@ -315,6 +315,8 @@ Basically, it allows you to create a complete system backup, using a simple web 
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **55414**:
+
     URL = `http://<your.IP>:55414`  
     Remark: Change the IP address for your system.
 
@@ -341,6 +343,8 @@ Your very own GitHub style server, with web interface.
 ![Gogs web interface screenshot](../assets/images/dietpi-software-cloud-gogs.png){: width="400" height="175" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **3000**:
 
     - URL = `http://<your.IP>:3000`
 
@@ -378,6 +382,8 @@ Your very own GitHub style server, with web interface.
 ![Gitea logo](../assets/images/dietpi-software-cloud-gitea.jpg){: width="320" height="200" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **3000**:
 
     - URL = `http://<your.IP>:3000`
 
@@ -448,6 +454,8 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **8384**:
+
     URL = `http://<your.IP>:8384`
 
 === "First run setup"
@@ -487,7 +495,9 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
 === "Quick start"
 
-    Open the web browser using next link: `http://<your.IP>:9000`.
+    The web interface is accessible via port **9000**:
+
+    - `http://<your.IP>:9000`.
 
     - [MinIO Server Quick Start Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
     - [Python Client Quick Start Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
@@ -514,11 +524,19 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
 === "View logs"
 
-    View logs by executing `journalctl -u firefox-sync`.
+    View logs by executing
+
+     ```sh
+     journalctl -u firefox-sync
+     ```
 
 === "Updating"
 
-    Update by executing `dietpi-software reinstall 177`.
+    Update by executing
+
+    ```sh
+    dietpi-software reinstall 177
+    ```
 
 === "Installation directory"
 
@@ -576,7 +594,7 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
             17. Select "Continue".
             18. Select "Finish".  
                 ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png)
-        
+
         === "macOS"
 
             1. In your browser (note that this cannot be done in Safari), next to the address bar, select the warning or lock icon.
@@ -600,6 +618,8 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
                 ![Import certificate on macOS, screenshot 5](../assets/images/import_cert_mac_5.png)
 
 === "Web access"
+
+    The web interface is accessible via port **8001**:
 
     - URL = `https://<your.IP>:8001`
     - On first access, you need to create an account, either via web UI or via client (see "Client access" tab).
