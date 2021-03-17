@@ -206,31 +206,6 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
     </table>
 </div>
 
-## Firefly
-
-**Six-core 64-bit High Performance Open Source Platform**. For more details visit [**Firefly RK3399**](https://en.t-firefly.com/product/rk3399.html) website.
-
-![Firefly RK3399 photo](assets/images/dietpi-firefly-rk3399.png){: width="413" height="331" loading="lazy"}
-
-<div class="md-typeset__table">
-    <table>
-        <thead>
-            <tr>
-                <th align="left"><strong>Product</strong></th>
-                <th align="left"><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td align="left"><a class="table" href=""><strong>Firefly RK3399</strong></a></td>
-                <td align="left">
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_FireflyRK3399-ARMv8-Buster.7z">DietPi image</a></li>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
 ## Allo Sparky SBC
 
 Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit the [**Allo Sparky SBC**](https://www.allo.com/sparky/sparky-sbc.html) website.

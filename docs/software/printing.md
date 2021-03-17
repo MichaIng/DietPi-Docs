@@ -27,7 +27,7 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 
 === "Access the web interface"
 
-    The web interface is accessible via port `5000` on the machine running the OctoPrint server:  
+    The web interface is accessible via port **5000**:
 
     - URL = `http://<your.IP>:5000`  
 

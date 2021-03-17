@@ -75,8 +75,8 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     You can use `pihole -r` to repair or reconfigure your Pi-hole instance.
 
-    !!! warning "No selection of Lighttpd during repair procedure"
-        Do NOT select to install Lighttpd when being asked, as this will mix our own webserver stack setup with a different once provided by the Pi-hole installer, which causes various issues.
+    !!! warning "Do **NOT** select to install Lighttpd"
+        Do **NOT** select to install Lighttpd when being asked, as this will mix our own webserver stack setup with the different one provided by the Pi-hole installer, which causes various issues.
 
 === "Setting the password"
 
@@ -130,11 +130,19 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 
 === "View logs"
 
-    View the log files: `journalctl -u unbound`
+    View the log files:
+
+     ```sh
+     journalctl -u unbound
+     ```
 
 === "Updating unbound"
 
-    Update to latest version: `apt update && apt upgrade`
+    Update to latest version:
+
+    ```sh
+    apt update && apt upgrade
+    ```
 
 === "Activating DNS over TLS (DoT)"
 

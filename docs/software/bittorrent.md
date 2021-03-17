@@ -27,7 +27,7 @@
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"} 
+    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
 
@@ -42,6 +42,8 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 ![Transmission web interface screenshot](../assets/images/dietpi-software-download-transmission.png){: width="500" height="334" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **9091**:
 
     - URL = `http://<your.IP>:9091`
     - Username = `root`
@@ -60,7 +62,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
     DietPi sets up Transmission to use port forwarding on the router.  
     In rare cases this won't work with some routers and you will need to manually setup port forwarding:
 
-    - Use TCP+UDP with the default DietPi transmission port of 51413.
+    - Use TCP+UDP with the default DietPi transmission port of **51413**.
     - Point this port to the IP address of your DietPi system.
 
     Once port forwarding is setup, simply complete the following to update transmission:
@@ -87,6 +89,8 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 ![Deluge web interface screenshot](../assets/images/dietpi-software-download-deluge.png){: width="500" height="338" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8112**:
 
     - URL = `http://<your.IP>:8112`
     - Password = `<your global password>`
@@ -134,6 +138,8 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 ![qBittorrent web interface screenshot](../assets/images/dietpi-software-download-qbittorrent.png){: width="400" height="236" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **1340**:
 
     - URL = `http://<your.IP>:1340`
     - Username = `qbittorrent`
@@ -250,6 +256,8 @@ NZB download manager with web interface.
 
 === "Access to the web interface"
 
+    The web interface uses port **8080**:
+
     - URL= `http://<your.IP>:8080/sabnzbd`
 
 === "Web interface not loading / Unable to access"
@@ -309,6 +317,8 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **8081**:
+
     - URL= `http://<your.IP>:8081`
 
 === "Add a TV show"
@@ -358,6 +368,8 @@ Automatically download your favorite TV shows, as they become available.
 ![Sonarr web interface screenshot](../assets/images/dietpi-software-download-sonarr.png){: width="400" height="200" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8989**:
 
     - URL= `http://<your.IP>:8989`
 
@@ -427,6 +439,8 @@ Automatically download your favorite movies, as they become available.
 ![Radarr web interface screenshot](../assets/images/dietpi-software-download-radarr.png){: width="400" height="207" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **7878**:
 
     - URL= `http://<your.IP>:7878`
 
@@ -502,7 +516,9 @@ Key features:
 
 === "Quick start"
 
-    After installation access the web interface using port **6767** (e.g.: `http://<your.IP>:6767`)
+    The web interface is accessible via port **6767**:
+
+    - URL= `http://<your.IP>:6767`
 
     ![Bazarr subtitle finds list](../assets/images/dietpi-software-download-bazarr.jpg){: width="1105" height="490" loading="lazy"}
 
@@ -537,6 +553,8 @@ Automatically download your favorite music.
 ![Lidarr web interface screenshot](../assets/images/dietpi-software-download-lidarr.jpg){: width="400" height="205" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8686**:
 
     - URL = `http://<your.IP>:8686`
 
@@ -603,6 +621,8 @@ Recommend additional software:
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **5050**:
+
     - URL= `http://<your.IP>:5050`
 
 === "Access Downloads"
@@ -640,6 +660,8 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **9117**:
+
     - URL= `http://<your.IP>:9117`
 
 === "Recommended: Protect your privacy with a VPN"
@@ -655,6 +677,8 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 ![NZBGet web interface screenshot](../assets/images/dietpi-software-download-nzbget.jpg){: width="400" height="270" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **6789**:
 
     - URL= `http://<your.IP>:6789`
     - Username = `admin`
@@ -682,6 +706,8 @@ Do all your HTPC tasks without using 5 different interfaces!
 ![HTPC Manager web interface screenshot](../assets/images/dietpi-software-download-htpc-manager.png){: width="400" height="191" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8085**:
 
     - URL= `http://<your.IP>:8085`
 
