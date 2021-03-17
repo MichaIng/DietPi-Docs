@@ -123,6 +123,8 @@ Stream JPEG frames from various sources to various possible outputs. With the de
 
 === "Access the HTTP stream"
 
+    The web interface uses port **8082**:
+
     - Stream: `http://<your.IP>:8082/?action=stream`
     - Snapshot: `http://<your.IP>:8082/?action=snapshot`
     - HTTP plugin docs: <https://github.com/jacksonliam/mjpg-streamer/blob/master/mjpg-streamer-experimental/plugins/output_http/README.md>

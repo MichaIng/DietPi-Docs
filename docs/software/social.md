@@ -229,6 +229,8 @@ Essentially, it is a "peer-to-peer" Google search engine, not controlled by Goog
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **8090**:
+
     URL = `http://<your.IP>:8090`
 
 === "Admin Interface Login"

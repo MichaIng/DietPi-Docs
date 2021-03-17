@@ -167,7 +167,7 @@ RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
 === "Access to RPi-Monitor"
 
-    The web interface of *RPi-Monitor* can be accessed via:
+    The web interface is accessible via port **8888**:
 
     - URL = `http://<your.IP>:8888`
 
@@ -187,7 +187,7 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
 
 === "Access to Netdata"
 
-    The web interface of *Netdata* can be accessed via:
+    The web interface is accessible via port **19999**:
 
     - URL = `http://<your.IP>:19999`
 
@@ -218,7 +218,7 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
 
 === "Access to Webmin"
 
-    The web interface of *Webmin* can be accessed via:
+    The web interface is accessible via port **10000**:
 
     - URL = `https://<your.IP>:10000`
     - Username = `root`

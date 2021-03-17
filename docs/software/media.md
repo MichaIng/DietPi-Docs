@@ -68,6 +68,8 @@ Also installs:
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **1337**:
+
     URL = `http://<your.IP>:1337`
 
 === "Transfer/add music"
@@ -100,6 +102,8 @@ Also installs:
 ![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.gif){: width="400" height="318" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **1333**:
 
     URL = `http://<your.IP>:1333`
 
@@ -195,6 +199,8 @@ Mopidy is a python based music player web based user interface for MPD.
 
 === "Access to the web interface"
 
+    The web interface uses port **6680**:
+
     - URL = `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
 
 === "Transfer/add music"
@@ -237,6 +243,8 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 === "Access to the web interface"
 
+    The web interface uses port **8080**:
+
     - URL = `http://<your.IP>:8080/airsonic`
     - Username = `admin`
     - Password = `admin`
@@ -263,6 +271,8 @@ Feature rich media streaming server with a web interface. Coded in Java.
 ![Subsonic web interface screenshot](../assets/images/dietpi-software-media-subsonic.png){: width="400" height="178" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **4040**:
 
     - URL = `http://<your.IP>:4040`
     - Username = `admin`
@@ -302,6 +312,8 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 ![Logitech Media Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **9000**:
 
     - URL = `http://<your.IP>:9000`
 
@@ -344,6 +356,8 @@ Squeezelite is the audio player for the Logitech Media Server.
 ![Logitech Media Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **9000**:
 
     - URL = `http://<your.IP>:9000`
 
@@ -436,6 +450,8 @@ Stream your shared media to any DLNA/UPnP capable device.
 ![ReadyMedia logo](../assets/images/dietpi-software-media-readymedia.jpg){: width="351" height="341" loading="lazy"}
 
 === "Access to ReadyMedia status"
+
+    The web interface is accessible via port **8200**:
 
     - URL = `http://<your.IP>:8200`
 
@@ -543,6 +559,8 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **8096**:
+
     URL = `http://<your.IP>:8096`
 
 === "First run setup"
@@ -595,6 +613,8 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 === "Access to the web interface"
 
+    The web interface uses port **32400**:
+
     URL = `http://<your.IP>:32400/web`
 
 === "First run setup"
@@ -636,6 +656,8 @@ A Python-based monitoring and tracking tool for Plex Media Server.
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **8181**:
+
     URL = `http://<your.IP>:8181`
 
 === "Access to the log files"
@@ -650,7 +672,7 @@ Turn your device into a lightweight Mumble VoIP server.
 
 === "Murmur Server connection details"
 
-    Use the following credentials to connect clients to the Murmur server:
+    The server is accessible via port **64738**:
 
     - URL = `http://<your.IP>:64738`
     - Password = No password required
@@ -782,6 +804,8 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
 
 === "Access IceCast web interface"
 
+    The web interface is accessible via port **8000**:
+
     - URL = `http://<your.IP>:8000`
     - Admin user = `admin`
     - Admin password = randomly generated, use code below to view:
@@ -813,6 +837,8 @@ Web interface music streamer.
 ![Koel web interface screenshot](../assets/images/dietpi-software-media-koel.png){: width="400" height="197" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8000**:
 
     - URL = `http://<your.IP>:8000`
     - Email address = The one you entered during installation
@@ -848,6 +874,8 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
 === "Access to the web interface"
 
+    The web interface uses port **2038** resp. **2039**:
+
     - Admin page = `http://<your.IP>:2038/admin`
     - Library view page = `http://<your.IP>:2039`
 
@@ -878,6 +906,8 @@ Free and open source comics/mangas media server with web UI.
 ![Komga web interface screenshot](../assets/images/dietpi-software-media-komga.jpg){: width="500" height="306" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **2037**:
 
     - URL = `http://<your.IP>:2037`
 
@@ -940,6 +970,8 @@ Spotify Connect Web is a console client and player for Spotify Connect including
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **4000**:
+
     - URL = `http://<your.IP>:4000`
 
 === "Generate the Spotify API key"
@@ -999,6 +1031,8 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 ![Jellyfin web interface screenshot](../assets/images/dietpi-software-media-jellyfin.jpg){: width="600" height="341" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8096**:
 
     URL = `http://<your.IP>:8096`
 

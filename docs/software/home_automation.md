@@ -42,6 +42,8 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **8123**:
+
     URL = `http://<your.IP>:8123`
 
 === "Configuration files"
@@ -180,6 +182,8 @@ Domoticz is a Home Automation System that lets you monitor and configure various
 ![Domoticz web interface screenshot](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: width="600" height="226" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8124** resp. **8424**:
 
     - HTTP: `http://<your.IP>:8124`
     - HTTPS: `https://<your.IP>:8424`

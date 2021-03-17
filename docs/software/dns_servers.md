@@ -130,11 +130,19 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 
 === "View logs"
 
-    View the log files: `journalctl -u unbound`
+    View the log files:
+
+     ```sh
+     journalctl -u unbound
+     ```
 
 === "Updating unbound"
 
-    Update to latest version: `apt update && apt upgrade`
+    Update to latest version:
+
+    ```sh
+    apt update && apt upgrade
+    ```
 
 === "Activating DNS over TLS (DoT)"
 
