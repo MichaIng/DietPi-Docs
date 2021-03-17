@@ -672,7 +672,7 @@ Turn your device into a lightweight Mumble VoIP server.
 
 === "Murmur Server connection details"
 
-    The web interface is accessible via port **64738**:
+    The server is accessible via port **64738**:
 
     - URL = `http://<your.IP>:64738`
     - Password = No password required
