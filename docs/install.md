@@ -559,10 +559,13 @@ Select the following tabs for the installation description of your target.
 
 ## 4. First logon on DietPi
 
+The hostname of the system will be: **dietpi**.  
+You might change the name before the first boot within the configuration file `dietpi.txt`.
+
 After the system has booted up, you can continue following the instructions on the screen, or connect via network:
 
 - If you have a keyboard and a monitor connected to your system you login via this console.
-- If you have a headless system (e.g. an SBC without keyboard resp. monitor) you have to use a terminal program (e.g. `putty`) to connect to the system via an ssh connection.
+- If you have a headless system (e.g. an SBC without keyboard resp. monitor) you have to use a terminal program (e.g. `PuTTY`) to connect to the system via an ssh connection.
 
 A login prompt will appear. Use the initial credentials:
 
@@ -589,17 +592,25 @@ A login prompt will appear. Use the initial credentials:
     sudo nmap -sn 192.168.1.0/24 #For scanning IP address
     ```
 
-    Alternatively you may also determine the IP address in the DHCP status page of your DHCP server (often included in a router).
+    Alternatively you may also determine the IP address in the DHCP status page of your DHCP server (often included in a router): Search for the hostname **dietpi** and obtain the IP address.
 
     **Connect to DietPi via SSH**
 
-    - A popular SSH Client for Windows is PUTTY. You can download putty from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host Name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.
+    - A popular SSH Client for Windows is PuTTY. You can download PuTTY from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host Name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.  
+    Depending on your DHCP configuration, also just `dietpi` may be sufficient as the hostname.  
+    Sometimes it needs to be followed by your router's domain (e.g. `dietpi.fritz.box`).  
     ![DietPi-SSH](assets/images/dietpi-ssh.jpg)
 
     - Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address `192.168.1.20` with the one found via scanning the network):  
     ```
     ssh root@192.168.1.20
     ```
+
+        resp.
+
+        ```
+        ssh root@dietpi
+        ```
 
 To further proceed you’ll need to accept the DietPi GPL license. Hit the ++enter++ key on your keyboard to do this.
 
