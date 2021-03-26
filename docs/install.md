@@ -565,52 +565,51 @@ You might change the name before the first boot within the configuration file `d
 After the system has booted up, you can continue following the instructions on the screen, or connect via network:
 
 - If you have a keyboard and a monitor connected to your system you login via this console.
-- If you have a headless system (e.g. an SBC without keyboard resp. monitor) you have to use an SSH client (e.g. `PuTTY`) to connect to the system via an ssh connection.
+- If you have a headless system without keyboard and monitor attached, you can use an **SSH** client like [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to connect from a remote system. The SSH server [Dropbear](../software/ssh/#dropbear) is installed and enabled by default on DietPi.
+- Most SBCs alternatively allow to connect a serial console via **UART**, which is by default enabled on DietPi as well.
 
 A login prompt will appear. Use the initial credentials:
 
 - login: `root`
-- password: `dietpi`
+- password: `dietpi` (resp. the one you set via `dietpi.txt`)
 
-??? hint "Click here if you want to connect via network (running a _headless install_)"
+??? hint "Click here if you want to connect via SSH (running a _headless install_)"
 
-    **WARNING**
-
-    On first login DietPi will immediately upgrade system and packages. If your network connection is not stable it is recommended to perform this step locally instead.
+    !!! warning "On first login DietPi will immediately upgrade system and packages. If your network connection is not stable it is recommended to perform this step locally instead."
 
     **IP Scanning tool**
 
     For the following steps we require an IP Scanning tool to determine the IP address of the Raspberry Pi.
 
     - For Windows, you could try `Advanced IP Scanner`. Download the tool from [here](https://www.advanced-ip-scanner.com).
+    - For Linux, you can use the `nmap` command:
 
-    - For Linux, you can use `nmap` command:
-    ```
-    sudo apt-get install nmap # for installing Nmap
-    ```  
-    ```
-    sudo nmap -sn 192.168.1.0/24 #For scanning IP address
-    ```
+        ```sh
+        sudo apt-get install nmap # for installing Nmap
+        sudo nmap -sn 192.168.1.0/24 # for scanning IP address in the eange 192.168.1.0 - 192.168.1.255
+        ```
 
     Alternatively you may also determine the IP address in the DHCP status page of your DHCP server (often included in a router): Search for the hostname **DietPi** and obtain the IP address.
 
     **Connect to DietPi via SSH**
 
-    - A popular SSH Client for Windows is PuTTY. You can download PuTTY from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host Name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.  
+    A popular SSH Client for Windows is PuTTY. You can download PuTTY from [here](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html). Enter in the `Host Name` field the IP address found during the scanning, select `SSH` and then click on _Open_ button.  
     Depending on your DHCP configuration, also just `dietpi` may be sufficient as the hostname.  
-    Sometimes it needs to be followed by your router's domain (e.g. `dietpi.fritz.box`).  
+    Sometimes it needs to be followed by your router's domain (e.g. `dietpi.fritz.box`).
+
     ![DietPi-SSH](assets/images/dietpi-ssh.jpg)
 
-    - Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address `192.168.1.20` with the one found via scanning the network):  
-    ```
+    Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address `192.168.1.20` with the one found via scanning the network):
+
+    ```sh
     ssh root@192.168.1.20
     ```
 
-        resp.
+    resp.
 
-        ```
-        ssh root@dietpi
-        ```
+    ```sh
+    ssh root@dietpi
+    ```
 
 To further proceed you’ll need to accept the DietPi GPL license. Hit the ++enter++ key on your keyboard to do this.
 
