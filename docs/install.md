@@ -559,13 +559,13 @@ Select the following tabs for the installation description of your target.
 
 ## 4. First logon on DietPi
 
-The hostname of the system will be: **dietpi**.  
+The hostname of the system will be: **DietPi**.  
 You might change the name before the first boot within the configuration file `dietpi.txt`.
 
 After the system has booted up, you can continue following the instructions on the screen, or connect via network:
 
 - If you have a keyboard and a monitor connected to your system you login via this console.
-- If you have a headless system (e.g. an SBC without keyboard resp. monitor) you have to use a terminal program (e.g. `PuTTY`) to connect to the system via an ssh connection.
+- If you have a headless system (e.g. an SBC without keyboard resp. monitor) you have to use an SSH client (e.g. `PuTTY`) to connect to the system via an ssh connection.
 
 A login prompt will appear. Use the initial credentials:
 
@@ -592,7 +592,7 @@ A login prompt will appear. Use the initial credentials:
     sudo nmap -sn 192.168.1.0/24 #For scanning IP address
     ```
 
-    Alternatively you may also determine the IP address in the DHCP status page of your DHCP server (often included in a router): Search for the hostname **dietpi** and obtain the IP address.
+    Alternatively you may also determine the IP address in the DHCP status page of your DHCP server (often included in a router): Search for the hostname **DietPi** and obtain the IP address.
 
     **Connect to DietPi via SSH**
 
