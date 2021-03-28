@@ -184,7 +184,6 @@ Keychain
 KiB
 kickstart
 kickstarts
-Killswitch
 killswitch
 KiTTY
 klick
