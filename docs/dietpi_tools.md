@@ -200,7 +200,7 @@ DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Al
 === "Requires VPN Subscription"
 
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    You can use any VPN provider you want, but DietPi-VPN specifiacally supports ProtonVPN and NordVPN.
+    You can use any VPN provider you want, but DietPi-VPN specifically supports ProtonVPN and NordVPN.
 
 === "Usage"
 
