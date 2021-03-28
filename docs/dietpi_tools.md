@@ -192,11 +192,26 @@ When you execute the certificate installation it also installs it for your selec
     To be accessible from the internet, typically your router needs a port forwarding configuration to route incoming HTTP and HTTPS accesses to your DietPi system.  
     Although you only need a HTTPS protocol forwarding (typically port 433), you also need to forward the HTTP protocol (typically port 80) to your DietPi system, otherwise the certification renewal procedure will fail (due to the fact that the certification renewal procedure takes place several months later you may have forgotten this issue).
 
-### DietPi NordVPN
+### DietPi VPN
 
-Run `dietpi-nordvpn`.
+DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all VPN users to quickly and easily connect to any NordVPN, ProtonVPN, or any other server that uses OpenVPN in TCP or UDP, using only open source software.
 
-![DietPi-NordVPN screenshot](assets/images/dietpi-nordvpn.jpg){: width="642" height="207" loading="lazy"}
+![DietPi-VPN screenshot](assets/images/dietpi-vpn.jpg){: width="642" height="312" loading="lazy"}
+=== "Requires VPN Subscription"
+
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    You can use any VPN provider you want, but DietPi-VPN specifiacally supports ProtonVPN and NordVPN.
+
+=== "Usage"
+
+    Simply run `dietpi-vpn` to use the GUI, allowing you to setup your connection and provider.  
+    DietPi will also automatically start and connect the VPN during system boot if you select autostart.
+
+=== "Killswitch"
+    DietPi-VPN comes with an optional killswitch that will shut off your internet in the case of you losing your connection to the VPN sever.
+    This will still allow access from your LAN and allow you to fix any problems using SSH, if needed.
+
+![OpenVPN logo](assets/images/dietpi-software-vpn-openvpn-logo.png){: width="400" height="116" loading="lazy"}
 
 ## System configuration
 
