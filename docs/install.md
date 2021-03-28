@@ -48,11 +48,13 @@ Select the following tabs for the installation description of your target.
 
     ??? hint "How do I extract DietPi image on Linux"
         On Debian and Ubuntu-based systems, open a terminal and type:
+
         ```
         sudo apt install p7zip
         ```
 
         Once p7zip is installed, type the following at the terminal to extract the file:
+
         ```
         7zr e DietPi-Image.7z
         ```
@@ -63,16 +65,16 @@ Select the following tabs for the installation description of your target.
 
     At first, download and install [balenaEtcher](https://etcher.io/). This application flashes OS images to SD cards & USB drives, safely and easily on Windows, macOS, Linux.  
 
-    !!! note ""
-        You may also use [Rufus](https://rufus.ie/) to flash the SD card. In the same page, click on **Install on native PC (UEFI)** tab to see an example of using Rufus.
+    !!! note "On Windows you may also use [Rufus](https://rufus.ie/) to flash the image."
+        Click on the **Install on native PC** tab above to see an example of using Rufus. In case of SBC images, all options are greyed out, which is correct, so after selecting the image and the target drive, you only need to hit START.
 
-    Start balenaEtcher and make sure you have your SD card inserted into your computer. Locate and select the DietPi image.
+    Start balenaEtcher and make sure you have your drive or SD card inserted into your computer. Locate and select the DietPi image.
 
     ![DietPi-Etcher-install-01](assets/images/DietPi-Etcher-install-01.jpg){: width="795" height="529" loading="lazy"}
 
-    Next, ensure that the SD card selected is the correct one.
+    Next, ensure that the selected device is the correct one.
 
-    !!! warning "All data on the SD card will be erased!"
+    !!! warning "All data on the drive will be erased!"
         The flash procedure will wipe the drive clean, so if you choose the wrong one, you may risk losing data.
 
 
@@ -92,11 +94,11 @@ Select the following tabs for the installation description of your target.
 
     ## 3. Prepare the first boot
 
-    Remove the SD card from the PC and insert it into your SBC device, preparing to boot for the first time.  
+    Remove the drive resp. SD card from the PC and insert it into your SBC device, preparing to boot for the first time.  
     Power on the SBC to login and execute the first boot procedure.  
 
     ???+ hint "Initial boot duration"
-        Due to a resize of the SD card filesystem this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the SD card size, SD card speed and system speed.
+        Due to an automated resize of the root filesystem and basic setup steps, this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the system drive and hardware.
 
 === "Install in VirtualBox"
 
