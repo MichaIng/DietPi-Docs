@@ -3,7 +3,7 @@
 ## Overview
 
 - [**Pi-hole - Network-wide Ad Blocking**](#pi-hole)
-- [**Unbound - A validating, recursive, and caching DNS resolver**](#unbound)
+- [**Unbound - A validating, recursive and caching DNS resolver**](#unbound)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -32,7 +32,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     The web interface of Pi-hole can be accessed via:
 
-    - URL= `http://<your.IP>/admin`
+    - URL = `http://<your.IP>/admin`
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
 === "Configuration"
@@ -100,7 +100,10 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
 ***
 
-Wikipedia: <https://wikipedia.org/wiki/Pi-hole>
+Official website: <https://pi-hole.net/>  
+Official documentation: <https://docs.pi-hole.net/>  
+Wikipedia: <https://wikipedia.org/wiki/Pi-hole>  
+Source code: <https://github.com/pi-hole>
 
 YouTube video tutorial #1: *Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!*.
 
@@ -112,8 +115,7 @@ YouTube video tutorial #4 (German language): [`Raspberry Pi Zero W mit Pi-hole -
 
 ## Unbound
 
-Unbound is a validating, recursive, caching DNS resolver.  
-For more details see [unbound "about" description](https://nlnetlabs.nl/projects/unbound/about/).
+Unbound is a validating, recursive, caching DNS resolver. It can resolve hostnames by quering the root name servers directly, replacing ISP/public DNS resolvers. Eliminating one player involved in handling your DNS requests, increases your internet privacy. Additionally Unbound can be configured to use the encrypted DoT protocol, which requires again a public DNS provider, but masks requests for your LAN operator and ISP instead. For more info, see the "Activating DNS over TLS (DoT)" tab below.
 
 ![Unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: width="150" height="34" loading="lazy"}
 
@@ -121,8 +123,8 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
 
 === "Default DNS ports"
 
-    - Default DNS port: 53
-    - DNS port when Pi-hole is installed: 5335
+    - Default DNS port: **53**
+    - DNS port when Pi-hole is installed: **5335**
 
 === "Configuration directory"
 
@@ -141,12 +143,13 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
     Update to latest version:
 
     ```sh
-    apt update && apt upgrade
+    apt update
+    apt upgrade
     ```
 
 === "Activating DNS over TLS (DoT)"
 
-    If required, you can activate DoT. Simply copy/execute following section:
+    DoT sends DNS requests encrypted, masking them from your LAN operator and ISP. But it requires again a public DNS provider, to query the root name servers, which is otherwise, thanks to Unbound, not required. Root name server requests can only be unencrypted, either sent directly from Unbound (default) or by a public provider (when using DoT). Whether DoT (or any other encrypted DNS wrapper protocol) is preferrable or not, depends on your individual case and needs, i.e. if you trust your LAN operator and ISP more, or a public DNS provider. You can activate DoT by copying and executing the following command block:
 
     ```sh
     cat << '_EOF_' > /etc/unbound/unbound.conf.d/dietpi-dot.conf
@@ -165,19 +168,23 @@ For more details see [unbound "about" description](https://nlnetlabs.nl/projects
     _EOF_
     ```
 
-    Once done, Unbound service would need to be restarted
+    !!! note "The used DNS servers are examples only and can be replaced by your favorite one."
+        A list of public DNS providers, their IP addresses and their in cases included ad blocking / adult content blocking features are available on Wikipedia:
+
+        - <https://wikipedia.org/wiki/Public_recursive_name_server>
+
+    For the change to take effect, the Unbound service needs to be restarted:
 
     ```sh
     systemctl restart unbound
     ```
 
-    The used DNS servers are examples only and can be replaced by your favorite one. A list of public DNS providers, their IP addresses and their in cases included ad blocking / adult content blocking features are available on Wikipedia:
-
-    - https://wikipedia.org/wiki/Public_recursive_name_server
-
 ***
 
-Source code: <https://github.com/NLnetLabs/unbound>.  
-Official documentation: <https://nlnetlabs.nl/documentation/unbound> resp. <https://nlnetlabs.nl/documentation/unbound/unbound>
+Official website: <https://www.nlnetlabs.nl/projects/unbound/about/>  
+Official documentation: <https://nlnetlabs.nl/documentation/unbound/unbound>  
+New WIP documentation: <https://unbound.readthedocs.io/>  
+Wikipedia: <https://wikipedia.org/wiki/Unbound_(DNS_server)>  
+Source code: <https://github.com/NLnetLabs/unbound>
 
 [Return to the **Optimised Software list**](../../software/)
