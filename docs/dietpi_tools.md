@@ -196,7 +196,7 @@ When you execute the certificate installation it also installs it for your selec
 
 DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all VPN users to quickly and easily connect to any NordVPN, ProtonVPN, or any other server that uses OpenVPN in TCP or UDP, using only open source software.
 
-![DietPi-VPN screenshot](assets/images/dietpi-vpn.jpg){: width="642" height="312" loading="lazy"}
+![DietPi-VPN screenshot](assets/images/dietpi-vpn.jpg){: width="642" height="300" loading="lazy"}
 === "Requires VPN Subscription"
 
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
@@ -211,7 +211,7 @@ DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Al
     DietPi-VPN comes with an optional killswitch that will shut off your internet in the case of you losing your connection to the VPN sever.
     This will still allow access from your LAN and allow you to fix any problems using SSH, if needed.
 
-![OpenVPN logo](assets/images/dietpi-software-vpn-openvpn-logo.png){: width="400" height="116" loading="lazy"}
+![OpenVPN logo](assets/images/dietpi-software-vpn-openvpn-logo.png){: width="200" height="58" loading="lazy"}
 
 ## System configuration
 
