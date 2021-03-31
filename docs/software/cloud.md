@@ -442,6 +442,14 @@ Your very own GitHub style server, with web interface.
         - [Fail2Ban](../system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
         - <https://docs.gitea.io/en-us/fail2ban-setup>
 
+=== "Updating"
+
+    You can easily update Gitea by reinstalling it. Your settings and data are preserved by this:
+
+    ```sh
+    dietpi-software reinstall 165
+    ```
+
 ***
 
 Website: <https://gitea.io>
@@ -532,7 +540,7 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
 === "Updating"
 
-    Update by executing
+    You can easily update the Firefox Sync Server by reinstalling it. Your settings and data are preserved by this:
 
     ```sh
     dietpi-software reinstall 177
