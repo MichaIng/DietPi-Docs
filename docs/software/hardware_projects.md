@@ -86,7 +86,7 @@ Mycroft AI is a free and open source voice assistant.
 
 === "Interactive install"
 
-    1. Branch selection: For unexperienced users we recommend the master branch as well: ++y++
+    1. Branch selection: For inexperienced users we recommend the master branch as well: ++y++
     2. Auto updates: It slows down the the startup process a bit, but it anyway takes a while to load all skills, so we recommend this as well: ++y++
     3. Add Mycroft commands to PATH: Chose *NO* here, since the installer runs as user `mycroft`, which is no login user, which is why this has no effect: ++n++
     4. Check code before submitting: If you are an official Mycroft developer, choose ++y++, else: ++n++

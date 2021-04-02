@@ -153,6 +153,7 @@ HiFi
 HiFiBerry
 Hipp
 hostname
+hostnames
 hotfix
 hotspot
 HotSpot
@@ -328,6 +329,8 @@ Remot
 renderer
 reselect
 resolvconf
+resolver
+resolvers
 RK
 Rockchip
 ROCKPro
@@ -407,8 +410,8 @@ UI
 Unarchiver
 uncheck
 uncomment
-unexperienced
-Unmount
+unencrypted
+unmount
 upgradable
 UPnP
 upvote
@@ -442,6 +445,7 @@ Widevine
 wikimedia
 Winamp
 WinSCP
+WIP
 WireGuard
 WiringPi
 Wordpress
