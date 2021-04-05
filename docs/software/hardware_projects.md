@@ -317,7 +317,7 @@ MQTT provides a lightweight method of carrying out messaging using a publish/sub
     journalctl -u mosquitto
     ```
 
-=== "Update to lastest version"
+=== "Update to latest version"
 
     Mosquitto is installed via its official APT repository, hence the following commands can be used to update it to the latest version:
 
