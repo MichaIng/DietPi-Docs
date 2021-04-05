@@ -233,7 +233,7 @@ Run `dietpi-config`.
     The advanced options are used to
 
     - Configure swap file size
-    - Configure time synchronization and realtime clock source
+    - Configure time synchronization and real time clock source
     - Update device firmware
     - Toggle serial console
     - Toggle Bluetooth

@@ -131,7 +131,7 @@ Select the following tabs for the installation description of your target.
         The needed additional installation steps (use of the extension pack) are described here (installation steps on the host system) and below (installation steps within the DietPi guest system).  
         The installation on the host system contains the base VirtualBox installation, the installation of the kernel headers and the installation of the extension pack. The VirtualBox host installation is described in the case of a Linux based host system.
 
-        1. Installation of Virtualbox on a Linux host system  
+        1. Installation of VirtualBox on a Linux host system  
            Following is the description of a manual installation (you need to change this depending on the actual VirtualBox release):
 
              ```sh
@@ -149,7 +149,7 @@ Select the following tabs for the installation description of your target.
               apt install linux-headers-amd64
               ```
 
-        2. Installation of the Virtualbox extension pack on a Linux host system  
+        2. Installation of the VirtualBox extension pack on a Linux host system  
            Following is the description of a manual installation (you need to change this depending on the actual VirtualBox release):
 
              ```sh
