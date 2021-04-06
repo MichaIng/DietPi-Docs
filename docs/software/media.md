@@ -779,27 +779,36 @@ Website: <https://www.signalyst.eu/consumer.html>
 
 ## IceCast
 
-Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
+Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
 ![IceCast web interface screenshot](../assets/images/dietpi-software-media-icecast.png){: width="400" height="218" loading="lazy"}
 
 === "Installation notes"
 
-    DietPi will attempt to detect mic input during installation, and apply to DarkIce. If a microphone was not available, or you experience issue, check available microphones with: `arecord -l`
+    DietPi will attempt to detect mic input during installation, and apply to DarkIce. If a microphone was not available, or you experience issues, check available microphones with:
+
+    ```sh
+    arecord -l
+    ```
 
     - Then edit the device entry in `/etc/darkice.cfg`, or  
-    - Simple copy and paste:
+    - Simply copy and paste:
 
         ```sh
         sed -i "/^device[[:blank:]]/c\device = hw:$(arecord -l | mawk -F'[ :]' '/card/{print $2;exit}'),0" /etc/darkice.cfg
         ```
 
-    - Restart services: `dietpi-services restart`
+    - Restart the DarkIce service:
 
-    We created a `systemd` service for DarkIce, DietPi will automatically start it. You can check its status by running the following command:
+        ```sh
+        systemctl restart darkice
+        ```
+
+    We create `systemd` services for both, IceCast and DarkIce, automatically started by DietPi. You can check their status by running the following command:
 
     ```sh
-    systemctl -l status darkice
+    systemctl status icecast2
+    systemctl status darkice
     ```
 
 === "Access IceCast web interface"
@@ -817,7 +826,7 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
     - Source password = `dietpi`
     - Relay password = `dietpi`
 
-=== "Access Recording File"
+=== "Access recording file"
 
     This is disabled by default.
 
@@ -827,8 +836,33 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
         localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg
         ```
 
-    - Restart services: `dietpi-services restart`
+    - Restart the DarkIce service:
+
+        ```sh
+        systemctl restart darkice
+        ```
+
     - A recording will then be saved in the following location: `/mnt/dietpi_userdata/darkice_recording.ogg`
+
+=== "View logs"
+
+    Run the following commands on a console to view logs for IceCast and DarkIce:
+
+    ```sh
+    journalctl -u icecast2
+    journalctl -u darkice
+    ```
+
+    IceCast additionally creates access and error log files at: `/var/log/icecast2/`
+
+=== "Update to latest version"
+
+    IceCast and DarkIce are installed from the Debian APT repository and hence can be updated by running the following commands:
+
+    ```sh
+    apt update
+    apt install icecast2 darkice
+    ```
 
 ## Koel
 
