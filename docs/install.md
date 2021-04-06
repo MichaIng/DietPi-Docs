@@ -122,6 +122,37 @@ Select the following tabs for the installation description of your target.
 
     is needed. A recommended size is at least a free space of 10 GiB.
 
+    ??? important "Installation of VirtualBox with VirtualBox extension pack ("Guest additions")"
+        If you plan to install the VirtualBox extension pack, some things have to be taken into account to achieve a working time synchronization. In general:
+
+        - The VirtualBox expansion pack contains an own time sync functionality, which can keep the VM system time in sync with the host system time.
+          The time sync mode in `dietpi-config` should hence be switched to **Custom** to avoid conflicts or timeouts during the boot process.
+        - VirtualBox without the extension pack requires a network time sync solution, e.g. one of the `dietpi-config` configurable time sync modes (which are based on `systemd-timesyncd`).
+
+        The needed additional installation steps (use of the extension pack) are described here (installation steps on the host system) and below (installation steps within the DietPi guest system).  
+        The installation on the host system contains the base VirtualBox installation and the installation of the extension pack. The VirtualBox host installation is described in the case of a Linux based host system (the description assumes a root user, otherwise add `sudo` appropriate).
+
+        1. Installation of VirtualBox on a Linux host system  
+           Following is the description of a manual installation (you need to change this depending on the actual VirtualBox release):
+
+             ```sh
+             mkdir ~/Downloads
+             cd ~/Downloads
+             wget https://download.virtualbox.org/virtualbox/6.1.18/virtualbox-6.1_6.1.18-142142~Debian~buster_amd64.deb
+             apt install ./virtualbox-6.1_6.1.18-142142~Debian~buster_amd64.deb
+             ```
+
+        2. Installation of the VirtualBox extension pack on a Linux host system  
+           Following is the description of a manual installation (you need to change this depending on the actual VirtualBox release):
+
+             ```sh
+             cd ~/Downloads
+             wget https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
+             VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
+             ```
+
+        After these two steps the host installation of the VirtualBox extension pack is completed. Further installation steps on the guest system are described below.
+
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
     Download the **DietPi VirtualBox file** "DietPi_VirtualBox-x86_64-Buster.7z" from [`dietpi.com`](https://dietpi.com/#download) and   
@@ -161,6 +192,58 @@ Select the following tabs for the installation description of your target.
         ![IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
 
         Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
+
+    ??? important "Installation steps within the DietPi guest system when using the VirtualBox extension pack"
+        If you use the VirtualBox extension pack, after the DietPi base installation (done during the very first boot of the DietPi system), further installation steps within the DietPi guest system have to be done to achieve a working time synchronization. In general you have to use the following **Time sync mode** options set via the `dietpi-config` command (in the **Advanced Options**):
+
+        - VirtualBox without extension pack: The time synchronisation has to use options 1..4 ("Boot only", "Boot + Daily", "Boot + Hourly", "Daemon + Drift"). No further installation steps are necessary.
+        - VirtualBox with extension pack: The time synchronisation must use option 0 ("Custom"). Further installation steps are necessary, see below.
+
+            ![DietPi-config time synchronization](assets/images/dietpi-config-timesync.png){: width="600" height="328" loading="lazy"}
+
+        Additional installation steps in case of the use of the extension pack (the description assumes a root user, otherwise add `sudo` appropriate):
+
+        1. Check whether an optical disc with the VirtualBox extensions (`.iso`) is present:
+
+            ```sh
+            lsblk
+            ```
+
+            If you do not see a `/dev/sr0` optical drive, you need to add this in the virtual machine settings (in the shutdown state of the VM) `\Machine->Settings->Storage`: Add an optical storage which is linked to the guest additions (`.iso`).
+
+        2. Install the kernel headers and the extension pack:
+
+            ```sh
+            apt -y install build-essential dkms linux-headers-amd64
+            mkdir /root/mnt
+            mount /dev/sr0 /root/mnt
+            cd /root/mnt
+            ./VBoxLinuxAdditions.run
+            ```
+
+            If you see an error message ***"VirtualBox Guest Additions: Kernel headers not found for target kernel"*** then the kernel headers are not installed properly (execute `apt -y install linux-headers-amd64` and afterwards try `./VBoxLinuxAdditions.run` again).
+
+        3. Reboot and check service  
+           Check a running VirtualBox extension pack service with
+
+             ```sh
+             systemctl status vboxadd-service
+             ```
+
+             The `vboxadd-service` should be in state *active*.
+
+        4. Settings in the host system  
+            To assure that the guest VM syncs the time with the host at boot and when restoring from saved state, run the following three commands on the **host system** (not the DietPi guest system):
+
+            ```sh
+            VBoxManage guestproperty set "<vm_name>" --timesync-set-start
+            VBoxManage guestproperty set "<vm_name>" --timesync-set-on-restore 1
+            VBoxManage guestproperty set "<vm_name>" "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold" 10000
+            ```
+
+            Replace `<vm_name>` with the name of your virtual machine (i.e. the name shown in the VM VirtualBox Manager UI, e.g. `DietPi_VirtualBox-x86_64-Buster` if you import the VM without changing its name).
+
+        With all these setup steps the time synchronization with the usage of the extension pack should work. Sometimes it needs a couple of minutes until the time is synchronized, so be somehow patient.
 
 === "Install in VMware Player"
 
