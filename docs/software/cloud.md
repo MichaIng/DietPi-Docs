@@ -70,19 +70,19 @@ Also Installs:
 
 === "FAQ"
 
-    #### Where is my data stored?
+    **Where is my data stored?**
 
     `/mnt/dietpi_userdata/owncloud_data` (or `dietpi.txt` choice)
 
-    #### Why am I limited to 2 GiB file size uploads?
+    **Why am I limited to 2 GiB file size uploads?**
 
     DietPi will automatically apply the max supported upload size to the PHP and ownCloud configs.
 
-    - 32bit systems can handle 2 GB
-    - 64bit systems can handle 8796 PB, yep, in petabyte
+    - 32-bit systems can handle 2 GB
+    - 64-bit systems can handle 8796 PB, yep, in petabyte
     - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024))MB"`
 
-    #### Will my data be saved after deinstallation?
+    **Will my data be saved after deinstallation?**
 
     Your userdata directory will stay after deinstallation.  
     As well a database backup will be saved to your userdata directory. Thus you can easily restore your instance by reinstalling ownCloud and restore the database dump.
@@ -122,7 +122,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     ncc list
     ```
 
-=== "Nextcloud 'Brute force protection'"
+=== "Brute-force protection"
 
     Nextcloud offers built-in brute force protection and additionally a plugin ***Brute-force settings***.  
     This will delay your login rate in case of several failed login attempts.
@@ -211,18 +211,18 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "FAQ"
 
-    #### Where is my data stored?
+    **Where is my data stored?**
 
     `/mnt/dietpi_userdata/nextcloud_data` (or `dietpi.txt` choice)
 
-    #### Why am I limited to 2GB file size uploads?
+    **Why am I limited to 2GB file size uploads?**
 
     DietPi will automatically apply the max supported upload size to the PHP and Nextcloud configs.
 
     - 32bit systems can handle 2 GB
     - 64bit systems can handle 8796 PB (petabytes)
 
-    #### Will my data be saved after deinstallation?
+    **Will my data be saved after deinstallation?**
 
     Your user data directory will stay after deinstallation. As well a database backup will be saved to your user data directory. Thus you can easily restore your instance by reinstalling Nextcloud and restore the database dump.
 
@@ -411,7 +411,7 @@ Your very own GitHub style server, with web interface.
 
 === "Fail2Ban integration"
 
-    Using Fail2Ban your can block users after failed login attempts. This hardens your system, e.g. against brute force attacks.
+    Using Fail2Ban your can block users after failed login attempts. This hardens your system, e.g. against brute-force attacks.
 
     - Create new filter `/etc/fail2ban/filter.d/gitea.conf`:
 
@@ -441,6 +441,14 @@ Your very own GitHub style server, with web interface.
     - See also:
         - [Fail2Ban](../system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
         - <https://docs.gitea.io/en-us/fail2ban-setup>
+
+=== "Update to latest version"
+
+    You can easily update Gitea by reinstalling it. Your settings and data are preserved by this:
+
+    ```sh
+    dietpi-software reinstall 165
+    ```
 
 ***
 
@@ -497,8 +505,7 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
     The web interface is accessible via port **9000**:
 
-    - `http://<your.IP>:9000`.
-
+    - URL = `http://<your.IP>:9000`
     - [MinIO Server Quick Start Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
     - [Python Client Quick Start Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
     - [JavaScript Client Quick Start Guide - MinIO](https://docs.min.io/docs/javascript-client-quickstart-guide.html)
@@ -519,32 +526,30 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
     - Open `about:config` to access advanced settings.
     - Search for: `identity.sync.tokenserver.uri`.
     - Set value to: `http://<your.IP>:5000/token/1.0/sync/1.5`.
-        - We recommend to access your Firefox Sync Server only from local network or via VPN.
+        - We recommend to access your Firefox Sync Server only from local network or via VPN, keeping the default listening port **5000** closed for access from outside of your LAN.
         - If you need to access it remotely without VPN, adjust the `public_url` setting inside the config file `/mnt/dietpi_userdata/firefox-sync/syncserver.ini` to contain your public IP or domain and desired port.
+
+=== "Directories"
+
+    - Install directory: `/opt/firefox-sync`
+    - Data directory: `/mnt/dietpi_userdata/firefox-sync`
+    - Config file: `/mnt/dietpi_userdata/firefox-sync/syncserver.ini`
 
 === "View logs"
 
-    View logs by executing
+    View the logs by executing:
 
      ```sh
      journalctl -u firefox-sync
      ```
 
-=== "Updating"
+=== "Update to latest version"
 
-    Update by executing
+    You can easily update the Firefox Sync Server by reinstalling it. Your settings and data are preserved by this:
 
     ```sh
     dietpi-software reinstall 177
     ```
-
-=== "Installation directory"
-
-    `/opt/firefox-sync`
-
-=== "Database and config directory"
-
-    `/mnt/dietpi_userdata/firefox-sync`
 
 ***
 
@@ -688,7 +693,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     - Config file: `/home/bd/bdd.conf`
     - Data directory: `/mnt/dietpi_userdata/fuguhub-data`
 
-=== "Logging"
+=== "View logs"
     - Service: `journalctl -u bdd`
     - Trace: `/home/bd/trace/`  
       It contains an info about the database creation only, even after playing around with the web UI a bit.
