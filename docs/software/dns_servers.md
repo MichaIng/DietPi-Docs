@@ -39,7 +39,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     The configuration contains setting devices (e.g. router) to use Pi-hole for DNS resolution.
 
-    #### Option 1 - Setup single devices to use the Pi-hole DNS server
+    <font size="+2">Option 1 - Setup single devices to use the Pi-hole DNS server</font>
 
     Simply change your DNS settings to use the IP address of your Pi-hole device. This will need to be done for each device that you want Pi-hole to work with.
 
@@ -49,7 +49,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     - On my PC, I would set the DNS address to 192.168.0.100
     - Tutorial [The Ultimate Guide to Changing Your DNS settings](https://www.howtogeek.com/167533/the-ultimate-guide-to-changing-your-dns-server/).
 
-    #### Option 2 - Setup your router to use the Pi-hole DNS server
+    <font size="+2">Option 2 - Setup your router to use the Pi-hole DNS server</font>
 
     This method will automatically point every device (that uses DHCP) on your network to Pi-hole.
     On your routers control panel web page, you will need to find a option called "DNS server". This should be located under DHCP settings.
@@ -104,6 +104,8 @@ Official website: <https://pi-hole.net/>
 Official documentation: <https://docs.pi-hole.net/>  
 Wikipedia: <https://wikipedia.org/wiki/Pi-hole>  
 Source code: <https://github.com/pi-hole>
+
+DietPi Blog: [`Pi-Hole & Unbound: How to have ad-free & safer internet in just few minutes`](https://dietpi.com/blog/?p=564)
 
 YouTube video tutorial #1: *Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!*.
 
@@ -186,5 +188,7 @@ Official documentation: <https://nlnetlabs.nl/documentation/unbound/unbound>
 New WIP documentation: <https://unbound.readthedocs.io/>  
 Wikipedia: <https://wikipedia.org/wiki/Unbound_(DNS_server)>  
 Source code: <https://github.com/NLnetLabs/unbound>
+
+DietPi Blog: [`Pi-Hole & Unbound: How to have ad-free & safer internet in just few minutes`](https://dietpi.com/blog/?p=564)
 
 [Return to the **Optimised Software list**](../../software/)
