@@ -205,6 +205,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
         sudo -u www-data php /var/www/nextcloud/updater/updater.phar
         y # Starts download and install of files
         y # Starts the internal database upgrade and migration steps
+        N # Do not keep maintenance mode active
         ```
 
     3. Follow the official documentation for a manual upgrade process: <https://docs.nextcloud.com/server/latest/admin_manual/maintenance/manual_upgrade.html>
