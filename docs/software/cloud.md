@@ -672,7 +672,8 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
 === "Quick access"
 
-    Open the browser `http://<your.IP>`. On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
+    Open the browser `http://<your.IP>`.  
+    On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
 
     !!! warning "FuguHub runs by default on port 80 and optional 443, making it incompatible with a regular webserver using the default setup."
 
@@ -694,6 +695,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     - Data directory: `/mnt/dietpi_userdata/fuguhub-data`
 
 === "View logs"
+
     - Service: `journalctl -u bdd`
     - Trace: `/home/bd/trace/`  
       It contains an info about the database creation only, even after playing around with the web UI a bit.

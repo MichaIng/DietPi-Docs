@@ -214,12 +214,19 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 
     Remark: If the client config sets the DNS server via `DNS = ...` directive, assure that resolvconf is installed: `apt install resolvconf`.
 
-=== "Logging"
+=== "View logs"
 
-    Logging can be viewed with:  
-    `journalctl -u wg-quick@wg0`  
-    respectively  
-    `journalctl -u wg-quick@<config_name>`.
+    Logging can be viewed with:
+
+    ```
+    journalctl -u wg-quick@wg0
+    ```
+
+    respectively
+
+    ```
+    journalctl -u wg-quick@<config_name>
+    ```
 
 ???+ info "Kernel update"
 

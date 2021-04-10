@@ -583,7 +583,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
     - Audio: `/mnt/dietpi_userdata/Music`
     - Videos: `/mnt/dietpi_userdata/Video`
 
-=== "Logging"
+=== "View logs"
 
     To view Emby server logs, run the following command from console:
 
@@ -1023,7 +1023,7 @@ Spotify Connect Web is a console client and player for Spotify Connect including
     - Folder = `/mnt/dietpi_userdata/spotify-connect-web`
     - Accessed from file server = `/spotify-connect-web`
 
-=== "View service logs"
+=== "View logs"
 
     View the service logs via:
 
@@ -1070,7 +1070,7 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
     URL = `http://<your.IP>:8096`
 
-=== "View service logs"
+=== "View logs"
 
     - Service:
 
