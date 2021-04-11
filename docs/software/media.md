@@ -880,7 +880,12 @@ Web interface music streamer.
 
 === "First run setup"
 
-    We strongly recommend to change the admin users email address and password.
+    We strongly recommend to change the admin users email address and password:
+
+    1. Login to the web interface
+    2. Select "Users" at the bottom of the left-sided navigation panel
+    3. However over the user tile and select "Update Profile"
+    4. Change name and credentials and select "Save"
 
 === "Transfer media files to your device"
 
