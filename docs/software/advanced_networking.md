@@ -4,7 +4,6 @@
 
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi HotSpot traffic through the Tor network**](#tor-hotspot)
-- [**Tor Relay - Add a node to the Tor network**](#tor-relay)
 - [**HAProxy - High performance TCP/HTTP load balancer**](#haproxy)
 - [**No-IP - Dynamic DNS update client**](#no-ip)
 
@@ -90,44 +89,6 @@ Wikipedia: <https://wikipedia.org/wiki/Tor_(anonymity_network)>
 YouTube video tutorial: *DietPi Tor Hotspot Setup on Raspberry Pi 3 B Plus*.
 
 <iframe src="https://www.youtube-nocookie.com/embed/rik-ABzSoHM?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
-
-## Tor Relay
-
-![Tor logo](../assets/images/dietpi-software-advanced-networking-tor.png){: width="150" height="91" loading="lazy"}
-
-Contribute a node to the Tor network, which allows people to be anonymous on the internet.
-
-=== "Types of relay"
-
-    You can run many types of relay, each with their own technical requirements and legal implications.
-
-    Bridges are the safest relay to run from home, and are relatively easy, low-risk and low bandwidth, but they have a big impact on users, especially in censored countries. Normally, IP addresses and other information of Tor relays is published, making it easy for websites to blacklist the relay, and anything else using that IP address. Since a bridge isn't listed publicly, it is unlikely to be blocked by websites or receive abuse complaints.
-
-    Guard/Middle relays are the first and second relays connected to, respectively. Information about them is listed, but they are unlikely to receive abuse complaints. However, they may be blocked by certain services that don't understand how Tor works or deliberately want to censor Tor users. If you have one static IP address, consider running a bridge instead.
-
-    Exit relays are the final relay connected to, and the one that actually sends traffic to its destination. The website will see the exit relay's IP address instead of the real IP address of the Tor user. Exit relays have the greatest legal exposure and liability of all the relays, and should not be run from home.
-
-    ??? info "Exit relay prep"
-        Running exit relays requires some preparation.
-        Before running an exit relay, you should set a reverse DNS (and, if possible, WHOIS) record to make it clearer that your IP address is a Tor exit relay.
-        Also, it is recommended that you run an exit relay on its own server, with its own IP address.
-
-=== "Monitoring"
-
-    The simplest way to monitor the Tor relay is to use the DietPi-CloudShell scene, for this run `dietpi-cloudshell` from command line and select the "Tor Relay" scene. It uses the Tor monitor [nyx](https://nyx.torproject.org/) which can be called in standalone mode by executing `nyx` from command line.
-
-    You can also monitor it with the [Tor relay search](https://metrics.torproject.org/rs.html). Just paste either the fingerprint (found at `/var/lib/tor/fingerprint`) or nickname of your relay.
-
-    ??? info "Note for bridge operators"
-        The Tor relay search will not always work for bridges, sometimes showing them as down when they are running.  In that case, use the specific Tor bridge monitoring URL, `https://bridges.torproject.org/status?type=obfs4&id=<FINGERPRINT>`.
-
-=== "Keeping up-to-date"
-
-    Keeping Tor relays updated is important to the safety of both the users and the operator. Because of this, automated upgrades are recommended and asked about when first installing. Otherwise, use `apt-get update && apt-get upgrade`.
-
-***
-
-Official documentation: <https://community.torproject.org/relay/setup>
 
 ## HAProxy
 
