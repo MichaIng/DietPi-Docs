@@ -267,7 +267,7 @@ Wikipedia: <https://wikipedia.org/wiki/RTorrent>
 Source code: <https://github.com/rakshasa/rtorrent>  
 License: [GPLv2](https://github.com/rakshasa/rtorrent/blob/master/COPYING)
 
-ruTorrent documenation: <https://github.com/Novik/ruTorrent/wiki>  
+ruTorrent documentation: <https://github.com/Novik/ruTorrent/wiki>  
 ruTorrent source code: <https://github.com/Novik/ruTorrent>  
 ruTorrent license: [GPLv3](https://github.com/Novik/ruTorrent/blob/master/LICENSE.md)
 
