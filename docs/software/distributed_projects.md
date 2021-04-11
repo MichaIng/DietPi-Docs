@@ -171,4 +171,22 @@ This node lets you download files through IPFS and add your own files to the net
     ??? info "Note for using with extension"
         IPFS content will not load on `https://` pages without an SSL certificate. We recommend a free one from LetsEncrypt using [DietPi-LetsEncrypt](../dietpi_tools.md#dietpi-letsencrypt)
 
+=== "Logging"
+
+    You can view the service logs via
+
+    ```sh
+    journalctl -u ipfs
+    ```
+
+=== "Updating"
+
+    You can update your IPFS node by running
+
+    ```sh
+    dietpi-software reinstall 186
+    ```
+
+    IPFS has a built in update command (`ipfs update`), but this requires the `ipfs-update` binary found at https://dist.ipfs.io/#ipfs-update.
+
 [Return to the **Optimised Software list**](../../software/)
