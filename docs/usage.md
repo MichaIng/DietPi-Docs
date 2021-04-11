@@ -45,11 +45,11 @@ More detailed options may be studied in the [man pages of `journalctl`](https://
 | `journalctl --no-pager | grep <filter>` | Filters log messages (filtering with `grep`) |
 
 In the software package descriptions, sometimes there is a tab called "View Logs". This gives a `jounalctl -u UNITNAME` command example how to filter the logging messages of a given software package.  
-Example: See [tab "View logs"](https://dietpi.com/docs/software/dns_servers/#unbound) of *Unbound*. It gives: `journalctl -u unbound`.
+Example: See [tab "View logs"](../software/dns_servers/#unbound) of *Unbound*. It gives: `journalctl -u unbound`.
 
 <font size="+2">Logging options</font>
 
-As described in the chapter [Log system choices](https://dietpi.com/docs/software/log_system/), DietPi has several options how the logging system operates. Especially the log history, the memory consumption and the frequency of SD card write accesses varies.  
+As described in the chapter [Log system choices](../software/log_system/), DietPi has several options how the logging system operates. Especially the log history, the memory consumption and the frequency of SD card write accesses varies.  
 Find and set the options which fit to your demands, it is also an option to change the logging to examine some problems.
 
 | Log option | location | log depth | log persistence |
