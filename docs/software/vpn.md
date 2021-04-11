@@ -218,13 +218,13 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 
     Logging can be viewed with:
 
-    ```
+    ```sh
     journalctl -u wg-quick@wg0
     ```
 
     respectively
 
-    ```
+    ```sh
     journalctl -u wg-quick@<config_name>
     ```
 
