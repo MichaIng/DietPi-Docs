@@ -9,10 +9,10 @@ This chapter contains several documents describing the usage of DietPi.
 
 ## How to use the logging mechanism
 
-DietPi uses the systemd based loggin (instead of using syslog). `journald` is the logging part.
+DietPi uses the systemd based logging (instead of using syslog). `journald` is the logging part.
 The basic command to evaluate the systemd-journal is
 
-```
+```sh
 journalctl [options]
 ```
 
@@ -33,13 +33,13 @@ More detailed options may be studied in the [man pages of `journalctl`](https://
 
 | Command | Remark |
 | - | - |
-| `journalctl -u UNITNAME` <br>(--unit UNITNAME) | Displays messages of the given unit |
+| `journalctl -u UNITNAME` <br>(`--unit UNITNAME`) | Displays messages of the given unit |
 | `journalctl _PID=<process_id>` | Displays messages of process with PID equals to <process_id\> |
 | `journalctl -r` <br>(`--reverse`) | Displays list in reverse order, i.e. newest messages first |
 | `journalctl -f` <br>(`--follow`) | Displays the tail of the log message list and shows new entries *live* |
 | `journalctl -b` <br>(`--boot`) | Displays messages since the last boot (i.e. no older messages). See also option `--list-boots` |
 | `journalctl -k` <br>(`--dmesg`) | Displays kernel messages |
-| `journalctl -p PRIORITY` <br>(--priority PRIORITY) | Displays messages with the given priority. PRIORITY may be `merg`, `alert`, `crit`, `err`, `warning`, `notice`, `info` and `debug`. Also numers as PRIORITY are possible |
+| `journalctl -p PRIORITY` <br>(--priority PRIORITY) | Displays messages with the given priority. PRIORITY may be `merg`, `alert`, `crit`, `err`, `warning`, `notice`, `info` and `debug`. Also numbers as PRIORITY are possible |
 | `journalctl -o verbose` | Displays additional meta data |
 | `journalctl --disk-usage` | Displays the amount of disk space used by the logging messages |
 | `journalctl --no-pager | grep <filter>` | Filters log messages (filtering with `grep`) |
