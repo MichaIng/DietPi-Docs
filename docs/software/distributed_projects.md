@@ -5,7 +5,7 @@
 - [**Folding@Home - Use processing power to assist with disease research**](#foldinghome)
 - [**Tor Relay - Add a node to the Tor network**](#tor-relay)
 - [**YaCy - Decentralized open source search engine**](#yacy)
-- [**IPFS Node- Contribute to a decentralized internet**](#ipfs-node)
+- [**IPFS Node - Contribute to a decentralized internet**](#ipfs-node)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -76,7 +76,7 @@ The problems which are solved require so many computer calculations that help fr
 
 ## Tor Relay
 
-![Tor logo](../assets/images/dietpi-software-distributed-projects-tor.png){: width="150" height="91" loading="lazy"}
+![Tor logo](../assets/images/dietpi-software-tor-logo.png){: width="150" height="91" loading="lazy"}
 
 Contribute a node to the Tor network, which allows people to be anonymous on the internet.
 
