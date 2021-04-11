@@ -872,27 +872,46 @@ Web interface music streamer.
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8000**:
+    The web interface is accessible via port **8003**:
 
-    - URL = `http://<your.IP>:8000`
-    - Email address = The one you entered during installation
-    - Password = The one you entered during installation
+    - URL = `http://<your.IP>:8003`
+    - Email address = `admin@koel.dev`
+    - Password = `KoelIsCool`
 
 === "First run setup"
 
-    Configure Koel to use the DietPi user data (music) directory:
-
-    - In the web interface, on the left hand side click `settings`
-    - Under `Media Path`, enter `/mnt/dietpi_userdata/Music`
-    - Then click `Scan`
+    We strongly recommend to change the admin users email address and password.
 
 === "Transfer media files to your device"
 
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
-    Folders used by Koel:
+    Directories used by Koel:
 
     - Local = `/mnt/dietpi_userdata/Music`
     - Accessed from file server = `/Music`
+
+=== "View logs"
+
+    To view Koel service logs, run the following command from console:
+
+    ```sh
+    journalctl -u koel
+    ```
+
+=== "Update to latest version"
+
+    To update Koel to the recent version, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 143
+    ```
+
+***
+
+Official website: <https://koel.dev/>  
+Official documentation: <https://docs.koel.dev/>  
+Source code: <https://github.com/koel/koel>  
+License: [MIT](https://github.com/koel/koel/blob/master/LICENSE.md)
 
 ## GMediaRender
 
