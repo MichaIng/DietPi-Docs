@@ -83,9 +83,10 @@
 
 ## [Distributed Projects](../software/distributed_projects/)
 
-- [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)
-- [**Tor Relay - Add a node to the Tor network**](../software/advanced_networking/#tor-relay)
-- [**YaCy - Decentralized open source search engine**](../software/social/#yacy)
+- [**Folding@Home - Use processing power to assist with disease research**](../software/distributed_projects/#foldinghome)
+- [**Tor Relay - Add a node to the Tor network**](../software/distributed_projects/#tor-relay)
+- [**YaCy - Decentralized open source search engine**](../software/distributed_projects/#yacy)
+- [**IPFS Node - Contribute to a decentralized internet**](../software/distributed_projects/#ipfs-node)
 
 ## [DNS Servers](../software/dns_servers/)
 

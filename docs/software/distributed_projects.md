@@ -5,6 +5,7 @@
 - [**Folding@Home - Use processing power to assist with disease research**](#foldinghome)
 - [**Tor Relay - Add a node to the Tor network**](#tor-relay)
 - [**YaCy - Decentralized open source search engine**](#yacy)
+- [**IPFS Node- Contribute to a decentralized internet**](#ipfs-node)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -28,7 +29,7 @@ The problems which are solved require so many computer calculations that help fr
 
 *By default, our installation will add you to the DietPi team group, however, you can change this in the web interface at any time.*
 
-![Folding@Home web interface screenshot](../assets/images/dietpi-software-computationalscience-foldingathome.png){: width="550" height="424" loading="lazy"}
+![Folding@Home web interface screenshot](../assets/images/dietpi-software-distributed-projects-foldingathome.png){: width="550" height="424" loading="lazy"}
 
 === "Access the web interface"
 
@@ -75,7 +76,7 @@ The problems which are solved require so many computer calculations that help fr
 
 ## Tor Relay
 
-![Tor logo](../assets/images/dietpi-software-advanced-networking-tor.png){: width="150" height="91" loading="lazy"}
+![Tor logo](../assets/images/dietpi-software-distributed-projects-tor.png){: width="150" height="91" loading="lazy"}
 
 Contribute a node to the Tor network, which allows people to be anonymous on the internet.
 
@@ -116,7 +117,7 @@ Official documentation: <https://community.torproject.org/relay/setup>
 YaCy is a decentralized open source search engine.  
 Essentially, it is a "peer-to-peer" Google search engine, not controlled by Google.
 
-![YaCy search web page screenshot](../assets/images/dietpi-software-social-yacy.png){: width="400" height="233" loading="lazy"}
+![YaCy search web page screenshot](../assets/images/dietpi-software-distributed-projects-yacy.png){: width="400" height="233" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -142,5 +143,32 @@ Essentially, it is a "peer-to-peer" Google search engine, not controlled by Goog
     YaCy is extremely CPU intensive, coupled with constant background processing, we highly recommend using `dietpi-services` to reduce process priority.
 
     Recommended setting: Nice = 19
+
+## IPFS Node
+
+IPFS (InterPlanetary File System) is a peer-to-peer hypermedia protocol designed to make the web faster, safer, and more open.
+This node lets you download files through IPFS and add your own files to the network.
+
+![IPFS web interface screenshot](../assets/images/dietpi-software-distributed-projects-ipfs.png){: width="400" height="233" loading="lazy"}
+
+=== "Access to the web interface and IPFS gateway"
+
+    The web interface is accessible via port **5003**, and the gateway through **8087**:
+
+    WebUI = `http://<your.IP>:5003/webui`
+
+    Gateway = `http://<your.IP>:8087/ipfs/IPFSHash`
+
+=== "Usage with IPFS Companion browser extension"
+
+    You can use your IPFS node with the IPFS Companion browser extension to automatically download IPFS-hosted files through your node.
+    In the settings page of the extension, change "IPFS API URL" to `http://<your.IP>:5003`, and "Local Gateway" to `http://<your.IP>:8087`.
+
+    Firefox: https://addons.mozilla.org/en-US/firefox/addon/ipfs-companion/
+
+    Chromium and derivatives: https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch
+
+    ??? info "Note for using with extension"
+        IPFS content will not load on `https://` pages without an SSL certificate. We recommend a free one from LetsEncrypt using [DietPi-LetsEncrypt](../dietpi_tools.md#dietpi-letsencrypt)
 
 [Return to the **Optimised Software list**](../../software/)
