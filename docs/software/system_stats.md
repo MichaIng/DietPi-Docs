@@ -197,8 +197,12 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
     `/etc/netdata/netdata.conf`  
     and change the line  
     `bind socket to IP = 127.0.0.1`  
-    to match either the local network IP or static public IP of your server depending on your needs.  
-    Alternatively comment it e.g. if your server does not have a static public IP but you require remote access.
+    to match either the local network IP or static public IP of your dietpi server depending on your needs.
+    Alternatively comment it e.g. if your server does not have a static public IP but you require remote access. (Probably not a good idea. See "Security hardening" in next tab.)
+Once saved, you will need to restart the service to implement the changes by entering the below into the terminal:
+```bash
+systemctl restart netdata
+```
 
 === "Security hardening"
 
