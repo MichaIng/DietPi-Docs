@@ -207,7 +207,7 @@ systemctl restart netdata
 === "Security hardening"
 
     Note that having Netdata accessible to anyone gives potential attackers a bunch of useful information where to start hacking.  
-    About how to limit access to Netdata, check as well: <https://docs.netdata.cloud/web/server/>.
+    To learn about how to limit access to Netdata, please refer to their documentation regarding [the configuration of access lists](https://learn.netdata.cloud/docs/agent/web/server/#access-lists).
 
 ***
 
