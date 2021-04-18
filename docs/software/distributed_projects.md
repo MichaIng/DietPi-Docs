@@ -189,6 +189,6 @@ This node lets you download files through IPFS and add your own files to the net
     IPFS has a built in update command (`ipfs update`), but this requires the `ipfs-update` binary found at https://dist.ipfs.io/#ipfs-update.
 
 !!! warning "Do not expose to internet"
-    The IPFS web interface requires no authentication to use. Do not expose it to the internet without taking proper security measures (reverse proxy, vpn, etc.).
+    The IPFS web interface requires no authentication to use. Do not expose it to the internet without taking proper security measures, like an authenticated reverse proxy, VPN or similar.
 
 [Return to the **Optimised Software list**](../../software/)
