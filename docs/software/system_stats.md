@@ -199,10 +199,12 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
     `bind socket to IP = 127.0.0.1`  
     to match either the local network IP or static public IP of your DietPi server depending on your needs.
     Alternatively comment it e.g. if your server does not have a static public IP but you require remote access. But note that an unprotected publicly accessible Netdata web interface is a potential security risk. Head over to the "Security hardening" tab to learn more about how to restrict access to Netdata.
-Once saved, you will need to restart the service to implement the changes by entering the below into the terminal:
-```bash
-systemctl restart netdata
-```
+
+    Once saved, you will need to restart the service to implement the changes by entering the below into the terminal:
+
+    ```sh
+    systemctl restart netdata
+    ```
 
 === "Security hardening"
 
