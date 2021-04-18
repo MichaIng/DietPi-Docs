@@ -80,6 +80,7 @@ plugins:
       dietpi_sbc.md: hardware.md
       release-notes.md: releases.md
       dietpi_references.md: references.md
+      software/computational_science.md: software/distributed_projects.md
 
 extra:
   social:
