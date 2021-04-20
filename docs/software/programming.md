@@ -2,7 +2,7 @@
 
 ## Overview
 
-- [**Python - High-level interpreted programming language**](#python)
+- [**Python 3 - High-level interpreted programming language**](#python-3)
 - [**Docker -  Create, deploy, and run applications using containers**](#docker)
 - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
 - [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
@@ -22,7 +22,7 @@
 
 [Return to the **Optimised Software list**](../../software/)
 
-## Python
+## Python 3
 
 Python is a text based interpreted programming language with object oriented programming options for general purpose applications.  
 
