@@ -193,7 +193,7 @@ Also installs:
 
 ## Mopidy
 
-Mopidy is a python based music player web based user interface for MPD.
+Mopidy is a Python based music player web based user interface for MPD.
 
 ![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="400" height="198" loading="lazy"}
 
@@ -650,7 +650,7 @@ YouTube video tutorial (German language): `Raspberry Pi 4 - Plex TV Media Server
 
 ## Tautulli
 
-A Python-based monitoring and tracking tool for Plex Media Server.
+A Python based monitoring and tracking tool for Plex Media Server.
 
 ![Tautulli web interface screenshot](../assets/images/dietpi-software-media-tautulli.png){: width="400" height="273" loading="lazy"}
 
