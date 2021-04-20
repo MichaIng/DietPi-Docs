@@ -9,14 +9,14 @@ This chapter contains several documents describing the usage of DietPi.
 
 ## How to use the logging mechanism
 
-DietPi uses the systemd based logging (instead of using syslog). `journald` is the logging part.
-The basic command to evaluate the systemd-journal is
+DietPi uses systemd as system and service manager, which includes the `systemd-journald` logging daemon.
+An additional syslog daemon, like `rsyslog`, is not required and hence not pre-installed on DietPi. The basic command to access `systemd-journald` logs is
 
 ```sh
 journalctl [options]
 ```
 
-<font size="+2">Basic output</font>
+<font size="+2">Logging basic output</font>
 
 Using simply `journalctl` prints out all logging messages stored in the system.  
 Each line shows:  
@@ -26,7 +26,7 @@ The following screenshot shows the logging of the boot process (of a DietPi virt
 
 ![DietPi logging - journalctl screenshot](assets/images/dietpi-howto-logging1.png){: width="640" height="300" loading="lazy"}
 
-<font size="+2">Output filtering options</font>
+<font size="+2">Logging output filtering options</font>
 
 Some of the options are described in the following table.  
 More detailed options may be studied in the [man pages of `journalctl`](https://man7.org/linux/man-pages/man1/journalctl.1.html).
