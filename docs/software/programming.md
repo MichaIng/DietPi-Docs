@@ -6,6 +6,7 @@
 - [**Docker -  Create, deploy, and run applications using containers**](#docker)
 - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
 - [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
+- [**VSCodium - FLOSS version of Microsoft VSCode**](#vscodium)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -131,6 +132,13 @@ Portainer simplifies your Docker container management via Portainer web interfac
 Official documentation: <https://documentation.portainer.io>  
 Source code: <https://github.com/portainer/portainer>  
 Open-source license: [zlib](https://github.com/portainer/portainer/blob/develop/LICENSE)
+
+## VSCodium
+VSCodium is a FLOSS version of [Microsoft's Visual Studio code](https://code.visualstudio.com/), built directly from the source on GitHub, without branding, tracking, or telemetry.
+
+![VSCodium screenshot](../assets/images/dietpi-software-programming-vscodium.jpg){: width="1028" height="799" loading="lazy"}
+
+Documentation (Visual Studio Code): <https://code.visualstudio.com/docs>
 
 [Return to the **Optimised Software list**](../../software/)
 
