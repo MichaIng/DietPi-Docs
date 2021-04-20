@@ -18,7 +18,6 @@
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/advanced_networking/#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/advanced_networking/#tor-hotspot)
 - [**HAProxy - High performance TCP/HTTP load balancer**](../software/advanced_networking/#haproxy)
-- [**No-IP - Website URL Address**](../software/advanced_networking/#no-ip)
 
 ## [BitTorrent & Download Tools](../software/bittorrent/)
 

@@ -5,7 +5,6 @@
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi HotSpot traffic through the Tor network**](#tor-hotspot)
 - [**HAProxy - High performance TCP/HTTP load balancer**](#haproxy)
-- [**No-IP - Dynamic DNS update client**](#no-ip)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -141,27 +140,5 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
 Website: <http://www.haproxy.org>  
 Official documentation: <http://www.haproxy.org/#docs>
-
-## No-IP
-
-Use your No-IP account and website URL address to always have it pointing to your DietPi system. Essential if your hosting a website.
-
-![No-IP logo](../assets/images/dietpi-software-advanced-networking-noip.jpg){: width="200" height="72" loading="lazy"}
-
-The setup of No-IP is done as follows:
-
-- Create your free No-IP account <https://www.noip.com/sign-up> and select a web address for your account.
-- Type `dietpi-config` in a terminal and press ++enter++.
-- Go to *Networking Options: Misc* and select *No-IP* from the menu.
-    If No-IP is not yet installed, confirm the installation and reselect No-IP from the menu once completed.
-- Type in your *username* and *password* details at the prompt.
-- Type in *5* for the interval option.
-
-If successful, the No-IP current status will change to: *Online*.  
-You will need to enable port forwarding on your router for all programs your require and point them to DietPi. E.g.: TCP port 80/443 for websites, pointing to 192.168.0.100.
-
-***
-
-Website: <https://www.noip.com>
 
 [Return to the **Optimised Software list**](../../software/)
