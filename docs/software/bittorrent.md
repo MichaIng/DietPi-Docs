@@ -528,12 +528,12 @@ Key features:
     - Data directory: `/mnt/dietpi_userdata/bazarr`
     - Bazarr configuration file: `/mnt/dietpi_userdata/bazarr/config/config.ini`
 
-    View logs:
+=== "View logs"
 
     - Service: `journalctl -u bazarr`
     - Binary: `/var/log/bazarr/bazarr.log`
 
-    Update to latest version:
+=== "Update to latest version"
 
     - Use the internal web based updater
 

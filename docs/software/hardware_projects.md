@@ -237,7 +237,7 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
     Node-RED, all configs and data is stored in the following location:  
     `/mnt/dietpi_userdata/node-red`
 
-=== "Logging"
+=== "View logs"
 
     To view Node-RED service logs, run the following command from console:
 
