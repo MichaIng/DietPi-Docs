@@ -19,7 +19,6 @@
 - [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/advanced_networking/#tor-hotspot)
 - [**Tor Relay - Add a node to the Tor network**](../software/advanced_networking/#tor-relay)
 - [**HAProxy - High performance TCP/HTTP load balancer**](../software/advanced_networking/#haproxy)
-- [**No-IP - Website URL Address**](../software/advanced_networking/#no-ip)
 
 ## [BitTorrent & Download Tools](../software/bittorrent/)
 
