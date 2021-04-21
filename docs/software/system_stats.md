@@ -197,13 +197,19 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
     `/etc/netdata/netdata.conf`  
     and change the line  
     `bind socket to IP = 127.0.0.1`  
-    to match either the local network IP or static public IP of your server depending on your needs.  
-    Alternatively comment it e.g. if your server does not have a static public IP but you require remote access.
+    to match either the local network IP or static public IP of your DietPi server depending on your needs.
+    Alternatively comment it e.g. if your server does not have a static public IP but you require remote access. But note that an unprotected publicly accessible Netdata web interface is a potential security risk. Head over to the "Security hardening" tab to learn more about how to restrict access to Netdata.
+
+    Once saved, you will need to restart the service to implement the changes by entering the below into the terminal:
+
+    ```sh
+    systemctl restart netdata
+    ```
 
 === "Security hardening"
 
     Note that having Netdata accessible to anyone gives potential attackers a bunch of useful information where to start hacking.  
-    About how to limit access to Netdata, check as well: <https://docs.netdata.cloud/web/server/>.
+    To learn about how to limit access to Netdata, please refer to their documentation regarding [the configuration of access lists](https://learn.netdata.cloud/docs/agent/web/server/#access-lists).
 
 ***
 

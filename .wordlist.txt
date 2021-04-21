@@ -158,6 +158,7 @@ hotfix
 hotspot
 HotSpot
 hotspots
+HowTo
 htop
 HQPlayer
 HTPC
@@ -176,6 +177,7 @@ Jackett
 JanKoudijs
 Jellyfin
 Joulinar
+journalctl
 journald
 JS
 JSON
@@ -294,6 +296,7 @@ PCIe
 phpBB
 phpMyAdmin
 phpSysInfo
+PID
 Pi-hole
 PiJuice
 Pinebook

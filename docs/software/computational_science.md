@@ -43,7 +43,7 @@ The problems which are solved require so many computer calculations that help fr
     2. Edit `/mnt/dietpi_userdata/fahclient/config.xml`
     3. Save changes and restart services with `dietpi-services start`
 
-=== "Logging"
+=== "View logs"
 
     Folding@Home has a logging feature which outputs into the journal logging system. The logs can be viewed via:
 

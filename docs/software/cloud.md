@@ -205,6 +205,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
         sudo -u www-data php /var/www/nextcloud/updater/updater.phar
         y # Starts download and install of files
         y # Starts the internal database upgrade and migration steps
+        N # Do not keep maintenance mode active
         ```
 
     3. Follow the official documentation for a manual upgrade process: <https://docs.nextcloud.com/server/latest/admin_manual/maintenance/manual_upgrade.html>
@@ -672,7 +673,8 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
 === "Quick access"
 
-    Open the browser `http://<your.IP>`. On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
+    Open the browser `http://<your.IP>`.  
+    On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
 
     !!! warning "FuguHub runs by default on port 80 and optional 443, making it incompatible with a regular webserver using the default setup."
 
@@ -694,6 +696,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     - Data directory: `/mnt/dietpi_userdata/fuguhub-data`
 
 === "View logs"
+
     - Service: `journalctl -u bdd`
     - Trace: `/home/bd/trace/`  
       It contains an info about the database creation only, even after playing around with the web UI a bit.
