@@ -3,6 +3,7 @@
 ## Overview
 
 - [**OctoPrint - Web interface for controlling 3D printers**](#octoprint)
+- [**CUPS - Common UNIX printing system**](#cups)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -59,5 +60,25 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 Website: <https://octoprint.org>  
 Official documentation: <https://docs.octoprint.org>  
 Forum: <https://community.octoprint.org>
+
+## CUPS
+
+CUPS provides a web interface for managing your local or network printers.
+
+![CUPS web interface screenshot](../assets/images/dietpi-software-printserver-cups.png)
+
+=== "Access the web interface"
+
+    The web interface is accessible via port **631**:
+
+    - URL = `http(s)://<your.IP>:631`  
+    - Username = `root`
+    - Password = <RootPassword>
+
+***
+
+Website: <http://www.cups.org>  
+Official documentation: <http://www.cups.org/documentation.html>  
+GitHub: <https://github.com/apple/cups>
 
 [Return to the **Optimised Software list**](../../software/)
