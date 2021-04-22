@@ -733,7 +733,7 @@ Flask is a lightweight web application framework. It is designed to make getting
 
 === "Quick start"
 
-    In order to use **Flask** it is first required first to install the Python Package Manager - [see Python pip 3](../programming/#python). Then run the next command.
+    In order to use **Flask** it is first required first to install the Python Package Manager - [see Python 3](../programming/#python-3). Then run the next command.
 
     ```sh
     pip3 install -U Flask

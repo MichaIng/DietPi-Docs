@@ -81,7 +81,7 @@
 
 ## [Development & Programming](../software/programming/)
 
-- [**Python - High-level interpreted programming language**](../software/programming/#python)
+- [**Python 3 - High-level interpreted programming language**](../software/programming/#python-3)
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](../software/programming/#docker-compose)
 - [**Portainer - Docker container management**](../software/programming/#portainer)

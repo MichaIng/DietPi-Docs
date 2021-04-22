@@ -59,4 +59,4 @@ jobs:
       run: GO111MODULE=on go get -u github.com/raviqqe/liche
     - name: Run liche to check HTML and Markdown files
       if: always() && steps.liche.outcome == 'success'
-      run: liche -c 64 -x 'https://(github.com|twitter.com|www.spigotmc.org|pi-hole.net)' -d build -r README.md build/docs
+      run: liche -c 64 -x 'https://(github.com|twitter.com|www.spigotmc.org|pi-hole.net|www.php.net)' -d build -r README.md build/docs

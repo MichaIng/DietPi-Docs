@@ -55,7 +55,7 @@ Welcome to **February 2021 release** :octicons-heart-16: of **DietPi**. With thi
 !!! info "Why this upgrade to version 7?"
 
     A new check of the system updates has been implemented. This checks for a minimum required Debian and DietPi version and migrates systems with either too old Debian version or too old DietPi version to a different Git branch automatically. This process smoothens the migration of our code base to newer Debian versions.
-    
+
     The alternative branch can be used to inform and support Debian distribution upgrades and to upgrade the DietPi code to an intermediate version from where the system can be migrated back to the regular stable/master branch.
 
     Since this change required a new repository version file, we incremented the DietPi core version to v7.0. The change to version 7 is also motivated by the long list of improvments brought in 2020. All of these qualify the system to be upgraded to a new version.
@@ -91,14 +91,14 @@ The Steam platform is one of the largest digital distribution platform for gamin
 !!! info ""
 
     **Caution:** Steam may not run perfectly stable yet :octicons-beaker-16:. It could also crash when trying to allocate space for the games and it would resume the downloads once started again.
-    
-    We're optimistic that further improvements will address these issues and more enhancements will be available in the future :octicons-heart-16: 
+
+    We're optimistic that further improvements will address these issues and more enhancements will be available in the future :octicons-heart-16:
 
 [Box86](../software/gaming/#box86) is a x86 wrapper/emulator for ARMv7 systems, and it is now available for install. Thanks to it's ability to wrap ARMv7 shared system libraries to be used with i386 binaries, often no additional libraries are needed to be installed.
 
 !!! info ""
 
-    Thanks to <https://github.com/tbinfm>, it will be invoked automatically when an i386 binary is executed. 
+    Thanks to <https://github.com/tbinfm>, it will be invoked automatically when an i386 binary is executed.
 
 **[mjpg-streamer](../software/camera/#mjpg-streamer)**
 
@@ -140,7 +140,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 - **DietPi-Software** - **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16: On install in combination with Pi-hole, no additional configuration file will be created anymore but the adjusted interface binding and port will be applied to "/etc/unbound/unbound.conf.d/dietpi.conf". Declaring "interface" in two configuration files do not override each other but lead to two concurrent bindings, which is not intended. The two files, if present, will be merged as well on DietPi update. It is hence intended that admins change "dietpi.conf" directly, if required, and this file won't be overwritten on reinstalls to preserve local changes. Additionally, on new installs, the configuration file will be better sorted and contain comments to explain their purpose.
 - **DietPi-Software** - **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16:  On new installs, by default access is now granted to all private IPv4 and IPv6 address ranges instead of to the 192.168.0.0/16 subnet only, which includes VPNs, containers and cases of multiple local networks the server is attached to.
 - **DietPi-Software** - **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16: A monthly cron job is now created to keep the root hints file updated. Many thanks to @APraxx for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4077>.
-- **DietPi-Software** | **Python 3 pip**: `pip` and pip-based installs on ARMv6 and ARMv7 boards will have the piwheels.org repository for pre-compiled wheels added automatically, which can reduce build dependencies and compile time dramatically.
+- **DietPi-Software** | **Python 3**: `pip` and pip-based installs on ARMv6 and ARMv7 boards will have the piwheels.org repository for pre-compiled wheels added automatically, which can reduce build dependencies and compile time dramatically.
 - **DietPi-Software** | **[Node-RED](../software/hardware_projects/#node-red)**: New installs and reinstalls with setup [Node-RED](../software/hardware_projects/#node-red) as local module for the "nodered" service user, rather than as global system module/command. This allows upgrading and removing all related Node modules through the web interface, instead of just the ones which were installed via web interface. Additionally a console alias for the "node-red-admin" CLI command has been added so that running this command with any user will call the local Node-RED instance as "nodered" service user.
 - **DietPi-Software** | **[Docker](../software/programming/#docker)**: The Docker APT repository is now installed manually instead of using the official Docker installer. This allows us to enable the Docker install option for Debian Bullseye systems, if only to allow widened testing of this upcoming Debian release with DietPi.
 
@@ -165,7 +165,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 - **DietPi-Software** | **[Domoticz](../software/home_automation/#domoticz)** :octicons-arrow-right-16: Resolved an issue where saving custom scripts and starting with a template did not work. Many thanks to @tec13 for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8627>
 - **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where for [ruTorrent](../software/bittorrent/#rtorrent), [Koel](../software/media/#koel) and [Bitwarden_RS](../software/cloud/#bitwarden_rs) the automatic newest version detection failed and instead a possibly older fallback was used. Many thanks to @kelvmod for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4105>
 - **DietPi-Software** | **[LXQt](../software/desktop/#lxqt)** :octicons-arrow-right-16: Resolved visual issues with our default configuration of Debian Buster, drastically simplified and cleaned up the files we ship.
-- **DietPi-Software** | **[SABnzbd](../software/bittorrent/#sabnzbd)**: Resolved an issue on Stretch where the install failed due to raised minimum [Python](../software/programming/#python) version with SABnzbd v3.2.0. If Python 3.5 is installed, SABnzbd v3.1.1 will be installed now to allow keeping the install option enabled for now. Many thanks to @19eighties for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2762#issuecomment-787118995>
+- **DietPi-Software** | **[SABnzbd](../software/bittorrent/#sabnzbd)**: Resolved an issue on Stretch where the install failed due to raised minimum [Python](../software/programming/#python-3) version with SABnzbd v3.2.0. If Python 3.5 is installed, SABnzbd v3.1.1 will be installed now to allow keeping the install option enabled for now. Many thanks to @19eighties for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2762#issuecomment-787118995>
 
 !!! hint ""
 
@@ -180,7 +180,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 !!! hint ""
 
     For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
-  
+
 ## December 2020 (version 6.34)
 
 ### Overview
@@ -423,12 +423,12 @@ As always, many smaller code performance and stability improvements, visual and 
 - **DietPi-Software** :octicons-commit-24: **Jellyfin** :octicons-arrow-right-16: A FOSS web interface media streaming server available for install. Many thanks to all who voted for it: <https://github.com/MichaIng/DietPi/issues/3152>
 - **DietPi-Software** :octicons-commit-24: **Airsonic** :octicons-arrow-right-16: It is now available on Debian Buster systems since Java 11 support has been added. Many thanks to @linxiaopi for pointing us at the required re-evaluation: [#3732](https://github.com/MichaIng/DietPi/issues/3732)
 - **DietPi-Software** :octicons-arrow-right-16: On the uninstall information prompt, the info has been added that uninstalling usually means that related userdata and configs are purged as well. Additionally "dietpi-software reinstall <ID>" is mentioned now as alternative to repair/update installed software. Many thanks to @kpine for doing this request: [#3550](https://github.com/MichaIng/DietPi/issues/3550)
-- **DietPi-Software** :octicons-commit-24: **Python pip** :octicons-arrow-right-16: octicons-arrow-right-16: We migrated this software selection to a Python3/pip3 install only, due to Python2 EOL in 2020/01. Where possible, dependant software selections have been migrated to Python3 builds, where not possible, Python2/pip2 is installed separately for now. We hope that most affected software titles will do Python3 releases soon, otherwise we will remove them form our portfolio, at latest in spring 2021. The strongest reason for this is that next Debian Bullseye (summer 2021) will not ship Python2 packages anymore.
-- **DietPi-Software** :octicons-commit-24: **SABnzbd** :octicons-arrow-right-16: Migrated to a Python3-based install.
-- **DietPi-Software** :octicons-commit-24: **OctoPrint** :octicons-arrow-right-16: On Debian Buster and up, migrated to a Python3-based install.
+- **DietPi-Software** :octicons-commit-24: **Python 3** :octicons-arrow-right-16: octicons-arrow-right-16: We migrated this software selection to a Python 3 / pip3 install only, due to Python 2 EOL in 2020/01. Where possible, dependant software selections have been migrated to Python 3 builds, where not possible, Python 2 / pip2 is installed separately for now. We hope that most affected software titles will do Python 3 releases soon, otherwise we will remove them form our portfolio, at latest in spring 2021. The strongest reason for this is that next Debian Bullseye (summer 2021) will not ship Python 2 packages anymore.
+- **DietPi-Software** :octicons-commit-24: **SABnzbd** :octicons-arrow-right-16: Migrated to a Python 3 based install.
+- **DietPi-Software** :octicons-commit-24: **OctoPrint** :octicons-arrow-right-16: On Debian Buster and up, migrated to a Python 3 based install.
 - **DietPi-Software** :octicons-commit-24: **Wordpress** :octicons-arrow-right-16: Plugins can now be installed and the internal updater used OOTB without the need to manually apply correct file permissions first. Many thanks to @Joulinar for implementing this: [#3720](https://github.com/MichaIng/DietPi/pull/3720)
 - **DietPi-Software** :octicons-commit-24: **ProFTPD** :octicons-arrow-right-16: On fresh installs, reverse DNS lookups are disabled by default now by adding "UseReverseDNS off" to /etc/proftpd/proftpd.conf. This increases login speeds, in case dramatically, depending on reverse DNS server. Additionally file uploads can now be resumed by default via "AllowStoreRestart On" and members of the "dietpi" group have write access to uploaded files ("Umask 002") to increase OOTB compatibility with media and file sharing software. Many thanks to @bbsixzz for doing these suggestions: [#3727](https://github.com/MichaIng/DietPi/issues/3727)
-- **DietPi-Software** :octicons-commit-24: **HTPC Manager** :octicons-arrow-right-16: Migrated to a Python3-compatibe fork initiated by @gmiranda (<https://github.com/HTPC-Manager/HTPC-Manager>), since the previous fork stopped development. Please help test, and when possible contribute to this project to keep it alive. We'll do minimal tests and assure the basic install and web interface works fine from Debian Stretch till Debian Bullseye.
+- **DietPi-Software** :octicons-commit-24: **HTPC Manager** :octicons-arrow-right-16: Migrated to a Python 3 compatibe fork initiated by @gmiranda (<https://github.com/HTPC-Manager/HTPC-Manager>), since the previous fork stopped development. Please help test, and when possible contribute to this project to keep it alive. We'll do minimal tests and assure the basic install and web interface works fine from Debian Stretch till Debian Bullseye.
 
 ### API Changes
 
@@ -622,7 +622,7 @@ Last but certainly not least, a big **Thank You** to the following people who co
 - DietPi-Software | RPi Cam Control: Resolved an issue where camera through the web UI failed because of missing permissions. Many thanks to @arkhub for reporting this issue: #3431
 - DietPi-Software | OctoPrint: Resolved an issue where install failed. Many thanks to @zell-mbc and @Joulinar for reporting the issue and providing the solution: #3474
 - DietPi-Software | Koel: Resolved an issue where download failed because of changed GitHub link. Many thanks to @C-Fu and @Joulinar for reporting and identifying the issue: #3482
-- DietPi-Software | Mopidy: Resolved an issue where installs on Debian Buster and above were not complete since Mopidy v3 uses Python3. Many thanks to @lupa18 for reporting this issue: #3485
+- DietPi-Software | Mopidy: Resolved an issue where installs on Debian Buster and above were not complete since Mopidy v3 uses Python 3. Many thanks to @lupa18 for reporting this issue: #3485
 - DietPi-Software | Nextcloud Talk: Worked around an external bug where Nextcloud Talk app failed to install. Many thanks to @harmlessdrudge for reporting this issue: #3499
 
 ## January 2020 (version v6.28 - Hotfix)
@@ -654,7 +654,7 @@ As always, many smaller code performance and stability improvements, visual and 
 - **DietPi-Software** | **ownCloud** :octicons-arrow-right-16: Enabled install on Buster, Bullseye and ARMv6 RPi models (RPi1+Zero). ownCloud 10.3 has been release with PHP7.3 support, hence it can be used with native distro PHP7.3 and does not require Ondrej's PHP repo which does not support armv6hf.
 - **DietPi-Software** | **Syncthing** :octicons-arrow-right-16: Enhanced service by security hardenings and to allow internal updates and auto updates without failing to restart. Moved binary from /etc/syncthing to /opt/syncthing to match FHS and disabled file logging, which is an unnecessary overhead, since logs can be easily viewed via "journalctl -u syncthing". Changes will be applied to all installs on v6.27 update, existing configs won't be touched by this.
 - **DietPi-Software** | **NAA daemon** :octicons-arrow-right-16: Latest version is now scraped from base URL and installed automatically. Many thanks to @Heroldgray for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/3191>
-- **DietPi-Software** | **Home Assistant** :octicons-arrow-right-16: Python3.8 will be installed for the pyenv from now on due to Python3.6 deprecation. Many thanks to @sdomotica for providing this information: <https://github.com/MichaIng/DietPi/issues/3219>
+- **DietPi-Software** | **Home Assistant** :octicons-arrow-right-16: Python 3.8 will be installed for the pyenv from now on due to Python 3.6 deprecation. Many thanks to @sdomotica for providing this information: <https://github.com/MichaIng/DietPi/issues/3219>
 - **DietPi-Software** | **Home Assistant** :octicons-arrow-right-16: When selecting for install, one will be informed about possibly long install/build times. Many thanks to @Gill-Bates for doing this suggestion to avoid users assuming their install process being stuck: <https://github.com/MichaIng/DietPi/issues/2897>
 - **DietPi-Software** | **Home Assistant** :octicons-arrow-right-16: Vastly reduced Home Assistant dependencies and install complexity. It does not run inside a virtualenv of pyenv anymore, since it has already its unique pyenv Python instance. pyenv is still required due to the large amount of specific module versions, required for HA and its integrations. The alternative would be a venv from a globally installed Python instance, but this requires further thoughts and discussion. The amount of development libraries and tools, installed via APT, has been updated and reduced to a minimum to build Python and Home Assistant inside the pyenv without errors and warnings. There is a slightly increased chance that certain HA components need additional development packages. To cover this, two new settings have been added to dietpi.txt: "SOFTWARE_HOMEASSISTANT_APT_DEPS" and "SOFTWARE_HOMEASSISTANT_PIP_DEPS". Add a space-separated list of APT packages and pip modules respectively, to have those installed automatically with Home Assistant. As well activating the pyenv environment from console is now easier possible via "source /home/homeassistant/pyenv-activate.sh" as user "homeassistant". Additionally "/home/homeassistant/homeassistant-update.sh" has been added, which can be called by any sudo-capable user to update Home Assistant easily.
 - **DietPi-Software** | **Node-RED** :octicons-arrow-right-16: Access permissions to I2C is now enabled by default on RPi and other SBCs which ship a configured "i2c" group by default. Many thanks to @NastySpill for reporting an underlying issue: <https://dietpi.com/phpbb/viewtopic.php?t=6862>

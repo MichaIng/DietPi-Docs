@@ -2,7 +2,7 @@
 
 ## Overview
 
-- [**Python - High-level interpreted programming language**](#python)
+- [**Python 3 - High-level interpreted programming language**](#python-3)
 - [**Docker -  Create, deploy, and run applications using containers**](#docker)
 - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
 - [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
@@ -22,7 +22,7 @@
 
 [Return to the **Optimised Software list**](../../software/)
 
-## Python
+## Python 3
 
 Python is a text based interpreted programming language with object oriented programming options for general purpose applications.  
 
@@ -52,7 +52,7 @@ A Docker container image is a lightweight, standalone, executable package of sof
 
 Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
 
-=== "How to access the logs"
+=== "View logs"
 
     Docker logs can be accessed using next command:
 
@@ -114,7 +114,7 @@ Portainer simplifies your Docker container management via Portainer web interfac
 === "Quick start"
 
     The web interface is accessible via port **9002**:
-    
+
     - Portainer starts automatically after installation. To view the web interface, open the web browser using next URL: `http://<your.local.ip>:9002` [^1].
     - If you have basic questions on how to use **Portainer**, please read the beginner guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>.
 
