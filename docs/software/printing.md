@@ -65,7 +65,7 @@ Forum: <https://community.octoprint.org>
 
 CUPS provides a web interface for managing your local or network printers.
 
-![CUPS web interface screenshot](../assets/images/dietpi-software-printserver-cups.png)
+![CUPS web interface screenshot](../assets/images/dietpi-software-printserver-cups.png){: width="500" height="385" loading="lazy"}
 
 === "Access the web interface"
 
