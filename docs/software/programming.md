@@ -140,6 +140,7 @@ VSCodium is a FLOSS version of [Microsoft's Visual Studio code](https://code.vis
 ![VSCodium screenshot](../assets/images/dietpi-software-programming-vscodium.png){: width="1028" height="799" loading="lazy"}
 
 Documentation (Visual Studio Code): <https://code.visualstudio.com/docs>
+Documantation (VSCodium): <https://github.com/VSCodium/vscodium/blob/master/DOCS.md>
 
 [Return to the **Optimised Software list**](../../software/)
 
