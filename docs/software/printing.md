@@ -73,7 +73,7 @@ CUPS provides a web interface for managing your local or network printers.
 
     - URL = `http(s)://<your.IP>:631`  
     - Username = `root`
-    - Password = <RootPassword>
+    - Password = `<RootPassword>`
 
 ***
 
