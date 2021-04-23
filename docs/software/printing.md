@@ -26,7 +26,7 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 
 ![OctoPrint web interface screenshot](../assets/images/dietpi-software-printserver-octoprint.png){: width="400" height="297" loading="lazy"}
 
-=== "Access the web interface"
+=== "Access to the web interface"
 
     The web interface is accessible via port **5000**:
 
@@ -67,13 +67,13 @@ CUPS provides a web interface for managing your local or network printers.
 
 ![CUPS web interface screenshot](../assets/images/dietpi-software-printserver-cups.png){: width="500" height="385" loading="lazy"}
 
-=== "Access the web interface"
+=== "Access to the web interface"
 
     The web interface is accessible via port **631**:
 
     - URL = `http(s)://<your.IP>:631`  
     - Username = `root`
-    - Password = `<RootPassword>`
+    - Password = `<your root password>`
 
 ***
 
