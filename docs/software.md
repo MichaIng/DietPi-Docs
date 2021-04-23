@@ -172,6 +172,7 @@
 ## [Printing Server](../software/printing/)
 
 - [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint)
+- [**CUPS - Common UNIX printing system**](../software/printing/#cups)
 
 ## [Remote Desktop & Remote Access](../software/remote_desktop/)
 
