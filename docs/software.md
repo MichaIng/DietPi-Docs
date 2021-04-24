@@ -59,6 +59,14 @@
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#bitwarden_rs)
 - [**FuguHub - Your Own Personal Cloud Server**](../software/cloud/#fuguhub)
 
+## [Databases & Data Stores](../software/databases/#overview)
+
+- [**MariaDB** - Open Source Relational Database](../software/databases/#mariadb)
+  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](../software/databases/#phpmyadmin)  
+- [**SQLite** - Small, Fast and High reliable SQL database engine](../software/databases/#sqlite)
+- [**Redis** - Open Source In-memory key–value Data Store](../software/databases/#redis)
+- [**InfluxDB** - Open Source Time Series Database](../software/databases/#influxdb)
+
 ## [Desktops](../software/desktop/)
 
 - [**LXDE - Highly optimized ultra lightweight desktop**](../software/desktop/#lxde)
@@ -124,7 +132,6 @@
 - [**Mosquitto - Message broker that implements MQTT protocol**](../software/hardware_projects/#mosquitto)
 - [**Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet**](../software/hardware_projects/#blynk-server)
 - [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](../software/hardware_projects/#audiophonics-pi-spc)
-- [**InfluxDB - Database optimized to save time based data as logs or data from a sensor**](../software/hardware_projects/#influxdb)
 - [**Grafana - The open platform for beautiful analytics and monitoring**](../software/hardware_projects/#grafana)
 
 ## [Home Automation](../software/home_automation/)
@@ -241,14 +248,6 @@
 - [**Nginx** - High performance web server, load balancer & reverse proxy](../software/webserver_stack/#nginx)  
 - [**Lighttpd** - Extremely lightweight webserver](../software/webserver_stack/#lighttpd)
 - [**Tomcat8** - Apache Tomcat server](../software/webserver_stack/#tomcat)  
-
-### [Databases & Data stores](../software/webserver_stack/#databases-data-stores)
-
-- [**MariaDB** - Open Source Relational Database](../software/webserver_stack/#mariadb)
-  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](../software/webserver_stack/#phpmyadmin)  
-- [**SQLite** - Small, Fast and High reliable SQL database engine](../software/webserver_stack/#sqlite)
-- [**Redis** - Open Source In-memory key–value Data Store](../software/webserver_stack/#redis)
-- [**InfluxDB** - Open Source Time Series Database](../software/webserver_stack/#influxdb)
 
 ### [Programming & Web development Frameworks](../software/webserver_stack/#web-development-programming-frameworks)
 
