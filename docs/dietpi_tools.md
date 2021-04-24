@@ -209,6 +209,7 @@ DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Al
     DietPi will also automatically start and connect the VPN during system boot if you select autostart.
 
 === "Killswitch"
+
     DietPi-VPN comes with an optional killswitch that will shut off your internet in the case of you losing your connection to the VPN sever.
     This will still allow access from your LAN and allow you to fix any problems using SSH, if needed.
 
