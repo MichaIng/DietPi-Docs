@@ -8,7 +8,7 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. This releas
 
 ![DietPi version 7](assets/images/dietpi-version7.1.jpg){: width="300" }
 
-[_Source: Pexels.com_](https://www.pexels.com/photo/abstract-aluminum-architectural-architecture-210158/)
+[_Source: Pexels.com_](https://www.pexels.com/photo/abstract-aluminum-architectural-architecture-210158)
 
 ### Merged software list
 
@@ -47,7 +47,7 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. This releas
 - **`DietPi-Arr_to_RAM`** :octicons-arrow-right-16: Support for [Sonarr](../software/bittorrent/#sonarr) v3 and [Radarr](../software/bittorrent/#radarr) v3 has been added. On first link to RAM, a script `/mnt/dietpi_userdata/(sonarr|radarr|lidarr)/dietpi-arr_to_RAM.sh` is created, which allows updating the linked database backups via the programs "Custom Script" feature. Since v3, it is not possible anymore to pass arguments to custom script or call scripts inside the /boot directory at all, which broke the previous `/boot/dietpi/misc/dietpi-arr_to_RAM 2 (sonarr|radarr|lidarr)` calls in two ways.
 - **DietPi-FS_partition_resize** :octicons-arrow-right-16: Added support to automatically resize F2FS and Btrfs filesystems on first boot.
 
-- [**DietPi-Drive_Manager**](../../dietpi_tools/#dietpi-drive-manager) enhancements :octicons-arrow-right-16:
+- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) enhancements :octicons-arrow-right-16:
 
     !!! hint ""
 
@@ -55,7 +55,7 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. This releas
         - When adding Samba mounts, credentials are not added in plain text to /etc/fstab anymore, but stored instead in a separate per-mount credential file with strict root-only read permissions.
         Many thanks to @TheOriginalMrWolf for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4082>
 
-- [**DietPi-Config**](../../dietpi_tools/#dietpi-configuration) enhancements :octicons-arrow-right-16:
+- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) enhancements :octicons-arrow-right-16:
 
     !!! hint ""
 
@@ -63,17 +63,25 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. This releas
 
         - When disabling the RPi camera feature, the bcm2835_isp kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: <https://github.com/MichaIng/DietPi/issues/4203>
 
-- **DietPi-Software** | **Mosquitto** :octicons-arrow-right-16: Since v2, by default remote connections and no unauthenticated requests are possible anymore. On fresh installs and reinstalls, we'll enable remote connections, but create a password file, so that MQTT clients need to authenticate with username "mosquitto" and the global software password by default. Many thanks to @mattsmithuk for reporting this change: <https://github.com/MichaIng/DietPi/issues/4133>
-- **DietPi-Software** | **IceCast** :octicons-arrow-right-16: The streaming server can now be installed on virtual machines as well and the default web UI password will now be the global software password instead of a random one. Since the DarkIce config file /etc/darkice.cfg contains the global software password in plain text, its permission mode is changed to 600 to limit read access to the root user only.
-- **DietPi-Software** | **OctoPrint** :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 5000 to 5001 to avoid conflicts with Shairport Sync.
-- **DietPi-Software** | **Firefox Sync Server** :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 5000 to 5002 to avoid conflicts with Shairport Sync.
-- **DietPi-Software** | **rTorrent** :octicons-arrow-right-16: For performance reasons, and to avoid conflicts with Shairport Sync, the default SCGI/RPC access has been changed from TCP port 5000 to UNIX socket. This change is applied on fresh installs and reinstalls of rTorrent, as it requires a change on both all sides, rTorrent, ruTorrent and the webserver. HTTP authentication is now enforced for the rTorrent RPC access with all webservers, using the global software password by default, and the password hash algorithm has been hardened with Nginx.
-- **DietPi-Software** | **WebIOPi** :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 8000 to 8002 to avoid conflicts with IceCast. Additionally the install process has been slightly sped up by skipping unnecessary installer-internal APT calls.
-- **DietPi-Software** | **Koel** :octicons-arrow-right-16: On fresh installs and reinstalls, the listening port has been changed from 8000 to 8003 to avoid conflicts with IceCast. Additionally the install process has been simplified and dependencies reduces, since after Koel v5.0.0 pre-compiled frontend binaries are available. This also allows a completely unattended install now. As little security hardening, the Koel MariaDB database password has been changed to a long random character string and the config files permission mode has been changed to 600 to permit read access to the Koel service user only. Finally as little performance enhancement, Koel now connects via UNIX socket to MariaDB instead of view TCP connection, which allows to disable TCP listening in MariaDB.
-- **DietPi-Software** | **YaCy** :octicons-arrow-right-16: New installs and reinstalls will now have the latest version detected and downloaded automatically. This enables an easy update method by simply reinstalling YaCy via "dietpi-software reinstall 133", independent of the DietPi version.
-- **DietPi-Software** | **Remot3.it** :octicons-arrow-right-16: After the install finished, it is now offered to do the interactive "connectd_installer" setup directly. Neither is a reboot required, nor does any service need to run to be registered.
+- **DietPi-Software** | [**Mosquitto**](../software/hardware_projects/#mosquitto) :octicons-arrow-right-16: Since v2, by default remote connections and no unauthenticated requests are possible anymore. On fresh installs and reinstalls, we'll enable remote connections, but create a password file, so that MQTT clients need to authenticate with username "mosquitto" and the global software password by default. Many thanks to @mattsmithuk for reporting this change: <https://github.com/MichaIng/DietPi/issues/4133>
+- **DietPi-Software** | [**IceCast**](../software/media/#icecast) :octicons-arrow-right-16: The streaming server can now be installed on virtual machines as well and the default web UI password will now be the global software password instead of a random one. Since the DarkIce config file /etc/darkice.cfg contains the global software password in plain text, its permission mode is changed to 600 to limit read access to the root user only.
+- **DietPi-Software** | [**OctoPrint**](../software/printing/#octoprint :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 5000 to 5001 to avoid conflicts with Shairport Sync.
+- **DietPi-Software** | [**Firefox Sync Server**](../software/cloud/#firefox-sync-server) :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 5000 to 5002 to avoid conflicts with Shairport Sync.
+- **DietPi-Software** | [**rTorrent**](../software/bittorrent/#rtorrent) :octicons-arrow-right-16: For performance reasons, and to avoid conflicts with Shairport Sync, the default SCGI/RPC access has been changed from TCP port 5000 to UNIX socket. This change is applied on fresh installs and reinstalls of rTorrent, as it requires a change on both all sides, rTorrent, ruTorrent and the webserver. HTTP authentication is now enforced for the rTorrent RPC access with all webservers, using the global software password by default, and the password hash algorithm has been hardened with Nginx.
+- **DietPi-Software** | [**WebIOPi**](../software/hardware_projects/#webiopi) :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 8000 to 8002 to avoid conflicts with IceCast. Additionally the install process has been slightly sped up by skipping unnecessary installer-internal APT calls.
+- **DietPi-Software** | [**Koel**](../software/media/#koel) enhancements :octicons-arrow-right-16:
+
+    !!! hint ""
+
+        - On fresh installs and reinstalls, the listening port has been changed from `8000` to `8003` to avoid conflicts with IceCast. 
+        - Additionally the install process has been simplified and dependencies reduces, since after Koel v5.0.0 pre-compiled frontend binaries are available. This also allows a completely unattended install now. As little security hardening, the Koel MariaDB database password has been changed to a long random character string and the config files permission mode has been changed to `600` to permit read access to the Koel service user only. 
+        - Resolved more issues which caused the installation to fail. These were caused by changed archive directory names and changed Laravel dependencies.
+        - Finally as little performance enhancement, Koel now connects via UNIX socket to MariaDB instead of view TCP connection, which allows to disable TCP listening in MariaDB.
+
+- **DietPi-Software** | [**YaCy**](../software/social/#yacy) :octicons-arrow-right-16: New installs and reinstalls will now have the latest version detected and downloaded automatically. This enables an easy update method by simply reinstalling YaCy via "dietpi-software reinstall 133", independent of the DietPi version.
+- **DietPi-Software** | [**Remot3.it**](../software/remote_desktop/#remot3it) :octicons-arrow-right-16: After the install finished, it is now offered to do the interactive "connectd_installer" setup directly. Neither is a reboot required, nor does any service need to run to be registered.
   This is especially helpful for installs via `dietpi-software install 68`, where the hint about this required setup was not shown before.
-- **DietPi-Software** | **Sonarr** :octicons-arrow-right-16: Support for and migration to v3 has been implemented. Existing installs won't be migrated automatically, run "dietpi-software reinstall 144" to upgrade your Sonarr to v3. On DietPi update, Sonarr v2 users will receive a related notification.
+- **DietPi-Software** | [**Sonarr**](../software/bittorrent/#sonarr) :octicons-arrow-right-16: Support for and migration to v3 has been implemented. Existing installs won't be migrated automatically, run "dietpi-software reinstall 144" to upgrade your Sonarr to v3. On DietPi update, Sonarr v2 users will receive a related notification.
 
 ### Supported SBC (updates)
 
@@ -92,12 +100,11 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. This releas
 - **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where the "uninstall" command did not work and the "reinstall" did not show the intended backup prompt. Many thanks to @Zeuskk for reporting this v7.0 regression: [MariaDB error](https://dietpi.com/phpbb/viewtopic.php?t=8729)
 - **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where directory permissions could be wrong because of 7zr overriding the default umask. This lead e.g. to 403 browser error on a fresh Single File PHP Gallery install. Many thanks to @Alexgolshtein for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4251>
 - **DietPi-Software** | **X.Org X Server**  :octicons-arrow-right-16: Resolved an issue on RPi where the X server start failed when the KMS device tree overlay was not enabled. Many thanks to @xthedakmanx for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4175>
-- **DietPi-Software** | **LXDE**  :octicons-arrow-right-16:  Resolved an issue where after installing LXDE, the system booted into the LightDM desktop login mask automatically, even if desktop autologin was not chosen via dietpi-autostart. Many thanks to @manilx for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8766>
-- **DietPi-Software** | **Portainer**  :octicons-arrow-right-16:  Resolved an issue where the uninstall failed, if the container or image was removed manually before, or not found for a different reason. Many thanks to @redschumi for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4224>
-- **DietPi-Software** | **IceCast** :octicons-arrow-right-16: Resolved an issue where DarkIce fails to connect to IceCast by default, due to an invalid hostname in its config.
-- **DietPi-Software** | **Koel** :octicons-arrow-right-16: Resolved issues which caused a failing install, caused by changed archive directory names and changed Laravel dependencies.
-- **DietPi-Software** | **myMPD** :octicons-arrow-right-16: Resolved an issue where the service fails to start because of a renamed setting. Many thanks to @sofad for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4256>
-- **DietPi-Software** | **O!MPD** :octicons-arrow-right-16: Resolved an issue where browsing the media directory from the web UI failed because of a missing slash in the local config file. Many thanks to @pinkdot for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8904>
+- **DietPi-Software** | [**LXDE**](../software/desktop/#lxde)  :octicons-arrow-right-16:  Resolved an issue where after installing LXDE, the system booted into the LightDM desktop login mask automatically, even if desktop autologin was not chosen via dietpi-autostart. Many thanks to @manilx for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8766>
+- **DietPi-Software** | [**Portainer**](../software/programming/#portainer)  :octicons-arrow-right-16:  Resolved an issue where the uninstall failed, if the container or image was removed manually before, or not found for a different reason. Many thanks to @redschumi for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4224>
+- **DietPi-Software** | [**IceCast**](../software/media/#icecast) :octicons-arrow-right-16: Resolved an issue where DarkIce fails to connect to IceCast by default, due to an invalid hostname in its config.
+- **DietPi-Software** | [**myMPD**](../software/media/#mympd) :octicons-arrow-right-16: Resolved an issue where the service fails to start because of a renamed setting. Many thanks to @sofad for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4256>
+- **DietPi-Software** | [**O!MPD**](../software/media/#ompd) :octicons-arrow-right-16: Resolved an issue where browsing the media directory from the web UI failed because of a missing slash in the local config file. Many thanks to @pinkdot for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8904>
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/XXXX>
 
