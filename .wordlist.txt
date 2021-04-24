@@ -440,6 +440,8 @@ VMware
 VNC
 VNCSERVER
 VPN
+VSCode
+VSCodium
 vsftpd
 VST
 Waveshare

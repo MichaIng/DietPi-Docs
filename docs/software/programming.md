@@ -6,6 +6,7 @@
 - [**Docker -  Create, deploy, and run applications using containers**](#docker)
 - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
 - [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
+- [**VSCodium - FLOSS version of Microsoft VSCode**](#vscodium)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -111,16 +112,15 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 ![Portainer screenshot](../assets/images/dietpi-software-portainer.jpg){: width="1159" height="636" loading="lazy"}
 
-=== "Quick start"
+=== "Access to the web interface"
 
-    The web interface is accessible via port **9002**:
+    The web interface is accessible via port **9002**[^1]:
 
-    - Portainer starts automatically after installation. To view the web interface, open the web browser using next URL: `http://<your.local.ip>:9002` [^1].
-    - If you have basic questions on how to use **Portainer**, please read the beginner guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>.
+    - URL = `http://<your.IP>:9002`
 
-=== "Update"
+=== "Update to latest version"
 
-    Update to latest version:
+    To update Portainer, simply reinstall it:
 
     ```sh
     dietpi-software reinstall 185
@@ -129,8 +129,29 @@ Portainer simplifies your Docker container management via Portainer web interfac
 ***
 
 Official documentation: <https://documentation.portainer.io>  
+Beginners guide: https://codeopolis.com/posts/beginners-guide-to-portainer/>
 Source code: <https://github.com/portainer/portainer>  
 Open-source license: [zlib](https://github.com/portainer/portainer/blob/develop/LICENSE)
+
+## VSCodium
+
+VSCodium is a FLOSS version of [Microsoft's Visual Studio code](https://code.visualstudio.com/), built directly from the source on GitHub, without branding, tracking, or telemetry.
+
+![VSCodium screenshot](../assets/images/dietpi-software-programming-vscodium.png){: width="1028" height="799" loading="lazy"}
+
+=== "Update to latest version"
+
+    VSCodium is installed as APT package, hence you can update it by running the following commands:
+
+    ```sh
+    apt update
+    apt install codium
+    ```
+
+Documentation (Visual Studio Code): <https://code.visualstudio.com/docs>  
+Documentation (VSCodium): <https://github.com/VSCodium/vscodium/blob/master/DOCS.md>  
+Source code: <https://github.com/VSCodium/vscodium>  
+License: [MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)
 

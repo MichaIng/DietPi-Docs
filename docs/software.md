@@ -87,6 +87,7 @@
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](../software/programming/#docker-compose)
 - [**Portainer - Docker container management**](../software/programming/#portainer)
+- [**VSCodium - FLOSS version of Microsoft VSCode**](../software/programming/#vscodium)
 
 ## [Distributed Projects](../software/distributed_projects/)
 
