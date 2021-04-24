@@ -31,9 +31,9 @@ The problems which are solved require so many computer calculations that help fr
 
 ![Folding@Home web interface screenshot](../assets/images/dietpi-software-distributed-projects-foldingathome.png){: width="550" height="424" loading="lazy"}
 
-=== "Access the web interface"
+=== "Access to the web interface"
 
-    The web interface is accessible via the port **7396** on the machine running the computation, e.g. this could be:  
+    The web interface is accessible via the port **7396**, e.g. this could be:  
 
     - URL = `http://<your.IP>:7396`
 
