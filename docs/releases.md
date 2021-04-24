@@ -15,12 +15,12 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. This releas
 The _optimised_ and _additional_ software menus have been merged within `dietpi-software` tool. The earlier split did not follow consistent rules. The merge allows development tools and platforms a more prominent position. It also simplifies the software selection and it addresses a possible confusion about that separation among the community.
 
 ![DietPi Merged software single](assets/images/dietpi-release-single-software-list.jpg){ loading="lazy" }
-    
+
 _Note:_ Since multiple software titles were listening on the ports `5000` and `8000`, the default ports of those titles have been changed to avoid conflicts on concurrent installs. No change is done during the DietPi update, even a software title reinstall won't change it, in most cases. For details see the individual software changes below.
 
 ### New DietPi Tools
 
-- **DietPi-DDNS** 
+- **DietPi-DDNS**
 
     It is a new DietPi tool and it allows you to manage domains for your dynamic IP address.
 
@@ -30,9 +30,9 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
     ![dietpi-ddns](assets/images/dietpi-release-ddns-selection.jpg){: width="600" loading="lazy"}
 
-- [**DietPi-VPN**](../dietpi_tools/#dietpi-nordvpn) 
+- [**DietPi-VPN**](../dietpi_tools/#dietpi-nordvpn)
 
-    It is a major upgrade of an already available tool `DietPi-NordVPN` which is now retired. 
+    It is a major upgrade of an already available tool `DietPi-NordVPN` which is now retired.
 
     ![dietpi-vpn](assets/images/dietpi-release-vpn.jpg){: width="600" loading="lazy"}
 
@@ -54,7 +54,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
     VSCodium is an excellent editor not only for web developers, but also for other programmers. Due to its features, it’s considered one of the best open source code editors, with full support for various programming languages, including Java, JavaScript, Go, Node.js, Python and C++.
 
     ![vscodium](https://vscodium.com/img/vscodium.png){: loading="lazy"}
-    
+
 ### Changes / Improvements / Optimisations
 
 - [**DietPi-LetsEncrypt**](../dietpi_tools/#dietpi-letsencrypt) enhancements :octicons-arrow-right-16:
