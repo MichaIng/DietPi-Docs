@@ -2,81 +2,146 @@
 
 ## April 2021 (version 7.1) - beta version
 
-### New DietPi Tool:
+### Overview
 
-- **DietPi-DDNS** :octicons-arrow-right-16: This new tool has been added, which allows you to manage domains for your dynamic IP address. Select a Dynamic DNS (DDNS) provider or add a custom API URL, to have your DDNS entry updated regularly, via cURL and Cron job. Among others, it supports No-IP and replaces the No-IP client that DietPi supported until now.
+Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. This release is focused to fine tune existent DietPi tools, making them easier to use, with more options.  
 
-### New Software:
+![DietPi version 7](assets/images/dietpi-version7.1.jpg){: width="300" }
 
-- **DietPi-Software** | **IPFS Node** :octicons-arrow-right-16: The InterPlanetary File System peer-to-peer hypermedia protocol node is now available for install with the software ID 186. Many thanks to @ravenclaw900 for implementing this software option: https://github.com/MichaIng/DietPi/issues/4232
-- **DietPi-Software** | **CUPS** :octicons-arrow-right-16: The common UNIX printing system is now available as optimised install option with the software ID 187, including a web interface to manage and share local and network printers across your LAN.
-- **DietPi-Software** | **Go** :octicons-arrow-right-16: Being previously tied into the OpenBazaar install, Go has now become a dedicated install option with the software ID 188. This includes the runtime system, package installer and compiler tool chain, as found at https://golang.org/dl/.
-- **DietPi-Software** | **VSCodium** :octicons-arrow-right-16: As alternative to MS VSCode without MS branding, telemetry and licensing, the VSCodium code editor, with support for various programming languages, including Java, JavaScript, Go, Node.js, Python and C++, has been added as software install option to DietPi.
+[_Source: Pexels.com_](https://www.pexels.com/photo/abstract-aluminum-architectural-architecture-210158)
 
+### Merged software list
+
+The _optimised_ and _additional_ software menus have been merged within `dietpi-software` tool. The earlier split did not follow consistent rules. The merge allows development tools and platforms a more prominent position. It also simplifies the software selection and it addresses a possible confusion about that separation among the community.
+
+![DietPi Merged software single](assets/images/dietpi-release-single-software-list.jpg){ loading="lazy" }
+
+_Note:_ Since multiple software titles were listening on the ports `5000` and `8000`, the default ports of those titles have been changed to avoid conflicts on concurrent installs. No change is done during the DietPi update, even a software title reinstall won't change it, in most cases. For details see the individual software changes below.
+
+### New DietPi Tools
+
+- **DietPi-DDNS**
+
+    It is a new DietPi tool and it allows you to manage domains for your dynamic IP address.
+
+    ![dietpi-ddns](assets/images/dietpi-release-ddns.jpg){: width="600" loading="lazy"}
+
+    Select a Dynamic DNS (DDNS) provider or add a custom API URL, to have your DDNS entry updated regularly, via cURL and Cron job. Among others, it supports No-IP and replaces the No-IP client that DietPi supported until now.
+
+    ![dietpi-ddns](assets/images/dietpi-release-ddns-selection.jpg){: width="600" loading="lazy"}
+
+- [**DietPi-VPN**](../dietpi_tools/#dietpi-nordvpn)
+
+    It is a major upgrade of an already available tool `DietPi-NordVPN` which is now retired.
+
+    ![dietpi-vpn](assets/images/dietpi-release-vpn.jpg){: width="600" loading="lazy"}
+
+    It enables more VPN clients, and it comes with a ProtonVPN client, as well as with a custom OVPN config. The script has been moved to `/boot/dietpi/dietpi-vpn` and the console command alias changed to `dietpi-vpn` accordingly.
+
+    ![dietpi-vpn](assets/images/dietpi-release-vpn-selection.jpg){: width="600" loading="lazy"}
+
+    Additionally a `killswitch` feature has been added. It forcefully drops all WAN packets not sent through the VPN, when the connection got lost, until the VPN is disconnected manually/intentionally. Furthermore, IPv6 is now automatically disabled when the VPN connection is established. This is required to prevent IPv6 leaks as most publish VPN providers/servers do not support IPv6. Earlier, IPv6 was automatically re-enabled once the VPN connection stopped.
+
+    Many thanks to @ravenclaw900 for doing this major rework - see <https://github.com/MichaIng/DietPi/pull/4180>.
+
+### New optimised software packages
+
+- **DietPi-Software** | **IPFS Node** :octicons-arrow-right-16: The InterPlanetary File System peer-to-peer hypermedia protocol node is now available for install with the software ID `186`. Many thanks to @ravenclaw900 for implementing this software option: <https://github.com/MichaIng/DietPi/issues/4232>
+- **DietPi-Software** | **CUPS** :octicons-arrow-right-16: The common UNIX printing system is now available as optimised install option with the software ID `187`, including a web interface to manage and share local and network printers across your LAN.
+- **DietPi-Software** | **Go** :octicons-arrow-right-16: Being previously tied into the [OpenBazaar](../software/social/#openbazaar) install, Go has now become a dedicated install option with the software ID `188`. This includes the runtime system, package installer and compiler tool chain, as found at <https://golang.org/dl/>.
+- **DietPi-Software** | **VSCodium** :octicons-arrow-right-16: It is 100% Open Source Version of Microsoft VS Code. It’s identical to VS Code with the single biggest difference that unlike VS Code, VSCodium doesn’t track your usage data (and it does not including Microsoft branding, telemetry and licensing).
+
+    VSCodium is an excellent editor not only for web developers, but also for other programmers. Due to its features, it’s considered one of the best open source code editors, with full support for various programming languages, including Java, JavaScript, Go, Node.js, Python and C++.
+
+    ![vscodium](https://vscodium.com/img/vscodium.png){: loading="lazy"}
 
 ### Changes / Improvements / Optimisations
 
-- **DietPi-LetsEncrypt**  :octicons-arrow-right-16: It is now possible to obtain certificates for multiple domains, given as comma-separated list, with the first domain used as primary webserver name.
-- **DietPi-LetsEncrypt**  :octicons-arrow-right-16:  It is now possible to obtain certificates without having a webserver installed. Certbot can start an own internal webserver for such case and the certificate can then used to manually enable HTTPS for other web applications, running on other ports than 80/443.
-- **DietPi-LetsEncrypt**  :octicons-arrow-right-16:  It is now possible to enable OCSP (Online Certificate Status Protocol) stapling for the obtained certificate. This allows clients to check if the certificate has been revoked, e.g. when the server has been compromised or the private key stolen.
-- **DietPi-LetsEncrypt** | **Lighttpd**  :octicons-arrow-right-16:  HTTPS is now enabled for IPv6 requests and the deprecated TLSv1.0 and TLSv1.1 are disabled from Debian Buster on. With the Lighttpd version shipped by Debian Stretch, those TLS versions cannot be disabled.
-- **DietPi-NordVPN**  :octicons-arrow-right-16:  The script reveived a major rework to allow being setup as ProtonVPN client and even with a custom OVPN config. For this reason it has been renamed to "DietPi-VPN", with the script moved to /boot/dietpi/dietpi-vpn and the console command alias changed to "dietpi-vpn" accordingly. Additionally a killswitch feature has been added which forcefully drops all WAN packets not sent through the VPN, when the connection got lost, until the VPN is disconnected manually/intentionally. Further is IPv6 now automatically disabled when the VPN connection is established. This is required to prevent IPv6 leaks as most publish VPN providers/servers do not support IPv6. When it has not been disabled before, IPv6 is re-enabled automatically once the VPN connection stops. Many thanks to @ravenclaw900 for doing this major rework: https://github.com/MichaIng/DietPi/pull/4180
-- **DietPi-Arr_to_RAM** :octicons-arrow-right-16: Support for Sonarr v3 and Radarr v3 has been added. On first link to RAM, a script "/mnt/dietpi_userdata/(sonarr|radarr|lidarr)/dietpi-arr_to_RAM.sh" is created, which allows updating the linked database backups via the programs "Custom Script" feature. Since v3, it is not possible anymore to pass arguments to custom script or call scripts inside the /boot directory at all, which broke the previous "/boot/dietpi/misc/dietpi-arr_to_RAM 2 (sonarr|radarr|lidarr)" calls in two ways.
+- [**DietPi-LetsEncrypt**](../dietpi_tools/#dietpi-letsencrypt) enhancements :octicons-arrow-right-16:
+
+    !!! hint ""
+
+        - It is now possible to obtain certificates for multiple domains. These should be provided as comma-separated list, with the first domain used as primary webserver name.
+        - It becomes possible to obtain certificates without having a webserver installed. Certbot can start an own internal webserver for such case and the certificate can then used to manually enable HTTPS for other web applications, running on other ports than 80/443.
+        - It is possible to enable OCSP (Online Certificate Status Protocol) stapling for the obtained certificate. This allows clients to check if the certificate has been revoked, e.g. when the server has been compromised or the private key stolen.
+        - When **Lighttpd**  is used, HTTPS is now enabled also for IPv6 requests and the deprecated TLSv1.0 and TLSv1.1 are disabled from Debian Buster. With the Lighttpd version shipped by Debian Stretch, those TLS versions cannot be disabled.
+
+- **`DietPi-Arr_to_RAM`** :octicons-arrow-right-16: Support for [Sonarr](../software/bittorrent/#sonarr) v3 and [Radarr](../software/bittorrent/#radarr) v3 has been added. On first link to RAM, a script `/mnt/dietpi_userdata/(sonarr|radarr|lidarr)/dietpi-arr_to_RAM.sh` is created, which allows updating the linked database backups via the programs "Custom Script" feature. Since v3, it is not possible anymore to pass arguments to custom script or call scripts inside the /boot directory at all, which broke the previous `/boot/dietpi/misc/dietpi-arr_to_RAM 2 (sonarr|radarr|lidarr)` calls in two ways.
 - **DietPi-FS_partition_resize** :octicons-arrow-right-16: Added support to automatically resize F2FS and Btrfs filesystems on first boot.
-- **DietPi-Drive_Manager** :octicons-arrow-right-16: Added support for resizing F2FS and Btrfs filesystems as well as format- and filesystem check & repair support for XFS filesystems.
-- **DietPi-Drive_Manager** :octicons-arrow-right-16: When adding Samba mounts, credentials are not added in plain text to /etc/fstab anymore, but stored instead in a separate per-mount credential file with strict root-only read permissions. Many thanks to @TheOriginalMrWolf for doing this suggestion: https://github.com/MichaIng/DietPi/issues/4082
-- **DietPi-Config** :octicons-arrow-right-16: Added a safe overclocking profile for RPi 3+ models. Many thanks to @lone for doing long-term stability tests and reporting back the result: https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285
-- **DietPi-Config** :octicons-arrow-right-16:  When disabling the RPi camera feature, the bcm2835_isp kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: https://github.com/MichaIng/DietPi/issues/4203
-- DietPi-Software :octicons-arrow-right-16: The "optimised" and "additional" software menus have been merged. The separation did not follow consistent rules and this change allows us to have development tools and platforms in a more prominent position. Also it simplifies the software selection and addresses possible confusion about that separation among our users.
-- **DietPi-Software** :octicons-arrow-right-16: Since multiple software titles were listeing on the ports 5000 and 8000, the default ports of those titles have been changed to avoid conflicts on concurrent installs. No change is done during the DietPi update, even a software title reinstall won't change it, in most cases. For details see the individual software changes below.
-- **DietPi-Software** | **Mosquitto** :octicons-arrow-right-16: Since v2, by default remote connections and no unauthenticated requests are possible anymore. On fresh installs and reinstalls, we'll enable remote connections, but create a password file, so that MQTT clients need to authenticate with username "mosquitto" and the global software password by default. Many thanks to @mattsmithuk for reporting this change: https://github.com/MichaIng/DietPi/issues/4133
-- **DietPi-Software** | **IceCast** :octicons-arrow-right-16: The streaming server can now be installed on virtual machines as well and the default web UI password will now be the global software password instead of a random one. Since the DarkIce config file /etc/darkice.cfg contains the global software password in plain text, its permission mode is changed to 600 to limit read access to the root user only.
-- **DietPi-Software** | **OctoPrint** :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 5000 to 5001 to avoid conflicts with Shairport Sync.
-- **DietPi-Software** | **Firefox Sync Server** :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 5000 to 5002 to avoid conflicts with Shairport Sync.
-- **DietPi-Software** | **rTorrent** :octicons-arrow-right-16: For performance reasons, and to avoid conflicts with Shairport Sync, the default SCGI/RPC access has been changed from TCP port 5000 to UNIX socket. This change is applied on fresh installs and reinstalls of rTorrent, as it requires a change on both all sides, rTorrent, ruTorrent and the webserver. HTTP authentication is now enforced for the rTorrent RPC access with all webservers, using the global software password by default, and the password hash algorithm has been hardened with Nginx.
-- **DietPi-Software** | **WebIOPi** :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 8000 to 8002 to avoid conflicts with IceCast. Additionally the install process has been slightly sped up by skipping unnecessary installer-internal APT calls.
-- **DietPi-Software** | **Koel** :octicons-arrow-right-16: On fresh installs and reinstalls, the listening port has been changed from 8000 to 8003 to avoid conflicts with IceCast. Additionally the install process has been simplified and dependencies reduces, since after Koel v5.0.0 pre-compiled frontend binaries are available. This also allows a completely unattended install now. As little security hardening, the Koel MariaDB database password has been changed to a long random character string and the config files permission mode has been changed to 600 to permit read access to the Koel service user only. Finally as little performance enhancement, Koel now connects via UNIX socket to MariaDB instead of view TCP connection, which allows to disable TCP listening in MariaDB.
-- **DietPi-Software** | **YaCy** :octicons-arrow-right-16: New installs and reinstalls will now have the latest version detected and downloaded automatically. This enables an easy update method by simply reinstalling YaCy via "dietpi-software reinstall 133", independent of the DietPi version.
-- **DietPi-Software** | **Remot3.it** :octicons-arrow-right-16: After the install finished, it is now offered to do the interactive "connectd_installer" setup directly. Neither is a reboot required, nor does any service need to run to be registered. This is especially helpful for installs via "dietpi-software install 68", where the hint about this required setup was not shown before.
-- **DietPi-Software** | **Sonarr** :octicons-arrow-right-16: Support for and migration to v3 has been implemented. Existing installs won't be migrated automatically, run "dietpi-software reinstall 144" to upgrade your Sonarr to v3. On DietPi update, Sonarr v2 users will receive a related notification.
+
+- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) enhancements :octicons-arrow-right-16:
+
+    !!! hint ""
+
+        - It has now support for resizing F2FS and Btrfs filesystems as well as format- and filesystem check & repair support for XFS filesystems.
+        - When adding Samba mounts, credentials are not added in plain text to /etc/fstab anymore, but stored instead in a separate per-mount credential file with strict root-only read permissions.
+        Many thanks to @TheOriginalMrWolf for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4082>
+
+- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) enhancements :octicons-arrow-right-16:
+
+    !!! hint ""
+
+        - Added a safe overclocking profile for RPi 3+ models. Many thanks to @lone for doing long-term stability tests and reporting back the result: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285)
+
+        - When disabling the RPi camera feature, the bcm2835_isp kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: <https://github.com/MichaIng/DietPi/issues/4203>
+
+- **DietPi-Software** | [**Mosquitto**](../software/hardware_projects/#mosquitto) :octicons-arrow-right-16: Since v2, by default remote connections and no unauthenticated requests are possible anymore. On fresh installs and reinstalls, we'll enable remote connections, but create a password file, so that MQTT clients need to authenticate with username `mosquitto` and the global software password by default. Many thanks to @mattsmithuk for reporting this change: <https://github.com/MichaIng/DietPi/issues/4133>
+- **DietPi-Software** | [**IceCast**](../software/media/#icecast) :octicons-arrow-right-16: The streaming server can now be installed on virtual machines as well and the default web UI password will now be the global software password instead of a random one. Since the DarkIce config file /etc/darkice.cfg contains the global software password in plain text, its permission mode is changed to 600 to limit read access to the root user only.
+- **DietPi-Software** | [**OctoPrint**](../software/printing/#octoprint :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 5000 to 5001 to avoid conflicts with Shairport Sync.
+- **DietPi-Software** | [**Firefox Sync Server**](../software/cloud/#firefox-sync-server) :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 5000 to 5002 to avoid conflicts with Shairport Sync.
+- **DietPi-Software** | [**rTorrent**](../software/bittorrent/#rtorrent) :octicons-arrow-right-16: For performance reasons, and to avoid conflicts with Shairport Sync, the default SCGI/RPC access has been changed from TCP port `5000` to UNIX socket. This change is applied on fresh installs and reinstalls of rTorrent, as it requires a change on both all sides, rTorrent, ruTorrent and the webserver. HTTP authentication is now enforced for the rTorrent RPC access with all webservers, using the global software password by default, and the password hash algorithm has been hardened with [Nginx](../software/webserver_stack/#nginx).
+- **DietPi-Software** | [**WebIOPi**](../software/hardware_projects/#webiopi) :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 8000 to 8002 to avoid conflicts with [IceCast](../software/media/#icecast). Additionally the install process has been slightly sped up by skipping unnecessary installer-internal APT calls.
+- **DietPi-Software** | [**Koel**](../software/media/#koel) enhancements :octicons-arrow-right-16:
+
+    !!! hint ""
+
+        - On fresh installs and reinstalls, the listening port has been changed from `8000` to `8003` to avoid conflicts with IceCast. 
+        - Additionally the install process has been simplified and dependencies reduces, since after Koel v5.0.0 pre-compiled frontend binaries are available. This also allows a completely unattended install now. As little security hardening, the Koel MariaDB database password has been changed to a long random character string and the config files permission mode has been changed to `600` to permit read access to the Koel service user only. 
+        - Resolved more issues which caused the installation to fail. These were caused by changed archive directory names and changed Laravel dependencies.
+        - Finally as little performance enhancement, Koel now connects via UNIX socket to MariaDB instead of view TCP connection, which allows to disable TCP listening in [MariaDB](../software/databases/#mariadb).
+
+- **DietPi-Software** | [**YaCy**](../software/social/#yacy) :octicons-arrow-right-16: New installs and reinstalls will now have the latest version detected and downloaded automatically. This enables an easy update method by simply reinstalling YaCy via `dietpi-software reinstall 133`, independent of the DietPi version.
+- **DietPi-Software** | [**Remot3.it**](../software/remote_desktop/#remot3it) :octicons-arrow-right-16: After the install finished, it is now offered to do the interactive "connectd_installer" setup directly. Neither is a reboot required, nor does any service need to run to be registered.
+  This is especially helpful for installs via `dietpi-software install 68`, where the hint about this required setup was not shown before.
+- **DietPi-Software** | [**Sonarr**](../software/bittorrent/#sonarr) :octicons-arrow-right-16: Support for and migration to v3 has been implemented. Existing installs won't be migrated automatically, run `dietpi-software reinstall 144` to upgrade your Sonarr to v3. On DietPi update, Sonarr v2 users will receive a related notification.
 
 ### Supported SBC (updates)
 
-- For historical reasons, DietPi had internal hardware identifiers for SBCs which are not officially supported anymore for a long time, namely variouos Orange Pi and Banana Pi models, BeagleBone Black and LeMaker Guitar. Since we do not provide a reference image and do not test features on those boards, we have no chance to reasonably use those hardware IDs code-wise to apply tweaks or enable features, which renders them meaningless. To avoid wrong assumptions, we hence removed the identifies for the named SBC models. 
+- For historical reasons, DietPi had internal hardware identifiers for SBCs which are not officially supported anymore for a long time, namely variouos Orange Pi and Banana Pi models, BeagleBone Black and LeMaker Guitar. Since we do not provide a reference image and do not test features on those boards, we have no chance to reasonably use those hardware IDs code-wise to apply tweaks or enable features, which renders them meaningless. To avoid wrong assumptions, we hence removed the identifies for the named SBC models.
   
     As a replacement, we added a set of generic SoC identifiers, which can as well be selected from within the DietPi-PREP system converter script. This means that one is e.g. able to select "Generic Allwinner H3" and have an SoC identifier set by this, which is used within the code for conditionals based on the SoC, e.g. regarding GPU acceleration and other SoC-internal hardware features. The removed SBC models are converted automatically to those generic identifiers, so that e.g. after the update an OrangePi PC will be shown in our scripts and banner as "Generic Allwinner H3". While it looks like a degradation, it is a hardening, as it assures that no false assumptions and conditionals are triggered in our scripts but only those which we can know for sure being true, regardless of the initial Debian image you used.
 
-- Firefly RK3399 was removed from the supported devices list, as no a single user is reported via DietPi-Survey (https://dietpi.com/survey/#device). If case there were actually Firefly RK3399 DietPi systems, not participating DietPi-Survey, those would be migrated to the "Generic Rockchip RK3399" identifier, which code-wise maintains the exact same support.
+- Firefly RK3399 was removed from the supported devices list, as no a single user is reported via DietPi-Survey (<https://dietpi.com/survey/#device>). If case there were actually Firefly RK3399 DietPi systems, not participating DietPi-Survey, those would be migrated to the "Generic Rockchip RK3399" identifier, which code-wise maintains the exact same support.
 
-### Fixes
+### Bug fixes
 
-- **DietPi-Config** / **DietPi-PREP**  :octicons-arrow-right-16: Resolved an issue on Debian Bullseye, when toggling serial consoles, where /etc/securetty is attempted to be altered even that it is not used and does not exist anymore since Debian Bullseye. Many thanks to @NastyDesertFox for reporting this issue: https://github.com/MichaIng/DietPi/issues/4205
-- **DietPi-Config**  :octicons-arrow-right-16:  Resolved an issue on Sparky SBC, where selecting the generic USB DAC sound card option failed, due to invalid amixer calls. Many thanks to @Balmoral86 for reporting this issue: https://github.com/MichaIng/DietPi/issues/4249
+- **DietPi-Config** / **DietPi-PREP**  :octicons-arrow-right-16: Resolved an issue on Debian Bullseye, when toggling serial consoles, where `/etc/securetty` is attempted to be altered even that it is not used and does not exist anymore since Debian Bullseye. Many thanks to @NastyDesertFox for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4205>
+- **DietPi-Config**  :octicons-arrow-right-16:  Resolved an issue on Sparky SBC, where selecting the generic USB DAC sound card option failed, due to invalid amixer calls. Many thanks to @Balmoral86 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4249>
 - **DietPi-Drive_Manager**  :octicons-arrow-right-16: Fixed detection and visualisation of loop devices in menu.
-- **DietPi-Set_userdata**  :octicons-arrow-right-16: When dietpi_userdata was moved to another drive, the intended dietpi:dietpi ownership was not applied to the target directory as intended. This is required by some software titles, like Syncthing and file servers, to permit the creation of files and directories. Many thanks to @redschumi for reporting this issue: https://github.com/MichaIng/DietPi/issues/4228
-- **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where the "uninstall" command did not work and the "reinstall" did not show the intended backup prompt. Many thanks to @Zeuskk for reporting this v7.0 regression: https://dietpi.com/phpbb/viewtopic.php?t=8729
-- **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where directory permissions could be wrong because of 7zr overriding the default umask. This lead e.g. to 403 browser error on a fresh Single File PHP Gallery install. Many thanks to @Alexgolshtein for reporting this issue: https://github.com/MichaIng/DietPi/issues/4251
-- **DietPi-Software** | **X.Org X Server**  :octicons-arrow-right-16: Resolved an issue on RPi where the X server start failed when the KMS device tree overlay was not enabled. Many thanks to @xthedakmanx for reporting this issue: https://github.com/MichaIng/DietPi/issues/4175
-- **DietPi-Software** | **LXDE**  :octicons-arrow-right-16:  Resolved an issue where after installing LXDE, the system booted into the LightDM desktop login mask automatically, even if desktop autologin was not chosen via dietpi-autostart. Many thanks to @manilx for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?t=8766
-- **DietPi-Software** | **Portainer**  :octicons-arrow-right-16:  Resolved an issue where the uninstall failed, if the container or image was removed manually before, or not found for a different reason. Many thanks to @redschumi for reporting this issue: https://github.com/MichaIng/DietPi/issues/4224
-- **DietPi-Software** | **IceCast** :octicons-arrow-right-16: Resolved an issue where DarkIce fails to connect to IceCast by default, due to an invalid hostname in its config.
-- **DietPi-Software** | **Koel** :octicons-arrow-right-16: Resolved issues which caused a failing install, caused by changed archive directory names and changed Laravel dependencies.
-- **DietPi-Software** | **myMPD** :octicons-arrow-right-16: Resolved an issue where the service fails to start because of a renamed setting. Many thanks to @sofad for reporting this issue: https://github.com/MichaIng/DietPi/issues/4256
-- **DietPi-Software** | **O!MPD** :octicons-arrow-right-16: Resolved an issue where browsing the media directory from the web UI failed because of a missing slash in the local config file. Many thanks to @pinkdot for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?t=8904
+- **DietPi-Set_userdata**  :octicons-arrow-right-16: When dietpi_userdata was moved to another drive, the intended dietpi:dietpi ownership was not applied to the target directory as intended. This is required by some software titles, like Syncthing and file servers, to permit the creation of files and directories. Many thanks to @redschumi for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4228>
+- **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where the "uninstall" command did not work and the "reinstall" did not show the intended backup prompt. Many thanks to @Zeuskk for reporting this v7.0 regression: [MariaDB error](https://dietpi.com/phpbb/viewtopic.php?t=8729)
+- **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where directory permissions could be wrong because of 7zr overriding the default umask. This lead e.g. to 403 browser error on a fresh Single File PHP Gallery install. Many thanks to @Alexgolshtein for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4251>
+- **DietPi-Software** | **X.Org X Server**  :octicons-arrow-right-16: Resolved an issue on RPi where the X server start failed when the KMS device tree overlay was not enabled. Many thanks to @xthedakmanx for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4175>
+- **DietPi-Software** | [**LXDE**](../software/desktop/#lxde)  :octicons-arrow-right-16:  Resolved an issue where after installing LXDE, the system booted into the LightDM desktop login mask automatically, even if desktop autologin was not chosen via dietpi-autostart. Many thanks to @manilx for reporting this issue: [pie 4 hangs at empty screen](https://dietpi.com/phpbb/viewtopic.php?t=8766)
+- **DietPi-Software** | [**Portainer**](../software/programming/#portainer)  :octicons-arrow-right-16:  Resolved an issue where the uninstall failed, if the container or image was removed manually before, or not found for a different reason. Many thanks to @redschumi for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4224>
+- **DietPi-Software** | [**IceCast**](../software/media/#icecast) :octicons-arrow-right-16: Resolved an issue where DarkIce fails to connect to IceCast by default, due to an invalid hostname in its config.
+- **DietPi-Software** | [**myMPD**](../software/media/#mympd) :octicons-arrow-right-16: Resolved an issue where the service fails to start because of a renamed setting. Many thanks to @sofad for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4256>
+- **DietPi-Software** | [**O!MPD**](../software/media/#ompd) :octicons-arrow-right-16: Resolved an issue where browsing the media directory from the web UI failed because of a missing slash in the local config file. Many thanks to @pinkdot for reporting this issue: [Small issue in O!MPD with missing slash](https://dietpi.com/phpbb/viewtopic.php?t=8904)
 
-As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: https://github.com/MichaIng/DietPi/pull/XXXX
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/XXXX>
 
-### Removed Software:
-- DietPi-Software | DietPi-NordVPN :octicons-arrow-right-16: As part of the major rework (see changes above), the dedicated install option has been removed. The script is available OOTB and will download, install or remove parts depending on your provider choice and menu selections.
-- DietPi-Software | No-IP :octicons-arrow-right-16: As result of the new DietPi-DDNS tool (see new scripts above), the dedicated install option has been removed. DietPi-DDNS is always available and does not require any additional download or install of external files.
+### Removed software packages
+
+- **DietPi-Software** | **DietPi-NordVPN** :octicons-arrow-right-16: As part of the major rework (see changes above), the dedicated install option has been removed. The script is available OOTB and will download, install or remove parts depending on your provider choice and menu selections.
+- **DietPi-Software** | **No-IP** :octicons-arrow-right-16: As result of the new DietPi-DDNS tool (see new scripts above), the dedicated install option has been removed. `DietPi-DDNS` is always available and does not require any additional download or install of external files.
 
 ### Known / Outstanding Issues
 
-- DietPi-Config  :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: https://github.com/MichaIng/DietPi/issues/2103
-- DietPi-Software | MATE desktop :octicons-arrow-right-16: When logging in as root, desktop items and right-click context menu is missing: https://github.com/MichaIng/DietPi/issues/3160
-- DietPi-Software | Sonarr/Radarr/Mono  :octicons-arrow-right-16: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: https://github.com/MichaIng/DietPi/issues/3179
+- **DietPi-Config** :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
+- **DietPi-Software** | **MATE desktop** :octicons-arrow-right-16: When logging in as root, desktop items and right-click context menu is missing: <https://github.com/MichaIng/DietPi/issues/3160>
+- **DietPi-Software** | **Sonarr**/**Radarr**/**Mono**  :octicons-arrow-right-16: With current Mono version 6, import to a file system without UNIX permissions support (exFAT, FAT32/vfat, CIFS mounts and NTFS without "permissions" option) fails, regardless of user/umask mount options: <https://github.com/MichaIng/DietPi/issues/3179>
 
-For all additional issues that may appear after release, please see the following link for active tickets: https://github.com/MichaIng/DietPi/issues
+For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
 
 ## February 2021 (version 7.0)
 
@@ -84,7 +149,7 @@ For all additional issues that may appear after release, please see the followin
 
 Welcome to **February 2021 release** :octicons-heart-16: of **DietPi**. With this release we changed the major version number, becoming **Version 7**! We expect a smooth upgrade :octicons-thumbsup-16:
 
-![DietPi version 7](assets/images/dietpi-version7.jpg){: width="300" height="200" loading="lazy"}
+![DietPi version 7](assets/images/dietpi-version7.jpg){: width="300" loading="lazy"}
 
 !!! info "Why this upgrade to version 7?"
 
@@ -110,7 +175,7 @@ Whenever you have multiple containers :octicons-server-16: , there are many task
 
 [Docker Compose](../software/programming/#docker-compose) lets you automate the deployment of multiple containers using an YAML file. This file enable you to configure your application’s services and create all the app’s services from this configuration.
 
-![docker compose](assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
+![docker compose](assets/images/dietpi-docker-compose.png){: width="500" loading="lazy"}
 
 Find sample applications using Docker Compose and more details in the [documentation page](../software/programming/#docker-compose).
 
@@ -182,16 +247,16 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 
 - **DietPi-Banner**  :octicons-arrow-right-16: Running the script without input argument will now open the menu instead of printing the banner. The console alias has been adjusted accordingly, so that it is now possible to run "dietpi-banner 0" and "dietpi-banner 1" from console to have full and short banner versions printed. The "dietpi-banner" console command remains opening the menu.
 
-### Fixes
+### Bug fixes
 
 - **Audio** :octicons-arrow-right-16: Resolved a bug with Debian Buster, where the ALSA state daemon was always running, even when it was not configured.
-- **DietPi-Globals** | `G_OBTAIN_CPU_TEMP` :octicons-arrow-right-16: Negative temperatures are not trusted anymore, "N/A" will be printed instead. This allows a generic approach to fix/allow temperature estimation on further SBC models. Many thanks to @Thanapat for reporting a related issue on Roseapple Pi: <https://dietpi.com/phpbb/viewtopic.php?t=8677>
+- **DietPi-Globals** | `G_OBTAIN_CPU_TEMP` :octicons-arrow-right-16: Negative temperatures are not trusted anymore, "N/A" will be printed instead. This allows a generic approach to fix/allow temperature estimation on further SBC models. Many thanks to @Thanapat for reporting a related issue on Roseapple Pi: [Editing dietpi-globals](https://dietpi.com/phpbb/viewtopic.php?t=8677)
 - **DietPi-Set_swapfile**  :octicons-arrow-right-16: Resolve an issue where "zram"/"zram0" dietpi.txt path entries were dropped, when running the script without input arguments. This especially broke applying zram-swap on first boot. Many thanks to @Dr0bac for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4002>
-- **DietPi-Software** | **[Bitwarden_RS](../software/cloud/#bitwarden_rs)**  :octicons-arrow-right-16: Resolved an issue where the self-signed TLS certificate could not be imported on iOS. To apply this fix to an existing instance, the configuration file "/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env" needs to be removed or moved to a different location, so "dietpi-software reinstall 183" will re-create the configuration and TLS certificate.
+- **DietPi-Software** | **[Bitwarden_RS](../software/cloud/#bitwarden_rs)**  :octicons-arrow-right-16: Resolved an issue where the self-signed TLS certificate could not be imported on iOS. To apply this fix to an existing instance, the configuration file "/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env" needs to be removed or moved to a different location, so `dietpi-software reinstall 183` will re-create the configuration and TLS certificate.
 - **DietPi-Software** | **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16:  Resolved an issue where during install in combination with Pi-hole the service restart could have failed. Many thanks to @Ernstian for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2409#issuecomment-739154892>
 - **DietPi-Software** | **[Unbound](../software/dns_servers/#unbound)**  :octicons-arrow-right-16:  Resolved an issue where the service start failed if the host system had a local IP address outside of the 192.168.0.0/16 subnet. Many thanks to @faxesystem for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2409#issuecomment-749174984>
 - **DietPi-Software** | **[ReadyMedia](../software/media/#readymedia)**  :octicons-arrow-right-16: Resolved an issue where the media library was not rescanned on service start. Many thanks to @AdamFarnsworth0 for reporting this issue: <https://twitter.com/AdamFarnsworth0/status/1347977813635305475>
-- **DietPi-Software** | **[WiFi Hotspot](../software/advanced_networking/#wifi-hotspot)** :octicons-arrow-right-16:  Resolved an issue where the install on Armbian-based images with RTL8188C* WiFi chip failed. Many thanks to @smogan71 for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8523>
+- **DietPi-Software** | **[WiFi Hotspot](../software/advanced_networking/#wifi-hotspot)** :octicons-arrow-right-16:  Resolved an issue where the install on Armbian-based images with RTL8188C* WiFi chip failed. Many thanks to @smogan71 for reporting this issue: [rock64 -> wifi-hotspot -> Unable to locate package hostapt-realtek](https://dietpi.com/phpbb/viewtopic.php?t=8523)
 - **DietPi-Software** | **[Medusa](../software/bittorrent/#medusa)** :octicons-arrow-right-16:  This software option has been disabled on Stretch systems, since it now requires Python >=3.6, which is not available in the Debian Stretch repository. If you run Medusa on a Stretch system, it will continue to work, but updating will either not be possible or break it. Many thanks to @aermak for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3991>
 - **DietPi-Software** | **[WiringPi](../software/hardware_projects/#wiringpi)** :octicons-arrow-right-16:  Resolved an issue where the install failed, if the /usr/local/bin directory was not present. Many thanks to @bruz for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8609>
 - **DietPi-Software** | **[PaperMC](../software/gaming/#papermc)**  :octicons-arrow-right-16:  Resolved an issue where the install failed due to changed download URLs and stabilised service start and config creation by setting the Java heap size and allowing more time for the startup on smaller SBCs. Many thanks to @omavoss for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?p=30191#p30191>
@@ -223,7 +288,7 @@ Welcome to **December 2020 release** :octicons-gift-16: of DietPi. This release 
 
 As a summary of 2020, DietPi had **8 releases** with over **175 000** downloads. It brought 128 :octicons-light-bulb-16: improvements and changes, as well as 119 :octicons-issue-closed-16: bug fixes.
 
-![DietPi Release in 2020](assets/images/dietpi-release-gift.jpg){: width="447" height="298" loading="lazy"}
+![DietPi Release in 2020](assets/images/dietpi-release-gift.jpg){: width="447" loading="lazy"}
 
 ### New optimised software packages
 
@@ -233,7 +298,7 @@ It is a new software package included in the DietPi optimised list. Portainer si
 
 For more details check the [documentation page](../software/programming/#portainer).
 
-![Portainer screenshot](assets/images/dietpi-software-portainer.jpg){: width="1159" height="636" loading="lazy"}
+![Portainer screenshot](assets/images/dietpi-software-portainer.jpg){: width="1159" loading="lazy"}
 
 Many thanks to @Joulinar for implementing this software option - more details here: MichaIng/DietPi#3933
 
@@ -243,7 +308,7 @@ PaperMC extends the list of Minecraft servers supported by DietPi. It is a high 
 
 For more details check the [documentation page](../software/gaming/#papermc).
 
-![Minecraft screenshot](assets/images/dietpi-software-papermc.jpg){: width="606" height="363" loading="lazy"}
+![Minecraft screenshot](assets/images/dietpi-software-papermc.jpg){: width="606" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3828
 
@@ -263,7 +328,7 @@ Validating, recursive, caching DNS resolver is now available for install and int
 
 For more details check the [documentation page](../software/dns_servers/#unbound)
 
-![Unbound monitor screenshot](assets/images/dietpi-software-unbound.jpg){: width="603" height="331" loading="lazy"}
+![Unbound monitor screenshot](assets/images/dietpi-software-unbound.jpg){: width="600" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3872
 
@@ -273,7 +338,7 @@ Bitwarden_RS is a an unofficial Bitwarden password manager server with web UI, w
 
 For more details check the [documentation page](../software/cloud/#bitwarden_rs)
 
-![Bitwarden_RS](assets/images/dietpi-software-bitwarden_rs.jpg){: width="2000" height="823" loading="lazy"}
+![Bitwarden_RS](assets/images/dietpi-software-bitwarden_rs.jpg){: width="2000" loading="lazy"}
 
 Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/DietPi!3724).
 
@@ -321,7 +386,7 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 - **[DietPi-Config | Raspberry Pi](../dietpi_tools/#advanced-options)**: When enabling I2C support, the Python 3 SMbus module is now installed instead of the deprecated Python 2 version. This matches as well the dependency of PiJuice, which nowadays pulls Python 3 SMbus as package dependency, hence this change avoids the obsolete install of the whole Python 2 stack when PiJuice is installed through dietpi-software. Many thanks to @Trunkzeh for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3963#issuecomment-748547394>
 - **[DietPi-Software | OpenBazaar](../software/social/#openbazaar)** :octicons-arrow-right-16: Build is now done with the currently latest Go v1.15.3 and the service runs as unprivileged user `openbazaar` instead of `root`.
 - **[DietPi-Software | XRDP](../software/remote_desktop/#xrdp)** :octicons-arrow-right-16: Remote desktop connections can now be done with the "Xorg" method and hence don't require an active VNC server anymore. New installes will not pull TigerVNC as dependency and if only RDP is required, TigerVNC can be uninstalled.
-- **[DietPi-Software | Single File PHP Gallery](../software/social/#image-gallery)** :octicons-arrow-right-16: Updated new installs to latest v4.7.1. Run "dietpi-software reinstall 56" to upgrade your existing instance.
+- **[DietPi-Software | Single File PHP Gallery](../software/social/#image-gallery)** :octicons-arrow-right-16: Updated new installs to latest v4.7.1. Run `dietpi-software reinstall 56` to upgrade your existing instance.
 - **[DietPi-Software | MineOS](../software/gaming/#mineos)** :octicons-arrow-right-16: A systemd service is now used to run the daemon in favour of the previous supervisor, the obsolete `mineos` user is not created anymore, Node.js v11 is used to build MineOS, obsolete dependencies have been removed and a reinstall will now perform a MineOS upgrade and the existing `/etc/mineos.conf` is not replaced anymore.
 - **[DietPi-Software | Mycroft AI](../software/hardware_projects/#mycroft-ai)** :octicons-arrow-right-16: By default, the ALSA automatic conversions plugin is enabled now on install, which enables OOTB compatibility with all wav sound formats and sound card. Additionally listener sampling rate override (48000 Hz) has been removed, reverting to Mycroft default (16000 Hz), which might solve an issue with hanging microphone level in CLI and related failing voice detection.
 - **[DietPi-Software | Gogs](../software/cloud/#gogs)** :octicons-arrow-right-16: Has been enabled for ARMv8 boards and on ARMv7 boards the newest version is installed again, which was not the case since Gogs v0.12. due to changed download names. Many thanks to [phpBB:MadKernel](https://dietpi.com/phpbb/memberlist.php?username=MadKernel) for bringing ARMv8 support back to our attention: <https://dietpi.com/phpbb/viewtopic.php?t=8276>
@@ -456,7 +521,7 @@ As always, many smaller code performance and stability improvements, visual and 
 - **DietPi-Software** :octicons-commit-24: **Komga** :octicons-arrow-right-16: FOSS home server for comics and mangas, now available for install as ID 179. Many thanks to @himura95 for providing the implementation: [#3403](https://github.com/MichaIng/DietPi/issues/3403)
 - **DietPi-Software** :octicons-commit-24: **Jellyfin** :octicons-arrow-right-16: A FOSS web interface media streaming server available for install. Many thanks to all who voted for it: <https://github.com/MichaIng/DietPi/issues/3152>
 - **DietPi-Software** :octicons-commit-24: **Airsonic** :octicons-arrow-right-16: It is now available on Debian Buster systems since Java 11 support has been added. Many thanks to @linxiaopi for pointing us at the required re-evaluation: [#3732](https://github.com/MichaIng/DietPi/issues/3732)
-- **DietPi-Software** :octicons-arrow-right-16: On the uninstall information prompt, the info has been added that uninstalling usually means that related userdata and configs are purged as well. Additionally "dietpi-software reinstall <ID>" is mentioned now as alternative to repair/update installed software. Many thanks to @kpine for doing this request: [#3550](https://github.com/MichaIng/DietPi/issues/3550)
+- **DietPi-Software** :octicons-arrow-right-16: On the uninstall information prompt, the info has been added that uninstalling usually means that related userdata and configs are purged as well. Additionally `dietpi-software reinstall <ID>` is mentioned now as alternative to repair/update installed software. Many thanks to @kpine for doing this request: [#3550](https://github.com/MichaIng/DietPi/issues/3550)
 - **DietPi-Software** :octicons-commit-24: **Python 3** :octicons-arrow-right-16: octicons-arrow-right-16: We migrated this software selection to a Python 3 / pip3 install only, due to Python 2 EOL in 2020/01. Where possible, dependant software selections have been migrated to Python 3 builds, where not possible, Python 2 / pip2 is installed separately for now. We hope that most affected software titles will do Python 3 releases soon, otherwise we will remove them form our portfolio, at latest in spring 2021. The strongest reason for this is that next Debian Bullseye (summer 2021) will not ship Python 2 packages anymore.
 - **DietPi-Software** :octicons-commit-24: **SABnzbd** :octicons-arrow-right-16: Migrated to a Python 3 based install.
 - **DietPi-Software** :octicons-commit-24: **OctoPrint** :octicons-arrow-right-16: On Debian Buster and up, migrated to a Python 3 based install.
@@ -505,7 +570,7 @@ Welcome to the July 2020 release of DietPi. There are a number of updates in thi
 - **DietPi-Software - Folding@Home** - Updated to latest v7.6.X, which includes an explicit option for prioritising COVID 19 projects [see link](https://foldingathome.org/2020/04/17/new-foldinghome-software-with-the-option-to-prioritize-covid-19-projects/). This update is applied to all systems with DietPi v6.31, existing config and data are preserved.
 - **DietPi-Software - Sonarr/Radarr/Lidarr** - The /media directory as second common mount point can now also be used as download/media directory without manually adding it to the systemd units ReadWritePaths list.
 - **DietPi-Software - Samba Server** - Changed default server-side file permissions from 0775 to 0664, hence files on the server are by default created without execute permissions now, which suits usual standards.
-- **DietPi-Software - QuiteRSS** - Re-added the years ago accidentally removed install code block. If you ever wondered why there was no QuiteRSS after selecting it for install, now there will be. If it is marked as installed already, run either "dietpi-software install 22" or simply "apt install quiterss" to (really) get it.
+- **DietPi-Software - QuiteRSS** - Re-added the years ago accidentally removed install code block. If you ever wondered why there was no QuiteRSS after selecting it for install, now there will be. If it is marked as installed already, run either `dietpi-software install 22` or simply `apt install quiterss` to (really) get it.
 - **DietPi-Software - SqueezeLite** - Updated to v1.9.7 and the service runs now as own user "squeezelite".
 
 ### Notable fixes
