@@ -53,7 +53,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 
     - OS: **L** for Linux / DietPi
     - Webserver: **A** for Apache2, **E** for [Nginx](#nginx), **L** for [Lighttpd](#lighttpd)
-    - Database: **M** for MariaDB, **S** for [SQLite](../database/#sqlite)
+    - Database: **M** for MariaDB, **S** for [SQLite](../databases/#sqlite)
     - Scripting language: **P** for [PHP](#php)
 
 !!! hint ""
@@ -93,11 +93,11 @@ DietPi offers an **one-click-installation** of the following web development sta
 
 === "Which DATABASE to CHOOSE ?"
 
-    **[MariaDB](../database/#mariadb)**  
+    **[MariaDB](../databases/#mariadb)**  
     It is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.
 
-    **[SQLite](../database/#sqlite)**  
-    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](../database/#mariadb). [SQLite](../database/#sqlite) has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
+    **[SQLite](../databases/#sqlite)**  
+    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](../databases/#mariadb). [SQLite](../databases/#sqlite) has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
 
 ***
 
@@ -124,7 +124,7 @@ The latter is used only in the case of the first webserver background installati
     ![DietPi-Software webserver preference menu](../assets/images/dietpi-software-webserver-preference.png){: width="500" height="309" loading="lazy"}
 
     Using this option you only select the webserver for use in DietPi installations.  
-    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](../database/#mariadb) / [SQLite](../database/#sqlite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
+    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](../databases/#mariadb) / [SQLite](../databases/#sqlite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
 
     ???+ info "No webserver change if already installed"
         This setting "Webserver Preference* can NOT be changed if an existing webserver is installed on the system.
@@ -159,7 +159,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](../database/#mariadb)** details.
+    For database, check **[MariaDB](../databases/#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
@@ -217,9 +217,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 ### LASP Web Stack
 
-LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [SQLite](../database/#sqlite) instead of [MariaDB](../database/#mariadb).
+LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [SQLite](../databases/#sqlite) instead of [MariaDB](../databases/#mariadb).
 
-[SQLite](../database/#sqlite) is an embedded relational database engine. It is popular and together with [Apache2](#apache2) and PHP could be a good candidate for single board computer.
+[SQLite](../databases/#sqlite) is an embedded relational database engine. It is popular and together with [Apache2](#apache2) and PHP could be a good candidate for single board computer.
 
 === "Quick start"
 
@@ -308,7 +308,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](../database/#mariadb)** details.
+    For database, check **[MariaDB](../databases/#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
@@ -366,7 +366,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LESP Web Stack
 
-LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache2](#apache2) web server, and [SQLite](../database/#sqlite) instead of MariaDB.
+LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache2](#apache2) web server, and [SQLite](../databases/#sqlite) instead of MariaDB.
 
 **[Nginx](#nginx)** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
@@ -411,7 +411,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](../database/#mariadb)** details.
+    For database, check **[MariaDB](../databases/#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
@@ -425,7 +425,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LLSP web stack
 
-LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **[Lighttpd](#lighttpd)** instead of [Apache2](#apache2) web server and **[SQLite](../database/#sqlite)** instead of [MariaDB](../database/#mariadb).
+LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **[Lighttpd](#lighttpd)** instead of [Apache2](#apache2) web server and **[SQLite](../databases/#sqlite)** instead of [MariaDB](../databases/#mariadb).
 
 === "Quick start"
 
@@ -443,7 +443,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](../database/#mariadb)** details.
+    For database, check **[MariaDB](../databases/#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
@@ -463,7 +463,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - Database
 
-    You may choose to install **[MariaDB](../database/#mariadb)** or other available databases like **[InfluxDB](../database/#influxdb)**, **[Redis](../database/#redis)**, **[SQLite](../database/#sqlite)**.
+    You may choose to install **[MariaDB](../databases/#mariadb)** or other available databases like **[InfluxDB](../databases/#influxdb)**, **[Redis](../databases/#redis)**, **[SQLite](../databases/#sqlite)**.
 
 ## WebServers
 

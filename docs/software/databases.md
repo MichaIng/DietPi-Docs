@@ -1,4 +1,4 @@
-# Databases and Data stores
+# Databases and Data Stores
 
 ## Overview
 

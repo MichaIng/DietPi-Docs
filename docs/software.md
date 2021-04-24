@@ -64,13 +64,13 @@
 
 - [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)
 
-## [Databases & Data stores](../software/database/#overview)
+## [Databases & Data Stores](../software/databases/#overview)
 
-- [**MariaDB** - Open Source Relational Database](../software/database/#mariadb)
-  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](../software/database/#phpmyadmin)  
-- [**SQLite** - Small, Fast and High reliable SQL database engine](../software/database/#sqlite)
-- [**Redis** - Open Source In-memory key–value Data Store](../software/database/#redis)
-- [**InfluxDB** - Open Source Time Series Database](../software/database/#influxdb)
+- [**MariaDB** - Open Source Relational Database](../software/databases/#mariadb)
+  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](../software/databases/#phpmyadmin)  
+- [**SQLite** - Small, Fast and High reliable SQL database engine](../software/databases/#sqlite)
+- [**Redis** - Open Source In-memory key–value Data Store](../software/databases/#redis)
+- [**InfluxDB** - Open Source Time Series Database](../software/databases/#influxdb)
 
 ## [Desktops](../software/desktop/)
 

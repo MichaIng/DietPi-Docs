@@ -447,7 +447,7 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
 === "Prerequisites"
 
     A database server is required for Grafana. As Grafana offers many options (InfluxDB/MySQL), we have not automatically installed either as manual configuration may be preferred.  
-    However, we highly recommend installing [InfluxDB](../database/#influxdb).
+    However, we highly recommend installing [InfluxDB](../databases/#influxdb).
 
     You can do this using the install steps provided by **DietPi-Software** tool or running the next command line in the terminal:
     
@@ -455,7 +455,7 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
     dietpi-software install 74
     ```
 
-    After the InfluxDB is installed, please follow the database creation guide [here](../database/#influxdb).
+    After the InfluxDB is installed, please follow the database creation guide [here](../databases/#influxdb).
 
 === "Access to the web interface"
 
