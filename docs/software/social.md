@@ -8,7 +8,6 @@
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](#openbazaar)
-- [**YaCy - Decentralized open source search engine**](#yacy)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -219,37 +218,5 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
     - Click New Server
     - Select Standalone
     - Enter the IP address of your DietPi device, and, the username and password you applied in step 1.
-
-## YaCy
-
-YaCy is a decentralized open source search engine.  
-Essentially, it is a "peer-to-peer" Google search engine, not controlled by Google.
-
-![YaCy search web page screenshot](../assets/images/dietpi-software-social-yacy.png){: width="400" height="233" loading="lazy"}
-
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8090**:
-
-    URL = `http://<your.IP>:8090`
-
-=== "Admin Interface Login"
-
-    Set password with:
-
-    ```sh
-    /etc/yacy/bin/passwd.sh mypassword
-    ```
-
-    Login details are then:
-
-    - Username = `admin`
-    - Password = `mypassword`
-
-=== "Reduce CPU usage"
-
-    YaCy is extremely CPU intensive, coupled with constant background processing, we highly recommend using `dietpi-services` to reduce process priority.
-
-    Recommended setting: Nice = 19
 
 [Return to the **Optimised Software list**](../../software/)

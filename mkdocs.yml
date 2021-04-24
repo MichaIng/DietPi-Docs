@@ -80,6 +80,7 @@ plugins:
       dietpi_sbc.md: hardware.md
       release-notes.md: releases.md
       dietpi_references.md: references.md
+      software/computational_science.md: software/distributed_projects.md
 
 extra:
   social:
@@ -109,10 +110,10 @@ nav:
   - BitTorrent & Download Tools: software/bittorrent.md
   - Camera & Surveillance: software/camera.md
   - Cloud & Backup Systems: software/cloud.md
-  - Computational Science: software/computational_science.md
   - Databases & Data Stores: software/databases.md
   - Desktops & Utilities: software/desktop.md
   - Development & Programming: software/programming.md
+  - Distributed Projects: software/distributed_projects.md
   - DNS Servers: software/dns_servers.md
   - File Servers: software/file_servers.md
   - Gaming & Emulation: software/gaming.md

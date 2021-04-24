@@ -17,7 +17,6 @@
 
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/advanced_networking/#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/advanced_networking/#tor-hotspot)
-- [**Tor Relay - Add a node to the Tor network**](../software/advanced_networking/#tor-relay)
 - [**HAProxy - High performance TCP/HTTP load balancer**](../software/advanced_networking/#haproxy)
 - [**No-IP - Website URL Address**](../software/advanced_networking/#no-ip)
 
@@ -60,10 +59,6 @@
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#bitwarden_rs)
 - [**FuguHub - Your Own Personal Cloud Server**](../software/cloud/#fuguhub)
 
-## [Computational Science](../software/computational_science/)
-
-- [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)
-
 ## [Databases & Data Stores](../software/databases/#overview)
 
 - [**MariaDB** - Open Source Relational Database](../software/databases/#mariadb)
@@ -93,6 +88,13 @@
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](../software/programming/#docker-compose)
 - [**Portainer - Docker container management**](../software/programming/#portainer)
+
+## [Distributed Projects](../software/distributed_projects/)
+
+- [**Folding@Home - Use processing power to assist with disease research**](../software/distributed_projects/#foldinghome)
+- [**Tor Relay - Add a node to the Tor network**](../software/distributed_projects/#tor-relay)
+- [**YaCy - Decentralized open source search engine**](../software/distributed_projects/#yacy)
+- [**IPFS Node - Contribute to a decentralized internet**](../software/distributed_projects/#ipfs-node)
 
 ## [DNS Servers](../software/dns_servers/)
 
@@ -203,7 +205,6 @@
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](../software/social/#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](../software/social/#baikal)
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](../software/social/#openbazaar)
-- [**YaCy - Decentralized open source search engine**](../software/social/#yacy)
 
 ## [SSH Server](../software/ssh/)
 

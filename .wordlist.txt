@@ -169,7 +169,9 @@ ICMP
 Imgur
 InfluxData
 InfluxDB
+InterPlanetary
 IoT
+IPFS
 IPsec
 iptables
 IPv
@@ -447,6 +449,7 @@ webserver
 webservers
 WebServers
 webstack
+WebUI
 Wh
 WHOIS
 Widevine
