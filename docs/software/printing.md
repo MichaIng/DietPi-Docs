@@ -65,7 +65,7 @@ License: [AGPLv3](https://github.com/OctoPrint/OctoPrint/blob/master/LICENSE.txt
 
 ## CUPS
 
-CUPS provides a web interface for managing your local or network printers.
+The **C**ommon **U**NIX **P**rinting **S**ystem (CUPS) provides a **c**ommand-**l**ine **i**nterface (CLI) and a web interface for managing your local and network printers.
 
 ![CUPS web interface screenshot](../assets/images/dietpi-software-printserver-cups.png){: width="500" height="385" loading="lazy"}
 
@@ -77,10 +77,12 @@ CUPS provides a web interface for managing your local or network printers.
     - Username = `root`
     - Password = `<your root password>`
 
+    Checkout the official docs for quick start instructions: <https://www.cups.org/doc/overview.html>
+
 ***
 
-Website: <http://www.cups.org>  
-Official documentation: <http://www.cups.org/documentation.html>  
+Website: <https://www.cups.org>  
+Official documentation: <https://www.cups.org/documentation.html>  
 GitHub: <https://github.com/apple/cups>
 
 [Return to the **Optimised Software list**](../../software/)
