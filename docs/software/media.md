@@ -817,14 +817,9 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
     - URL = `http://<your.IP>:8000`
     - Admin user = `admin`
-    - Admin password = randomly generated, use code below to view:
-
-        ```sh
-        grep admin-password /etc/icecast2/icecast.xml
-        ```
-
-    - Source password = `dietpi`
-    - Relay password = `dietpi`
+    - Admin password = `<your global password>` (default: `dietpi`)
+    - Source password = `<your global password>` (default: `dietpi`)
+    - Relay password = `<your global password>` (default: `dietpi`)
 
 === "Access recording file"
 
@@ -843,6 +838,11 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
         ```
 
     - A recording will then be saved in the following location: `/mnt/dietpi_userdata/darkice_recording.ogg`
+
+=== "Configuration files"
+
+    - IceCast: `/etc/icecast2/icecast.xml`
+    - DarkIce: `/etc/darkice.cfg`
 
 === "View logs"
 
