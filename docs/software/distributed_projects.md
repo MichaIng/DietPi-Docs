@@ -106,7 +106,12 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
 
 === "Keeping up-to-date"
 
-    Keeping Tor relays updated is important to the safety of both the users and the operator. Because of this, automated upgrades are recommended and asked about when first installing. Otherwise, use `apt-get update && apt-get upgrade`.
+    Keeping Tor relays updated is important to the safety of both the users and the operator. Because of this, automated upgrades are recommended and asked about when first installing. Otherwise, regularly run the following commands to keep your system packages up-to-date:
+
+    ```sh
+    apt update
+    apt upgrade
+    ```
 
 ***
 
