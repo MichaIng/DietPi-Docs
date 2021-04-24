@@ -229,6 +229,7 @@ Meveric
 MiB
 MichaIng
 microcontroller
+microcontrollers
 MicroSol
 Minecraft
 MineOS
