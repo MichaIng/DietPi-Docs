@@ -165,7 +165,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: width="454" height="129" loading="lazy"}
 
-    E.g. to install Chromium, LXQt and GIMP you have to execute:
+    E.g. to install Chromium, LXQt and GIMP you have to run next command in the terminal:
 
     ```sh
     dietpi-software install 113 173 174

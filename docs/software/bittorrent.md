@@ -292,10 +292,10 @@ NZB download manager with web interface.
 
     Requires compile install, please see: <https://sabnzbd.org/wiki/installation/multicore-par2>
 
-    Remark: The steps require a Git client and build tools. You can install these via:
+    Remark: The steps require a Git client and build tools (Build-Essentials). You can install these running next command in the terminal:
 
     ```sh
-    dietpi-software install 16 17`
+    dietpi-software install 16 17
     ```
 
 === "Recommended: Protect your privacy with a VPN"

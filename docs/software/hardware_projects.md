@@ -12,7 +12,6 @@
 - [**Mosquitto - Message broker that implements MQTT protocol**](#mosquitto)
 - [**Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet**](#blynk-server)
 - [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](#audiophonics-pi-spc)
-- [**InfluxDB - Database optimized to save time based data as logs or data from a sensor**](#influxdb)
 - [**Grafana - The open platform for beautiful analytics and monitoring**](#grafana)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
@@ -448,10 +447,15 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
 === "Prerequisites"
 
     A database server is required for Grafana. As Grafana offers many options (InfluxDB/MySQL), we have not automatically installed either as manual configuration may be preferred.  
-    However, we highly recommend installing InfluxDB:  
-    `dietpi-software install 74`
+    However, we highly recommend installing [InfluxDB](../database/#influxdb).
 
-    Then follow the database creation guide [here](#influxdb-database-optimized-to-save-time-based-data-as-logs-or-data-from-a-sensor).
+    You can do this using the install steps provided by **DietPi-Software** tool or running the next command line in the terminal:
+    
+    ```sh  
+    dietpi-software install 74
+    ```
+
+    After the InfluxDB is installed, please follow the database creation guide [here](../database/#influxdb).
 
 === "Access to the web interface"
 
