@@ -2,6 +2,20 @@
 
 ## April 2021 (version 7.1) - beta version
 
+### Overview
+
+Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. This release is focused to fine tune existent DietPi tools, making them easier to use, with more options.  
+
+![DietPi version 7](assets/images/dietpi-version7.1.jpg){: width="300" }
+
+[_Source: Pexels.com_](https://www.pexels.com/photo/abstract-aluminum-architectural-architecture-210158/)
+
+### Merged software list
+
+- The "optimised" and "additional" software menus have been merged within `dietpi-software` tool. The separation did not follow consistent rules. This change allows development tools and platforms a more prominent position. This change also simplifies the software selection and it addresses a possible confusion about that separation among the community.
+
+    _Note:_ Since multiple software titles were listening on the ports `5000` and `8000`, the default ports of those titles have been changed to avoid conflicts on concurrent installs. No change is done during the DietPi update, even a software title reinstall won't change it, in most cases. For details see the individual software changes below.
+
 ### New DietPi Tools
 
 - **DietPi-DDNS** :octicons-arrow-right-16: This new tool has been added, which allows you to manage domains for your dynamic IP address. Select a Dynamic DNS (DDNS) provider or add a custom API URL, to have your DDNS entry updated regularly, via cURL and Cron job. Among others, it supports No-IP and replaces the No-IP client that DietPi supported until now.
@@ -12,37 +26,43 @@
 
     Many thanks to @ravenclaw900 for doing this major rework - see <https://github.com/MichaIng/DietPi/pull/4180>.
 
-### Merged software list
-
-- The "optimised" and "additional" software menus have been merged within `dietpi-software` tool. The separation did not follow consistent rules. This change allows development tools and platforms a more prominent position. This change also simplifies the software selection and it addresses a possible confusion about that separation among the community.
-
-    _Note:_ Since multiple software titles were listening on the ports `5000` and `8000`, the default ports of those titles have been changed to avoid conflicts on concurrent installs. No change is done during the DietPi update, even a software title reinstall won't change it, in most cases. For details see the individual software changes below.
-
 ### New optimised software packages
 
 - **DietPi-Software** | **IPFS Node** :octicons-arrow-right-16: The InterPlanetary File System peer-to-peer hypermedia protocol node is now available for install with the software ID 186. Many thanks to @ravenclaw900 for implementing this software option: <https://github.com/MichaIng/DietPi/issues/4232>
 - **DietPi-Software** | **CUPS** :octicons-arrow-right-16: The common UNIX printing system is now available as optimised install option with the software ID 187, including a web interface to manage and share local and network printers across your LAN.
-- **DietPi-Software** | **Go** :octicons-arrow-right-16: Being previously tied into the OpenBazaar install, Go has now become a dedicated install option with the software ID 188. This includes the runtime system, package installer and compiler tool chain, as found at <https://golang.org/dl/>.
+- **DietPi-Software** | **Go** :octicons-arrow-right-16: Being previously tied into the [OpenBazaar](../software/social/#openbazaar) install, Go has now become a dedicated install option with the software ID `188`. This includes the runtime system, package installer and compiler tool chain, as found at <https://golang.org/dl/>.
 - **DietPi-Software** | **VSCodium** :octicons-arrow-right-16: As alternative to MS VSCode without MS branding, telemetry and licensing, the VSCodium code editor, with support for various programming languages, including Java, JavaScript, Go, Node.js, Python and C++, has been added as software install option to DietPi.
 
 ### Changes / Improvements / Optimisations
 
-- [**DietPi-LetsEncrypt**](../dietpi_tools/#dietpi-letsencrypt) :octicons-arrow-right-16: Multiple optimisations have been enabled:
-  - It is now possible to obtain certificates for multiple domains. These should be provided as comma-separated list, with the first domain used as primary webserver name.
-  - It becomes possible to obtain certificates without having a webserver installed. Certbot can start an own internal webserver for such case and the certificate can then used to manually enable HTTPS for other web applications, running on other ports than 80/443.
-  - It is possible to enable OCSP (Online Certificate Status Protocol) stapling for the obtained certificate. This allows clients to check if the certificate has been revoked, e.g. when the server has been compromised or the private key stolen.
-  - When **Lighttpd**  is used, HTTPS is now enabled also for IPv6 requests and the deprecated TLSv1.0 and TLSv1.1 are disabled from Debian Buster. With the Lighttpd version shipped by Debian Stretch, those TLS versions cannot be disabled.
+- [**DietPi-LetsEncrypt**](../dietpi_tools/#dietpi-letsencrypt) enhancements :octicons-arrow-right-16:
 
-- **DietPi-Arr_to_RAM** :octicons-arrow-right-16: Support for [Sonarr](../software/bittorrent/#sonarr) v3 and [Radarr](../software/bittorrent/#radarr) v3 has been added. On first link to RAM, a script `/mnt/dietpi_userdata/(sonarr|radarr|lidarr)/dietpi-arr_to_RAM.sh` is created, which allows updating the linked database backups via the programs "Custom Script" feature. Since v3, it is not possible anymore to pass arguments to custom script or call scripts inside the /boot directory at all, which broke the previous `/boot/dietpi/misc/dietpi-arr_to_RAM 2 (sonarr|radarr|lidarr)` calls in two ways.
+    !!! hint ""
+
+        - It is now possible to obtain certificates for multiple domains. These should be provided as comma-separated list, with the first domain used as primary webserver name.
+        - It becomes possible to obtain certificates without having a webserver installed. Certbot can start an own internal webserver for such case and the certificate can then used to manually enable HTTPS for other web applications, running on other ports than 80/443.
+        - It is possible to enable OCSP (Online Certificate Status Protocol) stapling for the obtained certificate. This allows clients to check if the certificate has been revoked, e.g. when the server has been compromised or the private key stolen.
+        - When **Lighttpd**  is used, HTTPS is now enabled also for IPv6 requests and the deprecated TLSv1.0 and TLSv1.1 are disabled from Debian Buster. With the Lighttpd version shipped by Debian Stretch, those TLS versions cannot be disabled.
+
+- **`DietPi-Arr_to_RAM`** :octicons-arrow-right-16: Support for [Sonarr](../software/bittorrent/#sonarr) v3 and [Radarr](../software/bittorrent/#radarr) v3 has been added. On first link to RAM, a script `/mnt/dietpi_userdata/(sonarr|radarr|lidarr)/dietpi-arr_to_RAM.sh` is created, which allows updating the linked database backups via the programs "Custom Script" feature. Since v3, it is not possible anymore to pass arguments to custom script or call scripts inside the /boot directory at all, which broke the previous `/boot/dietpi/misc/dietpi-arr_to_RAM 2 (sonarr|radarr|lidarr)` calls in two ways.
 - **DietPi-FS_partition_resize** :octicons-arrow-right-16: Added support to automatically resize F2FS and Btrfs filesystems on first boot.
 
-- **DietPi-Drive_Manager** :octicons-arrow-right-16:
-  - It has now support for resizing F2FS and Btrfs filesystems as well as format- and filesystem check & repair support for XFS filesystems.
-  - When adding Samba mounts, credentials are not added in plain text to /etc/fstab anymore, but stored instead in a separate per-mount credential file with strict root-only read permissions.
-  Many thanks to @TheOriginalMrWolf for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4082>
+- [**DietPi-Drive_Manager**](../../dietpi_tools/#dietpi-drive-manager) enhancements :octicons-arrow-right-16:
 
-- **DietPi-Config** :octicons-arrow-right-16: Added a safe overclocking profile for RPi 3+ models. Many thanks to @lone for doing long-term stability tests and reporting back the result: <https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285>
-- **DietPi-Config** :octicons-arrow-right-16:  When disabling the RPi camera feature, the bcm2835_isp kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: <https://github.com/MichaIng/DietPi/issues/4203>
+    !!! hint ""
+    
+        - It has now support for resizing F2FS and Btrfs filesystems as well as format- and filesystem check & repair support for XFS filesystems.
+        - When adding Samba mounts, credentials are not added in plain text to /etc/fstab anymore, but stored instead in a separate per-mount credential file with strict root-only read permissions.
+        Many thanks to @TheOriginalMrWolf for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4082>
+
+- [**DietPi-Config**](../../dietpi_tools/#dietpi-configuration) enhancements :octicons-arrow-right-16: 
+
+    !!! hint ""
+    
+        - Added a safe overclocking profile for RPi 3+ models. Many thanks to @lone for doing long-term stability tests and reporting back the result: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285)
+
+        - When disabling the RPi camera feature, the bcm2835_isp kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: <https://github.com/MichaIng/DietPi/issues/4203>
+
 - **DietPi-Software** | **Mosquitto** :octicons-arrow-right-16: Since v2, by default remote connections and no unauthenticated requests are possible anymore. On fresh installs and reinstalls, we'll enable remote connections, but create a password file, so that MQTT clients need to authenticate with username "mosquitto" and the global software password by default. Many thanks to @mattsmithuk for reporting this change: <https://github.com/MichaIng/DietPi/issues/4133>
 - **DietPi-Software** | **IceCast** :octicons-arrow-right-16: The streaming server can now be installed on virtual machines as well and the default web UI password will now be the global software password instead of a random one. Since the DarkIce config file /etc/darkice.cfg contains the global software password in plain text, its permission mode is changed to 600 to limit read access to the root user only.
 - **DietPi-Software** | **OctoPrint** :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 5000 to 5001 to avoid conflicts with Shairport Sync.
@@ -69,7 +89,7 @@
 - **DietPi-Config**  :octicons-arrow-right-16:  Resolved an issue on Sparky SBC, where selecting the generic USB DAC sound card option failed, due to invalid amixer calls. Many thanks to @Balmoral86 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4249>
 - **DietPi-Drive_Manager**  :octicons-arrow-right-16: Fixed detection and visualisation of loop devices in menu.
 - **DietPi-Set_userdata**  :octicons-arrow-right-16: When dietpi_userdata was moved to another drive, the intended dietpi:dietpi ownership was not applied to the target directory as intended. This is required by some software titles, like Syncthing and file servers, to permit the creation of files and directories. Many thanks to @redschumi for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4228>
-- **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where the "uninstall" command did not work and the "reinstall" did not show the intended backup prompt. Many thanks to @Zeuskk for reporting this v7.0 regression: <https://dietpi.com/phpbb/viewtopic.php?t=8729>
+- **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where the "uninstall" command did not work and the "reinstall" did not show the intended backup prompt. Many thanks to @Zeuskk for reporting this v7.0 regression: [MariaDB error](https://dietpi.com/phpbb/viewtopic.php?t=8729)
 - **DietPi-Software**  :octicons-arrow-right-16: Resolved an issue where directory permissions could be wrong because of 7zr overriding the default umask. This lead e.g. to 403 browser error on a fresh Single File PHP Gallery install. Many thanks to @Alexgolshtein for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4251>
 - **DietPi-Software** | **X.Org X Server**  :octicons-arrow-right-16: Resolved an issue on RPi where the X server start failed when the KMS device tree overlay was not enabled. Many thanks to @xthedakmanx for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4175>
 - **DietPi-Software** | **LXDE**  :octicons-arrow-right-16:  Resolved an issue where after installing LXDE, the system booted into the LightDM desktop login mask automatically, even if desktop autologin was not chosen via dietpi-autostart. Many thanks to @manilx for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8766>
@@ -100,7 +120,7 @@ For all additional issues that may appear after release, please see the followin
 
 Welcome to **February 2021 release** :octicons-heart-16: of **DietPi**. With this release we changed the major version number, becoming **Version 7**! We expect a smooth upgrade :octicons-thumbsup-16:
 
-![DietPi version 7](assets/images/dietpi-version7.jpg){: width="300" height="200" loading="lazy"}
+![DietPi version 7](assets/images/dietpi-version7.jpg){: width="300" loading="lazy"}
 
 !!! info "Why this upgrade to version 7?"
 
@@ -126,7 +146,7 @@ Whenever you have multiple containers :octicons-server-16: , there are many task
 
 [Docker Compose](../software/programming/#docker-compose) lets you automate the deployment of multiple containers using an YAML file. This file enable you to configure your application’s services and create all the app’s services from this configuration.
 
-![docker compose](assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
+![docker compose](assets/images/dietpi-docker-compose.png){: width="500" loading="lazy"}
 
 Find sample applications using Docker Compose and more details in the [documentation page](../software/programming/#docker-compose).
 
@@ -239,7 +259,7 @@ Welcome to **December 2020 release** :octicons-gift-16: of DietPi. This release 
 
 As a summary of 2020, DietPi had **8 releases** with over **175 000** downloads. It brought 128 :octicons-light-bulb-16: improvements and changes, as well as 119 :octicons-issue-closed-16: bug fixes.
 
-![DietPi Release in 2020](assets/images/dietpi-release-gift.jpg){: width="447" height="298" loading="lazy"}
+![DietPi Release in 2020](assets/images/dietpi-release-gift.jpg){: width="447" loading="lazy"}
 
 ### New optimised software packages
 
@@ -249,7 +269,7 @@ It is a new software package included in the DietPi optimised list. Portainer si
 
 For more details check the [documentation page](../software/programming/#portainer).
 
-![Portainer screenshot](assets/images/dietpi-software-portainer.jpg){: width="1159" height="636" loading="lazy"}
+![Portainer screenshot](assets/images/dietpi-software-portainer.jpg){: width="1159" loading="lazy"}
 
 Many thanks to @Joulinar for implementing this software option - more details here: MichaIng/DietPi#3933
 
@@ -259,7 +279,7 @@ PaperMC extends the list of Minecraft servers supported by DietPi. It is a high 
 
 For more details check the [documentation page](../software/gaming/#papermc).
 
-![Minecraft screenshot](assets/images/dietpi-software-papermc.jpg){: width="606" height="363" loading="lazy"}
+![Minecraft screenshot](assets/images/dietpi-software-papermc.jpg){: width="606" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3828
 
@@ -279,7 +299,7 @@ Validating, recursive, caching DNS resolver is now available for install and int
 
 For more details check the [documentation page](../software/dns_servers/#unbound)
 
-![Unbound monitor screenshot](assets/images/dietpi-software-unbound.jpg){: width="603" height="331" loading="lazy"}
+![Unbound monitor screenshot](assets/images/dietpi-software-unbound.jpg){: width="603" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3872
 
@@ -289,7 +309,7 @@ Bitwarden_RS is a an unofficial Bitwarden password manager server with web UI, w
 
 For more details check the [documentation page](../software/cloud/#bitwarden_rs)
 
-![Bitwarden_RS](assets/images/dietpi-software-bitwarden_rs.jpg){: width="2000" height="823" loading="lazy"}
+![Bitwarden_RS](assets/images/dietpi-software-bitwarden_rs.jpg){: width="2000" loading="lazy"}
 
 Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/DietPi!3724).
 
