@@ -129,7 +129,7 @@ Portainer simplifies your Docker container management via Portainer web interfac
 ***
 
 Official documentation: <https://documentation.portainer.io>  
-Beginners guide: https://codeopolis.com/posts/beginners-guide-to-portainer/>
+Beginners guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>
 Source code: <https://github.com/portainer/portainer>  
 Open-source license: [zlib](https://github.com/portainer/portainer/blob/develop/LICENSE)
 
