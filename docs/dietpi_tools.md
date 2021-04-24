@@ -24,11 +24,11 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 ### Software overview
 
-=== "Software Optimised"
+=== "Browse Software"
 
-    - Begin by selecting **Software Optimized** in the main menu list and hit ++enter++.
+    - Begin by selecting **Browse Software** in the main menu list and hit ++enter++.
 
-    - Scroll through the list of available software - for more details check [DietPi Optimised Software](../software/).
+    - Scroll through the list of available software - for more details check [DietPi Optimised Software items](../software/).
 
     The list of optimised software is long. You either browse the list or use the option **Search**.
 
@@ -42,18 +42,9 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-Software Software Optimised menu screenshot](assets/images/dietpi-software-optimised.jpg){: width="643" height="365" loading="lazy"}
 
-=== "Software Additional"
+=== "Search Software"
 
-    This section provides:
-
-    - software packages that are often used and installed via `apt install <package>`, without additional optimisation from DietPi team.
-    - _or_ packages not directly required, but pulled as a dependency, like: build tools, libraries or runtime systems. E.g. packages like *Python3*, *pip*, *tcpdump* or *midnight commander* can be installed using the dialog.
-
-    ![DietPi-Software Software Additional menu screenshot](assets/images/dietpi-software-additional.jpg){: width="640" height="485" loading="lazy"}
-
-=== "Search"
-
-    DietPi supports a large number of software titles. Instead of scrolling through the **Software Optimised** list to find a specific software title, you may use the **Search** option. Type in the software ID or any keyword form its title or description and you'll get a list filtered by matching results.
+    DietPi supports a large number of software titles. Instead of scrolling through the **Browse Software** list to find a specific software title, you may use the **Search Software** option. Type in the software ID or any keyword form its title or description and you'll get a list filtered by matching results.
 
     ![DietPi-Software Search menu screenshot](assets/images/dietpi-software-search.png){: with="752" height="321" loading="lazy"}
 
@@ -139,7 +130,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "Install"
 
-    Install software item(s) which have been selected via **Optimised Software** or **Additional Software** lists, or via **SSH Server**, **File Server** or **Log System** choices.
+    Install software item(s) which have been selected via **Browse Software** list, via **Search Software**, or via **SSH Server**, **File Server** or **Log System** choices.
 
 === "Uninstall"
 

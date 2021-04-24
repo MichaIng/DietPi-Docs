@@ -16,22 +16,23 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere)
 
-??? info "How do I run **DietPi-Software** and install **optimised software**?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 !!! info Desktop environment
 
-    From the list of **Optimised Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
+    From the list of **Browse Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
 
 [Return to the **Optimised Software list**](../../software/)
 
