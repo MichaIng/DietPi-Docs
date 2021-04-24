@@ -125,33 +125,33 @@ The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana).
 
     - Create a database using `influxdb` via command line tool. This tool also uses HTTP so it can manage a database on a remote machine setting the `-host` option.
 
-      ```sh
-      influx -execute 'create database myfirstdb'
-      ```
+    ```sh
+    influx -execute 'create database myfirstdb'
+    ```
 
     - Create a database using a HTTP request and `curl` tool:
 
-      ```sh
-      curl -i -XPOST http://<your.IP>:8086/query --data-urlencode "q=CREATE DATABASE myfirstdb"
-      ```
+    ```sh
+    curl -i -XPOST http://<your.IP>:8086/query --data-urlencode "q=CREATE DATABASE myfirstdb"
+    ```
 
     - Post data
 
-      ```sh
-      curl -i -XPOST 'http://<your.IP>:8086/write?db=myfirstdb' --data-binary 'temperature value=20.12'
-      ```
+    ```sh
+    curl -i -XPOST 'http://<your.IP>:8086/write?db=myfirstdb' --data-binary 'temperature value=20.12'
+    ```
 
     - Retrieve and display data from the database
 
-      ```sh
-      influx -database myfirstdb -execute 'SELECT * FROM temperature'
-      ```    
+    ```sh
+    influx -database myfirstdb -execute 'SELECT * FROM temperature'
+    ```    
 
     - Retrieve data using a HTTP request and `curl` tool::
 
-      ```sh
-      curl -i -XPOST http://localhost:8086/query?db=mydb --data-urlencode "q=SELECT * FROM temperature"
-      ```
+    ```sh
+    curl -i -XPOST http://<your.IP>:8086/query?db=mydb --data-urlencode "q=SELECT * FROM temperature"
+    ```
 
 === "Users and security"
 
@@ -178,15 +178,15 @@ The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana).
 
     - Change next setting in the configuration file `/etc/influxdb/influxdb.conf`:
 
-        ```
-        auth-enabled = true
-        ```
+      ```
+      auth-enabled = true
+      ```
 
     - Restart service
 
-        ```sh
-        systemctl restart influxdb
-        ```
+      ```sh
+      systemctl restart influxdb
+      ```
 
 === Install information
 
