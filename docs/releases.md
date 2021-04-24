@@ -50,15 +50,15 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. This releas
 - [**DietPi-Drive_Manager**](../../dietpi_tools/#dietpi-drive-manager) enhancements :octicons-arrow-right-16:
 
     !!! hint ""
-    
+
         - It has now support for resizing F2FS and Btrfs filesystems as well as format- and filesystem check & repair support for XFS filesystems.
         - When adding Samba mounts, credentials are not added in plain text to /etc/fstab anymore, but stored instead in a separate per-mount credential file with strict root-only read permissions.
         Many thanks to @TheOriginalMrWolf for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4082>
 
-- [**DietPi-Config**](../../dietpi_tools/#dietpi-configuration) enhancements :octicons-arrow-right-16: 
+- [**DietPi-Config**](../../dietpi_tools/#dietpi-configuration) enhancements :octicons-arrow-right-16:
 
     !!! hint ""
-    
+
         - Added a safe overclocking profile for RPi 3+ models. Many thanks to @lone for doing long-term stability tests and reporting back the result: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285)
 
         - When disabling the RPi camera feature, the bcm2835_isp kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: <https://github.com/MichaIng/DietPi/issues/4203>
