@@ -187,6 +187,7 @@ Keychain
 KiB
 kickstart
 kickstarts
+killswitch
 KiTTY
 klick
 Kodi
@@ -305,8 +306,9 @@ PiVPN
 Plex
 Portainer
 pre
-ProFTPD
 Prioglio
+ProFTPD
+ProtonVPN
 PSU
 PuTTY
 Pydio
