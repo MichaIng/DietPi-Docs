@@ -526,8 +526,8 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
     - Open `about:config` to access advanced settings.
     - Search for: `identity.sync.tokenserver.uri`.
-    - Set value to: `http://<your.IP>:5000/token/1.0/sync/1.5`.
-        - We recommend to access your Firefox Sync Server only from local network or via VPN, keeping the default listening port **5000** closed for access from outside of your LAN.
+    - Set value to: `http://<your.IP>:5002/token/1.0/sync/1.5`.
+        - We recommend to access your Firefox Sync Server only from local network or via VPN, keeping the default listening port **5002** closed for access from outside of your LAN.
         - If you need to access it remotely without VPN, adjust the `public_url` setting inside the config file `/mnt/dietpi_userdata/firefox-sync/syncserver.ini` to contain your public IP or domain and desired port.
 
 === "Directories"
@@ -554,7 +554,9 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
 ***
 
-Source code: <https://github.com/mozilla-services/syncserver>
+Official documentation: <https://mozilla-services.readthedocs.io/en/latest/howtos/run-sync-1.5.html>  
+Source code: <https://github.com/mozilla-services/syncserver>  
+License: [MPL2.0](https://github.com/mozilla-services/syncserver/blob/master/LICENSE)
 
 Credits: This software title has been added to DietPi-Software by [CedArctic](https://github.com/CedArctic), many thanks! :D
 

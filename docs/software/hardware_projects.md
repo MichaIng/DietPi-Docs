@@ -189,9 +189,9 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8000**:
+    The web interface is accessible via port **8002**:
 
-    - URL = `http://<your.IP>:8000`
+    - URL = `http://<your.IP>:8002`
     - Username = `webiopi`
     - Password = `raspberry`
 
