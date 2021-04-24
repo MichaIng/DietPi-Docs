@@ -2,7 +2,6 @@
 
 ## Overview
 
-- [**DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users**](#dietpi-nordvpn)
 - [**OpenVPN - Easy to use, minimal hassle VPN server**](#openvpn)
 - [**PiVPN - OpenVPN server installer and management tool**](#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](#wireguard)
@@ -21,28 +20,6 @@
     To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
-
-## DietPi-NordVPN
-
-DietPi-NordVPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all NordVPN users to quickly and easily connect to any NordVPN server in TCP or UDP, using only open source software.
-
-![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="200" height="52" loading="lazy"}
-
-![DietPi-NordVPN menu screenshot](../assets/images/dietpi-software-vpn-nordvpn.jpg){: width="400" height="254" loading="lazy"}
-
-=== "Requires NordVPN Subscription"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    NordVPN offers unlimited bandwidth, zero logging and up to 6 devices on 1 account.
-
-=== "Usage"
-
-    Once installed using `dietpi-software`, simply run `dietpi-nordvpn` to use the GUI, allowing you to setup your connection.  
-    DietPi will also automatically start and connect the VPN during system boot.
-
-***
-
-Wikipedia: <https://wikipedia.org/wiki/NordVPN>
 
 ## OpenVPN
 
@@ -214,12 +191,19 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 
     Remark: If the client config sets the DNS server via `DNS = ...` directive, assure that resolvconf is installed: `apt install resolvconf`.
 
-=== "Logging"
+=== "View logs"
 
-    Logging can be viewed with:  
-    `journalctl -u wg-quick@wg0`  
-    respectively  
-    `journalctl -u wg-quick@<config_name>`.
+    Logging can be viewed with:
+
+    ```sh
+    journalctl -u wg-quick@wg0
+    ```
+
+    respectively
+
+    ```sh
+    journalctl -u wg-quick@<config_name>
+    ```
 
 ???+ info "Kernel update"
 

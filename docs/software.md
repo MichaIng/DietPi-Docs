@@ -76,7 +76,7 @@
 
 ## [Development & Programming](../software/programming/)
 
-- [**Python - High-level interpreted programming language**](../software/programming/#python)
+- [**Python 3 - High-level interpreted programming language**](../software/programming/#python-3)
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](../software/programming/#docker-compose)
 - [**Portainer - Docker container management**](../software/programming/#portainer)
@@ -174,6 +174,7 @@
 ## [Printing Server](../software/printing/)
 
 - [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint)
+- [**CUPS - Common UNIX printing system**](../software/printing/#cups)
 
 ## [Remote Desktop & Remote Access](../software/remote_desktop/)
 
@@ -219,7 +220,6 @@
 
 ## [VPN](../software/vpn/)
 
-- [**DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users**](../software/vpn/#dietpi-nordvpn)
 - [**OpenVPN - Easy to use, minimal hassle VPN server**](../software/vpn/#openvpn)
 - [**PiVPN - OpenVPN server installer & management tool**](../software/vpn/#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](../software/vpn/#wireguard)

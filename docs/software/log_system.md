@@ -22,6 +22,9 @@ The *Log System* can be changed at any time by running `dietpi-software` and sel
 
     ![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg){: width="500" height="336" loading="lazy"}
 
+???+ seealso "Examining the logging information"
+    A description of the basic log information display and filter option is given in the [HowTo section of the DietPi documentation](../../usage).
+
 [Return to the **Optimised Software list**](../../software/)
 
 ## DietPi-RAMlog

@@ -101,6 +101,7 @@ nav:
   - Getting started: getting_started.md
   - Software options: software.md
   - DietPi tools: dietpi_tools.md
+  - Usage hints / HowTo: usage.md
   - Supported hardware: hardware.md
   - Releases: releases.md
   - References: references.md

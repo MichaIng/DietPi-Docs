@@ -3,6 +3,7 @@
 ## Overview
 
 - [**OctoPrint - Web interface for controlling 3D printers**](#octoprint)
+- [**CUPS - Common UNIX printing system**](#cups)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -13,9 +14,9 @@
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -25,11 +26,11 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 
 ![OctoPrint web interface screenshot](../assets/images/dietpi-software-printserver-octoprint.png){: width="400" height="297" loading="lazy"}
 
-=== "Access the web interface"
+=== "Access to the web interface"
 
-    The web interface is accessible via port **5000**:
+    The web interface is accessible via port **5001**:
 
-    - URL = `http://<your.IP>:5000`  
+    - URL = `http://<your.IP>:5001`  
 
 === "First run setup"
 
@@ -58,6 +59,28 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 
 Website: <https://octoprint.org>  
 Official documentation: <https://docs.octoprint.org>  
-Forum: <https://community.octoprint.org>
+Forum: <https://community.octoprint.org>  
+Source code: <https://github.com/OctoPrint/OctoPrint>  
+License: [AGPLv3](https://github.com/OctoPrint/OctoPrint/blob/master/LICENSE.txt)
+
+## CUPS
+
+CUPS provides a web interface for managing your local or network printers.
+
+![CUPS web interface screenshot](../assets/images/dietpi-software-printserver-cups.png){: width="500" height="385" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **631**:
+
+    - URL = `http(s)://<your.IP>:631`  
+    - Username = `root`
+    - Password = `<your root password>`
+
+***
+
+Website: <http://www.cups.org>  
+Official documentation: <http://www.cups.org/documentation.html>  
+GitHub: <https://github.com/apple/cups>
 
 [Return to the **Optimised Software list**](../../software/)

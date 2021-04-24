@@ -27,9 +27,9 @@
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -76,13 +76,12 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ## Deluge
 
-Deluge, the web interface BitTorrent server that allows you to download BitTorrent files. This python coded BitTorrent server is an alternative to the [Lightweight Transmission](#transmission-lightweight-bittorrent-server-with-web-interface) option.
+Deluge, the web interface BitTorrent server that allows you to download BitTorrent files. This Python coded BitTorrent server is an alternative to the [Lightweight Transmission](#transmission-lightweight-bittorrent-server-with-web-interface) option.
 
 !!! hint "USB dedicated hard drive highly recommended"
 
@@ -125,9 +124,8 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ## qBittorrent
 
@@ -159,9 +157,8 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ## rTorrent
 
@@ -181,7 +178,20 @@ Also installs:
     - Username = `root`
     - Password = `<your global password>`
 
-=== "Access Downloads"
+    The login credentials can be changed, depending on the webserver choice, with the following commands:
+
+    ```sh
+    # With Lighttpd (default):
+    echo "username:rtorrent:$(echo -n 'username:rtorrent:password' | md5sum | mawk '{print $1}')" > /etc/.rutorrent-htaccess
+
+    # With Apache:
+    htpasswd -c /etc/.rutorrent-htaccess
+
+    # With Nginx:
+    echo "username:$(openssl passwd -apr1 'password')" > /etc/.rutorrent-htaccess
+    ```
+
+=== "Access downloads"
 
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by rTorrent:
@@ -197,11 +207,65 @@ Also installs:
     systemctl restart rtorrent
     ```
 
+=== "Access rTorrent RPC"
+
+    rTorrent by default listens on the UNIX domain socket at `/mnt/dietpi_userdata/downloads/.session/rpc.socket`. The webserver is configured to proxy `http://<your.IP>/RPC2` calls to the UNIX socket, but HTTP authentication is enforced for that URL.
+
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+
+=== "View logs"
+
+    To view rTorrent service logs, run the following command:
+
+    ```sh
+    journalctl -u rtorrent
+    ```
+
+    Issues with the web interface can be debugged via webserver logs:
+
+    ```sh
+    # With Lighttpd (default):
+    journalctl -u lighttpd
+    more /var/log/lighttpd/error.log
+
+    # With Apache:
+    journalctl -u apache2
+    more /var/log/apache2/error.log
+
+    # With Nginx:
+    journalctl -u nginx
+    more /var/log/nginx/error.log
+    ```
+
+=== "Update to latest version"
+
+    rTorrent itself is installed via APT, and hence can be updated by running the following commands:
+
+    ```sh
+    apt update
+    apt install rtorrent
+    ```
+
+    If the ruTorrent web interface shall be updated as well, easiest is a reinstall:
+
+    ```sh
+    dietpi-software reinstall 107
+    ```
+
+***
+
+Official website: <https://rakshasa.github.io/rtorrent/>  
+Official documentation: <https://github.com/rakshasa/rtorrent/wiki>  
+Wikipedia: <https://wikipedia.org/wiki/RTorrent>  
+Source code: <https://github.com/rakshasa/rtorrent>  
+License: [GPLv2](https://github.com/rakshasa/rtorrent/blob/master/COPYING)
+
+ruTorrent documentation: <https://github.com/Novik/ruTorrent/wiki>  
+ruTorrent source code: <https://github.com/Novik/ruTorrent>  
+ruTorrent license: [GPLv3](https://github.com/Novik/ruTorrent/blob/master/LICENSE.md)
 
 ## Aria2
 
@@ -244,9 +308,8 @@ Also installs:
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ## SABnzbd
 
@@ -258,7 +321,7 @@ NZB download manager with web interface.
 
     The web interface uses port **8080**:
 
-    - URL= `http://<your.IP>:8080/sabnzbd`
+    - URL = `http://<your.IP>:8080/sabnzbd`
 
 === "Web interface not loading / Unable to access"
 
@@ -300,9 +363,8 @@ NZB download manager with web interface.
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ## Medusa
 
@@ -319,7 +381,7 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
     The web interface is accessible via port **8081**:
 
-    - URL= `http://<your.IP>:8081`
+    - URL = `http://<your.IP>:8081`
 
 === "Add a TV show"
 
@@ -353,9 +415,8 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ## Sonarr
 
@@ -371,7 +432,7 @@ Automatically download your favorite TV shows, as they become available.
 
     The web interface is accessible via port **8989**:
 
-    - URL= `http://<your.IP>:8989`
+    - URL = `http://<your.IP>:8989`
 
 === "First run setup"
 
@@ -418,9 +479,8 @@ Automatically download your favorite TV shows, as they become available.
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ***
 
@@ -442,7 +502,7 @@ Automatically download your favorite movies, as they become available.
 
     The web interface is accessible via port **7878**:
 
-    - URL= `http://<your.IP>:7878`
+    - URL = `http://<your.IP>:7878`
 
 === "First run setup"
 
@@ -489,9 +549,8 @@ Automatically download your favorite movies, as they become available.
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ***
 
@@ -518,7 +577,7 @@ Key features:
 
     The web interface is accessible via port **6767**:
 
-    - URL= `http://<your.IP>:6767`
+    - URL = `http://<your.IP>:6767`
 
     ![Bazarr subtitle finds list](../assets/images/dietpi-software-download-bazarr.jpg){: width="1105" height="490" loading="lazy"}
 
@@ -528,12 +587,12 @@ Key features:
     - Data directory: `/mnt/dietpi_userdata/bazarr`
     - Bazarr configuration file: `/mnt/dietpi_userdata/bazarr/config/config.ini`
 
-    View logs:
+=== "View logs"
 
     - Service: `journalctl -u bazarr`
     - Binary: `/var/log/bazarr/bazarr.log`
 
-    Update to latest version:
+=== "Update to latest version"
 
     - Use the internal web based updater
 
@@ -604,9 +663,8 @@ Automatically download your favorite music.
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ## CouchPotato
 
@@ -623,7 +681,7 @@ Recommend additional software:
 
     The web interface is accessible via port **5050**:
 
-    - URL= `http://<your.IP>:5050`
+    - URL = `http://<your.IP>:5050`
 
 === "Access Downloads"
 
@@ -640,9 +698,8 @@ Recommend additional software:
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ***
 
@@ -662,13 +719,12 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
 
     The web interface is accessible via port **9117**:
 
-    - URL= `http://<your.IP>:9117`
+    - URL = `http://<your.IP>:9117`
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ## NZBGet
 
@@ -680,7 +736,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
     The web interface is accessible via port **6789**:
 
-    - URL= `http://<your.IP>:6789`
+    - URL = `http://<your.IP>:6789`
     - Username = `admin`
     - Password = `<your global password>`
 
@@ -694,9 +750,8 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
 === "Recommended: Protect your privacy with a VPN"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    We highly recommend [***NordVPN***](../vpn/#dietpi-nordvpn-openvpn-and-dietpi-gui-for-nordvpn-users) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account.  
-    [![NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: width="300" height="78" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
 ## HTPC Manager
 
@@ -709,7 +764,7 @@ Do all your HTPC tasks without using 5 different interfaces!
 
     The web interface is accessible via port **8085**:
 
-    - URL= `http://<your.IP>:8085`
+    - URL = `http://<your.IP>:8085`
 
 === "Update to latest version"
 

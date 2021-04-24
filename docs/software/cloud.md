@@ -526,8 +526,8 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
     - Open `about:config` to access advanced settings.
     - Search for: `identity.sync.tokenserver.uri`.
-    - Set value to: `http://<your.IP>:5000/token/1.0/sync/1.5`.
-        - We recommend to access your Firefox Sync Server only from local network or via VPN, keeping the default listening port **5000** closed for access from outside of your LAN.
+    - Set value to: `http://<your.IP>:5002/token/1.0/sync/1.5`.
+        - We recommend to access your Firefox Sync Server only from local network or via VPN, keeping the default listening port **5002** closed for access from outside of your LAN.
         - If you need to access it remotely without VPN, adjust the `public_url` setting inside the config file `/mnt/dietpi_userdata/firefox-sync/syncserver.ini` to contain your public IP or domain and desired port.
 
 === "Directories"
@@ -554,7 +554,9 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
 ***
 
-Source code: <https://github.com/mozilla-services/syncserver>
+Official documentation: <https://mozilla-services.readthedocs.io/en/latest/howtos/run-sync-1.5.html>  
+Source code: <https://github.com/mozilla-services/syncserver>  
+License: [MPL2.0](https://github.com/mozilla-services/syncserver/blob/master/LICENSE)
 
 Credits: This software title has been added to DietPi-Software by [CedArctic](https://github.com/CedArctic), many thanks! :D
 
@@ -673,7 +675,8 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
 === "Quick access"
 
-    Open the browser `http://<your.IP>`. On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
+    Open the browser `http://<your.IP>`.  
+    On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
 
     !!! warning "FuguHub runs by default on port 80 and optional 443, making it incompatible with a regular webserver using the default setup."
 
@@ -695,6 +698,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     - Data directory: `/mnt/dietpi_userdata/fuguhub-data`
 
 === "View logs"
+
     - Service: `journalctl -u bdd`
     - Trace: `/home/bd/trace/`  
       It contains an info about the database creation only, even after playing around with the web UI a bit.
