@@ -543,7 +543,6 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
 
 Official documentation: <https://tomcat.apache.org>
 
-
 ## Web development - Programming & Frameworks
 
 ### PHP

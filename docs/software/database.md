@@ -3,7 +3,7 @@
 ## Overview
 
 - [**MariaDB** - Open Source Relational Database](#mariadb)
-    - [**phpMyAdmin** - SQL Administration Tool for MariaDB](#phpmyadmin)  
+  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](#phpmyadmin)  
 - [**SQLite** - Small, Fast and High reliable SQL database engine](#sqlite)
 - [**Redis** - Open Source In-memory key–value Data Store](#redis)
 - [**InfluxDB** - Open Source Time Series Database](#influxdb)
@@ -113,7 +113,7 @@ Commands: <https://redis.io/commands>
 
 Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding-docs/img/influxdb/preview.svg), [Public Domain](https://commons.wikimedia.org/w/index.php?curid=55056027).
 
-**InfluxDB** is a _time series_ database and it is optimsed to handle high write and query loads. For this purpose is a very good fit for saving sensor data or time series info from various logs. InfluxDB is not only a time series platform, but it provides also an Web UI and dashboard tools, background processing and monitoring agent. 
+**InfluxDB** is a _time series_ database and it is optimsed to handle high write and query loads. For this purpose is a very good fit for saving sensor data or time series info from various logs. InfluxDB is not only a time series platform, but it provides also an Web UI and dashboard tools, background processing and monitoring agent.
 
 The main interface to the database for management and data transferred are HTTP requests that are handled directly by the `influxdb` service (default port being used is `8086`).
 
