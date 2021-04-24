@@ -226,7 +226,6 @@
 
 ## [VPN](../software/vpn/)
 
-- [**DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users**](../software/vpn/#dietpi-nordvpn)
 - [**OpenVPN - Easy to use, minimal hassle VPN server**](../software/vpn/#openvpn)
 - [**PiVPN - OpenVPN server installer & management tool**](../software/vpn/#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](../software/vpn/#wireguard)

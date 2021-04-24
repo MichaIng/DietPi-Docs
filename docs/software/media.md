@@ -817,14 +817,9 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
     - URL = `http://<your.IP>:8000`
     - Admin user = `admin`
-    - Admin password = randomly generated, use code below to view:
-
-        ```sh
-        grep admin-password /etc/icecast2/icecast.xml
-        ```
-
-    - Source password = `dietpi`
-    - Relay password = `dietpi`
+    - Admin password = `<your global password>` (default: `dietpi`)
+    - Source password = `<your global password>` (default: `dietpi`)
+    - Relay password = `<your global password>` (default: `dietpi`)
 
 === "Access recording file"
 
@@ -843,6 +838,11 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
         ```
 
     - A recording will then be saved in the following location: `/mnt/dietpi_userdata/darkice_recording.ogg`
+
+=== "Configuration files"
+
+    - IceCast: `/etc/icecast2/icecast.xml`
+    - DarkIce: `/etc/darkice.cfg`
 
 === "View logs"
 
@@ -872,27 +872,51 @@ Web interface music streamer.
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8000**:
+    The web interface is accessible via port **8003**:
 
-    - URL = `http://<your.IP>:8000`
-    - Email address = The one you entered during installation
-    - Password = The one you entered during installation
+    - URL = `http://<your.IP>:8003`
+    - Email address = `admin@koel.dev`
+    - Password = `KoelIsCool`
 
 === "First run setup"
 
-    Configure Koel to use the DietPi user data (music) directory:
+    We strongly recommend to change the admin users email address and password:
 
-    - In the web interface, on the left hand side click `settings`
-    - Under `Media Path`, enter `/mnt/dietpi_userdata/Music`
-    - Then click `Scan`
+    1. Login to the web interface
+    2. Select "Users" at the bottom of the left-sided navigation panel
+    3. However over the user tile and select "Update Profile"
+    4. Change name and credentials and select "Save"
 
 === "Transfer media files to your device"
 
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
-    Folders used by Koel:
+    Directories used by Koel:
 
     - Local = `/mnt/dietpi_userdata/Music`
     - Accessed from file server = `/Music`
+
+=== "View logs"
+
+    To view Koel service logs, run the following command from console:
+
+    ```sh
+    journalctl -u koel
+    ```
+
+=== "Update to latest version"
+
+    To update Koel to the recent version, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 143
+    ```
+
+***
+
+Official website: <https://koel.dev/>  
+Official documentation: <https://docs.koel.dev/>  
+Source code: <https://github.com/koel/koel>  
+License: [MIT](https://github.com/koel/koel/blob/master/LICENSE.md)
 
 ## GMediaRender
 

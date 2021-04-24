@@ -14,9 +14,9 @@
 
     Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -28,9 +28,9 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **5000**:
+    The web interface is accessible via port **5001**:
 
-    - URL = `http://<your.IP>:5000`  
+    - URL = `http://<your.IP>:5001`  
 
 === "First run setup"
 
@@ -59,7 +59,9 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 
 Website: <https://octoprint.org>  
 Official documentation: <https://docs.octoprint.org>  
-Forum: <https://community.octoprint.org>
+Forum: <https://community.octoprint.org>  
+Source code: <https://github.com/OctoPrint/OctoPrint>  
+License: [AGPLv3](https://github.com/OctoPrint/OctoPrint/blob/master/LICENSE.txt)
 
 ## CUPS
 

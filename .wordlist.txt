@@ -1,6 +1,7 @@
 addictiveness
 ADF
 advanxer
+AGPLv
 AirPlay
 Airsonic
 AIY
@@ -187,6 +188,7 @@ Keychain
 KiB
 kickstart
 kickstarts
+killswitch
 KiTTY
 klick
 Kodi
@@ -228,6 +230,7 @@ Meveric
 MiB
 MichaIng
 microcontroller
+microcontrollers
 MicroSol
 Minecraft
 MineOS
@@ -242,6 +245,7 @@ Morsecode
 Mosquitto
 MotionEye
 MPD
+MPL
 MQTT
 MTA
 multiroom
@@ -305,8 +309,9 @@ PiVPN
 Plex
 Portainer
 pre
-ProFTPD
 Prioglio
+ProFTPD
+ProtonVPN
 PSU
 PuTTY
 Pydio
