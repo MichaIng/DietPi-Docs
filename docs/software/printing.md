@@ -66,7 +66,7 @@ License: [AGPLv3](https://github.com/OctoPrint/OctoPrint/blob/master/LICENSE.txt
 
 ## CUPS
 
-The **C**ommon **U**NIX **P**rinting **S**ystem (CUPS) provides a **c**ommand-**l**ine **i**nterface (CLI) and a web interface for managing your local and network printers.
+The Common UNIX Printing System (CUPS) provides a command-line interface (CLI) and a web interface for managing your local and network printers.
 
 ![CUPS web interface screenshot](../assets/images/dietpi-software-printserver-cups.png){: width="500" height="385" loading="lazy"}
 
