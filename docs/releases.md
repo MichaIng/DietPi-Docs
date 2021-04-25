@@ -633,7 +633,7 @@ Last but certainly not least, a big **Thank You** to the following people who co
 
 **Contributions to our issue tracking, reporting issues and providing insights:**
 
-- [@Joulinar](https://github.com/Joulinar) - Many thanks to for investigating this issue and providing the workaround: [RDP Black Screen](https://dietpi.com/phpbb/viewtopic.php?p=25285#p25285)
+- [@Joulinar](https://github.com/Joulinar) - Many thanks for investigating this issue and providing the workaround: [RDP Black Screen](https://dietpi.com/phpbb/viewtopic.php?p=25285#p25285)
 - @mrbluecoat: Many thanks for reporting the urgent use-case of Chromium kiosk mode autostart without keyboard attached - Fix [3326](https://github.com/MichaIng/DietPi/issues/3326)
 - @maartenlangeveld: Many thanks for revealing the underlying issue - [Fix 3609](https://github.com/MichaIng/DietPi/issues/3609)
 - @maartenlangeveld: Many thanks for making this suggestion - [Fix 3581](https://github.com/MichaIng/DietPi/issues/3581)
