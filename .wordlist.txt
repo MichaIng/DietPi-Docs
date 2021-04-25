@@ -139,12 +139,14 @@ GlusterFS
 GMediaRender
 GNUstep
 Gogs
+Golang
 GPIO
 GPIOs
 GPL
 GPLv
 GPT
 Grafana
+Griesemer
 HAProxy
 harddisk
 Hardkernel
@@ -376,6 +378,7 @@ sn
 SNMP
 SoCs
 Sonarr
+Soundcloud
 Soxr
 SPC
 SPI
@@ -413,6 +416,7 @@ TTS
 Tyrian
 uae
 UART
+Uber
 Ubooquity
 UDP
 UEFI
@@ -424,6 +428,7 @@ unencrypted
 unmount
 upgradable
 UPnP
+uptime
 upvote
 UrBackup
 userdata

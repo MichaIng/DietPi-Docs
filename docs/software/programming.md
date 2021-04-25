@@ -58,11 +58,11 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 
 === "Getting started"
 
-    To edit the code you can use an editor of your choice, or use [VSCodium](../software/programming/#vscodium). The _Go extension_ available in VSCodium provides rich language support for the Go programming language.
+    To edit the code you can use an editor of your choice, or use [VSCodium](#vscodium). The _Go extension_ available in VSCodium provides rich language support for the Go programming language.
 
     Just to have a taste of it, you could run some commands in this [_Go playground_](https://play.golang.org/p/AAX1cLCmA1c)
 
-    [Tutorial: Get started with Go](https://golang.org/doc/tutorial/getting-started)
+    Checkout also the official tutorial [Get started with Go](https://golang.org/doc/tutorial/getting-started).
 
 === "Install / Uninstall"
 
