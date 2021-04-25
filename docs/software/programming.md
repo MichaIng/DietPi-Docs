@@ -56,9 +56,24 @@ Go is a compiled language, fast and high-performance language intended to be sim
 
 Go is used by some of the big organizations such as Google, BBC, Uber, Soundcloud, Twitch, Medium, Daily Motion[^2]. Uber has reported better throughput, high performance, latency, and uptime. BBC, the house name in broadcasting the world news, uses it for backend, including crawlers and web scrapers. The build and deployment system of Soundcloud is in Go.
 
-You can use an editor of your choice, or use [VSCodium](../software/programming/#vscodium) to edit the code. The _Go extension_ available in VSCodium provides rich language support for the Go programming language.
+=== "Getting started"
 
-Just to have a taste of it, you could run some commands in this [_Go playground_](https://play.golang.org/p/AAX1cLCmA1c)
+    To edit the code you can use an editor of your choice, or use [VSCodium](../software/programming/#vscodium). The _Go extension_ available in VSCodium provides rich language support for the Go programming language.
+
+    Just to have a taste of it, you could run some commands in this [_Go playground_](https://play.golang.org/p/AAX1cLCmA1c)
+
+    [Tutorial: Get started with Go](https://golang.org/doc/tutorial/getting-started)
+
+=== "Install / Uninstall"
+
+    - We switched to automatic Go version detection. Here is an example:
+    
+    ```sh
+    root@DietPi3:~# go version
+    go version go1.16.3 linux/arm
+    ```
+    
+    - When uninstalled, the next folder `/mnt/dietpi_userdata/go` is still kept. This is the place where packages install, custom compilations are run, sources are downloaded etc. It is especially important to keep it as long as we don't have a good dependency system that blocks uninstalls of dependencies. Otherwise it would be possible to uninstall Go while [OpenBazaar](../social/#openbazaar) is still installed. As a side effect, removing `/mnt/dietpi_userdata/go` would mean also removing [OpenBazaar](../social/#openbazaar).
 
 ***
 
