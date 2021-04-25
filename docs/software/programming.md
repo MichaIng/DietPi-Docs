@@ -27,21 +27,27 @@
 
 ## Python 3
 
-Python is a text based interpreted programming language with object oriented programming options for general purpose applications.  
+Python is a text based interpreted programming language with object oriented programming options for general purpose applications. 
 
 ![Python logo](../assets/images/dietpi-software-programming-pythonlogo.png){: width="200" height="59" loading="lazy"}
 
 Source: By [www.python.org](http://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
-The install option explicitly installs only **Python 3**.  
-The `pip`/`pip3` Python package manager and development headers are included.
+You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^3], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest. 
 
-To use the `pip` package manager, a typical usage will be `pip3 install -U <module>`.
+Currenty, Python is 3rd most popular of programming language [^4].
+
+=== "Installation details"
+
+    The install option explicitly installs only **Python 3**.  
+    The `pip`/`pip3` Python package manager and development headers are included.
+    To use the `pip` package manager, a typical usage will be `pip3 install -U <module>`.
 
 ***
 
 Website: <https://www.python.org>  
 Official documentation, from beginner to advanced: <https://www.python.org/doc/>  
+How to Use Python: Your First Steps <https://realpython.com/python-first-steps/>
 Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
 
 ## Go
@@ -198,3 +204,7 @@ License: [MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
     [Logitech Media Server](../media/#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
 
 [^2]: [7 Most Famous Companies That Use Golang](https://www.agiratech.com/blog/companies-using-golang/)
+
+[^3]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
+
+[^4]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
