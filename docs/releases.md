@@ -7,7 +7,7 @@
 Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. We have a number of updates in this version that we hope you will like. Some of the key highlights include:
 
 !!! hint "Highlights"
-    
+
     - [Merged software list](#select-software-from-a-merged-list) - we simplified the software selection, using a single list ! You have now more options to choose from ! The list contains over 190 software options !
     - [New software](#new-optimised-software-in-71) - IPFS Nodes, Common UNIX Printing System (CUPS), and more in programming (Go language, and an excellent IDE: VSCodium)
     - [DietPi tools: New additions & notable updates](#dietpi-tools-in-71-new-notable-updates) - DietPi supports more VPN clients and it has more Dynamic DNS options. Enabling SSL/TLS certificates is easier now using the updates brought to Let's Encrypt tool.
@@ -28,10 +28,10 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
 ### New optimised software in 7.1
 
-- [**IPFS Node**](../software/distributed_projects/#ipfs-node) 
-    
-    The InterPlanetary File System (IPFS) is a protocol and peer-to-peer network for storing and accessing files, applications, data in a distributed file system. It is now available to install using `dietpi-software` or directly using the software ID `186`. 
-    
+- [**IPFS Node**](../software/distributed_projects/#ipfs-node)
+
+    The InterPlanetary File System (IPFS) is a protocol and peer-to-peer network for storing and accessing files, applications, data in a distributed file system. It is now available to install using `dietpi-software` or directly using the software ID `186`.
+
     Once installed, you can access the Web UI using the link: `http://<your.IP>:5003/webui`
 
     ![IPFS](assets/images/dietpi-release-ipfs.jpg){: loading="lazy"}
@@ -40,8 +40,8 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
 - [**CUPS**](../software/printing/#cups)
 
-    Common UNIX Printing System (CUPS) is a standard and modularized printing system that can process numerous data formats on the print server and also supports Internet Printing Protocol (IPP). 
-    
+    Common UNIX Printing System (CUPS) is a standard and modularized printing system that can process numerous data formats on the print server and also supports Internet Printing Protocol (IPP).
+
     It is now available as optimised install option using with the software ID `187`, including a web interface to manage & share local and network printers across your LAN.
 
     ![CUPS](assets/images/dietpi-software-printing-cups.png){: loading="lazy"}
@@ -56,12 +56,12 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
 - The **Go** Programming Language
 
-    **Go** <https://golang.org> is an open source programming language that makes it easy to build simple, reliable, and efficient software. 
-    
+    **Go** <https://golang.org> is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+
     Its installation was previously tied into the [OpenBazaar](../software/social/#openbazaar) installation. _Go_ programming language has now become a dedicated install option using `dietpi-software` or directly using the software ID `188`. The installation includes the runtime system, package installer and compiler tool chain, as found at <https://golang.org/dl/>.
 
-    You can use an editor of your choice, or use [VSCodium](../software/programming/#vscodium). The _Go extension_ available in VSCodium provides rich language support for the Go programming language. 
-    
+    You can use an editor of your choice, or use [VSCodium](../software/programming/#vscodium). The _Go extension_ available in VSCodium provides rich language support for the Go programming language.
+
     Just to have a taste of it, you could run some commands in this [_Go playground_](https://play.golang.org/p/AAX1cLCmA1c)
 
     ![Golang](assets/images/dietpi-software-programming-go.jpg)
