@@ -109,7 +109,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
     !!! hint ""
 
-        - The script now supports resizing F2FS and Btrfs filesystems as well as format, filesystem check and repair support for XFS filesystems.
+        - The script supports resizing for F2FS and Btrfs filesystems. The XFS filesystem type is now fully supported to format drives with and have them checked for filesystem errors.
         - When adding Samba mounts, credentials are not added in plain text to /etc/fstab anymore, but stored instead in a separate per-mount credential file with strict root-only read permissions.
         Many thanks to @TheOriginalMrWolf for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4082>
 
