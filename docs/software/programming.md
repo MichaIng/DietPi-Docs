@@ -3,6 +3,7 @@
 ## Overview
 
 - [**Python 3 - High-level interpreted programming language**](#python-3)
+- [**Go - Programming language**](#go)
 - [**Docker -  Create, deploy, and run applications using containers**](#docker)
 - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
 - [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
@@ -42,6 +43,20 @@ To use the `pip` package manager, a typical usage will be `pip3 install -U <modu
 Website: <https://www.python.org>  
 Official documentation, from beginner to advanced: <https://www.python.org/doc/>  
 Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
+
+## Go
+
+Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
+
+![DietPi Go open source programming language](../assets/images/dietpi-software-programming-golang.svg)
+
+Source: By [https://golang.org](https://blog.golang.org/go-brand), Creative Commons Attribution 3.0
+
+Go is a compiled language, fast and high-performance language intended to be simple and is designed to be easy to read and understand. Go was created at Google by Rob Pike, Robert Griesemer, and Ken Thompson, and it first appeared in Nov 2009.
+
+Go is used by some of the big organizations such as Google, BBC, Uber, Soundcloud, Twitch, Medium, Daily Motion[^2]. Uber has reported better throughput, high performance, latency, and uptime. BBC, the house name in broadcasting the world news, uses it for backend, including crawlers and web scrapers. The build and deployment system of Soundcloud is in Go.
+
+
 
 ## Docker
 
@@ -158,3 +173,5 @@ License: [MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
 
 [^1]:
     [Logitech Media Server](../media/#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
+
+[^2]: [7 Most Famous Companies That Use Golang](https://www.agiratech.com/blog/companies-using-golang/)
