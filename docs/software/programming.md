@@ -27,15 +27,15 @@
 
 ## Python 3
 
-Python is a text based interpreted programming language with object oriented programming options for general purpose applications. 
+Python is a text based interpreted programming language with object oriented programming options for general purpose applications.
 
 ![Python logo](../assets/images/dietpi-software-programming-pythonlogo.png){: width="200" height="59" loading="lazy"}
 
 Source: By [www.python.org](http://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
-You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^3], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest. 
+You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^3], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
 
-Currenty, Python is 3rd most popular of programming language [^4].
+Currently, Python is 3rd most popular of programming language [^4].
 
 === "Installation details"
 

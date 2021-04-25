@@ -308,6 +308,7 @@ PID
 Pi-hole
 PiJuice
 Pinebook
+Pinterest
 PiSupply
 PiVPN
 Plex
@@ -332,6 +333,7 @@ RAMlog
 Rasmus
 Raspbian
 Raspotify
+Reddit
 rcon
 RDBMS
 RDP
@@ -405,6 +407,7 @@ TCP
 tcpdump
 thechildofroth
 TigerVNC
+TIOBE
 TLS
 tmpfs
 Toews
