@@ -56,7 +56,15 @@ Go is a compiled language, fast and high-performance language intended to be sim
 
 Go is used by some of the big organizations such as Google, BBC, Uber, Soundcloud, Twitch, Medium, Daily Motion[^2]. Uber has reported better throughput, high performance, latency, and uptime. BBC, the house name in broadcasting the world news, uses it for backend, including crawlers and web scrapers. The build and deployment system of Soundcloud is in Go.
 
+You can use an editor of your choice, or use [VSCodium](../software/programming/#vscodium) to edit the code. The _Go extension_ available in VSCodium provides rich language support for the Go programming language.
 
+Just to have a taste of it, you could run some commands in this [_Go playground_](https://play.golang.org/p/AAX1cLCmA1c)
+
+***
+
+Website: <https://golang.org>  
+Official documentation, references and guided tours of Go programs : <https://golang.org/doc>  
+Wikipedia: <https://en.wikipedia.org/wiki/Go_(programming_language)>
 
 ## Docker
 
