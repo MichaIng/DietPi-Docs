@@ -16,7 +16,7 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. We have a n
 
 Many thanks to all contributors and beta testers :octicons-heart-16: :octicons-heart-16: !! With your help we could achieve all of these updates ! Install or upgrade to this latest update - it has more things we hope you would enjoy ! Share your feedback on [Twitter](https://twitter.com/DietPi_), [DietPi Forum](https://dietpi.com/phpbb/viewforum.php?f=9&sid=e6fcb5de3776c2d8eb1b22cc1fb24ca5), and report any issue to [GitHub](https://github.com/MichaIng/DietPi/issues) !
 
-As a new thing, we already scheduled the next update. DietPi 7.2 will be launched on Friday, 27 May !
+As a new thing, we already scheduled the next update. DietPi 7.2 will be launched on 29 May !
 
 ### Select software from a merged list
 
