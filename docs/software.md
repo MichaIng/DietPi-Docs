@@ -62,7 +62,7 @@
 ## [Databases & Data Stores](../software/databases/#overview)
 
 - [**MariaDB** - Open Source Relational Database](../software/databases/#mariadb)
-  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](../software/databases/#phpmyadmin)  
+- [**phpMyAdmin** - SQL Administration Tool for MariaDB](../software/databases/#phpmyadmin)  
 - [**SQLite** - Small, Fast and High reliable SQL database engine](../software/databases/#sqlite)
 - [**Redis** - Open Source In-memory key–value Data Store](../software/databases/#redis)
 - [**InfluxDB** - Open Source Time Series Database](../software/databases/#influxdb)
@@ -85,6 +85,7 @@
 ## [Development & Programming](../software/programming/)
 
 - [**Python 3 - High-level interpreted programming language**](../software/programming/#python-3)
+- [**Go - Programming language**](../software/programming/#go)
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](../software/programming/#docker-compose)
 - [**Portainer - Docker container management**](../software/programming/#portainer)

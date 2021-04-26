@@ -3,7 +3,7 @@
 ## Overview
 
 - [**MariaDB** - Open Source Relational Database](#mariadb)
-  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](#phpmyadmin)  
+- [**phpMyAdmin** - SQL Administration Tool for MariaDB](#phpmyadmin)  
 - [**SQLite** - Small, Fast and High reliable SQL database engine](#sqlite)
 - [**Redis** - Open Source In-memory key–value Data Store](#redis)
 - [**InfluxDB** - Open Source Time Series Database](#influxdb)
