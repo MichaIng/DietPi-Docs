@@ -58,7 +58,7 @@ Go is an open source programming language that makes it easy to build simple, re
 
 Source: By [https://golang.org](https://blog.golang.org/go-brand), Creative Commons Attribution 3.0
 
-Go is a compiled language, fast and high-performance language intended to be simple and is designed to be easy to read and understand. Go was created at Google by Rob Pike, Robert Griesemer, and Ken Thompson, and it first appeared in Nov 2009.
+Go is a compiled, fast and high-performance language intended to be simple and is designed to be easy to read and understand. Go was created at Google by Rob Pike, Robert Griesemer, and Ken Thompson, and it first appeared in Nov 2009.
 
 Go is used by some of the big organizations such as Google, BBC, Uber, Soundcloud, Twitch, Medium, Daily Motion[^2]. Uber has reported better throughput, high performance, latency, and uptime. BBC, the house name in broadcasting the world news, uses it for backend, including crawlers and web scrapers. The build and deployment system of Soundcloud is in Go.
 
@@ -73,12 +73,12 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 === "Install / Uninstall"
 
     - We switched to automatic Go version detection. Here is an example:
-    
+
     ```sh
     root@DietPi3:~# go version
     go version go1.16.3 linux/arm
     ```
-    
+
     - When uninstalled, the next folder `/mnt/dietpi_userdata/go` is still kept. This is the place where packages install, custom compilations are run, sources are downloaded etc. It is especially important to keep it as long as we don't have a good dependency system that blocks uninstalls of dependencies. Otherwise it would be possible to uninstall Go while [OpenBazaar](../social/#openbazaar) is still installed. As a side effect, removing `/mnt/dietpi_userdata/go` would mean also removing [OpenBazaar](../social/#openbazaar).
 
 ***
