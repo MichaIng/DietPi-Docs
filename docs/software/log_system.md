@@ -21,9 +21,9 @@ The *Log System* can be changed at any time by running `dietpi-software` and sel
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 ???+ seealso "Examining the logging information"
     A description of the basic log information display and filter option is given in the [HowTo section of the DietPi documentation](../../usage).

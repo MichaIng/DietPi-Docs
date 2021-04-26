@@ -2,17 +2,17 @@
 
 ## Overview
 
-**DietPi-Software** is a core DietPi tool, allowing you to install **Ready to run** and **Optimized software items** for your device. It automates the installation and configuration process for you and also applies specific optimizations unique to your hardware model. As a result DietPi-Software ensure you get the **maximum performance** from your device.
+**DietPi-Software** is a core DietPi tool, allowing you to install **Ready to run** and **optimized software items** for your device. It automates the installation and configuration process for you and also applies specific optimizations unique to your hardware model. As a result DietPi-Software ensure you get the **maximum performance** from your device.
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line `dietpi-launcher` and selected *DietPi-Software* or launch the tool `dietpi-software`.
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run `dietpi-launcher` from the command line and select *DietPi-Software* or launch the tool `dietpi-software`.
 
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi Software](assets/images/dietpi-software.jpg)
 
-    To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools/) section.
 
 ## [Advanced Networking](../software/advanced_networking/)
 
