@@ -12,7 +12,7 @@
 
     ![DietPi Software](assets/images/dietpi-software.jpg)
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools/) section.
 
 ## [Advanced Networking](../software/advanced_networking/)
 
