@@ -6,7 +6,7 @@
 
 Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused to simplify the software selection and improve things you can do with **DietPi**. It's now easier to connect (DDNS), secure (VPN, LetsEncrypt), share (IPFS), print (CUPS) and configure.
 
-:octicons-paper-airplane-16: If you have not tried yet DietPi 7, this is an excellent upgrade !
+:octicons-paper-airplane-16: If you have not tried yet DietPi 7, this is an excellent upgrade!
 
 ![DietPi Version 7.1](assets/images/dietpi-version-71.jpg){: width="320" height="427" loading="lazy"}
 
@@ -18,15 +18,15 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. It's an inc
 
     - [Merged software list](#select-software-from-a-merged-list)
 
-        The software selection is now simplified ! You have a single list to choose from, with over 190 software options !
+        The software selection is now simplified! You have a single list to choose from, with over 190 software options!
 
     - [New software](#new-optimised-software-in-71)
 
-        IPFS Nodes, Common UNIX Printing System (CUPS), and more in programming (Go language, and an excellent IDE: VSCodium)
+        IPFS Nodes, Common UNIX Printing System (CUPS), and more in programming (Go language, and an excellent IDE: VSCodium).
 
     - [DietPi tools: Additions & Major updates](#dietpi-tools-in-71-new-notable-updates)
 
-        DietPi supports more VPN clients and it has more Dynamic DNS options. Enabling SSL/TLS certificates is easier now using the updates brought to `DietPi-LetsEncrypt` tool. You can find more enhancements brought to: `DietPi-Drive_Manager`, `DietPi-Config`. 
+        DietPi supports more VPN clients and it has more Dynamic DNS options. Enabling SSL/TLS certificates is easier now using the updates brought to `DietPi-LetsEncrypt` tool. You can find more enhancements brought to: `DietPi-Drive_Manager`, `DietPi-Config`.
 
     - [Improvements](#changes-improvements-optimisations-in-71)
 
@@ -34,13 +34,30 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. It's an inc
 
     - [Bug fixes](#bug-fixes) & updates to [supported SBC](#supported-sbc-updates-in-71) list
 
-Many thanks to all contributors and beta testers :octicons-heart-16: :octicons-heart-16: !! With your help we could achieve all of these updates ! Install or upgrade to this latest update - it has more things we hope you would enjoy ! Share your feedback on [Twitter](https://twitter.com/DietPi_), [DietPi Forum](https://dietpi.com/phpbb/), and report any issue to [GitHub](https://github.com/MichaIng/DietPi/issues)!
+Many thanks to all contributors and beta testers :octicons-heart-16: :octicons-heart-16:.  
+With your help we could achieve all of these updates! Install or upgrade to this latest update - it has more things we hope you would enjoy!  
+Share your feedback on [Twitter](https://twitter.com/DietPi_), [DietPi Forum](https://dietpi.com/phpbb/), and report any issue to [GitHub](https://github.com/MichaIng/DietPi/issues)!
 
-As a new thing, we already scheduled the next update. DietPi 7.2 will be launched on 29 May !
+***Version #1:***  
+We already scheduled the next update:  
+***DietPi 7.2 will be launched on 2021-05-29***.
+
+***Version #2:***  
+
+!!! check "Next DietPi release"
+
+    As a new thing, we already scheduled the next update: ***DietPi 7.2 will be launched on 2021-05-29***.
+
+***Version #3:***  
+
+!!! check "Release schedule"
+
+    ![DietPi Version 7.2 release](assets/images/dietpi-releaseinformation-7.2.svg)
+
 
 ### Select software from a merged list
 
-The _optimised_ and _additional_ software menus have been merged within `dietpi-software` tool. The earlier split did not follow consistent rules. The merge allows development tools and platforms a more prominent position. It also simplifies the software selection and it addresses a possible confusion about that separation among the community.
+The _optimised_ and _additional_ software menus have been merged within the `dietpi-software` tool. The earlier split did not follow consistent rules. The merge allows development tools and platforms a more prominent position. It also simplifies the software selection and it addresses a possible confusion about that separation among the community.
 
 ![DietPi-Software menu screenshot](assets/images/dietpi-release-single-software-list.jpg){: width="641" height="322" loading="lazy" }
 
@@ -129,7 +146,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
     !!! hint ""
 
-        - The script supports resizing for F2FS and Btrfs filesystems. The XFS filesystem type is now fully supported to format drives with and have them checked for filesystem errors.
+        - The script supports resizing for **F2FS** and **Btrfs** filesystems. The **XFS** filesystem type is now fully supported to format drives with and have them checked for filesystem errors.
         - When adding Samba mounts, credentials are not added in plain text to /etc/fstab anymore, but stored instead in a separate per-mount credential file with strict root-only read permissions.
         Many thanks to @TheOriginalMrWolf for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4082>
 
@@ -163,8 +180,8 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
     !!! hint ""
 
-        - On fresh installs and reinstalls, the listening port has been changed from `8000` to `8003` to avoid conflicts with IceCast. 
-        - Additionally the install process has been simplified and dependencies reduces, since after Koel v5.0.0 pre-compiled frontend binaries are available. This also allows a completely unattended install now. As little security hardening, the Koel MariaDB database password has been changed to a long random character string and the config files permission mode has been changed to `600` to permit read access to the Koel service user only. 
+        - On fresh installs and reinstalls, the listening port has been changed from `8000` to `8003` to avoid conflicts with IceCast.
+        - Additionally the install process has been simplified and dependencies reduces, since after Koel v5.0.0 pre-compiled frontend binaries are available. This also allows a completely unattended install now. As little security hardening, the Koel MariaDB database password has been changed to a long random character string and the config files permission mode has been changed to `600` to permit read access to the Koel service user only.
         - Resolved more issues which caused the installation to fail. These were caused by changed archive directory names and changed Laravel dependencies.
         - Finally as little performance enhancement, Koel now connects via UNIX socket to MariaDB instead of view TCP connection, which allows to disable TCP listening in [MariaDB](../software/databases/#mariadb).
 
