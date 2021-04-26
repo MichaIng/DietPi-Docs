@@ -2,7 +2,7 @@
 
 ## Overview
 
-Once you did the [DietPi Installation](../install/) you could choose to install one or more [DietPi optimized software items](../software/) or run one of the [DietPi tools](../dietpi_tools/).
+Once you have done the [DietPi Installation](../install/) you can choose to install one or more [DietPi optimized software items](../software/) or run one of the [DietPi tools](../dietpi_tools/).
 
 ## Initial start
 
@@ -12,13 +12,13 @@ This will be the first screen displayed.
 
 ## DietPi-Launcher
 
-Once you run `dietpi-launcher` you could see all available DietPi tools. It provides a quick way to run any of the DietPi tools: Installing **DietPi optimized software items** to simple configure your device, enabling services to start to backup your installation and so on.
+Run `dietpi-launcher` to see all available DietPi tools. It provides a quick way to run any of the DietPi tools: From installing **DietPi optimized software items** to simple configure your device, from enabling services to start to backup your installation and so on.
 
 ![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="366" loading="lazy"}
 
 ## DietPi-Software -- Choose the software you need
 
-The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use. If you’re unsure what software to install, checkout [DietPi optimised software items](../software/) page for more details.  
+The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use. If you are unsure what software to install, checkout the [DietPi optimised software items](../software/) page for more details.  
 
 The list of DietPi optimised software includes:
 

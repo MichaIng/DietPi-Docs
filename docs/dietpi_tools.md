@@ -28,7 +28,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     - Begin by selecting **Browse Software** in the main menu list and hit ++enter++.
 
-    - Scroll through the list of available software - for more details check [DietPi Optimised Software items](../software/).
+    - Scroll through the list of available software - for more details check the [DietPi software list](../software/).
 
     The list of optimised software is long. You either browse the list or use the option **Search**.
 
@@ -44,7 +44,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "Search Software"
 
-    DietPi supports a large number of software titles. Instead of scrolling through the **Browse Software** list to find a specific software title, you may use the **Search Software** option. Type in the software ID or any keyword form its title or description and you'll get a list filtered by matching results.
+    DietPi supports a large number of software titles. Instead of scrolling through the **Browse Software** list to find a specific software title, you may use the **Search Software** option. Type in the software ID or any keyword from its title or description and you'll get a list filtered by matching results.
 
     ![DietPi-Software Search menu screenshot](assets/images/dietpi-software-search.png){: with="752" height="321" loading="lazy"}
 
@@ -94,7 +94,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     !!! hint "Automatic selection"
 
-        When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
+        When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Browse Software*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
 
         As a result you will not need to manually select/install a webserver stack. DietPi will do it all for you.
 
@@ -130,7 +130,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "Install"
 
-    Install software item(s) which have been selected via **Browse Software** list, via **Search Software**, or via **SSH Server**, **File Server** or **Log System** choices.
+    Install software item(s) which have been selected via **Browse Software** list, via **Search Software**, or via the **SSH Server**, **File Server** or **Log System** choices.
 
 === "Uninstall"
 
