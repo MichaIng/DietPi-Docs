@@ -10,14 +10,28 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. It's an inc
 
 ![DietPi Version 7.1](assets/images/dietpi-version-71.jpg){: width="320" height="427" loading="lazy"}
 
-> Photo by [David Pisnoy](https://unsplash.com/@davidpisnoy) on [Unsplash](https://unsplash.com)
+!!! cite ""
+
+    _Photo by [David Pisnoy](https://unsplash.com/@davidpisnoy) on [Unsplash](https://unsplash.com)_
 
 !!! hint "Highlights"
 
-    - [Merged software list](#select-software-from-a-merged-list) - The software selection is now simplified ! You have a single list to choose from, with over 190 software options !
-    - [New software](#new-optimised-software-in-71) - IPFS Nodes, Common UNIX Printing System (CUPS), and more in programming (Go language, and an excellent IDE: VSCodium)
-    - [DietPi tools: Additions & Major updates](#dietpi-tools-in-71-new-notable-updates) - DietPi supports more VPN clients and it has more Dynamic DNS options. Enabling SSL/TLS certificates is easier now using the updates brought to `DietPi-LetsEncrypt` tool. You can find more enhancements brought to: `DietPi-Drive_Manager`, `DietPi-Config`. 
-    - [Improvements](#changes-improvements-optimisations-in-71) - More improvments to different software titles.
+    - [Merged software list](#select-software-from-a-merged-list)
+
+        The software selection is now simplified ! You have a single list to choose from, with over 190 software options !
+
+    - [New software](#new-optimised-software-in-71)
+
+        IPFS Nodes, Common UNIX Printing System (CUPS), and more in programming (Go language, and an excellent IDE: VSCodium)
+
+    - [DietPi tools: Additions & Major updates](#dietpi-tools-in-71-new-notable-updates)
+
+        DietPi supports more VPN clients and it has more Dynamic DNS options. Enabling SSL/TLS certificates is easier now using the updates brought to `DietPi-LetsEncrypt` tool. You can find more enhancements brought to: `DietPi-Drive_Manager`, `DietPi-Config`. 
+
+    - [Improvements](#changes-improvements-optimisations-in-71)
+
+        More improvments to different software titles.
+
     - [Bug fixes](#bug-fixes) & updates to [supported SBC](#supported-sbc-updates-in-71) list
 
 Many thanks to all contributors and beta testers :octicons-heart-16: :octicons-heart-16: !! With your help we could achieve all of these updates ! Install or upgrade to this latest update - it has more things we hope you would enjoy ! Share your feedback on [Twitter](https://twitter.com/DietPi_), [DietPi Forum](https://dietpi.com/phpbb/), and report any issue to [GitHub](https://github.com/MichaIng/DietPi/issues)!
