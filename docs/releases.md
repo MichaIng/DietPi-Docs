@@ -4,19 +4,39 @@
 
 ### Overview
 
-Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. We have a number of updates in this version that we hope you will like. Some of the key highlights include:
+Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused to simplify the software selection and improve things you can do with **DietPi**. It's now easier to connect (DDNS), secure (VPN, LetsEncrypt), share (IPFS), print (CUPS) and configure.
+
+:octicons-paper-airplane-16: If you have not tried yet DietPi 7, this is an excellent upgrade !
+
+![DietPi Version 7.1](assets/images/dietpi-version-71.jpg){: width="320" height="427" loading="lazy"}
+
+!!! cite ""
+
+    _Photo by [David Pisnoy](https://unsplash.com/@davidpisnoy) on [Unsplash](https://unsplash.com)_
 
 !!! hint "Highlights"
 
-    - [Merged software list](#select-software-from-a-merged-list) - we simplified the software selection, using a single list ! You have now more options to choose from ! The list contains over 190 software options !
-    - [New software](#new-optimised-software-in-71) - IPFS Nodes, Common UNIX Printing System (CUPS), and more in programming (Go language, and an excellent IDE: VSCodium)
-    - [DietPi tools: New additions & notable updates](#dietpi-tools-in-71-new-notable-updates) - DietPi supports more VPN clients and it has more Dynamic DNS options. Enabling SSL/TLS certificates is easier now using the updates brought to Let's Encrypt tool.
-    - [Improvements](#changes-improvements-optimisations-in-71) - More improvments in DietPi tools (to name just a few: DietPi-LetsEncrypt, DietPi-Drive_Manager, DietPi-Config etc.) have been updated, along with more changes to more software packages.
+    - [Merged software list](#select-software-from-a-merged-list)
+
+        The software selection is now simplified ! You have a single list to choose from, with over 190 software options !
+
+    - [New software](#new-optimised-software-in-71)
+
+        IPFS Nodes, Common UNIX Printing System (CUPS), and more in programming (Go language, and an excellent IDE: VSCodium)
+
+    - [DietPi tools: Additions & Major updates](#dietpi-tools-in-71-new-notable-updates)
+
+        DietPi supports more VPN clients and it has more Dynamic DNS options. Enabling SSL/TLS certificates is easier now using the updates brought to `DietPi-LetsEncrypt` tool. You can find more enhancements brought to: `DietPi-Drive_Manager`, `DietPi-Config`. 
+
+    - [Improvements](#changes-improvements-optimisations-in-71)
+
+        More improvments to different software titles.
+
     - [Bug fixes](#bug-fixes) & updates to [supported SBC](#supported-sbc-updates-in-71) list
 
 Many thanks to all contributors and beta testers :octicons-heart-16: :octicons-heart-16: !! With your help we could achieve all of these updates ! Install or upgrade to this latest update - it has more things we hope you would enjoy ! Share your feedback on [Twitter](https://twitter.com/DietPi_), [DietPi Forum](https://dietpi.com/phpbb/), and report any issue to [GitHub](https://github.com/MichaIng/DietPi/issues)!
 
-As a new thing, we already scheduled the next update. DietPi 7.2 will be launched on 29 May!
+As a new thing, we already scheduled the next update. DietPi 7.2 will be launched on 29 May !
 
 ### Select software from a merged list
 
@@ -54,7 +74,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
     ![VSCodium GUI screenshot](assets/images/dietpi-software-programming-vscodium.png){: width="1028" height="799" loading="lazy"}
 
-- The **Go** Programming Language
+- [**Go** Programming Language](../software/programming/#go)
 
     **Go** <https://golang.org> is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 
@@ -117,14 +137,22 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
     !!! hint ""
 
-        - Added a safe overclocking profile for RPi 3+ models. Many thanks to @lone for doing long-term stability tests and reporting back the result: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285)
+        - Added a safe overclocking profile for RPi 3+ models ! Many thanks to @lone for doing long-term stability tests and reporting back the result. See the full conversation: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285)
 
-        - When disabling the RPi camera feature, the bcm2835_isp kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: <https://github.com/MichaIng/DietPi/issues/4203>
+        - When disabling the RPi camera feature, the `bcm2835_isp` kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: <https://github.com/MichaIng/DietPi/issues/4203>
+
+- **DietPi-FS_partition_resize** :octicons-arrow-right-16: Added support to automatically resize F2FS and Btrfs filesystems on first boot.
 
 ### Changes / Improvements / Optimisations in 7.1
 
-- **DietPi-Arr_to_RAM** :octicons-arrow-right-16: Support for [Sonarr](../software/bittorrent/#sonarr) v3 and [Radarr](../software/bittorrent/#radarr) v3 has been added. On first link to RAM, a script `/mnt/dietpi_userdata/(sonarr|radarr|lidarr)/dietpi-arr_to_RAM.sh` is created, which allows updating the linked database backups via the programs "Custom Script" feature. Since v3 it is no longer possible to pass arguments to user-defined scripts or to call scripts within the `boot` directory, which broke the previous `/boot/dietpi/misc/dietpi-arr_to_RAM 2 (sonarr|radarr|lidarr)` calls in two ways.
-- **DietPi-FS_partition_resize** :octicons-arrow-right-16: Added support to automatically resize F2FS and Btrfs filesystems on first boot.
+- **DietPi-Software** | [**Sonarr**](../software/bittorrent/#sonarr) / [**Radarr**](../software/bittorrent/#radarr) enhancements :octicons-arrow-right-16:
+
+    !!! hint ""
+
+        - **DietPi-Arr_to_RAM** :octicons-arrow-right-16: Support for [Sonarr](../software/bittorrent/#sonarr) v3 and [Radarr](../software/bittorrent/#radarr) v3 has been added. On first link to RAM, a script `/mnt/dietpi_userdata/(sonarr|radarr|lidarr)/dietpi-arr_to_RAM.sh` is created, which allows updating the linked database backups via the programs "Custom Script" feature. Since v3 it is no longer possible to pass arguments to user-defined scripts or to call scripts within the `boot` directory, which broke the previous `/boot/dietpi/misc/dietpi-arr_to_RAM 2 (sonarr|radarr|lidarr)` calls in two ways.
+        - [**Sonarr**](../software/bittorrent/#sonarr) :octicons-arrow-right-16: Support for v3 and migration to v3 have been implemented. Existing installations won't be migrated automatically. To do this, run `dietpi-software reinstall 144` to upgrade your Sonarr to v3. On DietPi update, Sonarr v2 users will receive a notification.
+        - Having both now installed as v3 or later, a long outstanding issue is resolved. Importing downloads to filesystems without native UNIX permissions support failed in the past, including Samba/CIFS mounts.
+
 - **DietPi-Software** | [**Mosquitto**](../software/hardware_projects/#mosquitto) :octicons-arrow-right-16: Since v2, by default remote connections and no unauthenticated requests are possible anymore. On fresh installs and reinstalls, we'll enable remote connections, but create a password file, so that MQTT clients need to authenticate with username `mosquitto` and the global software password by default. Many thanks to @mattsmithuk for reporting this change: <https://github.com/MichaIng/DietPi/issues/4133>
 - **DietPi-Software** | [**IceCast**](../software/media/#icecast) :octicons-arrow-right-16: The streaming server can now be installed on virtual machines as well and the default web UI password will now be the global software password instead of a random one. Since the DarkIce config file /etc/darkice.cfg contains the global software password in plain text, its permission mode is changed to 600 to limit read access to the root user only.
 - **DietPi-Software** | [**OctoPrint**](../software/printing/#octoprint) :octicons-arrow-right-16: On fresh installs, the default listening port has been changed from 5000 to 5001 to avoid conflicts with Shairport Sync.
@@ -142,7 +170,6 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
 - **DietPi-Software** | [**YaCy**](../software/social/#yacy) :octicons-arrow-right-16: New installs and reinstalls will now have the latest version detected and downloaded automatically. This enables an easy update method by simply reinstalling YaCy via `dietpi-software reinstall 133`, independent of the DietPi version.
 - **DietPi-Software** | [**Remot3.it**](../software/remote_desktop/#remot3it) :octicons-arrow-right-16: After the install finished, it is now offered to do the interactive "connectd_installer" setup directly. Neither is a reboot required, nor does any service need to run to be registered. This is especially helpful for installs via `dietpi-software install 68`, where the hint about this required setup was not shown before.
-- **DietPi-Software** | [**Sonarr**](../software/bittorrent/#sonarr) :octicons-arrow-right-16: Support for and migration to v3 has been implemented. Existing installs won't be migrated automatically, run `dietpi-software reinstall 144` to upgrade your Sonarr to v3. On DietPi update, Sonarr v2 users will receive a related notification.
 - **DietPi-Software** | [**Kodi**](../software/media/#kodi) :octicons-arrow-right-16: Worked around an issue on 64-bit RPi systems, where the wrong Kodi package is tried to be installed, causing an APT failure. Many thanks to @mmnpkf for reporting this issue: #4194
 - **DietPi-Software** | [**Chromium**](../software/desktop/#chromium) :octicons-arrow-right-16: Worked around an issue on 64-bit RPi systems, where the install failed, as The Raspberry Pi repository does not ship a 64-bit build yet. The Chromium package from the Debian repository is now installed instead.
 
@@ -170,7 +197,6 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 - **DietPi-Software** | [**O!MPD**](../software/media/#ompd) :octicons-arrow-right-16: Resolved an issue where browsing the media directory from the web UI failed because of a missing slash in the local config file. Many thanks to @pinkdot for reporting this issue: [Small issue in O!MPD with missing slash](https://dietpi.com/phpbb/viewtopic.php?t=8904)
 - **DietPi-Software** | [**Kodi**](../software/media/#kodi) :octicons-arrow-right-16: Worked around an issue on 64-bit RPi systems, where the wrong Kodi package is tried to be installed, causing an APT failure. Many thanks to @mmnpkf for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4194>
 - **DietPi-Software** | [**Chromium**](../software/desktop/#chromium) :octicons-arrow-right-16: Worked around an issue on 64-bit RPi systems, where the install failed, as The Raspberry Pi repository does not ship a 64-bit build yet. The Chromium package from the Debian repository is now installed instead.
-- **DietPi-Software** | [**Sonarr**](../software/bittorrent/#sonarr) / [**Radarr**](../software/bittorrent/#radarr) :octicons-arrow-right-16: Having both now installed as v3 or later, resolves a long outstanding issue, where importing downloads to filesystems without native UNIX permissions support, including Samba/CIFS mounts, failed.
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/XXXX>
 
