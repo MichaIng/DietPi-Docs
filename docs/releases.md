@@ -16,46 +16,31 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. It's an inc
 
 !!! hint "Highlights"
 
-    - [Merged software list](#select-software-from-a-merged-list)
+    - [**Merged software list**](#select-software-from-a-merged-list)
 
         The software selection is now simplified! You have a single list to choose from, with over 190 software options!
 
-    - [New software](#new-optimised-software-in-71)
+    - [**New software**](#new-optimised-software-in-71)
 
         IPFS Nodes, Common UNIX Printing System (CUPS), and more in programming (Go language, and an excellent IDE: VSCodium).
 
-    - [DietPi tools: Additions & Major updates](#dietpi-tools-in-71-new-notable-updates)
+    - [**DietPi tools**: Additions & Major updates](#dietpi-tools-in-71-new-notable-updates)
 
         DietPi supports more VPN clients and it has more Dynamic DNS options. Enabling SSL/TLS certificates is easier now using the updates brought to `DietPi-LetsEncrypt` tool. You can find more enhancements brought to: `DietPi-Drive_Manager`, `DietPi-Config`.
 
-    - [Improvements](#changes-improvements-optimisations-in-71)
+    - [**Improvements**](#changes-improvements-optimisations-in-71)
 
         More improvments to different software titles.
 
-    - [Bug fixes](#bug-fixes) & updates to [supported SBC](#supported-sbc-updates-in-71) list
+    - [**Bug fixes**](#bug-fixes) & updates to [**supported SBC**](#supported-sbc-updates-in-71) list
 
 Many thanks to all contributors and beta testers :octicons-heart-16: :octicons-heart-16:.  
 With your help we could achieve all of these updates! Install or upgrade to this latest update - it has more things we hope you would enjoy!  
 Share your feedback on [Twitter](https://twitter.com/DietPi_), [DietPi Forum](https://dietpi.com/phpbb/), and report any issue to [GitHub](https://github.com/MichaIng/DietPi/issues)!
 
-***Version #1:***  
-We already scheduled the next update:  
-***DietPi 7.2 will be launched on 2021-05-29***.
-
-***Version #2:***  
-
 !!! check "Next DietPi release"
 
     As a new feature, we will introduce shorter release cycles and a fixed schedule. The next update is already planned: ***DietPi 7.2 will be launched on 2021-05-29***.
-
-***Version #3:***  
-
-!!! check "Release schedule"
-
-    As a new feature, we will introduce shorter release cycles and a fixed schedule. The next update is already planned:
-
-    ![DietPi Version 7.2 release](assets/images/dietpi-releaseinformation-7.2.svg)
-
 
 ### Select software from a merged list
 
@@ -69,7 +54,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
 - [**IPFS Node**](../software/distributed_projects/#ipfs-node)
 
-    The InterPlanetary File System (IPFS) is a protocol and peer-to-peer network for storing and accessing files, applications, data in a distributed file system. It is now available to install using `dietpi-software` or directly using the software ID `186`.
+    The **InterPlanetary File System** (IPFS) is a protocol and peer-to-peer network for storing and accessing files, applications, data in a distributed file system. It is now available to install using `dietpi-software` or directly using the software ID `186`.
 
     Once installed, you can access the Web UI using the link: `http://<your.IP>:5003/webui`
 
@@ -79,7 +64,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
 - [**CUPS**](../software/printing/#cups)
 
-    Common UNIX Printing System (CUPS) is a standard and modularized printing system that can process numerous data formats on the print server and also supports Internet Printing Protocol (IPP).
+    **Common UNIX Printing System** (CUPS) is a standard and modularized printing system that can process numerous data formats on the print server and also supports Internet Printing Protocol (IPP).
 
     It is now available as optimised install option using with the software ID `187`, including a web interface to manage & share local and network printers across your LAN.
 
@@ -109,7 +94,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
 - [**DietPi-DDNS**](../dietpi_tools/#dietpi-tools)
 
-    It is a new DietPi tool and it allows you to manage domains for your dynamic IP address.
+    It is a new DietPi tool and it allows you to manage domains for your **dynamic IP address**.
 
     ![DietPi-Launcher menu screenshot showing DietPi-DDNS entry](assets/images/dietpi-release-ddns.jpg){: width="600" height="97" loading="lazy"}
 
@@ -135,10 +120,10 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
     !!! hint ""
 
-        - It is now possible to obtain certificates for multiple domains. These should be provided as comma-separated list, with the first domain used as primary webserver name.
-        - It becomes possible to obtain certificates without having a webserver installed. Certbot can start an own internal webserver for such case and the certificate can then be used to manually enable HTTPS for other web applications, running on other ports than 80/443.
-        - It is possible to enable OCSP (Online Certificate Status Protocol) stapling for the obtained certificate. This allows clients to check if the certificate has been revoked, e.g. when the server has been compromised or the private key has been stolen.
-        - When **Lighttpd** is used, HTTPS is now enabled also for IPv6 requests and the deprecated TLSv1.0 and TLSv1.1 are disabled from Debian Buster. With the Lighttpd version shipped by Debian Stretch, those TLS versions cannot be disabled.
+        - It is now possible to obtain **certificates for multiple domains**. These should be provided as comma-separated list, with the first domain used as primary webserver name.
+        - It becomes possible to obtain certificates **without having a webserver installed**. Certbot can start an own internal webserver for such case and the certificate can then be used to manually enable HTTPS for other web applications, running on other ports than 80/443.
+        - It is possible to enable **Online Certificate Status Protocol** (OCSP) stapling for the obtained certificate. This allows clients to check if the certificate has been revoked, e.g. when the server has been compromised or the private key has been stolen.
+        - When **Lighttpd** is used, HTTPS is now enabled also for IPv6 requests and the deprecated **TLSv1.0 and TLSv1.1** are disabled from Debian Buster. With the Lighttpd version shipped by Debian Stretch, those TLS versions cannot be disabled.
 
         For further information about TLSv1.0 and TLSv1.1 resp. testing it you could use an online TLS checker. One example could be: <https://www.ssllabs.com/ssltest/>.
 
@@ -149,16 +134,18 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
     !!! hint ""
 
         - The script supports resizing for **F2FS** and **Btrfs** filesystems. The **XFS** filesystem type is now fully supported to format drives with and have them checked for filesystem errors.
-        - When adding Samba mounts, credentials are not added in plain text to /etc/fstab anymore, but stored instead in a separate per-mount credential file with strict root-only read permissions.
+        - When adding **Samba mounts**, credentials are not added in plain text to /etc/fstab anymore, but stored instead in a separate per-mount credential file with strict root-only read permissions.
         Many thanks to @TheOriginalMrWolf for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4082>
 
 - [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) enhancements :octicons-arrow-right-16:
 
     !!! hint ""
 
-        - Added a safe overclocking profile for RPi 3+ models ! Many thanks to @lone for doing long-term stability tests and reporting back the result. See the full conversation: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285)
+        - Added a **safe overclocking profile for RPi 3+ models** ! Many thanks to @lone for doing long-term stability tests and reporting back the result. See the full conversation: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285)
 
-        - When disabling the RPi camera feature, the `bcm2835_isp` kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: <https://github.com/MichaIng/DietPi/issues/4203>
+        - When **disabling the RPi camera feature**, the `bcm2835_isp` kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: <https://github.com/MichaIng/DietPi/issues/4203>
+
+        - DietPi-Config | Worked around an issue in RPi, where selecting a **sound card** ended with an error prompt in certain circumstances. Many thanks to @sturbs for reporting this issue: #4306
 
 - **DietPi-FS_partition_resize** :octicons-arrow-right-16: Added support to automatically resize F2FS and Btrfs filesystems on first boot.
 
@@ -182,10 +169,10 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
     !!! hint ""
 
-        - On fresh installs and reinstalls, the listening port has been changed from `8000` to `8003` to avoid conflicts with IceCast.
-        - Additionally the install process has been simplified and dependencies reduces, since after Koel v5.0.0 pre-compiled frontend binaries are available. This also allows a completely unattended install now. As little security hardening, the Koel MariaDB database password has been changed to a long random character string and the config files permission mode has been changed to `600` to permit read access to the Koel service user only.
-        - Resolved more issues which caused the installation to fail. These were caused by changed archive directory names and changed Laravel dependencies.
-        - Finally as little performance enhancement, Koel now connects via UNIX socket to MariaDB instead of view TCP connection, which allows to disable TCP listening in [MariaDB](../software/databases/#mariadb).
+        - On fresh installs and reinstalls, the **listening port** has been changed from `8000` to `8003` to avoid conflicts with IceCast.
+        - Additionally the install process has been simplified and dependencies reduces, since after Koel v5.0.0 pre-compiled frontend binaries are available. This also allows a completely unattended install now. As little **security hardening**, the Koel MariaDB database password has been changed to a long random character string and the config files permission mode has been changed to `600` to permit read access to the Koel service user only.
+        - Resolved more issues which **caused the installation to fail**. These were caused by changed archive directory names and changed Laravel dependencies.
+        - Finally as little **performance enhancement**, Koel now connects via UNIX socket to MariaDB instead of view TCP connection, which allows to disable TCP listening in [MariaDB](../software/databases/#mariadb).
 
 - **DietPi-Software** | [**YaCy**](../software/social/#yacy) :octicons-arrow-right-16: New installs and reinstalls will now have the latest version detected and downloaded automatically. This enables an easy update method by simply reinstalling YaCy via `dietpi-software reinstall 133`, independent of the DietPi version.
 - **DietPi-Software** | [**Remot3.it**](../software/remote_desktop/#remot3it) :octicons-arrow-right-16: After the install finished, it is now offered to do the interactive "connectd_installer" setup directly. Neither is a reboot required, nor does any service need to run to be registered. This is especially helpful for installs via `dietpi-software install 68`, where the hint about this required setup was not shown before.
@@ -194,11 +181,11 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
 ### Supported SBC (updates) in 7.1
 
-- For historical reasons, DietPi had internal hardware identifiers for SBCs which are not officially supported anymore for a long time, namely variouos Orange Pi and Banana Pi models, BeagleBone Black and LeMaker Guitar. Since we do not provide a reference image and do not test features on those boards, we have no chance to reasonably use those hardware IDs code-wise to apply tweaks or enable features, which renders them meaningless. To avoid wrong assumptions, we hence removed the identifies for the named SBC models.
+- For historical reasons, DietPi had internal **hardware identifiers** for SBCs which are not officially supported anymore for a long time, namely variouos Orange Pi and Banana Pi models, BeagleBone Black and LeMaker Guitar. Since we do not provide a reference image and do not test features on those boards, we have no chance to reasonably use those hardware IDs code-wise to apply tweaks or enable features, which renders them meaningless. To avoid wrong assumptions, we hence removed the identifies for the named SBC models.
 
     As a replacement, we added a set of generic SoC identifiers, which can as well be selected from within the DietPi-PREP system converter script. This means that one is e.g. able to select "Generic Allwinner H3" and have an SoC identifier set by this, which is used within the code for conditionals based on the SoC, e.g. regarding GPU acceleration and other SoC-internal hardware features. The removed SBC models are converted automatically to those generic identifiers, so that e.g. after the update an OrangePi PC will be shown in our scripts and banner as "Generic Allwinner H3". While it looks like a degradation, it is a hardening, as it assures that no false assumptions and conditionals are triggered in our scripts but only those which we can know for sure being true, regardless of the initial Debian image you used.
 
-- Firefly RK3399 was removed from the supported devices list, as not a single user is reported via DietPi-Survey (<https://dietpi.com/survey/#device>). If case there were actually Firefly RK3399 DietPi systems, not participating DietPi-Survey, those would be migrated to the "Generic Rockchip RK3399" identifier, which code-wise maintains the exact same support.
+- **Firefly RK3399 was removed** from the supported devices list, as not a single user is reported via DietPi-Survey (<https://dietpi.com/survey/#device>). If case there were actually Firefly RK3399 DietPi systems, not participating DietPi-Survey, those would be migrated to the "Generic Rockchip RK3399" identifier, which code-wise maintains the exact same support.
 
 ### Bug fixes in 7.1
 
