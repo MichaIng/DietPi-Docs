@@ -26,7 +26,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4287109"
+     inkscape:zoom="1.4041016"
      inkscape:cx="400.42376"
      inkscape:cy="90.069719"
      inkscape:document-units="mm"
@@ -36,8 +36,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="2309"
-     inkscape:window-height="1203"
+     inkscape:window-width="2322"
+     inkscape:window-height="1185"
      inkscape:window-x="0"
      inkscape:window-y="31"
      inkscape:window-maximized="1" />
@@ -904,17 +904,17 @@ x7cW/x+xUOHdkl1ewwAAAABJRU5ErkJggg==
          id="tspan21"
          x="100.00272"
          y="108.29115"
-         style="stroke-width:0.26458332">next DietPi release:</tspan><tspan
+         style="stroke-width:0.26458332">Next DietPi release:</tspan><tspan
          sodipodi:role="line"
          x="100.00272"
          y="121.52032"
          style="stroke-width:0.26458332"
-         id="tspan25">- version: 7.2</tspan><tspan
+         id="tspan25">- Version: 7.2</tspan><tspan
          sodipodi:role="line"
          x="100.00272"
          y="134.74948"
          style="stroke-width:0.26458332"
-         id="tspan35">- date: 2021-05-29</tspan></text>
+         id="tspan35">- Date: 2021-05-29</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot27"
