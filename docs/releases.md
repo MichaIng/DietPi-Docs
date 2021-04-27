@@ -46,11 +46,13 @@ We already scheduled the next update:
 
 !!! check "Next DietPi release"
 
-    As a new thing, we already scheduled the next update: ***DietPi 7.2 will be launched on 2021-05-29***.
+    As a new feature, we will introduce shorter release cycle and a fixed schedule. The next update is already planned: ***DietPi 7.2 will be launched on 2021-05-29***.
 
 ***Version #3:***  
 
 !!! check "Release schedule"
+
+    As a new feature, we will introduce shorter release cycle and a fixed schedule. The next update is already planned: 
 
     ![DietPi Version 7.2 release](assets/images/dietpi-releaseinformation-7.2.svg)
 
