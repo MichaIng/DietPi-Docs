@@ -75,6 +75,7 @@ Cuberite
 customizable
 DarkBetter
 DarkIce
+DDNS
 de
 deinstallation
 DER
@@ -97,8 +98,10 @@ Dropbear
 dropdown
 DSI
 DSN
+DuckDNS
 DVFS
 DXX
+Dynu
 ebook
 ebooks
 EDL
