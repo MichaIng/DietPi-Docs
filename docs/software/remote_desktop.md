@@ -205,17 +205,17 @@ Remot3.it allows you to easily access your DietPi device over the internet.
 
 ![Remot3.it web interface screenshot](../assets/images/dietpi-software-remotedesktop-remot3it.png){: width="400" height="140" loading="lazy"}
 
-Weaved works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
+Remot3.it works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
 
 Examples of TCP ports for Remot3.it:
 
-- SSH port 22. Open a remote terminal to your device.
-- Transmission port 9091. Monitor your BitTorrent downloads.
-- Webserver port 80. Access your internal webserver and/or websites.
+- SSH port **22**. Open a remote terminal to your device.
+- Transmission port **9091**. Monitor your BitTorrent downloads.
+- Webserver port **80**. Access your internal websites.
 
 === "First Run Setup"
 
-    The first run setup is executed once `dietpi-software` has completed the installation and the system is rebooted. Run the following command. Follow the onscreen instructions to setup and link an account:
+    On interactive installs, `dietpi-software` will call the setup script to setup and manage your application connections. On unattended installs, e.g. via `dietpi.txt`, you can call it manually from console:
 
     ```sh
     connectd_installer
@@ -227,7 +227,7 @@ Examples of TCP ports for Remot3.it:
 
     Sign into your Remot3.it account to access your devices remotely:
 
-    - URL = <https://www.remote.it>
+    - URL = <https://remote.it/>
 
 ***
 
