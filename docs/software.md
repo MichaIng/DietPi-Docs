@@ -2,24 +2,23 @@
 
 ## Overview
 
-**DietPi-Software** is a core DietPi tool, allowing you to install **Ready to run** and **Optimized software** for your device. It automates the installation and configuration process for you and also applies specific optimizations unique to your hardware model. As a result DietPi-Software ensure you get the **maximum performance** from your device.
+**DietPi-Software** is a core DietPi tool, allowing you to install **Ready to run** and **optimized software items** for your device. It automates the installation and configuration process for you and also applies specific optimizations unique to your hardware model. As a result DietPi-Software ensure you get the **maximum performance** from your device.
 
-??? info "How do I run **DietPi-Software** and install **Optimised software** ?"
-    To install any of the **DietPi Optimised Software** listed below run from the command line `dietpi-launcher` and selected *DietPi-Software* or launch the tool `dietpi-software`.
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run `dietpi-launcher` from the command line and select *DietPi-Software* or launch the tool `dietpi-software`.
 
-    Choose **Software optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi Software](assets/images/dietpi-software.jpg)
 
-    To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools/) section.
 
 ## [Advanced Networking](../software/advanced_networking/)
 
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/advanced_networking/#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/advanced_networking/#tor-hotspot)
-- [**Tor Relay - Add a node to the Tor network**](../software/advanced_networking/#tor-relay)
 - [**HAProxy - High performance TCP/HTTP load balancer**](../software/advanced_networking/#haproxy)
-- [**No-IP - Website URL Address**](../software/advanced_networking/#no-ip)
 
 ## [BitTorrent & Download Tools](../software/bittorrent/)
 
@@ -60,9 +59,13 @@
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#bitwarden_rs)
 - [**FuguHub - Your Own Personal Cloud Server**](../software/cloud/#fuguhub)
 
-## [Computational Science](../software/computational_science/)
+## [Databases & Data Stores](../software/databases/#overview)
 
-- [**Folding@Home - Use processing power to assist with disease research**](../software/computational_science/#foldinghome)
+- [**MariaDB** - Open Source Relational Database](../software/databases/#mariadb)
+- [**phpMyAdmin** - SQL Administration Tool for MariaDB](../software/databases/#phpmyadmin)  
+- [**SQLite** - Small, Fast and High reliable SQL database engine](../software/databases/#sqlite)
+- [**Redis** - Open Source In-memory key–value Data Store](../software/databases/#redis)
+- [**InfluxDB** - Open Source Time Series Database](../software/databases/#influxdb)
 
 ## [Desktops](../software/desktop/)
 
@@ -82,9 +85,18 @@
 ## [Development & Programming](../software/programming/)
 
 - [**Python 3 - High-level interpreted programming language**](../software/programming/#python-3)
+- [**Go - Programming language**](../software/programming/#go)
 - [**Docker - Build, ship, and run distributed applications**](../software/programming/#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](../software/programming/#docker-compose)
 - [**Portainer - Docker container management**](../software/programming/#portainer)
+- [**VSCodium - FLOSS version of Microsoft VSCode**](../software/programming/#vscodium)
+
+## [Distributed Projects](../software/distributed_projects/)
+
+- [**Folding@Home - Use processing power to assist with disease research**](../software/distributed_projects/#foldinghome)
+- [**Tor Relay - Add a node to the Tor network**](../software/distributed_projects/#tor-relay)
+- [**YaCy - Decentralized open source search engine**](../software/distributed_projects/#yacy)
+- [**IPFS Node - Contribute to a decentralized internet**](../software/distributed_projects/#ipfs-node)
 
 ## [DNS Servers](../software/dns_servers/)
 
@@ -122,7 +134,6 @@
 - [**Mosquitto - Message broker that implements MQTT protocol**](../software/hardware_projects/#mosquitto)
 - [**Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet**](../software/hardware_projects/#blynk-server)
 - [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](../software/hardware_projects/#audiophonics-pi-spc)
-- [**InfluxDB - Database optimized to save time based data as logs or data from a sensor**](../software/hardware_projects/#influxdb)
 - [**Grafana - The open platform for beautiful analytics and monitoring**](../software/hardware_projects/#grafana)
 
 ## [Home Automation](../software/home_automation/)
@@ -172,6 +183,7 @@
 ## [Printing Server](../software/printing/)
 
 - [**OctoPrint - Web interface for controlling 3D printers**](../software/printing/#octoprint)
+- [**CUPS - Common UNIX printing system**](../software/printing/#cups)
 
 ## [Remote Desktop & Remote Access](../software/remote_desktop/)
 
@@ -195,7 +207,6 @@
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](../software/social/#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](../software/social/#baikal)
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](../software/social/#openbazaar)
-- [**YaCy - Decentralized open source search engine**](../software/social/#yacy)
 
 ## [SSH Server](../software/ssh/)
 
@@ -218,7 +229,6 @@
 
 ## [VPN](../software/vpn/)
 
-- [**DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users**](../software/vpn/#dietpi-nordvpn)
 - [**OpenVPN - Easy to use, minimal hassle VPN server**](../software/vpn/#openvpn)
 - [**PiVPN - OpenVPN server installer & management tool**](../software/vpn/#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](../software/vpn/#wireguard)
@@ -240,14 +250,6 @@
 - [**Nginx** - High performance web server, load balancer & reverse proxy](../software/webserver_stack/#nginx)  
 - [**Lighttpd** - Extremely lightweight webserver](../software/webserver_stack/#lighttpd)
 - [**Tomcat8** - Apache Tomcat server](../software/webserver_stack/#tomcat)  
-
-### [Databases & Data stores](../software/webserver_stack/#databases-data-stores)
-
-- [**MariaDB** - Open Source Relational Database](../software/webserver_stack/#mariadb)
-  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](../software/webserver_stack/#phpmyadmin)  
-- [**SQLite** - Small, Fast and High reliable SQL database engine](../software/webserver_stack/#sqlite)
-- [**Redis** - Open Source In-memory key–value Data Store](../software/webserver_stack/#redis)
-- [**InfluxDB** - Open Source Time Series Database](../software/webserver_stack/#influxdb)
 
 ### [Programming & Web development Frameworks](../software/webserver_stack/#web-development-programming-frameworks)
 

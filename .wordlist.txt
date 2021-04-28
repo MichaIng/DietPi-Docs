@@ -1,6 +1,7 @@
 addictiveness
 ADF
 advanxer
+AGPLv
 AirPlay
 Airsonic
 AIY
@@ -74,6 +75,7 @@ Cuberite
 customizable
 DarkBetter
 DarkIce
+DDNS
 de
 deinstallation
 DER
@@ -96,8 +98,10 @@ Dropbear
 dropdown
 DSI
 DSN
+DuckDNS
 DVFS
 DXX
+Dynu
 ebook
 ebooks
 EDL
@@ -138,12 +142,14 @@ GlusterFS
 GMediaRender
 GNUstep
 Gogs
+Golang
 GPIO
 GPIOs
 GPL
 GPLv
 GPT
 Grafana
+Griesemer
 HAProxy
 harddisk
 Hardkernel
@@ -168,7 +174,9 @@ ICMP
 Imgur
 InfluxData
 InfluxDB
+InterPlanetary
 IoT
+IPFS
 IPsec
 iptables
 IPv
@@ -187,6 +195,7 @@ Keychain
 KiB
 kickstart
 kickstarts
+killswitch
 KiTTY
 klick
 Kodi
@@ -228,6 +237,7 @@ Meveric
 MiB
 MichaIng
 microcontroller
+microcontrollers
 MicroSol
 Minecraft
 MineOS
@@ -242,6 +252,7 @@ Morsecode
 Mosquitto
 MotionEye
 MPD
+MPL
 MQTT
 MTA
 multiroom
@@ -300,13 +311,15 @@ PID
 Pi-hole
 PiJuice
 Pinebook
+Pinterest
 PiSupply
 PiVPN
 Plex
 Portainer
 pre
-ProFTPD
 Prioglio
+ProFTPD
+ProtonVPN
 PSU
 PuTTY
 Pydio
@@ -323,6 +336,7 @@ RAMlog
 Rasmus
 Raspbian
 Raspotify
+Reddit
 rcon
 RDBMS
 RDP
@@ -369,6 +383,7 @@ sn
 SNMP
 SoCs
 Sonarr
+Soundcloud
 Soxr
 SPC
 SPI
@@ -395,6 +410,7 @@ TCP
 tcpdump
 thechildofroth
 TigerVNC
+TIOBE
 TLS
 tmpfs
 Toews
@@ -406,6 +422,7 @@ TTS
 Tyrian
 uae
 UART
+Uber
 Ubooquity
 UDP
 UEFI
@@ -417,6 +434,7 @@ unencrypted
 unmount
 upgradable
 UPnP
+uptime
 upvote
 UrBackup
 userdata
@@ -433,6 +451,8 @@ VMware
 VNC
 VNCSERVER
 VPN
+VSCode
+VSCodium
 vsftpd
 VST
 Waveshare
@@ -442,6 +462,7 @@ webserver
 webservers
 WebServers
 webstack
+WebUI
 Wh
 WHOIS
 Widevine

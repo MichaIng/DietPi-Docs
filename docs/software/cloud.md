@@ -15,18 +15,19 @@
 - [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](#bitwarden_rs)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 
-??? info "How do I run **DietPi-Software** and install **optimised software**?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -244,19 +245,20 @@ Host video calls on your own Nextcloud instance. The TURN server ***Coturn*** wi
 
 Also installs:
 
-- Nextcloud
-- Coturn
+- [**Nextcloud**](#nextcloud)
+- **Coturn**
 
 ![Nextcloud Talk app screenshot](../assets/images/dietpi-software-cloud-nextcloudtalk.png){: width="2560" height="1440" loading="lazy"}
 
-### Installation notes
+=== "Installation notes"
 
-During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
+    During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
 
-If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
-Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
+    If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
 
-Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
+    Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
+
+    Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
 
 ***
 
@@ -526,8 +528,8 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
     - Open `about:config` to access advanced settings.
     - Search for: `identity.sync.tokenserver.uri`.
-    - Set value to: `http://<your.IP>:5000/token/1.0/sync/1.5`.
-        - We recommend to access your Firefox Sync Server only from local network or via VPN, keeping the default listening port **5000** closed for access from outside of your LAN.
+    - Set value to: `http://<your.IP>:5002/token/1.0/sync/1.5`.
+        - We recommend to access your Firefox Sync Server only from local network or via VPN, keeping the default listening port **5002** closed for access from outside of your LAN.
         - If you need to access it remotely without VPN, adjust the `public_url` setting inside the config file `/mnt/dietpi_userdata/firefox-sync/syncserver.ini` to contain your public IP or domain and desired port.
 
 === "Directories"
@@ -554,7 +556,9 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
 ***
 
-Source code: <https://github.com/mozilla-services/syncserver>
+Official documentation: <https://mozilla-services.readthedocs.io/en/latest/howtos/run-sync-1.5.html>  
+Source code: <https://github.com/mozilla-services/syncserver>  
+License: [MPL2.0](https://github.com/mozilla-services/syncserver/blob/master/LICENSE)
 
 Credits: This software title has been added to DietPi-Software by [CedArctic](https://github.com/CedArctic), many thanks! :D
 

@@ -18,31 +18,24 @@
 - [**Lighttpd** - Extremely lightweight webserver](#lighttpd)
 - [**Tomcat8** - Apache Tomcat server](#tomcat)
 
-[**Databases & Data stores**](#databases-data-stores)
-
-- [**MariaDB** - Open Source Relational Database](#mariadb)
-  - [**phpMyAdmin** - SQL Administration Tool for MariaDB](#phpmyadmin)  
-- [**SQLite** - Small, Fast and High reliable SQL database engine](#sqlite)
-- [**Redis** - Open Source In-memory key–value Data Store](#redis)
-- [**InfluxDB** - Open Source Time Series Database](#influxdb)
-
 [**Web development - Programming & Frameworks**](#web-development-programming-frameworks)
 
 - [**Flask - Micro web framework powered by Python**](#flask)
 - [**PHP** - Scripting language suited to web development](#php)
 
-??? info "How do I run **DietPi-Software** and install **optimised software**?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -61,7 +54,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 
     - OS: **L** for Linux / DietPi
     - Webserver: **A** for Apache2, **E** for [Nginx](#nginx), **L** for [Lighttpd](#lighttpd)
-    - Database: **M** for MariaDB, **S** for [SQLite](#sqlite)
+    - Database: **M** for MariaDB, **S** for [SQLite](../databases/#sqlite)
     - Scripting language: **P** for [PHP](#php)
 
 !!! hint ""
@@ -101,11 +94,11 @@ DietPi offers an **one-click-installation** of the following web development sta
 
 === "Which DATABASE to CHOOSE ?"
 
-    **[MariaDB](#mariadb)**  
+    **[MariaDB](../databases/#mariadb)**  
     It is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.
 
-    **[SQLite](#sqlite)**  
-    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](#mariadb). [SQLite](#sqlite) has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
+    **[SQLite](../databases/#sqlite)**  
+    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](../databases/#mariadb). [SQLite](../databases/#sqlite) has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
 
 ***
 
@@ -132,7 +125,7 @@ The latter is used only in the case of the first webserver background installati
     ![DietPi-Software webserver preference menu](../assets/images/dietpi-software-webserver-preference.png){: width="500" height="309" loading="lazy"}
 
     Using this option you only select the webserver for use in DietPi installations.  
-    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](#mariadb) / [SQLite](#sqlite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
+    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](../databases/#mariadb) / [SQLite](../databases/#sqlite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
 
     ???+ info "No webserver change if already installed"
         This setting "Webserver Preference* can NOT be changed if an existing webserver is installed on the system.
@@ -167,7 +160,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](#mariadb)** details.
+    For database, check **[MariaDB](../databases/#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
@@ -225,9 +218,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 ### LASP Web Stack
 
-LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [SQLite](#sqlite) instead of [MariaDB](#mariadb).
+LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [SQLite](../databases/#sqlite) instead of [MariaDB](../databases/#mariadb).
 
-[SQLite](#sqlite) is an embedded relational database engine. It is popular and together with [Apache2](#apache2) and PHP could be a good candidate for single board computer.
+[SQLite](../databases/#sqlite) is an embedded relational database engine. It is popular and together with [Apache2](#apache2) and PHP could be a good candidate for single board computer.
 
 === "Quick start"
 
@@ -316,7 +309,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](#mariadb)** details.
+    For database, check **[MariaDB](../databases/#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
@@ -374,7 +367,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LESP Web Stack
 
-LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache2](#apache2) web server, and [SQLite](#sqlite) instead of MariaDB.
+LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache2](#apache2) web server, and [SQLite](../databases/#sqlite) instead of MariaDB.
 
 **[Nginx](#nginx)** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
@@ -419,7 +412,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](#mariadb)** details.
+    For database, check **[MariaDB](../databases/#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
@@ -433,7 +426,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LLSP web stack
 
-LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **[Lighttpd](#lighttpd)** instead of [Apache2](#apache2) web server and **[SQLite](#sqlite)** instead of [MariaDB](#mariadb).
+LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **[Lighttpd](#lighttpd)** instead of [Apache2](#apache2) web server and **[SQLite](../databases/#sqlite)** instead of [MariaDB](../databases/#mariadb).
 
 === "Quick start"
 
@@ -451,7 +444,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](#mariadb)** details.
+    For database, check **[MariaDB](../databases/#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
@@ -471,7 +464,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - Database
 
-    You may choose to install **[MariaDB](#mariadb)** or other available databases like **[InfluxDB](#influxdb)**, **[Redis](#redis)**, **[SQLite](#sqlite)**.
+    You may choose to install **[MariaDB](../databases/#mariadb)** or other available databases like **[InfluxDB](../databases/#influxdb)**, **[Redis](../databases/#redis)**, **[SQLite](../databases/#sqlite)**.
 
 ## WebServers
 
@@ -550,163 +543,6 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
 ***
 
 Official documentation: <https://tomcat.apache.org>
-
-## Databases & Data stores
-
-### MariaDB
-
-**MariaDB** Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source [^2]. It is part of most cloud offerings and the default in most Linux distributions.
-
-![MariaDB logo](../assets/images/dietpi-software-webstack-mariadb.png){: width="200" height="61" loading="lazy"}
-
-Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/index.php?curid=55946550).
-
-=== "Quick access"
-
-    As `root` user, run `mariadb` from command line, no separate authentication required. But note that this won’t work via sudo, but an interactive root user shell session is required.
-
-    - Username = `root`
-    - Password = The same as your root login password, default is `dietpi`
-
-***
-
-Official documentation: <https://mariadb.org>  
-Getting started documentation: <https://mariadb.org/documentation/#getting-started>
-
-#### phpMyAdmin
-
-![phpMyAdmin logo](../assets/images/dietpi-software-webstack-phpmyadmin.png){: width="160" height="120" loading="lazy"}
-
-**phpMyAdmin** is a free software tool written in [PHP](#php), intended to handle the administration of MySQL / MariaDB over the Web.
-
-Frequently used operations (_such as: managing databases, tables, columns, relations, indexes etc._) can be performed via the web user interface. Using the same application you could also directly execute any SQL statement.
-
-=== "Quick access"
-
-    - URL = `http://<your.IP>/phpmyadmin`
-    - Username = `phpmyadmin`
-    - Password = The same as your root login password, default is `dietpi`
-
-***
-
-Website: <https://www.phpmyadmin.net>  
-Official documentation:  <https://www.phpmyadmin.net/docs/>
-
-### SQLite
-
-![SQLite logo](../assets/images/dietpi-software-webstack-sqlite.svg){: width="200" height="95" loading="lazy"}
-
-Source: Part of the SQLite documentation, which has been released by author D. Richard Hipp to the public domain. SVG conversion by Mike Toews. [Public Domain](https://commons.wikimedia.org/w/index.php?curid=11675072)
-
-**SQLite** is an embedded relational database engine. It it a self-contained,  high-reliability and full-featured SQL database engine. It is very popular and there are hundreds of millions copies worldwide in use today [^3].
-
-=== "Quick start"
-
-    To create a database and run commands, use the [quick start documentation](https://www.sqlite.org/quickstart.html).
-
-***
-
-Website: <https://www.sqlite.org/index.html>  
-Official documentation: <https://www.sqlite.org/docs.html>
-
-### Redis
-
-A non-SQL based data store.
-
-![Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: width="200" height="67" loading="lazy"}
-
-Source: [Carlos Prioglio](https://redis.io/images/redis-logo.svg), [licence](https://commons.wikimedia.org/w/index.php?curid=95020509).
-
-**Redis** is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
-
-**Redis** is in the family of databases called key-value stores. The essence of a key-value store is the ability to store some data, called a value, inside a key. This data can later be retrieved only if we know the exact key used to store it.
-
-=== "Quick start"
-
-    The first thing to do in order to check Redis is working properly is sending a PING command:
-
-    ```sh
-    redis-cli ping
-    ```
-
-    For more commands and an introduction to Redis data types and commands, read the [quick start documentation](https://redis.io/topics/data-types-intro).
-
-***
-
-Website: <https://redis.io>  
-Official documentation: <https://redis.io/documentation>  
-Commands: <https://redis.io/commands>
-
-### InfluxDB
-
-![InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: width="300" height="112" loading="lazy"}
-
-Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding-docs/img/influxdb/preview.svg), [Public Domain](https://commons.wikimedia.org/w/index.php?curid=55056027).
-
-**InfluxDB** is a _time series_ database designed to handle high write and query loads. InfluxDB is not only a time series platform, but it provides also an Web UI and dashboard tools, background processing and monitoring agent.
-
-=== "Quick start"
-
-    After the installation, the data transfers are made via the HTTP requests, and are handled directly by the InfluxDB service running on `http://<your.IP>:8086`.
-
-    - Create a database using `influxdb` via command line tool.
-
-      ```sh
-      influx -execute 'create database myfirstdb'
-      ```
-
-    - Create a database using a HTTP request and `curl` tool:
-
-      ```sh
-      curl -i -XPOST http://<your.IP>:8086/query --data-urlencode "q=CREATE DATABASE myfirstdb"
-      ```
-
-    - Post data
-
-      ```sh
-      curl -i -XPOST 'http://<your.IP>:8086/write?db=myfirstdb' --data-binary 'temperature value=20.12'
-      ```
-
-    - Retrieve and display data from the database
-
-      ```sh
-      influx -database myfirstdb -execute 'SELECT * FROM temperature'
-      ```    
-
-=== "Users and security"
-
-    Create users and authorizations from influx CLI
-
-    ```sh
-    influx -username admin -password admin01
-    ```
-
-    ```sql
-    CREATE USER admin WITH PASSWORD 'admin01' WITH ALL PRIVILEGES
-    CREATE USER test_user WITH PASSWORD 'test_user01'
-    GRANT ALL ON mydb TO test_user  
-    exit
-    ```
-
-    !!! hint "How to enabled secured access (HTTPS)"
-        By default the _HTTP_ authentication is disabled. To enable it, follow next two steps:
-
-        1. Change next setting in the configuration file `/etc/influxdb/influxdb.conf`:
-
-        ```
-        auth-enabled = true
-        ```
-
-        2. Restart service
-
-        ```sh
-        systemctl restart influxdb
-        ```
-
-***
-
-Website: <https://www.influxdata.com/products/influxdb>  
-Getting started: <https://docs.influxdata.com/influxdb/v2.0/get-started/#set-up-influxdb>
 
 ## Web development - Programming & Frameworks
 

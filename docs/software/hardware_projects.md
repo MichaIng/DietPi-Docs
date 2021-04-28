@@ -12,21 +12,21 @@
 - [**Mosquitto - Message broker that implements MQTT protocol**](#mosquitto)
 - [**Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet**](#blynk-server)
 - [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](#audiophonics-pi-spc)
-- [**InfluxDB - Database optimized to save time based data as logs or data from a sensor**](#influxdb)
 - [**Grafana - The open platform for beautiful analytics and monitoring**](#grafana)
 
-??? info "How do I run **DietPi-Software** and install **optimised software**?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 ## Google AIY
 
@@ -131,8 +131,11 @@ PiJuice is an all in one, battery based power supply HAT for the RPi, featuring 
         nano /var/lib/pijuice/pijuice_config.JSON
         ```
 
-    Restart services to apply any changes:  
-    `dietpi-services restart`
+    Restart the service to apply any changes:
+
+    ```sh
+    systemctl restart pijuice
+    ```
 
 === "Update firmware"
 
@@ -186,9 +189,9 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8000**:
+    The web interface is accessible via port **8002**:
 
-    - URL = `http://<your.IP>:8000`
+    - URL = `http://<your.IP>:8002`
     - Username = `webiopi`
     - Password = `raspberry`
 
@@ -198,8 +201,11 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
     - Enter the username `webiopi`
     - Enter your new password twice
 
-    You must also restart the `webiopi` service for your new password to take effect:  
-    `service webiopi restart`
+    You must also restart the `webiopi` service for your new password to take effect:
+
+    ```sh
+    systemctl restart webiopi
+    ```
 
 === "Access WebIOPi over the internet"
 
@@ -252,7 +258,7 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
     ```sh
     systemctl stop node-red
     cd /mnt/dietpi_userdata/node-red
-    sudo -u nodered npm up node-red
+    sudo -u nodered npm up --no-audit node-red
     systemctl start node-red
     ```
 
@@ -265,14 +271,66 @@ Libraries resp. flows: <https://flows.nodered.org>
 
 ## Mosquitto
 
-Eclipse Mosquitto™ is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 3.1 and 3.1.1.  
-MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for "Internet of Things" messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontroller like the Arduino.
+Eclipse Mosquitto™ is an open-source (EPL/EDL-licensed) message broker that implements the MQTT protocol versions 3.1 and 3.1.1.  
+MQTT provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for IoT (Internet of Things) messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers like the Arduino.
 
 ![Mosquitto logo](../assets/images/dietpi-software-hardwareprojects-mosquitto.png){: width="100" height="76" loading="lazy"}
 
+=== "Client configuration"
+
+    Mosquitto by default listens on network port **1883**. Clients need to authenticate with the following credentials:
+
+    - Username: `mosquitto`
+    - Password: `<your global password>` (default: `dietpi`)
+
+=== "Server configuration"
+
+    - Config directory: `/etc/mosquitto`
+    - Config file: `/etc/mosquitto/mosquitto.conf`
+    - Password file: `/etc/mosquitto/passwd`
+
+    To change the default authentication password for the `dietpi` user, run the following command:
+
+    ```sh
+    mosquitto_passwd /etc/mosquitto/passwd mosquitto
+    ```
+
+    To create a new authentication user, run the following command:
+
+    ```sh
+    mosquitto_passwd /etc/mosquitto/passwd
+    ```
+
+    After changes have been done, you need to restart the service:
+
+    ```sh
+    systemctl restart mosquitto
+    ```
+
+    For further details, see the official documentation, linked below.
+
+=== "View logs"
+
+    To view Mosquitto server logs, run the following command:
+
+    ```sh
+    journalctl -u mosquitto
+    ```
+
+=== "Update to latest version"
+
+    Mosquitto is installed via its official APT repository, hence the following commands can be used to update it to the latest version:
+
+    ```sh
+    apt update
+    apt install mosquitto
+    ```
+
 ***
 
-Official documentation: <https://mosquitto.org/documentation>
+Official website: <https://mosquitto.org/>  
+Official documentation: <https://mosquitto.org/documentation/>  
+Source code: <https://github.com/eclipse/mosquitto>
 
 ## Blynk Server
 
@@ -330,8 +388,11 @@ Also installs:
 
 === "Run test script"
 
-    Once you create a project in the iOS/Android app, replace the following with your `auth code`, then run the command:  
-    `blynk-client Replace_With_Your_Auth_Code`
+    Once you create a project in the iOS/Android app, run the command:
+
+    ```sh
+    blynk-client <replace_with_your_auth_code>
+    ```
 
 === "Update to the latest version"
 
@@ -351,7 +412,7 @@ See <https://www.audiophonics.fr/fr/kits-et-modules-diy/audiophonics-pi-spc-v2-m
 
 ???+ notes "Ensure correct GPIO pins!"
 
-    Please ensure the correct GPIO pins are used, when connecting Pi-SPC to RPi (see image below).  
+    Please ensure the correct GPIO pins are used, when connecting Pi-SPC to RPi (see image below).
 
     ![Raspberry Pi GPIO scheme](../assets/images/dietpi-software-hardwareprojects-audiophonics-gpionumbers.png){: width="400" height="119" loading="lazy"}
 
@@ -430,7 +491,7 @@ exit
 
 ### Install information
 
-The data location for InfluxDB is stored resp. linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`.
+The data location for InfluxDB is stored resp. linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`
 
 ***
 
@@ -448,10 +509,15 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
 === "Prerequisites"
 
     A database server is required for Grafana. As Grafana offers many options (InfluxDB/MySQL), we have not automatically installed either as manual configuration may be preferred.  
-    However, we highly recommend installing InfluxDB:  
-    `dietpi-software install 74`
+    However, we highly recommend installing [InfluxDB](../databases/#influxdb).
 
-    Then follow the database creation guide [here](#influxdb-database-optimized-to-save-time-based-data-as-logs-or-data-from-a-sensor).
+    You can do this using the install steps provided by **DietPi-Software** tool or running the next command line in the terminal:
+
+    ```sh  
+    dietpi-software install 74
+    ```
+
+    After the InfluxDB is installed, please follow the database creation guide [here](../databases/#influxdb).
 
 === "Access to the web interface"
 
@@ -481,7 +547,6 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
 
 === "Installation information"
 
-    The data location for Grafana is stored resp. linked with symbolic links to the DietPi userdata directory:  
-    `/mnt/dietpi_userdata/grafana`.
+    The data location for Grafana is stored resp. linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/grafana`
 
 [Return to the **Optimised Software list**](../../software/)

@@ -24,11 +24,11 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 ### Software overview
 
-=== "Software Optimised"
+=== "Browse Software"
 
-    - Begin by selecting **Software Optimized** in the main menu list and hit ++enter++.
+    - Begin by selecting **Browse Software** in the main menu list and hit ++enter++.
 
-    - Scroll through the list of available software - for more details check [DietPi Optimised Software](../software/).
+    - Scroll through the list of available software - for more details check the [DietPi software list](../software/).
 
     The list of optimised software is long. You either browse the list or use the option **Search**.
 
@@ -42,18 +42,9 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-Software Software Optimised menu screenshot](assets/images/dietpi-software-optimised.jpg){: width="643" height="365" loading="lazy"}
 
-=== "Software Additional"
+=== "Search Software"
 
-    This section provides:
-
-    - software packages that are often used and installed via `apt install <package>`, without additional optimisation from DietPi team.
-    - _or_ packages not directly required, but pulled as a dependency, like: build tools, libraries or runtime systems. E.g. packages like *Python3*, *pip*, *tcpdump* or *midnight commander* can be installed using the dialog.
-
-    ![DietPi-Software Software Additional menu screenshot](assets/images/dietpi-software-additional.jpg){: width="640" height="485" loading="lazy"}
-
-=== "Search"
-
-    DietPi supports a large number of software titles. Instead of scrolling through the **Software Optimised** list to find a specific software title, you may use the **Search** option. Type in the software ID or any keyword form its title or description and you'll get a list filtered by matching results.
+    DietPi supports a large number of software titles. Instead of scrolling through the **Browse Software** list to find a specific software title, you may use the **Search Software** option. Type in the software ID or any keyword from its title or description and you'll get a list filtered by matching results.
 
     ![DietPi-Software Search menu screenshot](assets/images/dietpi-software-search.png){: with="752" height="321" loading="lazy"}
 
@@ -103,7 +94,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     !!! hint "Automatic selection"
 
-        When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
+        When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Browse Software*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
 
         As a result you will not need to manually select/install a webserver stack. DietPi will do it all for you.
 
@@ -139,7 +130,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 === "Install"
 
-    Install software item(s) which have been selected via **Optimised Software** or **Additional Software** lists, or via **SSH Server**, **File Server** or **Log System** choices.
+    Install software item(s) which have been selected via **Browse Software** list, via **Search Software**, or via the **SSH Server**, **File Server** or **Log System** choices.
 
 === "Uninstall"
 
@@ -165,7 +156,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: width="454" height="129" loading="lazy"}
 
-    E.g. to install Chromium, LXQt and GIMP you have to execute:
+    E.g. to install Chromium, LXQt and GIMP you have to run next command in the terminal:
 
     ```sh
     dietpi-software install 113 173 174
@@ -192,11 +183,55 @@ When you execute the certificate installation it also installs it for your selec
     To be accessible from the internet, typically your router needs a port forwarding configuration to route incoming HTTP and HTTPS accesses to your DietPi system.  
     Although you only need a HTTPS protocol forwarding (typically port 433), you also need to forward the HTTP protocol (typically port 80) to your DietPi system, otherwise the certification renewal procedure will fail (due to the fact that the certification renewal procedure takes place several months later you may have forgotten this issue).
 
-### DietPi NordVPN
+### DietPi VPN
 
-Run `dietpi-nordvpn`.
+DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all VPN users to quickly and easily connect to any NordVPN, ProtonVPN, or any other server that uses OpenVPN in TCP or UDP, using only open source software.
 
-![DietPi-NordVPN screenshot](assets/images/dietpi-nordvpn.jpg){: width="642" height="207" loading="lazy"}
+![DietPi-VPN screenshot](assets/images/dietpi-vpn.jpg){: width="642" height="300" loading="lazy"}
+
+=== "Requires VPN Subscription"
+
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
+    You can use any VPN provider you want, but DietPi-VPN specifically supports ProtonVPN and NordVPN.
+
+=== "Usage"
+
+    Simply run `dietpi-vpn` to use the GUI, allowing you to setup your connection and provider.  
+    DietPi will also automatically start and connect the VPN during system boot if you select autostart.
+
+=== "Killswitch"
+
+    DietPi-VPN comes with an optional killswitch that will shut off your internet in the case of you losing your connection to the VPN sever.
+    This will still allow access from your LAN and allow you to fix any problems using SSH, if needed.
+
+![OpenVPN logo](assets/images/dietpi-software-vpn-openvpn-logo.png){: width="200" height="58" loading="lazy"}
+
+### DietPi DDNS
+
+DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cron job which updates your dynamically changing public IP address every defined amount of minutes against a DDNS provider, so that your public domain stays valid. It supports No-IP and replaces the No-IP client, which was available as install option on previous DietPi versions.
+
+![DietPi-DDNS main menu screenshot](assets/images/dietpi-ddns.jpg){: width="656" height="256" loading="lazy"}
+
+=== "Supported providers"
+
+    - DuckDNS: <https://www.duckdns.org/>
+    - No-IP: <https://www.noip.com/>
+    - Dynu: <https://www.dynu.com/>
+    - Alternatively you may use any other provider which has an API URL for updating your dynamic IP address.
+
+=== "CLI"
+
+    Type `dietpi-ddns -h` to get an overview of supported CLI commands and options:
+
+    - If no argument is given, the interactive menu is started.
+    - Use `dietpi-ddns <options> apply <provider>` to apply a cron job for the given provider and use the following options set details:
+        - `<provider>` is either the name of a supported provider, or any custom update URL. 
+        - Use `-d <domains>` to add one or a comma-separated list of multiple domains, which should point to the public IP address of this system.
+        - Use `-u <username>` to set a username or identifier. This is not required for all providers, in case of a custom provider, it is used as username for HTTP authentication.
+        - Use `-p <password>` to set a password or token. This is not required for all providers, in case of a custom provider, it is used as username for HTTP authentication.
+        - Use `-t <timespan>` to set an update interval in minutes, which is purely optional and defaults to 10 minutes.
+        - If you did already setup DietPi-DDNS before, the `apply` command can also be used to change one of the above settings. All other options are optional then.
+    - Use `dietpi-ddns remove` to remove any cron job that was setup before.
 
 ## System configuration
 
