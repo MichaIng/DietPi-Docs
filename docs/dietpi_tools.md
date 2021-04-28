@@ -206,6 +206,33 @@ DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Al
 
 ![OpenVPN logo](assets/images/dietpi-software-vpn-openvpn-logo.png){: width="200" height="58" loading="lazy"}
 
+### DietPi DDNS
+
+DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cron job which updates your dynamically changing public IP address every defined amount of minutes against a DDNS provider, so that your public domain stays valid. It supports No-IP and replaces the No-IP client, which was available as install option on previous DietPi versions.
+
+![DietPi-DDNS main menu screenshot](assets/images/dietpi-ddns.jpg){: width="656" height="256" loading="lazy"}
+
+=== "Supported providers"
+
+    - DuckDNS: <https://www.duckdns.org/>
+    - No-IP: <https://www.noip.com/>
+    - Dynu: <https://www.dynu.com/>
+    - Alternatively you may use any other provider which has an API URL for updating your dynamic IP address.
+
+=== "CLI"
+
+    Type `dietpi-ddns -h` to get an overview of supported CLI commands and options:
+
+    - If no argument is given, the interactive menu is started.
+    - Use `dietpi-ddns <options> apply <provider>` to apply a cron job for the given provider and use the following options set details:
+        - `<provider>` is either the name of a supported provider, or any custom update URL. 
+        - Use `-d <domains>` to add one or a comma-separated list of multiple domains, which should point to the public IP address of this system.
+        - Use `-u <username>` to set a username or identifier. This is not required for all providers, in case of a custom provider, it is used as username for HTTP authentication.
+        - Use `-p <password>` to set a password or token. This is not required for all providers, in case of a custom provider, it is used as username for HTTP authentication.
+        - Use `-t <timespan>` to set an update interval in minutes, which is purely optional and defaults to 10 minutes.
+        - If you did already setup DietPi-DDNS before, the `apply` command can also be used to change one of the above settings. All other options are optional then.
+    - Use `dietpi-ddns remove` to remove any cron job that was setup before.
+
 ## System configuration
 
 ### DietPi configuration
