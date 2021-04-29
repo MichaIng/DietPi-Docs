@@ -4,7 +4,7 @@
 
 ### Overview
 
-Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused to simplify the software selection and improve things you can do with **DietPi**. It's now easier to connect (DDNS), secure (VPN, LetsEncrypt), share (IPFS), print (CUPS) and configure.
+Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused to simplify the software selection and improve things you can do with **DietPi**. It's now easier to connect (DDNS), secure (VPN, LetsEncrypt), share files or data (IPFS), print (CUPS) and configure.
 
 :octicons-paper-airplane-16: If you have not tried yet DietPi 7, this is an excellent upgrade!
 
@@ -32,7 +32,7 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. It's an inc
 
         More improvments to different software titles.
 
-    - [**Bug fixes**](#bug-fixes) & updates to [**supported SBC**](#supported-sbc-updates-in-71) list
+    - [**Bug fixes**](#bug-fixes-in-71) & updates to [**supported SBC**](#supported-sbc-updates-in-71) list
 
 Many thanks to all contributors and beta testers :octicons-heart-16: :octicons-heart-16:.  
 With your help we could achieve all of these updates! Install or upgrade to this latest update - it has more things we hope you would enjoy!  
