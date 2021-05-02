@@ -148,7 +148,7 @@ Allows you to monitor your system stats from a web page. The display output can 
 
 ***
 
-Website: <https://phpsysinfo.github.io/phpsysinfo>
+Official website: <https://phpsysinfo.github.io/phpsysinfo>
 
 ## RPi-Monitor
 
@@ -174,11 +174,11 @@ RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
 === "Configuration"
 
-    The configuration is described there: <https://xavierberger.github.io/RPi-Monitor-docs/20_index.html>.  
+    The configuration is described there: <https://xavierberger.github.io/RPi-Monitor-docs/20_index.html>
 
 ***
 
-Website: <https://github.com/XavierBerger/RPi-Monitor>.
+Official website: <https://github.com/XavierBerger/RPi-Monitor>.
 
 ## Netdata
 
@@ -247,7 +247,8 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
 
 ***
 
-Website: <https://www.webmin.com>  
+Official website: <https://webmin.com/>  
+Official documentation: <https://doxfer.webmin.com/Webmin/Main_Page>  
 Wikipedia: <https://wikipedia.org/wiki/Webmin>
 
 [Return to the **Optimised Software list**](../../software/)
