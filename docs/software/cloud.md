@@ -12,7 +12,7 @@
 - [**Syncthing - Backup and sync server with web interface**](#syncthing)
 - [**MinIO - S3 compatible distributed object server**](#minio)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
-- [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](#bitwarden_rs)
+- [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
@@ -562,18 +562,18 @@ License: [MPL2.0](https://github.com/mozilla-services/syncserver/blob/master/LIC
 
 Credits: This software title has been added to DietPi-Software by [CedArctic](https://github.com/CedArctic), many thanks! :D
 
-## Bitwarden_RS
+## vaultwarden
 
-Bitwarden_RS is an unofficial Bitwarden password manager server with web interface, written in Rust.
+vaultwarden is an unofficial Bitwarden password manager server with web interface, written in Rust.
 
-![Bitwarden_RS web vault screenshot](../assets/images/dietpi-software-bitwarden_rs.jpg){: width="600" height="247" loading="lazy"}
+![vaultwarden web vault screenshot](../assets/images/dietpi-software-vaultwarden.jpg){: width="600" height="247" loading="lazy"}
 
 === "First access"
 
     - During install, a self-signed 4096-bit RSA TLS certificate is created to allow encrypted HTTPS access, which is required for access with most Bitwarden clients and reasonable as of the sensitivity of the data a password manager handles.
     - Most web browsers will warn you on access that the certificate is not trusted, although usually you can choose to ignore that and still access the web vault.
     - Most Bitwarden clients on the other hand will deny to access your server, as long as the certificate is not trusted.
-    - As far as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via `dietpi-letsencrypt` and setup either a reverse proxy, or configure Bitwarden_RS to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
+    - As far as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via `dietpi-letsencrypt` and setup either a reverse proxy, or configure vaultwarden to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
 
     ??? info "How do I add a self-signed certificate to the OS' Trusted Root Certification Authorities store?"
 
@@ -644,14 +644,14 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
 === "Directories"
 
-    - Install directory: `/opt/bitwarden_rs`
-    - Data directory: `/mnt/dietpi_userdata/bitwarden_rs`
-    - Config file: `/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env`
+    - Install directory: `/opt/vaultwarden`
+    - Data directory: `/mnt/dietpi_userdata/vaultwarden`
+    - Config file: `/mnt/dietpi_userdata/vaultwarden/vaultwarden.env`
 
 === "View logs"
 
     ```sh
-    journalctl -u bitwarden_rs
+    journalctl -u vaultwarden
     ```
 
 === "Update to latest version"
@@ -662,10 +662,10 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
 ***
 
-Official documentation: <https://github.com/dani-garcia/bitwarden_rs/wiki>  
-Forum: <https://bitwardenrs.discourse.group>  
-Source code: <https://github.com/dani-garcia/bitwarden_rs>  
-Open-source license: [GPLv3](https://github.com/dani-garcia/bitwarden_rs/blob/master/LICENSE.txt)
+Official documentation: <https://github.com/dani-garcia/vaultwarden/wiki>  
+Forum: <https://vaultwarden.discourse.group>  
+Source code: <https://github.com/dani-garcia/vaultwarden>  
+Open-source license: [GPLv3](https://github.com/dani-garcia/vaultwarden/blob/master/LICENSE.txt)
 
 Credits: This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9). Thank you!
 
