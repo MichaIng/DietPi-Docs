@@ -440,6 +440,7 @@ UrBackup
 userdata
 userspace
 UUID
+vaultwarden
 Viebrock
 VirtualBox
 VirtualHere
