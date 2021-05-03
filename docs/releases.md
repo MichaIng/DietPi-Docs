@@ -330,7 +330,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 - **Audio** :octicons-arrow-right-16: Resolved a bug with Debian Buster, where the ALSA state daemon was always running, even when it was not configured.
 - **DietPi-Globals** | `G_OBTAIN_CPU_TEMP` :octicons-arrow-right-16: Negative temperatures are not trusted anymore, "N/A" will be printed instead. This allows a generic approach to fix/allow temperature estimation on further SBC models. Many thanks to @Thanapat for reporting a related issue on Roseapple Pi: [Editing dietpi-globals](https://dietpi.com/phpbb/viewtopic.php?t=8677)
 - **DietPi-Set_swapfile** :octicons-arrow-right-16: Resolve an issue where "zram"/"zram0" dietpi.txt path entries were dropped, when running the script without input arguments. This especially broke applying zram-swap on first boot. Many thanks to @Dr0bac for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4002>
-- **DietPi-Software** | **[Bitwarden_RS](../software/cloud/#bitwarden_rs)** :octicons-arrow-right-16: Resolved an issue where the self-signed TLS certificate could not be imported on iOS. To apply this fix to an existing instance, the configuration file "/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env" needs to be removed or moved to a different location, so `dietpi-software reinstall 183` will re-create the configuration and TLS certificate.
+- **DietPi-Software** | **[Bitwarden_RS](../software/cloud/#vaultwarden)** :octicons-arrow-right-16: Resolved an issue where the self-signed TLS certificate could not be imported on iOS. To apply this fix to an existing instance, the configuration file "/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env" needs to be removed or moved to a different location, so `dietpi-software reinstall 183` will re-create the configuration and TLS certificate.
 - **DietPi-Software** | **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16: Resolved an issue where during install in combination with Pi-hole the service restart could have failed. Many thanks to @Ernstian for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2409#issuecomment-739154892>
 - **DietPi-Software** | **[Unbound](../software/dns_servers/#unbound)** :octicons-arrow-right-16: Resolved an issue where the service start failed if the host system had a local IP address outside of the 192.168.0.0/16 subnet. Many thanks to @faxesystem for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2409#issuecomment-749174984>
 - **DietPi-Software** | **[ReadyMedia](../software/media/#readymedia)** :octicons-arrow-right-16: Resolved an issue where the media library was not rescanned on service start. Many thanks to @AdamFarnsworth0 for reporting this issue: <https://twitter.com/AdamFarnsworth0/status/1347977813635305475>
@@ -340,7 +340,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 - **DietPi-Software** | **[PaperMC](../software/gaming/#papermc)** :octicons-arrow-right-16: Resolved an issue where the install failed due to changed download URLs and stabilised service start and config creation by setting the Java heap size and allowing more time for the startup on smaller SBCs. Many thanks to @omavoss for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?p=30191#p30191>
 - **DietPi-Software** | **[OpenTyrian](../software/gaming/#opentyrian)** :octicons-arrow-right-16: The install option has been disabled on x86_64, since the Debian package comes with a different file structure and it has been disabled on 64-bit RPi systems, since the binary has been compiled for armhf.
 - **DietPi-Software** | **[Domoticz](../software/home_automation/#domoticz)** :octicons-arrow-right-16: Resolved an issue where saving custom scripts and starting with a template did not work. Many thanks to @tec13 for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8627>
-- **DietPi-Software** :octicons-arrow-right-16: Resolved an issue where for [ruTorrent](../software/bittorrent/#rtorrent), [Koel](../software/media/#koel) and [Bitwarden_RS](../software/cloud/#bitwarden_rs) the automatic newest version detection failed and instead a possibly older fallback was used. Many thanks to @kelvmod for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4105>
+- **DietPi-Software** :octicons-arrow-right-16: Resolved an issue where for [ruTorrent](../software/bittorrent/#rtorrent), [Koel](../software/media/#koel) and [Bitwarden_RS](../software/cloud/#vaultwarden) the automatic newest version detection failed and instead a possibly older fallback was used. Many thanks to @kelvmod for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4105>
 - **DietPi-Software** | **[LXQt](../software/desktop/#lxqt)** :octicons-arrow-right-16: Resolved visual issues with our default configuration of Debian Buster, drastically simplified and cleaned up the files we ship.
 - **DietPi-Software** | **[SABnzbd](../software/bittorrent/#sabnzbd)**: Resolved an issue on Stretch where the install failed due to raised minimum [Python](../software/programming/#python-3) version with SABnzbd v3.2.0. If Python 3.5 is installed, SABnzbd v3.1.1 will be installed now to allow keeping the install option enabled for now. Many thanks to @19eighties for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2762#issuecomment-787118995>
 
@@ -386,7 +386,7 @@ Become part of the Tor Project and turn your DietPi into a Tor relay to help oth
 
 For more details check the [documentation page](../software/advanced_networking/#tor-relay).
 
-![advanced-networking-tor](assets/images/dietpi-software-tor-logo.png){: width="200" height="121" loading="lazy"}
+![Tor logo](assets/images/dietpi-software-tor-logo.png){: width="200" height="121" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3921.
 
@@ -396,17 +396,17 @@ Validating, recursive, caching DNS resolver is now available for install and int
 
 For more details check the [documentation page](../software/dns_servers/#unbound)
 
-![Unbound monitor screenshot](assets/images/dietpi-software-unbound.jpg){: width="600" loading="lazy"}
+![Unbound monitor screenshot](assets/images/dietpi-software-unbound.jpg){: width="603" height="331" loading="lazy"}
 
 Many thanks to @ravenclaw900 for implementing this software option: MichaIng/DietPi#3872
 
-**[Bitwarden_RS - password manager server](../software/cloud/#bitwarden_rs)**
+**[Bitwarden_RS - password manager server](../software/cloud/#vaultwarden)**
 
 Bitwarden_RS is a an unofficial Bitwarden password manager server with web UI, written in Rust and it is perfect for self-hosted deployments.
 
-For more details check the [documentation page](../software/cloud/#bitwarden_rs)
+For more details check the [documentation page](../software/cloud/#vaultwarden)
 
-![Bitwarden_RS](assets/images/dietpi-software-bitwarden_rs.jpg){: width="2000" loading="lazy"}
+![Bitwarden_RS web vault screenshot](assets/images/dietpi-software-vaultwarden.jpg){: width="2000" height="823" loading="lazy"}
 
 Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/DietPi!3724).
 
