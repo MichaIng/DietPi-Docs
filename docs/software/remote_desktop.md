@@ -48,7 +48,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     systemctl status vncserver
     ```
 
-    Although any VNC viewer may work, the latest official TigerVNC viewer can be downloaded here: <https://bintray.com/tigervnc/stable/tigervnc/>
+    Although any VNC viewer may work, the latest official TigerVNC viewer can be downloaded here: <https://sourceforge.net/projects/tigervnc/files/stable/>
 
     #### Connection Details
 
