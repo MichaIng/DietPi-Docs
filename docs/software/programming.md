@@ -43,6 +43,20 @@ Currently, Python is 3rd most popular of programming language [^4].
     The `pip`/`pip3` Python package manager and development headers are included.
     To use the `pip` package manager, a typical usage will be `pip3 install -U <module>`.
 
+=== "Python IDE packages"
+
+    There are many Python IDE packages available. Following is a short list of well known and widely good accepted IDEs (alphabetical order):
+
+    | Name | URL |
+    | :-: | - |
+    | **Atom** | <https://atom.io> |
+    | **Eclipse + Pydev** | <https://www.eclipse.org> and <http://pydev.org> |
+    | **IDLE** | <https://docs.python.org/3/library/idle.html> |
+    | **Pycharm** | <https://www.jetbrains.com/pycharm> |
+    | **Spyder** | <https://github.com/spyder-ide/spyder> |
+    | **Thonny** | <https://thonny.org> |
+    | **VSCodium** | [VSCodium](#vscodium) below |
+
 ***
 
 Website: <https://www.python.org>  
@@ -66,20 +80,43 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 
     To edit the code you can use an editor of your choice, or use [VSCodium](#vscodium). The _Go extension_ available in VSCodium provides rich language support for the Go programming language.
 
-    Just to have a taste of it, you could run some commands in this [_Go playground_](https://play.golang.org/p/AAX1cLCmA1c)
+    Just to have a taste of it, you could run some commands in [_Go playground_](https://play.golang.org/p/AAX1cLCmA1c)
 
     Checkout also the official tutorial [Get started with Go](https://golang.org/doc/tutorial/getting-started).
 
-=== "Install / Uninstall"
+=== "Install / Uninstall / Update"
 
     - We switched to automatic Go version detection. Here is an example:
 
-    ```sh
-    root@DietPi3:~# go version
-    go version go1.16.3 linux/arm
-    ```
+        ```sh
+        root@DietPi3:~# go version
+        go version go1.16.3 linux/arm
+        ```
 
-    - When uninstalled, the next folder `/mnt/dietpi_userdata/go` is still kept. This is the place where packages install, custom compilations are run, sources are downloaded etc. It is especially important to keep it as long as we don't have a good dependency system that blocks uninstalls of dependencies. Otherwise it would be possible to uninstall Go while [OpenBazaar](../social/#openbazaar) is still installed. As a side effect, removing `/mnt/dietpi_userdata/go` would mean also removing [OpenBazaar](../social/#openbazaar).
+    - When the Go package gets uninstalled, the folder `/mnt/dietpi_userdata/go` is still kept.  
+      This is the place where packages are installed, custom compilations are run, sources are downloaded etc. It is especially important to keep it as long as we don't have a good dependency system that blocks uninstalls of dependencies. Otherwise it would be possible to uninstall Go while [OpenBazaar](../social/#openbazaar) is still installed. As a side effect, removing `/mnt/dietpi_userdata/go` would mean also removing [OpenBazaar](../social/#openbazaar).
+
+    - xxx
+
+=== "Directories"
+
+    - `/mnt/dietpi_userdata/go`: This is the place where packages are installed, custom compilations are run, sources are downloaded etc.  
+      This path is what is given in the environment variable GOPATH.
+    - `/usr/local/go`: This is the place where libraries are installed.
+    - `/mnt/dietpi_userdata/go/pkg/mod`: This is the path for 3rd party go packages. The environment variable GOMODCACHE directs to this.
+
+=== "Go packages"  
+
+    The Go installation can be extended by installing 3rd party Go packages via the command `go get <URL_of_Go_package>` (example: <https://github.com/google/hilbert>).
+
+=== "Getting started"
+
+    Some common Go commands are:
+
+    - `go version`: Prints the installed Go version
+    - `go env`: Prints the Go internal environment variables (e.g. GOPATH). Can also be used e.g. like `$(go env GOPATH)/bin`
+    - `go mod init <MODULNAME>`: Generate a Go module
+    - `go help`: Start the Go internal help in general, details for commands e.g. via `go help build`
 
 ***
 
