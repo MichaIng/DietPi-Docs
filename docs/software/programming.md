@@ -107,7 +107,12 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 
 === "Go packages"  
 
-    The Go installation can be extended by installing 3rd party Go packages via the command `go get <URL_of_Go_package>` (example: <https://github.com/google/hilbert>).
+    The Go installation can be extended by installing 3rd party Go packages via the command
+
+    ```sh
+    go get <URL_of_Go_package>
+    ```
+    (example: <https://github.com/google/hilbert>).
 
 === "Getting started"
 
