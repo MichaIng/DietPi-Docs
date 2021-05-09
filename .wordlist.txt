@@ -143,6 +143,8 @@ GMediaRender
 GNUstep
 Gogs
 Golang
+GOMODCACHE
+GOPATH
 GPIO
 GPIOs
 GPL
@@ -322,6 +324,8 @@ ProFTPD
 ProtonVPN
 PSU
 PuTTY
+Pycharm
+Pydev
 Pydio
 pyenv
 PyPI
@@ -389,6 +393,7 @@ SPC
 SPI
 spindown
 Spotify
+Spyder
 Squeezelite
 SSD
 SSHFS
@@ -409,6 +414,7 @@ Tautulli
 TCP
 tcpdump
 thechildofroth
+Thonny
 TigerVNC
 TIOBE
 TLS

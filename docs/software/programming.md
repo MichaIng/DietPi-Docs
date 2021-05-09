@@ -45,7 +45,7 @@ Currently, Python is 3rd most popular of programming language [^4].
 
 === "Python IDE packages"
 
-    There are many Python IDE packages available. Following is a short list of well known and widely good accepted IDEs (alphabetical order):
+    There are many Python IDE packages available. Following is a short list of well known and widely good accepted IDE packages (alphabetical order):
 
     | Name | URL |
     | :-: | - |
@@ -99,7 +99,7 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
     - To update the Go package, execute the following:
         1. Download new Go file (e.g. `go1.16.4.linux-arm64.tar.gz` from <https://golang.org/dl>).
         2. Delete old `/usr/local/go` directory.
-        3. Unpack/untar downloaded `tar.gz` file to directory `/usr/local` (this installs the tar contents to `/usr/local/go`).
+        3. Unpack downloaded `tar.gz` file to directory `/usr/local` (this installs the tar contents to `/usr/local/go`).
         4. To check the installation, run `go version`.
 
         See also <https://golang.org/doc/install> or  
