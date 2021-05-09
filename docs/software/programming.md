@@ -96,23 +96,25 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
     - When the Go package gets uninstalled, the folder `/mnt/dietpi_userdata/go` is still kept.  
       This is the place where packages are installed, custom compilations are run, sources are downloaded etc. It is especially important to keep it as long as we don't have a good dependency system that blocks uninstalls of dependencies. Otherwise it would be possible to uninstall Go while [OpenBazaar](../social/#openbazaar) is still installed. As a side effect, removing `/mnt/dietpi_userdata/go` would mean also removing [OpenBazaar](../social/#openbazaar).
 
-    - xxx
+    - To update the Go package, execute the following:
+        1. Download new Go file (e.g. `go1.16.4.linux-arm64.tar.gz` from <https://golang.org/dl>).
+        2. Delete old `/usr/local/go` directory.
+        3. Unpack/untar downloaded `tar.gz` file to directory `/usr/local` (this installs the tar contents to `/usr/local/go`).
+        4. To check the installation, run `go version`.
+
+        See also <https://golang.org/doc/install> or  
+        <https://gist.github.com/nikhita/432436d570b89cab172dcf2894465753>.
 
 === "Directories"
 
     - `/mnt/dietpi_userdata/go`: This is the place where packages are installed, custom compilations are run, sources are downloaded etc.  
       This path is what is given in the environment variable GOPATH.
-    - `/usr/local/go`: This is the place where libraries are installed.
-    - `/mnt/dietpi_userdata/go/pkg/mod`: This is the path for 3rd party go packages. The environment variable GOMODCACHE directs to this.
 
-=== "Go packages"  
+        !!! note "GOPATH is a global setting"
+            In normal Go installations, GOPATH is a user specific environment variable. In DietPi it is global, i.e. all users have the same module cache and all see the same binaries below GOPATH/bin.
 
-    The Go installation can be extended by installing 3rd party Go packages via the command
-
-    ```sh
-    go get <URL_of_Go_package>
-    ```
-    (example: <https://github.com/google/hilbert>).
+    - `/usr/local/go`: This is the place where the Go package is installed.
+    - `/mnt/dietpi_userdata/go/pkg/mod`: This is the path for 3rd party Go packages. The environment variable GOMODCACHE directs to this.
 
 === "Getting started"
 
@@ -120,13 +122,14 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 
     - `go version`: Prints the installed Go version
     - `go env`: Prints the Go internal environment variables (e.g. GOPATH). Can also be used e.g. like `$(go env GOPATH)/bin`
-    - `go mod init <MODULNAME>`: Generate a Go module
+    - `go mod tidy <MODULNAME>`: Generate a Go module
     - `go help`: Start the Go internal help in general, details for commands e.g. via `go help build`
 
 ***
 
 Website: <https://golang.org>  
 Official documentation, references and guided tours of Go programs : <https://golang.org/doc>  
+One example source to grub for Go libraries: <https://github.com/avelino/awesome-go>  
 Wikipedia: <https://en.wikipedia.org/wiki/Go_(programming_language)>
 
 ## Docker
