@@ -84,7 +84,7 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 
     Checkout also the official tutorial [Get started with Go](https://golang.org/doc/tutorial/getting-started).
 
-=== "Install / Uninstall / Update"
+=== "Install / Uninstall"
 
     - We switched to automatic Go version detection. Here is an example:
 
@@ -94,16 +94,10 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
         ```
 
     - When the Go package gets uninstalled, the folder `/mnt/dietpi_userdata/go` is still kept.  
-      This is the place where packages are installed, custom compilations are run, sources are downloaded etc. It is especially important to keep it as long as we don't have a good dependency system that blocks uninstalls of dependencies. Otherwise it would be possible to uninstall Go while [OpenBazaar](../social/#openbazaar) is still installed. As a side effect, removing `/mnt/dietpi_userdata/go` would mean also removing [OpenBazaar](../social/#openbazaar).
+      This is the place where packages are installed, custom compilations are run, sources are downloaded etc.
 
-    - To update the Go package, execute the following:
-        1. Download new Go file (e.g. `go1.16.4.linux-arm64.tar.gz` from <https://golang.org/dl>).
-        2. Delete old `/usr/local/go` directory.
-        3. Unpack downloaded `tar.gz` file to directory `/usr/local` (this installs the tar contents to `/usr/local/go`).
-        4. To check the installation, run `go version`.
-
-        See also <https://golang.org/doc/install> or  
-        <https://gist.github.com/nikhita/432436d570b89cab172dcf2894465753>.
+        It is especially important to keep `/mnt/dietpi_userdata/go` as long as we don't have a good dependency system that blocks uninstalls of dependencies. Otherwise it would be possible to uninstall Go while [OpenBazaar](../social/#openbazaar) is still installed.  
+        As a side effect, removing `/mnt/dietpi_userdata/go` would mean also removing [OpenBazaar](../social/#openbazaar).
 
 === "Directories"
 
@@ -124,6 +118,17 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
     - `go env`: Prints the Go internal environment variables (e.g. GOPATH). Can also be used e.g. like `$(go env GOPATH)/bin`
     - `go mod tidy <MODULNAME>`: Generate a Go module
     - `go help`: Start the Go internal help in general, details for commands e.g. via `go help build`
+
+=== "Update to latest version"
+
+    ```sh
+    dietpi-software reinstall 188
+    ```
+
+    To check the installation, run `go version`.
+
+    See also <https://golang.org/doc/install> or  
+    <https://gist.github.com/nikhita/432436d570b89cab172dcf2894465753>.
 
 ***
 
