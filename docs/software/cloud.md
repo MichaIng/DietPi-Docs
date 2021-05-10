@@ -114,7 +114,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Advanced configuration"
 
-    For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/17/admin_manual/configuration_server/occ_command.html).
+    For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/21/admin_manual/configuration_server/occ_command.html).
 
     To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`.  
     Just use inside your terminal:
