@@ -110,6 +110,7 @@ Emby
 eMMC
 emoncms
 emonCMS
+emonHub
 emonPi
 emonTH
 emonTX
