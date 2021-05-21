@@ -103,15 +103,11 @@ Source: [Carlos Prioglio](https://redis.io/images/redis-logo.svg), [licence](htt
 
 ***
 
-Website: <https://redis.io>  
+Website: <https://redis.io/>  
 Official documentation: <https://redis.io/documentation>  
 Commands: <https://redis.io/commands>
 
 ## InfluxDB
-
-![InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: width="300" height="112" loading="lazy"}
-
-Source: [InfluxData](https://influxdata.github.io/design.influxdata.com/branding-docs/img/influxdb/preview.svg), [Public Domain](https://commons.wikimedia.org/w/index.php?curid=55056027).
 
 **InfluxDB** is a _time series_ database and it is optimised to handle high write and query loads. For this purpose is a very good fit for saving sensor data or time series info from various logs. InfluxDB is not only a time series platform, but it provides also an Web UI and dashboard tools, background processing and monitoring agent.
 
@@ -123,31 +119,31 @@ The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana).
 
     After the installation, the data transfers are made via the HTTP requests, and are handled directly by the InfluxDB service running on `http://<your.IP>:8086`.
 
-    - Create a database using `influxdb` via command line tool. This tool also uses HTTP so it can manage a database on a remote machine setting the `-host` option.
+    Create a database using `influxdb` via command line tool. This tool also uses HTTP, so it can manage a database on a remote machine setting the `-host` option:
 
     ```sh
     influx -execute 'create database myfirstdb'
     ```
 
-    - Create a database using a HTTP request and `curl` tool:
+    Create a database using a HTTP request and `curl` tool:
 
     ```sh
-    curl -i -XPOST http://<your.IP>:8086/query --data-urlencode "q=CREATE DATABASE myfirstdb"
+    curl -i -X POST http://<your.IP>:8086/query --data-urlencode 'q=CREATE DATABASE myfirstdb'
     ```
 
-    - Post data
+    Post data:
 
     ```sh
-    curl -i -XPOST 'http://<your.IP>:8086/write?db=myfirstdb' --data-binary 'temperature value=20.12'
+    curl -i -X POST 'http://<your.IP>:8086/write?db=myfirstdb' --data-binary 'temperature value=20.12'
     ```
 
-    - Retrieve and display data from the database
+    Retrieve and display data from the database:
 
     ```sh
     influx -database myfirstdb -execute 'SELECT * FROM temperature'
     ```    
 
-    - Retrieve data using a HTTP request and `curl` tool::
+    Retrieve data using a HTTP request and `curl` tool:
 
     ```sh
     curl -i -XPOST http://<your.IP>:8086/query?db=mydb --data-urlencode "q=SELECT * FROM temperature"
@@ -155,7 +151,7 @@ The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana).
 
 === "Users and security"
 
-    - **Create users and authorizations** using `influx` CLI
+    **Create users and authorizations** using `influx` CLI
 
     To start the InfluxDB database management interface enter:
 
@@ -176,24 +172,24 @@ The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana).
 
     By default the _HTTP_ authentication is disabled. To enable it, follow next two steps:
 
-    - Change next setting in the configuration file `/etc/influxdb/influxdb.conf`:
+    1. Change next setting in the configuration file `/etc/influxdb/influxdb.conf`:
 
-      ```
-      auth-enabled = true
-      ```
+        ```
+        auth-enabled = true
+        ```
 
-    - Restart service
+    2. Restart the service:
 
-      ```sh
-      systemctl restart influxdb
-      ```
+        ```sh
+        systemctl restart influxdb
+        ```
 
-=== Install information
+=== "Install information"
 
-The data location for InfluxDB is stored resp. linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`.
+    The data location for InfluxDB is stored respectively linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`
 
 ***
 
-Website: <https://www.influxdata.com/products/influxdb>  
-Official documentation: <https://docs.influxdata.com/influxdb>
-Getting started: <https://docs.influxdata.com/influxdb/v2.0/get-started/#set-up-influxdb>
+Website: <https://www.influxdata.com/products/influxdb/>  
+Official documentation: <https://docs.influxdata.com/influxdb/v1.8/>  
+Getting started: <https://docs.influxdata.com/influxdb/v1.8/introduction/get-started/>
