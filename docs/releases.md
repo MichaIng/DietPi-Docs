@@ -1,8 +1,8 @@
 # DietPi Releases
 
-## May 2021 (version 7.2 - Beta)
+## May 2021 (version 7.2 - Beta) {: id="#may-2021-version-72" }
 
-### New software titles {: id="new-software-7.2" }
+### New software titles {: id="new-software-72" }
 
 - Firefox :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the `ID 67`. A browser preference choice has been added to [DietPi-Software](../dietpi_tools/#dietpi-software). This could be enabled at the first boot, using the new option available in `dietpi.txt` file:
 
@@ -18,13 +18,13 @@
 
 or with the new menu entry. By doing this, the browser will be installed automatically with the [desktop](../software/#desktops) of your choice. Earlier `Firefox` was installed with every desktop, and it only played a role when a desktop was installed, being also overridden by the manual browser selection.
 
-### New supported SBC {: id="new-sbc-7.2" }
+### New supported SBCs {: id="new-sbc-72" }
 
 - Pinebook Pro | Initial hardware identifier (ID: 46) :octicons-arrow-right-16: Support for this device has been added to DietPi.
 - NanoPi R4S | Initial hardware identifier (ID: 47) :octicons-arrow-right-16: Support for this device has been added to DietPi.
 - NanoPi R1 | Initial hardware identifier (ID: 48) :octicons-arrow-right-16: Support for this device has been added to DietPi.
 
-### Changes / Improvements / Optimisations {: id="changes-7.2" }
+### Changes / Improvements / Optimisations {: id="changes-72" }
 
 - [**DietPi-DDNS**](../dietpi_tools/#dietpi-ddns) :octicons-arrow-right-16: Added [FreeDNS](https://freedns.afraid.org) native support, extending the list of existent options in `DietPi-DDNS` tool.
 - [**DietPi-VPN**](../dietpi_tools/#dietpi-vpn) :octicons-arrow-right-16: Added native support for [IPVanish](https://www.ipvanish.com) and [Private Internet access (PIA)](https://www.privateinternetaccess.com).
@@ -37,7 +37,7 @@ or with the new menu entry. By doing this, the browser will be installed automat
 - [DietPi-Software | **RPi Cam Control**](../software/camera/#rpi-cam-control) :octicons-arrow-right-16: This install option has been disabled for 64-bit systems. It uses a 32-bit/armhf raspimjpeg binary that depends in 32-bit/armhf C library. It will be re-enabled once the project maintainer or we provide a native 64-bit/arm64 raspimjpeg binary.
 - [DietPi-Software | **Roon Extension Manager**](../software/media/#roon-extension-manager) :octicons-arrow-right-16: After a major upgrade to v1.0, it is now implemented as Docker container, rather than as Node.js module. The upgrade can be applied manually via "dietpi-software reinstall 86". Many thanks to @JanKoudijs for developing Roon Extension Manager and implementing the required changes into DietPi-Software: <https://github.com/MichaIng/DietPi/pull/4399>.
 
-### Bug Fixes {: id="bug-fixes-7.2" }
+### Bug Fixes {: id="bug-fixes-72" }
 
 - [Odroid XU4](../hardware/#odroid) :octicons-arrow-right-16: Resolved an issue where installs and possibly other tasks hang, because the device ran out of entropy. All Odroid XU4 system will have the unsupported hardware random generator daemon removed and the software HAVEGE daemon installed instead for entropy generation. Many thanks to @Speeedfire for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4318>
 - DietPi-Banner :octicons-arrow-right-16: Resolved an issue where the MOTD was not updated via daily cron job, if the banner settings have not been changed yet, hence no config file exists. Since the MOTD is enabled by default, it needs to be updated as well if the config file does not exist. Many thanks to @gorby-pranata for helping us discovering this issue: [MichaIng/DietPi#4292](https://github.com/MichaIng/DietPi/pull/4292#issuecomment-830787256).
@@ -61,7 +61,7 @@ or with the new menu entry. By doing this, the browser will be installed automat
 - [DietPi-Software | Bitwarden_RS](../software/cloud/#bitwarden_rs) :octicons-arrow-right-16: This project has been renamed by its author into "vaultwarden", to avoid confusion and potential legal issues with original Bitwarden software. This caused our install option to fail. To apply this important change to all Bitwarden_RS instances, it will be migrated via reinstall during DietPi update. As compiling can take up to several hours, users are informed at the beginning of the DietPi update, with the option to cancel and apply it at a later time. All data and configs will be preserved during the reinstall. Many thanks to @math-gout for informing us about this change: <https://github.com/MichaIng/DietPi/issues/4325>.
 - [DietPi-Software | Home Assistant](../software/home_automation/#home-assistant) :octicons-arrow-right-16: Resolved an issue where the install failed, as running `pyenv init -` does not complement the PATH variable anymore.
 
-### Removed Software {: id="removed-software-7.2" }
+### Removed Software {: id="removed-software-72" }
 
 - LibSSL1.0.0 :octicons-arrow-right-16: This old library was kept for backwards-compatibility with old binaries but is not required anymore for any binary installed by DietPi-Software. It has hence been removed from the software list.
 
