@@ -1,6 +1,6 @@
 # DietPi Releases
 
-## May 2021 (version 7.2 - Beta) {: id="#may-2021-version-72" }
+## May 2021 (version 7.2 - Beta) {: id="may-2021-version-72" }
 
 ### New software titles {: id="new-software-72" }
 
