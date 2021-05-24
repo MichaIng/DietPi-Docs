@@ -24,22 +24,43 @@ or with the new menu entry. By doing this, the browser will be installed automat
 - NanoPi R4S | Initial hardware identifier (ID: 47) :octicons-arrow-right-16: Support for this device has been added to DietPi.
 - NanoPi R1 | Initial hardware identifier (ID: 48) :octicons-arrow-right-16: Support for this device has been added to DietPi.
 
+### DietPi Tools (new / notable updates) {: id="dietpi-tools-in-72-new-notable-updates" }
+
+- [**DietPi-DDNS**](../dietpi_tools/#dietpi-ddns) 
+  
+    It has now a native support for [FreeDNS](https://freedns.afraid.org), extending the list of existent options in `DietPi-DDNS` tool.
+
+- [**DietPi-VPN**](../dietpi_tools/#dietpi-vpn)
+    
+    It includes now native support for [IPVanish](https://www.ipvanish.com) and [Private Internet access (PIA)](https://www.privateinternetaccess.com).
+
+    When "Reset" is selected, you're now offered to purge the OpenVPN package, as long as neither the OpenVPN (server) install option nor PiVPN is installed. Many thanks to @maartenlangeveld for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4346>.
+
+    Allow inbound packets from the loopback interface. It  is required to communicate with local servers (e.g. Pi-hole) running on the same machine, as the connection doesn't count as established yet when the packets haven't been accepted by the server yet.
+
+- [**DietPi-AutoStart**](../dietpi_tools/#dietpi-autostart) 
+
+    It enables desktop autologin for non-root users more reliabe. Earlier the X server itself was started by the login user, which often required additional permissions and sometimes, based on GPU and driver, was not possible at all (without further customisation).
+    The method has been changed so that LightDM is used for non-root autologins, just like it is for manual desktop logins, but logging into the desktop automatically with the chosen user.
+
 ### Changes / Improvements / Optimisations {: id="changes-72" }
 
-- [**DietPi-DDNS**](../dietpi_tools/#dietpi-ddns) :octicons-arrow-right-16: Added [FreeDNS](https://freedns.afraid.org) native support, extending the list of existent options in `DietPi-DDNS` tool.
-- [**DietPi-VPN**](../dietpi_tools/#dietpi-vpn) :octicons-arrow-right-16: Added native support for [IPVanish](https://www.ipvanish.com) and [Private Internet access (PIA)](https://www.privateinternetaccess.com).
-- [**DietPi-VPN**](../dietpi_tools/#dietpi-vpn) :octicons-arrow-right-16: When "Reset" is selected, you're now offered to purge the OpenVPN package, as long as neither the OpenVPN (server) install option nor PiVPN is installed. Many thanks to @maartenlangeveld for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4346>.
-- [**DietPi-AutoStart**](../dietpi_tools/#dietpi-autostart) :octicons-arrow-right-16: Selecting desktop autologin with non-root user has been made much more reliabe. Previously the X server itself was started by the login user, which often requires additional permissions and sometimes, based on GPU and driver, is not possible at all without further customisation. The method has been changed so that LightDM is used for non-root autologins, just like it is for manual desktop logins, but logging into the desktop automatically with the chosen user.
-- [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On RPi, a new updated fork of the deprecated original project is now used, which enables support for RPi 4/400 and CM4: <https://github.com/WiringPi/WiringPi>.
-- [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On new installs and reinstalls, the source/examples directory is now installed to /mnt/dietpi_userdata/WiringPi instead of /root/wiringPi, to enable general access to non-root users.
-- DietPi-Software | **Node.js** :octicons-arrow-right-16: On ARMv6, new Node.js versions are now installed via unofficial builds. Official builds are provided up to Node v11 only. Many thanks to @ollliegits for adding support for this builds to our Node.js installer fork: <https://github.com/MichaIng/nodejs-linux-installer/pull/2>.
-- [DietPi-Software | **EmonPi**](../software/home_automation/#emonpi) :octicons-arrow-right-16: This software option has been renamed to "emonHub", the name of the data collector for the "emonPi" RPi energy monitor addon board. A much newer Python 3 compatible version form the official OpenEnergyMonitor repository is installed from now on, providing additional features and fixes.
+- [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On Raspberry Pi, a new updated fork of the deprecated original project is now used, which enables support for [Raspberry Pi 4, Raspberry Pi 400 and Raspberry Compute Module (CM) 4](../hardware/#raspberry-pi) - see <https://github.com/WiringPi/WiringPi>.
+- [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On new installs and reinstalls, the source/examples directory is now installed to `/mnt/dietpi_userdata/WiringPi` instead of `/root/wiringPi`, to enable general access to non-root users.
+- DietPi-Software | **Node.js** :octicons-arrow-right-16: On ARMv6, new Node.js versions are now installed via unofficial builds. Official builds for ARMv6 are provided up to Node v11 only. Many thanks to @ollliegits for adding support for this builds to our Node.js installer fork: <https://github.com/MichaIng/nodejs-linux-installer/pull/2>.
+- [DietPi-Software | **EmonPi**](../software/home_automation/#emonpi) :octicons-arrow-right-16: This software option has been renamed to `emonHub`, the name of the data collector for the "emonPi" RPi energy monitor addon board. A much newer Python 3 compatible version form the official OpenEnergyMonitor repository is installed from now on, providing additional features and fixes.
 - [DietPi-Software | **RPi Cam Control**](../software/camera/#rpi-cam-control) :octicons-arrow-right-16: This install option has been disabled for 64-bit systems. It uses a 32-bit/armhf raspimjpeg binary that depends in 32-bit/armhf C library. It will be re-enabled once the project maintainer or we provide a native 64-bit/arm64 raspimjpeg binary.
-- [DietPi-Software | **Roon Extension Manager**](../software/media/#roon-extension-manager) :octicons-arrow-right-16: After a major upgrade to v1.0, it is now implemented as Docker container, rather than as Node.js module. The upgrade can be applied manually via "dietpi-software reinstall 86". Many thanks to @JanKoudijs for developing Roon Extension Manager and implementing the required changes into DietPi-Software: <https://github.com/MichaIng/DietPi/pull/4399>.
+- [DietPi-Software | **Roon Extension Manager**](../software/media/#roon-extension-manager) :octicons-arrow-right-16: After a major upgrade to v1.0, it is now implemented as Docker container, rather than as Node.js module. The upgrade can be applied by manually running next: 
+
+    ```sh
+    dietpi-software reinstall 86
+    ```
+    
+    Many thanks to @JanKoudijs for developing Roon Extension Manager and implementing the required changes into `DietPi-Software`: <https://github.com/MichaIng/DietPi/pull/4399>.
 
 ### Bug Fixes {: id="bug-fixes-72" }
 
-- [Odroid XU4](../hardware/#odroid) :octicons-arrow-right-16: Resolved an issue where installs and possibly other tasks hang, because the device ran out of entropy. All Odroid XU4 system will have the unsupported hardware random generator daemon removed and the software HAVEGE daemon installed instead for entropy generation. Many thanks to @Speeedfire for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4318>
+- [Odroid XU4](../hardware/#odroid) :octicons-arrow-right-16: Resolved an issue where installs and possibly other tasks hang, because the device ran out of entropy. [Odroid XU4](../hardware/#odroid) system will have the unsupported hardware random generator daemon removed and the software HAVEGE daemon installed instead for entropy generation. Many thanks to @Speeedfire for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4318>
 - DietPi-Banner :octicons-arrow-right-16: Resolved an issue where the MOTD was not updated via daily cron job, if the banner settings have not been changed yet, hence no config file exists. Since the MOTD is enabled by default, it needs to be updated as well if the config file does not exist. Many thanks to @gorby-pranata for helping us discovering this issue: [MichaIng/DietPi#4292](https://github.com/MichaIng/DietPi/pull/4292#issuecomment-830787256).
 - DietPi-Banner :octicons-arrow-right-16: Resolved an issue where DietPi-VPN stats could not be shown due to a false file path. Many thanks to @sl002 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4354>.
 - DietPi-Banner and [DietPi-VPN](../dietpi_tools/#dietpi-vpn) :octicons-arrow-right-16: Resolved an issue where the WAN IP could not be derived, as the external API service we used has server issues by times. We switched to a (hopefully) more reliable one with higher rate limit as well, until we find time to host an own GeoIP API. Many thanks to @maartenlangeveld for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4393>.
