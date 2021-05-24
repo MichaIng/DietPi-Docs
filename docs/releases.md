@@ -24,7 +24,7 @@ or with the new menu entry. By doing this, the browser will be installed automat
 - NanoPi R4S | Initial hardware identifier (ID: 47) :octicons-arrow-right-16: Support for this device has been added to DietPi.
 - NanoPi R1 | Initial hardware identifier (ID: 48) :octicons-arrow-right-16: Support for this device has been added to DietPi.
 
-### DietPi Tools (new / notable updates) {: id="dietpi-tools-in-72-new-notable-updates" }
+### DietPi Tools (new / notable updates) {: id="dietpi-tools-72" }
 
 - [**DietPi-DDNS**](../dietpi_tools/#dietpi-ddns) 
   
