@@ -9,7 +9,7 @@
     !!! hint "Configuration options"
 
         There are available next options: `0`=None | `-1` = Firefox | `-2` = Chromium
-        
+
         **Note:** This option defines the browser to be installed **only** when a [desktop](../software/#desktops) is installed. It won't be installed if no desktop is installed and a manual browser selection will override it.
 
         ```sh
@@ -26,19 +26,19 @@ or with the new menu entry. By doing this, the browser will be installed automat
 
 ### DietPi Tools (new / notable updates) {: id="dietpi-tools-72" }
 
-- [**DietPi-DDNS**](../dietpi_tools/#dietpi-ddns) 
-  
+- [**DietPi-DDNS**](../dietpi_tools/#dietpi-ddns)
+
     It has now a native support for [FreeDNS](https://freedns.afraid.org), extending the list of existent options in `DietPi-DDNS` tool.
 
 - [**DietPi-VPN**](../dietpi_tools/#dietpi-vpn)
-    
+
     It includes now native support for [IPVanish](https://www.ipvanish.com) and [Private Internet access (PIA)](https://www.privateinternetaccess.com).
 
     When "Reset" is selected, you're now offered to purge the OpenVPN package, as long as neither the OpenVPN (server) install option nor PiVPN is installed. Many thanks to @maartenlangeveld for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4346>.
 
     Allow inbound packets from the loopback interface. It  is required to communicate with local servers (e.g. Pi-hole) running on the same machine, as the connection doesn't count as established yet when the packets haven't been accepted by the server yet.
 
-- [**DietPi-AutoStart**](../dietpi_tools/#dietpi-autostart) 
+- [**DietPi-AutoStart**](../dietpi_tools/#dietpi-autostart)
 
     It enables desktop autologin for non-root users more reliabe. Earlier the X server itself was started by the login user, which often required additional permissions and sometimes, based on GPU and driver, was not possible at all (without further customisation).
     The method has been changed so that LightDM is used for non-root autologins, just like it is for manual desktop logins, but logging into the desktop automatically with the chosen user.
@@ -50,12 +50,12 @@ or with the new menu entry. By doing this, the browser will be installed automat
 - DietPi-Software | **Node.js** :octicons-arrow-right-16: On ARMv6, new Node.js versions are now installed via unofficial builds. Official builds for ARMv6 are provided up to Node v11 only. Many thanks to @ollliegits for adding support for this builds to our Node.js installer fork: <https://github.com/MichaIng/nodejs-linux-installer/pull/2>.
 - [DietPi-Software | **EmonPi**](../software/home_automation/#emonpi) :octicons-arrow-right-16: This software option has been renamed to `emonHub`, the name of the data collector for the "emonPi" RPi energy monitor addon board. A much newer Python 3 compatible version form the official OpenEnergyMonitor repository is installed from now on, providing additional features and fixes.
 - [DietPi-Software | **RPi Cam Control**](../software/camera/#rpi-cam-control) :octicons-arrow-right-16: This install option has been disabled for 64-bit systems. It uses a 32-bit/armhf raspimjpeg binary that depends in 32-bit/armhf C library. It will be re-enabled once the project maintainer or we provide a native 64-bit/arm64 raspimjpeg binary.
-- [DietPi-Software | **Roon Extension Manager**](../software/media/#roon-extension-manager) :octicons-arrow-right-16: After a major upgrade to v1.0, it is now implemented as Docker container, rather than as Node.js module. The upgrade can be applied by manually running next: 
+- [DietPi-Software | **Roon Extension Manager**](../software/media/#roon-extension-manager) :octicons-arrow-right-16: After a major upgrade to v1.0, it is now implemented as Docker container, rather than as Node.js module. The upgrade can be applied by manually running next:
 
     ```sh
     dietpi-software reinstall 86
     ```
-    
+
     Many thanks to @JanKoudijs for developing Roon Extension Manager and implementing the required changes into `DietPi-Software`: <https://github.com/MichaIng/DietPi/pull/4399>.
 
 ### Bug Fixes {: id="bug-fixes-72" }
