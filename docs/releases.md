@@ -4,7 +4,7 @@
 
 ### New software titles {: id="new-software-72" }
 
-- Firefox :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the `ID 67`. A browser preference choice has been added to [DietPi-Software](../dietpi_tools/#dietpi-software). This could be enabled at the first boot, using the new option available in `dietpi.txt` file:
+- [Firefox](../software/desktop/#firefox) :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the `ID 67`. A browser preference choice has been added to [DietPi-Software](../dietpi_tools/#dietpi-software). This could be enabled at the first boot, using the new option available in `dietpi.txt` file:
 
     !!! hint "Configuration options"
 
