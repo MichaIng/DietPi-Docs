@@ -1,4 +1,5 @@
 addictiveness
+addon
 ADF
 advanxer
 AGPLv
@@ -294,6 +295,7 @@ OctoPrint
 Odroid
 Odroids
 Ok
+OOTB
 Oldschool
 OPcache
 OpenBazaar
