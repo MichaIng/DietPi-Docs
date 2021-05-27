@@ -109,10 +109,11 @@ EEPROM
 Emby
 eMMC
 emoncms
-EmonCMS
-EmonPi
-EmonTH
-EmonTX
+emonCMS
+emonHub
+emonPi
+emonTH
+emonTX
 EPL
 EQ
 ESXi
