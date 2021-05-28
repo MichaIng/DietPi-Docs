@@ -68,6 +68,24 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     - Select *Static DNS* from the list, then choose a DNS server, or manually enter a custom entry.
     - Once completed, select *Apply* to save the changes.
 
+=== "DietPi differences"
+
+    The DietPi Pi-hole implementation uses the official installer script, but it comes with a few differences, compared to the default official setup:
+
+    1. The installer is called with the `--disable-install-webserver` flag, which skips the Lighttpd and PHP installation parts. Instead, DietPi installs Lighttpd, Nginx or Apache2, based on user choice, and PHP as standalone PHP-FPM server or module for Apache2 respectively. This allows more flexible webserver configurations as well, easy HTTPS, other web sites/applications on the same server etc. When repairing and reconfiguring Pi-hole (see "Repairing Pi-hole" tab for details), it is important to **NOT** select to install Lighttpd when being asked, as this would lead to doubled PHP and webserver installs or conflicting webserver settings.
+    2. The `/var/log/pihole.log` plain text DNS query log is disabled by default. It is a second query log implementation, as `/etc/pihole/pihole-FTL.db` is used as a database-wise log implementation already, used by the web interface to search long-term logs. If you however want to use the `pihole -t`/`pihole tail` command, to print colorised logs to console, you need to re-enable the file-based logging:
+
+        ```sh
+        pihole -l on
+        ```
+
+        Also the DietPi [logging system](../dietpi_tools/#quick-selections) needs to be changed, to disable DietPi-RAMlog, as otherwise `/var/log/pihole.log` is cleared hourly.
+    3. The logging duration for the database-wise DNS query log in `/etc/pihole/pihole-FTL.db` is reduced from 365 days to 2 days. An internal discussion revealed that no-one of us uses logs old than a few hours. One year of logs leads to database sizes from hundreds of MiBs to GiBs. We leave it at 2 days so that web interface dashboard graphs/diagrams are not empty after Pi-hole (re)starts. You can easily adjust the logging duration by editing the `/etc/pihole/pihole-FTL.conf` config file. E.g. to restore the default 365 days of logs:
+
+        ```sh
+        MAXDBDAYS=365
+        ```
+
 === "Updating Pi-hole"
 
     Pi-hole can be updated via the shell command `pihole -up`.
