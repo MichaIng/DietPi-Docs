@@ -72,7 +72,7 @@ or with the new menu entry. It works like the webserver preference, so it only p
 - [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On Raspberry Pi, a new updated fork of the deprecated original project is now used, which enables support for [Raspberry Pi 4, Raspberry Pi 400 and Raspberry Compute Module (CM) 4](../hardware/#raspberry-pi) - see <https://github.com/WiringPi/WiringPi>.
 - [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On new installs and reinstalls, the source/examples directory is now installed to `/mnt/dietpi_userdata/WiringPi` instead of `/root/wiringPi`, to enable general access to non-root users.
 - DietPi-Software | **Node.js** :octicons-arrow-right-16: On ARMv6, new Node.js versions are now installed via unofficial builds. Official builds for ARMv6 are provided up to Node v11 only. Many thanks to @ollliegits for adding support for this builds to our Node.js installer fork: <https://github.com/MichaIng/nodejs-linux-installer/pull/2>.
-- [DietPi-Software | **EmonPi**](../software/home_automation/#emonpi) :octicons-arrow-right-16: This software option has been renamed to `emonHub`, the name of the data collector for the "emonPi" RPi energy monitor addon board. A much newer Python 3 compatible version form the official OpenEnergyMonitor repository is installed from now on, providing additional features and fixes.
+- [DietPi-Software | **EmonPi**](../software/home_automation/#emonhub) :octicons-arrow-right-16: This software option has been renamed to `emonHub`, the name of the data collector for the "emonPi" RPi energy monitor addon board. A much newer Python 3 compatible version form the official OpenEnergyMonitor repository is installed from now on, providing additional features and fixes.
 - [DietPi-Software | **RPi Cam Control**](../software/camera/#rpi-cam-control) :octicons-arrow-right-16: This install option has been disabled for 64-bit systems. It uses a 32-bit/armhf raspimjpeg binary that depends in 32-bit/armhf C library. It will be re-enabled once the project maintainer or we provide a native 64-bit/arm64 raspimjpeg binary.
 - [DietPi-Software | **Roon Extension Manager**](../software/media/#roon-extension-manager) :octicons-arrow-right-16: After a major upgrade to v1.0, it is now implemented as Docker container, rather than as Node.js module. The upgrade can be applied by manually running next:
 
@@ -81,6 +81,7 @@ or with the new menu entry. It works like the webserver preference, so it only p
     ```
 
     Many thanks to @JanKoudijs for developing Roon Extension Manager and implementing the required changes into `DietPi-Software`: <https://github.com/MichaIng/DietPi/pull/4399>.
+- [DietPi-Software | **Pi-hole**](../software/dns_servers/#pi-hole) :octicons-arrow-right-16: New installs and reinstall will have the DNS query logging duration reduced to 2 days. An internal discussion revealed that no-one of us uses logs old than a few hours, while those are kept for a year by default, leading to database sizes from hundreds of MiBs to GiBs. We leave it at 2 days so that dashboard graphs/diagrams are not empty on Pi-hole (re)start. Users who require long-term DNS query data for statistics or similar, can easily increase the TTL, shown as well in our docs.
 
 ### Bug Fixes {: #bug-fixes-72 }
 
