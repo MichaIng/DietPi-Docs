@@ -36,7 +36,7 @@ or with the new menu entry. Similarly to the webserver preference, the chosen br
 
 - [**DietPi-DDNS**](../dietpi_tools/#dietpi-ddns)
 
-    It has now a native support for [FreeDNS](https://freedns.afraid.org), extending the list of existent options in `DietPi-DDNS` tool.
+    It has now a native support for [FreeDNS](https://freedns.afraid.org) and [OVH](https://docs.ovh.com/gb/en/domains/hosting_dynhost/), extending the list of existent options in `DietPi-DDNS` tool.
 
 - [**DietPi-VPN**](../dietpi_tools/#dietpi-vpn)
 
