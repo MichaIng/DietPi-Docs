@@ -1,8 +1,8 @@
 # DietPi Releases
 
-## May 2021 (version 7.2) {: id="may-2021-version-72" }
+## May 2021 (version 7.2){: #may-2021-version-72 }
 
-### New software titles {: id="new-software-72" }
+### New software titles{: #new-software-72 }
 
 - [Firefox](../software/desktop/#firefox) :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the ID **67**. A browser preference option has been added to [DietPi-Software](../dietpi_tools/#dietpi-software). This can be set prior to first boot, using the new setting available in `dietpi.txt` file:
 
@@ -18,7 +18,7 @@
 
 or with the new menu entry. Similarly to the webserver preference, the chosen browser (or none) will be installed, (only) when a [desktop](../software/#desktops) of your choice is installed, and a manually selected browser from the full software list or software search list will override the preference. Previously, Firefox was always installed together with desktops
 
-### New supported SBCs {: id="new-sbc-72" }
+### New supported SBCs{: new-sbc-72 }
 
 - Pinebook Pro | Initial hardware identifier (ID: 46) :octicons-arrow-right-16: Support for this device has been added to DietPi. DietPi image will be available for download starting with `30.05.2021`.
 
@@ -32,7 +32,7 @@ or with the new menu entry. Similarly to the webserver preference, the chosen br
 
 ![NanoPi R1](assets/images/dietpi-nanopi_r1.jpg){: width="540" height="500" loading="lazy"}
 
-### DietPi Tools (new / notable updates) {: id="dietpi-tools-72" }
+### DietPi Tools (new / notable updates){: #dietpi-tools-72 }
 
 - [**DietPi-DDNS**](../dietpi_tools/#dietpi-ddns)
 
@@ -67,7 +67,7 @@ or with the new menu entry. Similarly to the webserver preference, the chosen br
 
 or with the new menu entry. It works like the webserver preference, so it only play a role when a desktop is installed as dependency and a manually selected desktop from the full software list or software search list will override the preference.
 
-### Changes / Improvements / Optimisations {: id="changes-72" }
+### Changes / Improvements / Optimisations{: #changes-72 }
 
 - [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On Raspberry Pi, a new updated fork of the deprecated original project is now used, which enables support for [Raspberry Pi 4, Raspberry Pi 400 and Raspberry Compute Module (CM) 4](../hardware/#raspberry-pi) - see <https://github.com/WiringPi/WiringPi>.
 - [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On new installs and reinstalls, the source/examples directory is now installed to `/mnt/dietpi_userdata/WiringPi` instead of `/root/wiringPi`, to enable general access to non-root users.
@@ -82,7 +82,7 @@ or with the new menu entry. It works like the webserver preference, so it only p
 
     Many thanks to @JanKoudijs for developing Roon Extension Manager and implementing the required changes into `DietPi-Software`: <https://github.com/MichaIng/DietPi/pull/4399>.
 
-### Bug Fixes {: id="bug-fixes-72" }
+### Bug Fixes{: #bug-fixes-72 }
 
 - [Odroid XU4](../hardware/#odroid) :octicons-arrow-right-16: Resolved an issue where installs and possibly other tasks hang, because the device ran out of entropy. [Odroid XU4](../hardware/#odroid) system will have the unsupported hardware random generator daemon removed and the software HAVEGE daemon installed instead for entropy generation. Many thanks to @Speeedfire for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4318>
 - [DietPi-Banner](../dietpi_tools/#dietpi-banner) :octicons-arrow-right-16: Resolved an issue where the MOTD was not updated via daily cron job, if the banner settings have not been changed yet, hence no config file exists. Since the MOTD is enabled by default, it needs to be updated as well if the config file does not exist. Many thanks to @gorby-pranata for helping us discovering this issue: [MichaIng/DietPi#4292](https://github.com/MichaIng/DietPi/pull/4292#issuecomment-830787256).
@@ -107,7 +107,7 @@ or with the new menu entry. It works like the webserver preference, so it only p
 - [DietPi-Software | Home Assistant](../software/home_automation/#home-assistant) :octicons-arrow-right-16: Resolved an issue where the install failed, as running `pyenv init -` does not complement the PATH variable anymore.
 - [DietPi-Software | Mosquitto](../software/hardware_projects/#mosquitto) :octicons-arrow-right-16: Resolved an issue where the install failed on ARMv8 systems. Many thanks to @fra87 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4424>
 
-### Removed Software {: id="removed-software-72" }
+### Removed Software{: #removed-software-72 }
 
 - LibSSL1.0.0 :octicons-arrow-right-16: This old library was kept for backwards-compatibility with old binaries but is not required anymore for any binary installed by DietPi-Software. It has hence been removed from the software list.
 
@@ -161,7 +161,7 @@ The _optimised_ and _additional_ software menus have been merged within the `die
 
 _Note:_ Since multiple software titles were listening on the ports `5000` and `8000`, the default ports of those titles have been changed to avoid conflicts on concurrent installs. No change is done during the DietPi update, even a software title reinstall won't change it, in most cases. For details see the individual software changes below.
 
-### New software titles {: id="new-optimised-software-in-71" }
+### New software titles{: #new-optimised-software-in-71 }
 
 - [**IPFS Node**](../software/distributed_projects/#ipfs-node)
 
@@ -201,7 +201,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
     ![Go playground web interface screenshot](assets/images/dietpi-software-programming-go.jpg){: width="772" height="329" loading="lazy"}
 
-### DietPi Tools (new / notable updates) {: id="dietpi-tools-in-71-new-notable-updates" }
+### DietPi Tools (new / notable updates){: #dietpi-tools-in-71-new-notable-updates }
 
 - [**DietPi-DDNS**](../dietpi_tools/#dietpi-ddns)
 
@@ -260,7 +260,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
 - **DietPi-FS_partition_resize** :octicons-arrow-right-16: Added support to automatically resize F2FS and Btrfs filesystems on first boot.
 
-### Changes / Improvements / Optimisations {: id="changes-improvements-optimisations-in-71" }
+### Changes / Improvements / Optimisations{: #changes-improvements-optimisations-in-71 }
 
 - **DietPi-Software** | [**Sonarr**](../software/bittorrent/#sonarr) / [**Radarr**](../software/bittorrent/#radarr) enhancements :octicons-arrow-right-16:
 
@@ -289,7 +289,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 - **DietPi-Software** | [**Remot3.it**](../software/remote_desktop/#remot3it) :octicons-arrow-right-16: After the install finished, it is now offered to do the interactive "connectd_installer" setup directly. Neither is a reboot required, nor does any service need to run to be registered. This is especially helpful for installs via `dietpi-software install 68`, where the hint about this required setup was not shown before.
 - **DietPi-Software** | **RPi.GPIO** :octicons-arrow-right-16: This software option has been renamed to "Python 3 RPi.GPIO" to make clear that it is a Python package. In our efforts to migrate all software options to Python 3, only the Python 3 package is installed from now on. To install it for Python 2, one needs to run the following command manually form console: `apt install python-rpi.gpio`
 
-### Supported SBC (updates) {: id="supported-sbc-updates-in-71" }
+### Supported SBC (updates){: #supported-sbc-updates-in-71 }
 
 - For historical reasons, DietPi had internal **hardware identifiers** for SBCs which are not officially supported anymore for a long time, namely variouos Orange Pi and Banana Pi models, BeagleBone Black and LeMaker Guitar. Since we do not provide a reference image and do not test features on those boards, we have no chance to reasonably use those hardware IDs code-wise to apply tweaks or enable features, which renders them meaningless. To avoid wrong assumptions, we hence removed the identifies for the named SBC models.
 
@@ -297,7 +297,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
 - **Firefly RK3399 was removed** from the supported devices list, as not a single user is reported via DietPi-Survey (<https://dietpi.com/survey/#device>). If case there were actually Firefly RK3399 DietPi systems, not participating DietPi-Survey, those would be migrated to the "Generic Rockchip RK3399" identifier, which code-wise maintains the exact same support.
 
-### Bug fixes {: id="bug-fixes-in-71" }
+### Bug fixes{: #bug-fixes-in-71 }
 
 - **DietPi-Config** / **DietPi-PREP** :octicons-arrow-right-16: Resolved an issue on Debian Bullseye, when toggling serial consoles, where `/etc/securetty` is attempted to be altered even that it is not used and does not exist anymore since Debian Bullseye. Many thanks to @NastyDesertFox for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4205>
 - **DietPi-Config** :octicons-arrow-right-16: Resolved an issue on Sparky SBC, where selecting the generic USB DAC sound card option failed, due to invalid amixer calls. Many thanks to @Balmoral86 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4249>
