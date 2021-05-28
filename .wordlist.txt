@@ -127,6 +127,7 @@ FHS
 filesystem
 ForkedDaapd
 FOSS
+FPM
 FPU
 FreshRSS
 FriendlyARM
@@ -136,6 +137,7 @@ fullscreen
 FuguHub
 Gbit
 GiB
+GiBs
 GiBi
 Gilles
 Gitea
@@ -239,6 +241,7 @@ MBR
 MCrcon
 Meveric
 MiB
+MiBs
 MichaIng
 microcontroller
 microcontrollers
@@ -349,6 +352,7 @@ RDBMS
 RDP
 ReadyMedia
 RealVNC
+reconfiguring
 Remot
 renderer
 reselect
