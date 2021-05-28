@@ -188,13 +188,13 @@ Once Chromium is running, simply go to the following address: <chrome://gpu>
 
 ### Firefox
 
-![Firefox](../assets/images/dietpi-software-firefox.png)
+![Firefox logo](../assets/images/dietpi-software-firefox.png){: width="128" height="128" loading="lazy"}
 
 Firefox Browser, also known as simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation.
 
 Similar to [Chromium](#chromium), Firefox has been made a separate install option. For desktop installs users can choose between Chromium, Firefox or no web browser.
 
-![Firefox 2](../assets/images/dietpi-software-firefox-display.png)
+![Firefox screenshot](../assets/images/dietpi-software-firefox-display.png){: width="1024" height="723" loading="lazy"}
 
 ### GIMP
 
