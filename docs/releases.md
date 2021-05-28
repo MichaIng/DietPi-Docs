@@ -4,11 +4,11 @@
 
 ### New software titles {: id="new-software-72" }
 
-- [Firefox](../software/desktop/#firefox) :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the `ID 67`. A browser preference choice has been added to [DietPi-Software](../dietpi_tools/#dietpi-software). This could be enabled at the first boot, using the new option available in `dietpi.txt` file:
+- [Firefox](../software/desktop/#firefox) :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the ID **67**. A browser preference option has been added to [DietPi-Software](../dietpi_tools/#dietpi-software). This can be set prior to first boot, using the new setting available in `dietpi.txt` file:
 
     !!! hint "Configuration options"
 
-        There are available next options: `0`=None | `-1` = Firefox | `-2` = Chromium
+        There are available next options: `0` = None | `-1` = [Firefox](../software/desktop/#firefox) | `-2` = [Chromium](../software/desktop/#chromium)
 
         **Note:** This option defines the browser to be installed **only** when a [desktop](../software/#desktops) is installed. It won't be installed if no desktop is installed and a manual browser selection will override it.
 
@@ -16,7 +16,7 @@
         AUTO_SETUP_BROWSER_INDEX=-1
         ```
 
-or with the new menu entry. By doing this, the browser will be installed automatically with the [desktop](../software/#desktops) of your choice. Earlier `Firefox` was installed with every desktop, and it only played a role when a desktop was installed, being also overridden by the manual browser selection.
+or with the new menu entry. Similarly to the webserver preference, the chosen browser (or none) will be installed, (only) when a [desktop](../software/#desktops) of your choice is installed, and a manually selected browser from the full software list or software search list will override the preference. Previously, Firefox was always installed together with desktops
 
 ### New supported SBCs {: id="new-sbc-72" }
 
@@ -50,6 +50,22 @@ or with the new menu entry. By doing this, the browser will be installed automat
 
     It enables desktop autologin for non-root users more reliabe. Earlier the X server itself was started by the login user, which often required additional permissions and sometimes, based on GPU and driver, was not possible at all (without further customisation).
     The method has been changed so that LightDM is used for non-root autologins, just like it is for manual desktop logins, but logging into the desktop automatically with the chosen user.
+
+- [**DietPi-Software**](../dietpi_tools/#dietpi-software)
+
+    Along with the browser preference, a desktop preference option has been added to chose which desktop to install (only) when another software selection requires one, especially remote desktop solutions. This can be set prior to first boot, using the new setting available in `dietpi.txt` file:
+
+    !!! hint "Configuration options"
+
+        There are available next options: `0` = [LXDE](../software/desktop/#lxde) | `-1` = [Xfce](../software/desktop/#xfce) | `-2` = [MATE](../software/desktop/#mate) | `-3` = [LXQt](../software/desktop/#lxqt) | `-4` = [GNUstep](../software/desktop/#gnustep)
+
+        **Note:** This option defines the desktop to be installed **only** when another selected software requires one. It won't be installed if no other software requires a desktop and a manual desktop selection will override it.
+
+        ```sh
+        AUTO_SETUP_DESKTOP_INDEX=0
+        ```
+
+or with the new menu entry. It works like the webserver preference, so it only play a role when a desktop is installed as dependency and a manually selected desktop from the full software list or software search list will override the preference.
 
 ### Changes / Improvements / Optimisations {: id="changes-72" }
 
