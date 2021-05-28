@@ -73,7 +73,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     The DietPi Pi-hole implementation uses the official installer script, but it comes with a few differences, compared to the default official setup:
 
     1. The installer is called with the `--disable-install-webserver` flag, which skips the Lighttpd and PHP installation parts. Instead, DietPi installs Lighttpd, Nginx or Apache2, based on user choice, and PHP as standalone PHP-FPM server or module for Apache2 respectively. This allows more flexible webserver configurations as well, easy HTTPS, other web sites/applications on the same server etc. When repairing and reconfiguring Pi-hole (see "Repairing Pi-hole" tab for details), it is important to **NOT** select to install Lighttpd when being asked, as this would lead to doubled PHP and webserver installs or conflicting webserver settings.
-    2. The `/var/log/pihole.log` plain text DNS query log is disabled by default. It is a second query log implementation, as `/etc/pihole/pihole-FTL.db` is used as a database-wise log implementation already, used by the web interface to search long-term logs. If you however want to use the `pihole -t`/`pihole tail` command, to print colorised logs to console, you need to re-enable the file-based logging:
+    2. The `/var/log/pihole.log` plain text DNS query log is disabled by default. It is a second query log implementation, as `/etc/pihole/pihole-FTL.db` is used as a database-wise log implementation already, used by the web interface to search long-term logs. If you however want to use the `pihole -t`/`pihole tail` command, to print colourised logs to console, you need to re-enable the file-based logging:
 
         ```sh
         pihole -l on
