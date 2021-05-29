@@ -674,6 +674,17 @@ The following commands are non-interactive, but error-handled wrappers for `apt-
 - `G_AGUG` - `apt-get upgrade`
 - `G_AGDUG` - `apt-get dist-upgrade`
 
+### DietPi Banner
+
+Enables the configuration of the initial banner, displayed on logon.
+Run `dietpi-banner`.
+
+![DietPi-Banner config menu](assets/images/dietpi-banner_config.jpg){: width="643" height="338" loading="lazy"}
+
+Using these settings you can configure the information displayed initially, choosing the details displayed initially. See below an example where 4 options are selected:
+
+![DietPi-Banner print on login](assets/images/dietpi-banner.jpg){: width="636" height="359" loading="lazy"}
+
 ### DietPi CPU info
 
 Displays CPU temperature, processor frequency, throttle level etc.  

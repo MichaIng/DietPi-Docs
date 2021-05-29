@@ -13,6 +13,7 @@
 ### Desktop Utilities
 
 - [**Chromium - Web browser**](#chromium)
+- [**Firefox - Web browser**](#firefox)
 - [**GIMP - Image editor**](#gimp)
 - [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss)
 - [**Xfce Power Manager - Power manager with brightness control**](#xfce-power-manager)
@@ -184,6 +185,16 @@ Once Chromium is running, simply go to the following address: <chrome://gpu>
 - with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... many-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
 
 ![Chromium screenshot](../assets/images/dietpi-software-desktop-tools-chromium.jpg){: width="1376" height="858" loading="lazy"}
+
+### Firefox
+
+![Firefox logo](../assets/images/dietpi-software-firefox.png){: width="128" height="128" loading="lazy"}
+
+Firefox Browser, also known as simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation.
+
+Similar to [Chromium](#chromium), Firefox has been made a separate install option. For desktop installs users can choose between Chromium, Firefox or no web browser.
+
+![Firefox screenshot](../assets/images/dietpi-software-firefox-display.png){: width="1024" height="723" loading="lazy"}
 
 ### GIMP
 

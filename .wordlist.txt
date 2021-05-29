@@ -1,4 +1,5 @@
 addictiveness
+addon
 ADF
 advanxer
 AGPLv
@@ -109,10 +110,11 @@ EEPROM
 Emby
 eMMC
 emoncms
-EmonCMS
-EmonPi
-EmonTH
-EmonTX
+emonCMS
+emonHub
+emonPi
+emonTH
+emonTX
 EPL
 EQ
 ESXi
@@ -177,6 +179,7 @@ Imgur
 InfluxData
 InfluxDB
 InterPlanetary
+io
 IoT
 IPFS
 IPsec
@@ -190,6 +193,7 @@ Joulinar
 journalctl
 journald
 JS
+js
 JSON
 JustBoom
 Kbit
@@ -216,6 +220,7 @@ Lidarr
 LightDM
 Lighttpd
 Lighty
+LinkedIn
 LLMP
 LLSP
 LMS
@@ -278,6 +283,7 @@ Netdata
 Nextcloud
 NFS
 Nginx
+nodejs
 nm
 Nmap
 NoMachine
@@ -293,6 +299,7 @@ OctoPrint
 Odroid
 Odroids
 Ok
+OOTB
 Oldschool
 OPcache
 OpenBazaar
@@ -370,6 +377,7 @@ SABnzbd
 SATA
 SBC
 SBCs
+scalable
 SCP
 scroller
 SDL
@@ -425,6 +433,7 @@ transactional
 transcoding
 TRÅDFRI
 TTS
+Tumblr
 Tyrian
 uae
 UART
@@ -446,6 +455,7 @@ UrBackup
 userdata
 userspace
 UUID
+vaultwarden
 Viebrock
 VirtualBox
 VirtualHere

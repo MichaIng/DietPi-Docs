@@ -56,7 +56,7 @@
 - [**Syncthing - Backup and sync server with web interface**](../software/cloud/#syncthing)
 - [**MinIO - S3 compatible distributed object server**](../software/cloud/#minio)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](../software/cloud/#firefox-sync-server)
-- [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#bitwarden_rs)
+- [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](../software/cloud/#fuguhub)
 
 ## [Databases & Data Stores](../software/databases/#overview)
@@ -139,7 +139,7 @@
 ## [Home Automation](../software/home_automation/)
 
 - [**Home Assistant - Open-source home automation platform running on Python 3**](../software/home_automation/#home-assistant)
-- [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](../software/home_automation/#emonpi)
+- [**emonHub - Data collector for the emonPi energy monitor addon board**](../software/home_automation/#emonhub)
 - [**Domoticz - Multi platform Home Automation System**](../software/home_automation/#domoticz)
 - [**TasmoAdmin - Administrative website for Tasmota devices**](../software/home_automation/#tasmoadmin)
 
