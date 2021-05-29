@@ -18,11 +18,11 @@
 
         ```sh
         AUTO_SETUP_BROWSER_INDEX=-1
-        ```
+            ```
 
     Web browser will be installed _only_ when a [desktop](../software/#desktops) is installed. It's similar to the webserver preference where an webserver will ONLY be installed when another software title requires it.
 
-    **Why this change?** Instead of having **always** Firefox installed when a desktop got selected (or pulled as dependency e.g. a VNC server), now you can choose whether Firefox, Chromium or _no browser_ will be installed.
+    **Why this change ?** Instead of having **always** Firefox installed when a desktop got selected (or pulled as dependency e.g. a VNC server), now you can choose whether Firefox, Chromium or _no browser_ will be installed.
 
     It is not an _"install this browser now"_ selection, like for file server, SSH server or logging system, it's a preference selection.
 
@@ -52,7 +52,7 @@
 
     When "Reset" is selected, you're now offered to purge the OpenVPN package, as long as neither the OpenVPN (server) install option nor PiVPN is installed. Many thanks to @maartenlangeveld for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4346>.
 
-    Allow inbound packets from the loopback interface. It  is required to communicate with local servers (e.g. Pi-hole) running on the same machine, as the connection doesn't count as established yet when the packets haven't been accepted by the server yet.
+    Allow inbound packets from the loopback interface. It is required to communicate with local servers (e.g. Pi-hole) running on the same machine, as the connection doesn't count as established yet when the packets haven't been accepted by the server yet.
 
 - [**DietPi-AutoStart**](../dietpi_tools/#dietpi-autostart)
 
@@ -77,7 +77,6 @@ or with the new menu entry. It works like the webserver preference, so it only p
 
 ### Changes / Improvements / Optimisations {: #changes-72 }
 
-- [DietPi-Config](../dietpi_tools/#dietpi-configuration) | On [Raspberry Pi](../hardware/#raspberry-pi), the Allo Boss2 DAC can now be selected from the sound card list. The OLED display that comes with this product currently needs to be installed manually by following Allo's instructions, but will be natively integrated into DietPi with the next release v7.3.
 - [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On Raspberry Pi, a new updated fork of the deprecated original project is now used, which enables support for [Raspberry Pi 4, Raspberry Pi 400 and Raspberry Compute Module (CM) 4](../hardware/#raspberry-pi) - see <https://github.com/WiringPi/WiringPi>.
 - [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On new installs and reinstalls, the source/examples directory is now installed to `/mnt/dietpi_userdata/WiringPi` instead of `/root/wiringPi`, to enable general access to non-root users.
 - [DietPi-Software | **Node.js**](../software/webserver_stack/#nodejs) :octicons-arrow-right-16: On ARMv6, new Node.js versions are now installed via unofficial builds. Official builds for ARMv6 are provided up to Node v11 only. Many thanks to @ollliegits for adding support for this builds to our Node.js installer fork: <https://github.com/MichaIng/nodejs-linux-installer/pull/2>.
