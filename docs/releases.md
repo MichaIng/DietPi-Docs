@@ -18,11 +18,11 @@
 
         ```sh
         AUTO_SETUP_BROWSER_INDEX=-1
-            ```
+        ```
 
     Web browser will be installed _only_ when a [desktop](../software/#desktops) is installed. It's similar to the webserver preference where an webserver will ONLY be installed when another software title requires it.
 
-    **Why this change ?** Instead of having **always** Firefox installed when a desktop got selected (or pulled as dependency e.g. a VNC server), now you can choose whether Firefox, Chromium or _no browser_ will be installed.
+    **Why this change?** Instead of having **always** Firefox installed when a desktop got selected (or pulled as dependency e.g. a VNC server), now you can choose whether Firefox, Chromium or _no browser_ will be installed.
 
     It is not an _"install this browser now"_ selection, like for file server, SSH server or logging system, it's a preference selection.
 
@@ -366,7 +366,7 @@ This new version includes **4 new software titles** :octicons-paper-airplane-16:
 
 Docker Compose is a tool to define and run multi-container Docker applications. It can now be installed through our software selection. [Docker](../software/programming/#docker) will be pulled-in automatically (as dependency).
 
-**What would Docker Compose bring to you ?**
+**What would Docker Compose bring to you?**
 
 Whenever you have multiple containers :octicons-server-16: , there are many tasks you need to do: deploy and configure each individual container, and configure them to talk to each other as well. This will be tedious even with few containers.
 
@@ -531,11 +531,11 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 ### New supported SBC
 
- New [Raspberry Pi 400](https://www.raspberrypi.org/blog/raspberry-pi-400-the-70-desktop-pc/) is now fully supported. Inspired by the home computers of the 1980s, Raspberry Pi 400 is a complete personal computer, built into a compact keyboard.
+New [Raspberry Pi 400](https://www.raspberrypi.org/blog/raspberry-pi-400-the-70-desktop-pc/) is now fully supported. Inspired by the home computers of the 1980s, Raspberry Pi 400 is a complete personal computer, built into a compact keyboard.
 
- For more details on how to install DietPi, check the [documentation](../hardware/#raspberry-pi).
+For more details on how to install DietPi, check the [documentation](../hardware/#raspberry-pi).
 
- ![Raspberry Pi 400 photo](assets/images/dietpi-raspberry-pi-400-back.jpg){: width="800" height="571" loading="lazy"}
+![Raspberry Pi 400 photo](assets/images/dietpi-raspberry-pi-400-back.jpg){: width="800" height="571" loading="lazy"}
 
 ### Changes / Improvements / Optimisations
 
