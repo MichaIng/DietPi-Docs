@@ -52,7 +52,7 @@
 
     When "Reset" is selected, you're now offered to purge the OpenVPN package, as long as neither the OpenVPN (server) install option nor PiVPN is installed. Many thanks to @maartenlangeveld for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4346>.
 
-    Allow inbound packets from the loopback interface. It  is required to communicate with local servers (e.g. Pi-hole) running on the same machine, as the connection doesn't count as established yet when the packets haven't been accepted by the server yet.
+    Allow inbound packets from the loopback interface. It is required to communicate with local servers (e.g. Pi-hole) running on the same machine, as the connection doesn't count as established yet when the packets haven't been accepted by the server yet.
 
 - [**DietPi-AutoStart**](../dietpi_tools/#dietpi-autostart)
 
@@ -77,10 +77,11 @@ or with the new menu entry. It works like the webserver preference, so it only p
 
 ### Changes / Improvements / Optimisations {: #changes-72 }
 
+- [DietPi-Config](../dietpi_tools/#dietpi-configuration) | On [Raspberry Pi](../hardware/#raspberry-pi), the Allo Boss2 DAC can now be selected from the sound card list. The OLED display that comes with this product currently needs to be installed manually by following Allo's instructions, but will be natively integrated into DietPi with the next release v7.3.
 - [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On Raspberry Pi, a new updated fork of the deprecated original project is now used, which enables support for [Raspberry Pi 4, Raspberry Pi 400 and Raspberry Compute Module (CM) 4](../hardware/#raspberry-pi) - see <https://github.com/WiringPi/WiringPi>.
 - [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On new installs and reinstalls, the source/examples directory is now installed to `/mnt/dietpi_userdata/WiringPi` instead of `/root/wiringPi`, to enable general access to non-root users.
 - [DietPi-Software | **Node.js**](../software/webserver_stack/#nodejs) :octicons-arrow-right-16: On ARMv6, new Node.js versions are now installed via unofficial builds. Official builds for ARMv6 are provided up to Node v11 only. Many thanks to @ollliegits for adding support for this builds to our Node.js installer fork: <https://github.com/MichaIng/nodejs-linux-installer/pull/2>.
-- [DietPi-Software | **EmonPi**](../software/home_automation/#emonpi) :octicons-arrow-right-16: This software option has been renamed to `emonHub`, the name of the data collector for the "emonPi" RPi energy monitor addon board. A much newer Python 3 compatible version form the official OpenEnergyMonitor repository is installed from now on, providing additional features and fixes.
+- [DietPi-Software | **EmonPi**](../software/home_automation/#emonhub) :octicons-arrow-right-16: This software option has been renamed to `emonHub`, the name of the data collector for the "emonPi" RPi energy monitor addon board. A much newer Python 3 compatible version form the official OpenEnergyMonitor repository is installed from now on, providing additional features and fixes.
 - [DietPi-Software | **RPi Cam Control**](../software/camera/#rpi-cam-control) :octicons-arrow-right-16: This install option has been disabled for 64-bit systems. It uses a 32-bit/armhf raspimjpeg binary that depends in 32-bit/armhf C library. It will be re-enabled once the project maintainer or we provide a native 64-bit/arm64 raspimjpeg binary.
 - [DietPi-Software | **Roon Extension Manager**](../software/media/#roon-extension-manager) :octicons-arrow-right-16: After a major upgrade to v1.0, it is now implemented as Docker container, rather than as Node.js module. The upgrade can be applied by manually running next:
 
@@ -89,6 +90,7 @@ or with the new menu entry. It works like the webserver preference, so it only p
     ```
 
     Many thanks to @JanKoudijs for developing Roon Extension Manager and implementing the required changes into `DietPi-Software`: <https://github.com/MichaIng/DietPi/pull/4399>.
+- [DietPi-Software | **Pi-hole**](../software/dns_servers/#pi-hole) :octicons-arrow-right-16: New installs and reinstall will have the DNS query logging duration reduced to 2 days. An internal discussion revealed that no-one of us uses logs old than a few hours, while those are kept for a year by default, leading to database sizes from hundreds of MiBs to GiBs. We leave it at 2 days so that dashboard graphs/diagrams are not empty on Pi-hole (re)start. Users who require long-term DNS query data for statistics or similar, can easily increase the TTL, shown as well in our docs.
 
 ### Bug Fixes {: #bug-fixes-72 }
 
@@ -104,16 +106,17 @@ or with the new menu entry. It works like the webserver preference, so it only p
 - [DietPi-Config](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Resolved an issue where changing the locale generated it but did not apply it as new system default. Many thanks to @bamyasi for reporting the issue: [MichaIng/DietPi#3515](https://github.com/MichaIng/DietPi/issues/3515#issuecomment-840751875)
 - [DietPi-Software | Python 3](../software/programming/#python-3) :octicons-arrow-right-16: Resolved an issue where installing pip on Stretch systems failed, due to a changed download URL. Many thanks to @tfmeier for reporting this issue: [docker-compose fails to install on Pine A64 on DietPi 7.1.2](https://dietpi.com/phpbb/viewtopic.php?t=8968)
 - [DietPi-Software | Webmin](../software/system_stats/#webmin) :octicons-arrow-right-16: Resolved an issue where restarts from the web interface only stopped the service. Many thanks to @Burgess85 and @Keridos for reporting this issue: [Webmin](https://dietpi.com/phpbb/viewtopic.php?t=8839), <https://github.com/MichaIng/DietPi/pull/4331>.
-- [DietPi-Software | Docker Compose](../software/programming/#docker-compose) :octicons-arrow-right-16: Resolved an issue on ARMv8 Debian Stretch systems, where the install failed because of missing development headers. Many thanks to @tfmeier for reporting this issue: [docker-compose fails to install on Pine A64 on DietPi 7.1.2](https://dietpi.com/phpbb/viewtopic.php?p=34293#p34293)
+- [DietPi-Software | Docker Compose](../software/programming/#docker-compose) :octicons-arrow-right-16: Resolved an issue on ARMv8 Debian Stretch systems, where the install failed because of missing development headers. Many thanks to [phpBB:tfmeier](https://dietpi.com/phpbb/memberlist.php?username=tfmeier) for reporting this issue: [docker-compose fails to install on Pine A64 on DietPi 7.1.2](https://dietpi.com/phpbb/viewtopic.php?p=34293#p34293)
 - [DietPi-Software | rTorrent](../software/bittorrent/#rtorrent) :octicons-arrow-right-16: Resolved an issue where pre-v7.1 reinstalls with Lighttpd did not update the webserver configuration to provide the new RPC socket proxy. Many thanks to @bbsixzz for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4330>.
 - [DietPi-Software | rTorrent](../software/bittorrent/#rtorrent) :octicons-arrow-right-16: Resolved an issue where v7.1 reinstalls failed. Many thanks to @Joulinar for fixing it.
 - [DietPi-Software | Radarr](../software/bittorrent/#radarr) :octicons-arrow-right-16: Resolved an issue where an older fallback version was installed, rather than the latest one. Many thanks to @Takerman for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4350>.
 - [DietPi-Software | Node.js](../software/webserver_stack/#nodejs) :octicons-arrow-right-16: Resolved an issue on ARMv6 where installing further modules via web interface failed, as an incompatible Node.js version was installed. The latest Node.js version is now installed via unofficial builds (see changes above). Many thanks to @torwan for reporting this issue: [Node Red update and add-ons fail @ DietPi @ Raspberry Pi Zero W](https://dietpi.com/phpbb/viewtopic.php?t=8944).
 - [DietPi-Software | RPi Cam Control](../software/camera/#rpi-cam-control) :octicons-arrow-right-16: Resolved two issues: Reinstalls failed when certain files in the web interface existed already and the shutdown and reboot buttons from the web interface failed due to insufficient webserver permissions.
-- [DietPi-Software | Kodi](../software/media/#kodi) :octicons-arrow-right-16: Resolved an issue where an attempt was made during install to create a desktop entry, even if no desktop environment was installed. Many thanks to @sidgeg for reporting this issue: [Kodi Install Issues](https://dietpi.com/phpbb/viewtopic.php?t=8995).
+- [DietPi-Software | Kodi](../software/media/#kodi) :octicons-arrow-right-16: Resolved an issue where an attempt was made during install to create a desktop entry, even if no desktop environment was installed. Many thanks to [phpBB:sidgeg](https://dietpi.com/phpbb/memberlist.php?username=sidgeg) for reporting this issue: [Kodi Install Issues](https://dietpi.com/phpbb/viewtopic.php?t=8995).
 - [DietPi-Software | Bitwarden_RS](../software/cloud/#bitwarden_rs) :octicons-arrow-right-16: This project has been renamed by its author into "vaultwarden", to avoid confusion and potential legal issues with original Bitwarden software. This caused our install option to fail. To apply this important change to all Bitwarden_RS instances, it will be migrated via reinstall during DietPi update. As compiling can take up to several hours, users are informed at the beginning of the DietPi update, with the option to cancel and apply it at a later time. All data and configs will be preserved during the reinstall. Many thanks to @math-gout for informing us about this change: <https://github.com/MichaIng/DietPi/issues/4325>.
 - [DietPi-Software | Home Assistant](../software/home_automation/#home-assistant) :octicons-arrow-right-16: Resolved an issue where the install failed, as running `pyenv init -` does not complement the PATH variable anymore.
 - [DietPi-Software | Mosquitto](../software/hardware_projects/#mosquitto) :octicons-arrow-right-16: Resolved an issue where the install failed on ARMv8 systems. Many thanks to @fra87 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4424>
+- [DietPi-Software | Kodi](../software/media/#kodi) :octicons-arrow-right-16: Resolved an issue on 64-bit RPi systems, where starting Kodi outside of a desktop session (e.g. using the Kodi [dietpi-autostart](../dietpi_tools/#dietpi-autostart) option) failed, as our script tried to start it without X server (intended on 32-bit RPi systems). Many thanks to [phpBB:Milemar](https://dietpi.com/phpbb/memberlist.php?username=Milemar) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=9030>
 
 ### Removed Software {: #removed-software-72 }
 
@@ -366,7 +369,7 @@ This new version includes **4 new software titles** :octicons-paper-airplane-16:
 
 Docker Compose is a tool to define and run multi-container Docker applications. It can now be installed through our software selection. [Docker](../software/programming/#docker) will be pulled-in automatically (as dependency).
 
-**What would Docker Compose bring to you ?**
+**What would Docker Compose bring to you?**
 
 Whenever you have multiple containers :octicons-server-16: , there are many tasks you need to do: deploy and configure each individual container, and configure them to talk to each other as well. This will be tedious even with few containers.
 
@@ -531,11 +534,11 @@ Many thanks to @CactiChameleon9 for implementing this software option (MichaIng/
 
 ### New supported SBC
 
- New [Raspberry Pi 400](https://www.raspberrypi.org/blog/raspberry-pi-400-the-70-desktop-pc/) is now fully supported. Inspired by the home computers of the 1980s, Raspberry Pi 400 is a complete personal computer, built into a compact keyboard.
+New [Raspberry Pi 400](https://www.raspberrypi.org/blog/raspberry-pi-400-the-70-desktop-pc/) is now fully supported. Inspired by the home computers of the 1980s, Raspberry Pi 400 is a complete personal computer, built into a compact keyboard.
 
- For more details on how to install DietPi, check the [documentation](../hardware/#raspberry-pi).
+For more details on how to install DietPi, check the [documentation](../hardware/#raspberry-pi).
 
- ![Raspberry Pi 400 photo](assets/images/dietpi-raspberry-pi-400-back.jpg){: width="800" height="571" loading="lazy"}
+![Raspberry Pi 400 photo](assets/images/dietpi-raspberry-pi-400-back.jpg){: width="800" height="571" loading="lazy"}
 
 ### Changes / Improvements / Optimisations
 
