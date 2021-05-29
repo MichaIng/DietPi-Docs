@@ -20,8 +20,9 @@
 
 [**Web development - Programming & Frameworks**](#web-development-programming-frameworks)
 
-- [**Flask - Micro web framework powered by Python**](#flask)
+- [**Flask** - Micro web framework powered by Python](#flask)
 - [**PHP** - Scripting language suited to web development](#php)
+- [**Node.js** - JavaScript runtime designed to build scalable network applications](#nodejs)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -581,6 +582,27 @@ Website: <https://palletsprojects.com/p/flask>
 Official documentation: <https://flask.palletsprojects.com/en/1.1.x>  
 PyPI package page: <https://pypi.org/project/Flask>
 
+### Node.js {: #nodejs }
+
+Node.js is JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+![Node.js](../assets/images/dietpi-software-nodejs.jpg)
+
+Source: By [nodejs.org](https://nodejs.org), [Trademark policy](https://nodejs.org/en/about/trademark/)
+
+By using the event-callback/non-blocking approach, Node.js offers a single-threaded event-io model that allows orchestration of tasks running in parallel. It supports multiple connections without a need for a large memory footprint. Amazon, Netflix, eBay, Reddit, LinkedIn, Tumblr, and PayPal use Node.js.[^5]
+
+=== "Node.js version"
+
+    Starting with version 7.2, DietPi added support for [Node.js unofficials builds from unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/). In this way, you can get the benefits of using the latest Node.js version.
+    
+    _Why this ?_ We believe that's important and more secure to use the most recent version. At the moment of writing the documentation, latest official ARMv6 build for Node.js has the version 11 and the latest _unofficial build_ issued by Node.js is v15.14.  
+
+***
+
+Website: <https://nodejs.org/>  
+Official documentation: <https://nodejs.org/api/>  
+
 [^1]:
     Find out more about the success stories of Nginx on: <https://nginx.org/en/>
 [^2]:
@@ -589,5 +611,7 @@ PyPI package page: <https://pypi.org/project/Flask>
     [Most Widely Deployed and Used Database Engine](https://www.sqlite.org/mostdeployed.html). Retrieved 12 December 2020
 [^4]:
     [NGINX vs. Apache: Our View of a Decade-Old Question](https://www.nginx.com/blog/nginx-vs-apache-our-view/). Retrieved 12 December 2020
+
+[^5]: https://hostingtribunal.com/blog/node-js-stats/#gref . Retrieved 29 May 2021
 
 [Return to the **Optimised Software list**](../../software/)

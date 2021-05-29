@@ -2,9 +2,13 @@
 
 ## May 2021 (version 7.2) {: #may-2021-version-72 }
 
-### New software titles {: #new-software-72 }
+### New software title {: #new-software-72 }
 
-- [Firefox](../software/desktop/#firefox) :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the ID **67**. A browser preference option has been added to [DietPi-Software](../dietpi_tools/#dietpi-software). This can be set prior to first boot, using the new setting available in `dietpi.txt` file:
+- [Firefox](../software/desktop/#firefox) :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the ID **67**. A browser preference option has been added to [DietPi-Software](../dietpi_tools/#dietpi-software). 
+
+    ![DietPi Browser preference](assets/images/dietpi-software-browser-preference.jpg){: width="500" height="272" loading="lazy"}
+
+    This can be set prior to first boot, using the new setting available in `dietpi.txt` file:
 
     !!! hint "Configuration options"
 
@@ -14,9 +18,13 @@
 
         ```sh
         AUTO_SETUP_BROWSER_INDEX=-1
-        ```
+            ```
 
-or with the new menu entry. Similarly to the webserver preference, the chosen browser (or none) will be installed, (only) when a [desktop](../software/#desktops) of your choice is installed, and a manually selected browser from the full software list or software search list will override the preference. Previously, Firefox was always installed together with desktops
+    Web browser will be installed _only_ when a [desktop](../software/#desktops) is installed. It's similar to the webserver preference where an webserver will ONLY be installed when another software title requires it. 
+        
+    **Why this change ?** Instead of having **always** Firefox installed when a desktop got selected (or pulled as dependency e.g. a VNC server), now you can choose whether Firefox, Chromium or _no browser_ will be installed. 
+        
+    It is not an _"install this browser now"_ selection, like for file server, SSH server or logging system, it's a preference selection.
 
 ### New supported SBCs {: #new-sbc-72 }
 
@@ -71,7 +79,7 @@ or with the new menu entry. It works like the webserver preference, so it only p
 
 - [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On Raspberry Pi, a new updated fork of the deprecated original project is now used, which enables support for [Raspberry Pi 4, Raspberry Pi 400 and Raspberry Compute Module (CM) 4](../hardware/#raspberry-pi) - see <https://github.com/WiringPi/WiringPi>.
 - [DietPi-Software | **WiringPi**](../software/hardware_projects/#wiringpi) :octicons-arrow-right-16: On new installs and reinstalls, the source/examples directory is now installed to `/mnt/dietpi_userdata/WiringPi` instead of `/root/wiringPi`, to enable general access to non-root users.
-- DietPi-Software | **Node.js** :octicons-arrow-right-16: On ARMv6, new Node.js versions are now installed via unofficial builds. Official builds for ARMv6 are provided up to Node v11 only. Many thanks to @ollliegits for adding support for this builds to our Node.js installer fork: <https://github.com/MichaIng/nodejs-linux-installer/pull/2>.
+- [DietPi-Software | **Node.js**](../software/webserver_stack/#nodejs) :octicons-arrow-right-16: On ARMv6, new Node.js versions are now installed via unofficial builds. Official builds for ARMv6 are provided up to Node v11 only. Many thanks to @ollliegits for adding support for this builds to our Node.js installer fork: <https://github.com/MichaIng/nodejs-linux-installer/pull/2>.
 - [DietPi-Software | **EmonPi**](../software/home_automation/#emonpi) :octicons-arrow-right-16: This software option has been renamed to `emonHub`, the name of the data collector for the "emonPi" RPi energy monitor addon board. A much newer Python 3 compatible version form the official OpenEnergyMonitor repository is installed from now on, providing additional features and fixes.
 - [DietPi-Software | **RPi Cam Control**](../software/camera/#rpi-cam-control) :octicons-arrow-right-16: This install option has been disabled for 64-bit systems. It uses a 32-bit/armhf raspimjpeg binary that depends in 32-bit/armhf C library. It will be re-enabled once the project maintainer or we provide a native 64-bit/arm64 raspimjpeg binary.
 - [DietPi-Software | **Roon Extension Manager**](../software/media/#roon-extension-manager) :octicons-arrow-right-16: After a major upgrade to v1.0, it is now implemented as Docker container, rather than as Node.js module. The upgrade can be applied by manually running next:
@@ -100,7 +108,7 @@ or with the new menu entry. It works like the webserver preference, so it only p
 - [DietPi-Software | rTorrent](../software/bittorrent/#rtorrent) :octicons-arrow-right-16: Resolved an issue where pre-v7.1 reinstalls with Lighttpd did not update the webserver configuration to provide the new RPC socket proxy. Many thanks to @bbsixzz for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4330>.
 - [DietPi-Software | rTorrent](../software/bittorrent/#rtorrent) :octicons-arrow-right-16: Resolved an issue where v7.1 reinstalls failed. Many thanks to @Joulinar for fixing it.
 - [DietPi-Software | Radarr](../software/bittorrent/#radarr) :octicons-arrow-right-16: Resolved an issue where an older fallback version was installed, rather than the latest one. Many thanks to @Takerman for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4350>.
-- DietPi-Software | Node.js :octicons-arrow-right-16: Resolved an issue on ARMv6 where installing further modules via web interface failed, as an incompatible Node.js version was installed. The latest Node.js version is now installed via unofficial builds (see changes above). Many thanks to @torwan for reporting this issue: [Node Red update and add-ons fail @ DietPi @ Raspberry Pi Zero W](https://dietpi.com/phpbb/viewtopic.php?t=8944).
+- [DietPi-Software | Node.js](../software/webserver_stack/#nodejs) :octicons-arrow-right-16: Resolved an issue on ARMv6 where installing further modules via web interface failed, as an incompatible Node.js version was installed. The latest Node.js version is now installed via unofficial builds (see changes above). Many thanks to @torwan for reporting this issue: [Node Red update and add-ons fail @ DietPi @ Raspberry Pi Zero W](https://dietpi.com/phpbb/viewtopic.php?t=8944).
 - [DietPi-Software | RPi Cam Control](../software/camera/#rpi-cam-control) :octicons-arrow-right-16: Resolved two issues: Reinstalls failed when certain files in the web interface existed already and the shutdown and reboot buttons from the web interface failed due to insufficient webserver permissions.
 - [DietPi-Software | Kodi](../software/media/#kodi) :octicons-arrow-right-16: Resolved an issue where an attempt was made during install to create a desktop entry, even if no desktop environment was installed. Many thanks to @sidgeg for reporting this issue: [Kodi Install Issues](https://dietpi.com/phpbb/viewtopic.php?t=8995).
 - [DietPi-Software | Bitwarden_RS](../software/cloud/#bitwarden_rs) :octicons-arrow-right-16: This project has been renamed by its author into "vaultwarden", to avoid confusion and potential legal issues with original Bitwarden software. This caused our install option to fail. To apply this important change to all Bitwarden_RS instances, it will be migrated via reinstall during DietPi update. As compiling can take up to several hours, users are informed at the beginning of the DietPi update, with the option to cancel and apply it at a later time. All data and configs will be preserved during the reinstall. Many thanks to @math-gout for informing us about this change: <https://github.com/MichaIng/DietPi/issues/4325>.
