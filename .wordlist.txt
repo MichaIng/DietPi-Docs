@@ -179,6 +179,7 @@ Imgur
 InfluxData
 InfluxDB
 InterPlanetary
+io
 IoT
 IPFS
 IPsec
@@ -192,6 +193,7 @@ Joulinar
 journalctl
 journald
 JS
+js
 JSON
 JustBoom
 Kbit
@@ -218,6 +220,7 @@ Lidarr
 LightDM
 Lighttpd
 Lighty
+LinkedIn
 LLMP
 LLSP
 LMS
@@ -280,6 +283,7 @@ Netdata
 Nextcloud
 NFS
 Nginx
+nodejs
 nm
 Nmap
 NoMachine
@@ -373,6 +377,7 @@ SABnzbd
 SATA
 SBC
 SBCs
+scalable
 SCP
 scroller
 SDL
@@ -428,6 +433,7 @@ transactional
 transcoding
 TRÅDFRI
 TTS
+Tumblr
 Tyrian
 uae
 UART

@@ -4,7 +4,7 @@
 
 ### New software title {: #new-software-72 }
 
-- [Firefox](../software/desktop/#firefox) :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the ID **67**. A browser preference option has been added to [DietPi-Software](../dietpi_tools/#dietpi-software). 
+- [Firefox](../software/desktop/#firefox) :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the ID **67**. A browser preference option has been added to [DietPi-Software](../dietpi_tools/#dietpi-software).
 
     ![DietPi Browser preference](assets/images/dietpi-software-browser-preference.jpg){: width="500" height="272" loading="lazy"}
 
@@ -20,10 +20,10 @@
         AUTO_SETUP_BROWSER_INDEX=-1
             ```
 
-    Web browser will be installed _only_ when a [desktop](../software/#desktops) is installed. It's similar to the webserver preference where an webserver will ONLY be installed when another software title requires it. 
-        
-    **Why this change ?** Instead of having **always** Firefox installed when a desktop got selected (or pulled as dependency e.g. a VNC server), now you can choose whether Firefox, Chromium or _no browser_ will be installed. 
-        
+    Web browser will be installed _only_ when a [desktop](../software/#desktops) is installed. It's similar to the webserver preference where an webserver will ONLY be installed when another software title requires it.
+
+    **Why this change ?** Instead of having **always** Firefox installed when a desktop got selected (or pulled as dependency e.g. a VNC server), now you can choose whether Firefox, Chromium or _no browser_ will be installed.
+
     It is not an _"install this browser now"_ selection, like for file server, SSH server or logging system, it's a preference selection.
 
 ### New supported SBCs {: #new-sbc-72 }

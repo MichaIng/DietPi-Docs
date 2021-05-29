@@ -594,7 +594,7 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
 
 === "Node.js version"
 
-    Starting with version 7.2, DietPi added support for [Node.js unofficials builds from unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/). In this way, you can get the benefits of using the latest Node.js version.
+    Starting with version 7.2, DietPi added support for [Node.js unofficial builds from unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/). In this way, you can get the benefits of using the latest Node.js version.
     
     _Why this ?_ We believe that's important and more secure to use the most recent version. At the moment of writing the documentation, latest official ARMv6 build for Node.js has the version 11 and the latest _unofficial build_ issued by Node.js is v15.14.  
 
@@ -612,6 +612,6 @@ Official documentation: <https://nodejs.org/api/>
 [^4]:
     [NGINX vs. Apache: Our View of a Decade-Old Question](https://www.nginx.com/blog/nginx-vs-apache-our-view/). Retrieved 12 December 2020
 
-[^5]: https://hostingtribunal.com/blog/node-js-stats/#gref . Retrieved 29 May 2021
+[^5]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
 
 [Return to the **Optimised Software list**](../../software/)
