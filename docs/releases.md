@@ -2,7 +2,19 @@
 
 ## May 2021 (version 7.2) {: #may-2021-version-72 }
 
-### New software title {: #new-software-72 }
+### Overview
+
+Welcome to **May 2021 release** :octicons-heart-16: of **DietPi**.
+
+With this release we bring more details on things which will be delivered within current iteration. Check always the iteration planning page in [DietPi Wiki](https://github.com/MichaIng/DietPi/wiki/Iteration-plans) to see what will be delivered next !  
+
+This release extend the support for new SBCs, add new providers for `DietPi-DDNS` and `DietPi-VPN`, and also brings a new configuration option for browser selection.
+
+Plus, more enhancements & bug fixes !
+
+![DietPi Version 7.2](assets/images/dietpi-version-72.jpg){: width="320" height="427" loading="lazy"}
+
+### Browser preference option {: #new-software-72 }
 
 - [Firefox](../software/desktop/#firefox) :octicons-arrow-right-16: The Mozilla Firefox browser has now become an independent software option with the ID **67**. A browser preference option has been added to [DietPi-Software](../dietpi_tools/#dietpi-software).
 
