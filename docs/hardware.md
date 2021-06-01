@@ -155,6 +155,12 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>Pinebook Pro</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PinebookPro-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>ROCK64</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK64-ARMv8-Buster.7z">DietPi image</a></li>
@@ -378,9 +384,21 @@ For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) websi
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>NanoPi R1</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR1-ARMv7-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>NanoPi R2S</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR2S-ARMv8-Buster.7z">DietPi image</a></li>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>NanoPi R4S</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR4S-ARMv8-Buster.7z">DietPi image</a></li>
                 </td>
             </tr>
             <tr>
