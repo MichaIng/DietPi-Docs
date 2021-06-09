@@ -86,7 +86,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: width="550" height="370" loading="lazy"}
 
-    See also <https://dietpi.com/docs/software/log_system/>.
+    See also <../software/log_system/>.
 
 === "Webserver Preference"
 
