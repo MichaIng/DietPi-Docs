@@ -26,7 +26,7 @@ The *Log System* can be changed at any time by running `dietpi-software` and sel
     To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 ???+ seealso "Examining the logging information"
-    A description of the basic log information display and filter option is given in the [HowTo section of the DietPi documentation](../../usage).
+    A description of the basic log information display and filter option is given in the [HowTo section of the DietPi documentation](../../usage/).
 
 [Return to the **Optimised Software list**](../../software/)
 
