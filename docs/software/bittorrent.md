@@ -52,7 +52,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Transmission:
 
     - folder accessed via file server = `downloads`
@@ -117,7 +117,7 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Deluge:
 
     - Folder accessed via file server = `downloads`
@@ -146,7 +146,7 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by qBittorrent:
 
     - Folder accessed via file server = `downloads`
@@ -194,7 +194,7 @@ Also installs:
 
 === "Access downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by rTorrent:
 
     - Folder accessed via file server = `downloads`
@@ -291,7 +291,7 @@ Also installs:
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Aria2:
 
     - Folder accessed via file server = `downloads`
@@ -346,7 +346,7 @@ NZB download manager with web interface.
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by SABnzbd:
 
     - folder accessed via file server = `downloads/complete`
@@ -686,7 +686,7 @@ Recommend additional software:
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Transmission:
 
     - Folder accessed via file server = `downloads`
@@ -743,7 +743,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Transmission:
 
     - Folder accessed via file server = `downloads/complete`
