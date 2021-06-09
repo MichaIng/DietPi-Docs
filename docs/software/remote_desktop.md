@@ -32,7 +32,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 !!! info Desktop environment
 
-    From the list of **Browse Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
+    From the list of **Browse Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop/). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
 
 [Return to the **Optimised Software list**](../../software/)
 
