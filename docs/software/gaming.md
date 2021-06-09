@@ -10,21 +10,23 @@
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth)
 - [**Steam - Steam client**](#steam)
 - [**PaperMC - Fast and optimised Minecraft server**](#papermc)
+- [**Box86 - x86 userspace emulation for ARM**](#box86)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## OpenTyrian
 
@@ -32,7 +34,7 @@ Tyrian is an arcade-style vertical scrolling shooter. The story is set
 in 20,031 where you play as Trent Hawkins, a skilled fighter pilot employed
 to fight MicroSol and save the galaxy.
 
-![OpenTyrian screenshot](../assets/images/dietpi-software-games-opentyrian.jpg){: style="width:500px"}
+![OpenTyrian screenshot](../assets/images/dietpi-software-games-opentyrian.jpg){: width="400" height="251" loading="lazy"}
 
 === "Start the game"
 
@@ -50,9 +52,11 @@ to fight MicroSol and save the galaxy.
 
 Cuberite allows you to create a single, blazingly fast Minecraft server, which utilizes the performance benefits of C++ (instead of Java) and comes with a handy web interface.
 
-![Cuberite web interface view](../assets/images/dietpi-software-games-cuberite.png){: style="width:500px"}
+![Cuberite web interface view](../assets/images/dietpi-software-games-cuberite.png){: width="400" height="198" loading="lazy"}
 
 === "Access the web interface"
+
+    The web interface is accessible via port **1339**:
 
     - URL = `http://<your.IP>:1339`
     - Username = `admin`
@@ -84,7 +88,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
     You can restart the service by running:
 
-    ```
+    ```sh
     systemctl restart cuberite
     ```
 
@@ -97,7 +101,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
     Update to newest version:
 
-    ```
+    ```sh
     dietpi-software reinstall 52
     ```
 
@@ -105,9 +109,11 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
 MineOS allows you to create multiple Minecraft servers with ease, using a simple web interface.
 
-![MineOS web interface view](../assets/images/dietpi-software-games-mineos.png){: style="width:500px"}
+![MineOS web interface view](../assets/images/dietpi-software-games-mineos.png){: width="400" height="208" loading="lazy"}
 
 === "Access to web interface"
+
+    The web interface is accessible via port **8443**:
 
     - URL = `https://<your.IP>:8443`  
       You can safely ignore the certificate "warning" if one appears.
@@ -134,13 +140,13 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
 YouTube video tutorial: *How to Install MineOS on Raspberry Pi 4 using Diet Pi OS*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5WxRBTmXbwk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/5WxRBTmXbwk?rel=0" frameborder="0" allow="fullscreen"  width="560" height="315" loading="lazy"></iframe>
 
 ## Nukkit
 
-Nukkit is Java-based server for Minecraft Pocket Edition.
+Nukkit is a Java-based server for Minecraft Pocket Edition.
 
-![Nukkit screenshot](../assets/images/dietpi-software-games-nukkit.png){: style="width:500px"}
+![Nukkit screenshot](../assets/images/dietpi-software-games-nukkit.png){: width="400" height="225" loading="lazy"}
 
 === "Info"
 
@@ -158,7 +164,7 @@ Nukkit is Java-based server for Minecraft Pocket Edition.
 
     You can restart the service by running:
 
-    ```
+    ```sh
     systemctl restart nukkit
     ```
 
@@ -172,7 +178,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 - We also offer a completely automated installation image for Amiberry. Please see: <https://blitterstudio.com/amiberry/>.
 - Direct download link: <https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster_Amiberry.7z>.
 
-![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: style="width:500px"}
+![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: width="400" height="189" loading="lazy"}
 
 === "1st run setup"
 
@@ -312,7 +318,7 @@ When ready, select **Start** to launch the emulator. Have fun!
 
 YouTube video tutorial #1: *Amiga on the Raspberry Pi with DietPi and Amiberry: I got the Pi 400 to work!*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/osBU7iVSQ78" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/osBU7iVSQ78?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 YouTube video tutorial #2: [Amiga on the Raspberry Pi with DietPi and Amiberry: Workbench and Autobooting](https://www.youtube.com/watch?v=LU-G0PRNffQ)
 
@@ -324,7 +330,7 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
 - Keyboard + mouse is highly recommended
 - We have compiled the latest version of DXX-Rebirth (0.58.1) with support for FB and RPi OpenGL.
 
-![DXX-Rebirth logo and screenshot](../assets/images/dietpi-software-games-dxxrebirth.png){: style="width:500px"}
+![DXX-Rebirth logo and screenshot](../assets/images/dietpi-software-games-dxxrebirth.png){: width="400" height="156" loading="lazy"}
 
 === "Starting DXX-Rebirth"
 
@@ -357,29 +363,36 @@ Website: <http://www.dxx-rebirth.com/>
 
 ## Steam
 
-![Steam on Linux logo](../assets/images/dietpi-software-games-steam.jpg){: style="width:500px"}
+![Steam on Linux logo](../assets/images/dietpi-software-games-steam.jpg){: width="400" height="267" loading="lazy"}
 
-### Installation notes
+Steam is a gaming client and store made by Valve.
 
-- Steam is installed to the DietPi user data directory `/mnt/dietpi_userdata/steam`
-- By default, installing games will install them to `/mnt/dietpi_userdata/steam`
+### Steam on ARM
+
+Steam is made for x86, but it, and many Steam games that have Linux versions, can be run on ARM with the help of [Box86](#box86). Note that 2D games are the best to play, and more complex ones may require overclocking your device.
+
+??? warning "Known issues on ARM"
+
+    - Only small mode (the mini games list) is supported, as the internal library browser depends on 64-bit components.
+    - Hence it is not possible to search/add games from the client, which needs to be done from the website store (doesn't work for free games) or a different client.
+    - Quitting the Steam client only works by running `killall steam.sh` from a console. Using the exit button from the menu or panel icon will hang Steam.
 
 ## PaperMC
 
 A highly optimized Minecraft server with plugins, written in Java.  
 PaperMC by default runs a single server, available on LAN, but can be port forwarded so other people can connect.
 
-![PaperMC logo](../assets/images/dietpi-software-games-papermc.jpg){: style="width:70px"}
+![PaperMC logo](../assets/images/dietpi-software-games-papermc.jpg){: width="100" height="100" loading="lazy"}
 
-![PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg){: style="width:500px"}
+![PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg){: width="500" height="300" loading="lazy"}
 
 === "Default server/query port"
 
-    - The default server/query port is: `25565`
+    - The default server/query port is: **25565**
 
 === "Console access via rcon"
 
-    - Port: `25575`
+    - Port: **25575**
     - Password: `<globalSoftwarePassword>` (default: `dietpi`)
     - Console command: `mcrcon -p <globalSoftwarePassword>`
 
@@ -455,4 +468,8 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 Website: <https://paper.readthedocs.io>  
 Source code: <https://github.com/PaperMC/Paper>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+## Box86
+
+Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux, like ARM. Note that this only works on ARMv7. To use it just run an x86 file or run `box86 /path/to/file`.
+
+[Return to the **Optimised Software list**](../../software/)

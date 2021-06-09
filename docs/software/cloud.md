@@ -10,26 +10,26 @@
 - [**Gogs - GitHub style server, with web interface**](#gogs)
 - [**Gitea - GitHub style server, with web interface**](#gitea)
 - [**Syncthing - Backup and sync server with web interface**](#syncthing)
-- [**Tonido - Lightweight backup and sync server with web interface and cloud access**](#tonido)
 - [**MinIO - S3 compatible distributed object server**](#minio)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
-- [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](#bitwarden_rs)
+- [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## ownCloud
 
@@ -40,17 +40,22 @@ Also Installs:
 - Webserver
 - USB dedicated hard drive highly recommended
 
-![DietPi cloud software ownCloud](../assets/images/dietpi-software-cloud-owncloud.png)
+![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png){: width="400" height="218" loading="lazy"}
 
 === "Access to the web interface"
 
-    - URL = `http://localhost/owncloud`  
-      where 'localhost' can be substituted by local server IP or hostname, to access remotely.
+    - URL = `http://<your.IP>/owncloud`
     - Username = `admin`
-    - Password = <your global password\>
+    - Password = `<your global password>`
 
-    If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).  
-    We added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`: Just use `occ` followed by the desired command inside your terminal.
+    If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).
+
+    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`.  
+    Just use inside your terminal:
+
+    ```sh
+    occ list
+    ```
 
 === "Update ownCloud to the latest version"
 
@@ -66,19 +71,19 @@ Also Installs:
 
 === "FAQ"
 
-    #### Where is my data stored?
+    **Where is my data stored?**
 
     `/mnt/dietpi_userdata/owncloud_data` (or `dietpi.txt` choice)
 
-    #### Why am I limited to 2 GiB file size uploads?
+    **Why am I limited to 2 GiB file size uploads?**
 
     DietPi will automatically apply the max supported upload size to the PHP and ownCloud configs.
 
-    - 32bit systems can handle 2 GB
-    - 64bit systems can handle 8796 PB, yep, in petabyte
+    - 32-bit systems can handle 2 GB
+    - 64-bit systems can handle 8796 PB, yep, in petabyte
     - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024))MB"`
 
-    #### Will my data be saved after deinstallation?
+    **Will my data be saved after deinstallation?**
 
     Your userdata directory will stay after deinstallation.  
     As well a database backup will be saved to your userdata directory. Thus you can easily restore your instance by reinstalling ownCloud and restore the database dump.
@@ -90,35 +95,35 @@ Official documentation: <https://doc.owncloud.org/server/admin_manual>
 
 YouTube video tutorial: *How to Install DietPi OwnCloud on Raspberry Pi*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-OatWtH1Z9c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/-OatWtH1Z9c?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ## Nextcloud
 
 Nextcloud gives you access to all your files wherever you are. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust.
 
-![DietPi cloud software Nextcloud](../assets/images/dietpi-software-cloud-nextcloud.jpg)
+![Nextcloud web interface screenshot](../assets/images/dietpi-software-cloud-nextcloud.jpg){: width="2048" height="1280" loading="lazy"}
 
 === "Quick start"
 
     Access the web interface using the next URL when running on SBC (`http://localhost/nextcloud/`) or the IP address / hostname of your DietPi device (e.g.: `http://192.168.0.100/nextcloud/`).
 
     - Username = `admin`
-    - Password = <your global password\>
+    - Password = `<your global password>`
 
     Nextcloud is installed together with the webserver. To fast access the files, a dedicated USB hard drive is highly recommended.
 
 === "Advanced configuration"
 
-    For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/17/admin_manual/configuration_server/occ_command.html).
+    For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html).
 
     To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`.  
     Just use inside your terminal:
 
-    ```
-    ncc [followed by the desired command]
+    ```sh
+    ncc list
     ```
 
-=== "Nextcloud 'Brute force protection'"
+=== "Brute-force protection"
 
     Nextcloud offers built-in brute force protection and additionally a plugin ***Brute-force settings***.  
     This will delay your login rate in case of several failed login attempts.
@@ -201,24 +206,25 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
         sudo -u www-data php /var/www/nextcloud/updater/updater.phar
         y # Starts download and install of files
         y # Starts the internal database upgrade and migration steps
+        N # Do not keep maintenance mode active
         ```
 
     3. Follow the official documentation for a manual upgrade process: <https://docs.nextcloud.com/server/latest/admin_manual/maintenance/manual_upgrade.html>
 
 === "FAQ"
 
-    #### Where is my data stored?
+    **Where is my data stored?**
 
     `/mnt/dietpi_userdata/nextcloud_data` (or `dietpi.txt` choice)
 
-    #### Why am I limited to 2GB file size uploads?
+    **Why am I limited to 2GB file size uploads?**
 
     DietPi will automatically apply the max supported upload size to the PHP and Nextcloud configs.
 
     - 32bit systems can handle 2 GB
     - 64bit systems can handle 8796 PB (petabytes)
 
-    #### Will my data be saved after deinstallation?
+    **Will my data be saved after deinstallation?**
 
     Your user data directory will stay after deinstallation. As well a database backup will be saved to your user data directory. Thus you can easily restore your instance by reinstalling Nextcloud and restore the database dump.
 
@@ -229,7 +235,7 @@ Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/c
 
 YouTube video tutorial #1: *DietPi Nextcloud Setup on Raspberry Pi 3 B Plus*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Q3R2RqFSyE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/Q3R2RqFSyE4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 YouTube video tutorial #2: [DietPi Docker Nextcloud External Storage Setup with SAMBA SERVER on RPI3B](https://www.youtube.com/watch?v=NOb12BuNpZ8)
 
@@ -239,19 +245,20 @@ Host video calls on your own Nextcloud instance. The TURN server ***Coturn*** wi
 
 Also installs:
 
-- Nextcloud
-- Coturn
+- [**Nextcloud**](#nextcloud)
+- **Coturn**
 
-![DietPi cloud software Nextcloud Talk](../assets/images/dietpi-software-cloud-nextcloudtalk.png)
+![Nextcloud Talk app screenshot](../assets/images/dietpi-software-cloud-nextcloudtalk.png){: width="2560" height="1440" loading="lazy"}
 
-### Installation notes
+=== "Installation notes"
 
-During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
+    During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
 
-If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
-Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
+    If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
 
-Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
+    Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
+
+    Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
 
 ***
 
@@ -265,7 +272,7 @@ Also Installs:
 
 - Webserver
 
-![DietPi cloud software Pydio](../assets/images/dietpi-software-cloud-pydio.png)
+![Pydio web interface screenshot](../assets/images/dietpi-software-cloud-pydio.png){: width="400" height="243" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -307,9 +314,11 @@ Website: <https://pydio.com>
 UrBackup Server is an Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.  
 Basically, it allows you to create a complete system backup, using a simple web interface, for systems on your network.
 
-![DietPi cloud software UrBackup Server](../assets/images/dietpi-software-cloud-urbackup.png)
+![UrBackup interface screenshot](../assets/images/dietpi-software-cloud-urbackup.png){: width="400" height="103" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **55414**:
 
     URL = `http://<your.IP>:55414`  
     Remark: Change the IP address for your system.
@@ -334,15 +343,15 @@ Website: <https://www.urbackup.org/index.html>
 
 Your very own GitHub style server, with web interface.
 
-![DietPi cloud software Gogs](../assets/images/dietpi-software-cloud-gogs.png)
+![Gogs web interface screenshot](../assets/images/dietpi-software-cloud-gogs.png){: width="400" height="175" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **3000**:
 
     - URL = `http://<your.IP>:3000`
 
 === "First run setup"
-
-    Remark: Documentation requires DietPi v6.11 or higher.
 
     Has to be done once, when connected to the web interface:
 
@@ -373,9 +382,11 @@ Website: <https://gogs.io>
 
 Your very own GitHub style server, with web interface.
 
-![DietPi cloud software Gitea](../assets/images/dietpi-software-cloud-gitea.jpg){: style="width:200px"}
+![Gitea logo](../assets/images/dietpi-software-cloud-gitea.jpg){: width="320" height="200" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **3000**:
 
     - URL = `http://<your.IP>:3000`
 
@@ -386,8 +397,8 @@ Your very own GitHub style server, with web interface.
     - Change the following values only:
         - MySQL database user = `gitea`
         - MySQL database password = `dietpi`
-        - Repository Root Path = `/mnt/dietpi_userdata/gitea/gitea-repositories`
-        - Log Path = `/var/log/gitea`
+        - Repository root path = `/mnt/dietpi_userdata/gitea/gitea-repositories`
+        - Log path = `/var/log/gitea`
     - Scroll to the bottom of page and select Install Gitea
     - When the web address changes to localhost: and fails to load, you need to reconnect to the web page using the IP address (e.g.: `http://<your.IP>:3000`)
     - Once the page has reloaded, you will need to click register to create the admin account
@@ -403,7 +414,7 @@ Your very own GitHub style server, with web interface.
 
 === "Fail2Ban integration"
 
-    Using Fail2Ban your can block users after failed login attempts. This hardens your system, e.g. against brute force attacks.
+    Using Fail2Ban your can block users after failed login attempts. This hardens your system, e.g. against brute-force attacks.
 
     - Create new filter `/etc/fail2ban/filter.d/gitea.conf`:
 
@@ -434,6 +445,14 @@ Your very own GitHub style server, with web interface.
         - [Fail2Ban](../system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
         - <https://docs.gitea.io/en-us/fail2ban-setup>
 
+=== "Update to latest version"
+
+    You can easily update Gitea by reinstalling it. Your settings and data are preserved by this:
+
+    ```sh
+    dietpi-software reinstall 165
+    ```
+
 ***
 
 Website: <https://gitea.io>
@@ -442,9 +461,11 @@ Website: <https://gitea.io>
 
 Backup and sync server with web interface. Extremely lightweight and efficient as no webserver is required.
 
-![DietPi cloud software Syncthing](../assets/images/dietpi-software-cloud-syncthing.png)
+![Syncthing interface screenshot](../assets/images/dietpi-software-cloud-syncthing.png){: width="400" height="195" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8384**:
 
     URL = `http://<your.IP>:8384`
 
@@ -477,49 +498,17 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
 Website: <https://syncthing.net>
 
-## Tonido
-
-Lightweight backup and sync server, includes web interface and external cloud access.
-
-??? note "Windows app not supported for ARMv7!"
-
-    Windows sync app is not supported for ARMv7 (RPi). See <https://github.com/MichaIng/DietPi/issues/592#issuecomment-290915782> for details.
-
-![DietPi cloud software Tonido](../assets/images/dietpi-software-cloud-tonido.png)
-
-=== "Installation notes"
-
-    Remark: This documentation requires DietPi v6.12.
-
-    - DietPi installs Tonido to the following location: `/mnt/dietpi_userdata/tonido`
-    - DietPi install symbolic links to the Tonido data directories automatically. Therefore, default Tonido sync/userdata locations will point to `/mnt/dietpi_userdata/tonido`:
-
-        ```sh
-        /home/tonido/tonido #PointsTo# /mnt/dietpi_userdata/tonido
-        /home/tonido/TonidoSync #PointsTo# /mnt/dietpi_userdata/tonido/sync
-        /home/tonido/TonidoSyncData #PointsTo# /mnt/dietpi_userdata/tonido/syncdata
-        ```
-
-    We created a `systemd` service for Tonido, DietPi will automatically start this: `systemctl status tonido`
-
-=== "Access to the web interface"
-
-    URL = `http://<your.IP>:10001`
-
-***
-
-Website: <https://www.tonido.com>
-
 ## MinIO
 
 It is an open source Kubernetes Native, High Performance Object Storage (S3 Compatible). It helps building cloud-native data infrastructure for machine learning, analytics and application data workloads.
 
-![DietPi MinIO](../assets/images/dietpi-software-cloud-minio.jpg)
+![MinIO setup diagram](../assets/images/dietpi-software-cloud-minio.jpg){: width="417" height="443" loading="lazy"}
 
 === "Quick start"
 
-    Open the web browser using next link: `http://<your.IP>:9000`.
+    The web interface is accessible via port **9000**:
 
+    - URL = `http://<your.IP>:9000`
     - [MinIO Server Quick Start Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
     - [Python Client Quick Start Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
     - [JavaScript Client Quick Start Guide - MinIO](https://docs.min.io/docs/javascript-client-quickstart-guide.html)
@@ -533,50 +522,58 @@ Official documentation: <https://docs.min.io>
 
 This is Mozilla's Firefox Sync Server which manages syncing Firefox instance bookmarks, history, tabs and passwords across devices. Out of the box it runs on a Python server for small loads and can be configured to run behind Nginx or Apache.
 
-![Firefox Sync Logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png){: style="width:200px"}
+![Firefox Sync logo](../assets/images/dietpi-software-cloud-firefoxsyncserver.png){: width="300" height="95" loading="lazy"}
 
 === "Configure Firefox"
 
     - Open `about:config` to access advanced settings.
     - Search for: `identity.sync.tokenserver.uri`.
-    - Set value to: `http://<your.IP>:5000/token/1.0/sync/1.5`.
-        - We recommend to access your Firefox Sync Server only from local network or via VPN.
+    - Set value to: `http://<your.IP>:5002/token/1.0/sync/1.5`.
+        - We recommend to access your Firefox Sync Server only from local network or via VPN, keeping the default listening port **5002** closed for access from outside of your LAN.
         - If you need to access it remotely without VPN, adjust the `public_url` setting inside the config file `/mnt/dietpi_userdata/firefox-sync/syncserver.ini` to contain your public IP or domain and desired port.
+
+=== "Directories"
+
+    - Install directory: `/opt/firefox-sync`
+    - Data directory: `/mnt/dietpi_userdata/firefox-sync`
+    - Config file: `/mnt/dietpi_userdata/firefox-sync/syncserver.ini`
 
 === "View logs"
 
-    View logs by executing `journalctl -u firefox-sync`.
+    View the logs by executing:
 
-=== "Updating"
+     ```sh
+     journalctl -u firefox-sync
+     ```
 
-    Update by executing `dietpi-software reinstall 177`.
+=== "Update to latest version"
 
-=== "Installation directory"
+    You can easily update the Firefox Sync Server by reinstalling it. Your settings and data are preserved by this:
 
-    `/opt/firefox-sync`
-
-=== "Database and config directory"
-
-    `/mnt/dietpi_userdata/firefox-sync`
+    ```sh
+    dietpi-software reinstall 177
+    ```
 
 ***
 
-Source code: <https://github.com/mozilla-services/syncserver>
+Official documentation: <https://mozilla-services.readthedocs.io/en/latest/howtos/run-sync-1.5.html>  
+Source code: <https://github.com/mozilla-services/syncserver>  
+License: [MPL2.0](https://github.com/mozilla-services/syncserver/blob/master/LICENSE)
 
 Credits: This software title has been added to DietPi-Software by [CedArctic](https://github.com/CedArctic), many thanks! :D
 
-## Bitwarden_RS
+## vaultwarden
 
-Bitwarden_RS is an unofficial Bitwarden password manager server with web interface, written in Rust.
+vaultwarden is an unofficial Bitwarden password manager server with web interface, written in Rust.
 
-![Bitwarden_RS web vault screenshot](../assets/images/dietpi-software-bitwarden_rs.jpg){: style="width:600px"}
+![vaultwarden web vault screenshot](../assets/images/dietpi-software-vaultwarden.jpg){: width="600" height="247" loading="lazy"}
 
 === "First access"
 
     - During install, a self-signed 4096-bit RSA TLS certificate is created to allow encrypted HTTPS access, which is required for access with most Bitwarden clients and reasonable as of the sensitivity of the data a password manager handles.
     - Most web browsers will warn you on access that the certificate is not trusted, although usually you can choose to ignore that and still access the web vault.
     - Most Bitwarden clients on the other hand will deny to access your server, as long as the certificate is not trusted.
-    - As far as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via `dietpi-letsencrypt` and setup either a reverse proxy, or configure Bitwarden_RS to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
+    - As far as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via `dietpi-letsencrypt` and setup either a reverse proxy, or configure vaultwarden to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
 
     ??? info "How do I add a self-signed certificate to the OS' Trusted Root Certification Authorities store?"
 
@@ -584,31 +581,55 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
             1. In your browser, next to the address bar, select the warning or lock icon.
                 Then select the certificate button to open Windows' Certificate view.
-            2. Switch to the "Details" tab.
+            2. Switch to the "Details" tab.  
                 ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
             3. Select "Save to file".
-            4. In the newly opened window, select "Continue".
+            4. In the newly opened window, select "Continue".  
                 ![Import certificate on Windows 10, screenshot 2](../assets/images/import_cert_windows_2.png)
             5. Leave default DER coding and select "Continue".
-            6. Select "Browse" to chose a target file location.
+            6. Select "Browse" to chose a target file location.  
                 ![Import certificate on Windows 10, screenshot 3](../assets/images/import_cert_windows_3.png)
             7. Choose a target file location and name, it is only required temporarily.
             8. Select "Continue".
-            9. Select "Finish".
+            9. Select "Finish".  
                 ![Import certificate on Windows 10, screenshot 4](../assets/images/import_cert_windows_4.png)
             10. Double-click the created certificate file and select "Install certificate".
             11. Select "Local system".
-            12. Select "Continue", which requires administrator permissions.
+            12. Select "Continue", which requires administrator permissions.  
                 ![Import certificate on Windows 10, screenshot 5](../assets/images/import_cert_windows_5.png)
             13. Choose "Save all certificates to the following store".
             14. Select "Browse".
             15. Select "Trusted Root Certification Authorities".
             16. Select "Ok".
             17. Select "Continue".
-            18. Select "Finish".
+            18. Select "Finish".  
                 ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png)
 
+        === "macOS"
+
+            1. In your browser (note that this cannot be done in Safari), next to the address bar, select the warning or lock icon.
+                Then select the "Certificate (Invalid)" button.  
+                ![Import certificate on macOS, screenshot 1](../assets/images/import_cert_mac_1.png){: width="250px"}
+            2. Drag the certificate icon to your desktop, it is only required temporarily.
+            3. Double-click on the certificate file.  
+                ![Import certificate on macOS, screenshot 2](../assets/images/import_cert_mac_2.png)
+            4. On the "Keychain" dropdown, select "System".
+            5. Select "Add".
+            6. Enter an administrator username and password.
+            7. Select "Modify Keychain".  
+                ![Import certificate on macOS, screenshot 3](../assets/images/import_cert_mac_3.png)
+            8. Double-click on the certificate in the list.
+            9. Select "Trust".  
+                ![Import certificate on macOS, screenshot 4](../assets/images/import_cert_mac_4.png)
+            10. On the "Secure Sockets Layer (SSL)" dropdown, select "Always Trust".
+            11. Click the red button in the top left corner of the window.
+            12. Enter an administrator username and password.
+            13. Select "Update Settings".  
+                ![Import certificate on macOS, screenshot 5](../assets/images/import_cert_mac_5.png)
+
 === "Web access"
+
+    The web interface is accessible via port **8001**:
 
     - URL = `https://<your.IP>:8001`
     - On first access, you need to create an account, either via web UI or via client (see "Client access" tab).
@@ -623,14 +644,14 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
 === "Directories"
 
-    - Install directory: `/opt/bitwarden_rs`
-    - Data directory: `/mnt/dietpi_userdata/bitwarden_rs`
-    - Config file: `/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env`
+    - Install directory: `/opt/vaultwarden`
+    - Data directory: `/mnt/dietpi_userdata/vaultwarden`
+    - Config file: `/mnt/dietpi_userdata/vaultwarden/vaultwarden.env`
 
 === "View logs"
 
     ```sh
-    journalctl -u bitwarden_rs
+    journalctl -u vaultwarden
     ```
 
 === "Update to latest version"
@@ -641,39 +662,36 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
 ***
 
-Official documentation: <https://github.com/dani-garcia/bitwarden_rs/wiki>  
-Forum: <https://bitwardenrs.discourse.group>  
-Source code: <https://github.com/dani-garcia/bitwarden_rs>  
-Open-source license: [GPLv3](https://github.com/dani-garcia/bitwarden_rs/blob/master/LICENSE.txt)
+Official documentation: <https://github.com/dani-garcia/vaultwarden/wiki>  
+Forum: <https://vaultwarden.discourse.group>  
+Source code: <https://github.com/dani-garcia/vaultwarden>  
+Open-source license: [GPLv3](https://github.com/dani-garcia/vaultwarden/blob/master/LICENSE.txt)
 
-Credits: This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9). Thank you !
+Credits: This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9). Thank you!
 
 ## FuguHub
 
 FuguHub transforms your DietPi device into a secure online storage system, letting you access and share files from any connected computer or device.
 
-![FuguHub logo](https://fuguhub.com/images/FuguHub.png)
+![FuguHub logo](https://fuguhub.com/images/FuguHub.png){: width="149" height="140" loading="lazy"}
 
 === "Quick access"
 
-    Open the browser `http://<your.IP>`. On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
+    Open the browser `http://<your.IP>`.  
+    On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
 
-    !!! warning ""
+    !!! warning "FuguHub runs by default on port 80 and optional 443, making it incompatible with a regular webserver using the default setup."
 
-        FuguHub runs by default on port 80 and optional 443. As a result it may be incompatible with a regular webserver using the default setup.
-
-    ![FuguHub Application](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png)
+    ![FuguHub web interface screenshot](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png){: width="1920" height="1088" loading="lazy"}
 
 === "Interactive install"
 
-    1. Press `ENTER` to continue
-    2. Press `y` to accept license
-    3. Press `y `for `VPS` or `n` for `home/office` server
+    1. Press ++enter++ to continue
+    2. Press ++y++ to accept license
+    3. Press ++y++ for `VPS` or ++n++ for `home/office` server
     4. Choose whether to install an internal BitTorrent client.
 
-    !!! warning ""
-
-        It is recommended to use the standard supported DietPi BitTorrent clients - more details on [BitTorrent / Download Tools](../bittorrent/#bittorrent-download-tools).
+    !!! warning "It is recommended to use the a dedicated BitTorrent server, if required: <https://dietpi.com/docs/software/bittorrent/>"
 
     Setup details:
 
@@ -681,12 +699,14 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     - Config file: `/home/bd/bdd.conf`
     - Data directory: `/mnt/dietpi_userdata/fuguhub-data`
 
-=== "Logging"
+=== "View logs"
+
     - Service: `journalctl -u bdd`
-    - Trace: `/home/bd/trace/` # It contains an info about the database creation only, even after playing around with the web UI a bid.
+    - Trace: `/home/bd/trace/`  
+      It contains an info about the database creation only, even after playing around with the web UI a bit.
 
 ***
 
 Website: <https://fuguhub.com>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

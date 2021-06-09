@@ -32,24 +32,27 @@
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web)
 - [**Jellyfin - Media streaming server including live TV**](#jellyfin)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+
+[Return to the **Optimised Software list**](../../software/)
 
 ## Kodi
 
 The only media centre/player you'll ever need.
 
-![DietPi media server software Kodi](../assets/images/dietpi-software-media-kodi.jpg){: style="width:500px"}
+![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg){: width="400" height="225" loading="lazy"}
 
 If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autostart`:
 
@@ -64,9 +67,11 @@ Also installs:
 
 - MPD (music player daemon)
 
-![DietPi media server software ympd](../assets/images/dietpi-software-media-ympd.png){: style="width:500px"}
+![ympd web interface screenshot](../assets/images/dietpi-software-media-ympd.png){: width="400" height="162" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **1337**:
 
     URL = `http://<your.IP>:1337`
 
@@ -87,7 +92,7 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
 
 ## myMPD
 
@@ -97,9 +102,11 @@ Also installs:
 
 - MPD (music player daemon)
 
-![DietPi media server software myMPD](../assets/images/dietpi-software-media-mympd.gif){: style="width:500px"}
+![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.gif){: width="400" height="318" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **1333**:
 
     URL = `http://<your.IP>:1333`
 
@@ -131,7 +138,7 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
 
 ## O!MPD
 
@@ -142,7 +149,7 @@ Also installs:
 - MPD (music player daemon)
 - Web server
 
-![DietPi media server software O!MPD](../assets/images/dietpi-software-media-ompd.png){: style="width:500px"}
+![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="400" height="199" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -155,8 +162,8 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by O!MPD:
 
-    - local = `/mnt/dietpi_userdata/Music`
-    - accessed from file server = `/Music`
+    - Local = `/mnt/dietpi_userdata/Music`
+    - Accessed from file server = `/Music`
 
 === "Update/scan library"
 
@@ -171,13 +178,13 @@ Also installs:
 
 - MPD (music player daemon)
 
-![DietPi media server software CAVA](../assets/images/dietpi-software-media-cava.gif){: style="width:500px"}
+![Animated CAVA output](../assets/images/dietpi-software-media-cava.gif){: width="500" height="114" loading="lazy"}
 
 === "Autostart option"
 
     If you did not select CAVA to start from boot:
 
-    - CAVA can also be run by typing `cava`. Use `CTRL+C` to terminate.
+    - CAVA can also be run by typing `cava`. Use ++ctrl+c++ to terminate.
     - You can modify the autostart options in `dietpi-autostart`.
 
 === "DietPi-JustBoom control panel"
@@ -185,15 +192,17 @@ Also installs:
     - Tweak CAVA options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi media server software ympd JustBoom](../assets/images/dietpi-software-media-dietpi-justboom.png){: style="width:300px"}
+        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
 
 ## Mopidy
 
-Mopidy is a python based music player web based user interface for MPD.
+Mopidy is a Python based music player web based user interface for MPD.
 
-![DietPi media server software Mopidy](../assets/images/dietpi-software-media-mopidy.png){: style="width:500px"}
+![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="400" height="198" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface uses port **6680**:
 
     - URL = `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
 
@@ -202,13 +211,16 @@ Mopidy is a python based music player web based user interface for MPD.
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by Mopidy:
 
-    - local = `/mnt/dietpi_userdata/Music`
-    - accessed from file server = `/Music`
+    - Local = `/mnt/dietpi_userdata/Music`
+    - Accessed from file server = `/Music`
 
 === "Refresh music files / database"
 
-    This is done automatic, however, you can force an update using the command  
-    `mopidyctl local scan`.
+    This is done automatic, however, you can force an update using the command
+
+    ```sh
+    mopidyctl local scan
+    ```
 
 === "Adding Mopidy extensions"
 
@@ -218,16 +230,23 @@ Mopidy is a python based music player web based user interface for MPD.
 
 === "Support of codecs"
 
-    Enable support for vast number of codecs like .m4a.   
-    Many thanks to Roth for [this hint](https://dietpi.com/phpbb/viewtopic.php?f=12&t=785&p=3743#p3742).
+    Enable support for vast number of codecs like .m4a. Execute the following installation procedure:
+
+    ```sh
+    apt-get install -y gstreamer1.0-plugins-bad
+    ```
+
+    Many thanks to Roth for [this hint](https://dietpi.com/phpbb/viewtopic.php?t=785).
 
 ## Airsonic
 
 Feature rich media streaming server with a web interface. Coded in Java.
 
-![DietPi media server software Airsonic](../assets/images/dietpi-software-media-airsonic.png){: style="width:500px"}
+![Airsonic web interface screenshot](../assets/images/dietpi-software-media-airsonic.png){: width="400" height="257" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface uses port **8080**:
 
     - URL = `http://<your.IP>:8080/airsonic`
     - Username = `admin`
@@ -246,15 +265,17 @@ Feature rich media streaming server with a web interface. Coded in Java.
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by Mopidy:
 
-    - folder = `/mnt/dietpi_userdata/Music`  
+    - Folder = `/mnt/dietpi_userdata/Music`  
 
 ## Subsonic
 
 Feature rich media streaming server with a web interface. Coded in Java.
 
-![DietPi media server software Subsonic](../assets/images/dietpi-software-media-subsonic.png){: style="width:500px"}
+![Subsonic web interface screenshot](../assets/images/dietpi-software-media-subsonic.png){: width="400" height="178" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **4040**:
 
     - URL = `http://<your.IP>:4040`
     - Username = `admin`
@@ -265,7 +286,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by Mopidy:
 
-    - folder = `/mnt/dietpi_userdata/Music`  
+    - Folder = `/mnt/dietpi_userdata/Music`  
 
 === "Jetty http 404 error"
 
@@ -280,7 +301,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 === "GitHub Contributions"
 
-    Many thanks to 'thechildofroth' for his testing and fixes with the Subsonic installation.
+    Many thanks to [thechildofroth](https://github.com/thechildofroth) for his testing and fixes with the Subsonic installation.
 
 ## Logitech Media Server
 
@@ -291,9 +312,11 @@ Logitech Media Server (aka LMS, Squeezebox Server) is the server software that e
 
 Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting Squeezelite for installation in `dietpi-software`.
 
-![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
+![Logitech Media Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **9000**:
 
     - URL = `http://<your.IP>:9000`
 
@@ -302,7 +325,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by Mopidy:
 
-    - folder = `/mnt/dietpi_userdata/Music`  
+    - Folder = `/mnt/dietpi_userdata/Music`  
 
 === "Change Squeezelite command line options"
 
@@ -310,24 +333,34 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
     - Select `squeezelite`
     - Select `Edit`
     - Unset and re-set the `ExecStart` entry:
-      :
-      ```sh
+
+      ```systemd
       ExecStart=
       ExecStart=/usr/bin/squeezelite [<your custom arguments>]
       ```
 
-      : The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
+      The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
 
-    - Save changes with `CTRL+o` and exit `dietpi-services`
+    - Save changes with ++ctrl+o++ and exit `dietpi-services`
     - Restart the service: `systemctl restart squeezelite`
+
+=== "Update"
+
+    To update Logitech Media Server to the current version, execute
+
+    ```sh
+    dietpi-software reinstall 35
+    ```
 
 ## Squeezelite
 
 Squeezelite is the audio player for the Logitech Media Server.
 
-![DietPi media server software Logitech Media Server](../assets/images/dietpi-software-media-squeezebox.png){: style="width:500px"}
+![Logitech Media Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **9000**:
 
     - URL = `http://<your.IP>:9000`
 
@@ -336,7 +369,7 @@ Squeezelite is the audio player for the Logitech Media Server.
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by Mopidy:
 
-    - folder = `/mnt/dietpi_userdata/Music`  
+    - Folder = `/mnt/dietpi_userdata/Music`  
 
 === "Change Squeezelite command line options"
 
@@ -344,15 +377,15 @@ Squeezelite is the audio player for the Logitech Media Server.
     - Select `squeezelite`
     - Select `Edit`
     - Unset and re-set the `ExecStart` entry:
-      :
-      ```sh
+
+      ```systemd
       ExecStart=
       ExecStart=/usr/bin/squeezelite [<your custom arguments>]
       ```
 
-      : The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
+      The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
 
-    - Save changes with `CTRL+o` and exit `dietpi-services`
+    - Save changes with ++ctrl+o++ and exit `dietpi-services`
     - Restart the service: `systemctl restart squeezelite`
 
 ## Shairport Sync
@@ -360,7 +393,7 @@ Squeezelite is the audio player for the Logitech Media Server.
 Shairport Sync is an AirPlay audio player which plays audio streamed from iTunes, iOS devices and third-party AirPlay sources such as ForkedDaapd and Airfoil.  
 Audio played by a Shairport Sync-powered device stays synchronised with the source and hence with similar devices playing the same source. This allows for synchronised multi-room audio on multiple devices.
 
-![DietPi media server software Shairport Sync](../assets/images/dietpi-software-media-shairportsync.png){: style="width:400px"}
+![Shairport Sync connection scheme](../assets/images/dietpi-software-media-shairportsync.png){: width="400" height="233" loading="lazy"}
 
 === "AirPlay device name"
 
@@ -405,9 +438,9 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
     Increasing the `shairplay-sync` process priority (nice) may resolve the issue.
 
     - Run `dietpi-services` from the terminal
-    - Select `shairport-sync` via up/down buttons then press `Enter`
-    - Select `CPU Nice` via up/down buttons then press `Enter`
-    - Select `-20 : (Highest priority)` via up button, then press `Enter`
+    - Select `shairport-sync` via up/down buttons then press ++enter++
+    - Select `CPU Nice` via up/down buttons then press ++enter++
+    - Select `-20 : (Highest priority)` via up button, then press ++enter++
 
     DietPi will then automatically apply and set the nice level.
 
@@ -417,9 +450,11 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
 
 Stream your shared media to any DLNA/UPnP capable device.
 
-![DietPi media server software ReadyMedia](../assets/images/dietpi-software-media-readymedia.jpg){: style="width:200px"}
+![ReadyMedia logo](../assets/images/dietpi-software-media-readymedia.jpg){: width="351" height="341" loading="lazy"}
 
 === "Access to ReadyMedia status"
+
+    The web interface is accessible via port **8200**:
 
     - URL = `http://<your.IP>:8200`
 
@@ -452,7 +487,7 @@ Also Installs:
 
 - Webserver stack
 
-![DietPi media server software Ampache](../assets/images/dietpi-software-media-ampacheinterface.png){: style="width:500px"}
+![Ampache web interface screenshot](../assets/images/dietpi-software-media-ampacheinterface.png){: width="400" height="202" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -477,7 +512,7 @@ Also Installs:
     - Select `show catalogues` from the left hand side.
     - Select `Update all`.
 
-    ![DietPi media server software Ampache update catalog](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png){: style="width:500px"}
+    ![Ampache web interface screenshot with database update instructions](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png){: width="400" height="193" loading="lazy"}
 
 === "Add custom media folders"
 
@@ -492,7 +527,7 @@ Also Installs:
     chmod -R 775 /my/directory
     ```
 
-    ![DietPi media server software Ampache add catalog](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: style="width:500px"}
+    ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
 
 === "Enable additional file formats via transcoding"
 
@@ -505,8 +540,11 @@ Also Installs:
 
 === "Update Ampache"
 
-    To update Ampache to the current version, execute  
-    `dietpi-software reinstall 40`.
+    To update Ampache to the current version, execute
+
+    ```sh
+    dietpi-software reinstall 40
+    ```
 
 ## Emby
 
@@ -520,9 +558,11 @@ A web interface media streaming server. Think Kodi, but using any device with a 
     A Virtual Machine is highly recommended for Video transcoding:  
     <https://github.com/MichaIng/DietPi/issues/310#issuecomment-219067830>
 
-![DietPi media server software Emby](../assets/images/dietpi-software-media-embyserver.png){: style="width:500px"}
+![Emby web interface screenshot](../assets/images/dietpi-software-media-embyserver.png){: width="400" height="199" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8096**:
 
     URL = `http://<your.IP>:8096`
 
@@ -543,27 +583,40 @@ A web interface media streaming server. Think Kodi, but using any device with a 
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by Emby:
 
-    - audio = `/mnt/dietpi_userdata/Music`
-    - videos = `/mnt/dietpi_userdata/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`
+    - Videos: `/mnt/dietpi_userdata/Video`
+
+=== "View logs"
+
+    To view Emby server logs, run the following command from console:
+
+    ```sh
+    journalctl -u emby-server
+    ```
 
 === "Update"
 
-    To update the Emby Server version simply reinstall Emby Server to update it to newest version. It will preserve any existing data and settings:  
-    `dietpi-software reinstall 41`
+    To update the Emby Server version simply reinstall Emby Server to update it to newest version. It will preserve any existing data and settings:
+
+    ```sh
+    dietpi-software reinstall 41
+    ```
 
 ***
 
 YouTube video tutorial: *DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zEcNNLCFngI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/zEcNNLCFngI?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ## Plex Media Server
 
 Plex organizes your video, music, and photo collections and streams them to all of your screens. Also known as a "Web interface media streaming server".
 
-![DietPi media server software Plex Media Server](../assets/images/dietpi-software-media-plexmediaserver.png){: style="width:500px"}
+![Plex Media Server web interface screenshot](../assets/images/dietpi-software-media-plexmediaserver.png){: width="400" height="199" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface uses port **32400**:
 
     URL = `http://<your.IP>:32400/web`
 
@@ -575,7 +628,7 @@ Plex organizes your video, music, and photo collections and streams them to all 
     - Give your server a name (e.g.: `DietPi-Plex`)
     - Click `library` to setup your media locations:
 
-        ```sh
+        ```
         /mnt/dietpi_userdata/Music
         /mnt/dietpi_userdata/Video
         ```
@@ -587,22 +640,26 @@ Plex organizes your video, music, and photo collections and streams them to all 
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Folders used by Plex Media Server:
 
-    - audio = `/mnt/dietpi_userdata/Music`
-    - videos = `/mnt/dietpi_userdata/Video`
+    - Audio = `/mnt/dietpi_userdata/Music`
+    - Video = `/mnt/dietpi_userdata/Video`
 
 ***
 
+Tutorial: [Setup Guide for Plex on Raspberry Pi](https://blog.barnettjones.com/2020/11/26/dietpi-plex-setup/)
+
 YouTube video tutorial (German language): `Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)`.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EElrNjXc3aA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/EElrNjXc3aA?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ## Tautulli
 
-A Python-based monitoring and tracking tool for Plex Media Server.
+A Python based monitoring and tracking tool for Plex Media Server.
 
-![DietPi media server software Tautulli](../assets/images/dietpi-software-media-tautulli.png){: style="width:500px"}
+![Tautulli web interface screenshot](../assets/images/dietpi-software-media-tautulli.png){: width="400" height="273" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8181**:
 
     URL = `http://<your.IP>:8181`
 
@@ -614,11 +671,11 @@ A Python-based monitoring and tracking tool for Plex Media Server.
 
 Turn your device into a lightweight Mumble VoIP server.
 
-![DietPi media server software Murmur](../assets/images/dietpi-software-media-murmur.png){: style="width:100px"}
+![Mumble logo](../assets/images/dietpi-software-media-murmur.png){: width="100" height="100" loading="lazy"}
 
 === "Murmur Server connection details"
 
-    Use the following credentials to connect clients to the Murmur server:
+    The server is accessible via port **64738**:
 
     - URL = `http://<your.IP>:64738`
     - Password = No password required
@@ -630,7 +687,6 @@ Turn your device into a lightweight Mumble VoIP server.
 
     ```sh
     nano /etc/mumble-server.ini
-    #Restart service
     systemctl restart mumble-server
     ```
 
@@ -638,9 +694,9 @@ Turn your device into a lightweight Mumble VoIP server.
 
 Turns your SBC into a Roon capable audio player. By using the main Roon application on another device, you can stream your music catalog directly to the Roon Bridge running on your SBC.
 
-![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+![Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150" height="81" loading="lazy"}
 
-![DietPi media server software Roon Bridge](../assets/images/dietpi-software-media-roonbridge.png){: style="width:500px"}
+![Roon Bridge interface screenshot](../assets/images/dietpi-software-media-roonbridge.png){: width="400" height="225" loading="lazy"}
 
 === "More information on Roon"
 
@@ -656,9 +712,9 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 
 Turns your device into a Roon capable audio player and core server.
 
-![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+![Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150" height="81" loading="lazy"}
 
-![DietPi media server software Roon Server](../assets/images/dietpi-software-media-roonserver.png){: style="width:500px"}
+![Roon Server usage scheme](../assets/images/dietpi-software-media-roonserver.png){: width="400" height="134" loading="lazy"}
 
 === "Install a Roon Remote on another system"
 
@@ -682,9 +738,9 @@ Turns your device into a Roon capable audio player and core server.
 
 At startup the Roon Extension Manager accesses a repository containing the community developed extensions. Via `Settings` \> `Extensions` within Roon the repository can be viewed and an extension can be selected to perform a certain action.
 
-![DietPi media server software Roon logo](../assets/images/dietpi-software-media-roon.png){: style="width:150px"}
+![Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150" height="81" loading="lazy"}
 
-![DietPi media server software Roon Extension Manager](../assets/images/dietpi-software-media-roonextmanager.jpg){: style="width:500px"}
+![Roon Extension Manager screenshot](../assets/images/dietpi-software-media-roonextmanager.jpg){: width="400" height="225" loading="lazy"}
 
 ***
 
@@ -696,7 +752,7 @@ Credits: Many thanks to @JanKoudijs for contributing this into DietPi
 Signalyst Network Audio Adapter (NAA) daemon allows you to stream music from an HQPlayer source (like Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (like 192 kHz) and more.  
 Also works with Roon.
 
-![DietPi media server software NAA Daemon](../assets/images/dietpi-software-media-naa.png){: style="width:500px"}
+![HQPlayer screenshot](../assets/images/dietpi-software-media-naa.png){: width="400" height="300" loading="lazy"}
 
 === "HQPlayer Desktop (Windows)"
 
@@ -716,7 +772,9 @@ Also works with Roon.
 
 === "Update method"
 
-    `dietpi-software reinstall 124`
+    ```sh
+    dietpi-software reinstall 124
+    ```
 
 ***
 
@@ -724,43 +782,49 @@ Website: <https://www.signalyst.eu/consumer.html>
 
 ## IceCast
 
-Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
+Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
-![DietPi media server software IceCast](../assets/images/dietpi-software-media-icecast.png){: style="width:500px"}
+![IceCast web interface screenshot](../assets/images/dietpi-software-media-icecast.png){: width="400" height="218" loading="lazy"}
 
 === "Installation notes"
 
-    DietPi will attempt to detect mic input during installation, and apply to DarkIce. If a microphone was not available, or you experience issue, check available microphones with: `arecord -l`
+    DietPi will attempt to detect mic input during installation, and apply to DarkIce. If a microphone was not available, or you experience issues, check available microphones with:
+
+    ```sh
+    arecord -l
+    ```
 
     - Then edit the device entry in `/etc/darkice.cfg`, or  
-    - Simple copy and paste:
+    - Simply copy and paste:
 
         ```sh
         sed -i "/^device[[:blank:]]/c\device = hw:$(arecord -l | mawk -F'[ :]' '/card/{print $2;exit}'),0" /etc/darkice.cfg
         ```
 
-    - Restart services: `dietpi-services restart`
+    - Restart the DarkIce service:
 
-    We created a `systemd` service for DarkIce, DietPi will automatically start it. You can check its status by running the following command:
+        ```sh
+        systemctl restart darkice
+        ```
+
+    We create `systemd` services for both, IceCast and DarkIce, automatically started by DietPi. You can check their status by running the following command:
 
     ```sh
-    systemctl -l status darkice
+    systemctl status icecast2
+    systemctl status darkice
     ```
 
 === "Access IceCast web interface"
 
+    The web interface is accessible via port **8000**:
+
     - URL = `http://<your.IP>:8000`
     - Admin user = `admin`
-    - Admin password = randomly generated, use code below to view:
+    - Admin password = `<your global password>` (default: `dietpi`)
+    - Source password = `<your global password>` (default: `dietpi`)
+    - Relay password = `<your global password>` (default: `dietpi`)
 
-        ```sh
-        grep admin-password /etc/icecast2/icecast.xml
-        ```
-
-    - Source password = `dietpi`
-    - Relay password = `dietpi`
-
-=== "Access Recording File"
+=== "Access recording file"
 
     This is disabled by default.
 
@@ -770,50 +834,108 @@ Shoutcast streaming server, includes DarkIce for audio input (e.g.: microphone).
         localDumpFile = /mnt/dietpi_userdata/darkice_recording.ogg
         ```
 
-    - Restart services: `dietpi-services restart`
+    - Restart the DarkIce service:
+
+        ```sh
+        systemctl restart darkice
+        ```
+
     - A recording will then be saved in the following location: `/mnt/dietpi_userdata/darkice_recording.ogg`
+
+=== "Configuration files"
+
+    - IceCast: `/etc/icecast2/icecast.xml`
+    - DarkIce: `/etc/darkice.cfg`
+
+=== "View logs"
+
+    Run the following commands on a console to view logs for IceCast and DarkIce:
+
+    ```sh
+    journalctl -u icecast2
+    journalctl -u darkice
+    ```
+
+    IceCast additionally creates access and error log files at: `/var/log/icecast2/`
+
+=== "Update to latest version"
+
+    IceCast and DarkIce are installed from the Debian APT repository and hence can be updated by running the following commands:
+
+    ```sh
+    apt update
+    apt install icecast2 darkice
+    ```
 
 ## Koel
 
 Web interface music streamer.
 
-![DietPi media server software Koel](../assets/images/dietpi-software-media-koel.png){: style="width:500px"}
+![Koel web interface screenshot](../assets/images/dietpi-software-media-koel.png){: width="400" height="197" loading="lazy"}
 
 === "Access to the web interface"
 
-    - URL = `http://<your.IP>:8000`
-    - Email address = The one you entered during installation
-    - Password = The one you entered during installation
+    The web interface is accessible via port **8003**:
+
+    - URL = `http://<your.IP>:8003`
+    - Email address = `admin@koel.dev`
+    - Password = `KoelIsCool`
 
 === "First run setup"
 
-    Configure Koel to use the DietPi user data (music) directory:
+    We strongly recommend to change the admin users email address and password:
 
-    - In the web interface, on the left hand side click `settings`
-    - Under `Media Path`, enter `/mnt/dietpi_userdata/Music`
-    - Then click `Scan`
+    1. Login to the web interface
+    2. Select "Users" at the bottom of the left-sided navigation panel
+    3. However over the user tile and select "Update Profile"
+    4. Change name and credentials and select "Save"
 
 === "Transfer media files to your device"
 
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
-    Folders used by Koel:
+    Directories used by Koel:
 
-    - local = `/mnt/dietpi_userdata/Music`
-    - accessed from file server = `/Music`
+    - Local = `/mnt/dietpi_userdata/Music`
+    - Accessed from file server = `/Music`
+
+=== "View logs"
+
+    To view Koel service logs, run the following command from console:
+
+    ```sh
+    journalctl -u koel
+    ```
+
+=== "Update to latest version"
+
+    To update Koel to the recent version, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 143
+    ```
+
+***
+
+Official website: <https://koel.dev/>  
+Official documentation: <https://docs.koel.dev/>  
+Source code: <https://github.com/koel/koel>  
+License: [MIT](https://github.com/koel/koel/blob/master/LICENSE.md)
 
 ## GMediaRender
 
 A DLNA audio render/endpoint. Allows you to stream and play music, from another device, such as [BubbleUPnP](https://play.google.com/store/apps/details?id=com.bubblesoft.android.bubbleupnp).
 
-![DietPi media server software GMediaRender](../assets/images/dietpi-software-media-gmediarender.png){: style="width:150px"}
+![GMediaRender logo](../assets/images/dietpi-software-media-gmediarender.png){: width="128" height="128" loading="lazy"}
 
 ## Ubooquity
 
 Ubooquity is a free home server for your comics and ebooks library, with remote web interface viewing.
 
-![DietPi media server software Ubooquity](../assets/images/dietpi-software-media-ubooquity.jpg){: style="width:600px"}
+![Ubooquity web interface screenshot](../assets/images/dietpi-software-media-ubooquity.jpg){: width="400" height="188" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface uses port **2038** resp. **2039**:
 
     - Admin page = `http://<your.IP>:2038/admin`
     - Library view page = `http://<your.IP>:2039`
@@ -828,21 +950,25 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
 === "Update to the latest version"
 
-    `dietpi-software reinstall 80`
+    ```sh
+    dietpi-software reinstall 80
+    ```
 
 ***
 
 YouTube video tutorial: *DietPi Ubooquity Comics and Ebook Reader on Raspberry Pi 3 B Plus*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xUewleo7f2Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/xUewleo7f2Q?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ## Komga
 
 Free and open source comics/mangas media server with web UI.
 
-![DietPi media server software Komga](../assets/images/dietpi-software-media-komga.jpg){: style="width:500px"}
+![Komga web interface screenshot](../assets/images/dietpi-software-media-komga.jpg){: width="500" height="306" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **2037**:
 
     - URL = `http://<your.IP>:2037`
 
@@ -856,13 +982,17 @@ Free and open source comics/mangas media server with web UI.
 
 === "View logs"
 
-    `journalctl -u komga`
+    ```sh
+    journalctl -u komga
+    ```
 
     If you require file logging, set a path via `config` file, like `logging:` \> `file:` \> `name: /var/log/komga/komga.log`, assure that the directory exists and the `komga` user or group has write permissions.
 
 === "Update to latest version"
 
-    `dietpi-software reinstall 179`
+    ```sh
+    dietpi-software reinstall 179
+    ```
 
 ***
 
@@ -875,7 +1005,7 @@ Spotify Connect client for the Raspberry Pi that Just Works™.
 
 !!! note "You will need a Spotify Premium account in order to use the Spotify Connect client."
 
-![DietPi media server software Raspotify](../assets/images/dietpi-software-media-raspotify.png){: style="width:250px"}
+![Spotify logo](../assets/images/dietpi-software-media-raspotify.png){: width="331" height="100" loading="lazy"}
 
 Raspotify should work straight out of the box.
 
@@ -901,6 +1031,8 @@ Spotify Connect Web is a console client and player for Spotify Connect including
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **4000**:
+
     - URL = `http://<your.IP>:4000`
 
 === "Generate the Spotify API key"
@@ -915,10 +1047,10 @@ Spotify Connect Web is a console client and player for Spotify Connect including
     Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
     Copy the `spotify_appkey.key` to the following folder:
 
-    - folder = `/mnt/dietpi_userdata/spotify-connect-web`
-    - accessed from file server = `/spotify-connect-web`
+    - Folder = `/mnt/dietpi_userdata/spotify-connect-web`
+    - Accessed from file server = `/spotify-connect-web`
 
-=== "View service logs"
+=== "View logs"
 
     View the service logs via:
 
@@ -957,13 +1089,15 @@ Quick start documentation: <https://developer.spotify.com/documentation/web-api/
 
 A FOSS web interface media streaming server, including live TV, forked from Emby.
 
-![DietPi media server software Jellyfin](../assets/images/dietpi-software-media-jellyfin.jpg){: style="width:600px"}
+![Jellyfin web interface screenshot](../assets/images/dietpi-software-media-jellyfin.jpg){: width="600" height="341" loading="lazy"}
 
 === "Access to the web interface"
 
+    The web interface is accessible via port **8096**:
+
     URL = `http://<your.IP>:8096`
 
-=== "View service logs"
+=== "View logs"
 
     - Service:
 
@@ -981,7 +1115,7 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
     Code: Select all
 
-    ```
+    ```sh
     apt update
     apt install jellyfin jellyfin-ffmpeg
     ```
@@ -990,4 +1124,4 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
 Source code: <https://github.com/jellyfin/jellyfin>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

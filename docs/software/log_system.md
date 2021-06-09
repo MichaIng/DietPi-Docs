@@ -9,20 +9,26 @@ Various logging methods can be selected from lightweight to full. If you don't r
 
 The *Log System* can be changed at any time by running `dietpi-software` and selecting "Log System" from the menu.
 
-![DietPi log system selection](../assets/images/dietpi-software-log-system.png){: style="width:200px"}
+![DietPi log system selection](../assets/images/dietpi-software-log-system.png){: width="256" height="128" loading="lazy"}
 
-??? info "How do I set the **Log System** ?"
-    To select the **Log System** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
-    Choose **Log System** and select the desired item. Finally click on `Install`. DietPi will do all the necessary steps to change to the desired log system.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg){: style="width:400px"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+
+???+ seealso "Examining the logging information"
+    A description of the basic log information display and filter option is given in the [HowTo section of the DietPi documentation](../../usage).
+
+[Return to the **Optimised Software list**](../../software/)
 
 ## DietPi-RAMlog
 
@@ -58,7 +64,7 @@ Lightweight tmpfs-based RAM logging solution, which reduces disk I/O and might i
     Remark: If Rsyslog is required, it can be manually installed with `apt install rsyslog`.
 
     Remark: This option significantly writes less so than a constant log writing system, e.g. the *Full logging mode*.  
-    See also <https://www.raspberrypi.org/forums/viewtopic.php?t=11258#p123670>.
+    See also <https://www.raspberrypi.org/forums/viewtopic.php?t=11258>.
 
 ## Full Logging
 
@@ -71,4 +77,4 @@ Pros/Cons:
 \+ Comes with both Rsyslog and Logrotate installed as standard  
 \+ The "standard" of Linux logging systems, essential if your log file data is critical to system operation and/or maintenance
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

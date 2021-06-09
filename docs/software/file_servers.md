@@ -7,20 +7,21 @@
 - [**vsftpd - Feature rich FTP file server**](#vsftpd)
 - [**NFS - Network file system server**](#nfs)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## ProFTPD
 
@@ -163,21 +164,50 @@ Network file system server.
     - Address = IP address of your DietPi system (e.g.: 192.168.0.100)
     - Port = 2049
 
-=== "Increase security"
+=== "Access configuration"
 
-    By default NFS will allow anyone to connect. You can limit who can access the NFS share by setting a IP address range:
+    The NFS access configuration is done via **export files**.  
+    You can edit the `/etc/exports` file as well as adding further export files within the `/etc/exports.d` directory.
 
-    - Edit the following file: `/etc/exports`
+    **Explanations of the export file format** are available in the internet or can be read in the man pages (use `man exports`, therefore the package **man** needs to be installed).
+
+    After changing the access configuration, the export information can be re-read via command
+
+    ```
+    exportfs -ra
+    ```
+
+    Alternatively you can restart the service (`systemctl restart nfs-kernel-server`).
+
+    The actual access configuration can be displayed with the command
+
+    ```
+    exportfs
+    ```
+
+    On the client side you can query the mountable exports with the command
+
+    ```
+    showmount -e <NFS_SERVER>
+    ```
+
+=== "Default configuration / increase security"
+
+    By default the DietPi NFS installation exports the directory `/mnt/dietpi_userdata` for everyone. This is configured in `/etc/exports.d/dietpi.exports`. You can edit this file to restrict the access.
+
+    E.g. you could limit the access to the NFS share by setting a IP address range:
+
+    - Edit the following file: `/etc/exports.d/dietpi.exports`
     - To only allow users access with an IP address range of 192.168.0.1-255
 
         ```
         /mnt/dietpi_userdata 192.168.0.*(rw,async,no_root_squash,fsid=0,crossmnt,no_subtree_check)
         ```
 
-    - Restart services via `systemctl restart nfs-kernel-server`
+    - Activate the new configuration (`systemctl restart nfs-kernel-server` or `exportfs -ra`)
 
 ***
 
 Wikipedia: <https://wikipedia.org/wiki/Network_File_System>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

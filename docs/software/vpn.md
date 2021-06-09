@@ -2,53 +2,31 @@
 
 ## Overview
 
-- [**DietPi-NordVPN - OpenVPN and DietPi GUI for NordVPN users**](#dietpi-nordvpn)
 - [**OpenVPN - Easy to use, minimal hassle VPN server**](#openvpn)
 - [**PiVPN - OpenVPN server installer and management tool**](#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](#wireguard)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
-
-## DietPi-NordVPN
-
-DietPi-NordVPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all NordVPN users to quickly and easily connect to any NordVPN server in TCP or UDP, using only open source software.
-
-![DietPi VPN software NordVPN logo](../assets/images/dietpi-software-vpn-nordvpn-logo.png){: style="width:200px"}
-
-![DietPi VPN software NordVPN](../assets/images/dietpi-software-vpn-nordvpn.jpg){: style="width:500px"}
-
-=== "Requires NordVPN Subscription"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
-    NordVPN offers unlimited bandwidth, zero logging and up to 6 devices on 1 account.
-
-=== "Usage"
-
-    Once installed using `dietpi-software`, simply run `dietpi-nordvpn` to use the GUI, allowing you to setup your connection.  
-    DietPi will also automatically start and connect the VPN during system boot.
-
-***
-
-Wikipedia: <https://wikipedia.org/wiki/NordVPN>
+[Return to the **Optimised Software list**](../../software/)
 
 ## OpenVPN
 
 An easy to use VPN server and client system. The DietPi installation of OpenVPN uses a single client file to get you connected with minimal hassle.
 
-![DietPi VPN software OpenVPN logo](../assets/images/dietpi-software-vpn-openvpn-logo.png){: style="width:200px"}
+![OpenVPN logo](../assets/images/dietpi-software-vpn-openvpn-logo.png){: width="200" height="58" loading="lazy"}
 
 === "Client connection file"
 
@@ -119,7 +97,7 @@ Installation article (German language): [`PiVPN: Raspberry Pi mit OpenVPN – Ra
 
 PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a command `pivpn` which allows for simple creation of additional user profiles and configurations.
 
-![DietPi VPN software PiVPN logo](../assets/images/dietpi-software-vpn-pivpn-logo.png){: style="width:100px"}
+![PiVPN logo](../assets/images/dietpi-software-vpn-pivpn-logo.png){: width="100" height="100" loading="lazy"}
 
 === "Using PiVPN"
 
@@ -133,15 +111,19 @@ PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a c
 
 Website: <https://www.pivpn.io>
 
+YouTube video tutorial: *VPN configuration using Raspberry Pi and DietPi*.
+
+<iframe src="https://www.youtube-nocookie.com/embed/aYPaDeqtMG8?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+
 YouTube video tutorial: *DietPi PiVPN Server Setup on Raspberry Pi 3 B Plus*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0t0bwskZJFw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/0t0bwskZJFw?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ## WireGuard
 
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner and more useful than IPsec, while avoiding the massive headache.
 
-![DietPi VPN software WireGuard logo](../assets/images/dietpi-software-vpn-wireguard.svg){: style="width:200px"}
+![WireGuard logo](../assets/images/dietpi-software-vpn-wireguard.svg){: width="300" height="53" loading="lazy"}
 
 When installing using `dietpi-software`, you can choose whether to install WireGuard as VPN server or client.
 
@@ -170,7 +152,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 
     Create a second client key pair:
 
-    ```
+    ```sh
     umask 0077
     wg genkey > client2_private.key
     wg pubkey < client2_private.key > client2_public.key
@@ -179,7 +161,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 
     Clone and configure the client config:
 
-    ```
+    ```sh
     cp -a wg0-client.conf wg0-client2.conf
     G_CONFIG_INJECT 'Address = ' 'Address = 10.9.0.3/24' wg0-client2.conf
     G_CONFIG_INJECT 'PrivateKey = ' "PrivateKey = $(<client2_private.key)" wg0-client2.conf
@@ -210,12 +192,19 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 
     Remark: If the client config sets the DNS server via `DNS = ...` directive, assure that resolvconf is installed: `apt install resolvconf`.
 
-=== "Logging"
+=== "View logs"
 
-    Logging can be viewed with:  
-    `journalctl -u wg-quick@wg0`  
-    respectively  
-    `journalctl -u wg-quick@<config_name>`.
+    Logging can be viewed with:
+
+    ```sh
+    journalctl -u wg-quick@wg0
+    ```
+
+    respectively
+
+    ```sh
+    journalctl -u wg-quick@<config_name>
+    ```
 
 ???+ info "Kernel update"
 
@@ -229,6 +218,6 @@ Wikipedia: <https://wikipedia.org/wiki/WireGuard>
 
 YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: Installation unter DietPi mit NoIP und AVM Fritzbox`.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yRkdzGmnvA4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/yRkdzGmnvA4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

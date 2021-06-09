@@ -8,28 +8,28 @@
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](#openbazaar)
-- [**YaCy - Decentralized open source search engine**](#yacy)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## FreshRSS
 
 FreshRSS is a self-hosted RSS feed aggregator.
 
-![DietPi social software FreshRSS](../assets/images/dietpi-software-social-freshrss.jpg){: style="width:500px"}
+![FreshRSS screenshot](../assets/images/dietpi-software-social-freshrss.jpg){: width="400" height="247" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -49,7 +49,7 @@ Also Installs:
 
 - Webserver
 
-![DietPi social software phpBB](../assets/images/dietpi-software-social-phpbb.png){: style="width:500px"}
+![phpBB example forum screenshot](../assets/images/dietpi-software-social-phpbb.png){: width="400" height="298" loading="lazy"}
 
 ### Access Forums
 
@@ -113,7 +113,7 @@ Your forum is now ready.
 WordPress is a state-of-the-art semantic personal publishing platform with a focus on aesthetics, web standards, and usability.
 It allows you to create your own website.
 
-![DietPi social software Wordpress](../assets/images/dietpi-software-social-wordpress.jpg){: style="width:500px"}
+![Wordpress logo and usage pictogram](../assets/images/dietpi-software-social-wordpress.jpg){: width="400" height="242" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -137,7 +137,7 @@ Also Installs:
 
 - LASP Webserver
 
-![DietPi social software Image Gallery](../assets/images/dietpi-software-social-imagegallery.png){: style="width:500px"}
+![Single File PHP Gallery web interface screenshot](../assets/images/dietpi-software-social-imagegallery.png){: width="400" height="248" loading="lazy"}
 
 === "Access to Image Gallery"
 
@@ -166,13 +166,13 @@ Website: <https://sye.dk/sfpg>
 
 YouTube video tutorial: *DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)*.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0by117lpq_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/0by117lpq_o?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ## Baïkal
 
 Baïkal is a lightweight CalDAV + CardDAV server.
 
-![DietPi social software Baïkal](../assets/images/dietpi-software-social-baikal.png){: style="width:500px"}
+![Baïkal web interface screenshot](../assets/images/dietpi-software-social-baikal.png){: width="400" height="219" loading="lazy"}
 
 === "First run setup"
 
@@ -200,7 +200,7 @@ Baïkal is a lightweight CalDAV + CardDAV server.
 OpenBazaar is a free decentralised peer to peer market server for all. No fees. Usage of Bitcoins.  
 Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
 
-![DietPi social software OpenBazaar](../assets/images/dietpi-software-social-openbazaar.png){: style="width:500px"}
+![OpenBazaar client screenshot](../assets/images/dietpi-software-social-openbazaar.png){: width="400" height="240" loading="lazy"}
 
 === "OpenBazaar Client"
 
@@ -220,34 +220,4 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
     - Select Standalone
     - Enter the IP address of your DietPi device, and, the username and password you applied in step 1.
 
-## YaCy
-
-YaCy is a decentralized open source search engine.  
-Essentially, it is a "peer-to-peer" Google search engine, not controlled by Google.
-
-![DietPi social software YaCy](../assets/images/dietpi-software-social-yacy.png){: style="width:500px"}
-
-=== "Access to the web interface"
-
-    URL = `http://<your.IP>:8090`
-
-=== "Admin Interface Login"
-
-    Set password with:
-
-    ```sh
-    /etc/yacy/bin/passwd.sh mypassword
-    ```
-
-    Login details are then:
-
-    - Username = `admin`
-    - Password = `mypassword`
-
-=== "Reduce CPU usage"
-
-    YaCy is extremely CPU intensive, coupled with constant background processing, we highly recommend using `dietpi-services` to reduce process priority.
-
-    Recommended setting: Nice = 19
-
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)

@@ -3,30 +3,31 @@
 ## Overview
 
 - [**Home Assistant - Open-source home automation platform running on Python 3**](#home-assistant)
-- [**EmonPi - Lightweight Energy usage stats with EmonPi PCB**](#emonpi)
+- [**emonHub - Data collector for the emonPi energy monitor addon board**](#emonhub)
 - [**Domoticz - Multi platform Home Automation System**](#domoticz)
 - [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** ?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
-    ```
+    ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg)
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
 
 ## Home Assistant
 
 Home Assistant is an open-source home automation platform running on Python 3. Track and control all devices at home and automate control. Perfect to run on a Raspberry Pi.
 
-![DietPi home automation software Home Assistant](../assets/images/dietpi-software-homeautomation-homeassistant.png){: style="width:500px"}
+![Home Assistant pictogram](../assets/images/dietpi-software-homeautomation-homeassistant.png){: width="500" height="184" loading="lazy"}
 
 === "Initial install and access"
 
@@ -41,6 +42,8 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     - Open the HA web UI (see below). It will again install some Python modules on first access, which can again take a little while. Always check `htop` if you are unsure, which reveals any Python/pip module install process, if currently done.
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8123**:
 
     URL = `http://<your.IP>:8123`
 
@@ -78,68 +81,68 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
 Official documentation: <https://home-assistant.io/docs>
 
-## EmonPi
+## emonHub
 
-Turn your Raspberry Pi into a energy usage monitor with web interface.
+Turn your Raspberry Pi into an energy usage monitor with web interface.
 
-![DietPi home automation software EmonPi](../assets/images/dietpi-software-homeautomation-emonpi.png){: style="width:500px"}
+![emonCMS web interface screenshot](../assets/images/dietpi-software-homeautomation-emonpi.png){: width="400" height="237" loading="lazy"}
 
 ### Installation
 
-The DietPi optimized installation for EmonPi is aimed at users who want the following:
+The DietPi optimised installation for emonPi is aimed at users who want the following:
 
-- Ultra lightweight alternative installation to the official EmonPi image, with all the optimisations and features of DietPi. Allowing additional uses for your RPi device (e.g.: ownCloud server): [htop image of RPi Zero @700 MHz](https://dietpi.com/downloads/misc/EmonPi_Guide/EmonPi_DietPi_zero_700mhz.jpg), running our EmonPi installation.
+- Ultra lightweight alternative installation to the official emonPi image, with all the optimisations and features of DietPi. Allowing additional uses for your RPi device (e.g.: ownCloud server): [htop image of RPi Zero @700 MHz](https://dietpi.com/downloads/misc/EmonPi_Guide/EmonPi_DietPi_zero_700mhz.jpg), running our emonHub installation.
 - Real time and historical energy usage statistics uploaded to the [emoncms.org](https://emoncms.org/) cloud, viewable from a web browser and the [Android App](https://openenergymonitor.org/forum-archive/node/11260.html), from anywhere in the world.
-- Use an existing RPi, or, do not wish to purchase the full EmonPi package (e.g.: case).
-- Comfortable attaching the EmonPi to your Raspberry Pi GPIO. No soldering or wiring is required.
+- Use an existing RPi, or, do not wish to purchase the full emonPi package with case and LCD.
+- Comfortable attaching the emonPi to your Raspberry Pi GPIO. No soldering or wiring is required.
 
 ### Missing support
 
-The DietPi installation does not support:
+The DietPi installation does not setup all features OOTB, but they can be manually enabled:
 
-- RF transmission. RF receiver (sensor nodes) is supported (e.g.: EmonTX/EmonTH)
-- EmonPi LCD screen.
-- Local EmonCMS webserver on RPi. All EmonPi data is sent to [emoncms.org](https://emoncms.org/) cloud.
+- RF transmission. RF receiver (sensor nodes) is supported (e.g.: emonTX/emonTH)
+- emonPi LCD screen
+- Local emonCMS webserver on RPi. All emonPi data is sent to [emoncms.org](https://emoncms.org/) cloud by default.
 
 ### Requirements
 
 The following hardware is required:
 
-- 1x EmonPi PCB - [Order one here](https://shop.openenergymonitor.com/emonpi-shield-kit-no-enclosure/): Select 1 Clip-on CT Current Sensor (all together £33.42), or sensors based on your needs. [Image of what you will receive](https://cdn2.bigcommerce.com/server4400/98a75/product_images/optionset_rule_images/28_zoom_1429716170.jpg).  
+- 1x emonPi PCB - [Order one here](https://shop.openenergymonitor.com/emonpi-shield-kit-no-enclosure/): Select 1 Clip-on CT Current Sensor (all together £33.42), or sensors based on your needs. [Image of what you will receive](https://cdn2.bigcommerce.com/server4400/98a75/product_images/optionset_rule_images/28_zoom_1429716170.jpg).  
   This installation also supports the optional temperature sensor, but its not required.
 - 1x Raspberry Pi (any model)
-- 1x Good quality Raspberry Pi PSU. The EmonPi does not need its own power supply. It will draw power directly through the GPIOs on the RPi.
-- Alternatively you can power the RPi through the EmonPi shield via GPIO. For this, add the EmonPi PSU to the chart and skip buying a dedicated PSU for the RPi itself.
+- 1x Good quality Raspberry Pi PSU. The emonPi does not need its own power supply. It will draw power directly through the GPIOs on the RPi.
+- Alternatively you can power the RPi through the emonPi shield via GPIO. For this, add the emonPi PSU to the chart and skip buying a dedicated PSU for the RPi itself.
 
 === "During Installation"
 
     You will be asked to create a [emoncms.org](https://emoncms.org/) account and input your unique API Key. DietPi will automatically apply your API Key during installation.
     If you did not complete this, or wish to change the API Key on your system, please follow the steps located here, otherwise continue below.
 
-=== "Attach EmonPi to RPi"
+=== "Attach emonPi to RPi"
 
     - Attach GPIO extender/riser to RPi:  
-      ![Image1](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g2.jpg){: style="width:400px"}  
-      ![Image2](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g3.jpg){: style="width:400px"}
-    - Attach EmonPi to RPi:  
-      ![Image3](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g5.jpg){: style="width:400px"}
+      ![Raspberry Pi emonPi attachment photo 1](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g2.jpg){: width="400" height="322" loading="lazy"}  
+      ![Raspberry Pi emonPi attachment photo 2](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g3.jpg){: width="400" height="277" loading="lazy"}
+    - Attach emonPi to RPi:  
+      ![Raspberry Pi emonPi attachment photo 3](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g5.jpg){: width="400" height="478" loading="lazy"}
     - Verify pins are visible:  
-      ![Image4](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g4.jpg){: style="width:400px"}
+      ![Raspberry Pi emonPi attachment photo 4](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g4.jpg){: width="400" height="300" loading="lazy"}
 
 === "Connect power sensor"
 
-    Connect the sensor to measure the power consumption to the EmonPi:
+    Connect the sensor to measure the power consumption to the emonPi:
 
-    - Plug the 3.5mm power consumption sensor into the EmonPi:  
-      ![Image5](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g6.jpg){: style="width:400px"}
+    - Plug the 3.5mm power consumption sensor into the emonPi:  
+      ![Raspberry Pi emonPi attachment photo 5](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g6.jpg){: width="400" height="714" loading="lazy"}
     - Clip the power consumption sensor onto a positive (red) cable (cables are live, use caution):  
-      ![Image6](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g7.jpg){: style="width:400px"}
+      ![Raspberry Pi emonPi attachment photo 6](../assets/images/dietpi-software-homeautomation-emonpi-emonPi-g7.jpg){: width="400" height="234" loading="lazy"}
 
 === "Setup Inputs and feeds for power sensor"
 
     #### Assign a name to your power sensor input
 
-    Inputs are the real time value of the data received from the EmonPi. We will assign a name to the power value so we can use it later.
+    Inputs are the real time value of the data received from the emonPi. We will assign a name to the power value so we can use it later.
 
     - Login to your `https://emoncms.org` account
     - Click `Setup` at the top right of screen, then click `Inputs`
@@ -147,16 +150,16 @@ The following hardware is required:
 
     #### Setup feed
 
-    Feeds allow your EmonPi data (inputs) to be saved to a database. You will need feeds setup if you want to view historical (and pretty) stats.
+    Feeds allow your emonPi data (inputs) to be saved to a database. You will need feeds setup if you want to view historical (and pretty) stats.
 
     - Login to your `https://emoncms.org` account
     - Click `Setup` at the top right of screen, then click `Inputs`
     - Select the spanner on the far right of *Power WATT*
     - Check the screen matches the following image  
-      ![Image7](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_addfeed.png){: style="width:640px"}  
+      ![emonPi setup screenshot 1](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_addfeed.png){: width="1079" height="89" loading="lazy"}  
       then click `add`
     - To verify the feed is active, click `Setup` at the top right of screen, then click `Inputs`. You should see `log` under *Process list* of *Power WATT*:  
-      ![Image8](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_inputs.png){: style="width:640px"}  
+      ![emonPi setup screenshot 2](../assets/images/dietpi-software-homeautomation-emonpi-emoncms-emonpi_inputs.png){: width="731" height="79" loading="lazy"}  
 
 === "Setup 'My Electric' App"
 
@@ -171,22 +174,52 @@ The following hardware is required:
     - Enter your unit costs for your electric (optional).
 
     Then click `Save`.  
-    Press `F5` to refresh the page and view your energy consumption.
+    Press ++f5++ to refresh the page and view your energy consumption.
+
+***
+
+Official usage guide: <https://guide.openenergymonitor.org/>  
+Official config docs: <https://github.com/openenergymonitor/emonhub/blob/stable/configuration.md>  
+Source code: <https://github.com/openenergymonitor/emonhub>
 
 ## Domoticz
 
-Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.
+Domoticz is a Home Automation System that lets you monitor and configure various devices like lights, switches, various sensors/meters like for temperature, rain, wind, UV radiation, electric fields, gas, water and much more. Notifications/Alerts can be sent to any mobile device.
 
-![DietPi home automation software Domoticz](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: style="width:600px"}
+![Domoticz web interface screenshot](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: width="600" height="226" loading="lazy"}
 
 === "Access to the web interface"
+
+    The web interface is accessible via port **8124** resp. **8424**:
 
     - HTTP: `http://<your.IP>:8124`
     - HTTPS: `https://<your.IP>:8424`
 
 === "View logs"
 
-    `journalctl -u domoticz`
+    ```sh
+    journalctl -u domoticz
+    ```
+
+=== "Service handling"
+
+    Use the following commands to control the Domoticz system service:
+
+    ```sh
+    systemctl status domoticz
+    ```
+
+    ```sh
+    systemctl stop domoticz
+    ```
+
+    ```sh
+    systemctl start domoticz
+    ```
+
+    ```sh
+    systemctl restart domoticz
+    ```
 
 === "Install directory"
 
@@ -209,7 +242,7 @@ Also installs:
 - Webserver (based on your preference)
 - PHP
 
-![DietPi home automation software TasmoAdmin](../assets/images/dietpi-software-homeautomation-tasmoadmin.png){: style="width:200px"}
+![TasmoAdmin logo](../assets/images/dietpi-software-homeautomation-tasmoadmin.png){: width="302" height="184" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -220,4 +253,4 @@ Also installs:
 Source code: <https://github.com/reloxx13/TasmoAdmin>  
 Credits: Implemented by [`svh1985`](https://github.com/svh1985)
 
-[Return to the **Optimised Software list**](../../dietpi_optimised_software)
+[Return to the **Optimised Software list**](../../software/)
