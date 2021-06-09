@@ -406,7 +406,7 @@ Install Blynk App (Android): <https://play.google.com/store/apps/details?id=cc.b
 ## Audiophonics PI-SPC
 
 Power control module for Raspberry Pi which allows you to physically power on/off the system, without the need to run `poweroff`.
-See <https://www.audiophonics.fr/fr/kits-et-modules-diy/audiophonics-pi-spc-v2-module-de-controle-alimentation-type-atx-pre-assemble-p-11125.html> for further details.
+See <https://www.audiophonics.fr/en/raspberry-pi-and-other-sbc-accessories/audiophonics-pi-spc-v2-power-management-module-for-raspberry-pi-p-10912.html> for further details.
 
 ![Audiophonics PCB photo](../assets/images/dietpi-software-hardwareprojects-audiophonis-pcb.jpg){: width="400" height="400" loading="lazy"}
 
