@@ -63,4 +63,4 @@ jobs:
       run: |
         ./lychee -X head --github-token '${{ secrets.GITHUB_TOKEN }}' README.md
         cd build
-        find . -type d -exec ../lychee -X head -a 405 --exclude 'https://fonts.gstatic.com' -b 'http://127.0.0.1:8000/{}/' --github-token '${{ secrets.GITHUB_TOKEN }}' '{}/*.html' \;
+        find . -type d -exec ../lychee --exclude '(fonts.gstatic.com|admin@koel.dev|localhost|bridges.torproject.org|www.spigotmc.org|ftp://)' -b 'http://127.0.0.1:8000/{}/' --github-token '${{ secrets.GITHUB_TOKEN }}' '{}/*.html' \;
