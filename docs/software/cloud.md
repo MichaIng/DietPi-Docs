@@ -105,12 +105,13 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Quick start"
 
-    Access the web interface using the next URL when running on SBC (`http://localhost/nextcloud/`) or the IP address / hostname of your DietPi device (e.g.: `http://192.168.0.100/nextcloud/`).
+    Nextcloud is accessible via regular HTTP/HTTPS port **80**/**443** below the `/nextcloud` path:
 
+    - URL = `http://<your.IP>/nextcloud/`
     - Username = `admin`
     - Password = `<your global password>`
 
-    Nextcloud is installed together with the webserver. To fast access the files, a dedicated USB hard drive is highly recommended.
+    To fast access the files, a dedicated USB hard drive is highly recommended.
 
 === "Advanced configuration"
 
