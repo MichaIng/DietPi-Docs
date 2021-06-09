@@ -50,7 +50,7 @@ jobs:
       if: always() && steps.build.outcome == 'success'
       run: |
         sed -i '/^- redirects:$/,/^$/d' mkdocs.yml
-        mkdocs serve -s
+        mkdocs serve -s &
     - name: Download lychee
       id: lychee
       if: always() && steps.serve.outcome == 'success'
