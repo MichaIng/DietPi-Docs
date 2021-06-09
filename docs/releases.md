@@ -638,7 +638,7 @@ As always, many smaller code performance and stability improvements, visual and 
 
     For more details on installation and configuration open [DietPi Optimised Software - Bazarr](../software/bittorrent/#bazarr) page.
 
-    Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent#bazarr) page in [Optimised software](../software/).
+    Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent/#bazarr) page in [Optimised software](../software/).
     Many thanks to @DiogoAbu for doing this suggestion [Issue #2045](https://github.com/MichaIng/DietPi/issues/2045)
 
 - **Docker logging available in RAM/journald**
