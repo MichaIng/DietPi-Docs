@@ -668,7 +668,7 @@ Forum: <https://vaultwarden.discourse.group>
 Source code: <https://github.com/dani-garcia/vaultwarden>  
 Open-source license: [GPLv3](https://github.com/dani-garcia/vaultwarden/blob/master/LICENSE.txt)
 
-Credits: This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9). Thank you!
+Credits: This software title has been added to DietPi-Software by @CactiChameleon9. Thank you!
 
 ## FuguHub
 
@@ -692,7 +692,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     3. Press ++y++ for `VPS` or ++n++ for `home/office` server
     4. Choose whether to install an internal BitTorrent client.
 
-    !!! warning "It is recommended to use the a dedicated BitTorrent server, if required: <https://dietpi.com/docs/software/bittorrent/>"
+    !!! warning "It is recommended to use the a dedicated [BitTorrent](../bittorrent/) server, if required."
 
     Setup details:
 
