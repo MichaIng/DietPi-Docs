@@ -36,7 +36,7 @@
 
     We do not install a desktop environment. User will be required to setup Google API and keys on another system (please see first run setup below).  
     We highly recommend SSH to allow for a quick setup of Google API and device link.  
-    We also recommend one of [DietPi File servers](https://dietpi.com/docs/software/file_servers/), for easy transfer of `assistant.json`, generated during Google API setup.
+    We also recommend one of [DietPi File servers](../file_servers/), for easy transfer of `assistant.json`, generated during Google API setup.
 
 ![Google AIY logo](../assets/images/dietpi-software-hardwareprojects-googleaiy.jpg){: width="400" height="239" loading="lazy"}
 
@@ -47,7 +47,7 @@
     - Follow the link below, to setup Google API and download client keys, required to enable the speech API:  
       <https://aiyprojects.withgoogle.com/voice#users-guide-1-2--turn-on-the-google-assistant-api>  
       Remark: When setting up the activity controls, ensure you also enable "Include Chrome browsing history and activity from websites and apps that use Google services", else she will not function ;)
-    - Make sure you have one of [DietPi's File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    - Make sure you have one of [DietPi's File Servers](../file_servers/) installed.  
       Once completed, download the `client_secret.json` and save it to:
         - If using SSH = `/mnt/dietpi_userdata/voice-recognizer-raspi/assistant.json`
         - If using File Server = `voice-recognizer-raspi/assistant.json`
@@ -209,7 +209,7 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
 
 === "Access WebIOPi over the internet"
 
-    To be able to access your WebIOPi interface over the internet, you may install [Remot3.it (Weaved)](https://dietpi.com/docs/software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet).
+    To be able to access your WebIOPi interface over the internet, you may install [Remot3.it (Weaved)](../remote_desktop/#remot3it).
 
 ***
 
