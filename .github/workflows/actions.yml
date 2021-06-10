@@ -48,6 +48,7 @@ jobs:
     - name: Serve DietPi-Docs for lychee
       id: serve
       if: always() && steps.build.outcome == 'success'
+      # Test links against docs without redirects, so that we are forced to update links to renamed pages
       run: |
         sed -i '/^- redirects:$/,/^$/d' mkdocs.yml
         mkdocs serve -s &
