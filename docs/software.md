@@ -102,7 +102,7 @@
 
 - [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole)
 - [**Unbound - A validating, recursive, and caching DNS resolver**](../software/dns_servers/#unbound)
-- [**AdGuard Home - A powerful network-wide ads & trackers blocking DNS server**](../software/dns_servers/#adguardhome)
+- [**AdGuard Home - A powerful network-wide ads & trackers blocking DNS server**](../software/dns_servers/#adguard-home)
 
 ## [File Servers](../software/file_servers/)
 
