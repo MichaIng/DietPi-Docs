@@ -179,6 +179,7 @@
 - [**Raspotify - Spotify Connect client**](../software/media/#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web)
 - [**Jellyfin - Media streaming server including live TV**](../software/media/#jellyfin)
+- [**Beets - Music organizer and manager**](../software/media/#beets)
 
 ## [Printing Server](../software/printing/)
 
