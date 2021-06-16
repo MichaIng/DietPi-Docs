@@ -31,6 +31,7 @@
 - [**Raspotify - Spotify Connect client**](#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web)
 - [**Jellyfin - Media streaming server including live TV**](#jellyfin)
+- [**Beets - Music organizer and manager**](#beets)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -542,7 +543,7 @@ Also Installs:
 
     To update Ampache to the current version, execute
 
-    ```sh
+    ```shjellyfin
     dietpi-software reinstall 40
     ```
 
@@ -1123,5 +1124,18 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 ***
 
 Source code: <https://github.com/jellyfin/jellyfin>
+
+## Beets
+A command-line music organizer and manager.
+
+=== "Changing configuration"
+
+    You can edit the configuration for Beets at '/mnt/dietpi_userdata/beets/config.yaml'
+
+=== "Usage with other apps"
+
+    You can use Beets to import music into any music app supported by DietPi-Software with `beet import`.
+
+***
 
 [Return to the **Optimised Software list**](../../software/)
