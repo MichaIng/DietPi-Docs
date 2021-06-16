@@ -149,7 +149,7 @@ Unbound is a validating, recursive, caching DNS resolver. It can resolve hostnam
 === "Default DNS ports"
 
     - Default DNS port: **53**
-    - DNS port when Pi-hole or AdGuard Home is installed: **5335**
+    - DNS port when Pi-hole or AdGuard Home are installed: **5335**
 
 === "Configuration directory"
 
