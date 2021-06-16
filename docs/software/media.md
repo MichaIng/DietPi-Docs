@@ -1126,11 +1126,12 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 Source code: <https://github.com/jellyfin/jellyfin>
 
 ## Beets
+
 A command-line music organizer and manager.
 
 === "Changing configuration"
 
-    You can edit the configuration for Beets at '/mnt/dietpi_userdata/beets/config.yaml'
+    You can edit the configuration for Beets at `/mnt/dietpi_userdata/beets/config.yaml`.
 
 === "Usage with other apps"
 
