@@ -14,7 +14,6 @@
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
-- [**K3s - Lightweight Kubernetes**](#k3s)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -709,52 +708,5 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 ***
 
 Website: <https://fuguhub.com>
-
-## K3s
-
-Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & Edge computing
-
-![K3s Logo](https://k3s.io/images/logo-k3s.svg){: width="300" height="116" loading="lazy"}
-
-=== "Before installation"
-
-    The default installation of K3s creates a single-node cluster.
-    If you want to have a multi-node setup, you need to configure the nodes to speak to the others.
-    
-    In `/boot/dietpi.txt`, edit the `SOFTWARE_K3S_EXEC` parameter to set command (`server` or `agent`).
-    After the command, you can add other command-line parameters here.
-
-    Example:
-
-    ```
-    SOFTWARE_K3S_EXEC=server --disable=local-storage
-    ```
-
-    If you need to add many command-line parameters, it is recommended to put them in a file instead, 
-    keeping only the command (`server` or `agent`) in `/boot/dietpi.txt`.
-    During installation, if `/boot/dietpi-k3s.yaml` exists, it is copied to `/etc/rancher/k3s/config.yaml`, and used by K3s.
-    The format of this file is documented in the [K3s docs](https://rancher.com/docs/k3s/latest/en/installation/install-options/#configuration-file).
-
-=== "Connecting to your cluster"
-
-    When running in `server` mode, K3s generates a kubeconfig file at `/etc/rancher/k3s/k3s.yaml`.
-    Copy this to your client machine, and edit the `server` setting to point to the hostname of the server.
-
-    Place the file in the default location (`~/.kube/config`), or point to it using the `KUBECONFIG` environment-variable.
-    
-    You should now be able to interact with your Kubernetes cluster using `kubectl`:
-
-    ```
-    kubectl get nodes
-    kubectl get pods -A
-    ```
-
-=== "View logs"
-
-    - Service: `journalctl -u k3s`
-
-
-Website: <https://k3s.io>
-
 
 [Return to the **Optimised Software list**](../../software/)
