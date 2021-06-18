@@ -257,7 +257,7 @@ Wikipedia: <https://wikipedia.org/wiki/Webmin>
 
 Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & Edge computing
 
-![K3s Logo](https://k3s.io/images/logo-k3s.svg){: width="300" height="116" loading="lazy"}
+![K3s Logo](../assets/images/logo-k3s.svg){: width="300" height="116" loading="lazy"}
 
 === "Before installation"
 
@@ -298,6 +298,7 @@ Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & E
 
 
 Website: <https://k3s.io>
+Official documentation: <https://rancher.com/docs/k3s/latest/en/>
 
 
 [Return to the **Optimised Software list**](../../software/)
