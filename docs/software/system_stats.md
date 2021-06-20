@@ -252,7 +252,6 @@ Official website: <https://webmin.com/>
 Official documentation: <https://doxfer.webmin.com/Webmin/Main_Page>  
 Wikipedia: <https://wikipedia.org/wiki/Webmin>
 
-
 ## K3s
 
 Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & Edge computing
@@ -296,9 +295,7 @@ Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & E
 
     - Service: `journalctl -u k3s`
 
-
 Website: <https://k3s.io>
 Official documentation: <https://rancher.com/docs/k3s/latest/en/>
-
 
 [Return to the **Optimised Software list**](../../software/)
