@@ -674,7 +674,7 @@ Credits: This software title has been added to DietPi-Software by @CactiChameleo
 
 FuguHub transforms your DietPi device into a secure online storage system, letting you access and share files from any connected computer or device.
 
-![FuguHub logo](https://fuguhub.com/images/FuguHub.png){: width="149" height="140" loading="lazy"}
+![FuguHub logo](../assets/images/dietpi-software-cloud-fuguhub.png){: width="149" height="140" loading="lazy"}
 
 === "Quick access"
 
