@@ -32,18 +32,21 @@
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web)
 - [**Jellyfin - Media streaming server including live TV**](#jellyfin)
 
-??? info "How do I run **DietPi-Software** and install **optimised software**?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+
+[Return to the **Optimised Software list**](../../software/)
 
 ## Kodi
 
@@ -74,7 +77,7 @@ Also installs:
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used:
 
     - local = `/mnt/dietpi_userdata/Music`
@@ -120,7 +123,7 @@ Also installs:
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used:
 
     - local = `/mnt/dietpi_userdata/Music`
@@ -156,7 +159,7 @@ Also installs:
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by O!MPD:
 
     - Local = `/mnt/dietpi_userdata/Music`
@@ -193,7 +196,7 @@ Also installs:
 
 ## Mopidy
 
-Mopidy is a python based music player web based user interface for MPD.
+Mopidy is a Python based music player web based user interface for MPD.
 
 ![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="400" height="198" loading="lazy"}
 
@@ -205,7 +208,7 @@ Mopidy is a python based music player web based user interface for MPD.
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
     - Local = `/mnt/dietpi_userdata/Music`
@@ -259,7 +262,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
     - Folder = `/mnt/dietpi_userdata/Music`  
@@ -280,7 +283,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
     - Folder = `/mnt/dietpi_userdata/Music`  
@@ -319,7 +322,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
     - Folder = `/mnt/dietpi_userdata/Music`  
@@ -363,7 +366,7 @@ Squeezelite is the audio player for the Logitech Media Server.
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
     - Folder = `/mnt/dietpi_userdata/Music`  
@@ -457,7 +460,7 @@ Stream your shared media to any DLNA/UPnP capable device.
 
 === "Transfer media files to ReadyMedia"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by ReadyMedia:
 
     - `/Music`
@@ -494,7 +497,7 @@ Also Installs:
 
 === "Transfer media files to ReadyMedia"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Ampache:
 
     - audio = `/mnt/dietpi_userdata/Music`
@@ -577,13 +580,13 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
 === "Transfer media files to your device"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Emby:
 
     - Audio: `/mnt/dietpi_userdata/Music`
     - Videos: `/mnt/dietpi_userdata/Video`
 
-=== "Logging"
+=== "View logs"
 
     To view Emby server logs, run the following command from console:
 
@@ -634,7 +637,7 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 === "Transfer media files to your device"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Plex Media Server:
 
     - Audio = `/mnt/dietpi_userdata/Music`
@@ -650,7 +653,7 @@ YouTube video tutorial (German language): `Raspberry Pi 4 - Plex TV Media Server
 
 ## Tautulli
 
-A Python-based monitoring and tracking tool for Plex Media Server.
+A Python based monitoring and tracking tool for Plex Media Server.
 
 ![Tautulli web interface screenshot](../assets/images/dietpi-software-media-tautulli.png){: width="400" height="273" loading="lazy"}
 
@@ -725,7 +728,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Transfer media files to your device"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Roon Server:
 
     - Music folder = `/mnt/dietpi_userdata/Music`
@@ -817,14 +820,9 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
     - URL = `http://<your.IP>:8000`
     - Admin user = `admin`
-    - Admin password = randomly generated, use code below to view:
-
-        ```sh
-        grep admin-password /etc/icecast2/icecast.xml
-        ```
-
-    - Source password = `dietpi`
-    - Relay password = `dietpi`
+    - Admin password = `<your global password>` (default: `dietpi`)
+    - Source password = `<your global password>` (default: `dietpi`)
+    - Relay password = `<your global password>` (default: `dietpi`)
 
 === "Access recording file"
 
@@ -843,6 +841,11 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
         ```
 
     - A recording will then be saved in the following location: `/mnt/dietpi_userdata/darkice_recording.ogg`
+
+=== "Configuration files"
+
+    - IceCast: `/etc/icecast2/icecast.xml`
+    - DarkIce: `/etc/darkice.cfg`
 
 === "View logs"
 
@@ -872,27 +875,51 @@ Web interface music streamer.
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8000**:
+    The web interface is accessible via port **8003**:
 
-    - URL = `http://<your.IP>:8000`
-    - Email address = The one you entered during installation
-    - Password = The one you entered during installation
+    - URL = `http://<your.IP>:8003`
+    - Email address = `admin@koel.dev`
+    - Password = `KoelIsCool`
 
 === "First run setup"
 
-    Configure Koel to use the DietPi user data (music) directory:
+    We strongly recommend to change the admin users email address and password:
 
-    - In the web interface, on the left hand side click `settings`
-    - Under `Media Path`, enter `/mnt/dietpi_userdata/Music`
-    - Then click `Scan`
+    1. Login to the web interface
+    2. Select "Users" at the bottom of the left-sided navigation panel
+    3. However over the user tile and select "Update Profile"
+    4. Change name and credentials and select "Save"
 
 === "Transfer media files to your device"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
-    Folders used by Koel:
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Directories used by Koel:
 
     - Local = `/mnt/dietpi_userdata/Music`
     - Accessed from file server = `/Music`
+
+=== "View logs"
+
+    To view Koel service logs, run the following command from console:
+
+    ```sh
+    journalctl -u koel
+    ```
+
+=== "Update to latest version"
+
+    To update Koel to the recent version, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 143
+    ```
+
+***
+
+Official website: <https://koel.dev/>  
+Official documentation: <https://docs.koel.dev/>  
+Source code: <https://github.com/koel/koel>  
+License: [MIT](https://github.com/koel/koel/blob/master/LICENSE.md)
 
 ## GMediaRender
 
@@ -915,7 +942,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
 === "Transfer ebooks/comics to your device"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
 
     - Use the following folders = `/mnt/dietpi_userdata/ebooks` and `/mnt/dietpi_userdata/comics`
     - Then use the admin page, to set the above locations for ebook and comic storage
@@ -1017,13 +1044,13 @@ Spotify Connect Web is a console client and player for Spotify Connect including
 
 === "Transfer Spotify API key"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Copy the `spotify_appkey.key` to the following folder:
 
     - Folder = `/mnt/dietpi_userdata/spotify-connect-web`
     - Accessed from file server = `/spotify-connect-web`
 
-=== "View service logs"
+=== "View logs"
 
     View the service logs via:
 
@@ -1070,7 +1097,7 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
     URL = `http://<your.IP>:8096`
 
-=== "View service logs"
+=== "View logs"
 
     - Service:
 

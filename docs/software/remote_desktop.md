@@ -16,22 +16,23 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere)
 
-??? info "How do I run **DietPi-Software** and install **optimised software**?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 !!! info Desktop environment
 
-    From the list of **Optimised Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
+    From the list of **Browse Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop/). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -47,7 +48,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     systemctl status vncserver
     ```
 
-    Although any VNC viewer may work, the latest official TigerVNC viewer can be downloaded here: <https://bintray.com/tigervnc/stable/tigervnc/>
+    Although any VNC viewer may work, the latest official TigerVNC viewer can be downloaded here: <https://sourceforge.net/projects/tigervnc/files/stable/>
 
     #### Connection Details
 
@@ -204,17 +205,17 @@ Remot3.it allows you to easily access your DietPi device over the internet.
 
 ![Remot3.it web interface screenshot](../assets/images/dietpi-software-remotedesktop-remot3it.png){: width="400" height="140" loading="lazy"}
 
-Weaved works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
+Remot3.it works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
 
 Examples of TCP ports for Remot3.it:
 
-- SSH port 22. Open a remote terminal to your device.
-- Transmission port 9091. Monitor your BitTorrent downloads.
-- Webserver port 80. Access your internal webserver and/or websites.
+- SSH port **22**. Open a remote terminal to your device.
+- Transmission port **9091**. Monitor your BitTorrent downloads.
+- Webserver port **80**. Access your internal websites.
 
 === "First Run Setup"
 
-    The first run setup is executed once `dietpi-software` has completed the installation and the system is rebooted. Run the following command. Follow the onscreen instructions to setup and link an account:
+    On interactive installs, `dietpi-software` will call the setup script to setup and manage your application connections. On unattended installs, e.g. via `dietpi.txt`, you can call it manually from console:
 
     ```sh
     connectd_installer
@@ -226,7 +227,7 @@ Examples of TCP ports for Remot3.it:
 
     Sign into your Remot3.it account to access your devices remotely:
 
-    - URL = <https://www.remote.it>
+    - URL = <https://remote.it/>
 
 ***
 

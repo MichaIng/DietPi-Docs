@@ -9,18 +9,19 @@
 - [**Netdata - Web interface system stats**](#netdata)
 - [**Webmin - Remote system management with web interface**](#webmin)
 
-??? info "How do I run **DietPi-Software** and install **optimised software**?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi software](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -147,7 +148,7 @@ Allows you to monitor your system stats from a web page. The display output can 
 
 ***
 
-Website: <https://phpsysinfo.github.io/phpsysinfo>
+Official website: <https://phpsysinfo.github.io/phpsysinfo>
 
 ## RPi-Monitor
 
@@ -173,11 +174,11 @@ RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
 === "Configuration"
 
-    The configuration is described there: <https://xavierberger.github.io/RPi-Monitor-docs/20_index.html>.  
+    The configuration is described there: <https://xavierberger.github.io/RPi-Monitor-docs/20_index.html>
 
 ***
 
-Website: <https://github.com/XavierBerger/RPi-Monitor>.
+Official website: <https://github.com/XavierBerger/RPi-Monitor>.
 
 ## Netdata
 
@@ -197,13 +198,19 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
     `/etc/netdata/netdata.conf`  
     and change the line  
     `bind socket to IP = 127.0.0.1`  
-    to match either the local network IP or static public IP of your server depending on your needs.  
-    Alternatively comment it e.g. if your server does not have a static public IP but you require remote access.
+    to match either the local network IP or static public IP of your DietPi server depending on your needs.
+    Alternatively comment it e.g. if your server does not have a static public IP but you require remote access. But note that an unprotected publicly accessible Netdata web interface is a potential security risk. Head over to the "Security hardening" tab to learn more about how to restrict access to Netdata.
+
+    Once saved, you will need to restart the service to implement the changes by entering the below into the terminal:
+
+    ```sh
+    systemctl restart netdata
+    ```
 
 === "Security hardening"
 
     Note that having Netdata accessible to anyone gives potential attackers a bunch of useful information where to start hacking.  
-    About how to limit access to Netdata, check as well: <https://docs.netdata.cloud/web/server/>.
+    To learn about how to limit access to Netdata, please refer to their documentation regarding [the configuration of access lists](https://learn.netdata.cloud/docs/agent/web/server/#access-lists).
 
 ***
 
@@ -240,7 +247,8 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
 
 ***
 
-Website: <https://www.webmin.com>  
+Official website: <https://webmin.com/>  
+Official documentation: <https://doxfer.webmin.com/Webmin/Main_Page>  
 Wikipedia: <https://wikipedia.org/wiki/Webmin>
 
 [Return to the **Optimised Software list**](../../software/)

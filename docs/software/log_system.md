@@ -11,16 +11,22 @@ The *Log System* can be changed at any time by running `dietpi-software` and sel
 
 ![DietPi log system selection](../assets/images/dietpi-software-log-system.png){: width="256" height="128" loading="lazy"}
 
-??? info "How do I set the **Log System**?"
-    To select the **Log System** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Log System** and select the desired item. Finally click on `Install`. DietPi will do all the necessary steps to change to the desired log system.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg){: width="500" height="336" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+
+???+ seealso "Examining the logging information"
+    A description of the basic log information display and filter option is given in the [HowTo section of the DietPi documentation](../../usage/).
 
 [Return to the **Optimised Software list**](../../software/)
 

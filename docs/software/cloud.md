@@ -12,21 +12,22 @@
 - [**Syncthing - Backup and sync server with web interface**](#syncthing)
 - [**MinIO - S3 compatible distributed object server**](#minio)
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
-- [**Bitwarden_RS - Unofficial Bitwarden password manager server written in Rust**](#bitwarden_rs)
+- [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 
-??? info "How do I run **DietPi-Software** and install **optimised software**?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -45,7 +46,7 @@ Also Installs:
 
     - URL = `http://<your.IP>/owncloud`
     - Username = `admin`
-    - Password = `<your global password>`
+    - Password = `<your global password>` (default: `dietpi`)
 
     If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).
 
@@ -104,16 +105,17 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Quick start"
 
-    Access the web interface using the next URL when running on SBC (`http://localhost/nextcloud/`) or the IP address / hostname of your DietPi device (e.g.: `http://192.168.0.100/nextcloud/`).
+    Nextcloud is accessible via regular HTTP/HTTPS port **80**/**443** below the `/nextcloud` path:
 
+    - URL = `http://<your.IP>/nextcloud/`
     - Username = `admin`
-    - Password = `<your global password>`
+    - Password = `<your global password>` (default: `dietpi`)
 
-    Nextcloud is installed together with the webserver. To fast access the files, a dedicated USB hard drive is highly recommended.
+    To fast access the files, a dedicated USB hard drive is highly recommended.
 
 === "Advanced configuration"
 
-    For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/17/admin_manual/configuration_server/occ_command.html).
+    For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html).
 
     To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`.  
     Just use inside your terminal:
@@ -205,6 +207,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
         sudo -u www-data php /var/www/nextcloud/updater/updater.phar
         y # Starts download and install of files
         y # Starts the internal database upgrade and migration steps
+        N # Do not keep maintenance mode active
         ```
 
     3. Follow the official documentation for a manual upgrade process: <https://docs.nextcloud.com/server/latest/admin_manual/maintenance/manual_upgrade.html>
@@ -243,19 +246,20 @@ Host video calls on your own Nextcloud instance. The TURN server ***Coturn*** wi
 
 Also installs:
 
-- Nextcloud
-- Coturn
+- [**Nextcloud**](#nextcloud)
+- **Coturn**
 
 ![Nextcloud Talk app screenshot](../assets/images/dietpi-software-cloud-nextcloudtalk.png){: width="2560" height="1440" loading="lazy"}
 
-### Installation notes
+=== "Installation notes"
 
-During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
+    During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
 
-If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
-Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
+    If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
 
-Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
+    Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
+
+    Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
 
 ***
 
@@ -286,7 +290,7 @@ Also Installs:
         - Host = `localhost`
         - Database = `pydio`
         - User = `pydio`
-        - Password = `dietpi`
+        - Password = `<your global password>` (default: `dietpi`)
         - Use MySqli = No
     - Click test connection, when successful, click the `>>` button.
     - Under advanced options, use the default values, then click the `Install Pydio` button.
@@ -355,7 +359,7 @@ Your very own GitHub style server, with web interface.
     - Change the following values only:
         - Database = `MySQL`
         - User = `gogs`
-        - Database password = `<your global password>`
+        - Database password = `<your global password>` (default: `dietpi`)
         - Repository Root Path = `/mnt/dietpi_userdata/gogs-repo`
         - Run User = `gogs`
         - Log Path = `/var/log/gogs`
@@ -393,7 +397,7 @@ Your very own GitHub style server, with web interface.
 
     - Change the following values only:
         - MySQL database user = `gitea`
-        - MySQL database password = `dietpi`
+        - MySQL database password = `<your global password>` (default: `dietpi`)
         - Repository root path = `/mnt/dietpi_userdata/gitea/gitea-repositories`
         - Log path = `/var/log/gitea`
     - Scroll to the bottom of page and select Install Gitea
@@ -525,8 +529,8 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
     - Open `about:config` to access advanced settings.
     - Search for: `identity.sync.tokenserver.uri`.
-    - Set value to: `http://<your.IP>:5000/token/1.0/sync/1.5`.
-        - We recommend to access your Firefox Sync Server only from local network or via VPN, keeping the default listening port **5000** closed for access from outside of your LAN.
+    - Set value to: `http://<your.IP>:5002/token/1.0/sync/1.5`.
+        - We recommend to access your Firefox Sync Server only from local network or via VPN, keeping the default listening port **5002** closed for access from outside of your LAN.
         - If you need to access it remotely without VPN, adjust the `public_url` setting inside the config file `/mnt/dietpi_userdata/firefox-sync/syncserver.ini` to contain your public IP or domain and desired port.
 
 === "Directories"
@@ -553,22 +557,24 @@ This is Mozilla's Firefox Sync Server which manages syncing Firefox instance boo
 
 ***
 
-Source code: <https://github.com/mozilla-services/syncserver>
+Official documentation: <https://mozilla-services.readthedocs.io/en/latest/howtos/run-sync-1.5.html>  
+Source code: <https://github.com/mozilla-services/syncserver>  
+License: [MPL2.0](https://github.com/mozilla-services/syncserver/blob/master/LICENSE)
 
 Credits: This software title has been added to DietPi-Software by [CedArctic](https://github.com/CedArctic), many thanks! :D
 
-## Bitwarden_RS
+## vaultwarden
 
-Bitwarden_RS is an unofficial Bitwarden password manager server with web interface, written in Rust.
+vaultwarden is an unofficial Bitwarden password manager server with web interface, written in Rust.
 
-![Bitwarden_RS web vault screenshot](../assets/images/dietpi-software-bitwarden_rs.jpg){: width="600" height="247" loading="lazy"}
+![vaultwarden web vault screenshot](../assets/images/dietpi-software-vaultwarden.jpg){: width="600" height="247" loading="lazy"}
 
 === "First access"
 
     - During install, a self-signed 4096-bit RSA TLS certificate is created to allow encrypted HTTPS access, which is required for access with most Bitwarden clients and reasonable as of the sensitivity of the data a password manager handles.
     - Most web browsers will warn you on access that the certificate is not trusted, although usually you can choose to ignore that and still access the web vault.
     - Most Bitwarden clients on the other hand will deny to access your server, as long as the certificate is not trusted.
-    - As far as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via `dietpi-letsencrypt` and setup either a reverse proxy, or configure Bitwarden_RS to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
+    - As far as you have a public domain name for your DietPi server, we recommend to request an official trusted CA certificate, e.g. via `dietpi-letsencrypt` and setup either a reverse proxy, or configure vaultwarden to use the retrieved key and certificate directly via ROCKET_TLS setting in the config file (see "Directories" tab).
 
     ??? info "How do I add a self-signed certificate to the OS' Trusted Root Certification Authorities store?"
 
@@ -639,14 +645,14 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
 === "Directories"
 
-    - Install directory: `/opt/bitwarden_rs`
-    - Data directory: `/mnt/dietpi_userdata/bitwarden_rs`
-    - Config file: `/mnt/dietpi_userdata/bitwarden_rs/bitwarden_rs.env`
+    - Install directory: `/opt/vaultwarden`
+    - Data directory: `/mnt/dietpi_userdata/vaultwarden`
+    - Config file: `/mnt/dietpi_userdata/vaultwarden/vaultwarden.env`
 
 === "View logs"
 
     ```sh
-    journalctl -u bitwarden_rs
+    journalctl -u vaultwarden
     ```
 
 === "Update to latest version"
@@ -657,22 +663,23 @@ Bitwarden_RS is an unofficial Bitwarden password manager server with web interfa
 
 ***
 
-Official documentation: <https://github.com/dani-garcia/bitwarden_rs/wiki>  
-Forum: <https://bitwardenrs.discourse.group>  
-Source code: <https://github.com/dani-garcia/bitwarden_rs>  
-Open-source license: [GPLv3](https://github.com/dani-garcia/bitwarden_rs/blob/master/LICENSE.txt)
+Official documentation: <https://github.com/dani-garcia/vaultwarden/wiki>  
+Forum: <https://vaultwarden.discourse.group>  
+Source code: <https://github.com/dani-garcia/vaultwarden>  
+Open-source license: [GPLv3](https://github.com/dani-garcia/vaultwarden/blob/master/LICENSE.txt)
 
-Credits: This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9). Thank you!
+Credits: This software title has been added to DietPi-Software by @CactiChameleon9. Thank you!
 
 ## FuguHub
 
 FuguHub transforms your DietPi device into a secure online storage system, letting you access and share files from any connected computer or device.
 
-![FuguHub logo](https://fuguhub.com/images/FuguHub.png){: width="149" height="140" loading="lazy"}
+![FuguHub logo](../assets/images/dietpi-software-cloud-fuguhub.png){: width="149" height="140" loading="lazy"}
 
 === "Quick access"
 
-    Open the browser `http://<your.IP>`. On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
+    Open the browser `http://<your.IP>`.  
+    On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
 
     !!! warning "FuguHub runs by default on port 80 and optional 443, making it incompatible with a regular webserver using the default setup."
 
@@ -685,7 +692,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     3. Press ++y++ for `VPS` or ++n++ for `home/office` server
     4. Choose whether to install an internal BitTorrent client.
 
-    !!! warning "It is recommended to use the a dedicated BitTorrent server, if required: <https://dietpi.com/docs/software/bittorrent/>"
+    !!! warning "It is recommended to use the a dedicated [BitTorrent](../bittorrent/) server, if required."
 
     Setup details:
 
@@ -694,6 +701,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     - Data directory: `/mnt/dietpi_userdata/fuguhub-data`
 
 === "View logs"
+
     - Service: `journalctl -u bdd`
     - Trace: `/home/bd/trace/`  
       It contains an info about the database creation only, even after playing around with the web UI a bit.

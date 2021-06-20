@@ -13,22 +13,24 @@
 ### Desktop Utilities
 
 - [**Chromium - Web browser**](#chromium)
+- [**Firefox - Web browser**](#firefox)
 - [**GIMP - Image editor**](#gimp)
 - [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss)
 - [**Xfce Power Manager - Power manager with brightness control**](#xfce-power-manager)
 
-??? info "How do I run **DietPi-Software** and install **optimised software**?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -183,6 +185,16 @@ Once Chromium is running, simply go to the following address: <chrome://gpu>
 - with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... many-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
 
 ![Chromium screenshot](../assets/images/dietpi-software-desktop-tools-chromium.jpg){: width="1376" height="858" loading="lazy"}
+
+### Firefox
+
+![Firefox logo](../assets/images/dietpi-software-firefox.png){: width="128" height="128" loading="lazy"}
+
+Firefox Browser, also known as simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation.
+
+Similar to [Chromium](#chromium), Firefox has been made a separate install option. For desktop installs users can choose between Chromium, Firefox or no web browser.
+
+![Firefox screenshot](../assets/images/dietpi-software-firefox-display.png){: width="1024" height="723" loading="lazy"}
 
 ### GIMP
 

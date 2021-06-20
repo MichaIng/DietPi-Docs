@@ -45,18 +45,24 @@ jobs:
     - name: Run PySpelling to check HTML files
       if: always() && steps.pyspelling.outcome == 'success'
       run: pyspelling -c .spellcheck.yml
-    - name: Setup Go 1.16 for liche
-      id: go
+    - name: Serve DietPi-Docs for lychee
+      id: serve
       if: always() && steps.build.outcome == 'success'
-      # https://github.com/actions/setup-go/releases
-      uses: actions/setup-go@v2
-      with:
-        # https://github.com/actions/go-versions/releases
-        go-version: '1.16'
-    - name: Install liche
-      id: liche
-      if: always() && steps.go.outcome == 'success'
-      run: GO111MODULE=on go get -u github.com/raviqqe/liche
-    - name: Run liche to check HTML and Markdown files
-      if: always() && steps.liche.outcome == 'success'
-      run: liche -c 64 -x 'https://(github.com|twitter.com|www.spigotmc.org|pi-hole.net)' -d build -r README.md build/docs
+      # Test links against docs without redirects, so that we are forced to update links to renamed pages
+      run: |
+        sed -i '/^- redirects:$/,/^$/d' mkdocs.yml
+        mkdocs serve -s &
+    - name: Download lychee
+      id: lychee
+      if: always() && steps.serve.outcome == 'success'
+      run: |
+        curl -sSfL "$(curl -sSfL https://api.github.com/repos/lycheeverse/lychee/releases/latest | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-gnu\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        tar xf lychee.tar.gz
+        rm lychee.tar.gz
+    - name: Run lychee to check README and HTML files
+      if: always() && steps.lychee.outcome == 'success'
+      run: |
+        ./lychee -X head --github-token '${{ secrets.GITHUB_TOKEN }}'
+        cd build
+        find -type d \( -exec ../lychee --exclude '(fonts.gstatic.com|admin@koel.dev|localhost|bridges.torproject.org|www.spigotmc.org|ftp://|root@192.168.1.20|127.0.0.1:8384|www.audiophonics.fr)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b 'http://127.0.0.1:8000/{}/' '{}/*.html' \; -o -exec touch failed \; \)
+        test ! -e failed

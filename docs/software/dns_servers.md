@@ -5,18 +5,19 @@
 - [**Pi-hole - Network-wide Ad Blocking**](#pi-hole)
 - [**Unbound - A validating, recursive and caching DNS resolver**](#unbound)
 
-??? info "How do I run **DietPi-Software** and install **optimised software**?"
-    To install any of the **DietPi optimised software** listed below run from the command line:
+??? info "How do I run **DietPi-Software** and install **optimised software** items?"
+    To install any of the **DietPi optimised software items** listed below run from the command line:
 
     ```sh
     dietpi-software
     ```
 
-    Choose **Software Optimised** and select one or more items. Finally click on `Install`. DietPi will do all the necessary steps to install and start these software items.
+    Choose **Browse Software** and select one or more items. Finally select `Install`.  
+    DietPi will do all the necessary steps to install and start these software items.
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -27,6 +28,9 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 - Also Installs: [Webserver stack](../webserver_stack/)
 
 ![Pi-hole web interface screenshot](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500" height="410" loading="lazy"}
+
+!!! warning "Webserver installation"
+    DietPi-Software calls the Pi-hole installer with the `--disable-install-webserver` flag, which skips the Lighttpd and PHP installation parts. Instead, Lighttpd, Nginx or Apache2 is installed separately, based on user choice, and PHP as standalone PHP-FPM server or module for Apache2 respectively. This allows more flexible webserver configurations as well, easy HTTPS, other web sites/applications on the same server etc. When **repairing** and **reconfiguring** Pi-hole (see "Repairing Pi-hole" tab below), it is important to **NOT** select to install Lighttpd when being asked, as this would lead to doubled PHP and webserver installs or conflicting webserver settings.
 
 === "Access the web interface"
 
@@ -39,7 +43,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     The configuration contains setting devices (e.g. router) to use Pi-hole for DNS resolution.
 
-    #### Option 1 - Setup single devices to use the Pi-hole DNS server
+    <font size="+2">Option 1 - Setup single devices to use the Pi-hole DNS server</font>
 
     Simply change your DNS settings to use the IP address of your Pi-hole device. This will need to be done for each device that you want Pi-hole to work with.
 
@@ -49,7 +53,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     - On my PC, I would set the DNS address to 192.168.0.100
     - Tutorial [The Ultimate Guide to Changing Your DNS settings](https://www.howtogeek.com/167533/the-ultimate-guide-to-changing-your-dns-server/).
 
-    #### Option 2 - Setup your router to use the Pi-hole DNS server
+    <font size="+2">Option 2 - Setup your router to use the Pi-hole DNS server</font>
 
     This method will automatically point every device (that uses DHCP) on your network to Pi-hole.
     On your routers control panel web page, you will need to find a option called "DNS server". This should be located under DHCP settings.
@@ -67,6 +71,23 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     - Select *Static DNS* from the list, then choose a DNS server, or manually enter a custom entry.
     - Once completed, select *Apply* to save the changes.
 
+=== "DietPi differences"
+
+    The DietPi Pi-hole implementation uses the official installer script, but it comes with a few differences, compared to the official default setup:
+
+    1. The `/var/log/pihole.log` plain text DNS query log is disabled by default. It is a second query log implementation, as `/etc/pihole/pihole-FTL.db` is used as a database-wise log implementation already, used by the web interface to search long-term logs. If you however want to use the `pihole -t`/`pihole tail` command, to print colourised logs to console, you need to re-enable the file-based logging:
+
+        ```sh
+        pihole -l on
+        ```
+
+        Also the DietPi [logging system](../../dietpi_tools/#quick-selections) needs to be changed, to disable DietPi-RAMlog, as otherwise `/var/log/pihole.log` is cleared hourly.
+    2. The logging duration for the database-wise DNS query log in `/etc/pihole/pihole-FTL.db` is reduced from 365 days to 2 days. An internal discussion revealed that no-one of us uses logs old than a few hours. One year of logs leads to database sizes from hundreds of MiBs to GiBs. We leave it at 2 days so that web interface dashboard graphs/diagrams are not empty after Pi-hole (re)starts. You can easily adjust the logging duration by editing the `/etc/pihole/pihole-FTL.conf` config file. E.g. to restore the default 365 days of logs:
+
+        ```sh
+        MAXDBDAYS=365
+        ```
+
 === "Updating Pi-hole"
 
     Pi-hole can be updated via the shell command `pihole -up`.
@@ -76,7 +97,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     You can use `pihole -r` to repair or reconfigure your Pi-hole instance.
 
     !!! warning "Do **NOT** select to install Lighttpd"
-        Do **NOT** select to install Lighttpd when being asked, as this will mix our own webserver stack setup with the different one provided by the Pi-hole installer, which causes various issues.
+        Do **NOT** select to install Lighttpd when being asked, as this would lead to doubled PHP and webserver installs or conflicting webserver settings.
 
 === "Setting the password"
 
@@ -105,13 +126,16 @@ Official documentation: <https://docs.pi-hole.net/>
 Wikipedia: <https://wikipedia.org/wiki/Pi-hole>  
 Source code: <https://github.com/pi-hole>
 
+DietPi Blog: [`Pi-Hole & Unbound: How to have ad-free & safer internet in just few minutes`](https://dietpi.com/blog/?p=564)
+
 YouTube video tutorial #1: *Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!*.
 
 <iframe src="https://www.youtube-nocookie.com/embed/RO2_eZlVrj4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 YouTube video tutorial #2: [`Block ads everywhere with Pi-hole and PiVPN on DietPi`](https://www.youtube.com/watch?v=qbLEHlKkGiE)  
 YouTube video tutorial #3 (German language): [`Raspberry Pi & DietPi : Pi-hole der Werbeblocker für Netzwerke mit Anleitung für AVM FritzBox`](https://www.youtube.com/watch?v=vXUvFWhXW6c&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=6)  
-YouTube video tutorial #4 (German language): [`Raspberry Pi Zero W mit Pi-hole - günstiger Werbeblocker & Schritt für Schritt Anleitung unter DietPi`](https://www.youtube.com/watch?v=IxWuMHu9IYk&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=2)
+YouTube video tutorial #4 (German language): [`Raspberry Pi Zero W mit Pi-hole - günstiger Werbeblocker & Schritt für Schritt Anleitung unter DietPi`](https://www.youtube.com/watch?v=IxWuMHu9IYk&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=2)  
+Blog entry with YouTube video #5 (German language): [`Unbound Installation für PiHole unter DietPi`](https://blog.login.gmbh/unbound-installation-fuer-pihole-unter-dietpi/)
 
 ## Unbound
 
@@ -186,5 +210,9 @@ Official documentation: <https://nlnetlabs.nl/documentation/unbound/unbound>
 New WIP documentation: <https://unbound.readthedocs.io/>  
 Wikipedia: <https://wikipedia.org/wiki/Unbound_(DNS_server)>  
 Source code: <https://github.com/NLnetLabs/unbound>
+
+DietPi Blog: [`Pi-Hole & Unbound: How to have ad-free & safer internet in just few minutes`](https://dietpi.com/blog/?p=564)
+
+Blog entry with YouTube video (German language): [`Unbound Installation für PiHole unter DietPi`](https://blog.login.gmbh/unbound-installation-fuer-pihole-unter-dietpi/)
 
 [Return to the **Optimised Software list**](../../software/)
