@@ -46,7 +46,7 @@ Also Installs:
 
     - URL = `http://<your.IP>/owncloud`
     - Username = `admin`
-    - Password = `<your global password>`
+    - Password = `<your global password>` (default: `dietpi`)
 
     If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).
 
@@ -109,7 +109,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     - URL = `http://<your.IP>/nextcloud/`
     - Username = `admin`
-    - Password = `<your global password>`
+    - Password = `<your global password>` (default: `dietpi`)
 
     To fast access the files, a dedicated USB hard drive is highly recommended.
 
@@ -290,7 +290,7 @@ Also Installs:
         - Host = `localhost`
         - Database = `pydio`
         - User = `pydio`
-        - Password = `dietpi`
+        - Password = `<your global password>` (default: `dietpi`)
         - Use MySqli = No
     - Click test connection, when successful, click the `>>` button.
     - Under advanced options, use the default values, then click the `Install Pydio` button.
@@ -359,7 +359,7 @@ Your very own GitHub style server, with web interface.
     - Change the following values only:
         - Database = `MySQL`
         - User = `gogs`
-        - Database password = `<your global password>`
+        - Database password = `<your global password>` (default: `dietpi`)
         - Repository Root Path = `/mnt/dietpi_userdata/gogs-repo`
         - Run User = `gogs`
         - Log Path = `/var/log/gogs`
@@ -397,7 +397,7 @@ Your very own GitHub style server, with web interface.
 
     - Change the following values only:
         - MySQL database user = `gitea`
-        - MySQL database password = `dietpi`
+        - MySQL database password = `<your global password>` (default: `dietpi`)
         - Repository root path = `/mnt/dietpi_userdata/gitea/gitea-repositories`
         - Log path = `/var/log/gitea`
     - Scroll to the bottom of page and select Install Gitea
