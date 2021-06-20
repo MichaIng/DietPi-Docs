@@ -105,12 +105,13 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Quick start"
 
-    Access the web interface using the next URL when running on SBC (`http://localhost/nextcloud/`) or the IP address / hostname of your DietPi device (e.g.: `http://192.168.0.100/nextcloud/`).
+    Nextcloud is accessible via regular HTTP/HTTPS port **80**/**443** below the `/nextcloud` path:
 
+    - URL = `http://<your.IP>/nextcloud/`
     - Username = `admin`
     - Password = `<your global password>`
 
-    Nextcloud is installed together with the webserver. To fast access the files, a dedicated USB hard drive is highly recommended.
+    To fast access the files, a dedicated USB hard drive is highly recommended.
 
 === "Advanced configuration"
 
@@ -667,7 +668,7 @@ Forum: <https://vaultwarden.discourse.group>
 Source code: <https://github.com/dani-garcia/vaultwarden>  
 Open-source license: [GPLv3](https://github.com/dani-garcia/vaultwarden/blob/master/LICENSE.txt)
 
-Credits: This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9). Thank you!
+Credits: This software title has been added to DietPi-Software by @CactiChameleon9. Thank you!
 
 ## FuguHub
 
@@ -691,7 +692,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     3. Press ++y++ for `VPS` or ++n++ for `home/office` server
     4. Choose whether to install an internal BitTorrent client.
 
-    !!! warning "It is recommended to use the a dedicated BitTorrent server, if required: <https://dietpi.com/docs/software/bittorrent/>"
+    !!! warning "It is recommended to use the a dedicated [BitTorrent](../bittorrent/) server, if required."
 
     Setup details:
 
