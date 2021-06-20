@@ -265,7 +265,7 @@ Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & E
     If you want to have a multi-node setup, you need to configure the nodes to speak to the others.
     
     In `/boot/dietpi.txt`, edit the `SOFTWARE_K3S_EXEC` parameter to set command (`server` or `agent`).
-    After the command, you can add other command-line parameters here.
+    You can add other command-line parameters after the command.
 
     Example:
 
