@@ -209,7 +209,6 @@ klick
 Kodi
 Koel
 Komga
-kubeconfig
 Kubernetes
 LASP
 lcd

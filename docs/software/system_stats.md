@@ -279,7 +279,7 @@ Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & E
 
 === "Connecting to your cluster"
 
-    When running in `server` mode, K3s generates a kubeconfig file at `/etc/rancher/k3s/k3s.yaml`.
+    When running in `server` mode, K3s generates a `kubeconfig` file at `/etc/rancher/k3s/k3s.yaml`.
     Copy this to your client machine, and edit the `server` setting to point to the hostname of the server.
 
     Place the file in the default location (`~/.kube/config`), or point to it using the `KUBECONFIG` environment-variable.
