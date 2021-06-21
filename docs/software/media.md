@@ -543,7 +543,7 @@ Also Installs:
 
     To update Ampache to the current version, execute
 
-    ```shjellyfin
+    ```sh
     dietpi-software reinstall 40
     ```
 
