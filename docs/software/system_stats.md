@@ -256,7 +256,7 @@ Wikipedia: <https://wikipedia.org/wiki/Webmin>
 
 Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & Edge computing
 
-![K3s Logo](../assets/images/logo-k3s.svg){: width="300" height="116" loading="lazy"}
+![K3s logo](../assets/images/logo-k3s.svg){: width="300" height="116" loading="lazy"}
 
 === "Before installation"
 
@@ -286,7 +286,7 @@ Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & E
     
     You should now be able to interact with your Kubernetes cluster using `kubectl`:
 
-    ```
+    ```sh
     kubectl get nodes
     kubectl get pods -A
     ```
@@ -295,7 +295,11 @@ Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & E
 
     - Service: `journalctl -u k3s`
 
-Website: <https://k3s.io>
-Official documentation: <https://rancher.com/docs/k3s/latest/en/>
+***
+
+Official website: <https://k3s.io>  
+Official documentation: <https://rancher.com/docs/k3s/latest/en/>  
+Source code: <https://github.com/k3s-io/k3s>  
+License: [Apache 2.0](https://github.com/k3s-io/k3s/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)
