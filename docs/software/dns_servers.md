@@ -276,7 +276,7 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
 	
 	```sh
 	G_CONFIG_INJECT 'password:[[:blank:]]' "  password: $(htpasswd -bnBC 10 '' "<your_new_password>" | tr -d ':\n' | sed 's/\$2y/\$2a/')" /opt/AdGuardHome/AdGuardHome.yaml
-	systemctl restart adguardhome.service
+	systemctl restart adguardhome
 	```
 
 === "Blocklists and whitelists"
@@ -292,6 +292,7 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
 Official website: <https://adguard.com/en/adguard-home/overview.html>  
 Official documentation: <https://github.com/AdguardTeam/AdGuardHome/wiki>  
 Wikipedia: <https://en.wikipedia.org/wiki/AdGuard#AdGuard_Home>  
-Source code: <https://github.com/AdguardTeam/AdGuardHome>
+Source code: <https://github.com/AdguardTeam/AdGuardHome>  
+License: [GPLv3](https://github.com/AdguardTeam/AdGuardHome/blob/master/LICENSE.txt)
 
 [Return to the **Optimised Software list**](../../software/)
