@@ -228,6 +228,7 @@
 - [**RPi-Monitor - Web interface system stats**](../software/system_stats/#rpi-monitor)
 - [**Netdata - Web interface system stats**](../software/system_stats/#netdata)
 - [**Webmin - Remote system management with web interface**](../software/system_stats/#webmin)
+- [**K3s - Lightweight Kubernetes**](../software/system_stats/#k3s)
 
 ## [VPN](../software/vpn/)
 
