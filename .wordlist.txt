@@ -1,6 +1,7 @@
 addictiveness
 addon
 ADF
+AdGuard
 advanxer
 AGPLv
 AirPlay
