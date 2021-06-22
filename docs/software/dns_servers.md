@@ -273,11 +273,11 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
 === "Setting the password"
 
     If you forgot your login password for the AdGuard Home admin web page, you can set it with the following shell command on your AdGuard Home device.
-	
-	```sh
-	G_CONFIG_INJECT 'password:[[:blank:]]' "  password: $(htpasswd -bnBC 10 '' "<your_new_password>" | tr -d ':\n' | sed 's/\$2y/\$2a/')" /opt/AdGuardHome/AdGuardHome.yaml
-	systemctl restart adguardhome
-	```
+    
+    ```sh
+    G_CONFIG_INJECT 'password:[[:blank:]]' "  password: $(htpasswd -bnBC 10 '' "<your_new_password>" | tr -d ':\n' | sed 's/\$2y/\$2a/')" /opt/AdGuardHome/AdGuardHome.yaml
+    systemctl restart adguardhome
+    ```
 
 === "Blocklists and whitelists"
 
