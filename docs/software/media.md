@@ -1129,6 +1129,8 @@ Source code: <https://github.com/jellyfin/jellyfin>
 
 A command-line music organizer and manager.
 
+![Beets logo](../assets/images/dietpi-software-media-beets.png){: width="144" height="144" loading="lazy"}
+
 === "Changing configuration"
 
     You can edit the configuration for Beets at `/mnt/dietpi_userdata/beets/config.yaml`.
@@ -1138,5 +1140,10 @@ A command-line music organizer and manager.
     You can use Beets to import music into any music app supported by DietPi-Software with `beet import`.
 
 ***
+
+Official website: <https://beets.io/>  
+Official documentation: <https://beets.readthedocs.io/en/stable/>  
+Source code: <https://github.com/beetbox/beets>  
+License: [MIT](https://github.com/beetbox/beets/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)
