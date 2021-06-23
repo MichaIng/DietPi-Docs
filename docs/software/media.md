@@ -1166,7 +1166,7 @@ The snapcast serve needs to have its audio sources manually configured after ins
 
 === "Implementation details"
 
-    DietPi-Software installs the Snapcast server nealy with default configs, as shipped with the official package. Only the JSON RPC, which listens by default on port **1705**, is disabled. To enable and configure it, check the `[tcp]` section of the config file (see "Changing options" tab).
+    DietPi-Software installs the Snapcast server nearly with default configs, as shipped with the official package. Only the JSON RPC, which listens by default on port **1705**, is disabled. To enable and configure it, check the `[tcp]` section of the config file (see "Changing options" tab).
 
 === "Changing options"
 
@@ -1179,12 +1179,12 @@ The snapcast serve needs to have its audio sources manually configured after ins
     ```
 
 === "Using MPD as an input source"
-    
+
     If you have MPD installed you can use it as an input source.
-    
-    First you need to ensure that mpd outputs to a pipe you can do this in two ways.
-    1) Install CAVA from the DietPi software list. 
-    OR
+
+    First you need to ensure that MPD outputs to a pipe you can do this in two ways.
+    1) Install CAVA from the DietPi software list.  
+    OR  
     2) Add the following to `/etc/mpd.conf` and restart with `systemctl restart mpd`
 
     ```
@@ -1194,61 +1194,61 @@ The snapcast serve needs to have its audio sources manually configured after ins
         name "snapcast"
         path "/tmp/mpd.fifo"
         format "48000:16:2"
-    }    
-    ```
-    
-    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to snapcast clients here i've called it MyMpd. Check the snapserver docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
-
-    ```
-    source = pipe:///tmp/mpd.fifo?name=MyMpd&mode=read
+    }
     ```
 
-=== "Using mopidy as an input source"
-    
-    If you have mopidy installed you can use it as an input source.
-    
-    First you need to ensure that mopidy outputs to a pipe. Add the following to `/etc/mopidy/mopidy.conf` and restart with `systemctl restart mopidy`
+    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myMPD`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
+
+    ```
+    source = pipe:///tmp/mpd.fifo?name=myMPD&mode=read
+    ```
+
+=== "Using Mopidy as an input source"
+
+    If you have Mopidy installed you can use it as an input source.
+
+    First you need to ensure that Mopidy outputs to a pipe. Add the following to `/etc/mopidy/mopidy.conf` and restart with `systemctl restart mopidy`
 
     ```
     [audio]
-    output = audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/mopidy.fifo 
+    output = audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/mopidy.fifo
     ```
-    
-    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to snapcast clients here i've called it MyMopidy. Check the snapserver docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
+
+    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to snapcast clients here i've called it `myMopidy`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
 
     ```
-    source = pipe:///tmp/mopidy.fifo?name=MyMopidy&mode=read
+    source = pipe:///tmp/mopidy.fifo?name=myMopidy&mode=read
     ```
 
 === "Using Raspotify/librespot as an input source"
-    
-    If you have raspotify installed you can use it as an input source.    
 
-    Add the following config under `[stream]`. The `name` is the name as it will appear to snapcast clients here i've called it MySpotify. The `devicename` is the name that will be shown when connecting in Spotify. Check the snapserver docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#librespot>. I've disabled the audio cache to protect the SD card.
+    If you have Raspotify installed you can use it as an input source.
+
+    Add the following config under `[stream]`. The `name` is the name as it will appear to snapcast clients here I have called it `mySpotify`. The `devicename` is the name that will be shown when connecting in Spotify. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#librespot>. I have disabled the audio cache to protect the SD card.
 
     ```
-    source = librespot:///usr/bin/librespot?name=MySpotify&devicename=SnapcastSpotify&disable_audio_cache=true
+    source = librespot:///usr/bin/librespot?name=mySpotify&devicename=SnapcastSpotify&disable_audio_cache=true
     ```
 
-=== "Using AirPlay (shairport-sync) as an input
+=== "Using AirPlay (Shairport Sync) as an input
 
     First install shairport-sync.
 
-    Then (at the moment - see: <https://github.com/MichaIng/DietPi/issues/4470>) we need to replace the Shairport Sync binary with one that supports stdout. To do this we need to compile a new binary - you will find details here: 
+    Then (at the moment - see: <https://github.com/MichaIng/DietPi/issues/4470>) we need to replace the Shairport Sync binary with one that supports stdout. To do this we need to compile a new binary - you will find details here:  
     <https://github.com/mikebrady/shairport-sync/blob/master/INSTALL.md#build-and-install>
 
     You need to use this line when configuring instead of the line from the docs:
 
     ```sh
-    ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-systemd --with-metadata --with-stdout   
+    ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-systemd --with-metadata --with-stdout
     ```
-    
-    Don't forget to run `make` and `make install`. 
 
-    Then add the following config under `[stream]`. The `name` is the name as it will appear to snapcast clients here i've called it MyAirport. He `devicename` is the name that will be shown when searching for Airport devices. Check the snapserver docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
+    Don't forget to run `make` and `make install`.
+
+    Then add the following config under `[stream]`. The `name` is the name as it will appear to snapcast clients here I have called it `myAirport`. He `devicename` is the name that will be shown when searching for Airport devices. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
 
     ```
-    source = airplay:///usr/local/bin/shairport-sync?name=MyAirport&devicename=SnapcastAirport&params=--configfile=/usr/local/etc/shairport-sync.conf
+    source = airplay:///usr/local/bin/shairport-sync?name=myAirport&devicename=SnapcastAirport&params=--configfile=/usr/local/etc/shairport-sync.conf
     ```
 
     You will then either need to mask the original Shairport Sync service
