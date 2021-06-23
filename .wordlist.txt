@@ -219,6 +219,7 @@ Lerdorf
 LESP
 LetsEncrypt
 LGPL
+librespot
 Lidarr
 LightDM
 Lighttpd
