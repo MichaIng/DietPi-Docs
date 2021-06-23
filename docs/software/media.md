@@ -32,8 +32,8 @@
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web)
 - [**Jellyfin - Media streaming server including live TV**](#jellyfin)
 - [**Beets - Music organizer and manager**](#beets)
-- [**Snapcast client - Multi room audio client**](#snapcastclient)
-- [**Snapcast server - Multi room audio server**](#snapcastserver)
+- [**Snapcast Server - Multi room audio server**](#snapcast-server)
+- [**Snapcast Client - Multi room audio client**](#snapcast-client)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -76,7 +76,7 @@ Also installs:
 
     The web interface is accessible via port **1337**:
 
-    URL = `http://<your.IP>:1337`
+    - URL = `http://<your.IP>:1337`
 
 === "Transfer/add music"
 
@@ -111,7 +111,7 @@ Also installs:
 
     The web interface is accessible via port **1333**:
 
-    URL = `http://<your.IP>:1333`
+    - URL = `http://<your.IP>:1333`
 
 === "Installation notes"
 
@@ -664,11 +664,13 @@ A Python based monitoring and tracking tool for Plex Media Server.
 
     The web interface is accessible via port **8181**:
 
-    URL = `http://<your.IP>:8181`
+    - URL = `http://<your.IP>:8181`
 
 === "Access to the log files"
 
-    `/mnt/dietpi_userdata/plexpy/logs/`
+    ```
+    /mnt/dietpi_userdata/plexpy/logs/
+    ```
 
 ## Murmur
 
@@ -1098,7 +1100,7 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
     The web interface is accessible via port **8096**:
 
-    URL = `http://<your.IP>:8096`
+    - URL = `http://<your.IP>:8096`
 
 === "View logs"
 
@@ -1148,36 +1150,23 @@ Official documentation: <https://beets.readthedocs.io/en/stable/>
 Source code: <https://github.com/beetbox/beets>  
 License: [MIT](https://github.com/beetbox/beets/blob/master/LICENSE)
 
-## Snapcast client
-
-A FOSS multi room audio solution - this part is a client app it listens to the server and plays the audio it is sent
-
-![Snapcast logo](../assets/images/dietpi-software-media-snapcastclient.png){: width="300" height="48" loading="lazy"}
-
-The snapcast client will prompt you for the server's IP and port when installing and will be setup to start on boot up. This should work for most people but there are additional configuration parameters that can be found in the snapcast documentation: <https://github.com/badaix/snapcast#client>
-
-=== "Changing options"
-
-    It should just work but, you can change the available options in:
-
-    - `/etc/default/snapclient`
-
-    Then restart services with:
-
-    ```sh
-    systemctl restart snapclient
-    ```
-***
-
-Source code: <https://github.com/badaix/snapcast>
-
-## Snapcast server
+## Snapcast Server
 
 A FOSS multi room audio solution - this part is the server app it sends music to one or more clients to play.
 
-![Snapcast logo](../assets/images/dietpi-software-media-snapcastclient.png){: width="300" height="48" loading="lazy"}
+![Snapcast logo](../assets/images/dietpi-software-media-snapcast.png){: width="300" height="48" loading="lazy"}
 
 The snapcast serve needs to have its audio sources manually configured after installation. See the snapcast documents for more details: <https://github.com/badaix/snapcast#server>
+
+=== "Access to the web interface"
+
+    The Snapcast server provides a web interface on port **1740**, which allows you to control volumes for all clients and optionally play audio through your browser:
+
+    - URL = `http://<your.IP>:1740`
+
+=== "Implementation details"
+
+    DietPi-Software installs the Snapcast server nealy with default configs, as shipped with the official package. Only the JSON RPC, which listens by default on port **1705**, is disabled. To enable and configure it, check the `[tcp]` section of the config file (see "Changing options" tab).
 
 === "Changing options"
 
@@ -1211,7 +1200,7 @@ The snapcast serve needs to have its audio sources manually configured after ins
     Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to snapcast clients here i've called it MyMpd. Check the snapserver docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
 
     ```
-    source= pipe:///tmp/mpd.fifo?name=MyMpd&mode=read
+    source = pipe:///tmp/mpd.fifo?name=MyMpd&mode=read
     ```
 
 === "Using mopidy as an input source"
@@ -1228,7 +1217,7 @@ The snapcast serve needs to have its audio sources manually configured after ins
     Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to snapcast clients here i've called it MyMopidy. Check the snapserver docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
 
     ```
-    source= pipe:///tmp/mopidy.fifo?name=MyMopidy&mode=read
+    source = pipe:///tmp/mopidy.fifo?name=MyMopidy&mode=read
     ```
 
 === "Using Raspotify/librespot as an input source"
@@ -1238,19 +1227,19 @@ The snapcast serve needs to have its audio sources manually configured after ins
     Add the following config under `[stream]`. The `name` is the name as it will appear to snapcast clients here i've called it MySpotify. The `devicename` is the name that will be shown when connecting in Spotify. Check the snapserver docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#librespot>. I've disabled the audio cache to protect the SD card.
 
     ```
-    source= librespot:///usr/bin/librespot?name=MySpotify&devicename=SnapcastSpotify&disable_audio_cache=true
+    source = librespot:///usr/bin/librespot?name=MySpotify&devicename=SnapcastSpotify&disable_audio_cache=true
     ```
 
 === "Using AirPlay (shairport-sync) as an input
 
     First install shairport-sync.
 
-    Then (at the moment- see: https://github.com/MichaIng/DietPi/issues/4470) we need to replace the binary in shairport-sync with one that supports stdout. To do this we need to compile a new binary - you will find details here: 
+    Then (at the moment - see: <https://github.com/MichaIng/DietPi/issues/4470>) we need to replace the Shairport Sync binary with one that supports stdout. To do this we need to compile a new binary - you will find details here: 
     <https://github.com/mikebrady/shairport-sync/blob/master/INSTALL.md#build-and-install>
 
     You need to use this line when configuring instead of the line from the docs:
 
-    ```
+    ```sh
     ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-systemd --with-metadata --with-stdout   
     ```
     
@@ -1259,17 +1248,40 @@ The snapcast serve needs to have its audio sources manually configured after ins
     Then add the following config under `[stream]`. The `name` is the name as it will appear to snapcast clients here i've called it MyAirport. He `devicename` is the name that will be shown when searching for Airport devices. Check the snapserver docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
 
     ```
-    source=airplay:///usr/local/bin/shairport-sync?name=MyAirport&devicename=SnapcastAirport&params=--configfile=/usr/local/etc/shairport-sync.conf
+    source = airplay:///usr/local/bin/shairport-sync?name=MyAirport&devicename=SnapcastAirport&params=--configfile=/usr/local/etc/shairport-sync.conf
     ```
 
-    You will then either need to disable the original shairport-sync service
+    You will then either need to mask the original Shairport Sync service
 
+    ```sh
+    systemctl mask shairport-sync
     ```
-    sudo systemctl disable shairport-sync
+
+    or you can try to run one of them on a different port - Snapcast docs shows how to do this here: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
+
+***
+
+Source code: <https://github.com/badaix/snapcast>
+
+## Snapcast Client
+
+A FOSS multi room audio solution - this part is a client app it listens to the server and plays the audio it is sent
+
+![Snapcast logo](../assets/images/dietpi-software-media-snapcast.png){: width="300" height="48" loading="lazy"}
+
+The snapcast client will prompt you for the server's IP and port when installing and will be setup to start on boot up. This should work for most people but there are additional configuration parameters that can be found in the snapcast documentation: <https://github.com/badaix/snapcast#client>
+
+=== "Changing options"
+
+    It should just work but, you can change the available options in:
+
+    - `/etc/default/snapclient`
+
+    Then restart services with:
+
+    ```sh
+    systemctl restart snapclient
     ```
-
-    or you can try to run one of them on a different port - snapcast doc shows how to do this here: https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay
-
 
 ***
 
