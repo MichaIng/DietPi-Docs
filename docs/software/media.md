@@ -1156,7 +1156,7 @@ A FOSS multi room audio solution - this part is the server app it sends music to
 
 ![Snapcast logo](../assets/images/dietpi-software-media-snapcast.png){: width="300" height="48" loading="lazy"}
 
-The snapcast serve needs to have its audio sources manually configured after installation. See the snapcast documents for more details: <https://github.com/badaix/snapcast#server>
+The Snapcast server needs to have its audio sources manually configured after installation. See the Snapcast documents for more details: <https://github.com/badaix/snapcast#server>
 
 === "Access to the web interface"
 
@@ -1214,7 +1214,7 @@ The snapcast serve needs to have its audio sources manually configured after ins
     output = audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/mopidy.fifo
     ```
 
-    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to snapcast clients here i've called it `myMopidy`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
+    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myMopidy`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
 
     ```
     source = pipe:///tmp/mopidy.fifo?name=myMopidy&mode=read
@@ -1224,7 +1224,7 @@ The snapcast serve needs to have its audio sources manually configured after ins
 
     If you have Raspotify installed you can use it as an input source.
 
-    Add the following config under `[stream]`. The `name` is the name as it will appear to snapcast clients here I have called it `mySpotify`. The `devicename` is the name that will be shown when connecting in Spotify. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#librespot>. I have disabled the audio cache to protect the SD card.
+    Add the following config under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `mySpotify`. The `devicename` is the name that will be shown when connecting in Spotify. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#librespot>. I have disabled the audio cache to protect the SD card.
 
     ```
     source = librespot:///usr/bin/librespot?name=mySpotify&devicename=SnapcastSpotify&disable_audio_cache=true
@@ -1245,7 +1245,7 @@ The snapcast serve needs to have its audio sources manually configured after ins
 
     Don't forget to run `make` and `make install`.
 
-    Then add the following config under `[stream]`. The `name` is the name as it will appear to snapcast clients here I have called it `myAirport`. He `devicename` is the name that will be shown when searching for Airport devices. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
+    Then add the following config under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myAirport`. The `devicename` is the name that will be shown when searching for Airport devices. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
 
     ```
     source = airplay:///usr/local/bin/shairport-sync?name=myAirport&devicename=SnapcastAirport&params=--configfile=/usr/local/etc/shairport-sync.conf
@@ -1269,7 +1269,7 @@ A FOSS multi room audio solution - this part is a client app it listens to the s
 
 ![Snapcast logo](../assets/images/dietpi-software-media-snapcast.png){: width="300" height="48" loading="lazy"}
 
-The snapcast client will prompt you for the server's IP and port when installing and will be setup to start on boot up. This should work for most people but there are additional configuration parameters that can be found in the snapcast documentation: <https://github.com/badaix/snapcast#client>
+The Snapcast client will prompt you for the server's IP and port when installing and will be setup to start on boot up. This should work for most people but there are additional configuration parameters that can be found in the Snapcast documentation: <https://github.com/badaix/snapcast#client>
 
 === "Changing options"
 
