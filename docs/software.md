@@ -181,8 +181,8 @@
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web)
 - [**Jellyfin - Media streaming server including live TV**](../software/media/#jellyfin)
 - [**Beets - Music organizer and manager**](../software/media/#beets)
-- [**Snapcast client - Multi room audio client**](../software/media/#snapcastclient)
-- [**Snapcast server - Multi room audio server**](../software/media/#snapcastserver)
+- [**Snapcast Server - Multi room audio server**](../software/media/#snapcast-server)
+- [**Snapcast Client - Multi room audio client**](../software/media/#snapcast-client)
 
 ## [Printing Server](../software/printing/)
 
