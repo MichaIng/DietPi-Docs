@@ -397,6 +397,7 @@ Signalyst
 SlimDevices
 SMB
 sn
+Snapcast
 SNMP
 SoCs
 Sonarr
