@@ -22,19 +22,19 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
 - [**Snapcast Server**](../software/media/#snapcast-server)
 
-    This multiroom audio server component has been added with software ID 191. Many thanks to @foxy82 for implementing this software title: https://github.com/MichaIng/DietPi/pull/4465
+    This multiroom audio server component has been added with software ID 191. Many thanks to @foxy82 for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4465>
 
 - [**Snapcast Client**](../software/media/#snapcast-client)
 
-    The multiroom audio client component has been added with software ID 192. Many thanks to @foxy82 for implementing this software title: https://github.com/MichaIng/DietPi/pull/4465
+    The multiroom audio client component has been added with software ID 192. Many thanks to @foxy82 for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4465>
 
 - [**K3s**](../software/system_stats/#k3s)
 
-    Added a lightweight Kubernetes implementation as install option with ID 193. Many thanks to @mortenlj for implementing this software title: https://github.com/MichaIng/DietPi/pull/4476
+    Added a lightweight Kubernetes implementation as install option with ID 193. Many thanks to @mortenlj for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4476>
 
 ### DietPi Tools (new / notable updates) {: #dietpi-tools-73 }
 
-- **DietPi-Automation** :octicons-arrow-right-16: A new `dietpi.txt` setting has been added - `AUTO_SETUP_DHCP_TO_STATIC`. When it is enabled 
+- **DietPi-Automation** :octicons-arrow-right-16: A new `dietpi.txt` setting has been added - `AUTO_SETUP_DHCP_TO_STATIC`. When it is enabled
 
     ```sh
     AUTO_SETUP_DHCP_TO_STATIC=1
@@ -42,7 +42,7 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
     DHCP leased network settings will be applied as static network settings automatically during first run setup. This works as well with older images, by adding the above setting to `dietpi.txt`.
 
-- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) :octicons-arrow-right-16: Resolved an issue where network drives were detected as physical drives (v7.2 regression). Many thanks to @maartenlangeveld for reporting this issue: https://github.com/MichaIng/DietPi/issues/4479
+- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) :octicons-arrow-right-16: Resolved an issue where network drives were detected as physical drives (v7.2 regression). Many thanks to @maartenlangeveld for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4479>
 
 - [**DietPi-Software**](../dietpi_tools/#dietpi-software) :octicons-arrow-right-16: Resolved an issue where with
 
@@ -58,12 +58,12 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
 ### Improvements {: #changes-73 }
 
-- [DietPi-Software | **Cuberite**](../software/gaming/#cuberite) :octicons-arrow-right-16: This has been enabled for ARMv8 systems, where the available ARMv7 binaries work just fine. 
+- [DietPi-Software | **Cuberite**](../software/gaming/#cuberite) :octicons-arrow-right-16: This has been enabled for ARMv8 systems, where the available ARMv7 binaries work just fine.
 
 ### Bug Fixes {: #bug-fixes-73 }
 
-- [DietPi-Software | **Node-RED**](../software/hardware_projects/#node-red) :octicons-arrow-right-16: Resolved an issue where the Python 3 RPi.GPIO module was tried to be installed as dependency on non-RPi devices (v7.2 regression). Many thanks to @TheAdminFrmoHell for reporting this issue: https://github.com/MichaIng/DietPi/issues/4478
-- [DietPi-Software | **PI-SPC**](../software/hardware_projects/#audiophonics-pi-spc) :octicons-arrow-right-16: Resolved a syntax error in the shutdown script loop. Many thanks to @renaudlarzilliere for reporting this issue: https://github.com/MichaIng/DietPi/issues/4488
+- [DietPi-Software | **Node-RED**](../software/hardware_projects/#node-red) :octicons-arrow-right-16: Resolved an issue where the Python 3 RPi.GPIO module was tried to be installed as dependency on non-RPi devices (v7.2 regression). Many thanks to @TheAdminFrmoHell for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4478>
+- [DietPi-Software | **PI-SPC**](../software/hardware_projects/#audiophonics-pi-spc) :octicons-arrow-right-16: Resolved a syntax error in the shutdown script loop. Many thanks to @renaudlarzilliere for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4488>
 
 ### Removed Software {: #removed-software-73 }
 
@@ -75,14 +75,13 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
     The software option `Tomcat` is hence removed from `DietPi-Software`, in favour of a manual package install.
 
-As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: https://github.com/MichaIng/DietPi/pull/XXXX
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/XXXX>
 
 ### Known / Outstanding Issues {: #known-issues-73 }
 
-- DietPi-Config | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: https://github.com/MichaIng/DietPi/issues/2103
+- DietPi-Config | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
 
-For all additional issues that may appear after release, please see the following link for active tickets: https://github.com/MichaIng/DietPi/issues
-
+For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
 
 ## May 2021 (version 7.2) {: #may-2021-version-72 }
 
