@@ -134,6 +134,7 @@ FreshRSS
 FriendlyARM
 FriendlyARM's
 frontend
+frp
 fullscreen
 FuguHub
 Gbit
