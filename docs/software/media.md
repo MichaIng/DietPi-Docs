@@ -31,6 +31,9 @@
 - [**Raspotify - Spotify Connect client**](#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web)
 - [**Jellyfin - Media streaming server including live TV**](#jellyfin)
+- [**Beets - Music organizer and manager**](#beets)
+- [**Snapcast Server - Multi room audio server**](#snapcast-server)
+- [**Snapcast Client - Multi room audio client**](#snapcast-client)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -73,11 +76,11 @@ Also installs:
 
     The web interface is accessible via port **1337**:
 
-    URL = `http://<your.IP>:1337`
+    - URL = `http://<your.IP>:1337`
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used:
 
     - local = `/mnt/dietpi_userdata/Music`
@@ -108,7 +111,7 @@ Also installs:
 
     The web interface is accessible via port **1333**:
 
-    URL = `http://<your.IP>:1333`
+    - URL = `http://<your.IP>:1333`
 
 === "Installation notes"
 
@@ -123,7 +126,7 @@ Also installs:
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used:
 
     - local = `/mnt/dietpi_userdata/Music`
@@ -159,7 +162,7 @@ Also installs:
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by O!MPD:
 
     - Local = `/mnt/dietpi_userdata/Music`
@@ -208,7 +211,7 @@ Mopidy is a Python based music player web based user interface for MPD.
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
     - Local = `/mnt/dietpi_userdata/Music`
@@ -262,7 +265,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
     - Folder = `/mnt/dietpi_userdata/Music`  
@@ -283,7 +286,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
     - Folder = `/mnt/dietpi_userdata/Music`  
@@ -322,7 +325,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
     - Folder = `/mnt/dietpi_userdata/Music`  
@@ -366,7 +369,7 @@ Squeezelite is the audio player for the Logitech Media Server.
 
 === "Transfer/add music"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
     - Folder = `/mnt/dietpi_userdata/Music`  
@@ -460,7 +463,7 @@ Stream your shared media to any DLNA/UPnP capable device.
 
 === "Transfer media files to ReadyMedia"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by ReadyMedia:
 
     - `/Music`
@@ -497,7 +500,7 @@ Also Installs:
 
 === "Transfer media files to ReadyMedia"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Ampache:
 
     - audio = `/mnt/dietpi_userdata/Music`
@@ -580,7 +583,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
 === "Transfer media files to your device"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Emby:
 
     - Audio: `/mnt/dietpi_userdata/Music`
@@ -637,7 +640,7 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 === "Transfer media files to your device"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Plex Media Server:
 
     - Audio = `/mnt/dietpi_userdata/Music`
@@ -661,11 +664,13 @@ A Python based monitoring and tracking tool for Plex Media Server.
 
     The web interface is accessible via port **8181**:
 
-    URL = `http://<your.IP>:8181`
+    - URL = `http://<your.IP>:8181`
 
 === "Access to the log files"
 
-    `/mnt/dietpi_userdata/plexpy/logs/`
+    ```
+    /mnt/dietpi_userdata/plexpy/logs/
+    ```
 
 ## Murmur
 
@@ -728,7 +733,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Transfer media files to your device"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Roon Server:
 
     - Music folder = `/mnt/dietpi_userdata/Music`
@@ -892,7 +897,7 @@ Web interface music streamer.
 
 === "Transfer media files to your device"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Directories used by Koel:
 
     - Local = `/mnt/dietpi_userdata/Music`
@@ -942,7 +947,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
 === "Transfer ebooks/comics to your device"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
 
     - Use the following folders = `/mnt/dietpi_userdata/ebooks` and `/mnt/dietpi_userdata/comics`
     - Then use the admin page, to set the above locations for ebook and comic storage
@@ -1044,7 +1049,7 @@ Spotify Connect Web is a console client and player for Spotify Connect including
 
 === "Transfer Spotify API key"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Copy the `spotify_appkey.key` to the following folder:
 
     - Folder = `/mnt/dietpi_userdata/spotify-connect-web`
@@ -1095,7 +1100,7 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
     The web interface is accessible via port **8096**:
 
-    URL = `http://<your.IP>:8096`
+    - URL = `http://<your.IP>:8096`
 
 === "View logs"
 
@@ -1123,5 +1128,163 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 ***
 
 Source code: <https://github.com/jellyfin/jellyfin>
+
+## Beets
+
+A command-line music organizer and manager.
+
+![Beets logo](../assets/images/dietpi-software-media-beets.png){: width="144" height="144" loading="lazy"}
+
+=== "Changing configuration"
+
+    You can edit the configuration for Beets at `/mnt/dietpi_userdata/beets/config.yaml`.
+
+=== "Usage with other apps"
+
+    You can use Beets to import music into any music app supported by DietPi-Software with `beet import`.
+
+***
+
+Official website: <https://beets.io/>  
+Official documentation: <https://beets.readthedocs.io/en/stable/>  
+Source code: <https://github.com/beetbox/beets>  
+License: [MIT](https://github.com/beetbox/beets/blob/master/LICENSE)
+
+## Snapcast Server
+
+A FOSS multi room audio solution - this part is the server app it sends music to one or more clients to play.
+
+![Snapcast logo](../assets/images/dietpi-software-media-snapcast.png){: width="300" height="48" loading="lazy"}
+
+The Snapcast server needs to have its audio sources manually configured after installation. See the Snapcast documents for more details: <https://github.com/badaix/snapcast#server>
+
+=== "Access to the web interface"
+
+    The Snapcast server provides a web interface on port **1740**, which allows you to control volumes for all clients and optionally play audio through your browser:
+
+    - URL = `http://<your.IP>:1740`
+
+=== "Implementation details"
+
+    DietPi-Software installs the Snapcast server nearly with default configs, as shipped with the official package. Only the JSON RPC, which listens by default on port **1705**, is disabled. To enable and configure it, check the `[tcp]` section of the config file (see "Changing options" tab).
+
+=== "Changing options"
+
+    - `/etc/snapserver.conf`
+
+    Then restart services with:
+
+    ```sh
+    systemctl restart snapserver
+    ```
+
+=== "Using MPD as an input source"
+
+    If you have MPD installed you can use it as an input source.
+
+    First you need to ensure that MPD outputs to a pipe you can do this in two ways.
+    1) Install CAVA from the DietPi software list.  
+    OR  
+    2) Add the following to `/etc/mpd.conf` and restart with `systemctl restart mpd`
+
+    ```
+    audio_output {
+        type "fifo"
+        enabled "yes"
+        name "snapcast"
+        path "/tmp/mpd.fifo"
+        format "48000:16:2"
+    }
+    ```
+
+    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myMPD`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
+
+    ```
+    source = pipe:///tmp/mpd.fifo?name=myMPD&mode=read
+    ```
+
+=== "Using Mopidy as an input source"
+
+    If you have Mopidy installed you can use it as an input source.
+
+    First you need to ensure that Mopidy outputs to a pipe. Add the following to `/etc/mopidy/mopidy.conf` and restart with `systemctl restart mopidy`
+
+    ```
+    [audio]
+    output = audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/mopidy.fifo
+    ```
+
+    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myMopidy`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
+
+    ```
+    source = pipe:///tmp/mopidy.fifo?name=myMopidy&mode=read
+    ```
+
+=== "Using Raspotify/librespot as an input source"
+
+    If you have Raspotify installed you can use it as an input source.
+
+    Add the following config under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `mySpotify`. The `devicename` is the name that will be shown when connecting in Spotify. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#librespot>. I have disabled the audio cache to protect the SD card.
+
+    ```
+    source = librespot:///usr/bin/librespot?name=mySpotify&devicename=SnapcastSpotify&disable_audio_cache=true
+    ```
+
+=== "Using AirPlay (Shairport Sync) as an input"
+
+    First install `shairport-sync`.
+
+    Then (at the moment - see: <https://github.com/MichaIng/DietPi/issues/4470>) we need to replace the Shairport Sync binary with one that supports `stdout`. To do this we need to compile a new binary - you will find details here:  
+    <https://github.com/mikebrady/shairport-sync/blob/master/INSTALL.md#build-and-install>
+
+    You need to use this line when configuring instead of the line from the docs:
+
+    ```sh
+    ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-systemd --with-metadata --with-stdout
+    ```
+
+    Don't forget to run `make` and `make install`.
+
+    Then add the following config under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myAirport`. The `devicename` is the name that will be shown when searching for Airport devices. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
+
+    ```
+    source = airplay:///usr/local/bin/shairport-sync?name=myAirport&devicename=SnapcastAirport&params=--configfile=/usr/local/etc/shairport-sync.conf
+    ```
+
+    You will then either need to mask the original Shairport Sync service
+
+    ```sh
+    systemctl mask shairport-sync
+    ```
+
+    or you can try to run one of them on a different port - Snapcast docs shows how to do this here: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
+
+***
+
+Source code: <https://github.com/badaix/snapcast>
+
+## Snapcast Client
+
+A FOSS multi room audio solution - this part is a client app it listens to the server and plays the audio it is sent
+
+![Snapcast logo](../assets/images/dietpi-software-media-snapcast.png){: width="300" height="48" loading="lazy"}
+
+The Snapcast client will prompt you for the server's IP and port when installing and will be setup to start on boot up. This should work for most people but there are additional configuration parameters that can be found in the Snapcast documentation: <https://github.com/badaix/snapcast#client>
+
+=== "Changing options"
+
+    It should just work but, you can change the available options in:
+
+    - `/etc/default/snapclient`
+
+    Then restart services with:
+
+    ```sh
+    systemctl restart snapclient
+    ```
+
+***
+
+Source code: <https://github.com/badaix/snapcast>
 
 [Return to the **Optimised Software list**](../../software/)

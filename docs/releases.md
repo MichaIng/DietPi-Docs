@@ -1,5 +1,114 @@
 # DietPi Releases
 
+## June 2021 (version 7.3) {: #june-2021-version-73 }
+
+### Overview
+
+Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
+
+### New software titles {: #new-software-in-73 }
+
+- [**AdGuard Home**](../software/dns_servers/#adguard-home)
+
+    AdGuard Home is a network-wide software for blocking ads & tracking, similar to [Pi-hole](../software/dns_servers/#pi-hole), already supported by DietPi.
+
+    It covers all your devices, and you don't need any client-side software for that. Especially with the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.
+
+    ![DietPi AdGuard Home](assets/images/dietpi-software-dnsserver-adguard.gif){: width="500" loading="lazy"}
+
+    _DietPi software ID: 126_
+
+- [**Beets**](../software/media/#beets)
+
+    **Beets** is a command line media library management system for music geeks. It is designed as a library, it can do almost anything you can imagine for your music collection. As stated on the official website, _the purpose of **Beets** is to get your music collection right once and for all_.
+
+    _DietPi software ID: 190_
+
+- **frp**
+
+    **frp** is a Reverse HTTP proxy, filtering requests by different rules. It is a middleware between your web server ([Nginx](../software/webserver_stack/#nginx), [Apache](../software/webserver_stack/#apache2), [Lighttpd](../software/webserver_stack/#lighttpd) etc.) and the application server, preventing abuse of the application backend.
+
+    ![DietPi frp](assets/images/dietpi-software-frp.png){: width="500" loading="lazy"}
+
+    _New software ID: 171_
+
+- [**Snapcast Server**](../software/media/#snapcast-server)
+
+    This multiroom audio server component has been added with software ID 191. Many thanks to @foxy82 for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4465>
+
+    _DietPi software ID: 191_
+
+- [**Snapcast Client**](../software/media/#snapcast-client)
+
+    The multiroom audio client component has been added with software ID 192. Many thanks to @foxy82 for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4465>
+
+    ![DietPi Snapcast Client](assets/images/dietpi-software-media-snapcast-client.jpg){: width="500" loading="lazy"}
+
+    _DietPi software ID: 192_
+
+- [**K3s**](../software/system_stats/#k3s)
+
+    It is a lightweight Kubernetes distribution built for IoT & Edge computing
+    (install option ID 193). Easy to start with, half the memory, all in a binary of less than 100 MB.
+
+    Many thanks to @mortenlj for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4476>
+
+### DietPi Tools (new / notable updates) {: #dietpi-tools-73 }
+
+- **DietPi-Automation** :octicons-arrow-right-16: A new `dietpi.txt` setting has been added - `AUTO_SETUP_DHCP_TO_STATIC`. When it is enabled
+
+    ```sh
+    AUTO_SETUP_DHCP_TO_STATIC=1
+    ```
+
+    DHCP leased network settings will be applied as static network settings automatically during first run setup. This works as well with older images, by adding the above setting to `dietpi.txt`.
+
+- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) :octicons-arrow-right-16: Resolved an issue where network drives were detected as physical drives (v7.2 regression). Many thanks to @maartenlangeveld for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4479>
+
+- [**DietPi-Software**](../dietpi_tools/#dietpi-software) :octicons-arrow-right-16: Resolved an issue where with
+
+    ```sh
+    AUTO_SETUP_AUTOMATED=1
+    ```
+
+    the OpenSSH client was always installed on first boot, even if it was not requested.
+
+- [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore) :octicons-arrow-right-16: The include/exclude filter handling has been reworked. `/mnt` (`dietpi_userdata`) and `/media` related rules are added now via the editable custom filter file, which gives users more control over these. Especially it allows to include other mount points below `/mnt`, hence external `dietpi_userdata`, which was previously impossible due to the order in which those filter rules are applied.
+
+- [**DietPi-JustBoom**](../dietpi_tools/#dietpi-justboom) :octicons-arrow-right-16: Resolved an issue where the equalizer was always shown as "Off" even when it was just or previously enabled (v7.2 regression). Many thanks to @shao for reporting this issue: [ALSA equalizer not working](https://dietpi.com/phpbb/viewtopic.php?p=35072#p35072)
+
+- [**DietPi-VPN**](../dietpi_tools/#dietpi-vpn) :octicons-arrow-right-16: The killswitch has been adjusted to allow incoming SSH connections. Many thanks to @yslupdates for doing this request: <https://github.com/MichaIng/DietPi/issues/4447>
+
+- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Support for the Allo Boss2 DAC OLED display has been added to the **Display Options** > **LCD/OLED Panel addon** menu. When selecting the Allo Boss2 DAC as sound card, you will be asked whether to enable the OLED display as well.
+
+### Improvements {: #changes-73 }
+
+- [DietPi-Software | **Cuberite**](../software/gaming/#cuberite) :octicons-arrow-right-16: This has been enabled for ARMv8 systems, where the available ARMv7 binaries work just fine.
+- [DietPi-Software | **Allo web UI**](https://dietpi.com/phpbb/viewtopic.php?t=2317) :octicons-arrow-right-16: Updated to v13.3 which adds support for the Allo Boss2 DAC and resolves an issue where the Squeezelite service could not be controlled as the service path has changed. All credits go to Allo for implementing these changes.
+
+### Bug Fixes {: #bug-fixes-73 }
+
+- [DietPi-Software | **Node-RED**](../software/hardware_projects/#node-red) :octicons-arrow-right-16: Resolved an issue where the Python 3 RPi.GPIO module was tried to be installed as dependency on non-RPi devices (v7.2 regression). Many thanks to @TheAdminFrmoHell for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4478>
+- [DietPi-Software | **PI-SPC**](../software/hardware_projects/#audiophonics-pi-spc) :octicons-arrow-right-16: Resolved a syntax error in the shutdown script loop. Many thanks to @renaudlarzilliere for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4488>
+
+### Removed Software {: #removed-software-73 }
+
+- **Tomcat 8** :octicons-arrow-right-16: Tomcat version 8 is available until Debian Stretch only, from Buster and newer versions it will be [**Tomcat 9**](../software/webserver_stack/#tomcat). There is no reasonable configuration that `DietPi-Software` can do on top of installing the APT package, which can be easily done manually, running next command:
+
+    ```sh
+    apt install tomcat9
+    ```
+
+    The software option `Tomcat` is hence removed from `DietPi-Software`, in favour of a manual package install.
+
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4515>
+
+### Known / Outstanding Issues {: #known-issues-73 }
+
+- [DietPi-Config](../dietpi_tools/#dietpi-configuration) | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
+
+For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
+
 ## May 2021 (version 7.2) {: #may-2021-version-72 }
 
 ### Overview
@@ -30,7 +139,7 @@ Plus, more enhancements & bug fixes !
 
         ```sh
         AUTO_SETUP_BROWSER_INDEX=-1
-            ```
+        ```
 
     Web browser will be installed _only_ when a [desktop](../software/#desktops) is installed. It's similar to the webserver preference where an webserver will ONLY be installed when another software title requires it.
 
@@ -348,11 +457,6 @@ As always, many smaller code performance and stability improvements, visual and 
 - **DietPi-Software** | **DietPi-NordVPN** :octicons-arrow-right-16: As part of the major rework (see changes above), the dedicated install option has been removed. The script is available out of the box and will download, install or remove parts depending on your provider choice and menu selections.
 - **DietPi-Software** | **No-IP** :octicons-arrow-right-16: As result of the new DietPi-DDNS tool (see new scripts above), the dedicated install option has been removed. `DietPi-DDNS` is always available and does not require any additional download or install of external files.
 
-### Known / Outstanding Issues
-
-- **DietPi-Config** :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
-- **DietPi-Software** | [**MATE desktop**](../software/desktop/#mate) :octicons-arrow-right-16: When logging in as root, desktop items and right-click context menu is missing: <https://github.com/MichaIng/DietPi/issues/3160>
-
 For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>.
 
 ## February 2021 (version 7.0)
@@ -592,7 +696,7 @@ For more details on how to install DietPi, check the [documentation](../hardware
 - **[DietPi-Software | MineOS](../software/gaming/#mineos)** :octicons-arrow-right-16: A systemd service is now used to run the daemon in favour of the previous supervisor, the obsolete `mineos` user is not created anymore, Node.js v11 is used to build MineOS, obsolete dependencies have been removed and a reinstall will now perform a MineOS upgrade and the existing `/etc/mineos.conf` is not replaced anymore.
 - **[DietPi-Software | Mycroft AI](../software/hardware_projects/#mycroft-ai)** :octicons-arrow-right-16: By default, the ALSA automatic conversions plugin is enabled now on install, which enables OOTB compatibility with all wav sound formats and sound card. Additionally listener sampling rate override (48000 Hz) has been removed, reverting to Mycroft default (16000 Hz), which might solve an issue with hanging microphone level in CLI and related failing voice detection.
 - **[DietPi-Software | Gogs](../software/cloud/#gogs)** :octicons-arrow-right-16: Has been enabled for ARMv8 boards and on ARMv7 boards the newest version is installed again, which was not the case since Gogs v0.12. due to changed download names. Many thanks to [phpBB:MadKernel](https://dietpi.com/phpbb/memberlist.php?username=MadKernel) for bringing ARMv8 support back to our attention: <https://dietpi.com/phpbb/viewtopic.php?t=8276>
-- **[DietPi-Software | Folding@Home](../software/computational_science/#foldinghome)** :octicons-arrow-right-16: Is now available for ARMv8 (arm64) boards. Donate your idle CPU power to help researchers fighting against diseases like Cancer, Alzheimer, Ebola and COVID-19.
+- **[DietPi-Software | Folding@Home](../software/distributed_projects/#foldinghome)** :octicons-arrow-right-16: Is now available for ARMv8 (arm64) boards. Donate your idle CPU power to help researchers fighting against diseases like Cancer, Alzheimer, Ebola and COVID-19.
 - **[DietPi-Software | Radarr](../software/bittorrent/#radarr)** :octicons-arrow-right-16: Has been upgraded to the newest major version 3, including the required branch migration (from "develop" to "master") and, for non-ARMv6 boards, a migration to the now available .NET-based build away from Mono. This change is applied to all DietPi systems via Radarr reinstall, preserving your data and configs of course.
 - **[DietPi-Software | OctoPrint](../software/printing/#octoprint)** :octicons-arrow-right-16: Is now available via PyPI repository, hence can be installed and updated easier and faster without downloading and building from the sources. Git is not required anymore, as the internal updater as well uses Python pip only. We migrate all DietPi OctoPrint instances to the new version and new install method, so that the Git/install directory /opt/octoprint is obsolete and removed. All your data will be preserved, of course. Many thanks to @Stinocon for reporting issues related to our previous implementation: <https://github.com/MichaIng/DietPi/issues/3940>
 
@@ -636,9 +740,9 @@ As always, many smaller code performance and stability improvements, visual and 
 
     ![DietPi-Software Bazarr](assets/images/dietpi-software_bazarr.jpg){: width="1898" height="1080" loading="lazy"}
 
-    For more details on installation and configuration open [DietPi Optimised Software - Bazarr](../software/bittorrent#bazarr) page.
+    For more details on installation and configuration open [DietPi Optimised Software - Bazarr](../software/bittorrent/#bazarr) page.
 
-    Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent#bazarr) page in [Optimised software](../software/).
+    Companion application to Sonarr and Radarr, which manages and downloads subtitles based on your requirements, now available for install. Open [Bazarr](../software/bittorrent/#bazarr) page in [Optimised software](../software/).
     Many thanks to @DiogoAbu for doing this suggestion [Issue #2045](https://github.com/MichaIng/DietPi/issues/2045)
 
 - **Docker logging available in RAM/journald**

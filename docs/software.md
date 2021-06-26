@@ -19,6 +19,7 @@
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/advanced_networking/#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/advanced_networking/#tor-hotspot)
 - [**HAProxy - High performance TCP/HTTP load balancer**](../software/advanced_networking/#haproxy)
+- [**frp - Reverse Proxy**](../software/advanced_networking/#frp)
 
 ## [BitTorrent & Download Tools](../software/bittorrent/)
 
@@ -102,6 +103,7 @@
 
 - [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole)
 - [**Unbound - A validating, recursive, and caching DNS resolver**](../software/dns_servers/#unbound)
+- [**AdGuard Home - A powerful network-wide ads & trackers blocking DNS server**](../software/dns_servers/#adguard-home)
 
 ## [File Servers](../software/file_servers/)
 
@@ -179,6 +181,9 @@
 - [**Raspotify - Spotify Connect client**](../software/media/#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web)
 - [**Jellyfin - Media streaming server including live TV**](../software/media/#jellyfin)
+- [**Beets - Music organizer and manager**](../software/media/#beets)
+- [**Snapcast Server - Multi room audio server**](../software/media/#snapcast-server)
+- [**Snapcast Client - Multi room audio client**](../software/media/#snapcast-client)
 
 ## [Printing Server](../software/printing/)
 
@@ -226,6 +231,7 @@
 - [**RPi-Monitor - Web interface system stats**](../software/system_stats/#rpi-monitor)
 - [**Netdata - Web interface system stats**](../software/system_stats/#netdata)
 - [**Webmin - Remote system management with web interface**](../software/system_stats/#webmin)
+- [**K3s - Lightweight Kubernetes**](../software/system_stats/#k3s)
 
 ## [VPN](../software/vpn/)
 

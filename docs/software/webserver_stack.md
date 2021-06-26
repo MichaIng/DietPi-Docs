@@ -16,7 +16,7 @@
 - [**Apache2** - Feature-rich webserver](#apache2)  
 - [**Nginx** - High performance web server, load balancer & reverse proxy](#nginx)  
 - [**Lighttpd** - Extremely lightweight webserver](#lighttpd)
-- [**Tomcat8** - Apache Tomcat server](#tomcat)
+- [**Tomcat** - Apache Tomcat server](#tomcat)
 
 [**Web development - Programming & Frameworks**](#web-development-programming-frameworks)
 
@@ -534,6 +534,16 @@ What is **Apache Tomcat**? Essentially it’s an open-source Java servlet and Ja
 ![Tomcat logo](../assets/images/dietpi-software-webstack-tomcat.svg){: width="200" height="133" loading="lazy"}
 
 Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/site/xdocs/images/logos/tomcat.eps), [Apache License 2.0](https://commons.wikimedia.org/w/index.php?curid=11302180).
+
+=== "Install"
+
+    Starting with DietPi 7.3 `Tomcat 8` has been removed from the DietPi Software List. The reason is that `Tomcat 8` is available until Debian Stretch only. From Debian Buster and newer versions, it will be supported only Tomcat 9.
+    
+    To install Tomcat 9, run next command in the console:
+
+    ```sh
+    apt install tomcat9
+    ```
 
 === "Quick access"
 

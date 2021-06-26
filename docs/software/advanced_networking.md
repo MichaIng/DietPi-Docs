@@ -5,6 +5,7 @@
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi HotSpot traffic through the Tor network**](#tor-hotspot)
 - [**HAProxy - High performance TCP/HTTP load balancer**](#haproxy)
+- [**frp - Reverse Proxy**](#frp)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -141,5 +142,30 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
 Website: <http://www.haproxy.org>  
 Official documentation: <http://www.haproxy.org/#docs>
+
+## frp
+
+frp is a fast reverse proxy, supporting many protocols.
+
+=== "Access to web services"
+
+    Aside from proxies, frp also has a few dashboards that you can use to monitor it.
+
+    - Admin UI (Client): `http://<your.IP>:7400`
+    - Dashboard (Server): `http://<your.IP>:7500`
+
+=== "Configuration Files"
+
+    Depending on whether you have installed the client or the server (or both), there will be only the configuration files for that component.
+
+    - Client: `/etc/frp/frpc.ini`
+    - Server: `/etc/frp/frps.ini`
+
+    Note that you will need root access to edit these files, or you can edit the client one through the Admin UI.
+
+***
+
+Official documentation: <https://github.com/fatedier/frp/blob/dev/README.md>
+Source code: <https://github.com/fatedier/frp>
 
 [Return to the **Optimised Software list**](../../software/)

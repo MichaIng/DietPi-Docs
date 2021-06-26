@@ -1,6 +1,7 @@
 addictiveness
 addon
 ADF
+AdGuard
 advanxer
 AGPLv
 AirPlay
@@ -133,6 +134,7 @@ FreshRSS
 FriendlyARM
 FriendlyARM's
 frontend
+frp
 fullscreen
 FuguHub
 Gbit
@@ -218,6 +220,7 @@ Lerdorf
 LESP
 LetsEncrypt
 LGPL
+librespot
 Lidarr
 LightDM
 Lighttpd
@@ -396,6 +399,7 @@ Signalyst
 SlimDevices
 SMB
 sn
+Snapcast
 SNMP
 SoCs
 Sonarr

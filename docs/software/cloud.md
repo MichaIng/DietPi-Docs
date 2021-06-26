@@ -46,7 +46,7 @@ Also Installs:
 
     - URL = `http://<your.IP>/owncloud`
     - Username = `admin`
-    - Password = `<your global password>`
+    - Password = `<your global password>` (default: `dietpi`)
 
     If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).
 
@@ -105,12 +105,13 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Quick start"
 
-    Access the web interface using the next URL when running on SBC (`http://localhost/nextcloud/`) or the IP address / hostname of your DietPi device (e.g.: `http://192.168.0.100/nextcloud/`).
+    Nextcloud is accessible via regular HTTP/HTTPS port **80**/**443** below the `/nextcloud` path:
 
+    - URL = `http://<your.IP>/nextcloud/`
     - Username = `admin`
-    - Password = `<your global password>`
+    - Password = `<your global password>` (default: `dietpi`)
 
-    Nextcloud is installed together with the webserver. To fast access the files, a dedicated USB hard drive is highly recommended.
+    To fast access the files, a dedicated USB hard drive is highly recommended.
 
 === "Advanced configuration"
 
@@ -289,7 +290,7 @@ Also Installs:
         - Host = `localhost`
         - Database = `pydio`
         - User = `pydio`
-        - Password = `dietpi`
+        - Password = `<your global password>` (default: `dietpi`)
         - Use MySqli = No
     - Click test connection, when successful, click the `>>` button.
     - Under advanced options, use the default values, then click the `Install Pydio` button.
@@ -358,7 +359,7 @@ Your very own GitHub style server, with web interface.
     - Change the following values only:
         - Database = `MySQL`
         - User = `gogs`
-        - Database password = `<your global password>`
+        - Database password = `<your global password>` (default: `dietpi`)
         - Repository Root Path = `/mnt/dietpi_userdata/gogs-repo`
         - Run User = `gogs`
         - Log Path = `/var/log/gogs`
@@ -396,7 +397,7 @@ Your very own GitHub style server, with web interface.
 
     - Change the following values only:
         - MySQL database user = `gitea`
-        - MySQL database password = `dietpi`
+        - MySQL database password = `<your global password>` (default: `dietpi`)
         - Repository root path = `/mnt/dietpi_userdata/gitea/gitea-repositories`
         - Log path = `/var/log/gitea`
     - Scroll to the bottom of page and select Install Gitea
@@ -667,13 +668,13 @@ Forum: <https://vaultwarden.discourse.group>
 Source code: <https://github.com/dani-garcia/vaultwarden>  
 Open-source license: [GPLv3](https://github.com/dani-garcia/vaultwarden/blob/master/LICENSE.txt)
 
-Credits: This software title has been added to DietPi-Software by [CactiChameleon9](https://github.com/CactiChameleon9). Thank you!
+Credits: This software title has been added to DietPi-Software by @CactiChameleon9. Thank you!
 
 ## FuguHub
 
 FuguHub transforms your DietPi device into a secure online storage system, letting you access and share files from any connected computer or device.
 
-![FuguHub logo](https://fuguhub.com/images/FuguHub.png){: width="149" height="140" loading="lazy"}
+![FuguHub logo](../assets/images/dietpi-software-cloud-fuguhub.png){: width="149" height="140" loading="lazy"}
 
 === "Quick access"
 
@@ -691,7 +692,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     3. Press ++y++ for `VPS` or ++n++ for `home/office` server
     4. Choose whether to install an internal BitTorrent client.
 
-    !!! warning "It is recommended to use the a dedicated BitTorrent server, if required: <https://dietpi.com/docs/software/bittorrent/>"
+    !!! warning "It is recommended to use the a dedicated [BitTorrent](../bittorrent/) server, if required."
 
     Setup details:
 
