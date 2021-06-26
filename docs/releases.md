@@ -10,8 +10,8 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
 - [**AdGuard Home**](../software/dns_servers/#adguard-home)
 
-    AdGuard Home is a network-wide software for blocking ads & tracking, similar to [Pi-hole](../software/dns_servers/#pi-hole), already supported by DietPi. 
-    
+    AdGuard Home is a network-wide software for blocking ads & tracking, similar to [Pi-hole](../software/dns_servers/#pi-hole), already supported by DietPi.
+
     It covers all your devices, and you don't need any client-side software for that. Especially with the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.
 
     ![DietPi AdGuard Home](assets/images/dietpi-software-dnsserver-adguard.gif){: width="500" loading="lazy"}
@@ -20,11 +20,11 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
 - [**Beets**](../software/media/#beets)
 
-    **Beets** is a command line media library management system for music geeks. It is designed as a library, it can do almost anything you can imagine for your music collection. As stated on the official website, _the purpose of **Beets** is to get your music collection right once and for all_. 
+    **Beets** is a command line media library management system for music geeks. It is designed as a library, it can do almost anything you can imagine for your music collection. As stated on the official website, _the purpose of **Beets** is to get your music collection right once and for all_.
 
     _DietPi software ID: 190_
 
-- **frp** 
+- **frp**
 
     **frp** is a Reverse HTTP proxy, filtering requests by different rules. It is a middleware between your web server ([Nginx](../software/webserver_stack/#nginx), [Apache](../software/webserver_stack/#apache2), [Lighttpd](../software/webserver_stack/#lighttpd) etc.) and the application server, preventing abuse of the application backend.
 
@@ -50,7 +50,7 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
     It is a lightweight Kubernetes distribution built for IoT & Edge computing
     (install option ID 193). Easy to start with, half the memory, all in a binary of less than 100 MB.
-    
+
     Many thanks to @mortenlj for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4476>
 
 ### DietPi Tools (new / notable updates) {: #dietpi-tools-73 }

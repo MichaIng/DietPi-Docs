@@ -1232,9 +1232,9 @@ The Snapcast server needs to have its audio sources manually configured after in
 
 === "Using AirPlay (Shairport Sync) as an input"
 
-    First install shairport-sync.
+    First install `shairport-sync`.
 
-    Then (at the moment - see: <https://github.com/MichaIng/DietPi/issues/4470>) we need to replace the Shairport Sync binary with one that supports stdout. To do this we need to compile a new binary - you will find details here:  
+    Then (at the moment - see: <https://github.com/MichaIng/DietPi/issues/4470>) we need to replace the Shairport Sync binary with one that supports `stdout`. To do this we need to compile a new binary - you will find details here:  
     <https://github.com/mikebrady/shairport-sync/blob/master/INSTALL.md#build-and-install>
 
     You need to use this line when configuring instead of the line from the docs:
