@@ -67,7 +67,7 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
 ### Removed Software {: #removed-software-73 }
 
-- **Tomcat 8** :octicons-arrow-right-16: Tomcat version 8 is available until Debian Stretch only, from Buster and newer versions it will be [**Tomcat 9**](software/webserver_stack/#tomcat). There is no reasonable configuration that `DietPi-Software` can do on top of installing the APT package, which can be easily done manually, running next command:
+- **Tomcat 8** :octicons-arrow-right-16: Tomcat version 8 is available until Debian Stretch only, from Buster and newer versions it will be [**Tomcat 9**](../software/webserver_stack/#tomcat). There is no reasonable configuration that `DietPi-Software` can do on top of installing the APT package, which can be easily done manually, running next command:
 
     ```sh
     apt install tomcat9
@@ -75,11 +75,11 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
     The software option `Tomcat` is hence removed from `DietPi-Software`, in favour of a manual package install.
 
-As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/XXXX>
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4515>
 
 ### Known / Outstanding Issues {: #known-issues-73 }
 
-- DietPi-Config | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
+- [DietPi-Config](../dietpi_tools/#dietpi-configuration) | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
 
 For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
 
@@ -430,11 +430,6 @@ As always, many smaller code performance and stability improvements, visual and 
 
 - **DietPi-Software** | **DietPi-NordVPN** :octicons-arrow-right-16: As part of the major rework (see changes above), the dedicated install option has been removed. The script is available out of the box and will download, install or remove parts depending on your provider choice and menu selections.
 - **DietPi-Software** | **No-IP** :octicons-arrow-right-16: As result of the new DietPi-DDNS tool (see new scripts above), the dedicated install option has been removed. `DietPi-DDNS` is always available and does not require any additional download or install of external files.
-
-### Known / Outstanding Issues
-
-- **DietPi-Config** :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
-- **DietPi-Software** | [**MATE desktop**](../software/desktop/#mate) :octicons-arrow-right-16: When logging in as root, desktop items and right-click context menu is missing: <https://github.com/MichaIng/DietPi/issues/3160>
 
 For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>.
 
