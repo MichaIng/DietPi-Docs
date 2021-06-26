@@ -77,9 +77,14 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
 - [**DietPi-JustBoom**](../dietpi_tools/#dietpi-justboom) :octicons-arrow-right-16: Resolved an issue where the equalizer was always shown as "Off" even when it was just or previously enabled (v7.2 regression). Many thanks to @shao for reporting this issue: [ALSA equalizer not working](https://dietpi.com/phpbb/viewtopic.php?p=35072#p35072)
 
+- [**DietPi-VPN**](../dietpi_tools/#dietpi-vpn) :octicons-arrow-right-16: The killswitch has been adjusted to allow incoming SSH connections. Many thanks to @yslupdates for doing this request: <https://github.com/MichaIng/DietPi/issues/4447>
+
+- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Support for the Allo Boss2 DAC OLED display has been added to the **Display Options** > **LCD/OLED Panel addon** menu. When selecting the Allo Boss2 DAC as sound card, you will be asked whether to enable the OLED display as well.
+
 ### Improvements {: #changes-73 }
 
 - [DietPi-Software | **Cuberite**](../software/gaming/#cuberite) :octicons-arrow-right-16: This has been enabled for ARMv8 systems, where the available ARMv7 binaries work just fine.
+- [DietPi-Software | **Allo web UI**](https://dietpi.com/phpbb/viewtopic.php?t=2317) :octicons-arrow-right-16: Updated to v13.3 which adds support for the Allo Boss2 DAC and resolves an issue where the Squeezelite service could not be controlled as the service path has changed. All credits go to Allo for implementing these changes.
 
 ### Bug Fixes {: #bug-fixes-73 }
 
