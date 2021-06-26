@@ -1,5 +1,89 @@
 # DietPi Releases
 
+## June 2021 (version 7.3) {: #june-2021-version-73 }
+
+### Overview
+
+Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
+
+### New software titles {: #new-software-in-73 }
+
+- [**AdGuard Home**](../software/dns_servers/#adguard-home)
+
+    This DNS sinkhole ad blocker for your LAN, similar to Pi-hole, has been added with software ID 126.
+
+- [**Beets**](../software/media/#beets)
+
+    This command line music organizer and manager has been added with software ID 190.
+
+- **frp**
+
+    This proxy system has been added as install option with ID 171.
+
+- [**Snapcast Server**](../software/media/#snapcast-server)
+
+    This multiroom audio server component has been added with software ID 191. Many thanks to @foxy82 for implementing this software title: https://github.com/MichaIng/DietPi/pull/4465
+
+- [**Snapcast Client**](../software/media/#snapcast-client)
+
+    The multiroom audio client component has been added with software ID 192. Many thanks to @foxy82 for implementing this software title: https://github.com/MichaIng/DietPi/pull/4465
+
+- [**K3s**](../software/system_stats/#k3s)
+
+    Added a lightweight Kubernetes implementation as install option with ID 193. Many thanks to @mortenlj for implementing this software title: https://github.com/MichaIng/DietPi/pull/4476
+
+### DietPi Tools (new / notable updates) {: #dietpi-tools-73 }
+
+- **DietPi-Automation** :octicons-arrow-right-16: A new `dietpi.txt` setting has been added - `AUTO_SETUP_DHCP_TO_STATIC`. When it is enabled 
+
+    ```sh
+    AUTO_SETUP_DHCP_TO_STATIC=1
+    ```
+
+    DHCP leased network settings will be applied as static network settings automatically during first run setup. This works as well with older images, by adding the above setting to `dietpi.txt`.
+
+- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) :octicons-arrow-right-16: Resolved an issue where network drives were detected as physical drives (v7.2 regression). Many thanks to @maartenlangeveld for reporting this issue: https://github.com/MichaIng/DietPi/issues/4479
+
+- [**DietPi-Software**](../dietpi_tools/#dietpi-software) :octicons-arrow-right-16: Resolved an issue where with
+
+    ```sh
+    AUTO_SETUP_AUTOMATED=1
+    ```
+
+    the OpenSSH client was always installed on first boot, even if it was not requested.
+
+- [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore) :octicons-arrow-right-16: The include/exclude filter handling has been reworked. `/mnt` (`dietpi_userdata`) and `/media` related rules are added now via the editable custom filter file, which gives users more control over these. Especially it allows to include other mount points below `/mnt`, hence external `dietpi_userdata`, which was previously impossible due to the order in which those filter rules are applied.
+
+- [**DietPi-JustBoom**](../dietpi_tools/#dietpi-justboom) :octicons-arrow-right-16: Resolved an issue where the equalizer was always shown as "Off" even when it was just or previously enabled (v7.2 regression). Many thanks to @shao for reporting this issue: [ALSA equalizer not working](https://dietpi.com/phpbb/viewtopic.php?p=35072#p35072)
+
+### Improvements {: #changes-73 }
+
+- [DietPi-Software | **Cuberite**](../software/gaming/#cuberite) :octicons-arrow-right-16: This has been enabled for ARMv8 systems, where the available ARMv7 binaries work just fine. 
+
+### Bug Fixes {: #bug-fixes-73 }
+
+- [DietPi-Software | **Node-RED**](../software/hardware_projects/#node-red) :octicons-arrow-right-16: Resolved an issue where the Python 3 RPi.GPIO module was tried to be installed as dependency on non-RPi devices (v7.2 regression). Many thanks to @TheAdminFrmoHell for reporting this issue: https://github.com/MichaIng/DietPi/issues/4478
+- [DietPi-Software | **PI-SPC**](../software/hardware_projects/#audiophonics-pi-spc) :octicons-arrow-right-16: Resolved a syntax error in the shutdown script loop. Many thanks to @renaudlarzilliere for reporting this issue: https://github.com/MichaIng/DietPi/issues/4488
+
+### Removed Software {: #removed-software-73 }
+
+- **Tomcat 8** :octicons-arrow-right-16: Tomcat version 8 is available until Debian Stretch only, from Buster and newer versions it will be [**Tomcat 9**](software/webserver_stack/#tomcat). There is no reasonable configuration that `DietPi-Software` can do on top of installing the APT package, which can be easily done manually, running next command:
+
+    ```sh
+    apt install tomcat9
+    ```
+
+    The software option `Tomcat` is hence removed from `DietPi-Software`, in favour of a manual package install.
+
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: https://github.com/MichaIng/DietPi/pull/XXXX
+
+### Known / Outstanding Issues {: #known-issues-73 }
+
+- DietPi-Config | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: https://github.com/MichaIng/DietPi/issues/2103
+
+For all additional issues that may appear after release, please see the following link for active tickets: https://github.com/MichaIng/DietPi/issues
+
+
 ## May 2021 (version 7.2) {: #may-2021-version-72 }
 
 ### Overview
