@@ -10,27 +10,48 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**.
 
 - [**AdGuard Home**](../software/dns_servers/#adguard-home)
 
-    This DNS sinkhole ad blocker for your LAN, similar to Pi-hole, has been added with software ID 126.
+    AdGuard Home is a network-wide software for blocking ads & tracking, similar to [Pi-hole](../software/dns_servers/#pi-hole), already supported by DietPi. 
+    
+    It covers all your devices, and you don't need any client-side software for that. Especially with the rise of Internet-Of-Things and connected devices, it becomes more and more important to be able to control your whole network.
+
+    ![DietPi AdGuard Home](assets/images/dietpi-software-dnsserver-adguard.gif){: width="500" loading="lazy"}
+
+    _DietPi software ID: 126_
 
 - [**Beets**](../software/media/#beets)
 
-    This command line music organizer and manager has been added with software ID 190.
+    **Beets** is a command line media library management system for music geeks. It is designed as a library, it can do almost anything you can imagine for your music collection. As stated on the official website, _the purpose of **Beets** is to get your music collection right once and for all_. 
 
-- **frp**
+    _DietPi software ID: 190_
 
-    This proxy system has been added as install option with ID 171.
+- **frp** 
+
+    **frp** is a Reverse HTTP proxy, filtering requests by different rules. It is a middleware between your web server ([Nginx](../software/webserver_stack/#nginx), [Apache](../software/webserver_stack/#apache2), [Lighttpd](../software/webserver_stack/#lighttpd) etc.) and the application server, preventing abuse of the application backend.
+
+    ![DietPi frp](assets/images/dietpi-software-frp.png){: width="500" loading="lazy"}
+
+    _New software ID: 171_
 
 - [**Snapcast Server**](../software/media/#snapcast-server)
 
     This multiroom audio server component has been added with software ID 191. Many thanks to @foxy82 for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4465>
 
+    _DietPi software ID: 191_
+
 - [**Snapcast Client**](../software/media/#snapcast-client)
 
     The multiroom audio client component has been added with software ID 192. Many thanks to @foxy82 for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4465>
 
+    ![DietPi Snapcast Client](assets/images/dietpi-software-media-snapcast-client.jpg){: width="500" loading="lazy"}
+
+    _DietPi software ID: 192_
+
 - [**K3s**](../software/system_stats/#k3s)
 
-    Added a lightweight Kubernetes implementation as install option with ID 193. Many thanks to @mortenlj for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4476>
+    It is a lightweight Kubernetes distribution built for IoT & Edge computing
+    (install option ID 193). Easy to start with, half the memory, all in a binary of less than 100 MB.
+    
+    Many thanks to @mortenlj for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4476>
 
 ### DietPi Tools (new / notable updates) {: #dietpi-tools-73 }
 

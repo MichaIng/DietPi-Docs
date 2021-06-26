@@ -1230,7 +1230,7 @@ The Snapcast server needs to have its audio sources manually configured after in
     source = librespot:///usr/bin/librespot?name=mySpotify&devicename=SnapcastSpotify&disable_audio_cache=true
     ```
 
-=== "Using AirPlay (Shairport Sync) as an input
+=== "Using AirPlay (Shairport Sync) as an input"
 
     First install shairport-sync.
 
