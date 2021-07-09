@@ -118,7 +118,7 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
     - URL = `https://<your.IP>:8443`  
       You can safely ignore the certificate "warning" if one appears.
     - Username = `root`
-    - Password = `<globalSoftwarePassword>` (default: `dietpi`)
+    - Password = The same as your root login password. Default is `dietpi`
 
 === "1st run setup"
 
