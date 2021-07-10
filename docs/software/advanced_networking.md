@@ -145,7 +145,7 @@ Official documentation: <http://www.haproxy.org/#docs>
 
 ## frp
 
-A fast reverse proxy helping you to expose a local server behind a NAT or firewall to the Internet. It supports 
+A fast reverse proxy, helping you to expose a local server behind a NAT or firewall to the Internet. It supports more protocols, naming a few: TCP, UDP, HTTP(S), and also P2P connect mode.
 
 === "Access to web services"
 

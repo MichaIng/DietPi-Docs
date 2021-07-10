@@ -20,10 +20,10 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**. It brings 6 
 
 - [**Beets**](../software/media/#beets)
 
-    ![Beets logo](../assets/images/dietpi-software-media-beets.png){: width="144" height="144" loading="lazy"}
+    ![Beets logo](assets/images/dietpi-software-media-beets.png){: width="144" height="144" loading="lazy"}
 
-    **Beets** is a command line media library management system for music geeks. It is designed as a library, it can do almost anything you can imagine for your music collection. 
-    
+    **Beets** is a command line media library management system for music geeks. It is designed as a library, it can do almost anything you can imagine for your music collection.
+
     As stated on the official website, _the purpose of **Beets** is to get your music collection right once and for all_.
 
     Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `190`.
@@ -32,25 +32,25 @@ Welcome to **June 2021 release** :octicons-heart-16: of **DietPi**. It brings 6 
 
     ![DietPi frp](assets/images/dietpi-software-frp.png){: width="500" loading="lazy"}
 
-    **frp** is a fast reverse proxy helping you to expose a local server behind a NAT or firewall to the Internet. 
+    **frp** is a fast reverse proxy helping you to expose a local server behind a NAT or firewall to the Internet.
 
     Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `171`.
 
 - [**Snapcast Server**](../software/media/#snapcast-server) & [**Snapcast Client**](../software/media/#snapcast-client)
 
-    ![Snapcast logo](../assets/images/dietpi-software-media-snapcast.png){: width="300" height="48" loading="lazy"}
+    ![Snapcast logo](assets/images/dietpi-software-media-snapcast.png){: width="300" height="48" loading="lazy"}
 
-    **Snapcast** centralizes broadcasting of audio streams and it handles sending audio streams to wireless receivers creating a **multiroom wireless speaker system**. 
-    
+    **Snapcast** centralizes broadcasting of audio streams and it handles sending audio streams to wireless receivers creating a **multiroom wireless speaker system**.
+
     With Snapcast, many different clients can connect to the same server in order to stream the same audio. It allows you to group speakers together, as well as adjust latency on each speaker.
 
     Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software IDs `191` and `192`. Many thanks to @foxy82 for implementing these software titles: <https://github.com/MichaIng/DietPi/pull/4465>
 
 - [**K3s**](../software/system_stats/#k3s)
 
-    ![K3s logo](../assets/images/logo-k3s.svg){: width="300" height="116" loading="lazy"}
+    ![K3s logo](assets/images/logo-k3s.svg){: width="300" height="116" loading="lazy"}
 
-    **K3s** has composed all the required Kubernetes parts, including dependencies, into a single binary. While there are tools and distributions to help install the Kubernetes specific components of a cluster, the value of a single binary for edge use cases is clear: simplifies both the ease of installation, runtime operations, and maintenance of Kubernetes. 
+    **K3s** has composed all the required Kubernetes parts, including dependencies, into a single binary. While there are tools and distributions to help install the Kubernetes specific components of a cluster, the value of a single binary for edge use cases is clear: simplifies both the ease of installation, runtime operations, and maintenance of Kubernetes.
 
     **K3s** is Kubernetes wrapped in simple launcher that handles a lot of the complexity of TLS and options for the embedded binaries. It esentially makes the container orchestration simpler to install, run, or operate.
 
