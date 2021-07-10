@@ -1141,14 +1141,14 @@ A command-line music organizer and manager. Some of the key features are:
 
 === "Quick start"
 
-    Start by typing `beet` in the commmand line. All the options and commands will be made available. 
+    Start by typing `beet` in the command line. All the options and commands will be made available. 
     
     You could start using Beets by importing music with `beet import` and then query the library with 'beet list'. For example next command line shows all Tangos in the year 2010
 
     ```sh
     beet ls year:2010 genre:Tango
     ```
-    
+
 === "Changing configuration"
 
     You can change the Beets configuration, by editing next file: `/mnt/dietpi_userdata/beets/config.yaml`.

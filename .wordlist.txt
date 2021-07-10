@@ -93,6 +93,7 @@ DLNA
 DNS
 Domoticz
 DoT
+downloader
 DPMS
 DRC
 DRM
@@ -361,6 +362,7 @@ ReadyMedia
 RealVNC
 reconfiguring
 Remot
+renamer
 renderer
 reselect
 resolvconf
