@@ -10,4 +10,4 @@ DietPi announcements and discussions are done via Facebook: <https://www.faceboo
 
 ## DietPi Blog page
 
-We created a blog page about DietPi features and hints: <https://dietpi.com/blog>
+We created a blog page about DietPi features and hints: <https://dietpi.com/blog/>
