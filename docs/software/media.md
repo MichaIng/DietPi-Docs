@@ -1131,17 +1131,27 @@ Source code: <https://github.com/jellyfin/jellyfin>
 
 ## Beets
 
-A command-line music organizer and manager.
+A command-line music organizer and manager. Some of the key features are:
+
+- flexible automatic metadata corrector and file renamer
+- album art downloader, lyrics fetcher, and genre identifier
+- music metadata inspection and modification tool for lots of audio file types
 
 ![Beets logo](../assets/images/dietpi-software-media-beets.png){: width="144" height="144" loading="lazy"}
 
+=== "Quick start"
+
+    Start by typing `beet` in the command line. All the options and commands will be made available. 
+    
+    You could start using Beets by importing music with `beet import` and then query the library with 'beet list'. For example next command line shows all Tangos in the year 2010
+
+    ```sh
+    beet ls year:2010 genre:Tango
+    ```
+
 === "Changing configuration"
 
-    You can edit the configuration for Beets at `/mnt/dietpi_userdata/beets/config.yaml`.
-
-=== "Usage with other apps"
-
-    You can use Beets to import music into any music app supported by DietPi-Software with `beet import`.
+    You can change the Beets configuration, by editing next file: `/mnt/dietpi_userdata/beets/config.yaml`.
 
 ***
 
