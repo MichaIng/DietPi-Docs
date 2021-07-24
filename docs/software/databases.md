@@ -215,9 +215,13 @@ PostgreSQL is a persistent advanced object-relational database server, used in s
 
 === "Configuration"
 
-    - Config directory: `/etc/postgresql/*/main` with the asterisk being the PostgreSQL version number, e.g. `11` or `13`
-    - Main config file: `/etc/postgresql/*/main/postgresql.conf`
-    - DietPi config override: `/etc/postgresql/*/main/conf.d/00dietpi.conf`
+    - Config directory:  
+        `/etc/postgresql/*/main`  
+        with the asterisk being the PostgreSQL version number, e.g. `11` or `13`
+    - Main config file:  
+        `/etc/postgresql/*/main/postgresql.conf`
+    - DietPi config override:  
+        `/etc/postgresql/*/main/conf.d/00dietpi.conf`
 
     To add or change settings, best practice is to create a new override configuration, e.g.:
 
@@ -234,6 +238,7 @@ PostgreSQL is a persistent advanced object-relational database server, used in s
 === "Service handling"
 
     The systemd service `postgresql.service` is used to start and control the PostgreSQL server. The following commands can be used:
+
     - Start: `systemctl start postgresql`
     - Stop: `systemctl stop postgresql`
     - Restart: `systemctl restart postgresql`
