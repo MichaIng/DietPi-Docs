@@ -264,11 +264,11 @@ Synapse is a server, written in Python, for communication using the Matrix proto
 === "View logs"
 
     Logs are done to the system journal an can be viewed via:
- 
+
     ```sh
     journalctl -u synapse
     ```
-    
+
 === "Update to latest version"
 
     Since Synapse is installed via Python 3 pip, you can update it via:
