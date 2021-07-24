@@ -67,7 +67,7 @@
 - [**SQLite** - Small, Fast and High reliable SQL database engine](../software/databases/#sqlite)
 - [**Redis** - Open Source In-memory key–value Data Store](../software/databases/#redis)
 - [**InfluxDB** - Open Source Time Series Database](../software/databases/#influxdb)
-- [**PostgreSQL** - Persistant and advanced SQL database engine](../software/databases/#postgresql)
+- [**PostgreSQL** - Persistent and advanced SQL database engine](../software/databases/#postgresql)
 
 ## [Desktops](../software/desktop/)
 
