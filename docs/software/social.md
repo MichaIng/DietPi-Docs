@@ -8,6 +8,7 @@
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](#openbazaar)
+- [**Synapse - Decentralized communication with the Matrix protocol**](#synapse)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -219,5 +220,72 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
     - Click New Server
     - Select Standalone
     - Enter the IP address of your DietPi device, and, the username and password you applied in step 1.
+
+## Synapse
+
+Synapse is a server, written in Python, for communication using the Matrix protocol.
+
+=== "Client"
+
+    For communicating with Synapse, you can use [Element](https://element.io/), however any client that supports the Matrix protocol should work.
+
+=== "Federation"
+
+    Synapse is by default set up to be a private server, with no connection to any other servers. To connect to other servers (federate), see https://github.com/matrix-org/synapse/blob/develop/docs/federate.md.  Note that frp does not currently work with Synapse.
+
+=== "Configuration"
+
+    - Config directory:  
+        `/mnt/dietpi_userdata/synapse`
+    - Main config file:  
+        `/mnt/dietpi_userdata/synapse/homeserver.yaml`
+    - DietPi config override:  
+        `/mnt/dietpi_userdata/synapse/homeserver.yaml.d/00-dietpi.yaml`  
+        This also contains the PostgreSQL database details and that file is hence only readable to root or the `synapse` user.
+
+    To add or change settings, best practice is to create a new override configuration, e.g.:
+
+    ```
+    /mnt/dietpi_userdata/synapse/homeserver.yaml.d/99-local.yaml
+    ```
+
+    For changes to take effect, the service needs to be reloaded:
+
+    ```sh
+    systemctl reload synapse
+    ```
+
+=== "Service handling"
+
+    The DietPi Synapse implementation creates a systemd service `synapse.service` to start and control the Synapse server. The following commands can be used:
+
+    - Start: `systemctl start synapse`
+    - Stop: `systemctl stop synapse`
+    - Restart: `systemctl restart synapse`
+    - Reload config: `systemctl reload synapse`
+    - Print status: `systemctl start synapse`
+
+=== "View logs"
+
+    Logs are done to the system journal an can be viewed via:
+
+    ```sh
+    journalctl -u synapse
+    ```
+
+=== "Update to latest version"
+
+    Since Synapse is installed via Python 3 pip, you can update it via:
+
+    ```sh
+    pip3 install -U matrix-synapse
+    ```
+
+***
+
+Official website: <https://matrix.org/>  
+Official documentation: <https://matrix.org/docs/guides>  
+Source code: <https://github.com/matrix-org/synapse>  
+License: [Apache 2.0](https://github.com/matrix-org/synapse/blob/develop/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)

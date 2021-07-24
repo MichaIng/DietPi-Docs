@@ -979,21 +979,59 @@ Free and open source comics/mangas media server with web UI.
 
 === "Data directory"
 
-    `/mnt/dietpi_userdata/komga`
+    Variable data and configs are stored in the following directory:
+
+    ```
+    /mnt/dietpi_userdata/komga
+    ```
 
 === "Configuration file"
 
-    `/mnt/dietpi_userdata/komga/application.yml`
+    The configuration file can be found at the following location:
+
+    ```
+    /mnt/dietpi_userdata/komga/application.yml
+    ```
+
+    You need to restart the service for changes to take effect:
+
+    ```sh
+    systemctl restart komga
+    ```
+
+=== "File hashing"
+
+    File hashing is by default disabled on installs via DietPi, to reduce CPU load for small hardware. The downside is that when moving or renaming media files, Komga won't be able to keep metadata and read state attached, as the database entry is associated to the file path. The original media entry will remain shown as "unavailable" in the library, so that you can manually copy metadata over to the new entry. To remove the old entry, clear the trash of the library.
+
+    With file hashing enabled, database entries and hence metadata and read state are associated to the file hash, so that it stays intact when files are moved or renamed only, with the downside of additional CPU load and resource usage, especially on smaller hardware. To enable file hashing, set the following entry in the configuration file:
+
+    ```yaml
+    file-hashing: true
+    ```
+
+    Read more: <https://komga.org/guides/trash.html#file-hashes>
 
 === "View logs"
+
+    Logs are stored in the system journal and can be viewed by running the following command:
 
     ```sh
     journalctl -u komga
     ```
 
-    If you require file logging, set a path via `config` file, like `logging:` \> `file:` \> `name: /var/log/komga/komga.log`, assure that the directory exists and the `komga` user or group has write permissions.
+    If you require file logging, set a path via config file, e.g.:
+
+    ```yaml
+    logging:
+      file:
+        name: "/var/log/komga/komga.log"
+    ```
+    
+    Assure that the directory exists and the `komga` user or group has write permissions.
 
 === "Update to latest version"
+
+    To update Komga to the latest version, simply reinstall it via DietPi-Software:
 
     ```sh
     dietpi-software reinstall 179
@@ -1001,8 +1039,10 @@ Free and open source comics/mangas media server with web UI.
 
 ***
 
+Official website: <https://komga.org/>  
 Official documentation: <https://komga.org/guides>  
-Source code: <https://github.com/gotson/komga>
+Source code: <https://github.com/gotson/komga>  
+License: [MIT](https://github.com/gotson/komga/blob/master/LICENSE)
 
 ## Raspotify
 
