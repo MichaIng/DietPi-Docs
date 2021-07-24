@@ -370,7 +370,7 @@ Also installs:
 
 === "Server configuration"
 
-    Remark: The config file changes in the web UI do not have an effect yet: <https://github.com/blynkkk/blynk-server/issues/1318>
+    Remark: The config file changes in the web UI do not have an effect.
 
     To change settings you need to edit  
     `/mnt/dietpi_userdata/blynk/server.properties`  
@@ -401,7 +401,9 @@ Also installs:
 ***
 
 Official documentation: <http://docs.blynk.cc>  
-Install Blynk App (Android): <https://play.google.com/store/apps/details?id=cc.blynk>
+Install Blynk App (Android): <https://play.google.com/store/apps/details?id=cc.blynk>  
+Source code: <https://github.com/Peterkn2001/blynk-server>  
+License: [GPLv3](https://github.com/Peterkn2001/blynk-server/blob/master/license.txt)
 
 ## Audiophonics PI-SPC
 
