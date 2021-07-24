@@ -7,6 +7,7 @@
 - [**SQLite** - Small, Fast and High reliable SQL database engine](#sqlite)
 - [**Redis** - Open Source In-memory key–value Data Store](#redis)
 - [**InfluxDB** - Open Source Time Series Database](#influxdb)
+- [**PostgreSQL** - Persistant and advanced SQL database engine](#postgresql)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -68,7 +69,7 @@ Official documentation:  <https://www.phpmyadmin.net/docs/>
 
 Source: Part of the SQLite documentation, which has been released by author D. Richard Hipp to the public domain. SVG conversion by Mike Toews. [Public Domain](https://commons.wikimedia.org/w/index.php?curid=11675072)
 
-**SQLite** is an embedded relational database engine. It it a self-contained,  high-reliability and full-featured SQL database engine. It is very popular and there are hundreds of millions copies worldwide in use today [^3].
+**SQLite** is an embedded relational database engine. It it a self-contained, high-reliability and full-featured SQL database engine. It is very popular and there are hundreds of millions copies worldwide in use today [^3].
 
 === "Quick start"
 
@@ -189,6 +190,8 @@ The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana).
     The data location for InfluxDB is stored respectively linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`
 
 ***
+
+## PostgreSQL
 
 Website: <https://www.influxdata.com/products/influxdb/>  
 Official documentation: <https://docs.influxdata.com/influxdb/v1.8/>  

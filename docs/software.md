@@ -67,6 +67,7 @@
 - [**SQLite** - Small, Fast and High reliable SQL database engine](../software/databases/#sqlite)
 - [**Redis** - Open Source In-memory key–value Data Store](../software/databases/#redis)
 - [**InfluxDB** - Open Source Time Series Database](../software/databases/#influxdb)
+- [**PostgreSQL** - Persistant and advanced SQL database engine](../software/databases/#postgresql)
 
 ## [Desktops](../software/desktop/)
 
@@ -212,6 +213,7 @@
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](../software/social/#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](../software/social/#baikal)
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](../software/social/#openbazaar)
+- [**Synapse - Decentralized communication with the Matrix protocol**](../software/social/#synapse)
 
 ## [SSH Server](../software/ssh/)
 
