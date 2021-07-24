@@ -7,7 +7,7 @@
 - [**SQLite** - Small, Fast and High reliable SQL database engine](#sqlite)
 - [**Redis** - Open Source In-memory key–value Data Store](#redis)
 - [**InfluxDB** - Open Source Time Series Database](#influxdb)
-- [**PostgreSQL** - Persistant and advanced SQL database engine](#postgresql)
+- [**PostgreSQL** - Persistent and advanced SQL database engine](#postgresql)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
