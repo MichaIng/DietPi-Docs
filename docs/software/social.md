@@ -235,9 +235,12 @@ Synapse is a server, written in Python, for communication using the Matrix proto
 
 === "Configuration"
 
-    - Config directory: `/mnt/dietpi_userdata/synapse`
-    - Main config file: `/mnt/dietpi_userdata/synapse/homeserver.yaml`
-    - DietPi config override: `/mnt/dietpi_userdata/synapse/homeserver.yaml.d/00-dietpi.yaml`
+    - Config directory:  
+        `/mnt/dietpi_userdata/synapse`
+    - Main config file:  
+        `/mnt/dietpi_userdata/synapse/homeserver.yaml`
+    - DietPi config override:  
+        `/mnt/dietpi_userdata/synapse/homeserver.yaml.d/00-dietpi.yaml`  
         This also contains the PostgreSQL database details and that file is hence only readable to root or the `synapse` user.
 
     To add or change settings, best practice is to create a new override configuration, e.g.:
@@ -255,6 +258,7 @@ Synapse is a server, written in Python, for communication using the Matrix proto
 === "Service handling"
 
     The DietPi Synapse implementation creates a systemd service `synapse.service` to start and control the Synapse server. The following commands can be used:
+
     - Start: `systemctl start synapse`
     - Stop: `systemctl stop synapse`
     - Restart: `systemctl restart synapse`
