@@ -191,8 +191,8 @@ The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana).
 
 ***
 
-## PostgreSQL
-
 Website: <https://www.influxdata.com/products/influxdb/>  
 Official documentation: <https://docs.influxdata.com/influxdb/v1.8/>  
 Getting started: <https://docs.influxdata.com/influxdb/v1.8/introduction/get-started/>
+
+## PostgreSQL
