@@ -5,6 +5,7 @@
 Welcome to **Juli 2021 release** :octicons-heart-16: of **DietPi**.
 
 ### Changes {: #changes-74 }
+
 - [DietPi-Update](../dietpi_tools/#dietpi-update) :octicons-arrow-right-16: A new live patching system has been implemented. This allows us to ship little fixes and updates, that are safe to apply with a one-line command, until the next DietPi version is released. Live patches are checked for together with DietPi updates and a notification is shown in the login banner as well, when new live patches have been found. When available, each patch can be individually applied or dismissed and the login banner won't bother you again about patches that you have seen in the dietpi-update menu already, regardless whether you applied them or not.
 - [DietPi-Globals | **G_AGUP**](../dietpi_tools/#useful-dietpi-shell-functions) :octicons-arrow-right-16: Our "apt-get update" wrapper will now throw an error, when some index files couldn't be downloaded, e.g. due to DNS failure. Currently "apt-get update" prints a warning but does not return an error code. It is better to have an error handler prompt here, where we have an associated command output, than later when package installs or upgrades fail because of outdated information or missing list files.
 - [DietPi-Software | **Home Assistant**](../software/home_automation/#home-assistant) :octicons-arrow-right-16: On ARMv6/7, piwheels.org is now used within pyenv, which ships pre-compiled wheels for many Python modules and by this speeds up the installation, first service start and install of new integrations.
@@ -12,11 +13,13 @@ Welcome to **Juli 2021 release** :octicons-heart-16: of **DietPi**.
 - [DietPi-Software | **Komga**](../software/media/#komga) :octicons-arrow-right-16: Obsolete entries have been removed from the default config and file hashing will be disabled on new installs. Many thanks to @quyentruong for contributing this change: <https://github.com/MichaIng/DietPi/pull/4570>
 
 ### New Software {: #new-software-74 }
+
 - [Synapse](../software/social/#synapse) :octicons-arrow-right-16: A Matrix homeserver implementation has been added with software ID 125.
 - [PostgreSQL](../software/databases/#postgresql) :octicons-arrow-right-16: A persistent advanced object-relational database server has been added with software ID 194.
 - **youtube-dl** :octicons-arrow-right-16: The famous command-line program to download videos from YouTube and other video platforms has been added to DietPi-Software with ID 195.
 
 ### Fixes {: #fixes-74 }
+
 - **Debian Stretch** :octicons-arrow-right-16: Since Armbian dropped support for Debian Stretch from their APT repository, Armbian-based Stretch systems will have their APT sources adjusted to pull kernel, device tree, bootloader and firmware packages from the Armbian Buster suite. These are compatible with all Debian versions and have no dependencies or depandants which could cause conflicts.
 - **DietPi-Set_swapfile** :octicons-arrow-right-16: Resolved an issue where remounting the /tmp tmpfs filesystem failed, if another filesystem type was mounted at /tmp. This could be especially the case during DietPi-PREP image creation. Many thanks to @timocapa for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4573#issuecomment-884993352>
 - [DietPi-Software](../software/) | **X.Org X Server** :octicons-arrow-right-16: Resolved an issue where the X server failed on PINE A64 as the wrong DDX driver packages were installed. Many thanks to @exadeci for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4541>
@@ -27,6 +30,7 @@ Welcome to **Juli 2021 release** :octicons-heart-16: of **DietPi**.
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4584>
 
 ### Known/Outstanding Issues {: #known-issues-74 }
+
 - DietPi-Config :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
 
 For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
