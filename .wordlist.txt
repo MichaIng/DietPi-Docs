@@ -90,6 +90,7 @@ DiogoAbu
 diskimager
 DIY
 DLNA
+dl
 DNS
 Domoticz
 DoT
@@ -507,6 +508,7 @@ XRDP
 XU
 YaCy
 ympd
+youtube
 ZeroPi
 zlib
 zr
