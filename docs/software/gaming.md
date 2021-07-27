@@ -359,7 +359,7 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
 
 ***
 
-Website: <http://www.dxx-rebirth.com/>
+Official website: <https://www.dxx-rebirth.com/>
 
 ## Steam
 
@@ -465,7 +465,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
 ***
 
-Website: <https://paper.readthedocs.io>  
+Official website: <https://paper.readthedocs.io>  
 Source code: <https://github.com/PaperMC/Paper>
 
 ## Box86
