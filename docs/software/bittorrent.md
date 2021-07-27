@@ -17,7 +17,7 @@
 - [**Jackett - API Support for your favourite torrent trackers**](#jackett)
 - [**NZBGet - NZB download manager with web interface**](#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](#htpc-manager)
-- [**youtube-dl - download videos from YouTube.com and other sites**](#youtube-dl)
+- [**youtube-dl - download videos from YouTube and other sites**](#youtube-dl)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
