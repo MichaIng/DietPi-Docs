@@ -6,24 +6,36 @@ Welcome to **July 2021 release** :octicons-heart-16: of **DietPi**.
 
 ### New software titles {: #new-software-74 }
 
-- [Synapse](../software/social/#synapse)
+- [**Synapse**](../software/social/#synapse)
 
-    A Matrix homeserver implementation has been added. Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `125`.
+    Synapse is a reference homeserver implementation written in Python/Twisted by the core team over at Matrix.org
+    It enables decentralized communication, storing all user personal info, chat history, create the room for own use and many other options. 
+    
+    Matrix Synapse is a great alternative for applications like Slack, Discord, Rocket.chat and others. 
+
+    Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `125`.
  
-- [PostgreSQL](../software/databases/#postgresql) 
+- [**PostgreSQL**](../software/databases/#postgresql) 
 
     A persistent advanced object-relational database server has been added. Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `194`.
 
-- **youtube-dl** 
+- [**youtube-dl**](../software/bittorrent/#youtube-dl)
 
-    The famous command-line program to download videos from YouTube and other video platforms has been added. Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `195`.
+    The famous command-line program to download videos from YouTube and other video platforms has been added. 
+    
+    Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `195`.
 
 ### DietPi Tools (new / notable updates) {: #dietpi-tools-74 }
 
 - [DietPi-Update](../dietpi_tools/#dietpi-update) :octicons-arrow-right-16: A new live patching system has been implemented. This allows us to ship little fixes and updates, that are safe to apply with a one-line command, until the next DietPi version is released. Live patches are checked for together with DietPi updates and a notification is shown in the login banner as well, when new live patches have been found. When available, each patch can be individually applied or dismissed and the login banner won't bother you again about patches that you have seen in the dietpi-update menu already, regardless whether you applied them or not.
 - [DietPi-Globals | **G_AGUP**](../dietpi_tools/#useful-dietpi-shell-functions) :octicons-arrow-right-16: Our `apt-get update` wrapper will now throw an error, when some index files couldn't be downloaded, e.g. due to DNS failure. Currently `apt-get update` prints a warning but does not return an error code. It is better to have an error handler prompt here, where we have an associated command output, than later when package installs or upgrades fail because of outdated information or missing list files.
-- **Debian Stretch** :octicons-arrow-right-16: Since Armbian dropped support for Debian Stretch from their APT repository, Armbian-based Stretch systems will have their APT sources adjusted to pull kernel, device tree, bootloader and firmware packages from the Armbian Buster suite. These are compatible with all Debian versions and have no dependencies or depandants which could cause conflicts.
 - **DietPi-Set_swapfile** :octicons-arrow-right-16: Resolved an issue where remounting the /tmp tmpfs filesystem failed, if another filesystem type was mounted at /tmp. This could be especially the case during DietPi-PREP image creation. Many thanks to @timocapa for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4573#issuecomment-884993352>
+
+### Debian OS & Armbian OS updates {: #change-74-bullseye }
+
+- **Armbian-based Stretch systems** :octicons-arrow-right-16: [Armbian](https://www.armbian.com/) dropped support for Debian Stretch from their APT repository. As a result, Armbian-based Stretch systems will have their APT sources adjusted to pull kernel, device tree, bootloader and firmware packages from the Armbian Buster suite. These are compatible with all Debian versions and have no dependencies or depandants which could cause conflicts.
+
+- Upcoming **Debian 11 (Bullseye)** release :octicons-arrow-right-16: DietPi installation and DietPi Tools have been throughly tested to be fully compatible with the upcoming release - Debian 11 Bullseye. Read more about this release [here](https://www.debian.org/releases/bullseye/releasenotes).
 
 ### Improvements {: #changes-74 }
 
