@@ -9,20 +9,20 @@ Welcome to **July 2021 release** :octicons-heart-16: of **DietPi**.
 - [**Synapse**](../software/social/#synapse)
 
     Synapse is a reference homeserver implementation written in Python/Twisted by the core team over at Matrix.org
-    It enables decentralized communication, storing all user personal info, chat history, create the room for own use and many other options. 
-    
-    Matrix Synapse is a great alternative for applications like Slack, Discord, Rocket.chat and others. 
+    It enables decentralized communication, storing all user personal info, chat history, create the room for own use and many other options.
+
+    Matrix Synapse is a great alternative for applications like Slack, Discord, Rocket.chat and others.
 
     Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `125`.
- 
-- [**PostgreSQL**](../software/databases/#postgresql) 
+
+- [**PostgreSQL**](../software/databases/#postgresql)
 
     A persistent advanced object-relational database server has been added. Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `194`.
 
 - [**youtube-dl**](../software/bittorrent/#youtube-dl)
 
-    The famous command-line program to download videos from YouTube and other video platforms has been added. 
-    
+    The famous command-line program to download videos from YouTube and other video platforms has been added.
+
     Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `195`.
 
 ### DietPi Tools (new / notable updates) {: #dietpi-tools-74 }
