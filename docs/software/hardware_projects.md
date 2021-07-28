@@ -429,7 +429,7 @@ License: [GPLv3](https://github.com/Peterkn2001/blynk-server/blob/master/license
 
 Blynk Android app: <https://play.google.com/store/apps/details?id=cc.blynk>
 
-Blynk JS library npm page: <https://www.npmjs.com/package/blynk-library>  
+Blynk JS library `npm` page: <https://www.npmjs.com/package/blynk-library>  
 Blynk JS library source code: <https://github.com/vshymanskyy/blynk-library-js>  
 Blynk JS library license: [MIT](https://github.com/vshymanskyy/blynk-library-js/blob/master/LICENSE)
 
