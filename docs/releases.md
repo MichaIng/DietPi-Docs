@@ -1,5 +1,51 @@
 # DietPi Releases
 
+## August 2021 (version 7.5) {: #august-2021-version-75 }
+
+### Overview
+
+Welcome to **August 2021 release** :octicons-heart-16: of **DietPi**. This release had a focus on aligining with the latest release of Debian OS. 
+
+![DietPi Version 7.5](assets/images/dietpi-version-75-debian11.jpg){: width="600" height="343" loading="lazy"}
+
+### Debian 11 (codename _Bullseye_)
+
+The new version Debian 11.0, codenamed 'bullseye', was released on August 14th, 2021. Every Debian release is a big deal, with support coming from its large user community. Debian is also the core operating system for other Linux distributions such as Canonical's Ubuntu, DietPi or Raspberry Pi OS.
+
+It has major changes and improvments: exFAT filesystem support, over 10 000 new software packages, and long-term support. Here is the official press release [link](https://www.debian.org/News/2021/20210814).
+
+**Want to give it a try ?**
+
+DietPi images for Raspberry Pi (based on Debian 11 release) are already available for download, and these have been tested for a long time. All other DietPi images will be available soon.
+
+### New software title {: #new-software-75 }
+
+- **Java JRE** :octicons-arrow-right-16: The OpenJDK JRE (Java Runtime Environment) has been made available as dedicated software option. Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `196`.
+ 
+### DietPi Tools (new / notable updates) {: #dietpi-tools-75 }
+
+- **DietPi-Globals** :octicons-arrow-right-16: A new global function G_GET_WAN_IP has been added to print the public IP and location info. This function is now used by DietPi-Banner and DietPi-VPN to show the public IP. It makes use of the public API at freegeoip.app, which may also be used by malware, like all public APIs, and may hence be present in public blocklists. The function checks, whether this is the case, via curl's exit code, and in case prints a meaningful error message. Many thanks to @cocoflan for reporting the a related case: <https://github.com/MichaIng/DietPi/issues/4445>
+- DietPi-Software | **Java** :octicons-arrow-right-16: This install option has now been split into the **JRE (Java Runtime Environment)** and the **JDK (Java Development Kit)**. Our Java-written software options require only JRE installation. By making this selection, we save over 200 Mb of additional JDK-related disk space. For developers, the JDK install option remains available, with the same software ID.
+
+### Bug Fixes {: #fixes-75 }
+
+- [DietPi-Software | **Blynk Server**](../software/hardware_projects/#blynk-server) :octicons-arrow-right-16: Resolved an issue where the install failed as the previous official repository has been removed by Blynk Inc. We switched to a fork, created hours before the repository removal, to preserve the install option and save users from being forced to use the commercial cloud servers. But note that there is no guarantee that the official apps will keep supporting it for long. In case older versions of the apps might need to be used.
+- [DietPi-Software | **Roon Extension Manager**](../software/media/#roon-extension-manager) :octicons-arrow-right-16: Resolved an issue where the installer failed when dietpi-software was executed with sudo as unprivileged user. The installer internally uses the SUDO_USER variable to perform some tasks, which fails to download the container startup shell script, as only root can write to the download location. Many thanks to @Esad-np for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4462>
+- DietPi-Software | **Java JRE** :octicons-arrow-right-16: Resolved an issue where the install failed on ARMv6: <https://github.com/MichaIng/DietPi/issues/4509#issuecomment-876413815>
+- [DietPi-Software | **VSCodium**](../software/programming/#vscodium) :octicons-arrow-right-16: Added the missing dependency on ALSA for cases where no desktop is installed and VSCodium is started as standalone X server session. Many thanks to @Gill-Bates for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4610>
+- DietPi-Software | Bazarr :octicons-arrow-right-16: Resolved an issue where the install failed, as assets have been moved into an own repository, bundled with now release downloads. Many thanks to @psi5asp for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4615>
+- [DietPi-Software | phpSysInfo](../software/system_stats/#phpsysinfo) :octicons-arrow-right-16: Resolved an issue where the install failed because of a changed download URL. Many thanks to @robex for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=9278>
+- [DietPi-Software | LXDE](../software/desktop/#lxde) :octicons-arrow-right-16: Resolved an issue on Raspberry Pi Bullseye systems, where the install failed. Many thanks to @ravenclaw900 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4555#issuecomment-898780672>
+
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/XXXX>
+
+### Known/Outstanding Issues {: #known-issues-75 }
+
+- [DietPi-Config](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
+
+For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
+
+
 ## July 2021 (version 7.4) {: #juli-2021-version-74 }
 
 Welcome to **July 2021 release** :octicons-heart-16: of **DietPi**.
