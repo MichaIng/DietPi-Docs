@@ -4,7 +4,7 @@
 
 ### Overview
 
-Welcome to **August 2021 release** :octicons-heart-16: of **DietPi**. This release had a focus on aligining with the latest release of Debian OS. 
+Welcome to **August 2021 release** :octicons-heart-16: of **DietPi**. This release had a focus on aligining with the latest release of Debian OS.
 
 ![DietPi Version 7.5](assets/images/dietpi-version-75-debian11.jpg){: width="600" height="343" loading="lazy"}
 
@@ -21,7 +21,7 @@ DietPi images for Raspberry Pi (based on Debian 11 release) are already availabl
 ### New software title {: #new-software-75 }
 
 - **Java JRE** :octicons-arrow-right-16: The OpenJDK JRE (Java Runtime Environment) has been made available as dedicated software option. Now available to install using [`dietpi-software`](../dietpi_tools/#dietpi-software) or directly using the software ID `196`.
- 
+
 ### DietPi Tools (new / notable updates) {: #dietpi-tools-75 }
 
 - **DietPi-Globals** :octicons-arrow-right-16: A new global function G_GET_WAN_IP has been added to print the public IP and location info. This function is now used by DietPi-Banner and DietPi-VPN to show the public IP. It makes use of the public API at freegeoip.app, which may also be used by malware, like all public APIs, and may hence be present in public blocklists. The function checks, whether this is the case, via curl's exit code, and in case prints a meaningful error message. Many thanks to @cocoflan for reporting the a related case: <https://github.com/MichaIng/DietPi/issues/4445>
@@ -44,7 +44,6 @@ As always, many smaller code performance and stability improvements, visual and 
 - [DietPi-Config](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
 
 For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
-
 
 ## July 2021 (version 7.4) {: #juli-2021-version-74 }
 
