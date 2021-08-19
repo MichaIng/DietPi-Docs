@@ -14,9 +14,9 @@ The new version Debian 11.0, codenamed 'bullseye', was released on August 14th, 
 
 It has major changes and improvments: exFAT filesystem support, over 10 000 new software packages, and long-term support. Here is the official press release [link](https://www.debian.org/News/2021/20210814).
 
-**Want to give it a try ?**
+**Want to give it a try?**
 
-DietPi images for Raspberry Pi (based on Debian 11 release) are already available for download, and these have been tested for a long time. All other DietPi images will be available soon.
+DietPi images for Raspberry Pi (based on Debian 11 release) and native PCs are already available for download, and these have been tested for a long time. All other DietPi images will be available soon.
 
 ### New software title {: #new-software-75 }
 
