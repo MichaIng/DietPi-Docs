@@ -97,12 +97,6 @@ Welcome to **July 2021 release** :octicons-heart-16: of **DietPi**.
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4584>
 
-### Known/Outstanding Issues {: #known-issues-74 }
-
-- [DietPi-Config](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
-
-For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
-
 ## June 2021 (version 7.3) {: #june-2021-version-73 }
 
 ### Overview
