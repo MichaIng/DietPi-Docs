@@ -176,7 +176,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
 - Keyboard + mouse is highly recommended.
 - We also offer a completely automated installation image for Amiberry. Please see: <https://blitterstudio.com/amiberry/>.
-- Direct download link: <https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster_Amiberry.7z>.
+- Direct download link: <https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Bullseye_Amiberry.7z>.
 
 ![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: width="400" height="189" loading="lazy"}
 

@@ -291,7 +291,7 @@ Feature rich media streaming server with a web interface. Coded in Java.
 
     - Folder = `/mnt/dietpi_userdata/Music`  
 
-=== "Jetty http 404 error"
+=== "Jetty HTTP 404 error"
 
     This is a known issue with Subsonic and is out of my control.  
     If you experience this error while accessing the Subsonic web page, you can resolve the issue by running the following:

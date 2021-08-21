@@ -10,21 +10,30 @@
     }
 
     html .md-nav--primary .md-nav__title {
-        background-color: #232f3e !important;
-        border-bottom: 1px solid #1b2532 !important;
-        color: #ffffff;
+        background-color: #9ccc00 !important;
+        border-bottom: 1px solid #9ccc00 !important;
+        color: #000;
     }
 
     html .md-nav--primary .md-nav__title::before {
         color: #ffffff;
+    }
+
+    .md-nav--primary .md-nav--lifted {
+        color: #000
     }
 }
 
 /* Header */
 
 .md-header {
-    background-color: #232f3e !important;
-    border-bottom: 1px solid #1b2532 !important;
+    background-color: #9ccc00 !important;
+    border-bottom: 1px solid #9ccc00 !important;
+    color: #000;
+}
+
+.md-header a:hover {
+    color: #164046 !important;
 }
 
 .md-header-nav__button.md-logo img, .md-header-nav__button.md-logo svg {
@@ -35,11 +44,53 @@
     margin-left: 0;
 }
 
+.md-announce {
+    background-color: #164046 !important;
+}
+
 /* Second Navigation */
 
 .md-tabs {
-    background-image: url(../assets/images/second-nav-blue.png);
-    background-color: #1f4e79 !important;
+    background-color: #9ccc00 !important;
+    color: #000;
+}
+
+.md-tabs a:hover {
+    color: #164046 !important;
+}
+
+/* Link Styles */
+.md-typeset a {
+    color: #7B952F !important;
+}
+
+.md-typeset a:hover {
+    color: #164046 !important;
+}
+
+a:hover {
+    color: #9ccc00 !important;
+}
+
+.md-nav__item .md-nav__link--active {
+    color: #9ccc00 !important;
+}
+
+.md-typeset .tabbed-set>input:checked+label {
+    color: #9ccc00 !important;
+    border-color: #9ccc00 !important;
+}
+
+.md-typeset .tabbed-set>label:hover {
+    color: #9ccc00 !important;
+}
+
+.md-announce a {
+    color: #fff !important;
+}
+
+.md-announce a:hover {
+    color: #9ccc00 !important;
 }
 
 /* Tables */
@@ -60,12 +111,20 @@
 
 /* Footer */
 
+.md-footer {
+    background-color: #9ccc00 !important;
+    color: #000;
+}
+
+.md-footer a:hover {
+    color: #164046 !important;
+}
+
 .md-footer-nav {
-    background-image: url(../assets/images/second-nav-blue.png);
-    background-color: #1f4e79 !important;
+    background-color: #9ccc00 !important;
 }
 
 .md-footer-meta {
-    background-color: #232f3e !important;
-    border-top: 1px solid #1b2532 !important;
+    background-color: #164046 !important;
+    border-top: 1px solid #164046 !important;
 }
