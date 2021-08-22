@@ -153,7 +153,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
     - Enable shared desktop mode:
         - Run `dietpi-autostart 2` to autostart into a desktop session and have RealVNC attached to it automatically.
         - Then `reboot` the system to have the changes taking effect.
-    - Follow the instructions within the section *Running directly rendered apps such as Minecraft remotely* in <https://www.realvnc.com/docs/raspberry-pi.html>.
+    - Follow the instructions within the section *Running directly rendered apps such as Minecraft remotely* in <https://help.realvnc.com/hc/en-us/articles/360002249917-VNC-Connect-and-Raspberry-Pi>.
 
 ## XRDP
 
