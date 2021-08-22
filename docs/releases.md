@@ -47,7 +47,7 @@ DietPi images for Raspberry Pi (based on Debian 11 release) and native PCs are a
 - [DietPi-Software | ProFTPD](../software/file_servers/#proftpd) :octicons-arrow-right-16: Resolved an issue where the service start failed on Bullseye systems due to an invalid config entry. Many thanks to @twikedk for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4666>
 - [DietPi-Software | Kodi](../software/media/#kodi) :octicons-arrow-right-16: Resolved an issue where the install failed on ARMv6 Bullseye images, as neither Raspbian nor the Raspberry Pi repository contain a Kodi package yet. We ship now an own package. Many thanks to @sibofax for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4650>
 
-As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/XXXX>
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4668>
 
 ### Known/Outstanding Issues {: #known-issues-75 }
 
