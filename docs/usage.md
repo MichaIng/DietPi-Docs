@@ -7,13 +7,13 @@ title: Usage hints / HowTo
 
 This chapter contains several documents describing the usage of DietPi.
 
-## How to upgrade from Stretch to Buster
+## How to upgrade to Buster
 
 Debian Bullseye has been released on August 14, 2021, and Debian Stretch has become "oldoldstable". Regular support for Debian Stretch ended last year and LTS support will end in 2022. We hence highly recommend to upgrade to the new Debian Bullseye.
 
 If you are fine with flashing a new image, follow the brief instructions on our [blog post](https://dietpi.com/blog/?p=811#2.1-fresh-install) to cover common migration steps.
 
-If too much customisation has been done without having it well documented or scripted, an upgrade of the running system may be easier. Run the below commands step by step to perform the upgrade from Stretch to Buster. If you face any errors and are unsure how to resolve, please contact us via our [community forum](https://dietpi.com/phpbb/viewforum.php?f=11) or [GitHub issue](https://github.com/MichaIng/DietPi/issues) to find help.
+If too much customisation has been done without having it well documented or scripted, an upgrade of the running system may be easier. Run the below commands step by step to perform the upgrade from Stretch to Buster in a first step. If you face any errors and are unsure how to resolve, please contact us via our [community forum](https://dietpi.com/phpbb/viewforum.php?f=11) or [GitHub issue](https://github.com/MichaIng/DietPi/issues) to find help.
 
 ```sh
 dietpi-backup 1
@@ -30,7 +30,7 @@ apt autopurge
 . /boot/dietpi/func/dietpi-globals
 ```
 
-Check if everything is working fine, the do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following our blog post: <https://dietpi.com/blog/?p=811#2.2-manual-upgrade>
+Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#2.2-manual-upgrade>
 
 ## How to use the logging mechanism
 
