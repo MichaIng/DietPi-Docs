@@ -215,11 +215,11 @@ As always, many smaller code performance and stability improvements, visual and 
 
 Welcome to **May 2021 release** :octicons-heart-16: of **DietPi**.
 
-With this release we bring more details on things which will be delivered within current iteration. Check always the iteration planning page in [DietPi Wiki](https://github.com/MichaIng/DietPi/wiki/Iteration-plans) to see what will be delivered next !  
+With this release we bring more details on things which will be delivered within current iteration. Check always the iteration planning page in [DietPi Wiki](https://github.com/MichaIng/DietPi/wiki/Iteration-plans) to see what will be delivered next!  
 
 This release extend the support for new SBCs, add new providers for `DietPi-DDNS` and `DietPi-VPN`, and also brings a new configuration option for browser selection.
 
-Plus, more enhancements & bug fixes !
+Plus, more enhancements & bug fixes!
 
 ![DietPi Version 7.2](assets/images/dietpi-version-72.jpg){: width="320" height="427" loading="lazy"}
 
@@ -243,7 +243,7 @@ Plus, more enhancements & bug fixes !
 
     Web browser will be installed _only_ when a [desktop](../software/#desktops) is installed. It's similar to the webserver preference where an webserver will ONLY be installed when another software title requires it.
 
-    **Why this change ?** Instead of having **always** Firefox installed when a desktop got selected (or pulled as dependency e.g. a VNC server), now you can choose whether Firefox, Chromium or _no browser_ will be installed.
+    **Why this change?** Instead of having **always** Firefox installed when a desktop got selected (or pulled as dependency e.g. a VNC server), now you can choose whether Firefox, Chromium or _no browser_ will be installed.
 
     It is not an _"install this browser now"_ selection, like for file server, SSH server or logging system, it's a preference selection.
 
@@ -484,7 +484,7 @@ _Note:_ Since multiple software titles were listening on the ports `5000` and `8
 
     !!! hint ""
 
-        - Added a **safe overclocking profile for RPi 3+ models** ! Many thanks to @lone for doing long-term stability tests and reporting back the result. See the full conversation: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285)
+        - Added a **safe overclocking profile for RPi 3+ models**! Many thanks to @lone for doing long-term stability tests and reporting back the result. See the full conversation: [RPi 3 A+ DietPi-Config Performance Options](https://dietpi.com/phpbb/viewtopic.php?p=32285#p32285)
 
         - When **disabling the RPi camera feature**, the `bcm2835_isp` kernel module is now additionally blacklisted. Since kernel 5.X it is otherwise loaded automatically and pulls in the whole camera modules stack as dependency, adding some additional memory usage and boot overhead. Many thanks to @ferbar for making us aware of this: <https://github.com/MichaIng/DietPi/issues/4203>
 
@@ -575,7 +575,7 @@ Welcome to **February 2021 release** :octicons-heart-16: of **DietPi**. With thi
 
     Since this change required a new repository version file, we incremented the DietPi core version to v7.0. The change to version 7 is also motivated by the long list of improvments brought in 2020. All of these qualify the system to be upgraded to a new version.
 
-    This change has NO side effects ! We encourage you to do it. All previously supported DietPi and Debian versions remain supported ! This change enables us to NOT require fresh image installs for major upgrades (like we did a few years ago when an upgrade from v159 to v6.0 was required).
+    This change has NO side effects! We encourage you to do it. All previously supported DietPi and Debian versions remain supported! This change enables us to NOT require fresh image installs for major upgrades (like we did a few years ago when an upgrade from v159 to v6.0 was required).
 
 This new version includes **4 new software titles** :octicons-paper-airplane-16:
 
@@ -1170,7 +1170,7 @@ DietPi-Software | phpMyAdmin: The APT package install has been replaced by an up
 - **DietPi-Software** | **ownCloud/Nextcloud** :octicons-arrow-right-16: An important security fix has been applied to our ownCloud/Nextcloud Nginx configs. This has been merged into our other GitHub branches as well, hence all fresh installs wont be affected. Read more about it: <https://nextcloud.com/blog/urgent-security-issue-in-nginx-php-fpm/>
 - **DietPi-Software** | **WireGuard** :octicons-arrow-right-16: Resolved an issue where wg0 server fails to start if network has not yet fully initialised. Many thanks to @Joulinar for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3175>
 - **DietPi-Software** | **Syncthing** :octicons-arrow-right-16: Resolved an issue where fresh install failed to start due to missing permissions. Many thanks to @ralban, @mowestusa and @g7kse for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3180>
-- **DietPi-Software** | **Gitea** :octicons-arrow-right-16: Resolved an issue where fresh Gitea installs failed to start due to missing permissions.  Many thanks to [phpBB:NZRob](https://dietpi.com/phpbb/memberlist.php?username=NZRob) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=6550>
+- **DietPi-Software** | **Gitea** :octicons-arrow-right-16: Resolved an issue where fresh Gitea installs failed to start due to missing permissions. Many thanks to [phpBB:NZRob](https://dietpi.com/phpbb/memberlist.php?username=NZRob) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=6550>
 - **DietPi-Software** | **Home Assistant** :octicons-arrow-right-16: Resolved on issue where fresh install failed to started to start due to missing permissions. Many thanks to [phpBB:slopsjon](https://dietpi.com/phpbb/memberlist.php?username=slopsjon), [phpBB:tyjtyj](https://dietpi.com/phpbb/memberlist.php?username=tyjtyj) and [phpBB:pakikje](https://dietpi.com/phpbb/memberlist.php?username=pakikje) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=6531>, <https://dietpi.com/phpbb/viewtopic.php?p=20408#p20408>
 - **DietPi-Software** | **Google AIY** :octicons-arrow-right-16: Resolved an issue where fresh install failed to start due to missing permissions
 - **DietPi-Software** | **Grafana** :octicons-arrow-right-16: Resolved an issue where install failed on RPi 1/Zero Buster systems. The fix includes an update of Grafana to the latest official version for those models. Many thanks to @TBail for reporting this issue: <https://github.com/MichaIng/DietPi/issues/3213>
