@@ -7,6 +7,31 @@ title: Usage hints / HowTo
 
 This chapter contains several documents describing the usage of DietPi.
 
+## How to upgrade to Buster
+
+Debian Bullseye has been released on August 14, 2021, and Debian Stretch has become "oldoldstable". Regular support for Debian Stretch ended last year and LTS support will end in 2022. We hence highly recommend to upgrade to the new Debian Bullseye.
+
+If you are fine with flashing a new image, follow the brief instructions on our [blog post](https://dietpi.com/blog/?p=811#2.1-fresh-install) to cover common migration steps.
+
+If too much customisation has been done without having it well documented or scripted, an upgrade of the running system may be easier. Run the below commands step by step to perform the upgrade from Stretch to Buster in a first step. If you face any errors and are unsure how to resolve, please contact us via our [community forum](https://dietpi.com/phpbb/viewforum.php?f=11) or [GitHub issue](https://github.com/MichaIng/DietPi/issues) to find help.
+
+```sh
+dietpi-backup 1
+sed -i 's/stretch/buster/g' /etc/apt/sources.list{,.d/*.list}
+rm -f /etc/apt/sources.list.d/dietpi-php.list
+rm -f /etc/apt/trusted.gpg.d/dietpi-php.gpg
+rm -f /etc/apt/preferences.d/dietpi-{php,openssl,xrdp}
+/boot/dietpi/func/dietpi-set_software apt-cache clean
+apt update
+apt upgrade
+apt full-upgrade
+apt autopurge
+/boot/dietpi/func/dietpi-obtain_hw_model
+. /boot/dietpi/func/dietpi-globals
+```
+
+Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#2.2-manual-upgrade>
+
 ## How to use the logging mechanism
 
 DietPi uses systemd as system and service manager, which includes the `systemd-journald` logging daemon.
