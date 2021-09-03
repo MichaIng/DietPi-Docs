@@ -3,7 +3,7 @@ on: push
 jobs:
   Actions:
     # https://github.com/actions/virtual-environments
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
     - name: Clone DietPi-Docs repository
       id: clone
@@ -17,7 +17,7 @@ jobs:
       run: sudo npm i -g markdownlint-cli2
     - name: Run markdownlint-cli2 to check Markdown files
       run: markdownlint-cli2 '**.md'
-    - name: Setup Python 3.9 for MkDocs and PySpelling
+    - name: Setup Python for MkDocs and PySpelling
       id: python
       if: always() && steps.clone.outcome == 'success'
       # https://github.com/actions/setup-python/releases
@@ -64,5 +64,5 @@ jobs:
       run: |
         ./lychee -X head --github-token '${{ secrets.GITHUB_TOKEN }}'
         cd build
-        find -type d \( -exec ../lychee --exclude '(fonts.gstatic.com|admin@koel.dev|localhost|bridges.torproject.org|www.spigotmc.org|ftp://|:///|root@192.168.1.20|127.0.0.1:8384|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b 'http://127.0.0.1:8000/{}/' '{}/*.html' \; -o -exec touch failed \; \)
+        find -type d \( -exec ../lychee --exclude '(fonts.gstatic.com|admin@koel.dev|localhost|bridges.torproject.org|www.spigotmc.org|root@192.168.1.20|127.0.0.1:8384|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b 'http://127.0.0.1:8000/{}/' '{}/*.html' \; -o -exec touch failed \; \)
         test ! -e failed
