@@ -225,7 +225,7 @@ DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cr
 
     - If no argument is given, the interactive menu is started.
     - Use `dietpi-ddns <options> apply <provider>` to apply a cron job for the given provider and use the following options set details:
-        - `<provider>` is either the name of a supported provider, or any custom update URL. 
+        - `<provider>` is either the name of a supported provider, or any custom update URL.
         - Use `-d <domains>` to add one or a comma-separated list of multiple domains, which should point to the public IP address of this system.
         - Use `-u <username>` to set a username or identifier. This is not required for all providers, in case of a custom provider, it is used as username for HTTP authentication.
         - Use `-p <password>` to set a password or token. This is not required for all providers, in case of a custom provider, it is used as username for HTTP authentication.
@@ -401,19 +401,28 @@ Run `dietpi-drive_manager`.
 
     - `HFS+`  
       Recommended for Mac owners.  
-      `+` Mac OS file system
+      `+` Mac OS file system  
+      `-` Not compatible on a Windows system
 
     - `BTRFS`  
       A modern Linux file system.  
-      `+` <https://github.com/Fourdee/DietPi/issues/271#issuecomment-247173250>
+      `+` <https://github.com/Fourdee/DietPi/issues/271#issuecomment-247173250>  
+      `-` Not compatible on a Windows system
 
     - `F2FS`  
       Linux file system designed for flash/NAND based drives.  
-      `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>
+      `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>  
+      `-` Not compatible on a Windows system
 
     - `exFAT`  
-      Windows file system, intended for external drives, e.g. USB flash drives or SD cards  
-      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>
+      Windows file system, intended for external drives, e.g. USB flash drives or SD cards.  
+      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>  
+      `+` Compatible on a Windows system  
+
+    - `XFS`  
+      A modern Linux file system.  
+      `+` Well accepted for large files (typically in a file server use)  
+      `-` Not compatible on a Windows system
 
 === "Move DietPi system to a larger SD card"
 
