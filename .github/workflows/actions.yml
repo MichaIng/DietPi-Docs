@@ -45,24 +45,10 @@ jobs:
     - name: Run PySpelling to check HTML files
       if: always() && steps.pyspelling.outcome == 'success'
       run: pyspelling -c .spellcheck.yml
-    - name: Serve DietPi-Docs for lychee
-      id: serve
-      if: always() && steps.build.outcome == 'success'
-      # Test links against docs without redirects, so that we are forced to update links to renamed pages
-      run: |
-        sed -i '/^- redirects:$/,/^$/d' mkdocs.yml
-        mkdocs serve -s &
-    - name: Download lychee
+    - name: Build lychee
       id: lychee
-      if: always() && steps.serve.outcome == 'success'
-      run: |
-        curl -sSfL "$(curl -sSfL https://api.github.com/repos/lycheeverse/lychee/releases/latest | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-gnu\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
-        tar xf lychee.tar.gz
-        rm lychee.tar.gz
+      if: always() && steps.build.outcome == 'success'
+      run: cargo install --git 'https://github.com/lycheeverse/lychee' --branch 'local-files'
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
-      run: |
-        ./lychee -X head --github-token '${{ secrets.GITHUB_TOKEN }}'
-        cd build
-        find -type d \( -exec ../lychee --exclude '(fonts.gstatic.com|admin@koel.dev|localhost|bridges.torproject.org|www.spigotmc.org|root@192.168.1.20|127.0.0.1:8384|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b 'http://127.0.0.1:8000/{}/' '{}/*.html' \; -o -exec touch failed \; \)
-        test ! -e failed
+      run: lychee --exclude '(fonts.gstatic.com|admin@koel.dev|localhost|bridges.torproject.org|www.spigotmc.org|root@192.168.1.20|127.0.0.1:8384|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
