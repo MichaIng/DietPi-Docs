@@ -51,4 +51,4 @@ jobs:
       run: cargo install --git 'https://github.com/lycheeverse/lychee' --branch 'local-files'
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
-      run: lychee --exclude '(fonts.gstatic.com|admin@koel.dev|localhost|bridges.torproject.org|www.spigotmc.org|root@192.168.1.20|127.0.0.1:8384|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+      run: lychee -v --no-progress --exclude '(fonts.gstatic.com|admin@koel.dev|localhost|bridges.torproject.org|www.spigotmc.org|root@192.168.1.20|127.0.0.1:8384|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
