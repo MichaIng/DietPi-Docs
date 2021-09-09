@@ -443,6 +443,7 @@ TLS
 tmpfs
 Toews
 Tonido
+TPM
 transactional
 transcoding
 TRÅDFRI
