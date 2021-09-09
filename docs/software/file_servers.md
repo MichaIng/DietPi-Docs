@@ -49,7 +49,7 @@ ProFTPD gives you access to files/music/downloads etc. on your DietPi system qui
 
 === "Destination directory"
 
-    The destination directory can be changed by replacing **/Path/To/Directory** to your target directory:
+    The destination directory can be changed by replacing **/Path/To/Directory** to your target directory (within the configuration file `/etc/proftpd/proftpd.conf`):
 
     ```sh
     systemctl stop proftpd
@@ -61,7 +61,7 @@ ProFTPD gives you access to files/music/downloads etc. on your DietPi system qui
 
     Jailing means to lock users to their home folders.
 
-    *Jailing* can be enabled via
+    *Jailing* can be enabled in the configuration file `/etc/proftpd/proftpd.conf` via
 
     ```sh
     systemctl stop proftpd
@@ -108,7 +108,7 @@ The Samba server lets you share files on your DietPi system with ease based on t
 
 === "Destination directory"
 
-    The destination directory can be changed by replacing **/Path/To/Directory** to your target directory:
+    The destination directory can be changed by replacing **/Path/To/Directory** to your target directory (within the configuration file `/etc/samba/smb.conf`):
 
     ```sh
     sed -i '/path = /c\path = /Path/To/Directory' /etc/samba/smb.conf
