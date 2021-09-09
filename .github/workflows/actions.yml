@@ -48,8 +48,8 @@ jobs:
     - name: Build lychee
       id: lychee
       if: always() && steps.build.outcome == 'success'
-      run: cargo install --git 'https://github.com/lycheeverse/lychee' --branch 'local-files'
+      run: cargo install --git 'https://github.com/lycheeverse/lychee'
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
-      run: lychee -Env --require-https --exclude '(fonts.gstatic.com|admin@koel.dev|bridges.torproject.org|www.spigotmc.org|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+      run: lychee -Env --require-https --exclude '(^http://www.w3.org/2000/svg$|fonts.gstatic.com|admin@koel.dev|bridges.torproject.org|www.spigotmc.org|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
