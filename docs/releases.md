@@ -1,6 +1,8 @@
 # DietPi Releases
 
-## September 2021 (version 7.6) {: #september-2021-version-76 }
+## BETA September 2021 (version 7.6) {: #september-2021-version-76 }
+
+DietPi Beta v7.6 is available for testing, please help testing and hardening the upcoming release. Read the changelog below and find all info about how to apply, detailed code changes and new release candidates on GitHub: <https://github.com/MichaIng/DietPi/issues/4728>
 
 ### New Software {: #new-software-76 }
 
