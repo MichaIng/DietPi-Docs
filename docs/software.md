@@ -60,6 +60,7 @@
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](../software/cloud/#firefox-sync-server)
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](../software/cloud/#fuguhub)
+- [**File Browser - Light web based file manager with sharing features**](../software/cloud/#file-manager)
 
 ## [Databases & Data Stores](../software/databases/#overview)
 
