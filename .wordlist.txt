@@ -415,6 +415,7 @@ SPC
 SPI
 spindown
 Spotify
+Spotifyd
 Spyder
 Squeezelite
 SSD

@@ -1085,6 +1085,7 @@ Spotify Connect client for the Raspberry Pi that Just Works™.
 
         ```sh
         systemctl restart raspotify
+        ```
 
 === "View logs"
 
@@ -1199,6 +1200,7 @@ Spotifyd is a lightweight FOSS Spotify client, supporting the Spotify Connect pr
 
         ```sh
         systemctl restart spotifyd
+        ```
 
 === "View logs"
 
@@ -1212,7 +1214,7 @@ Spotifyd is a lightweight FOSS Spotify client, supporting the Spotify Connect pr
 
 Official documentation: <https://spotifyd.github.io/spotifyd/>
 Source code: <https://github.com/Spotifyd/spotifyd>
-License: [GPlv3](https://github.com/Spotifyd/spotifyd/blob/master/LICENSE)
+License: [GPLv3](https://github.com/Spotifyd/spotifyd/blob/master/LICENSE)
 
 ## Jellyfin
 
