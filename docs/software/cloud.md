@@ -14,6 +14,7 @@
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
+- [**File Browser - Light web based file manager with sharing features**](#file-manager)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -709,5 +710,45 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 ***
 
 Website: <https://fuguhub.com>
+
+## File Browser
+
+Access and manage your data from anywhere via browser with this lightweight remote file manager. Other than ownCloud and Nextcloud, it accesses the raw data on your filesystem, based on a chosen root directory, which makes it similar to Syncthing. You can setup multiple users with their own root directory and also sharing files and directories via password-protected link is possible.
+
+![File Browser logo](../assets/images/dietpi-software-cloud-filebrowser.svg){: width="150" height="150" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8085**:
+
+    URL = `http://<your.IP>:8085`
+
+=== "Directories"
+
+    - Install directory: `/opt/filebrowser`
+    - Config directory: `/mnt/dietpi_userdata/filebrowser`
+    - Default data directory: `/mnt`
+
+=== "View logs"
+
+    View the logs by executing:
+
+     ```sh
+     journalctl -u filebrowser
+     ```
+
+=== "Update to latest version"
+
+    You can easily update File Browser by reinstalling it. Your settings and data are preserved by this:
+
+    ```sh
+    dietpi-software reinstall 198
+    ```
+
+***
+
+Official documentation: <https://filebrowser.org/>  
+Source code: <https://github.com/filebrowser/filebrowser>  
+License: [Apache 2.0](https://github.com/filebrowser/filebrowser/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)

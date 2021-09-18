@@ -30,6 +30,7 @@
 - [**Komga - Free and open source comics/mangas media server with web UI**](#komga)
 - [**Raspotify - Spotify Connect client**](#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web)
+- [**Spotifyd - Lightweight FOSS Spotify client**](#spotifyd)
 - [**Jellyfin - Media streaming server including live TV**](#jellyfin)
 - [**Beets - Music organizer and manager**](#beets)
 - [**Snapcast Server - Multi room audio server**](#snapcast-server)
@@ -705,7 +706,7 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 
 === "More information on Roon"
 
-    Can be found there: <https://roonlabs.com/index.html>  
+    Can be found there: <https://roonlabs.com/>  
     See also [YouTube videos from David Snyder](https://www.youtube.com/c/dsnyder0cnn/search?query=roon)
 
 === "Requirements"
@@ -724,7 +725,7 @@ Turns your device into a Roon capable audio player and core server.
 === "Install a Roon Remote on another system"
 
     You can use the Roon Remote apps to control and configure the Roon Server:  
-    <https://roonlabs.com/downloads.html>
+    <https://roonlabs.com/downloads>
 
 === "Recommended Music Storage Directory"
 
@@ -736,7 +737,7 @@ Turns your device into a Roon capable audio player and core server.
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Roon Server:
 
-    - Music folder = `/mnt/dietpi_userdata/Music`
+    - Music directory = `/mnt/dietpi_userdata/Music`
     - Accessed from file server = `/Music`
 
 ## Roon Extension Manager
@@ -1052,22 +1053,51 @@ Spotify Connect client for the Raspberry Pi that Just Works™.
 
 ![Spotify logo](../assets/images/dietpi-software-media-raspotify.png){: width="331" height="100" loading="lazy"}
 
-Raspotify should work straight out of the box.
-
 === "Changing options"
 
-    However, you can change the available options in:
+    Raspotify should work straight out of the box. However, you can change the available options in:
 
     - `/etc/default/raspotify`
 
-    Then restart services with:
+    Then restart the service with:
 
     ```sh
     systemctl restart raspotify
     ```
 
+=== "Service control"
+
+    The service is started automatically at boot, but you can control it manually as well:
+
+    - Manually start the service:
+
+        ```sh
+        systemctl start raspotify
+        ```
+
+    - Manually stop the service:
+
+        ```sh
+        systemctl stop raspotify
+        ```
+
+    - Manually restart the service:
+
+        ```sh
+        systemctl restart raspotify
+        ```
+
+=== "View logs"
+
+    View the service logs via:
+
+    ```sh
+    journalctl -u raspotify
+    ```
+
 ***
 
+Official website: <https://dtcooper.github.io/raspotify/>
 Source code: <https://github.com/dtcooper/raspotify>
 
 ## Spotify Connect Web
@@ -1078,22 +1108,44 @@ Spotify Connect Web is a console client and player for Spotify Connect including
 
     The web interface is accessible via port **4000**:
 
-    - URL = `http://<your.IP>:4000`
+    - URL: `http://<your.IP>:4000`
 
 === "Generate the Spotify API key"
 
-    The generation of the `spotify_appkey.key` is required to allow the application, access to Spotify API using your account.
+    The generation of the `spotify_appkey.key` is required to grant the application access to Spotify API using your account.
 
     Fill out the application form <https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app>.  
-    Wait for it to be "accepted"
+    Wait for it to be "accepted".
 
 === "Transfer Spotify API key"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Copy the `spotify_appkey.key` to the following folder:
+    Copy the `spotify_appkey.key` to the following directory:
 
-    - Folder = `/mnt/dietpi_userdata/spotify-connect-web`
-    - Accessed from file server = `/spotify-connect-web`
+    - Directory: `/mnt/dietpi_userdata/spotify-connect-web`
+    - Accessed from file server: `/spotify-connect-web`
+
+=== "Service control"
+
+    The service is started automatically at boot, but you can control it manually as well:
+
+    - Manually start the service:
+
+        ```sh
+        systemctl start spotify-connect-web
+        ```
+
+    - Manually stop the service:
+
+        ```sh
+        systemctl stop spotify-connect-web
+        ```
+
+    - Manually restart the service:
+
+        ```sh
+        systemctl restart spotify-connect-web
+        ```
 
 === "View logs"
 
@@ -1103,32 +1155,66 @@ Spotify Connect Web is a console client and player for Spotify Connect including
     journalctl -u spotify-connect-web
     ```
 
-=== "Service handling"
-
-    There are some typical service tasks available:
-
-    - Manually start the service:
-
-        ```sh
-        systemctl start spotify-connect-web
-        ```
-
-    - Manually stop the service
-
-        ```sh
-        systemctl stop spotify-connect-web
-        ```
-
-    - Manually restart the service
-
-        ```sh
-        systemctl restart spotify-connect-web
-        ```
-
 ***
 
 Source code: <https://github.com/Fornoth/spotify-connect-web>  
 Quick start documentation: <https://developer.spotify.com/documentation/web-api/quick-start>
+
+## Spotifyd
+
+Spotifyd is a lightweight FOSS Spotify client, supporting the Spotify Connect protocol.
+
+!!! note "You will need a Spotify Premium account in order to use the Spotifyd."
+
+![Spotify logo](../assets/images/dietpi-software-media-raspotify.png){: width="331" height="100" loading="lazy"}
+
+=== "Changing options"
+
+    Spotifyd should work straight out of the box. However, you can change the available options in:
+
+    - `/mnt/dietpi_userdata/spotifyd/spotifyd.conf`
+
+    Then restart the service with:
+
+    ```sh
+    systemctl restart spotifyd
+    ```
+
+=== "Service control"
+
+    The service is started automatically at boot, but you can control it manually as well:
+
+    - Manually start the service:
+
+        ```sh
+        systemctl start spotifyd
+        ```
+
+    - Manually stop the service:
+
+        ```sh
+        systemctl stop spotifyd
+        ```
+
+    - Manually restart the service:
+
+        ```sh
+        systemctl restart spotifyd
+        ```
+
+=== "View logs"
+
+    View the service logs via:
+
+    ```sh
+    journalctl -u spotifyd
+    ```
+
+***
+
+Official documentation: <https://spotifyd.github.io/spotifyd/>
+Source code: <https://github.com/Spotifyd/spotifyd>
+License: [GPLv3](https://github.com/Spotifyd/spotifyd/blob/master/LICENSE)
 
 ## Jellyfin
 

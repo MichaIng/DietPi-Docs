@@ -60,6 +60,7 @@
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](../software/cloud/#firefox-sync-server)
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](../software/cloud/#fuguhub)
+- [**File Browser - Light web based file manager with sharing features**](../software/cloud/#file-manager)
 
 ## [Databases & Data Stores](../software/databases/#overview)
 
@@ -124,7 +125,8 @@
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](../software/gaming/#dxx-rebirth)
 - [**Steam - Steam client**](../software/gaming/#steam)
 - [**PaperMC - Fast and optimized Minecraft server**](../software/gaming/#papermc)
-- [**Box86 - x86 userspace emulation for ARM**](../software/gaming/#box86)
+- [**Box86 - i386 userspace emulation for ARMv7*](../software/gaming/#box86)
+- [**Box64 - x86_64 userspace emulation for ARMv8**](../software/gaming/#box64)
 
 ## [Hardware Projects](../software/hardware_projects/)
 
@@ -182,6 +184,7 @@
 - [**Komga - Free and open source comics/mangas media server with web UI**](../software/media/#komga)
 - [**Raspotify - Spotify Connect client**](../software/media/#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web)
+- [**Spotifyd - Lightweight FOSS Spotify client**](../software/media/#spotifyd)
 - [**Jellyfin - Media streaming server including live TV**](../software/media/#jellyfin)
 - [**Beets - Music organizer and manager**](../software/media/#beets)
 - [**Snapcast Server - Multi room audio server**](../software/media/#snapcast-server)
