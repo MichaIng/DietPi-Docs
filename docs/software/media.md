@@ -705,7 +705,7 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 
 === "More information on Roon"
 
-    Can be found there: <https://roonlabs.com/index.html>  
+    Can be found there: <https://roonlabs.com/>  
     See also [YouTube videos from David Snyder](https://www.youtube.com/c/dsnyder0cnn/search?query=roon)
 
 === "Requirements"
@@ -724,7 +724,7 @@ Turns your device into a Roon capable audio player and core server.
 === "Install a Roon Remote on another system"
 
     You can use the Roon Remote apps to control and configure the Roon Server:  
-    <https://roonlabs.com/downloads.html>
+    <https://roonlabs.com/downloads>
 
 === "Recommended Music Storage Directory"
 
@@ -736,7 +736,7 @@ Turns your device into a Roon capable audio player and core server.
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Roon Server:
 
-    - Music folder = `/mnt/dietpi_userdata/Music`
+    - Music directory = `/mnt/dietpi_userdata/Music`
     - Accessed from file server = `/Music`
 
 ## Roon Extension Manager
