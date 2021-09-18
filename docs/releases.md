@@ -1,13 +1,12 @@
 # DietPi Releases
 
-## BETA September 2021 (version 7.6) {: #september-2021-version-76 }
-
-DietPi Beta v7.6 is available for testing, please help testing and hardening the upcoming release. Read the changelog below and find all info about how to apply, detailed code changes and new release candidates on GitHub: <https://github.com/MichaIng/DietPi/issues/4728>
+## September 2021 (version 7.6) {: #september-2021-version-76 }
 
 ### New Software {: #new-software-76 }
 
 - **Box64** :octicons-arrow-right-16: This x86_64 userspace emulator allows you to run x86_64 binaries on an ARMv8/arm64 system. It works very similar to Box86, hence is able to use arm64 shared libraries with the x86_64 binaries, so that often no additional libraries need to be installed. Thanks to binfmt, it is invoked automatically if an x86_64 binary is tried to be executed. Many thanks to @ravenclaw900 for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4625>
 - **File Browser** :octicons-arrow-right-16: Access and manage your data from anywhere via browser with this lightweight remote file manager. Other than ownCloud and Nextcloud, it accesses the raw data on your filesystem, based on a chosen root directory, which makes it similar to Syncthing. You can setup multiple users with their own root directory and also sharing files and directories via password-protected link is possible.
+- **Spotifyd** :octicons-arrow-right-16: Spotifyd streams music just like the official client, but is more lightweight. It also supports the Spotify Connect protocol, which makes it show up as a device that can be controlled from the official clients. Many thanks to @ressu for implementing this software title: <https://github.com/MichaIng/DietPi/pull/4713>
 
 ### Improvements {: #improvements-76 }
 
@@ -36,6 +35,9 @@ DietPi Beta v7.6 is available for testing, please help testing and hardening the
 - [DietPi-Software | **LXDE**](../software/desktop/#lxde) :octicons-arrow-right-16: Resolved an issue where the hotkey setup didn't work because of a missing openbox plugin. Many thanks to @pinipon for reporting the issue and solution: <https://github.com/MichaIng/DietPi/issues/4687>
 - [DietPi-Software | **Blynk**](../software/hardware_projects/#blynk-server): Resolved an issue where the log directory may be missing, which breaks the service start, when the userdata were migrated from one system to a new one. Many thanks to @Phil1988 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4721>
 - [DietPi-Software | **qBittorrent**](../software/bittorrent/#qbittorrent) :octicons-arrow-right-16: Resolved an issue on Bullseye systems where login to the web interface was not possible with the global software password since the required hash algorithm has changed. Many thanks to [phpBB:robex](https://dietpi.com/phpbb/memberlist.php?username=aftensleuk) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?p=22564#p22564>
+- [DietPi-Software | **ReadyMedia**](../software/media/#readymedia) :octicons-arrow-right-16: Resolved an issue on Bullseye where the service does not start unless the log directory is manually created. Due to a Debian package patch, on Bullseye logs are forced to file logging again, so that /var/log/minidlna again needs to exist. Many thanks to @AnzoP for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4745>
+
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4747>
 
 ### Known/Outstanding Issues {: #known-issues-76 }
 
