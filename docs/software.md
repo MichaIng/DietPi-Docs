@@ -124,7 +124,8 @@
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](../software/gaming/#dxx-rebirth)
 - [**Steam - Steam client**](../software/gaming/#steam)
 - [**PaperMC - Fast and optimized Minecraft server**](../software/gaming/#papermc)
-- [**Box86 - x86 userspace emulation for ARM**](../software/gaming/#box86)
+- [**Box86 - i386 userspace emulation for ARMv7*](../software/gaming/#box86)
+- [**Box64 - x86_64 userspace emulation for ARMv8**](../software/gaming/#box64)
 
 ## [Hardware Projects](../software/hardware_projects/)
 
