@@ -14,7 +14,7 @@
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
-- [**File Browser - Light web based file manager with sharing features**](#file-manager)
+- [**File Browser - Light web based file manager with sharing features**](#file-browser)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
