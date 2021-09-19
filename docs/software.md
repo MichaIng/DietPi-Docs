@@ -19,6 +19,7 @@
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](../software/advanced_networking/#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](../software/advanced_networking/#tor-hotspot)
 - [**HAProxy - High performance TCP/HTTP load balancer**](../software/advanced_networking/#haproxy)
+- [**frp - Reverse Proxy**](../software/advanced_networking/#frp)
 
 ## [BitTorrent & Download Tools](../software/bittorrent/)
 
@@ -37,6 +38,7 @@
 - [**Jackett - API Support for your favourite torrent trackers**](../software/bittorrent/#jackett)
 - [**NZBGet - NZB download manager with web interface**](../software/bittorrent/#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](../software/bittorrent/#htpc-manager)
+- [**youtube-dl - download videos from YouTube and other sites**](../software/bittorrent/#youtube-dl)
 
 ## [Camera & Surveillance](../software/camera/)
 
@@ -58,6 +60,7 @@
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](../software/cloud/#firefox-sync-server)
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](../software/cloud/#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](../software/cloud/#fuguhub)
+- [**File Browser - Light web based file manager with sharing features**](../software/cloud/#file-manager)
 
 ## [Databases & Data Stores](../software/databases/#overview)
 
@@ -66,6 +69,7 @@
 - [**SQLite** - Small, Fast and High reliable SQL database engine](../software/databases/#sqlite)
 - [**Redis** - Open Source In-memory key–value Data Store](../software/databases/#redis)
 - [**InfluxDB** - Open Source Time Series Database](../software/databases/#influxdb)
+- [**PostgreSQL** - Persistent and advanced SQL database engine](../software/databases/#postgresql)
 
 ## [Desktops](../software/desktop/)
 
@@ -102,6 +106,7 @@
 
 - [**Pi-hole - Network-wide Ad Blocking**](../software/dns_servers/#pi-hole)
 - [**Unbound - A validating, recursive, and caching DNS resolver**](../software/dns_servers/#unbound)
+- [**AdGuard Home - A powerful network-wide ads & trackers blocking DNS server**](../software/dns_servers/#adguard-home)
 
 ## [File Servers](../software/file_servers/)
 
@@ -120,7 +125,8 @@
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](../software/gaming/#dxx-rebirth)
 - [**Steam - Steam client**](../software/gaming/#steam)
 - [**PaperMC - Fast and optimized Minecraft server**](../software/gaming/#papermc)
-- [**Box86 - x86 userspace emulation for ARM**](../software/gaming/#box86)
+- [**Box86 - i386 userspace emulation for ARMv7*](../software/gaming/#box86)
+- [**Box64 - x86_64 userspace emulation for ARMv8**](../software/gaming/#box64)
 
 ## [Hardware Projects](../software/hardware_projects/)
 
@@ -178,7 +184,11 @@
 - [**Komga - Free and open source comics/mangas media server with web UI**](../software/media/#komga)
 - [**Raspotify - Spotify Connect client**](../software/media/#raspotify)
 - [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](../software/media/#spotify-connect-web)
+- [**Spotifyd - Lightweight FOSS Spotify client**](../software/media/#spotifyd)
 - [**Jellyfin - Media streaming server including live TV**](../software/media/#jellyfin)
+- [**Beets - Music organizer and manager**](../software/media/#beets)
+- [**Snapcast Server - Multi room audio server**](../software/media/#snapcast-server)
+- [**Snapcast Client - Multi room audio client**](../software/media/#snapcast-client)
 
 ## [Printing Server](../software/printing/)
 
@@ -207,6 +217,7 @@
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](../software/social/#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](../software/social/#baikal)
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](../software/social/#openbazaar)
+- [**Synapse - Decentralized communication with the Matrix protocol**](../software/social/#synapse)
 
 ## [SSH Server](../software/ssh/)
 
@@ -226,6 +237,7 @@
 - [**RPi-Monitor - Web interface system stats**](../software/system_stats/#rpi-monitor)
 - [**Netdata - Web interface system stats**](../software/system_stats/#netdata)
 - [**Webmin - Remote system management with web interface**](../software/system_stats/#webmin)
+- [**K3s - Lightweight Kubernetes**](../software/system_stats/#k3s)
 
 ## [VPN](../software/vpn/)
 

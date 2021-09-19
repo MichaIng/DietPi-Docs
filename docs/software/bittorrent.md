@@ -17,6 +17,7 @@
 - [**Jackett - API Support for your favourite torrent trackers**](#jackett)
 - [**NZBGet - NZB download manager with web interface**](#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](#htpc-manager)
+- [**youtube-dl - download videos from YouTube and other sites**](#youtube-dl)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -52,7 +53,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Transmission:
 
     - folder accessed via file server = `downloads`
@@ -117,7 +118,7 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Deluge:
 
     - Folder accessed via file server = `downloads`
@@ -146,7 +147,7 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by qBittorrent:
 
     - Folder accessed via file server = `downloads`
@@ -194,7 +195,7 @@ Also installs:
 
 === "Access downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by rTorrent:
 
     - Folder accessed via file server = `downloads`
@@ -291,7 +292,7 @@ Also installs:
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Aria2:
 
     - Folder accessed via file server = `downloads`
@@ -346,7 +347,7 @@ NZB download manager with web interface.
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by SABnzbd:
 
     - folder accessed via file server = `downloads/complete`
@@ -686,7 +687,7 @@ Recommend additional software:
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Transmission:
 
     - Folder accessed via file server = `downloads`
@@ -743,7 +744,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
 === "Access Downloads"
 
-    Make sure you have one of DietPi's [File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Transmission:
 
     - Folder accessed via file server = `downloads/complete`
@@ -772,5 +773,24 @@ Do all your HTPC tasks without using 5 different interfaces!
     ```sh
     dietpi-software reinstall 155
     ```
+
+## youtube-dl
+
+`youtube-dl` is a command-line program to download videos from YouTube.com and many more sites. See here the full list of supported websites - [link](https://ytdl-org.github.io/youtube-dl/supportedsites.html).
+
+=== "Quick start"
+
+    This tool could be accessed from the command line 
+
+    ```sh
+    youtube-dl [OPTIONS] URL [URL...]
+    ```
+
+    Read the documentation for more details on the options used - [link](https://github.com/ytdl-org/youtube-dl).
+
+***
+
+Website: <https://ytdl-org.github.io/youtube-dl/>  
+Documentation: <https://github.com/ytdl-org/youtube-dl/blob/master/README.md#readme>
 
 [Return to the **Optimised Software list**](../../software/)

@@ -10,7 +10,7 @@
 - [**WebIOPi - Web interface to control RPi GPIO**](#webiopi)
 - [**Node-RED - Visual tool for wiring together hardware devices, APIs and online services**](#node-red)
 - [**Mosquitto - Message broker that implements MQTT protocol**](#mosquitto)
-- [**Blynk Server - iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet**](#blynk-server)
+- [**Blynk Server - Blynk server with web and MQTT interface for controlling IoT devices, written in Java**](#blynk-server)
 - [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](#audiophonics-pi-spc)
 - [**Grafana - The open platform for beautiful analytics and monitoring**](#grafana)
 
@@ -36,7 +36,7 @@
 
     We do not install a desktop environment. User will be required to setup Google API and keys on another system (please see first run setup below).  
     We highly recommend SSH to allow for a quick setup of Google API and device link.  
-    We also recommend one of [DietPi File servers](https://dietpi.com/docs/software/file_servers/), for easy transfer of `assistant.json`, generated during Google API setup.
+    We also recommend one of [DietPi File servers](../file_servers/), for easy transfer of `assistant.json`, generated during Google API setup.
 
 ![Google AIY logo](../assets/images/dietpi-software-hardwareprojects-googleaiy.jpg){: width="400" height="239" loading="lazy"}
 
@@ -47,7 +47,7 @@
     - Follow the link below, to setup Google API and download client keys, required to enable the speech API:  
       <https://aiyprojects.withgoogle.com/voice#users-guide-1-2--turn-on-the-google-assistant-api>  
       Remark: When setting up the activity controls, ensure you also enable "Include Chrome browsing history and activity from websites and apps that use Google services", else she will not function ;)
-    - Make sure you have one of [DietPi's File Servers](https://dietpi.com/docs/software/file_servers/) installed.  
+    - Make sure you have one of [DietPi's File Servers](../file_servers/) installed.  
       Once completed, download the `client_secret.json` and save it to:
         - If using SSH = `/mnt/dietpi_userdata/voice-recognizer-raspi/assistant.json`
         - If using File Server = `voice-recognizer-raspi/assistant.json`
@@ -209,7 +209,7 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
 
 === "Access WebIOPi over the internet"
 
-    To be able to access your WebIOPi interface over the internet, you may install [Remot3.it (Weaved)](https://dietpi.com/docs/software/remote_desktop/#remot3it-weaved-access-your-device-over-the-internet).
+    To be able to access your WebIOPi interface over the internet, you may install [Remot3.it (Weaved)](../remote_desktop/#remot3it).
 
 ***
 
@@ -334,46 +334,58 @@ Source code: <https://github.com/eclipse/mosquitto>
 
 ## Blynk Server
 
-Platform with iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet.
+Platform with iOS and Android apps to control Arduino, ESP8266, Raspberry Pi and similar microcontroller boards over the Internet, written in Java. This is the server component to replace the Blynk Inc. cloud servers.
 
 Also installs:
 
-- Blynk JS Library
+- Blynk JS library: <https://www.npmjs.com/package/blynk-library>
 
 ![Blynk app on a smartphone](../assets/images/dietpi-software-hardwareprojects-blynk.jpg){: width="375" height="400" loading="lazy"}
-
-=== "Installation notes"
-
-    DietPi installs Blynk (including user data and config file) to the following location:  
-    `/mnt/dietpi_userdata/blynk`
-
-    Log files can be found in:  
-    `/var/log/blynk`
-
-    We created a `systemd` service for Blynk, DietPi will automatically start this:
-
-    ```sh
-    systemctl status blynkserver
-    ```
-
-    DietPi will also install ***Blynk JS Library***, along with this installation. Please skip this section when you reach the Blynk user guide.
 
 === "Access to the web admin interface"
 
     The web interface uses port **9443**:
 
-    - URL = `https://<your.IP>:9443/admin`
-    - Default user: `admin@blynk.cc`
-    - Default password: `admin`
+    - URL = `https://<your.IP>:9443/admin` (You may ignore the browser warning, as a self-signed certificate is used by default.)
+    - Email address: `admin@blynk.cc`
+    - Password: A random password is generated at first service start, which can be found by running the following command:
 
-    These values can be adjusted by editing the config file below.
+        ```sh
+        journalctl -u blynkserver.service | grep password
+        ```
+
+=== "Installation notes"
+
+    DietPi installs Blynk (including user data and config file) to the following location:
+
+    ```
+    /mnt/dietpi_userdata/blynk
+    ```
+
+    Log files can be found in:
+
+    ```
+    /var/log/blynk
+    ```
+
+    We created a systemd service for Blynk, automatically started by DietPi at boot:
+
+    ```sh
+    systemctl status blynkserver
+    ```
+
+    DietPi will also install the ***Blynk JS library***, along with this installation. Please skip this section when you reach the Blynk user guide.
 
 === "Server configuration"
 
-    Remark: The config file changes in the web UI do not have an effect yet: <https://github.com/blynkkk/blynk-server/issues/1318>
+    !!! warning "Config file changes via web UI do not have any effect."
 
-    To change settings you need to edit  
-    `/mnt/dietpi_userdata/blynk/server.properties`  
+    To change settings you need to edit
+
+    ```
+    /mnt/dietpi_userdata/blynk/server.properties
+    ```
+
     and restart the Blynk server:
 
     ```sh
@@ -382,31 +394,49 @@ Also installs:
 
 === "Getting started with Blynk app"
 
-    To log into your own server, press `Log In`, then the three dots at the bottom and switch the slider to `CUSTOM`. There you can enter your own Blynk servers IP/domain and use the above login credentials.
-
-    You can then skip creating an external Blynk account and instead go on and create a new project directly: <https://docs.blynk.cc/#getting-started-getting-started-with-the-blynk-app-2-create-a-new-project>
+    1. Download the Blynk app for Android: <https://play.google.com/store/apps/details?id=cc.blynk>
+    2. To log into your own server, press `Log In`, then the three dots at the bottom and switch the slider to `CUSTOM`.
+    3. There you can enter your own Blynk servers IP/domain and use the above login credentials.
+    4. Create a new project by following this guide: <https://docs.blynk.cc/#getting-started-getting-started-with-the-blynk-app-2-create-a-new-project>
+    5. The authentication token for the new project can be obtained from the app and as well from the web interface at `Users` > `admin@blynk.cc` within the `Profile DashBoards` section. Use it to connect with your Blynk library Node scripts.
 
 === "Run test script"
 
-    Once you create a project in the iOS/Android app, run the command:
+    Once you create a project in the iOS/Android app, you may test the connection via
 
-    ```sh
-    blynk-client <replace_with_your_auth_code>
-    ```
+        ```sh
+        blynk-client '<authentication token>'
+        ```
+
+        But the TLS connection usually fails with the self-signed certificates. If Let's Encrypt was setup before, the Blynk server will use it automatically, which should allow TLS connection. If it does not work, check out the example scripts to connect via plain TCP: <https://github.com/vshymanskyy/blynk-library-js/blob/master/examples/nodejs/client-tcp-local.js>
+
+        The HTTP port can be seen and changed via config file. See the "Server configuration" tab.
 
 === "Update to the latest version"
 
-    Update Blynk with: `dietpi-software reinstall 131`.
+    Update Blynk with:
+
+    ```sh
+    dietpi-software reinstall 131
+    ```
 
 ***
 
-Official documentation: <http://docs.blynk.cc>  
-Install Blynk App (Android): <https://play.google.com/store/apps/details?id=cc.blynk>
+Official website: <https://blynk.io/>  
+Official documentation: <https://docs.blynk.io/>  
+Source code: <https://github.com/Peterkn2001/blynk-server>  
+License: [GPLv3](https://github.com/Peterkn2001/blynk-server/blob/master/license.txt)
+
+Blynk Android app: <https://play.google.com/store/apps/details?id=cc.blynk>
+
+Blynk JS library `npm` page: <https://www.npmjs.com/package/blynk-library>  
+Blynk JS library source code: <https://github.com/vshymanskyy/blynk-library-js>  
+Blynk JS library license: [MIT](https://github.com/vshymanskyy/blynk-library-js/blob/master/LICENSE)
 
 ## Audiophonics PI-SPC
 
 Power control module for Raspberry Pi which allows you to physically power on/off the system, without the need to run `poweroff`.
-See <https://www.audiophonics.fr/fr/kits-et-modules-diy/audiophonics-pi-spc-v2-module-de-controle-alimentation-type-atx-pre-assemble-p-11125.html> for further details.
+See <https://www.audiophonics.fr/en/raspberry-pi-and-other-sbc-accessories/audiophonics-pi-spc-v2-power-management-module-for-raspberry-pi-p-10912.html> for further details.
 
 ![Audiophonics PCB photo](../assets/images/dietpi-software-hardwareprojects-audiophonis-pcb.jpg){: width="400" height="400" loading="lazy"}
 

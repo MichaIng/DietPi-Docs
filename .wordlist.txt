@@ -1,6 +1,7 @@
 addictiveness
 addon
 ADF
+AdGuard
 advanxer
 AGPLv
 AirPlay
@@ -31,6 +32,7 @@ Balena
 balenaEtcher
 Bazarr
 Beelink
+binfmt
 Bitcoin
 Bitwarden
 blazingly
@@ -89,9 +91,11 @@ DiogoAbu
 diskimager
 DIY
 DLNA
+dl
 DNS
 Domoticz
 DoT
+downloader
 DPMS
 DRC
 DRM
@@ -125,6 +129,7 @@ FastMail
 FB
 FHS
 filesystem
+filesystems
 ForkedDaapd
 FOSS
 FPM
@@ -133,6 +138,7 @@ FreshRSS
 FriendlyARM
 FriendlyARM's
 frontend
+frp
 fullscreen
 FuguHub
 Gbit
@@ -218,6 +224,7 @@ Lerdorf
 LESP
 LetsEncrypt
 LGPL
+librespot
 Lidarr
 LightDM
 Lighttpd
@@ -302,6 +309,7 @@ OctoPrint
 Odroid
 Odroids
 Ok
+oldoldstable
 OOTB
 Oldschool
 OPcache
@@ -358,6 +366,7 @@ ReadyMedia
 RealVNC
 reconfiguring
 Remot
+renamer
 renderer
 reselect
 resolvconf
@@ -396,6 +405,7 @@ Signalyst
 SlimDevices
 SMB
 sn
+Snapcast
 SNMP
 SoCs
 Sonarr
@@ -405,6 +415,7 @@ SPC
 SPI
 spindown
 Spotify
+Spotifyd
 Spyder
 Squeezelite
 SSD
@@ -428,11 +439,13 @@ tcpdump
 thechildofroth
 Thonny
 TigerVNC
+TiB
 TIOBE
 TLS
 tmpfs
 Toews
 Tonido
+TPM
 transactional
 transcoding
 TRÅDFRI
@@ -501,6 +514,7 @@ XRDP
 XU
 YaCy
 ympd
+youtube
 ZeroPi
 zlib
 zr

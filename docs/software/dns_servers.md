@@ -4,6 +4,7 @@
 
 - [**Pi-hole - Network-wide Ad Blocking**](#pi-hole)
 - [**Unbound - A validating, recursive and caching DNS resolver**](#unbound)
+- [**AdGuard Home - A powerful network-wide ads & trackers blocking DNS server**](#adguard-home)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -148,7 +149,7 @@ Unbound is a validating, recursive, caching DNS resolver. It can resolve hostnam
 === "Default DNS ports"
 
     - Default DNS port: **53**
-    - DNS port when Pi-hole is installed: **5335**
+    - DNS port when Pi-hole or AdGuard Home are installed: **5335**
 
 === "Configuration directory"
 
@@ -214,5 +215,84 @@ Source code: <https://github.com/NLnetLabs/unbound>
 DietPi Blog: [`Pi-Hole & Unbound: How to have ad-free & safer internet in just few minutes`](https://dietpi.com/blog/?p=564)
 
 Blog entry with YouTube video (German language): [`Unbound Installation für PiHole unter DietPi`](https://blog.login.gmbh/unbound-installation-fuer-pihole-unter-dietpi/)
+
+## AdGuard Home
+
+AdGuard Home is a DNS sinkhole with web interface that will block ads for any device on your network.
+
+![AdGuard Home web interface screenshot](../assets/images/dietpi-software-dnsserver-adguardhome.png){: width="500" height="410" loading="lazy"}
+
+=== "Access the web interface"
+
+    The web interface is accessible via port **8083**:
+
+    - URL = `http://<your.IP>:8083`
+    - User = `admin`
+    - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
+
+=== "Configuration"
+
+    The configuration contains setting devices (e.g. router) to use AdGuard Home for DNS resolution.
+
+    <font size="+2">Option 1 - Setup single devices to use the AdGuard Home DNS server</font>
+
+    Simply change your DNS settings to use the IP address of your AdGuard Home device. This will need to be done for each device that you want AdGuard Home to work with.
+
+    Example:
+
+    - My AdGuard Home device has the IP address of 192.168.0.100
+    - On my PC, I would set the DNS address to 192.168.0.100
+    - Tutorial [The Ultimate Guide to Changing Your DNS settings](https://www.howtogeek.com/167533/the-ultimate-guide-to-changing-your-dns-server/).
+
+    <font size="+2">Option 2 - Setup your router to use the AdGuard Home DNS server</font>
+
+    This method will automatically point every device (that uses DHCP) on your network to AdGuard Home.
+    On your routers control panel web page, you will need to find a option called "DNS server". This should be located under DHCP settings.
+
+    Simply enter the IP address of your AdGuard Home device under "DNS server":
+
+    ![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: width="400" height="240" loading="lazy"}
+
+    On your AdGuard Home device, you will need to set a different DNS server.  
+    Depending on your router configuration, if you don't do this step, the AdGuard Home device may not be able to access the internet. It's highly recommended to have the device running AdGuard Home, pointing to a DNS server outside your network.
+
+    - Run the following command: `dietpi-config 8 1`
+    - Select: *Ethernet*
+    - If you are running in DHCP mode, select *Change Mode*, then select: *Copy Current address to Static*
+    - Select *Static DNS* from the list, then choose a DNS server, or manually enter a custom entry.
+    - Once completed, select *Apply* to save the changes.
+
+=== "Updating AdGuard Home"
+
+    To update AdGuard Home, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 126
+    ```
+
+=== "Setting the password"
+
+    If you forgot your login password for the AdGuard Home admin web page, you can set it with the following shell command on your AdGuard Home device.
+    
+    ```sh
+    G_CONFIG_INJECT 'password:[[:blank:]]' "  password: $(htpasswd -bnBC 10 '' "<your_new_password>" | tr -d ':\n' | sed 's/\$2y/\$2a/')" /mnt/dietpi_userdata/adguardhome/AdGuardHome.yaml
+    systemctl restart adguardhome
+    ```
+
+=== "Blocklists and whitelists"
+
+    There are many sites in the web giving blocklists and whitelists for AdGuard Home. They can be used when you want to have more blocking as the standard installation gives you. Here are some examples:
+
+    - [The Big Blocklist Collection by `WaLLy3K`](https://firebog.net/)
+    - [Phishing Army blocklist](https://phishing.army/)
+    - [Whitelist collection by `anudeepND`](https://github.com/anudeepND/whitelist)
+
+***
+
+Official website: <https://adguard.com/en/adguard-home/overview.html>  
+Official documentation: <https://github.com/AdguardTeam/AdGuardHome/wiki>  
+Wikipedia: <https://en.wikipedia.org/wiki/AdGuard#AdGuard_Home>  
+Source code: <https://github.com/AdguardTeam/AdGuardHome>  
+License: [GPLv3](https://github.com/AdguardTeam/AdGuardHome/blob/master/LICENSE.txt)
 
 [Return to the **Optimised Software list**](../../software/)

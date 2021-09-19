@@ -32,7 +32,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 !!! info Desktop environment
 
-    From the list of **Browse Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
+    From the list of **Browse Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop/). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
 
 [Return to the **Optimised Software list**](../../software/)
 
@@ -153,7 +153,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
     - Enable shared desktop mode:
         - Run `dietpi-autostart 2` to autostart into a desktop session and have RealVNC attached to it automatically.
         - Then `reboot` the system to have the changes taking effect.
-    - Follow the instructions within the section *Running directly rendered apps such as Minecraft remotely* in <https://www.realvnc.com/docs/raspberry-pi.html>.
+    - Follow the instructions within the section *Running directly rendered apps such as Minecraft remotely* in <https://help.realvnc.com/hc/en-us/articles/360002249917-VNC-Connect-and-Raspberry-Pi>.
 
 ## XRDP
 

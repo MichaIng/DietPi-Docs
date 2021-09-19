@@ -86,7 +86,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: width="550" height="370" loading="lazy"}
 
-    See also <https://dietpi.com/docs/software/log_system/>.
+    See also <../software/log_system/>.
 
 === "Webserver Preference"
 
@@ -225,7 +225,7 @@ DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cr
 
     - If no argument is given, the interactive menu is started.
     - Use `dietpi-ddns <options> apply <provider>` to apply a cron job for the given provider and use the following options set details:
-        - `<provider>` is either the name of a supported provider, or any custom update URL. 
+        - `<provider>` is either the name of a supported provider, or any custom update URL.
         - Use `-d <domains>` to add one or a comma-separated list of multiple domains, which should point to the public IP address of this system.
         - Use `-u <username>` to set a username or identifier. This is not required for all providers, in case of a custom provider, it is used as username for HTTP authentication.
         - Use `-p <password>` to set a password or token. This is not required for all providers, in case of a custom provider, it is used as username for HTTP authentication.
@@ -315,7 +315,7 @@ Run `dietpi-config`.
 
     The tools options are used to
 
-    - Perform CPU, RAM, file system and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark>
+    - Perform CPU, RAM, filesystem and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark>
     - Perform CPU/IO/RAM/DISK **stress tests** to test the stability of your system, e.g. after applying some overclocking.
 
 ---
@@ -325,8 +325,8 @@ Run `dietpi-config`.
 Feature-rich drive management utility. It is a lightweight program that allows you to:
 
 - Manage drives: Mount, format external drives
-- Maintenance drives: Check and repair drives, resize (expand) file system, change reserved blocks count
-- Set drive attributes: Set read only file systems, set idle spindown time
+- Maintenance drives: Check and repair drives, resize (expand) filesystem, change reserved blocks count
+- Set drive attributes: Set read only filesystems, set idle spindown time
 - Move DietPi User data
 - Transfer RootFS to external drive (Raspberry Pi and some ODROID boards only)
 - Disable swap file, change swap file size
@@ -347,7 +347,7 @@ Run `dietpi-drive_manager`.
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_2.png){: width="600" height="297" loading="lazy"}
 
-        If needed, format the drive before usage selecting the `Format` option (file system type description see below).  
+        If needed, format the drive before usage selecting the `Format` option (filesystem type description see below).  
         Remark: Formatting drives can only be done unmounted.
 
         If needed, mount the drive via the `Mount` selection. If mounted, commands `Unmount`, `Benchmark`, `User data`, `Swapfile` and `Read only` are present.
@@ -356,7 +356,7 @@ Run `dietpi-drive_manager`.
 
 === "Move the location of user data and swap file"
 
-    You can move the location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swap file to a different location on a target drive. This may be useful if your file system containing the DietPi user data resp. swap file has only little space left.
+    You can move the location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swap file to a different location on a target drive. This may be useful if your filesystem containing the DietPi user data resp. swap file has only little space left.
     Therefore execute the following steps (example user data, swap file is quite similar):
 
     1. Run `dietpi-drive_manager` to bring up the main menu.
@@ -372,48 +372,61 @@ Run `dietpi-drive_manager`.
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_5.png){: width="500" height="188" loading="lazy"}
 
-=== "Format file system types"
+=== "Format filesystem types"
 
-    Formatting file systems lead you to these dialogues:
+    Formatting filesystems lead you to these dialogues:
 
     ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_6.png){: width="500" height="137" loading="lazy"}
     ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_7.png){: width="500" height="326" loading="lazy"}
 
-    In the latter dialog you have to choose the file system type. The following selections may be chosen:
+    In the latter dialog you have to choose the filesystem type. The following selections may be chosen:
 
-    - `EXT4` (Default)  
-      Recommended for users who plan to use this drive solely on the DietPi system (e.g. dedicated drive).  
-      `+` The standard for Linux file systems  
+    - `ext4` (Default)  
+      Recommended for users who plan to use this drive solely on Linux systems (e.g. dedicated drive).  
+      `+` The standard for Linux filesystems  
       `-` Not compatible on a Windows system
 
     - `NTFS`  
       Recommended for users who plan to use this drive on a Windows system.  
       `+` Compatible on a Windows system  
+      `-` Only emulated support for UNIX permissions  
+      `-` Does support symbolic links (creation)  
       `-` High CPU usage during transfers (spawns a process)
 
     - `FAT32`  
       Recommended for users who want high compatibility across multiples operating systems.  
       `+` Highly compatible with all OS  
-      `-` 4GB file size limit  
-      `-` 2TB drive size limit  
-      `-` Does not support file/folder permissions  
+      `-` 4 GiB file size limit  
+      `-` 2 TiB drive size limit  
+      `-` Does not support UNIX permissions  
       `-` Does not support symbolic links
 
     - `HFS+`  
-      Recommended for Mac owners.  
-      `+` Mac OS file system
+      Recommended for users who plan to use this drive on a macOS system.  
+      `+` macOS filesystem  
+      `-` Not compatible on a Windows system
 
-    - `BTRFS`  
-      A modern Linux file system.  
-      `+` <https://github.com/Fourdee/DietPi/issues/271#issuecomment-247173250>
+    - `Btrfs`  
+      A modern Linux filesystem.  
+      `+` <https://github.com/MichaIng/DietPi/issues/271#issuecomment-247173250>  
+      `-` Not compatible on a Windows system
 
     - `F2FS`  
-      Linux file system designed for flash/NAND based drives.  
-      `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>
+      Linux filesystem designed for flash/NAND based drives.  
+      `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>  
+      `-` Not compatible on a Windows system
 
     - `exFAT`  
-      Windows file system, intended for external drives, e.g. USB flash drives or SD cards  
-      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>
+      Windows filesystem, intended for external drives, e.g. USB flash drives or SD cards.  
+      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>  
+      `+` Compatible on a Windows system  
+      `-` Does not support UNIX permissions  
+      `-` Does not support symbolic links
+
+    - `XFS`  
+      A modern Linux filesystem.  
+      `+` Well accepted for large files (typically in a file server use)  
+      `-` Not compatible on a Windows system
 
 === "Move DietPi system to a larger SD card"
 
@@ -431,7 +444,7 @@ Run `dietpi-drive_manager`.
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_8.png){: width="500" height="138" loading="lazy"}
 
-    1. Reboot your system to expand the root file system to use the whole space of the new memory card.
+    1. Reboot your system to expand the root filesystem to use the whole space of the new memory card.
 
     A similar procedure may be used when moving the SD card contents to a smaller SD card. During this procedure you typically need to shrink the partition size (e.g. with `parted` or `gparted`) before copying the partition image to a different memory card. Also, do the resize to use the full space on the new card.
 

@@ -7,6 +7,7 @@ Links to special software packages are located at the end of the according softw
 
 - Twitter: <https://twitter.com/DietPi_>
 - Facebook: <https://www.facebook.com/groups/167403007229675>
+- Blog: <https://dietpi.com/blog/>
 
 ## General articles
 
@@ -31,4 +32,4 @@ Links to special software packages are located at the end of the according softw
     ![advanxer.com logo](assets/images/dietpi-references-advanxer.com-logo.png){: width="200" height="55" loading="lazy"}
 
     Many thanks to `advanxer.com` for generating this nice description.  
-    See also <http://munin-monitoring.org>, <https://github.com/munin-monitoring/munin>.
+    See also <https://munin-monitoring.org/>, <https://github.com/munin-monitoring/munin>.

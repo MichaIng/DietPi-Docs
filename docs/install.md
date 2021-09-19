@@ -49,13 +49,13 @@ Select the following tabs for the installation description of your target.
     ??? hint "How do I extract DietPi image on Linux"
         On Debian and Ubuntu-based systems, open a terminal and type:
 
-        ```
+        ```sh
         sudo apt install p7zip
         ```
 
         Once p7zip is installed, type the following at the terminal to extract the file:
 
-        ```
+        ```sh
         7zr e DietPi-Image.7z
         ```
 
@@ -322,7 +322,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__Microsoft Hyper-V__](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview).
 
-    ![DietPi-Hyper-V-program](assets/images/dietpi-HyperV-program.png){: width="722" height="450" loading="lazy"}
+    ![Hyper-V-Manager screenshot](assets/images/dietpi-HyperV-program.png){: width="722" height="450" loading="lazy"}
 
     !!! info "Tested with Windows 10"
         This description relates to Hyper-V on a Microsoft Windows system.
@@ -345,18 +345,17 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi Hyper-V file** from [`dietpi.com`](https://dietpi.com/#download) (will be redirected to [`GitHub/yumiris`](https://github.com/yumiris/DietPi.Hyper-V/blob/master/README.md)) and   
-    unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    Download the **DietPi Hyper-V file** from [`dietpi.com`](https://dietpi.com/#download) and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
-    ![DietPi Hyper-V download image](assets/images/dietpi-HyperV-Download.jpg){: width="722" height="463" loading="lazy"}
+    ![DietPi Hyper-V image download](assets/images/dietpi-HyperV-Download.jpg){: width="722" height="463" loading="lazy"}
 
-    The zip file contains a couple of files, the important is the `.vhdx` file which have to be copied to a Hyper-V machine folder (The folder can be located anywhere on the PCs harddisk).
+    The archive contains the DietPi `README.md`, the `.vhdx` virtual disk image and a `hash.txt`, which contains hashes to check the integrity of the virtual disk image. Move the `.vhdx` file to the desired virtual machine folder on your harddisk.
 
     <font size="+2">2. Add a Hyper-V virtual machine</font>
 
-    As next, a Hyper-V machine is generated. Right click on your PCs node in the left tree and open the dialog wizard for the machine generation ("New" -> "Virtual Machine"):
+    Next, a Hyper-V machine needs to be created. Start the Hyper-V-Manager, right click on your PCs node in the left tree and open the dialog wizard for the machine generation ("New" -> "Virtual Machine"):
 
-    ![DietPi Hyper-V machine generation](assets/images/dietpi-HyperV-VM-generation.png){: width="450" height="364" loading="lazy"}
+    ![Hyper-V machine generation](assets/images/dietpi-HyperV-VM-generation.png){: width="450" height="364" loading="lazy"}
 
     In the following wizard you have to set the following:
 
@@ -364,21 +363,21 @@ Select the following tabs for the installation description of your target.
     2. Select the Hyper-V Generation: Select **Generation 1** ("Specify Generation")
     3. Choose your RAM size (e.g. 2048 MB)
     4. If you have already configured a network, select your network. Otherwise let it "Not connected" and change it afterwards
-    5. Choose to use extracted `.vhdx` Hyper-V disc file (see above)
+    5. Choose to use the extracted `.vhdx` Hyper-V disc file (see above)
 
     If you have not set up any network connection, go on with the **Virtual Switch Manager** and add a network. Select that network in your virtual machine settings afterwards.  
 
-    ![DietPi Hyper-V network management](assets/images/dietpi-HyperV-manage-network.png){: width="250" height="284" loading="lazy"}
+    ![Hyper-V network management](assets/images/dietpi-HyperV-manage-network.png){: width="250" height="284" loading="lazy"}
 
     <font size="+2">3. First boot of the new Hyper-V machine</font>
 
     First, click on ***Connect*** to open a window of the virtual machine:
 
-    ![DietPi Hyper-V open machine windows](assets/images/dietpi-HyperV-connect-machine.png){: width="450" height="205" loading="lazy"}
+    ![Hyper-V machine connection](assets/images/dietpi-HyperV-connect-machine.png){: width="450" height="205" loading="lazy"}
 
     Then press ***Start*** to boot up the machine:
 
-    ![DietPi Hyper-V machine start](assets/images/dietpi-HyperV-start-machine.png){: width="550" height="420" loading="lazy"}
+    ![Hyper-V machine start](assets/images/dietpi-HyperV-start-machine.png){: width="550" height="420" loading="lazy"}
 
     After this, your machine should boot up.
 
@@ -396,17 +395,12 @@ Select the following tabs for the installation description of your target.
     <font size="+1">**Network connection not found**</font>  
     In the case that you did not setup your network configuration properly, the booting procedure will not find a network connection and may respond with this boot console output:
 
-    ![DietPi Hyper-V boot without network](assets/images/dietpi-HyperV-boot-wo-network.jpg){: width="722" height="164" loading="lazy"}
+    ![Hyper-V boot without network](assets/images/dietpi-HyperV-boot-wo-network.jpg){: width="722" height="164" loading="lazy"}
 
     Then you have to check and repair your network configuration within the **Virtual Switch Manager**.
 
-    <font size="+1">**Enable Secure Boot option (machines of generation 2)**</font>  
-    It may also be necessary to deselect the "Enable Secure Boot" option in your virtual machine settings (at least select "Microsoft UEFI Certificate Authority"):
-
-    ![DietPi Hyper-V safe start option](assets/images/dietpi-HyperV-safe-start.png){: width="600" height="240" loading="lazy"}
-
-    <font size="+1">**Generate a Hyper-V virtual machine of generation 2**</font>  
-    An option to get a Hyper-V generation 2 machine is to generate your own Hyper-V virtual machine via a **Debian network installation** (booting the Hyper-V machine from a Debian `netinst.iso` like you would do it on a PC). Install a minimal Debian machine (i.e. no X11 desktops, etc.). Afterwards run the procedure described in section ["Make your own distribution"](https://dietpi.com/docs/hardware/#make-your-own-distribution).
+    <font size="+1">**Generate a Hyper-V Generation 2 machine**</font>  
+    An option to get a Hyper-V Generation 2 machine is to generate your own Hyper-V image via a **Debian network installation** (booting the Hyper-V machine from a Debian `netinst.iso` installer like you would do it on a PC). Install a minimal Debian machine (i.e. no X11 desktops, etc.). Afterwards run the procedure described in section ["Make your own distribution"](../hardware/#make-your-own-distribution). Generation 2 machines support (and require) to boot in UEFI mode, support [Secure Boot](https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface#Secure_Boot), [TPM](https://en.wikipedia.org/wiki/Trusted_Platform_Module), use modern SCSI controllers and have higher hardware limits. For use as a home server, however, you will not need any of these functions.
 
 === "Install on native PC"
 

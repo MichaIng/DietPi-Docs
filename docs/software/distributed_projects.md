@@ -103,7 +103,8 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
     You can also monitor it with the [Tor relay search](https://metrics.torproject.org/rs.html). Just paste either the fingerprint (found at `/var/lib/tor/fingerprint`) or nickname of your relay.
 
     ??? info "Note for bridge operators"
-        The Tor relay search will not always work for bridges, sometimes showing them as down when they are running.  In that case, use the specific Tor bridge monitoring URL, `https://bridges.torproject.org/status?type=obfs4&id=<FINGERPRINT>`.
+        The Tor relay search will not always work for bridges, sometimes showing them as down when they are running. In that case, use the specific Tor bridge monitoring URL:  
+        `https://bridges.torproject.org/status?type=obfs4&id=<FINGERPRINT>`
 
 === "Keeping up-to-date"
 
