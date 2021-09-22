@@ -331,6 +331,7 @@ Feature-rich drive management utility. It is a lightweight program that allows y
 - Transfer RootFS to external drive (Raspberry Pi and some ODROID boards only)
 - Disable swap file, change swap file size
 - Run benchmarks on drives
+- Mount network drives (NFS and Samba)
 
 Run `dietpi-drive_manager`.
 
@@ -447,6 +448,18 @@ Run `dietpi-drive_manager`.
     1. Reboot your system to expand the root filesystem to use the whole space of the new memory card.
 
     A similar procedure may be used when moving the SD card contents to a smaller SD card. During this procedure you typically need to shrink the partition size (e.g. with `parted` or `gparted`) before copying the partition image to a different memory card. Also, do the resize to use the full space on the new card.
+
+=== "Mount network drive"
+
+    If you want to mount a NFS drive or a Samba share, you can do this by:
+
+    1. Run `dietpi-drive_manager` to bring up the main menu.
+    1. Select `Add network drive`.
+    1. Select the type of network drive that you have.
+    1. Follow the prompts.
+
+    !!! info "Mounting a macOS Samba share"
+        To mount a macOS Samba share enabled in `Sharing`, you need to (in the server) go to `Sharing > File Sharing > Options > Windows File Sharing` and select your username.
 
 ---
 
