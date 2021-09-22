@@ -116,10 +116,10 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
     The web interface is accessible via port **8443**:
 
-    - URL = `https://<your.IP>:8443`  
+    - URL: `https://<your.IP>:8443`  
       You can safely ignore the certificate "warning" if one appears.
-    - Username = `root`
-    - Password = The same as your root login password. Default is `dietpi`
+    - Username: `root`
+    - Password: The same as your root login password. Default is `dietpi`
 
 === "1st run setup"
 
@@ -139,9 +139,9 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
 ***
 
-YouTube video tutorial: *How to Install MineOS on Raspberry Pi 4 using Diet Pi OS*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/5WxRBTmXbwk?rel=0" frameborder="0" allow="fullscreen"  width="560" height="315" loading="lazy"></iframe>
+Official forum: <https://discourse.codeemo.com/>  
+Source code: <https://github.com/hexparrot/mineos-node>  
+License: [GPLv3](https://github.com/hexparrot/mineos-node/blob/master/LICENSE.md)
 
 ## Nukkit
 
