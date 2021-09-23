@@ -1097,7 +1097,7 @@ Spotify Connect client for the Raspberry Pi that Just Works™.
 
 ***
 
-Official website: <https://dtcooper.github.io/raspotify/>
+Official website: <https://dtcooper.github.io/raspotify/>  
 Source code: <https://github.com/dtcooper/raspotify>
 
 ## Spotify Connect Web
@@ -1212,8 +1212,8 @@ Spotifyd is a lightweight FOSS Spotify client, supporting the Spotify Connect pr
 
 ***
 
-Official documentation: <https://spotifyd.github.io/spotifyd/>
-Source code: <https://github.com/Spotifyd/spotifyd>
+Official documentation: <https://spotifyd.github.io/spotifyd/>  
+Source code: <https://github.com/Spotifyd/spotifyd>  
 License: [GPLv3](https://github.com/Spotifyd/spotifyd/blob/master/LICENSE)
 
 ## Jellyfin
