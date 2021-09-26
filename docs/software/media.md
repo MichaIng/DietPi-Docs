@@ -1296,9 +1296,9 @@ The Snapcast server needs to have its audio sources manually configured after in
 
 === "Access to the web interface"
 
-    The Snapcast server provides a web interface on port **1740**, which allows you to control volumes for all clients and optionally play audio through your browser:
+    The Snapcast server provides a web interface on port **1780**, which allows you to control volumes for all clients and optionally play audio through your browser:
 
-    - URL = `http://<your.IP>:1740`
+    - URL = `http://<your.IP>:1780`
 
 === "Implementation details"
 
