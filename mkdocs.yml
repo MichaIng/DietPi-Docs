@@ -2,7 +2,7 @@ site_name: DietPi.com Docs
 site_url: https://dietpi.com/docs/
 site_description: Official documentation pages for DietPi OS
 site_author: DietPi.com Team
-copyright: Copyright © 2020 DietPi.com | Documentation Distributed under <a target="_blank"
+copyright: Copyright © 2021 DietPi.com | Documentation Distributed under <a target="_blank"
            href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 
 repo_name: DietPi-Docs
@@ -72,15 +72,6 @@ plugins:
       remove_comments: true
       remove_empty_space: true
       reduce_boolean_attributes: true
-- redirects:
-    redirect_maps:
-      user-guide_installation.md: install.md
-      user-guide_overview.md: getting_started.md
-      dietpi_optimised_software.md: software.md
-      dietpi_sbc.md: hardware.md
-      release-notes.md: releases.md
-      dietpi_references.md: references.md
-      software/computational_science.md: software/distributed_projects.md
 
 extra:
   social:
