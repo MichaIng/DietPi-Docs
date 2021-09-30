@@ -1097,7 +1097,7 @@ Spotify Connect client for the Raspberry Pi that Just Works™.
 
 ***
 
-Official website: <https://dtcooper.github.io/raspotify/>
+Official website: <https://dtcooper.github.io/raspotify/>  
 Source code: <https://github.com/dtcooper/raspotify>
 
 ## Spotify Connect Web
@@ -1212,8 +1212,8 @@ Spotifyd is a lightweight FOSS Spotify client, supporting the Spotify Connect pr
 
 ***
 
-Official documentation: <https://spotifyd.github.io/spotifyd/>
-Source code: <https://github.com/Spotifyd/spotifyd>
+Official documentation: <https://spotifyd.github.io/spotifyd/>  
+Source code: <https://github.com/Spotifyd/spotifyd>  
 License: [GPLv3](https://github.com/Spotifyd/spotifyd/blob/master/LICENSE)
 
 ## Jellyfin
@@ -1296,9 +1296,9 @@ The Snapcast server needs to have its audio sources manually configured after in
 
 === "Access to the web interface"
 
-    The Snapcast server provides a web interface on port **1740**, which allows you to control volumes for all clients and optionally play audio through your browser:
+    The Snapcast server provides a web interface on port **1780**, which allows you to control volumes for all clients and optionally play audio through your browser:
 
-    - URL = `http://<your.IP>:1740`
+    - URL = `http://<your.IP>:1780`
 
 === "Implementation details"
 

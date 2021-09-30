@@ -722,6 +722,8 @@ Access and manage your data from anywhere via browser with this lightweight remo
     The web interface is accessible via port **8085**:
 
     URL = `http://<your.IP>:8085`
+    Username = `dietpi`
+    Password = `<your global password>`
 
 === "Directories"
 
