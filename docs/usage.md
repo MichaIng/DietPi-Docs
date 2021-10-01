@@ -1,6 +1,5 @@
 ---
-description: Usage hints for DietPi
-title: Usage hints / HowTo
+description: Miscellaneous usage hints and guides for the DietPi OS
 ---
 
 # Usage hints / HowTo
