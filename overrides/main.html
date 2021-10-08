@@ -35,3 +35,8 @@
 {% block announce %}
   <a href="https://dietpi.com/contribute.html">Learn how to support and contribute to the DietPi project <span class="twemoji">{% include ".icons/fontawesome/regular/heart.svg" %}</span></a>
 {% endblock %}
+{% block scripts %}
+  {% for path in config["extra_javascript"] %}
+    <script defer src="{{ path | url }}"></script>
+  {% endfor %}
+{% endblock %}
