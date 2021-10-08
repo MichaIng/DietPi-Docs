@@ -94,9 +94,8 @@ extra:
 extra_css:
 - assets/stylesheets/custom.css
 
-# Added via main.html override to allow adding "defer" attribute
-#extra_javascript:
-#- assets/javascripts/custom.js
+extra_javascript:
+- assets/javascripts/custom.js
 
 nav:
 - HOME:
