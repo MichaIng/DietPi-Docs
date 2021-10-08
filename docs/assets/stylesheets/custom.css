@@ -99,15 +99,19 @@ a:hover {
 
 /* Footer */
 
-.md-footer {
+.md-footer__inner {
     background-color: #9ccc00;
     color: #000;
 }
 
-.md-footer a:hover {
+.md-footer__inner a:hover {
     color: #164046 !important;
 }
 
 .md-footer-meta {
     background-color: #164046;
 }
+
+.md-footer-meta a:hover {
+    color: #9ccc00 !important;
+
