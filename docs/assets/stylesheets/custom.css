@@ -13,7 +13,7 @@
         color: #164046 !important;
     }
 
-    .md-nav--primary .md-nav__item--nested .md-nav__item--active
+    .md-nav--primary .md-nav__item--nested .md-nav__item--active,
     .md-nav--primary .md-nav__item--nested > .md-nav__link:focus,
     .md-nav--primary .md-nav__item--nested > .md-nav__link:hover {
         color: #9ccc00;
@@ -28,7 +28,7 @@
 }
 
 .md-header a:hover {
-    color: #164046;
+    color: #164046 !important;
 }
 
 .md-announce {
@@ -74,11 +74,11 @@ a:hover {
 }
 
 .md-announce a {
-    color: #fff;
+    color: #fff !important;
 }
 
 .md-announce a:hover {
-    color: #9ccc00;
+    color: #9ccc00 !important;
 }
 
 /* Tables */
