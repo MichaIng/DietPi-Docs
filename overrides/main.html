@@ -38,7 +38,7 @@
 {% endblock %}
 
 {% block scripts %}
-  <script defer src="{{ 'assets/javascripts/bundle.js' | url }}"></script>
+  {{ super() }}
   {% for path in config["extra_javascript"] %}
     <script defer src="{{ path | url }}"></script>
   {% endfor %}
