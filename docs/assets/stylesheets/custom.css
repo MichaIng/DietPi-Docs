@@ -117,3 +117,31 @@
 .md-footer-meta a:is(:focus,:hover) {
     color: #9ccc00 !important;
 }
+
+/* Content tabs */
+
+.tabbed-labels.tabbed-scroll-left::before {
+  display: inline-block;
+  font-size: 0.9em;
+  position: absolute;
+  top: 0.75em;
+  left: 0;
+  display: inline-block;
+  padding-right: 0.64em;
+  color: gray;
+  background: linear-gradient(to right, rgb(255, 255, 255) 75%, rgba(255, 255, 255, 0));
+  content: "\25C0";
+}
+
+.tabbed-labels.tabbed-scroll-right::after {
+  display: inline-block;
+  font-size: 0.9em;
+  position: absolute;
+  top: 0.75em;
+  right: 0;
+  display: inline-block;
+  padding-left: 0.64em;
+  color: gray;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 25%);
+  content: "\25B6";
+}
