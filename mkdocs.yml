@@ -54,9 +54,9 @@ markdown_extensions:
 #- markdown.extensions.def_list # Definition lists
 #- markdown.markdown.md_in_html # Allow Markdown syntax inside of HTML tags
 #- pymdownx.arithmatex # LaTeX math term support
-#- pymdownx.caret # Superscript <sup> and intert <ins> via caret ^
+#- pymdownx.caret # Superscript <sup> and insert <ins> via caret ^
 #- pymdownx.critic # Comment, highlight, add or strikethrough text
-#- pymdownx.highlight # Configure code highlighting for all code detinitions, fenced, inline and blocked by indentation
+#- pymdownx.highlight # Configure code highlighting for all code definitions, fenced, inline and blocked by indentation
 #- pymdownx.inlinehilite # Highlight syntax in inline code
 #- pymdownx.mark # Mark text <mark> via ==text==
 #- pymdownx.smartsymbols # Easy symbols syntax (trademark, copyright, arrows, ...)
@@ -83,7 +83,7 @@ extra:
     link: https://twitter.com/DietPi_
 
 extra_css:
-- css/custom.css
+- assets/stylesheets/custom.css
 
 nav:
 - HOME:
