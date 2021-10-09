@@ -97,6 +97,36 @@ a:hover {
     font-size: medium;
 }
 
+/* Content tabs */
+
+.tabbed-labels {
+  scrollbar-width: thin;
+  -ms-overflow-style: unset;
+}
+
+.tabbed-labels::-webkit-scrollbar {
+  display: unset;
+  height: 8px;
+}
+
+.tabbed-labels::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.tabbed-labels::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.tabbed-labels::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.tabbed-labels::-webkit-scrollbar-thumb:active {
+  background: #444;
+}
+
 /* Footer */
 
 .md-footer {
