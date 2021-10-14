@@ -34,7 +34,6 @@
 - [**Radarr - Automatically download Movies**](../software/bittorrent/#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](../software/bittorrent/#bazarr)
 - [**Lidarr - Automatically download Music**](../software/bittorrent/#lidarr)
-- [**CouchPotato - Automatically download movies**](../software/bittorrent/#couchpotato)
 - [**Jackett - API Support for your favourite torrent trackers**](../software/bittorrent/#jackett)
 - [**NZBGet - NZB download manager with web interface**](../software/bittorrent/#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](../software/bittorrent/#htpc-manager)
