@@ -29,7 +29,7 @@ jobs:
       id: mkdocs
       if: always() && steps.python.outcome == 'success'
       run: |
-        pip3 install -U pip wheel 'setuptools<58'
+        pip3 install -U pip wheel setuptools
         pip3 install -r requirements.txt
     - name: Build DietPi-Docs
       id: build
@@ -39,7 +39,7 @@ jobs:
       id: pyspelling
       if: always() && steps.build.outcome == 'success'
       run: |
-        pip3 install -U pyspelling
+        pip3 install -U pyspelling &
         sudo apt-get -q update
         sudo apt-get -qq --no-install-recommends install aspell-en
     - name: Run PySpelling to check HTML files
