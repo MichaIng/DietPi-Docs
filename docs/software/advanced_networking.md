@@ -103,7 +103,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
 === "Quick start"
 
-    After installation, you need to manually modify the `haproxy.cfg` to best fit your network requirements. Check the configuration manual [here](http://www.haproxy.org/#docs).
+    After installation, you need to manually modify the `haproxy.cfg` to best fit your network requirements. Check the configuration manual [here](https://www.haproxy.org/#docs).
 
     ```sh
     systemctl stop haproxy
@@ -140,8 +140,8 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
 ***
 
-Website: <http://www.haproxy.org>  
-Official documentation: <http://www.haproxy.org/#docs>
+Website: <https://www.haproxy.org/>  
+Official documentation: <https://www.haproxy.org/#docs>
 
 ## frp
 
