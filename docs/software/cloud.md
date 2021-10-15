@@ -719,9 +719,9 @@ Access and manage your data from anywhere via browser with this lightweight remo
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8085**:
+    The web interface is accessible via port **8084**:
 
-    - URL = `http://<your.IP>:8085`
+    - URL = `http://<your.IP>:8084`
     - Username = `dietpi`
     - Password = `<your global password>`
 
