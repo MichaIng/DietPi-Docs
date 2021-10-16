@@ -147,6 +147,17 @@ Very secure FTP file server with feature rich security options.
     - Address = Your IP address (e.g.: 192.168.0.100)
     - Port = 21
 
+=== "Destination directory"
+
+    The destination directory can be changed by replacing **/Path/To/Directory** to your target directory (within the configuration file `/etc/vsftpd.conf`):
+
+    ```sh
+    systemctl stop vsftpd
+    sed -i '/local_root=/c\local_root=/Path/To/Directory' /etc/vsftpd.conf
+    systemctl start vsftpd
+    ```
+
+
 ***
 
 Wikipedia: <https://wikipedia.org/wiki/Vsftpd>
