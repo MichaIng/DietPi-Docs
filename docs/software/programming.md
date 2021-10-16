@@ -32,7 +32,7 @@ Python is a text based interpreted programming language with object oriented pro
 
 ![Python logo](../assets/images/dietpi-software-programming-pythonlogo.png){: width="200" height="59" loading="lazy"}
 
-Source: By [www.python.org](http://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
+Source: By [www.python.org](https://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
 You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^3], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
 
@@ -51,7 +51,7 @@ Currently, Python is 3rd most popular of programming language [^4].
     | Name | URL |
     | :-: | - |
     | **Atom** | <https://atom.io> |
-    | **Eclipse + Pydev** | <https://www.eclipse.org> and <http://pydev.org> |
+    | **Eclipse + Pydev** | <https://www.eclipse.org> and <https://www.pydev.org/> |
     | **IDLE** | <https://docs.python.org/3/library/idle.html> |
     | **Pycharm** | <https://www.jetbrains.com/pycharm> |
     | **Spyder** | <https://github.com/spyder-ide/spyder> |
