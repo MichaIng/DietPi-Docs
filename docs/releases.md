@@ -18,13 +18,13 @@ If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's 
 
 **DietPi-Software** :
 
-- [**DietPi-JustBoom**](../dietpi_tools/#dietpi-justboom) :octicons-arrow-right-16: Added the ability to enforce an output channel count, or to not enforce an audio format value to preserve the input stream format or leave conversion up to ALSA, which is now the default when resetting settings. Similarly the audio output buffer can now be unset to keep the MPD default. Generally, if not required for a specific reason, it is recommended to not convert the audio stream and keep these settings unchanged/default.
+- [**DietPi-JustBoom**](../dietpi_tools/#dietpi-justboom) :octicons-arrow-right-16: Added the ability to enforce an output channel count, or to not enforce an audio format value to preserve the input stream format or leave conversion up to ALSA, which now is the default when resetting settings. Similarly, the audio output buffer can now be unset to keep the MPD default. Generally, if not required for a specific reason, it is recommended to not convert the audio stream and keep these settings unchanged/default.
 
 - [**Deluge**](../software/bittorrent/#deluge) :
 
     - Logging is not done to `/var/log/deluged/` anymore but to journal instead, accessible via `journalctl -u deluged -u deluge-web`. This change only affects new installs and reinstalls of Deluge.
     - On fresh installs, the web interface is now accessible as expected with the chosen global software password, stored hashed with a fresh random salt. Previously the password was hardcoded to `dietpi`.
-    - Resolved an issue on Bullseye where the web interface service did not start as a new command line flag `-d` is required to keep it in foregound. Many thanks to @quyentruong for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4785>
+    - Resolved an issue on Bullseye where the web interface service did not start as a new command line flag `-d` is required to keep it in foreground. Many thanks to @quyentruong for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4785>
 
 - [**Kodi**](../software/media/#kodi) :
 
@@ -38,7 +38,7 @@ If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's 
 
 - **General** :octicons-arrow-right-16: The `/boot/dietpi/func/obtain_network_details` script has been removed, including the related `/run/dietpi/.network` file to obtain network details. All uses of these files have been replaced with the new DietPi-Globals `G_GET_NET` function (see below).
 - **DietPi-Globals** :octicons-arrow-right-16: A new global function `G_GET_NET` has been added to print network interface details. Most importantly it prints info for the main interface, by following the priorities of `/boot/dietpi/func/obtain_network_details: default gateway => state UP => IP assigned`, but allows to additionally filter by IP family, type, interface name or print the default gateway explicitly. It aims to be a replacement for `/boot/dietpi/func/obtain_network_details` with more flexibility and to allow deriving always up-to-date interface info instead of depending on the correctness of a cache file.
-- DietPi-Globals | `G_GET_WAN_IP` :octicons-arrow-right-16: We use our own GEO IP service now to show the systems WAN IP and location in the DietPi banner and DietPi-VPN. When Pi-hole was used, with a previous update, "freegeoip.app" was added to Pi-hole's whitlist, which is now not required anymore. You may hence remove that entry from the whitelist.
+- DietPi-Globals | `G_GET_WAN_IP` :octicons-arrow-right-16: We use our own GEO IP service now to show the systems WAN IP and location in the DietPi banner and DietPi-VPN. When Pi-hole was used, with a previous update, "freegeoip.app" was added to Pi-hole's whitelist, which is now not required anymore. You may hence remove that entry from the whitelist.
 - DietPi-Boot :octicons-arrow-right-16: This script and service has been removed: Waiting for network is now done via `DietPi-PostBoot` `"After=network-online.target"`, time sync is done in `DietPi-PostBoot`, but in background (mostly not required for service starts) and pre-installed image stage handling is as well done in PostBoot now.
 - DietPi-Update :octicons-arrow-right-16: A network connection and time sync check is now done before checking for updates, similar to how `DietPi-Software` does it on installs.
 
@@ -67,20 +67,24 @@ If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's 
 - [DietPi-Software | **Chromium**](../software/desktop/#chromium) :octicons-arrow-right-16: Resolved an issue where the autostart option didn't work if Chromium was installed without a desktop. Many thanks to @jowelboy for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9531)
 - [DietPi-Software | **Chromium**](../software/desktop/#chromium) :octicons-arrow-right-16: Resolved an issue on RPi where starting Chromium failed if no desktop was installed, due to a missing dependency. Many thanks to @Loader23 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4782>
 - DietPi-Software | X.Org X Server :octicons-arrow-right-16: Resolved an issue with Odroid N2 and C4 models where the installation failed because of a typo. Many thanks to @wiml for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4830>
+- [DietPi-Software | **Airsonic**](../software/media/#airsonic) :octicons-arrow-right-16: Since the project has been archived and does not support Java 17, it has been disabled on Bullseye. We're watching a fork (https://github.com/airsonic-advanced/airsonic-advanced) which is actively developed and where at least the web interface works with Java 17. Playing audio however failed on local tests, hence we'll wait until it becomes more stable to be a drop-in replacement for Airsonic in general and supported on Bullseye with Java 17 as well. Many thanks to @Andaloup for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4847>
+- [DietPi-Software | **FreshRSS**](../software/social/#freshrss) :octicons-arrow-right-16: Resolved an issue where on reinstalls nested /opt/FreshRSS/FreshRSS-master and /opt/FreshRSS/p/p were created. Since FreshRSS has an internal updater, reinstalls won't download and install the new version as long as /opt/FreshRSS is present already. The nested directory and link is removed on next DietPi update, when present. Many thanks to @kinoushe for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4775>
 
 **DietPi General and Configuration tools** :
 
 - **General** :octicons-arrow-right-16: Since the Armbian repository router does not reliably preserves HTTPS on redirects yet, APT by times fails when detecting a downgrade from HTTPS to HTTP. We hence change the armbian.list to use plain HTTP until the issues with the router have been resolved.
 - **General** :octicons-arrow-right-16: Worked around an issue on Debian Stretch where `systemctl enable/disable --now` does not start/stop the service in certain circumstances. This is solved within our error handler `G_EXEC`, hence when manually calling systemctl you may still face this: <https://github.com/MichaIng/DietPi/issues/4815>
+- **General** :octicons-arrow-right-16: Applied a workaround on Bullseye systems with older Linux versions (v4.14 and below) which do not sufficiently support the new "unified cgroup hierarchy" (a.k.a. cgroups-v2). Since the newer systemd tries to use it automatically, Docker and similar software which make use of cgroups fail. For devices with known boot configuration file, the kernel command line arguments are applied to force the legacy cgroups hierarchy usage.
 - [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore) :octicons-arrow-right-16: Resolved an issue where clearing the PATH cache via "hash" command did not work as of a wrong command line argument: <https://github.com/MichaIng/DietPi/issues/4800>
-- [DietPi-LetsEncrypt](../dietpi_tools/#dietpi-letsencrypt) :octicons-arrow-right-16: Resolved an issue where the script failed when ownCloud or Nextcloud are were installed. Many thanks to @billouetaudrey for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4752>
+- [DietPi-LetsEncrypt](../dietpi_tools/#dietpi-letsencrypt) :octicons-arrow-right-16: Resolved an issue where the script failed when [ownCloud](../software/cloud/#owncloud) or [Nextcloud](../software/cloud/#nextcloud) were installed. Many thanks to @billouetaudrey for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4752>
 - [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Resolved an issue where the WiFi connection state could have been obtained falsely as accidentally the Ethernet interface index was used to derive it.
+- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Resolved an issue on [NanoPi NEO](../hardware/#nanopi-series-friendlyarm) (and likely other Allwinner H3 SBCs) where selecting a sound card failed as an invalid control was tried to be set. Many thanks to @VS-X for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4833>
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4840>.
 
 ### Removed Software {: #removed-software-77 }
 
-- **CouchPotato** :octicons-arrow-right-16: Sadly, the CouchPotato project is not maintained anymore and has been abandoned. As a result we had to removed it from DietPi. The instance installed on your system will remain, but it will be not longer managed via DietPi configuration tools (it cannot longer be installed, reinstalled or uninstalled anymore). We recommend to migrate to an alternative project, like [**Radarr**](../software/bittorrent/#radarr), which can be found in **DietPi-Software** was well. Please find here uninstall instructions [link](https://github.com/MichaIng/DietPi/issues/4323#issuecomment-927128724) for a manual removal of CouchPotato.
+- **CouchPotato** :octicons-arrow-right-16: Sadly, the CouchPotato project is not maintained anymore and has been abandoned. As a result we had to removed it from DietPi. The instance installed on your system will remain, but it will be not longer managed via DietPi configuration tools (it cannot longer be installed, reinstalled or uninstalled anymore). We recommend to migrate to an alternative project, like [**Radarr**](../software/bittorrent/#radarr), which can be found in **DietPi-Software** was well. Please find [here](https://github.com/MichaIng/DietPi/issues/4323#issuecomment-927128724) uninstall instructions for a manual removal of CouchPotato.
 
 ### Known/Outstanding Issues {: #known-issues-77 }
 
@@ -500,7 +504,7 @@ Welcome to **April 2021 release** :octicons-heart-16: of **DietPi**. It's an inc
 
     - [**Improvements**](#changes-improvements-optimisations-in-71)
 
-        More improvments to different software titles.
+        More improvements to different software titles.
 
     - [**Bug fixes**](#bug-fixes-in-71) & updates to [**supported SBC**](#supported-sbc-updates-in-71) list
 
