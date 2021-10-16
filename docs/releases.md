@@ -12,7 +12,7 @@ If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's 
 
 !!! cite ""
 
-    _Photo by [planet_fox](https://pixabay.com/photos/raspberry-pi-pi-computer-4980917) on [Pixabay](https://pixabay.com)_
+    _Photo by planet_fox, Pixabay_
 
 ### Improvements {: #improvements-77 }
 
