@@ -91,7 +91,7 @@ YouTube video tutorial: *DietPi CloudShell (RPi / Odroid XU4)*
 
 === "Waveshare32"
 
-    See <http://www.waveshare.com/3.2inch-rpi-lcd-b.htm>.  
+    See <https://www.waveshare.com/3.2inch-rpi-lcd-b.htm>.  
     This is available for all Raspberry Pi and Odroid versions. DietPi will automatically configure your system for the device.  
     Simply run `dietpi-config`, select `Display Options`, then select `waveshare32`.   
     After a reboot, your *Waveshare32* will become active.
