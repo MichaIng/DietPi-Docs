@@ -22,15 +22,15 @@ If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's 
 
 - [**Deluge**](../software/bittorrent/#deluge) :
 
-    * Logging is not done to `/var/log/deluged/` anymore but to journal instead, accessible via `journalctl -u deluged -u deluge-web`. This change only affects new installs and reinstalls of Deluge.
-    * On fresh installs, the web interface is now accessible as expected with the chosen global software password, stored hashed with a fresh random salt. Previously the password was hardcoded to `dietpi`.
-    * Resolved an issue on Bullseye where the web interface service did not start as a new command line flag `-d` is required to keep it in foregound. Many thanks to @quyentruong for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4785>
+    - Logging is not done to `/var/log/deluged/` anymore but to journal instead, accessible via `journalctl -u deluged -u deluge-web`. This change only affects new installs and reinstalls of Deluge.
+    - On fresh installs, the web interface is now accessible as expected with the chosen global software password, stored hashed with a fresh random salt. Previously the password was hardcoded to `dietpi`.
+    - Resolved an issue on Bullseye where the web interface service did not start as a new command line flag `-d` is required to keep it in foregound. Many thanks to @quyentruong for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4785>
 
 - [**Kodi**](../software/media/#kodi) :
 
-    * On Debian Bullseye, beginning with Kodi 19, GBM support is present by default, which means that [**Kodi**](../software/media/#kodi) can be started without a wrapping X server. This is now done by default when starting Kodi outside of a desktop session, including the dietpi-autostart option. This also means that an X server is not installed anymore as a dependency of Kodi, but only as a dependency of a deskop environment.
-    * It can now be installed on all devices. In some cases, video playback performance may be bad, depending on the GPU, whether good drivers are available, and on the video quality, of course. However, it should be our users who evaluate whether it's sufficient or not, instead of us. With Debian Bullseye, new Mesa drivers and Kodi 19 started via GBM, performance should be much better than it was with older Debian/package versions.
-    * Resolved an issue on RPi ARMv8/64-bit systems where Kodi fails to start when it was installed without a desktop. Many thanks to @Klola for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=38079#p38079)
+    - On Debian Bullseye, beginning with Kodi 19, GBM support is present by default, which means that [**Kodi**](../software/media/#kodi) can be started without a wrapping X server. This is now done by default when starting Kodi outside of a desktop session, including the dietpi-autostart option. This also means that an X server is not installed anymore as a dependency of Kodi, but only as a dependency of a deskop environment.
+    - It can now be installed on all devices. In some cases, video playback performance may be bad, depending on the GPU, whether good drivers are available, and on the video quality, of course. However, it should be our users who evaluate whether it's sufficient or not, instead of us. With Debian Bullseye, new Mesa drivers and Kodi 19 started via GBM, performance should be much better than it was with older Debian/package versions.
+    - Resolved an issue on RPi ARMv8/64-bit systems where Kodi fails to start when it was installed without a desktop. Many thanks to @Klola for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=38079#p38079)
 
 - [File Browser](../software/cloud/#file-browser) :octicons-arrow-right-16: The default network port has been changed to `8084` to resolve a conflict with [HTPC Manager](../software/bittorrent/#htpc-manager). This only affects **new** [File Browser](../software/cloud/#file-browser) installations. Many thanks to @KamikazeePL for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9507)
 
