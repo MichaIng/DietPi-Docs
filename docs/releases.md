@@ -4,7 +4,9 @@
 
 ### Overview
 
-Welcome to **October 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused on improvments to the scripts and software packages, improving the way you use **DietPi**.
+Welcome to **October 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused on improvments to the scripts and software packages, improving the way you use **DietPi**. 
+
+If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's important to check also: [DietPi - How to Upgrade to "BULLSEYE"](https://dietpi.com/blog/?p=811). It is a _step by step_ article on how to achieve a successful migration ! 
 
 ![DietPi Version 7.7](assets/images/dietpi-version-77.jpg){: width="320" height="427" loading="lazy"}
 
@@ -14,39 +16,65 @@ Welcome to **October 2021 release** :octicons-heart-16: of **DietPi**. It's an i
 
 ### Improvements {: #improvements-77 }
 
-- General :octicons-arrow-right-16: The `/boot/dietpi/func/obtain_network_details` script has been removed, including the related /run/dietpi/.network file to obtain network details. All uses of these files have been replaced with the new DietPi-Globals `G_GET_NET` function (see below).
-- DietPi-Globals :octicons-arrow-right-16: A new global function `G_GET_NET` has been added to print network interface details. Most importantly it prints info for the main interface, by following the priorities of `/boot/dietpi/func/obtain_network_details: default gateway => state UP => IP assigned`, but allows to additionally filter by IP family, type, interface name or print the default gateway explicitly. It aims to be a replacement for `/boot/dietpi/func/obtain_network_details` with more flexibility and to allow deriving always up-to-date interface info instead of depending on the correctness of a cache file.
-- DietPi-Globals | G_GET_WAN_IP :octicons-arrow-right-16: We use our own GEO IP service now to show the systems WAN IP and location in the DietPi banner and DietPi-VPN. When Pi-hole was used, with a previous update, "freegeoip.app" was added to Pi-hole's whitlist, which is now not required anymore. You may hence remove that entry from the whitelist.
-- DietPi-Globals :octicons-arrow-right-16: The global functions `G_DEV_1` and `G_DEV_BENCH` have been removed, which did exist for testing and development only but are not used in our current workflows.
-- DietPi-TimeSync :octicons-arrow-right-16: Use the same flag file that systemd-timesyncd itself uses since Buster, to skip an additional service restart and sync when it was done already.
-- DietPi-TimeSync :octicons-arrow-right-16: When our oneshot modes (boot only, hourly, daily) are selected, `systemd-timesyncd` is now "enabled" to be started by systemd earlier at boot, instead of on our script call. Especially since both now share the same flag file (on Buster and above), this has a chance to prevent an additional service restart if the time sync has finished already when PostBoot is reached.
-- DietPi-Boot :octicons-arrow-right-16: This script and service has been removed: Waiting for network is now done via `DietPi-PostBoot` `"After=network-online.target"`, time sync is done in `DietPi-PostBoot`, but in background (mostly not required for service starts) and pre-installed image stage handling is as well done in PostBoot now.
-- DietPi-Update :octicons-arrow-right-16: A network connection and time sync check is now done before checking for updates, similar to how DietPi-Software does it on installs.
-- DietPi-Login :octicons-arrow-right-16: The DietPi banner on login won't be shown anymore if ~/.hushlogin exists, which is a common method to prevent the shell from printing `/etc/motd` on login and should hence be respected for the DietPi banner as well. Many thanks to @dnknth for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4786>
-- DietPi-JustBoom :octicons-arrow-right-16: Added the ability to enforce an output channel count, or to not enforce an audio format value to preserve the input stream format or leave conversion up to ALSA, which is now the default when resetting settings. Similarly the audio output buffer can now be unset to keep the MPD default. Generally, if not required for a specific reason, it is recommended to not convert the audio stream and keep these settings unchanged/default.
-- DietPi-Software | Deluge :octicons-arrow-right-16: Logging is not done to /var/log/deluged/ anymore but to journal instead, accessible via "journalctl -u deluged -u deluge-web". This change only affects new installs and reinstalls of Deluge.
-- DietPi-Software | Deluge :octicons-arrow-right-16: On fresh installs, the web interface is now accessible as expected with the chosen global software password, stored hashed with a fresh random salt. Previously the password was hardcoded to "dietpi".
-- DietPi-Software | Kodi :octicons-arrow-right-16: On Debian Bullseye, with Kodi 19, GBM support is present by default, which means that Kodi can be started without a wrapping X server. This is now done by default when starting Kodi outside of a desktop session, including the dietpi-autostart option. This also means that an X server is not installed anymore as a dependency of Kodi, but only as a dependency of a deskop environment.
-- DietPi-Software | Kodi :octicons-arrow-right-16: It can now be installed on all devices. In some cases, video playback performance may be bad, depending on the GPU, whether good drivers are available, and on the video quality, of course. However, it should be our users who evaluate whether it's sufficient or not, instead of us. With Debian Bullseye, new Mesa drivers and Kodi 19 started via GBM, performance should be much better than it was with older Debian/package versions.
-- DietPi-Software | File Browser :octicons-arrow-right-16: The default network port has been changed to 8084 to resolve a conflict with HTPC Manager. This only affects new File Browser installs. Many thanks to @KamikazeePL for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9507)
+**DietPi-Software Improvments**
+
+- [**DietPi-JustBoom**](../dietpi_tools/#dietpi-justboom) :octicons-arrow-right-16: Added the ability to enforce an output channel count, or to not enforce an audio format value to preserve the input stream format or leave conversion up to ALSA, which is now the default when resetting settings. Similarly the audio output buffer can now be unset to keep the MPD default. Generally, if not required for a specific reason, it is recommended to not convert the audio stream and keep these settings unchanged/default.
+
+- [**Deluge**](../software/bittorrent/#deluge) 
+
+    - Logging is not done to `/var/log/deluged/` anymore but to journal instead, accessible via `journalctl -u deluged -u deluge-web`. This change only affects new installs and reinstalls of Deluge.
+    - On fresh installs, the web interface is now accessible as expected with the chosen global software password, stored hashed with a fresh random salt. Previously the password was hardcoded to `dietpi`.
+    - Resolved an issue on Bullseye where the web interface service did not start as a new command line flag `-d` is required to keep it in foregound. Many thanks to @quyentruong for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4785>
+
+- [**Kodi**](../software/media/#kodi) 
+
+    - On Debian Bullseye, beginning with Kodi 19, GBM support is present by default, which means that [**Kodi**](../software/media/#kodi) can be started without a wrapping X server. This is now done by default when starting Kodi outside of a desktop session, including the dietpi-autostart option. This also means that an X server is not installed anymore as a dependency of Kodi, but only as a dependency of a deskop environment.
+    - It can now be installed on all devices. In some cases, video playback performance may be bad, depending on the GPU, whether good drivers are available, and on the video quality, of course. However, it should be our users who evaluate whether it's sufficient or not, instead of us. With Debian Bullseye, new Mesa drivers and Kodi 19 started via GBM, performance should be much better than it was with older Debian/package versions.
+    - Resolved an issue on RPi ARMv8/64-bit systems where Kodi fails to start when it was installed without a desktop. Many thanks to @Klola for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=38079#p38079)
+
+- [File Browser](../software/cloud/#file-browser) :octicons-arrow-right-16: The default network port has been changed to `8084` to resolve a conflict with [HTPC Manager](../software/bittorrent/#htpc-manager). This only affects **new** [File Browser](../software/cloud/#file-browser) installations. Many thanks to @KamikazeePL for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9507)
+
+**Network & Printing interface**
+
+  - **General** :octicons-arrow-right-16: The `/boot/dietpi/func/obtain_network_details` script has been removed, including the related `/run/dietpi/.network` file to obtain network details. All uses of these files have been replaced with the new DietPi-Globals `G_GET_NET` function (see below).
+  - **DietPi-Globals** :octicons-arrow-right-16: A new global function `G_GET_NET` has been added to print network interface details. Most importantly it prints info for the main interface, by following the priorities of `/boot/dietpi/func/obtain_network_details: default gateway => state UP => IP assigned`, but allows to additionally filter by IP family, type, interface name or print the default gateway explicitly. It aims to be a replacement for `/boot/dietpi/func/obtain_network_details` with more flexibility and to allow deriving always up-to-date interface info instead of depending on the correctness of a cache file.
+  - DietPi-Globals | `G_GET_WAN_IP` :octicons-arrow-right-16: We use our own GEO IP service now to show the systems WAN IP and location in the DietPi banner and DietPi-VPN. When Pi-hole was used, with a previous update, "freegeoip.app" was added to Pi-hole's whitlist, which is now not required anymore. You may hence remove that entry from the whitelist.
+  - DietPi-Boot :octicons-arrow-right-16: This script and service has been removed: Waiting for network is now done via `DietPi-PostBoot` `"After=network-online.target"`, time sync is done in `DietPi-PostBoot`, but in background (mostly not required for service starts) and pre-installed image stage handling is as well done in PostBoot now.
+  - DietPi-Update :octicons-arrow-right-16: A network connection and time sync check is now done before checking for updates, similar to how `DietPi-Software` does it on installs.
+
+**Time syncronization**
+
+- Use the same flag file that `systemd-timesyncd` itself uses since Buster, to skip an additional service restart and sync when it was done already.
+- When our oneshot modes (boot only, hourly, daily) are selected, `systemd-timesyncd` is now "enabled" to be started by systemd earlier at boot, instead of on our script call. Especially since both now share the same flag file (on Buster and above), this has a chance to prevent an additional service restart if the time sync has finished already when PostBoot is reached.
+
+**DietPi Login**
+
+- The DietPi banner on login won't be shown anymore if `~/.hushlogin` exists, which is a common method to prevent the shell from printing `/etc/motd` on login and should hence be respected for the DietPi banner as well. Many thanks to @dnknth for doing this suggestion: <https://github.com/MichaIng/DietPi/issues/4786>
+
+**Other changes**
+
+- **DietPi-Globals** :octicons-arrow-right-16: The global functions `G_DEV_1` and `G_DEV_BENCH` have been removed, which did exist for testing and development only but are not used in our current workflows.
 
 ### Bug Fixes {: #bug-fixes-77 }
 
-- General :octicons-arrow-right-16: Since the Armbian repository router does not reliably preserves HTTPS on redirects yet, APT by times fails when detecting a downgrade from HTTPS to HTTP. We hence change the armbian.list to use plain HTTP until the issues with the router have been resolved.
-- General :octicons-arrow-right-16: Worked around an issue on Debian Stretch where "systemctl enable/disable --now" does not start/stop the service in certain circumstances. This is solved within our error handler "G_EXEC", hence when manually calling systemctl you may still face this: <https://github.com/MichaIng/DietPi/issues/4815>
-- DietPi-Backup :octicons-arrow-right-16: Resolved an issue where clearing the PATH cache via "hash" command did not work as of a wrong command line argument: <https://github.com/MichaIng/DietPi/issues/4800>
-- DietPi-LetsEncrypt :octicons-arrow-right-16: Resolved an issue where the script failed when ownCloud or Nextcloud are were installed. Many thanks to @billouetaudrey for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4752>
-- DietPi-JustBoom :octicons-arrow-right-16: Resolved an issue where applying some MPD settings did not work. Many thanks to @elevader for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9426)
-- DietPi-Config :octicons-arrow-right-16: Resolved an issue where the WiFi connection state could have been obtained falsely as accidentally the Ethernet interface index was used to derive it.
-- DietPi-Software :octicons-arrow-right-16: Resolved an issue where software services failed with a cryptic error message, when an expected directory was not present. This was especially reported with Sonarr and Radarr, if their log directory was missing for some reason. When directories are missing, which are explicitly listed to be read-writeable within the systemd service, systemd prints "Failed at step NAMESPACE spawning", while Sonarr and Radarr themselves would print a clearer error message about the missing log directory. Many thanks to @stevewitz for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9463)
-- DietPi-Software :octicons-arrow-right-16: Lighttpd: Resolved an issue where the upgrade from Buster to Bullseye, following our guide, fails if HTTPS was enabled via DietPi-LetsEncrypt before. Many thanks to @fhals for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9477)
-- DietPi-Software | Kodi :octicons-arrow-right-16: Resolved an issue on RPi ARMv8/64-bit systems where Kodi fails to start when it was installed without a desktop. Many thanks to @Klola for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=38079#p38079)
-- DietPi-Software | Deluge :octicons-arrow-right-16: Resolved an issue on Bullseye where the web interface service did not start as a new command line flag "-d" is required to keep it in foregound. Many thanks to @quyentruong for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4785>
-- DietPi-Software | Home Assistant :octicons-arrow-right-16: The Python version compiled with Home Assistant has been bumped to v3.9.7, which resolves and issue with installs on 32-bit ARM systems. Many thanks to @Przemek for reporting this issue: [MichaIng/DietPi#4372](https://github.com/MichaIng/DietPi/issues/4372#issuecomment-936656595)
-- DietPi-Software | Home Assistant :octicons-arrow-right-16: Resolved an issue where Home Assistant did not start on ARM systems due to newly required runtime libraries.
-- DietPi-Software | Chromium :octicons-arrow-right-16: Resolved an issue where the autostart option didn't work if Chromium was installed without a desktop. Many thanks to @jowelboy for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9531)
-- DietPi-Software | Chromium :octicons-arrow-right-16: Resolved an issue on RPi where starting Chromium failed if no desktop was installed, due to a missing dependency. Many thanks to @Loader23 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4782>
+**DietPi-Software Fixes**
+
+- [DietPi-Software | **DietPi-JustBoom**](../dietpi_tools/#dietpi-justboom) :octicons-arrow-right-16: Resolved an issue where applying some MPD settings did not work. Many thanks to @elevader for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9426)
+- **DietPi-Software** :octicons-arrow-right-16: Resolved an issue where software services failed with a cryptic error message, when an expected directory was not present. This was especially reported with [Sonarr](../software/bittorrent/#sonarr) and [Radarr](../software/bittorrent/#radarr), if their log directory was missing for some reason. When directories are missing, which are explicitly listed to be read-writeable within the systemd service, systemd prints `Failed at step NAMESPACE spawning`, while [Sonarr](../software/bittorrent/#sonarr) and [Radarr](../software/bittorrent/#radarr) themselves would print a clearer error message about the missing log directory. Many thanks to @stevewitz for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9463)
+- [DietPi-Software | **Lighttpd**](../software/webserver_stack/#lighttpd) :octicons-arrow-right-16: Resolved an issue where the upgrade from Buster to Bullseye, following our guide, fails if HTTPS was enabled via DietPi-LetsEncrypt before. Many thanks to @fhals for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9477)
+- [DietPi-Software | **Home Assistant**](../software/home_automation/#home-assistant) :octicons-arrow-right-16: The Python version compiled with Home Assistant has been bumped to v3.9.7, which resolves and issue with installs on 32-bit ARM systems. Many thanks to @Przemek for reporting this issue: [MichaIng/DietPi#4372](https://github.com/MichaIng/DietPi/issues/4372#issuecomment-936656595)
+- [DietPi-Software | **Home Assistant**](../software/home_automation/#home-assistant) :octicons-arrow-right-16: Resolved an issue where Home Assistant did not start on ARM systems due to newly required runtime libraries.
+- [DietPi-Software | **Chromium**](../software/desktop/#chromium) :octicons-arrow-right-16: Resolved an issue where the autostart option didn't work if Chromium was installed without a desktop. Many thanks to @jowelboy for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9531)
+- [DietPi-Software | **Chromium**](../software/desktop/#chromium) :octicons-arrow-right-16: Resolved an issue on RPi where starting Chromium failed if no desktop was installed, due to a missing dependency. Many thanks to @Loader23 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4782>
 - DietPi-Software | X.Org X Server :octicons-arrow-right-16: Resolved an issue with Odroid N2 and C4 models where the installation failed because of a typo. Many thanks to @wiml for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4830>
+
+**DietPi General and Configuration tools**
+
+- **General** :octicons-arrow-right-16: Since the Armbian repository router does not reliably preserves HTTPS on redirects yet, APT by times fails when detecting a downgrade from HTTPS to HTTP. We hence change the armbian.list to use plain HTTP until the issues with the router have been resolved.
+- **General** :octicons-arrow-right-16: Worked around an issue on Debian Stretch where `systemctl enable/disable --now` does not start/stop the service in certain circumstances. This is solved within our error handler `G_EXEC`, hence when manually calling systemctl you may still face this: <https://github.com/MichaIng/DietPi/issues/4815>
+- [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore) :octicons-arrow-right-16: Resolved an issue where clearing the PATH cache via "hash" command did not work as of a wrong command line argument: <https://github.com/MichaIng/DietPi/issues/4800>
+- [DietPi-LetsEncrypt](../dietpi_tools/#dietpi-letsencrypt) :octicons-arrow-right-16: Resolved an issue where the script failed when ownCloud or Nextcloud are were installed. Many thanks to @billouetaudrey for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4752>
+- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Resolved an issue where the WiFi connection state could have been obtained falsely as accidentally the Ethernet interface index was used to derive it.
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4840>.
 
