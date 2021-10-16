@@ -157,7 +157,6 @@ Very secure FTP file server with feature rich security options.
     systemctl start vsftpd
     ```
 
-
 ***
 
 Wikipedia: <https://wikipedia.org/wiki/Vsftpd>
