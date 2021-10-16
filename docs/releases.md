@@ -16,7 +16,7 @@ If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's 
 
 ### Improvements {: #improvements-77 }
 
-**DietPi-Software Improvments** :
+**DietPi-Software** :
 
 - [**DietPi-JustBoom**](../dietpi_tools/#dietpi-justboom) :octicons-arrow-right-16: Added the ability to enforce an output channel count, or to not enforce an audio format value to preserve the input stream format or leave conversion up to ALSA, which is now the default when resetting settings. Similarly the audio output buffer can now be unset to keep the MPD default. Generally, if not required for a specific reason, it is recommended to not convert the audio stream and keep these settings unchanged/default.
 
