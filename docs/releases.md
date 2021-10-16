@@ -4,7 +4,7 @@
 
 ### Overview
 
-Welcome to **October 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused on improvments to the scripts and software packages, improving the way you use **DietPi**. 
+Welcome to **October 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused on improvments to the scripts and software packages, improving the way you use **DietPi**.
 
 ![DietPi Version 7.7](assets/images/dietpi-version-77.jpg){: width="320" height="427" loading="lazy"}
 
@@ -48,7 +48,7 @@ Welcome to **October 2021 release** :octicons-heart-16: of **DietPi**. It's an i
 - DietPi-Software | Chromium :octicons-arrow-right-16: Resolved an issue on RPi where starting Chromium failed if no desktop was installed, due to a missing dependency. Many thanks to @Loader23 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4782>
 - DietPi-Software | X.Org X Server :octicons-arrow-right-16: Resolved an issue with Odroid N2 and C4 models where the installation failed because of a typo. Many thanks to @wiml for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4830>
 
-As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: https://github.com/MichaIng/DietPi/pull/4840
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4840>.
 
 ### Removed Software {: #removed-software-77 }
 
