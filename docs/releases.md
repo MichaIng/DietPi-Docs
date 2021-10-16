@@ -12,7 +12,7 @@ If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's 
 
 !!! cite ""
 
-    _Photo by [planet_fox](https://pixabay.com/photos/raspberry-pi-pi-computer-4980917/) on [Pixabay](https://pixabay.com/)_
+    _Photo by [planet_fox](https://pixabay.com/photos/raspberry-pi-pi-computer-4980917) on [Pixabay](https://pixabay.com)_
 
 ### Improvements {: #improvements-77 }
 
@@ -35,7 +35,7 @@ If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's 
 - [File Browser](../software/cloud/#file-browser) :octicons-arrow-right-16: The default network port has been changed to `8084` to resolve a conflict with [HTPC Manager](../software/bittorrent/#htpc-manager). This only affects **new** [File Browser](../software/cloud/#file-browser) installations. Many thanks to @KamikazeePL for reporting this issue: [see issue on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=9507)
 
 **Network & Printing interface** :
-    
+
 - **General** :octicons-arrow-right-16: The `/boot/dietpi/func/obtain_network_details` script has been removed, including the related `/run/dietpi/.network` file to obtain network details. All uses of these files have been replaced with the new DietPi-Globals `G_GET_NET` function (see below).
 - **DietPi-Globals** :octicons-arrow-right-16: A new global function `G_GET_NET` has been added to print network interface details. Most importantly it prints info for the main interface, by following the priorities of `/boot/dietpi/func/obtain_network_details: default gateway => state UP => IP assigned`, but allows to additionally filter by IP family, type, interface name or print the default gateway explicitly. It aims to be a replacement for `/boot/dietpi/func/obtain_network_details` with more flexibility and to allow deriving always up-to-date interface info instead of depending on the correctness of a cache file.
 - DietPi-Globals | `G_GET_WAN_IP` :octicons-arrow-right-16: We use our own GEO IP service now to show the systems WAN IP and location in the DietPi banner and DietPi-VPN. When Pi-hole was used, with a previous update, "freegeoip.app" was added to Pi-hole's whitlist, which is now not required anymore. You may hence remove that entry from the whitelist.
