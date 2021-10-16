@@ -4,7 +4,7 @@
 
 ### Overview
 
-Welcome to **October 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused on improvments to the scripts and software packages, improving the way you use **DietPi**.
+Welcome to **October 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused on improvements to the scripts and software packages, improving the way you use **DietPi**.
 
 If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's important to check also: [DietPi - How to Upgrade to "BULLSEYE"](https://dietpi.com/blog/?p=811). It is a _step by step_ article on how to achieve a successful migration !
 
