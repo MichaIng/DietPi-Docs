@@ -6,8 +6,6 @@
 
 Welcome to **October 2021 release** :octicons-heart-16: of **DietPi**. It's an incremental release focused on improvements to the scripts and software packages, improving the way you use **DietPi**.
 
-If you have an **earlier DietPi version** and plan to migrate to **v7.7**, it's important to check also: [DietPi - How to Upgrade to "BULLSEYE"](https://dietpi.com/blog/?p=811). It is a _step by step_ article on how to achieve a successful migration !
-
 ![DietPi Version 7.7](assets/images/dietpi-version-77.jpg){: width="320" height="427" loading="lazy"}
 
 !!! cite ""
@@ -141,7 +139,7 @@ For all additional issues that may appear after release, please see the followin
 
 ### Overview
 
-Welcome to **August 2021 release** :octicons-heart-16: of **DietPi**. This release had a focus on aligining with the latest release of the Debian OS.
+Welcome to **August 2021 release** :octicons-heart-16: of **DietPi**. This release had a focus on polishing support for the latest release of the Debian OS.
 
 ![Debian 11 Bullseye logo](assets/images/dietpi-version-75-debian11.jpg){: width="600" height="343" loading="lazy"}
 

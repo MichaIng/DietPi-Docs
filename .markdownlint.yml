@@ -1,15 +1,20 @@
 # https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
 default: true
+# Headings need to be declared with hash signs.
 MD003:
   style: 'atx'
+# Nested list items need to be indented with 4 spaces (default: 2) to comply with MkDocs interpreter.
 MD007:
   indent: 4
+# We do not enforce a line length limit.
 MD013: false
+# We allow repeating headings on the same level of a different branch.
 MD024:
-  allow_different_nesting: true
+  siblings_only: true
+# We declare the title meta tag at the top of Markdown documents, which must be allowed aside of the actual top level heading.
 MD025:
   front_matter_title: ''
-MD026:
-  punctuation: '.,;:!'
+# We allow inline HTML, e.g. for YouTube frames.
 MD033: false
+# Some Markdown extensions use 4 space indentation as well, which must not be interpreted as inconsistent code block syntax.
 MD046: false
