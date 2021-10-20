@@ -73,13 +73,13 @@ plugins:
       remove_all_empty_space: true
       reduce_boolean_attributes: true
       remove_optional_attribute_quotes: true
-      conver_charrefs: true
+      convert_charrefs: true
     minify_css: true
     css_files:
     - assets/stylesheets/*.css
-    minify_js: true
-    js_files:
-    - assets/javascripts/*.js
+    #minify_js: true
+    #js_files:
+    #- assets/javascripts/*.js
 
 extra:
   social:
