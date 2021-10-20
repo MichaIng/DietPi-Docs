@@ -76,10 +76,10 @@ plugins:
       convert_charrefs: true
     minify_css: true
     css_files:
-    - assets/stylesheets/*.css
+    - assets/stylesheets/custom.css
     #minify_js: true
     #js_files:
-    #- assets/javascripts/*.js
+    #- assets/javascripts/custom.js
 
 extra:
   social:
