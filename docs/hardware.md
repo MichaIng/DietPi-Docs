@@ -226,7 +226,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
             <tr>
                 <td><a class="table" href=""><strong>ROCK Pi 4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -477,7 +477,7 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Native PC UEFI</strong></a></td>
+                <td><a class="table" href=""><strong>Native PC for UEFI</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Bullseye_Installer.7z">DietPi installer image</a>
                 </td>
@@ -546,7 +546,7 @@ The script has to be executed on the running target system which you want to con
 
     ```sh
     apt update
-    apt install -y systemd-sysv ca-certificates sudo curl
+    apt install -y curl ca-certificates systemd-sysv
     ```
 
 ### Script execution
@@ -558,17 +558,10 @@ The script has to be executed on the running target system which you want to con
 !!! important "Needed: Root rights"
     Ensure you have elevated privileges (e.g.: login as `root`, or use `sudo`).
 
-Execute the following shell command to download the script:
+Execute the following shell command to download and execute the script:
 
 ```sh
-curl -sSfLO https://raw.githubusercontent.com/MichaIng/DietPi/master/PREP_SYSTEM_FOR_DIETPI.sh
-```
-
-As the next step, execute:
-
-```sh
-chmod +x PREP_SYSTEM_FOR_DIETPI.sh
-./PREP_SYSTEM_FOR_DIETPI.sh
+bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/PREP_SYSTEM_FOR_DIETPI.sh')"
 ```
 
 In the following dialog you have to select the DietPi installer branch. Generally use `master` as long as you do not want to create a development image:
@@ -595,5 +588,5 @@ After this you can restart your system (`reboot`), alternatively you can copy th
 A further step can be to generate a compressed DietPi image via the `dietpi-imager` script. This script is located in the `.meta` subdirectory in the [GitHub DietPi share](https://github.com/MichaIng/DietPi) or can be executed via:
 
 ```sh
-bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager)"
+bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager')"
 ```
