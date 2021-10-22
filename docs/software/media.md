@@ -1114,7 +1114,7 @@ Spotify Connect Web is a console client and player for Spotify Connect including
 
     The generation of the `spotify_appkey.key` is required to grant the application access to Spotify API using your account.
 
-    Fill out the application form <https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app>.  
+    Fill out the application form <https://developer.spotify.com/documentation/general/guides/authorization/app-settings/>.  
     Wait for it to be "accepted".
 
 === "Transfer Spotify API key"
