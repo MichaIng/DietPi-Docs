@@ -45,11 +45,13 @@ jobs:
     - name: Run PySpelling to check HTML files
       if: always() && steps.pyspelling.outcome == 'success'
       run: pyspelling -c .spellcheck.yml
-    - name: Build lychee
+    - name: Download lychee
       id: lychee
       if: always() && steps.build.outcome == 'success'
-      run: cargo install --git 'https://github.com/lycheeverse/lychee' --branch 'stream'
+      run: |
+        curl -sSfL "$(curl -sSfL 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-gnu\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        tar xf lychee.tar.gz
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
-      run: lychee -Env --require-https --exclude '(fonts.gstatic.com|admin@koel.dev|^root@192.168.1.20$|bridges.torproject.org|www.spigotmc.org|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+      run: ./lychee -Env --require-https --exclude '(fonts.gstatic.com|admin@koel.dev|^root@192.168.1.20$|bridges.torproject.org|www.spigotmc.org|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
