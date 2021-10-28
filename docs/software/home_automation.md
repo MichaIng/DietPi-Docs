@@ -91,7 +91,7 @@ Turn your Raspberry Pi into an energy usage monitor with web interface.
 
 The DietPi optimised installation for emonPi is aimed at users who want the following:
 
-- Ultra lightweight alternative installation to the official emonPi image, with all the optimisations and features of DietPi. Allowing additional uses for your RPi device (e.g.: ownCloud server): [htop image of RPi Zero @700 MHz](https://dietpi.com/downloads/misc/EmonPi_Guide/EmonPi_DietPi_zero_700mhz.jpg), running our emonHub installation.
+- Ultra lightweight alternative installation to the official emonPi image, with all the optimisations and features of DietPi. Allowing additional uses for your RPi device (e.g.: ownCloud server).
 - Real time and historical energy usage statistics uploaded to the [emoncms.org](https://emoncms.org/) cloud, viewable from a web browser and the [Android App](https://openenergymonitor.org/forum-archive/node/11260.html), from anywhere in the world.
 - Use an existing RPi, or, do not wish to purchase the full emonPi package with case and LCD.
 - Comfortable attaching the emonPi to your Raspberry Pi GPIO. No soldering or wiring is required.
