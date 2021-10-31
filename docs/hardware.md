@@ -232,7 +232,7 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
             <tr>
                 <td><a class="table" href=""><strong>ROCK Pi S</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
