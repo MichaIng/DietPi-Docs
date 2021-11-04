@@ -144,7 +144,6 @@
 ## [Home Automation](home_automation/)
 
 - [**Home Assistant - Open-source home automation platform running on Python 3**](home_automation/#home-assistant)
-- [**emonHub - Data collector for the emonPi energy monitor addon board**](home_automation/#emonhub)
 - [**Domoticz - Multi platform Home Automation System**](home_automation/#domoticz)
 - [**TasmoAdmin - Administrative website for Tasmota devices**](home_automation/#tasmoadmin)
 
@@ -162,7 +161,6 @@
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](media/#cava)
 - [**Mopidy - Web Interface Music /Radio Player**](media/#mopidy)
 - [**Airsonic - Feature rich media streaming server with web interface**](media/#airsonic)
-- [**Subsonic - Feature rich media streaming server with web interface**](media/#subsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](media/#logitech-media-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](media/#squeezelite)
 - [**Shairport Sync - AirPlay audio player with multiroom sync**](media/#shairport-sync)
