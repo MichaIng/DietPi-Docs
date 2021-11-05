@@ -20,6 +20,7 @@ sed -i 's/stretch/buster/g' /etc/apt/sources.list{,.d/*.list}
 rm -f /etc/apt/sources.list.d/dietpi-php.list
 rm -f /etc/apt/trusted.gpg.d/dietpi-php.gpg
 rm -f /etc/apt/preferences.d/dietpi-{php,openssl,xrdp}
+rm -f /etc/mysql/mariadb.conf.d/97-dietpi.cnf
 /boot/dietpi/func/dietpi-set_software apt-cache clean
 apt update
 apt upgrade
