@@ -84,6 +84,14 @@ It also Installs:
     To verify that the traffic is being routed through Tor you can check the following:  
     On the connected WiFi device, go to the following URL: <https://check.torproject.org>
 
+=== "View logs"
+
+    Tor service logs can be viewed with the following command:
+
+    ```sh
+    journalctl -t tor
+    ```
+
 ***
 
 Wikipedia: <https://wikipedia.org/wiki/Tor_(anonymity_network)>  
