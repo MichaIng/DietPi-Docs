@@ -728,3 +728,9 @@ Run `dietpi-morsecode`.
 Run `dietpi-bugreport`.
 
 ![DietPi-Bugreport screenshot](assets/images/dietpi-bugreport.jpg){: width="646" height="352" loading="lazy"}
+
+### DietPi dashboard
+
+A lightweight, no-dependencies web dashboard for managing your DietPi system. Installable through DietPi-Software.
+
+![DietPi-Dashboard screenshot](assets/images/dietpi-dashboard.jpg){: width="700" height="346" loading="lazy"}
