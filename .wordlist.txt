@@ -186,6 +186,7 @@ ICMP
 Imgur
 InfluxData
 InfluxDB
+Installable
 InterPlanetary
 io
 IoT
