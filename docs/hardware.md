@@ -29,7 +29,7 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
 
 **New Zero** quick intro:
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V2frBYX62LU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/V2frBYX62LU?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 <div class="md-typeset__table">
     <table>
