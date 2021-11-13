@@ -46,6 +46,7 @@ Quick intro:
                     <strong>DietPi image for ALL Raspberry Pi models</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Bullseye.7z">Download image</a>
                     <strong>
                         <ul>
+                            <li>Raspberry Pi Zero 2 W</li>
                             <li>Raspberry Pi 400</li>
                             <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
                             <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
@@ -62,10 +63,11 @@ Quick intro:
                     <strong>DietPi image for Raspberry Pi with ARMv7 CPU or above</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv7-Bullseye.7z">Download image</a>
                     <strong>
                         <ul>
+                            <li>Raspberry Pi Zero 2 W</li>
                             <li>Raspberry Pi 400</li>
                             <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
                             <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
-                            <li>Raspberry Pi 2 Model B v1.2</li>
+                            <li>Raspberry Pi 2 Model B v1.1 / B v1.2</li>
                         </ul>
                     </strong>
                 </td>
@@ -76,9 +78,11 @@ Quick intro:
                     <strong>DietPi image for Raspberry Pi with ARMv8/64-bit CPU</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv8-Bullseye.7z">Download image</a>
                     <strong>
                         <ul>
+                            <li>Raspberry Pi Zero 2 W</li>
                             <li>Raspberry Pi 400</li>
                             <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
                             <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
+                            <li>Raspberry Pi 2 Model B v1.2</li>
                         </ul>
                     </strong>
                 </td>
@@ -233,6 +237,12 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
                 <td><a class="table" href=""><strong>ROCK Pi S</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Radxa Zero</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZero-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -578,7 +588,7 @@ Depending on whether you want to use the WiFi feature later on, you have to sele
 
 ![DietPi-PREP WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550" height="184" loading="lazy"}
 
-The last selection is the target Debian version (the actual **Buster** or the upcoming **Bullseye**).  
+The last selection is the target Debian version (the old **Buster**, current stable **Bullseye**, or next testing **Bookworm**).  
 After this, the script runs a couple of minutes, finally the following message occurs:
 
 ![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}
