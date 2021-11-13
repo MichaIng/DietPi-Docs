@@ -64,7 +64,6 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
                             <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
                             <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
                             <li>Raspberry Pi 2 Model B v1.1 / B v1.2</li>
-                            <li>Raspberry Pi Zero 2 W</li>
                         </ul>
                     </strong>
                 </td>
