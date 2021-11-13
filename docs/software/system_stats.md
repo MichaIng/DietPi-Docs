@@ -2,6 +2,7 @@
 
 ## Overview
 
+- [**DietPi-Dashboard - Official lightweight standalone DietPi web interface**](#dietpi-dashboard)
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](#dietpi-cloudshell)
 - [**Linux Dash - Web interface system stats**](#linux-dash)
 - [**phpSysInfo - Web interface system stats**](#phpsysinfo)
@@ -25,6 +26,85 @@
     To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
+
+## DietPi-Dashboard
+
+DietPi-Dashboard is a very lightweight and standalone web interface for monitoring and managing your DietPi system with your favourite web browser. It is written in Rust.
+
+![DietPi-Dashboard screenshot](../assets/images/dietpi-dashboard.jpg){: width="700" height="346" loading="lazy"}
+
+!!! warning "DietPi-Dashboard is still in Beta!"
+
+    We hence do not recommend yet to actively use in on sensitive production systems. Also password protection has not yet been implemented, hence assure that TCP port **8088** is not open/forwarded for public access.
+
+=== "Access the web interface"
+
+    DietPi-Dashboard is accessible by default at TCP port **8088**:
+
+    - URL = `http://<your.IP>:8088`
+
+=== "Directories"
+
+    The DietPi-Dashboard executable and its configuration file can be found at:
+
+    ```
+    /opt/dietpi-dashboard
+    ```
+
+=== "Configuration"
+
+    The configuration file is located at:
+
+    ```
+    /opt/dietpi-dashboard/config.toml
+    ```
+
+    When doing changes, you need to restart the service afterwards:
+
+    ```sh
+    systemctl restart dietpi-dashboard
+    ```
+
+=== "Service control"
+
+    DietPi-Dashboard by default is started as systemd service and can hence be controlled with the following commands:
+
+    ```sh
+    systemctl status dietpi-dashboard
+    ```
+
+    ```sh
+    systemctl stop dietpi-dashboard
+    ```
+
+    ```sh
+    systemctl start dietpi-dashboard
+    ```
+
+    ```sh
+    systemctl restart dietpi-dashboard
+    ```
+
+=== "View logs"
+
+    Service logs can be reviewed with the following command:
+
+    ```sh
+    journalctl -u dietpi-dashboard
+    ```
+
+=== "Update to latest version"
+
+    You can easily update DietPi-Dashboard by reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 200
+    ```
+
+***
+
+Source code: <https://github.com/ravenclaw900/DietPi-Dashboard>  
+License: [GPLv3](https://github.com/ravenclaw900/DietPi-Dashboard/blob/main/LICENSE)
 
 ## DietPi-CloudShell
 
