@@ -9,7 +9,6 @@
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava)
 - [**Mopidy - Web Interface Music /Radio Player**](#mopidy)
 - [**Airsonic - Feature rich media streaming server with web interface**](#airsonic)
-- [**Subsonic - Feature rich media streaming server with web interface**](#subsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](#squeezelite)
 - [**Shairport Sync - AirPlay audio player with multiroom sync**](#shairport-sync)
@@ -270,42 +269,6 @@ Feature rich media streaming server with a web interface. Coded in Java.
     Folders used by Mopidy:
 
     - Folder = `/mnt/dietpi_userdata/Music`  
-
-## Subsonic
-
-Feature rich media streaming server with a web interface. Coded in Java.
-
-![Subsonic web interface screenshot](../assets/images/dietpi-software-media-subsonic.png){: width="400" height="178" loading="lazy"}
-
-=== "Access to the web interface"
-
-    The web interface is accessible via port **4040**:
-
-    - URL = `http://<your.IP>:4040`
-    - Username = `admin`
-    - Password = `admin`
-
-=== "Transfer/add music"
-
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Mopidy:
-
-    - Folder = `/mnt/dietpi_userdata/Music`  
-
-=== "Jetty HTTP 404 error"
-
-    This is a known issue with Subsonic and is out of my control.  
-    If you experience this error while accessing the Subsonic web page, you can resolve the issue by running the following:
-
-    ```sh
-    systemctl stop subsonic
-    rm -R /var/subsonic/jetty
-    systemctl restart subsonic
-    ```
-
-=== "GitHub Contributions"
-
-    Many thanks to [thechildofroth](https://github.com/thechildofroth) for his testing and fixes with the Subsonic installation.
 
 ## Logitech Media Server
 
