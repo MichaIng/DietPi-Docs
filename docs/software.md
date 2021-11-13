@@ -230,6 +230,7 @@
 
 ## [System Stats & Management](system_stats/)
 
+- [**DietPi-Dashboard - Official lightweight standalone DietPi web interface**](system_stats/#dietpi-dashboard)
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](system_stats/#dietpi-cloudshell)
 - [**Linux Dash - Web interface system stats**](system_stats/#linux-dash)
 - [**phpSysInfo - Web interface system stats**](system_stats/#phpsysinfo)
