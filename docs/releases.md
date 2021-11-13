@@ -4,12 +4,12 @@
 
 ### Overview
 
-This release adds a major improvment to DietPi, providing an Web Dashboard to both **monitor and manage** your DietPi installations. It also brings full support to latest launches: **Raspberry Pi Zero 2 W** and **Radxa Zero SBCs** - two powerful and ultra small SBC variants !
+This release adds a major improvment to DietPi, providing our own official DietPi-Dashboard to both **monitor and manage** your DietPi installations. It also brings full support to latest launches: **Raspberry Pi Zero 2 W** and **Radxa Zero SBCs** - two powerful and ultra small SBC variants!
 
 ### New Software {: #new-software-78 }
 
 - [**DietPi-Dashboard**](../software/system_stats/#dietpi-dashboard)
-    We are proud to announce official DietPi Web interface for monitoring and managing your DietPi system using your web browser :octicons-heart-16: ! You can see various statistics, and even run commands in the  console embedded in the web page ! Thanks to the great work of @ravenclaw900 !
+    We are proud to announce official DietPi Web interface for monitoring and managing your DietPi system using your web browser :octicons-heart-16:! You can see various statistics, and even run commands in the  console embedded in the web page! Thanks to the great work of @ravenclaw900!
 
     ![DietPi-Dashboard Screenshot](assets/images/dietpi-dashboard.jpg){: width="700" height="346" loading="lazy"}
 
@@ -23,7 +23,7 @@ This release adds a major improvment to DietPi, providing an Web Dashboard to bo
     dietpi-software install 200
     ```
 
-    Please share your feedback ! You can find more details in the original GitHub issue: <https://github.com/MichaIng/DietPi/issues/448>
+    Please share your feedback! You can find more details in the original GitHub issue: <https://github.com/MichaIng/DietPi/issues/448>
 
 ### New supported SBCs {: #new-sbc-78 }
 
