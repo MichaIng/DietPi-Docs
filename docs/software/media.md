@@ -750,9 +750,9 @@ Turns your device into a Roon capable audio player and core server.
 
     More detailed logs from the individual Roon server components can be found in the following files:
 
-    - /mnt/dietpi_userdata/roonserver/RAATServer/Logs/RAATServer_log.txt
-    - /mnt/dietpi_userdata/roonserver/RoonServer/Logs/RoonServer_log.txt
-    - /mnt/dietpi_userdata/roonserver/RoonGoer/Logs/RoonGoer_log.txt
+    - `/mnt/dietpi_userdata/roonserver/RAATServer/Logs/RAATServer_log.txt`
+    - `/mnt/dietpi_userdata/roonserver/RoonServer/Logs/RoonServer_log.txt`
+    - `/mnt/dietpi_userdata/roonserver/RoonGoer/Logs/RoonGoer_log.txt`
 
 === "Update to latest version"
 
