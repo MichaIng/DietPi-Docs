@@ -27,6 +27,10 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
 
 ![Raspberry Pi Zero 2 photo](assets/images/dietpi-raspberry-pi-zero-2.jpg){: width="500" height="333" loading="lazy"}
 
+**New Zero** quick intro:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V2frBYX62LU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <div class="md-typeset__table">
     <table>
         <thead>
