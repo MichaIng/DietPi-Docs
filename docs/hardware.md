@@ -206,7 +206,7 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
 
 ## ROCK Pi
 
-**Maker Friendly, IoT connectivity** enabled. 
+**Maker Friendly, IoT connectivity** enabled.
 
 **Radxa ROCK Pi** features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
 For more details visit the [**Radxa ROCK Pi**](https://rockpi.org/) website.
@@ -217,7 +217,7 @@ One of the supported boards is ROCK Pi 4.
 
 **ROCK Pi 4** is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
 
-**Radxa Zero** is an ultra thin SBC in small form factor with powerful performance based on Amlogic S905Y2. Radxa Zero features a Quad Core 64 ARM processor, 32bit LPDDR4, up to 4K@60 HDMI, 802.11 ac WIFI, Bluetooth 5.0, USB 3.0, 40-pin GPIO header. Radxa Zero supports USB 2.0 OTG & power via one USB-C port.
+**Radxa Zero** is an ultra thin SBC in small form factor with powerful performance based on Amlogic S905Y2. Radxa Zero features a Quad Core 64 ARM processor, 32bit LPDDR4, up to 4K@60 HDMI, 802.11 ac WIFI, Bluetooth 5.0, USB 3.0, 40-pin GPIO header. Radxa Zero supports USB 2.0 and power via one USB-C port.
 
 ![Radxa Zero photo](assets/images/dietpi-radxa-zero.jpg){: width="500" loading="lazy"}
 
@@ -248,10 +248,6 @@ One of the supported boards is ROCK Pi 4.
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZero-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
-<<<<<<< HEAD
-            
-=======
->>>>>>> master
         </tbody>
     </table>
 </div>

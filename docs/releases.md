@@ -10,35 +10,35 @@ This release adds a major improvment to DietPi, providing an Web Dashboard to bo
 
 - [**DietPi-Dashboard**](../software/system_stats/#dietpi-dashboard)
     We are proud to announce official DietPi Web interface for monitoring and managing your DietPi system using your web browser :octicons-heart-16: ! You can see various statistics, and even run commands in the  console embedded in the web page ! Thanks to the great work of @ravenclaw900 !
-    
+
     ![DietPi-Dashboard Screenshot](assets/images/dietpi-dashboard.jpg){: width="700" height="346" loading="lazy"}
 
     !!! Warning "DietPi-Dashboard"
 
         **It is still in beta phase** as we test and gradually implement more features. We hence do not recommend yet to actively use in on sensitive production systems.
-    
+
     We would be happy if you would try it to install, either using dietpi-software or running the command in the console:
-        
+
     ```sh
     dietpi-software install 200
     ``` 
-    Please share your feedback ! You can find more details in the original GitHub issue: <https://github.com/MichaIng/DietPi/issues/448>
 
+    Please share your feedback ! You can find more details in the original GitHub issue: <https://github.com/MichaIng/DietPi/issues/448>
 
 ### New supported SBCs {: #new-sbc-78 }
 
-- [**Radxa Zero**](../hardware/#rock-pi) 
+- [**Radxa Zero**](../hardware/#rock-pi)
     DietPi offers support for this tiny Quad Core SBC. It has the same form factored as Raspberry Pi Zero, but way more powerful. This SBC has been added to DietPi with the hardware ID `74`. Many thanks to @almirus and @dhry for helping with testing and debugging an early image: <https://github.com/MichaIng/DietPi/issues/4831>
 
     ![DietPi Radxa Zero Photo](assets/images/dietpi-radxa-zero.jpg){: width="500"  height="281" loading="lazy"}
 
 - [**Raspberry Pi Zero 2 W**](../hardware/#raspberry-pi)
     The Raspberry Pi Zero 2 W brings increased processing power. According to Raspberry, multithreaded chores are up to five times faster, which is a significant boost, while keeping exactly the same form factor. 
-    
+
     ![Raspberry Pi Zero 2 photo](assets/images/dietpi-raspberry-pi-zero-2.jpg){: width="500" height="333" loading="lazy"}
 
     With this release, the initial DietPi support for this Raspberry Pi Zero / Zero W successor has been added. It also comes with overclocking profiles, helpful to achieve even better performance. It uses hardware ID `3` (shared with RPi 3/3+, since this version has the same processor as the original Raspberry Pi 3). 
-    
+
     Many thanks to [phpBB:CassTG](https://dietpi.com/phpbb/memberlist.php?username=CassTG) for providing the early hardware information and doing intensive overclocking tests: <https://dietpi.com/phpbb/viewtopic.php?t=9599>.
 
 ### Improvements {: #improvements-78 }
@@ -56,7 +56,7 @@ This release adds a major improvment to DietPi, providing an Web Dashboard to bo
         ![DietPi Overclocking Profiles](assets/images/dietpi-overclocking-profiles.jpg){: width="744" height="300" loading="lazy"}
     - The option to prefer IPv4 connections when IPv6 is enabled has been removed: This only worked for APT and `wget`, while e.g. cURL and ping were never affected by this setting, which meant an inconsistent behaviour. If one faces issues with IPv6 enabled, it should be simply disabled instead of preferring/forcing IPv4 only for specific tools.
 
-- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) 
+- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager)
     - When transferring the DietPi user data to a different drive, it is now checked whether the target location is located within a supported filesystem type, one with native symlink and UNIX permission support. The same is done when using the CLI script `/boot/dietpi/func/dietpi-set_userdata`.
     - Transferring the root filesystem is now supported on Odroid C4/HC4 models.
     - The option to transfer the root filesystem is now shown as well when the drive does not contain any filesystem. The process implies formatting with a supported filesystem anyway which makes the condition obsolete. Also it is not needed anymore to unmount the filesystem manually first, as this is done automatically before formatting. In the related format menu, only supported filesystems are listed, i.e. ext4 and additionally F2FS on Raspberry Pi. The input box to enter a custom mount point is omitted as it is only temporarily used until the root filesystem transfer has finished. The swap file is not disabled anymore as it can be copied and reused as is on the new root filesystem without issues.

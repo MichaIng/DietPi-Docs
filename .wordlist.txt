@@ -12,6 +12,7 @@ ALSA
 Allwinner
 Allwinner's
 Amiberry
+Amlogic
 Ampache
 analytics
 APCu
