@@ -4,28 +4,66 @@
 
 ### Overview
 
-### New supported SBCs {: #new-sbc-78 }
-
-- [**Radxa Zero**](../hardware/#rock-pi) :octicons-arrow-right-16: Initial support for this Raspberry Pi Zero form factored (but way more powerful) SBC has been added to DietPi with the hardware ID 74. Many thanks to @almirus and @dhry for helping with testing and debugging an early image: <https://github.com/MichaIng/DietPi/issues/4831>
-- [**Raspberry Pi Zero 2 W**](../hardware/#raspberry-pi) :octicons-arrow-right-16:  Initial support for this Raspberry Pi Zero/Zero W successor has been added, using hardware ID 3 for now (shared with RPi 3/3+), including overclocking profiles. Many thank to [phpBB:CassTG](https://dietpi.com/phpbb/memberlist.php?username=CassTG) for providing early hardware information and doing intensive overclocking tests: <https://dietpi.com/phpbb/viewtopic.php?t=9599>
+This release adds a major improvment to DietPi, providing an Web Dashboard to both **monitor and manage** your DietPi installations. It also brings full support to latest launches: **Raspberry Pi Zero 2 W** and **Radxa Zero SBCs** - two powerful and ultra small SBC variants !
 
 ### New Software {: #new-software-78 }
 
-- [**DietPi-Dashboard**](../software/system_stats/#dietpi-dashboard) :octicons-arrow-right-16: Thanks to the great work of @ravenclaw900, we are proud to announce our own official DietPi web interface for monitoring and managing your DietPi system using your web browser. It is still in beta phase as we test and gradually implement more features. We would be happy if you would try it out via "dietpi-software install 200" and give us feedback: <https://github.com/MichaIng/DietPi/issues/448>
+- [**DietPi-Dashboard**](../software/system_stats/#dietpi-dashboard)
+    We are proud to announce official DietPi Web interface for monitoring and managing your DietPi system using your web browser :octicons-heart-16: ! You can see various statistics, and even run commands in the  console embedded in the web page ! Thanks to the great work of @ravenclaw900 !
+
+    ![DietPi-Dashboard Screenshot](assets/images/dietpi-dashboard.jpg){: width="700" height="346" loading="lazy"}
+
+    !!! Warning "DietPi-Dashboard"
+
+        **It is still in beta phase** as we test and gradually implement more features. We hence do not recommend yet to actively use in on sensitive production systems.
+
+    We would be happy if you would try it to install, either using dietpi-software or running the command in the console:
+
+    ```sh
+    dietpi-software install 200
+    ```
+
+    Please share your feedback ! You can find more details in the original GitHub issue: <https://github.com/MichaIng/DietPi/issues/448>
+
+### New supported SBCs {: #new-sbc-78 }
+
+- [**Radxa Zero**](../hardware/#rock-pi)
+    DietPi offers support for this tiny Quad Core SBC. It has the same form factored as Raspberry Pi Zero, but way more powerful. This SBC has been added to DietPi with the hardware ID `74`. Many thanks to @almirus and @dhry for helping with testing and debugging an early image: <https://github.com/MichaIng/DietPi/issues/4831>
+
+    ![DietPi Radxa Zero Photo](assets/images/dietpi-radxa-zero.jpg){: width="500"  height="281" loading="lazy"}
+
+- [**Raspberry Pi Zero 2 W**](../hardware/#raspberry-pi)
+    The Raspberry Pi Zero 2 W brings increased processing power. According to Raspberry, multithreaded chores are up to five times faster, which is a significant boost, while keeping exactly the same form factor.
+
+    ![Raspberry Pi Zero 2 photo](assets/images/dietpi-raspberry-pi-zero-2.jpg){: width="500" height="333" loading="lazy"}
+
+    With this release, the initial DietPi support for this Raspberry Pi Zero / Zero W successor has been added. It also comes with overclocking profiles, helpful to achieve even better performance. It uses hardware ID `3` (shared with RPi 3/3+, since this version has the same processor as the original Raspberry Pi 3).
+
+    Many thanks to [phpBB:CassTG](https://dietpi.com/phpbb/memberlist.php?username=CassTG) for providing the early hardware information and doing intensive overclocking tests: <https://dietpi.com/phpbb/viewtopic.php?t=9599>.
 
 ### Improvements {: #improvements-78 }
 
-- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Overclocking profiles for most Raspberry Pi models have been updated to match the effective 100 MHz ARM/CPU frequency steps used by current firmware. Also an energy saving profile has been added to some models, which reduces minimum and maximum voltage a little, reducing energy consumption and heat emission a little on idle and on load.
-- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: The option to prefer IPv4 connections when IPv6 is enabled has been removed: This only worked for APT and wget, while e.g. cURL and ping were never affected by this setting, which meant an inconsistent behaviour. If one faces issues with IPv6 enabled, it should be simply disabled instead of preferring/forcing IPv4 only for specific tools.
-- [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore) :octicons-arrow-right-16: A feature has been added to enable daily system backup via cron job. Many thanks to @Lycidias93 for suggesting this feature: <https://github.com/MichaIng/DietPi/issues/3871>
-- [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore) :octicons-arrow-right-16: Rsync/transfer logs are now done to "dietpi-backup.log" inside of the backup directory. This way they remain persistent even if DietPi-RAMlog is enabled and can be reviewed at a later time. This is helpful especially when daily backups via cron job are enabled, where the log obviously is not presented directly when the backup finished. A related option to review the last transfer log has been added to the dietpi-backup main menu. The old log file /var/log/dietpi-backup.log is moved to the new location if any backup exists during next DietPi update.
-- [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore) :octicons-arrow-right-16: When using an NFS mount as backup target, it is now verified that the NFS share supports UNIX permissions to prevent the creation of a broken system backup in the first place.
-- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) :octicons-arrow-right-16: When transferring the DietPi user data to a different drive, it is now checked whether the target location is located within a supported filesystem type, one with native symlink and UNIX permission support. The same is done when using the CLI script /boot/dietpi/func/dietpi-set_userdata.
-- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) :octicons-arrow-right-16: Transferring the root filesystem is now supported on Odroid C4/HC4 models.
-- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) :octicons-arrow-right-16: The option to transfer the root filesystem is now shown as well when the drive does not contain any filesystem. The process implies formatting with a supported filesystem anyway which makes the condition obsolete. Also it is not needed anymore to unmount the filesystem manually first, as this is done automatically before formatting. In the related format menu, only supported filesystems are listed, i.e. ext4 and additionally F2FS on Raspberry Pi. The input box to enter a custom mount point is omitted as it is only temporarily used until the root filesystem transfer has finished. The swap file is not disabled anymore as it can be copied and reused as is on the new root filesystem without issues.
-- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) :octicons-arrow-right-16: When transferring the root filesystem, further checks are performed: There needs to be a dedicated boot partition (required on Raspberry Pi and default on our current Odroid images), as this is what the transfer steps expect and the only reason for moving only the root filesystem instead of cloning the whole drive or flashing the DietPi image to an external drive in the first place. The expected boot/kernel configuration files need to be present so that the kernel can be instructed to mount the new root filesystem. The DietPi user data must not currently be located at the target partition as it would be formatted and all data hence lost.
-- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager) :octicons-arrow-right-16: On ext4 filesystems, the reserved blocks percentage is now shown and can be changed as well if the drive is not currently mounted.
-- [**DietPi-RAMlog**](../software/log_system/#dietpi-ramlog) :octicons-arrow-right-16: The /var/log directory structure is now synced to the persistent disk storage after software installs and via daily cron job to prevent missing logs files or directories in case of unclean shutdowns, which usually lead to failing service startups.
+- [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore)
+    - A feature has been added to enable daily system backup via cron job. Many thanks to @Lycidias93 for suggesting this feature: <https://github.com/MichaIng/DietPi/issues/3871>
+        ![DietPi Backup Daily](assets/images/dietpi-backup-daily.png){: width="713" height="300" loading="lazy"}
+
+    - `Rsync` / Transfer logs are now done to `dietpi-backup.log` inside of the backup directory. This way they remain persistent even if `DietPi-RAMlog` is enabled and can be reviewed at a later time. This is helpful especially when daily backups via cron job are enabled, where the log obviously is not presented directly when the backup finished. A related option to review the last transfer log has been added to the dietpi-backup main menu. The old log file `/var/log/dietpi-backup.log` is moved to the new location, if any backup exists during next DietPi update.
+    - When using an NFS mount as backup target, it is now verified that the NFS share supports UNIX permissions to prevent the creation of a broken system backup in the first place.
+
+- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration)
+    - Overclocking profiles for most Raspberry Pi models have been **updated** to match the effective 100 MHz ARM/CPU frequency steps used by current firmware.
+    - An **energy saving profile** has been added to some models, which reduces minimum and maximum voltage a little, reducing energy consumption and heat emission a little on idle and on load.
+        ![DietPi Overclocking Profiles](assets/images/dietpi-overclocking-profiles.jpg){: width="744" height="300" loading="lazy"}
+    - The option to prefer IPv4 connections when IPv6 is enabled has been removed: This only worked for APT and `wget`, while e.g. cURL and ping were never affected by this setting, which meant an inconsistent behaviour. If one faces issues with IPv6 enabled, it should be simply disabled instead of preferring/forcing IPv4 only for specific tools.
+
+- [**DietPi-Drive_Manager**](../dietpi_tools/#dietpi-drive-manager)
+    - When transferring the DietPi user data to a different drive, it is now checked whether the target location is located within a supported filesystem type, one with native symlink and UNIX permission support. The same is done when using the CLI script `/boot/dietpi/func/dietpi-set_userdata`.
+    - Transferring the root filesystem is now supported on Odroid C4/HC4 models.
+    - The option to transfer the root filesystem is now shown as well when the drive does not contain any filesystem. The process implies formatting with a supported filesystem anyway which makes the condition obsolete. Also it is not needed anymore to unmount the filesystem manually first, as this is done automatically before formatting. In the related format menu, only supported filesystems are listed, i.e. ext4 and additionally F2FS on Raspberry Pi. The input box to enter a custom mount point is omitted as it is only temporarily used until the root filesystem transfer has finished. The swap file is not disabled anymore as it can be copied and reused as is on the new root filesystem without issues.
+    - When transferring the root filesystem, further checks are performed: There needs to be a dedicated boot partition (required on Raspberry Pi and default on our current Odroid images), as this is what the transfer steps expect and the only reason for moving only the root filesystem instead of cloning the whole drive or flashing the DietPi image to an external drive in the first place. The expected boot/kernel configuration files need to be present so that the kernel can be instructed to mount the new root filesystem. The DietPi user data must not currently be located at the target partition as it would be formatted and all data hence lost.
+    - On ext4 filesystems, the reserved blocks percentage is now shown and can be changed as well if the drive is not currently mounted.
+
+- [**DietPi-RAMlog**](../software/log_system/#dietpi-ramlog) :octicons-arrow-right-16: The `/var/log` directory structure is now synced to the persistent disk storage after software installs and via daily cron job to prevent missing logs files or directories in case of unclean shutdowns, which usually lead to failing service startups.
 - [DietPi-Software | **Roon Server**](../software/media/#roon-server) :octicons-arrow-right-16: Added support for the new .NET core based version, released on November 3rd, which is expected to have improved performance compared to the old Mono based version. To resolve an old issue with our Roon Server implementation (see below), a reinstall is done during the DietPi update, which pulls in the .NET core dependencies as well. But this will NOT update the Roon Server version to prevent issues with potentially required migration steps. After updating DietPi, use Roon's internal updater to benefit from the new version.
 
 ### Bug Fixes {: #bug-fixes-78 }

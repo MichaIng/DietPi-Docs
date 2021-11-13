@@ -23,13 +23,13 @@ DietPi runs also on one of the first models **Raspberry Pi 1**, launched in 2012
 
 ![Raspberry Pi 1 Model B photo](assets/images/raspberry-pi-1b.jpg){: width="500" height="242" loading="lazy"}
 
-and even on the compact form **Raspberry Pi Zero W**
+and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Zero 2 W**
 
-![Raspberry Pi Zero W photo](assets/images/raspberry-pi-zero-w.jpg){: width="500" height="333" loading="lazy"}
+![Raspberry Pi Zero 2 photo](assets/images/dietpi-raspberry-pi-zero-2.jpg){: width="500" height="333" loading="lazy"}
 
-Quick intro:
+**New Zero** quick intro:
 
-<iframe src="https://www.youtube-nocookie.com/embed/sajBySPeYH0?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/V2frBYX62LU?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 <div class="md-typeset__table">
     <table>
@@ -209,14 +209,20 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
 
 ## ROCK Pi
 
-**Maker Friendly, IoT connectivity** enabled. Radxa ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
+**Maker Friendly, IoT connectivity** enabled.
+
+**Radxa ROCK Pi** features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
 For more details visit the [**Radxa ROCK Pi**](https://rockpi.org/) website.
 
 One of the supported boards is ROCK Pi 4.
 
 ![Radxa ROCK Pi 4 photo](assets/images/dietpi-rockpi-4b.jpg){: width="500" height="375" loading="lazy"}
 
-ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
+**ROCK Pi 4** is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
+
+**Radxa Zero** is an ultra thin SBC in small form factor with powerful performance based on Amlogic S905Y2. Radxa Zero features a Quad Core 64 ARM processor, 32bit LPDDR4, up to 4K@60 HDMI, 802.11 ac WIFI, Bluetooth 5.0, USB 3.0, 40-pin GPIO header. Radxa Zero supports USB 2.0 and power via one USB-C port.
+
+![Radxa Zero photo](assets/images/dietpi-radxa-zero.jpg){: width="500" loading="lazy"}
 
 <div class="md-typeset__table">
     <table>
