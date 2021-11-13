@@ -21,7 +21,7 @@ This release adds a major improvment to DietPi, providing an Web Dashboard to bo
 
     ```sh
     dietpi-software install 200
-    ``` 
+    ```
 
     Please share your feedback ! You can find more details in the original GitHub issue: <https://github.com/MichaIng/DietPi/issues/448>
 
@@ -33,11 +33,11 @@ This release adds a major improvment to DietPi, providing an Web Dashboard to bo
     ![DietPi Radxa Zero Photo](assets/images/dietpi-radxa-zero.jpg){: width="500"  height="281" loading="lazy"}
 
 - [**Raspberry Pi Zero 2 W**](../hardware/#raspberry-pi)
-    The Raspberry Pi Zero 2 W brings increased processing power. According to Raspberry, multithreaded chores are up to five times faster, which is a significant boost, while keeping exactly the same form factor. 
+    The Raspberry Pi Zero 2 W brings increased processing power. According to Raspberry, multithreaded chores are up to five times faster, which is a significant boost, while keeping exactly the same form factor.
 
     ![Raspberry Pi Zero 2 photo](assets/images/dietpi-raspberry-pi-zero-2.jpg){: width="500" height="333" loading="lazy"}
 
-    With this release, the initial DietPi support for this Raspberry Pi Zero / Zero W successor has been added. It also comes with overclocking profiles, helpful to achieve even better performance. It uses hardware ID `3` (shared with RPi 3/3+, since this version has the same processor as the original Raspberry Pi 3). 
+    With this release, the initial DietPi support for this Raspberry Pi Zero / Zero W successor has been added. It also comes with overclocking profiles, helpful to achieve even better performance. It uses hardware ID `3` (shared with RPi 3/3+, since this version has the same processor as the original Raspberry Pi 3).
 
     Many thanks to [phpBB:CassTG](https://dietpi.com/phpbb/memberlist.php?username=CassTG) for providing the early hardware information and doing intensive overclocking tests: <https://dietpi.com/phpbb/viewtopic.php?t=9599>.
 
