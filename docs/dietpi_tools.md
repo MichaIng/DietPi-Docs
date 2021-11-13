@@ -651,18 +651,23 @@ Run `dietpi-logclear`.
 
 ### DietPi backup (backup/restore)
 
-Fully backups DietPi setup. It also includes the restore capability from an already made DietPi backup.  
-`DietPi-Backup` allows you to Backup and Restore your DietPi system. Same effect as *Windows system restore*. A snapshot of the system that you can restore at any time.  
-You can also customize which files/folders are included and excluded through the GUI.
+`DietPi-Backup` allows you to backup and restore your DietPi system, similar to *Windows system restore*. It creates a snapshot of the system that you can restore at any time. You can also customise which files and directories are included and excluded through the GUI, and enable automatic daily backups.
 
-If you have *broken* your system, or want to reset your system to an earlier date, this can all be done with `DietPi-Backup`. Just make sure you create a backup first.  
-Run `dietpi-backup`.
+From the console, run the following command:
 
-![DietPi-Backup screenshot](assets/images/dietpi-backup_1.png){: width="643" height="298" loading="lazy"}
+```sh
+dietpi-backup
+```
 
-Remark: In the case that `rsync` is not installed, it is installed.
+![DietPi-Backup screenshot](assets/images/dietpi-backup_1.png){: width="656" height="304" loading="lazy"}
+
+!!! info "DietPi userdata may not be included"
+
+    If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
 
 !!! info "DietPi-Backup is purely based on `Rsync`"
+
+    In the case that the `rsync` package is not installed, this is done automatically once you start a backup or restore.
 
 ### DietPi file explorer
 

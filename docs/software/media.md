@@ -9,7 +9,6 @@
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava)
 - [**Mopidy - Web Interface Music /Radio Player**](#mopidy)
 - [**Airsonic - Feature rich media streaming server with web interface**](#airsonic)
-- [**Subsonic - Feature rich media streaming server with web interface**](#subsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](#squeezelite)
 - [**Shairport Sync - AirPlay audio player with multiroom sync**](#shairport-sync)
@@ -270,42 +269,6 @@ Feature rich media streaming server with a web interface. Coded in Java.
     Folders used by Mopidy:
 
     - Folder = `/mnt/dietpi_userdata/Music`  
-
-## Subsonic
-
-Feature rich media streaming server with a web interface. Coded in Java.
-
-![Subsonic web interface screenshot](../assets/images/dietpi-software-media-subsonic.png){: width="400" height="178" loading="lazy"}
-
-=== "Access to the web interface"
-
-    The web interface is accessible via port **4040**:
-
-    - URL = `http://<your.IP>:4040`
-    - Username = `admin`
-    - Password = `admin`
-
-=== "Transfer/add music"
-
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Mopidy:
-
-    - Folder = `/mnt/dietpi_userdata/Music`  
-
-=== "Jetty HTTP 404 error"
-
-    This is a known issue with Subsonic and is out of my control.  
-    If you experience this error while accessing the Subsonic web page, you can resolve the issue by running the following:
-
-    ```sh
-    systemctl stop subsonic
-    rm -R /var/subsonic/jetty
-    systemctl restart subsonic
-    ```
-
-=== "GitHub Contributions"
-
-    Many thanks to [thechildofroth](https://github.com/thechildofroth) for his testing and fixes with the Subsonic installation.
 
 ## Logitech Media Server
 
@@ -698,21 +661,22 @@ Turn your device into a lightweight Mumble VoIP server.
 
 ## Roon Bridge
 
-Turns your SBC into a Roon capable audio player. By using the main Roon application on another device, you can stream your music catalog directly to the Roon Bridge running on your SBC.
+Turns your SBC into a Roon capable audio player. By using the main Roon application on another device, you can stream your music catalogue directly to the Roon Bridge running on your SBC.
 
 ![Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150" height="81" loading="lazy"}
 
 ![Roon Bridge interface screenshot](../assets/images/dietpi-software-media-roonbridge.png){: width="400" height="225" loading="lazy"}
 
-=== "More information on Roon"
-
-    Can be found there: <https://roonlabs.com/>  
-    See also [YouTube videos from David Snyder](https://www.youtube.com/c/dsnyder0cnn/search?query=roon)
-
 === "Requirements"
 
     Roon on another system (e.g.: Windows PC) to control the player.  
     [Roon License](https://roonlabs.com/pricing) (free trial is also available).
+
+***
+
+Official website: <https://roonlabs.com/>  
+Official forum: <https://community.roonlabs.com/>  
+YouTube videos from `David Snyder`: <https://www.youtube.com/c/dsnyder0cnn/search?query=roon>
 
 ## Roon Server
 
@@ -724,13 +688,15 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Install a Roon Remote on another system"
 
-    You can use the Roon Remote apps to control and configure the Roon Server:  
-    <https://roonlabs.com/downloads>
+    You can use the Roon Remote apps to control and configure the Roon Server: <https://roonlabs.com/downloads>
 
 === "Recommended Music Storage Directory"
 
     When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer Music below), and storing the music on your Roon Server system:  
-    `/mnt/dietpi_userdata/Music`
+
+    ```
+    /mnt/dietpi_userdata/Music
+    ```
 
 === "Transfer media files to your device"
 
@@ -739,6 +705,69 @@ Turns your device into a Roon capable audio player and core server.
 
     - Music directory = `/mnt/dietpi_userdata/Music`
     - Accessed from file server = `/Music`
+
+=== "Directories"
+
+    The Roon Server installation can be found at:
+
+    ```
+    /opt/roonserver
+    ```
+
+    Its configuration and data can be found at:
+
+    ```
+    /mnt/dietpi_userdata/roonserver
+    ```
+
+=== "Service control"
+
+    Roon Server by default is started as systemd service and can hence be controlled with the following commands:
+
+    ```sh
+    systemctl status roonserver
+    ```
+
+    ```sh
+    systemctl stop roonserver
+    ```
+
+    ```sh
+    systemctl start roonserver
+    ```
+
+    ```sh
+    systemctl restart roonserver
+    ```
+
+=== "View logs"
+
+    Service logs can be reviewed with the following command:
+
+    ```sh
+    journalctl -u roonserver
+    ```
+
+    More detailed logs from the individual Roon server components can be found in the following files:
+
+    - `/mnt/dietpi_userdata/roonserver/RAATServer/Logs/RAATServer_log.txt`
+    - `/mnt/dietpi_userdata/roonserver/RoonServer/Logs/RoonServer_log.txt`
+    - `/mnt/dietpi_userdata/roonserver/RoonGoer/Logs/RoonGoer_log.txt`
+
+=== "Update to latest version"
+
+    The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with the following commands:
+
+    ```sh
+    rm -R /opt/roonserver
+    dietpi-software reinstall 154
+    ```
+
+***
+
+Official website: <https://roonlabs.com/>  
+Official forum: <https://community.roonlabs.com/>  
+YouTube videos from `David Snyder`: <https://www.youtube.com/c/dsnyder0cnn/search?query=roon>
 
 ## Roon Extension Manager
 
