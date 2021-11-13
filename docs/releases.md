@@ -45,7 +45,7 @@ This release adds a major improvment to DietPi, providing an Web Dashboard to bo
 
 - [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore)
     - A feature has been added to enable daily system backup via cron job. Many thanks to @Lycidias93 for suggesting this feature: <https://github.com/MichaIng/DietPi/issues/3871>
-        ![DietPi Backup Daily](assets/images/dietpi-backup-daily.jpg){: width="713" height="300" loading="lazy"}
+        ![DietPi Backup Daily](assets/images/dietpi-backup-daily.png){: width="713" height="300" loading="lazy"}
 
     - `Rsync` / Transfer logs are now done to `dietpi-backup.log` inside of the backup directory. This way they remain persistent even if `DietPi-RAMlog` is enabled and can be reviewed at a later time. This is helpful especially when daily backups via cron job are enabled, where the log obviously is not presented directly when the backup finished. A related option to review the last transfer log has been added to the dietpi-backup main menu. The old log file `/var/log/dietpi-backup.log` is moved to the new location, if any backup exists during next DietPi update.
     - When using an NFS mount as backup target, it is now verified that the NFS share supports UNIX permissions to prevent the creation of a broken system backup in the first place.
