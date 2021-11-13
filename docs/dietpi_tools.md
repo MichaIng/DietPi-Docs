@@ -656,7 +656,7 @@ Run `dietpi-logclear`.
 From the console, run the following command:
 
 ```sh
-dietpi-backup`
+dietpi-backup
 ```
 
 ![DietPi-Backup screenshot](assets/images/dietpi-backup_1.png){: width="656" height="304" loading="lazy"}
