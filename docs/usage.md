@@ -30,6 +30,15 @@ apt autopurge
 . /boot/dietpi/func/dietpi-globals
 ```
 
+If you have PHP installed, also run the following commands to prevent issues when installing additional PHP modules:
+
+```bash
+mapfile -t packages < <(dpkg --get-selections '*php*' | mawk '$2=="install" {print $1}')
+dpkg -r --force-depends "${packages[@]}"
+apt -y install "${packages[@]}"
+unset -v packages
+```
+
 Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#2.2-manual-upgrade>
 
 ## How to use the logging mechanism
