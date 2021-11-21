@@ -24,13 +24,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         # https://github.com/actions/python-versions/releases
-        python-version: '3.9.7'
+        python-version: '3.9.9'
     - name: Install MkDocs
       id: mkdocs
       if: always() && steps.python.outcome == 'success'
       run: |
         pip3 install -U pip wheel setuptools
-        pip3 install -r requirements.txt
+        pip3 install -Ur requirements.txt
     - name: Build DietPi-Docs
       id: build
       if: always() && steps.mkdocs.outcome == 'success'
@@ -54,4 +54,4 @@ jobs:
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
-      run: ./lychee -Env --require-https --exclude '(^http://www.w3.org/2000/svg$|fonts.gstatic.com|^admin@koel.dev$|^root@192.168.1.20$|bridges.torproject.org|www.spigotmc.org|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+      run: ./lychee -Env --require-https --exclude '(fonts.gstatic.com|^admin@koel.dev$|^root@192.168.1.20$|bridges.torproject.org|www.spigotmc.org|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'

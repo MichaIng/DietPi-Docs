@@ -119,25 +119,25 @@ It is a new generation single board computer that is more powerful, more stable,
             <tr>
                 <td><a class="table" href=""><strong>Odroid C2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC2-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC2-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid C4 / HC4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC4-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC4-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid N2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid XU3 / XU4 / MC1 / HC1 / HC2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidXU4-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidXU4-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
