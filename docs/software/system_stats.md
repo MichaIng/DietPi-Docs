@@ -35,13 +35,14 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 !!! warning "DietPi-Dashboard is still in Beta!"
 
-    We hence do not recommend yet to actively use in on sensitive production systems. Also password protection has not yet been implemented, hence assure that TCP port **8088** is not open/forwarded for public access.
+    We hence do not recommend yet to actively use in on sensitive production systems.
 
 === "Access the web interface"
 
     DietPi-Dashboard is accessible by default at TCP port **8088**:
 
     - URL = `http://<your.IP>:8088`
+    - Password = `<your software password>` (default: `dietpi`)
 
 === "Directories"
 
@@ -92,6 +93,27 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     ```sh
     journalctl -u dietpi-dashboard
     ```
+
+=== "Password Protection"
+
+    Password protection is enabled by default from DietPi 7.9 and on, but if you installed it before, you'll need to make these changes in the config file:
+    ```toml
+    pass = true
+    # You can get the hash by running "echo -n '<PASSWORD>' | sha512sum
+    hash = "SHA512 hash of password"
+    # You can get a random secret by running "openssl rand -hex 32"
+    secret = "Random 64-character secret"
+    ```
+
+    Then, restart the service.
+
+=== "Resetting the password"
+
+    To reset the password, you will need to change the `hash` setting in the config file. See the password protection section for how to get the correct hash.
+
+=== "Invalidating logged in sessions"
+
+    If you need to make every logged in session log out, but you don't want to change the password, you can instead change the secret. Generate a new secret (see password protection), and put it in the config file. Then, make sure to restart the service. This will log everyone out, and then they will need to log back in to continue.
 
 === "Update to latest version"
 
