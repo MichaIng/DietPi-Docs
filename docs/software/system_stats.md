@@ -97,12 +97,14 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 === "Password Protection"
 
     Password protection is enabled by default from DietPi 7.9 and on, but if you installed it before, you'll need to make these changes in the config file:
+
+
     ```toml
     pass = true
-    # You can get the hash by running "echo -n '<PASSWORD>' | sha512sum
-    hash = "SHA512 hash of password"
+    # You can get the hash by running "echo -n '<PASSWORD>' | sha512sum"
+    hash = "<SHA512 hash of PASSWORD>"
     # You can get a random secret by running "openssl rand -hex 32"
-    secret = "Random 64-character secret"
+    secret = "<random 64-character secret>"
     ```
 
     Then, restart the service.
