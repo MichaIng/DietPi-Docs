@@ -94,7 +94,7 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     journalctl -u dietpi-dashboard
     ```
 
-=== "Password Protection"
+=== "Password Management"
 
     Password protection is enabled by default from DietPi 7.9 and on, but if you installed it before, you'll need to make these changes in the config file:
 
@@ -109,13 +109,9 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
     Then, restart the service.
 
-=== "Resetting the password"
+    To reset the password, just replace the hash in the config file.
 
-    To reset the password, you will need to change the `hash` setting in the config file. See the password protection section for how to get the correct hash.
-
-=== "Invalidating logged in sessions"
-
-    If you need to make every logged in session log out, but you don't want to change the password, you can instead change the secret. Generate a new secret (see password protection), and put it in the config file. Then, make sure to restart the service. This will log everyone out, and then they will need to log back in to continue.
+    If you need to make every logged in session log out, but you don't want to change the password, you can instead change the secret. Generate a new secret and put it in the config file. Then, make sure to restart the service. This will log everyone out, and then they will need to log back in to continue.
 
 === "Update to latest version"
 
