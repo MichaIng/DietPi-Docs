@@ -207,7 +207,7 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
     </table>
 </div>
 
-## Radxa (ROCK Pi)
+## Radxa
 
 **Maker Friendly, IoT connectivity** enabled.
 
