@@ -13,7 +13,6 @@
 - [**Radarr - Automatically download Movies**](#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](#bazarr)
 - [**Lidarr - Automatically download Music**](#lidarr)
-- [**CouchPotato - Automatically download movies**](#couchpotato)
 - [**Jackett - API Support for your favourite torrent trackers**](#jackett)
 - [**NZBGet - NZB download manager with web interface**](#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](#htpc-manager)
@@ -668,52 +667,11 @@ Automatically download your favorite music.
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
     [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
-## CouchPotato
-
-Automatically download movies as they are released.
-
-Recommend additional software:
-
-- Transmission: For torrent download support
-- SABnzbd: For NZB download support
-
-![CouchPotato web interface screenshot](../assets/images/dietpi-software-download-couchpotato.png){: width="400" height="200" loading="lazy"}
-
-=== "Access to the web interface"
-
-    The web interface is accessible via port **5050**:
-
-    - URL = `http://<your.IP>:5050`
-
-=== "Access Downloads"
-
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Transmission:
-
-    - Folder accessed via file server = `downloads`
-    - Local folder = `/mnt/dietpi_userdata/downloads`
-
-    Folders used by CouchPotato:
-
-    - Folder accessed via file server = `couchpotato`
-    - Local folder = `/mnt/dietpi_userdata/couchpotato`
-
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
-
-***
-
-YouTube video tutorial: *How to install and configure CouchPotato on Raspberry Pi | Download all movies at once*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/PkDcVy8cvkg?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
-
 ## Jackett
 
 API Support for your favorite torrent trackers.
 
-Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, SickRage, CouchPotato) into tracker-site-specific HTTP queries, parses the HTML response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.
+Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, Lidarr, Medusa) into tracker-site-specific HTTP queries, parses the HTML response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.
 
 ![Jackett web interface screenshot](../assets/images/dietpi-software-download-jackett.png){: width="400" height="262" loading="lazy"}
 

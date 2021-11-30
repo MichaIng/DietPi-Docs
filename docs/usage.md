@@ -20,6 +20,7 @@ sed -i 's/stretch/buster/g' /etc/apt/sources.list{,.d/*.list}
 rm -f /etc/apt/sources.list.d/dietpi-php.list
 rm -f /etc/apt/trusted.gpg.d/dietpi-php.gpg
 rm -f /etc/apt/preferences.d/dietpi-{php,openssl,xrdp}
+rm -f /etc/mysql/mariadb.conf.d/97-dietpi.cnf
 /boot/dietpi/func/dietpi-set_software apt-cache clean
 apt update
 apt upgrade
@@ -27,6 +28,15 @@ apt full-upgrade
 apt autopurge
 /boot/dietpi/func/dietpi-obtain_hw_model
 . /boot/dietpi/func/dietpi-globals
+```
+
+If you have PHP installed, also run the following commands to prevent issues when installing additional PHP modules:
+
+```bash
+mapfile -t packages < <(dpkg --get-selections '*php*' | mawk '$2=="install" {print $1}')
+dpkg -r --force-depends "${packages[@]}"
+apt -y install "${packages[@]}"
+unset -v packages
 ```
 
 Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#2.2-manual-upgrade>

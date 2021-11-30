@@ -422,9 +422,10 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
     1. Run `dietpi-services` from console.
     2. Select `papermc`.
     3. Select `Edit`.
-    4. Uncomment the line that starts with `#ExecStart=` (remove the leading `#`) and add/change e.g. `-Xms1G -Xmx1G` right behind the `java` command to apply 1 GiB heap size, so that the line looks like this:
+    4. Uncomment the line that starts with `#ExecStart=` (remove the leading `#`) and add/change e.g. `-Xms1G -Xmx1G` right behind the `java` command to apply 1 GiB heap size. Additionally you need to add an `ExecStart=` above to unset the command of the original service, so that it finally looks like this:
 
         ```
+        ExecStart=
         ExecStart=/usr/bin/java -Xms1G -Xmx1G -jar /opt/papermc/paperclip.jar --nogui --noconsole
         ```
 

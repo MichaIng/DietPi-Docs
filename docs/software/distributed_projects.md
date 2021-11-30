@@ -115,6 +115,14 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
     apt upgrade
     ```
 
+=== "View logs"
+
+    Tor service logs can be viewed with the following command:
+
+    ```sh
+    journalctl -t tor
+    ```
+
 ***
 
 Official documentation: <https://community.torproject.org/relay/setup>
