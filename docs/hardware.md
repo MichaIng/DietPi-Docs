@@ -99,7 +99,7 @@ ODROID-N2 is one of the supported boards.
 
 ![Odroid N2 photo](assets/images/dietpi-odroid-n2-plus.jpg){: width="500" height="353" loading="lazy"}
 
-It is a new generation single board computer that is more powerful, more stable, and faster performing than N1. The main CPU of the N2 is based on big. Thanks to the modern 12nm silicon technology, the A73 cores runs at 1.8 GHz without thermal throttling using the stock metal-housing heat sink allowing a robust and quiet computer.
+It is a new generation single-board computer based on the Amlogic S922X SoC and the [fastest](https://dietpi.com/survey/#benchmark) we measured until time of writing. The main CPU of the N2 consists of a big.LITTLE quad-core Cortex-A73 + dual-core Cortex-A53 combination. Thanks to the modern 12nm silicon technology, the A73 cores run at up to 1.8 GHz (N2) respectively 2.4 GHz (N2+) without thermal throttling using the stock metal-housing heat sink allowing a robust and quiet computer.
 
 <div class="md-typeset__table">
     <table>
