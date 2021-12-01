@@ -70,32 +70,42 @@
     font-size: medium;
 }
 
-/* Content tabs scroll buttons */
+/* Content tabs */
+
+@media screen and (max-width: 44.9375em) {
+    .tabbed-alternate > .tabbed-labels {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
 
 .tabbed-alternate > .tabbed-labels.tabbed-scroll-left::before {
-  display: inline-block;
-  font-size: 0.9em;
-  position: absolute;
-  top: 0.75em;
-  left: 0;
-  padding-right: 0.64em;
-  color: gray;
-  background: linear-gradient(to right, rgb(255, 255, 255) 75%, rgba(255, 255, 255, 0));
-  content: "\25C0";
-  cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+    position: absolute;
+    top: 0.75em;
+    left: 0;
+    padding-left: 0;
+    padding-right: 0.64em;
+    color: gray;
+    background: linear-gradient(to right, rgb(255, 255, 255) 75%, rgba(255, 255, 255, 0));
+    content: "\25C0";
+    cursor: pointer;
 }
 
 .tabbed-alternate > .tabbed-labels.tabbed-scroll-right::after {
-  display: inline-block;
-  font-size: 0.9em;
-  position: absolute;
-  top: 0.75em;
-  right: 0;
-  padding-left: 0.64em;
-  color: gray;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 25%);
-  content: "\25B6";
-  cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+    position: absolute;
+    top: 0.75em;
+    right: 0;
+    padding-left: 0.64em;
+    padding-right: 0;
+    color: gray;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 25%);
+    content: "\25B6";
+    cursor: pointer;
 }
 
 /* Footer */
