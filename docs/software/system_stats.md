@@ -66,6 +66,24 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     systemctl restart dietpi-dashboard
     ```
 
+=== "Password protection"
+
+    Password protection is enabled by default from DietPi v7.9 on. If you installed it before, you'll need to enable it via configuration file. For this, create a SHA512 hash of the `PASSWORD` you want to use for logging into the web interface, and a random 64-character secret which is used to generate a token to transfer and store securely in your browser. Apply those to the configuration file and restart the service for the changes to take effect:
+
+    ```sh
+    hash=$(echo -n 'PASSWORD' | sha512sum | mawk '{print $1}')
+    secret=$(openssl rand -hex 32)
+    G_CONFIG_INJECT 'pass[[:blank:]]' 'pass = true' /opt/dietpi-dashboard/config.toml
+    GCI_PASSWORD=1 G_CONFIG_INJECT 'hash[[:blank:]]' "hash = \"$hash\"" /opt/dietpi-dashboard/config.toml
+    GCI_PASSWORD=1 G_CONFIG_INJECT 'secret[[:blank:]]' "secret = \"$secret\"" /opt/dietpi-dashboard/config.toml
+    unset -v hash secret
+    systemctl restart dietpi-dashboard
+    ```
+
+    To change the password, just replace the hash in the config file and restart the service.
+
+    If you want to force a logout of all browsers without changing the password, you can instead change the secret. Generate an apply a new secret to the configuration file and restart the service. Every client and browser will then need to login again to continue using the DietPi-Dashboard, as the stored token that is based on password and secret has been invalidated.
+
 === "Service control"
 
     DietPi-Dashboard by default is started as systemd service and can hence be controlled with the following commands:
@@ -93,25 +111,6 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     ```sh
     journalctl -u dietpi-dashboard
     ```
-
-=== "Password Management"
-
-    Password protection is enabled by default from DietPi 7.9 and on, but if you installed it before, you'll need to make these changes in the config file:
-
-
-    ```toml
-    pass = true
-    # You can get the hash by running "echo -n '<PASSWORD>' | sha512sum"
-    hash = "<SHA512 hash of PASSWORD>"
-    # You can get a random secret by running "openssl rand -hex 32"
-    secret = "<random 64-character secret>"
-    ```
-
-    Then, restart the service.
-
-    To reset the password, just replace the hash in the config file.
-
-    If you need to make every logged in session log out, but you don't want to change the password, you can instead change the secret. Generate a new secret and put it in the config file. Then, make sure to restart the service. This will log everyone out, and then they will need to log back in to continue.
 
 === "Update to latest version"
 
