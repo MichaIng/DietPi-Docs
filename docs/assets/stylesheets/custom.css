@@ -70,9 +70,9 @@
     font-size: medium;
 }
 
-/* Content tabs */
+/* Content tabs scroll buttons */
 
-.tabbed-labels.tabbed-scroll-left::before {
+.tabbed-alternate > .tabbed-labels.tabbed-scroll-left::before {
   display: inline-block;
   font-size: 0.9em;
   position: absolute;
@@ -82,9 +82,10 @@
   color: gray;
   background: linear-gradient(to right, rgb(255, 255, 255) 75%, rgba(255, 255, 255, 0));
   content: "\25C0";
+  cursor: pointer;
 }
 
-.tabbed-labels.tabbed-scroll-right::after {
+.tabbed-alternate > .tabbed-labels.tabbed-scroll-right::after {
   display: inline-block;
   font-size: 0.9em;
   position: absolute;
@@ -94,6 +95,7 @@
   color: gray;
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 25%);
   content: "\25B6";
+  cursor: pointer;
 }
 
 /* Footer */
