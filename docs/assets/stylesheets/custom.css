@@ -1,3 +1,13 @@
+/* Colours */
+:root {
+    --md-accent-fg-color: #9ccc00;
+    --md-primary-bg-color: #9ccc00;
+    --md-typeset-a-color: #7b952f;
+    --md-primary-fg-color--dark: #164046;
+    --md-footer-bg-color: #9ccc00;
+    --md-footer-bg-color--dark: #164046;
+}
+
 @media only screen and (max-width: 76.1875em) {
     .md-nav__source {
         background-color: #1f4e79;
@@ -64,11 +74,6 @@ a:hover {
     color: #9ccc00 !important;
 }
 
-.md-typeset .tabbed-set > input:checked+label {
-    color: #9ccc00 !important;
-    border-color: #9ccc00 !important;
-}
-
 .md-typeset .tabbed-set > label:hover {
     color: #9ccc00 !important;
 }
@@ -99,7 +104,7 @@ a:hover {
 
 /* Content tabs */
 
-.tabbed-labels {
+.tabbed-set.tabbed-alternate > .tabbed-labels {
   scrollbar-width: thin;
   -ms-overflow-style: unset;
 }
