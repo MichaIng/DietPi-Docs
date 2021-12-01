@@ -21,11 +21,10 @@ const tabOverflow = () => {
     })
   })
 
-  // Change the tab to either the previous or next input - depending on which indicator was clicked.
-  // Make sure the current, selected input is scrolled into view.
+  // Change tab when clicking button
   const tabChange = e => {
     const target = e.target;
-    if (target.classList.contains('tabbed-scroll-right') && e.offsetX >= target.offsetWidth - 15) {
+    if (target.classList.contains('tabbed-scroll-right') && e.offsetX >= target.offsetWidth - 20) {
       const selected = target.closest('.tabbed-alternate').querySelector('input:checked');
       const sib = selected.nextSibling;
       if (sib && sib.tagName === 'INPUT') {
@@ -33,7 +32,7 @@ const tabOverflow = () => {
       } else {
 	selected.click();
       }
-    } else if (target.classList.contains('tabbed-scroll-left') && e.offsetX <= 15) {
+    } else if (target.classList.contains('tabbed-scroll-left') && e.offsetX <= 20) {
       const selected = target.closest('.tabbed-alternate').querySelector('input:checked');
       const sib = selected.previousSibling
       if (sib && sib.tagName === 'INPUT') {
