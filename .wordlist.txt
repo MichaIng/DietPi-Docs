@@ -398,6 +398,7 @@ SDL
 serverless
 servlet
 SFTP
+SHA
 Shairport
 ShareAlike
 Shoutcast
