@@ -409,6 +409,7 @@ SMB
 sn
 Snapcast
 SNMP
+SoC
 SoCs
 Sonarr
 Soundcloud
