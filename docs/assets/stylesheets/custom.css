@@ -1,7 +1,6 @@
 /* Colours */
 :root {
     --md-accent-fg-color: #9ccc00;
-    --md-primary-bg-color: #9ccc00;
     --md-primary-fg-color: #7b952f;
     --md-primary-fg-color--dark: #164046;
 }
@@ -12,10 +11,6 @@
 }	
 
 @media only screen and (max-width: 76.1875em) {
-    .md-nav__source {
-        background-color: #1f4e79;
-    }
-
     .md-nav--primary .md-nav__title {
         background-color: #9ccc00 !important;
         border-bottom: 1px solid #9ccc00 !important;
@@ -23,13 +18,7 @@
     }
 
     .md-nav--primary .md-nav__title a:hover {
-        color: #164046 !important;
-    }
-
-    .md-nav--primary .md-nav__item--nested .md-nav__item--active,
-    .md-nav--primary .md-nav__item--nested > .md-nav__link:focus,
-    .md-nav--primary .md-nav__item--nested > .md-nav__link:hover {
-        color: #9ccc00;
+        color: #164046;
     }
 }
 
@@ -40,7 +29,7 @@
 }
 
 .md-banner a {
-    color: #000;
+    color: #fff;
 }
 
 .md-banner a:hover {
@@ -118,7 +107,6 @@
 /* Footer */
 
 .md-footer {
-    background-color: #9ccc00;
     color: #000;
 }
 
