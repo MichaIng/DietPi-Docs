@@ -93,6 +93,9 @@ extra:
 extra_css:
 - assets/stylesheets/custom.css
 
+extra_javascript:
+- assets/javascripts/custom.js
+
 nav:
 - HOME:
   - Overview: index.md
