@@ -46,7 +46,8 @@ markdown_extensions:
     repo_url_shortener: true
     repo_url_shorthand: true
 - pymdownx.superfences # Indended code blocks, e.g. within lists, admonition, details or tabbed blocks
-- pymdownx.tabbed # Tabbed content blocks
+- pymdownx.tabbed: # Tabbed content blocks
+    alternate_style: true
 
 #  Markdown extensions which could be used in the future
 #
