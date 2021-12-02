@@ -10,7 +10,7 @@
     --md-footer-bg-color--dark: #164046;
 }	
 
-@media only screen and (max-width: 76.1875em) {
+@media screen and (max-width: 76.1875em) {
     .md-nav--primary .md-nav__title {
         background-color: #9ccc00 !important;
         border-bottom: 1px solid #9ccc00 !important;
@@ -32,10 +32,6 @@
     color: #fff;
 }
 
-.md-banner a:hover {
-    color: #9ccc00 !important;
-}
-
 /* Header */
 
 .md-header {
@@ -43,18 +39,18 @@
     color: #000;
 }
 
-.md-header a:hover {
+.md-header a:is(:focus,:hover) {
     color: #164046;
 }
 
-/* Primary Navigation */
+/* Primary navigation */
 
 .md-tabs {
     background-color: #9ccc00;
     color: #000;
 }
 
-.md-tabs a:hover {
+.md-tabs a:is(:focus,:hover) {
     color: #164046;
 }
 
@@ -62,7 +58,7 @@
 
 .md-typeset table:not([class]) th {
     min-width: 15rem;
-    background-color: #6c6c6c !important;
+    background-color: #6c6c6c;
     font-size: medium;
 }
 
@@ -77,31 +73,31 @@
 /* Content tabs */
 
 .tabbed-set.tabbed-alternate > .tabbed-labels {
-  scrollbar-width: thin;
-  -ms-overflow-style: unset;
+    scrollbar-width: thin;
+    -ms-overflow-style: unset;
 }
 
 .tabbed-set.tabbed-alternate > .tabbed-labels::-webkit-scrollbar {
-  display: unset;
-  height: 8px;
+    display: unset;
+    height: 8px;
 }
 
 .tabbed-set.tabbed-alternate > .tabbed-labels::-webkit-scrollbar-track {
-  background: #ccc;
-  border-radius: 4px;
+    background: #ccc;
+    border-radius: 4px;
 }
 
 .tabbed-set.tabbed-alternate > .tabbed-labels::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+    background: #888;
+    border-radius: 4px;
 }
 
 .tabbed-set.tabbed-alternate > .tabbed-labels::-webkit-scrollbar-thumb:hover {
-  background: #666;
+    background: #666;
 }
 
 .tabbed-set.tabbed-alternate > .tabbed-labels::-webkit-scrollbar-thumb:active {
-  background: #444;
+    background: #444;
 }
 
 /* Footer */
@@ -110,14 +106,14 @@
     color: #000;
 }
 
-.md-footer__inner a:hover {
-    color: #164046 !important;
+.md-footer__inner a:is(:focus,:hover) {
+    color: #164046;
 }
 
 .md-footer-meta {
     background-color: #164046;
 }
 
-.md-footer-meta a:hover {
+.md-footer-meta a:is(:focus,:hover) {
     color: #9ccc00 !important;
 }
