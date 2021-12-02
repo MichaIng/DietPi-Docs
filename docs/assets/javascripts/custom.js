@@ -25,20 +25,18 @@ const tabOverflow = () => {
   const tabChange = e => {
     const target = e.target;
     if (target.classList.contains('tabbed-scroll-right') && e.offsetX >= target.offsetWidth - 20) {
-      const selected = target.closest('.tabbed-alternate').querySelector('input:checked');
-      const sib = selected.nextSibling;
+      const sib = target.closest('.tabbed-alternate').querySelector('input:checked').nextSibling;
       if (sib && sib.tagName === 'INPUT') {
         sib.click();
       } else {
-	selected.click();
+        target.scrollLeft = target.scrollWidth;
       }
     } else if (target.classList.contains('tabbed-scroll-left') && e.offsetX <= 20) {
-      const selected = target.closest('.tabbed-alternate').querySelector('input:checked');
-      const sib = selected.previousSibling
+      const sib = target.closest('.tabbed-alternate').querySelector('input:checked').previousSibling;
       if (sib && sib.tagName === 'INPUT') {
         sib.click();
       } else {
-	selected.click();
+        target.scrollLeft = 0;
       }
     }
   }
