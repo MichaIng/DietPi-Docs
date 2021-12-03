@@ -124,7 +124,7 @@ The result of the automated installation can cover the following areas:
 To achieve this automated installation, the following steps need to be conducted in the given order:
 
 1. Flash the boot media (e.g. SD card)
-1. Edit the file `/boot/dietpi.txt` on the boot media
+1. Edit the file `/boot/dietpi.txt9` on the boot media
 1. Attach the boot media to your system
 1. Start up the system the first time
 1. Wait for completion of the automated setup
@@ -138,7 +138,7 @@ Below, only the most important options are listed. For further options go into t
 
 To achieve the basic network configuration the following options shall be taken into account:
 
-- Run with WiFi: AUTO_SETUP_NET_WIFI_ENABLED, AUTO_SETUP_NET_WIFI_COUNTRY_CODE in combination with `dietpi-wifi.txt`
+- Run with WiFi: AUTO_SETUP_NET_WIFI_ENABLED, AUTO_SETUP_NET_WIFI_COUNTRY_CODE in combination with `dietpi-wifi.txt8`
 - Use a static IP address: AUTO_SETUP_NET_USESTATIC, AUTO_SETUP_NET_STATIC_IP, AUTO_SETUP_NET_STATIC_MASK, AUTO_SETUP_NET_STATIC_GATEWAY, AUTO_SETUP_NET_STATIC_DNS, AUTO_SETUP_DHCP_TO_STATIC
 - Usage of a proxy server: CONFIG_PROXY_ADDRESS, CONFIG_PROXY_PORT, CONFIG_PROXY_USERNAME, CONFIG_PROXY_PASSWORD
 
