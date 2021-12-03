@@ -98,12 +98,12 @@ Find and set the options which fit to your demands, it is also an option to chan
 
 ## How to do an automatic base installation at first boot
 
-DietPi offers the option for an automatic first boot installation. Normally, at the first boot there is an installation procedure which sets up your system initially. At this point the steps described in the section ["First logon on DietPi"](http://localhost:8000/docs/install/#4-first-logon-on-dietpi) are conducted.
+DietPi offers the option for an automatic first boot installation. Normally, during the first system boot there is an installation procedure which sets up your system initially. The steps described in the section ["First logon on DietPi"](http://localhost:8000/docs/install/#4-first-logon-on-dietpi) are then conducted.
 
 ![dietpi-login01](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
 
 These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
-The initial automatization is based on the configuration file `/boot/dietpi.txt`. It can be edited before the first boot and will be evaluated during the first boot. On subsequent boot procedures, the most options are not evaluated any more.
+The automatized setup is based on the configuration file `/boot/dietpi.txt`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
 
 ??? info "Editing the file `dietpi.txt`"
 
@@ -132,7 +132,7 @@ To achieve this automated installation, the following steps need to be conducted
 ### Options within the file `dietpi.txt`
 
 The options are generally described within the file itself. Basically see the file contents for details about the configuration options.  
-Below, there are only the most important options listed. Further options see the file `dietpi.txt` itself.
+Below, only the most important options are listed. For further options go into the file `dietpi.txt` itself.
 
 #### Network configuration
 
@@ -186,3 +186,31 @@ These keywords are general ones and need to be used for fully automated setups:
 ### Wait for completion of the automated setup
 
 The duration of an automated setup depends on the selected options, especially the software packages to be installed and of course of the system's speed. It may take a long time (more than an hour may be possible). To find out whether the automatic installation process is running the user can login to the system via another SSH connection. During the installation process a cyclic message will appear after the login.
+
+### Example `dietpi.txt` contents
+
+The following lines give an example of needed changes within the `dietpi.txt` file. The target to be achieved is:
+
+- Automatic updates
+- Ethernet connection, DHCP, no proxy, no WiFi
+- German localization
+- Hostname "myDietpiSystem"
+- X11 desktop with XFCE and Chromium
+- Autostart to X11 login screen
+
+Then these entries need to be set within the file `dietpi.txt` prior the initial boot:
+
+```
+AUTO_SETUP_ACCEPT_LICENSE=1
+AUTO_SETUP_LOCALE=de_DE.UTF-8
+AUTO_SETUP_KEYBOARD_LAYOUT=de
+AUTO_SETUP_TIMEZONE=Europe/Berlin
+AUTO_SETUP_NET_HOSTNAME=myDietPiSystem
+AUTO_SETUP_DESKTOP_INDEX=-1
+AUTO_SETUP_BROWSER_INDEX=-2
+AUTO_SETUP_AUTOSTART_TARGET_INDEX=16
+AUTO_SETUP_AUTOMATED=1
+AUTO_SETUP_INSTALL_SOFTWARE_ID=25
+CONFIG_CHECK_DIETPI_UPDATES=1
+CONFIG_CHECK_APT_UPDATES=2
+```
