@@ -109,7 +109,7 @@ The automatized setup is based on the configuration file `/boot/dietpi.txt`. It 
 
     On some hardware options (e.g. Raspberry Pi) the file is located on an own partition which can be accessed on a Windows PC.
 
-    Some hardware options (e.g. NanoPi) do not have this extra partition. In this case the SD card needs to be mounted to be able to access the `dietpi.txt` file.
+    Some hardware options (e.g. NanoPi) do not have this extra partition. In this case the SD card needs to be mounted to be able to access the `/boot/dietpi.txt` file.
 
 The result of the automated installation can cover the following areas:
 
@@ -124,7 +124,7 @@ The result of the automated installation can cover the following areas:
 To achieve this automated installation, the following steps need to be conducted in the given order:
 
 1. Flash the boot media (e.g. SD card)
-1. Edit the file `dietpi.txt` on the boot media
+1. Edit the file `/boot/dietpi.txt` on the boot media
 1. Attach the boot media to your system
 1. Start up the system the first time
 1. Wait for completion of the automated setup
