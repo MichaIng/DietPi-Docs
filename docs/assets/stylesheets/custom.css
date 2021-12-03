@@ -1,8 +1,16 @@
-@media only screen and (max-width: 76.1875em) {
-    .md-nav__source {
-        background-color: #1f4e79;
-    }
+/* Colours */
+:root {
+    --md-accent-fg-color: #9ccc00;
+    --md-primary-fg-color: #7b952f;
+    --md-primary-fg-color--dark: #164046;
+}
 
+:root>* {
+    --md-footer-bg-color: #9ccc00;
+    --md-footer-bg-color--dark: #164046;
+}	
+
+@media screen and (max-width: 76.1875em) {
     .md-nav--primary .md-nav__title {
         background-color: #9ccc00 !important;
         border-bottom: 1px solid #9ccc00 !important;
@@ -10,14 +18,18 @@
     }
 
     .md-nav--primary .md-nav__title a:hover {
-        color: #164046 !important;
+        color: #164046;
     }
+}
 
-    .md-nav--primary .md-nav__item--nested .md-nav__item--active,
-    .md-nav--primary .md-nav__item--nested > .md-nav__link:focus,
-    .md-nav--primary .md-nav__item--nested > .md-nav__link:hover {
-        color: #9ccc00;
-    }
+/* Announcement */
+
+.md-banner {
+    background-color: #164046;
+}
+
+.md-banner a {
+    color: #fff;
 }
 
 /* Header */
@@ -27,65 +39,26 @@
     color: #000;
 }
 
-.md-header a:hover {
-    color: #164046 !important;
+.md-header a:is(:focus,:hover) {
+    color: #164046;
 }
 
-.md-announce {
-    background-color: #164046;
-}
-
-/* Primary Navigation */
+/* Primary navigation */
 
 .md-tabs {
-    background-color: #9ccc00 !important;
+    background-color: #9ccc00;
     color: #000;
 }
 
-.md-tabs a:hover {
-    color: #164046 !important;
-}
-
-/* Link styles */
-
-.md-typeset a {
-    color: #7B952F !important;
-}
-
-.md-typeset a:hover {
-    color: #164046 !important;
-}
-
-a:hover {
-    color: #9ccc00 !important;
-}
-
-.md-nav__item .md-nav__link--active {
-    color: #9ccc00 !important;
-}
-
-.md-typeset .tabbed-set > input:checked+label {
-    color: #9ccc00 !important;
-    border-color: #9ccc00 !important;
-}
-
-.md-typeset .tabbed-set > label:hover {
-    color: #9ccc00 !important;
-}
-
-.md-announce a {
-    color: #fff !important;
-}
-
-.md-announce a:hover {
-    color: #9ccc00 !important;
+.md-tabs a:is(:focus,:hover) {
+    color: #164046;
 }
 
 /* Tables */
 
 .md-typeset table:not([class]) th {
     min-width: 15rem;
-    background-color: #6c6c6c !important;
+    background-color: #6c6c6c;
     font-size: medium;
 }
 
@@ -100,18 +73,17 @@ a:hover {
 /* Footer */
 
 .md-footer {
-    background-color: #9ccc00;
     color: #000;
 }
 
-.md-footer__inner a:hover {
-    color: #164046 !important;
+.md-footer__inner a:is(:focus,:hover) {
+    color: #164046;
 }
 
 .md-footer-meta {
     background-color: #164046;
 }
 
-.md-footer-meta a:hover {
+.md-footer-meta a:is(:focus,:hover) {
     color: #9ccc00 !important;
 }

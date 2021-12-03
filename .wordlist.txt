@@ -398,6 +398,7 @@ SDL
 serverless
 servlet
 SFTP
+SHA
 Shairport
 ShareAlike
 Shoutcast
@@ -408,6 +409,7 @@ SMB
 sn
 Snapcast
 SNMP
+SoC
 SoCs
 Sonarr
 Soundcloud
