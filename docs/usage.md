@@ -105,11 +105,11 @@ DietPi offers the option for an automatic first boot installation. Normally, dur
 These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
 The automatized setup is based on the configuration file `/boot/dietpi.txt`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
 
-??? info "Editing the file `/boot/dietpi.txt` contents"
+??? info "Editing the file `/boot/dietpi.txt2` contents"
 
     On some hardware options (e.g. Raspberry Pi) the file is located on an own partition which can be accessed on a Windows PC.
 
-    Some hardware options (e.g. NanoPi) do not have this extra partition. In this case the SD card needs to be mounted to be able to access the `/boot/dietpi.txt` file.
+    Some hardware options (e.g. NanoPi) do not have this extra partition. In this case the SD card needs to be mounted to be able to access the `/boot/dietpi.txt3` file.
 
 The result of the automated installation can cover the following areas:
 
@@ -129,10 +129,10 @@ To achieve this automated installation, the following steps need to be conducted
 1. Start up the system the first time
 1. Wait for completion of the automated setup
 
-### Options within the `/boot/dietpi.txt` file
+### Options within the `/boot/dietpi.txt4` file
 
 The options are generally described within the file itself. Basically see the file contents for details about the configuration options.  
-Below, only the most important options are listed. For further options go into the file `dietpi.txt` itself.
+Below, only the most important options are listed. For further options go into the file `/boot/dietpi.txt` itself.
 
 #### Network configuration
 
@@ -187,7 +187,7 @@ These keywords are general ones and need to be used for fully automated setups:
 
 The duration of an automated setup depends on the selected options, especially the software packages to be installed and of course of the system's speed. It may take a long time (more than an hour may be possible). To find out whether the automatic installation process is running the user can login to the system via another SSH connection. During the installation process a cyclic message will appear after the login.
 
-### Example `/boot/dietpi.txt` contents
+### Example `/boot/dietpi.txt1` contents
 
 The following lines give an example of needed changes within the `dietpi.txt` file. The target to be achieved is:
 
