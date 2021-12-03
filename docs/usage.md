@@ -41,6 +41,8 @@ unset -v packages
 
 Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#2.2-manual-upgrade>
 
+---
+
 ## How to use the logging mechanism
 
 DietPi uses systemd as system and service manager, which includes the `systemd-journald` logging daemon.
@@ -91,3 +93,96 @@ Find and set the options which fit to your demands, it is also an option to chan
 | DietPi-RAMlog #1 | RAM | last hour | volatile, i.e. not saved to disk |
 | DietPi-RAMlog #2 | RAM | long term | stored, i.e. hourly saved to disk |
 | Full logging | disk | long term | stored, i.e. immediately saved to disk <br>(with Rsyslog and Logrotate)|
+
+---
+
+## How to do an automatic base installation at first boot
+
+DietPi offers the option for an automatic first boot installation. Normally, at the first boot there is an installation procedure which sets up your system initially. At this point the steps described in the section ["First logon on DietPi"](http://localhost:8000/docs/install/#4-first-logon-on-dietpi) are conducted.
+
+![dietpi-login01](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
+
+These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
+The initial automatization is based on the configuration file `/boot/dietpi.txt`. It can be edited before the first boot and will be evaluated during the first boot. On subsequent boot procedures, the most options are not evaluated any more.
+
+??? info "Editing the file `dietpi.txt`"
+
+    On some hardware options (e.g. Raspberry Pi) the file is located on an own partition which can be accessed on a Windows PC.
+
+    Some hardware options (e.g. NanoPi) do not have this extra partition. In this case the SD card needs to be mounted to be able to access the file `dietpi.txt`.
+
+The result of the automated installation can cover the following areas:
+
+- **Network configuration** (e.g. WiFi, network and proxy settings)
+- **System options** (e.g. timezone, hostname, root password)
+- **Software preferences** (e.g. SSH server, file server, web server)
+- **Software options** (e.g. VNC, Nextcloud, DietPi Dashboard)
+- **Automatic software installation** (packages from `dietpi-software`)
+- **User script** pre and post initial installation
+- **Restore** from a previous made system backup
+
+To achieve this automated installation, the following steps need to be conducted in the given order:
+
+1. Flash the boot media (e.g. SD card)
+1. Edit the file `dietpi.txt` on the boot media
+1. Attach the boot media to your system
+1. Start up the system the first time
+1. Wait for completion of the automated setup
+
+### Options within the file `dietpi.txt`
+
+The options are generally described within the file itself. Basically see the file contents for details about the configuration options.  
+Below, there are only the most important options listed. Further options see the file `dietpi.txt` itself.
+
+#### Network configuration
+
+To achieve the basic network configuration the following options shall be taken into account:
+
+- Run with WiFi: AUTO_SETUP_NET_WIFI_ENABLED, AUTO_SETUP_NET_WIFI_COUNTRY_CODE in combination with `dietpi-wifi.txt`
+- Use a static IP address: AUTO_SETUP_NET_USESTATIC, AUTO_SETUP_NET_STATIC_IP, AUTO_SETUP_NET_STATIC_MASK, AUTO_SETUP_NET_STATIC_GATEWAY, AUTO_SETUP_NET_STATIC_DNS, AUTO_SETUP_DHCP_TO_STATIC
+- Usage of a proxy server: CONFIG_PROXY_ADDRESS, CONFIG_PROXY_PORT, CONFIG_PROXY_USERNAME, CONFIG_PROXY_PASSWORD
+
+#### System options
+
+Many of the system options can be set with the automated installation and can be also changed afterwards via `dietpi-config`:
+
+- Basic settings: AUTO_SETUP_NET_HOSTNAME, AUTO_SETUP_GLOBAL_PASSWORD
+- Localization: AUTO_SETUP_LOCALE, AUTO_SETUP_KEYBOARD_LAYOUT, AUTO_SETUP_TIMEZONE
+- Autostart: AUTO_SETUP_AUTOSTART_TARGET_INDEX, AUTO_SETUP_AUTOSTART_LOGIN_USER
+- Overclocking: CONFIG_CPU_GOVERNOR, CONFIG_CPU_MAX_FREQ, CONFIG_CPU_MIN_FREQ, etc.
+- Auto-updating: CONFIG_CHECK_DIETPI_UPDATES, CONFIG_CHECK_APT_UPDATES
+
+#### Software preferences
+
+Some server options can be set via AUTO_SETUP_SSH_SERVER_INDEX, AUTO_SETUP_FILE_SERVER_INDEX, AUTO_SETUP_WEB_SERVER_INDEX
+
+#### Software packages installation
+
+All software packages, which can be installed via `dietpi-software` can also be installed automatically using the keyword AUTO_SETUP_INSTALL_SOFTWARE_ID.  
+The software packages are given with their software ID (a number) which can be found on the left side when browsing the software in the `dietpi-software` script. Additionally they are given in the [list of available software IDs](https://github.com/MichaIng/DietPi/wiki/DietPi-Software-list).
+
+As an example the software package "Plex Media Server" has the ID 42.
+
+#### User script
+
+Execution of a user script can be done at these two instants of time:
+
+- pre-networking and pre-DietPi install (`/boot/Automation_Custom_PreScript.sh`)
+- post-networking and post-DietPi install (`/boot/Automation_Custom_Script.sh`)
+
+Search `AUTO_SETUP_CUSTOM_SCRIPT_EXEC` for details.
+
+#### System restore
+
+A restore process can be executed automatically using the keyword AUTO_SETUP_BACKUP_RESTORE. This gives the option to start up a system with a previous made system backup (e.g. for generating many identical systems).
+
+#### General options
+
+These keywords are general ones and need to be used for fully automated setups:
+
+- AUTO_SETUP_ACCEPT_LICENSE
+- AUTO_SETUP_AUTOMATED
+
+### Wait for completion of the automated setup
+
+The duration of an automated setup depends on the selected options, especially the software packages to be installed and of course of the system's speed. It may take a long time (more than an hour may be possible). To find out whether the automatic installation process is running the user can login to the system via another SSH connection. During the installation process a cyclic message will appear after the login.

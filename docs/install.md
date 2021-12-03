@@ -690,6 +690,10 @@ A login prompt will appear. Use the initial credentials:
     ssh root@dietpi
     ```
 
+??? info "Option: Automatic base installation at first boot (running an _unattended base installation_)"
+
+    DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](../usage/#how-to-do-an-automatic-base-installation-at-first-boot) for details.
+
 To further proceed you’ll need to accept the DietPi GPL license. Hit the ++enter++ key on your keyboard to do this.
 
 ![dietpi-login01](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
