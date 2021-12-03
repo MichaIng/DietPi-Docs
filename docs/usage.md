@@ -103,13 +103,13 @@ DietPi offers the option for an automatic first boot installation. Normally, dur
 ![dietpi-login01](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
 
 These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
-The automatized setup is based on the configuration file `/boot/dietpi.txt`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
+The automatized setup is based on the configuration file `/boot/dietpi.txtd`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
 
-??? info "Editing the file `/boot/dietpi.txt2` contents"
+??? info "Editing the file `/boot/dietpi.txte` contents"
 
     On some hardware options (e.g. Raspberry Pi) the file is located on an own partition which can be accessed on a Windows PC.
 
-    Some hardware options (e.g. NanoPi) do not have this extra partition. In this case the SD card needs to be mounted to be able to access the `/boot/dietpi.txt3` file.
+    Some hardware options (e.g. NanoPi) do not have this extra partition. In this case the SD card needs to be mounted to be able to access the `/boot/dietpi.txtf` file.
 
 The result of the automated installation can cover the following areas:
 
@@ -124,21 +124,21 @@ The result of the automated installation can cover the following areas:
 To achieve this automated installation, the following steps need to be conducted in the given order:
 
 1. Flash the boot media (e.g. SD card)
-1. Edit the file `/boot/dietpi.txt9` on the boot media
+1. Edit the file `/boot/dietpi.txtg` on the boot media
 1. Attach the boot media to your system
 1. Start up the system the first time
 1. Wait for completion of the automated setup
 
-### Options within the `/boot/dietpi.txt4` file
+### Options within the `/boot/dietpi.txth` file
 
 The options are generally described within the file itself. Basically see the file contents for details about the configuration options.  
-Below, only the most important options are listed. For further options go into the file `/boot/dietpi.txt` itself.
+Below, only the most important options are listed. For further options go into the file `/boot/dietpi.txti` itself.
 
 #### Network configuration
 
 To achieve the basic network configuration the following options shall be taken into account:
 
-- Run with WiFi: AUTO_SETUP_NET_WIFI_ENABLED, AUTO_SETUP_NET_WIFI_COUNTRY_CODE in combination with `dietpi-wifi.txt8`
+- Run with WiFi: AUTO_SETUP_NET_WIFI_ENABLED, AUTO_SETUP_NET_WIFI_COUNTRY_CODE in combination with `dietpi-wifi.txtj`
 - Use a static IP address: AUTO_SETUP_NET_USESTATIC, AUTO_SETUP_NET_STATIC_IP, AUTO_SETUP_NET_STATIC_MASK, AUTO_SETUP_NET_STATIC_GATEWAY, AUTO_SETUP_NET_STATIC_DNS, AUTO_SETUP_DHCP_TO_STATIC
 - Usage of a proxy server: CONFIG_PROXY_ADDRESS, CONFIG_PROXY_PORT, CONFIG_PROXY_USERNAME, CONFIG_PROXY_PASSWORD
 
@@ -187,9 +187,9 @@ These keywords are general ones and need to be used for fully automated setups:
 
 The duration of an automated setup depends on the selected options, especially the software packages to be installed and of course of the system's speed. It may take a long time (more than an hour may be possible). To find out whether the automatic installation process is running the user can login to the system via another SSH connection. During the installation process a cyclic message will appear after the login.
 
-### Example `/boot/dietpi.txt1` contents
+### Example `/boot/dietpi.txta` contents
 
-The following lines give an example of needed changes within the `dietpi.txt` file. The target to be achieved is:
+The following lines give an example of needed changes within the `dietpi.txtb` file. The target to be achieved is:
 
 - Automatic updates
 - Ethernet connection, DHCP, no proxy, no WiFi
@@ -198,7 +198,7 @@ The following lines give an example of needed changes within the `dietpi.txt` fi
 - X11 desktop with XFCE and Chromium
 - Autostart to X11 login screen
 
-Then these entries need to be set within the file `dietpi.txt` prior the initial boot:
+Then these entries need to be set within the file `dietpi.txtc` prior the initial boot:
 
 ```sh
 AUTO_SETUP_ACCEPT_LICENSE=1
