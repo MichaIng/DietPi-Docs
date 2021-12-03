@@ -105,7 +105,7 @@ DietPi offers the option for an automatic first boot installation. Normally, dur
 These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
 The automatized setup is based on the configuration file `/boot/dietpi.txt`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
 
-??? info "Editing the file `dietpi.txt`"
+??? info "Editing the file `dietpi.txt` contents"
 
     On some hardware options (e.g. Raspberry Pi) the file is located on an own partition which can be accessed on a Windows PC.
 
@@ -200,7 +200,7 @@ The following lines give an example of needed changes within the `dietpi.txt` fi
 
 Then these entries need to be set within the file `dietpi.txt` prior the initial boot:
 
-```
+```sh
 AUTO_SETUP_ACCEPT_LICENSE=1
 AUTO_SETUP_LOCALE=de_DE.UTF-8
 AUTO_SETUP_KEYBOARD_LAYOUT=de
