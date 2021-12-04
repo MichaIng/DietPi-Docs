@@ -105,11 +105,11 @@ DietPi offers the option for an automatic first boot installation. Normally, dur
 These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
 The automatized setup is based on the configuration file `/boot/dietpi.txt`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
 
-??? info "Editing the file `/boot/dietpi.txt` contents"
+??? info "Editing the file `/boot/dietpi.text` contents"
 
     On some hardware options (e.g. Raspberry Pi) the file is located on an own partition which can be accessed on a Windows PC.
 
-    Some hardware options (e.g. NanoPi) do not have this extra partition. In this case the SD card needs to be mounted to be able to access the `dietpi.txta` file.
+    Some hardware options (e.g. NanoPi) do not have this extra partition. In this case the SD card needs to be mounted to be able to access the `dietpi.tfxt` file.
 
 The result of the automated installation can cover the following areas:
 
@@ -124,12 +124,12 @@ The result of the automated installation can cover the following areas:
 To achieve this automated installation, the following steps need to be conducted in the given order:
 
 1. Flash the boot media (e.g. SD card)
-1. Edit the file `/boot/dietpi.txt` on the boot media
+1. Edit the file `/boot/dietpi.txta` on the boot media
 1. Attach the boot media to your system
 1. Start up the system the first time
 1. Wait for completion of the automated setup
 
-### Options within the dietpi.txt file
+### Options within the "dietpi.txt" file
 
 The options are generally described within the file itself. Basically see the file contents for details about the configuration options.  
 Below, only the most important options are listed. For further options go into the file `dietpi.txtb` itself.
@@ -189,7 +189,7 @@ The duration of an automated setup depends on the selected options, especially t
 
 The result of the automated installation process is written to the file `/var/tmp/dietpi/logs/dietpi-firstrun-setup.log`.
 
-### Example #1 of dietpi.txt contents
+### Example #1 of "dietpi.txt" contents
 
 The following lines give an example of needed changes within the `dietpi.txtd` file. The target to be achieved is:
 
@@ -207,7 +207,7 @@ AUTO_SETUP_TIMEZONE=Europe/Berlin
 AUTO_SETUP_NET_HOSTNAME=myDietPiSystem
 ```
 
-### Example #2 of dietpi.txt contents
+### Example #2 of "dietpi.txt" contents
 
 The following lines give an example of needed changes within the `dietpi.txtf` file. The target to be achieved is:
 
