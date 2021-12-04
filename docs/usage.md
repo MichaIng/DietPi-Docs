@@ -124,7 +124,7 @@ The result of the automated installation can cover the following areas:
 To achieve this automated installation, the following steps need to be conducted in the given order:
 
 1. Flash the boot media (e.g. SD card)
-1. Edit the file `/boot/dietpi.txta` on the boot media
+1. Edit the file `/boot/dietpi.txt` on the boot media
 1. Attach the boot media to your system
 1. Start up the system the first time
 1. Wait for completion of the automated setup
@@ -132,13 +132,13 @@ To achieve this automated installation, the following steps need to be conducted
 ### Options within the file
 
 The options are generally described within the file itself. Basically see the file contents for details about the configuration options.  
-Below, only the most important options are listed. For further options go into the file `dietpi.txtb` itself.
+Below, only the most important options are listed. For further options go into the file `dietpi.txt` itself.
 
 #### Network configuration
 
 To achieve the basic network configuration the following options shall be taken into account:
 
-- Run with WiFi: AUTO_SETUP_NET_WIFI_ENABLED, AUTO_SETUP_NET_WIFI_COUNTRY_CODE in combination with `dietpi-wifi.txtc`
+- Run with WiFi: AUTO_SETUP_NET_WIFI_ENABLED, AUTO_SETUP_NET_WIFI_COUNTRY_CODE in combination with `dietpi-wifi.txt`
 - Use a static IP address: AUTO_SETUP_NET_USESTATIC, AUTO_SETUP_NET_STATIC_IP, AUTO_SETUP_NET_STATIC_MASK, AUTO_SETUP_NET_STATIC_GATEWAY, AUTO_SETUP_NET_STATIC_DNS, AUTO_SETUP_DHCP_TO_STATIC
 - Usage of a proxy server: CONFIG_PROXY_ADDRESS, CONFIG_PROXY_PORT, CONFIG_PROXY_USERNAME, CONFIG_PROXY_PASSWORD
 
@@ -191,13 +191,13 @@ The result of the automated installation process is written to the file `/var/tm
 
 ### Example #1 of file contents
 
-The following lines give an example of needed changes within the `dietpi.txtd` file. The target to be achieved is:
+The following lines give an example of needed changes within the `dietpi.txt` file. The target to be achieved is:
 
 - Ethernet connection, DHCP, no proxy, no WiFi
 - German localization
 - Hostname "myDietpiSystem"
 
-Then these entries need to be set within the file `dietpi.txte` prior the initial boot:
+Then these entries need to be set within the file `dietpi.txt` prior the initial boot:
 
 ```sh
 AUTO_SETUP_ACCEPT_LICENSE=1
@@ -209,7 +209,7 @@ AUTO_SETUP_NET_HOSTNAME=myDietPiSystem
 
 ### Example #2 of file contents
 
-The following lines give an example of needed changes within the `dietpi.txtf` file. The target to be achieved is:
+The following lines give an example of needed changes within the `dietpi.txt` file. The target to be achieved is:
 
 - Automatic updates
 - Ethernet connection, DHCP, no proxy, no WiFi
@@ -218,7 +218,7 @@ The following lines give an example of needed changes within the `dietpi.txtf` f
 - X11 desktop with XFCE and Chromium
 - Autostart to X11 login screen
 
-Then these entries need to be set within the file `dietpi.txtg` prior the initial boot:
+Then these entries need to be set within the file `dietpi.txt` prior the initial boot:
 
 ```sh
 AUTO_SETUP_LOCALE=de_DE.UTF-8
