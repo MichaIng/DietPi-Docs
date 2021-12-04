@@ -1,5 +1,39 @@
 # DietPi Releases
 
+## December 2021 (version 7.9) {: #december-2021-version-79 }
+ 
+### Improvements {: #improvements-79 }
+
+- DietPi-Dashboard | On fresh installs, password protection is now enabled by default, using the global software password. You can apply or change this manually by following the instructions in our documentation: https://dietpi.com/docs/software/system_stats/#dietpi-dashboard
+- DietPi-Dashboard | The default TCP network port has been changed from 8088 to 5252 to resolve a port conflict with InfluxDB. This does not affect existing installs, but you will be asked whether to apply this change during DietPi update. Many thanks to @blablazzz for reporting this issue: https://github.com/MichaIng/DietPi/issues/4966
+- DietPi-Backup | A backup archive with a selectable amount of backups to keep can be created now. Backups are rotated automatically and if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync, to reduce writes and increase speed. Many thanks to @johnvick and many others for requesting this feature: https://dietpi.com/phpbb/viewtopic.php?t=3593
+- DietPi-Backup | Backups can now be stored outside of /mnt into any directory or mount point as long as the filesystem supports symlinks and UNIX permissions.
+- DietPi-Software | SABnzbd: For fresh installs, file logging has been disabled in favour of journal logging. All service and process logs can hence now be reviewed via: journalctl -u sabnzbd
+- DietPi-Software | Apache: Fresh installs and reinstalls will be configured with PHP-FPM instead of mod_php. As a requirement, the event MPM is used instead of prefork. This reduces memory usage and increases access performance significantly on concurrent requests, as the Apache parent process does not need to fork a new child process for every single process. We further optimised it by spawning a single static child process only while handling concurrent requests by a sufficient amount of process threads. This allows Apache to share memory efficiently and makes it quite lightweight. There are no downsides known when using a single process only, compared to multiple processes with less threads each. Related StackExchange questions: https://superuser.com/questions/1611015/apache2-mpm-event-more-threads-vs-more-processes
+- DietPi-Software | Apache: Our default/base configuration is now added as separate file, so that the main apache2.conf is not touched anymore. Furthermore the default vhost is now pre-created before the package install, so that it can be skipped on a reinstall to not overwrite user customisations. These in combination allow for a safe and clean reinstall without breaking any changes done by the admin, with the little exception that the webroot is set to /var/www which is required for all our software options which make use of an external webserver.
+- DietPi-Software | Apache: Our new default config provides maximum privacy settings and security headers. It is trivial to override these with own configurations, on vhost or directory level.
+- DietPi-Software | Apache: Logging is now done to journal (journalctl -u apache2) by default and the ServerName directive added with the local IP, to mute related startup warnings. This may imply access and CORS failures when applications check for the server name as allowed hostname but a different external IPs/hostnames was used for access. In such case generally applications provide a way to define a list of permitted hostnames. Without a server name set, usually webserver simply apply the HTTP_HOST header, which bypasses every related check. Apache, according to the logged warning, seems to use 127.0.1.1 then.
+- DietPi-Software | Kodi: On Raspberry Pi Bullseye systems, the new official Raspberry Pi repository build for Kodi 19.3 is now installed. You can apply the upgrade manually by reinstalling Kodi: dietpi-software reinstall 31
+- DietPi-Software | Kodi: The addon repository is now installed by default with all Kodi installs, which previously was the case only on RPi and Odroids. When currently missing, it can be manually installed: apt install kodi-repository-kodi
+- DietPi-Software | Gitea: The service runs now as dedicated user "gitea" with its home directory "/mnt/dietpi_userdata/gitea" to allow easy transfer and usage of SSH keys for remote access. This applies to newly installed or reinstalled Gitea instances. Many thanks to @LilTrublMakr for reporting the related limitation with the previously used "dietpi" user: https://github.com/MichaIng/DietPi/issues/4620
+
+### Bug Fixes {: #bug-fixes-79 }
+
+- Raspberry Pi | Resolved an issue in our images where on first boot two serial login consoles on the generic symlinked and actual serial devices could have been started. This doubled inputs and in turn broke successful username and password login via serial console on first boot. Many thanks to @ad7718 for reporting this issue: https://github.com/MichaIng/DietPi/issues/5014 
+- DietPi-Backup | Resolved an issue where backup and restore failed if a non-default backup location is used, as a wrong log file path was used. This is a v7.8 regression. Many thanks to @Malinka for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=39909#p39909
+- DietPi-Software | Resolved a v7.8 regression where ReadyMedia, Deluge, Sonarr and Jellyfin installs failed with an error on "usermod", since the services were not stopped first. This has been loved via live patches for v7.8 as well.
+- DietPi-Software | Transmission: Resolved a v7.8 regression where on fresh installs the intended configuration was not deployed. Many thanks to @kannz and @alessandro.psrt for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?t=9567, https://dietpi.com/phpbb/viewtopic.php?t=9683
+- DietPi-Software | SABnzbd: Resolved an issue where installs failed on ARMv6 and ARMv7 Stretch systems. Many thanks to @bensp for reporting this issue: https://github.com/MichaIng/DietPi/issues/4997
+
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: https://github.com/MichaIng/DietPi/pull/XXXX
+
+### Known/Outstanding Issues {: #known-issues-79 }
+
+- DietPi-Config | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: https://github.com/MichaIng/DietPi/issues/2103
+
+For all additional issues that may appear after release, please see the following link for active tickets: https://github.com/MichaIng/DietPi/issues
+
+
 ## November 2021 (version 7.8) {: #november-2021-version-78 }
 
 ### Overview
