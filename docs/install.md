@@ -644,7 +644,6 @@ Select the following tabs for the installation description of your target.
 
             DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](../usage/#how-to-do-an-automatic-base-installation-at-first-boot) for details.
 
-
 ## 4. First logon on DietPi
 
 The hostname of the system will be: **DietPi**.  
