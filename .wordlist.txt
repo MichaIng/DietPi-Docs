@@ -279,7 +279,6 @@ multithreading
 Mumble
 Munin
 Mycroft
-myDietpiSystem
 MyHome
 myMPD
 MySqli
@@ -475,7 +474,6 @@ upvote
 UrBackup
 userdata
 userspace
-USESTATIC
 UUID
 vaultwarden
 Viebrock

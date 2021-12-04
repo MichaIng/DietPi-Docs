@@ -98,18 +98,18 @@ Find and set the options which fit to your demands, it is also an option to chan
 
 ## How to do an automatic base installation at first boot (DietPi-Automation)
 
-DietPi offers the option for an automatic first boot installation. Normally, during the first system boot there is an installation procedure which sets up your system initially. The steps described in the section ["First logon on DietPi"](http://localhost:8000/docs/install/#4-first-logon-on-dietpi) are then conducted.
+DietPi offers the option for an automatic first boot installation. Normally, during the first system boot there is an installation procedure which sets up your system initially. The steps described in the section ["First logon on DietPi"](../install/#4-first-logon-on-dietpi) are then conducted.
 
-![dietpi-login01](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
+![DietPi first login - licence aggreement](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
 
 These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
 The automatized setup is based on the configuration file `/boot/dietpi.txt`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
 
 ??? info "Editing the file `/boot/dietpi.text` contents"
 
-    On some hardware options (e.g. Raspberry Pi) the file is located on an own partition which can be accessed on a Windows PC.
+    On some hardware options (e.g. Raspberry Pi) the file is located on an own FAT partition which can be accessed on a Windows PC. In this case `dietpi.txt` can be found in its root.
 
-    Some hardware options (e.g. NanoPi) do not have this extra partition. In this case the SD card needs to be mounted to be able to access the `dietpi.tfxt` file.
+    Some hardware options (e.g. NanoPi) do not have this extra partition, i.e. the system is located on a single partition, usually ext4. In this case the SD card needs to be mounted to be able to access the `dietpi.txt` file which then can be found within the `/boot` directory.
 
 The result of the automated installation can cover the following areas:
 
@@ -138,27 +138,27 @@ Below, only the most important options are listed. For further options go into t
 
 To achieve the basic network configuration the following options shall be taken into account:
 
-- Run with WiFi: AUTO_SETUP_NET_WIFI_ENABLED, AUTO_SETUP_NET_WIFI_COUNTRY_CODE in combination with `dietpi-wifi.txt`
-- Use a static IP address: AUTO_SETUP_NET_USESTATIC, AUTO_SETUP_NET_STATIC_IP, AUTO_SETUP_NET_STATIC_MASK, AUTO_SETUP_NET_STATIC_GATEWAY, AUTO_SETUP_NET_STATIC_DNS, AUTO_SETUP_DHCP_TO_STATIC
-- Usage of a proxy server: CONFIG_PROXY_ADDRESS, CONFIG_PROXY_PORT, CONFIG_PROXY_USERNAME, CONFIG_PROXY_PASSWORD
+- Run with WiFi: `AUTO_SETUP_NET_WIFI_ENABLED`, `AUTO_SETUP_NET_WIFI_COUNTRY_CODE` in combination with `dietpi-wifi.txt`
+- Use a static IP address: `AUTO_SETUP_NET_USESTATIC`, `AUTO_SETUP_NET_STATIC_IP`, `AUTO_SETUP_NET_STATIC_MASK`, `AUTO_SETUP_NET_STATIC_GATEWAY`, `AUTO_SETUP_NET_STATIC_DNS`, `AUTO_SETUP_DHCP_TO_STATIC`
+- Usage of a proxy server: `CONFIG_PROXY_ADDRESS`, `CONFIG_PROXY_PORT`, `CONFIG_PROXY_USERNAME`, `CONFIG_PROXY_PASSWORD`
 
 #### System options
 
 Many of the system options can be set with the automated installation and can be also changed afterwards via `dietpi-config`:
 
-- Basic settings: AUTO_SETUP_NET_HOSTNAME, AUTO_SETUP_GLOBAL_PASSWORD
-- Localization: AUTO_SETUP_LOCALE, AUTO_SETUP_KEYBOARD_LAYOUT, AUTO_SETUP_TIMEZONE
-- Autostart: AUTO_SETUP_AUTOSTART_TARGET_INDEX, AUTO_SETUP_AUTOSTART_LOGIN_USER
-- Overclocking: CONFIG_CPU_GOVERNOR, CONFIG_CPU_MAX_FREQ, CONFIG_CPU_MIN_FREQ, etc.
-- Auto-updating: CONFIG_CHECK_DIETPI_UPDATES, CONFIG_CHECK_APT_UPDATES
+- Basic settings: `AUTO_SETUP_NET_HOSTNAME`, `AUTO_SETUP_GLOBAL_PASSWORD`
+- Localization: `AUTO_SETUP_LOCALE`, `AUTO_SETUP_KEYBOARD_LAYOUT`, `AUTO_SETUP_TIMEZONE`
+- Autostart: `AUTO_SETUP_AUTOSTART_TARGET_INDEX`, `AUTO_SETUP_AUTOSTART_LOGIN_USER`
+- Overclocking: `CONFIG_CPU_GOVERNOR`, `CONFIG_CPU_MAX_FREQ`, `CONFIG_CPU_MIN_FREQ`, etc.
+- Auto-updating: `CONFIG_CHECK_DIETPI_UPDATES`, `CONFIG_CHECK_APT_UPDATES`
 
 #### Software preferences
 
-Some server options can be set via AUTO_SETUP_SSH_SERVER_INDEX, AUTO_SETUP_FILE_SERVER_INDEX, AUTO_SETUP_WEB_SERVER_INDEX
+Some server options can be set via `AUTO_SETUP_SSH_SERVER_INDEX`, `AUTO_SETUP_FILE_SERVER_INDEX`, `AUTO_SETUP_WEB_SERVER_INDEX`.
 
 #### Software packages installation
 
-All software packages, which can be installed via `dietpi-software` can also be installed automatically using the keyword AUTO_SETUP_INSTALL_SOFTWARE_ID.  
+All software packages, which can be installed via `dietpi-software` can also be installed automatically using the keyword `AUTO_SETUP_INSTALL_SOFTWARE_ID`.  
 The software packages are given with their software ID (a number) which can be found on the left side when browsing the software in the `dietpi-software` script. Additionally they are given in the [list of available software IDs](https://github.com/MichaIng/DietPi/wiki/DietPi-Software-list).
 
 As an example the software package "Plex Media Server" has the ID 42.
@@ -174,14 +174,16 @@ Search `AUTO_SETUP_CUSTOM_SCRIPT_EXEC` for details.
 
 #### System restore
 
-A restore process can be executed automatically using the keyword AUTO_SETUP_BACKUP_RESTORE. This gives the option to start up a system with a previous made system backup (e.g. for generating many identical systems).
+A restore process can be executed automatically using the keyword `AUTO_SETUP_BACKUP_RESTORE`. This gives the option to start up a system with a previous made system backup (e.g. for generating many identical systems).
 
 #### General options
 
 These keywords are general ones and need to be used for fully automated setups:
 
-- AUTO_SETUP_ACCEPT_LICENSE
-- AUTO_SETUP_AUTOMATED
+- `AUTO_SETUP_ACCEPT_LICENSE`
+- `AUTO_SETUP_AUTOMATED`
+
+Remark: If `AUTO_SETUP_AUTOMATED=1` is used, the `AUTO_SETUP_ACCEPT_LICENCE` needs not to be set.
 
 ### Wait for completion of the automated setup / Logging
 
@@ -195,7 +197,7 @@ The following lines give an example of needed changes within the `dietpi.txt` fi
 
 - Ethernet connection, DHCP, no proxy, no WiFi
 - German localization
-- Hostname "myDietpiSystem"
+- Hostname `myDietpiSystem`
 
 Then these entries need to be set within the file `dietpi.txt` prior the initial boot:
 
@@ -214,7 +216,7 @@ The following lines give an example of needed changes within the `dietpi.txt` fi
 - Automatic updates
 - Ethernet connection, DHCP, no proxy, no WiFi
 - German localization
-- Hostname "myDietpiSystem"
+- Hostname `myDietpiSystem`
 - X11 desktop with XFCE and Chromium
 - Autostart to X11 login screen
 
@@ -225,7 +227,6 @@ AUTO_SETUP_LOCALE=de_DE.UTF-8
 AUTO_SETUP_KEYBOARD_LAYOUT=de
 AUTO_SETUP_TIMEZONE=Europe/Berlin
 AUTO_SETUP_NET_HOSTNAME=myDietPiSystem
-AUTO_SETUP_DESKTOP_INDEX=-1
 AUTO_SETUP_BROWSER_INDEX=-2
 AUTO_SETUP_AUTOSTART_TARGET_INDEX=16
 AUTO_SETUP_AUTOMATED=1
