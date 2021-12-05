@@ -16,7 +16,7 @@ Take us for a spin, and let us know if you hit any road bumps along the way. The
 
     Debian 9 "Stretch" was released in 2017, and it has been initially superseded by Debian 10 (buster), and then Debian 11 (bullseye).
 
-    **DietPi v.7.9 will be the last release with support for Debian Stretch**. Next release will be **DietPi v8.0** and it will require Debian Buster or newer.
+    **DietPi v7.9 will be the last release with support for Debian Stretch**. Next release will be **DietPi v8.0** and it will require Debian Buster or newer.
 
     Read our article [**Why you should upgrade your Stretch system now**](https://dietpi.com/blog/?p=1001) to learn more about the need to make this upgrade and you could do this easily to Debian Buster and even further to latest version (Debian Bullseye).
 
@@ -60,7 +60,7 @@ Take us for a spin, and let us know if you hit any road bumps along the way. The
         journalctl -u apache2
         ```
 
-    - The ServerName directive is added with the **local IP**, to mute related startup warnings.
+    - The `ServerName` directive is added with the **local IP**, to mute related startup warnings.
     This may imply access and CORS failures when applications check for the server name as allowed hostname but a different external IPs/hostnames was used for access. In such case generally applications provide a way to define a list of permitted hostnames. Without a server name set, usually webserver simply apply the `HTTP_HOST` header, which bypasses every related check. Apache, according to the logged warning, seems to use `127.0.1.1` then.
 
 - **DietPi-Software** | [**Kodi**](../software/media/#kodi)
