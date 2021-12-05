@@ -483,17 +483,17 @@ Apache is a Apache Software Foundation project. The goal is to provide a secure,
 
     Logging is done to journal by default, and you can view the details by executing next command:
 
-        ```sh
-        journalctl -u apache2
-        ```
-    
+    ```sh
+    journalctl -u apache2
+    ```
+
 === "Server name"
 
     The `ServerName` directive is updated with the local IP. This helps muting the related startup warnings. 
     
     **Notes:** 
     
-    - This may imply access and CORS failures when applications check for the server name as allowed hostname but a different external IPs/hostnames was used for access. In such case generally applications provide a way to define a list of permitted hostnames. 
+    - This may imply access and CORS failures [^6] when applications check for the server name. In such case, generally applications provide a way to define a list of permitted hostnames. 
     
     - Without a server name set, usually webserver simply apply the HTTP_HOST header, which bypasses every related check. Apache, according to the logged warning, seems to use 127.0.1.1 then.
 
@@ -641,5 +641,7 @@ Official documentation: <https://nodejs.org/api/>
     [NGINX vs. Apache: Our View of a Decade-Old Question](https://www.nginx.com/blog/nginx-vs-apache-our-view/). Retrieved 12 December 2020
 
 [^5]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
+
+[^6]: [CORS Errors Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors). Retrieved 05 December 2021
 
 [Return to the **Optimised Software list**](../../software/)

@@ -43,7 +43,7 @@ Take us for a spin, and let us know if you hit any road bumps along the way. The
         Many thanks to @johnvick and many others for requesting this feature [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=3593).
 
     - Backups can now be stored outside of `/mnt` into any directory or mount point as long as the filesystem supports `symlinks` and UNIX `permissions`.
-    - Resolved an issue where backup and restore failed if a non-default backup location is used, as a wrong log file path was used. This is a v7.8 regression. Many thanks to @Malinka for reporting this issue [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=39909#p39909].
+    - Resolved an issue where backup and restore failed if a non-default backup location is used, as a wrong log file path was used. This is a v7.8 regression. Many thanks to @Malinka for reporting this issue [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=39909#p39909).
 
 - **DietPi-Software** | **[SABnzbd](../software/bittorrent/#sabnzbd)**
     - For fresh installs, file logging has been disabled in favour of journal logging. All service and process logs can hence now be reviewed via: journalctl -u sabnzbd
@@ -76,7 +76,7 @@ Take us for a spin, and let us know if you hit any road bumps along the way. The
         apt install kodi-repository-kodi
         ```
 
-- **DietPi-Software** | **[Gitea](../software/cloud/#gitea)** :octicons-arrow-right-16: The service runs now as dedicated user `gitea` with its home directory `/mnt/dietpi_userdata/gitea` to allow easy transfer and usage of SSH keys for remote access. This applies to newly installed or reinstalled Gitea instances. Many thanks to @LilTrublMakr for reporting the related limitation with the previously used `dietpi` user: https://github.com/MichaIng/DietPi/issues/4620.
+- **DietPi-Software** | **[Gitea](../software/cloud/#gitea)** :octicons-arrow-right-16: The service runs now as dedicated user `gitea` with its home directory `/mnt/dietpi_userdata/gitea` to allow easy transfer and usage of SSH keys for remote access. This applies to newly installed or reinstalled Gitea instances. Many thanks to @LilTrublMakr for reporting the related limitation with the previously used `dietpi` user: <https://github.com/MichaIng/DietPi/issues/4620>.
 
 ### Bug Fixes {: #bug-fixes-79 }
 
@@ -88,10 +88,9 @@ As always, many smaller code performance and stability improvements, visual and 
 
 ### Known/Outstanding Issues {: #known-issues-79 }
 
-- DietPi-Config | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: https://github.com/MichaIng/DietPi/issues/2103
+- DietPi-Config | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>.
 
-For all additional issues that may appear after release, please see the following link for active tickets: https://github.com/MichaIng/DietPi/issues
-
+For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>.
 
 ## November 2021 (version 7.8) {: #november-2021-version-78 }
 
