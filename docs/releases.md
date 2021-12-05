@@ -8,13 +8,13 @@
 
 Take us for a spin, and let us know if you hit any road bumps along the way. The fun is in the journey.
 
-**Ready to get started ?** Find here the steps how to use the DietPi Beta branch [branch system](https://github.com/MichaIng/DietPi/blob/master/BRANCH_SYSTEM.md).
+**Ready to get started?** Find here the steps how to use the DietPi Beta branch [branch system](https://github.com/MichaIng/DietPi/blob/master/BRANCH_SYSTEM.md).
 
 ### Announcement
 
 !!! Warning "**Debian "Stretch" support**"
 
-    Debian 9 "Stretch" was released in 2017, and it has been initially superseded by Debian 10 (buster), and then Debian 11 (bullseye).
+    Debian 9 "Stretch" was released in 2017, and it has been initially superseded by Debian 10 "Buster", and then Debian 11 "Bullseye".
 
     **DietPi v7.9 will be the last release with support for Debian Stretch**. Next release will be **DietPi v8.0** and it will require Debian Buster or newer.
 
@@ -43,7 +43,7 @@ Take us for a spin, and let us know if you hit any road bumps along the way. The
         Many thanks to [phpBB:johnvick](https://dietpi.com/phpbb/memberlist.php?username=johnvick) and many others for requesting this feature [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=3593).
 
     - Backups can now be stored outside of `/mnt` into any directory or mount point as long as the filesystem supports `symlinks` and UNIX `permissions`.
-    - Resolved an issue where backup and restore failed if a non-default backup location is used, as a wrong log file path was used. This is a v7.8 regression. Many thanks to @Malinka for reporting this issue [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=39909#p39909).
+    - Resolved an issue where backup and restore failed if a non-default backup location is used, as a wrong log file path was used. This is a v7.8 regression. Many thanks to [phpBB:Malinka](https://dietpi.com/phpbb/memberlist.php?username=Malinka) for reporting this issue [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=39909#p39909).
 
 - **DietPi-Software** | **[SABnzbd](../software/bittorrent/#sabnzbd)**
     - For fresh installs, file logging has been disabled in favour of journal logging. All service and process logs can hence now be reviewed via: journalctl -u sabnzbd
@@ -51,7 +51,7 @@ Take us for a spin, and let us know if you hit any road bumps along the way. The
 
 - **DietPi-Software** | **[Apache](../software/webserver_stack/#apache)**
     - Fresh installs and reinstalls will be configured with `PHP-FPM` instead of `mod_php`. As a requirement, the event `MPM` is used instead of prefork. This reduces memory usage and increases access performance significantly on concurrent requests, as the Apache parent process does not need to fork a new child process for every single process.
-    - It is further optimised by spawning a single static child process only while handling concurrent requests by a sufficient amount of process threads. This allows Apache to share memory efficiently and makes it quite lightweight. There are no downsides known when using a single process only, compared to multiple processes with less threads each. For more information, see related StackExchange Q&A: [StackExchange - Apache2 MPM event: More threads vs more processes ?](https://superuser.com/questions/1611015/apache2-mpm-event-more-threads-vs-more-processes)
+    - It is further optimised by spawning a single static child process only while handling concurrent requests by a sufficient amount of process threads. This allows Apache to share memory efficiently and makes it quite lightweight. There are no downsides known when using a single process only, compared to multiple processes with less threads each. For more information, see related StackExchange Q&A: [StackExchange - Apache2 MPM event: More threads vs more processes?](https://superuser.com/questions/1611015/apache2-mpm-event-more-threads-vs-more-processes)
     - Default/base configuration is now added as separate file, so that the main `apache2.conf` is not touched anymore. Furthermore the default `vhost` is now pre-created before the package install, so that it can be skipped on a reinstall to not overwrite user customisations. These in combination allow for a safe and clean reinstall without breaking any changes done by the admin, with the little exception that the webroot is set to `/var/www` which is required for all our software options which make use of an external webserver.
     - The new default configuration provides maximum privacy settings and security headers. It is simple to override these with own configurations, on `vhost` or directory level.
     - Logging is now done to journal by default, and you can view them, running next command:
@@ -82,7 +82,7 @@ Take us for a spin, and let us know if you hit any road bumps along the way. The
 
 - [**Raspberry Pi**](../hardware/#raspberry-pi) :octicons-arrow-right-16: Resolved an issue in the DietPi images where on first boot two serial login consoles on the generic `symlinked` and actual serial devices could have been started. This doubled inputs and in turn broke successful `username` and `password` login via serial console on first boot. Many thanks to @ad7718 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/5014>.
 - **DietPi-Software** :octicons-arrow-right-16: Resolved a DietPi v7.8 regression where [ReadyMedia](../software/media/#readymedia), [Deluge](../software/bittorrent/#deluge), [Sonarr](../software/bittorrent/#sonarr) and [Jellyfin](../software/media/#jellyfin) installs failed with an error on `usermod`, since the services were not stopped first. This has been loved via live patches for DietPi v7.8 as well.
-- **DietPi-Software** | **[Transmission](../software/bittorrent/#transmission)**: Resolved a v7.8 regression where on fresh installs the intended configuration was not deployed. Many thanks to @kannz and @alessandro.psrt for reporting these issue on the DietPi forum: ["Transmission settings ?"](https://dietpi.com/phpbb/viewtopic.php?t=9567) or ["Wrong settings.json in transmission-daemon"](https://dietpi.com/phpbb/viewtopic.php?t=9683).
+- **DietPi-Software** | **[Transmission](../software/bittorrent/#transmission)**: Resolved a v7.8 regression where on fresh installs the intended configuration was not deployed. Many thanks to [phpBB:kannz](https://dietpi.com/phpbb/memberlist.php?username=kannz) and [phpBB:alessandro.psrt](https://dietpi.com/phpbb/memberlist.php?username=alessandro.psrt) for reporting these issue on the DietPi forum: ["Transmission settings?"](https://dietpi.com/phpbb/viewtopic.php?t=9567) or ["Wrong settings.json in transmission-daemon"](https://dietpi.com/phpbb/viewtopic.php?t=9683).
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/issues/5019>
 
