@@ -186,12 +186,6 @@ As always, many smaller code performance and stability improvements, visual and 
 
 - **Odroid N1** :octicons-arrow-right-16: There is not a single reported DietPi Odroid N1 system, which makes sense as this model was never really released. Only a small number of developer samples are floating around, not worth to keep maintaining an image and dedicated code. If there are unreported Odroid N1 DietPi systems out there, they will be automatically migrated to the Generic Rockchip RK3399 device ID on DietPi update.
 
-### Known/Outstanding Issues {: #known-issues-78 }
-
-- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
-
-For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
-
 ## October 2021 (version 7.7) {: #october-2021-version-77 }
 
 ### Overview
@@ -314,12 +308,6 @@ As always, many smaller code performance and stability improvements, visual and 
 - [DietPi-Software | **ReadyMedia**](../software/media/#readymedia) :octicons-arrow-right-16: Resolved an issue on Bullseye where the service does not start unless the log directory is manually created. Due to a Debian package patch, on Bullseye logs are forced to file logging again, so that /var/log/minidlna again needs to exist. Many thanks to @AnzoP for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4745>
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4747>
-
-### Known/Outstanding Issues {: #known-issues-76 }
-
-- [DietPi-Config](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
-
-For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
 
 ## August 2021 (version 7.5) {: #august-2021-version-75 }
 
