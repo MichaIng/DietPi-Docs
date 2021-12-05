@@ -1,5 +1,97 @@
 # DietPi Releases
 
+## December 2021 (Beta Version 7.9) {: #december-2021-version-79 }
+
+### Overview
+
+**DietPi Beta v7.9 is ready for testing! While we are in beta, we are working at full speed to roll out DietPi improvments and new features on December 11th.**
+
+Take us for a spin, and let us know if you hit any road bumps along the way. The fun is in the journey.
+
+**Ready to get started?** Find here the steps how to use the DietPi Beta branch [branch system](https://github.com/MichaIng/DietPi/blob/master/BRANCH_SYSTEM.md).
+
+### Announcement
+
+!!! Warning "**Debian "Stretch" support**"
+
+    Debian 9 "Stretch" was released in 2017, and it has been initially superseded by Debian 10 "Buster", and then Debian 11 "Bullseye".
+
+    **DietPi v7.9 will be the last release with support for Debian Stretch**. Next release will be **DietPi v8.0** and it will require Debian Buster or newer.
+
+    Read our article [**Why you should upgrade your Stretch system now**](https://dietpi.com/blog/?p=1001) to learn more about the need to make this upgrade and you could do this easily to Debian Buster and even further to latest version (Debian Bullseye).
+
+### Improvements {: #improvements-79 }
+
+- [**DietPi-Dashboard**](../software/system_stats/#dietpi-dashboard)
+    - On fresh installs, password protection is now enabled by default, using the **global software password**.
+
+        ![DietPi-Dashboard Password](assets/images/dietpi-dashboard-login.jpg){: width="800" height="576" loading="lazy"}
+
+        You can apply or change this manually by following the instructions in our documentation: <https://dietpi.com/docs/software/system_stats/#dietpi-dashboard>
+
+    - The default TCP network port has been changed from `8088` to `5252` to resolve a port conflict with InfluxDB. If you have already installed DietPi-Dashboard, you will be asked whether you want to apply this change during the update.
+
+        ![DietPi-Dashboard Default Port](assets/images/dietpi-dashboard-port-change.jpg){: width="800" height="252" loading="lazy"}
+
+        Many thanks to @blablazzz for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4966>
+
+- [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore)
+    - A backup archive with a selectable amount of backups to keep can be created now. Backups are rotated automatically and if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync, to reduce writes and increase speed.
+
+        ![DietPi-Backup Amount](assets/images/dietpi-backup-amount.jpg){: width="800" height="265" loading="lazy"}
+
+        Many thanks to [phpBB:johnvick](https://dietpi.com/phpbb/memberlist.php?username=johnvick) and many others for requesting this feature [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=3593).
+
+    - Backups can now be stored outside of `/mnt` into any directory or mount point as long as the filesystem supports `symlinks` and UNIX `permissions`.
+    - Resolved an issue where backup and restore failed if a non-default backup location is used, as a wrong log file path was used. This is a v7.8 regression. Many thanks to [phpBB:Malinka](https://dietpi.com/phpbb/memberlist.php?username=Malinka) for reporting this issue [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=39909#p39909).
+
+- **DietPi-Software** | **[SABnzbd](../software/bittorrent/#sabnzbd)**
+    - For fresh installs, file logging has been disabled in favour of journal logging. All service and process logs can hence now be reviewed via: journalctl -u sabnzbd
+    - Resolved an issue where installs failed on ARMv6 and ARMv7 Stretch systems. Many thanks to @bensp for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4997>.
+
+- **DietPi-Software** | **[Apache](../software/webserver_stack/#apache)**
+    - Fresh installs and reinstalls will be configured with `PHP-FPM` instead of `mod_php`. As a requirement, the event `MPM` is used instead of prefork. This reduces memory usage and increases access performance significantly on concurrent requests, as the Apache parent process does not need to fork a new child process for every single process.
+    - It is further optimised by spawning a single static child process only while handling concurrent requests by a sufficient amount of process threads. This allows Apache to share memory efficiently and makes it quite lightweight. There are no downsides known when using a single process only, compared to multiple processes with less threads each. For more information, see related StackExchange Q&A: [StackExchange - Apache2 MPM event: More threads vs more processes?](https://superuser.com/questions/1611015/apache2-mpm-event-more-threads-vs-more-processes)
+    - Default/base configuration is now added as separate file, so that the main `apache2.conf` is not touched anymore. Furthermore the default `vhost` is now pre-created before the package install, so that it can be skipped on a reinstall to not overwrite user customisations. These in combination allow for a safe and clean reinstall without breaking any changes done by the admin, with the little exception that the webroot is set to `/var/www` which is required for all our software options which make use of an external webserver.
+    - The new default configuration provides maximum privacy settings and security headers. It is simple to override these with own configurations, on `vhost` or directory level.
+    - Logging is now done to journal by default, and you can view them, running next command:
+
+        ```sh
+        journalctl -u apache2
+        ```
+
+    - The `ServerName` directive is added with the **local IP**, to mute related startup warnings.
+    This may imply access and CORS failures when applications check for the server name as allowed hostname but a different external IPs/hostnames was used for access. In such case generally applications provide a way to define a list of permitted hostnames. Without a server name set, usually webserver simply apply the `HTTP_HOST` header, which bypasses every related check. Apache, according to the logged warning, seems to use `127.0.1.1` then.
+
+- **DietPi-Software** | [**Kodi**](../software/media/#kodi)
+    - On **Raspberry Pi Bullseye** systems, the new official **Raspberry Pi** repository build for Kodi 19.3 is now installed. You can apply the upgrade manually by reinstalling Kodi.
+
+        ```sh
+        dietpi-software reinstall 31
+        ```
+
+    - The addon repository is now installed by default with all Kodi installs, which previously was the case only on RPi and Odroids. When currently missing, it can be manually installed
+
+        ```sh
+        apt install kodi-repository-kodi
+        ```
+
+- **DietPi-Software** | **[Gitea](../software/cloud/#gitea)** :octicons-arrow-right-16: The service runs now as dedicated user `gitea` with its home directory `/mnt/dietpi_userdata/gitea` to allow easy transfer and usage of SSH keys for remote access. This applies to newly installed or reinstalled Gitea instances. Many thanks to @LilTrublMakr for reporting the related limitation with the previously used `dietpi` user: <https://github.com/MichaIng/DietPi/issues/4620>.
+
+### Bug Fixes {: #bug-fixes-79 }
+
+- [**Raspberry Pi**](../hardware/#raspberry-pi) :octicons-arrow-right-16: Resolved an issue in the DietPi images where on first boot two serial login consoles on the generic `symlinked` and actual serial devices could have been started. This doubled inputs and in turn broke successful `username` and `password` login via serial console on first boot. Many thanks to @ad7718 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/5014>.
+- **DietPi-Software** :octicons-arrow-right-16: Resolved a DietPi v7.8 regression where [ReadyMedia](../software/media/#readymedia), [Deluge](../software/bittorrent/#deluge), [Sonarr](../software/bittorrent/#sonarr) and [Jellyfin](../software/media/#jellyfin) installs failed with an error on `usermod`, since the services were not stopped first. This has been loved via live patches for DietPi v7.8 as well.
+- **DietPi-Software** | **[Transmission](../software/bittorrent/#transmission)**: Resolved a v7.8 regression where on fresh installs the intended configuration was not deployed. Many thanks to [phpBB:kannz](https://dietpi.com/phpbb/memberlist.php?username=kannz) and [phpBB:alessandro.psrt](https://dietpi.com/phpbb/memberlist.php?username=alessandro.psrt) for reporting these issue on the DietPi forum: ["Transmission settings?"](https://dietpi.com/phpbb/viewtopic.php?t=9567) or ["Wrong settings.json in transmission-daemon"](https://dietpi.com/phpbb/viewtopic.php?t=9683).
+
+As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/issues/5019>
+
+### Known/Outstanding Issues {: #known-issues-79 }
+
+- DietPi-Config | Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>.
+
+For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>.
+
 ## November 2021 (version 7.8) {: #november-2021-version-78 }
 
 ### Overview
@@ -93,12 +185,6 @@ As always, many smaller code performance and stability improvements, visual and 
 ### Removed Supported SBC {: #removed-SBC-78 }
 
 - **Odroid N1** :octicons-arrow-right-16: There is not a single reported DietPi Odroid N1 system, which makes sense as this model was never really released. Only a small number of developer samples are floating around, not worth to keep maintaining an image and dedicated code. If there are unreported Odroid N1 DietPi systems out there, they will be automatically migrated to the Generic Rockchip RK3399 device ID on DietPi update.
-
-### Known/Outstanding Issues {: #known-issues-78 }
-
-- [**DietPi-Config**](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
-
-For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
 
 ## October 2021 (version 7.7) {: #october-2021-version-77 }
 
@@ -222,12 +308,6 @@ As always, many smaller code performance and stability improvements, visual and 
 - [DietPi-Software | **ReadyMedia**](../software/media/#readymedia) :octicons-arrow-right-16: Resolved an issue on Bullseye where the service does not start unless the log directory is manually created. Due to a Debian package patch, on Bullseye logs are forced to file logging again, so that /var/log/minidlna again needs to exist. Many thanks to @AnzoP for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4745>
 
 As always, many smaller code performance and stability improvements, visual and spelling fixes have been done, too much to list all of them here. Check out all code changes of this release on GitHub: <https://github.com/MichaIng/DietPi/pull/4747>
-
-### Known/Outstanding Issues {: #known-issues-76 }
-
-- [DietPi-Config](../dietpi_tools/#dietpi-configuration) :octicons-arrow-right-16: Enabling WiFi + Ethernet adapters, both on different subnets, breaks WiFi connection in some cases: <https://github.com/MichaIng/DietPi/issues/2103>
-
-For all additional issues that may appear after release, please see the following link for active tickets: <https://github.com/MichaIng/DietPi/issues>
 
 ## August 2021 (version 7.5) {: #august-2021-version-75 }
 
@@ -903,7 +983,7 @@ For more details check the documentation page: [mjpg-streamer](../software/camer
 - **DietPi-Software** | **[Domoticz](../software/home_automation/#domoticz)** :octicons-arrow-right-16: Resolved an issue where saving custom scripts and starting with a template did not work. Many thanks to [phpBB:tec13](https://dietpi.com/phpbb/memberlist.php?username=tec13) for reporting this issue: <https://dietpi.com/phpbb/viewtopic.php?t=8627>
 - **DietPi-Software** :octicons-arrow-right-16: Resolved an issue where for [ruTorrent](../software/bittorrent/#rtorrent), [Koel](../software/media/#koel) and [Bitwarden_RS](../software/cloud/#vaultwarden) the automatic newest version detection failed and instead a possibly older fallback was used. Many thanks to @kelvmod for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4105>
 - **DietPi-Software** | **[LXQt](../software/desktop/#lxqt)** :octicons-arrow-right-16: Resolved visual issues with our default configuration of Debian Buster, drastically simplified and cleaned up the files we ship.
-- **DietPi-Software** | **[SABnzbd](../software/bittorrent/#sabnzbd)**: Resolved an issue on Stretch where the install failed due to raised minimum [Python](../software/programming/#python-3) version with SABnzbd v3.2.0. If Python 3.5 is installed, SABnzbd v3.1.1 will be installed now to allow keeping the install option enabled for now. Many thanks to @19eighties for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2762#issuecomment-787118995>
+- **DietPi-Software** | **[SABnzbd](../software/bittorrent/#sabnzbd)** :octicons-arrow-right-16: Resolved an issue on Stretch where the install failed due to raised minimum [Python](../software/programming/#python-3) version with SABnzbd v3.2.0. If Python 3.5 is installed, SABnzbd v3.1.1 will be installed now to allow keeping the install option enabled for now. Many thanks to @19eighties for reporting this issue: <https://github.com/MichaIng/DietPi/issues/2762#issuecomment-787118995>
 
 !!! hint ""
 

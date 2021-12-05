@@ -31,7 +31,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 ![Pi-hole web interface screenshot](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500" height="410" loading="lazy"}
 
 !!! warning "Webserver installation"
-    DietPi-Software calls the Pi-hole installer with the `--disable-install-webserver` flag, which skips the Lighttpd and PHP installation parts. Instead, Lighttpd, Nginx or Apache2 is installed separately, based on user choice, and PHP as standalone PHP-FPM server or module for Apache2 respectively. This allows more flexible webserver configurations as well, easy HTTPS, other web sites/applications on the same server etc. When **repairing** and **reconfiguring** Pi-hole (see "Repairing Pi-hole" tab below), it is important to **NOT** select to install Lighttpd when being asked, as this would lead to doubled PHP and webserver installs or conflicting webserver settings.
+    DietPi-Software calls the Pi-hole installer with the `--disable-install-webserver` flag, which skips the Lighttpd and PHP installation parts. Instead, Lighttpd, Nginx or Apache is installed separately, based on user choice, and PHP as standalone PHP-FPM server or module for Apache respectively. This allows more flexible webserver configurations as well, easy HTTPS, other web sites/applications on the same server etc. When **repairing** and **reconfiguring** Pi-hole (see "Repairing Pi-hole" tab below), it is important to **NOT** select to install Lighttpd when being asked, as this would lead to doubled PHP and webserver installs or conflicting webserver settings.
 
 === "Access the web interface"
 
