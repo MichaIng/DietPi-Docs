@@ -4,15 +4,44 @@
 
 ### Overview
 
-DietPi Beta v7.9 is ready for testing !
+**DietPi Beta v7.9 is ready for testing ! While we are in beta, we are working at full speed to roll out DietPi improvments and new features.** 
+
+Take us for a spin, and let us know if you hit any road bumps along the way. The fun is in the journey. 
+
+**Ready to get started ?** Find here the steps how to use the DietPi Beta branch [branch system](https://github.com/MichaIng/DietPi/blob/master/BRANCH_SYSTEM.md).
+
+### Announcement 
+
+!!! Warning "**Debian "stretch" support**"
+
+    Debian 9.13 "stretch" was released July 18th, 2020, and it has been initially superseded by Debian 10 (buster), and then Debian 11 (bullseye). 
+    
+    **DietPi v.7.9 will be the last release with support for Debian stretch**. Next release will be **DietPi v8.0** and it will require Debian Buster or newer. 
+    
+    Read our article [**Why you should upgrade your Stretch system now**](https://dietpi.com/blog/?p=1001) to learn more about the need to make this upgrade and you could do this easily to Debian Buster and even further to latest version (Debian Bullseye). 
 
 ### Improvements {: #improvements-79 }
 
 - [**DietPi-Dashboard**](../software/system_stats/#dietpi-dashboard)
-    - On fresh installs, password protection is now enabled by default, using the **global software password**. You can apply or change this manually by following the instructions in our documentation: <https://dietpi.com/docs/software/system_stats/#dietpi-dashboard>
-    - The default TCP network port has been changed from `8088` to `5252` to resolve a port conflict with InfluxDB. This does not affect existing installs, but you will be asked whether to apply this change during DietPi update. Many thanks to @blablazzz for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4966>
+    - On fresh installs, password protection is now enabled by default, using the **global software password**. 
+
+        ![DietPi-Dashboard Password](assets/images/dietpi-dashboard-login.jpg){: width="800" height="576" loading="lazy"}
+    
+        You can apply or change this manually by following the instructions in our documentation: <https://dietpi.com/docs/software/system_stats/#dietpi-dashboard>
+
+    - The default TCP network port has been changed from `8088` to `5252` to resolve a port conflict with InfluxDB. If you have already installed DietPi-Dashboard, you will be asked whether you want to apply this change during the update. 
+    
+        ![DietPi-Dashboard Default Port](assets/images/dietpi-dashboard-port-change.jpg){: width="800" height="252" loading="lazy"}
+
+        Many thanks to @blablazzz for reporting this issue: <https://github.com/MichaIng/DietPi/issues/4966>
+
 - [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore)
-    - A backup archive with a selectable amount of backups to keep can be created now. Backups are rotated automatically and if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync, to reduce writes and increase speed. Many thanks to @johnvick and many others for requesting this feature [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=3593).
+    - A backup archive with a selectable amount of backups to keep can be created now. Backups are rotated automatically and if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync, to reduce writes and increase speed. 
+
+        ![DietPi-Backup Amount](assets/images/dietpi-backup-amount.jpg){: width="800" height="265" loading="lazy"}
+
+        Many thanks to @johnvick and many others for requesting this feature [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=3593).
+
     - Backups can now be stored outside of `/mnt` into any directory or mount point as long as the filesystem supports `symlinks` and UNIX `permissions`.
     - Resolved an issue where backup and restore failed if a non-default backup location is used, as a wrong log file path was used. This is a v7.8 regression. Many thanks to @Malinka for reporting this issue: https://dietpi.com/phpbb/viewtopic.php?p=39909#p39909
 

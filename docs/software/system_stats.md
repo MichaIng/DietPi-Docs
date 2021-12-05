@@ -39,10 +39,14 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 === "Access the web interface"
 
-    DietPi-Dashboard is accessible by default at TCP port **8088**:
+    DietPi-Dashboard is accessible by default at TCP port **5252**:
 
-    - URL = `http://<your.IP>:8088`
+    - URL = `http://<your.IP>:5252`
     - Password = `<your software password>` (default: `dietpi`)
+
+    !!! warning "DietPi-Dashboard Port"
+
+        The default TCP network port has been changed from `8088` to `5252` to resolve a port conflict with InfluxDB. If you had an early installation of `dietpi-dashboard` and you did not want to make this change, you may continue to use the initial port (`8088`).
 
 === "Directories"
 
