@@ -4,7 +4,7 @@
 
 ### Overview
 
-**DietPi Beta v7.9 is ready for testing ! While we are in beta, we are working at full speed to roll out DietPi improvments and new features.**
+**DietPi Beta v7.9 is ready for testing! While we are in beta, we are working at full speed to roll out DietPi improvments and new features on December 11th.**
 
 Take us for a spin, and let us know if you hit any road bumps along the way. The fun is in the journey.
 
@@ -12,11 +12,11 @@ Take us for a spin, and let us know if you hit any road bumps along the way. The
 
 ### Announcement
 
-!!! Warning "**Debian "stretch" support**"
+!!! Warning "**Debian "Stretch" support**"
 
-    Debian 9.13 "stretch" was released July 18th, 2020, and it has been initially superseded by Debian 10 (buster), and then Debian 11 (bullseye).
+    Debian 9 "Stretch" was released in 2017, and it has been initially superseded by Debian 10 (buster), and then Debian 11 (bullseye).
 
-    **DietPi v.7.9 will be the last release with support for Debian stretch**. Next release will be **DietPi v8.0** and it will require Debian Buster or newer.
+    **DietPi v.7.9 will be the last release with support for Debian Stretch**. Next release will be **DietPi v8.0** and it will require Debian Buster or newer.
 
     Read our article [**Why you should upgrade your Stretch system now**](https://dietpi.com/blog/?p=1001) to learn more about the need to make this upgrade and you could do this easily to Debian Buster and even further to latest version (Debian Bullseye).
 
@@ -40,7 +40,7 @@ Take us for a spin, and let us know if you hit any road bumps along the way. The
 
         ![DietPi-Backup Amount](assets/images/dietpi-backup-amount.jpg){: width="800" height="265" loading="lazy"}
 
-        Many thanks to @johnvick and many others for requesting this feature [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=3593).
+        Many thanks to [phpBB:johnvick](https://dietpi.com/phpbb/memberlist.php?username=johnvick) and many others for requesting this feature [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?t=3593).
 
     - Backups can now be stored outside of `/mnt` into any directory or mount point as long as the filesystem supports `symlinks` and UNIX `permissions`.
     - Resolved an issue where backup and restore failed if a non-default backup location is used, as a wrong log file path was used. This is a v7.8 regression. Many thanks to @Malinka for reporting this issue [on the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=39909#p39909).

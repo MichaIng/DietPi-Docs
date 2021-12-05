@@ -469,7 +469,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ## WebServers
 
-### Apache {: #apache }
+### Apache
 
 Apache is open source and it is the most commonly used Web server on Linux systems.
 
