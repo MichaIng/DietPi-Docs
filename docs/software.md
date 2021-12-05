@@ -247,8 +247,8 @@
 
 ### [Stacks for web development](webserver_stack/#stacks-for-web-development)
 
-- [**LAMP web stack - Apache2 / MariaDB / PHP**](webserver_stack/#lamp-web-stack)
-- [**LASP web stack - Apache2 / SQLite / PHP**](webserver_stack/#lasp-web-stack)
+- [**LAMP web stack - Apache / MariaDB / PHP**](webserver_stack/#lamp-web-stack)
+- [**LASP web stack - Apache / SQLite / PHP**](webserver_stack/#lasp-web-stack)
 - [**LEMP web stack - Nginx / MariaDB / PHP**](webserver_stack/#lemp-web-stack)
 - [**LESP web stack - Nginx / SQLite / PHP**](webserver_stack/#lesp-web-stack)  
 - [**LLMP web stack - Lighttpd / MariaDB / PHP**](webserver_stack/#llmp-web-stack)
@@ -256,7 +256,7 @@
 
 ### [Webservers](webserver_stack/#webservers)
 
-- [**Apache2 - Feature-rich webserver**](webserver_stack/#apache2)  
+- [**Apache - Feature-rich webserver**](webserver_stack/#apache)  
 - [**Nginx - High performance web server, load balancer & reverse proxy**](webserver_stack/#nginx)  
 - [**Lighttpd - Extremely lightweight webserver**](webserver_stack/#lighttpd)
 - [**Tomcat8 - Apache Tomcat server**](webserver_stack/#tomcat)  

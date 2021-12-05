@@ -97,6 +97,10 @@ Select the following tabs for the installation description of your target.
     Remove the drive resp. SD card from the PC and insert it into your SBC device, preparing to boot for the first time.  
     Power on the SBC to login and execute the first boot procedure.  
 
+    ??? info "Option: Automatic base installation at first boot (running an _unattended base installation_)"
+
+        DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](../usage/#how-to-do-an-automatic-base-installation-at-first-boot) for details.
+
     ???+ hint "Initial boot duration"
         Due to an automated resize of the root filesystem and basic setup steps, this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the system drive and hardware.
 
@@ -635,6 +639,10 @@ Select the following tabs for the installation description of your target.
             You need to set these values before you boot up the PC for the first time (initial boot).
 
         For the first boot up of your PC disconnect your disc drive from your working PC and connect it to the target PC. Then power on the target PC to login and execute the first boot procedure.
+
+        ??? info "Option: Automatic base installation at first boot (running an _unattended base installation_)"
+
+            DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](../usage/#how-to-do-an-automatic-base-installation-at-first-boot) for details.
 
 ## 4. First logon on DietPi
 
