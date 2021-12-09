@@ -76,12 +76,12 @@ Welcome to **December 2021 release** :octicons-heart-16: of **DietPi**. It is en
 
 - **DietPi-Software** | **[Chromium](../software/desktop/#chromium)** :octicons-arrow-right-16: On Raspberry Pi, the `chromium-codecs-ffmpeg-extra` package is now installed together with Chromium, which adds additional codecs for patented video/audio formats. Many thanks to @Krawei for identifying this Chromium video playback enhancement - see <https://github.com/MichaIng/DietPi/issues/5013>.
 
-- **DietPi-Software** - **File server** :octicons-arrow-right-16: This choice menu has been removed from DietPi Software, most file servers being able to run concurrently. Hence it is not required anymore first to remove the existent file server (e.g. a Samba server) and then to install something new (e.g. a FTP server). As a result, it is not necessary a dedicated menu option in the DietPi-Software. 
+- **DietPi-Software** - **File server** :octicons-arrow-right-16: This choice menu has been removed from DietPi Software, most file servers being able to run concurrently. Hence it is not required anymore first to remove the existent file server (e.g. a Samba server) and then to install something new (e.g. a FTP server). As a result, it is not necessary a dedicated menu option in the DietPi-Software.
 
-    File servers can be selected using "Browse Software" or "Search Software" menus in `dietpi-software` or via CLI. See the documentation for the available [DietPi File Servers](https://dietpi.com/docs/software/file_servers/). 
+    File servers can be selected using "Browse Software" or "Search Software" menus in `dietpi-software` or via CLI. See the documentation for the available [DietPi File Servers](https://dietpi.com/docs/software/file_servers/).
 
     ![DietPi-Software](assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-    
+
     The related `dietpi.txt` setting has been removed for new images as well, but it will still be respected when present. For an automated install with new images, use the `AUTO_SETUP_INSTALL_SOFTWARE_ID` setting instead.
 
 ### Bug Fixes {: #bug-fixes-79 }
