@@ -72,7 +72,7 @@ Welcome to **December 2021 release** :octicons-heart-16: of **DietPi**. It is en
         apt install kodi-repository-kodi
         ```
 
-- **DietPi-Software** | [**Gitea**](../software/cloud/#gitea) 
+- **DietPi-Software** | [**Gitea**](../software/cloud/#gitea)
     - The service runs now as dedicated user `gitea` with its home directory `/mnt/dietpi_userdata/gitea` to allow easy transfer and usage of SSH keys for remote access. This applies to newly installed or reinstalled Gitea instances. Many thanks to @LilTrublMakr for reporting the related limitation with the previously used `dietpi` user: <https://github.com/MichaIng/DietPi/issues/4620>.
     - [**Gitea**](../software/cloud/#gitea) and [**Gogs**](../software/cloud/#gogs) conflict with each other as both use port `3000` by default. DietPi uses new conflict management system to prevent both being installed concurrently.
 
