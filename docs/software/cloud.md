@@ -367,7 +367,7 @@ Your very own GitHub style server, with web interface.
         - Application URL: `http://<your.domain/IP>:3000/`
         - Log Path: `/var/log/gogs`
     - Scroll to the bottom of page and select "Install Gogs".
-    - Depending on whether the base URL above was entered correctly/is accessible by the connected browser, you may need to reconnect to the web page using the IP address, e.g.: `http://<your.IP>:3000`
+    - Depending on whether the application URL above was entered correctly/is accessible by the connected browser, you may need to reconnect to the web page using the IP address, e.g.: `http://<your.IP>:3000`
     - Once the page has reloaded, you will need to click `Register` to create the admin account.
 
 === "External access"
@@ -428,8 +428,9 @@ Your very own GitHub style server, with web interface.
     - Change the following values only:
         - Host: `/run/mysqld/mysqld.sock`
         - Password: `<your global password>` (default: `dietpi`)
-        - Gitea base URL: `http://<your.domain/IP>:3000/`
-        - Log path: `/var/log/gitea` (However, file logging is disabled by default.)
+        - SSH Server Domain: `<your.domain/IP>`
+        - Gitea Base URL: `http://<your.domain/IP>:3000/`
+        - Log Path: `/var/log/gitea` (However, file logging is disabled by default.)
     - Scroll to the bottom of page and select "Install Gitea".
     - Depending on whether the base URL above was entered correctly/is accessible by the connected browser, you may need to reconnect to the web page using the IP address, e.g.: `http://<your.IP>:3000`
     - Once the page has reloaded, you will need to click `Register` to create the admin account.
