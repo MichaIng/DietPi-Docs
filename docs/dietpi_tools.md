@@ -651,7 +651,14 @@ Run `dietpi-logclear`.
 
 ### DietPi backup (backup/restore)
 
-`DietPi-Backup` allows you to backup and restore your DietPi system, similar to *Windows system restore*. It creates a snapshot of the system that you can restore at any time. You can also customise which files and directories are included and excluded through the GUI, and enable automatic daily backups.
+`DietPi-Backup` allows you to backup and restore your DietPi system, similar to *Windows system restore*. It creates a snapshot of the system that can be restored at any time.  
+`DietPi-Backup` provides the following features:
+
+- Selection of the **target directory** (also remote mounted shares are possible)
+- Customization which **files and directories** are **included** and **excluded**
+- Activation of **automatic daily backups**
+- Setting of an **amount of backups to be kept**  
+  Backups are rotated automatically and if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync
 
 From the console, run the following command:
 
