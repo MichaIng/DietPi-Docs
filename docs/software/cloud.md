@@ -377,7 +377,7 @@ Your very own GitHub style server, with web interface.
     - Port: 3000
     - Protocol: TCP+UDP
 
-    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt).
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [`dietpi-letsencrypt`](../../dietpi_tools/#dietpi-letsencrypt).
 
 === "View logs"
 
@@ -441,11 +441,11 @@ Your very own GitHub style server, with web interface.
     - Port: 3000
     - Protocol: TCP+UDP
 
-    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt).
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [`dietpi-letsencrypt`](../../dietpi_tools/#dietpi-letsencrypt).
 
 === "Fail2Ban integration"
 
-    Using Fail2Ban your can block IPs after failed login attempts. This hardens your system against e.g. brute-force attacks.
+    Using Fail2Ban your can block IP addresses after failed login attempts. This hardens your system against e.g. brute-force attacks.
 
     === "When using journal logging (default)"
 
