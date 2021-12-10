@@ -351,34 +351,63 @@ Your very own GitHub style server, with web interface.
 
     The web interface is accessible via port **3000**:
 
-    - URL = `http://<your.IP>:3000`
+    - URL: `http://<your.IP>:3000`
 
 === "First run setup"
 
     Has to be done once, when connected to the web interface:
 
     - Change the following values only:
-        - Database = `MySQL`
-        - User = `gogs`
-        - Database password = `<your global password>` (default: `dietpi`)
-        - Repository Root Path = `/mnt/dietpi_userdata/gogs-repo`
-        - Run User = `gogs`
-        - Log Path = `/var/log/gogs`
-        - Email service settings \> From = `anyone@anyemail.com`
-    - Scroll to the bottom of page and select Install Gogs
-    - When the web address changes to localhost: and fails to load, you need to reconnect to the web page using the IP address (e.g.: `http://<your.IP>:3000`)
-    - Once the page has reloaded, you will need to click register to create the admin account
+        - Database Type: `MySQL`
+        - Host: `/run/mysqld/mysqld.sock`
+        - Password: `<your global password>` (default: `dietpi`)
+        - Repository Root Path: `/mnt/dietpi_userdata/gogs-repo`
+        - Run User: `gogs`
+        - Domain: `<your.domain/IP>`
+        - Application URL: `http://<your.domain/IP>:3000/`
+        - Log Path: `/var/log/gogs`
+    - Scroll to the bottom of page and select "Install Gogs".
+    - Depending on whether the base URL above was entered correctly/is accessible by the connected browser, you may need to reconnect to the web page using the IP address, e.g.: `http://<your.IP>:3000`
+    - Once the page has reloaded, you will need to click `Register` to create the admin account.
 
 === "External access"
 
     If you wish to allow external access to your Gogs server, you will need to setup port forwarding on your router, pointing to the IP address of your DietPi device.
 
-    - Port = 3000
-    - Protocol = TCP+UDP
+    - Port: 3000
+    - Protocol: TCP+UDP
+
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt).
+
+=== "View logs"
+
+    Initial service logs can be viewed via:
+
+    ```sh
+    journalctl -u gitea
+    ```
+
+    Daemon logs can be found in the following directory:
+
+    ```
+    /var/log/gogs
+    ```
+
+=== "Update to latest version"
+
+    You can easily update Gogs by reinstalling it. Your settings and data are preserved by this:
+
+    ```sh
+    dietpi-software reinstall 49
+    ```
 
 ***
 
-Website: <https://gogs.io>
+Official website: <https://gogs.io/>  
+Official documentation: <https://gogs.io/docs>  
+Official forum: <https://discuss.gogs.io/>  
+Source code: <https://github.com/gogs/gogs>  
+License: [MIT](https://github.com/gogs/gogs/blob/main/LICENSE)
 
 ## Gitea
 
@@ -390,62 +419,93 @@ Your very own GitHub style server, with web interface.
 
     The web interface is accessible via port **3000**:
 
-    - URL = `http://<your.IP>:3000`
+    - URL: `http://<your.IP>:3000`
 
 === "First run setup"
 
     Has to be done once, when connected to the web interface:
 
     - Change the following values only:
-        - MySQL database user = `gitea`
-        - MySQL database password = `<your global password>` (default: `dietpi`)
-        - Repository root path = `/mnt/dietpi_userdata/gitea/gitea-repositories`
-        - Log path = `/var/log/gitea`
-    - Scroll to the bottom of page and select Install Gitea
-    - When the web address changes to localhost: and fails to load, you need to reconnect to the web page using the IP address (e.g.: `http://<your.IP>:3000`)
-    - Once the page has reloaded, you will need to click register to create the admin account
+        - Host: `/run/mysqld/mysqld.sock`
+        - Password: `<your global password>` (default: `dietpi`)
+        - Gitea base URL: `http://<your.domain/IP>:3000/`
+        - Log path: `/var/log/gitea` (However, file logging is disabled by default.)
+    - Scroll to the bottom of page and select "Install Gitea".
+    - Depending on whether the base URL above was entered correctly/is accessible by the connected browser, you may need to reconnect to the web page using the IP address, e.g.: `http://<your.IP>:3000`
+    - Once the page has reloaded, you will need to click `Register` to create the admin account.
 
 === "External access"
 
     If you wish to allow external access to your Gitea server, you will need to setup port forwarding on your router, pointing to the IP address of your DietPi device.
 
-    - Port = 3000
-    - Protocol = TCP+UDP
+    - Port: 3000
+    - Protocol: TCP+UDP
 
-    If an external access is used, the activation of the package [Let’s Encrypt - Enable HTTPS / SSL](../system_security/#lets-encrypt-enable-https-ssl) is strongly recommended to increase your system security.
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt).
 
 === "Fail2Ban integration"
 
-    Using Fail2Ban your can block users after failed login attempts. This hardens your system, e.g. against brute-force attacks.
+    Using Fail2Ban your can block IPs after failed login attempts. This hardens your system against e.g. brute-force attacks.
 
-    - Create new filter `/etc/fail2ban/filter.d/gitea.conf`:
+    === "When using journal logging (default)"
+
+        By default Gitea logs to the systemd journal (see "View logs" tab), in which case Fail2Ban protection can be enabled with the following steps:
+
+        Create a new filter `/etc/fail2ban/filter.d/gitea.conf`:
 
         ```ini
-        # Fail2Ban filter for Gitea
-
         [Definition]
-        failregex =  .*Failed authentication attempt for .* from <HOST>
-        ignoreregex =
+        journalmatch = _SYSTEMD_UNIT=gitea.service
+        failregex = Failed authentication attempt for \x1b\[1m.+\x1b\[0m from \x1b\[1m<HOST>:\d+\x1b\[0m:
         ```
 
-    - Create new jail `/etc/fail2ban/jail.d/gitea.conf`:
+        Create a new jail `/etc/fail2ban/jail.d/gitea.conf`:
 
         ```ini
         [gitea]
         enabled = true
-        filter = gitea
-        logpath = /var/log/gitea/gitea.log
-        backend = auto
+        backend = systemd
         ```
 
-        As not specified here, Fail2Ban uses properties like `maxretry`, `bantime`, etc. from `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` (if present). Note the setting `backend = auto`. By default, `backend` is set to `systemd` in `/etc/fail2ban/jail.conf`. As a result, Fail2Ban ignores the `logpath` entry here in the jail `gitea.conf`, with the consequence, that Fail2Ban does not recognize an attack on Gitea (port 3000) even though attacks are listed in `/var/log/gitea/gitea.log`.
+    === "When using file logging"
 
-    - Restart Fail2Ban: `systemctl restart fail2ban`.
-    - Test your settings by trying to sign in multiple times from a remote PC with a wrong user or password. After `maxretry` attempts your IP must be banned for `bantime` seconds (DietPi does not respond anymore) as the default action by Fail2Ban is `route`, specified in `/etc/fail2ban/action.d/route.conf`.
-    - Check the current status on your DietPi with `fail2ban-client status gitea`.
+        When file logging is enabled (see "View logs" tab), Fail2Ban protection can be enabled with the following steps:
+
+        Create a new filter `/etc/fail2ban/filter.d/gitea.conf`:
+
+        ```ini
+        [Definition]
+        failregex = Failed authentication attempt for .+ from <HOST>:\d+:
+        ```
+
+        Create a new jail `/etc/fail2ban/jail.d/gitea.conf`:
+
+        ```ini
+        [gitea]
+        enabled = true
+        backend = auto
+        logpath = /var/log/gitea/gitea.log
+        ```
+
+    You can specify other properties like `maxretry` or `bantime` to overwrite the defaults in `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` if present. When done:
+
+    - Restart Fail2Ban: `systemctl restart fail2ban`
+    - Try to login to the Gitea web interface with a wrong password.
+    - Check whether the failed login has been detected: `fail2ban-client status gitea`
+    - When you further try to login `maxretry` times, your IP should be banned for `bantime` seconds, so that neither the Gitea web interface, nor SSH or any other network application will respond to requests from your client. When Fail2Ban was installed via `dietpi-software`, by default `route`/`blackhole` blocking is used, so that `ip r` on the server should show a `blackhole` route for your client's IP.
     - See also:
-        - [Fail2Ban](../system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
-        - <https://docs.gitea.io/en-us/fail2ban-setup>
+        - [Fail2Ban](../system_security/#fail2ban)
+        - <https://docs.gitea.io/en-us/fail2ban-setup/>
+
+=== "View logs"
+
+    By default, logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u gitea
+    ```
+
+    File logging to `/var/log/gitea/gitea.log` can be enabled by editing `/mnt/dietpi_userdata/gitea/custom/conf/app.ini` and changing `MODE = console` in the `[log]` section to `MODE = file`.
 
 === "Update to latest version"
 
@@ -457,7 +517,11 @@ Your very own GitHub style server, with web interface.
 
 ***
 
-Website: <https://gitea.io>
+Official website: <https://gitea.io/>  
+Official documentation: <https://docs.gitea.io/>  
+Official forum: <https://discourse.gitea.io/>  
+Source code: <https://github.com/go-gitea/gitea>  
+License: [MIT](https://github.com/go-gitea/gitea/blob/main/LICENSE)
 
 ## Syncthing
 
