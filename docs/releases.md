@@ -80,7 +80,7 @@ Welcome to **December 2021 release** :octicons-heart-16: of **DietPi**. It is en
 
 - **DietPi-Software** - **File server** :octicons-arrow-right-16: This choice menu has been removed from DietPi Software, most file servers being able to run concurrently. Hence it is not required anymore first to remove the existent file server (e.g. a Samba server) and then to install something new (e.g. a FTP server). As a result, it is not necessary a dedicated menu option in the DietPi-Software.
 
-    File servers can be selected using "Browse Software" or "Search Software" menus in `dietpi-software` or via CLI. See the documentation for the available [DietPi File Servers](https://dietpi.com/docs/software/file_servers/).
+    File servers can be selected using "Browse Software" or "Search Software" menus in `dietpi-software` or via CLI. See the documentation for the available [DietPi File Servers](../software/file_servers/).
 
     ![DietPi-Software](assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 

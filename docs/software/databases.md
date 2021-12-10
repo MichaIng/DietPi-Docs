@@ -39,17 +39,6 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
     - Username = `root`
     - Password = The same as your root login password, default is `dietpi`
 
-=== "Configuration"
-
-    MariaDB configuration file could be found at: `/etc/mysql/my.cnf`.
-
-    By default, DietPi sets MariaDB configuration to use Unix socket connections. This is a fast way to enable local connectivity, comparing with TCP connections[^2].
-    
-    ```
-    [client-server]
-    socket = /run/mysqld/mysqld.sock
-    ```
-
 ***
 
 Official documentation: <https://mariadb.org>  
