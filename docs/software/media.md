@@ -227,9 +227,19 @@ Mopidy is a Python based music player web based user interface for MPD.
 
 === "Adding Mopidy extensions"
 
-    Mopidy is highly customizable and supports various extensions from Web extensions to Backend extensions. See [*Extensions*](https://mopidy.com/ext/) for a list.
+    Mopidy is highly customisable and supports various extensions from alternative web clients to backend extensions. See [*Extensions*](https://mopidy.com/ext/) for a list.
 
-    See [*Installing extensions*](https://docs.mopidy.com/en/latest/installation/debian/?highlight=backend%20extensions#installing-extensions) for installation details.
+    Those can be installed via `pip`, e.g.:
+
+    ```sh
+    pip3 install --no-cache-dir -U Mopidy-Jellyfin
+    ```
+
+    or on Stretch:
+
+    ```sh
+    pip2 install --no-cache-dir -U Mopidy-Jellyfin
+    ```
 
 === "Support of codecs"
 
