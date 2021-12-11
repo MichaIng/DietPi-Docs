@@ -69,7 +69,7 @@ Official documentation:  <https://www.phpmyadmin.net/docs/>
 
 Source: Part of the SQLite documentation, which has been released by author D. Richard Hipp to the public domain. SVG conversion by Mike Toews. [Public Domain](https://commons.wikimedia.org/w/index.php?curid=11675072)
 
-**SQLite** is an embedded relational database engine. It it a self-contained, high-reliability and full-featured SQL database engine. It is very popular and there are hundreds of millions copies worldwide in use today[^3].
+**SQLite** is an embedded relational database engine. It it a self-contained, high-reliability and full-featured SQL database engine. It is very popular and there are hundreds of millions copies worldwide in use today[^2].
 
 === "Quick start"
 
@@ -278,6 +278,4 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 
 [^1]: [About MariaDB Server and MariaDB Foundation](https://mariadb.org/about/)
 
-[^2]: [MySQL connections: sockets vs. TCP](https://jasonbarnabe.wordpress.com/2014/10/01/mysql-connections-sockets-vs-tcp/)
-
-[^3]: [About SQLite](https://www.sqlite.com/about.html)
+[^2]: [About SQLite](https://www.sqlite.com/about.html)
