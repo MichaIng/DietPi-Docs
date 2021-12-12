@@ -57,6 +57,15 @@ It consists of full control of the camera in a web-based interface.
     dietpi-software reinstall 59
     ```
 
+=== "Activate the camera"
+
+    The camera need to be enabled via `dietpi-config`: Select `Display Options`, then set `RPi Camera` to `[On]`.
+    Additionally the behaviour of the cameras LED can be set via `RPi Camera LED` within the same directory.
+
+    Remark: After a change in the camera activation you need to reboot and power cycle the SBC.
+
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
+
 ***
 
 Github page: <https://github.com/silvanmelchior/RPi_Cam_Web_Interface>  
@@ -104,6 +113,15 @@ from any RPi camera, USB camera or an IP camera network stream.
     ```sh
     sudo pip2 install -U motioneye
     ```
+
+=== "Activate the camera"
+
+    The camera need to be enabled via `dietpi-config`: Select `Display Options`, then set `RPi Camera` to `[On]`.
+    Additionally the behaviour of the cameras LED can be set via `RPi Camera LED` within the same directory.
+
+    Remark: After a change in the camera activation you need to reboot and power cycle the SBC.
+
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
 
 ***
 
@@ -191,6 +209,15 @@ Stream JPEG frames from various sources to various possible outputs. With the de
     ```sh
     systemctl status mjpg-streamer
     ```
+
+=== "Activate the camera"
+
+    The camera need to be enabled via `dietpi-config`: Select `Display Options`, then set `RPi Camera` to `[On]`.
+    Additionally the behaviour of the cameras LED can be set via `RPi Camera LED` within the same directory.
+
+    Remark: After a change in the camera activation you need to reboot and power cycle the SBC.
+
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
 
 ***
 
