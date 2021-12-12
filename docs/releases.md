@@ -91,6 +91,8 @@ Welcome to **December 2021 release** :octicons-heart-16: of **DietPi**. It is en
 
     The related `dietpi.txt` setting has been removed for new images as well, but it will still be respected when present. For an automated install with new images, use the `AUTO_SETUP_INSTALL_SOFTWARE_ID` setting instead.
 
+- **DietPi documentation** | [**How to**](../usage/#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation) :octicons-arrow-right-16: Added a section describing the **automatic base installation at first boot** via the file `/boot/dietpi.txt` (DietPi-Automation).
+
 ### Bug Fixes {: #bug-fixes-79 }
 
 - [**Raspberry Pi**](../hardware/#raspberry-pi) :octicons-arrow-right-16: Resolved an issue in the DietPi images where on first boot two serial login consoles on the generic `symlinked` and actual serial devices could have been started. This doubled inputs and in turn broke successful `username` and `password` login via serial console on first boot. Many thanks to @ad7718 for reporting this issue: <https://github.com/MichaIng/DietPi/issues/5014>.
