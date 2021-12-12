@@ -235,7 +235,7 @@ CONFIG_CHECK_DIETPI_UPDATES=1
 CONFIG_CHECK_APT_UPDATES=2
 ```
 
-***
+---
 
 ### References
 
