@@ -666,7 +666,7 @@ From the console, run the following command:
 dietpi-backup
 ```
 
-![DietPi-Backup screenshot](assets/images/dietpi-backup_1.png){: width="656" height="304" loading="lazy"}
+![DietPi-Backup menu screenshot](assets/images/dietpi-backup_1.png){: width="681" height="330" loading="lazy"}
 
 !!! info "DietPi userdata may not be included"
 

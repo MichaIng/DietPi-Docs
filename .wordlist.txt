@@ -76,6 +76,7 @@ CSI
 CSM
 Ctrl
 Cuberite
+customisable
 customizable
 DarkBetter
 DarkIce
