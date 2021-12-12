@@ -240,4 +240,4 @@ CONFIG_CHECK_APT_UPDATES=2
 ### References
 
 DietPi Community Forum: [DietPi-Automation](https://dietpi.com/phpbb/viewtopic.php?t=273)  
-Blog entry  (German language): [Vollautomatische Installation eines Raspberry Pi unter DietPi – Schritt für Schritt](https://blog.login.gmbh/vollautomatische-installation-eines-raspberry-pi-unter-dietpi-schritt-fuer-schritt/)
+Blog entry  (German language): [`Vollautomatische Installation eines Raspberry Pi unter DietPi – Schritt für Schritt`](https://blog.login.gmbh/vollautomatische-installation-eines-raspberry-pi-unter-dietpi-schritt-fuer-schritt/)
