@@ -142,7 +142,8 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
     - URL = `http://<your.IP>:1340`
     - Username = `qbittorrent`
-    - Password = `<your global password>`
+    - Password = `<your global password>` (default: `dietpi`)  
+        NB: Since qBittorrent v4.2.0 (Debian Bullseye), a new safer hash algorithm is used, which we are currently not able to replicate dynamically for the global software password with common shell tools. Until then, for your first login the password is `dietpi`. Please change it directly after first login: <https://github.com/MichaIng/DietPi/issues/5078>
 
 === "Access Downloads"
 
@@ -177,7 +178,7 @@ Also installs:
 
     - URL = `http://<your.IP>/rutorrent`
     - Username = `root`
-    - Password = `<your global password>`
+    - Password = `<your global password>` (default: `dietpi`)
 
     The login credentials can be changed, depending on the webserver choice, with the following commands:
 
