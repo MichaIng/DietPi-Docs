@@ -210,7 +210,6 @@ Stream JPEG frames from various sources to various possible outputs. With the de
     systemctl status mjpg-streamer
     ```
 
-
 === "Troubleshooting"
 
     The camera should be activated by the installation process. This can be checked via `dietpi-config`: Select `Display Options`, then check for `RPi Camera` set to `[On]`. This should lead to a line `start_x=1` (without a leading `#`) in the file `/boot/config.txt`.  
