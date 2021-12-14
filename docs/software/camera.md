@@ -57,10 +57,10 @@ It consists of full control of the camera in a web-based interface.
     dietpi-software reinstall 59
     ```
 
-=== "Troubleshooting"
+=== "RPi camera module"
 
-    The camera should be activated by the installation process. This can be checked via `dietpi-config`: Select `Display Options`, then check for `RPi Camera` set to `[On]`. This should lead to a line `start_x=1` (without a leading `#`) in the file `/boot/config.txt`.  
-    Additionally the behaviour of the cameras LED can be set in the same dialog via `RPi Camera LED`.
+    If you have an official Raspberry Pi camera module, it should be activated by the installation process. This can be checked/enabled via `dietpi-config` > `Display Options` > `RPi Camera` to show `[On]`.  
+    Additionally, the behaviour of the cameras LED can be set in the same dialog via `RPi Camera LED`.
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
@@ -114,10 +114,10 @@ from any RPi camera, USB camera or an IP camera network stream.
     sudo pip2 install -U motioneye
     ```
 
-=== "Troubleshooting"
+=== "RPi camera module"
 
-    The camera should be activated by the installation process. This can be checked via `dietpi-config`: Select `Display Options`, then check for `RPi Camera` set to `[On]`. This should lead to a line `start_x=1` (without a leading `#`) in the file `/boot/config.txt`.  
-    Additionally the behaviour of the cameras LED can be set in the same dialog via `RPi Camera LED`.
+    If you have an official Raspberry Pi camera module, it can be enabled via `dietpi-config` > `Display Options` > `RPi Camera` to show `[On]`.  
+    Additionally, the behaviour of the cameras LED can be set in the same dialog via `RPi Camera LED`.
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
@@ -210,10 +210,10 @@ Stream JPEG frames from various sources to various possible outputs. With the de
     systemctl status mjpg-streamer
     ```
 
-=== "Troubleshooting"
+=== "RPi camera module"
 
-    The camera should be activated by the installation process. This can be checked via `dietpi-config`: Select `Display Options`, then check for `RPi Camera` set to `[On]`. This should lead to a line `start_x=1` (without a leading `#`) in the file `/boot/config.txt`.  
-    Additionally the behaviour of the cameras LED can be set in the same dialog via `RPi Camera LED`.
+    If you have an official Raspberry Pi camera module, it can be enabled via `dietpi-config` > `Display Options` > `RPi Camera` to show `[On]`.  
+    Additionally, the behaviour of the cameras LED can be set in the same dialog via `RPi Camera LED`.
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
