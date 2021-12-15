@@ -59,8 +59,8 @@ It consists of full control of the camera in a web-based interface.
 
 === "RPi camera module"
 
-    If you have an official Raspberry Pi camera module, it should be activated by the installation process. This can be checked/enabled via `dietpi-config` > `Display Options` > `RPi Camera` to show `[On]`.  
-    Additionally, the behaviour of the cameras LED can be set in the same dialog via `RPi Camera LED`.
+    The RPi camera module is automatically enabled during the installation process. However, It requires a reboot and/or sometimes a power cycle to take effect.  
+    The camera activation may be checked via `dietpi-config` > `Display Options` > `RPi Camera` to show `[On]`. Additionally, the behaviour of the cameras LED can be set in the same dialog via `RPi Camera LED`.
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
