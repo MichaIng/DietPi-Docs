@@ -232,7 +232,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     **How can I check my OPcache status**
 
-    Nextcloud has a speedup option via the **php OPcache** feature. If it is not setup in an appropriate manner, the Nextcloud settings overview dialog show *"PHP OPcache not properly configured"* in combination with needed settings. In the internet many further hints are available to optimize the `php.ini`. DietPi installs appropriate ini files by default which supersede the standard `php.ini` file (`97-dietpi.ini` and `98-dietpi-nextcloud.ini`).  
+    Nextcloud has a speedup option via the **PHP OPcache** feature. If it is not setup in an appropriate manner, the Nextcloud settings overview dialog show *"PHP OPcache not properly configured"* in combination with needed settings. In the internet many further hints are available to optimize the `php.ini`. DietPi installs appropriate '.ini' files by default which supersede the standard `php.ini` file (`97-dietpi.ini` and `98-dietpi-nextcloud.ini`).  
     Often there is the question which of the various `php.ini` files on the system is the valid one. DietPi therefore has helping files in its `/var/www` directory to give some information about this:  
     The first file is `phpinfo.php`. This can be called from the browser via
 
