@@ -230,9 +230,9 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     Your user data directory will stay after deinstallation. As well a database backup will be saved to your user data directory. Thus you can easily restore your instance by reinstalling Nextcloud and restore the database dump.
 
-    **How can I check my opcache status**
+    **How can I check my OPcache status**
 
-    Nextcloud has a speedup option via the **php opcache** feature. If it is not setup in an appropriate manner, the Nextcloud settings overview dialog show *"PHP Opcache not properly configured"* in combination with needed settings. In the internet many further hints are available to optimize the php.ini. DietPi installes appropriate ini files by default which supersede the standard `php.ini` file (`97-dietpi.ini` and `98-dietpi-nextcloud.ini`).  
+    Nextcloud has a speedup option via the **php OPcache** feature. If it is not setup in an appropriate manner, the Nextcloud settings overview dialog show *"PHP OPcache not properly configured"* in combination with needed settings. In the internet many further hints are available to optimize the php.ini. DietPi installs appropriate ini files by default which supersede the standard `php.ini` file (`97-dietpi.ini` and `98-dietpi-nextcloud.ini`).  
     Often there is the question which of the various `php.ini` files on the system is the valid one. DietPi therefore has helping files in its `/var/www` directory to give some information about this:  
     The first file is `phpinfo.php`. This can be called from the browser via
 
@@ -245,14 +245,14 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     - `Scan this dir for additional .ini files`
     - `Additional .ini files parsed`
 
-    With these informations the user is able to find out the location to search for the configuration files which contain the opcache settings.  
+    With these information the user is able to find out the location to search for the configuration files which contain the OPcache settings.  
     The actual settings can be seen in the section `Zend OPcache`.
 
-    The second file is `opcache.php` (based on [amnuts/opcache-gui](https://github.com/amnuts/opcache-gui)). This shows a nicer graphical output of the opcache status and can be called from the browser via
+    The second file is `opcache.php` (based on [`amnuts/opcache-gui`](https://github.com/amnuts/opcache-gui)). This shows a nicer graphical output of the OPcache status and can be called from the browser via
 
     - URL = `http://<your.IP>/opcache.php/`
 
-    ![OpCache statistics page](../assets/images/OpCache_php_output.png){: width="700" height="976" loading="lazy"}
+    ![OPcache statistics page](../assets/images/OpCache_php_output.png){: width="700" height="976" loading="lazy"}
 
     The dialog shows the cache status as well as the settings (unfortunately not the path to the configuration files like `phpinfo.php`).  
     With these two pages the user shall be able to setup the right settings for Nextcloud.
