@@ -264,7 +264,9 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
 
 === "Updating AdGuard Home"
 
-    Please use the internal updater from the web interface to update your AdGuard Home. Available updates are shown at and can be applied from the bottom of the page.
+    Please use the internal updater from the web interface to update your AdGuard Home. You will see a notification at the top of the page once an update is available.
+
+    ![AdGuard Home update notification](../assets/images/adguardhome-update-notification.png){: width="753" height="95" loading="lazy"}
 
 === "Setting the password"
 
