@@ -264,11 +264,9 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
 
 === "Updating AdGuard Home"
 
-    To update AdGuard Home, simply reinstall it:
+    Please use the internal updater from the web interface to update your AdGuard Home. You will see a notification at the top of the page once an update is available.
 
-    ```sh
-    dietpi-software reinstall 126
-    ```
+    ![AdGuard Home update notification](../assets/images/adguardhome-update-notification.png){: width="753" height="95" loading="lazy"}
 
 === "Setting the password"
 
