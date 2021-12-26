@@ -257,7 +257,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     The dialog shows the cache status as well as the settings.
 
-    **I have warnings regarding missing PHP modules (e.g. bcmath, gmp and imagick).**   
+    **I have warnings regarding missing PHP modules (e.g. `bcmath`, `gmp` and `imagick`).**   
     **What shall I do?**
 
     Sometimes the Nextcloud settings overview dialog shows a message *"This instance is missing some recommended PHP modules. For improved performance and better compatibility it is highly recommended to install them."*. This issue is described [there in the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=27383&sid=c4dbfcb4f4e4d735020aee1f5cfca9ce#p27383), we propose to ignore them, mostly they are not needed.  
