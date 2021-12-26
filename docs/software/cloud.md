@@ -232,21 +232,22 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     **How can I check my OPcache status**
 
-    Nextcloud has a speedup option via the **PHP OPcache** feature. If it is not setup in an appropriate manner, the Nextcloud settings overview dialog show *"PHP OPcache not properly configured"* in combination with needed settings. In the internet many further hints are available to optimize the `php.ini`. DietPi installs appropriate `ini` files by default which supersede the standard `php.ini` file (`97-dietpi.ini` and `98-dietpi-nextcloud.ini`).  
-    Often there is the question which of the various `php.ini` files on the system is the valid one. DietPi therefore has helping files in its `/var/www` directory to give some information about this:  
+    Nextcloud has a speedup option via the **PHP OPcache** feature. DietPi activates this during installation of Nextcloud (e.g. via `97-dietpi.ini` and `98-dietpi-nextcloud.ini`).  
+    If the OPcache is not setup in an appropriate manner, the Nextcloud settings overview dialog shows *"PHP OPcache not properly configured"* in combination with needed settings. If this should appear, an issue in <https://github.com/MichaIng/DietPi/issues> should be opened, because the DietPi installation shall do it all for the user in a correct manner.
+
+    Sometimes there is the question which of the various `php.ini` files on the system are used. DietPi therefore has helping files in its `/var/www` directory to give some information about this:  
     The first file is `phpinfo.php`. This can be called from the browser via
 
     - URL = `http://<your.IP>/phpinfo.php/`
 
-    In the following output there are some hints where to look:
+    In the following output there are some hints which files are used:
 
     - `Configuration File (php.ini) Path`
     - `Loaded Configuration File`
     - `Scan this dir for additional .ini files`
     - `Additional .ini files parsed`
 
-    With these information the user is able to find out the location to search for the configuration files which contain the OPcache settings.  
-    The actual settings can be seen in the section `Zend OPcache`.
+    The actual OPcache status can be seen in the section `Zend OPcache`.
 
     The second file is `opcache.php` (based on [`amnuts/opcache-gui`](https://github.com/amnuts/opcache-gui)). This shows a nicer graphical output of the OPcache status and can be called from the browser via
 
@@ -254,8 +255,14 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     ![OPcache statistics page](../assets/images/OpCache_php_output.png){: width="700" height="976" loading="lazy"}
 
-    The dialog shows the cache status as well as the settings (unfortunately not the path to the configuration files like `phpinfo.php`).  
-    With these two pages the user shall be able to setup the right settings for Nextcloud.
+    The dialog shows the cache status as well as the settings.
+
+    **I have warnings regarding missing PHP modules (e.g. bcmath, gmp and imagick).**   
+    **What shall I do?**
+
+    Sometimes the Nextcloud settings overview dialog shows a message *"This instance is missing some recommended PHP modules. For improved performance and better compatibility it is highly recommended to install them."*. This issue is described [there in the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=27383&sid=c4dbfcb4f4e4d735020aee1f5cfca9ce#p27383), we propose to ignore them, mostly they are not needed.  
+    To get rid of this message anyhow, you can install the mentioned modules via  
+    `sudo apt install php-bcmath php-gmp php-imagick libmagickcore-6.q16-6-extra`.
 
 ***
 
