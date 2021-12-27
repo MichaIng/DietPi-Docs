@@ -230,43 +230,38 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     Your user data directory will stay after deinstallation. As well a database backup will be saved to your user data directory. Thus you can easily restore your instance by reinstalling Nextcloud and restore the database dump.
 
-    **How can I check my OPcache status**
+    **How can I check my OPcache status?**
 
-    Nextcloud has a speedup option via the **PHP OPcache** feature. DietPi activates this during installation of Nextcloud (e.g. via `97-dietpi.ini` and `98-dietpi-nextcloud.ini`).  
-    If the OPcache is not setup in an appropriate manner, the Nextcloud settings overview dialog shows *"PHP OPcache not properly configured"* in combination with needed settings. If this should appear, an issue in <https://github.com/MichaIng/DietPi/issues> should be opened, because the DietPi installation shall do it all for the user in a correct manner.
+    PHP uses a so called *OPcache* to store PHP scripts in optimised *opcode* format in RAM, which speeds up browser access as the raw PHP scripts do not need to be read from disk and parsed first.  
+    The Nextcloud admin panel includes a check for sufficient OPcache settings and in case shows a recommendation for settings to apply. If such appears, we recommend to apply them with an own configuration file, e.g.:
 
-    Sometimes there is the question which of the various `php.ini` files on the system are used. DietPi therefore has helping files in its `/var/www` directory to give some information about this:  
-    The first file is `phpinfo.php`. This can be called from the browser via
+    ```sh
+    echo -e '; Custom Nextcloud OPcache settings\n; priority=99\nopcache.memory_consumption=128' > /etc/php/7.4/mods-available/custom.ini
+    phpenmod custom
+    ```
 
-    - URL = `http://<your.IP>/phpinfo.php/`
+    You can watch the actual usage with the pre-installed [`opcache-gui`](https://github.com/amnuts/opcache-gui) by @amnuts.
 
-    In the following output there are some hints which files are used:
-
-    - `Configuration File (php.ini) Path`
-    - `Loaded Configuration File`
-    - `Scan this dir for additional .ini files`
-    - `Additional .ini files parsed`
-
-    The actual OPcache status can be seen in the section `Zend OPcache`.
-
-    The second file is `opcache.php` (based on [`amnuts/opcache-gui`](https://github.com/amnuts/opcache-gui)). This shows a nicer graphical output of the OPcache status and can be called from the browser via
-
-    - URL = `http://<your.IP>/opcache.php/`
+    - URL: `http://<your.IP>/opcache.php`
 
     ![OPcache statistics page](../assets/images/OpCache_php_output.png){: width="700" height="976" loading="lazy"}
 
     The dialog shows the cache status as well as the settings.
 
-    **I have warnings regarding missing PHP modules (e.g. `bcmath`, `gmp` and `imagick`).**   
-    **What shall I do?**
+    **What shall I do about missing `bcmath`, `gmp` and `imagick` PHP modules?**
 
-    Sometimes the Nextcloud settings overview dialog shows a message *"This instance is missing some recommended PHP modules. For improved performance and better compatibility it is highly recommended to install them."*. This issue is described [there in the DietPi forum](https://dietpi.com/phpbb/viewtopic.php?p=27383&sid=c4dbfcb4f4e4d735020aee1f5cfca9ce#p27383), we propose to ignore them, mostly they are not needed.  
-    To get rid of this message anyhow, you can install the mentioned modules via  
-    `sudo apt install php-bcmath php-gmp php-imagick libmagickcore-6.q16-6-extra`.
+    After a fresh install via `dietpi-software`, Nextcloud shows a warning *"This instance is missing some recommended PHP modules. For improved performance and better compatibility it is highly recommended to install them."*, also described [here](https://dietpi.com/phpbb/viewtopic.php?p=27383#p27383). We propose to ignore them, the first is not needed at all and a subject ob discussion as of security issues, the other two are required only if you want to use the WebAuthn passwordless authentication with Nextcloud.  
+    If you must mute those warnings, you can install the modules manually:
+
+    ```sh
+    sudo apt install php-bcmath php-gmp php-imagick libmagickcore-6.q16-6-extra
+    ```
+
+    The `imagick` related warning can be solved alternatively by disabling the `Theming` app, if no manual theming is done to the Nextcloud instance anyway.
 
 ***
 
-Website: <https://nextcloud.com/athome>  
+Website: <https://nextcloud.com/>  
 Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>
 
 YouTube video tutorial #1: *DietPi Nextcloud Setup on Raspberry Pi 3 B Plus*.
