@@ -250,7 +250,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     **What shall I do about missing `bcmath`, `gmp` and `imagick` PHP modules?**
 
-    After a fresh install via `dietpi-software`, Nextcloud shows a warning *"This instance is missing some recommended PHP modules. For improved performance and better compatibility it is highly recommended to install them."*, also described [here](https://dietpi.com/phpbb/viewtopic.php?p=27383#p27383). We propose to ignore them, the first (`bcmath`) is not needed at all and a subject of discussion as of security issues, the other two (`gmp`, `imagick`) are required only if you want to use the WebAuthn passwordless authentication with Nextcloud.  
+    After a fresh install via `dietpi-software`, Nextcloud shows a warning *"This instance is missing some recommended PHP modules. For improved performance and better compatibility it is highly recommended to install them."*, also described [here](https://dietpi.com/phpbb/viewtopic.php?p=27383#p27383). We propose to ignore them, `imagick` is not needed at all and a subject of discussion as of security issues, `bcmath` and `gmp` are required only if you want to use the WebAuthn passwordless authentication with Nextcloud.  
     If you must mute those warnings, you can install the modules manually:
 
     ```sh
