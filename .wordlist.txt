@@ -325,6 +325,7 @@ ownCloud
 Panokostas
 PaperMC
 passwd
+passwordless
 PCIe
 phpBB
 phpMyAdmin
@@ -441,6 +442,7 @@ Tautulli
 TCP
 tcpdump
 thechildofroth
+theming
 Thonny
 TigerVNC
 TiB
@@ -493,6 +495,7 @@ VSCodium
 vsftpd
 VST
 Waveshare
+WebAuthn
 WebIOPi
 Webmin
 webserver
