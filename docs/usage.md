@@ -241,4 +241,4 @@ CONFIG_CHECK_APT_UPDATES=2
 
 DietPi Community Forum: [DietPi-Automation](https://dietpi.com/phpbb/viewtopic.php?t=273)  
 Blog entry (German language) from `Holger Erbe`: [`Vollautomatische Installation eines Raspberry Pi unter DietPi – Schritt für Schritt`](https://blog.login.gmbh/vollautomatische-installation-eines-raspberry-pi-unter-dietpi-schritt-fuer-schritt/)  
-Blog entry (German language) from `DMW007`: [Raspberry Pi Ersteinrichtung mit DietPi Installation ohne Monitor automatisiert einrichten (Windows + Linux)](https://u-labs.de/portal/raspberry-pi-ersteinrichtung-mit-dietpi-installation-ohne-monitor-automatisiert-einrichten-windows-linux/)
+Blog entry (German language) from `DMW007`: [`Raspberry Pi Ersteinrichtung mit DietPi Installation ohne Monitor automatisiert einrichten (Windows + Linux)`](https://u-labs.de/portal/raspberry-pi-ersteinrichtung-mit-dietpi-installation-ohne-monitor-automatisiert-einrichten-windows-linux/)
