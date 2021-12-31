@@ -173,7 +173,7 @@ Select the following tabs for the installation description of your target.
 
     ![VirtualBox appliance import screenshot](assets/images/dietpi-VirtualBox-import1.png){: width="483" height="308" loading="lazy"}
 
-    In the following dialog the user has to choose DietPi_VirtualBox-x86_64-Buster.ova as the file which shall be imported.
+    In the following dialog the user has to choose the `.ova` file which shall be imported.
 
     ![VirtualBox appliance import selection screenshot](assets/images/dietpi-VirtualBox-import2.png){: width="971" height="775" loading="lazy"}
 
