@@ -59,7 +59,7 @@ Select the following tabs for the installation description of your target.
         7zr e DietPi-Image.7z
         ```
 
-        Replace **DietPi-Image.7z** with the correct name of your compressed DietPi file, example: **DietPi_RPi-ARMv6-Bullseye.7z**. This will extract the DietPi image file for you to use.
+        Replace **DietPi-Image.7z** with the correct name of the downloaded archive, e.g. **DietPi_RPi-ARMv6-Bullseye.7z**. This will extract the DietPi image file for you to use.
 
     ## 2. Flash the DietPi image
 
@@ -173,7 +173,7 @@ Select the following tabs for the installation description of your target.
 
     ![VirtualBox appliance import screenshot](assets/images/dietpi-VirtualBox-import1.png){: width="483" height="308" loading="lazy"}
 
-    In the following dialog the user has to choose DietPi_VirtualBox-x86_64-Bullseye.ova as the file which shall be imported.
+    In the following dialog the user has to choose DietPi_VirtualBox-x86_64-Buster.ova as the file which shall be imported.
 
     ![VirtualBox appliance import selection screenshot](assets/images/dietpi-VirtualBox-import2.png){: width="971" height="775" loading="lazy"}
 
@@ -244,11 +244,11 @@ Select the following tabs for the installation description of your target.
             VBoxManage guestproperty set "<vm_name>" "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold" 10000
             ```
 
-            Replace `<vm_name>` with the name of your virtual machine (i.e. the name shown in the VM VirtualBox Manager UI, e.g. `DietPi_VirtualBox-x86_64-Bullseye` if you import the VM without changing its name).
+            Replace `<vm_name>` with the name of your virtual machine, shown in the VM VirtualBox Manager UI, e.g. `DietPi_VirtualBox-x86_64-Bullseye` if you import the VM without changing its name.
 
         With all these setup steps the time synchronization with the usage of the extension pack should work. Sometimes it needs a couple of minutes until the time is synchronized, so be somehow patient.
 
-=== "VMware Player/Fusion"
+=== "VMware"
 
     <font size="+2">Introduction</font>
 
@@ -291,7 +291,7 @@ Select the following tabs for the installation description of your target.
 
     ![VMware file open screenshot](assets/images/dietpi-VMware-import1.png){: width="715" height="585" loading="lazy"}
 
-    In the following dialog the user has to navigate to the directory where the `.vmx` and `.vmdk` file were stored. Then choose DietPi_VMware-x86_64-Bullseye(`.vmx`) as the file which shall be opened.  
+    In the following dialog the user has to navigate to the directory where the `.vmx` and `.vmdk` file were stored. Choose the `.vmx` file to open.  
     After this the DietPi VMware virtual machine is present and can be started:
 
     ![VMware virtual machine list screenshot](assets/images/dietpi-VMware-VM-Machine.png){: width="714" height="588" loading="lazy"}
@@ -529,8 +529,8 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi installer image</font>
 
-        Download the **UEFI installer image** `DietPi_NativePC-UEFI-x86_64-Bullseye_Installer.7z` from [`dietpi.com`](https://dietpi.com/#download) and
-        unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+        Download the **Native PC for UEFI** > **Installer Image** from [`dietpi.com`](https://dietpi.com/#download) and
+        extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download UEFI installer image](assets/images/dietpi-download-nativepc-uefi.jpg){: width="722" height="211" loading="lazy"}
 
@@ -617,8 +617,8 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi installer image</font>
 
-        Download the **BIOS installer image** `DietPi_NativePC-BIOS-x86_64-Bullseye_Installer.7z` from [`dietpi.com`](https://dietpi.com/#download) and
-        unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+        Download the **Native PC for BIOS/CSM** > **Installer Image** from [`dietpi.com`](https://dietpi.com/#download) and
+        extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
 
@@ -695,8 +695,8 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi direct write image</font>
 
-        Download the **BIOS direct write image** `DietPi_NativePC-BIOS-x86_64-Bullseye.7z` from [`dietpi.com`](https://dietpi.com/#download) and
-        unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+        Download the **Native PC for BIOS/CSM** > **Direct flash Image** from [`dietpi.com`](https://dietpi.com/#download) and
+        extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download BIOS direct write image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
 
