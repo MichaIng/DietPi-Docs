@@ -15,7 +15,7 @@ Following these steps you will be able to initially setup DietPi and install add
 
 Select the following tabs for the installation description of your target.
 
-=== "Raspberry Pi and derivates (SBC)"
+=== "Raspberry Pi and derivatives (SBC)"
 
     ## Introduction
 
