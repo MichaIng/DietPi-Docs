@@ -434,19 +434,19 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
 
-    Klick on the downloaded file to extract it. Move the contained .img file (`DietPi_NativePC-BIOS-x86_64-Bullseye_Installer.iso`) e.g. on your desktop.
+    Klick on the downloaded file to extract it. Move the contained `.img` file (`DietPi_NativePC-BIOS-x86_64-Bullseye_Installer.iso`) e.g. on your desktop.
 
     ![DietPi ISO image on MAC desktop](assets/images/dietpi-Parallels00.png){: width="120" height="123" loading="lazy"}
 
     <font size="+2">2. Create the virtual machine in Parallels Desktop</font>
 
-    As next, the Parallels virtual machine has to be created using the .iso file:
+    As next, the Parallels virtual machine has to be created using the `.iso` file:
 
     ![Parallels Desktop VM creation screenshot](assets/images/dietpi-Parallels01.png){: width="620" height="417" loading="lazy"}
 
     In the following dialog the user has to choose `DietPi_NativePC-BIOS-x86_64-Bullseye_Installer.iso` as the installation image which shall be used.
 
-    ![Parallels Desktop .iso file selection screenshot](assets/images/dietpi-Parallels02.png){: width="400" height="197" loading="lazy"}
+    ![Parallels Desktop ISO file selection screenshot](assets/images/dietpi-Parallels02.png){: width="400" height="197" loading="lazy"}
 
     Set the machine name in the next dialog and klick “Create”.
 
@@ -477,7 +477,7 @@ Select the following tabs for the installation description of your target.
     ![Parallels Desktop start virtual machine screenshot](assets/images/dietpi-Parallels06.png){: width="500" height="368" loading="lazy"}
 
     ??? note "Temperature value not shown correctly within the Parallels Desktop DietPi virtual machine"
-        The temperature value shown in the login dialog or given by the command `cpu` or `G_OBTAIN_CPU_TEMP` ist not valid. You have to ignore the shown warning.
+        The temperature value shown in the login dialog or given by the command `cpu` or `G_OBTAIN_CPU_TEMP` is not valid. You have to ignore the shown warning.
 
         ![Parallels Desktop dialog after login screenshot](assets/images/dietpi-Parallels09.png){: width="693" height="347" loading="lazy"}
 
@@ -490,13 +490,13 @@ Select the following tabs for the installation description of your target.
 
         ![Parallels Desktop network configuration screenshot](assets/images/dietpi-Parallels20.png){: width="693" height="521" loading="lazy"}
 
-        In the "Advanced" seclection open the network preferences:
+        In the "Advanced" selection open the network preferences:
 
         ![Parallels Desktop network preferences screenshot](assets/images/dietpi-Parallels21.png){: width="420" height="243" loading="lazy"}
 
         Disable the DHCP:
 
-        ![Parallels Desktop unselect DHCP screenshot](assets/images/dietpi-Parallels22.png){: width="550" height="519" loading="lazy"}
+        ![Parallels Desktop uncheck DHCP screenshot](assets/images/dietpi-Parallels22.png){: width="550" height="519" loading="lazy"}
 
         Then, go back to your virtual machine. The network connection should then run fine.
 
