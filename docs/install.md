@@ -695,7 +695,7 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi direct write image</font>
 
-        Download the **Native PC for BIOS/CSM** > **Direct flash Image** from [`dietpi.com`](https://dietpi.com/#download) and
+        Download the **Native PC for BIOS/CSM** > **Direct write Image** from [`dietpi.com`](https://dietpi.com/#download) and
         extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download BIOS direct write image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
