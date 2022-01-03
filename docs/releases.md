@@ -8,13 +8,13 @@ Open the [Release notes](../release/v8_0) for more details.
 
 ## December 2021 (Version 7.9) {: #december-2021-version-79 }
 
-**December 2021 release DietPi** is enabling password protection for [**DietPi-Dashboard**](../software/system_stats/#dietpi-dashboard), [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore) starts to support multiple backups and the **[Apache](../software/webserver_stack/#apache)** web server uses the dedicated `PHP-FPM` server improving the overall performance. 
+**December 2021 release DietPi** is enabling password protection for [**DietPi-Dashboard**](../software/system_stats/#dietpi-dashboard), [**DietPi-Backup**](../dietpi_tools/#dietpi-backup-backuprestore) starts to support multiple backups and the **[Apache](../software/webserver_stack/#apache)** web server uses the dedicated `PHP-FPM` server improving the overall performance.
 
 Open the [Release notes](../release/v7_9) for more details.
 
 ## November 2021 (version 7.8) {: #november-2021-version-78 }
 
-This release adds a major improvment to DietPi, providing our own official DietPi-Dashboard to both **monitor and manage** your DietPi installations. It also brings full support to latest launches: **Raspberry Pi Zero 2 W** and **Radxa Zero SBCs** - two powerful and ultra small SBC variants!
+This release adds a major improvement to DietPi, providing our own official DietPi-Dashboard to both **monitor and manage** your DietPi installations. It also brings full support to latest launches: **Raspberry Pi Zero 2 W** and **Radxa Zero SBCs** - two powerful and ultra small SBC variants!
 
 Open the [Release notes](../release/v7_8) for more details.
 

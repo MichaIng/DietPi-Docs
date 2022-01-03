@@ -3,6 +3,7 @@ addon
 ADF
 AdGuard
 advanxer
+AdoptOpenJDK
 AGPLv
 AirPlay
 Airsonic
@@ -62,6 +63,7 @@ Clonezilla
 Cloudflare
 CloudShell
 codecs
+codename
 Computerworld
 conf
 config
@@ -78,6 +80,7 @@ Ctrl
 Cuberite
 customisable
 customizable
+DAC
 DarkBetter
 DarkIce
 DDNS
@@ -198,10 +201,12 @@ IPv
 iZotope
 Jackett
 JanKoudijs
+JDK
 Jellyfin
 Joulinar
 journalctl
 journald
+JRE
 JS
 js
 JSON
@@ -312,10 +317,12 @@ Odroid
 Odroids
 Ok
 oldoldstable
+OLED
 OOTB
 Oldschool
 OPcache
 OpenBazaar
+OpenJDK
 OpenGL
 OpenGLES
 OpenSSH
@@ -406,6 +413,7 @@ ShareAlike
 Shoutcast
 SickRage
 Signalyst
+shao
 SlimDevices
 SMB
 sn
