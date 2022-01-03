@@ -80,9 +80,6 @@ plugins:
     #minify_js: true
     #js_files:
     #- assets/javascripts/custom.js
-- redirects:
-    redirect_maps:
-      "releases.md": releases/v8_0.md
 extra:
   social:
   - icon: fontawesome/brands/github
@@ -104,6 +101,7 @@ nav:
   - DietPi tools: dietpi_tools.md
   - Usage hints / HowTo: usage.md
   - Supported hardware: hardware.md
+  - Releases : releases.md
   - References: references.md
 - OPTIMISED SOFTWARE:
   - Advanced Networking: software/advanced_networking.md
@@ -130,24 +128,24 @@ nav:
   - VPN: software/vpn.md
   - Web Development: software/webserver_stack.md
 - UPDATES:
-  - "January 2022" : releases/v8_0.md
-  - "December 2021" : releases/v7_9.md
-  - "November 2021" : releases/v7_8.md
-  - "October 2021" : releases/v7_7.md
-  - "September 2021" : releases/v7_6.md
-  - "August 2021" : releases/v7_5.md
-  - "July 2021" : releases/v7_4.md
-  - "June 2021" : releases/v7_3.md
-  - "May 2021" : releases/v7_2.md
-  - "April 2021" : releases/v7_1.md
-  - "February 2021" : releases/v7_0.md
-  - "December 2020" : releases/v6_34.md
-  - "October 2020" : releases/v6_33.md
-  - "August 2020" : releases/v6_32.md
-  - "July 2020" : releases/v6_31.md
-  - "May 2020" : releases/v6_30.md          
-  - "January 2020" : releases/v6_28.md
-  - "Earlier" : releases/earlier.md
+  - "January 2022" : updates/v8_0.md
+  - "December 2021" : updates/v7_9.md
+  - "November 2021" : updates/v7_8.md
+  - "October 2021" : updates/v7_7.md
+  - "September 2021" : updates/v7_6.md
+  - "August 2021" : updates/v7_5.md
+  - "July 2021" : updates/v7_4.md
+  - "June 2021" : updates/v7_3.md
+  - "May 2021" : updates/v7_2.md
+  - "April 2021" : updates/v7_1.md
+  - "February 2021" : updates/v7_0.md
+  - "December 2020" : updates/v6_34.md
+  - "October 2020" : updates/v6_33.md
+  - "August 2020" : updates/v6_32.md
+  - "July 2020" : updates/v6_31.md
+  - "May 2020" : updates/v6_30.md          
+  - "January 2020" : updates/v6_28.md
+  - "Earlier" : updates/earlier.md
 - COMMUNITY:
   # The first file "socialmedia.md" is added, otherwise in some browsers klicking on "Community" jumps directly to the first entry
   # That was the case that a klick directly jumped to the github page. (Then you leave our genious dietpi.com/docs site...) :-)
