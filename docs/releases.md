@@ -2,7 +2,7 @@
 
 ## January 2022 (Version 8.0) {: #january-2022-version-80 }
 
-**January 2022 release of DietPi** removes support for Debian Stretch, which enabled to run a major code cleanup and migrate to newer methods in different areas. As a summary of 2021, DietPi had **10 releases** with over **112 000** live systems running DietPi. It brought 000 :octicons-light-bulb-16: improvements and changes, as well as 000 :octicons-issue-closed-16: bug fixes.
+**January 2022 release of DietPi** removes support for Debian Stretch, which enabled to run a major code cleanup and migrate to newer methods in different areas.
 
 Open the [Release notes](../release/v8_0) for more details.
 

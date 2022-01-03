@@ -145,7 +145,7 @@ nav:
   - "July 2020" : release/v6_31.md
   - "May 2020" : release/v6_30.md          
   - "January 2020" : release/v6_28.md
-  - "Earlier" : release/earlier.md
+  - "Earlier" : https://dietpi.com/phpbb/viewforum.php?f=10
 - COMMUNITY:
   # The first file "socialmedia.md" is added, otherwise in some browsers klicking on "Community" jumps directly to the first entry
   # That was the case that a klick directly jumped to the github page. (Then you leave our genious dietpi.com/docs site...) :-)
