@@ -430,6 +430,7 @@ RAMdisk
 RAMlog
 Rasmus
 Raspbian
+RaspberryPi
 Raspotify
 README
 Reddit
@@ -621,6 +622,7 @@ Waveshare
 WebAuthn
 WebIOPi
 Webmin
+webroot
 webserver
 webservers
 WebServers
@@ -636,6 +638,7 @@ WIP
 WireGuard
 WiringPi
 Wordpress
+writeable
 WSAD
 www
 Xfce
@@ -648,3 +651,4 @@ youtube
 ZeroPi
 zlib
 zr
+zram
