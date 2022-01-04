@@ -5,6 +5,7 @@ AdGuard
 advanxer
 AdoptOpenJDK
 AGPLv
+AGUP
 AirPlay
 Airsonic
 AIY
@@ -358,7 +359,6 @@ Ok
 oldoldstable
 OLED
 Ondrej
-Ondrej’s
 oneshot
 ons
 OOTB
