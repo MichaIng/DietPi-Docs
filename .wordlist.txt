@@ -96,7 +96,6 @@ DietPi
 DietPi's
 Dimitris
 DiogoAbu
-dir
 diskimager
 distro
 DIY
@@ -133,6 +132,7 @@ EPL
 EQ
 ESXi
 exFAT
+F2FS
 facto
 FAHClient
 FastMail
@@ -175,6 +175,7 @@ GPLv
 GPT
 Grafana
 Griesemer
+GUA
 HAProxy
 harddisk
 Hardkernel
@@ -492,6 +493,7 @@ sudo
 subnet
 subnets
 SVG
+swapfile
 symlink
 Syncthing
 syscall
@@ -504,6 +506,7 @@ Tautulli
 TCP
 teleporter
 tcpdump
+th
 thechildofroth
 theming
 Thonny
@@ -545,7 +548,6 @@ USBridgeSig
 userland
 UTF
 UnRAR
-Unsplash
 upgradable
 UPnP
 uptime
@@ -585,6 +587,7 @@ WebServers
 webstack
 WebUI
 whiptail
+WH
 WHOIS
 Widevine
 wikimedia
@@ -610,3 +613,4 @@ ZeroPi
 ZFS
 zlib
 zr
+zram
