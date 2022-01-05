@@ -8,6 +8,7 @@ AGPLv
 AirPlay
 Airsonic
 AIY
+Alicja
 Allo
 ALSA
 Allwinner
@@ -132,7 +133,7 @@ EPL
 EQ
 ESXi
 exFAT
-F2FS
+FS
 facto
 FAHClient
 FastMail
@@ -378,6 +379,7 @@ Pinterest
 PiSupply
 PiVPN
 piwheels
+Pixabay
 Plex
 Portainer
 POSIX
