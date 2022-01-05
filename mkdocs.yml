@@ -80,6 +80,7 @@ plugins:
     #minify_js: true
     #js_files:
     #- assets/javascripts/custom.js
+
 extra:
   social:
   - icon: fontawesome/brands/github
@@ -101,9 +102,10 @@ nav:
   - DietPi tools: dietpi_tools.md
   - Usage hints / HowTo: usage.md
   - Supported hardware: hardware.md
-  - Releases : releases.md
+  - Releases: releases.md
   - References: references.md
 - OPTIMISED SOFTWARE:
+  - Overview: software.md
   - Advanced Networking: software/advanced_networking.md
   - BitTorrent & Download Tools: software/bittorrent.md
   - Camera & Surveillance: software/camera.md
@@ -128,24 +130,27 @@ nav:
   - VPN: software/vpn.md
   - Web Development: software/webserver_stack.md
 - RELEASES:
-  - "January 2022" : release/v8_0.md
-  - "December 2021" : release/v7_9.md
-  - "November 2021" : release/v7_8.md
-  - "October 2021" : release/v7_7.md
-  - "September 2021" : release/v7_6.md
-  - "August 2021" : release/v7_5.md
-  - "July 2021" : release/v7_4.md
-  - "June 2021" : release/v7_3.md
-  - "May 2021" : release/v7_2.md
-  - "April 2021" : release/v7_1.md
-  - "February 2021" : release/v7_0.md
-  - "December 2020" : release/v6_34.md
-  - "October 2020" : release/v6_33.md
-  - "August 2020" : release/v6_32.md
-  - "July 2020" : release/v6_31.md
-  - "May 2020" : release/v6_30.md          
-  - "January 2020" : release/v6_28.md
-  - "Earlier" : https://dietpi.com/phpbb/viewforum.php?f=10
+  - Overview: releases.md
+  - v8.0: releases/v8_0.md
+  - v7.9: releases/v7_9.md
+  - v7.8: releases/v7_8.md
+  - v7.7: releases/v7_7.md
+  - v7.6: releases/v7_6.md
+  - v7.5: releases/v7_5.md
+  - v7.4: releases/v7_4.md
+  - v7.3: releases/v7_3.md
+  - v7.2: releases/v7_2.md
+  - v7.1: releases/v7_1.md
+  - v7.0: releases/v7_0.md
+  - v6.34: releases/v6_34.md
+  - v6.33: releases/v6_33.md
+  - v6.32: releases/v6_32.md
+  - v6.31: releases/v6_31.md
+  - v6.30: releases/v6_30.md
+  - v6.29: releases/v6_29.md
+  - v6.28: releases/v6_28.md
+  - v6.27: releases/v6_27.md
+  - Earlier: https://dietpi.com/phpbb/viewforum.php?f=10
 - COMMUNITY:
   # The first file "socialmedia.md" is added, otherwise in some browsers klicking on "Community" jumps directly to the first entry
   # That was the case that a klick directly jumped to the github page. (Then you leave our genious dietpi.com/docs site...) :-)

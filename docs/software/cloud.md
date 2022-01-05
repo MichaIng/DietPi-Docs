@@ -732,7 +732,7 @@ vaultwarden is an unofficial Bitwarden password manager server with web interfac
 
 === "Client access"
 
-    Any official Bitwarden client will work [link](https://bitwarden.com/download).
+    Any official Bitwarden client will work: <https://bitwarden.com/download>
 
     1. Select the settings cog at the top left of the window.
     2. Add `https://<your.IP>:8001` into the custom server field.
