@@ -81,11 +81,11 @@ Open the [Release notes](../releases/v6_30) for more details.
 
 Open the [Release notes](../releases/v6_29) for more details.
 
-## January 2020 (version v6.28 - Hotfix)
+## January 2020 (version 6.28 - Hotfix)
 
 Open the [Release notes](../releases/v6_28) for more details.
 
-## January 2020 (version v6.27)
+## January 2020 (version 6.27)
 
 Open the [Release notes](../releases/v6_27) for more details.
 
