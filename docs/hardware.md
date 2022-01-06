@@ -479,7 +479,7 @@ The VirtualBox virtual machine is great for those occasions where SBC performanc
 
 The Parallels Desktop virtual machine for macOS is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 macOS system (e.g. Mac mini 2011/2012/2014/2018) and still get the same great DietPi features and experience.
 
-### Hyper-V (community image)
+### Hyper-V
 
 The Hyper-V virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
