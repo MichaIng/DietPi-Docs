@@ -324,7 +324,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__Parallels Desktop__](https://www.parallels.com/products/desktop/) for macOS.
 
-    ![Parallels Desktop DietPi machine](assets/images/dietpi-Parallels10.png){: width="720" height="405" loading="lazy"}
+    ![Parallels Desktop DietPi machine](assets/images/Parallels1.jpg){: width="720" height="405" loading="lazy"}
 
     <font size="+2">Prerequisites</font>
 
@@ -346,7 +346,7 @@ Select the following tabs for the installation description of your target.
 
     As next, the Parallels virtual machine is opened by just double click the `.pvm` file. Then the machine starts up.
 
-    ![Parallels Desktop DietPi startup](assets/images/dietpi-Parallels07.png){: width="640" height="273" loading="lazy"}
+    ![Parallels Desktop DietPi startup](assets/images/Parallels2.png){: width="640" height="273" loading="lazy"}
 
 === "Hyper-V"
 
