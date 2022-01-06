@@ -338,75 +338,15 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **BIOS installer** image from [`dietpi.com`](https://dietpi.com/#download).
+    Download the **DietPi Parallels** image from [`dietpi.com`](https://dietpi.com/#download).
 
-    ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
+    Doubleclick on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.pvm` file to the Parallels directory (typically directory "Parallels" within your home directory).
 
-    Klick on the downloaded file to extract it. Move the contained `.iso` file e.g. on your desktop.
+    <font size="+2">2. Open the virtual machine in Parallels Desktop</font>
 
-    ![DietPi ISO image on MAC desktop](assets/images/dietpi-Parallels00.png){: width="120" height="123" loading="lazy"}
+    As next, the Parallels virtual machine is opened by just doubleclick the `.pvm` file. Then the machine starts up.
 
-    <font size="+2">2. Create the virtual machine in Parallels Desktop</font>
-
-    As next, the Parallels virtual machine has to be created using the `.iso` file:
-
-    ![Parallels Desktop VM creation screenshot](assets/images/dietpi-Parallels01.png){: width="620" height="417" loading="lazy"}
-
-    In the following dialog the user has to choose the `.iso` file as the installation image which shall be used.
-
-    ![Parallels Desktop ISO file selection screenshot](assets/images/dietpi-Parallels02.png){: width="400" height="197" loading="lazy"}
-
-    Set the machine name in the next dialog and klick “Create”.
-
-    ![Parallels Desktop VM name screenshot](assets/images/dietpi-Parallels03.png){: width="620" height="417" loading="lazy"}
-
-    After the creation has finished the DietPi Parallels Desktop virtual machine starts automatically.
-
-    <font size="+2">3. First boot of the new Parallels Desktop image</font>
-
-    After booting the graphics selection dialog appears:
-
-    ![Parallels Desktop Clonezilla main menu screenshot](assets/images/dietpi-Parallels04.png){: width="500" height="404" loading="lazy"}
-
-    You can select the default settings. In case of problems, please select "Safe graphic settings".
-
-    Once this step is completed, the installation process begins with the help of the wonderful Clonezilla tool.
-
-    Select the harddisk of your virtual machine where your DietPi shall be installed. Normally, there is only one harddisk present.
-    After this, the installation process starts with several steps, e.g. showing the process of the image copying:
-
-    ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg){: width="500" height="350" loading="lazy"}
-
-    These steps take some time, be patient! Otherwise buy an SSD. :-)  
-    At the end the system executes a shutdown.
-
-    For the first boot up of your Parallels Desktop virtual machine start the virtual machine to login and execute the first boot procedure:
-
-    ![Parallels Desktop start virtual machine screenshot](assets/images/dietpi-Parallels06.png){: width="500" height="368" loading="lazy"}
-
-    ??? note "Temperature value not shown correctly within the Parallels Desktop DietPi virtual machine"
-        The temperature value shown in the login dialog or given by the command `cpu` or `G_OBTAIN_CPU_TEMP` is not valid. You have to ignore the shown warning.
-
-        ![Parallels Desktop dialog after login screenshot](assets/images/dietpi-Parallels09.png){: width="693" height="347" loading="lazy"}
-
-    ??? note "Network settings in case of networking problems"
-        The settings of the network may lead to a failure of network access. This can e.g. be determined via a network timeout message (e.g. the given message `curl: (28) Resolving timed out after 3005 milliseconds`).
-
-        ![Parallels Desktop dialog after login screenshot](assets/images/dietpi-Parallels09.png){: width="693" height="347" loading="lazy"}
-
-        In this case open the network configuration from the machine's "Configuration" dialog:
-
-        ![Parallels Desktop network configuration screenshot](assets/images/dietpi-Parallels20.png){: width="693" height="521" loading="lazy"}
-
-        In the "Advanced" selection open the network preferences:
-
-        ![Parallels Desktop network preferences screenshot](assets/images/dietpi-Parallels21.png){: width="420" height="243" loading="lazy"}
-
-        Disable the DHCP:
-
-        ![Parallels Desktop uncheck DHCP screenshot](assets/images/dietpi-Parallels22.png){: width="550" height="519" loading="lazy"}
-
-        Then, go back to your virtual machine. The network connection should then run fine.
+    ![Parallels Desktop DietPi startup](assets/images/dietpi-Parallels07.png){: width="640" height="273" loading="lazy"}
 
 === "Hyper-V"
 
