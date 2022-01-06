@@ -413,7 +413,7 @@ Your very own GitHub style server, with web interface.
     Initial service logs can be viewed via:
 
     ```sh
-    journalctl -u gitea
+    journalctl -u gogs
     ```
 
     Daemon logs can be found in the following directory:

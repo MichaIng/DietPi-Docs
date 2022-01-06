@@ -324,7 +324,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__Parallels Desktop__](https://www.parallels.com/products/desktop/) for macOS.
 
-    ![Parallels Desktop DietPi machine](assets/images/Parallels1.jpg){: width="720" height="405" loading="lazy"}
+    ![Parallels Desktop DietPi machine](assets/images/Parallels1.jpg){: width="896" height="504" loading="lazy"}
 
     <font size="+2">Prerequisites</font>
 
