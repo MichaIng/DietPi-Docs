@@ -340,11 +340,11 @@ Select the following tabs for the installation description of your target.
 
     Download the **DietPi Parallels** image from [`dietpi.com`](https://dietpi.com/#download).
 
-    Doubleclick on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.pvm` file to the Parallels directory (typically directory "Parallels" within your home directory).
+    Double click on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.pvm` file to the Parallels directory (typically directory "Parallels" within your home directory).
 
     <font size="+2">2. Open the virtual machine in Parallels Desktop</font>
 
-    As next, the Parallels virtual machine is opened by just doubleclick the `.pvm` file. Then the machine starts up.
+    As next, the Parallels virtual machine is opened by just double click the `.pvm` file. Then the machine starts up.
 
     ![Parallels Desktop DietPi startup](assets/images/dietpi-Parallels07.png){: width="640" height="273" loading="lazy"}
 
