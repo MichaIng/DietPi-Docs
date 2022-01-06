@@ -149,6 +149,6 @@ Also installs:
 ***
 
 Source code: <https://github.com/reloxx13/TasmoAdmin>  
-Credits: Implemented by [`svh1985`](https://github.com/svh1985)
+Credits: Implemented by @svh1985
 
 [Return to the **Optimised Software list**](../../software/)

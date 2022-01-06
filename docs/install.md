@@ -11,7 +11,7 @@ The installation of DietPi consists of few steps:
 - Get the DietPi image (and put it on the installation media)
 - Boot up the DietPi device and go through one time installation steps
 
-Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [`dietpi-software`](../dietpi_tools/#dietpi-software).
+Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/#dietpi-software){:class="nospellcheck"}.
 
 Select the following tabs for the installation description of your target.
 
@@ -35,7 +35,7 @@ Select the following tabs for the installation description of your target.
 
     ## 1. Download and extract the DietPi disk image
 
-    Open [`dietpi.com`](https://dietpi.com/#download) and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally.
+    Open [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally.
 
     _Example:_
     ![DietPi for Raspberry Pi download page](assets/images/DietPi-RaspberryPi-image.jpg){: width="1186" height="561" loading="lazy"}
@@ -159,7 +159,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi VirtualBox** image from [`dietpi.com`](https://dietpi.com/#download) and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    Download the **DietPi VirtualBox** image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi-VirtualBox-download-image](assets/images/dietpi-VirtualBox-Download.png){: width="1152" height="733" loading="lazy"}
 
@@ -277,7 +277,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi VMware** image from [`dietpi.com`](https://dietpi.com/#download) and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    Download the **DietPi VMware** image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi VMware download image](assets/images/dietpi-VMware-Download.png){: width="1223" height="749" loading="lazy"}
 
@@ -338,7 +338,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi Parallels** image from [`dietpi.com`](https://dietpi.com/#download).
+    Download the **DietPi Parallels** image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"}.
 
     Double click on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.pvm` file to the Parallels directory (typically directory "Parallels" within your home directory).
 
@@ -381,7 +381,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi Hyper-V** image from [`dietpi.com`](https://dietpi.com/#download) and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    Download the **DietPi Hyper-V** image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi Hyper-V image download](assets/images/dietpi-HyperV-Download.jpg){: width="722" height="463" loading="lazy"}
 
@@ -469,7 +469,7 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi installer image</font>
 
-        Download the **Native PC for UEFI** > **Installer Image** from [`dietpi.com`](https://dietpi.com/#download) and
+        Download the **Native PC for UEFI** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and
         extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download UEFI installer image](assets/images/dietpi-download-nativepc-uefi.jpg){: width="722" height="211" loading="lazy"}
@@ -557,7 +557,7 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi installer image</font>
 
-        Download the **Native PC for BIOS/CSM** > **Installer Image** from [`dietpi.com`](https://dietpi.com/#download) and
+        Download the **Native PC for BIOS/CSM** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and
         extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
@@ -635,7 +635,7 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi direct write image</font>
 
-        Download the **Native PC for BIOS/CSM** > **Direct write Image** from [`dietpi.com`](https://dietpi.com/#download) and
+        Download the **Native PC for BIOS/CSM** > **Direct write Image** from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and
         extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download BIOS direct write image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
@@ -739,7 +739,7 @@ DietPi will then immediately begin to search for and install updated software pa
 Once the packages have been updated, DietPi will ask you to confirm whether you would like to enable user analytics.
 
 !!! info "DietPi Survey"
-    DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [`dietpi.com/survey`](https://dietpi.com/survey/) page. Checkout and see how DietPi is used!
+    DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/){:class="nospellcheck"} page. Checkout and see how DietPi is used!
 
 ![dietpi-data](assets/images/dietpi-data-policy.jpg){: width="642" height="385" loading="lazy"}
 
@@ -766,8 +766,8 @@ A video tutorial on _How to install and initially configure DietPi_ made by Robe
 
 Further videos:
 
-- YouTube video #1: [`Installing DietPi : Fast Linux For Any Raspberry Pi!!!`](https://www.youtube.com/watch?v=U-UXenzA2m8)
-- YouTube video #2: [`How Install Diet Pi Raspberry Pi 4 Or Any SBC - Install Set Up Configure`](https://www.youtube.com/watch?v=qH0YsFNIyFo)
-- YouTube video #3: [`Headless install of Dietpi | No Monitor, No LAN, No router login | Pre Configure WiFi`](https://www.youtube.com/watch?v=vlMpn9u0Y4o)
-- YouTube video #4: [`Installing DietPi on Raspberry Pi, First Boot and Configuration`](https://www.youtube.com/watch?v=LzJpAUufyy0)
-- YouTube video #5 (German language): [`Raspberry Pi 4 & DietPi - die schnelle Alternative - Grundinstallation einfach erklärt`](https://www.youtube.com/watch?v=J5yPeJFLSO0&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=7)
+- YouTube video #1: [Installing DietPi : Fast Linux For Any Raspberry Pi!!!](https://www.youtube.com/watch?v=U-UXenzA2m8){:class="nospellcheck"}
+- YouTube video #2: [How Install Diet Pi Raspberry Pi 4 Or Any SBC - Install Set Up Configure](https://www.youtube.com/watch?v=qH0YsFNIyFo){:class="nospellcheck"}
+- YouTube video #3: [Headless install of Dietpi | No Monitor, No LAN, No router login | Pre Configure WiFi](https://www.youtube.com/watch?v=vlMpn9u0Y4o){:class="nospellcheck"}
+- YouTube video #4: [Installing DietPi on Raspberry Pi, First Boot and Configuration](https://www.youtube.com/watch?v=LzJpAUufyy0){:class="nospellcheck"}
+- YouTube video #5 (German language): [Raspberry Pi 4 & DietPi - die schnelle Alternative - Grundinstallation einfach erklärt](https://www.youtube.com/watch?v=J5yPeJFLSO0&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=7){:class="nospellcheck"}

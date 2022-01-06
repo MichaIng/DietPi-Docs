@@ -240,7 +240,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     phpenmod custom
     ```
 
-    You can watch the actual usage with the pre-installed [`opcache-gui`](https://github.com/amnuts/opcache-gui) by @amnuts.
+    You can watch the actual usage with the pre-installed [opcache-gui](https://github.com/amnuts/opcache-gui){:class="nospellcheck"} by @amnuts.
 
     - URL: `http://<your.IP>/opcache.php`
 
@@ -406,7 +406,7 @@ Your very own GitHub style server, with web interface.
     - Port: 3000
     - Protocol: TCP+UDP
 
-    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [`dietpi-letsencrypt`](../../dietpi_tools/#dietpi-letsencrypt).
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt){:class="nospellcheck"}.
 
 === "View logs"
 
@@ -471,7 +471,7 @@ Your very own GitHub style server, with web interface.
     - Port: 3000
     - Protocol: TCP+UDP
 
-    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [`dietpi-letsencrypt`](../../dietpi_tools/#dietpi-letsencrypt).
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt){:class="nospellcheck"}.
 
 === "Fail2Ban integration"
 
