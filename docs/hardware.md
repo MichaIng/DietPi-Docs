@@ -463,15 +463,21 @@ The Native PC images are great for those occasions where SBC performance just is
 
 ### VMware
 
-The VMware virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
+The VMware virtual machine (e.g. VMware Player, VMware Fusion) is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server (Windows, Linux, macOS) and still get the same great DietPi features and experience.
 
 ### VirtualBox
 
-![Oracle VirtualBox logo](assets/images/vbox.jpg){: width="267" height="273" loading="lazy"}
+![Oracle VirtualBox logo](assets/images/vbox.jpg){: width="133" height="136" loading="lazy"}
 
 VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at server, desktop and embedded use.
 
 The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
+
+### Parallels Desktop
+
+![macOS Parallels Desktop](assets/images/Parallels3.png){: width="270" height="82" loading="lazy"}
+
+The Parallels Desktop virtual machine for macOS is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 macOS system (e.g. Mac mini 2011/2012/2014/2018) and still get the same great DietPi features and experience.
 
 ### Hyper-V (community image)
 
@@ -509,6 +515,12 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
                 <td><a class="table" href=""><strong>VirtualBox</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Bullseye.7z">DietPi appliance</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Parallels Desktop (x86_64 macOS system)</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi installer image</a>
                 </td>
             </tr>
             <tr>

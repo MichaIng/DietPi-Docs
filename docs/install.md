@@ -15,13 +15,13 @@ Following these steps you will be able to initially setup DietPi and install add
 
 Select the following tabs for the installation description of your target.
 
-=== "Install on SBC"
+=== "Raspberry Pi and derivatives (SBC)"
 
     ## Introduction
 
     Single board computers (SBCs) based on the well known Raspberry PI ARM based architecture gained more and more friends in the last years. The low cost in combination with the power and hardware flexibility makes these SBCs optimal for embedded systems, like e.g. home automation or cloud applications.
 
-    ![Raspberry Pi 1 Model B photo](assets/images/raspberry-pi-1b.jpg){: width="598" height="289" loading="lazy"}
+    ![Raspberry Pi 1 Model B photo](assets/images/raspberry-pi-1b.jpg){: width="400" height="200" loading="lazy"}
 
     ## Prerequisites
 
@@ -59,7 +59,7 @@ Select the following tabs for the installation description of your target.
         7zr e DietPi-Image.7z
         ```
 
-        Replace **DietPi-Image.7z** with the correct name of your compressed DietPi file, example: **DietPi_RPi-ARMv6-Buster.7z**. This will extract the DietPi image file for you to use.
+        Replace **DietPi-Image.7z** with the correct name of the downloaded archive, e.g. **DietPi_RPi-ARMv6-Bullseye.7z**. This will extract the DietPi image file for you to use.
 
     ## 2. Flash the DietPi image
 
@@ -104,7 +104,7 @@ Select the following tabs for the installation description of your target.
     ???+ hint "Initial boot duration"
         Due to an automated resize of the root filesystem and basic setup steps, this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the system drive and hardware.
 
-=== "Install in VirtualBox"
+=== "VirtualBox"
 
     <font size="+2">Introduction</font>
 
@@ -142,8 +142,8 @@ Select the following tabs for the installation description of your target.
              ```sh
              mkdir ~/Downloads
              cd ~/Downloads
-             wget https://download.virtualbox.org/virtualbox/6.1.18/virtualbox-6.1_6.1.18-142142~Debian~buster_amd64.deb
-             apt install ./virtualbox-6.1_6.1.18-142142~Debian~buster_amd64.deb
+             wget https://download.virtualbox.org/virtualbox/6.1.30/virtualbox-6.1_6.1.30-148432~Debian~bullseye_amd64.deb
+             apt install ./virtualbox-6.1_6.1.30-148432~Debian~bullseye_amd64.deb
              ```
 
         2. Installation of the VirtualBox extension pack on a Linux host system  
@@ -159,8 +159,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi VirtualBox file** "DietPi_VirtualBox-x86_64-Buster.7z" from [`dietpi.com`](https://dietpi.com/#download) and   
-    unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    Download the **DietPi VirtualBox** image from [`dietpi.com`](https://dietpi.com/#download) and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi-VirtualBox-download-image](assets/images/dietpi-VirtualBox-Download.png){: width="1152" height="733" loading="lazy"}
 
@@ -174,7 +173,7 @@ Select the following tabs for the installation description of your target.
 
     ![VirtualBox appliance import screenshot](assets/images/dietpi-VirtualBox-import1.png){: width="483" height="308" loading="lazy"}
 
-    In the following dialog the user has to choose DietPi_VirtualBox-x86_64-Buster.ova as the file which shall be imported.
+    In the following dialog the user has to choose the `.ova` file which shall be imported.
 
     ![VirtualBox appliance import selection screenshot](assets/images/dietpi-VirtualBox-import2.png){: width="971" height="775" loading="lazy"}
 
@@ -245,11 +244,11 @@ Select the following tabs for the installation description of your target.
             VBoxManage guestproperty set "<vm_name>" "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold" 10000
             ```
 
-            Replace `<vm_name>` with the name of your virtual machine (i.e. the name shown in the VM VirtualBox Manager UI, e.g. `DietPi_VirtualBox-x86_64-Buster` if you import the VM without changing its name).
+            Replace `<vm_name>` with the name of your virtual machine, shown in the VM VirtualBox Manager UI, e.g. `DietPi_VirtualBox-x86_64-Bullseye` if you import the VM without changing its name.
 
         With all these setup steps the time synchronization with the usage of the extension pack should work. Sometimes it needs a couple of minutes until the time is synchronized, so be somehow patient.
 
-=== "Install in VMware Player"
+=== "VMware"
 
     <font size="+2">Introduction</font>
 
@@ -257,7 +256,7 @@ Select the following tabs for the installation description of your target.
 
     One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
 
-    One of the options of a virtual machine is [__VMware Workstation Player__](https://www.vmware.com/de/products/workstation-player/workstation-player-evaluation.html).
+    One of the options of a virtual machine is [__VMware Workstation Player__](https://www.vmware.com/de/products/workstation-player/workstation-player-evaluation.html) resp. [__VMware Fusion__](https://www.vmware.com/de/products/fusion/fusion-evaluation.html) (macOS).
 
     ![DietPi-VMware-program](assets/images/dietpi-VMware-program.png){: width="769" height="588" loading="lazy"}
 
@@ -278,8 +277,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi VMware file** "DietPi_VMware-x86_64-Buster.7z" from [`dietpi.com`](https://dietpi.com/#download) and   
-    unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    Download the **DietPi VMware** image from [`dietpi.com`](https://dietpi.com/#download) and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi VMware download image](assets/images/dietpi-VMware-Download.png){: width="1223" height="749" loading="lazy"}
 
@@ -293,7 +291,7 @@ Select the following tabs for the installation description of your target.
 
     ![VMware file open screenshot](assets/images/dietpi-VMware-import1.png){: width="715" height="585" loading="lazy"}
 
-    In the following dialog the user has to navigate to the directory where the `.vmx` and `.vmdk` file were stored. Then choose DietPi_VMware-x86_64-Buster(`.vmx`) as the file which shall be opened.  
+    In the following dialog the user has to navigate to the directory where the `.vmx` and `.vmdk` file were stored. Choose the `.vmx` file to open.  
     After this the DietPi VMware virtual machine is present and can be started:
 
     ![VMware virtual machine list screenshot](assets/images/dietpi-VMware-VM-Machine.png){: width="714" height="588" loading="lazy"}
@@ -316,7 +314,41 @@ Select the following tabs for the installation description of your target.
 
     For information about running DietPi in an VMware ESXi environment, you can read this article: [Running the DietPi VMware image on ESXi 6.7](https://ccie.tv/running-dietpi-vmware-image-on-esxi-6-7).
 
-=== "Install in Hyper-V"
+=== "Parallels (macOS)"
+
+    <font size="+2">Introduction</font>
+
+    Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
+
+    One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
+
+    One of the options of a virtual machine is [__Parallels Desktop__](https://www.parallels.com/products/desktop/) for macOS.
+
+    ![Parallels Desktop DietPi machine](assets/images/Parallels1.jpg){: width="896" height="504" loading="lazy"}
+
+    <font size="+2">Prerequisites</font>
+
+    As a starting point you need an **Apple Mac with a running Parallels Desktop software** on which the DietPi system will run (x86 system, e.g. Mac mini 2011/2012/2014/2018).  
+    On this MAC a free harddisk space of about  
+
+    - 1.2 GiB for a minimal running system  
+    - 5 - 10 GiB for a typical running system with X11  
+
+    is needed. A recommended size is at least a free space of 10 GiB.
+
+    <font size="+2">1. Download and extract the DietPi disk image</font>
+
+    Download the **DietPi Parallels** image from [`dietpi.com`](https://dietpi.com/#download).
+
+    Double click on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.pvm` file to the Parallels directory (typically directory "Parallels" within your home directory).
+
+    <font size="+2">2. Open the virtual machine in Parallels Desktop</font>
+
+    As next, the Parallels virtual machine is opened by just double click the `.pvm` file. Then the machine starts up.
+
+    ![Parallels Desktop DietPi startup](assets/images/Parallels2.png){: width="640" height="273" loading="lazy"}
+
+=== "Hyper-V"
 
     <font size="+2">Introduction</font>
 
@@ -349,7 +381,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi Hyper-V file** from [`dietpi.com`](https://dietpi.com/#download) and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    Download the **DietPi Hyper-V** image from [`dietpi.com`](https://dietpi.com/#download) and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi Hyper-V image download](assets/images/dietpi-HyperV-Download.jpg){: width="722" height="463" loading="lazy"}
 
@@ -406,7 +438,7 @@ Select the following tabs for the installation description of your target.
     <font size="+1">**Generate a Hyper-V Generation 2 machine**</font>  
     An option to get a Hyper-V Generation 2 machine is to generate your own Hyper-V image via a **Debian network installation** (booting the Hyper-V machine from a Debian `netinst.iso` installer like you would do it on a PC). Install a minimal Debian machine (i.e. no X11 desktops, etc.). Afterwards run the procedure described in section ["Make your own distribution"](../hardware/#make-your-own-distribution). Generation 2 machines support (and require) to boot in UEFI mode, support [Secure Boot](https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface#Secure_Boot), [TPM](https://en.wikipedia.org/wiki/Trusted_Platform_Module), use modern SCSI controllers and have higher hardware limits. For use as a home server, however, you will not need any of these functions.
 
-=== "Install on native PC"
+=== "Native PC"
 
     <font size="+2">Introduction</font>
 
@@ -437,8 +469,8 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi installer image</font>
 
-        Download the **UEFI installer image** `DietPi_NativePC-UEFI-x86_64-Buster_Installer.7z` from [`dietpi.com`](https://dietpi.com/#download) and
-        unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+        Download the **Native PC for UEFI** > **Installer Image** from [`dietpi.com`](https://dietpi.com/#download) and
+        extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download UEFI installer image](assets/images/dietpi-download-nativepc-uefi.jpg){: width="722" height="211" loading="lazy"}
 
@@ -525,8 +557,8 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi installer image</font>
 
-        Download the **BIOS installer image** `DietPi_NativePC-BIOS-x86_64-Buster_Installer.7z` from [`dietpi.com`](https://dietpi.com/#download) and
-        unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+        Download the **Native PC for BIOS/CSM** > **Installer Image** from [`dietpi.com`](https://dietpi.com/#download) and
+        extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
 
@@ -603,8 +635,8 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi direct write image</font>
 
-        Download the **BIOS direct write image** `DietPi_NativePC-BIOS-x86_64-Buster.7z` from [`dietpi.com`](https://dietpi.com/#download) and
-        unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+        Download the **Native PC for BIOS/CSM** > **Direct write Image** from [`dietpi.com`](https://dietpi.com/#download) and
+        extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download BIOS direct write image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
 
