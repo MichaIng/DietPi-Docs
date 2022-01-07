@@ -434,7 +434,6 @@ Your very own GitHub style server, with web interface.
 
 Official website: <https://gogs.io/>  
 Official documentation: <https://gogs.io/docs>  
-Official forum: <https://discuss.gogs.io/>  
 Source code: <https://github.com/gogs/gogs>  
 License: [MIT](https://github.com/gogs/gogs/blob/main/LICENSE)
 
@@ -604,7 +603,9 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
     The web interface is accessible via port **9000**:
 
-    - URL = `http://<your.IP>:9000`
+    - URL: `http://<your.IP>:9000`
+    - Username: `adminadmin`
+    - Password: `adminadmin`
     - [MinIO Server Quick Start Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
     - [Python Client Quick Start Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
     - [JavaScript Client Quick Start Guide - MinIO](https://docs.min.io/docs/javascript-client-quickstart-guide.html)
