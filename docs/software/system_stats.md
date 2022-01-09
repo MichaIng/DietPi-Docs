@@ -88,7 +88,7 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
     From DietPi v8.0 on, you can install DietPi-Dashboard as backend only node, with does not include an own web interface. Such backend only nodes can then be accessed from another full DietPi-Dashboard frontend/web interface.
 
-    !!!  hint "Full DietPi-Dashboard nodes with frontend included can currently not be accessed from other frontends."
+    !!! hint "Full DietPi-Dashboard nodes with frontend included can currently not be accessed from other frontends."
 
 === "Service control"
 
@@ -367,7 +367,7 @@ Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & E
 
     The default installation of K3s creates a single-node cluster.
     If you want to have a multi-node setup, you need to configure the nodes to speak to the others.
-    
+
     In `/boot/dietpi.txt`, edit the `SOFTWARE_K3S_EXEC` parameter to set command (`server` or `agent`).
     You can add other command-line parameters after the command.
 
@@ -377,7 +377,7 @@ Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & E
     SOFTWARE_K3S_EXEC=server --disable=local-storage
     ```
 
-    If you need to add many command-line parameters, it is recommended to put them in a file instead, 
+    If you need to add many command-line parameters, it is recommended to put them in a file instead,
     keeping only the command (`server` or `agent`) in `/boot/dietpi.txt`.
     During installation, if `/boot/dietpi-k3s.yaml` exists, it is copied to `/etc/rancher/k3s/config.yaml`, and used by K3s.
     The format of this file is documented in the [K3s docs](https://rancher.com/docs/k3s/latest/en/installation/install-options/#configuration-file).
@@ -388,7 +388,7 @@ Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & E
     Copy this to your client machine, and edit the `server` setting to point to the hostname of the server.
 
     Place the file in the default location (`~/.kube/config`), or point to it using the `KUBECONFIG` environment-variable.
-    
+
     You should now be able to interact with your Kubernetes cluster using `kubectl`:
 
     ```sh
