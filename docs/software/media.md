@@ -275,19 +275,19 @@ Feature rich media streaming server with a web interface, coded in Java.
 
     First we check off the `Getting started` page and head over to `Settings`:
 
-    !["Getting started" page](../assets/airsonic_setup_1.png){: width="1440" height="900" loading="lazy"}
+    !["Getting started" page](../assets/images/airsonic_setup_1.png){: width="1440" height="900" loading="lazy"}
 
     On the `Media folders` tab we change the path to DietPi's default music directory, save and scan the new media directory:
 
-    !["Media folders" settings page](../assets/airsonic_setup_2.png){: width="1440" height="900" loading="lazy"}
+    !["Media folders" settings page](../assets/images/airsonic_setup_2.png){: width="1440" height="900" loading="lazy"}
 
     On the `Credentials` tab we add a new admin password, the default `bcrypt` encoding is very good for secure password storage:
 
-    !["Credentials" settings page](../assets/airsonic_setup_3.png){: width="1440" height="900" loading="lazy"}
+    !["Credentials" settings page](../assets/images/airsonic_setup_3.png){: width="1440" height="900" loading="lazy"}
 
     Finally, due to a [current bug with the default web player](https://github.com/airsonic-advanced/airsonic-advanced/issues/646), we need switch to the `Players` tab, first cloning the default player, then recreating it. Finally we can hit `Refresh` at the left side panel to have media files added to the list, which enables us to play our music through the browser:
 
-    !["Players" settings page] page(../assets/airsonic_setup_4.png){: width="1440" height="900" loading="lazy"}
+    !["Players" settings page] page(../assets/images/airsonic_setup_4.png){: width="1440" height="900" loading="lazy"}
 
 === "Setup details"
 
