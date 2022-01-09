@@ -8,7 +8,7 @@
 - [**O!MPD - Feature-rich web Interface audio player for MPD**](#ompd)
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava)
 - [**Mopidy - Web Interface Music /Radio Player**](#mopidy)
-- [**Airsonic - Feature rich media streaming server with web interface**](#airsonic)
+- [**Airsonic-Advanced - Feature rich media streaming server with web interface**](#airsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](#squeezelite)
 - [**Shairport Sync - AirPlay audio player with multiroom sync**](#shairport-sync)
@@ -251,34 +251,92 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     Many thanks to Roth for [this hint](https://dietpi.com/phpbb/viewtopic.php?t=785).
 
-## Airsonic
+## Airsonic-Advanced {: #airsonic }
 
-Feature rich media streaming server with a web interface. Coded in Java.
+Feature rich media streaming server with a web interface, coded in Java.
 
-![Airsonic web interface screenshot](../assets/images/dietpi-software-media-airsonic.png){: width="400" height="257" loading="lazy"}
+![Airsonic logo](../assets/images/airsonic-logo.svg){: width="350" height="100" loading="lazy"}
 
-=== "Access to the web interface"
+=== "Web interface"
 
     The web interface uses port **8080**:
 
-    - URL = `http://<your.IP>:8080/airsonic`
-    - Username = `admin`
-    - Password = `admin`
+    - URL: `http://<your.IP>:8080/airsonic`
+    - Username: `admin`
+    - Password: `admin`
+
+    !!! hint "The web interface may feel sluggish on first access."
+
+        This is normal on first access after service start. Once a page has been viewed, respectively an element selected the first time, subsequent accesses will perform much faster.
 
 === "First run setup"
 
-    Once connected to the web interface, we need to configure the Music directory:
+    Once connected to the web interface for the first time, we recommend to do the following setup steps:
 
-    - Click the `Settings` button
-    - Under `Media Folders`, replace the current music folder entry with `/mnt/dietpi_userdata/Music`, then select `Save`
-    - Select `Scan media folders now` to update the library
+    First we check off the `Getting started` page and head over to `Settings`:
 
-=== "Transfer/add music"
+    !["Getting started" page](../assets/images/airsonic_setup_1.png){: width="1440" height="900" loading="lazy"}
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Mopidy:
+    On the `Media folders` tab we change the path to DietPi's default music directory, save and scan the new media directory:
 
-    - Folder = `/mnt/dietpi_userdata/Music`  
+    !["Media folders" settings page](../assets/images/airsonic_setup_2.png){: width="1440" height="900" loading="lazy"}
+
+    On the `Credentials` tab we add a new admin password, the default `bcrypt` encoding is very good for secure password storage:
+
+    !["Credentials" settings page](../assets/images/airsonic_setup_3.png){: width="1440" height="900" loading="lazy"}
+
+    Finally, due to a [current bug with the default web player](https://github.com/airsonic-advanced/airsonic-advanced/issues/646), we need switch to the `Players` tab, first cloning the default player, then recreating it. Finally we can hit `Refresh` at the left side panel to have media files added to the list, which enables us to play our music through the browser:
+
+    !["Players" settings page](../assets/images/airsonic_setup_4.png){: width="1440" height="900" loading="lazy"}
+
+=== "Setup details"
+
+    The install, config and data directory is located at:
+
+    ```
+    /mnt/dietpi_userdata/airsonic
+    ```
+
+=== "Service control"
+
+    Since Airsonic-Advanced runs as systems service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status airsonic
+    ```
+
+    ```sh
+    systemctl start airsonic
+    ```
+
+    ```sh
+    systemctl stop airsonic
+    ```
+
+    ```sh
+    systemctl restart airsonic
+    ```
+
+=== "Logs"
+
+    Since Airsonic-Advanced runs as systemd service, its logs can be viewed via:
+
+    ```sh
+    journalctl -u airsonic
+    ```
+
+=== "Update"
+
+    Airsonic-Advanced can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 33
+    ```
+
+***
+
+Source code: <https://github.com/airsonic-advanced/airsonic-advanced>  
+License: [GPLv3](https://github.com/airsonic-advanced/airsonic-advanced/blob/master/LICENSE.txt)
 
 ## Logitech Media Server
 

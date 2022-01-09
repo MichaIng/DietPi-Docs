@@ -160,7 +160,7 @@
 - [**O!MPD - Feature-rich web Interface audio player for MPD**](media/#ompd)
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](media/#cava)
 - [**Mopidy - Web Interface Music /Radio Player**](media/#mopidy)
-- [**Airsonic - Feature rich media streaming server with web interface**](media/#airsonic)
+- [**Airsonic-Advanced - Feature rich media streaming server with web interface**](media/#airsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](media/#logitech-media-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](media/#squeezelite)
 - [**Shairport Sync - AirPlay audio player with multiroom sync**](media/#shairport-sync)
