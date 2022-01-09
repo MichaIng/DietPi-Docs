@@ -434,7 +434,6 @@ Your very own GitHub style server, with web interface.
 
 Official website: <https://gogs.io/>  
 Official documentation: <https://gogs.io/docs>  
-Official forum: <https://discuss.gogs.io/>  
 Source code: <https://github.com/gogs/gogs>  
 License: [MIT](https://github.com/gogs/gogs/blob/main/LICENSE)
 
@@ -604,7 +603,9 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
     The web interface is accessible via port **9000**:
 
-    - URL = `http://<your.IP>:9000`
+    - URL: `http://<your.IP>:9000`
+    - Username: `adminadmin`
+    - Password: `adminadmin`
     - [MinIO Server Quick Start Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
     - [Python Client Quick Start Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
     - [JavaScript Client Quick Start Guide - MinIO](https://docs.min.io/docs/javascript-client-quickstart-guide.html)
@@ -771,39 +772,43 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
 ![FuguHub logo](../assets/images/dietpi-software-cloud-fuguhub.png){: width="149" height="140" loading="lazy"}
 
-=== "Quick access"
+=== "Web interface"
 
-    Open the browser `http://<your.IP>`.  
-    On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
+    The web interface is accessible via regular HTTP and HTTPS ports **80** and **443**:
 
-    !!! warning "FuguHub runs by default on port 80 and optional 443, making it incompatible with a regular webserver using the default setup."
+    - URL: `http://<your.IP>` or `https://<your.IP>` (When using HTTPS, you may ignore the browser warning because of the self-signed certificate which is used by default.)
+    - Username: `dietpi`
+    - Password: `<your global password>` (default: `dietpi`)
+
+    !!! warning "The fact that FuguHub runs on ports 80 and 443 by default makes it incompatible with regular web servers when using the default setup."
 
     ![FuguHub web interface screenshot](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png){: width="1920" height="1088" loading="lazy"}
 
-=== "Interactive install"
-
-    1. Press ++enter++ to continue
-    2. Press ++y++ to accept license
-    3. Press ++y++ for `VPS` or ++n++ for `home/office` server
-    4. Choose whether to install an internal BitTorrent client.
-
-    !!! warning "It is recommended to use the a dedicated [BitTorrent](../bittorrent/) server, if required."
-
-    Setup details:
+=== "Setup details"
 
     - Install directory: `/home/bd`
     - Config file: `/home/bd/bdd.conf`
-    - Data directory: `/mnt/dietpi_userdata/fuguhub-data`
+    - File server directory: `/mnt/dietpi_userdata/fuguhub-data`
 
-=== "View logs"
+=== "Logs"
 
     - Service: `journalctl -u bdd`
     - Trace: `/home/bd/trace/`  
       It contains an info about the database creation only, even after playing around with the web UI a bit.
 
+=== "Update"
+
+    To update FuguHub, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 161
+    ```
+
+    All your settings and data will be preserved.
+
 ***
 
-Website: <https://fuguhub.com>
+Official website: <https://fuguhub.com/>
 
 ## File Browser
 

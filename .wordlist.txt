@@ -151,6 +151,7 @@ FreshRSS
 FriendlyARM
 FriendlyARM's
 frontend
+frontends
 frp
 fullscreen
 FuguHub
@@ -486,6 +487,7 @@ Squeezelite
 SSD
 SSHFS
 SSID
+SSIDs
 SSL
 StackExchange
 StephanStS
@@ -599,6 +601,7 @@ WIP
 WireGuard
 WiringPi
 Wordpress
+WPA
 writeable
 WSAD
 www
