@@ -417,7 +417,7 @@ Also installs:
         Within the script you can also define event listeners and handlers. By default the value of the virtual pin `V1` is printed to console when it changes, and the value of the virtual pin `V9` is set to system time seconds whenever the pin is read. For a more interactive test you could hence add the following widgets to your project via app:
 
         1. Add a `Button` and change its `OUTPUT` pin to `Virtual` > `V1`. Go back and hit the play button. Whenever you push the button in the app, the test script console should print the value changes as defined.
-	2. Hit the stop button. Add a `Value Display`, change its `INPUT` pin to `Virtual` > `V9` and the `READING RATE` to `1 sec`. Go back and hit the start button. While the test script is running, the display widget will not show the server's system time seconds, updated every 1-2 seconds.
+        2. Hit the stop button. Add a `Value Display`, change its `INPUT` pin to `Virtual` > `V9` and the `READING RATE` to `1 sec`. Go back and hit the start button. While the test script is running, the display widget will not show the server's system time seconds, updated every 1-2 seconds.
 
         Hit ++ctrl+c++ to exit the test script.
 
