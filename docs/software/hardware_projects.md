@@ -346,13 +346,9 @@ Also installs:
 
     The web interface uses port **9443**:
 
-    - URL = `https://<your.IP>:9443/admin` (You may ignore the browser warning, as a self-signed certificate is used by default.)
+    - URL: `https://<your.IP>:9443/admin` (You may ignore the browser warning, as a self-signed certificate is used by default.)
     - Email address: `admin@blynk.cc`
-    - Password: A random password is generated at first service start, which can be found by running the following command:
-
-        ```sh
-        journalctl -u blynkserver.service | grep password
-        ```
+    - Password: `<your global password>` (default: `dietpi`)
 
 === "Installation notes"
 
@@ -362,7 +358,13 @@ Also installs:
     /mnt/dietpi_userdata/blynk
     ```
 
-    Log files can be found in:
+    Logs can be viewed via:
+
+    ```sh
+    journalctl -u blynkserver
+    ```
+
+    and more detailed log files in:
 
     ```
     /var/log/blynk
@@ -394,23 +396,30 @@ Also installs:
 
 === "Getting started with Blynk app"
 
+    !!! warning "The new "Blynk IoT" app does not support a self-hosted Blynk server!"
+
+        The "legacy" Blynk app will prompt hints about the new "Blynk IoT" app at several places. You need to ignore these since the new app does not support self-hosted Blynk severs, but only the Blynk Inc. cloud.
+
     1. Download the Blynk app for Android: <https://play.google.com/store/apps/details?id=cc.blynk>
     2. To log into your own server, press `Log In`, then the three dots at the bottom and switch the slider to `CUSTOM`.
-    3. There you can enter your own Blynk servers IP/domain and use the above login credentials.
+    3. There you can enter your own Blynk server's IP/domain and use the above login credentials.
     4. Create a new project by following this guide: <https://docs.blynk.cc/#getting-started-getting-started-with-the-blynk-app-2-create-a-new-project>
     5. The authentication token for the new project can be obtained from the app and as well from the web interface at `Users` > `admin@blynk.cc` within the `Profile DashBoards` section. Use it to connect with your Blynk library Node scripts.
 
 === "Run test script"
 
-    Once you create a project in the iOS/Android app, you may test the connection via
+    Once you created a project in the iOS/Android app, you may test the connection via `/mnt/dietpi_userdata/blynk/client-tcp-local.js`. You need to edit the file and replace `YOUR_AUTH_TOKEN` with the authentication token of your project. Then run it:
 
         ```sh
-        blynk-client '<authentication token>'
+        /mnt/dietpi_userdata/blynk/client-tcp-local.js
         ```
 
-        But the TLS connection usually fails with the self-signed certificates. If Let's Encrypt was setup before, the Blynk server will use it automatically, which should allow TLS connection. If it does not work, check out the example scripts to connect via plain TCP: <https://github.com/vshymanskyy/blynk-library-js/blob/master/examples/nodejs/client-tcp-local.js>
+        Within the script you can also define event listeners and handlers. By default the value of the virtual pin `V1` is printed to console when it changes, and the value of the virtual pin `V9` is set to system time seconds whenever the pin is read. For a more interactive test you could hence add the following widgets to your project via app:
 
-        The HTTP port can be seen and changed via config file. See the "Server configuration" tab.
+        1. Add a `Button` and change its `OUTPUT` pin to `Virtual` > `V1`. Go back and hit the play button. Whenever you push the button in the app, the test script console should print the value changes as defined.
+	2. Hit the stop button. Add a `Value Display`, change its `INPUT` pin to `Virtual` > `V9` and the `READING RATE` to `1 sec`. Go back and hit the start button. While the test script is running, the display widget will not show the server's system time seconds, updated every 1-2 seconds.
+
+        Hit ++ctrl+c++ to exit the test script.
 
 === "Update to the latest version"
 
@@ -553,9 +562,9 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
 
     The web interface is accessible via port **3001**:
 
-    - URL = `http://<your.IP>:3001`
-    - Username = `admin`
-    - Password = `<your global password>`
+    - URL: `http://<your.IP>:3001`
+    - Username: `admin`
+    - Password: `<your global password>` (default: `dietpi`)
 
 === "Usage information"
 
