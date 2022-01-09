@@ -29,20 +29,20 @@
 
 ## DietPi-Dashboard
 
-DietPi-Dashboard is a very lightweight and standalone web interface for monitoring and managing your DietPi system with your favourite web browser. It is written in Rust.
+DietPi-Dashboard is a very lightweight and standalone web interface for monitoring and managing your DietPi system with your favourite web browser. It is written in Rust. An overview of its features is given by our article [here](https://dietpi.com/blog/?p=1137).
 
 ![DietPi-Dashboard screenshot](../assets/images/dietpi-dashboard.jpg){: width="700" height="346" loading="lazy"}
 
 !!! warning "DietPi-Dashboard is still in Beta!"
 
-    We hence do not recommend yet to actively use in on sensitive production systems.
+    We hence do not recommend to actively use it on sensitive production systems yet.
 
-=== "Access the web interface"
+=== "Web interface"
 
     DietPi-Dashboard is accessible by default at TCP port **5252**:
 
-    - URL = `http://<your.IP>:5252`
-    - Password = `<your software password>` (default: `dietpi`)
+    - URL: `http://<your.IP>:5252`
+    - Password: `<your software password>` (default: `dietpi`)
 
 === "Directories"
 
@@ -84,6 +84,12 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
     If you want to force a logout of all browsers without changing the password, you can instead change the secret. Generate an apply a new secret to the configuration file and restart the service. Every client and browser will then need to login again to continue using the DietPi-Dashboard, as the stored token that is based on password and secret has been invalidated.
 
+=== "Multiple nodes"
+
+    From DietPi v8.0 on, you can install DietPi-Dashboard as backend only node, with does not include an own web interface. Such backend only nodes can then be accessed from another full DietPi-Dashboard frontend/web interface.
+
+    !!!  hint "Full DietPi-Dashboard nodes with frontend included can currently not be accessed from other frontends."
+
 === "Service control"
 
     DietPi-Dashboard by default is started as systemd service and can hence be controlled with the following commands:
@@ -104,7 +110,7 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     systemctl restart dietpi-dashboard
     ```
 
-=== "View logs"
+=== "Logs"
 
     Service logs can be reviewed with the following command:
 
@@ -112,7 +118,7 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     journalctl -u dietpi-dashboard
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     You can easily update DietPi-Dashboard by reinstalling it:
 
