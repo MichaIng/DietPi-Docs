@@ -86,7 +86,17 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 === "Multiple nodes"
 
-    From DietPi v8.0 on, you can install DietPi-Dashboard as backend only node, with does not include an own web interface. Such backend only nodes can then be accessed from another full DietPi-Dashboard frontend/web interface.
+    From DietPi v8.0 on, you can install DietPi-Dashboard as backend only node, with does not include an own web interface. Such backend only nodes can then be accessed from another full DietPi-Dashboard frontend/web interface. Additional nodes would need to be added manually into configuration file located at:
+
+    ```
+    /opt/dietpi-dashboard/config.toml
+    ```    
+    
+    When doing changes, you need to restart the service afterwards:
+
+    ```sh
+    systemctl restart dietpi-dashboard
+    ```
 
     !!! hint "Full DietPi-Dashboard nodes with frontend included can currently not be accessed from other frontends."
 
