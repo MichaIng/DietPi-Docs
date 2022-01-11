@@ -39,6 +39,13 @@ apt -y install "${packages[@]}"
 unset -v packages
 ```
 
+If `dietpi-update` migrated you to the dedicated Stretch update branch already, you can now migrate back to the stable `master` branch to apply DietPi updates to v8.0 and above:
+
+```sh
+G_CONFIG_INJECT 'DEV_GITBRANCH=' 'DEV_GITBRANCH=master' /boot/dietpi.txt
+dietpi-update
+```
+
 Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#2.2-manual-upgrade>
 
 ---
