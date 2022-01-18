@@ -152,7 +152,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
       free        Print an unused software ID, free for a new software implementation
     ```
 
-    The <software_id\> which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:
+    The `<software_id>` which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:
 
     ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: width="454" height="129" loading="lazy"}
 
@@ -237,7 +237,7 @@ DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cr
 
 ### DietPi configuration
 
-Configure various system settings, from display / audio / network to _auto start_ options.  
+Configure various system settings, from display / audio / network to *auto start* options.  
 Run `dietpi-config`.
 
 ![DietPi-Config screenshot](assets/images/dietpi-config.jpg){: width="643" height="335" loading="lazy"}
