@@ -46,6 +46,15 @@ G_CONFIG_INJECT 'DEV_GITBRANCH=' 'DEV_GITBRANCH=master' /boot/dietpi.txt
 dietpi-update
 ```
 
+If you have **Python 3** installed, as of its upgrade from v3.5 to v3.7, it needs to be reinstalled and old modules can be removed for cleanup:
+
+```sh
+rm -Rf /usr/local/lib/python3.5 /usr/local/bin/pip3*
+dietpi-software reinstall 130
+```
+
+You may need to reinstall other Python-based software titles as well and modules manually installed with the `pip3` command. Your data and settings are preserved.
+
 Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#2.2-manual-upgrade>
 
 ---
