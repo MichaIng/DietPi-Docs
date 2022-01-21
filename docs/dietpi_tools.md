@@ -461,7 +461,7 @@ Run `dietpi-drive_manager`.
     !!! tip "Instead of an IP address, a hostname may be used"
 
     !!! info "Mounting a Samba shared folder"
-        In case of a Samba mount do not use a leading `/` in the dialog entering the fileservers shared folder name (e.g. enter `public/music` instead of `/public/music`).
+        In case of a Samba mount do not use a leading `/` in the dialog entering the file servers shared folder name (e.g. enter `public/music` instead of `/public/music`).
 
     !!! info "Mounting a macOS Samba share"
         To mount a macOS Samba share enabled in `Sharing`, you need to (in the server) go to `Sharing > File Sharing > Options > Windows File Sharing` and select your username.
