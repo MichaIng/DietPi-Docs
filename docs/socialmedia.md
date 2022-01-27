@@ -1,3 +1,8 @@
+---
+title: DietPi Social Media Channels
+description: The social media channels maintained by the DietPi project team where you can contact us and get new about DietPi
+---
+
 # Social media
 
 ## DietPi on Twitter
