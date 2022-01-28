@@ -1,6 +1,6 @@
 ---
-description: Easy to follow tutorial to install & initially configure DietPi
 title: How to install DietPi
+description: Easy to follow tutorial to install & initially configure DietPi
 ---
 
 # How to install DietPi

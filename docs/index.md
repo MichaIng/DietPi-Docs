@@ -1,6 +1,6 @@
 ---
-description: How to install DietPi on SBCs and virtualized environments. Install & configure optimised software and much more.
 title: DietPi Documentation
+description: How to install DietPi on SBCs, PCs and virtualized environments. Install & configure optimised software and much more.
 ---
 
 [![DietPi Logo](https://dietpi.com/images/dietpi-logo_180x180.png){: width="180" height="180" loading="lazy"}](https://dietpi.com/)

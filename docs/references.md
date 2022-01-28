@@ -1,7 +1,12 @@
+---
+title: External references and articles
+description: Read external references, articles and watch videos and guides about DietPi
+---
+
 # References
 
 At this page, links to general information are referenced.  
-Links to special software packages are located at the end of the according software package description in the "Optimized Software" documentation area.
+Links to special software packages are located at the end of the according software package description in the [Optimised Software](../software/) documentation area.
 
 ## General links
 

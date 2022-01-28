@@ -1,3 +1,8 @@
+---
+title: DietPi Release Notes
+description: Overview of DietPi releases with applied new software and features, hardware support, optimisations and bug fixes
+---
+
 # DietPi Releases
 
 - [v8.0 January 2022](v8_0/)
