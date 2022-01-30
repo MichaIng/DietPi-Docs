@@ -552,13 +552,20 @@ Also Installs:
     - Enter the details of your path (See the image example below to add your USB drive music folder to Ampache).
     - Select the `add catalogue` button.
 
-    Remark: For Ampache to access custom directories, you must ensure read access to the folder, e.g. by:
+    !!! note "Check access rights on local custom directories"
+        For Ampache to access custom directories, you must ensure read access to the folder, e.g. by:
 
-    ```sh
-    chmod -R 775 /my/directory
-    ```
+        ```sh
+        chmod -R 775 /my/directory
+        ```
 
-    ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
+        ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
+
+    !!! note "Access rights on remote mounts (e.g. Samba, NFS)"
+        In case that you want to access a mounted directory, also the access rights need to be set.  
+        Example Samba mount: Edit the `/etc/fstab` file and search for the line with the mounted media Samba share.  
+        Check whether `file_mode=0775,dir_mode=0775` is set.  
+        Otherwise set them and restart your system to get the changed mount options valid (alternatively execute `umount /my/directory` and `mount -a`).
 
 === "Enable additional file formats via transcoding"
 
@@ -1128,7 +1135,7 @@ Free and open source comics/mangas media server with web UI.
       file:
         name: "/var/log/komga/komga.log"
     ```
-    
+
     Assure that the directory exists and the `komga` user or group has write permissions.
 
 === "Update to latest version"
@@ -1368,8 +1375,8 @@ A command-line music organizer and manager. Some of the key features are:
 
 === "Quick start"
 
-    Start by typing `beet` in the command line. All the options and commands will be made available. 
-    
+    Start by typing `beet` in the command line. All the options and commands will be made available.
+
     You could start using Beets by importing music with `beet import` and then query the library with 'beet list'. For example next command line shows all Tangos in the year 2010
 
     ```sh
