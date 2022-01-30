@@ -209,10 +209,8 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
  
     1. Download the client from: <https://github.com/OpenBazaar/openbazaar-desktop/releases>
     2. Start the OpenBazaar client and add your server:
-        - Click Menu (top right)
-        - Click New Server
-        - Select Standalone
-        - Enter the IPv4 address of your DietPi device, the username and password you applied during the OpenBazaar server install.
+        - Click "New"
+        - Enter the IPv4 address of your DietPi device, the username and password you entered during the OpenBazaar server install.
 
 ***
 
