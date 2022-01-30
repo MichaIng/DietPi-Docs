@@ -59,8 +59,8 @@ The only media centre/player you'll ever need.
 
 If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autostart`:
 
-- Desktop = Kodi is available via the LXDE start menu, and, desktop.
-- Console = Kodi can also be run by typing `startkodi`.
+- Desktop: Kodi is available via the LXDE start menu, and, desktop.
+- Console: Kodi can also be run by typing `startkodi`.
 
 ## ympd
 
@@ -76,15 +76,15 @@ Also installs:
 
     The web interface is accessible via port **1337**:
 
-    - URL = `http://<your.IP>:1337`
+    - URL: `http://<your.IP>:1337`
 
 === "Transfer/add music"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used:
 
-    - local = `/mnt/dietpi_userdata/Music`
-    - accessed from file server = `/Music`
+    - Local: `/mnt/dietpi_userdata/Music`
+    - Accessed from file server: `/Music`
 
 === "Refresh music files / database"
 
@@ -111,7 +111,7 @@ Also installs:
 
     The web interface is accessible via port **1333**:
 
-    - URL = `http://<your.IP>:1333`
+    - URL: `http://<your.IP>:1333`
 
 === "Installation notes"
 
@@ -129,8 +129,8 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used:
 
-    - local = `/mnt/dietpi_userdata/Music`
-    - accessed from file server = `/Music`
+    - Local: `/mnt/dietpi_userdata/Music`
+    - Accessed from file server: `/Music`
 
 === "Refresh music files / database"
 
@@ -156,17 +156,17 @@ Also installs:
 
 === "Access to the web interface"
 
-    - URL = `http://<your.IP>/ompd`
-    - Username = `admin`
-    - Password = `admin`
+    - URL: `http://<your.IP>/ompd`
+    - Username: `admin`
+    - Password: `admin`
 
 === "Transfer/add music"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by O!MPD:
 
-    - Local = `/mnt/dietpi_userdata/Music`
-    - Accessed from file server = `/Music`
+    - Local: `/mnt/dietpi_userdata/Music`
+    - Accessed from file server: `/Music`
 
 === "Update/scan library"
 
@@ -207,15 +207,15 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     The web interface uses port **6680**:
 
-    - URL = `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
+    - URL: `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
 
 === "Transfer/add music"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Mopidy:
 
-    - Local = `/mnt/dietpi_userdata/Music`
-    - Accessed from file server = `/Music`
+    - Local: `/mnt/dietpi_userdata/Music`
+    - Accessed from file server: `/Music`
 
 === "Refresh music files / database"
 
@@ -353,14 +353,14 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
     The web interface is accessible via port **9000**:
 
-    - URL = `http://<your.IP>:9000`
+    - URL: `http://<your.IP>:9000`
 
 === "Transfer/add music"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Mopidy:
+    The default download directory used by Mopidy:
 
-    - Folder = `/mnt/dietpi_userdata/Music`  
+    - `/mnt/dietpi_userdata/Music`
 
 === "Change Squeezelite command line options"
 
@@ -397,14 +397,14 @@ Squeezelite is the audio player for the Logitech Media Server.
 
     The web interface is accessible via port **9000**:
 
-    - URL = `http://<your.IP>:9000`
+    - URL: `http://<your.IP>:9000`
 
 === "Transfer/add music"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Mopidy:
+    The default download directory used by Mopidy:
 
-    - Folder = `/mnt/dietpi_userdata/Music`  
+    - `/mnt/dietpi_userdata/Music`
 
 === "Change Squeezelite command line options"
 
@@ -491,7 +491,7 @@ Stream your shared media to any DLNA/UPnP capable device.
 
     The web interface is accessible via port **8200**:
 
-    - URL = `http://<your.IP>:8200`
+    - URL: `http://<your.IP>:8200`
 
 === "Transfer media files to ReadyMedia"
 
@@ -526,17 +526,17 @@ Also Installs:
 
 === "Access to the web interface"
 
-    - URL = `http://<your.IP>/ampache`
-    - Username = `admin`
-    - Password = `dietpi`
+    - URL: `http://<your.IP>/ampache`
+    - Username: `admin`
+    - Password: `dietpi`
 
 === "Transfer media files to ReadyMedia"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Ampache:
 
-    - audio = `/mnt/dietpi_userdata/Music`
-    - videos = `/mnt/dietpi_userdata/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`
+    - Video: `/mnt/dietpi_userdata/Video`
 
 === "Scan for media, update Ampache database"
 
@@ -599,7 +599,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
     The web interface is accessible via port **8096**:
 
-    URL = `http://<your.IP>:8096`
+    URL: `http://<your.IP>:8096`
 
 === "First run setup"
 
@@ -653,7 +653,7 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
     The web interface uses port **32400**:
 
-    URL = `http://<your.IP>:32400/web`
+    URL: `http://<your.IP>:32400/web`
 
 === "First run setup"
 
@@ -675,8 +675,8 @@ Plex organizes your video, music, and photo collections and streams them to all 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Plex Media Server:
 
-    - Audio = `/mnt/dietpi_userdata/Music`
-    - Video = `/mnt/dietpi_userdata/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`
+    - Video: `/mnt/dietpi_userdata/Video`
 
 ***
 
@@ -696,7 +696,7 @@ A Python based monitoring and tracking tool for Plex Media Server.
 
     The web interface is accessible via port **8181**:
 
-    - URL = `http://<your.IP>:8181`
+    - URL: `http://<your.IP>:8181`
 
 === "Access to the log files"
 
@@ -714,9 +714,9 @@ Turn your device into a lightweight Mumble VoIP server.
 
     The server is accessible via port **64738**:
 
-    - URL = `http://<your.IP>:64738`
-    - Password = No password required
-    - Superuser Password = `dietpi`
+    - URL: `http://<your.IP>:64738`
+    - Password: No password required
+    - Superuser Password: `dietpi`
 
 === "Change Murmur Server settings"
 
@@ -771,8 +771,8 @@ Turns your device into a Roon capable audio player and core server.
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Folders used by Roon Server:
 
-    - Music directory = `/mnt/dietpi_userdata/Music`
-    - Accessed from file server = `/Music`
+    - Music directory: `/mnt/dietpi_userdata/Music`
+    - Accessed from file server: `/Music`
 
 === "Directories"
 
@@ -921,11 +921,11 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
     The web interface is accessible via port **8000**:
 
-    - URL = `http://<your.IP>:8000`
-    - Admin user = `admin`
-    - Admin password = `<your global password>` (default: `dietpi`)
-    - Source password = `<your global password>` (default: `dietpi`)
-    - Relay password = `<your global password>` (default: `dietpi`)
+    - URL: `http://<your.IP>:8000`
+    - Admin user: `admin`
+    - Admin password: `<your global password>` (default: `dietpi`)
+    - Source password: `<your global password>` (default: `dietpi`)
+    - Relay password: `<your global password>` (default: `dietpi`)
 
 === "Access recording file"
 
@@ -980,9 +980,9 @@ Web interface music streamer.
 
     The web interface is accessible via port **8003**:
 
-    - URL = `http://<your.IP>:8003`
-    - Email address = `admin@koel.dev`
-    - Password = `KoelIsCool`
+    - URL: `http://<your.IP>:8003`
+    - Email address: `admin@koel.dev`
+    - Password: `KoelIsCool`
 
 === "First run setup"
 
@@ -998,8 +998,8 @@ Web interface music streamer.
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Directories used by Koel:
 
-    - Local = `/mnt/dietpi_userdata/Music`
-    - Accessed from file server = `/Music`
+    - Local: `/mnt/dietpi_userdata/Music`
+    - Accessed from file server: `/Music`
 
 === "View logs"
 
@@ -1040,14 +1040,14 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
     The web interface uses port **2038** resp. **2039**:
 
-    - Admin page = `http://<your.IP>:2038/admin`
-    - Library view page = `http://<your.IP>:2039`
+    - Admin page: `http://<your.IP>:2038/admin`
+    - Library view page: `http://<your.IP>:2039`
 
 === "Transfer ebooks/comics to your device"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
 
-    - Use the following folders = `/mnt/dietpi_userdata/ebooks` and `/mnt/dietpi_userdata/comics`
+    - Use the following folders: `/mnt/dietpi_userdata/ebooks` and `/mnt/dietpi_userdata/comics`
     - Then use the admin page, to set the above locations for ebook and comic storage
     - Run a scan in the admin page to update the database
 
@@ -1073,7 +1073,7 @@ Free and open source comics/mangas media server with web UI.
 
     The web interface is accessible via port **2037**:
 
-    - URL = `http://<your.IP>:2037`
+    - URL: `http://<your.IP>:2037`
 
 === "Data directory"
 
@@ -1321,9 +1321,9 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8096**:
+    The web interface is accessible via port **8097**:
 
-    - URL = `http://<your.IP>:8096`
+    - URL: `http://<your.IP>:8097`
 
 === "View logs"
 
@@ -1395,7 +1395,7 @@ The Snapcast server needs to have its audio sources manually configured after in
 
     The Snapcast server provides a web interface on port **1780**, which allows you to control volumes for all clients and optionally play audio through your browser:
 
-    - URL = `http://<your.IP>:1780`
+    - URL: `http://<your.IP>:1780`
 
 === "Implementation details"
 
