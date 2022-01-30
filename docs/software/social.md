@@ -207,15 +207,17 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
 
     The client will allow you to browse and trade within the OpenBazaar market network.
  
-    1. Download the client from: <https://github.com/OpenBazaar/openbazaar-desktop/releases>
+    1. Download the client from: <https://github.com/mobazha/openbazaar-desktop/releases>
+        - Expand "Assents" below the latest releases
+        - For Windows, download `OpenBazaar2Client-x.y.z-Setup-64.exe`
     2. Start the OpenBazaar client and add your server:
         - Click "New"
         - Enter the IPv4 address of your DietPi device, the username and password you entered during the OpenBazaar server install.
 
 ***
 
-Source code: <https://github.com/OpenBazaar/openbazaar-go>  
-License: [MIT](https://github.com/OpenBazaar/openbazaar-go/blob/master/LICENSE)
+Source code: <https://github.com/mobazha/openbazaar-go>  
+License: [MIT](https://github.com/mobazha/openbazaar-go/blob/master/LICENSE)
 
 ## Synapse
 
