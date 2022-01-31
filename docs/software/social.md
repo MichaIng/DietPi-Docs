@@ -212,7 +212,38 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
         - For Windows, download `OpenBazaar2Client-x.y.z-Setup-64.exe`
     2. Start the OpenBazaar client and add your server:
         - Click "New"
-        - Enter the IPv4 address of your DietPi device, the username and password you entered during the OpenBazaar server install.
+        - Enter the IPv4 address of your DietPi device, the username and password you entered during the OpenBazaar server install
+        - Turn off SSL, unless you manually enabled it, including TLS certificate setup
+
+=== "Configuration"
+
+    - Config and data directory:  
+        `/mnt/dietpi_userdata/openbazaar`
+    - Main config file:  
+        `/mnt/dietpi_userdata/openbazaar/config`
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart openbazaar
+    ```
+
+=== "Service handling"
+
+    The DietPi OpenBazaar implementation creates a systemd service `openbazaar.service` to start and control the OpenBazaar server. The following commands can be used:
+
+    - Start: `systemctl start openbazaar`
+    - Stop: `systemctl stop openbazaar`
+    - Restart: `systemctl restart openbazaar`
+    - Print status: `systemctl status openbazaar`
+
+=== "View logs"
+
+    Logs are done to the system journal an can be viewed via:
+
+    ```sh
+    journalctl -u openbazaar
+    ```
 
 ***
 
@@ -261,7 +292,7 @@ Synapse is a server, written in Python, for communication using the Matrix proto
     - Stop: `systemctl stop synapse`
     - Restart: `systemctl restart synapse`
     - Reload config: `systemctl reload synapse`
-    - Print status: `systemctl start synapse`
+    - Print status: `systemctl status synapse`
 
 === "View logs"
 
