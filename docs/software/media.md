@@ -534,7 +534,7 @@ Also Installs:
     - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
     - Video: `/mnt/dietpi_userdata/Video`, `/Video` from NFS/Samba
 
-=== "Scan for media, update Ampache database"
+=== "Update media database"
 
     DietPi will automatically add various catalogue directories to Ampache during installation. You can modify these directories as needed before running your first scan.  
     To start the scan and import your media into Ampache:
@@ -545,36 +545,71 @@ Also Installs:
 
     ![Ampache web interface screenshot with database update instructions](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png){: width="400" height="193" loading="lazy"}
 
-=== "Add custom media folders"
+=== "Add media directories"
 
     - Select the `admin` button.
     - Select `add a catalogue` from the left hand side.
-    - Enter the details of your path (See the image example below to add your USB drive music folder to Ampache).
+    - Enter the details of your path.
     - Select the `add catalogue` button.
 
-    !!! note "Check access rights on local custom directories"
-        For Ampache to access custom directories, you must ensure read access to the folder, e.g. by:
+    ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
+
+    !!! note "Access permissions on local directories"
+        If Ampache fails to add a directory, assure it has read permissions, e.g. by adding global read permissions:
 
         ```sh
-        chmod -R 775 /my/directory
+        chmod -R a+r /my/directory
         ```
 
-        ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
+    !!! note "Access permissions on remote mounts (e.g. NFS, Samba)"
+        In case you want to access a remote mount, also read permissions for Ampache need to be assured.
 
-    !!! note "Access rights on remote mounts (e.g. Samba, NFS)"
-        In case that you want to access a mounted directory, also the access rights need to be set.  
-        Example Samba mount: Edit the `/etc/fstab` file and search for the line with the mounted media Samba share.  
-        Check whether `file_mode=0775,dir_mode=0775` is set.  
-        Otherwise set them and restart your system to get the changed mount options valid (alternatively execute `umount /my/directory` and `mount -a`).
+        - For NFS, you can grant global read permissions like you would do with a local directory, e.g. via:
+
+            ```sh
+            chmod -R a+r /my/nfs/directory
+            ```
+
+            In case the the NFS client has no write permissions, this needs to be done at the NFS server.
+
+        - For Samba, edit `/etc/fstab` and add or set the mount options `file_mode=0775,dir_mode=0775`. Important is the last digit of each mode, which indicates read (and execute) permissions for all users. Stricter modes, still working with Ampache, would be: `file_mode=0644,dir_mode=0755`  
+            Then remount the the Samba share for the change to take effect:
+
+            ```sh
+            mount -o remount /my/samba/directory
+            ```
+
+=== "Configuration"
+
+    Since Debian Bullseye (Ampache v5), the main configuration file is located at:
+
+    ```
+    /mnt/dietpi_userdata/ampache/config/ampache.cfg.php
+    ```
+
+    Until Debian Buster (Ampache v4), the main configuration file is located at:
+
+    ```
+    /var/www/ampache/config/ampache.cfg.php
+    ```
 
 === "Enable additional file formats via transcoding"
 
-    - <https://github.com/ampache/ampache/wiki/Transcoding>
-    - E.g. to allow .m4a playback:
+    E.g. to allow .m4a playback:
 
-      ```sh
-      G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /var/www/ampache/config/ampache.cfg.php
-      ```
+    - Since Debian Bullseye (Ampache v5):
+
+        ```sh
+        G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /mnt/dietpi_userdata/ampache/config/ampache.cfg.php
+        ```
+
+    - Until Debian Buster (Ampache v4):
+
+        ```sh
+        G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /var/www/ampache/config/ampache.cfg.php
+        ```
+
+    More info: <https://github.com/ampache/ampache/wiki/Transcoding>
 
 === "Update Ampache"
 
@@ -763,7 +798,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Recommended Music Storage Directory"
 
-    When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer music tab), and storing the music on your Roon Server system:  
+    When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer music tab), and storing the music on your Roon Server system:
 
     ```
     /mnt/dietpi_userdata/Music
@@ -864,7 +899,7 @@ Also works with Roon.
     This will allow you to stream audio from your Windows PC, to the NAA Daemon on the DietPi device.
 
     - Download and install HQPlayer Desktop for Windows:  
-      <https://www.signalyst.eu/consumer.html>
+        <https://www.signalyst.eu/consumer.html>
     - Run the program
     - To configure HQPlayer to use the NAA Daemon on the DietPi device:
         - Select `File` then `Settings`
@@ -883,7 +918,7 @@ Also works with Roon.
 
 ***
 
-Website: <https://www.signalyst.eu/consumer.html>  
+Website: <https://www.signalyst.eu/consumer.html>
 
 ## IceCast
 
@@ -899,7 +934,7 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
     arecord -l
     ```
 
-    - Then edit the device entry in `/etc/darkice.cfg`, or  
+    - Then edit the device entry in `/etc/darkice.cfg`, or
     - Simply copy and paste:
 
         ```sh
@@ -1426,20 +1461,20 @@ The Snapcast server needs to have its audio sources manually configured after in
 
     If you have MPD installed you can use it as an input source.
 
-    First you need to ensure that MPD outputs to a pipe you can do this in two ways.
-    1) Install CAVA from the DietPi software list.  
-    OR  
-    2) Add the following to `/etc/mpd.conf` and restart with `systemctl restart mpd`
+    First you need to ensure that MPD outputs to a pipe you can do this in two ways:
 
-    ```
-    audio_output {
-        type "fifo"
-        enabled "yes"
-        name "snapcast"
-        path "/tmp/mpd.fifo"
-        format "48000:16:2"
-    }
-    ```
+    1. Install CAVA from the DietPi software list.
+    2. OR: Add the following to `/etc/mpd.conf` and restart with `systemctl restart mpd`
+
+        ```
+        audio_output {
+            type "fifo"
+            enabled "yes"
+            name "snapcast"
+            path "/tmp/mpd.fifo"
+            format "48000:16:2"
+        }
+        ```
 
     Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myMPD`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
 
