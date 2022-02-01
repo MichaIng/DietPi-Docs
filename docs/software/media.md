@@ -1076,7 +1076,7 @@ Free and open source comics/mangas media server with web UI.
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Default directories:
 
-    - eBooks: `/mnt/dietpi_userdata/ebooks`, `/ebooks` from NFS/Samba
+    - ebooks: `/mnt/dietpi_userdata/ebooks`, `/ebooks` from NFS/Samba
     - Comics: `/mnt/dietpi_userdata/comics`, `/comics` from NFS/Samba
 
 === "Data directory"
