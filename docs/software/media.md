@@ -78,13 +78,12 @@ Also installs:
 
     - URL: `http://<your.IP>:1337`
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used:
+    Default music directory:
 
-    - Local: `/mnt/dietpi_userdata/Music`
-    - Accessed from file server: `/Music`
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Refresh music files / database"
 
@@ -124,13 +123,12 @@ Also installs:
     - Restart services with `systemctl restart mympd`
     - Use the same URL address above, it will redirect to HTTPS during connection
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used:
+    Default music directory:
 
-    - Local: `/mnt/dietpi_userdata/Music`
-    - Accessed from file server: `/Music`
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Refresh music files / database"
 
@@ -160,13 +158,12 @@ Also installs:
     - Username: `admin`
     - Password: `admin`
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by O!MPD:
+    Default music directory:
 
-    - Local: `/mnt/dietpi_userdata/Music`
-    - Accessed from file server: `/Music`
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Update/scan library"
 
@@ -209,13 +206,12 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     - URL: `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Mopidy:
+    Default music directory:
 
-    - Local: `/mnt/dietpi_userdata/Music`
-    - Accessed from file server: `/Music`
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Refresh music files / database"
 
@@ -355,12 +351,12 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
     - URL: `http://<your.IP>:9000`
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    The default download directory used by Mopidy:
+    Default music directory:
 
-    - `/mnt/dietpi_userdata/Music`
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Change Squeezelite command line options"
 
@@ -399,12 +395,12 @@ Squeezelite is the audio player for the Logitech Media Server.
 
     - URL: `http://<your.IP>:9000`
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    The default download directory used by Mopidy:
+    Default music directory:
 
-    - `/mnt/dietpi_userdata/Music`
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Change Squeezelite command line options"
 
@@ -493,14 +489,14 @@ Stream your shared media to any DLNA/UPnP capable device.
 
     - URL: `http://<your.IP>:8200`
 
-=== "Transfer media files to ReadyMedia"
+=== "Transfer media files to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by ReadyMedia:
+    Default media directories:
 
-    - `/Music`
-    - `/Pictures`
-    - `/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - Video: `/mnt/dietpi_userdata/Video`, `/Video` from NFS/Samba
+    - Images: `/mnt/dietpi_userdata/Pictures`, `/Pictures` from NFS/Samba
 
 === "Refresh the ReadyMedia database"
 
@@ -530,13 +526,13 @@ Also Installs:
     - Username: `admin`
     - Password: `dietpi`
 
-=== "Transfer media files to ReadyMedia"
+=== "Transfer media files to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Ampache:
+    Default media directories:
 
-    - Audio: `/mnt/dietpi_userdata/Music`
-    - Video: `/mnt/dietpi_userdata/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - Video: `/mnt/dietpi_userdata/Video`, `/Video` from NFS/Samba
 
 === "Scan for media, update Ampache database"
 
@@ -613,13 +609,13 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
     You can also mount Samba/NFS shares by running `dietpi-drive_manager` and selecting `Mount network drive` from the menu.
 
-=== "Transfer media files to your device"
+=== "Transfer media files to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Emby:
+    Default media directories:
 
-    - Audio: `/mnt/dietpi_userdata/Music`
-    - Videos: `/mnt/dietpi_userdata/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - Video: `/mnt/dietpi_userdata/Video`, `/Video` from NFS/Samba
 
 === "View logs"
 
@@ -670,13 +666,13 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
     You can also mount Samba/NFS shares by running `dietpi-drive_manager` and selecting `Mount network drive` from the menu.
 
-=== "Transfer media files to your device"
+=== "Transfer media files to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Plex Media Server:
+    Default media directories:
 
-    - Audio: `/mnt/dietpi_userdata/Music`
-    - Video: `/mnt/dietpi_userdata/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - Video: `/mnt/dietpi_userdata/Video`, `/Video` from NFS/Samba
 
 ***
 
@@ -760,19 +756,18 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Recommended Music Storage Directory"
 
-    When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer Music below), and storing the music on your Roon Server system:  
+    When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer music tab), and storing the music on your Roon Server system:  
 
     ```
     /mnt/dietpi_userdata/Music
     ```
 
-=== "Transfer media files to your device"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Roon Server:
+    Default music directory:
 
-    - Music directory: `/mnt/dietpi_userdata/Music`
-    - Accessed from file server: `/Music`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Directories"
 
@@ -993,13 +988,12 @@ Web interface music streamer.
     3. However over the user tile and select "Update Profile"
     4. Change name and credentials and select "Save"
 
-=== "Transfer media files to your device"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Directories used by Koel:
+    Default music directory:
 
-    - Local: `/mnt/dietpi_userdata/Music`
-    - Accessed from file server: `/Music`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "View logs"
 
@@ -1043,13 +1037,15 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
     - Admin page: `http://<your.IP>:2038/admin`
     - Library view page: `http://<your.IP>:2039`
 
-=== "Transfer ebooks/comics to your device"
+=== "Transfer ebooks/comics to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Default directories:
 
-    - Use the following folders: `/mnt/dietpi_userdata/ebooks` and `/mnt/dietpi_userdata/comics`
-    - Then use the admin page, to set the above locations for ebook and comic storage
-    - Run a scan in the admin page to update the database
+    - eBooks: `/mnt/dietpi_userdata/ebooks`, `/ebooks` from NFS/Samba
+    - Comics: `/mnt/dietpi_userdata/comics`, `/comics` from NFS/Samba
+
+    Use the admin page to set the above locations for ebook and comic storage, then run a scan to update the database.
 
 === "Update to the latest version"
 
@@ -1074,6 +1070,14 @@ Free and open source comics/mangas media server with web UI.
     The web interface is accessible via port **2037**:
 
     - URL: `http://<your.IP>:2037`
+
+=== "Transfer ebooks/comics to DietPi"
+
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Default directories:
+
+    - eBooks: `/mnt/dietpi_userdata/ebooks`, `/ebooks` from NFS/Samba
+    - Comics: `/mnt/dietpi_userdata/comics`, `/comics` from NFS/Samba
 
 === "Data directory"
 
