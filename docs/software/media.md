@@ -1042,7 +1042,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Default directories:
 
-    - eBooks: `/mnt/dietpi_userdata/ebooks`, `/ebooks` from NFS/Samba
+    - ebooks: `/mnt/dietpi_userdata/ebooks`, `/ebooks` from NFS/Samba
     - Comics: `/mnt/dietpi_userdata/comics`, `/comics` from NFS/Samba
 
     Use the admin page to set the above locations for ebook and comic storage, then run a scan to update the database.
