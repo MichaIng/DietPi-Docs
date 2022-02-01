@@ -203,23 +203,52 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
 
 ![OpenBazaar client screenshot](../assets/images/dietpi-software-social-openbazaar.png){: width="400" height="240" loading="lazy"}
 
-=== "OpenBazaar Client"
+=== "OpenBazaar client setup"
 
-    The client will allow you to browse and trade, within the OpenBazaar market network.  
-    <https://www.openbazaar.org/download/>
+    The client will allow you to browse and trade within the OpenBazaar market network.
+ 
+    1. Download the client from: <https://github.com/mobazha/openbazaar-desktop/releases>
+        - Expand "Assents" below the latest releases
+        - For Windows, download `OpenBazaar2Client-x.y.z-Setup-64.exe`
+    2. Start the OpenBazaar client and add your server:
+        - Click "New"
+        - Enter the IPv4 address of your DietPi device, the username and password you entered during the OpenBazaar server install
+        - Turn off SSL, unless you manually enabled it, including TLS certificate setup
 
-=== "Connecting OpenBazaar Client to your OpenBazaar Server"
+=== "Configuration"
 
-    Step 1:  
-    During installation, you will be asked to enter a username, password, and allowed IP address.
+    - Config and data directory:  
+        `/mnt/dietpi_userdata/openbazaar`
+    - Main config file:  
+        `/mnt/dietpi_userdata/openbazaar/config`
 
-    Step 2:  
-    Next, you will need to open the OpenBazaar Client and add your server:
+    For changes to take effect, the service needs to be restarted:
 
-    - Click Menu (top right)
-    - Click New Server
-    - Select Standalone
-    - Enter the IP address of your DietPi device, and, the username and password you applied in step 1.
+    ```sh
+    systemctl restart openbazaar
+    ```
+
+=== "Service handling"
+
+    The DietPi OpenBazaar implementation creates a systemd service `openbazaar.service` to start and control the OpenBazaar server. The following commands can be used:
+
+    - Start: `systemctl start openbazaar`
+    - Stop: `systemctl stop openbazaar`
+    - Restart: `systemctl restart openbazaar`
+    - Print status: `systemctl status openbazaar`
+
+=== "View logs"
+
+    Logs are done to the system journal an can be viewed via:
+
+    ```sh
+    journalctl -u openbazaar
+    ```
+
+***
+
+Source code: <https://github.com/mobazha/openbazaar-go>  
+License: [MIT](https://github.com/mobazha/openbazaar-go/blob/master/LICENSE)
 
 ## Synapse
 
@@ -263,7 +292,7 @@ Synapse is a server, written in Python, for communication using the Matrix proto
     - Stop: `systemctl stop synapse`
     - Restart: `systemctl restart synapse`
     - Reload config: `systemctl reload synapse`
-    - Print status: `systemctl start synapse`
+    - Print status: `systemctl status synapse`
 
 === "View logs"
 
