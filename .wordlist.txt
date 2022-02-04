@@ -568,6 +568,7 @@ UUID
 Vae
 vaultwarden
 VCSM
+vhost
 vhosts
 VideoCore
 Viebrock
