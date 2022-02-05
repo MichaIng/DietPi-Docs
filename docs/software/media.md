@@ -59,8 +59,8 @@ The only media centre/player you'll ever need.
 
 If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autostart`:
 
-- Desktop = Kodi is available via the LXDE start menu, and, desktop.
-- Console = Kodi can also be run by typing `startkodi`.
+- Desktop: Kodi is available via the LXDE start menu, and, desktop.
+- Console: Kodi can also be run by typing `startkodi`.
 
 ## ympd
 
@@ -76,15 +76,14 @@ Also installs:
 
     The web interface is accessible via port **1337**:
 
-    - URL = `http://<your.IP>:1337`
+    - URL: `http://<your.IP>:1337`
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used:
+    Default music directory:
 
-    - local = `/mnt/dietpi_userdata/Music`
-    - accessed from file server = `/Music`
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Refresh music files / database"
 
@@ -111,7 +110,7 @@ Also installs:
 
     The web interface is accessible via port **1333**:
 
-    - URL = `http://<your.IP>:1333`
+    - URL: `http://<your.IP>:1333`
 
 === "Installation notes"
 
@@ -124,13 +123,12 @@ Also installs:
     - Restart services with `systemctl restart mympd`
     - Use the same URL address above, it will redirect to HTTPS during connection
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used:
+    Default music directory:
 
-    - local = `/mnt/dietpi_userdata/Music`
-    - accessed from file server = `/Music`
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Refresh music files / database"
 
@@ -156,17 +154,16 @@ Also installs:
 
 === "Access to the web interface"
 
-    - URL = `http://<your.IP>/ompd`
-    - Username = `admin`
-    - Password = `admin`
+    - URL: `http://<your.IP>/ompd`
+    - Username: `admin`
+    - Password: `admin`
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by O!MPD:
+    Default music directory:
 
-    - Local = `/mnt/dietpi_userdata/Music`
-    - Accessed from file server = `/Music`
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Update/scan library"
 
@@ -207,15 +204,14 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     The web interface uses port **6680**:
 
-    - URL = `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
+    - URL: `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Mopidy:
+    Default music directory:
 
-    - Local = `/mnt/dietpi_userdata/Music`
-    - Accessed from file server = `/Music`
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Refresh music files / database"
 
@@ -353,14 +349,14 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
     The web interface is accessible via port **9000**:
 
-    - URL = `http://<your.IP>:9000`
+    - URL: `http://<your.IP>:9000`
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Mopidy:
+    Default music directory:
 
-    - Folder = `/mnt/dietpi_userdata/Music`  
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Change Squeezelite command line options"
 
@@ -397,14 +393,14 @@ Squeezelite is the audio player for the Logitech Media Server.
 
     The web interface is accessible via port **9000**:
 
-    - URL = `http://<your.IP>:9000`
+    - URL: `http://<your.IP>:9000`
 
-=== "Transfer/add music"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Mopidy:
+    Default music directory:
 
-    - Folder = `/mnt/dietpi_userdata/Music`  
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Change Squeezelite command line options"
 
@@ -491,16 +487,16 @@ Stream your shared media to any DLNA/UPnP capable device.
 
     The web interface is accessible via port **8200**:
 
-    - URL = `http://<your.IP>:8200`
+    - URL: `http://<your.IP>:8200`
 
-=== "Transfer media files to ReadyMedia"
+=== "Transfer media files to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by ReadyMedia:
+    Default media directories:
 
-    - `/Music`
-    - `/Pictures`
-    - `/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - Video: `/mnt/dietpi_userdata/Video`, `/Video` from NFS/Samba
+    - Images: `/mnt/dietpi_userdata/Pictures`, `/Pictures` from NFS/Samba
 
 === "Refresh the ReadyMedia database"
 
@@ -526,19 +522,19 @@ Also Installs:
 
 === "Access to the web interface"
 
-    - URL = `http://<your.IP>/ampache`
-    - Username = `admin`
-    - Password = `dietpi`
+    - URL: `http://<your.IP>/ampache`
+    - Username: `admin`
+    - Password: `dietpi`
 
-=== "Transfer media files to ReadyMedia"
+=== "Transfer media files to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Ampache:
+    Default media directories:
 
-    - audio = `/mnt/dietpi_userdata/Music`
-    - videos = `/mnt/dietpi_userdata/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - Video: `/mnt/dietpi_userdata/Video`, `/Video` from NFS/Samba
 
-=== "Scan for media, update Ampache database"
+=== "Update media database"
 
     DietPi will automatically add various catalogue directories to Ampache during installation. You can modify these directories as needed before running your first scan.  
     To start the scan and import your media into Ampache:
@@ -549,29 +545,71 @@ Also Installs:
 
     ![Ampache web interface screenshot with database update instructions](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png){: width="400" height="193" loading="lazy"}
 
-=== "Add custom media folders"
+=== "Add media directories"
 
     - Select the `admin` button.
     - Select `add a catalogue` from the left hand side.
-    - Enter the details of your path (See the image example below to add your USB drive music folder to Ampache).
+    - Enter the details of your path.
     - Select the `add catalogue` button.
-
-    Remark: For Ampache to access custom directories, you must ensure read access to the folder, e.g. by:
-
-    ```sh
-    chmod -R 775 /my/directory
-    ```
 
     ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
 
+    !!! note "Access permissions on local directories"
+        If Ampache fails to add a directory, assure it has read permissions, e.g. by adding global read permissions:
+
+        ```sh
+        chmod -R a+r /my/directory
+        ```
+
+    !!! note "Access permissions on remote mounts (e.g. NFS, Samba)"
+        In case you want to access a remote mount, also read permissions for Ampache need to be assured.
+
+        - For NFS, you can grant global read permissions like you would do with a local directory, e.g. via:
+
+            ```sh
+            chmod -R a+r /my/nfs/directory
+            ```
+
+            In case the the NFS client has no write permissions, this needs to be done at the NFS server.
+
+        - For Samba, edit `/etc/fstab` and add or set the mount options `file_mode=0775,dir_mode=0775`. Important is the last digit of each mode, which indicates read (and execute) permissions for all users. Stricter modes, still working with Ampache, would be: `file_mode=0644,dir_mode=0755`  
+            Then remount the the Samba share for the change to take effect:
+
+            ```sh
+            mount -o remount /my/samba/directory
+            ```
+
+=== "Configuration"
+
+    Since Debian Bullseye (Ampache v5), the main configuration file is located at:
+
+    ```
+    /mnt/dietpi_userdata/ampache/config/ampache.cfg.php
+    ```
+
+    Until Debian Buster (Ampache v4), the main configuration file is located at:
+
+    ```
+    /var/www/ampache/config/ampache.cfg.php
+    ```
+
 === "Enable additional file formats via transcoding"
 
-    - <https://github.com/ampache/ampache/wiki/Transcoding>
-    - E.g. to allow .m4a playback:
+    E.g. to allow .m4a playback:
 
-      ```sh
-      G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /var/www/ampache/config/ampache.cfg.php
-      ```
+    - Since Debian Bullseye (Ampache v5):
+
+        ```sh
+        G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /mnt/dietpi_userdata/ampache/config/ampache.cfg.php
+        ```
+
+    - Until Debian Buster (Ampache v4):
+
+        ```sh
+        G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /var/www/ampache/config/ampache.cfg.php
+        ```
+
+    More info: <https://github.com/ampache/ampache/wiki/Transcoding>
 
 === "Update Ampache"
 
@@ -599,7 +637,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
     The web interface is accessible via port **8096**:
 
-    URL = `http://<your.IP>:8096`
+    URL: `http://<your.IP>:8096`
 
 === "First run setup"
 
@@ -613,13 +651,13 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
     You can also mount Samba/NFS shares by running `dietpi-drive_manager` and selecting `Mount network drive` from the menu.
 
-=== "Transfer media files to your device"
+=== "Transfer media files to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Emby:
+    Default media directories:
 
-    - Audio: `/mnt/dietpi_userdata/Music`
-    - Videos: `/mnt/dietpi_userdata/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - Video: `/mnt/dietpi_userdata/Video`, `/Video` from NFS/Samba
 
 === "View logs"
 
@@ -653,7 +691,7 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
     The web interface uses port **32400**:
 
-    URL = `http://<your.IP>:32400/web`
+    URL: `http://<your.IP>:32400/web`
 
 === "First run setup"
 
@@ -670,13 +708,13 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
     You can also mount Samba/NFS shares by running `dietpi-drive_manager` and selecting `Mount network drive` from the menu.
 
-=== "Transfer media files to your device"
+=== "Transfer media files to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Plex Media Server:
+    Default media directories:
 
-    - Audio = `/mnt/dietpi_userdata/Music`
-    - Video = `/mnt/dietpi_userdata/Video`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - Video: `/mnt/dietpi_userdata/Video`, `/Video` from NFS/Samba
 
 ***
 
@@ -696,7 +734,7 @@ A Python based monitoring and tracking tool for Plex Media Server.
 
     The web interface is accessible via port **8181**:
 
-    - URL = `http://<your.IP>:8181`
+    - URL: `http://<your.IP>:8181`
 
 === "Access to the log files"
 
@@ -714,9 +752,9 @@ Turn your device into a lightweight Mumble VoIP server.
 
     The server is accessible via port **64738**:
 
-    - URL = `http://<your.IP>:64738`
-    - Password = No password required
-    - Superuser Password = `dietpi`
+    - URL: `http://<your.IP>:64738`
+    - Password: No password required
+    - Superuser Password: `dietpi`
 
 === "Change Murmur Server settings"
 
@@ -760,19 +798,18 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Recommended Music Storage Directory"
 
-    When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer Music below), and storing the music on your Roon Server system:  
+    When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer music tab), and storing the music on your Roon Server system:
 
     ```
     /mnt/dietpi_userdata/Music
     ```
 
-=== "Transfer media files to your device"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Folders used by Roon Server:
+    Default music directory:
 
-    - Music directory = `/mnt/dietpi_userdata/Music`
-    - Accessed from file server = `/Music`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Directories"
 
@@ -862,7 +899,7 @@ Also works with Roon.
     This will allow you to stream audio from your Windows PC, to the NAA Daemon on the DietPi device.
 
     - Download and install HQPlayer Desktop for Windows:  
-      <https://www.signalyst.eu/consumer.html>
+        <https://www.signalyst.eu/consumer.html>
     - Run the program
     - To configure HQPlayer to use the NAA Daemon on the DietPi device:
         - Select `File` then `Settings`
@@ -881,7 +918,7 @@ Also works with Roon.
 
 ***
 
-Website: <https://www.signalyst.eu/consumer.html>  
+Website: <https://www.signalyst.eu/consumer.html>
 
 ## IceCast
 
@@ -897,7 +934,7 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
     arecord -l
     ```
 
-    - Then edit the device entry in `/etc/darkice.cfg`, or  
+    - Then edit the device entry in `/etc/darkice.cfg`, or
     - Simply copy and paste:
 
         ```sh
@@ -921,11 +958,11 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
     The web interface is accessible via port **8000**:
 
-    - URL = `http://<your.IP>:8000`
-    - Admin user = `admin`
-    - Admin password = `<your global password>` (default: `dietpi`)
-    - Source password = `<your global password>` (default: `dietpi`)
-    - Relay password = `<your global password>` (default: `dietpi`)
+    - URL: `http://<your.IP>:8000`
+    - Admin user: `admin`
+    - Admin password: `<your global password>` (default: `dietpi`)
+    - Source password: `<your global password>` (default: `dietpi`)
+    - Relay password: `<your global password>` (default: `dietpi`)
 
 === "Access recording file"
 
@@ -980,9 +1017,9 @@ Web interface music streamer.
 
     The web interface is accessible via port **8003**:
 
-    - URL = `http://<your.IP>:8003`
-    - Email address = `admin@koel.dev`
-    - Password = `KoelIsCool`
+    - URL: `http://<your.IP>:8003`
+    - Email address: `admin@koel.dev`
+    - Password: `KoelIsCool`
 
 === "First run setup"
 
@@ -993,13 +1030,12 @@ Web interface music streamer.
     3. However over the user tile and select "Update Profile"
     4. Change name and credentials and select "Save"
 
-=== "Transfer media files to your device"
+=== "Transfer music to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Directories used by Koel:
+    Default music directory:
 
-    - Local = `/mnt/dietpi_userdata/Music`
-    - Accessed from file server = `/Music`
+    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "View logs"
 
@@ -1040,16 +1076,18 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
     The web interface uses port **2038** resp. **2039**:
 
-    - Admin page = `http://<your.IP>:2038/admin`
-    - Library view page = `http://<your.IP>:2039`
+    - Admin page: `http://<your.IP>:2038/admin`
+    - Library view page: `http://<your.IP>:2039`
 
-=== "Transfer ebooks/comics to your device"
+=== "Transfer ebooks/comics to DietPi"
 
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Default directories:
 
-    - Use the following folders = `/mnt/dietpi_userdata/ebooks` and `/mnt/dietpi_userdata/comics`
-    - Then use the admin page, to set the above locations for ebook and comic storage
-    - Run a scan in the admin page to update the database
+    - ebooks: `/mnt/dietpi_userdata/ebooks`, `/ebooks` from NFS/Samba
+    - Comics: `/mnt/dietpi_userdata/comics`, `/comics` from NFS/Samba
+
+    Use the admin page to set the above locations for ebook and comic storage, then run a scan to update the database.
 
 === "Update to the latest version"
 
@@ -1073,7 +1111,15 @@ Free and open source comics/mangas media server with web UI.
 
     The web interface is accessible via port **2037**:
 
-    - URL = `http://<your.IP>:2037`
+    - URL: `http://<your.IP>:2037`
+
+=== "Transfer ebooks/comics to DietPi"
+
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Default directories:
+
+    - ebooks: `/mnt/dietpi_userdata/ebooks`, `/ebooks` from NFS/Samba
+    - Comics: `/mnt/dietpi_userdata/comics`, `/comics` from NFS/Samba
 
 === "Data directory"
 
@@ -1124,7 +1170,7 @@ Free and open source comics/mangas media server with web UI.
       file:
         name: "/var/log/komga/komga.log"
     ```
-    
+
     Assure that the directory exists and the `komga` user or group has write permissions.
 
 === "Update to latest version"
@@ -1321,9 +1367,9 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8096**:
+    The web interface is accessible via port **8097**:
 
-    - URL = `http://<your.IP>:8096`
+    - URL: `http://<your.IP>:8097`
 
 === "View logs"
 
@@ -1364,8 +1410,8 @@ A command-line music organizer and manager. Some of the key features are:
 
 === "Quick start"
 
-    Start by typing `beet` in the command line. All the options and commands will be made available. 
-    
+    Start by typing `beet` in the command line. All the options and commands will be made available.
+
     You could start using Beets by importing music with `beet import` and then query the library with 'beet list'. For example next command line shows all Tangos in the year 2010
 
     ```sh
@@ -1395,7 +1441,7 @@ The Snapcast server needs to have its audio sources manually configured after in
 
     The Snapcast server provides a web interface on port **1780**, which allows you to control volumes for all clients and optionally play audio through your browser:
 
-    - URL = `http://<your.IP>:1780`
+    - URL: `http://<your.IP>:1780`
 
 === "Implementation details"
 
@@ -1415,20 +1461,20 @@ The Snapcast server needs to have its audio sources manually configured after in
 
     If you have MPD installed you can use it as an input source.
 
-    First you need to ensure that MPD outputs to a pipe you can do this in two ways.
-    1) Install CAVA from the DietPi software list.  
-    OR  
-    2) Add the following to `/etc/mpd.conf` and restart with `systemctl restart mpd`
+    First you need to ensure that MPD outputs to a pipe you can do this in two ways:
 
-    ```
-    audio_output {
-        type "fifo"
-        enabled "yes"
-        name "snapcast"
-        path "/tmp/mpd.fifo"
-        format "48000:16:2"
-    }
-    ```
+    1. Install CAVA from the DietPi software list.
+    2. OR: Add the following to `/etc/mpd.conf` and restart with `systemctl restart mpd`
+
+        ```
+        audio_output {
+            type "fifo"
+            enabled "yes"
+            name "snapcast"
+            path "/tmp/mpd.fifo"
+            format "48000:16:2"
+        }
+        ```
 
     Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myMPD`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
 

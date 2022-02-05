@@ -112,9 +112,11 @@ Commands: <https://redis.io/commands>
 
 **InfluxDB** is a _time series_ database and it is optimised to handle high write and query loads. For this purpose is a very good fit for saving sensor data or time series info from various logs. InfluxDB is not only a time series platform, but it provides also an Web UI and dashboard tools, background processing and monitoring agent.
 
-The main interface to the database for management and data transferred are HTTP requests that are handled directly by the `influxdb` service (default port being used is `8086`).
+The main interface to the database for management and data transferred are HTTP requests that are handled directly by the `influxdb` service, which by default listens on TCP port **8086**.
 
 The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana). This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).
+
+![InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: width="300" height="112" loading="lazy"}
 
 === "Quick start"
 
