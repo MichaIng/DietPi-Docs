@@ -60,6 +60,7 @@ CCleaner
 CDTV
 CedArctic
 Certbot
+cgroup
 changelog
 CIFS
 CLI
@@ -88,6 +89,7 @@ DAC
 DarkBetter
 DarkIce
 DDNS
+DDX
 de
 deinstallation
 DER
@@ -132,6 +134,7 @@ emonTX
 EPL
 EQ
 ESXi
+executables
 exFAT
 FS
 facto
@@ -146,6 +149,7 @@ ForkedDaapd
 FOSS
 FPM
 FPU
+framebuffer
 FreeDNS
 FreshRSS
 FriendlyARM
@@ -496,6 +500,7 @@ subshell
 sudo
 subnet
 subnets
+subvolume
 SVG
 swapfile
 symlink
@@ -563,6 +568,7 @@ UUID
 Vae
 vaultwarden
 VCSM
+vhost
 vhosts
 VideoCore
 Viebrock
