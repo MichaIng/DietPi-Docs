@@ -1,6 +1,6 @@
 ---
 title: DietPi Software Options
-description: Overview of ready-to-run software options provided by DietPi-Software, cloud & backup servers, media streaming and web servers, BitTorrent, forums, system monitoring & management and more
+description: Overview of ready-to-run DietPi-Software options, cloud & backup servers, media streaming & download servers, forums, system monitoring & management and more
 ---
 
 # DietPi software options
