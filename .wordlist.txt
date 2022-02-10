@@ -564,6 +564,7 @@ upvote
 UrBackup
 userdata
 userspace
+UTM
 UUID
 Vae
 vaultwarden
