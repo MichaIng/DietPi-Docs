@@ -473,17 +473,21 @@ VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at s
 
 The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
-### Parallels Desktop (macOS)
+### Parallels
 
-![macOS Parallels Desktop](assets/images/Parallels3.png){: width="270" height="82" loading="lazy"}
+![Parallels Desktop](assets/images/Parallels3.png){: width="270" height="82" loading="lazy"}
 
-The [Parallels Desktop virtual machine for macOS](https://www.parallels.com/products/desktop/) is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 macOS system (e.g. Mac mini 2011/2012/2014/2018) and still get the same great DietPi features and experience.
+The [Parallels Desktop virtual machine](https://www.parallels.com/products/desktop/) is great for those occasions where SBC performance just isn't enough. Run one of these e.g. on any x86_64 macOS system (e.g. Mac mini 2011/2012/2014/2018) and still get the same great DietPi features and experience.
 
-### UTM (macOS)
+### UTM
 
-![macOS UTM](assets/images/UTM3.png){: width="270" height="221" loading="lazy"}
+![UTM](assets/images/UTM3.png){: width="270" height="221" loading="lazy"}
 
-The [UTM virtual machine for macOS](https://mac.getutm.app/) is great for those occasions where SBC performance just isn't enough. Run one of these on any macOS system (e.g. Mac mini 2011/2012/2014/2018 and M1 Apple Silicon) and still get the same great DietPi features and experience.
+The [UTM virtual machine](https://mac.getutm.app/) is great for those occasions where SBC performance just isn't enough. Run one of these on any macOS system (e.g. Mac mini 2011/2012/2014/2018 and M1 Apple Silicon) and still get the same great DietPi features and experience.
+
+!!! info "Emulation feature of UTM"
+    The emulation feature is an option of the virtualization technique to run x86 code on a M1 Mac system and vice versa a M1 Mac code on a x86 Mac system.  
+    This might be a good choice e.g. for testing purposes, but typically there will be a performance drawback using the emulation instead of running native x86 code on a x86 system resp. native M1 code on a M1 system.
 
 ### Hyper-V
 
@@ -524,15 +528,15 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Parallels Desktop (x86_64 macOS system)</strong></a></td>
+                <td><a class="table" href=""><strong>Parallels</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi appliance (x86_64)</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>UTM (macOS system)</strong></a></td>
+                <td><a class="table" href=""><strong>UTM</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bullseye.7z">DietPi appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bullseye.7z">DietPi appliance (x86_64)</a>
                 </td>
             </tr>
             <tr>
