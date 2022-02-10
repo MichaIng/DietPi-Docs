@@ -473,11 +473,17 @@ VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at s
 
 The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
-### Parallels Desktop
+### Parallels Desktop (macOS)
 
 ![macOS Parallels Desktop](assets/images/Parallels3.png){: width="270" height="82" loading="lazy"}
 
-The Parallels Desktop virtual machine for macOS is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 macOS system (e.g. Mac mini 2011/2012/2014/2018) and still get the same great DietPi features and experience.
+The [Parallels Desktop virtual machine for macOS](https://www.parallels.com/products/desktop/) is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 macOS system (e.g. Mac mini 2011/2012/2014/2018) and still get the same great DietPi features and experience.
+
+### UTM (macOS)
+
+![macOS UTM](assets/images/UTM3.png){: width="270" height="221" loading="lazy"}
+
+The [UTM virtual machine for macOS](https://mac.getutm.app/) is great for those occasions where SBC performance just isn't enough. Run one of these on any macOS system (e.g. Mac mini 2011/2012/2014/2018 and M1 Apple Silicon) and still get the same great DietPi features and experience.
 
 ### Hyper-V
 
@@ -520,7 +526,13 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>Parallels Desktop (x86_64 macOS system)</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi installer image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi appliance</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>UTM (macOS system)</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bullseye.7z">DietPi appliance</a>
                 </td>
             </tr>
             <tr>
