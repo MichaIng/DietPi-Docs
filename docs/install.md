@@ -371,8 +371,8 @@ Select the following tabs for the installation description of your target.
     is needed. A recommended size is at least a free space of 10 GiB.
 
     !!! info "Emulation feature of UTM"
-        The emulation feature is an option of the virtualization technique to run x86 code on a M1 Mac system and vice versa a M1 Mac code on a x86 Mac system.  
-        This might be a good choice e.g. for testing purposes, but typically there will be a performance drawback using the emulation instead of running native x86 code on a x86 system resp. native M1 code on a M1 system.
+        The emulation feature is an option of the virtualization technique to run x86 code on a M1 Mac system and vice versa an M1 Mac code on a x86 Mac system.  
+        This might be a good choice e.g. for testing purposes, but typically there will be a performance drawback using the emulation instead of running native x86 images on a x86 system resp. native `aarch64` images on an M1 system.
 
     !!! info "UTM machine for M1 (Apple silicon)"
         The available DietPi UTM image is an image which is x86 based. On a M1 Mac it will run with lower performance because it uses the slower emulation and not the faster virtualization technique.  

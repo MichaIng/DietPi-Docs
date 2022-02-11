@@ -486,8 +486,8 @@ The [Parallels Desktop virtual machine](https://www.parallels.com/products/deskt
 The [UTM virtual machine](https://mac.getutm.app/) is great for those occasions where SBC performance just isn't enough. Run one of these on any macOS system (e.g. Mac mini 2011/2012/2014/2018 and M1 Apple Silicon) and still get the same great DietPi features and experience.
 
 !!! info "Emulation feature of UTM"
-    The emulation feature is an option of the virtualization technique to run x86 code on a M1 Mac system and vice versa a M1 Mac code on a x86 Mac system.  
-    This might be a good choice e.g. for testing purposes, but typically there will be a performance drawback using the emulation instead of running native x86 code on a x86 system resp. native M1 code on a M1 system.
+    The emulation feature is an option of the virtualization technique to run x86 code on a M1 Mac system and vice versa an M1 Mac code on a x86 Mac system.  
+    This might be a good choice e.g. for testing purposes, but typically there will be a performance drawback using the emulation instead of running native x86 images on a x86 system resp. native `aarch64` images on an M1 system.
 
 ### Hyper-V
 
