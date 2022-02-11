@@ -501,6 +501,7 @@ sudo
 subnet
 subnets
 subvolume
+Sur
 SVG
 swapfile
 symlink
