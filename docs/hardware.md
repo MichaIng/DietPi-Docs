@@ -530,13 +530,13 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>Parallels</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi appliance (x86_64)</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>UTM</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bullseye.7z">DietPi appliance (x86_64)</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bullseye.7z">DietPi appliance</a>
                 </td>
             </tr>
             <tr>
