@@ -386,9 +386,13 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">2. Import the virtual machine in UTM</font>
 
-    As next, start resp. restart the UTM program. The imported DietPi virtual machine should be visible there. Then select the imported machine to start it up.
+    As next, start resp. restart the UTM program. The imported DietPi virtual machine should be visible there.
 
-    ![UTM DietPi startup](assets/images/UTM2.png){: width="640" height="517" loading="lazy"}
+    ![UTM GUI](assets/images/UTM3.png){: width="350" height="283" loading="lazy"}
+
+    Then select the imported machine to start it up.
+
+    ![UTM DietPi startup](assets/images/UTM2.png){: width="640" height="265" loading="lazy"}
 
 === "Hyper-V"
 
