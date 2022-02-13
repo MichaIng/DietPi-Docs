@@ -501,6 +501,7 @@ sudo
 subnet
 subnets
 subvolume
+Sur
 SVG
 swapfile
 symlink
@@ -564,6 +565,7 @@ upvote
 UrBackup
 userdata
 userspace
+UTM
 UUID
 Vae
 vaultwarden
