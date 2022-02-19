@@ -1,3 +1,8 @@
+---
+title: DNS Servers Options
+description: Description of DietPi software options related to DNS servers
+---
+
 # DNS Servers
 
 ## Overview

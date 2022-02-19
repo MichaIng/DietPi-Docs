@@ -1,3 +1,8 @@
+---
+title: Development and Programming Software Options
+description: Description of DietPi software options related to software development
+---
+
 # Development & Programming
 
 ## Overview

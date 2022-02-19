@@ -1,3 +1,8 @@
+---
+title: BitTorrent and Download Tools Software Options
+description: Description of DietPi software options related to BitTorrent and other download tools
+---
+
 # BitTorrent / Download Tools
 
 ## Overview
@@ -739,7 +744,7 @@ Do all your HTPC tasks without using 5 different interfaces!
 
 === "Quick start"
 
-    This tool could be accessed from the command line 
+    This tool could be accessed from the command line
 
     ```sh
     youtube-dl [OPTIONS] URL [URL...]

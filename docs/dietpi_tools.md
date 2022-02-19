@@ -1,3 +1,7 @@
+---
+description: Guides about the basic DietPi tools
+---
+
 # DietPi Tools
 
 ## DietPi launcher
