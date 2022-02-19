@@ -1,5 +1,4 @@
 ---
-title: SSH Server Choices
 description: Description of DietPi SSH server options
 ---
 

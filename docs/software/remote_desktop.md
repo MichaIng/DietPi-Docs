@@ -1,5 +1,5 @@
 ---
-title: Remote Desktop Access Software Packages
+title: Remote Desktop Access Software Options
 description: Description of DietPi software options related to remote desktops and remote access
 ---
 

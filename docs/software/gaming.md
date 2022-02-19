@@ -1,5 +1,5 @@
 ---
-title: Gaming and Emulation Software Packages
+title: Gaming and Emulation Software Options
 description: Description of DietPi software options related to games and userspace emulation
 ---
 

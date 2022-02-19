@@ -1,5 +1,5 @@
 ---
-title: Web Development Software Packages
+title: Web Development Software Options
 description: Description of DietPi software options related to web stacks, web servers and web development
 ---
 

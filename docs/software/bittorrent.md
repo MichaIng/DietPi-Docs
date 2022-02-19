@@ -1,5 +1,5 @@
 ---
-title: BitTorrent and Download Tools Software Packages
+title: BitTorrent and Download Tools Software Options
 description: Description of DietPi software options related to BitTorrent and other download tools
 ---
 

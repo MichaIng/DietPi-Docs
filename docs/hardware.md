@@ -1,5 +1,4 @@
 ---
-title: DietPi Supported Hardware
 description: DietPi Supported Hardware: Raspberry Pi 4/3/2/1/Zero, Odroid, PINE64, NanoPi, Native PC & Virtual Machines (VirtualBox, VMware, Hyper-V)
 ---
 

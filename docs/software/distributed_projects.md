@@ -1,5 +1,5 @@
 ---
-title: Distributed Projects Software Packages
+title: Distributed Projects Software Options
 description: Description of DietPi software options related to distributed software projects
 ---
 

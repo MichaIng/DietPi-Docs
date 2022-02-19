@@ -1,5 +1,5 @@
 ---
-title: Advanced Networking Software Packages
+title: Advanced Networking Software Options
 description: Description of DietPi software options related to networking
 ---
 

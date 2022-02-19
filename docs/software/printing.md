@@ -1,5 +1,5 @@
 ---
-title: Printing Software Packages
+title: Printing Software Options
 description: Description of DietPi software options related to printers
 ---
 

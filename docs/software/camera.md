@@ -1,5 +1,5 @@
 ---
-title: Camera and Surveillance Software Packages
+title: Camera and Surveillance Software Options
 description: Description of DietPi software options related to camera and surveillance
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Development and Programming Software Packages
+title: Development and Programming Software Options
 description: Description of DietPi software options related to software development
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: Social and Publishing Software Packages
+title: Social and Publishing Software Options
 description: Description of DietPi software options related to social platforms and publishing servers
 ---
 
-# Social & Publishing
+# Social & Search
 
 ## Overview
 

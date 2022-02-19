@@ -1,5 +1,4 @@
 ---
-title: DietPi Tools
 description: Guides about the basic DietPi tools
 ---
 

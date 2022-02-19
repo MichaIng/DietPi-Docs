@@ -1,5 +1,4 @@
 ---
-title: System Stats and Management Software Packages
 description: Description of DietPi software options related to system statistics, monitoring and management
 ---
 
