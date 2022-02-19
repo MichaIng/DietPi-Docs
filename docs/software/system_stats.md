@@ -1,4 +1,5 @@
 ---
+title: System Statistics and Management Options
 description: Description of DietPi software options related to system statistics, monitoring and management
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Log System Choices
 description: Description of DietPi logging options
 ---
 
