@@ -1,3 +1,8 @@
+---
+title: Hardware Projects Software Packages
+description: Description of DietPi software options related to hardware
+---
+
 # Hardware Projects
 
 ## Overview

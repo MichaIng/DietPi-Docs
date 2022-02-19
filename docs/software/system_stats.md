@@ -1,3 +1,8 @@
+---
+title: System Stats and Management Software Packages
+description: Description of DietPi software options related to system statistics, monitoring and management
+---
+
 # System Stats & Management
 
 ## Overview
@@ -91,7 +96,7 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     ```
     /opt/dietpi-dashboard/config.toml
     ```    
-    
+
     When doing changes, you need to restart the service afterwards:
 
     ```sh

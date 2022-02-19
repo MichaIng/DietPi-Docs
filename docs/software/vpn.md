@@ -1,3 +1,8 @@
+---
+title: VPN Software Packages
+description: Description of DietPi software options related to VPNs
+---
+
 # VPN
 
 ## Overview

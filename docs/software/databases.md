@@ -1,3 +1,8 @@
+---
+title: Databases and Data Store Software Packages
+description: Description of DietPi software options related to databases and data stores
+---
+
 # Databases and Data Stores
 
 ## Overview

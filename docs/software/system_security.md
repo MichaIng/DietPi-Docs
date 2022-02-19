@@ -1,3 +1,8 @@
+---
+title: System Security Software Packages
+description: Description of DietPi software options related to SSL and security
+---
+
 # System Security
 
 ## Overview

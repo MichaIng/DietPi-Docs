@@ -1,3 +1,8 @@
+---
+title: Media Systems Software Packages
+description: Description of DietPi software options related to media systems like media (streaming) servers and players
+---
+
 # Media Systems
 
 ## Overview

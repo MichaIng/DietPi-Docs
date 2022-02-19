@@ -1,3 +1,8 @@
+---
+title: Distributed Projects Software Packages
+description: Description of DietPi software options related to distributed software projects
+---
+
 # Distributed Projects
 
 ## Overview
