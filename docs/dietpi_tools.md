@@ -406,6 +406,13 @@ Run `dietpi-drive_manager`.
       `-` Does not support UNIX permissions  
       `-` Does not support symbolic links
 
+    - `exFAT`  
+      Windows filesystem, intended for external drives, e.g. USB flash drives or SD cards.  
+      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>  
+      `+` Compatible on a Windows system  
+      `-` Does not support UNIX permissions  
+      `-` Does not support symbolic links
+
     - `HFS+`  
       Recommended for users who plan to use this drive on a macOS system.  
       `+` macOS filesystem  
@@ -413,20 +420,13 @@ Run `dietpi-drive_manager`.
 
     - `Btrfs`  
       A modern Linux filesystem.  
-      `+` <https://github.com/MichaIng/DietPi/issues/271#issuecomment-247173250>  
-      `-` Not compatible on a Windows system
+      `+` Advantages were described in [this DietPi issue](https://github.com/MichaIng/DietPi/issues/271#issuecomment-247173250)  
+      `-` Compatible with Windows only via additional windows driver [WinBtrfs](https://github.com/maharmstone/btrfs)
 
     - `F2FS`  
       Linux filesystem designed for flash/NAND based drives.  
       `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>  
       `-` Not compatible on a Windows system
-
-    - `exFAT`  
-      Windows filesystem, intended for external drives, e.g. USB flash drives or SD cards.  
-      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>  
-      `+` Compatible on a Windows system  
-      `-` Does not support UNIX permissions  
-      `-` Does not support symbolic links
 
     - `XFS`  
       A modern Linux filesystem.  

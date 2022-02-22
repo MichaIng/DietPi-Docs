@@ -604,6 +604,7 @@ WHOIS
 Widevine
 wikimedia
 Winamp
+WinBtrfs
 WinSCP
 WIP
 WireGuard
