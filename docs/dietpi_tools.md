@@ -421,7 +421,7 @@ Run `dietpi-drive_manager`.
     - `Btrfs`  
       A modern Linux filesystem.  
       `+` Advantages were described in [this DietPi issue](https://github.com/MichaIng/DietPi/issues/271#issuecomment-247173250)  
-      `-` Compatible with Windows only via additional windows drive [WinBtrfs](https://github.com/maharmstone/btrfs)
+      `-` Compatible with Windows only via additional windows driver [WinBtrfs](https://github.com/maharmstone/btrfs)
 
     - `F2FS`  
       Linux filesystem designed for flash/NAND based drives.  
