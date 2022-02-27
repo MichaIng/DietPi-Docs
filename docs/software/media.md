@@ -1144,18 +1144,6 @@ Free and open source comics/mangas media server with web UI.
     systemctl restart komga
     ```
 
-=== "File hashing"
-
-    File hashing is by default disabled on installs via DietPi, to reduce CPU load for small hardware. The downside is that when moving or renaming media files, Komga won't be able to keep metadata and read state attached, as the database entry is associated to the file path. The original media entry will remain shown as "unavailable" in the library, so that you can manually copy metadata over to the new entry. To remove the old entry, clear the trash of the library.
-
-    With file hashing enabled, database entries and hence metadata and read state are associated to the file hash, so that it stays intact when files are moved or renamed only, with the downside of additional CPU load and resource usage, especially on smaller hardware. To enable file hashing, set the following entry in the configuration file:
-
-    ```yaml
-    file-hashing: true
-    ```
-
-    Read more: <https://komga.org/guides/trash.html#file-hashes>
-
 === "View logs"
 
     Logs are stored in the system journal and can be viewed by running the following command:
