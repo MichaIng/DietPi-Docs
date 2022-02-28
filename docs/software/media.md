@@ -797,14 +797,70 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 
 === "Requirements"
 
-    Roon on another system (e.g.: Windows PC) to control the player.  
-    [Roon License](https://roonlabs.com/pricing) (free trial is also available).
+    - Roon on another system (e.g.: Windows PC) to control the player.  
+    - [Roon license](https://roonlabs.com/pricing) (free trial is also available).
+
+=== "Directories"
+
+    The Roon Bridge installation can be found at:
+
+    ```
+    /opt/roonbridge
+    ```
+
+    Its configuration and data can be found at:
+
+    ```
+    /mnt/dietpi_userdata/roonbridge
+    ```
+
+=== "Service control"
+
+    The Roon Bridge by default is started as systemd service and can hence be controlled with the following commands:
+
+    ```sh
+    systemctl status roonbridge
+    ```
+
+    ```sh
+    systemctl stop roonbridge
+    ```
+
+    ```sh
+    systemctl start roonbridge
+    ```
+
+    ```sh
+    systemctl restart roonbridge
+    ```
+
+=== "View logs"
+
+    Service logs can be reviewed with the following command:
+
+    ```sh
+    journalctl -u roonbridge
+    ```
+
+    More detailed logs from the individual Roon Bridge components can be found at the following location:
+
+    ```
+    /var/log/roonbridge
+    ```
+
+=== "Update"
+
+    The Roon Bridge can be updated by reinstalling it, which preserves your data and configs:
+
+    ```sh
+    dietpi-software reinstall 121
+    ```
 
 ***
 
 Official website: <https://roonlabs.com/>  
 Official forum: <https://community.roonlabs.com/>  
-YouTube videos from `David Snyder`: <https://www.youtube.com/c/dsnyder0cnn/search?query=roon>
+YouTube videos by `David Snyder`: <https://www.youtube.com/c/dsnyder0cnn/search?query=roon>
 
 ## Roon Server
 
@@ -849,7 +905,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Service control"
 
-    Roon Server by default is started as systemd service and can hence be controlled with the following commands:
+    The Roon Server by default is started as systemd service and can hence be controlled with the following commands:
 
     ```sh
     systemctl status roonserver
@@ -875,13 +931,13 @@ Turns your device into a Roon capable audio player and core server.
     journalctl -u roonserver
     ```
 
-    More detailed logs from the individual Roon server components can be found in the following files:
+    More detailed logs from the individual Roon Server components can be found at the following location:
 
-    - `/mnt/dietpi_userdata/roonserver/RAATServer/Logs/RAATServer_log.txt`
-    - `/mnt/dietpi_userdata/roonserver/RoonServer/Logs/RoonServer_log.txt`
-    - `/mnt/dietpi_userdata/roonserver/RoonGoer/Logs/RoonGoer_log.txt`
+    ```
+    /var/log/roonserver
+    ```
 
-=== "Update to latest version"
+=== "Update"
 
     The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with the following commands:
 
@@ -903,6 +959,14 @@ At startup the Roon Extension Manager accesses a repository containing the commu
 ![Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150" height="81" loading="lazy"}
 
 ![Roon Extension Manager screenshot](../assets/images/dietpi-software-media-roonextmanager.jpg){: width="400" height="225" loading="lazy"}
+
+=== "Directories"
+
+    Roon Extension Manager data and configs can be found at the following location:
+
+    ```
+    /mnt/dietpi_userdata/roon-extension-manager
+    ```
 
 ***
 
@@ -932,7 +996,7 @@ Also works with Roon.
 
     Guide: <https://help.roonlabs.com/portal/en/kb/articles/faq-how-do-i-use-roon-and-hqplayer-together>
 
-=== "Update method"
+=== "Update"
 
     ```sh
     dietpi-software reinstall 124
