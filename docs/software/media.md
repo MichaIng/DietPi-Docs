@@ -758,6 +758,12 @@ A Python based monitoring and tracking tool for Plex Media Server.
     /mnt/dietpi_userdata/tautulli/logs/
     ```
 
+***
+
+Official website: <https://tautulli.com/>  
+Source code: <https://github.com/Tautulli/Tautulli>  
+License: [GPLv3](https://github.com/Tautulli/Tautulli/blob/master/LICENSE)
+
 ## Murmur
 
 Turn your device into a lightweight Mumble VoIP server.
