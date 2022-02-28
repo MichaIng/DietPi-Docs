@@ -736,7 +736,7 @@ A Python based monitoring and tracking tool for Plex Media Server.
     The web interface is accessible via port **8181**:
 
     - URL: `http://<your.IP>:8181`
-    - After first run setup, select "SIGN IN WITH TAUTULLI" and enter the username and password you chose before. On our own tests, authentication via plex.tv account did not work, it may however depend on the subscription.
+    - After first run setup, select "SIGN IN WITH TAUTULLI" and enter the username and password you chose before. On our own tests, authentication via `plex.tv` account did not work, it may however depend on the subscription.
 
 === "First run setup"
 
@@ -744,11 +744,11 @@ A Python based monitoring and tracking tool for Plex Media Server.
 
     1. Click "Next"
     2. Enter a username and password for future web interface logins and click "Next".
-    3. Click "Sign In with Plex" and log in with your plex.tv account in the new window, then click "Next".
+    3. Click "Sign In with Plex" and log in with your `plex.tv` account in the new window, then click "Next".
     4. Enter the IP address or hostname of your Plex Media Server, use `127.0.0.1` if it runs on the same machine, then click "Next".
     5. Choose the activity logging ignore interval and click "Next".
     6. Click "Next" and "Finish".
-    7. When logging in to the Tautulli web interface, first select "SIGN IN WITH TAUTULLI" and enter the username and password you chose before. On our own tests, authentication via plex.tv account did not work, it may however depend on the subscription.
+    7. When logging in to the Tautulli web interface, first select "SIGN IN WITH TAUTULLI" and enter the username and password you chose before. On our own tests, authentication via `plex.tv` account did not work, it may however depend on the subscription.
 
 === "View logs"
 

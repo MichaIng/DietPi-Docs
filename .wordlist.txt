@@ -291,7 +291,7 @@ MiBs
 MichaIng
 microcontroller
 microcontrollers
-Microk
+MicroK
 MicroSol
 Minecraft
 MineOS
