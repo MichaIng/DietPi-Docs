@@ -1,5 +1,6 @@
 addictiveness
 addon
+addons
 ADF
 AdGuard
 advanxer
@@ -290,6 +291,7 @@ MiBs
 MichaIng
 microcontroller
 microcontrollers
+Microk
 MicroSol
 Minecraft
 MineOS

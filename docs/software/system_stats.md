@@ -425,11 +425,9 @@ License: [Apache 2.0](https://github.com/k3s-io/k3s/blob/master/LICENSE)
 
 ## Microk8s
 
-High availability - Low-ops, minimal production Kubernetes, for devs, cloud, clusters, workstations, Edge and IoT.
+High availability - Low-ops, minimal production Kubernetes, for developers, cloud, clusters, workstations, Edge and IoT.
 
-![microk8s logo](../assets/images/microk8s.png){: width="300" height="150" loading="lazy"}
-
-
+![MicroK8s logo](../assets/images/microk8s.png){: width="300" height="150" loading="lazy"}
 
 === "Connecting to your cluster"
 
