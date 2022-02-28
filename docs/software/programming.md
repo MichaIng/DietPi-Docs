@@ -171,10 +171,12 @@ Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia
 
 ***
 
-Official documentation: <https://docs.docker.com/get-started/overview>  
-Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
-Logging: <https://docs.docker.com/config/containers/logging/configure>  
-Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
+Official documentation: <https://docs.docker.com/get-started/overview/>  
+Configuration docs: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
+Logging docs: <https://docs.docker.com/config/containers/logging/configure/>  
+Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>  
+Source code: <https://github.com/moby/moby>  
+License: [Apache-2.0](https://github.com/moby/moby/blob/master/LICENSE)
 
 For a quick intro, see **DietPi Docker Setup on Raspberry Pi 3 B Plus**:
 
@@ -187,25 +189,26 @@ Docker Compose is a [Docker](#docker) tool used to define and run multi-contain
 `docker-compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments.
 
 <!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/master/logo.png) -->
-![docker compose](../assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
+![Docker Compose diagram](../assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
 
-_Docker (individual container) vs. Docker-Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa/)_
+_Docker (individual container) vs. Docker Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa)_
 
-=== "Update to latest version"
+=== "Update"
 
-    The tool is available soon after the installation. In case you need to upgrade it, here is the command:
+    To update Docker Compose to the latest version, simply reinstall it:
 
     ```sh
-    sudo pip3 install docker-compose --upgrade
+    dietpi-software reinstall 134
     ```
 
 ***
 
-Official documentation: <https://docs.docker.com/compose>  
-Getting started: <https://docs.docker.com/compose/gettingstarted>  
+Official documentation: <https://docs.docker.com/compose/>  
+Getting started: <https://docs.docker.com/compose/gettingstarted/>  
 Sample apps with Compose: <https://docs.docker.com/compose/samples-for-compose/>  
-Release notes: <https://docs.docker.com/compose/release-notes/>  
-Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
+Release notes: <https://github.com/docker/compose/releases>  
+Source code: <https://github.com/docker/compose>  
+License: [Apache-2.0](https://github.com/docker/compose/blob/v2/LICENSE)
 
 ## Portainer
 
