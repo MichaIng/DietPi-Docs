@@ -15,7 +15,7 @@ Following these steps you will be able to initially setup DietPi and install add
 
 Select the following tabs for the installation description of your target.
 
-=== "Raspberry Pi and derivatives (SBC)"
+=== "Raspberry Pi and other SBCs"
 
     ## Introduction
 
@@ -28,14 +28,14 @@ Select the following tabs for the installation description of your target.
     To follow this tutorial, you will need the next hardware list:
 
     - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](../hardware/)
-    - An SD card of at least 4 GiB, and a way to write it on your computer (integrated slot or external SD card reader)
+    - An SD card, USB flash drive or eMMC of at least 4 GiB size, and a way to write it
     - Optional: Ethernet (network) cable
 
-    _Note_: Following this guide you could run the installation directly (from a console) or via network. If you choose an installation via network you will not need a monitor or keyboard connected to your SBC or virtualised environment.
+    _Note_: Following this guide you could run the installation directly from a console via keyboard and screen, via SSH client or serial console.
 
     ## 1. Download and extract the DietPi disk image
 
-    Open [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select your SBC and click on **Download**. The disk image will be downloaded locally.
 
     _Example:_
     ![DietPi for Raspberry Pi download page](assets/images/DietPi-RaspberryPi-image.jpg){: width="1186" height="561" loading="lazy"}
@@ -56,17 +56,17 @@ Select the following tabs for the installation description of your target.
         Once p7zip is installed, type the following at the terminal to extract the file:
 
         ```sh
-        7zr e DietPi-Image.7z
+        7zr x DietPi-Image.7z
         ```
 
         Replace **DietPi-Image.7z** with the correct name of the downloaded archive, e.g. **DietPi_RPi-ARMv6-Bullseye.7z**. This will extract the DietPi image file for you to use.
 
     ## 2. Flash the DietPi image
 
-    At first, download and install [balenaEtcher](https://etcher.io/). This application flashes OS images to SD cards & USB drives, safely and easily on Windows, macOS, Linux.  
+    At first, download and install [balenaEtcher](https://www.balena.io/etcher/). This application flashes OS images to SD cards and USB drives, safely and easily on Windows, macOS, Linux.  
 
     !!! note "On Windows you may also use [Rufus](https://rufus.ie/) to flash the image."
-        Click on the **Install on native PC** tab above to see an example of using Rufus. In case of SBC images, all options are greyed out, which is correct, so after selecting the image and the target drive, you only need to hit START.
+        Click on the **Install on native PC** tab above to see an example of using Rufus. In case of SBC images, all options are greyed out, which is correct, so after selecting the image and the target drive, you only need to hit **START**.
 
     Start balenaEtcher and make sure you have your drive or SD card inserted into your computer. Locate and select the DietPi image.
 
@@ -142,8 +142,8 @@ Select the following tabs for the installation description of your target.
              ```sh
              mkdir ~/Downloads
              cd ~/Downloads
-             wget https://download.virtualbox.org/virtualbox/6.1.30/virtualbox-6.1_6.1.30-148432~Debian~bullseye_amd64.deb
-             apt install ./virtualbox-6.1_6.1.30-148432~Debian~bullseye_amd64.deb
+             curl -LO 'https://download.virtualbox.org/virtualbox/6.1.32/virtualbox-6.1_6.1.32-149290~Debian~bullseye_amd64.deb'
+             apt install ./virtualbox-6.1_6.1.32-149290~Debian~bullseye_amd64.deb
              ```
 
         2. Installation of the VirtualBox extension pack on a Linux host system  
@@ -151,8 +151,8 @@ Select the following tabs for the installation description of your target.
 
              ```sh
              cd ~/Downloads
-             wget https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
-             VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
+             curl -LO 'https://download.virtualbox.org/virtualbox/6.1.32/Oracle_VM_VirtualBox_Extension_Pack-6.1.32-149290.vbox-extpack'
+             VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.32-149290.vbox-extpack
              ```
 
         After these two steps the host installation of the VirtualBox extension pack is completed. Further installation steps on the guest system are described below.
