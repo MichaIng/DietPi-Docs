@@ -241,6 +241,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Netdata - Web interface system stats**](system_stats/#netdata)
 - [**Webmin - Remote system management with web interface**](system_stats/#webmin)
 - [**K3s - Lightweight Kubernetes**](system_stats/#k3s)
+- [**MicroK8s - Low-ops, minimal production Kubernetes**](system_stats/#microk8s)
 
 ## [VPN](vpn/)
 
