@@ -248,6 +248,7 @@ Kodi
 Koel
 Komga
 Kubernetes
+KVM
 LASP
 Laravel
 LeMaker
@@ -398,8 +399,10 @@ prefork
 Prioglio
 ProFTPD
 ProtonVPN
+Proxmox
 PSU
 PuTTY
+PVM
 Pycharm
 Pydev
 Pydio
@@ -407,6 +410,8 @@ pyenv
 PyPI
 RAR
 qBittorrent
+QCOW
+QEMU
 Queneuder
 QuiteRSS
 Qz
@@ -572,10 +577,12 @@ UUID
 Vae
 vaultwarden
 VCSM
+VHDX
 vhost
 vhosts
 VideoCore
 Viebrock
+VirtIO
 VirtualBox
 VirtualHere
 virtualised
@@ -583,12 +590,15 @@ virtualiser
 VM
 VMs
 VMware
+VMware's
+VMX
 VNC
 VNCSERVER
 VPN
 VSCode
 VSCodium
 vsftpd
+vSphere
 VST
 Waveshare
 WebAuthn
