@@ -15,7 +15,7 @@ description: Description of DietPi software options related to system statistics
 - [**Netdata - Web interface system stats**](#netdata)
 - [**Webmin - Remote system management with web interface**](#webmin)
 - [**K3s - Lightweight Kubernetes**](#k3s)
-- [**Microk8s - Low-ops, minimal production Kubernetes**](#microk8s)
+- [**MicroK8s - Low-ops, minimal production Kubernetes**](#microk8s)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -423,13 +423,11 @@ Official documentation: <https://rancher.com/docs/k3s/latest/en/>
 Source code: <https://github.com/k3s-io/k3s>  
 License: [Apache 2.0](https://github.com/k3s-io/k3s/blob/master/LICENSE)
 
-## Microk8s
+## MicroK8s
 
-High availability - Low-ops, minimal production Kubernetes, for devs, cloud, clusters, workstations, Edge and IoT.
+High availability - Low-ops, minimal production Kubernetes, for developers, cloud, clusters, workstations, Edge and IoT.
 
-![microk8s logo](../assets/images/microk8s.png){: width="300" height="150" loading="lazy"}
-
-
+![MicroK8s logo](../assets/images/microk8s.png){: width="300" height="150" loading="lazy"}
 
 === "Connecting to your cluster"
 
@@ -458,7 +456,7 @@ High availability - Low-ops, minimal production Kubernetes, for devs, cloud, clu
     microk8s kubectl get napspaces
     ```
 
-    Microk8s does provide a few "addons", which can be seen below with the enable and disable command.
+    MicroK8s does provide a few "addons", which can be seen below with the enable and disable command.
 
     ```sh
     microk8s status # to view the addons
