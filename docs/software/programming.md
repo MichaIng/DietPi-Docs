@@ -149,10 +149,26 @@ In 2013, Docker introduced containers. These are a standardized unit of software
 
 A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
 
-<!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200" height="???" loading="lazy"}  -->
+<!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200" height="60" loading="lazy"}  -->
 ![Docker functional block diagram](../assets/images/dietpi-software-programming-docker2.svg){: width="400" height="369" loading="lazy"}
 
-Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
+_Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)_
+
+=== "Configuration"
+
+    The Docker configuration files are located at:
+
+    - Docker: `/etc/docker/daemon.json`
+    - containerd: `/etc/containerd/config.toml`
+
+=== "Update"
+
+    Since Docker is installed via APT packages, it can be updated by running the following commands:
+
+    ```sh
+    apt update
+    apt install docker-ce containerd.io docker-ce-cli
+    ```
 
 === "View logs"
 
@@ -161,13 +177,6 @@ Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia
     ```sh
     journalctl -u docker -u containerd
     ```
-
-=== "Configuration files"
-
-    The location of the Docker configuration files:
-
-    - Docker: `/etc/docker/daemon.json`
-    - containerd: `/etc/containerd/config.toml`
 
 ***
 
@@ -188,7 +197,7 @@ Docker Compose is a [Docker](#docker) tool used to define and run multi-contain
 
 `docker-compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments.
 
-<!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/master/logo.png) -->
+<!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/v2/logo.png){: width="200" height="219" loading="lazy"} -->
 ![Docker Compose diagram](../assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
 
 _Docker (individual container) vs. Docker Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa)_
