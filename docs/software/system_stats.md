@@ -422,23 +422,31 @@ License: [Apache 2.0](https://github.com/k3s-io/k3s/blob/master/LICENSE)
 
 High availability - Low-ops, minimal production Kubernetes, for devs, cloud, clusters, workstations, Edge and IoT.
 
-![microk8s logo](../assets/images/microk8s.png){: width="300" height="116" loading="lazy"}
+![microk8s logo](../assets/images/microk8s.png){: width="300" height="150" loading="lazy"}
 
 
 
 === "Connecting to your cluster"
 
-    To create a cluster out of two or more already-running MicroK8s instances, use the microk8s add-node command
+    To create a cluster out of two or more already-running MicroK8s instances, use the `microk8s` add-node command:
 
     ```sh
     microk8s add-node
+    ```
+
     From the node you wish to join to this cluster, run the following:
+
+    ```sh
     microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
-    Use the '--worker' flag to join a node as a worker not running the control plane, eg:
+    ```
+
+    Use the `--worker` flag to join a node as a worker not running the control plane, e.g.:
+
+    ```sh
     microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
     ```
 
-    for most commands, you can use microk8s in front like below.
+    For most commands, you can use `microk8s` in front like below.
 
     ```sh
     microk8s kubectl get nodes
@@ -448,20 +456,24 @@ High availability - Low-ops, minimal production Kubernetes, for devs, cloud, clu
     Microk8s does provide a few "addons", which can be seen below with the enable and disable command.
 
     ```sh
-    microk8s status #to view the addons
+    microk8s status # to view the addons
     microk8s enable dns # to enable addons
-    microk8s enable dashboard # to enable kubernetes dashboard
+    microk8s enable dashboard # to enable Kubernetes dashboard
     ```
 
 === "View logs"
 
-    - Service: `journalctl -u microk8s`
+    Per-node log files can be in:
+
+    ```
+    /var/log/pods
+    ```
 
 ***
 
-Official website: <https://k3s.io>  
+Official website: <https://microk8s.io/>  
 Official documentation: <https://microk8s.io/docs>  
-Addons documentation: <https://microk8s.io/docs/addons>
+Addons documentation: <https://microk8s.io/docs/addons>  
 Source code: <https://github.com/ubuntu/microk8s>  
 License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
