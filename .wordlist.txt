@@ -589,6 +589,7 @@ VPN
 VSCode
 VSCodium
 vsftpd
+vSphere
 VST
 Waveshare
 WebAuthn
