@@ -365,7 +365,7 @@ Select the following tabs for the installation description of your target.
         To install VM tools in your ESXi machine, it is an option to do it with the `open-vm-tools` via:
 
         ```sh
-        apt install open-vm-Tools
+        apt install open-vm-tools
         ```
 
     !!! info "Boot times of a VM can be fast (less than 10 seconds)"
