@@ -1,3 +1,8 @@
+---
+title: Hardware Projects Software Options
+description: Description of DietPi software options related to hardware
+---
+
 # Hardware Projects
 
 ## Overview

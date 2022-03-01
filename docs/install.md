@@ -15,7 +15,7 @@ Following these steps you will be able to initially setup DietPi and install add
 
 Select the following tabs for the installation description of your target.
 
-=== "Raspberry Pi and derivatives (SBC)"
+=== "Raspberry Pi and other SBCs"
 
     ## Introduction
 
@@ -28,14 +28,14 @@ Select the following tabs for the installation description of your target.
     To follow this tutorial, you will need the next hardware list:
 
     - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](../hardware/)
-    - An SD card of at least 4 GiB, and a way to write it on your computer (integrated slot or external SD card reader)
+    - An SD card, USB flash drive or eMMC of at least 4 GiB size, and a way to write it
     - Optional: Ethernet (network) cable
 
-    _Note_: Following this guide you could run the installation directly (from a console) or via network. If you choose an installation via network you will not need a monitor or keyboard connected to your SBC or virtualised environment.
+    _Note_: Following this guide you could run the installation directly from a console via keyboard and screen, via SSH client or serial console.
 
     ## 1. Download and extract the DietPi disk image
 
-    Open [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and select “Download”. Various supported devices will be displayed. Choose the preferred SBC and click on the **Download**. The disk image will be downloaded locally.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select your SBC and click on **Download**. The disk image will be downloaded locally.
 
     _Example:_
     ![DietPi for Raspberry Pi download page](assets/images/DietPi-RaspberryPi-image.jpg){: width="1186" height="561" loading="lazy"}
@@ -56,17 +56,17 @@ Select the following tabs for the installation description of your target.
         Once p7zip is installed, type the following at the terminal to extract the file:
 
         ```sh
-        7zr e DietPi-Image.7z
+        7zr x DietPi-Image.7z
         ```
 
         Replace **DietPi-Image.7z** with the correct name of the downloaded archive, e.g. **DietPi_RPi-ARMv6-Bullseye.7z**. This will extract the DietPi image file for you to use.
 
     ## 2. Flash the DietPi image
 
-    At first, download and install [balenaEtcher](https://etcher.io/). This application flashes OS images to SD cards & USB drives, safely and easily on Windows, macOS, Linux.  
+    At first, download and install [balenaEtcher](https://www.balena.io/etcher/). This application flashes OS images to SD cards and USB drives, safely and easily on Windows, macOS, Linux.  
 
     !!! note "On Windows you may also use [Rufus](https://rufus.ie/) to flash the image."
-        Click on the **Install on native PC** tab above to see an example of using Rufus. In case of SBC images, all options are greyed out, which is correct, so after selecting the image and the target drive, you only need to hit START.
+        Click on the **Install on native PC** tab above to see an example of using Rufus. In case of SBC images, all options are greyed out, which is correct, so after selecting the image and the target drive, you only need to hit **START**.
 
     Start balenaEtcher and make sure you have your drive or SD card inserted into your computer. Locate and select the DietPi image.
 
@@ -142,8 +142,8 @@ Select the following tabs for the installation description of your target.
              ```sh
              mkdir ~/Downloads
              cd ~/Downloads
-             wget https://download.virtualbox.org/virtualbox/6.1.30/virtualbox-6.1_6.1.30-148432~Debian~bullseye_amd64.deb
-             apt install ./virtualbox-6.1_6.1.30-148432~Debian~bullseye_amd64.deb
+             curl -LO 'https://download.virtualbox.org/virtualbox/6.1.32/virtualbox-6.1_6.1.32-149290~Debian~bullseye_amd64.deb'
+             apt install ./virtualbox-6.1_6.1.32-149290~Debian~bullseye_amd64.deb
              ```
 
         2. Installation of the VirtualBox extension pack on a Linux host system  
@@ -151,8 +151,8 @@ Select the following tabs for the installation description of your target.
 
              ```sh
              cd ~/Downloads
-             wget https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
-             VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack
+             curl -LO 'https://download.virtualbox.org/virtualbox/6.1.32/Oracle_VM_VirtualBox_Extension_Pack-6.1.32-149290.vbox-extpack'
+             VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.32-149290.vbox-extpack
              ```
 
         After these two steps the host installation of the VirtualBox extension pack is completed. Further installation steps on the guest system are described below.
@@ -314,7 +314,7 @@ Select the following tabs for the installation description of your target.
 
     For information about running DietPi in an VMware ESXi environment, you can read this article: [Running the DietPi VMware image on ESXi 6.7](https://ccie.tv/running-dietpi-vmware-image-on-esxi-6-7).
 
-=== "Parallels (macOS)"
+=== "Parallels"
 
     <font size="+2">Introduction</font>
 
@@ -322,14 +322,14 @@ Select the following tabs for the installation description of your target.
 
     One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
 
-    One of the options of a virtual machine is [__Parallels Desktop__](https://www.parallels.com/products/desktop/) for macOS.
+    One of the options of a virtual machine is [__Parallels Desktop__](https://www.parallels.com/products/desktop/).
 
     ![Parallels Desktop DietPi machine](assets/images/Parallels1.jpg){: width="896" height="504" loading="lazy"}
 
     <font size="+2">Prerequisites</font>
 
-    As a starting point you need an **Apple Mac with a running Parallels Desktop software** on which the DietPi system will run (x86 system, e.g. Mac mini 2011/2012/2014/2018).  
-    On this MAC a free harddisk space of about  
+    As a starting point you can use an **Apple Mac with a running Parallels Desktop software** on which the DietPi system will run (x86 system, e.g. Mac mini 2011/2012/2014/2018).  
+    On this Mac a free harddisk space of about  
 
     - 1.2 GiB for a minimal running system  
     - 5 - 10 GiB for a typical running system with X11  
@@ -347,6 +347,52 @@ Select the following tabs for the installation description of your target.
     As next, the Parallels virtual machine is opened by just double click the `.pvm` file. Then the machine starts up.
 
     ![Parallels Desktop DietPi startup](assets/images/Parallels2.png){: width="640" height="273" loading="lazy"}
+
+=== "UTM"
+
+    <font size="+2">Introduction</font>
+
+    Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
+
+    One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
+
+    One of the options of a virtual machine is [__UTM__](https://mac.getutm.app/).
+
+    ![UTM Desktop DietPi machine](assets/images/UTM1.png){: width="900" height="506" loading="lazy"}
+
+    <font size="+2">Prerequisites</font>
+
+    As a starting point you can use an **Apple Mac with macOS 11 Big Sur or higher running the UTM software** (x86 system, e.g. Mac mini 2011/2012/2014/2018 as well as M1 Apple silicon).  
+    On this Mac a free harddisk space of about  
+
+    - 1.2 GiB for a minimal running system  
+    - 5 - 10 GiB for a typical running system with X11  
+
+    is needed. A recommended size is at least a free space of 10 GiB.
+
+    !!! info "Emulation feature of UTM"
+        The emulation feature is an option of the virtualization technique to run x86 code on a M1 Mac system and vice versa an M1 Mac code on a x86 Mac system.  
+        This might be a good choice e.g. for testing purposes, but typically there will be a performance drawback using the emulation instead of running native x86 images on a x86 system resp. native `aarch64` images on an M1 system.
+
+    !!! info "UTM machine for M1 (Apple silicon)"
+        The available DietPi UTM image is an image which is x86 based. On a M1 Mac it will run with lower performance because it uses the slower emulation and not the faster virtualization technique.  
+        If you plan to run DietPi on an M1 Mac with UTM, it is a good choice to create a native `aarch64` DietPi image for getting the best performance. This can be achieved by adding a new UTM VM via the `+` option in the UTM program. Then a new VM can be generated by using a standard Debian image for the `arm64` architecture Native PCs (e.g. with the `mini.iso` image) and afterwards executing the scripts described in [Make your own distribution](https://dietpi.com/docs/hardware/#make-your-own-distribution).  
+
+    <font size="+2">1. Download and extract the DietPi disk image</font>
+
+    Download the **DietPi UTM** image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"}.
+
+    Double click on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.utm` file to the UTM virtual machine directory. This is typically located within the (hidden) user subdirectory `.../Library/Containers/com.utmapp.UTM/Data/Documents`.
+
+    <font size="+2">2. Import the virtual machine in UTM</font>
+
+    As next, start resp. restart the UTM program. The imported DietPi virtual machine should be visible there.
+
+    ![UTM GUI](assets/images/UTM3.png){: width="350" height="283" loading="lazy"}
+
+    Then select the imported machine to start it up.
+
+    ![UTM DietPi startup](assets/images/UTM2.png){: width="640" height="265" loading="lazy"}
 
 === "Hyper-V"
 

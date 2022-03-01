@@ -1,5 +1,6 @@
 addictiveness
 addon
+addons
 ADF
 AdGuard
 advanxer
@@ -290,6 +291,7 @@ MiBs
 MichaIng
 microcontroller
 microcontrollers
+MicroK
 MicroSol
 Minecraft
 MineOS
@@ -501,6 +503,7 @@ sudo
 subnet
 subnets
 subvolume
+Sur
 SVG
 swapfile
 symlink
@@ -564,6 +567,7 @@ upvote
 UrBackup
 userdata
 userspace
+UTM
 UUID
 Vae
 vaultwarden
@@ -602,6 +606,7 @@ WHOIS
 Widevine
 wikimedia
 Winamp
+WinBtrfs
 WinSCP
 WIP
 WireGuard

@@ -1,3 +1,8 @@
+---
+title: Web Development Software Options
+description: Description of DietPi software options related to web stacks, web servers and web development
+---
+
 # Web Development
 
 ## Overview
@@ -489,12 +494,12 @@ Apache is a Apache Software Foundation project. The goal is to provide a secure,
 
 === "Server name"
 
-    The `ServerName` directive is updated with the local IP. This helps muting the related startup warnings. 
-    
-    **Notes:** 
-    
-    - This may imply access and CORS failures [^6] when applications check for the server name. In such case, generally applications provide a way to define a list of permitted hostnames. 
-    
+    The `ServerName` directive is updated with the local IP. This helps muting the related startup warnings.
+
+    **Notes:**
+
+    - This may imply access and CORS failures [^6] when applications check for the server name. In such case, generally applications provide a way to define a list of permitted hostnames.
+
     - Without a server name set, usually webserver simply apply the HTTP_HOST header, which bypasses every related check. Apache, according to the logged warning, seems to use 127.0.1.1 then.
 
 ***
@@ -556,7 +561,7 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
 === "Install"
 
     Starting with DietPi 7.3 `Tomcat 8` has been removed from the DietPi Software List. The reason is that `Tomcat 8` is available until Debian Stretch only. From Debian Buster and newer versions, it will be supported only Tomcat 9.
-    
+
     To install Tomcat 9, run next command in the console:
 
     ```sh
@@ -623,7 +628,7 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
 === "Node.js version"
 
     Starting with version 7.2, DietPi added support for [Node.js unofficial builds from unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/). In this way, you can get the benefits of using the latest Node.js version.
-    
+
     _Why this ?_ We believe that's important and more secure to use the most recent version. At the moment of writing the documentation, latest official ARMv6 build for Node.js has the version 11 and the latest _unofficial build_ issued by Node.js is v15.14.  
 
 ***

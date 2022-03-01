@@ -1,4 +1,9 @@
-# Social / Search
+---
+title: Social and Publishing Software Options
+description: Description of DietPi software options related to social platforms and publishing servers
+---
+
+# Social & Search
 
 ## Overview
 
@@ -206,7 +211,7 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
 === "OpenBazaar client setup"
 
     The client will allow you to browse and trade within the OpenBazaar market network.
- 
+
     1. Download the client from: <https://github.com/mobazha/openbazaar-desktop/releases>
         - Expand "Assents" below the latest releases
         - For Windows, download `OpenBazaar2Client-x.y.z-Setup-64.exe`
