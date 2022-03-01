@@ -368,8 +368,6 @@ Select the following tabs for the installation description of your target.
         apt install open-vm-tools
         ```
 
-    !!! info "Boot times of a VM can be fast (less than 10 seconds)"
-
 === "Proxmox"
 
     <font size="+2">Introduction</font>
