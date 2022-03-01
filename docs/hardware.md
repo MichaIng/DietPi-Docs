@@ -535,7 +535,7 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>VMware ESXi Hypervisor</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ESXi-x86_64-Bullseye.7z">DietPi appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ESXi-x86_64-Bullseye.7z">DietPi OVA appliance</a>
                 </td>
             </tr>
             <tr>
