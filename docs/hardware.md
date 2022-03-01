@@ -472,6 +472,12 @@ VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at s
 
 The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
+### Proxmox
+
+![Proxmox logo](assets/images/proxmox-logo.svg){: width="400" height="65" loading="lazy"}
+
+[Proxmox](https://www.proxmox.com/) is a virtual machine and container platform, based on [QEMU](https://www.qemu.org/) and [KVM](https://www.linux-kvm.org/). It allows to run and manage multiple virtual machines and containers on a Linux OS via CLI and web interface, similar to how VMware's vSphere and ESXi works.
+
 ### Parallels
 
 ![Parallels Desktop](assets/images/Parallels3.png){: width="270" height="82" loading="lazy"}
@@ -519,31 +525,37 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>VMware</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Bullseye.7z">DietPi appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Bullseye.7z">DietPi VMX appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>VirtualBox</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Bullseye.7z">DietPi appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Bullseye.7z">DietPi OVA appliance</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Proxmox</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bullseye.7z">DietPi QCOW2 image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Parallels</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi PVM appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>UTM</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bullseye.7z">DietPi appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bullseye.7z">DietPi UTM appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Hyper-V</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Hyper-V-x86_64-Bullseye.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Hyper-V-x86_64-Bullseye.7z">DietPi VHDX image</a>
                 </td>
             </tr>
         </tbody>
