@@ -333,7 +333,7 @@ Select the following tabs for the installation description of your target.
 
     Download the **DietPi ESXi** appliance image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
-    The zip file contains a couple of files, the important is the `DietPi_ESXi-x86_64-Bullseye.ova` file which have to be uploaded to the ESXi server.
+    The archive contains a couple of files, the important one is `DietPi_ESXi-x86_64-Bullseye.ova`, which has to be uploaded to the ESXi server.
 
     <font size="+2">2. Create the Virtual Machine</font>
 
