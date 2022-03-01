@@ -466,7 +466,7 @@ The Native PC images are great for those occasions where SBC performance just is
 
 The VMware virtual machine (e.g. [VMware Workstation Player](https://www.vmware.com/products/workstation-player.html/), [VMware Workstation Pro](https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-pro.html/), [VMware Fusion](https://www.vmware.com/products/fusion.html/)) is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server (Windows, Linux, macOS) and still get the same great DietPi features and experience.
 
-The [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html/), described as a "Bare Metal Hypervisor" (aka [Type-1 hypervisor](https://en.wikipedia.org/wiki/Hypervisor/)) is part of e.g. the [VMware vSphere Hypervisor platform](https://www.vmware.com/products/vsphere-hypervisor.html/) ("appliance server"). It allows to run and manage multiple virtual machines on a x86_64 machine, similar to the Proxmox appliance server.
+The [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html/), described as a "Bare Metal Hypervisor" aka [Type-1 hypervisor](https://en.wikipedia.org/wiki/Hypervisor/), is part of e.g. the [VMware vSphere Hypervisor platform](https://www.vmware.com/products/vsphere-hypervisor.html/) ("appliance server"). It allows to run and manage multiple virtual machines on one x86_64 machine. That way it can be compared to the [Proxmox](#proxmox) appliance server.
 
 ### VirtualBox
 
