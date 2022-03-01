@@ -381,10 +381,10 @@ Select the following tabs for the installation description of your target.
         ```
 
         As next, the disk image is imported.  
-        **Note**: Use the VM ID entered during the VM creation.
+        **Note**: Replace `100` below with the **VM ID** entered during VM creation.
 
         ```sh
-        ID=100 # replace "100" with the VM ID entered on VM creation
+        ID=100
         qm importdisk "$ID" DietPi_Proxmox-x86_64-Bullseye.qcow2 local-lvm
         qm set "$ID" --scsi0 "local-lvm:vm-$ID-disk-0"
         qm set "$ID" --boot order=scsi0
