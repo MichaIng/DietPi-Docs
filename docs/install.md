@@ -11,7 +11,7 @@ The installation of DietPi consists of few steps:
 - Get the DietPi image (and put it on the installation media)
 - Boot up the DietPi device and go through one time installation steps
 
-Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/#dietpi-software){:class="nospellcheck"}.
+Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/#dietpi-software){: class="nospellcheck"}.
 
 Select the following tabs for the installation description of your target.
 
@@ -119,10 +119,10 @@ Select the following tabs for the installation description of your target.
     <font size="+2">Prerequisites</font>
 
     As a starting point you need a **PC with a running VirtualBox software** on which the DietPi system will run.  
-    On this PC a free harddisk space of about  
+    On this PC a free harddisk space of about
 
-    - 1.2 GiB for a minimal running system  
-    - 5 - 10 GiB for a typical running system with X11  
+    - 1.2 GiB for a minimal running system
+    - 5 - 10 GiB for a typical running system with X11
 
     is needed. A recommended size is at least a free space of 10 GiB.
 
@@ -159,7 +159,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi VirtualBox** image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    Download the **DietPi VirtualBox** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi-VirtualBox-download-image](assets/images/dietpi-VirtualBox-Download.png){: width="1152" height="733" loading="lazy"}
 
@@ -266,18 +266,17 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">Prerequisites</font>
 
-    As a starting point you need a **PC with a running VMware Workstation Player software** on which the DietPi system will run.
-
-    On this PC a free harddisk space of about  
+    As a starting point you need a **PC with a running VMware Workstation Player software** on which the DietPi system will run.  
+    On this PC a free harddisk space of about
 
     - 3 GiB for a minimal running system (1.5 GiB in switched off state)
-    - 5 - 10 GiB for a typical running system with X11  
+    - 5 - 10 GiB for a typical running system with X11
 
     is needed. A recommended size is at least a free space of 10 GiB.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi VMware** image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    Download the **DietPi VMware** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi VMware download image](assets/images/dietpi-VMware-Download.png){: width="1223" height="749" loading="lazy"}
 
@@ -371,6 +370,88 @@ Select the following tabs for the installation description of your target.
 
     !!! info "Boot times of a VM can be fast (less than 10 seconds)"
 
+=== "Proxmox"
+
+    One of the options to run and manage virtual machines is [__Proxmox__](https://www.proxmox.com/).
+
+    ![Proxmox web interface](assets/images/proxmox1.png){: width="800" height="439" loading="lazy"}
+
+    <font size="+2">Prerequisites</font>
+
+    Proxmox runs on any `x86_64` system. ISO images for the Virtual Environment server can be found here: <https://www.proxmox.com/de/downloads/category/iso-images-pve>  
+    Aside of the Proxmox server's [system requirements](https://www.proxmox.com/en/proxmox-ve/requirements), a DietPi VM additionally requires:
+
+    - 1.2 GiB for a minimal DietPi system
+    - 5 - 10 GiB for a typical running system with X11
+
+    <font size="+2">1. Generate a new Proxmox VM</font>
+
+    1. Access the Proxmox web interface via HTTPS on TCP port **8006**:
+        - URL: `https://<your.IP>:8006`
+        - Username: `root`
+        - Password: `<root user password you entered during Proxmox VE install>`
+    1. Tab **General**: Select the **Create VM** button at the top right corner. Choose a **Node** , a **VM ID** and a **Name**, then click **Next**.
+
+        ![Proxmox VM creation](assets/images/proxmox2.png){: width="722" height="314" loading="lazy"}
+
+        Remember the VM ID, you need it later.
+
+    1. Tab **OS**: Select "**Do not use any media** ", for the **Guest OS** assure that **Linux** and version "**5.x - 2.6 Kernel**" is selected, then click **Next**.
+    1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default. Click **Next**.
+    1. Tab **Disks**: Delete the default `scsi0` disk with the red trash bin button, then click **Next**.
+    1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `kvm64` type. Then click **Next**.
+    1. Tab **Memory**: While DietPi runs with less, depending on the software you want to install and run within the VM, we recommend at least 1024 MiB memory size, 2048 MiB allows the DietPi system to setup itself without a swap file by default. When done, click **Next**.
+
+        ??? info "Dynamic memory allocation via ballooning device"
+            The [ballooning device](https://wikipedia.org/wiki/Memory_ballooning) allows Proxmox to dynamically allocate memory from the host system based on actual memory usage within the VM. I.e. you are able to run VMs with a higher overall memory size than the host system has, as long as all VMs do not fully use their memory at the same time.
+
+    1. Tab **Network**: Using a network bridge allows the VM to show up as dedicated system in your LAN, which simplifies SSH and network application access. We recommend to use the default para-virtualised **VirtIO** adapter model. When done, click **Next**.
+    1. Tab **Confirm**: Start the VM creation by clicking **Finish**.
+
+    <font size="+2">2. Download, extract and import the DietPi image</font>
+
+    !!! info "Transferring a disk image to Proxmox"
+        A DietPi disk image can be transferred to the Proxmox server via e.g. USB flash drive or by uploading it as CD/DVD ISO image. Since the import needs to be done via console (accessible via web interface and SSH), we guide you through the path of downloading it directly on the Proxmox server.
+
+    1. Select the Proxmox node, then click the **Shell** button at the top right corner. Alternatively connect via SSH to the Proxmox server, using the same login credentials you used for the Proxmox web interface.
+    1. In the console window, enter the following commands to download the DietPi image, extract it via `p7zip`, import it as disk to your new VM (using the **VM ID** you chose during creation) and make it the boot drive.  
+        _If not done yet, we recommend to upgrade all APT packages to the latest version._
+
+        ```sh
+        apt update
+        apt full-upgrade
+        apt install p7zip
+        curl -O https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bullseye.7z
+        7zr x DietPi_Proxmox-x86_64-Bullseye.7z
+        ```
+
+        Optionally verify the SHA256 hash of the downloaded file via:
+
+        ```sh
+        sha256sum -c < <(mawk '/SHA256/{print $2"  DietPi_Proxmox-x86_64-Bullseye.qcow2"}' hash.txt)
+        ```
+
+        As next, the disk image is imported.  
+        **Note**: Replace `100` below with the **VM ID** entered during VM creation.
+
+        ```sh
+        ID=100
+        qm importdisk "$ID" DietPi_Proxmox-x86_64-Bullseye.qcow2 local-lvm
+        qm set "$ID" --scsi0 "local-lvm:vm-$ID-disk-0"
+        qm set "$ID" --boot order=scsi0
+        ```
+
+    1. Finally, you can remove the downloaded and extracted files and close the console:
+
+        ```sh
+        rm DietPi_Proxmox-x86_64-Bullseye.* hash.txt README.md
+        ```
+
+    The VM can now be started, select it via left side navigation of the Proxmox web interface, then the **Start** button at the top right side, finally the **Console** button to watch and finish the DietPi first run setup.  
+    Alternatively you can connect to the VM via SSH, after giving it some time to finish initial setup steps and obtaining its IP with your router or IP scanner.
+
+    ![Proxmox VM starting](assets/images/proxmox3.png){: width="1024" height="590" loading="lazy"}
+
 === "Parallels"
 
     <font size="+2">Introduction</font>
@@ -386,16 +467,16 @@ Select the following tabs for the installation description of your target.
     <font size="+2">Prerequisites</font>
 
     As a starting point you can use an **Apple Mac with a running Parallels Desktop software** on which the DietPi system will run (x86 system, e.g. Mac mini 2011/2012/2014/2018).  
-    On this Mac a free harddisk space of about  
+    On this Mac a free harddisk space of about
 
-    - 1.2 GiB for a minimal running system  
-    - 5 - 10 GiB for a typical running system with X11  
+    - 1.2 GiB for a minimal running system
+    - 5 - 10 GiB for a typical running system with X11
 
     is needed. A recommended size is at least a free space of 10 GiB.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi Parallels** image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"}.
+    Download the **DietPi Parallels** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}.
 
     Double click on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.pvm` file to the Parallels directory (typically directory "Parallels" within your home directory).
 
@@ -420,10 +501,10 @@ Select the following tabs for the installation description of your target.
     <font size="+2">Prerequisites</font>
 
     As a starting point you can use an **Apple Mac with macOS 11 Big Sur or higher running the UTM software** (x86 system, e.g. Mac mini 2011/2012/2014/2018 as well as M1 Apple silicon).  
-    On this Mac a free harddisk space of about  
+    On this Mac a free harddisk space of about
 
-    - 1.2 GiB for a minimal running system  
-    - 5 - 10 GiB for a typical running system with X11  
+    - 1.2 GiB for a minimal running system
+    - 5 - 10 GiB for a typical running system with X11
 
     is needed. A recommended size is at least a free space of 10 GiB.
 
@@ -437,7 +518,7 @@ Select the following tabs for the installation description of your target.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi UTM** image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"}.
+    Download the **DietPi UTM** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}.
 
     Double click on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.utm` file to the UTM virtual machine directory. This is typically located within the (hidden) user subdirectory `.../Library/Containers/com.utmapp.UTM/Data/Documents`.
 
@@ -475,16 +556,16 @@ Select the following tabs for the installation description of your target.
 
         ![Hyper-V activation](assets/images/dietpi-HyperV-activation.png){: width="367" height="328" loading="lazy"}
 
-    On this PC a free harddisk space of about  
+    On this PC a free harddisk space of about
 
     - 3 GiB for a minimal running system (1.5 GiB in switched off state)
-    - 8 - 10 GiB for a typical running system with X11  
+    - 8 - 10 GiB for a typical running system with X11
 
     is needed. A recommended size is at least a free space of 10 GiB.
 
     <font size="+2">1. Download and extract the DietPi disk image</font>
 
-    Download the **DietPi Hyper-V** image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+    Download the **DietPi Hyper-V** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     ![DietPi Hyper-V image download](assets/images/dietpi-HyperV-Download.jpg){: width="722" height="463" loading="lazy"}
 
@@ -572,7 +653,7 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi installer image</font>
 
-        Download the **Native PC for UEFI** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and
+        Download the **Native PC for UEFI** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and
         extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download UEFI installer image](assets/images/dietpi-download-nativepc-uefi.jpg){: width="722" height="211" loading="lazy"}
@@ -660,7 +741,7 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi installer image</font>
 
-        Download the **Native PC for BIOS/CSM** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and
+        Download the **Native PC for BIOS/CSM** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and
         extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
@@ -738,7 +819,7 @@ Select the following tabs for the installation description of your target.
 
         <font size="+2">1. Download and extract the DietPi direct write image</font>
 
-        Download the **Native PC for BIOS/CSM** > **Direct write Image** from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and
+        Download the **Native PC for BIOS/CSM** > **Direct write Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and
         extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
         ![DietPi download BIOS direct write image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
@@ -842,7 +923,7 @@ DietPi will then immediately begin to search for and install updated software pa
 Once the packages have been updated, DietPi will ask you to confirm whether you would like to enable user analytics.
 
 !!! info "DietPi Survey"
-    DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/){:class="nospellcheck"} page. Checkout and see how DietPi is used!
+    DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/){: class="nospellcheck"} page. Checkout and see how DietPi is used!
 
 ![dietpi-data](assets/images/dietpi-data-policy.jpg){: width="642" height="385" loading="lazy"}
 
@@ -869,8 +950,8 @@ A video tutorial on _How to install and initially configure DietPi_ made by Robe
 
 Further videos:
 
-- YouTube video #1: [Installing DietPi : Fast Linux For Any Raspberry Pi!!!](https://www.youtube.com/watch?v=U-UXenzA2m8){:class="nospellcheck"}
-- YouTube video #2: [How Install Diet Pi Raspberry Pi 4 Or Any SBC - Install Set Up Configure](https://www.youtube.com/watch?v=qH0YsFNIyFo){:class="nospellcheck"}
-- YouTube video #3: [Headless install of Dietpi | No Monitor, No LAN, No router login | Pre Configure WiFi](https://www.youtube.com/watch?v=vlMpn9u0Y4o){:class="nospellcheck"}
-- YouTube video #4: [Installing DietPi on Raspberry Pi, First Boot and Configuration](https://www.youtube.com/watch?v=LzJpAUufyy0){:class="nospellcheck"}
-- YouTube video #5 (German language): [Raspberry Pi 4 & DietPi - die schnelle Alternative - Grundinstallation einfach erklärt](https://www.youtube.com/watch?v=J5yPeJFLSO0&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=7){:class="nospellcheck"}
+- YouTube video #1: [Installing DietPi : Fast Linux For Any Raspberry Pi!!!](https://www.youtube.com/watch?v=U-UXenzA2m8){: class="nospellcheck"}
+- YouTube video #2: [How Install Diet Pi Raspberry Pi 4 Or Any SBC - Install Set Up Configure](https://www.youtube.com/watch?v=qH0YsFNIyFo){: class="nospellcheck"}
+- YouTube video #3: [Headless install of Dietpi | No Monitor, No LAN, No router login | Pre Configure WiFi](https://www.youtube.com/watch?v=vlMpn9u0Y4o){: class="nospellcheck"}
+- YouTube video #4: [Installing DietPi on Raspberry Pi, First Boot and Configuration](https://www.youtube.com/watch?v=LzJpAUufyy0){: class="nospellcheck"}
+- YouTube video #5 (German language): [Raspberry Pi 4 & DietPi - die schnelle Alternative - Grundinstallation einfach erklärt](https://www.youtube.com/watch?v=J5yPeJFLSO0&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=7){: class="nospellcheck"}
