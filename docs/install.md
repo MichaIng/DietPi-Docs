@@ -341,7 +341,7 @@ Select the following tabs for the installation description of your target.
         - Password: `<root user password you entered during Proxmox VE install>`
     1. Tab **General**: Select the **Create VM** button at the top right corner. Choose a **Node** , a **VM ID** and a **Name**, then click **Next**.
 
-        ![Proxmox VM creation](assets/images/proxmox2.png){: width="600" height="260" loading="lazy"}
+        ![Proxmox VM creation](assets/images/proxmox2.png){: width="722" height="314" loading="lazy"}
 
         Remember the VM ID, you need it later.
 
