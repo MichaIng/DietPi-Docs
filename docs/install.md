@@ -322,7 +322,7 @@ Select the following tabs for the installation description of your target.
 
     One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
 
-    One of the options of a virtual machine appliance server is the freely available [__VMware vSpere Hypervisor__](https://www.vmware.com/products/vsphere-hypervisor.html/) which contains the [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html/).
+    One of the options of a virtual machine appliance server is the freely available [__VMware vSphere Hypervisor__](https://www.vmware.com/products/vsphere-hypervisor.html/) which contains the [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html/).
 
     ![VMware vSphere Hypervisor program](assets/images/VMwareESXi_02.jpg){: width="1918" height="1010" loading="lazy"}
 
@@ -330,7 +330,7 @@ Select the following tabs for the installation description of your target.
 
     As a starting point you need a **PC with a running VMware ESXi Hypervisor software** on which the DietPi system will run.
 
-    <font size="+2">1. Download and extract the DietPi applicance image</font>
+    <font size="+2">1. Download and extract the DietPi appliance image</font>
 
     Download the **DietPi ESXi** appliance image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
@@ -359,7 +359,7 @@ Select the following tabs for the installation description of your target.
 
     ![vSphere VM management screenshot 2](assets/images/VMwareESXi_05.jpg){: width="1669" height="859" loading="lazy"}
 
-    You can open a console of your VM just by clicking on the small VM's screen output to open a console window. Klick into the new console window to redirect your keyboard to this console.
+    You can open a console of your VM just by clicking on the small VM screen output to open a console window. Klick into the new console window to redirect your keyboard to this console.
 
     !!! info "Install VM tools"
 

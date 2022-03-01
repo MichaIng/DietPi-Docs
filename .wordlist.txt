@@ -366,6 +366,7 @@ OpenTyrian
 OpenVPN
 OTP
 overvoltage
+OVF
 OVH
 OVPN
 ownCloud
@@ -581,6 +582,7 @@ VirtualHere
 virtualised
 virtualiser
 VM
+VMDK
 VMs
 VMware
 VNC
