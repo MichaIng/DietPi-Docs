@@ -372,16 +372,25 @@ Select the following tabs for the installation description of your target.
         apt install p7zip
         curl -O https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bullseye.7z
         7zr x DietPi_Proxmox-x86_64-Bullseye.7z
-        # Verifying the SHA256 hash
+        ```
+
+        Optionally verify the SHA256 hash of the downloaded file via:
+
+        ```sh
         sha256sum -c < <(mawk '/SHA256/{print $2"  DietPi_Proxmox-x86_64-Bullseye.qcow2"}' hash.txt)
-        # Import the disk image
+        ```
+
+        As next, the disk image is imported.  
+        **Note**: Use the VM ID entered during the VM creation.
+
+        ```sh
         ID=100 # replace "100" with the VM ID entered on VM creation
         qm importdisk "$ID" DietPi_Proxmox-x86_64-Bullseye.qcow2 local-lvm
         qm set "$ID" --scsi0 "local-lvm:vm-$ID-disk-0"
         qm set "$ID" --boot order=scsi0
         ```
 
-    1. You can now remove the downloaded and extracted files and close the console:
+    1. Finally, you can remove the downloaded and extracted files and close the console:
 
         ```sh
         rm DietPi_Proxmox-x86_64-Bullseye.* hash.txt README.md
