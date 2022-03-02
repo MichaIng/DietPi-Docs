@@ -248,7 +248,7 @@ Select the following tabs for the installation description of your target.
 
         With all these setup steps the time synchronization with the usage of the extension pack should work. Sometimes it needs a couple of minutes until the time is synchronized, so be somehow patient.
 
-=== "VMware"
+=== "VMware Player / Fusion"
 
     <font size="+2">Introduction</font>
 
@@ -280,7 +280,7 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi VMware download image](assets/images/dietpi-VMware-Download.png){: width="1223" height="749" loading="lazy"}
 
-    The zip file contains a couple of files, the important two are the `.vmx` and `.vmdk` file which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
+    The zip file contains a couple of files, the important two are the `.vmx` and `.vmdk` files which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
 
     ![DietPi VMware 7zip archive content](assets/images/dietpi-VMware-7zip-file.png){: width="525" height="104" loading="lazy"}
 
@@ -290,7 +290,7 @@ Select the following tabs for the installation description of your target.
 
     ![VMware file open screenshot](assets/images/dietpi-VMware-import1.png){: width="715" height="585" loading="lazy"}
 
-    In the following dialog the user has to navigate to the directory where the `.vmx` and `.vmdk` file were stored. Choose the `.vmx` file to open.  
+    In the following dialog the user has to navigate to the directory where the `.vmx` and `.vmdk` files were stored. Choose the `.vmx` file to open.  
     After this the DietPi VMware virtual machine is present and can be started:
 
     ![VMware virtual machine list screenshot](assets/images/dietpi-VMware-VM-Machine.png){: width="714" height="588" loading="lazy"}
@@ -312,6 +312,61 @@ Select the following tabs for the installation description of your target.
     <font size="+2">Additional information</font>
 
     For information about running DietPi in an VMware ESXi environment, you can read this article: [Running the DietPi VMware image on ESXi 6.7](https://ccie.tv/running-dietpi-vmware-image-on-esxi-6-7).
+
+=== "VMware ESXi"
+
+    <font size="+2">Introduction</font>
+
+    Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
+
+    One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
+
+    One of the options of a virtual machine appliance server is the freely available [__VMware vSphere Hypervisor__](https://www.vmware.com/products/vsphere-hypervisor.html/) which contains the [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html/).
+
+    ![VMware vSphere Hypervisor program](assets/images/VMwareESXi_02.jpg){: width="1918" height="1010" loading="lazy"}
+
+    <font size="+2">Prerequisites</font>
+
+    As a starting point you need a **PC with a running VMware ESXi Hypervisor software** on which the DietPi system will run.
+
+    <font size="+2">1. Download and extract the DietPi appliance image</font>
+
+    Download the **DietPi ESXi** appliance image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
+
+    The archive contains a couple of files, the important one is `DietPi_ESXi-x86_64-Bullseye.ova`, which has to be uploaded to the ESXi server.
+
+    <font size="+2">2. Create the Virtual Machine</font>
+
+    The first step is to select the Virtual Machine management tab on the left to create the DietPi VM:
+
+    ![vSphere VM management screenshot 1](assets/images/VMwareESXi_03.jpg){: width="1178" height="275" loading="lazy"}
+
+    As next, enter the following in the VM creation dialog:
+
+    1. Tab **Select creation type**: Choose *Deploy a virtual machine from an OVF or OVA file*. Then click **Next**.
+    1. Tab **Select OVF and VMDK files**: Enter the name of your VM and drop or select the extracted `.ova` file. Then click **Next**.
+
+        ![DietPi VM creation screenshot](assets/images/VMwareESXi_04.jpg){: width="942" height="556" loading="lazy"}
+
+    1. Tab **Select storage**: Choose the location where the VM shall reside. Then click **Next**.
+    1. Tab **Deployment options**: Set options according to your preferences and click **Next**.
+    1. Tab **Ready to complete**: Check dialog and click **Finish**.
+
+    <font size="+2">3. First boot of the new VMware image</font>
+
+    Depending on your settings the VM automatically starts up and is shown in the VM management dialog. Otherwise click on the VM name.
+
+    ![vSphere VM management screenshot 2](assets/images/VMwareESXi_05.jpg){: width="1669" height="859" loading="lazy"}
+
+    You can open a console of your VM just by clicking on the small VM screen output to open a console window. Klick into the new console window to redirect your keyboard to this console.
+
+    !!! info "Install VM tools"
+
+        To install VM tools in your ESXi machine, it is an option to do it with the `open-vm-tools` via:
+
+        ```sh
+        apt install open-vm-tools
+        ```
 
 === "Proxmox"
 
