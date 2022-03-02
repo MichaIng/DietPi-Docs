@@ -86,6 +86,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 ### [Desktop Utilities](desktop/)
 
 - [**Chromium - Web browser**](desktop/#chromium)
+- [**Firefox - Web browser**](desktop/#firefox)
 - [**GIMP - Image editor**](desktop/#gimp)
 - [**QuiteRSS - RSS and Atom news feeds reader**](desktop/#quiterss)
 - [**Xfce Power Manager - Power manager with brightness control**](desktop/#xfce-power-manager)
