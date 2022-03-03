@@ -189,6 +189,7 @@ Hardkernel
 HC
 hexa
 hardcoded
+hardenings
 HiFi
 HiFiBerry
 Hipp
@@ -352,6 +353,7 @@ Odroids
 Ok
 oldoldstable
 OLED
+ondemand
 Ondrej
 oneshot
 OOTB
@@ -373,6 +375,7 @@ OVPN
 ownCloud
 Panokostas
 PaperMC
+pasja
 passwd
 passwordless
 PCIe
@@ -518,6 +521,7 @@ syscall
 sysvinit
 syslog
 systemd
+SysV
 TasmoAdmin
 Tasmota
 Tautulli
@@ -528,8 +532,9 @@ th
 thechildofroth
 theming
 Thonny
-TigerVNC
 TiB
+TigerVNC
+TimeSync
 TIOBE
 TLS
 TLSv
@@ -554,6 +559,7 @@ UEFI
 UI
 ULA
 umask
+unauthorise
 Unarchiver
 unbootable
 uncheck
@@ -588,6 +594,7 @@ VirtualBox
 VirtualHere
 virtualised
 virtualiser
+virtualisers
 VM
 VMDK
 VMs
