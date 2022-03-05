@@ -1,3 +1,8 @@
+---
+title: Media Systems Software Options
+description: Description of DietPi software options related to media systems like media (streaming) servers and players
+---
+
 # Media Systems
 
 ## Overview
@@ -731,12 +736,33 @@ A Python based monitoring and tracking tool for Plex Media Server.
     The web interface is accessible via port **8181**:
 
     - URL: `http://<your.IP>:8181`
+    - After first run setup, select "SIGN IN WITH TAUTULLI" and enter the username and password you chose before. On our own tests, authentication via `plex.tv` account did not work, it may however depend on the subscription.
 
-=== "Access to the log files"
+=== "First run setup"
+
+    When accessing to the web interface for the first time, go through the following steps to setup Tautulli:
+
+    1. Click "Next"
+    2. Enter a username and password for future web interface logins and click "Next".
+    3. Click "Sign In with Plex" and log in with your `plex.tv` account in the new window, then click "Next".
+    4. Enter the IP address or hostname of your Plex Media Server, use `127.0.0.1` if it runs on the same machine, then click "Next".
+    5. Choose the activity logging ignore interval and click "Next".
+    6. Click "Next" and "Finish".
+    7. When logging in to the Tautulli web interface, first select "SIGN IN WITH TAUTULLI" and enter the username and password you chose before. On our own tests, authentication via `plex.tv` account did not work, it may however depend on the subscription.
+
+=== "View logs"
+
+    Logs can be viewed from the web interface, using the gear button at the top right corner. Log files are stored on the server in the following directory:
 
     ```
-    /mnt/dietpi_userdata/plexpy/logs/
+    /mnt/dietpi_userdata/tautulli/logs/
     ```
+
+***
+
+Official website: <https://tautulli.com/>  
+Source code: <https://github.com/Tautulli/Tautulli>  
+License: [GPLv3](https://github.com/Tautulli/Tautulli/blob/master/LICENSE)
 
 ## Murmur
 
@@ -771,14 +797,70 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 
 === "Requirements"
 
-    Roon on another system (e.g.: Windows PC) to control the player.  
-    [Roon License](https://roonlabs.com/pricing) (free trial is also available).
+    - Roon on another system (e.g.: Windows PC) to control the player.  
+    - [Roon license](https://roonlabs.com/pricing) (free trial is also available).
+
+=== "Directories"
+
+    The Roon Bridge installation can be found at:
+
+    ```
+    /opt/roonbridge
+    ```
+
+    Its configuration and data can be found at:
+
+    ```
+    /mnt/dietpi_userdata/roonbridge
+    ```
+
+=== "Service control"
+
+    The Roon Bridge by default is started as systemd service and can hence be controlled with the following commands:
+
+    ```sh
+    systemctl status roonbridge
+    ```
+
+    ```sh
+    systemctl stop roonbridge
+    ```
+
+    ```sh
+    systemctl start roonbridge
+    ```
+
+    ```sh
+    systemctl restart roonbridge
+    ```
+
+=== "View logs"
+
+    Service logs can be reviewed with the following command:
+
+    ```sh
+    journalctl -u roonbridge
+    ```
+
+    More detailed logs from the individual Roon Bridge components can be found at the following location:
+
+    ```
+    /var/log/roonbridge
+    ```
+
+=== "Update"
+
+    The Roon Bridge can be updated by reinstalling it, which preserves your data and configs:
+
+    ```sh
+    dietpi-software reinstall 121
+    ```
 
 ***
 
 Official website: <https://roonlabs.com/>  
 Official forum: <https://community.roonlabs.com/>  
-YouTube videos from `David Snyder`: <https://www.youtube.com/c/dsnyder0cnn/search?query=roon>
+YouTube videos by `David Snyder`: <https://www.youtube.com/c/dsnyder0cnn/search?query=roon>
 
 ## Roon Server
 
@@ -823,7 +905,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Service control"
 
-    Roon Server by default is started as systemd service and can hence be controlled with the following commands:
+    The Roon Server by default is started as systemd service and can hence be controlled with the following commands:
 
     ```sh
     systemctl status roonserver
@@ -849,13 +931,13 @@ Turns your device into a Roon capable audio player and core server.
     journalctl -u roonserver
     ```
 
-    More detailed logs from the individual Roon server components can be found in the following files:
+    More detailed logs from the individual Roon Server components can be found at the following location:
 
-    - `/mnt/dietpi_userdata/roonserver/RAATServer/Logs/RAATServer_log.txt`
-    - `/mnt/dietpi_userdata/roonserver/RoonServer/Logs/RoonServer_log.txt`
-    - `/mnt/dietpi_userdata/roonserver/RoonGoer/Logs/RoonGoer_log.txt`
+    ```
+    /var/log/roonserver
+    ```
 
-=== "Update to latest version"
+=== "Update"
 
     The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with the following commands:
 
@@ -877,6 +959,14 @@ At startup the Roon Extension Manager accesses a repository containing the commu
 ![Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150" height="81" loading="lazy"}
 
 ![Roon Extension Manager screenshot](../assets/images/dietpi-software-media-roonextmanager.jpg){: width="400" height="225" loading="lazy"}
+
+=== "Directories"
+
+    Roon Extension Manager data and configs can be found at the following location:
+
+    ```
+    /mnt/dietpi_userdata/roon-extension-manager
+    ```
 
 ***
 
@@ -906,7 +996,7 @@ Also works with Roon.
 
     Guide: <https://help.roonlabs.com/portal/en/kb/articles/faq-how-do-i-use-roon-and-hqplayer-together>
 
-=== "Update method"
+=== "Update"
 
     ```sh
     dietpi-software reinstall 124
@@ -1138,18 +1228,6 @@ Free and open source comics/mangas media server with web UI.
     ```sh
     systemctl restart komga
     ```
-
-=== "File hashing"
-
-    File hashing is by default disabled on installs via DietPi, to reduce CPU load for small hardware. The downside is that when moving or renaming media files, Komga won't be able to keep metadata and read state attached, as the database entry is associated to the file path. The original media entry will remain shown as "unavailable" in the library, so that you can manually copy metadata over to the new entry. To remove the old entry, clear the trash of the library.
-
-    With file hashing enabled, database entries and hence metadata and read state are associated to the file hash, so that it stays intact when files are moved or renamed only, with the downside of additional CPU load and resource usage, especially on smaller hardware. To enable file hashing, set the following entry in the configuration file:
-
-    ```yaml
-    file-hashing: true
-    ```
-
-    Read more: <https://komga.org/guides/trash.html#file-hashes>
 
 === "View logs"
 

@@ -1,3 +1,8 @@
+---
+title: Advanced Networking Software Options
+description: Description of DietPi software options related to networking
+---
+
 # Advanced Networking
 
 ## Overview

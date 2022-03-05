@@ -54,6 +54,12 @@
     color: #164046;
 }
 
+/* Images: Reduce max width to 95% of container width */
+.md-typeset img,
+.md-typeset svg {
+    max-width: 95%;
+}
+
 /* Tables */
 
 .md-typeset table:not([class]) th {

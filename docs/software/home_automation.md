@@ -1,3 +1,8 @@
+---
+title: Home Automation Software Options
+description: Description of DietPi software options related to home automation
+---
+
 # Home Automation
 
 ## Overview

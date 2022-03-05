@@ -1,3 +1,8 @@
+---
+title: Remote Desktop Access Software Options
+description: Description of DietPi software options related to remote desktops and remote access
+---
+
 # Remote Desktop Access
 
 Run a **Desktop environment** on your device and access it accessed remotely via network. It is a great option for headless SBC devices.

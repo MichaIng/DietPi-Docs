@@ -1,3 +1,8 @@
+---
+title: System Statistics and Management Options
+description: Description of DietPi software options related to system statistics, monitoring and management
+---
+
 # System Stats & Management
 
 ## Overview
@@ -10,6 +15,7 @@
 - [**Netdata - Web interface system stats**](#netdata)
 - [**Webmin - Remote system management with web interface**](#webmin)
 - [**K3s - Lightweight Kubernetes**](#k3s)
+- [**MicroK8s - Low-ops, minimal production Kubernetes**](#microk8s)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -91,7 +97,7 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     ```
     /opt/dietpi-dashboard/config.toml
     ```    
-    
+
     When doing changes, you need to restart the service afterwards:
 
     ```sh
@@ -416,5 +422,62 @@ Official website: <https://k3s.io>
 Official documentation: <https://rancher.com/docs/k3s/latest/en/>  
 Source code: <https://github.com/k3s-io/k3s>  
 License: [Apache 2.0](https://github.com/k3s-io/k3s/blob/master/LICENSE)
+
+## MicroK8s
+
+High availability - Low-ops, minimal production Kubernetes, for developers, cloud, clusters, workstations, Edge and IoT.
+
+![MicroK8s logo](../assets/images/microk8s.png){: width="300" height="150" loading="lazy"}
+
+=== "Connecting to your cluster"
+
+    To create a cluster out of two or more already-running MicroK8s instances, use the `microk8s` add-node command:
+
+    ```sh
+    microk8s add-node
+    ```
+
+    From the node you wish to join to this cluster, run the following:
+
+    ```sh
+    microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
+    ```
+
+    Use the `--worker` flag to join a node as a worker not running the control plane, e.g.:
+
+    ```sh
+    microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
+    ```
+
+    For most commands, you can use `microk8s` in front like below.
+
+    ```sh
+    microk8s kubectl get nodes
+    microk8s kubectl get napspaces
+    ```
+
+    MicroK8s does provide a few "addons", which can be seen below with the enable and disable command.
+
+    ```sh
+    microk8s status # to view the addons
+    microk8s enable dns # to enable addons
+    microk8s enable dashboard # to enable Kubernetes dashboard
+    ```
+
+=== "View logs"
+
+    Per-node log files can be in:
+
+    ```
+    /var/log/pods
+    ```
+
+***
+
+Official website: <https://microk8s.io/>  
+Official documentation: <https://microk8s.io/docs>  
+Addons documentation: <https://microk8s.io/docs/addons>  
+Source code: <https://github.com/ubuntu/microk8s>  
+License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)
