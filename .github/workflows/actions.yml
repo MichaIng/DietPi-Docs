@@ -8,7 +8,7 @@ jobs:
     - name: Clone DietPi-Docs repository
       id: clone
       # https://github.com/actions/checkout/releases
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Install latest Node.js for markdownlint-cli2
       run: |
         sudo npm i -g n
@@ -21,7 +21,7 @@ jobs:
       id: python
       if: always() && steps.clone.outcome == 'success'
       # https://github.com/actions/setup-python/releases
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         # https://github.com/actions/python-versions/releases
         python-version: '3.9.10'
