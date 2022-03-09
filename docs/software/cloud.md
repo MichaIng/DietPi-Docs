@@ -48,22 +48,26 @@ Also Installs:
 
 ![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png){: width="400" height="218" loading="lazy"}
 
-=== "Access to the web interface"
+=== "Quick start"
 
-    - URL = `http://<your.IP>/owncloud`
-    - Username = `admin`
-    - Password = `<your global password>` (default: `dietpi`)
+    ownCloud is accessible via regular HTTP/HTTPS TCP ports **80**/**443** below the `/owncloud` path:
 
-    If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).
+    - URL: `http://<your.IP>/owncloud`
+    - Username: `admin` (or the one you set in `dietpi.txt`)
+    - Password: `<your global password>` (default: `dietpi`)
 
-    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`.  
-    Just use inside your terminal:
+=== "Configuration"
+
+    You can configure ownCloud via CLI from command line. To simplify this, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`.  
+    Simply run `occ` from your console:
 
     ```sh
     occ list
     ```
 
-=== "Update ownCloud to the latest version"
+    More details about available commands can be found in the [ownCloud admin manual](https://doc.owncloud.com/server/next/admin_manual/configuration/server/occ_command.html#core-commands).
+
+=== "Update"
 
     1. Option: Use the web-based updater from within the ownCloud web UI settings.
     2. Option: Use the updater script from console (recommended):
@@ -73,7 +77,7 @@ Also Installs:
         1
         ```
 
-    3. Follow the official documentation for a manual upgrade process: <https://doc.owncloud.com/server/admin_manual/maintenance/manual_upgrade.html>
+    3. Follow the official documentation for a manual upgrade process: <https://doc.owncloud.com/server/next/admin_manual/maintenance/upgrading/manual_upgrade.html>
 
 === "FAQ"
 
@@ -85,9 +89,9 @@ Also Installs:
 
     DietPi will automatically apply the max supported upload size to the PHP and ownCloud configs.
 
-    - 32-bit systems can handle 2 GB
-    - 64-bit systems can handle 8796 PB, yep, in petabyte
-    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024))MB"`
+    - 32-bit systems can handle 2 GiB
+    - 64-bit systems can handle 8796 PiB, yep, in petabyte
+    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024)) MiB"`
 
     **Will my data be saved after deinstallation?**
 
@@ -96,12 +100,8 @@ Also Installs:
 
 ***
 
-Website: <https://owncloud.com>  
-Official documentation: <https://doc.owncloud.org/server/admin_manual>
-
-YouTube video tutorial: *How to Install DietPi OwnCloud on Raspberry Pi*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/-OatWtH1Z9c?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Official website: <https://owncloud.com/>  
+Official documentation: <https://doc.owncloud.com/server/next/admin_manual/>
 
 ## Nextcloud
 
@@ -111,24 +111,22 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Quick start"
 
-    Nextcloud is accessible via regular HTTP/HTTPS port **80**/**443** below the `/nextcloud` path:
+    Nextcloud is accessible via regular HTTP/HTTPS ports **80**/**443** below the `/nextcloud` path:
 
-    - URL = `http://<your.IP>/nextcloud/`
-    - Username = `admin`
-    - Password = `<your global password>` (default: `dietpi`)
+    - URL: `http://<your.IP>/nextcloud`
+    - Username: `admin` (or the one you set in `dietpi.txt`)
+    - Password: `<your global password>` (default: `dietpi`)
 
-    To fast access the files, a dedicated USB hard drive is highly recommended.
+=== "Configuration"
 
-=== "Advanced configuration"
-
-    For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html).
-
-    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`.  
-    Just use inside your terminal:
+    You can configure Nextcloud via CLI from command line. To simplify this, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`.  
+    Simply run `ncc` from your console:
 
     ```sh
     ncc list
     ```
+
+    More details about available commands can be found in the [Nextcloud admin manual](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html).
 
 === "Brute-force protection"
 
@@ -203,7 +201,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
         - <https://help.nextcloud.com/t/repeated-login-attempts-from-china/6510/11?u=michaing>
         - <https://www.c-rieger.de/nextcloud-installationsanleitung/#c06>
 
-=== "Update Nextcloud to the latest version"
+=== "Update"
 
     1. Option: Use the web-based updater from within the Nextcloud web UI settings.
     2. Option: Use the updater script from console (recommended):
@@ -224,12 +222,13 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     `/mnt/dietpi_userdata/nextcloud_data` (or `dietpi.txt` choice)
 
-    **Why am I limited to 2GB file size uploads?**
+    **Why am I limited to 2 GiB file size uploads?**
 
     DietPi will automatically apply the max supported upload size to the PHP and Nextcloud configs.
 
-    - 32bit systems can handle 2 GB
-    - 64bit systems can handle 8796 PB (petabytes)
+    - 32-bit systems can handle 2 GiB
+    - 64-bit systems can handle 8796 PiB, yep, in petabyte
+    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024)) MiB"`
 
     **Will my data be saved after deinstallation?**
 
