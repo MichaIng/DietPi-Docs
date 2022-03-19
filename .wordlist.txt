@@ -385,6 +385,7 @@ phpSysInfo
 PID
 PIA
 Pi-hole
+PiB
 PiJuice
 Pinebook
 Pinterest

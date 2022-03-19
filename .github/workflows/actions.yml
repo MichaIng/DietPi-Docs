@@ -8,7 +8,7 @@ jobs:
     - name: Clone DietPi-Docs repository
       id: clone
       # https://github.com/actions/checkout/releases
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Install latest Node.js for markdownlint-cli2
       run: |
         sudo npm i -g n
@@ -21,7 +21,7 @@ jobs:
       id: python
       if: always() && steps.clone.outcome == 'success'
       # https://github.com/actions/setup-python/releases
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         # https://github.com/actions/python-versions/releases
         python-version: '3.9.10'
@@ -54,4 +54,4 @@ jobs:
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
-      run: ./lychee -En --require-https --exclude '(^https://pydio.com|^https://twitter.com|wiringpi.com|fonts.gstatic.com|^admin@koel.dev$|^root@192.168.1.20$|bridges.torproject.org|www.spigotmc.org|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+      run: ./lychee -En --require-https --exclude '^(https://pydio.com/|https://twitter.com/|http://wiringpi.com/|https://fonts.gstatic.com/|admin@koel.dev$|root@192.168.1.20$|https://bridges.torproject.org/|https://www.spigotmc.org/|https://www.audiophonics.fr/|https://help.realvnc.com/|https://www.php.net/)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
