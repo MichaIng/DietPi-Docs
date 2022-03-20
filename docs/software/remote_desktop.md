@@ -248,7 +248,7 @@ The VirtualHere package is used to share physically attached USB devices from yo
 
 The functionality consists of two parts:
 
-- The [server side](https://virtualhere.com/content/usb-servers): This software part is installed witin this DietPi software package. It serves your USB device over the network
+- The [server side](https://virtualhere.com/content/usb-servers): This software part is installed within this DietPi software package. It serves your USB device over the network
 - The [client side](https://virtualhere.com/usb_client_software): This software part needs to be installed on every client who wants to access the USB devices
 
 Download the client for your PC from:
