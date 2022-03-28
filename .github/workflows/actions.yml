@@ -1,7 +1,11 @@
 name: Build test and quality checks
-on: push
+on: [pull_request, push]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   Actions:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
     # https://github.com/actions/virtual-environments
     runs-on: ubuntu-latest
     steps:
@@ -54,4 +58,4 @@ jobs:
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
-      run: ./lychee -En --require-https --exclude '^(https://pydio.com/|https://twitter.com/|http://wiringpi.com/|https://fonts.gstatic.com/|admin@koel.dev$|root@192.168.1.20$|https://bridges.torproject.org/|https://www.spigotmc.org/|https://www.audiophonics.fr/|https://help.realvnc.com/|https://www.php.net/)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+      run: ./lychee -En --require-https --cache --exclude '^(pipe://|librespot://|airplay://|https://pydio.com/|https://twitter.com/|http://wiringpi.com/|https://fonts.gstatic.com/|admin@koel.dev$|root@192.168.1.20$|https://bridges.torproject.org/|https://www.spigotmc.org/|https://www.audiophonics.fr/|https://help.realvnc.com/|https://www.php.net/)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
