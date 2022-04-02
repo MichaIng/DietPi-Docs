@@ -71,6 +71,7 @@ CloudPrint
 CloudShell
 codecs
 Computerworld
+congerdesign
 conf
 config
 configs
@@ -277,6 +278,7 @@ Logrotate
 loopback
 LPDDR
 LTS
+LXC
 LXDE
 LXQt
 macOS
@@ -306,7 +308,7 @@ Mopidy
 morse
 Morsecode
 Mosquitto
-MotionEye
+motionEye
 MOTD
 MPM
 MPD
@@ -330,6 +332,7 @@ NanoPC
 NanoPi
 NAS
 natively
+nd
 Netdata
 Nextcloud
 NFS
@@ -436,6 +439,7 @@ RDBMS
 RDP
 ReadyMedia
 RealVNC
+reconfigures
 reconfiguring
 Remot
 renamer
@@ -650,3 +654,4 @@ ZFS
 zlib
 zr
 zram
+xz
