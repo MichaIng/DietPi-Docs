@@ -8,7 +8,7 @@ description: Description of DietPi software options related to camera and survei
 ## Overview
 
 - [**RPi Cam Control - Web interface & controls for your RPi camera**](#rpi-cam-control)
-- [**MotionEye - Web interface & surveillance for your camera**](#motioneye)
+- [**motionEye - Web interface & surveillance for your camera**](#motioneye)
 - [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](#mjpg-streamer)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
@@ -49,7 +49,7 @@ It consists of full control of the camera in a web-based interface.
 === "Access recordings (w/o web interface)"
 
     To access you recordings remotely without the web interface, you might want to have one of [DietPi's file servers](../file_servers/) installed.  
-    Directories used by MotionEye:
+    Directories used by motionEye:
 
     - Media directory = `/mnt/dietpi_userdata/rpicam`
     - Accessed from file server = `/rpicam`
@@ -77,9 +77,9 @@ Github page: <https://github.com/silvanmelchior/RPi_Cam_Web_Interface>
 Wiki: <https://elinux.org/RPi-Cam-Web-Interface>  
 License: [MIT](https://github.com/silvanmelchior/RPi_Cam_Web_Interface/blob/master/LICENSE.txt)
 
-## MotionEye
+## motionEye
 
-The *MotionEye* package offers surveillance for your camera.  
+The *motionEye* package offers surveillance for your camera.  
 It is mainly focused towards motion detection usage. It contains a web interface.
 
 The software can
@@ -91,7 +91,7 @@ The software can
 
 from any RPi camera, USB camera or an IP camera network stream.
 
-![MotionEye web interface screenshot](../assets/images/dietpi-software-camera-motioneye.png){: width="500" height="246" loading="lazy"}
+![motionEye web interface screenshot](../assets/images/dietpi-software-camera-motioneye.png){: width="500" height="246" loading="lazy"}
 
 === "Access the web interface"
 
@@ -106,14 +106,14 @@ from any RPi camera, USB camera or an IP camera network stream.
 === "Access recordings (w/o web interface)"
 
     To access you recordings remotely without the web interface, you might want to have one of [DietPi's file servers](../file_servers/) installed.  
-    Directories used by MotionEye:
+    Directories used by motionEye:
 
     - Media directory = `/mnt/dietpi_userdata/motioneye`
     - Accessed from file server = `/motioneye`
 
 === "Update to latest version"
 
-    MotionEye can be updated to the latest version via
+    motionEye can be updated to the latest version via
 
     ```sh
     sudo pip2 install -U motioneye
@@ -132,8 +132,8 @@ from any RPi camera, USB camera or an IP camera network stream.
 
 Github page: <https://github.com/ccrisan/motioneye>  
 Wiki: <https://github.com/ccrisan/motioneye/wiki>  
-Tutorial: [MotionEye on DietPi on Raspberry Pi: keeping an eye on things](https://mansfield-devine.com/speculatrix/2018/12/motioneye-on-dietpi-on-raspberry-pi/)  
-YouTube video tutorial (German language): `DietPi & MotionEye - Vollautomatische Installation inkl. Wlan Konfiguration, Updates und Anwendung`.
+Tutorial: [motionEye on DietPi on Raspberry Pi: keeping an eye on things](https://mansfield-devine.com/speculatrix/2018/12/motioneye-on-dietpi-on-raspberry-pi/)  
+YouTube video tutorial (German language): `DietPi & motionEye - Vollautomatische Installation inkl. Wlan Konfiguration, Updates und Anwendung`.
 
 <iframe src="https://www.youtube-nocookie.com/embed/vQxL3TfQK5E?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
