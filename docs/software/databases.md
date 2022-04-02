@@ -89,9 +89,9 @@ Official documentation: <https://www.sqlite.org/docs.html>
 
 A non-SQL based data store.
 
-![Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: width="200" height="67" loading="lazy"}
+![Redis logo](../assets/images/redis-logo.svg){: width="200" height="68" loading="lazy"}
 
-Source: [Carlos Prioglio](https://redis.io/images/redis-logo.svg), [licence](https://commons.wikimedia.org/w/index.php?curid=95020509).
+_[Trademark guidelines](https://redis.io/docs/about/trademark/)_
 
 **Redis** is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
 
