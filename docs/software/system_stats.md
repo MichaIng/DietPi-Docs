@@ -136,10 +136,11 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 === "Update"
 
-    You can easily update DietPi-Dashboard by reinstalling it:
+    You can easily update DietPi-Dashboard by reinstalling it and restarting the service for the change to take effect:
 
     ```sh
     dietpi-software reinstall 200
+    systemctl restart dietpi-dashboard
     ```
 
 ***
