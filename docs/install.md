@@ -106,7 +106,7 @@ Select the following tabs for the installation description of your target.
 
 === "VirtualBox"
 
-    ## Introduction
+    <h2>Introduction</h2>
 
     Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
@@ -116,7 +116,7 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi-VirtualBox-program](assets/images/dietpi-VirtualBox-program.png){: width="1593" height="814" loading="lazy"}
 
-    ## Prerequisites
+    <h2>Prerequisites</h2>
 
     As a starting point you need a **PC with a running VirtualBox software** on which the DietPi system will run.  
     On this PC a free harddisk space of about
@@ -157,7 +157,7 @@ Select the following tabs for the installation description of your target.
 
         After these two steps the host installation of the VirtualBox extension pack is completed. Further installation steps on the guest system are described below.
 
-    ## 1. Download and extract the DietPi disk image
+    <h2>1. Download and extract the DietPi disk image</h2>
 
     Download the **DietPi VirtualBox** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
@@ -167,7 +167,7 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi VirtualBox 7zip archive content](assets/images/dietpi-VirtualBox-7zip-file.png){: width="533" height="83" loading="lazy"}
 
-    ## 2. Import of the .ova file in VirtualBox
+    <h2>2. Import of the .ova file in VirtualBox</h2>
 
     As next, the VirtualBox virtual machine has to be setup by importing the .ova file (via \File\Import Appliance):
 
@@ -183,7 +183,7 @@ Select the following tabs for the installation description of your target.
 
     ![VirtualBox virtual machine list screenshot](assets/images/dietpi-VirtualBox-VB-Machine.png){: width="245" height="55" loading="lazy"}
 
-    ## 3. First boot of the new VirtualBox image
+    <h2>3. First boot of the new VirtualBox image</h2>
 
     Press the start button (green arrow) to 'boot up' your system based on the DietPi image.
 
@@ -250,7 +250,7 @@ Select the following tabs for the installation description of your target.
 
 === "VMware Player / Fusion"
 
-    ## Introduction
+    <h2>Introduction</h2>
 
     Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
@@ -264,7 +264,7 @@ Select the following tabs for the installation description of your target.
         This description relates to VMware Workstation 16 Player on a Microsoft Windows system.  
         ***VMware Workstation Pro*** as well as ***VMware Fusion for MAC*** were not tested but should work also.
 
-    ## Prerequisites
+    <h2>Prerequisites</h2>
 
     As a starting point you need a **PC with a running VMware Workstation Player software** on which the DietPi system will run.  
     On this PC a free harddisk space of about
@@ -274,7 +274,7 @@ Select the following tabs for the installation description of your target.
 
     is needed. A recommended size is at least a free space of 10 GiB.
 
-    ## 1. Download and extract the DietPi disk image
+    <h2>1. Download and extract the DietPi disk image</h2>
 
     Download the **DietPi VMware** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
@@ -284,7 +284,7 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi VMware 7zip archive content](assets/images/dietpi-VMware-7zip-file.png){: width="525" height="104" loading="lazy"}
 
-    ## 2. Add the files in VMware
+    <h2>2. Add the files in VMware</h2>
 
     As next, the VMware virtual machine is setup by just opening the `.vmx` file (via ***Open a Virtual Machine***):
 
@@ -295,7 +295,7 @@ Select the following tabs for the installation description of your target.
 
     ![VMware virtual machine list screenshot](assets/images/dietpi-VMware-VM-Machine.png){: width="714" height="588" loading="lazy"}
 
-    ## 3. First boot of the new VMware image
+    <h2>3. First boot of the new VMware image</h2>
 
     Press the ***Play virtual machine*** (green arrow) to 'boot up' your system based on the DietPi image. Possibly you have to acknowledge in an appearing dialog "I Copied it" and go on.
     If you want to use a WiFi connection you have to change the network settings matching your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
@@ -309,13 +309,13 @@ Select the following tabs for the installation description of your target.
 
         Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
 
-    ## Additional information
+    <h2>Additional information</h2>
 
     For information about running DietPi in an VMware ESXi environment, you can read this article: [Running the DietPi VMware image on ESXi 6.7](https://ccie.tv/running-dietpi-vmware-image-on-esxi-6-7).
 
 === "VMware ESXi"
 
-    <font size="+2">Introduction</font>
+    <h2>Introduction</h2>
 
     Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
@@ -325,17 +325,17 @@ Select the following tabs for the installation description of your target.
 
     ![VMware vSphere Hypervisor program](assets/images/VMwareESXi_02.jpg){: width="1918" height="1010" loading="lazy"}
 
-    <font size="+2">Prerequisites</font>
+    <h2>Prerequisites</h2>
 
     As a starting point you need a **PC with a running VMware ESXi Hypervisor software** on which the DietPi system will run.
 
-    <font size="+2">1. Download and extract the DietPi appliance image</font>
+    <h2>1. Download and extract the DietPi appliance image</h2>
 
     Download the **DietPi ESXi** appliance image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
     The archive contains a couple of files, the important one is `DietPi_ESXi-x86_64-Bullseye.ova`, which has to be uploaded to the ESXi server.
 
-    <font size="+2">2. Create the Virtual Machine</font>
+    <h2>2. Create the Virtual Machine</h2>
 
     The first step is to select the Virtual Machine management tab on the left to create the DietPi VM:
 
@@ -352,7 +352,7 @@ Select the following tabs for the installation description of your target.
     1. Tab **Deployment options**: Set options according to your preferences and click **Next**.
     1. Tab **Ready to complete**: Check dialog and click **Finish**.
 
-    <font size="+2">3. First boot of the new VMware image</font>
+    <h2>3. First boot of the new VMware image</h2>
 
     Depending on your settings the VM automatically starts up and is shown in the VM management dialog. Otherwise click on the VM name.
 
@@ -370,7 +370,7 @@ Select the following tabs for the installation description of your target.
 
 === "Proxmox"
 
-    <font size="+2">Introduction</font>
+    <h2>Introduction</h2>
 
     Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
@@ -380,7 +380,7 @@ Select the following tabs for the installation description of your target.
 
     ![Proxmox web interface](assets/images/proxmox1.png){: width="800" height="439" loading="lazy"}
 
-    <font size="+2">Prerequisites</font>
+    <h2>Prerequisites</h2>
 
     Proxmox runs on any `x86_64` system. ISO images for the Virtual Environment server can be found here: <https://www.proxmox.com/de/downloads/category/iso-images-pve>  
     Aside of the Proxmox server's [system requirements](https://www.proxmox.com/en/proxmox-ve/requirements), a DietPi VM additionally requires:
@@ -388,7 +388,7 @@ Select the following tabs for the installation description of your target.
     - 1.2 GiB for a minimal DietPi system
     - 5 - 10 GiB for a typical running system with X11
 
-    <font size="+2">1. Generate a new Proxmox VM</font>
+    <h2>1. Generate a new Proxmox VM</h2>
 
     1. Access the Proxmox web interface via HTTPS on TCP port **8006**:
         - URL: `https://<your.IP>:8006`
@@ -412,7 +412,7 @@ Select the following tabs for the installation description of your target.
     1. Tab **Network**: Using a network bridge allows the VM to show up as dedicated system in your LAN, which simplifies SSH and network application access. We recommend to use the default para-virtualised **VirtIO** adapter model. When done, click **Next**.
     1. Tab **Confirm**: Start the VM creation by clicking **Finish**.
 
-    <font size="+2">2. Download, extract and import the DietPi image</font>
+    <h2>2. Download, extract and import the DietPi image</h2>
 
     !!! info "Transferring a disk image to Proxmox"
         A DietPi disk image can be transferred to the Proxmox server via e.g. USB flash drive or by uploading it as CD/DVD ISO image. Since the import needs to be done via console (accessible via web interface and SSH), we guide you through the path of downloading it directly on the Proxmox server.
@@ -458,7 +458,7 @@ Select the following tabs for the installation description of your target.
 
 === "Parallels"
 
-    <font size="+2">Introduction</font>
+    <h2>Introduction</h2>
 
     Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
@@ -468,7 +468,7 @@ Select the following tabs for the installation description of your target.
 
     ![Parallels Desktop DietPi machine](assets/images/Parallels1.jpg){: width="896" height="504" loading="lazy"}
 
-    <font size="+2">Prerequisites</font>
+    <h2>Prerequisites</h2>
 
     As a starting point you can use an **Apple Mac with a running Parallels Desktop software** on which the DietPi system will run (x86 system, e.g. Mac mini 2011/2012/2014/2018).  
     On this Mac a free harddisk space of about
@@ -478,13 +478,13 @@ Select the following tabs for the installation description of your target.
 
     is needed. A recommended size is at least a free space of 10 GiB.
 
-    <font size="+2">1. Download and extract the DietPi disk image</font>
+    <h2>1. Download and extract the DietPi disk image</h2>
 
     Download the **DietPi Parallels** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}.
 
     Double click on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.pvm` file to the Parallels directory (typically directory "Parallels" within your home directory).
 
-    <font size="+2">2. Open the virtual machine in Parallels Desktop</font>
+    <h2>2. Open the virtual machine in Parallels Desktop</h2>
 
     As next, the Parallels virtual machine is opened by just double click the `.pvm` file. Then the machine starts up.
 
@@ -492,7 +492,7 @@ Select the following tabs for the installation description of your target.
 
 === "UTM"
 
-    <font size="+2">Introduction</font>
+    <h2>Introduction</h2>
 
     Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
@@ -502,7 +502,7 @@ Select the following tabs for the installation description of your target.
 
     ![UTM Desktop DietPi machine](assets/images/UTM1.png){: width="900" height="506" loading="lazy"}
 
-    <font size="+2">Prerequisites</font>
+    <h2>Prerequisites</h2>
 
     As a starting point you can use an **Apple Mac with macOS 11 Big Sur or higher running the UTM software** (x86 system, e.g. Mac mini 2011/2012/2014/2018 as well as M1 Apple silicon).  
     On this Mac a free harddisk space of about
@@ -520,13 +520,13 @@ Select the following tabs for the installation description of your target.
         The available DietPi UTM image is an image which is x86 based. On a M1 Mac it will run with lower performance because it uses the slower emulation and not the faster virtualization technique.  
         If you plan to run DietPi on an M1 Mac with UTM, it is a good choice to create a native `aarch64` DietPi image for getting the best performance. This can be achieved by adding a new UTM VM via the `+` option in the UTM program. Then a new VM can be generated by using a standard Debian image for the `arm64` architecture Native PCs (e.g. with the `mini.iso` image) and afterwards executing the scripts described in [Make your own distribution](https://dietpi.com/docs/hardware/#make-your-own-distribution).  
 
-    <font size="+2">1. Download and extract the DietPi disk image</font>
+    <h2>1. Download and extract the DietPi disk image</h2>
 
     Download the **DietPi UTM** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}.
 
     Double click on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.utm` file to the UTM virtual machine directory. This is typically located within the (hidden) user subdirectory `.../Library/Containers/com.utmapp.UTM/Data/Documents`.
 
-    <font size="+2">2. Import the virtual machine in UTM</font>
+    <h2>2. Import the virtual machine in UTM</h2>
 
     As next, start resp. restart the UTM program. The imported DietPi virtual machine should be visible there.
 
@@ -538,7 +538,7 @@ Select the following tabs for the installation description of your target.
 
 === "Hyper-V"
 
-    ## Introduction
+    <h2>Introduction</h2>
 
     Virtual machine images are great for those occasions where you want to set up a DietPi system very quickly and test things. Also it may be used as a Debian based Linux system with a small footprint for development purposes, e.g. with the X11 window system. The small footprint makes it optimally usable on PCs without a huge built in RAM. Also several VMs may be run for different applications.
 
@@ -551,7 +551,7 @@ Select the following tabs for the installation description of your target.
     !!! info "Tested with Windows 10"
         This description relates to Hyper-V on a Microsoft Windows system.
 
-    ## Prerequisites
+    <h2>Prerequisites</h2>
 
     As a starting point you need a **PC with a activated Hyper-V** on which the DietPi system will run.
 
@@ -567,7 +567,7 @@ Select the following tabs for the installation description of your target.
 
     is needed. A recommended size is at least a free space of 10 GiB.
 
-    ## 1. Download and extract the DietPi disk image
+    <h2>1. Download and extract the DietPi disk image</h2>
 
     Download the **DietPi Hyper-V** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
@@ -575,7 +575,7 @@ Select the following tabs for the installation description of your target.
 
     The archive contains the DietPi `README.md`, the `.vhdx` virtual disk image and a `hash.txt`, which contains hashes to check the integrity of the virtual disk image. Move the `.vhdx` file to the desired virtual machine folder on your harddisk.
 
-    ## 2. Add a Hyper-V virtual machine
+    <h2>2. Add a Hyper-V virtual machine</h2>
 
     Next, a Hyper-V machine needs to be created. Start the Hyper-V-Manager, right click on your PCs node in the left tree and open the dialog wizard for the machine generation ("New" -> "Virtual Machine"):
 
@@ -593,7 +593,7 @@ Select the following tabs for the installation description of your target.
 
     ![Hyper-V network management](assets/images/dietpi-HyperV-manage-network.png){: width="250" height="284" loading="lazy"}
 
-    ## 3. First boot of the new Hyper-V machine
+    <h2>3. First boot of the new Hyper-V machine</h2>
 
     First, click on ***Connect*** to open a window of the virtual machine:
 
@@ -614,9 +614,9 @@ Select the following tabs for the installation description of your target.
 
         Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
 
-    ## Additional information / troubleshooting
+    <h2>Additional information / troubleshooting</h2>
 
-    ### Network connection not found
+    <h3>Network connection not found</h3>
 
     In the case that you did not setup your network configuration properly, the booting procedure will not find a network connection and may respond with this boot console output:
 
@@ -624,12 +624,13 @@ Select the following tabs for the installation description of your target.
 
     Then you have to check and repair your network configuration within the **Virtual Switch Manager**.
 
-    <font size="+1">**Generate a Hyper-V Generation 2 machine**</font>  
+    <h3>Generate a Hyper-V Generation 2 machine</h3>
+
     An option to get a Hyper-V Generation 2 machine is to generate your own Hyper-V image via a **Debian network installation** (booting the Hyper-V machine from a Debian `netinst.iso` installer like you would do it on a PC). Install a minimal Debian machine (i.e. no X11 desktops, etc.). Afterwards run the procedure described in section ["Make your own distribution"](../hardware/#make-your-own-distribution). Generation 2 machines support (and require) to boot in UEFI mode, support [Secure Boot](https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface#Secure_Boot), [TPM](https://en.wikipedia.org/wiki/Trusted_Platform_Module), use modern SCSI controllers and have higher hardware limits. For use as a home server, however, you will not need any of these functions.
 
 === "Native PC"
 
-    ## Introduction
+    <h2>Introduction</h2>
 
     The Native PC images are great for those occasions where SBC performance is just not enough. One example could be [Intel NUC Kit](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits.html?page=2). It is a small, versatile, upgradable, and affordable desktop PC with the same basic feature set as that of a much larger machine.
 
@@ -648,7 +649,7 @@ Select the following tabs for the installation description of your target.
 
     === "UEFI installer image"
 
-        ## Prerequisites
+        <h2>Prerequisites</h2>
 
         You would need the next:
 
@@ -656,7 +657,7 @@ Select the following tabs for the installation description of your target.
         - one **bootable USB drive** (e.g. flash disk, at least 2 GiB), to hold the DietPi installer image and to boot the target PC
         - **target PC** to be installed
 
-        ## 1. Download and extract the DietPi installer image
+        <h2>1. Download and extract the DietPi installer image</h2>
 
         Download the **Native PC for UEFI** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and
         extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
@@ -668,7 +669,7 @@ Select the following tabs for the installation description of your target.
         !!! warning "Be careful if you run alternative applications!"
             While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
 
-        ## 2. Write image to USB drive
+        <h2>2. Write image to USB drive</h2>
 
         Start [Rufus](https://rufus.ie/) application and make sure you have your USB drive inserted into your computer. Follow the next steps:
 
@@ -685,7 +686,7 @@ Select the following tabs for the installation description of your target.
 
         ![Rufus UEFI installer image selections screenshot](assets/images/dietpi-rufus-uefi-installer.png){: width="473" height="579" loading="lazy"}
 
-        ## 3. Boot the target PC and install the image on the local disk
+        <h2>3. Boot the target PC and install the image on the local disk</h2>
 
         Boot the **target PC** from the USB image and install the image on the local disk / harddisk. Put the USB stick into the target PC and boot from this USB stick.  
 
@@ -734,7 +735,7 @@ Select the following tabs for the installation description of your target.
 
     === "BIOS installer image"
 
-        ## Prerequisites
+        <h2>Prerequisites</h2>
 
         You would need the next:
 
@@ -744,7 +745,7 @@ Select the following tabs for the installation description of your target.
 
         Remark: If your PC is not able to boot from a USB drive you can do a similar installation by burning the installer image onto a DVD and boot from the DVD. The same installation procedure will take place. Do not forget to eject your DVD before the installed DietPi shall boot from the hard disc for the first time.
 
-        ## 1. Download and extract the DietPi installer image
+        <h2>1. Download and extract the DietPi installer image</h2>
 
         Download the **Native PC for BIOS/CSM** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and
         extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
@@ -753,7 +754,7 @@ Select the following tabs for the installation description of your target.
 
         Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
-        ## 2. Write image to USB drive
+        <h2>2. Write image to USB drive</h2>
 
         Start [Rufus](https://rufus.ie/) application and make sure you have your USB drive inserted into your computer. Follow the next steps:
 
@@ -769,7 +770,7 @@ Select the following tabs for the installation description of your target.
 
         ![Rufus BIOS installer image selections screenshot](assets/images/dietpi-rufus-bios-installer.png){: width="474" height="580" loading="lazy"}
 
-        ## 3. Boot the target PC and install the image on the local disk
+        <h2>3. Boot the target PC and install the image on the local disk</h2>
 
         Boot the **target PC** from the USB image and install the image on the local disk / harddisk. Put the USB stick into the target PC and boot from this USB stick.  
 
@@ -814,7 +815,7 @@ Select the following tabs for the installation description of your target.
 
     === "BIOS direct write image"
 
-        ## Prerequisites
+        <h2>Prerequisites</h2>
 
         You would need the next:
 
@@ -822,7 +823,7 @@ Select the following tabs for the installation description of your target.
         - one **disc drive**, to hold the DietPi system. It is written with the direct write image and will be the disk drive in the DietPi system.
         - **target PC** to be installed
 
-        ## 1. Download and extract the DietPi direct write image
+        <h2>1. Download and extract the DietPi direct write image</h2>
 
         Download the **Native PC for BIOS/CSM** > **Direct write Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and
         extract the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
@@ -831,7 +832,7 @@ Select the following tabs for the installation description of your target.
 
         Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
-        ## 2. Write image to disc drive
+        <h2>2. Write image to disc drive</h2>
 
         Start [Rufus](https://rufus.ie/) application and make sure you have your disc drive connected into your computer. This may e.g. be done using an USB to SATA controller if you use a SATA disc drive. Follow the next steps:
 
@@ -848,7 +849,7 @@ Select the following tabs for the installation description of your target.
 
         ![Rufus BIOS direct write image selections screenshot](assets/images/dietpi-rufus-bios-direct-write-image.png){: width="474" height="607" loading="lazy"}
 
-        ## 3. Boot the target PC
+        <h2>3. Boot the target PC</h2>
 
         ??? info "Click here if you want to use a WiFi connection"
             To setup the WiFi, you have to change the network settings matching to your environment:
