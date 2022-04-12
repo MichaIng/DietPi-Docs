@@ -1,3 +1,8 @@
+---
+title: VPN Software Options
+description: Description of DietPi software options related to VPNs
+---
+
 # VPN
 
 ## Overview
@@ -91,7 +96,7 @@ An easy to use VPN server and client system. The DietPi installation of OpenVPN 
 
 Website: <https://openvpn.net>  
 Wikipedia: <https://wikipedia.org/wiki/OpenVPN>  
-Installation article (German language): [`PiVPN: Raspberry Pi mit OpenVPN – Raspberry Pi Teil3`](https://www.kuketz-blog.de/pivpn-raspberry-pi-mit-openvpn-raspberry-pi-teil3/)
+Installation article (German language): [PiVPN: Raspberry Pi mit OpenVPN – Raspberry Pi Teil3](https://www.kuketz-blog.de/pivpn-raspberry-pi-mit-openvpn-raspberry-pi-teil3/){:class="nospellcheck"}
 
 ## PiVPN
 

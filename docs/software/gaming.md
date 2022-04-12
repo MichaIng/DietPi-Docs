@@ -1,3 +1,8 @@
+---
+title: Gaming and Emulation Software Options
+description: Description of DietPi software options related to games and userspace emulation
+---
+
 # Gaming & Emulation
 
 ## Overview
@@ -10,7 +15,8 @@
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth)
 - [**Steam - Steam client**](#steam)
 - [**PaperMC - Fast and optimised Minecraft server**](#papermc)
-- [**Box86 - x86 userspace emulation for ARM**](#box86)
+- [**Box86 - i386 userspace emulation for ARMv7**](#box86)
+- [**Box64 - x86_64 userspace emulation for ARMv8**](#box64)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -115,10 +121,10 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
     The web interface is accessible via port **8443**:
 
-    - URL = `https://<your.IP>:8443`  
+    - URL: `https://<your.IP>:8443`  
       You can safely ignore the certificate "warning" if one appears.
-    - Username = `root`
-    - Password = `<globalSoftwarePassword>` (default: `dietpi`)
+    - Username: `root`
+    - Password: The same as your root login password. Default is `dietpi`
 
 === "1st run setup"
 
@@ -138,9 +144,9 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
 ***
 
-YouTube video tutorial: *How to Install MineOS on Raspberry Pi 4 using Diet Pi OS*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/5WxRBTmXbwk?rel=0" frameborder="0" allow="fullscreen"  width="560" height="315" loading="lazy"></iframe>
+Official forum: <https://discourse.codeemo.com/>  
+Source code: <https://github.com/hexparrot/mineos-node>  
+License: [GPLv3](https://github.com/hexparrot/mineos-node/blob/master/LICENSE.md)
 
 ## Nukkit
 
@@ -176,7 +182,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
 - Keyboard + mouse is highly recommended.
 - We also offer a completely automated installation image for Amiberry. Please see: <https://blitterstudio.com/amiberry/>.
-- Direct download link: <https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster_Amiberry.7z>.
+- Direct download link: <https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Bullseye_Amiberry.7z>.
 
 ![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: width="400" height="189" loading="lazy"}
 
@@ -359,7 +365,7 @@ Descent 1 & 2. A masterpiece 3D FPS. Brought back to life with the DXX-Rebirth p
 
 ***
 
-Website: <http://www.dxx-rebirth.com/>
+Official website: <https://www.dxx-rebirth.com/>
 
 ## Steam
 
@@ -421,9 +427,10 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
     1. Run `dietpi-services` from console.
     2. Select `papermc`.
     3. Select `Edit`.
-    4. Uncomment the line that starts with `#ExecStart=` (remove the leading `#`) and add/change e.g. `-Xms1G -Xmx1G` right behind the `java` command to apply 1 GiB heap size, so that the line looks like this:
+    4. Uncomment the line that starts with `#ExecStart=` (remove the leading `#`) and add/change e.g. `-Xms1G -Xmx1G` right behind the `java` command to apply 1 GiB heap size. Additionally you need to add an `ExecStart=` above to unset the command of the original service, so that it finally looks like this:
 
         ```
+        ExecStart=
         ExecStart=/usr/bin/java -Xms1G -Xmx1G -jar /opt/papermc/paperclip.jar --nogui --noconsole
         ```
 
@@ -465,11 +472,15 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
 ***
 
-Website: <https://paper.readthedocs.io>  
+Official website: <https://paper.readthedocs.io>  
 Source code: <https://github.com/PaperMC/Paper>
 
 ## Box86
 
-Box86 lets you run x86 Linux programs (such as games) on non-x86 Linux, like ARM. Note that this only works on ARMv7. To use it just run an x86 file or run `box86 /path/to/file`.
+Box86 lets you run **i386** Linux programs (such as games) on **ARMv7** systems. Thanks to [binfmt_misc](https://en.wikipedia.org/wiki/Binfmt_misc), which is enabled by default, you can execute **i386** binaries like every other executable and Box86 is invoked automatically.
+
+## Box64
+
+Box64 lets you run **x86_64** Linux programs (such as games) on **ARMv8** systems. Thanks to [binfmt_misc](https://en.wikipedia.org/wiki/Binfmt_misc), which is enabled by default, you can execute **x86_64** binaries like every other executable and Box64 is invoked automatically.
 
 [Return to the **Optimised Software list**](../../software/)

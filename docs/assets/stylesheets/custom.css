@@ -1,0 +1,95 @@
+/* Colours */
+:root {
+    --md-accent-fg-color: #9ccc00;
+    --md-primary-fg-color: #7b952f;
+    --md-primary-fg-color--dark: #164046;
+}
+
+:root>* {
+    --md-footer-bg-color: #9ccc00;
+    --md-footer-bg-color--dark: #164046;
+}	
+
+@media screen and (max-width: 76.1875em) {
+    .md-nav--primary .md-nav__title {
+        background-color: #9ccc00 !important;
+        border-bottom: 1px solid #9ccc00 !important;
+        color: #000 !important;
+    }
+
+    .md-nav--primary .md-nav__title a:hover {
+        color: #164046;
+    }
+}
+
+/* Announcement */
+
+.md-banner {
+    background-color: #164046;
+}
+
+.md-banner a {
+    color: #fff;
+}
+
+/* Header */
+
+.md-header {
+    background-color: #9ccc00;
+    color: #000;
+}
+
+.md-header a:is(:focus,:hover) {
+    color: #164046;
+}
+
+/* Primary navigation */
+
+.md-tabs {
+    background-color: #9ccc00;
+    color: #000;
+}
+
+.md-tabs a:is(:focus,:hover) {
+    color: #164046;
+}
+
+/* Images: Reduce max width to 95% of container width */
+.md-typeset img,
+.md-typeset svg {
+    max-width: 95%;
+}
+
+/* Tables */
+
+.md-typeset table:not([class]) th {
+    min-width: 15rem;
+    background-color: #6c6c6c;
+    font-size: medium;
+}
+
+.md-typeset table:not([class]) td {
+    vertical-align: middle;
+}
+
+.table {
+    font-size: medium;
+}
+
+/* Footer */
+
+.md-footer {
+    color: #000;
+}
+
+.md-footer__inner a:is(:focus,:hover) {
+    color: #164046;
+}
+
+.md-footer-meta {
+    background-color: #164046;
+}
+
+.md-footer-meta a:is(:focus,:hover) {
+    color: #9ccc00 !important;
+}

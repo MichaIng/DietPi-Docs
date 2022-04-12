@@ -1,3 +1,8 @@
+---
+title: Distributed Projects Software Options
+description: Description of DietPi software options related to distributed software projects
+---
+
 # Distributed Projects
 
 ## Overview
@@ -113,6 +118,14 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
     ```sh
     apt update
     apt upgrade
+    ```
+
+=== "View logs"
+
+    Tor service logs can be viewed with the following command:
+
+    ```sh
+    journalctl -t tor
     ```
 
 ***

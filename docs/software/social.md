@@ -1,4 +1,9 @@
-# Social / Search
+---
+title: Social and Publishing Software Options
+description: Description of DietPi software options related to social platforms and publishing servers
+---
+
+# Social & Search
 
 ## Overview
 
@@ -8,6 +13,7 @@
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
 - [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](#openbazaar)
+- [**Synapse - Decentralized communication with the Matrix protocol**](#synapse)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -202,22 +208,118 @@ Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
 
 ![OpenBazaar client screenshot](../assets/images/dietpi-software-social-openbazaar.png){: width="400" height="240" loading="lazy"}
 
-=== "OpenBazaar Client"
+=== "OpenBazaar client setup"
 
-    The client will allow you to browse and trade, within the OpenBazaar market network.  
-    <https://www.openbazaar.org/download/>
+    The client will allow you to browse and trade within the OpenBazaar market network.
 
-=== "Connecting OpenBazaar Client to your OpenBazaar Server"
+    1. Download the client from: <https://github.com/mobazha/openbazaar-desktop/releases>
+        - Expand "Assents" below the latest releases
+        - For Windows, download `OpenBazaar2Client-x.y.z-Setup-64.exe`
+    2. Start the OpenBazaar client and add your server:
+        - Click "New"
+        - Enter the IPv4 address of your DietPi device, the username and password you entered during the OpenBazaar server install
+        - Turn off SSL, unless you manually enabled it, including TLS certificate setup
 
-    Step 1:  
-    During installation, you will be asked to enter a username, password, and allowed IP address.
+=== "Configuration"
 
-    Step 2:  
-    Next, you will need to open the OpenBazaar Client and add your server:
+    - Config and data directory:  
+        `/mnt/dietpi_userdata/openbazaar`
+    - Main config file:  
+        `/mnt/dietpi_userdata/openbazaar/config`
 
-    - Click Menu (top right)
-    - Click New Server
-    - Select Standalone
-    - Enter the IP address of your DietPi device, and, the username and password you applied in step 1.
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart openbazaar
+    ```
+
+=== "Service handling"
+
+    The DietPi OpenBazaar implementation creates a systemd service `openbazaar.service` to start and control the OpenBazaar server. The following commands can be used:
+
+    - Start: `systemctl start openbazaar`
+    - Stop: `systemctl stop openbazaar`
+    - Restart: `systemctl restart openbazaar`
+    - Print status: `systemctl status openbazaar`
+
+=== "View logs"
+
+    Logs are done to the system journal an can be viewed via:
+
+    ```sh
+    journalctl -u openbazaar
+    ```
+
+***
+
+Source code: <https://github.com/mobazha/openbazaar-go>  
+License: [MIT](https://github.com/mobazha/openbazaar-go/blob/master/LICENSE)
+
+## Synapse
+
+Synapse is a server, written in Python, for communication using the Matrix protocol.
+
+=== "Client"
+
+    For communicating with Synapse, you can use [Element](https://element.io/), however any client that supports the Matrix protocol should work.
+
+=== "Federation"
+
+    Synapse is by default set up to be a private server, with no connection to any other servers. To connect to other servers (federate), see https://github.com/matrix-org/synapse/blob/develop/docs/federate.md.  Note that frp does not currently work with Synapse.
+
+=== "Configuration"
+
+    - Config directory:  
+        `/mnt/dietpi_userdata/synapse`
+    - Main config file:  
+        `/mnt/dietpi_userdata/synapse/homeserver.yaml`
+    - DietPi config override:  
+        `/mnt/dietpi_userdata/synapse/homeserver.yaml.d/00-dietpi.yaml`  
+        This also contains the PostgreSQL database details and that file is hence only readable to root or the `synapse` user.
+
+    To add or change settings, best practice is to create a new override configuration, e.g.:
+
+    ```
+    /mnt/dietpi_userdata/synapse/homeserver.yaml.d/99-local.yaml
+    ```
+
+    For changes to take effect, the service needs to be reloaded:
+
+    ```sh
+    systemctl reload synapse
+    ```
+
+=== "Service handling"
+
+    The DietPi Synapse implementation creates a systemd service `synapse.service` to start and control the Synapse server. The following commands can be used:
+
+    - Start: `systemctl start synapse`
+    - Stop: `systemctl stop synapse`
+    - Restart: `systemctl restart synapse`
+    - Reload config: `systemctl reload synapse`
+    - Print status: `systemctl status synapse`
+
+=== "View logs"
+
+    Logs are done to the system journal an can be viewed via:
+
+    ```sh
+    journalctl -u synapse
+    ```
+
+=== "Update to latest version"
+
+    Since Synapse is installed via Python 3 pip, you can update it via:
+
+    ```sh
+    pip3 install -U matrix-synapse
+    ```
+
+***
+
+Official website: <https://matrix.org/>  
+Official documentation: <https://matrix.org/docs/guides>  
+Source code: <https://github.com/matrix-org/synapse>  
+License: [Apache 2.0](https://github.com/matrix-org/synapse/blob/develop/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)

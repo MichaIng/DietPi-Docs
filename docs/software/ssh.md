@@ -1,3 +1,8 @@
+---
+title: SSH Server Choices
+description: Description of DietPi SSH server options
+---
+
 # SSH Server Choices
 
 ## Overview
@@ -39,7 +44,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
 === "Windows SSH client"
 
-    On Windows, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and [KiTTY](http://www.9bis.net/kitty/) are recommended SSH clients.
+    On Windows, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and [KiTTY](https://www.9bis.net/kitty/) are recommended SSH clients.
 
 ***
 
@@ -64,7 +69,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
 === "Windows SSH client"
 
-    On Windows, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and [KiTTY](http://www.9bis.net/kitty/) are recommended SSH clients.
+    On Windows, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and [KiTTY](https://www.9bis.net/kitty/) are recommended SSH clients.
 
 === "Windows SFTP/SCP client"
 

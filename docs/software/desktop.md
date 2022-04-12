@@ -1,3 +1,8 @@
+---
+title: Graphical Desktop Environments and Utilities
+description: Description of DietPi software options related to graphical desktop environments and additional desktop utilities
+---
+
 # Desktop environments & utilities
 
 ## Overview

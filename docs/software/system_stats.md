@@ -1,13 +1,21 @@
+---
+title: System Statistics and Management Options
+description: Description of DietPi software options related to system statistics, monitoring and management
+---
+
 # System Stats & Management
 
 ## Overview
 
+- [**DietPi-Dashboard - Official lightweight standalone DietPi web interface**](#dietpi-dashboard)
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](#dietpi-cloudshell)
 - [**Linux Dash - Web interface system stats**](#linux-dash)
 - [**phpSysInfo - Web interface system stats**](#phpsysinfo)
 - [**RPi-Monitor - Web interface system stats**](#rpi-monitor)
 - [**Netdata - Web interface system stats**](#netdata)
 - [**Webmin - Remote system management with web interface**](#webmin)
+- [**K3s - Lightweight Kubernetes**](#k3s)
+- [**MicroK8s - Low-ops, minimal production Kubernetes**](#microk8s)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -24,6 +32,121 @@
     To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
 
 [Return to the **Optimised Software list**](../../software/)
+
+## DietPi-Dashboard
+
+DietPi-Dashboard is a very lightweight and standalone web interface for monitoring and managing your DietPi system with your favourite web browser. It is written in Rust. An overview of its features is given by our article [here](https://dietpi.com/blog/?p=1137).
+
+![DietPi-Dashboard screenshot](../assets/images/dietpi-dashboard.jpg){: width="700" height="346" loading="lazy"}
+
+!!! warning "DietPi-Dashboard is still in Beta!"
+
+    We hence do not recommend to actively use it on sensitive production systems yet.
+
+=== "Web interface"
+
+    DietPi-Dashboard is accessible by default at TCP port **5252**:
+
+    - URL: `http://<your.IP>:5252`
+    - Password: `<your software password>` (default: `dietpi`)
+
+=== "Directories"
+
+    The DietPi-Dashboard executable and its configuration file can be found at:
+
+    ```
+    /opt/dietpi-dashboard
+    ```
+
+=== "Configuration"
+
+    The configuration file is located at:
+
+    ```
+    /opt/dietpi-dashboard/config.toml
+    ```
+
+    When doing changes, you need to restart the service afterwards:
+
+    ```sh
+    systemctl restart dietpi-dashboard
+    ```
+
+=== "Password protection"
+
+    Password protection is enabled by default from DietPi v7.9 on. If you installed it before, you'll need to enable it via configuration file. For this, create a SHA512 hash of the `PASSWORD` you want to use for logging into the web interface, and a random 64-character secret which is used to generate a token to transfer and store securely in your browser. Apply those to the configuration file and restart the service for the changes to take effect:
+
+    ```sh
+    hash=$(echo -n 'PASSWORD' | sha512sum | mawk '{print $1}')
+    secret=$(openssl rand -hex 32)
+    G_CONFIG_INJECT 'pass[[:blank:]]' 'pass = true' /opt/dietpi-dashboard/config.toml
+    GCI_PASSWORD=1 G_CONFIG_INJECT 'hash[[:blank:]]' "hash = \"$hash\"" /opt/dietpi-dashboard/config.toml
+    GCI_PASSWORD=1 G_CONFIG_INJECT 'secret[[:blank:]]' "secret = \"$secret\"" /opt/dietpi-dashboard/config.toml
+    unset -v hash secret
+    systemctl restart dietpi-dashboard
+    ```
+
+    To change the password, just replace the hash in the config file and restart the service.
+
+    If you want to force a logout of all browsers without changing the password, you can instead change the secret. Generate an apply a new secret to the configuration file and restart the service. Every client and browser will then need to login again to continue using the DietPi-Dashboard, as the stored token that is based on password and secret has been invalidated.
+
+=== "Multiple nodes"
+
+    From DietPi v8.0 on, you can install DietPi-Dashboard as backend only node, with does not include an own web interface. Such backend only nodes can then be accessed from another full DietPi-Dashboard frontend/web interface. Additional nodes would need to be added manually into configuration file located at:
+
+    ```
+    /opt/dietpi-dashboard/config.toml
+    ```    
+
+    When doing changes, you need to restart the service afterwards:
+
+    ```sh
+    systemctl restart dietpi-dashboard
+    ```
+
+    !!! hint "Full DietPi-Dashboard nodes with frontend included can currently not be accessed from other frontends."
+
+=== "Service control"
+
+    DietPi-Dashboard by default is started as systemd service and can hence be controlled with the following commands:
+
+    ```sh
+    systemctl status dietpi-dashboard
+    ```
+
+    ```sh
+    systemctl stop dietpi-dashboard
+    ```
+
+    ```sh
+    systemctl start dietpi-dashboard
+    ```
+
+    ```sh
+    systemctl restart dietpi-dashboard
+    ```
+
+=== "Logs"
+
+    Service logs can be reviewed with the following command:
+
+    ```sh
+    journalctl -u dietpi-dashboard
+    ```
+
+=== "Update"
+
+    You can easily update DietPi-Dashboard by reinstalling it and restarting the service for the change to take effect:
+
+    ```sh
+    dietpi-software reinstall 200
+    systemctl restart dietpi-dashboard
+    ```
+
+***
+
+Source code: <https://github.com/ravenclaw900/DietPi-Dashboard>  
+License: [GPLv3](https://github.com/ravenclaw900/DietPi-Dashboard/blob/main/LICENSE)
 
 ## DietPi-CloudShell
 
@@ -90,7 +213,7 @@ YouTube video tutorial: *DietPi CloudShell (RPi / Odroid XU4)*
 
 === "Waveshare32"
 
-    See <http://www.waveshare.com/3.2inch-rpi-lcd-b.htm>.  
+    See <https://www.waveshare.com/3.2inch-rpi-lcd-b.htm>.  
     This is available for all Raspberry Pi and Odroid versions. DietPi will automatically configure your system for the device.  
     Simply run `dietpi-config`, select `Display Options`, then select `waveshare32`.   
     After a reboot, your *Waveshare32* will become active.
@@ -248,7 +371,114 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
 ***
 
 Official website: <https://webmin.com/>  
-Official documentation: <https://doxfer.webmin.com/Webmin/Main_Page>  
+<!--Official documentation: <https://doxfer.webmin.com/Webmin/Main_Page>  -->
 Wikipedia: <https://wikipedia.org/wiki/Webmin>
+
+## K3s
+
+Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & Edge computing
+
+![K3s logo](../assets/images/logo-k3s.svg){: width="300" height="116" loading="lazy"}
+
+=== "Before installation"
+
+    The default installation of K3s creates a single-node cluster.
+    If you want to have a multi-node setup, you need to configure the nodes to speak to the others.
+
+    In `/boot/dietpi.txt`, edit the `SOFTWARE_K3S_EXEC` parameter to set command (`server` or `agent`).
+    You can add other command-line parameters after the command.
+
+    Example:
+
+    ```
+    SOFTWARE_K3S_EXEC=server --disable=local-storage
+    ```
+
+    If you need to add many command-line parameters, it is recommended to put them in a file instead,
+    keeping only the command (`server` or `agent`) in `/boot/dietpi.txt`.
+    During installation, if `/boot/dietpi-k3s.yaml` exists, it is copied to `/etc/rancher/k3s/config.yaml`, and used by K3s.
+    The format of this file is documented in the [K3s docs](https://rancher.com/docs/k3s/latest/en/installation/install-options/#configuration-file).
+
+=== "Connecting to your cluster"
+
+    When running in `server` mode, K3s generates a `kubeconfig` file at `/etc/rancher/k3s/k3s.yaml`.
+    Copy this to your client machine, and edit the `server` setting to point to the hostname of the server.
+
+    Place the file in the default location (`~/.kube/config`), or point to it using the `KUBECONFIG` environment-variable.
+
+    You should now be able to interact with your Kubernetes cluster using `kubectl`:
+
+    ```sh
+    kubectl get nodes
+    kubectl get pods -A
+    ```
+
+=== "View logs"
+
+    - Service: `journalctl -u k3s`
+
+***
+
+Official website: <https://k3s.io>  
+Official documentation: <https://rancher.com/docs/k3s/latest/en/>  
+Source code: <https://github.com/k3s-io/k3s>  
+License: [Apache 2.0](https://github.com/k3s-io/k3s/blob/master/LICENSE)
+
+## MicroK8s
+
+High availability - Low-ops, minimal production Kubernetes, for developers, cloud, clusters, workstations, Edge and IoT.
+
+![MicroK8s logo](../assets/images/microk8s.png){: width="300" height="150" loading="lazy"}
+
+=== "Connecting to your cluster"
+
+    To create a cluster out of two or more already-running MicroK8s instances, use the `microk8s` add-node command:
+
+    ```sh
+    microk8s add-node
+    ```
+
+    From the node you wish to join to this cluster, run the following:
+
+    ```sh
+    microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
+    ```
+
+    Use the `--worker` flag to join a node as a worker not running the control plane, e.g.:
+
+    ```sh
+    microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
+    ```
+
+    For most commands, you can use `microk8s` in front like below.
+
+    ```sh
+    microk8s kubectl get nodes
+    microk8s kubectl get napspaces
+    ```
+
+    MicroK8s does provide a few "addons", which can be seen below with the enable and disable command.
+
+    ```sh
+    microk8s status # to view the addons
+    microk8s enable dns # to enable addons
+    microk8s enable dashboard # to enable Kubernetes dashboard
+    ```
+
+=== "View logs"
+
+    Per-node log files can be in:
+
+    ```
+    /var/log/pods
+    ```
+
+***
+
+Official website: <https://microk8s.io/>  
+Official documentation: <https://microk8s.io/docs>  
+Addons documentation: <https://microk8s.io/docs/addons>  
+Source code: <https://github.com/ubuntu/microk8s>  
+License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)

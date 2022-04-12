@@ -1,15 +1,15 @@
-<h1 align="center"><img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi Logo"></h1>
+<h1 align="center"><img src="https://raw.githubusercontent.com/MichaIng/DietPi-Website/master/images/dietpi-logo_180x180.png" alt="DietPi logo" width="180" height="180" loading="lazy"></h1>
 <p align="center">
-  <b>Lightweight justice for your single-board computer!</b>
-  <br><br>
-  optimised • simplified • for everyone
-  <br><br>
-  <a href="https://dietpi.com/">Website</a> • <a href="https://dietpi.com/docs/">Documentation</a> • <a href="https://dietpi.com/#download">View all supported platforms</a> • <a href="https://dietpi.com/phpbb/">Forum</a>
+    <b>Lightweight justice for your single-board computer!</b>
+    <br><br>
+    optimised • simplified • for everyone
+    <br><br>
+    <a href="https://dietpi.com/" target="_blank" rel="noopener">Website</a> • <a href="https://dietpi.com/#download" target="_blank" rel="noopener">Downloads</a> • <a href="https://dietpi.com/docs/" target="_blank" rel="noopener">Documentation</a> • <a href="https://dietpi.com/phpbb/" target="_blank" rel="noopener">Forum</a> • <a href="https://dietpi.com/blog/" target="_blank" rel="noopener">Blog</a>
 </p>
 <hr>
 <p align="center">
-  <strong>Ready to run</strong> optimised software choices with <a href="https://dietpi.com/dietpi-software.html"><strong>dietpi-software</strong></a>
-  <br>Feature-rich configuration tool for your device with <strong>dietpi-config</strong>.
+    <strong>Ready to run</strong> optimised software choices with <a href="https://dietpi.com/dietpi-software.html" target="_blank" rel="noopener"><strong>dietpi-software</strong></a>
+    <br>Feature-rich configuration tool for your device with <strong>dietpi-config</strong>.
 </p>
 <hr>
 
@@ -22,7 +22,7 @@ It uses extended Markdown, as implemented by [MkDocs](https://www.mkdocs.org/).
 
 ## Building the documentation
 
-- Install dependencies: `pip3 install -r requirements.txt`
+- Install/update dependencies: `pip3 install -Ur requirements.txt`
 - From the root directory, run: `mkdocs serve`
 
 It builds the static HTML pages into a temporary directory and starts a local web server at `http://localhost:8000`. If you have troubles accessing the MkDocs website, you could also listen on a specific IP address or all IP addresses, e.g. `mkdocs serve -a 0.0.0.0:8000`.

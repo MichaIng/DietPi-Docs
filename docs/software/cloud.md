@@ -1,3 +1,8 @@
+---
+title: Cloud and Backup Systems Software Options
+description: Description of DietPi software options related to cloud and backup systems
+---
+
 # Cloud & Backup systems
 
 ## Overview
@@ -14,6 +19,7 @@
 - [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](#firefox-sync-server)
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
+- [**File Browser - Light web based file manager with sharing features**](#file-browser)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -42,22 +48,26 @@ Also Installs:
 
 ![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png){: width="400" height="218" loading="lazy"}
 
-=== "Access to the web interface"
+=== "Quick start"
 
-    - URL = `http://<your.IP>/owncloud`
-    - Username = `admin`
-    - Password = `<your global password>` (default: `dietpi`)
+    ownCloud is accessible via regular HTTP/HTTPS TCP ports **80**/**443** below the `/owncloud` path:
 
-    If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).
+    - URL: `http://<your.IP>/owncloud`
+    - Username: `admin` (or the one you set in `dietpi.txt`)
+    - Password: `<your global password>` (default: `dietpi`)
 
-    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`.  
-    Just use inside your terminal:
+=== "Configuration"
+
+    You can configure ownCloud via CLI from command line. To simplify this, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`.  
+    Simply run `occ` from your console:
 
     ```sh
     occ list
     ```
 
-=== "Update ownCloud to the latest version"
+    More details about available commands can be found in the [ownCloud admin manual](https://doc.owncloud.com/server/next/admin_manual/configuration/server/occ_command.html#core-commands).
+
+=== "Update"
 
     1. Option: Use the web-based updater from within the ownCloud web UI settings.
     2. Option: Use the updater script from console (recommended):
@@ -67,7 +77,7 @@ Also Installs:
         1
         ```
 
-    3. Follow the official documentation for a manual upgrade process: <https://doc.owncloud.com/server/admin_manual/maintenance/manual_upgrade.html>
+    3. Follow the official documentation for a manual upgrade process: <https://doc.owncloud.com/server/next/admin_manual/maintenance/upgrading/manual_upgrade.html>
 
 === "FAQ"
 
@@ -79,9 +89,9 @@ Also Installs:
 
     DietPi will automatically apply the max supported upload size to the PHP and ownCloud configs.
 
-    - 32-bit systems can handle 2 GB
-    - 64-bit systems can handle 8796 PB, yep, in petabyte
-    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024))MB"`
+    - 32-bit systems can handle 2 GiB
+    - 64-bit systems can handle 8796 PiB, yep, in petabyte
+    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024)) MiB"`
 
     **Will my data be saved after deinstallation?**
 
@@ -90,12 +100,8 @@ Also Installs:
 
 ***
 
-Website: <https://owncloud.com>  
-Official documentation: <https://doc.owncloud.org/server/admin_manual>
-
-YouTube video tutorial: *How to Install DietPi OwnCloud on Raspberry Pi*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/-OatWtH1Z9c?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Official website: <https://owncloud.com/>  
+Official documentation: <https://doc.owncloud.com/server/next/admin_manual/>
 
 ## Nextcloud
 
@@ -105,24 +111,22 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Quick start"
 
-    Nextcloud is accessible via regular HTTP/HTTPS port **80**/**443** below the `/nextcloud` path:
+    Nextcloud is accessible via regular HTTP/HTTPS ports **80**/**443** below the `/nextcloud` path:
 
-    - URL = `http://<your.IP>/nextcloud/`
-    - Username = `admin`
-    - Password = `<your global password>` (default: `dietpi`)
+    - URL: `http://<your.IP>/nextcloud`
+    - Username: `admin` (or the one you set in `dietpi.txt`)
+    - Password: `<your global password>` (default: `dietpi`)
 
-    To fast access the files, a dedicated USB hard drive is highly recommended.
+=== "Configuration"
 
-=== "Advanced configuration"
-
-    For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html).
-
-    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`.  
-    Just use inside your terminal:
+    You can configure Nextcloud via CLI from command line. To simplify this, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`.  
+    Simply run `ncc` from your console:
 
     ```sh
     ncc list
     ```
+
+    More details about available commands can be found in the [Nextcloud admin manual](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html).
 
 === "Brute-force protection"
 
@@ -197,7 +201,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
         - <https://help.nextcloud.com/t/repeated-login-attempts-from-china/6510/11?u=michaing>
         - <https://www.c-rieger.de/nextcloud-installationsanleitung/#c06>
 
-=== "Update Nextcloud to the latest version"
+=== "Update"
 
     1. Option: Use the web-based updater from within the Nextcloud web UI settings.
     2. Option: Use the updater script from console (recommended):
@@ -218,20 +222,50 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     `/mnt/dietpi_userdata/nextcloud_data` (or `dietpi.txt` choice)
 
-    **Why am I limited to 2GB file size uploads?**
+    **Why am I limited to 2 GiB file size uploads?**
 
     DietPi will automatically apply the max supported upload size to the PHP and Nextcloud configs.
 
-    - 32bit systems can handle 2 GB
-    - 64bit systems can handle 8796 PB (petabytes)
+    - 32-bit systems can handle 2 GiB
+    - 64-bit systems can handle 8796 PiB, yep, in petabyte
+    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024)) MiB"`
 
     **Will my data be saved after deinstallation?**
 
     Your user data directory will stay after deinstallation. As well a database backup will be saved to your user data directory. Thus you can easily restore your instance by reinstalling Nextcloud and restore the database dump.
 
+    **How can I check my OPcache status?**
+
+    PHP uses a so called *OPcache* to store PHP scripts in optimised *opcode* format in RAM, which speeds up browser access as the raw PHP scripts do not need to be read from disk and parsed first.  
+    The Nextcloud admin panel includes a check for sufficient OPcache settings and in case shows a recommendation for settings to apply. If such appears, we recommend to apply them with an own configuration file, e.g.:
+
+    ```sh
+    echo -e '; Custom Nextcloud OPcache settings\n; priority=99\nopcache.memory_consumption=128' > /etc/php/7.4/mods-available/custom.ini
+    phpenmod custom
+    ```
+
+    You can watch the actual usage with the pre-installed [opcache-gui](https://github.com/amnuts/opcache-gui){:class="nospellcheck"} by @amnuts.
+
+    - URL: `http://<your.IP>/opcache.php`
+
+    ![OPcache statistics page](../assets/images/OpCache_php_output.png){: width="700" height="976" loading="lazy"}
+
+    The dialog shows the cache status as well as the settings.
+
+    **What shall I do about missing `bcmath`, `gmp` and `imagick` PHP modules?**
+
+    After a fresh install via `dietpi-software`, Nextcloud shows a warning *"This instance is missing some recommended PHP modules. For improved performance and better compatibility it is highly recommended to install them."*, also described [here](https://dietpi.com/phpbb/viewtopic.php?p=27383#p27383). We propose to ignore them, `imagick` is not needed at all and a subject of discussion as of security issues, `bcmath` and `gmp` are required only if you want to use the WebAuthn passwordless authentication with Nextcloud.  
+    If you must mute those warnings, you can install the modules manually:
+
+    ```sh
+    sudo apt install php-bcmath php-gmp php-imagick libmagickcore-6.q16-6-extra
+    ```
+
+    The `imagick` related warning can be solved alternatively by disabling the `Theming` app (in the Nextcloud apps settings), if no manual theming is done to the Nextcloud instance anyway.
+
 ***
 
-Website: <https://nextcloud.com/athome>  
+Website: <https://nextcloud.com/>  
 Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>
 
 YouTube video tutorial #1: *DietPi Nextcloud Setup on Raspberry Pi 3 B Plus*.
@@ -350,34 +384,62 @@ Your very own GitHub style server, with web interface.
 
     The web interface is accessible via port **3000**:
 
-    - URL = `http://<your.IP>:3000`
+    - URL: `http://<your.IP>:3000`
 
 === "First run setup"
 
     Has to be done once, when connected to the web interface:
 
     - Change the following values only:
-        - Database = `MySQL`
-        - User = `gogs`
-        - Database password = `<your global password>` (default: `dietpi`)
-        - Repository Root Path = `/mnt/dietpi_userdata/gogs-repo`
-        - Run User = `gogs`
-        - Log Path = `/var/log/gogs`
-        - Email service settings \> From = `anyone@anyemail.com`
-    - Scroll to the bottom of page and select Install Gogs
-    - When the web address changes to localhost: and fails to load, you need to reconnect to the web page using the IP address (e.g.: `http://<your.IP>:3000`)
-    - Once the page has reloaded, you will need to click register to create the admin account
+        - Database Type: `MySQL`
+        - Host: `/run/mysqld/mysqld.sock`
+        - Password: `<your global password>` (default: `dietpi`)
+        - Repository Root Path: `/mnt/dietpi_userdata/gogs-repo`
+        - Run User: `gogs`
+        - Domain: `<your.domain/IP>`
+        - Application URL: `http://<your.domain/IP>:3000/`
+        - Log Path: `/var/log/gogs`
+    - Scroll to the bottom of page and select "Install Gogs".
+    - Depending on whether the application URL above was entered correctly/is accessible by the connected browser, you may need to reconnect to the web page using the IP address, e.g.: `http://<your.IP>:3000`
+    - Once the page has reloaded, you will need to click `Register` to create the admin account.
 
 === "External access"
 
     If you wish to allow external access to your Gogs server, you will need to setup port forwarding on your router, pointing to the IP address of your DietPi device.
 
-    - Port = 3000
-    - Protocol = TCP+UDP
+    - Port: 3000
+    - Protocol: TCP+UDP
+
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt){:class="nospellcheck"}.
+
+=== "View logs"
+
+    Initial service logs can be viewed via:
+
+    ```sh
+    journalctl -u gogs
+    ```
+
+    Daemon logs can be found in the following directory:
+
+    ```
+    /var/log/gogs
+    ```
+
+=== "Update to latest version"
+
+    You can easily update Gogs by reinstalling it. Your settings and data are preserved by this:
+
+    ```sh
+    dietpi-software reinstall 49
+    ```
 
 ***
 
-Website: <https://gogs.io>
+Official website: <https://gogs.io/>  
+Official documentation: <https://gogs.io/docs>  
+Source code: <https://github.com/gogs/gogs>  
+License: [MIT](https://github.com/gogs/gogs/blob/main/LICENSE)
 
 ## Gitea
 
@@ -389,62 +451,94 @@ Your very own GitHub style server, with web interface.
 
     The web interface is accessible via port **3000**:
 
-    - URL = `http://<your.IP>:3000`
+    - URL: `http://<your.IP>:3000`
 
 === "First run setup"
 
     Has to be done once, when connected to the web interface:
 
     - Change the following values only:
-        - MySQL database user = `gitea`
-        - MySQL database password = `<your global password>` (default: `dietpi`)
-        - Repository root path = `/mnt/dietpi_userdata/gitea/gitea-repositories`
-        - Log path = `/var/log/gitea`
-    - Scroll to the bottom of page and select Install Gitea
-    - When the web address changes to localhost: and fails to load, you need to reconnect to the web page using the IP address (e.g.: `http://<your.IP>:3000`)
-    - Once the page has reloaded, you will need to click register to create the admin account
+        - Host: `/run/mysqld/mysqld.sock`
+        - Password: `<your global password>` (default: `dietpi`)
+        - SSH Server Domain: `<your.domain/IP>`
+        - Gitea Base URL: `http://<your.domain/IP>:3000/`
+        - Log Path: `/var/log/gitea` (However, file logging is disabled by default.)
+    - Scroll to the bottom of page and select "Install Gitea".
+    - Depending on whether the base URL above was entered correctly/is accessible by the connected browser, you may need to reconnect to the web page using the IP address, e.g.: `http://<your.IP>:3000`
+    - Once the page has reloaded, you will need to click `Register` to create the admin account.
 
 === "External access"
 
     If you wish to allow external access to your Gitea server, you will need to setup port forwarding on your router, pointing to the IP address of your DietPi device.
 
-    - Port = 3000
-    - Protocol = TCP+UDP
+    - Port: 3000
+    - Protocol: TCP+UDP
 
-    If an external access is used, the activation of the package [Let’s Encrypt - Enable HTTPS / SSL](../system_security/#lets-encrypt-enable-https-ssl) is strongly recommended to increase your system security.
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt){:class="nospellcheck"}.
 
 === "Fail2Ban integration"
 
-    Using Fail2Ban your can block users after failed login attempts. This hardens your system, e.g. against brute-force attacks.
+    Using Fail2Ban your can block IP addresses after failed login attempts. This hardens your system against e.g. brute-force attacks.
 
-    - Create new filter `/etc/fail2ban/filter.d/gitea.conf`:
+    === "When using journal logging (default)"
+
+        By default Gitea logs to the systemd journal (see "View logs" tab), in which case Fail2Ban protection can be enabled with the following steps:
+
+        Create a new filter `/etc/fail2ban/filter.d/gitea.conf`:
 
         ```ini
-        # Fail2Ban filter for Gitea
-
         [Definition]
-        failregex =  .*Failed authentication attempt for .* from <HOST>
-        ignoreregex =
+        journalmatch = _SYSTEMD_UNIT=gitea.service
+        failregex = Failed authentication attempt for \x1b\[1m.+\x1b\[0m from \x1b\[1m<HOST>:\d+\x1b\[0m:
         ```
 
-    - Create new jail `/etc/fail2ban/jail.d/gitea.conf`:
+        Create a new jail `/etc/fail2ban/jail.d/gitea.conf`:
 
         ```ini
         [gitea]
         enabled = true
-        filter = gitea
-        logpath = /var/log/gitea/gitea.log
-        backend = auto
+        backend = systemd
         ```
 
-        As not specified here, Fail2Ban uses properties like `maxretry`, `bantime`, etc. from `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` (if present). Note the setting `backend = auto`. By default, `backend` is set to `systemd` in `/etc/fail2ban/jail.conf`. As a result, Fail2Ban ignores the `logpath` entry here in the jail `gitea.conf`, with the consequence, that Fail2Ban does not recognize an attack on Gitea (port 3000) even though attacks are listed in `/var/log/gitea/gitea.log`.
+    === "When using file logging"
 
-    - Restart Fail2Ban: `systemctl restart fail2ban`.
-    - Test your settings by trying to sign in multiple times from a remote PC with a wrong user or password. After `maxretry` attempts your IP must be banned for `bantime` seconds (DietPi does not respond anymore) as the default action by Fail2Ban is `route`, specified in `/etc/fail2ban/action.d/route.conf`.
-    - Check the current status on your DietPi with `fail2ban-client status gitea`.
+        When file logging is enabled (see "View logs" tab), Fail2Ban protection can be enabled with the following steps:
+
+        Create a new filter `/etc/fail2ban/filter.d/gitea.conf`:
+
+        ```ini
+        [Definition]
+        failregex = Failed authentication attempt for .+ from <HOST>:\d+:
+        ```
+
+        Create a new jail `/etc/fail2ban/jail.d/gitea.conf`:
+
+        ```ini
+        [gitea]
+        enabled = true
+        backend = auto
+        logpath = /var/log/gitea/gitea.log
+        ```
+
+    You can specify other properties like `maxretry` or `bantime` to overwrite the defaults in `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` if present. When done:
+
+    - Restart Fail2Ban: `systemctl restart fail2ban`
+    - Try to login to the Gitea web interface with a wrong password.
+    - Check whether the failed login has been detected: `fail2ban-client status gitea`
+    - When you further try to login `maxretry` times, your IP should be banned for `bantime` seconds, so that neither the Gitea web interface, nor SSH or any other network application will respond to requests from your client. When Fail2Ban was installed via `dietpi-software`, by default `route`/`blackhole` blocking is used, so that `ip r` on the server should show a `blackhole` route for your client's IP.
     - See also:
-        - [Fail2Ban](../system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
-        - <https://docs.gitea.io/en-us/fail2ban-setup>
+        - [Fail2Ban](../system_security/#fail2ban)
+        - <https://docs.gitea.io/en-us/fail2ban-setup/>
+
+=== "View logs"
+
+    By default, logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u gitea
+    ```
+
+    File logging to `/var/log/gitea/gitea.log` can be enabled by editing `/mnt/dietpi_userdata/gitea/custom/conf/app.ini` and changing `MODE = console` in the `[log]` section to `MODE = file`.
 
 === "Update to latest version"
 
@@ -456,7 +550,11 @@ Your very own GitHub style server, with web interface.
 
 ***
 
-Website: <https://gitea.io>
+Official website: <https://gitea.io/>  
+Official documentation: <https://docs.gitea.io/>  
+Official forum: <https://discourse.gitea.io/>  
+Source code: <https://github.com/go-gitea/gitea>  
+License: [MIT](https://github.com/go-gitea/gitea/blob/main/LICENSE)
 
 ## Syncthing
 
@@ -509,7 +607,9 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
     The web interface is accessible via port **9000**:
 
-    - URL = `http://<your.IP>:9000`
+    - URL: `http://<your.IP>:9000`
+    - Username: `minioadmin`
+    - Password: `minioadmin`
     - [MinIO Server Quick Start Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
     - [Python Client Quick Start Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
     - [JavaScript Client Quick Start Guide - MinIO](https://docs.min.io/docs/javascript-client-quickstart-guide.html)
@@ -517,7 +617,7 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 ***
 
 Website: <https://min.io/product/overview>  
-Official documentation: <https://docs.min.io>
+Official documentation: <https://docs.min.io/>
 
 ## Firefox Sync Server
 
@@ -676,38 +776,84 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
 ![FuguHub logo](../assets/images/dietpi-software-cloud-fuguhub.png){: width="149" height="140" loading="lazy"}
 
-=== "Quick access"
+=== "Web interface"
 
-    Open the browser `http://<your.IP>`.  
-    On the first access, an admin account needs to be created to log in with (to fully control the FuguHub app).
+    The web interface is accessible via regular HTTP and HTTPS ports **80** and **443**:
 
-    !!! warning "FuguHub runs by default on port 80 and optional 443, making it incompatible with a regular webserver using the default setup."
+    - URL: `http://<your.IP>` or `https://<your.IP>` (When using HTTPS, you may ignore the browser warning because of the self-signed certificate which is used by default.)
+    - Username: `dietpi`
+    - Password: `<your global password>` (default: `dietpi`)
+
+    !!! warning "The fact that FuguHub runs on ports 80 and 443 by default makes it incompatible with regular web servers when using the default setup."
 
     ![FuguHub web interface screenshot](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png){: width="1920" height="1088" loading="lazy"}
 
-=== "Interactive install"
-
-    1. Press ++enter++ to continue
-    2. Press ++y++ to accept license
-    3. Press ++y++ for `VPS` or ++n++ for `home/office` server
-    4. Choose whether to install an internal BitTorrent client.
-
-    !!! warning "It is recommended to use the a dedicated [BitTorrent](../bittorrent/) server, if required."
-
-    Setup details:
+=== "Setup details"
 
     - Install directory: `/home/bd`
     - Config file: `/home/bd/bdd.conf`
-    - Data directory: `/mnt/dietpi_userdata/fuguhub-data`
+    - File server directory: `/mnt/dietpi_userdata/fuguhub-data`
 
-=== "View logs"
+=== "Logs"
 
     - Service: `journalctl -u bdd`
     - Trace: `/home/bd/trace/`  
       It contains an info about the database creation only, even after playing around with the web UI a bit.
 
+=== "Update"
+
+    To update FuguHub, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 161
+    ```
+
+    All your settings and data will be preserved.
+
 ***
 
-Website: <https://fuguhub.com>
+Official website: <https://fuguhub.com/>
+
+## File Browser
+
+Access and manage your data from anywhere via browser with this lightweight remote file manager. Other than ownCloud and Nextcloud, it accesses the raw data on your filesystem, based on a chosen root directory, which makes it similar to Syncthing. You can setup multiple users with their own root directory and also sharing files and directories via password-protected link is possible.
+
+![File Browser logo](../assets/images/dietpi-software-cloud-filebrowser.svg){: width="150" height="150" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8084**:
+
+    - URL = `http://<your.IP>:8084`
+    - Username = `dietpi`
+    - Password = `<your global password>`
+
+=== "Directories"
+
+    - Install directory: `/opt/filebrowser`
+    - Config directory: `/mnt/dietpi_userdata/filebrowser`
+    - Default data directory: `/mnt`
+
+=== "View logs"
+
+    View the logs by executing:
+
+     ```sh
+     journalctl -u filebrowser
+     ```
+
+=== "Update to latest version"
+
+    You can easily update File Browser by reinstalling it. Your settings and data are preserved by this:
+
+    ```sh
+    dietpi-software reinstall 198
+    ```
+
+***
+
+Official documentation: <https://filebrowser.org/>  
+Source code: <https://github.com/filebrowser/filebrowser>  
+License: [Apache 2.0](https://github.com/filebrowser/filebrowser/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)

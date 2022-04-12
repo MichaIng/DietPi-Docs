@@ -1,3 +1,8 @@
+---
+title: Databases and Data Store Software Options
+description: Description of DietPi software options related to databases and data stores
+---
+
 # Databases and Data Stores
 
 ## Overview
@@ -7,6 +12,7 @@
 - [**SQLite** - Small, Fast and High reliable SQL database engine](#sqlite)
 - [**Redis** - Open Source In-memory key–value Data Store](#redis)
 - [**InfluxDB** - Open Source Time Series Database](#influxdb)
+- [**PostgreSQL** - Persistent and advanced SQL database engine](#postgresql)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software**?"
     To install any of the **DietPi optimised software** listed below run from the command line:
@@ -25,7 +31,7 @@
 
 ## MariaDB
 
-**MariaDB** Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source [^2]. It is part of most cloud offerings and the default in most Linux distributions.
+**MariaDB** Server is one of the most popular open source relational databases. It’s made by the original developers of MySQL and guaranteed to stay open source[^1]. It is part of most cloud offerings and the default in most Linux distributions.
 
 ![MariaDB logo](../assets/images/dietpi-software-webstack-mariadb.png){: width="200" height="61" loading="lazy"}
 
@@ -68,7 +74,7 @@ Official documentation:  <https://www.phpmyadmin.net/docs/>
 
 Source: Part of the SQLite documentation, which has been released by author D. Richard Hipp to the public domain. SVG conversion by Mike Toews. [Public Domain](https://commons.wikimedia.org/w/index.php?curid=11675072)
 
-**SQLite** is an embedded relational database engine. It it a self-contained,  high-reliability and full-featured SQL database engine. It is very popular and there are hundreds of millions copies worldwide in use today [^3].
+**SQLite** is an embedded relational database engine. It it a self-contained, high-reliability and full-featured SQL database engine. It is very popular and there are hundreds of millions copies worldwide in use today[^2].
 
 === "Quick start"
 
@@ -83,9 +89,9 @@ Official documentation: <https://www.sqlite.org/docs.html>
 
 A non-SQL based data store.
 
-![Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: width="200" height="67" loading="lazy"}
+![Redis logo](../assets/images/redis-logo.svg){: width="200" height="68" loading="lazy"}
 
-Source: [Carlos Prioglio](https://redis.io/images/redis-logo.svg), [licence](https://commons.wikimedia.org/w/index.php?curid=95020509).
+_[Trademark guidelines](https://redis.io/docs/about/trademark/)_
 
 **Redis** is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
 
@@ -111,9 +117,11 @@ Commands: <https://redis.io/commands>
 
 **InfluxDB** is a _time series_ database and it is optimised to handle high write and query loads. For this purpose is a very good fit for saving sensor data or time series info from various logs. InfluxDB is not only a time series platform, but it provides also an Web UI and dashboard tools, background processing and monitoring agent.
 
-The main interface to the database for management and data transferred are HTTP requests that are handled directly by the `influxdb` service (default port being used is `8086`).
+The main interface to the database for management and data transferred are HTTP requests that are handled directly by the `influxdb` service, which by default listens on TCP port **8086**.
 
 The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana). This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).
+
+![InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: width="300" height="112" loading="lazy"}
 
 === "Quick start"
 
@@ -193,3 +201,88 @@ The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana).
 Website: <https://www.influxdata.com/products/influxdb/>  
 Official documentation: <https://docs.influxdata.com/influxdb/v1.8/>  
 Getting started: <https://docs.influxdata.com/influxdb/v1.8/introduction/get-started/>
+
+## PostgreSQL
+
+PostgreSQL is a persistent advanced object-relational database server, used in similar scenarios as MariaDB.
+
+![PostgreSQL logo](../assets/images/dietpi-software-postgresql.png){: width="200" height="206" loading="lazy"}
+
+=== "Implementation details"
+
+    While the Debian package by ships PostgreSQL with an active TCP/IP listener, though on localhost only, when installed via DietPi-Software this is disabled by default. We recommend using the UNIX domain socket in `/run/postgresql` to connect to the database, which has performance benefits. When TCP/IP connections are required, best practice is to create an override config like `/etc/postgresql/*/main/conf.d/99local.conf` and setting the listening address:
+
+    ```
+    listen_addresses = 'localhost'
+    ```
+
+    Replace `localhost` with an actual IP address to allow remote access or with `*` to all access via all LAN and public IP addresses and domain names.
+
+    When installed via DietPi-Software, the actual database files are stored in `/mnt/dietpi_userdata/postgresql`, so that it can easily moved to an external drive, together with other DietPi userdata. For backwards-compatibility, a symlink is created at `/var/lib/postgresql`.
+
+=== "Configuration"
+
+    - Config directory:  
+        `/etc/postgresql/*/main`  
+        with the asterisk being the PostgreSQL version number, e.g. `11` or `13`
+    - Main config file:  
+        `/etc/postgresql/*/main/postgresql.conf`
+    - DietPi config override:  
+        `/etc/postgresql/*/main/conf.d/00dietpi.conf`
+
+    To add or change settings, best practice is to create a new override configuration, e.g.:
+
+    ```
+    /etc/postgresql/*/main/conf.d/99local.conf
+    ```
+
+    For changes to take effect, the service needs to be reloaded:
+
+    ```sh
+    systemctl reload postgresql
+    ```
+
+=== "Service handling"
+
+    The systemd service `postgresql.service` is used to start and control the PostgreSQL server. The following commands can be used:
+
+    - Start: `systemctl start postgresql`
+    - Stop: `systemctl stop postgresql`
+    - Restart: `systemctl restart postgresql`
+    - Reload config: `systemctl reload postgresql`
+    - Print status: `systemctl start postgresql`
+
+=== "View logs"
+
+    Service logs are done to the system journal an can be viewed via:
+
+    ```sh
+    journalctl -u postgresql
+    ```
+
+    The server itself by default logs to a file:
+
+    ```sh
+    cat /var/log/postgresql/postgresql-*-main.log
+    ```
+
+=== "Update to latest version"
+
+    Since PostgreSQL is installed via APT, it can be updated via:
+
+    ```sh
+    apt install postgresql
+    ```
+
+***
+
+Official website: <https://www.postgresql.org/>  
+Official documentation: <https://www.postgresql.org/docs/>  
+Source code: <https://git.postgresql.org/gitweb/?p=postgresql.git>  
+License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
+
+[Return to the **Optimised Software list**](../../software/)
+
+[^1]: [About MariaDB Server and MariaDB Foundation](https://mariadb.org/about/)
+
+[^2]: [About SQLite](https://www.sqlite.com/about.html)

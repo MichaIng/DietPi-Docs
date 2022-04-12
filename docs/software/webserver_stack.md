@@ -1,11 +1,16 @@
+---
+title: Web Development Software Options
+description: Description of DietPi software options related to web stacks, web servers and web development
+---
+
 # Web Development
 
 ## Overview
 
 [**Stacks for Web Development**](#stacks-for-web-development)
 
-- [**LAMP** web stack - **Apache2 / MariaDB / PHP**](#lamp-web-stack)
-- [**LASP** web stack - **Apache2 / SQLite / PHP**](#lasp-web-stack)
+- [**LAMP** web stack - **Apache / MariaDB / PHP**](#lamp-web-stack)
+- [**LASP** web stack - **Apache / SQLite / PHP**](#lasp-web-stack)
 - [**LEMP** web stack - **Nginx / MariaDB / PHP**](#lemp-web-stack)
 - [**LESP** web stack - **Nginx / SQLite / PHP**](#lesp-web-stack)  
 - [**LLMP** web stack - **Lighttpd / MariaDB / PHP**](#llmp-web-stack)
@@ -13,10 +18,10 @@
 
 [**Web Servers**](#webservers)
 
-- [**Apache2** - Feature-rich webserver](#apache2)  
+- [**Apache** - Feature-rich webserver](#apache)  
 - [**Nginx** - High performance web server, load balancer & reverse proxy](#nginx)  
 - [**Lighttpd** - Extremely lightweight webserver](#lighttpd)
-- [**Tomcat8** - Apache Tomcat server](#tomcat)
+- [**Tomcat** - Apache Tomcat server](#tomcat)
 
 [**Web development - Programming & Frameworks**](#web-development-programming-frameworks)
 
@@ -44,8 +49,8 @@
 
 DietPi offers an **one-click-installation** of the following web development stacks:
 
-- [**LAMP** web stack - **Apache2 / MariaDB / PHP**](#lamp-web-stack)
-- [**LASP** web stack - **Apache2 / SQLite / PHP**](#lasp-web-stack)
+- [**LAMP** web stack - **Apache / MariaDB / PHP**](#lamp-web-stack)
+- [**LASP** web stack - **Apache / SQLite / PHP**](#lasp-web-stack)
 - [**LEMP** web stack - **Nginx / MariaDB / PHP**](#lemp-web-stack)
 - [**LESP** web stack - **Nginx / SQLite / PHP**](#lesp-web-stack)  
 - [**LLMP** web stack - **Lighttpd / MariaDB / PHP**](#llmp-web-stack)
@@ -54,7 +59,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 !!! hint "Meaning of the acronyms *LAMP*, *LASP*, *LEMP*, *LESP*, *LLMP*, *LLSP*"
 
     - OS: **L** for Linux / DietPi
-    - Webserver: **A** for Apache2, **E** for [Nginx](#nginx), **L** for [Lighttpd](#lighttpd)
+    - Webserver: **A** for Apache, **E** for [Nginx](#nginx), **L** for [Lighttpd](#lighttpd)
     - Database: **M** for MariaDB, **S** for [SQLite](../databases/#sqlite)
     - Scripting language: **P** for [PHP](#php)
 
@@ -65,17 +70,17 @@ DietPi offers an **one-click-installation** of the following web development sta
 
 === "Which WEBSERVER to CHOOSE ?"
 
-    **[Apache2](#apache2)**
+    **[Apache](#apache)**
 
     - Memory use = **High** | Multithreaded = **Yes**
 
-    It is feature-rich and popular. It is recommended for beginners and users who are looking to follow Apache2 based guides.
+    It is feature-rich and popular. It is recommended for beginners and users who are looking to follow Apache based guides.
 
     **[Nginx](#nginx)**
 
     - Memory use = **Medium** | Multithreaded = **Yes**
 
-    It is a lightweight alternative to [Apache2](#apache2) and claims[^4] faster webserver performance compared to [Apache2](#apache2). It is ideal for medium-high traffic situations where [Lighttpd](#lighttpd) will suffer.
+    It is a lightweight alternative to [Apache](#apache) and claims[^4] faster webserver performance compared to [Apache](#apache). It is ideal for medium-high traffic situations where [Lighttpd](#lighttpd) will suffer.
 
     **[Lighttpd](#lighttpd)**
 
@@ -83,7 +88,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 
     It is extremely lightweight and is generally considered to offer the "best" webserver performance on Linux for SBCs (single board computers). It is recommended for users who expect low webserver traffic and/or personal use.  
 
-    Although the DietPi installation of Lighttpd is set to single threaded, do not be put off by this, in low usage scenarios (<10 users) it will still outperform [Nginx](#nginx) and [Apache2](#apache2). Activation of multithreading is described in the [Lighttpd](#lighttpd) package description.
+    Although the DietPi installation of Lighttpd is set to single threaded, do not be put off by this, in low usage scenarios (<10 users) it will still outperform [Nginx](#nginx) and [Apache](#apache). Activation of multithreading is described in the [Lighttpd](#lighttpd) package description.
 
     !!! hint "DietPi - Webserver Preference"
 
@@ -221,7 +226,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [SQLite](../databases/#sqlite) instead of [MariaDB](../databases/#mariadb).
 
-[SQLite](../databases/#sqlite) is an embedded relational database engine. It is popular and together with [Apache2](#apache2) and PHP could be a good candidate for single board computer.
+[SQLite](../databases/#sqlite) is an embedded relational database engine. It is popular and together with [Apache](#apache) and PHP could be a good candidate for single board computer.
 
 === "Quick start"
 
@@ -291,7 +296,7 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LEMP Web Stack
 
-LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache2](#apache2) web server.
+LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache](#apache) web server.
 
 **Nginx** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
@@ -368,7 +373,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LESP Web Stack
 
-LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache2](#apache2) web server, and [SQLite](../databases/#sqlite) instead of MariaDB.
+LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache](#apache) web server, and [SQLite](../databases/#sqlite) instead of MariaDB.
 
 **[Nginx](#nginx)** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
@@ -395,7 +400,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LLMP Web Stack
 
-LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Lighttpd](#lighttpd) instead of [Apache2](#apache2) web server.
+LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Lighttpd](#lighttpd) instead of [Apache](#apache) web server.
 
 === "Quick start"
 
@@ -427,7 +432,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LLSP web stack
 
-LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **[Lighttpd](#lighttpd)** instead of [Apache2](#apache2) web server and **[SQLite](../databases/#sqlite)** instead of [MariaDB](../databases/#mariadb).
+LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **[Lighttpd](#lighttpd)** instead of [Apache](#apache) web server and **[SQLite](../databases/#sqlite)** instead of [MariaDB](../databases/#mariadb).
 
 === "Quick start"
 
@@ -469,7 +474,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ## WebServers
 
-### Apache2
+### Apache
 
 Apache is open source and it is the most commonly used Web server on Linux systems.
 
@@ -478,6 +483,24 @@ Apache is open source and it is the most commonly used Web server on Linux syste
 Web servers are used to serve Web pages requested by client computers. Clients typically request and view Web pages using Web browser applications such as Firefox, Opera, Chromium, Microsoft Edge, Internet Explorer etc.
 
 Apache is a Apache Software Foundation project. The goal is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
+
+=== "Logging"
+
+    Logging is done to journal by default, and you can view the details by executing next command:
+
+    ```sh
+    journalctl -u apache2
+    ```
+
+=== "Server name"
+
+    The `ServerName` directive is updated with the local IP. This helps muting the related startup warnings.
+
+    **Notes:**
+
+    - This may imply access and CORS failures [^6] when applications check for the server name. In such case, generally applications provide a way to define a list of permitted hostnames.
+
+    - Without a server name set, usually webserver simply apply the HTTP_HOST header, which bypasses every related check. Apache, according to the logged warning, seems to use 127.0.1.1 then.
 
 ***
 
@@ -534,6 +557,16 @@ What is **Apache Tomcat**? Essentially it’s an open-source Java servlet and Ja
 ![Tomcat logo](../assets/images/dietpi-software-webstack-tomcat.svg){: width="200" height="133" loading="lazy"}
 
 Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/site/xdocs/images/logos/tomcat.eps), [Apache License 2.0](https://commons.wikimedia.org/w/index.php?curid=11302180).
+
+=== "Install"
+
+    Starting with DietPi 7.3 `Tomcat 8` has been removed from the DietPi Software List. The reason is that `Tomcat 8` is available until Debian Stretch only. From Debian Buster and newer versions, it will be supported only Tomcat 9.
+
+    To install Tomcat 9, run next command in the console:
+
+    ```sh
+    apt install tomcat9
+    ```
 
 === "Quick access"
 
@@ -595,7 +628,7 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
 === "Node.js version"
 
     Starting with version 7.2, DietPi added support for [Node.js unofficial builds from unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/). In this way, you can get the benefits of using the latest Node.js version.
-    
+
     _Why this ?_ We believe that's important and more secure to use the most recent version. At the moment of writing the documentation, latest official ARMv6 build for Node.js has the version 11 and the latest _unofficial build_ issued by Node.js is v15.14.  
 
 ***
@@ -613,5 +646,7 @@ Official documentation: <https://nodejs.org/api/>
     [NGINX vs. Apache: Our View of a Decade-Old Question](https://www.nginx.com/blog/nginx-vs-apache-our-view/). Retrieved 12 December 2020
 
 [^5]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
+
+[^6]: [CORS Errors Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors). Retrieved 05 December 2021
 
 [Return to the **Optimised Software list**](../../software/)

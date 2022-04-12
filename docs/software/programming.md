@@ -1,3 +1,8 @@
+---
+title: Development and Programming Software Options
+description: Description of DietPi software options related to software development
+---
+
 # Development & Programming
 
 ## Overview
@@ -32,7 +37,7 @@ Python is a text based interpreted programming language with object oriented pro
 
 ![Python logo](../assets/images/dietpi-software-programming-pythonlogo.png){: width="200" height="59" loading="lazy"}
 
-Source: By [www.python.org](http://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
+Source: By [www.python.org](https://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
 You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^3], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
 
@@ -51,7 +56,7 @@ Currently, Python is 3rd most popular of programming language [^4].
     | Name | URL |
     | :-: | - |
     | **Atom** | <https://atom.io> |
-    | **Eclipse + Pydev** | <https://www.eclipse.org> and <http://pydev.org> |
+    | **Eclipse + Pydev** | <https://www.eclipse.org> and <https://www.pydev.org/> |
     | **IDLE** | <https://docs.python.org/3/library/idle.html> |
     | **Pycharm** | <https://www.jetbrains.com/pycharm> |
     | **Spyder** | <https://github.com/spyder-ide/spyder> |
@@ -144,10 +149,26 @@ In 2013, Docker introduced containers. These are a standardized unit of software
 
 A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
 
-<!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200" height="???" loading="lazy"}  -->
+<!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200" height="60" loading="lazy"}  -->
 ![Docker functional block diagram](../assets/images/dietpi-software-programming-docker2.svg){: width="400" height="369" loading="lazy"}
 
-Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
+_Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)_
+
+=== "Configuration"
+
+    The Docker configuration files are located at:
+
+    - Docker: `/etc/docker/daemon.json`
+    - containerd: `/etc/containerd/config.toml`
+
+=== "Update"
+
+    Since Docker is installed via APT packages, it can be updated by running the following commands:
+
+    ```sh
+    apt update
+    apt install docker-ce containerd.io docker-ce-cli
+    ```
 
 === "View logs"
 
@@ -157,19 +178,14 @@ Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia
     journalctl -u docker -u containerd
     ```
 
-=== "Configuration files"
-
-    The location of the Docker configuration files:
-
-    - Docker: `/etc/docker/daemon.json`
-    - containerd: `/etc/containerd/config.toml`
-
 ***
 
-Official documentation: <https://docs.docker.com/get-started/overview>  
-Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
-Logging: <https://docs.docker.com/config/containers/logging/configure>  
-Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
+Official documentation: <https://docs.docker.com/get-started/overview/>  
+Configuration docs: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
+Logging docs: <https://docs.docker.com/config/containers/logging/configure/>  
+Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>  
+Source code: <https://github.com/moby/moby>  
+License: [Apache-2.0](https://github.com/moby/moby/blob/master/LICENSE)
 
 For a quick intro, see **DietPi Docker Setup on Raspberry Pi 3 B Plus**:
 
@@ -181,26 +197,27 @@ Docker Compose is a [Docker](#docker) tool used to define and run multi-contain
 
 `docker-compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments.
 
-<!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/master/logo.png) -->
-![docker compose](../assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
+<!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/v2/logo.png){: width="200" height="219" loading="lazy"} -->
+![Docker Compose diagram](../assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
 
-_Docker (individual container) vs. Docker-Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa/)_
+_Docker (individual container) vs. Docker Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa)_
 
-=== "Update to latest version"
+=== "Update"
 
-    The tool is available soon after the installation. In case you need to upgrade it, here is the command:
+    To update Docker Compose to the latest version, simply reinstall it:
 
     ```sh
-    sudo pip3 install docker-compose --upgrade
+    dietpi-software reinstall 134
     ```
 
 ***
 
-Official documentation: <https://docs.docker.com/compose>  
-Getting started: <https://docs.docker.com/compose/gettingstarted>  
+Official documentation: <https://docs.docker.com/compose/>  
+Getting started: <https://docs.docker.com/compose/gettingstarted/>  
 Sample apps with Compose: <https://docs.docker.com/compose/samples-for-compose/>  
-Release notes: <https://docs.docker.com/compose/release-notes/>  
-Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
+Release notes: <https://github.com/docker/compose/releases>  
+Source code: <https://github.com/docker/compose>  
+License: [Apache-2.0](https://github.com/docker/compose/blob/v2/LICENSE)
 
 ## Portainer
 

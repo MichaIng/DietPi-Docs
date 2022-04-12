@@ -1,3 +1,8 @@
+---
+title: Remote Desktop Access Software Options
+description: Description of DietPi software options related to remote desktops and remote access
+---
+
 # Remote Desktop Access
 
 Run a **Desktop environment** on your device and access it accessed remotely via network. It is a great option for headless SBC devices.
@@ -153,7 +158,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
     - Enable shared desktop mode:
         - Run `dietpi-autostart 2` to autostart into a desktop session and have RealVNC attached to it automatically.
         - Then `reboot` the system to have the changes taking effect.
-    - Follow the instructions within the section *Running directly rendered apps such as Minecraft remotely* in <https://www.realvnc.com/docs/raspberry-pi.html>.
+    - Follow the instructions within the section *Running directly rendered apps such as Minecraft remotely* in <https://help.realvnc.com/hc/en-us/articles/360002249917-VNC-Connect-and-Raspberry-Pi>.
 
 ## XRDP
 
@@ -241,11 +246,19 @@ The VirtualHere package is used to share physically attached USB devices from yo
 
 ![VirtualHere client screenshot](../assets/images/dietpi-software-remotedesktop-virtualhere.png){: width="400" height="252" loading="lazy"}
 
+The functionality consists of two parts:
+
+- The [server](https://virtualhere.com/content/usb-servers): This software part is installed with the DietPi software package. It serves your USB device over the network.
+- The [client](https://virtualhere.com/usb_client_software): This software part needs to be installed on every client which wants to access the USB devices.
+
 Download the client for your PC from:
 
 - <https://www.virtualhere.com/usb_client_software>
 
 Once installed, available VirtualHere devices will be shown in the client user interface and can be used on the client PC.
+
+!!! info "VirtualHere trial version is restricted to one single USB device per server instance"
+    The base installation of this DietPi software package installs the VirtualHere server. Basically it starts as a trial version supporting only one single USB device. To overcome this, you need to [buy a licence](https://virtualhere.com/purchase).
 
 !!! warning "USB Storage WARNING"
     - As per <https://github.com/MichaIng/DietPi/issues/852#issuecomment-292781475> it it highly recommended that you do not install VirtualHere if your DietPi user data is stored on a USB drive.

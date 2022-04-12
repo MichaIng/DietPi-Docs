@@ -1,3 +1,7 @@
+---
+description: Guides about the basic DietPi tools
+---
+
 # DietPi Tools
 
 ## DietPi launcher
@@ -86,7 +90,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: width="550" height="370" loading="lazy"}
 
-    See also <../software/log_system/>.
+    See [log system choices](../software/log_system/) for further details.
 
 === "Webserver Preference"
 
@@ -152,7 +156,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
       free        Print an unused software ID, free for a new software implementation
     ```
 
-    The <software_id\> which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:
+    The `<software_id>` which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:
 
     ![DietPi-Tools command line installation](assets/images/dietpi-tools-command-line-installation.png){: width="454" height="129" loading="lazy"}
 
@@ -225,7 +229,7 @@ DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cr
 
     - If no argument is given, the interactive menu is started.
     - Use `dietpi-ddns <options> apply <provider>` to apply a cron job for the given provider and use the following options set details:
-        - `<provider>` is either the name of a supported provider, or any custom update URL. 
+        - `<provider>` is either the name of a supported provider, or any custom update URL.
         - Use `-d <domains>` to add one or a comma-separated list of multiple domains, which should point to the public IP address of this system.
         - Use `-u <username>` to set a username or identifier. This is not required for all providers, in case of a custom provider, it is used as username for HTTP authentication.
         - Use `-p <password>` to set a password or token. This is not required for all providers, in case of a custom provider, it is used as username for HTTP authentication.
@@ -237,7 +241,7 @@ DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cr
 
 ### DietPi configuration
 
-Configure various system settings, from display / audio / network to _auto start_ options.  
+Configure various system settings, from display / audio / network to *auto start* options.  
 Run `dietpi-config`.
 
 ![DietPi-Config screenshot](assets/images/dietpi-config.jpg){: width="643" height="335" loading="lazy"}
@@ -315,7 +319,7 @@ Run `dietpi-config`.
 
     The tools options are used to
 
-    - Perform CPU, RAM, file system and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark>
+    - Perform CPU, RAM, filesystem and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark>
     - Perform CPU/IO/RAM/DISK **stress tests** to test the stability of your system, e.g. after applying some overclocking.
 
 ---
@@ -325,12 +329,13 @@ Run `dietpi-config`.
 Feature-rich drive management utility. It is a lightweight program that allows you to:
 
 - Manage drives: Mount, format external drives
-- Maintenance drives: Check and repair drives, resize (expand) file system, change reserved blocks count
-- Set drive attributes: Set read only file systems, set idle spindown time
+- Maintenance drives: Check and repair drives, resize (expand) filesystem, change reserved blocks count
+- Set drive attributes: Set read only filesystems, set idle spindown time
 - Move DietPi User data
 - Transfer RootFS to external drive (Raspberry Pi and some ODROID boards only)
 - Disable swap file, change swap file size
 - Run benchmarks on drives
+- Mount network drives (NFS and Samba)
 
 Run `dietpi-drive_manager`.
 
@@ -347,7 +352,7 @@ Run `dietpi-drive_manager`.
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_2.png){: width="600" height="297" loading="lazy"}
 
-        If needed, format the drive before usage selecting the `Format` option (file system type description see below).  
+        If needed, format the drive before usage selecting the `Format` option (filesystem type description see below).  
         Remark: Formatting drives can only be done unmounted.
 
         If needed, mount the drive via the `Mount` selection. If mounted, commands `Unmount`, `Benchmark`, `User data`, `Swapfile` and `Read only` are present.
@@ -356,7 +361,7 @@ Run `dietpi-drive_manager`.
 
 === "Move the location of user data and swap file"
 
-    You can move the location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swap file to a different location on a target drive. This may be useful if your file system containing the DietPi user data resp. swap file has only little space left.
+    You can move the location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swap file to a different location on a target drive. This may be useful if your filesystem containing the DietPi user data resp. swap file has only little space left.
     Therefore execute the following steps (example user data, swap file is quite similar):
 
     1. Run `dietpi-drive_manager` to bring up the main menu.
@@ -372,48 +377,61 @@ Run `dietpi-drive_manager`.
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_5.png){: width="500" height="188" loading="lazy"}
 
-=== "Format file system types"
+=== "Format filesystem types"
 
-    Formatting file systems lead you to these dialogues:
+    Formatting filesystems lead you to these dialogues:
 
     ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_6.png){: width="500" height="137" loading="lazy"}
     ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_7.png){: width="500" height="326" loading="lazy"}
 
-    In the latter dialog you have to choose the file system type. The following selections may be chosen:
+    In the latter dialog you have to choose the filesystem type. The following selections may be chosen:
 
-    - `EXT4` (Default)  
-      Recommended for users who plan to use this drive solely on the DietPi system (e.g. dedicated drive).  
-      `+` The standard for Linux file systems  
+    - `ext4` (Default)  
+      Recommended for users who plan to use this drive solely on Linux systems (e.g. dedicated drive).  
+      `+` The standard for Linux filesystems  
       `-` Not compatible on a Windows system
 
     - `NTFS`  
       Recommended for users who plan to use this drive on a Windows system.  
       `+` Compatible on a Windows system  
+      `-` Only emulated support for UNIX permissions  
+      `-` Does support symbolic links (creation)  
       `-` High CPU usage during transfers (spawns a process)
 
     - `FAT32`  
       Recommended for users who want high compatibility across multiples operating systems.  
       `+` Highly compatible with all OS  
-      `-` 4GB file size limit  
-      `-` 2TB drive size limit  
-      `-` Does not support file/folder permissions  
+      `-` 4 GiB file size limit  
+      `-` 2 TiB drive size limit  
+      `-` Does not support UNIX permissions  
+      `-` Does not support symbolic links
+
+    - `exFAT`  
+      Windows filesystem, intended for external drives, e.g. USB flash drives or SD cards.  
+      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>  
+      `+` Compatible on a Windows system  
+      `-` Does not support UNIX permissions  
       `-` Does not support symbolic links
 
     - `HFS+`  
-      Recommended for Mac owners.  
-      `+` Mac OS file system
+      Recommended for users who plan to use this drive on a macOS system.  
+      `+` macOS filesystem  
+      `-` Not compatible on a Windows system
 
-    - `BTRFS`  
-      A modern Linux file system.  
-      `+` <https://github.com/Fourdee/DietPi/issues/271#issuecomment-247173250>
+    - `Btrfs`  
+      A modern Linux filesystem.  
+      `+` Advantages were described in [this DietPi issue](https://github.com/MichaIng/DietPi/issues/271#issuecomment-247173250)  
+      `-` Compatible with Windows only via additional windows driver [WinBtrfs](https://github.com/maharmstone/btrfs)
 
     - `F2FS`  
-      Linux file system designed for flash/NAND based drives.  
-      `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>
+      Linux filesystem designed for flash/NAND based drives.  
+      `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>  
+      `-` Not compatible on a Windows system
 
-    - `exFAT`  
-      Windows file system, intended for external drives, e.g. USB flash drives or SD cards  
-      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>
+    - `XFS`  
+      A modern Linux filesystem.  
+      `+` Well accepted for large files (typically in a file server use)  
+      `-` Not compatible on a Windows system
 
 === "Move DietPi system to a larger SD card"
 
@@ -422,7 +440,7 @@ Run `dietpi-drive_manager`.
     1. Shutdown your system and put the SD card into a card reader of a different systems.
     1. Copy the SD card contents to the new (larger) SD card. This can e.g. be done using
         - the `dd` command (command line option)
-        - [`balenaEtcher`](https://etcher.io/) or [`Rufus`](https://rufus.ie/) (graphical user interface option)
+        - [balenaEtcher](https://etcher.io/) or [Rufus](https://rufus.ie/) (graphical user interface option)
         - `gnome-disks` (graphical user interface option)
     1. Boot the system with the copied memory card.
     1. Run `dietpi-drive_manager` to bring up the main menu.
@@ -431,9 +449,21 @@ Run `dietpi-drive_manager`.
 
         ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager_8.png){: width="500" height="138" loading="lazy"}
 
-    1. Reboot your system to expand the root file system to use the whole space of the new memory card.
+    1. Reboot your system to expand the root filesystem to use the whole space of the new memory card.
 
     A similar procedure may be used when moving the SD card contents to a smaller SD card. During this procedure you typically need to shrink the partition size (e.g. with `parted` or `gparted`) before copying the partition image to a different memory card. Also, do the resize to use the full space on the new card.
+
+=== "Mount network drive"
+
+    If you want to mount a NFS drive or a Samba share, you can do this by:
+
+    1. Run `dietpi-drive_manager` to bring up the main menu.
+    1. Select `Add network drive`.
+    1. Select the type of network drive that you have.
+    1. Follow the prompts.
+
+    !!! info "Mounting a macOS Samba share"
+        To mount a macOS Samba share enabled in `Sharing`, you need to (in the server) go to `Sharing > File Sharing > Options > Windows File Sharing` and select your username.
 
 ---
 
@@ -625,18 +655,30 @@ Run `dietpi-logclear`.
 
 ### DietPi backup (backup/restore)
 
-Fully backups DietPi setup. It also includes the restore capability from an already made DietPi backup.  
-`DietPi-Backup` allows you to Backup and Restore your DietPi system. Same effect as *Windows system restore*. A snapshot of the system that you can restore at any time.  
-You can also customize which files/folders are included and excluded through the GUI.
+`DietPi-Backup` allows you to backup and restore your DietPi system, similar to *Windows system restore*. It creates a snapshot of the system that can be restored at any time.  
+`DietPi-Backup` provides the following features:
 
-If you have *broken* your system, or want to reset your system to an earlier date, this can all be done with `DietPi-Backup`. Just make sure you create a backup first.  
-Run `dietpi-backup`.
+- Selection of the **target directory** (also remote mounted shares are possible)
+- Customization which **files and directories** are **included** and **excluded**
+- Activation of **automatic daily backups**
+- Setting of an **amount of backups to be kept**  
+  Backups are rotated automatically and if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync
 
-![DietPi-Backup screenshot](assets/images/dietpi-backup_1.png){: width="643" height="298" loading="lazy"}
+From the console, run the following command:
 
-Remark: In the case that `rsync` is not installed, it is installed.
+```sh
+dietpi-backup
+```
+
+![DietPi-Backup menu screenshot](assets/images/dietpi-backup_1.png){: width="681" height="330" loading="lazy"}
+
+!!! info "DietPi userdata may not be included"
+
+    If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
 
 !!! info "DietPi-Backup is purely based on `Rsync`"
+
+    In the case that the `rsync` package is not installed, this is done automatically once you start a backup or restore.
 
 ### DietPi file explorer
 

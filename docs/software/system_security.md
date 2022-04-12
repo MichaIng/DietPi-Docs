@@ -1,3 +1,8 @@
+---
+title: System Security Software Options
+description: Description of DietPi software options related to SSL and security
+---
+
 # System Security
 
 ## Overview
@@ -29,7 +34,7 @@ Let's Encrypt is a free SSL certificate provider. Certbot is the official client
 
 To use Certbot you need:
 
-- A working Apache2, Nginx or Lighttpd webserver
+- A working Apache, Nginx or Lighttpd webserver
 - A URL/domain (e.g.: `mysite.org`). No-IP can be used for a URL/domain that points to your device.
 - Ports 80 and 443 (TCP) need to be forwarded to your device. This is typically set within your router.
 

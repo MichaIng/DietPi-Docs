@@ -1,6 +1,5 @@
 ---
-description: DietPi Supported SBCs (Raspberry Pi 4/3/2/1/Zero, Odroid, PINE64 etc.) - Native PC & Virtual Machines (VirtualBox, VMware, Hyper-V)
-title: DietPi Supported SBCs
+description: DietPi Supported Hardware: Raspberry Pi 4/3/2/1/Zero, Odroid, PINE64, NanoPi, Native PC & Virtual Machines (VirtualBox, VMware, Hyper-V)
 ---
 
 # Supported hardware
@@ -23,13 +22,13 @@ DietPi runs also on one of the first models **Raspberry Pi 1**, launched in 2012
 
 ![Raspberry Pi 1 Model B photo](assets/images/raspberry-pi-1b.jpg){: width="500" height="242" loading="lazy"}
 
-and even on the compact form **Raspberry Pi Zero W**
+and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Zero 2 W**
 
-![Raspberry Pi Zero W photo](assets/images/raspberry-pi-zero-w.jpg){: width="500" height="333" loading="lazy"}
+![Raspberry Pi Zero 2 photo](assets/images/dietpi-raspberry-pi-zero-2.jpg){: width="500" height="333" loading="lazy"}
 
-Quick intro:
+**New Zero** quick intro:
 
-<iframe src="https://www.youtube-nocookie.com/embed/sajBySPeYH0?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/V2frBYX62LU?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 <div class="md-typeset__table">
     <table>
@@ -40,22 +39,53 @@ Quick intro:
             </tr>
         </thead>
         <tbody>
-        <tr>
-            <td><a class="table"><strong>Raspberry Pi - ALL models</strong><br>Single board computer (SBC)<br>Compute Module (CM)<br>Complete PC</a></td>
-            <td>
-                <strong>Unique DietPi image available for ALL Raspberry Pi models: </strong><a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Buster.7z">Download image</a>
-                <strong>
-                <ul>
-                  <li>Raspberry Pi 400</li>
-                  <li>Raspberry Pi 4 Model B <br>Compute Module 4</li>
-                  <li>Raspberry Pi 3 Model A+ / B / B+ <br>Compute Module 3 / CM 3+</li>
-                  <li>Raspberry Pi 2 Model B / B v1.2</li>
-                  <li>Raspberry Pi 1 Model A+ / B+ <br>Compute Module 1</li>
-                  <li>Raspberry Pi Zero / Zero W/WH</li>
-                </ul>
-                </strong>
-            </td>
-        </tr>
+            <tr>
+                <td><a class="table"><strong>Raspberry Pi - ALL models</strong><br>Single board computer (SBC)<br>Compute Module (CM)</a></td>
+                <td>
+                    <strong>DietPi image for ALL Raspberry Pi models</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Bullseye.7z">Download image</a>
+                    <strong>
+                        <ul>
+                            <li>Raspberry Pi Zero 2 W</li>
+                            <li>Raspberry Pi 400</li>
+                            <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
+                            <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
+                            <li>Raspberry Pi 2 Model B v1.1 / B v1.2</li>
+                            <li>Raspberry Pi 1 Model A / A+ / B / B+<br>Compute Module 1</li>
+                            <li>Raspberry Pi Zero / Zero W / Zero WH</li>
+                        </ul>
+                    </strong>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table"><strong>Raspberry Pi - ARMv7</strong><br>Single board computer (SBC)<br>Compute Module (CM)</a></td>
+                <td>
+                    <strong>DietPi image for Raspberry Pi with ARMv7 CPU or above</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv7-Bullseye.7z">Download image</a>
+                    <strong>
+                        <ul>
+                            <li>Raspberry Pi Zero 2 W</li>
+                            <li>Raspberry Pi 400</li>
+                            <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
+                            <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
+                            <li>Raspberry Pi 2 Model B v1.1 / B v1.2</li>
+                        </ul>
+                    </strong>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table"><strong>Raspberry Pi - ARMv8</strong><br>Single board computer (SBC)<br>Compute Module (CM)</a></td>
+                <td>
+                    <strong>DietPi image for Raspberry Pi with ARMv8/64-bit CPU</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv8-Bullseye.7z">Download image</a>
+                    <strong>
+                        <ul>
+                            <li>Raspberry Pi Zero 2 W</li>
+                            <li>Raspberry Pi 400</li>
+                            <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
+                            <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
+                            <li>Raspberry Pi 2 Model B v1.2</li>
+                        </ul>
+                    </strong>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -68,7 +98,7 @@ ODROID-N2 is one of the supported boards.
 
 ![Odroid N2 photo](assets/images/dietpi-odroid-n2-plus.jpg){: width="500" height="353" loading="lazy"}
 
-It is a new generation single board computer that is more powerful, more stable, and faster performing than N1. The main CPU of the N2 is based on big. Thanks to the modern 12nm silicon technology, the A73 cores runs at 1.8 GHz without thermal throttling using the stock metal-housing heat sink allowing a robust and quiet computer.
+It is a new generation single-board computer based on the Amlogic S922X SoC and the [fastest](https://dietpi.com/survey/#benchmark) we measured until time of writing. The main CPU of the N2 consists of a big.LITTLE quad-core Cortex-A73 + dual-core Cortex-A53 combination. Thanks to the modern 12nm silicon technology, the A73 cores run at up to 1.8 GHz (N2) respectively 2.4 GHz (N2+) without thermal throttling using the stock metal-housing heat sink allowing a robust and quiet computer.
 
 <div class="md-typeset__table">
     <table>
@@ -82,31 +112,31 @@ It is a new generation single board computer that is more powerful, more stable,
             <tr>
                 <td><a class="table" href=""><strong>Odroid C1</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC1-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC1-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid C2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC2-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC2-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Odroid N1</strong></a></td>
+                <td><a class="table" href=""><strong>Odroid C4 / HC4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidN1-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC4-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid N2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid XU3 / XU4 / MC1 / HC1 / HC2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidXU4-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidXU4-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -139,53 +169,60 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
             <tr>
                 <td><a class="table" href=""><strong>PINE A64</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PINEA64-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PINEA64-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>PINE H64</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PINEH64-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PINEH64-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Pinebook</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Pinebook-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Pinebook-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Pinebook Pro</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PinebookPro-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PinebookPro-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCK64</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK64-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK64-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCKPro64</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPro64-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPro64-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
 
-## ROCK Pi
+## Radxa
 
-**Maker Friendly, IoT connectivity** enabled. Radxa ROCK Pi features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more. It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
-For more details visit the [**Radxa ROCK Pi**](https://rockpi.org/) website.
+**Maker Friendly, IoT connectivity** enabled.
+
+**Radxa ROCK Pi and Radxa Zero** features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
+For more details visit the [**Radxa ROCK Pi**](https://rockpi.org/) resp. the [**Radxa Wiki**](https://wiki.radxa.com/Home) website.
 
 One of the supported boards is ROCK Pi 4.
 
 ![Radxa ROCK Pi 4 photo](assets/images/dietpi-rockpi-4b.jpg){: width="500" height="375" loading="lazy"}
 
-ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
+**ROCK Pi 4** is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
+It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
+
+**Radxa Zero** is an ultra thin SBC in small form factor with powerful performance based on Amlogic S905Y2. Radxa Zero features a Quad Core 64 ARM processor, 32bit LPDDR4, up to 4K@60 HDMI, 802.11 ac WIFI, Bluetooth 5.0, USB 3.0, 40-pin GPIO header. Radxa Zero supports USB 2.0 and power via one USB-C port.
+
+![Radxa Zero photo](assets/images/dietpi-radxa-zero.jpg){: width="500" loading="lazy"}
 
 <div class="md-typeset__table">
     <table>
@@ -199,13 +236,19 @@ ROCK Pi 4 is a Single Board Computer (SBC) in an ultra-small form factor that of
             <tr>
                 <td><a class="table" href=""><strong>ROCK Pi 4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCK Pi S</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Radxa Zero</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZero-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -230,7 +273,7 @@ Sparky Single Board Computer (SBC) is a credit card-sized board that can be used
             <tr>
                 <td><a class="table" href=""><strong>Sparky SBC</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_SparkySBC-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_SparkySBC-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -261,7 +304,7 @@ Careful consideration went into the design and development of the Tinker Board t
             <tr>
                 <td><a class="table" href=""><strong>ASUS Tinker Board</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ASUSTB-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ASUSTB-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -290,121 +333,121 @@ For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) websi
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO Plus2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEOPlus2-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEOPlus2-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO2 Black</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://github.com/MichaIng/DietPi/issues/3333">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2Black-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO3</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO3-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO3-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO4-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi K1 Plus</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiK1Plus-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiK1Plus-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi K2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiK2-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiK2-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M1 Plus</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1Plus-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1Plus-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M1/T1</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M2/T2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM2-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM2-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M3/T3</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM3-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM3-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M4V2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4V2-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4V2-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPC T4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>NanoPC M4</strong></a></td>
+                <td><a class="table" href=""><strong>NanoPi M4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi Fire3</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R1</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR1-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR1-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R2S</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR2S-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR2S-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R4S</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR4S-ARMv8-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR4S-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ZeroPi</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ZeroPi-ARMv7-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ZeroPi-ARMv7-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -419,17 +462,45 @@ The Native PC images are great for those occasions where SBC performance just is
 
 ### VMware
 
-The VMware virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
+![VMware logo](assets/images/VMwareESXi_01.jpg){: width="200" height="45" loading="lazy"}
+
+The VMware virtual machine (e.g. [VMware Workstation Player](https://www.vmware.com/products/workstation-player.html/), [VMware Workstation Pro](https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-pro.html/), [VMware Fusion](https://www.vmware.com/products/fusion.html/)) is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server (Windows, Linux, macOS) and still get the same great DietPi features and experience.
+
+The [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html/), described as a "Bare Metal Hypervisor" aka [Type-1 hypervisor](https://en.wikipedia.org/wiki/Hypervisor), is part of e.g. the [VMware vSphere Hypervisor platform](https://www.vmware.com/products/vsphere-hypervisor.html/) ("appliance server"). It allows to run and manage multiple virtual machines on one x86_64 machine. That way it can be compared to the [Proxmox](#proxmox) appliance server.
 
 ### VirtualBox
 
-![Oracle VirtualBox logo](assets/images/vbox.jpg){: width="267" height="273" loading="lazy"}
+![Oracle VirtualBox logo](assets/images/vbox.jpg){: width="100" height="103" loading="lazy"}
 
 VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at server, desktop and embedded use.
 
 The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
-### Hyper-V (community image)
+### Proxmox
+
+![Proxmox logo](assets/images/proxmox-logo.svg){: width="400" height="65" loading="lazy"}
+
+[Proxmox](https://www.proxmox.com/) is a virtual machine and container platform, based on [QEMU](https://www.qemu.org/) and [KVM](https://www.linux-kvm.org/). It allows to run and manage multiple virtual machines and containers on a Linux OS via CLI and web interface, similar to how VMware's vSphere and ESXi works.
+
+### Parallels
+
+![Parallels Desktop](assets/images/Parallels3.png){: width="270" height="82" loading="lazy"}
+
+The [Parallels Desktop virtual machine](https://www.parallels.com/products/desktop/) is great for those occasions where SBC performance just isn't enough. Run one of these e.g. on any x86_64 macOS system (e.g. Mac mini 2011/2012/2014/2018) and still get the same great DietPi features and experience.
+
+### UTM
+
+![UTM](assets/images/UTM4.png){: width="80" height="80" loading="lazy"}
+
+The [UTM virtual machine](https://mac.getutm.app/) is great for those occasions where SBC performance just isn't enough. Run one of these on any macOS system (e.g. Mac mini 2011/2012/2014/2018 and M1 Apple Silicon) and still get the same great DietPi features and experience.
+
+![UTM](assets/images/UTM3.png){: width="270" height="221" loading="lazy"}
+
+!!! info "Emulation feature of UTM"
+    The emulation feature is an option of the virtualization technique to run x86 code on a M1 Mac system and vice versa an M1 Mac code on a x86 Mac system.  
+    This might be a good choice e.g. for testing purposes, but typically there will be a performance drawback using the emulation instead of running native x86 images on a x86 system resp. native `aarch64` images on an M1 system.
+
+### Hyper-V
 
 The Hyper-V virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
@@ -445,31 +516,56 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>Native PC for BIOS/CSM</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Bullseye.7z">DietPi image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Bullseye_Installer.7z">DietPi installer image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Native PC UEFI</strong></a></td>
+                <td><a class="table" href=""><strong>Native PC for UEFI</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Buster_Installer.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Bullseye_Installer.7z">DietPi installer image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>VMware</strong></a></td>
+                <td><a class="table" href=""><strong>VMware Player / Fusion</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Bullseye.7z">DietPi VMX appliance</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>VMware ESXi Hypervisor</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ESXi-x86_64-Bullseye.7z">DietPi OVA appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>VirtualBox</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Buster.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Bullseye.7z">DietPi OVA appliance</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Proxmox</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bullseye.7z">DietPi QCOW2 image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Parallels</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi PVM appliance</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>UTM</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bullseye.7z">DietPi UTM appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Hyper-V</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a target="_blank" rel="noopener" href="https://github.com/yumiris/DietPi.Hyper-V/blob/master/README.md">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Hyper-V-x86_64-Bullseye.7z">DietPi VHDX image</a>
                 </td>
             </tr>
         </tbody>
@@ -495,20 +591,13 @@ Don't worry, DietPi contains a script which can be used to turn an installed Deb
 
 ### Basic information
 
-The image generation is based on a shell script (**PREP_SYSTEM_FOR_DIETPI.sh**, located on [GitHub DietPi share](https://github.com/MichaIng/DietPi/)):
+The image generation is based on a shell script (**PREP_SYSTEM_FOR_DIETPI.sh**, located on [GitHub DietPi share](https://github.com/MichaIng/DietPi)):
 
 - **The script will** convert any 'bloated' Debian/Raspbian installation into a lightweight DietPi system.  
 - **The script will NOT** support converting existing installed software (e.g. Nextcloud, Plex Media Server) over to the DietPi system.
 - **All existing software (APT) and user data will be deleted.**
 
-The script has to be executed on the target system which you want to convert to a lightweight DietPi system.  
-Basically there are three options for the image generation:
-
-- based on the `master` branch of DietPi
-- based on the `beta` branch of DietPi
-- based on the `dev` branch of DietPi
-
-It is recommended using the `master` or `beta` branch. Using the `beta` branch helps hardening the upcoming DietPi release, so this is appreciated.
+The script has to be executed on the running target system which you want to convert to a lightweight DietPi system, or when booting the original image as a container.
 
 ### Prerequisites
 
@@ -525,7 +614,7 @@ It is recommended using the `master` or `beta` branch. Using the `beta` branch h
 
     ```sh
     apt update
-    apt install -y systemd-sysv ca-certificates sudo curl locales
+    apt install -y curl ca-certificates systemd-sysv
     ```
 
 ### Script execution
@@ -537,34 +626,13 @@ It is recommended using the `master` or `beta` branch. Using the `beta` branch h
 !!! important "Needed: Root rights"
     Ensure you have elevated privileges (e.g.: login as `root`, or use `sudo`).
 
-The following procedure is explained with the use of the `master` branch. Unless otherwise noted, the procedure is identical to the `beta` and the `dev` branches.
-
-Execute the following shell command to get the script (`master` branch):
+Execute the following shell command to download and execute the script:
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/PREP_SYSTEM_FOR_DIETPI.sh -o PREP_SYSTEM_FOR_DIETPI.sh
+bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/PREP_SYSTEM_FOR_DIETPI.sh')"
 ```
 
-In case of using the `beta` branch execute:
-
-```sh
-curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/beta/PREP_SYSTEM_FOR_DIETPI.sh -o PREP_SYSTEM_FOR_DIETPI.sh
-```
-
-In case of using the `dev` branch execute:
-
-```sh
-curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/dev/PREP_SYSTEM_FOR_DIETPI.sh -o PREP_SYSTEM_FOR_DIETPI.sh
-```
-
-As the next step, execute
-
-```sh
-chmod +x PREP_SYSTEM_FOR_DIETPI.sh
-./PREP_SYSTEM_FOR_DIETPI.sh
-```
-
-In the following dialog you have to select the DietPi installer branch. Choose the same branch as the DietPi `PREP_SYSTEM_FOR_DIETPI.sh` script:
+In the following dialog you have to select the DietPi installer branch. Generally use `master` as long as you do not want to create a development image:
 
 ![DietPi-PREP branch selection](assets/images/dietpi-prep-selectbranch.png){: width="550" height="266" loading="lazy"}
 
@@ -578,19 +646,15 @@ Depending on whether you want to use the WiFi feature later on, you have to sele
 
 ![DietPi-PREP WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550" height="184" loading="lazy"}
 
-The last selection is the target Debian version (the actual **Buster** or the upcoming **Bullseye**).  
+The last selection is the target Debian version (the old **Buster**, current stable **Bullseye**, or next testing **Bookworm**).  
 After this, the script runs a couple of minutes, finally the following message occurs:
 
 ![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}
 
-If you did not use branch `master` the last step is to edit file `/boot/dietpi.txt` and edit the  
-`DEV_GITBRANCH=master`  
-which is near the end of the file.
-
 After this you can restart your system (`reboot`), alternatively you can copy the SC card (via `dd`) to an image (`.img`) to duplicate your base installation.
 
-A further step can be to generate a compressed DietPi image via the `dietpi-imager` script. This script is located in the `.meta` subdirectory in the [GitHub DietPi share](https://github.com/MichaIng/DietPi/) or can be executed via
+A further step can be to generate a compressed DietPi image via the `dietpi-imager` script. This script is located in the `.meta` subdirectory in the [GitHub DietPi share](https://github.com/MichaIng/DietPi) or can be executed via:
 
 ```sh
-sudo bash -c "$(curl -sSfL https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager)"
+bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager')"
 ```
