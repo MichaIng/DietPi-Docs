@@ -242,7 +242,7 @@ YouTube video tutorial (German language): `Raspberry Pi einfach fernsteuern: Rem
 
 ## VirtualHere
 
-The VirtualHere package is used to share physically attached USB devices from your SBC over the network to other systems.
+VirtualHere allows USB devices to be used remotely over a network just as if they were locally connected!
 
 ![VirtualHere client screenshot](../assets/images/dietpi-software-remotedesktop-virtualhere.png){: width="400" height="252" loading="lazy"}
 
@@ -265,5 +265,63 @@ Once installed, available VirtualHere devices will be shown in the client user i
     - VirtualHere does not take into account mounted drives when selecting them for remote use. This is potentially dangerous for any mounted drive that is in use and may cause data loss.
     - Do not use drives on the client that are mounted on the SBC.  
       Unmount the drive before hand in `dietpi-drive_manager`.
+
+=== "Network port"
+
+    The VirtualHere server listens on the TCP port **7575** by default for client connections.
+
+=== "Service control"
+
+    The service is started automatically at boot. As systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status virtualhere
+    ```
+
+    ```sh
+    systemctl start virtualhere
+    ```
+
+    ```sh
+    systemctl stop virtualhere
+    ```
+
+    ```sh
+    systemctl restart virtualhere
+    ```
+
+=== "Configuration"
+
+    The configuration file can be found at:
+
+    ```
+    /opt/virtualhere/config.ini
+    ```
+
+    When doing changes, apply them by restart the service:
+
+    ```sh
+    systemctl restart virtualhere
+    ```
+
+=== "Logs"
+
+    Since VirtualHere runs as systemd service, its logs can be viewed via:
+
+    ```sh
+    journalctl -u virtualhere
+    ```
+
+=== "Update"
+
+    When a new version is available, VirtualHere can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 138
+    ```
+
+***
+
+Official website: <https://virtualhere.com/>
 
 [Return to the **Optimised Software list**](../../software/)
