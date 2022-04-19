@@ -261,10 +261,7 @@ Once installed, available VirtualHere devices will be shown in the client user i
     The base installation of this DietPi software package installs the VirtualHere server. Basically it starts as a trial version supporting only one single USB device. To overcome this, you need to [buy a licence](https://virtualhere.com/purchase).
 
 !!! warning "USB Storage WARNING"
-    - As per <https://github.com/MichaIng/DietPi/issues/852#issuecomment-292781475> it it highly recommended that you do not install VirtualHere if your DietPi user data is stored on a USB drive.
-    - VirtualHere does not take into account mounted drives when selecting them for remote use. This is potentially dangerous for any mounted drive that is in use and may cause data loss.
-    - Do not use drives on the client that are mounted on the SBC.  
-      Unmount the drive before hand in `dietpi-drive_manager`.
+    USB devices cannot be used on the host server and the client system at the same time. VirtualHere will forcefully "detach" even actively used USB drives on the host system, once you start using them with the client. Be hence very careful to not select the wrong USB device in clients, especially when DietPi userdata or swap files are located on a USB drive. Data loss, service and system crashes can be the result! If a device must stay available at the server, it is best to let it be ignored by VirtualHere, making use of the `IgnoredDevices` option: It takes `xxxx/yyyy` as value with `xxxx` being the vendor ID and `yyyy` being the device ID, which can be obtained from the output of `lsusb`. See the "Configuration" tab below and the official documentation link for further details.
 
 === "Network port"
 
@@ -322,6 +319,7 @@ Once installed, available VirtualHere devices will be shown in the client user i
 
 ***
 
-Official website: <https://virtualhere.com/>
+Official website: <https://virtualhere.com/>  
+Official server docs: <https://virtualhere.com/configuration_faq>
 
 [Return to the **Optimised Software list**](../../software/)
