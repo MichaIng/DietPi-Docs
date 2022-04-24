@@ -27,8 +27,6 @@ theme:
 markdown_extensions:
 - markdown.extensions.admonition # Highlighted warning/info blocks
 - markdown.extensions.attr_list # Set custom HTML attributes {: }
-- markdown.extensions.codehilite: # Highlight syntax in code blocks
-    guess_lang: false # Language must always be defined for syntax highlighting
 - markdown.extensions.footnotes # Footnotes [^1]
 - markdown.extensions.meta # Define meta data (page title and description) at the top of the Markdown document
 - markdown.extensions.smarty # Automatically convert dashes, underscore, three-dots and quotes to text symbols
@@ -45,7 +43,7 @@ markdown_extensions:
 - pymdownx.magiclink: # Auto-links non angle bracket URLs and email addresses and allows to shorten and visualise Git repo links
     repo_url_shortener: true
     repo_url_shorthand: true
-- pymdownx.superfences # Indended code blocks, e.g. within lists, admonition, details or tabbed blocks
+- pymdownx.superfences # Indented code blocks, e.g. within lists, admonition, details or tabbed blocks, implies pymdownx.highlight
 - pymdownx.tabbed # Tabbed content blocks
 
 #  Markdown extensions which could be used in the future
@@ -56,7 +54,7 @@ markdown_extensions:
 #- pymdownx.arithmatex # LaTeX math term support
 #- pymdownx.caret # Superscript <sup> and insert <ins> via caret ^
 #- pymdownx.critic # Comment, highlight, add or strikethrough text
-#- pymdownx.highlight # Configure code highlighting for all code definitions, fenced, inline and blocked by indentation
+#- pymdownx.highlight # Configure code highlighting for all code definitions, fenced, inline and blocked by indentation, implied by pymdownx.superfences
 #- pymdownx.inlinehilite # Highlight syntax in inline code
 #- pymdownx.mark # Mark text <mark> via ==text==
 #- pymdownx.smartsymbols # Easy symbols syntax (trademark, copyright, arrows, ...)

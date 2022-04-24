@@ -296,7 +296,7 @@ Feature rich media streaming server with a web interface, coded in Java.
 
 === "Service control"
 
-    Since Airsonic-Advanced runs as systems service, it can be controlled with the following commands:
+    Since Airsonic-Advanced runs as systemd service, it can be controlled with the following commands:
 
     ```sh
     systemctl status airsonic

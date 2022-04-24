@@ -49,7 +49,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     The configuration contains setting devices (e.g. router) to use Pi-hole for DNS resolution.
 
-    <font size="+2">Option 1 - Setup single devices to use the Pi-hole DNS server</font>
+    <h2>Option 1 - Setup single devices to use the Pi-hole DNS server</h2>
 
     Simply change your DNS settings to use the IP address of your Pi-hole device. This will need to be done for each device that you want Pi-hole to work with.
 
@@ -59,7 +59,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     - On my PC, I would set the DNS address to 192.168.0.100
     - Tutorial [The Ultimate Guide to Changing Your DNS settings](https://www.howtogeek.com/167533/the-ultimate-guide-to-changing-your-dns-server/).
 
-    <font size="+2">Option 2 - Setup your router to use the Pi-hole DNS server</font>
+    <h2>Option 2 - Setup your router to use the Pi-hole DNS server</h2>
 
     This method will automatically point every device (that uses DHCP) on your network to Pi-hole.
     On your routers control panel web page, you will need to find a option called "DNS server". This should be located under DHCP settings.
@@ -239,7 +239,7 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
 
     The configuration contains setting devices (e.g. router) to use AdGuard Home for DNS resolution.
 
-    <font size="+2">Option 1 - Setup single devices to use the AdGuard Home DNS server</font>
+    <h2>Option 1 - Setup single devices to use the AdGuard Home DNS server</h2>
 
     Simply change your DNS settings to use the IP address of your AdGuard Home device. This will need to be done for each device that you want AdGuard Home to work with.
 
@@ -249,7 +249,7 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
     - On my PC, I would set the DNS address to 192.168.0.100
     - Tutorial [The Ultimate Guide to Changing Your DNS settings](https://www.howtogeek.com/167533/the-ultimate-guide-to-changing-your-dns-server/).
 
-    <font size="+2">Option 2 - Setup your router to use the AdGuard Home DNS server</font>
+    <h2>Option 2 - Setup your router to use the AdGuard Home DNS server</h2>
 
     This method will automatically point every device (that uses DHCP) on your network to AdGuard Home.
     On your routers control panel web page, you will need to find a option called "DNS server". This should be located under DHCP settings.

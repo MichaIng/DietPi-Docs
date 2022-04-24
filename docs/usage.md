@@ -68,7 +68,7 @@ An additional syslog daemon, like `rsyslog`, is not required and hence not pre-i
 journalctl [options]
 ```
 
-<font size="+2">Logging basic output</font>
+### Logging basic output
 
 Using simply `journalctl` prints out all logging messages stored in the system.  
 Each line shows:  
@@ -78,7 +78,7 @@ The following screenshot shows the logging of the boot process (of a DietPi virt
 
 ![DietPi logging - journalctl screenshot](assets/images/dietpi-howto-logging1.png){: width="640" height="300" loading="lazy"}
 
-<font size="+2">Logging output filtering options</font>
+### Logging output filtering options
 
 Some of the options are described in the following table.  
 More detailed options may be studied in the [man pages of `journalctl`](https://man7.org/linux/man-pages/man1/journalctl.1.html).
@@ -99,7 +99,7 @@ More detailed options may be studied in the [man pages of `journalctl`](https://
 In the software package descriptions, sometimes there is a tab called "View Logs". This gives a `jounalctl -u UNITNAME` command example how to filter the logging messages of a given software package.  
 Example: See [tab "View logs"](../software/dns_servers/#unbound) of *Unbound*. It gives: `journalctl -u unbound`.
 
-<font size="+2">Logging options</font>
+### Logging options
 
 As described in the chapter [Log system choices](../software/log_system/), DietPi has several options how the logging system operates. Especially the log history, the memory consumption and the frequency of SD card write accesses varies.  
 Find and set the options which fit to your demands, it is also an option to change the logging to examine some problems.
