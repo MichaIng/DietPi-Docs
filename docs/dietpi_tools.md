@@ -12,7 +12,7 @@ It provides an easy access to all DietPi OS tools, and it could be accessed by r
 dietpi-launcher
 ```
 
-![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="366" loading="lazy"}
+![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="398" loading="lazy"}
 
 ## DietPi software
 
@@ -24,7 +24,7 @@ dietpi-software
 
 It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../software/) titles.
 
-![DietPi-Software screenshot](assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+![DietPi-Software screenshot](assets/images/dietpi-software.jpg){: width="640" height="306" loading="lazy"}
 
 ### Software overview
 
@@ -34,7 +34,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     - Scroll through the list of available software - for more details check the [DietPi software list](../software/).
 
-    The list of optimised software is long. You either browse the list or use the option **Search**.
+    The list of optimised software is long. You either browse the list or use the option **Search Software**.
 
     - To install software on your DietPi, select it in the list and press ++space++ to add it to the installation list. If you change your mind, hit ++space++ again to remove it.
 
@@ -62,25 +62,6 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-Software SSH Server menu screenshot](assets/images/dietpi-software-ssh-selection.jpg){: width="550" height="320" loading="lazy"}
 
-=== "File Server"
-
-    DietPi-Software allows you to easily choose a method of **accessing the files** on your DietPi system.
-    Installing one of DietPi's file server choices will allow you to access and share files on your DietPi system.
-
-    DietPi will then automatically install and setup the file server for you. DietPi will also clean and remove any previous file server from your system.
-
-    The **default destination** directory for file servers is `/mnt/dietpi_userdata`.
-
-    The reasons for choosing **ProFTPD** over **Samba** may be:
-
-    - ProFTPD outperforms Samba in all aspects of performance.
-    - ProFTPD can max out the RPi 100 Mbit connection with minimal CPU usage.
-    - Samba server on a RPi v1 will hit 100% CPU usage at 40 Mbit transfer rate.
-
-    ![DietPi-Software File Server menu screenshot](assets/images/dietpi-software-fileserver-selection.jpg){: width="550" height="342" loading="lazy"}
-
-    See [file servers overview](../software/file_servers/) for further information.
-
 === "Log System"
 
     Various logging methods can be selected from lightweight to full.
@@ -91,18 +72,6 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: width="550" height="370" loading="lazy"}
 
     See [log system choices](../software/log_system/) for further details.
-
-=== "Webserver Preference"
-
-    The DietPi **Webserver Preference** system allows you to choose your favourite webserver for use in DietPi installations. If not decided, read more on [Which WEBSERVER to CHOOSE ?](../software/webserver_stack/#which-web-application-stack-is-best-for-you)
-
-    !!! hint "Automatic selection"
-
-        When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Browse Software*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
-
-        As a result you will not need to manually select/install a webserver stack. DietPi will do it all for you.
-
-    ![DietPi-Software Webserver Preference menu screenshot](assets/images/dietpi-software-webserver-preference.png){: width="550" height="340" loading="lazy"}
 
 === "User Data Location"
 
@@ -189,7 +158,8 @@ When you execute the certificate installation it also installs it for your selec
 
 ### DietPi VPN
 
-DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all VPN users to quickly and easily connect to any NordVPN, ProtonVPN, or any other server that uses OpenVPN in TCP or UDP, using only open source software.
+DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all VPN users to quickly and easily connect to any NordVPN, ProtonVPN, or any other server that uses OpenVPN in TCP or UDP, using only open source software.  
+Run `dietpi-vpn`.
 
 ![DietPi-VPN screenshot](assets/images/dietpi-vpn.jpg){: width="642" height="300" loading="lazy"}
 
@@ -212,7 +182,8 @@ DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Al
 
 ### DietPi DDNS
 
-DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cron job which updates your dynamically changing public IP address every defined amount of minutes against a DDNS provider, so that your public domain stays valid. It supports No-IP and replaces the No-IP client, which was available as install option on previous DietPi versions.
+DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cron job which updates your dynamically changing public IP address every defined amount of minutes against a DDNS provider, so that your public domain stays valid. It supports No-IP and replaces the No-IP client, which was available as install option on previous DietPi versions.  
+Run `dietpi-ddns`.
 
 ![DietPi-DDNS main menu screenshot](assets/images/dietpi-ddns.jpg){: width="656" height="256" loading="lazy"}
 
@@ -221,6 +192,8 @@ DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cr
     - DuckDNS: <https://www.duckdns.org/>
     - No-IP: <https://www.noip.com/>
     - Dynu: <https://www.dynu.com/>
+    - FreeDNS: <https://freedns.afraid.org/>
+    - OVH: <https://docs.ovh.com/gb/en/domains/hosting_dynhost/>
     - Alternatively you may use any other provider which has an API URL for updating your dynamic IP address.
 
 === "CLI"
@@ -472,7 +445,7 @@ Run `dietpi-drive_manager`.
 Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running.  
 Run `dietpi-autostart`.
 
-![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg){: width="644" height="368" loading="lazy"}
+![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg){: width="640" height="458" loading="lazy"}
 
 !!! info "Autostart option in `dietpi.txt` (first initial boot)"
     When booting the DietPi system the first time, the autostart option can also be set via the file `dietpi.txt`. See option  
@@ -526,7 +499,8 @@ In this case you have to e.g. install a sound program package via `dietpi-softwa
 
 ### DietPi survey
 
-DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software.
+DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software.  
+Run `dietpi-survey`.
 
 ???+ important "Privacy and goals"
 
@@ -721,7 +695,7 @@ The following commands are non-interactive, but error-handled wrappers for `apt-
 Enables the configuration of the initial banner, displayed on logon.
 Run `dietpi-banner`.
 
-![DietPi-Banner config menu](assets/images/dietpi-banner_config.jpg){: width="643" height="338" loading="lazy"}
+![DietPi-Banner config menu](assets/images/dietpi-banner_config.jpg){: width="640" height="368" loading="lazy"}
 
 Using these settings you can configure the information displayed initially, choosing the details displayed initially. See below an example where 4 options are selected:
 
