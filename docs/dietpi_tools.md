@@ -767,7 +767,7 @@ cpu
 
 ### DietPi morse code
 
-It converts a text file into morse code. To start DietPi-MorseCode, use the following command:
+It converts a text file into morse code. To start DietPi morse code, use the following command:
 
 ```sh
 dietpi-morsecode
@@ -775,7 +775,7 @@ dietpi-morsecode
 
 ### DietPi bug report
 
-To start DietPi-BugReport, use the following command:
+To start DietPi bug report, use the following command:
 
 ```sh
 dietpi-bugreport
