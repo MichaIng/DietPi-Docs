@@ -157,6 +157,7 @@ FreeDNS
 FreshRSS
 FriendlyARM
 FriendlyARM's
+FriendlyELEC
 frontend
 frontends
 frp
@@ -347,6 +348,7 @@ NTFS
 NTP
 NUC
 Nukkit
+numpy
 nyx
 NZB
 NZBGet
