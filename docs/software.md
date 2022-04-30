@@ -219,7 +219,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Wordpress - Website Blog and Publishing platform**](social/#wordpress)
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](social/#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](social/#baikal)
-- [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](social/#openbazaar)
 - [**Synapse - Decentralized communication with the Matrix protocol**](social/#synapse)
 
 ## [SSH Server](ssh/)
