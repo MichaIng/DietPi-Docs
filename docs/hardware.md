@@ -591,7 +591,7 @@ Don't worry, DietPi contains a script which can be used to turn an installed Deb
 
 ### Basic information
 
-The image generation is based on a shell script (**PREP_SYSTEM_FOR_DIETPI.sh**, located on [GitHub DietPi share](https://github.com/MichaIng/DietPi)):
+The image generation is based on a shell script [`dietpi-installer`](https://github.com/MichaIng/DietPi/blob/master/.build/images/dietpi-installer):
 
 - **The script will** convert any 'bloated' Debian/Raspbian installation into a lightweight DietPi system.  
 - **The script will NOT** support converting existing installed software (e.g. Nextcloud, Plex Media Server) over to the DietPi system.
@@ -629,32 +629,32 @@ The script has to be executed on the running target system which you want to con
 Execute the following shell command to download and execute the script:
 
 ```sh
-bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/PREP_SYSTEM_FOR_DIETPI.sh')"
+bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/.build/images/dietpi-installer')"
 ```
 
 In the following dialog you have to select the DietPi installer branch. Generally use `master` as long as you do not want to create a development image:
 
-![DietPi-PREP branch selection](assets/images/dietpi-prep-selectbranch.png){: width="550" height="266" loading="lazy"}
+![DietPi-Installer branch selection](assets/images/dietpi-prep-selectbranch.png){: width="550" height="266" loading="lazy"}
 
 In the following dialogues enter your name and afterwards the actual image base and the device (SBC or PC) the system is running on:
 
-![DietPi-PREP pre-image entry](assets/images/dietpi-prep-preimage.png){: width="550" height="218" loading="lazy"}
+![DietPi-Installer pre-image entry](assets/images/dietpi-prep-preimage.png){: width="550" height="218" loading="lazy"}
 
-![DietPi-PREP device selection](assets/images/dietpi-prep-deviceselection.png){: width="550" height="290" loading="lazy"}
+![DietPi-Installer device selection](assets/images/dietpi-prep-deviceselection.png){: width="550" height="290" loading="lazy"}
 
 Depending on whether you want to use the WiFi feature later on, you have to select the option to keep or purge the WiFi package. To keep the package could be the case if your hardware has an onboard WiFi or you add the WiFi e.g. via an USB WiFi adapter.
 
-![DietPi-PREP WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550" height="184" loading="lazy"}
+![DietPi-Installer WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550" height="184" loading="lazy"}
 
 The last selection is the target Debian version (the old **Buster**, current stable **Bullseye**, or next testing **Bookworm**).  
 After this, the script runs a couple of minutes, finally the following message occurs:
 
-![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}
+![DietPi-Installer finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}
 
 After this you can restart your system (`reboot`), alternatively you can copy the SC card (via `dd`) to an image (`.img`) to duplicate your base installation.
 
-A further step can be to generate a compressed DietPi image via the `dietpi-imager` script. This script is located in the `.meta` subdirectory in the [GitHub DietPi share](https://github.com/MichaIng/DietPi) or can be executed via:
+A further step can be to generate a compressed DietPi image via the [`dietpi-imager`](https://github.com/MichaIng/DietPi/blob/master/.build/images/dietpi-imager) script:
 
 ```sh
-bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager')"
+bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/.build/images/dietpi-imager')"
 ```
