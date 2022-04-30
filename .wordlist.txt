@@ -553,6 +553,7 @@ TPM
 transactional
 transcoding
 TRÅDFRI
+trustable
 TTS
 TTL
 TTY
