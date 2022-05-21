@@ -482,7 +482,7 @@ Automatically download your favorite TV shows, as they become available.
 
 === "Link databases to RAM"
 
-    Link the Sonarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/phpbb/viewtopic.php?t=5828>
+    Link the Sonarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
 === "Recommended: Protect your privacy with a VPN"
 
@@ -552,7 +552,7 @@ Automatically download your favorite movies, as they become available.
 
 === "Link databases to RAM"
 
-    Link the Radarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/phpbb/viewtopic.php?t=5828>
+    Link the Radarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
 === "Recommended: Protect your privacy with a VPN"
 
@@ -665,8 +665,7 @@ Automatically download your favorite music.
 
 === "Link databases to RAM"
 
-    Link the Lidarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files:  
-    <https://dietpi.com/phpbb/viewtopic.php?t=5828>
+    Link the Lidarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
 === "Recommended: Protect your privacy with a VPN"
 

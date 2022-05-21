@@ -152,7 +152,7 @@ nav:
   - v6.29 May 2020: releases/v6_29.md
   - v6.28 January 2020: releases/v6_28.md
   - v6.27 January 2020: releases/v6_27.md
-  - Earlier: https://dietpi.com/phpbb/viewforum.php?f=10
+  - Earlier: https://dietpi.com/forum/c/version-history/6
 - COMMUNITY:
   # The first file "socialmedia.md" is added, otherwise in some browsers klicking on "Community" jumps directly to the first entry
   # That was the case that a klick directly jumped to the github page. (Then you leave our genious dietpi.com/docs site...) :-)
@@ -161,6 +161,6 @@ nav:
   - DietPi Blog page: https://dietpi.com/blog/
   - Report issues: https://github.com/MichaIng/DietPi/issues
   - Request features: https://github.com/MichaIng/DietPi/issues/new/choose
-  - DietPi Forum: https://dietpi.com/phpbb/
-  - Community tutorials: https://dietpi.com/phpbb/viewforum.php?f=15
-  - Troubleshooting: https://dietpi.com/phpbb/viewforum.php?f=11
+  - DietPi Forum: https://dietpi.com/forum/
+  - Community tutorials: https://dietpi.com/forum/c/community-tutorials/8
+  - Troubleshooting: https://dietpi.com/forum/c/troubleshooting/10

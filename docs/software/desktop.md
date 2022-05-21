@@ -64,7 +64,7 @@ LXDE is highly optimised and ultra lightweight desktop. It works well with compu
 ***
 
 Website: <https://www.lxde.org>  
-Official documentation: <https://wiki.lxde.org/en/Main_Page>
+Official documentation: <https://wiki.lxde.org/>
 
 ## LXQt
 
