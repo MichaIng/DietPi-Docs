@@ -250,7 +250,7 @@ Mopidy is a Python based music player web based user interface for MPD.
     apt-get install -y gstreamer1.0-plugins-bad
     ```
 
-    Many thanks to Roth for [this hint](https://dietpi.com/phpbb/viewtopic.php?t=785).
+    Many thanks to Roth for [this hint](https://dietpi.com/forum/t/add-mopidy-to-software-options-advanced-alsa-configs/646).
 
 ## Airsonic-Advanced {: #airsonic }
 

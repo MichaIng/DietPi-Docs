@@ -4,7 +4,7 @@
     <br><br>
     optimised • simplified • for everyone
     <br><br>
-    <a href="https://dietpi.com/" target="_blank" rel="noopener">Website</a> • <a href="https://dietpi.com/#download" target="_blank" rel="noopener">Downloads</a> • <a href="https://dietpi.com/docs/" target="_blank" rel="noopener">Documentation</a> • <a href="https://dietpi.com/phpbb/" target="_blank" rel="noopener">Forum</a> • <a href="https://dietpi.com/blog/" target="_blank" rel="noopener">Blog</a>
+    <a href="https://dietpi.com/" target="_blank" rel="noopener">Website</a> • <a href="https://dietpi.com/#download" target="_blank" rel="noopener">Downloads</a> • <a href="https://dietpi.com/docs/" target="_blank" rel="noopener">Documentation</a> • <a href="https://dietpi.com/forum/" target="_blank" rel="noopener">Forum</a> • <a href="https://dietpi.com/blog/" target="_blank" rel="noopener">Blog</a>
 </p>
 <hr>
 <p align="center">
@@ -42,7 +42,7 @@ To see the full list of possibilities, please check our [contribution](https://d
 
 ## Feedback
 
-- Ask a question on our [forum](https://dietpi.com/phpbb/).
+- Ask a question on our [forum](https://dietpi.com/forum/).
 - [File a bug report or request](https://github.com/MichaIng/DietPi-Docs/issues)
 - Follow [@DietPi_](https://twitter.com/DietPi_) and let us know what you think!
 
