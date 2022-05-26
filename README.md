@@ -29,14 +29,16 @@ It builds the static HTML pages into a temporary directory and starts a local we
 
 ## Contributing
 
-There are many ways you could contribute to DietPi project. You could work on the DietPi project, extend the documentation, or just run different tests.
+There are many ways you could contribute to DietPi project. You could work on the DietPi project, website design, extend the documentation, or just run tests.
 
-If you have experience with GitHub, you could either look for existent issue to start with or report a new one. Documentation updates should be done directly on GitHub, using the development branch: **[dev](https://github.com/MichaIng/DietPi-Docs/tree/dev)**, creating a Pull Request (PR).
+If you have experience with GitHub, you could either look for existent issue to start with or report a new one. Documentation updates should be done directly on GitHub, using the development branch: **[dev](https://github.com/MichaIng/DietPi-Docs/tree/dev)**, creating a pull request (PR).
 
 If you need help:
 
-- Send an email: micha@dietpi.com
+- Send an email: <micha@dietpi.com>
 - Read the documentation: <https://dietpi.com/docs/>
+- Join our forum: <https://dietpi.com/forum/>
+- GitHub: <https://github.com/MichaIng/DietPi-Docs>
 
 To see the full list of possibilities, please check our [contribution](https://dietpi.com/contribute.html) page.
 
@@ -54,8 +56,8 @@ To see the full list of possibilities, please check our [contribution](https://d
 
 ## License
 
-<a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/docs/">DietPi-Docs</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/">DietPi</a> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License - <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+<a rel="cc:attributionURL" property="dct:title" href="https://dietpi.com/docs/" target="_blank" rel="noopener">DietPi-Docs</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://dietpi.com/" target="_blank" rel="noopener">DietPi</a> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License - <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
 
-<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
 
 This website shows logos of 3rd party software and providers which are excluded from the above license. They may only be used related to their product, for details, check individual trademark rules and licenses.
