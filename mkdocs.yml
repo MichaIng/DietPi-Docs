@@ -3,7 +3,7 @@ site_url: https://dietpi.com/docs/
 site_description: Official documentation pages for DietPi OS
 site_author: DietPi.com Team
 copyright: Copyright © 2021 DietPi.com | Documentation Distributed under <a target="_blank"
-           href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+           href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>
 
 repo_name: DietPi-Docs
 repo_url: https://github.com/MichaIng/DietPi-Docs
@@ -154,8 +154,7 @@ nav:
   - v6.27 January 2020: releases/v6_27.md
   - Earlier: https://dietpi.com/forum/c/version-history/6
 - COMMUNITY:
-  # The first file "socialmedia.md" is added, otherwise in some browsers klicking on "Community" jumps directly to the first entry
-  # That was the case that a klick directly jumped to the github page. (Then you leave our genious dietpi.com/docs site...) :-)
+  # The first entry is opened when selecting "COMMUNITY" from primary navigation bar, hence should be an internal docs page.
   - Social media: socialmedia.md
   - DietPi GitHub page: https://github.com/MichaIng/DietPi
   - DietPi Blog page: https://dietpi.com/blog/
