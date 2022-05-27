@@ -692,6 +692,12 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
     [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
+***
+
+Official website: <https://prowlarr.com/>  
+Official documentation: <https://wiki.servarr.com/prowlarr>  
+Source code: <https://github.com/Prowlarr/Prowlarr>  
+License: [GPLv3](https://github.com/Prowlarr/Prowlarr/blob/develop/LICENSE)
 ## Jackett
 
 API Support for your favorite torrent trackers.
