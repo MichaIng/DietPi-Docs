@@ -698,6 +698,7 @@ Official website: <https://prowlarr.com/>
 Official documentation: <https://wiki.servarr.com/prowlarr>  
 Source code: <https://github.com/Prowlarr/Prowlarr>  
 License: [GPLv3](https://github.com/Prowlarr/Prowlarr/blob/develop/LICENSE)
+
 ## Jackett
 
 API Support for your favorite torrent trackers.
