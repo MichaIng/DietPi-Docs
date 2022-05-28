@@ -39,6 +39,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Radarr - Automatically download Movies**](bittorrent/#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](bittorrent/#bazarr)
 - [**Lidarr - Automatically download Music**](bittorrent/#lidarr)
+- [**Prowlarr - Indexer manager & proxy for PVR**](bittorrent/#prowlarr)
 - [**Jackett - API Support for your favourite torrent trackers**](bittorrent/#jackett)
 - [**NZBGet - NZB download manager with web interface**](bittorrent/#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](bittorrent/#htpc-manager)
