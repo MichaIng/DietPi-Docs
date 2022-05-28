@@ -150,6 +150,7 @@ filesystems
 FirstBoot
 ForkedDaapd
 FOSS
+foto
 FPM
 FPU
 framebuffer
@@ -189,6 +190,7 @@ GUA
 HAProxy
 harddisk
 Hardkernel
+Hardkernel's
 HC
 hexa
 hardcoded
@@ -412,6 +414,7 @@ ProFTPD
 ProtonVPN
 Prowlarr
 Proxmox
+PSK
 PSU
 PuTTY
 PVM
@@ -484,6 +487,7 @@ scrollback
 SDRAM
 SDL
 selectable
+Servarr
 serverless
 servlet
 SFTP
@@ -524,6 +528,7 @@ sudo
 subnet
 subnets
 subvolume
+suju
 Sur
 SVG
 swapfile
