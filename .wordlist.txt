@@ -150,6 +150,7 @@ filesystems
 FirstBoot
 ForkedDaapd
 FOSS
+foto
 FPM
 FPU
 framebuffer
@@ -527,6 +528,7 @@ sudo
 subnet
 subnets
 subvolume
+suju
 Sur
 SVG
 swapfile
