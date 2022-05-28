@@ -18,7 +18,7 @@ description: Description of DietPi software options related to BitTorrent and ot
 - [**Radarr - Automatically download Movies**](#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](#bazarr)
 - [**Lidarr - Automatically download Music**](#lidarr)
-- [**Prowlarr - Indexer Manager & Proxy for PVR**](#prowlarr)
+- [**Prowlarr - Indexer manager & proxy for PVR**](#prowlarr)
 - [**Jackett - API Support for your favourite torrent trackers**](#jackett)
 - [**NZBGet - NZB download manager with web interface**](#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](#htpc-manager)
@@ -675,8 +675,6 @@ Automatically download your favorite music.
 
 ## Prowlarr
 
-Indexer Manager & Proxy for PVR.
-
 Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Lidarr, Mylar3, Radarr, Readarr, and Sonarr offering complete management of your indexers.
 
 ![Prowlarr web interface screenshot](../assets/images/dietpi-software-download-prowlarr.png){: width="400" height="262" loading="lazy"}
@@ -700,8 +698,6 @@ Source code: <https://github.com/Prowlarr/Prowlarr>
 License: [GPLv3](https://github.com/Prowlarr/Prowlarr/blob/develop/LICENSE)
 
 ## Jackett
-
-API Support for your favorite torrent trackers.
 
 Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, Lidarr, Medusa) into tracker-site-specific HTTP queries, parses the HTML response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.
 
