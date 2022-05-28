@@ -7,7 +7,7 @@ jobs:
   Actions:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
     # https://github.com/actions/virtual-environments
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
     - name: Clone DietPi-Docs repository
       id: clone

@@ -460,7 +460,7 @@ Your very own GitHub style server, with web interface.
     - Change the following values only:
         - Host: `/run/mysqld/mysqld.sock`
         - Password: `<your global password>` (default: `dietpi`)
-        - SSH Server Domain: `<your.domain/IP>`
+        - Server Domain: `<your.domain/IP>`
         - Gitea Base URL: `http://<your.domain/IP>:3000/`
         - Log Path: `/var/log/gitea` (However, file logging is disabled by default.)
     - Scroll to the bottom of page and select "Install Gitea".

@@ -150,6 +150,7 @@ filesystems
 FirstBoot
 ForkedDaapd
 FOSS
+foto
 FPM
 FPU
 framebuffer
@@ -189,6 +190,7 @@ GUA
 HAProxy
 harddisk
 Hardkernel
+Hardkernel's
 HC
 hexa
 hardcoded
@@ -410,10 +412,13 @@ prefork
 Prioglio
 ProFTPD
 ProtonVPN
+Prowlarr
 Proxmox
+PSK
 PSU
 PuTTY
 PVM
+PVR
 Pycharm
 Pydev
 Pydio
@@ -440,6 +445,8 @@ repo
 rcon
 RDBMS
 RDP
+reactjs
+Readarr
 ReadyMedia
 RealVNC
 reconfigures
@@ -480,6 +487,7 @@ scrollback
 SDRAM
 SDL
 selectable
+Servarr
 serverless
 servlet
 SFTP
@@ -520,6 +528,7 @@ sudo
 subnet
 subnets
 subvolume
+suju
 Sur
 SVG
 swapfile
