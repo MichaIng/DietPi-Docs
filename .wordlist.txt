@@ -410,10 +410,12 @@ prefork
 Prioglio
 ProFTPD
 ProtonVPN
+Prowlarr
 Proxmox
 PSU
 PuTTY
 PVM
+PVR
 Pycharm
 Pydev
 Pydio
@@ -440,6 +442,8 @@ repo
 rcon
 RDBMS
 RDP
+reactjs
+Readarr
 ReadyMedia
 RealVNC
 reconfigures
