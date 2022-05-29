@@ -181,8 +181,7 @@ Amiberry is an optimised Amiga emulator for the Raspberry Pi and other ARM-based
 This installation is possible due to a collaboration with Dimitris Panokostas (Amiberry) and Daniel Knight (DietPi).
 
 - Keyboard + mouse is highly recommended.
-- We also offer a completely automated installation image for Amiberry. Please see: <https://blitterstudio.com/amiberry/>.
-- Direct download link: <https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Bullseye_Amiberry.7z>.
+- We also offer completely automated installation images for Amiberry on Raspberry Pi, which can be found on our download page: <https://dietpi.com/#download>
 
 ![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: width="400" height="189" loading="lazy"}
 
@@ -198,44 +197,57 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
       You will need obtain at least one ADF image to start your Amiga experience.  
       Load your ADF from or place them where every you want it, e.g. create and use:  
       `/mnt/dietpi_userdata/amiberry/floppy_images`  
-      To allow uploads via file servers, remember to grant required permissions, e.g.:  
-      `chown dietpi:dietpi /mnt/dietpi_userdata/amiberry/floppy_images`
+      To allow uploads via file servers, remember to grant required permissions, e.g.:
+
+        ```sh
+        chown dietpi:dietpi /mnt/dietpi_userdata/amiberry/floppy_images
+        ```
 
 === "Starting"
 
-    - Amiberry can be started by running: `systemctl start amiberry`
+    - Amiberry can be started by running:
+
+        ```sh
+        systemctl start amiberry
+        ```
+
     - Optionally, you can enable Amiberry autostart to boot straight into the Amiga environment as fast as possible, with the least possible interference from Linux.  
-      Run `dietpi-autostart 6` from console or `dietpi-autostart` and select *Amiberry fast boot* from the menu, then reboot your system.  
-      If you face issues with the fast boot option or need to have other services starting up first, use `dietpi-autostart 8` or select *Amiberry standard boot* respectively.
+      Run `dietpi-autostart 6` from console or `dietpi-autostart` and select **Amiberry fast boot** from the menu, then reboot your system.  
+      If you face issues with the fast boot option or need to have other services starting up first, use `dietpi-autostart 8` or select **Amiberry standard boot** respectively.
 
 === "Create an Amiga configuration"
 
     Once Amiberry is running, you will need to configure the emulator, to tell it which Amiga system to emulate.
 
-    - Select `Quickstart` (from the left hand side menu)
+    - Select **Quickstart** (from the left hand side menu)
     - Under Amiga model: Select the Amiga model you'd like to emulate (example A500)
     - Under Config: Select the additional options for the target Amiga model (if required)
     - Click the Set configuration, button to apply changes.
 
-    Next you will need to setup the emulator for the Kickstart and Floppy disk image you wish to use:
+    Next you will need to setup the emulator for the Kickstart and floppy disk image you wish to use:
 
     - Select a Kickstart (ROM):
-      - On the left hand side, select ROM.
-      - Under Main ROM File:, click the browse button (3 dots) ...
-      - Navigate to your Kickstarts directory  
-        `/mnt/dietpi_userdata/amiberry/kickstarts`  
-        Remark: Amiberry does not currently support symbolic links. If you have a dedicated USB drive installation, the location is:  
-        `/mnt/uuid-of-drive/amiberry/kickstarts`
-      - Select a Kickstart (1.3 is recommended)
+        - On the left hand side, select **ROM**.
+        - Under **Main ROM File:**, select the browse button (3 dots) ...
+        - Navigate to your Kickstarts directory:  
+          `/mnt/dietpi_userdata/amiberry/kickstarts`\*
+        - Select the Kickstart (1.3 is recommended) you wish to use.
 
     - Select a Floppy disk image (ADF):
-      - On the left hand side, select Floppy drives.
-      - Under `DF0:`, select the browse button the right hand side (3 dots) ...
-      - Navigate to your Floppy image directory, e.g.   
-        `/mnt/dietpi_userdata/amiberry/floppy_images`  
-        Remark: Amiberry does not currently support symbolic links. If you have a dedicated USB drive installation, the location is:  
-        `/mnt/uuid-of-drive/amiberry/floppy_images`
-      - Select the ROM you wish to use.
+        - On the left hand side, select **Floppy drives**.
+        - Under `DF0:`, select the browse button (3 dots) ...
+        - Navigate to your floppy image directory:  
+          `/mnt/dietpi_userdata/amiberry/floppy_images`\*
+        - Select the ROM you wish to use.
+
+    \* Remark: Amiberry does not currently support symbolic links. If you moved DietPi userdata to an external drive, run the following command to derive it's actual path:  
+
+    ```sh
+    readlink -f /mnt/dietpi_userdata/amiberry
+    ```
+
+    With `dietpi-drive_manager`'s default mount point it looks like:  
+    `/mnt/<UUID>/dietpi_userdata/amiberry`
 
 === "Enable fullscreen output"
 
@@ -246,9 +258,9 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
     This will emulate the Amiga as fast as possible, ensuring you get the maximum FPS for your SBC hardware.
 
-    - On the left hand side, select CPU and FPU.
+    - On the left hand side, select **CPU and FPU**.
     - Under CPU Speed, select the fastest option.
-    - If you find this change slows down the emulation, try using the fixed value of 25 MHz
+    - If you find this change slows down the emulation, try using the fixed value of **25 MHz**.
 
 === "Optional: Save configuration (recommended)"
 
@@ -257,25 +269,33 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     - On the left hand side, select **Configurations**.
     - Enter the name, e.g. "autostart", then click **Save**.
 
+=== "Update"
+
+    To update Amiberry to the latest version, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 108
+    ```
+
 === "FAQ"
 
-    #### How can I transfer Kickstarts & Floppy Images to the device?
+    <h4>How can I transfer Kickstarts & Floppy Images to the device?</h4>
 
     Make sure you have one of DietPi's File Servers installed.
 
     - Floppy Disk Image (`.adf`) directory as chosen before, e.g. `/amiberry/floppy_images`
     - Kickstarts (`.rom`) directory = `/amiberry/kickstarts`
 
-    #### How can I open the configuration window once the emulator has started?
+    <h4>How can I open the configuration window once the emulator has started?</h4>
 
     The pre-defined key for that is ++f12++.
 
-    #### How can I reboot the Amiga emulation environment (Amiga reset)?
+    <h4>How can I reboot the Amiga emulation environment (Amiga reset)?</h4>
 
     Use ++ctrl+lwin+rwin++ keys.  
     If you don't have an ++rwin++ key, try using the ++menu++ key instead.
 
-    #### What are the default controls for Joystick, when using a Keyboard?
+    <h4>What are the default controls for Joystick, when using a Keyboard?</h4>
 
     When using a keyboard, the default joystick controls are:
 
@@ -283,41 +303,39 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     - ++page-down++ = Fire/Button 1
     - ++page-up++ = Fire/Button 2
 
-    #### How can I improve performance (frame rate)?
+    <h4>How can I improve performance (frame rate)?</h4>
 
     A ***lower resolution*** may improve performance on most games. From the emulator main menu:
 
-    - On the left hand side, select Display
-    - 640x256 is high resolution
-    - 320x256 is low resolution and should provide improved performance
+    - On the left hand side, select **Display**.
+    - **640x256** is high resolution.
+    - **320x256** is low resolution and should provide improved performance.
 
     ***Overclocking*** your system will improve performance. Stability may vary across devices and overclocking is not officially supported:  
 
-    - From a terminal, run `dietpi-config`
-    - Select the Performance Options menu
-    - Select Overclocking Profiles
-    - Select an overclocking profile, then reboot the system
+    - From a terminal, run `dietpi-config`.
+    - Select the **Performance Options** menu.
+    - Select **Overclocking**.
+    - Select an overclocking profile, then `reboot` the system to apply the change.
 
-    #### How do i set the floppy drive speed for compatibility?
+    <h4>How do I set the floppy drive speed for compatibility?</h4>
 
-    Floppy drive emulation is to set to "800 %" by default. This reduces loading times by up to 8x.  
-    You can lower this to 100 %, increasing compatibility:
+    Floppy drive emulation is to set to **800 %** by default. This reduces loading times by up to 8x.  
+    You can lower this to **100 %**, increasing compatibility:
 
-    - On the left hand side, select Floppy Drives
-    - Change the Floppy Drive Emulation Speed value to 100 %
+    - On the left hand side, select **Floppy drives**.
+    - Change the Floppy Drive Emulation Speed value to **100 %**.
 
-    #### Some games are not in full screen
+    <h4>Some games are not in full screen</h4>
 
     Games run at various resolutions, from the emulator main menu:
 
-    - On the left hand side, select Display
-    - Change the Height value to 200 or 256
-    - Press the Resume or Start button
+    - On the left hand side, select **Display**.
+    - Change the **Height** value to **200** or **256**.
+    - Press the **Resume** or **Start** button.
 
-    If you find this installation useful, please donate. Use the below link and select **Donate for DietPi and Amiberry 50:50** to have it split between Dimitris Panokostas (Amiberry) and DietPi.  
-    [PayPal Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DVBECXRW3TAA)
-
-**Good to GO!**  
+### Good to GO
+  
 When ready, select **Start** to launch the emulator. Have fun!
 
 ***
