@@ -226,3 +226,33 @@ YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: I
 <iframe src="https://www.youtube-nocookie.com/embed/yRkdzGmnvA4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 [Return to the **Optimised Software list**](../../software/)
+
+## Tailscale
+
+Zero config VPN.
+
+![Tailscale logo](../assets/images/dietpi-tailscale.png){: width="200" height="58" loading="lazy"}
+
+=== "How to configure"
+
+Step 1: Sign up for an account
+
+[Sign up for a Tailscale account]([https://](https://login.tailscale.com/start)). Get started with a free personal plan or trial for an organizational plan.
+
+Tailscale requires a Single Sign-On (SSO) provider, so you’ll need a Google, Microsoft, GitHub, Okta, OneLogin, or other supported SSO identity provider account to begin.
+
+Step 2: Add a machine to your network
+
+```sh
+tailscale up
+```
+
+Tailscale helps you connect your devices together. For that to be possible, Tailscale needs to run on your device.
+
+***
+
+Website: <https://tailscale.com/>
+
+Docs: <https://tailscale.com/kb/>
+
+[What is Tailscale?](https://tailscale.com/kb/1151/what-is-tailscale/){:class="nospellcheck"}
