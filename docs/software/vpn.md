@@ -10,6 +10,7 @@ description: Description of DietPi software options related to VPNs
 - [**OpenVPN - Easy to use, minimal hassle VPN server**](#openvpn)
 - [**PiVPN - OpenVPN server installer and management tool**](#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](#wireguard)
+- [**Tailscale - Zero config VPN**](#tailscale)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
