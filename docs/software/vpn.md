@@ -225,8 +225,6 @@ YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: I
 
 <iframe src="https://www.youtube-nocookie.com/embed/yRkdzGmnvA4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
-[Return to the **Optimised Software list**](../../software/)
-
 ## Tailscale
 
 Zero config VPN.
@@ -256,3 +254,5 @@ Tailscale helps you connect your devices together. For that to be possible, Tail
 Website: <https://tailscale.com/>
 Docs: <https://tailscale.com/kb/>
 [What is Tailscale?](https://tailscale.com/kb/1151/what-is-tailscale/){:class="nospellcheck"}
+
+[Return to the **Optimised Software list**](../../software/)
