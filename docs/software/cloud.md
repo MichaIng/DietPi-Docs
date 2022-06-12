@@ -856,4 +856,20 @@ Official documentation: <https://filebrowser.org/>
 Source code: <https://github.com/filebrowser/filebrowser>  
 License: [Apache 2.0](https://github.com/filebrowser/filebrowser/blob/master/LICENSE)
 
+## Rclone
+
+Rclone is a command-line program to manage files on cloud storage. It is a feature-rich alternative to cloud vendors' web storage interfaces. Over [40 cloud storage products](https://rclone.org/#providers) support rclone including S3 object stores, business & consumer file storage services, as well as standard transfer protocols.
+
+![File Browser logo](../assets/images/dietpi-software-cloud-rclone-logo.png){: width="150" height="150" loading="lazy"}
+
+=== "Setup"
+
+Run `rclone config` to setup. See [rclone config docs](https://rclone.org/docs/) for more details.
+
+***
+
+Official documentation: <https://rclone.org/>
+Source code: <https://github.com/rclone/rclone>
+License: [MIT License](https://github.com/rclone/rclone/blob/master/COPYING)
+
 [Return to the **Optimised Software list**](../../software/)
