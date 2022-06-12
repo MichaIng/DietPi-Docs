@@ -231,7 +231,7 @@ YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: I
 
 Zero config VPN.
 
-![Tailscale logo](../assets/images/dietpi-tailscale.png){: width="200" height="58" loading="lazy"}
+![Tailscale logo](../assets/images/dietpi-software-vpn-tailscale-logo.png){: width="200" height="58" loading="lazy"}
 
 === "How to configure"
 
