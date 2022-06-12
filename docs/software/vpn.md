@@ -231,6 +231,8 @@ YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: I
 
 Zero config VPN.
 
+Tailscale is a VPN service that makes the devices and applications you own accessible anywhere in the world, securely and effortlessly. It enables encrypted point-to-point connections using the open source WireGuard protocol, which means only devices on your private network can communicate with each other.
+
 ![Tailscale logo](../assets/images/dietpi-software-vpn-tailscale-logo.png){: width="200" height="58" loading="lazy"}
 
 === "How to configure"
@@ -252,7 +254,5 @@ Tailscale helps you connect your devices together. For that to be possible, Tail
 ***
 
 Website: <https://tailscale.com/>
-
 Docs: <https://tailscale.com/kb/>
-
 [What is Tailscale?](https://tailscale.com/kb/1151/what-is-tailscale/){:class="nospellcheck"}
