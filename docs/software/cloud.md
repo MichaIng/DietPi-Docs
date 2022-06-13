@@ -20,7 +20,7 @@ description: Description of DietPi software options related to cloud and backup 
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](#file-browser)
-- [**Rclone - Rclone is a command-line program to manage files on cloud storage.**](#Rclone)
+- [**Rclone - Rclone is a command-line program to manage files on cloud storage.**](#rclone)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
