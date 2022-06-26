@@ -127,6 +127,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     The stats web interface is accessible via port **1338**:
 
     - URL = `http://<your.IP>:1338`
+    - Prometheus metrics = `http://<your.IP>:1338/metrics`
     - Username = `admin`
     - Password = `dietpi`
 
