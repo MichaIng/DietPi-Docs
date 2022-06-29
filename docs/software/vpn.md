@@ -11,6 +11,7 @@ description: Description of DietPi software options related to VPNs
 - [**PiVPN - OpenVPN server installer and management tool**](#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](#wireguard)
 - [**Tailscale - Zero config VPN**](#tailscale)
+- [**ZeroTier - Free easy to deploy cloud-hosted VPN service**](#zerotier)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -293,5 +294,96 @@ Tailscale is a VPN service that makes the devices and applications you own acces
 Website: <https://tailscale.com/>  
 Docs: <https://tailscale.com/kb/>  
 License: [BSD 3-Clause](https://github.com/tailscale/tailscale/blob/main/LICENSE)
+
+## ZeroTier
+
+ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all networked devices, VMs, containers, and applications to communicate as if they all reside in the same physical data centre or cloud region.
+
+![ZeroTier logo](../assets/images/dietpi-software-vpn-zerotier-logo.png){: width="100" height="100" loading="lazy"}
+   
+=== "Creation of P2P Network on controller"
+
+    In order to use ZeroTier you firstly need to create network in controller either in ZeroTier ltd. hosted or self-hosted controllers.  
+    Firstly let's show step-by-step instructions for ZeroTier hosted networks. For that we will need to:
+    1. Register on <https://my.zerotier.com>
+    2. Press on **"Create A Network"**
+    3. Go to page of created network, where we need to choose which type network we would like to have:
+        - Private: Nodes must be authorized to become members
+        - Public: Any node can become a member. Members cannot be de-authorized or deleted. Members that haven't been online in 30 days will be removed, but can rejoin.
+    
+=== "Joining to network via `zerotier-cli`"
+
+    By running `sudo zerotier-cli join <network-id>`, whereas `<network-id>` could be found in controllers webpage in list of networks, we will join network.  
+    If Network type is Private, then we will need to go to controller website and authorize joining node by going to `https://my.zerotier.com/network/<network-id>` and scrolling down to members list where we will find on first column checkbox, if we fill it then node is authorized else it's not.  
+    If Network type is Public, then we automatically have access to other nodes.  
+    In order to leave certain network we need to run next command:
+
+    ```sh
+    zerotier-cli leave <network-id>
+    ```
+
+    For printing out the node ID, run:
+
+    ```sh
+    zerotier-cli info
+    ```
+    
+=== "Self-hosting controllers"
+
+    ZeroTier supports self-hosting controllers on nodes.
+    - Self-hosting a controller: <https://docs.zerotier.com/self-hosting/network-controllers>
+    - Self-hosting the controller UI: <https://github.com/dec0dOS/zero-ui>
+
+=== "Service control"
+
+    Since ZeroTier runs as a systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status zerotier-one
+    ```
+
+    ```sh
+    systemctl start zerotier-one
+    ```
+
+    ```sh
+    systemctl stop zerotier-one
+    ```
+
+    ```sh
+    systemctl restart zerotier-one
+    ```
+
+=== "Logs"
+
+    ZeroTier runs as a systemd service, hence logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u zerotier-one
+    ```
+
+=== "Update"
+
+    ZeroTier is installed as an APT package and can hence be upgraded using the following commands:
+
+    ```sh
+    apt update
+    apt install zerotier-one
+    ```
+
+***
+
+Website: <https://zerotier.com>  
+Wikipedia : <https://en.wikipedia.org/wiki/ZeroTier>  
+Source code: <https://github.com/zerotier/ZeroTierOne>
+License: [BSLv1.1](https://github.com/zerotier/ZeroTierOne/blob/master/LICENSE.txt)
+
+YouTube video tutorial: *Zerotier Tutorial: Delivering the Capabilities of VPN, SDN, and SD-WAN via an Open Source System*.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bl_Vau8wtgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+YouTube video tutorial: *How To Work Remotely Using Zerotier & Windows Remote Desktop (RDP)*.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZShna7v77xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Return to the **Optimised Software list**](../../software/)
