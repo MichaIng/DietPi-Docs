@@ -128,7 +128,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
     - URL = `http://<your.IP>:1338`
     - Username = `admin`
-    - Password = `dietpi`
+    - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
     !!! hint "This installation was made possible by Jerome Queneuder, who provided the methods for compiling and installation."
 
