@@ -861,7 +861,7 @@ License: [Apache 2.0](https://github.com/filebrowser/filebrowser/blob/master/LIC
 
 Rclone is a command-line program to manage files on cloud storage. It is a feature-rich alternative to cloud vendors' web storage interfaces. Over [40 cloud storage products](https://rclone.org/#providers) support rclone including S3 object stores, business & consumer file storage services, as well as standard transfer protocols.
 
-![File Browser logo](../assets/images/dietpi-software-cloud-rclone-logo.png){: width="150" height="150" loading="lazy"}
+![Rclone logo](../assets/images/dietpi-software-cloud-rclone-logo.png){: width="300" height="69" loading="lazy"}
 
 === "Setup"
 
