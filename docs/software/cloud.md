@@ -853,15 +853,15 @@ Access and manage your data from anywhere via browser with this lightweight remo
 
 ***
 
-Official documentation: <https://filebrowser.org/>  
-Source code: <https://github.com/filebrowser/filebrowser>  
+Official documentation: <https://filebrowser.org/>
+Source code: <https://github.com/filebrowser/filebrowser>
 License: [Apache 2.0](https://github.com/filebrowser/filebrowser/blob/master/LICENSE)
 
 ## Rclone
 
 Rclone is a command-line program to manage files on cloud storage. It is a feature-rich alternative to cloud vendors' web storage interfaces. Over [40 cloud storage products](https://rclone.org/#providers) support rclone including S3 object stores, business & consumer file storage services, as well as standard transfer protocols.
 
-![Rclone logo](../assets/images/dietpi-software-cloud-rclone-logo.png){: width="300" height="69" loading="lazy"}
+![Rclone logo](../assets/images/dietpi-software-cloud-rclone-logo.svg){: width="300" height="69" loading="lazy"}
 
 === "Setup"
 
