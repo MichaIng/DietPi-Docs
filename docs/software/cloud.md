@@ -865,7 +865,15 @@ Rclone is a command-line program to manage files on cloud storage. It is a featu
 
 === "Setup"
 
-Run `rclone config` to setup. See [rclone config docs](https://rclone.org/docs/) for more details.
+    Run `rclone config` to setup. See [Rclone config docs](https://rclone.org/docs/) for more details.
+
+=== "Update"
+
+    Rclone can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 202
+    ```
 
 ***
 
