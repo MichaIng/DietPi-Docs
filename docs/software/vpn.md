@@ -139,8 +139,8 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     #### General
 
     You are asked to enter your public IP/domain and the port on which the VPN server should be available. Remember to open/forward the port (UDP) through NAT on your router.  
-    During installation, a client configuration file will be automatically created as well at:   
-    `/etc/wireguard/wg0-client.conf`.
+    During installation, a client configuration file will be automatically created as well at:  
+    `/etc/wireguard/wg0-client.conf`
 
     Configure the client configuration to your needs, it contains some informational comments. By default it will pass all clients network traffic through the VPN tunnel, including DNS requests which will be resolved by the servers DNS resolver.  
     If you e.g. want to use the servers Pi-hole instance on the client only, but keep all other traffic outside the VPN tunnel, you would edit the following values:
@@ -151,11 +151,11 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     If your client is another Linux machine with iptables installed, you can uncomment the two kill switch lines to have all network traffic automatically disabled, when VPN connection is lost.
     If your client is a mobile phone with WireGuard app installed, you can simply apply the config by printing a QR code onto the servers terminal via:  
     `grep -v '^#' /etc/wireguard/wg0-client.conf | qrencode -t ansiutf8`.  
-    To allow VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`.
+    To allow VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`
 
     #### Adding multiple clients
 
-    Navigate to the servers WireGuard configuration directory: `cd /etc/wireguard`.
+    Navigate to the servers WireGuard configuration directory: `cd /etc/wireguard`
 
     Create a second client key pair:
 
@@ -197,7 +197,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     - To autostart the VPN interface on boot, run: `systemctl enable wg-quick@wg0-client`
     - To disable autostart again, run: `systemctl disable wg-quick@wg0-client`
 
-    Remark: If the client config sets the DNS server via `DNS = ...` directive, assure that resolvconf is installed: `apt install resolvconf`.
+    Remark: If the client config sets the DNS server via `DNS = ...` directive, assure that resolvconf is installed: `apt install resolvconf`
 
 === "View logs"
 
@@ -216,7 +216,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 ???+ info "Kernel update"
 
     The WireGuard kernel module needs to rebuild whenever the kernel is updated. On most devices this will be done automatically, when the kernel (+headers) is updated via APT package, which then usually triggers the module rebuild.  
-    If you update the kernel outside of APT, via `source build` or commands like `rpi-update`, assure that matching kernel headers are installed as well and rebuild the WireGuard module via: `dpkg-reconfigure wireguard-dkms`.
+    If you update the kernel outside of APT, via `source build` or commands like `rpi-update`, assure that matching kernel headers are installed as well and rebuild the WireGuard module via: `dpkg-reconfigure wireguard-dkms`
 
 ***
 
@@ -299,8 +299,8 @@ License: [BSD 3-Clause](https://github.com/tailscale/tailscale/blob/main/LICENSE
 
 ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all networked devices, VMs, containers, and applications to communicate as if they all reside in the same physical data centre or cloud region.
 
-![ZeroTier logo](../assets/images/dietpi-software-vpn-zerotier-logo.png){: width="100" height="100" loading="lazy"}
-   
+![ZeroTier logo](../assets/images/zerotier-logo.png){: width="300" height="71" loading="lazy"}
+
 === "Creation of P2P Network on controller"
 
     In order to use ZeroTier you firstly need to create network in controller either in ZeroTier ltd. hosted or self-hosted controllers.  
@@ -310,7 +310,7 @@ ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all
     3. Go to page of created network, where we need to choose which type network we would like to have:
         - Private: Nodes must be authorized to become members
         - Public: Any node can become a member. Members cannot be de-authorized or deleted. Members that haven't been online in 30 days will be removed, but can rejoin.
-    
+
 === "Joining to network via `zerotier-cli`"
 
     By running `sudo zerotier-cli join <network-id>`, whereas `<network-id>` could be found in controllers webpage in list of networks, we will join network.  
@@ -327,7 +327,7 @@ ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all
     ```sh
     zerotier-cli info
     ```
-    
+
 === "Self-hosting controllers"
 
     ZeroTier supports self-hosting controllers on nodes.
