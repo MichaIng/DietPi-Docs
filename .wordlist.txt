@@ -441,6 +441,7 @@ RAMlog
 Rasmus
 Raspbian
 Raspotify
+Rclone
 README
 Reddit
 reinstalls
@@ -526,6 +527,7 @@ SSL
 SSO
 StackExchange
 StephanStS
+storages
 subdirectory
 subshell
 sudo

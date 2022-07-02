@@ -66,6 +66,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](cloud/#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](cloud/#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](cloud/#file-browser)
+- [**Rclone - Utility to sync your files to cloud storages**](cloud/#rclone)
 
 ## [Databases & Data Stores](databases/#overview)
 
