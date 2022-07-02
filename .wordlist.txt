@@ -441,6 +441,7 @@ RAMlog
 Rasmus
 Raspbian
 Raspotify
+Rclone
 README
 Reddit
 reinstalls

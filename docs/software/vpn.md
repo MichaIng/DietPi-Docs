@@ -289,9 +289,9 @@ Tailscale is a VPN service that makes the devices and applications you own acces
 
 ***
 
-[What is Tailscale?](https://tailscale.com/kb/1151/what-is-tailscale/)
-Website: <https://tailscale.com/>
-Docs: <https://tailscale.com/kb/>
+[What is Tailscale?](https://tailscale.com/kb/1151/what-is-tailscale/)  
+Website: <https://tailscale.com/>  
+Docs: <https://tailscale.com/kb/>  
 License: [BSD 3-Clause](https://github.com/tailscale/tailscale/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)

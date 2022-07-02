@@ -20,7 +20,7 @@ description: Description of DietPi software options related to cloud and backup 
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](#file-browser)
-- [**Rclone - Rclone is a command-line program to manage files on cloud storage.**](#rclone)
+- [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -853,17 +853,17 @@ Access and manage your data from anywhere via browser with this lightweight remo
 
 ***
 
-Official documentation: <https://filebrowser.org/>
-Source code: <https://github.com/filebrowser/filebrowser>
+Official documentation: <https://filebrowser.org/>  
+Source code: <https://github.com/filebrowser/filebrowser>  
 License: [Apache 2.0](https://github.com/filebrowser/filebrowser/blob/master/LICENSE)
 
 ## Rclone
 
-Rclone is a command-line program to manage files on cloud storage. It is a feature-rich alternative to cloud vendors' web storage interfaces. Over [40 cloud storage products](https://rclone.org/#providers) support rclone including S3 object stores, business & consumer file storage services, as well as standard transfer protocols.
+Rclone is a command-line program to manage files on cloud storage. It is a feature-rich alternative to cloud vendors' web storage interfaces. Over [40 cloud storage products](https://rclone.org/#providers) support Rclone, including S3 object stores, business & consumer file storage services, as well as standard transfer protocols.
 
-![Rclone logo](../assets/images/dietpi-software-cloud-rclone-logo.svg){: width="300" height="69" loading="lazy"}
+![Rclone logo](../assets/images/rclone-logo.svg){: width="300" height="69" loading="lazy"}
 
-=== "Setup"
+=== "Quick start"
 
     Run `rclone config` to setup. See [Rclone config docs](https://rclone.org/docs/) for more details.
 
@@ -877,8 +877,8 @@ Rclone is a command-line program to manage files on cloud storage. It is a featu
 
 ***
 
-Official documentation: <https://rclone.org/>
-Source code: <https://github.com/rclone/rclone>
-License: [MIT License](https://github.com/rclone/rclone/blob/master/COPYING)
+Official documentation: <https://rclone.org/>  
+Source code: <https://github.com/rclone/rclone>  
+License: [MIT](https://github.com/rclone/rclone/blob/master/COPYING)
 
 [Return to the **Optimised Software list**](../../software/)
