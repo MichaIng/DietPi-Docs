@@ -484,31 +484,24 @@ License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
 ## Prometheus Node Exporter
 
-Prometheus exporter for hardware and OS metrics. This component exposes system metrics
-so they can be scraped by a external [Prometheus server](https://prometheus.io/), which can
-aggregate metrics from many devices. These metrics can then be visualized through [Grafana](https://grafana.com/),
-the final piece of a very powerful monitoring stack.
+Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by an external [Prometheus server](https://prometheus.io/), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](https://grafana.com/), the final piece of a very powerful monitoring stack.
 
-![Grafana interface screenshot](../assets/images/grafana_node_exporter_full.png){: width="500" height="260" loading="lazy"}
+![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png){: width="800" height="395" loading="lazy"}
 
-On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](https://github.com/fahlke/raspberrypi_exporter),
-which will add RPi-specific metrics such as voltages, CPU frequencies and temperatures.
+On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](https://github.com/fahlke/raspberrypi_exporter), which will add RPi-specific metrics such as voltages, CPU frequencies and temperatures.
 
-=== "Access to Prometheus Node Exporter"
+=== "Metrics access"
 
-    The metrics endpoint of *Prometheus Node Exporter* can be accessed via:
+    The metrics endpoint of *Prometheus Node Exporter* is exposed at TCP port **9100** and can be accessed via:
 
     - URL = `http://<your.IP>:9100/metrics`
 
-=== "Sample server configuration"
+=== "Configuration"
 
     ???+ important "Prometheus server not included"
-        Note that this software component **does not** install or configure a Prometheus server, it
-        must be installed separately.
+        Note that this software component **does not** install or configure a Prometheus server, it must be installed separately.
 
-    Your Prometheus server needs to be configured in order to scrape Node Exporter metrics.
-    Full configuration of the Prometheus server is outside the scope of this documentation,
-    but here is a sample `prometheus.yml` file for reference:
+    Your Prometheus server needs to be configured in order to scrape Node Exporter metrics. Full configuration of the Prometheus server is outside the scope of this documentation, but here is a sample `prometheus.yml` file for reference:
 
     ```yaml
     global:
@@ -520,16 +513,48 @@ which will add RPi-specific metrics such as voltages, CPU frequencies and temper
       - targets: ['your.IP:9100']
     ```
 
-=== "Sample Grafana dashboard"
+=== "Grafana dashboard"
 
     ???+ important "Grafana not included"
-        Note that this software component **does not** install or configure Grafana, it
-        must be installed separately.
+        Note that this software component **does not** install or configure Grafana, it must be installed separately.
 
-    There are [many pre-made templates](https://grafana.com/grafana/dashboards/?search=node+exporter)
-    of Grafana dashboards for visualizing data collected from a Prometheus Node Exporter. A good
-    starting point is [Node Exporter Full](https://grafana.com/grafana/dashboards/1860). You can import
-    it directly into your Grafana instance by using ID **1860**.
+    There are [many pre-made templates](https://grafana.com/grafana/dashboards/?search=node+exporter) of Grafana dashboards for visualizing data collected from a Prometheus Node Exporter. A good starting point is [Node Exporter Full](https://grafana.com/grafana/dashboards/1860). You can import it directly into your Grafana instance by using ID **1860**.
+
+=== "Service control"
+
+    Since Prometheus Node Exporter runs as a systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status node_exporter
+    ```
+
+    ```sh
+    systemctl start node_exporter
+    ```
+
+    ```sh
+    systemctl stop node_exporter
+    ```
+
+    ```sh
+    systemctl restart node_exporter
+    ```
+
+=== "Logs"
+
+    Prometheus Node Exporter runs as a systemd service, hence logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u node_exporter
+    ```
+
+=== "Update"
+
+    Prometheus Node Exporter can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 99
+    ```
 
 ***
 
