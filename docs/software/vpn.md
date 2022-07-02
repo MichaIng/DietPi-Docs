@@ -313,7 +313,7 @@ ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all
 
 === "Joining to network via `zerotier-cli`"
 
-    By running `sudo zerotier-cli join <network-id>`, whereas `<network-id>` could be found in controllers webpage in list of networks, we will join network.  
+    By running `sudo zerotier-cli join <network-id>`, whereas `<network-id>` could be found in controllers web page in list of networks, we will join network.  
     If Network type is Private, then we will need to go to controller website and authorize joining node by going to `https://my.zerotier.com/network/<network-id>` and scrolling down to members list where we will find on first column checkbox, if we fill it then node is authorized else it's not.  
     If Network type is Public, then we automatically have access to other nodes.  
     In order to leave certain network we need to run next command:
@@ -378,11 +378,11 @@ Wikipedia : <https://en.wikipedia.org/wiki/ZeroTier>
 Source code: <https://github.com/zerotier/ZeroTierOne>
 License: [BSLv1.1](https://github.com/zerotier/ZeroTierOne/blob/master/LICENSE.txt)
 
-YouTube video tutorial: *Zerotier Tutorial: Delivering the Capabilities of VPN, SDN, and SD-WAN via an Open Source System*.
+YouTube video tutorial: *ZeroTier Tutorial: Delivering the Capabilities of VPN, SDN, and SD-WAN via an Open Source System*.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Bl_Vau8wtgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-YouTube video tutorial: *How To Work Remotely Using Zerotier & Windows Remote Desktop (RDP)*.
+YouTube video tutorial: *How To Work Remotely Using ZeroTier & Windows Remote Desktop (RDP)*.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZShna7v77xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

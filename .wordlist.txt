@@ -50,6 +50,7 @@ Blynk
 bootable
 bootloader
 BruteFIR
+BSLv
 Bticino
 Btrfs
 BubbleUPnP
@@ -488,8 +489,9 @@ SCP
 scroller
 SCGI
 scrollback
-SDRAM
 SDL
+SDN
+SDRAM
 selectable
 Servarr
 serverless
@@ -670,6 +672,7 @@ YAML
 ympd
 youtube
 ZeroPi
+ZeroTier
 ZFS
 zlib
 zr
