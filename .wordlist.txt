@@ -359,13 +359,15 @@ OctoPrint
 Odroid
 Odroids
 Ok
+Okta
 oldoldstable
 OLED
+Oldschool
 ondemand
 Ondrej
+OneLogin
 oneshot
 OOTB
-Oldschool
 OPcache
 OrangePi
 OpenBazaar
@@ -521,6 +523,7 @@ SSHFS
 SSID
 SSIDs
 SSL
+SSO
 StackExchange
 StephanStS
 subdirectory
@@ -540,6 +543,7 @@ sysvinit
 syslog
 systemd
 SysV
+Tailscale
 TasmoAdmin
 Tasmota
 Tautulli

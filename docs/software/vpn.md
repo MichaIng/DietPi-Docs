@@ -10,6 +10,7 @@ description: Description of DietPi software options related to VPNs
 - [**OpenVPN - Easy to use, minimal hassle VPN server**](#openvpn)
 - [**PiVPN - OpenVPN server installer and management tool**](#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](#wireguard)
+- [**Tailscale - Zero config VPN**](#tailscale)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -224,5 +225,73 @@ Wikipedia: <https://wikipedia.org/wiki/WireGuard>
 YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: Installation unter DietPi mit NoIP und AVM Fritzbox`.
 
 <iframe src="https://www.youtube-nocookie.com/embed/yRkdzGmnvA4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+
+## Tailscale
+
+Zero config VPN.
+
+Tailscale is a VPN service that makes the devices and applications you own accessible anywhere in the world, securely and effortlessly. It enables encrypted point-to-point connections using the open source WireGuard protocol, which means only devices on your private network can communicate with each other.
+
+![Tailscale logo](../assets/images/tailscale-logo.svg){: width="242" height="44" loading="lazy"}
+
+=== "Quick start"
+
+    Step 1: Sign up for an account
+
+    [Sign up for a Tailscale account](https://login.tailscale.com/start). Get started with a free personal plan or trial for an organizational plan.
+
+    Tailscale requires a Single Sign-On (SSO) provider, so you’ll need a Google, Microsoft, GitHub, Okta, OneLogin, or other supported SSO identity provider account to begin.
+
+    Step 2: Add this device to your network
+
+    ```sh
+    tailscale up
+    ```
+
+    Tailscale helps you connect your devices together. For that to be possible, Tailscale needs to also be installed on other devices that you want to connect to.
+
+=== "Service control"
+
+    Since Tailscale runs as a systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status tailscale
+    ```
+
+    ```sh
+    systemctl start tailscale
+    ```
+
+    ```sh
+    systemctl stop tailscale
+    ```
+
+    ```sh
+    systemctl restart tailscale
+    ```
+
+=== "Logs"
+
+    Tailscale runs as a systemd service, hence logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u tailscale
+    ```
+
+=== "Update"
+
+    Tailscale is installed as an APT package and can hence be upgraded using the following commands:
+
+    ```sh
+    apt update
+    apt install tailscale
+    ```
+
+***
+
+[What is Tailscale?](https://tailscale.com/kb/1151/what-is-tailscale/)
+Website: <https://tailscale.com/>
+Docs: <https://tailscale.com/kb/>
+License: [BSD 3-Clause](https://github.com/tailscale/tailscale/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)
