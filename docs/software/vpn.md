@@ -242,7 +242,7 @@ Tailscale is a VPN service that makes the devices and applications you own acces
 
     Tailscale requires a Single Sign-On (SSO) provider, so you’ll need a Google, Microsoft, GitHub, Okta, OneLogin, or other supported SSO identity provider account to begin.
 
-    Step 2: Add a machine to your network
+    Step 2: Add this device to your network
 
     ```sh
     tailscale up
