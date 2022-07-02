@@ -244,6 +244,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Webmin - Remote system management with web interface**](system_stats/#webmin)
 - [**K3s - Lightweight Kubernetes**](system_stats/#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](system_stats/#microk8s)
+- [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](system_stats/#prometheus-node-exporter)
 
 ## [VPN](vpn/)
 
