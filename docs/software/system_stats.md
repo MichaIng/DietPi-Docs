@@ -16,6 +16,7 @@ description: Description of DietPi software options related to system statistics
 - [**Webmin - Remote system management with web interface**](#webmin)
 - [**K3s - Lightweight Kubernetes**](#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](#microk8s)
+- [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](#prometheus-node-exporter)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -480,5 +481,61 @@ Official documentation: <https://microk8s.io/docs>
 Addons documentation: <https://microk8s.io/docs/addons>  
 Source code: <https://github.com/ubuntu/microk8s>  
 License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
+
+## Prometheus Node Exporter
+
+Prometheus exporter for hardware and OS metrics. This component exposes system metrics
+so they can be scraped by a external [Prometheus server](https://prometheus.io/), which can
+aggregate metrics from many devices. These metrics can then be visualized through [Grafana](https://grafana.com/),
+the final piece of a very powerful monitoring stack.
+
+![Grafana interface screenshot](../assets/images/grafana_node_exporter_full.png){: width="500" height="260" loading="lazy"}
+
+On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](https://github.com/fahlke/raspberrypi_exporter),
+which will add RPi-specific metrics such as voltages, CPU frequencies and temperatures.
+
+=== "Access to Prometheus Node Exporter"
+
+    The metrics endpoint of *Prometheus Node Exporter* can be accessed via:
+
+    - URL = `http://<your.IP>:9100/metrics`
+
+=== "Sample server configuration"
+
+    ???+ important "Prometheus server not included"
+        Note that this software component **does not** install or configure a Prometheus server, it
+        must be installed separately.
+
+    Your Prometheus server needs to be configured in order to scrape Node Exporter metrics.
+    Full configuration of the Prometheus server is outside the scope of this documentation,
+    but here is a sample `prometheus.yml` file for reference:
+
+    ```yaml
+    global:
+      scrape_interval: 15s
+
+    scrape_configs:
+    - job_name: your.hostname
+      static_configs:
+      - targets: ['your.IP:9100']
+    ```
+
+=== "Sample Grafana dashboard"
+
+    ???+ important "Grafana not included"
+        Note that this software component **does not** install or configure Grafana, it
+        must be installed separately.
+
+    There are [many premade templates](https://grafana.com/grafana/dashboards/?search=node+exporter)
+    of Grafana dashboards for visualizing data collected from a Prometheus Node Exporter. A good
+    starting point is [Node Exporter Full](https://grafana.com/grafana/dashboards/1860). You can import
+    it directly into your Grafana instance by using ID **1860**.
+
+***
+
+Official website: <https://github.com/prometheus/node_exporter>  
+Documentation: <https://prometheus.io/docs/guides/node-exporter/>  
+Prometheus RPi Exporter: <https://github.com/fahlke/raspberrypi_exporter>  
+License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE), [MIT](https://github.com/fahlke/raspberrypi_exporter/blob/master/LICENSE) (for RPi Exporter)
 
 [Return to the **Optimised Software list**](../../software/)
