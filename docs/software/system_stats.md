@@ -526,7 +526,7 @@ which will add RPi-specific metrics such as voltages, CPU frequencies and temper
         Note that this software component **does not** install or configure Grafana, it
         must be installed separately.
 
-    There are [many premade templates](https://grafana.com/grafana/dashboards/?search=node+exporter)
+    There are [many pre-made templates](https://grafana.com/grafana/dashboards/?search=node+exporter)
     of Grafana dashboards for visualizing data collected from a Prometheus Node Exporter. A good
     starting point is [Node Exporter Full](https://grafana.com/grafana/dashboards/1860). You can import
     it directly into your Grafana instance by using ID **1860**.
