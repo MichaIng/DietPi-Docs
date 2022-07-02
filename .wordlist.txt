@@ -527,6 +527,7 @@ SSL
 SSO
 StackExchange
 StephanStS
+storages
 subdirectory
 subshell
 sudo
