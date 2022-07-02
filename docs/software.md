@@ -249,6 +249,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**OpenVPN - Easy to use, minimal hassle VPN server**](vpn/#openvpn)
 - [**PiVPN - OpenVPN server installer & management tool**](vpn/#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](vpn/#wireguard)
+- [**Tailscale - Zero config VPN**](vpn/#tailscale)
 
 ## [Web development](webserver_stack/)
 
