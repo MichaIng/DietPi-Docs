@@ -248,11 +248,11 @@ Tailscale is a VPN service that makes the devices and applications you own acces
     tailscale up
     ```
 
-    Tailscale helps you connect your devices together. For that to be possible, Tailscale needs to run on your device.
+    Tailscale helps you connect your devices together. For that to be possible, Tailscale needs to also be installed on other devices that you want to connect to.
 
 === "Service control"
 
-    Since Tailscale runs as systemd service, it can be controlled with the following commands:
+    Since Tailscale runs as a systemd service, it can be controlled with the following commands:
 
     ```sh
     systemctl status tailscale
