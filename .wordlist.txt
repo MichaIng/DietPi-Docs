@@ -414,6 +414,7 @@ preconfigured
 prefork
 Prioglio
 ProFTPD
+Prometheus
 ProtonVPN
 Prowlarr
 Proxmox
@@ -476,6 +477,7 @@ RPi
 RPis
 RSA
 RSS
+rsync
 Rsyslog
 rTorrent
 runtime
