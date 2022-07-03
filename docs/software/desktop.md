@@ -182,7 +182,7 @@ Not all devices support GPU acceleration with Chromium.
 
 #### Where can I check the status of GPU acceleration?
 
-Once Chromium is running, simply go to the following address: <chrome://gpu>
+Once Chromium is running, simply go to the following address: `chrome://gpu`
 
 #### Enable support for Widevine DRM protected content on RPi
 
