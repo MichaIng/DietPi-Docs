@@ -25,7 +25,7 @@ jobs:
       id: python
       if: always() && steps.clone.outcome == 'success'
       # https://github.com/actions/setup-python/releases
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v4
       with:
         # https://github.com/actions/python-versions/releases
         python-version: '3.10.5'
