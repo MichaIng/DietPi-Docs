@@ -514,6 +514,7 @@ SNMP
 SoC
 SoCs
 Sonarr
+SOQuartz
 Soundcloud
 Soxr
 SPC
