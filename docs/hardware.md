@@ -221,7 +221,8 @@ The PINE64 family also contains the newer members Quartz64 and SOQuartz compute 
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_SOQuartz-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
-            </tr>        </tbody>
+            </tr>
+        </tbody>
     </table>
 </div>
 
