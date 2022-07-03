@@ -114,9 +114,16 @@ PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a c
 
     Simply run the command `pivpn -a`.
 
+=== "Unattended installation"
+
+    PiVPN offers the option of an non-interactive installation. For details read the [corresponding part of the PiVPN installation documentation](https://docs.pivpn.io/install/#non-interactive-installation).
+
+    This option can be achieved by placing a config file named `unattended_pivpn.conf` into the boot partition/directory. For example configs, have a look at https://github.com/pivpn/pivpn/tree/master/examples.
+
 ***
 
-Website: <https://www.pivpn.io>
+Website: <https://www.pivpn.io>  
+Documentation: <https://docs.pivpn.io/>
 
 YouTube video tutorial: *VPN configuration using Raspberry Pi and DietPi*.
 
@@ -294,6 +301,10 @@ Tailscale is a VPN service that makes the devices and applications you own acces
 Website: <https://tailscale.com/>  
 Docs: <https://tailscale.com/kb/>  
 License: [BSD 3-Clause](https://github.com/tailscale/tailscale/blob/main/LICENSE)
+
+YouTube video tutorial: *Tailscale VPN - WireGuard was never so easy!*
+
+<iframe src="https://www.youtube.com/embed/Kzyolu9yn0E" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 ## ZeroTier
 
