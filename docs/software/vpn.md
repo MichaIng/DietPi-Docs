@@ -116,9 +116,8 @@ PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a c
 
 === "Unattended installation"
 
-    PiVPN offers the option of an non-interactive installation. For details read the [corresponding part of the PiVPN installation documentation](https://docs.pivpn.io/install/#non-interactive-installation).
-
-    This option can be achieved by placing a config file named `unattended_pivpn.conf` into the boot partition/directory. For example configs, have a look at https://github.com/pivpn/pivpn/tree/master/examples.
+    For an unattended PiVPN installation during first boot of DietPi, place a configuration file named `unattended_pivpn.conf` into the boot partition/directory. For example configs, have a look at <https://github.com/pivpn/pivpn/tree/master/examples>.  
+    More details can be found in the [corresponding part of the PiVPN installation documentation](https://docs.pivpn.io/install/#non-interactive-installation).
 
 ***
 
