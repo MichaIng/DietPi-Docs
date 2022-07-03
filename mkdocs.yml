@@ -129,6 +129,7 @@ nav:
   - Web Development: software/webserver_stack.md
 - RELEASES:
   - Overview: releases.md
+  - v8.6 July 2022: releases/v8_6.md
   - v8.5 May 2022: releases/v8_5.md
   - v8.4 April 2022, vol 2: releases/v8_4.md
   - v8.3 April 2022: releases/v8_3.md
