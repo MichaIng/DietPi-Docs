@@ -66,6 +66,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](cloud/#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](cloud/#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](cloud/#file-browser)
+- [**Rclone - Utility to sync your files to cloud storages**](cloud/#rclone)
 
 ## [Databases & Data Stores](databases/#overview)
 
@@ -243,12 +244,15 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Webmin - Remote system management with web interface**](system_stats/#webmin)
 - [**K3s - Lightweight Kubernetes**](system_stats/#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](system_stats/#microk8s)
+- [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](system_stats/#prometheus-node-exporter)
 
 ## [VPN](vpn/)
 
 - [**OpenVPN - Easy to use, minimal hassle VPN server**](vpn/#openvpn)
 - [**PiVPN - OpenVPN server installer & management tool**](vpn/#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](vpn/#wireguard)
+- [**Tailscale - Zero config VPN**](vpn/#tailscale)
+- [**ZeroTier - Free easy to deploy cloud-hosted VPN service**](vpn/#zerotier)
 
 ## [Web development](webserver_stack/)
 

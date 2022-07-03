@@ -10,6 +10,8 @@ description: Description of DietPi software options related to VPNs
 - [**OpenVPN - Easy to use, minimal hassle VPN server**](#openvpn)
 - [**PiVPN - OpenVPN server installer and management tool**](#pivpn)
 - [**WireGuard - An extremely simple yet fast and modern VPN**](#wireguard)
+- [**Tailscale - Zero config VPN**](#tailscale)
+- [**ZeroTier - Free easy to deploy cloud-hosted VPN service**](#zerotier)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -137,8 +139,8 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     #### General
 
     You are asked to enter your public IP/domain and the port on which the VPN server should be available. Remember to open/forward the port (UDP) through NAT on your router.  
-    During installation, a client configuration file will be automatically created as well at:   
-    `/etc/wireguard/wg0-client.conf`.
+    During installation, a client configuration file will be automatically created as well at:  
+    `/etc/wireguard/wg0-client.conf`
 
     Configure the client configuration to your needs, it contains some informational comments. By default it will pass all clients network traffic through the VPN tunnel, including DNS requests which will be resolved by the servers DNS resolver.  
     If you e.g. want to use the servers Pi-hole instance on the client only, but keep all other traffic outside the VPN tunnel, you would edit the following values:
@@ -149,11 +151,11 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     If your client is another Linux machine with iptables installed, you can uncomment the two kill switch lines to have all network traffic automatically disabled, when VPN connection is lost.
     If your client is a mobile phone with WireGuard app installed, you can simply apply the config by printing a QR code onto the servers terminal via:  
     `grep -v '^#' /etc/wireguard/wg0-client.conf | qrencode -t ansiutf8`.  
-    To allow VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`.
+    To allow VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`
 
     #### Adding multiple clients
 
-    Navigate to the servers WireGuard configuration directory: `cd /etc/wireguard`.
+    Navigate to the servers WireGuard configuration directory: `cd /etc/wireguard`
 
     Create a second client key pair:
 
@@ -195,7 +197,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     - To autostart the VPN interface on boot, run: `systemctl enable wg-quick@wg0-client`
     - To disable autostart again, run: `systemctl disable wg-quick@wg0-client`
 
-    Remark: If the client config sets the DNS server via `DNS = ...` directive, assure that resolvconf is installed: `apt install resolvconf`.
+    Remark: If the client config sets the DNS server via `DNS = ...` directive, assure that resolvconf is installed: `apt install resolvconf`
 
 === "View logs"
 
@@ -214,7 +216,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 ???+ info "Kernel update"
 
     The WireGuard kernel module needs to rebuild whenever the kernel is updated. On most devices this will be done automatically, when the kernel (+headers) is updated via APT package, which then usually triggers the module rebuild.  
-    If you update the kernel outside of APT, via `source build` or commands like `rpi-update`, assure that matching kernel headers are installed as well and rebuild the WireGuard module via: `dpkg-reconfigure wireguard-dkms`.
+    If you update the kernel outside of APT, via `source build` or commands like `rpi-update`, assure that matching kernel headers are installed as well and rebuild the WireGuard module via: `dpkg-reconfigure wireguard-dkms`
 
 ***
 
@@ -224,5 +226,164 @@ Wikipedia: <https://wikipedia.org/wiki/WireGuard>
 YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: Installation unter DietPi mit NoIP und AVM Fritzbox`.
 
 <iframe src="https://www.youtube-nocookie.com/embed/yRkdzGmnvA4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+
+## Tailscale
+
+Zero config VPN.
+
+Tailscale is a VPN service that makes the devices and applications you own accessible anywhere in the world, securely and effortlessly. It enables encrypted point-to-point connections using the open source WireGuard protocol, which means only devices on your private network can communicate with each other.
+
+![Tailscale logo](../assets/images/tailscale-logo.svg){: width="242" height="44" loading="lazy"}
+
+=== "Quick start"
+
+    Step 1: Sign up for an account
+
+    [Sign up for a Tailscale account](https://login.tailscale.com/start). Get started with a free personal plan or trial for an organizational plan.
+
+    Tailscale requires a Single Sign-On (SSO) provider, so you’ll need a Google, Microsoft, GitHub, Okta, OneLogin, or other supported SSO identity provider account to begin.
+
+    Step 2: Add this device to your network
+
+    ```sh
+    tailscale up
+    ```
+
+    Tailscale helps you connect your devices together. For that to be possible, Tailscale needs to also be installed on other devices that you want to connect to.
+
+=== "Service control"
+
+    Since Tailscale runs as a systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status tailscale
+    ```
+
+    ```sh
+    systemctl start tailscale
+    ```
+
+    ```sh
+    systemctl stop tailscale
+    ```
+
+    ```sh
+    systemctl restart tailscale
+    ```
+
+=== "Logs"
+
+    Tailscale runs as a systemd service, hence logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u tailscale
+    ```
+
+=== "Update"
+
+    Tailscale is installed as an APT package and can hence be upgraded using the following commands:
+
+    ```sh
+    apt update
+    apt install tailscale
+    ```
+
+***
+
+[What is Tailscale?](https://tailscale.com/kb/1151/what-is-tailscale/)  
+Website: <https://tailscale.com/>  
+Docs: <https://tailscale.com/kb/>  
+License: [BSD 3-Clause](https://github.com/tailscale/tailscale/blob/main/LICENSE)
+
+## ZeroTier
+
+ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all networked devices, VMs, containers, and applications to communicate as if they all reside in the same physical data centre or cloud region.
+
+![ZeroTier logo](../assets/images/zerotier-logo.png){: width="300" height="71" loading="lazy"}
+
+=== "Creation of P2P Network on controller"
+
+    In order to use ZeroTier you firstly need to create network in controller either in ZeroTier ltd. hosted or self-hosted controllers.  
+    Firstly let's show step-by-step instructions for ZeroTier hosted networks. For that we will need to:
+    1. Register on <https://my.zerotier.com>
+    2. Press on **"Create A Network"**
+    3. Go to page of created network, where we need to choose which type network we would like to have:
+        - Private: Nodes must be authorized to become members
+        - Public: Any node can become a member. Members cannot be de-authorized or deleted. Members that haven't been online in 30 days will be removed, but can rejoin.
+
+=== "Joining to network via `zerotier-cli`"
+
+    By running `sudo zerotier-cli join <network-id>`, whereas `<network-id>` could be found in controllers web page in list of networks, we will join network.  
+    If Network type is Private, then we will need to go to controller website and authorize joining node by going to `https://my.zerotier.com/network/<network-id>` and scrolling down to members list where we will find on first column checkbox, if we fill it then node is authorized else it's not.  
+    If Network type is Public, then we automatically have access to other nodes.  
+    In order to leave certain network we need to run next command:
+
+    ```sh
+    zerotier-cli leave <network-id>
+    ```
+
+    For printing out the node ID, run:
+
+    ```sh
+    zerotier-cli info
+    ```
+
+=== "Self-hosting controllers"
+
+    ZeroTier supports self-hosting controllers on nodes.
+    - Self-hosting a controller: <https://docs.zerotier.com/self-hosting/network-controllers>
+    - Self-hosting the controller UI: <https://github.com/dec0dOS/zero-ui>
+
+=== "Service control"
+
+    Since ZeroTier runs as a systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status zerotier-one
+    ```
+
+    ```sh
+    systemctl start zerotier-one
+    ```
+
+    ```sh
+    systemctl stop zerotier-one
+    ```
+
+    ```sh
+    systemctl restart zerotier-one
+    ```
+
+=== "Logs"
+
+    ZeroTier runs as a systemd service, hence logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u zerotier-one
+    ```
+
+=== "Update"
+
+    ZeroTier is installed as an APT package and can hence be upgraded using the following commands:
+
+    ```sh
+    apt update
+    apt install zerotier-one
+    ```
+
+***
+
+Website: <https://zerotier.com>  
+Wikipedia : <https://en.wikipedia.org/wiki/ZeroTier>  
+Source code: <https://github.com/zerotier/ZeroTierOne>
+License: [BSLv1.1](https://github.com/zerotier/ZeroTierOne/blob/master/LICENSE.txt)
+
+YouTube video tutorial: *ZeroTier Tutorial: Delivering the Capabilities of VPN, SDN, and SD-WAN via an Open Source System*.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bl_Vau8wtgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+YouTube video tutorial: *How To Work Remotely Using ZeroTier & Windows Remote Desktop (RDP)*.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZShna7v77xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 [Return to the **Optimised Software list**](../../software/)

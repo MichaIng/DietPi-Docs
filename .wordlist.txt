@@ -50,6 +50,7 @@ Blynk
 bootable
 bootloader
 BruteFIR
+BSLv
 Bticino
 Btrfs
 BubbleUPnP
@@ -359,13 +360,15 @@ OctoPrint
 Odroid
 Odroids
 Ok
+Okta
 oldoldstable
 OLED
+Oldschool
 ondemand
 Ondrej
+OneLogin
 oneshot
 OOTB
-Oldschool
 OPcache
 OrangePi
 OpenBazaar
@@ -439,6 +442,7 @@ RAMlog
 Rasmus
 Raspbian
 Raspotify
+Rclone
 README
 Reddit
 reinstalls
@@ -485,8 +489,9 @@ SCP
 scroller
 SCGI
 scrollback
-SDRAM
 SDL
+SDN
+SDRAM
 selectable
 Servarr
 serverless
@@ -521,8 +526,10 @@ SSHFS
 SSID
 SSIDs
 SSL
+SSO
 StackExchange
 StephanStS
+storages
 subdirectory
 subshell
 sudo
@@ -540,6 +547,7 @@ sysvinit
 syslog
 systemd
 SysV
+Tailscale
 TasmoAdmin
 Tasmota
 Tautulli
@@ -664,6 +672,7 @@ YAML
 ympd
 youtube
 ZeroPi
+ZeroTier
 ZFS
 zlib
 zr
