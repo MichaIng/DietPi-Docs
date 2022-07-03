@@ -157,6 +157,8 @@ The board is backwards compatible with many of the existing PINE64 peripherals, 
 
 The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means that PINE64 is committed to provide support for at least 5 years – until year 2023 and beyond.
 
+The PINE64 family also contains the newer members Quartz64 and SOQuartz compute module.
+
 <div class="md-typeset__table">
     <table>
         <thead>
@@ -200,6 +202,24 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
                 <td><a class="table" href=""><strong>ROCKPro64</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPro64-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Quartz64 Model A </strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Quartz64A-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Quartz64 Model B</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Quartz64B-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>SOQuartz Compute Module</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_SOQuartz-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
