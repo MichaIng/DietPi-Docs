@@ -121,7 +121,7 @@ PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a c
 
 ***
 
-Website: <https://www.pivpn.io>  
+Website: <https://pivpn.io/>  
 Documentation: <https://docs.pivpn.io/>
 
 YouTube video tutorial: *VPN configuration using Raspberry Pi and DietPi*.
