@@ -337,12 +337,12 @@ License: [GPLv3](https://github.com/airsonic-advanced/airsonic-advanced/blob/mas
 
 ## Logitech Media Server
 
-Logitech Media Server (aka LMS, Squeezebox Server) is the server software that enables web interface control of:
+Logitech Media Server (aka. LMS, fka. SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3) is the server software that enables web interface control of:
 
 - Software audio players: Squeezelite
 - Hardware audio players from Logitech: Squeezebox, SlimDevices
 
-Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting Squeezelite for installation in `dietpi-software`.
+Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting [Squeezelite](#squeezelite) for installation in `dietpi-software`.
 
 ![Logitech Media Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
 
@@ -359,49 +359,35 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
-=== "Change Squeezelite command line options"
+=== "View logs"
 
-    - Run `dietpi-services`
-    - Select `squeezelite`
-    - Select `Edit`
-    - Unset and re-set the `ExecStart` entry:
+    Logs can be viewed with the following command:
 
-      ```systemd
-      ExecStart=
-      ExecStart=/usr/bin/squeezelite [<your custom arguments>]
-      ```
+    ```sh
+    journalctl -u logitechmediaserver
+    ```
 
-      The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
+    Additionally, log files can be found in:
 
-    - Save changes with ++ctrl+o++ and exit `dietpi-services`
-    - Restart the service: `systemctl restart squeezelite`
+    ```
+    /var/log/squeezeboxserver
+    ```
 
 === "Update"
 
-    To update Logitech Media Server to the current version, execute
+    Logitech Media Server can be updated to the current version with the following command:
 
     ```sh
     dietpi-software reinstall 35
     ```
 
+***
+
+Source code: <https://github.com/Logitech/slimserver>
+
 ## Squeezelite
 
 Squeezelite is the audio player for the Logitech Media Server.
-
-![Logitech Media Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
-
-=== "Access to the web interface"
-
-    The web interface is accessible via port **9000**:
-
-    - URL: `http://<your.IP>:9000`
-
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Change Squeezelite command line options"
 
@@ -419,6 +405,26 @@ Squeezelite is the audio player for the Logitech Media Server.
 
     - Save changes with ++ctrl+o++ and exit `dietpi-services`
     - Restart the service: `systemctl restart squeezelite`
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u squeezelite
+    ```
+
+=== "Update"
+
+    Squeezelite can be updated to the current version with the following command:
+
+    ```sh
+    dietpi-software reinstall 36
+    ```
+
+***
+
+Source code: <https://github.com/ralph-irving/squeezelite>
 
 ## Shairport Sync
 
