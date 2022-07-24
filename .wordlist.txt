@@ -149,6 +149,7 @@ FHS
 filesystem
 filesystems
 FirstBoot
+fka
 ForkedDaapd
 FOSS
 foto
@@ -506,6 +507,8 @@ Shoutcast
 SickRage
 Signalyst
 SlimDevices
+SliMP
+SlimServer
 SMB
 SMbus
 sn
@@ -523,6 +526,8 @@ spindown
 Spotify
 Spotifyd
 Spyder
+SqueezeboxServer
+SqueezeCenter
 Squeezelite
 SSD
 SSHFS
