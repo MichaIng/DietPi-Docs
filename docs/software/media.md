@@ -339,7 +339,7 @@ License: [GPLv3](https://github.com/airsonic-advanced/airsonic-advanced/blob/mas
 
 Logitech Media Server (aka. LMS, fka. SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3) is the server software that enables web interface control of:
 
-- Software audio players: Squeezelite
+- Software audio players: [Squeezelite](#squeezelite)
 - Hardware audio players from Logitech: Squeezebox, SlimDevices
 
 Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting [Squeezelite](#squeezelite) for installation in `dietpi-software`.
@@ -383,11 +383,12 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 ***
 
+Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>
 Source code: <https://github.com/Logitech/slimserver>
 
 ## Squeezelite
 
-Squeezelite is the audio player for the Logitech Media Server.
+Squeezelite is a software audio player/client for the [Logitech Media Server](#logitech-media-server).
 
 === "Change Squeezelite command line options"
 
@@ -424,6 +425,7 @@ Squeezelite is the audio player for the Logitech Media Server.
 
 ***
 
+Wikipedia: <https://en.wikipedia.org/wiki/Squeezelite>
 Source code: <https://github.com/ralph-irving/squeezelite>
 
 ## Shairport Sync
