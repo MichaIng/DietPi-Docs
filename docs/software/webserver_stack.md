@@ -600,7 +600,7 @@ Official documentation: <https://www.php.net/manual/en/index.php>
 
 ### PHP Composer
 
-![Composer logo](../assets/images/dietpi-software-webstack-composer.png){: width="150" height="182" loading="lazy"}
+![Composer logo](../assets/images/dietpi-software-php-composer.png){: width="150" height="182" loading="lazy"}
 
 Source: [WizardCat](https://getcomposer.org){: class="nospellcheck"} via [Wikimedia tech blog, MIT](https://commons.wikimedia.org/w/index.php?curid=38131432).
 
