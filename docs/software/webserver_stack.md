@@ -602,8 +602,7 @@ Official documentation: <https://www.php.net/manual/en/index.php>
 
 ![Composer logo](../assets/images/dietpi-software-webstack-composer.png){: width="150" height="182" loading="lazy"}
 
-Source: [Von WizardCat](https://getcomposer.org) via [Wikimedia tech blog, MIT](https://commons.wikimedia.org/w/index.php?curid=38131432).
-
+Source: [WizardCat](https://getcomposer.org){: class="nospellcheck"} via [Wikimedia tech blog, MIT](https://commons.wikimedia.org/w/index.php?curid=38131432).
 
 Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
 
