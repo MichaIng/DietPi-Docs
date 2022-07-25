@@ -274,5 +274,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ### [Programming & Web development Frameworks](webserver_stack/#web-development-programming-frameworks)
 
-- [**Flask - Micro web framework powered by Python**](webserver_stack/#flask)
 - [**PHP - Scripting language especially suited to web development**](webserver_stack/#php)
+- [**PHP Composer** - A Dependency Manager for PHP](webserver_stack/#php-composer)
+- [**Flask - Micro web framework powered by Python**](webserver_stack/#flask)
+- [**Node.js** - JavaScript runtime designed to build scalable network applications](webserver_stack/#nodejs)
