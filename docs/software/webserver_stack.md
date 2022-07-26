@@ -25,8 +25,9 @@ description: Description of DietPi software options related to web stacks, web s
 
 [**Web development - Programming & Frameworks**](#web-development-programming-frameworks)
 
-- [**Flask** - Micro web framework powered by Python](#flask)
 - [**PHP** - Scripting language suited to web development](#php)
+- [**PHP Composer** - A Dependency Manager for PHP](#php-composer)
+- [**Flask** - Micro web framework powered by Python](#flask)
 - [**Node.js** - JavaScript runtime designed to build scalable network applications](#nodejs)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
@@ -582,7 +583,7 @@ Official documentation: <https://tomcat.apache.org>
 
 ### PHP
 
-![PHP logo](../assets/images/dietpi-software-webstack-php.svg){: width="200" height="108" loading="lazy"}
+![PHP logo](../assets/images/dietpi-software-webstack-php.svg){: width="150" height="78" loading="lazy"}
 
 Source: [Colin Viebrock](https://www.php.net/download-logos.php), [CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=9632398).
 
@@ -596,6 +597,19 @@ First introduced by Rasmus Lerdorf, PHP is an open-source, server-side general s
 
 Website: <https://www.php.net>  
 Official documentation: <https://www.php.net/manual/en/index.php>
+
+### PHP Composer
+
+![Composer logo](../assets/images/dietpi-software-php-composer.png){: width="150" height="182" loading="lazy"}
+
+Source: [WizardCat](https://getcomposer.org){: class="nospellcheck"} via [Wikimedia tech blog, MIT](https://commons.wikimedia.org/w/index.php?curid=38131432).
+
+Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
+
+***
+
+Website: <https://getcomposer.org/>  
+Official documentation: <https://getcomposer.org/doc/>
 
 ### Flask
 
