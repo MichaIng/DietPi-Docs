@@ -242,6 +242,7 @@ JRE
 JS
 js
 JSON
+JunoBloom
 JustBoom
 Kbit
 Keychain
@@ -338,6 +339,7 @@ NanoPC
 NanoPi
 NAS
 natively
+Navidrome
 nd
 Netdata
 Nextcloud
