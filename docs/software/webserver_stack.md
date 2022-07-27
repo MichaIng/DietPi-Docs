@@ -91,51 +91,27 @@ DietPi offers an **one-click-installation** of the following web development sta
 
     Although the DietPi installation of Lighttpd is set to single threaded, do not be put off by this, in low usage scenarios (<10 users) it will still outperform [Nginx](#nginx) and [Apache](#apache). Activation of multithreading is described in the [Lighttpd](#lighttpd) package description.
 
-    !!! hint "DietPi - Webserver Preference"
-
-        The DietPi webserver preference screen allows you to choose your favourite webserver for use in DietPi installations. Check more the **Web Preference** in the [Advanced configuration](../../dietpi_tools/#quick-selections).
-
     !!! info ""
 
-        For further details see [The battle of the web servers Apache vs. Nginx vs. Lighttpd 2](https://detechter.com/the-battle-of-the-web-servers-apache-vs-Nginx-vs-lighttpd-2/).
+        For further details see [The battle of the web servers Apache vs. Nginx vs. Lighttpd 2](https://detechter.com/the-battle-of-the-web-servers-apache-vs-Nginx-vs-lighttpd-2/) and [^4].
 
 === "Which DATABASE to CHOOSE ?"
 
     **[MariaDB](../databases/#mariadb)**  
-    It is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.
+    It is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.[^2]
 
     **[SQLite](../databases/#sqlite)**  
-    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](../databases/#mariadb). [SQLite](../databases/#sqlite) has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
+    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](../databases/#mariadb)[^3]. [SQLite](../databases/#sqlite) has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.
 
 ***
 
 ### How to install ?
 
-DietPi contains the option to choose the web stack of your favourite. Basically choosing the web stack resp. webserver, you have two options within `dietpi-software`:
+DietPi contains the option to choose the web stack of your favourite. Basically choosing the web stack resp. webserver is done via ***Browse Software*** within `dietpi-software`:
 
-- Selection via ***Software Optimized*** or
-- Selection via ***Webserver Preference***
+![DietPi-Software menu software list](../assets/images/dietpi-software-webstack-selection.png){: width="680" height="162" loading="lazy"}
 
-The latter is used only in the case of the first webserver background installation.
-
-=== "Selection via Software Optimised"
-
-    ![DietPi-Software menu software list](../assets/images/dietpi-software-webstack-selection.png){: width="680" height="162" loading="lazy"}
-
-    Using this option you select the complete web stack for installation. Just select the web stack you want to install and do the installation via the *Install* execution within `dietpi-software`.
-
-    !!! hint ""
-        Unless you _specifically_ need a web stack, it is recommended that you allow DietPi to install the default web stack automatically. This ensures compatibility and stability of your system.
-
-=== "Selection via Webserver Preference"
-
-    ![DietPi-Software webserver preference menu](../assets/images/dietpi-software-webserver-preference.png){: width="500" height="309" loading="lazy"}
-
-    Using this option you only select the webserver for use in DietPi installations.  
-    When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Software Optimized*), DietPi will automatically install, configure and optimize your chosen webserver preference. DietPi will also install [MariaDB](../databases/#mariadb) / [SQLite](../databases/#sqlite) as required, depending on your software selections. Basically, you will never need to manually select/install a webserver stack again. DietPi will do it all for you.
-
-    ???+ info "No webserver change if already installed"
-        This setting "Webserver Preference* can NOT be changed if an existing webserver is installed on the system.
+Using this option you select the complete web stack for installation. Just select the web stack you want to install and do the installation via the *Install* execution within `dietpi-software`.
 
 ***
 
@@ -579,7 +555,7 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
 
 Official documentation: <https://tomcat.apache.org>
 
-## [Web development - Programming & Frameworks](#web-development-programming-frameworks)
+## Web development - Programming & Frameworks <a id="web-development-programming-frameworks"></a>
 
 ### PHP
 
