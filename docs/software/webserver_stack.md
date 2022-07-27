@@ -629,7 +629,7 @@ Website: <https://palletsprojects.com/p/flask>
 Official documentation: <https://flask.palletsprojects.com/en/1.1.x>  
 PyPI package page: <https://pypi.org/project/Flask>
 
-### Node.js {: #nodejs }
+### [Node.js](#nodejs)
 
 Node.js is JavaScript runtime built on Chrome's V8 JavaScript engine.
 
