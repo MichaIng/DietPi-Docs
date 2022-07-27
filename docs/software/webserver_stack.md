@@ -579,7 +579,7 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
 
 Official documentation: <https://tomcat.apache.org>
 
-## Web development - Programming & Frameworks
+## Web development - Programming & Frameworks { :web-development-programming-frameworks }
 
 ### PHP
 
@@ -650,17 +650,11 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
 Website: <https://nodejs.org/>  
 Official documentation: <https://nodejs.org/api/>  
 
-[^1]:
-    Find out more about the success stories of Nginx on: <https://nginx.org/en/>
-[^2]:
-    ["Dead database walking: MySQL's creator on why the future belongs to MariaDB - MariaDB, open source, mysql, Oracle"](https://www2.computerworld.com.au/article/457551/dead_database_walking_mysql_creator_why_future_belongs_mariadb/). Computerworld. Retrieved 22 November 2020.
-[^3]:
-    [Most Widely Deployed and Used Database Engine](https://www.sqlite.org/mostdeployed.html). Retrieved 12 December 2020
-[^4]:
-    [NGINX vs. Apache: Our View of a Decade-Old Question](https://www.nginx.com/blog/nginx-vs-apache-our-view/). Retrieved 12 December 2020
-
+[^1]: Find out more about the success stories of Nginx on: <https://nginx.org/en/>
+[^2]: ["Dead database walking: MySQL's creator on why the future belongs to MariaDB - MariaDB, open source, mysql, Oracle"](https://www2.computerworld.com.au/article/457551/dead_database_walking_mysql_creator_why_future_belongs_mariadb/). Computerworld. Retrieved 22 November 2020.
+[^3]: [Most Widely Deployed and Used Database Engine](https://www.sqlite.org/mostdeployed.html). Retrieved 12 December 2020
+[^4]: [NGINX vs. Apache: Our View of a Decade-Old Question](https://www.nginx.com/blog/nginx-vs-apache-our-view/). Retrieved 12 December 2020
 [^5]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
-
 [^6]: [CORS Errors Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors). Retrieved 05 December 2021
 
 [Return to the **Optimised Software list**](../../software/)
