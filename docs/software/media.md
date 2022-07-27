@@ -253,7 +253,7 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     Many thanks to Roth for [this hint](https://dietpi.com/forum/t/add-mopidy-to-software-options-advanced-alsa-configs/646).
 
-## Airsonic-Advanced {: #airsonic }
+## [Airsonic-Advanced](#airsonic)
 
 Feature rich media streaming server with a web interface, coded in Java.
 
