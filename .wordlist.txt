@@ -242,6 +242,7 @@ JRE
 JS
 js
 JSON
+JunoBloom
 JustBoom
 Kbit
 Keychain
