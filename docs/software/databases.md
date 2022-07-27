@@ -49,11 +49,11 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
 Official documentation: <https://mariadb.org>  
 Getting started documentation: <https://mariadb.org/documentation/#getting-started>
 
-### phpMyAdmin
+## phpMyAdmin
 
 ![phpMyAdmin logo](../assets/images/dietpi-software-webstack-phpmyadmin.png){: width="160" height="120" loading="lazy"}
 
-**phpMyAdmin** is a free software tool written in [PHP](#php), intended to handle the administration of MySQL / MariaDB over the Web.
+**phpMyAdmin** is a free software tool written in [PHP](../webserver_stack/#php), intended to handle the administration of MySQL / MariaDB over the Web.
 
 Frequently used operations (_such as: managing databases, tables, columns, relations, indexes etc._) can be performed via the web user interface. Using the same application you could also directly execute any SQL statement.
 

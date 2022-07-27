@@ -82,7 +82,7 @@ It also Installs:
 
 === "Connection credentials"
 
-    These are identical to the [WiFi HotSpot credentials](#wifi-hotspot_1).
+    These are identical to the [WiFi HotSpot credentials](#wifi-hotspot).
 
 === "Verification"
 
