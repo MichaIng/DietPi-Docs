@@ -338,6 +338,7 @@ NanoPC
 NanoPi
 NAS
 natively
+Navidrome
 nd
 Netdata
 Nextcloud
