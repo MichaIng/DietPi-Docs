@@ -194,6 +194,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Beets - Music organizer and manager**](media/#beets)
 - [**Snapcast Server - Multi room audio server**](media/#snapcast-server)
 - [**Snapcast Client - Multi room audio client**](media/#snapcast-client)
+- [**Navidrome - Web interface media streaming server**](media/#navidrome)
 
 ## [Printing Server](printing/)
 
