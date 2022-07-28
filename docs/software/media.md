@@ -39,6 +39,7 @@ description: Description of DietPi software options related to media systems lik
 - [**Beets - Music organizer and manager**](#beets)
 - [**Snapcast Server - Multi room audio server**](#snapcast-server)
 - [**Snapcast Client - Multi room audio client**](#snapcast-client)
+- [**Navidrome - Web interface media streaming server**](#navidrome)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -1647,5 +1648,88 @@ The Snapcast client will prompt you for the server's IP and port when installing
 ***
 
 Source code: <https://github.com/badaix/snapcast>
+
+## Navidrome
+
+An open source web-based music collection server and streamer, written in Go.  
+It is API compatible to the [Subsonic media player](http://www.subsonic.org/pages/index.jsp).
+
+![Navidrome web interface screenshot](../assets/images/dietpi-software-media-navidrome.png){: width="400" height="202" loading="lazy"}
+
+=== "Web interface"
+
+    The web interface uses port **4533**:
+
+    - URL: `http://<your.IP>:4533`
+
+=== "Multiple Music Folders"
+
+    Navidrome don't support multiple music folders out of the box. The feature is still being developed.
+
+    Related GitHub issue: <https://github.com/navidrome/navidrome/issues/192>
+
+=== "Setup details"
+
+    The install, config and data directory is located at:
+
+    ```
+    /mnt/dietpi_userdata/navidrome
+    ```
+
+=== "Service control"
+
+    Since Navidrome runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status navidrome
+    ```
+
+    ```sh
+    systemctl start navidrome
+    ```
+
+    ```sh
+    systemctl stop navidrome
+    ```
+
+    ```sh
+    systemctl restart navidrome
+    ```
+
+=== "Logs"
+
+    Since Navidrome runs as systemd service, its logs can be viewed via:
+
+    ```sh
+    journalctl -u navidrome
+    ```
+
+=== "Update"
+
+    Navidrome can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 204
+    ```
+
+=== "Transfer music to DietPi"
+
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Default music directory:
+
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+
+=== "Clients for Navidrome"
+
+    Navidrome has a Subsonic-API compatible server built in, so there should be plenty of clients for different platforms available. See:
+
+    - <https://www.navidrome.org/docs/overview/#apps>
+    - <http://www.subsonic.org/pages/apps.jsp>
+
+***
+
+Website: <https://www.navidrome.org/>  
+Source code: <https://github.com/navidrome/navidrome>  
+License: [GPLv3](https://github.com/navidrome/navidrome/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)
