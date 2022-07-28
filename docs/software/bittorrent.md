@@ -762,7 +762,7 @@ Automatically download your favorite ebook, as they become available.
     - Service: `journalctl -u readarr`
     - Binary: `/var/log/readarr/Readarr.txt`
 
-=== "Update to latest version"
+=== "Update"
 
     - Use the internal web based updater
 
