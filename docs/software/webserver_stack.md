@@ -23,6 +23,7 @@ description: Description of DietPi software options related to web stacks, web s
 - [**Lighttpd** - Extremely lightweight webserver](#lighttpd)
 - [**Tomcat** - Apache Tomcat server](#tomcat)
 
+<!-- markdownlint-disable-next-line MD051 -->
 [**Web development - Programming & Frameworks**](#web-development-programming-frameworks)
 
 - [**PHP** - Scripting language suited to web development](#php)
@@ -105,7 +106,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 
 ***
 
-### How to install ?
+### How to install?
 
 DietPi contains the option to choose the web stack of your favourite. Basically choosing the web stack resp. webserver is done via ***Browse Software*** within `dietpi-software`:
 
@@ -605,7 +606,7 @@ Website: <https://palletsprojects.com/p/flask>
 Official documentation: <https://flask.palletsprojects.com/en/1.1.x>  
 PyPI package page: <https://pypi.org/project/Flask>
 
-### [Node.js](#nodejs)
+### Node.js
 
 Node.js is JavaScript runtime built on Chrome's V8 JavaScript engine.
 
