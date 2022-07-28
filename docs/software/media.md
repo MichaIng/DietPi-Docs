@@ -1651,7 +1651,8 @@ Source code: <https://github.com/badaix/snapcast>
 
 ## Navidrome {: #navidrome }
 
-An open source web-based music collection server and streamer, written in Go.
+An open source web-based music collection server and streamer, written in Go.  
+It is API compatible to the [Subsonic media player](http://www.subsonic.org/pages/index.jsp).
 
 ![Navidrome web interface screenshot](../assets/images/dietpi-software-media-navidrome.png){: width="400" height="202" loading="lazy"}
 
@@ -1665,7 +1666,7 @@ An open source web-based music collection server and streamer, written in Go.
 
     Navidrome don't support multiple music folders out of the box. The feature is still being developed.
 
-    Realted GitHub issue: <https://github.com/navidrome/navidrome/issues/192>
+    Related GitHub issue: <https://github.com/navidrome/navidrome/issues/192>
 
 === "Setup details"
 
@@ -1717,6 +1718,13 @@ An open source web-based music collection server and streamer, written in Go.
     Default music directory:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+
+=== "Clients for Navidrome"
+
+    Navidrome has a Subsonic-API compatible server built in, so there should be plenty of clients for different platforms available. See:
+
+    - <https://www.navidrome.org/docs/overview/#apps>
+    - <http://www.subsonic.org/pages/apps.jsp>
 
 ***
 
