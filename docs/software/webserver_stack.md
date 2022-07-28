@@ -556,7 +556,7 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
 
 Official documentation: <https://tomcat.apache.org>
 
-## Web development - Programming & Frameworks <a id="web-development-programming-frameworks"></a>
+## Web development - Programming & Frameworks
 
 ### PHP
 

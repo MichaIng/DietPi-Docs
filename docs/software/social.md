@@ -174,7 +174,7 @@ YouTube video tutorial: *DietPi: Easily set up Raspberry Pi projects (e.g. a sha
 
 <iframe src="https://www.youtube-nocookie.com/embed/0by117lpq_o?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
-## Baïkal {: #baikal}
+## Baïkal
 
 Baïkal is a lightweight CalDAV + CardDAV server.
 
