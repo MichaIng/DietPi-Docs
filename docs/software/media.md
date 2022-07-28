@@ -1649,7 +1649,7 @@ The Snapcast client will prompt you for the server's IP and port when installing
 
 Source code: <https://github.com/badaix/snapcast>
 
-## Navidrome {: #navidrome }
+## Navidrome
 
 An open source web-based music collection server and streamer, written in Go.  
 It is API compatible to the [Subsonic media player](http://www.subsonic.org/pages/index.jsp).
