@@ -11,6 +11,7 @@ description: Description of DietPi software options related to social platforms 
 - [**phpBB - Free flat-forum bulletin board software solution**](#phpbb)
 - [**Wordpress - Website Blog and Publishing platform**](#wordpress)
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](#single-file-php-gallery)
+<!-- markdownlint-disable-next-line MD051 -->
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
 - [**Synapse - Decentralized communication with the Matrix protocol**](#synapse)
 

@@ -69,7 +69,7 @@ This is perfect for users requiring anonymity and privacy.
 
 It also Installs:
 
-- [WiFi HotSpot](#wifi-hotspot_1)
+- [WiFi HotSpot](#wifi-hotspot)
 
 ![DietPi WiFi hotspot tor](../assets/images/dietpi-software-advanced-networking-torhotspot.png){: width="550" height="308" loading="lazy"}
 
@@ -82,7 +82,7 @@ It also Installs:
 
 === "Connection credentials"
 
-    These are identical to the [WiFi HotSpot credentials](#wifi-hotspot_1).
+    These are identical to the [WiFi HotSpot credentials](#wifi-hotspot).
 
 === "Verification"
 

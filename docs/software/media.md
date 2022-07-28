@@ -13,6 +13,7 @@ description: Description of DietPi software options related to media systems lik
 - [**O!MPD - Feature-rich web Interface audio player for MPD**](#ompd)
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava)
 - [**Mopidy - Web Interface Music /Radio Player**](#mopidy)
+<!-- markdownlint-disable-next-line MD051 -->
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](#airsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](#squeezelite)
@@ -1652,7 +1653,7 @@ Source code: <https://github.com/badaix/snapcast>
 ## Navidrome
 
 An open source web-based music collection server and streamer, written in Go.  
-It is API compatible to the [Subsonic media player](http://www.subsonic.org/pages/index.jsp).
+It is compatible with the [Subsonic media player](http://www.subsonic.org/pages/index.jsp).
 
 ![Navidrome web interface screenshot](../assets/images/dietpi-software-media-navidrome.png){: width="400" height="202" loading="lazy"}
 
@@ -1664,7 +1665,7 @@ It is API compatible to the [Subsonic media player](http://www.subsonic.org/page
 
 === "Multiple Music Folders"
 
-    Navidrome don't support multiple music folders out of the box. The feature is still being developed.
+    Navidrome doesn't support multiple music folders out of the box. The feature is still being developed.
 
     Related GitHub issue: <https://github.com/navidrome/navidrome/issues/192>
 
@@ -1721,7 +1722,7 @@ It is API compatible to the [Subsonic media player](http://www.subsonic.org/page
 
 === "Clients for Navidrome"
 
-    Navidrome has a Subsonic-API compatible server built in, so there should be plenty of clients for different platforms available. See:
+    Navidrome has a Subsonic-compatible server built in, so there should be plenty of clients for different platforms available. See:
 
     - <https://www.navidrome.org/docs/overview/#apps>
     - <http://www.subsonic.org/pages/apps.jsp>

@@ -89,7 +89,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
 ## Deluge
 
-Deluge, the web interface BitTorrent server that allows you to download BitTorrent files. This Python coded BitTorrent server is an alternative to the [Lightweight Transmission](#transmission-lightweight-bittorrent-server-with-web-interface) option.
+Deluge, the web interface BitTorrent server that allows you to download BitTorrent files. This Python coded BitTorrent server is an alternative to the [Lightweight Transmission](#transmission) option.
 
 !!! hint "USB dedicated hard drive highly recommended"
 
@@ -451,7 +451,7 @@ Automatically download your favorite TV shows, as they become available.
 
     Setup your download client:
 
-    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
+    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission).
 
     Setup file creation mask:  
     If you require write access from other applications (e.g. Plex subtitle downloads), you'll also need to set the file/folder creation mask to allow this.
@@ -521,7 +521,7 @@ Automatically download your favorite movies, as they become available.
 
     Setup your download client:
 
-    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
+    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission).
 
     Setup file creation mask:  
     If you require write access from other applications (e.g. Plex subtitle downloads), you'll also need to set the file/folder creation mask to allow this.
@@ -634,7 +634,7 @@ Automatically download your favorite music.
 
     Setup your download client:
 
-    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
+    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission).
 
     Setup file creation mask:  
     If you require write access from other applications (e.g. Plex subtitle downloads), you'll also need to set the file/folder creation mask to allow this.

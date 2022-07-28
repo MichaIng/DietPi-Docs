@@ -465,6 +465,12 @@ For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) websi
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>NanoPi R5S</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>ZeroPi</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ZeroPi-ARMv7-Bullseye.7z">DietPi image</a>

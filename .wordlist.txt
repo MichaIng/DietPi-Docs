@@ -161,6 +161,7 @@ FreshRSS
 FriendlyARM
 FriendlyARM's
 FriendlyELEC
+FriendlyELEC's
 frontend
 frontends
 frp
@@ -242,6 +243,7 @@ JRE
 JS
 js
 JSON
+JunoBloom
 JustBoom
 Kbit
 Keychain
