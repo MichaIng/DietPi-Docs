@@ -161,6 +161,7 @@ FreshRSS
 FriendlyARM
 FriendlyARM's
 FriendlyELEC
+FriendlyELEC's
 frontend
 frontends
 frp
