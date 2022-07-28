@@ -18,6 +18,7 @@ description: Description of DietPi software options related to BitTorrent and ot
 - [**Radarr - Automatically download Movies**](#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](#bazarr)
 - [**Lidarr - Automatically download Music**](#lidarr)
+- [**Readarr - Automatically download Ebooks**](#readarr)
 - [**Prowlarr - Indexer manager & proxy for PVR**](#prowlarr)
 - [**Jackett - API Support for your favourite torrent trackers**](#jackett)
 - [**NZBGet - NZB download manager with web interface**](#nzbget)
@@ -525,17 +526,17 @@ Automatically download your favorite movies, as they become available.
     Setup file creation mask:  
     If you require write access from other applications (e.g. Plex subtitle downloads), you'll also need to set the file/folder creation mask to allow this.
 
-    - In the Sonarr web interface, select `Settings`
-    - Toggle to `Advanced settings` slider (enable it)
+    - In the Radarr web interface, select `Settings`
+    - Toggle to `Advanced settings` (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-      ![Radarr permissions options](../assets/images/dietpi-software-download-sonarrpermissions.png){: width="400" height="171" loading="lazy"}
+      ![Radarr permissions options](../assets/images/dietpi-software-download-readarrpermissions.png){: width="400" height="254" loading="lazy"}
 
     - Save changes
 
 === "Add a movie"
 
-    - Simply select `Add Movies`
+    - Simply select `Add New Movies`
     - Type a name of the movie you wish to find
     - Once found, under `path` use the following location `/mnt/dietpi_userdata/downloads`
     - Change any further options (such as video quality) if needed, then select `+`
@@ -672,6 +673,110 @@ Automatically download your favorite music.
 
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
     [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+
+## Readarr
+
+Automatically download your favorite ebook, as they become available.
+
+??? note "A download client is required"
+
+    Transmission BitTorrent server is recommended to enable automatic downloads
+
+![Readarr web interface screenshot](../assets/images/dietpi-software-download-readarr.png){: width="400" height="183" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8787**:
+
+    - URL = `http://<your.IP>:8787`
+
+=== "First run setup"
+
+    Before you can add ebooks, you'll need to select a search indexer to use from the web interface:
+
+    - Simply go to `Settings` \> `Indexer` then choose at least one indexer.
+
+    Setup your download client:
+
+    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
+
+    Setup folder creation mask:  
+    If you require write access from other applications, you'll also need to set the folder creation mask to allow this.
+
+    - In the Readarr web interface, select `Settings`
+    - Toggle to `Advanced settings` (enable it)
+    - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
+
+      ![Readarr permissions options](../assets/images/dietpi-software-download-readarrpermissions.png){: width="400" height="254" loading="lazy"}
+
+    - Save changes
+
+=== "Add an ebook"
+
+    - Simply select `Add New Author`
+    - Type a name of the ebook or author you wish to find
+    - Once found, under `path` use the following location `/mnt/dietpi_userdata/downloads`
+    - Change any further options if needed, then select `Add`
+
+=== "Using custom download/media directories"
+
+    By default Readarr has strict permissions to only access download and media directories inside `/mnt/`. If you need to use a different location, please do the following:
+
+    1. Run `dietpi-services` from console
+    2. Select `readarr`
+    3. Select `Edit`
+    4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=`
+    5. Add your custom path to the end of this line, separated by one space
+    6. Press ++ctrl+o++ buttons to save and ++ctrl+x++ to exit
+
+=== "Setup details"
+
+    The install, config and data directory is located at:
+
+    - Install directory: `/opt/readarr`
+    - Data directory: `/mnt/dietpi_userdata/readarr`
+    - Readarr configuration file: `/mnt/dietpi_userdata/readarr/config.xml`
+
+=== "Service control"
+
+    Since Readarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status readarr
+    ```
+
+    ```sh
+    systemctl start readarr
+    ```
+
+    ```sh
+    systemctl stop readarr
+    ```
+
+    ```sh
+    systemctl restart readarr
+    ```
+
+=== "View logs"
+
+    - Service: `journalctl -u readarr`
+    - Binary: `/var/log/readarr/Readarr.txt`
+
+=== "Update to latest version"
+
+    - Use the internal web based updater
+
+=== "Recommended: Protect your privacy with a VPN"
+
+    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../../dietpi_tools/#dietpi-vpn) tool.  
+    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+
+***
+
+Official website: <https://readarr.com/>  
+Official documentation: <https://wiki.servarr.com/readarr>  
+Source code: <https://github.com/Readarr/Readarr>  
+License: [GPLv3](https://github.com/Readarr/Readarr/blob/develop/LICENSE.md)
 
 ## Prowlarr
 
