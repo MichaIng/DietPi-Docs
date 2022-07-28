@@ -627,6 +627,7 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
 Website: <https://nodejs.org/>  
 Official documentation: <https://nodejs.org/api/>  
 
+<!-- markdownlint-disable MD053 -->
 [^1]: Find out more about the success stories of Nginx on: <https://nginx.org/en/>
 [^2]: ["Dead database walking: MySQL's creator on why the future belongs to MariaDB - MariaDB, open source, mysql, Oracle"](https://www2.computerworld.com.au/article/457551/dead_database_walking_mysql_creator_why_future_belongs_mariadb/). Computerworld. Retrieved 22 November 2020.
 [^3]: [Most Widely Deployed and Used Database Engine](https://www.sqlite.org/mostdeployed.html). Retrieved 12 December 2020
