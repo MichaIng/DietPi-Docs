@@ -13,6 +13,7 @@ description: Description of DietPi software options related to media systems lik
 - [**O!MPD - Feature-rich web Interface audio player for MPD**](#ompd)
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava)
 - [**Mopidy - Web Interface Music /Radio Player**](#mopidy)
+<!-- markdownlint-disable-next-line MD051 -->
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](#airsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](#squeezelite)
@@ -253,7 +254,7 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     Many thanks to Roth for [this hint](https://dietpi.com/forum/t/add-mopidy-to-software-options-advanced-alsa-configs/646).
 
-## Airsonic-Advanced <a id="airsonic"></a>
+## Airsonic-Advanced {: #airsonic }
 
 Feature rich media streaming server with a web interface, coded in Java.
 

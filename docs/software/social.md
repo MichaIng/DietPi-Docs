@@ -11,6 +11,7 @@ description: Description of DietPi software options related to social platforms 
 - [**phpBB - Free flat-forum bulletin board software solution**](#phpbb)
 - [**Wordpress - Website Blog and Publishing platform**](#wordpress)
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](#single-file-php-gallery)
+<!-- markdownlint-disable-next-line MD051 -->
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
 - [**Synapse - Decentralized communication with the Matrix protocol**](#synapse)
 
@@ -173,7 +174,7 @@ YouTube video tutorial: *DietPi: Easily set up Raspberry Pi projects (e.g. a sha
 
 <iframe src="https://www.youtube-nocookie.com/embed/0by117lpq_o?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
-## Baïkal {: #baikal}
+## Baïkal
 
 Baïkal is a lightweight CalDAV + CardDAV server.
 
