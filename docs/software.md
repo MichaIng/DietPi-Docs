@@ -39,6 +39,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Radarr - Automatically download Movies**](bittorrent/#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](bittorrent/#bazarr)
 - [**Lidarr - Automatically download Music**](bittorrent/#lidarr)
+- [**Readarr - Automatically download Ebooks**](bittorrent/#readarr)
 - [**Prowlarr - Indexer manager & proxy for PVR**](bittorrent/#prowlarr)
 - [**Jackett - API Support for your favourite torrent trackers**](bittorrent/#jackett)
 - [**NZBGet - NZB download manager with web interface**](bittorrent/#nzbget)
@@ -194,6 +195,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Beets - Music organizer and manager**](media/#beets)
 - [**Snapcast Server - Multi room audio server**](media/#snapcast-server)
 - [**Snapcast Client - Multi room audio client**](media/#snapcast-client)
+- [**Navidrome - Web interface media streaming server**](media/#navidrome)
 
 ## [Printing Server](printing/)
 
@@ -274,5 +276,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ### [Programming & Web development Frameworks](webserver_stack/#web-development-programming-frameworks)
 
-- [**Flask - Micro web framework powered by Python**](webserver_stack/#flask)
 - [**PHP - Scripting language especially suited to web development**](webserver_stack/#php)
+- [**PHP Composer** - A Dependency Manager for PHP](webserver_stack/#php-composer)
+- [**Flask - Micro web framework powered by Python**](webserver_stack/#flask)
+- [**Node.js** - JavaScript runtime designed to build scalable network applications](webserver_stack/#nodejs)
