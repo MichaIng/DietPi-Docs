@@ -699,6 +699,13 @@ dietpi-backup
 
     In the case that the `rsync` package is not installed, this is done automatically once you start a backup or restore.
 
+!!! attention "Reduced system operation during DietPi-Backup runs"
+
+    During the run of `dietpi-backup`, all services are stopped. This has to be taken into account e.g. if scheduling backups.
+
+    - For example, a webserver based application (e.g. Nextcloud or many of the media servers, like Plex, navidrome, etc.) will not run, because the webserver based UI is stopped.
+    - Also, many of the according backend services are stopped as well as basic services like the Samba or NFS service.
+
 ### DietPi file explorer
 
 Lightweight file manager and explorer. To start DietPi-Explorer, use the following command:
