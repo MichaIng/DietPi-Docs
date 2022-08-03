@@ -681,7 +681,6 @@ dietpi-logclear
 - Customization which **files and directories** are **included** and **excluded**
 - Activation of **automatic daily backups**
 - Setting of an **amount of backups to be kept**  
-  Backups are rotated automatically and if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync
 
 From the console, run the following command:
 
@@ -691,9 +690,49 @@ dietpi-backup
 
 ![DietPi-Backup menu screenshot](assets/images/dietpi-backup_1.png){: width="681" height="330" loading="lazy"}
 
-!!! info "DietPi userdata may not be included"
+=== "Automatic daily backup"
 
-    If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
+    `Dietpi-Backup` gives the option of an automatic daily backup function (controlled via the Linux `cron` mechanism).
+
+    It contains these options (see screenshot above):
+
+    - "Daily Backup": Activates the daily backup
+    - "Amount": Sets the number of backups to be kept. Backups are rotated automatically, if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync
+
+=== "Daily backup execution time"
+
+    The automatic daily backup (activated via option "Daily Backup", see screenshot above) is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several backup clients backing up to the same storage (backup server): Shifting the backup starting time of these systems may reduce temporary overload of the backup server by avoiding concurrent access to the storage.
+
+    The starting time is basically defined via the file `/etc/crontab` (wich calls the backup/restore function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](#dietpi-cron). It is executed by running the following command
+
+    ```sh
+    dietpi-cron
+    ```
+
+    Please keep in mind that all other daily `cron` based procedures are also started at this changed time.
+
+=== "Backup file selection (Filter)"
+
+    The definition which files are used for the backup procedure is defined via the option "Filter" (see screenshot above). This opens a nano editor to include/exclude files of the backup. The format of the file contents is described within the file itself.
+
+    ![DietPi-Backup filter option screenshot](assets/images/dietpi-backup_filter-option.jpg){: width="681" height="330" loading="lazy"}
+
+    !!! info "DietPi userdata may not be included"
+
+        If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
+
+=== "Logging"
+
+    Logging information about the backup procedure is given within the files `.dietpi-backup_stats` and `.dietpi-backup_log` which are located in the backup target directory ("Location" option):
+
+    - `.dietpi-backup_stats` gives a list of completed operations with time and date
+    - `.dietpi-backup_log` gives a list of every processed file
+
+=== "Settings files"
+
+    Generally, the settings of the DietPi-Backup are changed via the `dietpi-backup` command menu entries.
+
+    The system stores these settings in the files `/boot/dietpi/.dietpi-backup_settings` and `/boot/dietpi/.dietpi-backup_inc_exc`, which are generated from `dietpi-backup` automatically. Therefore, the files do not need to be changed manually by the user.
 
 !!! info "DietPi-Backup is purely based on `Rsync`"
 
