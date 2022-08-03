@@ -713,9 +713,12 @@ dietpi-backup
 
 === "Backup file selection (Filter)"
 
-    The definition which files are used for the backup procedure is defined via the option "Filter" (see screenshot above). This opens a nano editor to include/exclude files of the backup. The format of the file contents is described within the file itself.
+    The definition which files are used for the backup procedure is defined via the option "Filter" (see screenshot above). This opens `nano` to edit the include/exclude definitions for the backup.  
+    The filter definition syntax is described within the file itself.
 
     ![DietPi-Backup filter option screenshot](assets/images/dietpi-backup_filter-option.jpg){: width="681" height="330" loading="lazy"}
+
+    The file containing the filter definitions is `/boot/dietpi/.dietpi-backup_inc_exc`.
 
     !!! info "DietPi userdata may not be included"
 
