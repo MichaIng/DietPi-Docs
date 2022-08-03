@@ -703,7 +703,7 @@ dietpi-backup
 
     The automatic daily backup (activated via option "Daily Backup", see screenshot above) is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several backup clients backing up to the same storage (backup server): Shifting the backup starting time of these systems may reduce temporary overload of the backup server by avoiding concurrent access to the storage.
 
-    The starting time is basically defined via the file `/etc/crontab` (wich calls the backup/restore function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](#dietpi-cron). It is executed by running the following command
+    The starting time is basically defined via the file `/etc/crontab` (which calls the backup/restore function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](#dietpi-cron). It is executed by running the following command
 
     ```sh
     dietpi-cron
@@ -742,7 +742,7 @@ dietpi-backup
 
     During the run of `dietpi-backup`, all services are stopped. This has to be taken into account e.g. if scheduling backups.
 
-    - For example, a webserver based application (e.g. Nextcloud or many of the media servers, like Plex, navidrome, etc.) will not run, because the webserver based UI is stopped.
+    - For example, a webserver based application (e.g. Nextcloud or many of the media servers, like Plex, Navidrome, etc.) will not run, because the webserver based UI is stopped.
     - Also, many of the according backend services are stopped as well as basic services like the Samba or NFS service.
 
 ### DietPi file explorer
