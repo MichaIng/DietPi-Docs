@@ -14,6 +14,8 @@ dietpi-launcher
 
 ![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="398" loading="lazy"}
 
+---
+
 ## Software installation
 
 ### DietPi software
@@ -161,6 +163,8 @@ When you execute the certificate installation it also installs it for your selec
     To be accessible from the internet, typically your router needs a port forwarding configuration to route incoming HTTP and HTTPS accesses to your DietPi system.  
     Although you only need a HTTPS protocol forwarding (typically port 433), you also need to forward the HTTP protocol (typically port 80) to your DietPi system, otherwise the certification renewal procedure will fail (due to the fact that the certification renewal procedure takes place several months later you may have forgotten this issue).
 
+---
+
 ### DietPi VPN
 
 DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all VPN users to quickly and easily connect to any NordVPN, ProtonVPN, or any other server that uses OpenVPN in TCP or UDP, using only open source software. To start DietPi-VPN, use the following command:
@@ -187,6 +191,8 @@ dietpi-vpn
     This will still allow access from your LAN and allow you to fix any problems using SSH, if needed.
 
 ![OpenVPN logo](assets/images/dietpi-software-vpn-openvpn-logo.png){: width="200" height="58" loading="lazy"}
+
+---
 
 ### DietPi DDNS
 
@@ -220,6 +226,8 @@ dietpi-ddns
         - Use `-t <timespan>` to set an update interval in minutes, which is purely optional and defaults to 10 minutes.
         - If you did already setup DietPi-DDNS before, the `apply` command can also be used to change one of the above settings. All other options are optional then.
     - Use `dietpi-ddns remove` to remove any cron job that was setup before.
+
+---
 
 ## System configuration
 
@@ -474,6 +482,8 @@ dietpi-autostart
     for further information.  
     The numbers shown on the left in the `dietpi-autostart` command correspond to the values in `dietpi.txt`.
 
+---
+
 ### DietPi services
 
 Provides service control, priority level tweaks and status print. To start DietPi-Services, use the following command:
@@ -490,6 +500,8 @@ The dialog to tweak a service is entered by highlighting the service (keys ++arr
 
 !!! caution "Be careful at tweaking the services."
 
+---
+
 ### DietPi LED control
 
 Change triggers for the status LEDs on your SBC/motherboard. To start DietPi-LED_Control, use the following command:
@@ -502,6 +514,8 @@ dietpi-led_control
 
 Depending on your used hardware, the number of entries in the dialog will change.
 
+---
+
 ### DietPi cron
 
 Modify the start times of specific cron job groups. To start DietPi-Cron, use the following command:
@@ -511,6 +525,8 @@ dietpi-cron
 ```
 
 ![DietPi-Cron screenshot](assets/images/dietpi-cron.jpg){: width="643" height="357" loading="lazy"}
+
+---
 
 ### DietPi JustBoom
 
@@ -529,6 +545,8 @@ If no sound output is configured, the following dialog appears:
 ![DietPi-JustBoom screenshot](assets/images/dietpi-justboom.jpg){: width="642" height="228" loading="lazy"}
 
 In this case you have to e.g. install a sound program package via `dietpi-software` or configure the sound output e.g. via `dietpi-config`.
+
+---
 
 ### DietPi survey
 
@@ -637,6 +655,8 @@ Update DietPi OS version to the latest version available and informs when update
 dietpi-update
 ```
 
+---
+
 ### DietPi cleaner
 
 Clean up not necessary files from the operating system and free up valuable disk space.  
@@ -662,6 +682,8 @@ The files cleaner allows you to customize a list of filenames to search and remo
 
 ![DietPi-Cleaner types screenshot](assets/images/dietpi-cleaner_3.png){: width="644" height="388" loading="lazy"}
 
+---
+
 ### DietPi log clear
 
 Clear log files in `/var/log/`. To start DietPi-LogClear, use the following command:
@@ -671,6 +693,8 @@ dietpi-logclear
 ```
 
 ![DietPi-LogClear screenshot](assets/images/dietpi-logclear.jpg){: width="643" height="198" loading="lazy"}
+
+---
 
 ### DietPi backup (backup/restore)
 
@@ -699,7 +723,7 @@ dietpi-backup
     - "Daily Backup": Activates the daily backup
     - "Amount": Sets the number of backups to be kept. Backups are rotated automatically, if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync
 
-=== "Daily backup execution time"
+    **Daily backup execution time**
 
     The automatic daily backup (activated via option "Daily Backup", see screenshot above) is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several backup clients backing up to the same storage (backup server): Shifting the backup starting time of these systems may reduce temporary overload of the backup server by avoiding concurrent access to the storage.
 
@@ -720,22 +744,22 @@ dietpi-backup
 
     The file containing the filter definitions is `/boot/dietpi/.dietpi-backup_inc_exc`.
 
-    !!! info "DietPi userdata may not be included"
-
-        If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
-
 === "Logging"
 
-    Logging information about the backup procedure is given within the files `.dietpi-backup_stats` and `.dietpi-backup_log` which are located in the backup target directory ("Location" option):
+    Logging information about the backup procedure is given within the files `.dietpi-backup_stats` and `.dietpi-backup.log` which are located in the backup target directory ("Location" option):
 
     - `.dietpi-backup_stats` gives a list of completed operations with time and date
-    - `.dietpi-backup_log` gives a list of every processed file
+    - `.dietpi-backup.log` gives a list of every processed file
 
 === "Settings files"
 
     Generally, the settings of the DietPi-Backup are changed via the `dietpi-backup` command menu entries.
 
     The system stores these settings in the files `/boot/dietpi/.dietpi-backup_settings` and `/boot/dietpi/.dietpi-backup_inc_exc`, which are generated from `dietpi-backup` automatically. Therefore, the files do not need to be changed manually by the user.
+
+!!! info "DietPi userdata may not be included"
+
+    If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
 
 !!! info "DietPi-Backup is purely based on `Rsync`"
 
@@ -748,6 +772,8 @@ dietpi-backup
     - For example, a webserver based application (e.g. Nextcloud or many of the media servers, like Plex, Navidrome, etc.) will not run, because the webserver based UI is stopped.
     - Also, many of the according backend services are stopped as well as basic services like the Samba or NFS service.
 
+---
+
 ### DietPi file explorer
 
 Lightweight file manager and explorer. To start DietPi-Explorer, use the following command:
@@ -757,6 +783,8 @@ dietpi-explorer
 ```
 
 ![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg){: width="646" height="355" loading="lazy"}
+
+---
 
 ### DietPi sync
 
@@ -770,6 +798,8 @@ dietpi-sync
 
 Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then, select a target location. The target location can be anything from a networked samba file server, or even an FTP server.  
 Each sync includes a leading dry run, after which you can check the expected result before deciding if you want to continue with the actual sync.
+
+---
 
 ## Misc tools
 
@@ -790,6 +820,8 @@ The following commands are non-interactive, but error-handled wrappers for `apt-
 - `G_AGUG` - `apt-get upgrade`
 - `G_AGDUG` - `apt-get dist-upgrade`
 
+---
+
 ### DietPi Banner
 
 Enables the configuration of the initial banner, displayed on logon. To start DietPi-Banner, use the following command:
@@ -804,6 +836,8 @@ Using these settings you can configure the information displayed initially, choo
 
 ![DietPi-Banner print on login](assets/images/dietpi-banner.jpg){: width="636" height="359" loading="lazy"}
 
+---
+
 ### DietPi CPU info
 
 Displays CPU temperature, processor frequency, throttle level etc. via the command line command
@@ -814,6 +848,8 @@ cpu
 
 ![DietPi-CPU_info screenshot](assets/images/dietpi-tools-cpuinfo.png){: width="741" height="299" loading="lazy"}
 
+---
+
 ### DietPi morse code
 
 It converts a text file into morse code. To start DietPi morse code, use the following command:
@@ -821,6 +857,8 @@ It converts a text file into morse code. To start DietPi morse code, use the fol
 ```sh
 dietpi-morsecode
 ```
+
+---
 
 ### DietPi bug report
 
