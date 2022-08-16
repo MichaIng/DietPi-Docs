@@ -765,7 +765,7 @@ dietpi-backup
 
     In the case that the `rsync` package is not installed, this is done automatically once you start a backup or restore.
 
-!!! attention "Reduced system operation during DietPi-Backup runs"
+!!! attention "Reduced system operation while DietPi-Backup runs"
 
     During the run of `dietpi-backup`, all services are stopped. This has to be taken into account e.g. if scheduling backups.
 
