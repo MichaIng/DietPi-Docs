@@ -218,6 +218,7 @@ HTPC
 HTTPS
 IceCast
 ICMP
+Imager
 Imgur
 InfluxData
 InfluxDB
