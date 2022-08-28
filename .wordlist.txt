@@ -218,6 +218,7 @@ HTPC
 HTTPS
 IceCast
 ICMP
+Imager
 Imgur
 InfluxData
 InfluxDB
@@ -258,6 +259,7 @@ KMS
 Kodi
 Koel
 Komga
+KristinaStrapcova
 Kubernetes
 KVM
 LASP
@@ -276,6 +278,7 @@ LightDM
 Lighttpd
 Lighty
 LinkedIn
+Linode
 LLMP
 LLSP
 LMS
@@ -643,6 +646,7 @@ VMX
 VNC
 VNCSERVER
 VPN
+VPS
 VSCode
 VSCodium
 vsftpd
