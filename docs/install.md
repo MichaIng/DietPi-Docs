@@ -446,9 +446,9 @@ Select the following tabs for the installation description of your target.
         ```
         
             1. If the last two commands fail with a `unable to parse directory volume name` error, you can perform the same actions through the Proxmox web interface.
-            1. Click your VM and click the *Hardware* tab.
-            1. You should see an entry for *Unused Disk 0* that has your image specified.
-            1. Press **Edit** to open the *Add: Unused Disk* popup.
+            1. Click your VM and click the **Hardware** tab.
+            1. You should see an entry for **Unused Disk 0** that has your image specified.
+            1. Press **Edit** to open the **Add: Unused Disk** popup.
             1. Set **Bus/Device** to **SCSI** to **0**.
             1. Leave other settings as default.
             1. Click **Add**. You should now see your new **Hard Disk (scsi0)** available.
