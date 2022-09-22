@@ -187,9 +187,7 @@ Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
 Source code: <https://github.com/moby/moby>  
 License: [Apache-2.0](https://github.com/moby/moby/blob/master/LICENSE)
 
-For a quick intro, see **DietPi Docker Setup on Raspberry Pi 3 B Plus**:
-
-<iframe src="https://www.youtube-nocookie.com/embed/y_VfLOGm5nA?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [*DietPi Docker Setup on Raspberry Pi 3 B Plus*](https://www.youtube.com/watch?v=y_VfLOGm5nA)
 
 ## Docker Compose
 
