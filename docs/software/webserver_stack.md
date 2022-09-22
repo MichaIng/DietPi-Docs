@@ -116,9 +116,7 @@ Using this option you select the complete web stack for installation. Just selec
 
 ***
 
-YouTube video tutorial: *DietPi Web Server Tutorial | Host a website from Home | Raspberry Pi*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/nB-i959ZGzQ?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [*DietPi Web Server Tutorial | Host a website from Home | Raspberry Pi*](https://www.youtube.com/watch?v=nB-i959ZGzQ)
 
 ***
 
