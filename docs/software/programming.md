@@ -100,7 +100,7 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 === "Directories"
 
     - `/usr/local/go`: This is the place where the Go development tools is installed.
-    - When installing packages via `go get` or `go install`, they are installed into the users home directory `~/go` by default. A custom path can be set via `GOPATH` environment variable. To also load binaries of compiled Go packages into your `PATH`, something like this can be done:
+    - When installing packages via `go get` or `go install`, they are installed into the users home directory `~/go` by default. A custom path can be set via the `GOPATH` environment variable. To also load binaries of compiled Go packages into your `PATH`, something like this can be done:
 
         ```sh
         cat << '_EOF_' >> ~/.bashrc
