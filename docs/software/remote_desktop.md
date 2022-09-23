@@ -265,7 +265,7 @@ Once installed, available VirtualHere devices will be shown in the client user i
     If a device must stay available at the server, it is best to let it be ignored by VirtualHere, making use of the `IgnoredDevices` option: It takes `xxxx/yyyy` as value with `xxxx` being the vendor ID and `yyyy` being the device ID, which can be obtained from the output of `lsusb`. See the "Configuration" tab below and the official documentation link for further details.
 
 ??? hint "What to do if the VirtualHere GUI client is not displayed on your DietPi graphical desktop (e.g. Xfce)"
-    In some cases, the GUI client does not start an X11 windows. This might be caused by a missing root permission to access X. In this case you need to execute `xhost local:root` in advance.  
+    In some cases, the GUI client does not start an X11 window. This might be caused by a missing root permission to access X. In this case you need to execute `xhost local:root` in advance.  
     With this you need to execute (example 64 bit Intel machine where the VirtualHere client was copied to `/usr/local/bin`)
 
     ```sh
