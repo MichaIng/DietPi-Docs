@@ -90,34 +90,6 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 
     Checkout also the official tutorial [Get started with Go](https://golang.org/doc/tutorial/getting-started).
 
-=== "Install / Uninstall"
-
-    - We switched to automatic Go version detection. Here is an example:
-
-        ```sh
-        root@DietPi3:~# go version
-        go version go1.16.3 linux/arm
-        ```
-
-    - When the Go package gets uninstalled, the folder `/mnt/dietpi_userdata/go` is still kept.  
-      This is the place where packages are installed, custom compilations are run, sources are downloaded etc.
-
-        It is especially important to keep `/mnt/dietpi_userdata/go` as long as we don't have a good dependency system that blocks uninstalls of dependencies. Otherwise it would be possible to uninstall Go while [OpenBazaar](../social/#openbazaar) is still installed.  
-        As a side effect, removing `/mnt/dietpi_userdata/go` would mean also removing [OpenBazaar](../social/#openbazaar).
-
-=== "Directories"
-
-    - `/mnt/dietpi_userdata/go`: This is the place where packages are installed, custom compilations are run, sources are downloaded etc.  
-      This path is what is given in the environment variable GOPATH.
-
-        !!! note "GOPATH is a global setting"
-            In normal Go installations, GOPATH is a user specific environment variable. In DietPi it is global, i.e. all users have the same module cache and all see the same binaries below GOPATH/bin.
-
-    - `/usr/local/go`: This is the place where the Go package is installed.
-    - `/mnt/dietpi_userdata/go/pkg/mod`: This is the path for 3rd party Go packages. The environment variable GOMODCACHE directs to this.
-
-=== "Getting started"
-
     Some common Go commands are:
 
     - `go version`: Prints the installed Go version
@@ -125,23 +97,32 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
     - `go mod tidy <MODULNAME>`: Generate a Go module
     - `go help`: Start the Go internal help in general, details for commands e.g. via `go help build`
 
+=== "Directories"
+
+    - `/usr/local/go`: This is the place where the Go development tools is installed.
+    - When installing packages via `go get` or `go install`, they are installed into the users home directory `~/go` by default. A custom path can be set via the `GOPATH` environment variable. To also load binaries of compiled Go packages into your `PATH`, something like this can be done:
+
+        ```sh
+        cat << '_EOF_' >> ~/.bashrc
+        export GOPATH=/path/to/go
+        export PATH="$PATH:$GOPATH/bin"
+        _EOF_
+        ```
+
 === "Update to latest version"
 
     ```sh
     dietpi-software reinstall 188
     ```
 
-    To check the installation, run `go version`.
-
-    See also <https://golang.org/doc/install> or  
-    <https://gist.github.com/nikhita/432436d570b89cab172dcf2894465753>.
-
 ***
 
 Website: <https://golang.org>  
-Official documentation, references and guided tours of Go programs : <https://golang.org/doc>  
-One example source to grub for Go libraries: <https://github.com/avelino/awesome-go>  
-Wikipedia: <https://en.wikipedia.org/wiki/Go_(programming_language)>
+Official documentation: <https://golang.org/doc>  
+Additional libraries: <https://github.com/avelino/awesome-go>  
+Wikipedia: <https://en.wikipedia.org/wiki/Go_(programming_language)>  
+Source code: <https://github.com/golang/go>  
+License: [BSD 3-Clause](https://github.com/golang/go/blob/master/LICENSE)
 
 ## Docker
 
