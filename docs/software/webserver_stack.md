@@ -116,9 +116,7 @@ Using this option you select the complete web stack for installation. Just selec
 
 ***
 
-YouTube video tutorial: *DietPi Web Server Tutorial | Host a website from Home | Raspberry Pi*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/nB-i959ZGzQ?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [*DietPi Web Server Tutorial | Host a website from Home | Raspberry Pi*](https://www.youtube.com/watch?v=nB-i959ZGzQ)
 
 ***
 
@@ -612,7 +610,7 @@ Node.js is JavaScript runtime built on Chrome's V8 JavaScript engine.
 
 ![Node.js](../assets/images/dietpi-software-nodejs.jpg)
 
-Source: By [nodejs.org](https://nodejs.org), [Trademark policy](https://nodejs.org/en/about/trademark/)
+Source: By [nodejs.org](https://nodejs.org), [Trademark policy](https://trademark-policy.openjsf.org/)
 
 By using the event-callback/non-blocking approach, Node.js offers a single-threaded event-io model that allows orchestration of tasks running in parallel. It supports multiple connections without a need for a large memory footprint. Amazon, Netflix, eBay, Reddit, LinkedIn, Tumblr, and PayPal use Node.js.[^5]
 
