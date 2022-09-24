@@ -868,4 +868,4 @@ To start DietPi bug report, use the following command:
 dietpi-bugreport
 ```
 
-![DietPi-Bugreport screenshot](assets/images/dietpi-bugreport.jpg){: width="646" height="352" loading="lazy"}
+![DietPi-BugReport screenshot](assets/images/dietpi-bugreport.jpg){: width="646" height="352" loading="lazy"}
