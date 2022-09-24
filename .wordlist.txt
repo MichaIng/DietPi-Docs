@@ -1,4 +1,5 @@
 aarch
+ACP
 addictiveness
 addon
 addons
@@ -55,7 +56,7 @@ BSLv
 Bticino
 Btrfs
 BubbleUPnP
-Bugreport
+BugReport
 CactiChameleon
 CalDAV
 CardDAV
@@ -290,6 +291,7 @@ Logrotate
 loopback
 LPDDR
 LTS
+LuidmilaKot
 LXC
 LXDE
 LXQt
