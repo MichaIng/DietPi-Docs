@@ -560,6 +560,7 @@ swapfile
 symlink
 Syncthing
 syscall
+sysfs
 sysvinit
 syslog
 systemd
