@@ -32,6 +32,7 @@ Autobooting
 autostart
 AutoStart
 backend
+backends
 backported
 Baïkal
 balancer
@@ -73,6 +74,7 @@ Clonezilla
 Cloudflare
 CloudPrint
 CloudShell
+codec
 codecs
 Computerworld
 congerdesign
@@ -223,6 +225,7 @@ Imager
 Imgur
 InfluxData
 InfluxDB
+initramfs
 integrations
 InterPlanetary
 io
@@ -544,6 +547,7 @@ SSID
 SSIDs
 SSL
 SSO
+stdout
 StackExchange
 StephanStS
 storages
@@ -676,6 +680,7 @@ WinSCP
 WIP
 WireGuard
 WiringPi
+Wokandapix
 Wordpress
 WPA
 writeable
