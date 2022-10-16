@@ -55,6 +55,30 @@ dietpi-software reinstall 130
 
 You may need to reinstall other Python-based software titles as well and modules manually installed with the `pip3` command. Your data and settings are preserved.
 
+If you have **lightttpd** installed, there may be a service startup error
+
+```text
+$ systemctl status lighttpd
+● lighttpd.service - Lighttpd Daemon
+   Loaded: loaded (/lib/systemd/system/lighttpd.service; disabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Fri 2022-10-14 16:15:02 PDT; 1 day 19h ago
+  Process: 990 ExecStartPre=/usr/sbin/lighttpd -tt -f /etc/lighttpd/lighttpd.conf (code=exited, status=255/EXCEPTION)
+  
+$ /usr/sbin/lighttpd -tt -f /etc/lighttpd/lighttpd.conf
+/bin/bash: /usr/share/lighttpd/create-mime.assign.pl: No such file or directory
+2022-10-16 11:43:46: (configfile.c.1468) command "/usr/share/lighttpd/create-mime.assign.pl" exited non-zero: 127
+2022-10-16 11:43:46: (configfile.c.1296) source: /etc/lighttpd/lighttpd.conf line: 27 pos: 14 parser failed somehow near here: (EOL)
+```
+
+Add a symlink `create-mime.assign.pl` pointing to `create-mime.conf.pl`
+```sh
+$ cd /usr/share/lighttpd
+$ ln -s create-mime.conf.pl create-mime.assign.pl
+$ systemctl restart lighttpd
+```
+
+([thanks @alaudet](https://github.com/alaudet/raspi-sump/issues/62#issuecomment-605097455))
+
 Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#2.2-manual-upgrade>
 
 ---
