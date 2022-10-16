@@ -194,6 +194,7 @@ GPT
 Grafana
 Griesemer
 GUA
+HACS
 HAProxy
 harddisk
 Hardkernel
