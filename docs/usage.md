@@ -55,7 +55,7 @@ dietpi-software reinstall 130
 
 You may need to reinstall other Python-based software titles as well and modules manually installed with the `pip3` command. Your data and settings are preserved.
 
-If you have **lightttpd** installed, there may be a service startup error
+If you have **lighttpd** installed, there may be a service startup error
 
 ```text
 $ systemctl status lighttpd
