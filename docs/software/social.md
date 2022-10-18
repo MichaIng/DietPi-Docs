@@ -211,7 +211,8 @@ Synapse is a server, written in Python, for communication using the Matrix proto
 
 === "Federation"
 
-    Synapse is by default set up to be a private server, with no connection to any other servers. To connect to other servers (federate), see https://github.com/matrix-org/synapse/blob/develop/docs/federate.md.  Note that frp does not currently work with Synapse.
+    Synapse is by default set up to be a private server, with no connection to any other servers. To connect to other servers (federate), see <https://github.com/matrix-org/synapse/blob/develop/docs/federate.md>.  
+    Note that [frp](../advanced_networking/#frp) does not currently work with Synapse.
 
 === "Configuration"
 
