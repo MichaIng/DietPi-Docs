@@ -3,6 +3,8 @@
     --md-accent-fg-color: #9ccc00;
     --md-primary-fg-color: #7b952f;
     --md-primary-fg-color--dark: #164046;
+    --md-text-font-family: "Roboto";
+    --md-code-font-family: "Roboto Mono";
 }
 
 :root>* {
@@ -92,4 +94,47 @@
 
 .md-footer-meta a:is(:focus,:hover) {
     color: #9ccc00 !important;
+}
+
+/* Roboto fonts */
+
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(/docs/assets/fonts/Roboto400i.woff2) format('woff2');
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url(/docs/assets/fonts/Roboto300.woff2) format('woff2');
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(/docs/assets/fonts/Roboto400.woff2) format('woff2');
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url(/docs/assets/fonts/Roboto700.woff2) format('woff2');
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url(/docs/assets/fonts/RobotoMono.woff2) format('woff2');
 }

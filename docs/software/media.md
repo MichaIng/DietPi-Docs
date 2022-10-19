@@ -1004,7 +1004,7 @@ Also works with Roon.
 
 === "How do I use Roon and HQPlayer together?"
 
-    Guide: <https://help.roonlabs.com/portal/en/kb/articles/faq-how-do-i-use-roon-and-hqplayer-together>
+    Guide: <https://help.roonlabs.com/portal/en/kb/articles/hqplayer>
 
 === "Update"
 
