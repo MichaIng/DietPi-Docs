@@ -179,9 +179,7 @@ The following screenshots shall give an overview over the displaying features of
 
 ***
 
-YouTube video tutorial: *DietPi CloudShell (RPi / Odroid XU4)*
-
-<iframe src="https://www.youtube-nocookie.com/embed/O-W8Z33as_U?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtube.com/watch?v=O-W8Z33as_U)
 
 ### Configuration
 

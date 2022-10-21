@@ -493,9 +493,7 @@ Automatically download your favorite TV shows, as they become available.
 
 ***
 
-YouTube video tutorial: *How to install and configure Sonarr on Raspberry Pi with DietPi*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/3h0GvdKcR0Y?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [How to install and configure Sonarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=3h0GvdKcR0Y)
 
 ## Radarr
 
@@ -563,9 +561,7 @@ Automatically download your favorite movies, as they become available.
 
 ***
 
-YouTube video tutorial: *How to install and configure Radarr on Raspberry Pi with DietPi*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/ji9CgSBcf5E?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [How to install and configure Radarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=ji9CgSBcf5E)
 
 ## Bazarr
 
