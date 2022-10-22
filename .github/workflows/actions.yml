@@ -58,4 +58,4 @@ jobs:
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
-      run: ./lychee -En --require-https --cache --exclude '^(https://fonts.gstatic.com/$|http://wiringpi.com/|https://pydio.com/|https://www.spigotmc.org/|https://help.realvnc.com/|https://blynk.io/|www.php.net|https://play.google.com/store/apps/details)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+      run: ./lychee -En --require-https --cache --exclude '^(https://fonts.gstatic.com/$|http://wiringpi.com/|https://pydio.com/|https://www.spigotmc.org/|https://help.realvnc.com/|https://help.roonlabs.com/|https://blynk.io/|https://play.google.com/store/apps/details)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
