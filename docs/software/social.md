@@ -168,11 +168,8 @@ Also Installs:
 
 ***
 
-Website: <https://sye.dk/sfpg>
-
-YouTube video tutorial: *DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/0by117lpq_o?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Website: <https://sye.dk/sfpg>  
+YouTube video tutorial: [DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)](https://www.youtube.com/watch?v=0by117lpq_o)
 
 ## Baïkal
 

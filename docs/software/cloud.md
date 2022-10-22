@@ -267,12 +267,8 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 ***
 
 Website: <https://nextcloud.com/>  
-Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>
-
-YouTube video tutorial #1: *DietPi Nextcloud Setup on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/Q3R2RqFSyE4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
-
+Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>  
+YouTube video tutorial #1: [DietPi Nextcloud Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=Q3R2RqFSyE4)  
 YouTube video tutorial #2: [DietPi Docker Nextcloud External Storage Setup with SAMBA SERVER on RPI3B](https://www.youtube.com/watch?v=NOb12BuNpZ8)
 
 ## Nextcloud Talk

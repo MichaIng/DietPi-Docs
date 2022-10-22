@@ -133,10 +133,7 @@ from any RPi camera, USB camera or an IP camera network stream.
 Github page: <https://github.com/ccrisan/motioneye>  
 Wiki: <https://github.com/ccrisan/motioneye/wiki>  
 Tutorial: [motionEye on DietPi on Raspberry Pi: keeping an eye on things](https://mansfield-devine.com/speculatrix/2018/12/motioneye-on-dietpi-on-raspberry-pi/)  
-YouTube video tutorial (German language): `DietPi & motionEye - Vollautomatische Installation inkl. Wlan Konfiguration, Updates und Anwendung`.
-
-<iframe src="https://www.youtube-nocookie.com/embed/vQxL3TfQK5E?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
-
+YouTube video tutorial (German language): [DietPi & motionEye - Vollautomatische Installation inkl. Wlan Konfiguration, Updates und Anwendung](https://www.youtube.com/watch?v=vQxL3TfQK5E){:class="nospellcheck"}  
 License: [GPLv3](https://github.com/ccrisan/motioneye/blob/dev/LICENSE)
 
 ## mjpg-streamer

@@ -267,6 +267,12 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZero-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
+            <tr>
+                <td><a class="table" href=""><strong>ROCK 3A</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK3A-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>

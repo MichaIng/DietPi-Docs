@@ -392,22 +392,34 @@ Source code: <https://github.com/Logitech/slimserver>
 
 Squeezelite is a software audio player/client for the [Logitech Media Server](#logitech-media-server).
 
-=== "Change Squeezelite command line options"
+=== "Change command-line options"
 
-    - Run `dietpi-services`
-    - Select `squeezelite`
-    - Select `Edit`
-    - Unset and re-set the `ExecStart` entry:
+    - Edit `/etc/default/squeezelite`
+    - Restart the service:
 
-      ```systemd
-      ExecStart=
-      ExecStart=/usr/bin/squeezelite [<your custom arguments>]
-      ```
+        ```sh
+        systemctl restart squeezelite
+        ```
 
-      The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
+    !!! hint "Installs on DietPi prior to v8.10"
 
-    - Save changes with ++ctrl+o++ and exit `dietpi-services`
-    - Restart the service: `systemctl restart squeezelite`
+        On earlier Squeezelite installs, this config file didn't exist yet. If you applied command-line options via `dietpi-services`, you can migrate them to the new config file:
+
+        - Assure Squeezelite has been updated to latest version:
+
+        ```sh
+        dietpi-software reinstall 36
+        ```
+
+        - Migrate options from `/etc/systemd/system/squeezelite.service.d/dietpi-services_edit.conf` to `/etc/default/squeezelite`.
+        - Remove obsolete config and restart service:
+
+        ```sh
+        rm /etc/systemd/system/squeezelite.service.d/dietpi-services_edit.conf
+        rmdir --ignore-fail-on-non-empty /etc/systemd/system/squeezelite.service.d
+        systemctl daemon-reload
+        systemctl restart squeezelite
+        ```
 
 === "View logs"
 
@@ -437,26 +449,37 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
 
 ![Shairport Sync connection scheme](../assets/images/dietpi-software-media-shairportsync.png){: width="400" height="233" loading="lazy"}
 
+=== "Configuration"
+
+    You can configure Shairport Sync with its config file: `/usr/local/etc/shairport-sync.conf`  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart shairport-sync
+    ```
+
 === "AirPlay device name"
 
-    When searching for an Airplay device, execute `shairport-sync` on DietPi.
+    When searching for an AirPlay device, execute `shairport-sync` on DietPi.
 
-=== "Stream from Android and iPad/iPhone"
+=== "Stream from Android and iOS"
 
-    There are many AirPlay players available for Android (e.g. [AirPlay For Android](https://play.google.com/store/apps/details?id=com.screen.mirroring.airplay.streamtotv&hl=de)) and iPad/iPhone (e.g. [AirPlay](https://support.apple.com/en-gb/HT204289)).  
+    There are many AirPlay players available for Android and iOS, e.g. [AirPlay For Android & TV](https://play.google.com/store/apps/details?id=com.screen.mirroring.airplay.streamtotv) and [AirPlay on iOS](https://support.apple.com/en-gb/HT204289).  
     Download and use the player of your choice.
 
-=== "Stream from a Windows/Mac PC"
+=== "Stream from Windows and macOS"
 
-    Airfoil is an application that will let you stream audio playback directly to any Shairport Sync device. Press play on your favourite music player (e.g.: Winamp/Spotify) and click the speaker next to the DietPi device.
+    [Airfoil](https://www.rogueamoeba.com/airfoil/mac/) is an application that will let you stream audio playback directly to any Shairport Sync device. Press play on your favourite music player (e.g.: Winamp/Spotify) and click the speaker next to the DietPi device.  
+    By using Airfoil, you can master the music in real time using the CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.
 
-=== "Audiophiles - Master music in real time"
+    !!! hint "Airfoil for Windows has been retired"
 
-    By using a PC + [Airfoil](https://www.rogueamoeba.com/airfoil/), you can master the music in real time using the PCs CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.
+        From End of 2019 on, sadly Airfoil isn't developed and supported anymore for Windows: <https://www.rogueamoeba.com/airfoil/windows/>  
+        There is however an official legacy download available: <https://www.rogueamoeba.com/legacy/#retired>
 
 === "Multiple Shairport devices / Change Shairport Sync name"
 
-    If you are planning to use multiple Shairport devices on the same network, please make sure the hostname of each device is unique. The hostname will also effect the `shairport-sync` name.  
+    If you are planning to use multiple Shairport devices on the same network, please make sure the hostname of each device is unique. The hostname will also effect the `shairport-sync` name, if you do not actively set the `name` setting in the `general` block of the config file.  
     This can be completed in `dietpi-config` \> `Security Options` \> `Change Hostname`.
 
 === "Soxr interpolation"
@@ -566,6 +589,7 @@ Also Installs:
     ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
 
     !!! note "Access permissions on local directories"
+
         If Ampache fails to add a directory, assure it has read permissions, e.g. by adding global read permissions:
 
         ```sh
@@ -573,6 +597,7 @@ Also Installs:
         ```
 
     !!! note "Access permissions on remote mounts (e.g. NFS, Samba)"
+
         In case you want to access a remote mount, also read permissions for Ampache need to be assured.
 
         - For NFS, you can grant global read permissions like you would do with a local directory, e.g. via:
@@ -688,9 +713,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
 ***
 
-YouTube video tutorial: *DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/zEcNNLCFngI?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=zEcNNLCFngI)
 
 ## Plex Media Server
 
@@ -729,11 +752,8 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 ***
 
-Tutorial: [Setup Guide for Plex on Raspberry Pi](https://blog.barnettjones.com/2020/11/26/dietpi-plex-setup/)
-
-YouTube video tutorial (German language): `Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)`.
-
-<iframe src="https://www.youtube-nocookie.com/embed/EElrNjXc3aA?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Tutorial: [Setup Guide for Plex on Raspberry Pi](https://blog.barnettjones.com/2020/11/26/dietpi-plex-setup/)  
+YouTube video tutorial (German language): [Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)](https://www.youtube.com/watch?v=EElrNjXc3aA){:class="nospellcheck"}
 
 ## Tautulli
 
@@ -1162,6 +1182,49 @@ A DLNA audio render/endpoint. Allows you to stream and play music, from another 
 
 ![GMediaRender logo](../assets/images/dietpi-software-media-gmediarender.png){: width="128" height="128" loading="lazy"}
 
+=== "Change command-line options"
+
+    - Edit `/etc/default/gmediarender`
+    - Restart the service:
+
+        ```sh
+        systemctl restart gmediarender
+        ```
+
+    !!! hint "Installs on DietPi prior to v8.10"
+
+        On earlier GMediaRender installs, this config file didn't exist yet. If you applied command-line options via `dietpi-services`, you can migrate them to the new config file:
+
+        - Assure GMediaRender has been updated to latest version:
+
+        ```sh
+        dietpi-software reinstall 163
+        ```
+
+        - Migrate options from `/etc/systemd/system/gmediarender.service.d/dietpi-services_edit.conf` to `/etc/default/gmediarender`.
+        - Remove obsolete config and restart service:
+
+        ```sh
+        rm /etc/systemd/system/gmediarender.service.d/dietpi-services_edit.conf
+        rmdir --ignore-fail-on-non-empty /etc/systemd/system/gmediarender.service.d
+        systemctl daemon-reload
+        systemctl restart gmediarender
+        ```
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u gmediarender
+    ```
+
+=== "Update to the latest version"
+
+    ```sh
+    dietpi-software reinstall 163
+    ```
+
 ## Ubooquity
 
 Ubooquity is a free home server for your comics and ebooks library, with remote web interface viewing.
@@ -1193,9 +1256,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
 ***
 
-YouTube video tutorial: *DietPi Ubooquity Comics and Ebook Reader on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/xUewleo7f2Q?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [DietPi Ubooquity Comics and Ebook Reader on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=xUewleo7f2Q)
 
 ## Komga
 

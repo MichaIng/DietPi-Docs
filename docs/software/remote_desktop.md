@@ -236,9 +236,7 @@ Examples of TCP ports for Remot3.it:
 
 ***
 
-YouTube video tutorial (German language): `Raspberry Pi einfach fernsteuern: Remote.It SSH ohne VPN von überall - Installation unter DietPi`.
-
-<iframe src="https://www.youtube-nocookie.com/embed/V5MZXBo3hGw?rel?=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial (German language): [Raspberry Pi einfach fernsteuern: Remote.It SSH ohne VPN von überall - Installation unter DietPi](https://www.youtube.com/watch?v=V5MZXBo3hGw){:class="nospellcheck"}
 
 ## VirtualHere
 
