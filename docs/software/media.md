@@ -475,7 +475,7 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
     !!! hint "Airfoil for Windows has been retired"
 
         From End of 2019 on, sadly Airfoil isn't developed and supported anymore for Windows: <https://www.rogueamoeba.com/airfoil/windows/>  
-        There is however an official lagacy download available: <https://www.rogueamoeba.com/legacy/#retired>
+        There is however an official legacy download available: <https://www.rogueamoeba.com/legacy/#retired>
 
 === "Multiple Shairport devices / Change Shairport Sync name"
 
