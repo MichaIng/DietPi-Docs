@@ -88,14 +88,14 @@ Also Installs:
 		
 		```
 		stylesheet:
-			- "assets/custom.css"
+		  - "assets/custom.css"
 
 		columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 3, 4, 6, 12)
 		theme: default
 		colors:
-			light:
-				highlight-primary: "#fff5f2"
-				highlight-secondary: "#fff5f2"
+		  light:
+		highlight-primary: "#fff5f2"
+		    highlight-secondary: "#fff5f2"
 				highlight-hover: "#bebebe"
 				background: "#12152B"
 				card-background: "rgba(255, 245, 242, 0.8)"
