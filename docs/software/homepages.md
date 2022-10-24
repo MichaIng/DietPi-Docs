@@ -3,7 +3,7 @@ title: Homepage options
 description: A homepage & dashboard for your services
 ---
 
-# Cloud & Backup systems
+# Homepages
 
 ## Overview
 
@@ -70,7 +70,7 @@ Also Installs:
 		```
 		# Will load Dracula theme.
 		stylesheet:
-  	  - "assets/custom.css"
+		  - "assets/custom.css"
 		```
 		
 === "Theming - Macos Theme"
