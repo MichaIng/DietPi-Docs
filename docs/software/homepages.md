@@ -34,7 +34,7 @@ Also Installs:
 
 - Nginx
 
-![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png){: width="400" height="218" loading="lazy"}
+![Homer preview screenshot](../assets/images/homer-preview.png){: width="400" height="218" loading="lazy"}
 
 === "Quick start"
 
@@ -79,7 +79,8 @@ Also Installs:
 		
 		1) `apt install git -y && $ git clone https://github.com/WalkxCode/Homer-Theme.git``
 		2) `cp Homer-Theme/custom.css /mnt/dietpi_userdata/Homer/assets/custom.css`
-		3) `cp Homer-Theme/wallpaper.jpeg /mnt/dietpi_userdata/Homer/assets/dracula-background`
+		3) `cp Homer-Theme/wallpaper.jpeg /mnt/dietpi_userdata/Homer/assets/wallpaper.jpeg`
+		4) `cp -r Homer-Theme/fonts /mnt/dietpi_userdata/Homer/assets/`
 		
 		And add the following lines:
 		
