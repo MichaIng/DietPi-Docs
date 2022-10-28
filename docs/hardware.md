@@ -333,13 +333,13 @@ Careful consideration went into the design and development of the Tinker Board t
     </table>
 </div>
 
-## NanoPi Series (FriendlyARM)
+## NanoPi Series (FriendlyELEC)
 
-**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2 x 1.8 GHz A72 cores and 4 x 1.4 GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
+**FriendlyELEC's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2 x 1.8 GHz A72 cores and 4 x 1.4 GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
 
-For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) website.
+For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) website.
 
-![FriendlyARM NanoPi K2 photo](assets/images/dietpi-nanopi-k2.jpg){: width="500" height="350" loading="lazy"}
+![FriendlyELEC NanoPi K2 photo](assets/images/dietpi-nanopi-k2.jpg){: width="500" height="350" loading="lazy"}
 
 **NanoPi K2** supports DVFS and it can smooth play high-definition video streams, and it is very well suited for applications such as advertisement machines, TV boxes, home entertainment appliances or multimedia devices.
 
