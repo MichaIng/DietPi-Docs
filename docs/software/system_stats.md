@@ -655,8 +655,22 @@ Homer is a modern and lighweight dashboard & homepage for your services
 		  link: "#c1c1c1"
 		  link-hover: "#fafafa"
 		  background-image: "../assets/wallpaper.jpeg"
-		```
+	```
 		
+=== "Theming - Catpuccin"
+		
+	To apply a catpuccin theme to homer follow the steps below:
+	
+	1) `apt install git -y && git clone https://github.com/mrpbennett/catppucin-homer``
+	2) then choose one of the css files, they all have varying colour schemes, and copy it to homer, for example:
+	  `cp catpuccin-homer/flavours/catppuccin-macchiato.css /var/www/homer/assets`
+	3) `nano /var/www/homer/assets/config.yml` and paste the below lines (change macchiato to the wanted theme): 
+	
+	```
+	# Will load catpuccin theme.
+	stylesheet:
+	  - "assets/catppuccin-macchiato.css"
+	```
 ***
 
 
