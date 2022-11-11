@@ -557,6 +557,13 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
 
 ***
 
+Official website: <https://github.com/prometheus/node_exporter>  
+Documentation: <https://prometheus.io/docs/guides/node-exporter/>  
+Prometheus RPi Exporter: <https://github.com/fahlke/raspberrypi_exporter>  
+License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE), [MIT](https://github.com/fahlke/raspberrypi_exporter/blob/master/LICENSE) (for RPi Exporter)
+
+[Return to the **Optimised Software list**](../../software/)
+
 ## Homer
 
 Homer is a modern and lighweight dashboard & homepage for your services
@@ -565,9 +572,9 @@ Homer is a modern and lighweight dashboard & homepage for your services
 
 === "Quick start"
 
-    Homer is accessible via port 49157 by default
+    Homer is accessible via the /homer path on your ip by default
 
-	- URL: `http://<your.IP>:49157`
+	- URL: `http://<your.IP>/homer`
     
 	You may bookmark this and save it as your browser's home page, or alternatively look into tools like nginx proxy manager and a dns server such as adguard home to give it a nice internal domain name such as homer.box.
      
@@ -589,7 +596,7 @@ Homer is a modern and lighweight dashboard & homepage for your services
 	
 === "Theming - Dracula"
 
- 	To apply the dracula theme to homer simply follow the steps below:
+ 	To apply the [dracula theme](https://draculatheme.com/static/img/screenshots/homer.png) to homer simply follow the steps below:
 		
 	1) `apt install git -y && git clone https://github.com/dracula/homer.git`
 	2) `cp homer/custom.css /var/www/homer/assets/custom.css`
@@ -609,7 +616,7 @@ Homer is a modern and lighweight dashboard & homepage for your services
 		
 === "Theming - Macos Theme"
 		
-	To apply a macos styled theme to homer simply follow the steps below:
+	To apply a [macos styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png) to homer simply follow the steps below:
 		
 	1) `apt install git -y && $ git clone https://github.com/WalkxCode/Homer-Theme.git``
 	2) `cp Homer-Theme/custom.css /var/www/homer/assets/custom.css`
@@ -659,7 +666,7 @@ Homer is a modern and lighweight dashboard & homepage for your services
 		
 === "Theming - Catpuccin"
 		
-	To apply a catpuccin theme to homer follow the steps below:
+	To apply a [catpuccin theme](https://github.com/mrpbennett/catppucin-homer/blob/main/assets/images/examples/preview.png?raw=true) to homer follow the steps below:
 	
 	1) `apt install git -y && git clone https://github.com/mrpbennett/catppucin-homer``
 	2) then choose one of the css files, they all have varying colour schemes, and copy it to homer, for example:
@@ -673,10 +680,5 @@ Homer is a modern and lighweight dashboard & homepage for your services
 	```
 ***
 
-
-Official website: <https://github.com/prometheus/node_exporter>  
-Documentation: <https://prometheus.io/docs/guides/node-exporter/>  
-Prometheus RPi Exporter: <https://github.com/fahlke/raspberrypi_exporter>  
-License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE), [MIT](https://github.com/fahlke/raspberrypi_exporter/blob/master/LICENSE) (for RPi Exporter)
-
-[Return to the **Optimised Software list**](../../software/)
+Official website: <https://github.com/bastienwirtz/homer>  
+Official demo: <https://homer-demo.netlify.app/>
