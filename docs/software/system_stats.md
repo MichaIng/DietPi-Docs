@@ -618,24 +618,19 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
 === "Update"
 
-    To update Homer simply re-run the installer from 
-    
+    To update Homer simply re-run the installer by executing
+
     ```sh
     dietpi-software reinstall 205
     ```
-    
-    then 
-    
-    ```sh
-    cd /mnt/dietpi_userdata/homer_backup
-    ``` 
-    
-    and replace the files you previously changed in `/var/www/homer` with the files from your backup. 
-    
-    For e.g, for your `config.yml`, it would be:
+
+    Remark: The `dietpi-software` script update procedure preserves the file `config.yml` automatically, there is no necessity for the user to do a restore manually.
+
+    If other files in `/var/www/homer` were previously changed by the user, they need to be copied in place (from the backup location `/mnt/dietpi_userdata/homer_backup`). As an example for a changed file `manifest.json` this could be done via:
 
     ```sh
-    mv config.yml /var/www/homer/assets
+    cd /mnt/dietpi_userdata/homer_backup
+    mv manifest.json /var/www/homer/assets
     ```
 
 === "Theming - Dracula"
