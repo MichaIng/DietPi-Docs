@@ -253,19 +253,19 @@ Tailscale is a VPN service that makes the devices and applications you own acces
     Since Tailscale runs as a systemd service, it can be controlled with the following commands:
 
     ```sh
-    systemctl status tailscale
+    systemctl status tailscaled
     ```
 
     ```sh
-    systemctl start tailscale
+    systemctl start tailscaled
     ```
 
     ```sh
-    systemctl stop tailscale
+    systemctl stop tailscaled
     ```
 
     ```sh
-    systemctl restart tailscale
+    systemctl restart tailscaled
     ```
 
 === "Logs"
@@ -273,7 +273,7 @@ Tailscale is a VPN service that makes the devices and applications you own acces
     Tailscale runs as a systemd service, hence logs can be viewed with the following command:
 
     ```sh
-    journalctl -u tailscale
+    journalctl -u tailscaled
     ```
 
 === "Update"

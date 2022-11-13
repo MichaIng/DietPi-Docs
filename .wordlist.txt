@@ -162,8 +162,6 @@ FPU
 framebuffer
 FreeDNS
 FreshRSS
-FriendlyARM
-FriendlyARM's
 FriendlyELEC
 FriendlyELEC's
 frontend
