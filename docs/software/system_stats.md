@@ -646,28 +646,28 @@ Homer is a modern and lightweight dashboard & homepage for your services
     ```sh
     apt install git
     git clone https://github.com/dracula/homer.git
-	cp homer/custom.css /var/www/homer/assets/custom.css
-	cp homer/dracula-background.png /var/www/homer/assets/dracula-background
+    cp homer/custom.css /var/www/homer/assets/custom.css
+    cp homer/dracula-background.png /var/www/homer/assets/dracula-background
     ```
 
     Edit your `config.yml` with the below command:
-	
+
     ```sh
     nano /var/www/homer/assets/config.yml
     ```
 
     And add the following lines:
-		
+
     ```
     # Will load Dracula theme
     stylesheet:
       - "assets/custom.css"
     ```
-	
+
 === "Theming - macOS"
-		
+
     To apply the [macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png) to Homer follow the steps below:
-		
+
     ```sh
     apt install git
     git clone https://github.com/WalkxCode/Homer-Theme.git
@@ -739,7 +739,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
         ``` 
         
         and paste the below lines (change `macchiato` to the wanted theme): 
-	
+
         ```
         # Will load catppuccin theme.
         stylesheet:
