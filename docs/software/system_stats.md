@@ -583,7 +583,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
     To configure entries and icons for Homer, you can edit it's `config.yml` file.  
     Example contents:
 
-    ```
+    ```yml
     services:
       - name: "Selfhosted"
         icon: "fas fa-cloud"
@@ -635,7 +635,6 @@ Homer is a modern and lightweight dashboard & homepage for your services
     For e.g, for your `config.yml`, it would be:
 
     ```sh
-    rm /var/www/homer/assets/config.yml
     mv config.yml /var/www/homer/assets
     ```
 
