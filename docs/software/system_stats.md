@@ -566,7 +566,7 @@ License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LI
 
 ## Homer
 
-Homer is a modern and lighweight dashboard & homepage for your services
+Homer is a modern and lightweight dashboard & homepage for your services
 
 ![Homer preview screenshot](../assets/images/homer-preview.png){: width="400" height="218" loading="lazy"}
 
@@ -574,13 +574,13 @@ Homer is a modern and lighweight dashboard & homepage for your services
 
     The *Homer* dashboard can be accessed via:
 
-	- URL: `http://<your.IP>/homer`
+    - URL: `http://<your.IP>/homer`
     
-	You may bookmark this and save it as your browser's home page, or alternatively look into tools like **Nginx Proxy Manager** and a DNS server such as **AdGuard Home** to give it a nice internal domain name such as `homer.box`.
-     
+    You may bookmark this and save it as your browser's home page, or alternatively look into tools like **Nginx Proxy Manager** and a DNS server such as **AdGuard Home** to give it a nice internal domain name such as `homer.box`.
+
 === "Configuration"
 
-	To configure entries and icons for Homer, you can edit it's config.yml file.  
+    To configure entries and icons for Homer, you can edit it's `config.yml` file.  
     Example contents:
 
     ```
@@ -614,11 +614,11 @@ Homer is a modern and lighweight dashboard & homepage for your services
             target: "_blank"
     ```
  
-	In the example above, a column titled `Selfhosted` is being made which contains 4 entries. In the same directory as the config.yml, an `icons2` folder exists, which contains icon images.
- 
+    In the example above, a column titled `Selfhosted` is being made which contains 4 entries. In the same directory as the `config.yml`, an `icons2` folder exists, which contains icon images.
+
 === "Update"
 
-	To update Homer simply re-run the installer from 
+    To update Homer simply re-run the installer from 
     
     ```sh
     dietpi-software reinstall 205
@@ -638,11 +638,11 @@ Homer is a modern and lighweight dashboard & homepage for your services
     rm /var/www/homer/assets/config.yml
     mv config.yml /var/www/homer/assets
     ```
-	
+
 === "Theming - Dracula"
 
- 	To apply the [Dracula theme](https://draculatheme.com/static/img/screenshots/homer.png) to Homer follow the steps below:
-		
+    To apply the [Dracula theme](https://draculatheme.com/static/img/screenshots/homer.png) to Homer follow the steps below:
+
     ```sh
     apt install git
     git clone https://github.com/dracula/homer.git
@@ -650,75 +650,75 @@ Homer is a modern and lighweight dashboard & homepage for your services
 	cp homer/dracula-background.png /var/www/homer/assets/dracula-background
     ```
 
-	Edit your `config.yml` with the below command:
-		
-	```sh
+    Edit your `config.yml` with the below command:
+	
+    ```sh
     nano /var/www/homer/assets/config.yml
     ```
+
+    And add the following lines:
 		
-	And add the following lines:
-		
-	```
-	# Will load Dracula theme
-	stylesheet:
-	  - "assets/custom.css"
-	```
-		
+    ```
+    # Will load Dracula theme
+    stylesheet:
+      - "assets/custom.css"
+    ```
+	
 === "Theming - macOS"
 		
-	To apply the [macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png) to Homer follow the steps below:
+    To apply the [macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png) to Homer follow the steps below:
 		
-	```sh
+    ```sh
     apt install git
     git clone https://github.com/WalkxCode/Homer-Theme.git
-	cp Homer-Theme/custom.css /var/www/homer/assets/custom.css
-	cp Homer-Theme/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
-	cp -r Homer-Theme/fonts /var/www/homer/assets/
+    cp Homer-Theme/custom.css /var/www/homer/assets/custom.css
+    cp Homer-Theme/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
+    cp -r Homer-Theme/fonts /var/www/homer/assets/
     ```
-		
-	And add the following lines (make sure to remove content for colors, theme, and columns if they previously existed):
-	
-	```
-	stylesheet:
-	  - "assets/custom.css"
 
-	columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 3, 4, 6, 12)
-	theme: default
-	colors:
-	  light:
-	      highlight-primary: "#fff5f2"
-		  highlight-secondary: "#fff5f2"
+    And add the following lines (make sure to remove content for colors, theme, and columns if they previously existed):
+
+    ```
+    stylesheet:
+      - "assets/custom.css"
+
+    columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 3, 4, 6, 12)
+    theme: default
+    colors:
+      light:
+          highlight-primary: "#fff5f2"
+          highlight-secondary: "#fff5f2"
           highlight-hover: "#bebebe"
-		  background: "#12152B"
-		  card-background: "rgba(255, 245, 242, 0.8)"
-		  text: "#ffffff"
-		  text-header: "#fafafa"
-		  text-title: "#000000"
-		  text-subtitle: "#111111"
-		  card-shadow: rgba(0, 0, 0, 0.5)
-		  link: "#3273dc"
-		  link-hover: "#2e4053"
-		  background-image: "../assets/wallpaper.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
-	  dark:
-		  highlight-primary: "#181C3A"
-		  highlight-secondary: "#181C3A"
-		  highlight-hover: "#1F2347"
-		  background: "#12152B"
-		  card-background: "rgba(24, 28, 58, 0.8)"
-		  text: "#eaeaea"
-		  text-header: "#7C71DD"
-		  text-title: "#fafafa"
-		  text-subtitle: "#8B8D9C"
-		  card-shadow: rgba(0, 0, 0, 0.5)
-		  link: "#c1c1c1"
-		  link-hover: "#fafafa"
-		  background-image: "../assets/wallpaper.jpeg"
-	```
-		
+          background: "#12152B"
+          card-background: "rgba(255, 245, 242, 0.8)"
+          text: "#ffffff"
+          text-header: "#fafafa"
+          text-title: "#000000"
+          text-subtitle: "#111111"
+          card-shadow: rgba(0, 0, 0, 0.5)
+          link: "#3273dc"
+          link-hover: "#2e4053"
+          background-image: "../assets/wallpaper.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
+      dark:
+          highlight-primary: "#181C3A"
+          highlight-secondary: "#181C3A"
+          highlight-hover: "#1F2347"
+          background: "#12152B"
+          card-background: "rgba(24, 28, 58, 0.8)"
+          text: "#eaeaea"
+          text-header: "#7C71DD"
+          text-title: "#fafafa"
+          text-subtitle: "#8B8D9C"
+          card-shadow: rgba(0, 0, 0, 0.5)
+          link: "#c1c1c1"
+          link-hover: "#fafafa"
+          background-image: "../assets/wallpaper.jpeg"
+    ```
+
 === "Theming - Catppuccin"
-		
-	To apply the [Catppuccin theme](https://github.com/mrpbennett/catppucin-homer/blob/main/assets/images/examples/preview.png?raw=true) to Homer follow the steps below:
-	
+
+    To apply the [Catppuccin theme](https://github.com/mrpbennett/catppucin-homer/blob/main/assets/images/examples/preview.png?raw=true) to Homer follow the steps below:
+
     1. Get theme:
 
         ```sh
@@ -726,7 +726,7 @@ Homer is a modern and lighweight dashboard & homepage for your services
         git clone https://github.com/mrpbennett/catppucin-homer
         ```
 
-    1. Choose one of the css files, they all have varying colour schemes, and copy it to Homer, for example the `catppuccin-macchiato` style sheet:
+    1. Choose one of the `css` files, they all have varying colour schemes, and copy it to Homer, for example the `catppuccin-macchiato` style sheet:
 
         ```sh
         cp catppuccin-homer/flavours/catppuccin-macchiato.css /var/www/homer/assets
@@ -738,7 +738,7 @@ Homer is a modern and lighweight dashboard & homepage for your services
         nano /var/www/homer/assets/config.yml
         ``` 
         
-        and paste the below lines (change macchiato to the wanted theme): 
+        and paste the below lines (change `macchiato` to the wanted theme): 
 	
         ```
         # Will load catppuccin theme.
