@@ -583,7 +583,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
     To configure entries and icons for Homer, you can edit it's `config.yml` file.  
     Example contents:
 
-    ```yml
+    ```yaml
     services:
       - name: "Selfhosted"
         icon: "fas fa-cloud"
@@ -652,7 +652,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     And add the following lines:
 
-    ```
+    ```yaml
     # Will load Dracula theme
     stylesheet:
       - "assets/custom.css"
@@ -672,7 +672,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     And add the following lines (make sure to remove content for colors, theme, and columns if they previously existed):
 
-    ```
+    ```yaml
     stylesheet:
       - "assets/custom.css"
 
@@ -734,7 +734,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
         
         and paste the below lines (change `macchiato` to the wanted theme): 
 
-        ```
+        ```yaml
         # Will load catppuccin theme.
         stylesheet:
         - "assets/catppuccin-macchiato.css"
