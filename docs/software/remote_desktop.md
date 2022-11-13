@@ -18,7 +18,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 ### Remote Access
 
-- [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it)
+- [**Remote.it - Access your device over the internet**](#remoteit)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
@@ -204,15 +204,15 @@ NoMachine is a remote desktop server with advanced features, such as screen reco
 
     You will now be connected to your device.
 
-## Remot3.it
+## Remote.it
 
-Remot3.it allows you to easily access your DietPi device over the internet.
+Remote.it (formerly known as Remot3.it) allows you to easily access your DietPi device over the internet.
 
-![Remot3.it web interface screenshot](../assets/images/dietpi-software-remotedesktop-remot3it.png){: width="400" height="140" loading="lazy"}
+![Remote.it web interface screenshot](../assets/images/dietpi-software-remotedesktop-remoteit.png){: width="400" height="140" loading="lazy"}
 
-Remot3.it works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
+Remote.it works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
 
-Examples of TCP ports for Remot3.it:
+Examples of TCP ports for Remote.it:
 
 - SSH port **22**. Open a remote terminal to your device.
 - Transmission port **9091**. Monitor your BitTorrent downloads.
@@ -226,11 +226,11 @@ Examples of TCP ports for Remot3.it:
     connectd_installer
     ```
 
-    Once your account is created and linked to this system, you can select a port for Remot3.it to enable remote access.
+    Once your account is created and linked to this system, you can select a port for Remote.it to enable remote access.
 
 === "Access your device"
 
-    Sign into your Remot3.it account to access your devices remotely:
+    Sign into your Remote.it account to access your devices remotely:
 
     - URL = <https://remote.it/>
 
