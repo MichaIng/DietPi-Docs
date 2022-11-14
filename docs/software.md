@@ -213,7 +213,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ### [Remote Access](remote_desktop/#remote-access)
 
-- [**Remote.it - Access your device over the internet**](remote_desktop/#remoteit)
+- [**Remote.It - Access your device over the internet**](remote_desktop/#remoteit)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](remote_desktop/#virtualhere)
 
 ## [Social & Search](social/)
