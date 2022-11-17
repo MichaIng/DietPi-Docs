@@ -439,7 +439,7 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Bullseye.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
