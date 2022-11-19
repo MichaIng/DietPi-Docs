@@ -18,7 +18,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 ### Remote Access
 
-- [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it)
+- [**Remote.It - Access your device over the internet**](#remoteit)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
@@ -204,35 +204,31 @@ NoMachine is a remote desktop server with advanced features, such as screen reco
 
     You will now be connected to your device.
 
-## Remot3.it
+## Remote.It
 
-Remot3.it allows you to easily access your DietPi device over the internet.
+Remote.It allows you to easily access your DietPi device over the internet.
 
-![Remot3.it web interface screenshot](../assets/images/dietpi-software-remotedesktop-remot3it.png){: width="400" height="140" loading="lazy"}
+![Remote.It web interface screenshot](../assets/images/dietpi-software-remotedesktop-remoteit.png){: width="400" height="140" loading="lazy"}
 
-Remot3.it works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
+Remote.It works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
 
-Examples of TCP ports for Remot3.it:
+Examples of TCP ports for Remote.It:
 
 - SSH port **22**. Open a remote terminal to your device.
 - Transmission port **9091**. Monitor your BitTorrent downloads.
 - Webserver port **80**. Access your internal websites.
 
-=== "First Run Setup"
+=== "Quick start"
 
-    On interactive installs, `dietpi-software` will call the setup script to setup and manage your application connections. On unattended installs, e.g. via `dietpi.txt`, you can call it manually from console:
+    While the DietPi-Software installation run, if not done yet, you may create an account at the Remote.It web portal: <https://app.remote.it/>
+
+    After the DietPi-Software installation finished, you can register the device at your Remote.It desktop application. For this, retrieve your claim code via:
 
     ```sh
-    connectd_installer
+    mawk -F\" '/claim/{print $4}' /etc/remoteit/config.json
     ```
 
-    Once your account is created and linked to this system, you can select a port for Remot3.it to enable remote access.
-
-=== "Access your device"
-
-    Sign into your Remot3.it account to access your devices remotely:
-
-    - URL = <https://remote.it/>
+    Then follow these instructions: <https://docs.remote.it/software/device-package/installation#3.-claim-and-register-the-device>
 
 ***
 
