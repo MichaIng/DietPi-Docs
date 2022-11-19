@@ -4,11 +4,13 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  Actions:
+  main:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
-    # https://github.com/actions/virtual-environments
+    # https://github.com/actions/runner-images
     runs-on: ubuntu-22.04
     steps:
+    - name: Setup tmpfs
+      run: sudo mount -t tmpfs -o "noatime,lazytime,uid=$UID" tmpfs "$GITHUB_WORKSPACE"
     - name: Clone DietPi-Docs repository
       id: clone
       # https://github.com/actions/checkout/releases
@@ -28,7 +30,7 @@ jobs:
       uses: actions/setup-python@v4
       with:
         # https://github.com/actions/python-versions/releases
-        python-version: '3.10.6'
+        python-version: '3.10.8'
     - name: Install MkDocs
       id: mkdocs
       if: always() && steps.python.outcome == 'success'
@@ -58,4 +60,4 @@ jobs:
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
-      run: ./lychee -En --require-https --cache --exclude '^(https://fonts.gstatic.com/$|http://wiringpi.com/|https://pydio.com/|https://www.spigotmc.org/|https://help.realvnc.com/|https://help.roonlabs.com/|https://blynk.io/|https://play.google.com/store/apps/details)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+      run: ./lychee -En --require-https --cache --exclude '^http(://wiringpi.com/$|s://((adguard|nginx|shiori|nextcloud).box/$|www.linux-kvm.org/$|fonts.gstatic.com/$|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details))' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'

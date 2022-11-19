@@ -213,7 +213,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ### [Remote Access](remote_desktop/#remote-access)
 
-- [**Remot3.it - (Weaved) Access your device over the internet**](remote_desktop/#remot3it)
+- [**Remote.It - Access your device over the internet**](remote_desktop/#remoteit)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](remote_desktop/#virtualhere)
 
 ## [Social & Search](social/)
@@ -247,6 +247,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**K3s - Lightweight Kubernetes**](system_stats/#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](system_stats/#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](system_stats/#prometheus-node-exporter)
+- [**Homer - A modern homepage for your services**](system_stats/#homer)
 
 ## [VPN](vpn/)
 
