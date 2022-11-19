@@ -218,21 +218,17 @@ Examples of TCP ports for Remote.It:
 - Transmission port **9091**. Monitor your BitTorrent downloads.
 - Webserver port **80**. Access your internal websites.
 
-=== "First Run Setup"
+=== "Quick start"
 
-    On interactive installs, `dietpi-software` will call the setup script to setup and manage your application connections. On unattended installs, e.g. via `dietpi.txt`, you can call it manually from console:
+    While the DietPi-Software installation run, if not done yet, you may create an account at the Remote.It web portal: <https://app.remote.it/>
+
+    After the DietPi-Software installation finished, you can register the device at your Remote.It desktop application. For this, retrieve your claim code via:
 
     ```sh
-    connectd_installer
+    mawk -F\" '/claim/{print $4}' /etc/remoteit/config.json
     ```
 
-    Once your account is created and linked to this system, you can select a port for Remote.It to enable remote access.
-
-=== "Access your device"
-
-    Sign into your Remote.It account to access your devices remotely:
-
-    - URL = <https://remote.it/>
+    Then follow these instructions: <https://docs.remote.it/software/device-package/installation#3.-claim-and-register-the-device>
 
 ***
 
