@@ -284,17 +284,17 @@ Also installs:
 
 === "Installation notes"
 
-    During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
+    For video call throughout your local network, a so called [TURN server](https://en.wikipedia.org/wiki/Traversal_Using_Relays_around_NAT) is required. *Coturn* is a common implementation and hence installed by default together with our Nextcloud Talk option.
 
-    If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
+    During installation you will be asked to enter your server's external domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
 
-    Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
-
-    Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
+    Coturn will be configured with authentication via shared secret and some additional security measures. For details, see this HowTo: <https://help.nextcloud.com/t/howto-setup-nextcloud-talk-with-turn-server/30794>
 
 ***
 
-Website: <https://nextcloud.com/talk>
+Website: <https://nextcloud.com/talk/>  
+Source code: <https://github.com/nextcloud/spreed>  
+Coturn source code: <https://github.com/coturn/coturn>
 
 ## Pydio
 
