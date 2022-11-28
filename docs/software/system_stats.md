@@ -641,7 +641,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
         ```sh
         curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/custom.css' -o /var/www/homer/assets/custom.css
-        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/dracula-background' -o /var/www/homer/assets/dracula-background
+        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/dracula-background.png' -o /var/www/homer/assets/dracula-background.png
         ```
 
     1. Edit your `config.yml` with:
