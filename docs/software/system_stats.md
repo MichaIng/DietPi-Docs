@@ -640,10 +640,8 @@ Homer is a modern and lightweight dashboard & homepage for your services
     1. Get theme:
 
         ```sh
-        apt install git
-        git clone https://github.com/dracula/homer.git
-        cp homer/custom.css /var/www/homer/assets/custom.css
-        cp homer/dracula-background.png /var/www/homer/assets/dracula-background
+        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/custom.css' -o /var/www/homer/assets/custom.css
+        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/dracula-background' -o /var/www/homer/assets/dracula-background
         ```
 
     1. Edit your `config.yml` with:
