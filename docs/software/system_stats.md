@@ -665,11 +665,14 @@ Homer is a modern and lightweight dashboard & homepage for your services
     1. Get theme:
 
         ```sh
-        apt install git
-        git clone https://github.com/WalkxCode/Homer-Theme.git
-        cp Homer-Theme/custom.css /var/www/homer/assets/custom.css
-        cp Homer-Theme/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
-        cp -r Homer-Theme/fonts /var/www/homer/assets/
+        cd /tmp
+        curl -fLO 'https://github.com/walkxcode/homer-theme/archive/main.tar.gz'
+        tar xf main.tar.gz
+        rm main.tar.gz
+        cp Homer-Theme-main/custom.css /var/www/homer/assets/custom.css
+        cp Homer-Theme-main/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
+        cp -R Homer-Theme-main/fonts /var/www/homer/assets/
+        rm -R Homer-Theme-main
         ```
 
     1. Edit your `config.yml` with:
