@@ -580,7 +580,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
 === "Configuration"
 
-    To configure entries and icons for Homer, you can edit it's `config.yml` file.  
+    To configure entries and icons for Homer, you can edit it's config file `/var/www/homer/assets/config.yml`.
     Example contents:
 
     ```yaml
@@ -635,83 +635,94 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
 === "Theming - Dracula"
 
-    To apply the [Dracula theme](https://draculatheme.com/static/img/screenshots/homer.png) to Homer follow the steps below:
+    To apply the [Dracula theme](https://draculatheme.com/static/img/screenshots/homer.png) to Homer execute these steps:
 
-    ```sh
-    apt install git
-    git clone https://github.com/dracula/homer.git
-    cp homer/custom.css /var/www/homer/assets/custom.css
-    cp homer/dracula-background.png /var/www/homer/assets/dracula-background
-    ```
+    1. Get theme:
 
-    Edit your `config.yml` with the below command:
+        ```sh
+        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/custom.css' -o /var/www/homer/assets/custom.css
+        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/dracula-background.png' -o /var/www/homer/assets/dracula-background.png
+        ```
 
-    ```sh
-    nano /var/www/homer/assets/config.yml
-    ```
+    1. Edit your `config.yml` with:
 
-    And add the following lines:
+        ```sh
+        nano /var/www/homer/assets/config.yml
+        ```
 
-    ```yaml
-    # Will load Dracula theme
-    stylesheet:
-      - "assets/custom.css"
-    ```
+    1. Add the following lines:
+
+        ```yaml
+        # Will load Dracula theme
+        stylesheet:
+        - "assets/custom.css"
+        ```
 
 === "Theming - macOS"
 
-    To apply the [macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png) to Homer follow the steps below:
+    To apply the [macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png) to Homer execute these steps:
 
-    ```sh
-    apt install git
-    git clone https://github.com/WalkxCode/Homer-Theme.git
-    cp Homer-Theme/custom.css /var/www/homer/assets/custom.css
-    cp Homer-Theme/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
-    cp -r Homer-Theme/fonts /var/www/homer/assets/
-    ```
+    1. Get theme:
 
-    And add the following lines (make sure to remove content for colors, theme, and columns if they previously existed):
+        ```sh
+        cd /tmp
+        curl -fLO 'https://github.com/walkxcode/homer-theme/archive/main.tar.gz'
+        tar xf main.tar.gz
+        rm main.tar.gz
+        cp Homer-Theme-main/custom.css /var/www/homer/assets/custom.css
+        cp Homer-Theme-main/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
+        cp -R Homer-Theme-main/fonts /var/www/homer/assets/
+        rm -R Homer-Theme-main
+        ```
 
-    ```yaml
-    stylesheet:
-      - "assets/custom.css"
+    1. Edit your `config.yml` with:
 
-    columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 3, 4, 6, 12)
-    theme: default
-    colors:
-      light:
-          highlight-primary: "#fff5f2"
-          highlight-secondary: "#fff5f2"
-          highlight-hover: "#bebebe"
-          background: "#12152B"
-          card-background: "rgba(255, 245, 242, 0.8)"
-          text: "#ffffff"
-          text-header: "#fafafa"
-          text-title: "#000000"
-          text-subtitle: "#111111"
-          card-shadow: rgba(0, 0, 0, 0.5)
-          link: "#3273dc"
-          link-hover: "#2e4053"
-          background-image: "../assets/wallpaper.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
-      dark:
-          highlight-primary: "#181C3A"
-          highlight-secondary: "#181C3A"
-          highlight-hover: "#1F2347"
-          background: "#12152B"
-          card-background: "rgba(24, 28, 58, 0.8)"
-          text: "#eaeaea"
-          text-header: "#7C71DD"
-          text-title: "#fafafa"
-          text-subtitle: "#8B8D9C"
-          card-shadow: rgba(0, 0, 0, 0.5)
-          link: "#c1c1c1"
-          link-hover: "#fafafa"
-          background-image: "../assets/wallpaper.jpeg"
-    ```
+        ```sh
+        nano /var/www/homer/assets/config.yml
+        ```
+
+    1. Add the following lines (make sure to remove content for colors, theme, and columns if they previously existed):
+
+        ```yaml
+        stylesheet:
+        - "assets/custom.css"
+
+        columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 3, 4, 6, 12)
+        theme: default
+        colors:
+        light:
+            highlight-primary: "#fff5f2"
+            highlight-secondary: "#fff5f2"
+            highlight-hover: "#bebebe"
+            background: "#12152B"
+            card-background: "rgba(255, 245, 242, 0.8)"
+            text: "#ffffff"
+            text-header: "#fafafa"
+            text-title: "#000000"
+            text-subtitle: "#111111"
+            card-shadow: rgba(0, 0, 0, 0.5)
+            link: "#3273dc"
+            link-hover: "#2e4053"
+            background-image: "../assets/wallpaper.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
+        dark:
+            highlight-primary: "#181C3A"
+            highlight-secondary: "#181C3A"
+            highlight-hover: "#1F2347"
+            background: "#12152B"
+            card-background: "rgba(24, 28, 58, 0.8)"
+            text: "#eaeaea"
+            text-header: "#7C71DD"
+            text-title: "#fafafa"
+            text-subtitle: "#8B8D9C"
+            card-shadow: rgba(0, 0, 0, 0.5)
+            link: "#c1c1c1"
+            link-hover: "#fafafa"
+            background-image: "../assets/wallpaper.jpeg"
+        ```
 
 === "Theming - Catppuccin"
 
-    To apply the [Catppuccin theme](https://github.com/mrpbennett/catppucin-homer/blob/main/assets/images/examples/preview.png?raw=true) to Homer follow the steps below:
+    To apply the [Catppuccin theme](https://github.com/mrpbennett/catppucin-homer/blob/main/assets/images/examples/preview.png?raw=true) to Homer execute these steps:
 
     1. Get theme:
 
@@ -726,13 +737,13 @@ Homer is a modern and lightweight dashboard & homepage for your services
         cp catppuccin-homer/flavours/catppuccin-macchiato.css /var/www/homer/assets
         ```
 
-    1. Edit the `config.yml` file:
+    1. Edit the `config.yml` file with:
     
         ```sh
         nano /var/www/homer/assets/config.yml
         ``` 
         
-        and paste the below lines (change `macchiato` to the wanted theme): 
+    1. Add the following lines (change `macchiato` to the wanted theme): 
 
         ```yaml
         # Will load catppuccin theme.
