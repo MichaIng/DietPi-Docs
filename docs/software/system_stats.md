@@ -580,7 +580,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
 === "Configuration"
 
-    To configure entries and icons for Homer, you can edit it's `config.yml` file (located in `/var/www/homer/assets/`).  
+    To configure entries and icons for Homer, you can edit it's config file `/var/www/homer/assets/config.yml`.
     Example contents:
 
     ```yaml
