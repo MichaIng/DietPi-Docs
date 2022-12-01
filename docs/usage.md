@@ -116,8 +116,6 @@ Find and set the options which fit to your demands, it is also an option to chan
 
 DietPi offers the option for an automatic first boot installation. Normally, during the first system boot there is an installation procedure which sets up your system initially. The steps described in the section ["First logon on DietPi"](../install/#4-first-logon-on-dietpi) are then conducted.
 
-![DietPi first login - licence agreement](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
-
 These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
 The automatized setup is based on the configuration file `/boot/dietpi.txt`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
 

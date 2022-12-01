@@ -920,10 +920,6 @@ A login prompt will appear. Use the initial credentials:
     ssh root@dietpi
     ```
 
-To further proceed you’ll need to accept the DietPi GPL license. Hit the ++enter++ key on your keyboard to do this.
-
-![dietpi-login01](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
-
 DietPi will then immediately begin to search for and install updated software packages, which will take some time to complete.
 
 Once the packages have been updated, DietPi will ask you to confirm whether you would like to enable user analytics.
