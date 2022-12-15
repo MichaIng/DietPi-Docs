@@ -712,7 +712,7 @@ From the console, run the following command:
 dietpi-backup
 ```
 
-![DietPi-Backup menu screenshot](assets/images/dietpi-backup_1.png){: width="681" height="330" loading="lazy"}
+![DietPi-Backup menu screenshot](assets/images/dietpi-backup_1.png){: width="643" height="306" loading="lazy"}
 
 === "Automatic daily backup"
 
@@ -743,6 +743,11 @@ dietpi-backup
     ![DietPi-Backup filter option screenshot](assets/images/dietpi-backup_filter-option.jpg){: width="681" height="330" loading="lazy"}
 
     The file containing the filter definitions is `/boot/dietpi/.dietpi-backup_inc_exc`.
+
+=== "Space check"
+
+    A space check on the target location prior to the backup process can be enabled/disabled. This might be an option if there is surely enough disk space available.  
+    Enabling the space check makes the backup a bit more safe, disabling it speeds it up.
 
 === "Logging"
 
