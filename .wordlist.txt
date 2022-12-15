@@ -392,6 +392,7 @@ OpenGLES
 OpenSSH
 OpenTyrian
 OpenVPN
+OTG
 OTP
 overvoltage
 OVF
@@ -452,6 +453,7 @@ QuiteRSS
 Qz
 Radarr
 Radxa
+Radxa's
 RAMdisk
 RAMlog
 Rasmus
