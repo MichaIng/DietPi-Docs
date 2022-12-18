@@ -104,6 +104,7 @@ de
 deinstallation
 DER
 DHCP
+dhcpcd
 dietpi
 DietPi
 DietPi's
