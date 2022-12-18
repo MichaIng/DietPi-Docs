@@ -55,7 +55,6 @@ Currently, Python is 3rd most popular of programming language [^4].
 
     | Name | URL |
     | :-: | - |
-    | **Atom** | <https://atom.io> |
     | **Eclipse + Pydev** | <https://www.eclipse.org> and <https://www.pydev.org/> |
     | **IDLE** | <https://docs.python.org/3/library/idle.html> |
     | **Pycharm** | <https://www.jetbrains.com/pycharm> |

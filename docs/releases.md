@@ -5,6 +5,7 @@ description: Overview of DietPi releases with applied new software and features,
 
 # DietPi Releases
 
+- [v8.12 December 2022](v8_12/)
 - [v8.11 November 2022](v8_11/)
 - [v8.10 October 2022](v8_10/)
 - [v8.9 September 2022](v8_9/)
