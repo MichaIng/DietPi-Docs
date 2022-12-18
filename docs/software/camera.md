@@ -7,7 +7,7 @@ description: Description of DietPi software options related to camera and survei
 
 ## Overview
 
-- [**RPi Cam Control - Web interface & controls for your RPi camera**](#rpi-cam-control)
+- [**RPi Cam Web Interface - Web interface & controls for your RPi camera**](#rpi-cam-web-interface)
 - [**motionEye - Web interface & surveillance for your camera**](#motioneye)
 - [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](#mjpg-streamer)
 
@@ -27,9 +27,9 @@ description: Description of DietPi software options related to camera and survei
 
 [Return to the **Optimised Software list**](../../software/)
 
-## RPi Cam Control
+## RPi Cam Web Interface
 
-The *RPi Cam Control* package can be used in combination with a Raspberry Pi camera module to
+The *RPi Cam Web Interface* package can be used in combination with a Raspberry Pi camera module to
 
 - take an image
 - record a video
@@ -38,7 +38,7 @@ The *RPi Cam Control* package can be used in combination with a Raspberry Pi cam
 
 It consists of full control of the camera in a web-based interface.
 
-![RPi Cam Control web interface screenshot](../assets/images/dietpi-software-camera-rpicamcontrol.png){: width="500" height="395" loading="lazy"}
+![RPi Cam Web Interface screenshot](../assets/images/dietpi-software-camera-rpicamcontrol.png){: width="500" height="395" loading="lazy"}
 
 === "Access the web interface"
 
@@ -56,7 +56,7 @@ It consists of full control of the camera in a web-based interface.
 
 === "Update to latest version"
 
-    RPi Cam Control can be updated to the latest version by reinstalling it via
+    RPi Cam Web Interface can be updated to the latest version by reinstalling it via
 
     ```sh
     dietpi-software reinstall 59

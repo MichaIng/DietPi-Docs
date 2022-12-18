@@ -273,6 +273,12 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK3A-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
+            <tr>
+                <td><a class="table" href=""><strong>ROCK 5B</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5B-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -470,6 +476,12 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 <td><a class="table" href=""><strong>NanoPi R5S</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>NanoPi R6S</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>

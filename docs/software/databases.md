@@ -91,7 +91,7 @@ A non-SQL based data store.
 
 ![Redis logo](../assets/images/redis-logo.svg){: width="200" height="68" loading="lazy"}
 
-_[Trademark guidelines](https://redis.io/docs/about/trademark/)_
+_[Trademark guidelines](https://redis.com/legal/trademark-guidelines/)_
 
 **Redis** is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
 

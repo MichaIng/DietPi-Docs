@@ -48,7 +48,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ## [Camera & Surveillance](camera/)
 
-- [**RPi Cam Control - Web interface & controls for your RPi camera**](camera/#rpi-cam-control)
+- [**RPi Cam Web Interface - Web interface & controls for your RPi camera**](camera/#rpi-cam-web-interface)
 - [**MotionEye - Web interface & surveillance for your camera**](camera/#motioneye)
 - [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](camera/#mjpg-streamer)
 

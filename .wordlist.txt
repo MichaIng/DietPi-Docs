@@ -104,6 +104,7 @@ de
 deinstallation
 DER
 DHCP
+dhcpcd
 dietpi
 DietPi
 DietPi's
@@ -392,6 +393,7 @@ OpenGLES
 OpenSSH
 OpenTyrian
 OpenVPN
+OTG
 OTP
 overvoltage
 OVF
@@ -452,6 +454,7 @@ QuiteRSS
 Qz
 Radarr
 Radxa
+Radxa's
 RAMdisk
 RAMlog
 Rasmus
