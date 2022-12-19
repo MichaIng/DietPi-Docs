@@ -115,20 +115,9 @@ Also installs:
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **1333**:
+    The web interface is accessible via port **1332**:
 
-    - URL: `http://<your.IP>:1333`
-
-=== "Installation notes"
-
-    We have disabled SSL and its redirect by default with the DietPi install. This is to prevent redirects to the hostname.  
-    To re-enable the SSL connection and redirect option:
-
-    - Edit `/etc/mympd.conf`
-    - Replace `ssl = false` with `ssl = true`
-    - Save changes and exit
-    - Restart services with `systemctl restart mympd`
-    - Use the same URL address above, it will redirect to HTTPS during connection
+    - URL: `http(s)://<your.IP>:1332`
 
 === "Transfer music to DietPi"
 
@@ -147,6 +136,11 @@ Also installs:
     - Simply run `dietpi-justboom` from the command line to launch it.
 
         ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
+***
+
+Official documentation: <https://jcorporation.github.io/myMPD>
+Source code: <https://github.com/jcorporation/myMPD>
+License: [GPLv3](https://github.com/jcorporation/myMPD/blob/master/LICENSE.md)
 
 ## O!MPD
 
