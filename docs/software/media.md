@@ -138,8 +138,8 @@ Also installs:
         ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
 ***
 
-Official documentation: <https://jcorporation.github.io/myMPD>
-Source code: <https://github.com/jcorporation/myMPD>
+Official documentation: <https://jcorporation.github.io/myMPD>  
+Source code: <https://github.com/jcorporation/myMPD>  
 License: [GPLv3](https://github.com/jcorporation/myMPD/blob/master/LICENSE.md)
 
 ## O!MPD
@@ -379,7 +379,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 ***
 
-Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>
+Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>  
 Source code: <https://github.com/Logitech/slimserver>
 
 ## Squeezelite
@@ -433,7 +433,7 @@ Squeezelite is a software audio player/client for the [Logitech Media Server](#l
 
 ***
 
-Wikipedia: <https://en.wikipedia.org/wiki/Squeezelite>
+Wikipedia: <https://en.wikipedia.org/wiki/Squeezelite>  
 Source code: <https://github.com/ralph-irving/squeezelite>
 
 ## Shairport Sync
