@@ -115,9 +115,9 @@ Also installs:
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **1332**:
+    The web interface is accessible via port **1333**:
 
-    - URL: `http(s)://<your.IP>:1332`
+    - URL: `https://<your.IP>:1333`
 
 === "Transfer music to DietPi"
 
@@ -136,6 +136,60 @@ Also installs:
     - Simply run `dietpi-justboom` from the command line to launch it.
 
         ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
+
+=== "Service control"
+
+    Since myMPD runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status mympd
+    ```
+
+    ```sh
+    systemctl start mympd
+    ```
+
+    ```sh
+    systemctl stop mympd
+    ```
+
+    ```sh
+    systemctl restart mympd
+    ```
+
+=== "Configuration"
+
+    myMPD can be configured via individual config files, one for each setting within the config directory:
+
+    ```
+    /var/lib/mympd/config/
+    ```
+
+    Details about available settings can be found in the official docs: <https://jcorporation.github.io/myMPD/configuration/#configuration-files>
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mympd
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u mympd
+    ```
+
+=== "Update"
+
+    As myMPD is installed via APT, it can be update with the following commands:
+
+    ```sh
+    apt update
+    apt install mympd
+    ```
+
 ***
 
 Official documentation: <https://jcorporation.github.io/myMPD>  
