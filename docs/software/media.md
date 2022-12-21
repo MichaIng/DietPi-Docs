@@ -229,7 +229,6 @@ Also installs:
     Click `update`.  
     ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="400" height="199" loading="lazy"}
 
-
 ## CAVA
 
 Console-based Audio Visualizer for MPD. Can be displayed in SSH terminals, consoles and LCD HATS.
