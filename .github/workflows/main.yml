@@ -19,7 +19,7 @@ jobs:
       # https://github.com/actions/setup-node/tags
       uses: actions/setup-node@v3
       with:
-        node-version: *
+        node-version: '*'
         check-latest: true
     - name: Install markdownlint-cli2
       run: sudo npm i -g markdownlint-cli2
