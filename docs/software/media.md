@@ -62,7 +62,7 @@ description: Description of DietPi software options related to media systems lik
 
 The only media centre/player you'll ever need.
 
-![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg){: width="400" height="225" loading="lazy"}
+![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg){: width="500" height="280" loading="lazy"}
 
 If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autostart`:
 
@@ -90,7 +90,8 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Default music directory:
 
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba  
+       (i.e. if you want to add a remote share this need to be mounted below `/mnt/dietpi_Userdata/Music`)
 
 === "Refresh music files / database"
 
@@ -111,7 +112,7 @@ Also installs:
 
 - MPD (music player daemon)
 
-![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.gif){: width="400" height="318" loading="lazy"}
+![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.png){: width="500" height="287" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -124,7 +125,8 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Default music directory:
 
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba  
+      (i.e. if you want to add a remote share this need to be mounted below `/mnt/dietpi_Userdata/Music`)
 
 === "Refresh music files / database"
 
@@ -205,7 +207,7 @@ Also installs:
 - MPD (music player daemon)
 - Web server
 
-![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="400" height="199" loading="lazy"}
+![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="500" height="249" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -218,12 +220,15 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Default music directory:
 
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba  
+      (i.e. if you want to add a remote share this need to be mounted below `/mnt/dietpi_Userdata/Music`)
 
 === "Update/scan library"
 
     Click the `settings` button (cog, top right).  
-    Click `update`.
+    Click `update`.  
+    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="400" height="199" loading="lazy"}
+
 
 ## CAVA
 
@@ -253,7 +258,7 @@ Also installs:
 
 Mopidy is a Python based music player web based user interface for MPD.
 
-![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="400" height="198" loading="lazy"}
+![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="500" height="230" loading="lazy"}
 
 === "Access to the web interface"
 
