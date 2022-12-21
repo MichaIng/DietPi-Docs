@@ -117,18 +117,7 @@ Also installs:
 
     The web interface is accessible via port **1333**:
 
-    - URL: `http://<your.IP>:1333`
-
-=== "Installation notes"
-
-    We have disabled SSL and its redirect by default with the DietPi install. This is to prevent redirects to the hostname.  
-    To re-enable the SSL connection and redirect option:
-
-    - Edit `/etc/mympd.conf`
-    - Replace `ssl = false` with `ssl = true`
-    - Save changes and exit
-    - Restart services with `systemctl restart mympd`
-    - Use the same URL address above, it will redirect to HTTPS during connection
+    - URL: `https://<your.IP>:1333`
 
 === "Transfer music to DietPi"
 
@@ -147,6 +136,65 @@ Also installs:
     - Simply run `dietpi-justboom` from the command line to launch it.
 
         ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
+
+=== "Service control"
+
+    Since myMPD runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status mympd
+    ```
+
+    ```sh
+    systemctl start mympd
+    ```
+
+    ```sh
+    systemctl stop mympd
+    ```
+
+    ```sh
+    systemctl restart mympd
+    ```
+
+=== "Configuration"
+
+    myMPD can be configured via individual config files, one for each setting within the config directory:
+
+    ```
+    /var/lib/mympd/config/
+    ```
+
+    Details about available settings can be found in the official docs: <https://jcorporation.github.io/myMPD/configuration/#configuration-files>
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mympd
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u mympd
+    ```
+
+=== "Update"
+
+    As myMPD is installed via APT, it can be update with the following commands:
+
+    ```sh
+    apt update
+    apt install mympd
+    ```
+
+***
+
+Official documentation: <https://jcorporation.github.io/myMPD>  
+Source code: <https://github.com/jcorporation/myMPD>  
+License: [GPLv3](https://github.com/jcorporation/myMPD/blob/master/LICENSE.md)
 
 ## O!MPD
 
@@ -385,7 +433,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 ***
 
-Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>
+Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>  
 Source code: <https://github.com/Logitech/slimserver>
 
 ## Squeezelite
@@ -439,7 +487,7 @@ Squeezelite is a software audio player/client for the [Logitech Media Server](#l
 
 ***
 
-Wikipedia: <https://en.wikipedia.org/wiki/Squeezelite>
+Wikipedia: <https://en.wikipedia.org/wiki/Squeezelite>  
 Source code: <https://github.com/ralph-irving/squeezelite>
 
 ## Shairport Sync
