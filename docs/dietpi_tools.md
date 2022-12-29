@@ -782,7 +782,7 @@ dietpi-backup
     dietpi-backup 1
     ```
 
-    A similar restore procedure is not recommended to avoid accidentially system overwrites.
+    A similar restore procedure is not recommended to avoid accidentally system overwrites.
 
 !!! info "DietPi userdata may not be included"
 
@@ -813,6 +813,8 @@ dietpi-sync
 
 Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then select a target location. The target location can be anything from a networked samba file server, or even an FTP server.
 
+In comparison to `DietPi-Backup` it is more a simple copy mechanism instead a system backup/restore functionality. `DietPi-Sync` shall impress with its simplicity.
+
 === "Delete mode"
 
     This setting gives these options:
@@ -826,7 +828,7 @@ Example: If you want to duplicate (sync) the data on your external USB HDD to an
 
     **Daily sync execution time**
 
-    The automatic daily sync is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several sync clients syncing up to the same storage (data server): Shifting the synchroization starting time of these systems may reduce temporary overload of the data server by avoiding concurrent access to the storage.
+    The automatic daily sync is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several sync clients syncing up to the same storage (data server): Shifting the synchronization starting time of these systems may reduce temporary overload of the data server by avoiding concurrent access to the storage.
 
     The starting time is basically defined via the file `/etc/crontab` (which calls the sync function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](#dietpi-cron). It is executed by running the following command
 
