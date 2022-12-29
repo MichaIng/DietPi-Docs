@@ -192,7 +192,7 @@ Also installs:
 
     Additional to the myMPD configuration via the configuration files the underlying MPD can be configured via the file 
     
-    ```sh
+    ```
     /etc/mpd.conf
     ```
     
@@ -237,7 +237,7 @@ Also installs:
 - MPD (music player daemon)
 - Web server
 
-![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="500" height="249" loading="lazy"}
+![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="500" height="347" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -256,7 +256,7 @@ Also installs:
 
     Additional to the O!MPD configuration via the web interface the underlying MPD can be configured via the file 
     
-    ```sh
+    ```
     /etc/mpd.conf
     ```
     
@@ -273,7 +273,7 @@ Also installs:
 
     Click the `settings` button (cog, top right).  
     Click `update`.  
-    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="400" height="199" loading="lazy"}
+    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="500" height="190" loading="lazy"}
 
 ## CAVA
 
@@ -330,7 +330,7 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     Additional to the Mopidy configuration (extensions configuration) via the web interface the underlying MPD can be configured via the file 
     
-    ```sh
+    ```
     /etc/mpd.conf
     ```
     
