@@ -136,7 +136,7 @@ Also installs:
 
     - URL: `https://<your.IP>:1333`
 
-    Alternatively, the web interface can be accessed via http (no https) port 1332.
+    Alternatively, the web interface can be accessed via HTTP (no HTTPS) port 1332.
 
 === "Transfer music to DietPi"
 
