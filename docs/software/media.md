@@ -100,7 +100,7 @@ Also installs:
 
     Additional to the ympd configuration via the web interface the underlying MPD can be configured via the file 
     
-    ```sh
+    ```
     /etc/mpd.conf
     ```
     
