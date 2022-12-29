@@ -280,7 +280,7 @@ Also installs:
 - [**Nextcloud**](#nextcloud)
 - **Coturn**
 
-![Nextcloud Talk app screenshot](../assets/images/dietpi-software-cloud-nextcloudtalk.png){: width="2560" height="1440" loading="lazy"}
+![Nextcloud Talk app screenshot](../assets/images/dietpi-software-cloud-nextcloudtalk.png){: width="800" height="450" loading="lazy"}
 
 === "Installation notes"
 

@@ -207,7 +207,7 @@ Also installs:
 - MPD (music player daemon)
 - Web server
 
-![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="500" height="249" loading="lazy"}
+![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="500" height="347" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -227,7 +227,7 @@ Also installs:
 
     Click the `settings` button (cog, top right).  
     Click `update`.  
-    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="400" height="199" loading="lazy"}
+    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="500" height="190" loading="lazy"}
 
 ## CAVA
 

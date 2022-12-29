@@ -568,7 +568,7 @@ License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LI
 
 Homer is a modern and lightweight dashboard & homepage for your services
 
-![Homer preview screenshot](../assets/images/homer-preview.png){: width="400" height="218" loading="lazy"}
+![Homer preview screenshot](../assets/images/homer-preview.png){: width="500" height="284" loading="lazy"}
 
 === "Access to Homer"
 
