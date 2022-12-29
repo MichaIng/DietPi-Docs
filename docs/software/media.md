@@ -12,7 +12,7 @@ description: Description of DietPi software options related to media systems lik
 - [**myMPD - Lightweight web Interface audio player for MPD**](#mympd)
 - [**O!MPD - Feature-rich web Interface audio player for MPD**](#ompd)
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava)
-- [**Mopidy - Web Interface Music /Radio Player**](#mopidy)
+- [**Mopidy - Web Interface Music /Radio Player for MPD**](#mopidy)
 <!-- markdownlint-disable-next-line MD051 -->
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](#airsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
@@ -90,12 +90,28 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Default music directory:
 
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba  
-       (i.e. if you want to add a remote share this need to be mounted below `/mnt/dietpi_Userdata/Music`)
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Refresh music files / database"
 
     Simply select the `Update DB` button from the settings menu in ympd.
+
+=== "Configuration"
+
+    Additional to the ympd configuration via the web interface the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
 
 === "DietPi-JustBoom control panel"
 
@@ -125,8 +141,7 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Default music directory:
 
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba  
-      (i.e. if you want to add a remote share this need to be mounted below `/mnt/dietpi_Userdata/Music`)
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
 === "Refresh music files / database"
 
@@ -175,6 +190,21 @@ Also installs:
     systemctl restart mympd
     ```
 
+    Additional to the myMPD configuration via the configuration files the underlying MPD can be configured via the file 
+    
+    ```sh
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "View logs"
 
     Logs can be viewed with the following command:
@@ -220,8 +250,24 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
     Default music directory:
 
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba  
-      (i.e. if you want to add a remote share this need to be mounted below `/mnt/dietpi_Userdata/Music`)
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+
+=== "Configuration"
+
+    Additional to the O!MPD configuration via the web interface the underlying MPD can be configured via the file 
+    
+    ```sh
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
 
 === "Update/scan library"
 
@@ -280,6 +326,23 @@ Mopidy is a Python based music player web based user interface for MPD.
     mopidyctl local scan
     ```
 
+=== "Configuration"
+
+    Additional to the Mopidy configuration (extensions configuration) via the web interface the underlying MPD can be configured via the file 
+    
+    ```sh
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "Adding Mopidy extensions"
 
     Mopidy is highly customisable and supports various extensions from alternative web clients to backend extensions. See [*Extensions*](https://mopidy.com/ext/) for a list.
@@ -294,6 +357,12 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     ```sh
     pip2 install --no-cache-dir -U Mopidy-Jellyfin
+    ```
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mopidy
     ```
 
 === "Support of codecs"
