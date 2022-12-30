@@ -782,7 +782,11 @@ dietpi-backup
     dietpi-backup 1
     ```
 
-    A similar restore procedure is not recommended to avoid accidentally system overwrites.
+    A similar restore procedure is not recommended to avoid accidentally system overwrites. But to skip navigating through the menu, it can be done as well via
+
+    ```sh
+    dietpi-backup -1
+    ```
 
 !!! info "DietPi userdata may not be included"
 
