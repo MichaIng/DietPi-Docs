@@ -378,8 +378,8 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
             Additionally, the access rights resp. ownership needs to be set appropriately. It can be achieved via
 
             ```sh
-            mkdir </path/to/backup/storage>
-            chmod -R urbackup:urbackup </path/to/backup/storage>
+            mkdir /path/to/backup/storage
+            chmod -R urbackup:urbackup /path/to/backup/storage
             ```
 
     Additionally, the location of the `tmp` directory should also be changed in accordance to the backup storage location.  
