@@ -369,7 +369,7 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
     The location of the backups can be changed in the web interface:
 
     - Select `Settings`.
-    - Change the Backup Storage Path: `/mnt/dietpi_userdata/urbackup` is recommended.
+    - Change the Backup Storage Path (`/mnt/dietpi_userdata/urbackup` is the default path on DietPi).
     - Click `Save`.
     - Restart service with `systemctl restart urbackupsrv`.
 
