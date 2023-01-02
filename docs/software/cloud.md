@@ -382,10 +382,10 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
             chmod -R urbackup:urbackup /path/to/backup/storage
             ```
 
-    Additionally, the location of the `tmp` directory should also be changed in accordance to the backup storage location.  
+    Additionally, the location of the `tmp` directory can also be changed (see also the [corresponding UrBackup documentation chapter](https://www.urbackup.org/administration_manual.html#x1-700008.5.1) about this issue).  
     Unfortunately, this location cannot be changed via the web interface, it has to be set manually in the configuration file, e.g. via
 
-    
+
     ```sh
     nano /etc/default/urbackupsrv
     ```
