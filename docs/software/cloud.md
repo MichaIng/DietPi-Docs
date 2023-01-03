@@ -369,7 +369,7 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
         ```
 
     **Best practice: Disable "Allow client-side pausing of backups"**  
-    Backup procedures sometimes are paused by the client side which leads to very long backup durations. To avoid this the pausing can be deactivated via the UrBackup web interface:
+    Backup procedures sometimes are paused by the client side which leads to a long backup duration. To avoid this the pausing can be deactivated via the UrBackup web interface:
 
     - Select `Settings`
     - Select tab `General` -> `Permissions`
