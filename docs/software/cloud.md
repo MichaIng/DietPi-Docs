@@ -344,7 +344,8 @@ Website: <https://pydio.com>
 ## UrBackup
 
 UrBackup Server is an Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.  
-Basically, it allows you to create a complete system backup, using a simple web interface, for systems on your network.
+Basically, it allows you to create a complete system backup for systems on your network, using a simple web interface.  
+Clients are available for Windows, macOS, Linux and FreeBSD.
 
 ![UrBackup interface screenshot](../assets/images/dietpi-software-cloud-urbackup.png){: width="400" height="103" loading="lazy"}
 
@@ -355,18 +356,52 @@ Basically, it allows you to create a complete system backup, using a simple web 
     URL = `http://<your.IP>:55414`  
     Remark: Change the IP address for your system.
 
+=== "Configuration"
+
+    The configuration of UrBackup is within these options:
+
+    - UrBackup web interface, tab "Settings"
+    - UrBackup configuration file, `/etc/default/urbackupsrv`  
+      Normally you do not need to edit this file except for changing storage locations (see other tab)
+
 === "Backup storage location"
 
     The location of the backups can be changed in the web interface:
 
     - Select `Settings`.
-    - Change the Backup Storage Path: `/mnt/dietpi_userdata/urbackup` is recommended.
+    - Change the Backup Storage Path (`/mnt/dietpi_userdata/urbackup` is the default path on DietPi).
     - Click `Save`.
     - Restart service with `systemctl restart urbackupsrv`.
 
+        ???+ note "Backup storage location directory and access rights"
+            It is necessary that the backup directory exists, UrBackup does not create the directory you set within the Backup Storage Path value.  
+            Additionally, the access rights resp. ownership needs to be set appropriately. It can be achieved via
+
+            ```sh
+            mkdir /path/to/backup/storage
+            chmod -R urbackup:urbackup /path/to/backup/storage
+            ```
+
+    Additionally, the location of the `tmp` directory can also be changed (see also the [corresponding UrBackup documentation chapter](https://www.urbackup.org/administration_manual.html#x1-700008.5.1) about this issue).  
+    Unfortunately, this location cannot be changed via the web interface, it has to be set manually in the configuration file, e.g. via
+
+
+    ```sh
+    nano /etc/default/urbackupsrv
+    ```
+
+    The relevant entry is `DAEMON_TMPDIR`:
+
+    ```
+    #Temporary file directory
+    # -- this may get very large depending on the advanced settings
+    DAEMON_TMPDIR='/mnt/dietpi_userdata/urbackup/tmp'
+    ```
+
 === "Download the client"
 
-    Install the appropriate client on the systems you wish to backup from <https://www.urbackup.org/download.html#client_windows>.
+    Install the appropriate client on the systems you wish to backup from <https://www.urbackup.org/download.html#client_windows>.  
+    Remark: For Windows 7 (outdated), the [client version 2.4.11](https://www.urbackup.org/downloads/Client/2.4.11/) has to be used.
 
 ***
 Website: <https://www.urbackup.org/index.html>
