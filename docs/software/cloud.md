@@ -357,7 +357,7 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
 
 === "Configuration"
 
-    The configuration of UrBackup is within these options:
+    The **configuration of UrBackup** is within these options:
 
     - UrBackup web interface, tab `Settings`
     - UrBackup configuration file, `/etc/default/urbackupsrv`  
@@ -368,6 +368,14 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
         systemctl restart urbackupsrv
         ```
 
+    **Best practice: Disable "Allow client-side pausing of backups"**  
+    Backup procedures sometimes are paused by the client side which leads to very long backup durations. To avoid this the pausing can be deactivated via the UrBackup web interface:
+
+    - Select `Settings`
+    - Select tab `General` -> `Permissions`
+    - Uncheck option `Allow client-side pausing of backups`
+    - Alternatively this can also be set via the client resp. group based settings in the `Settings` area
+
 === "Backup storage path"
 
     The location of the backups can be set **prior to installing UrBackup** via `SOFTWARE_URBACKUP_BACKUPPATH` setting in `/boot/dietpi.txt`. It defaults to `/mnt/dietpi_userdata/urbackup`.
@@ -375,6 +383,7 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
     After the installation, the path can be changed via web interface:
 
     - Select `Settings`
+    - Select tab `General` -> `Server`
     - Change `Backup Storage Path`
     - Click `Save`
 
