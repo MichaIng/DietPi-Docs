@@ -120,6 +120,56 @@ The Samba server lets you share files on your DietPi system with ease based on t
     systemctl restart nmbd smbd
     ```
 
+=== "Use `wsdd` to view shares"
+
+    In case of problems with the Samba share not showing up in the Windows network view, the `wsdd` daemon (Web Service Dynamic Discovery host daemon) can be installed. This can be done with the following steps:
+
+    1. Install `wsdd`:
+       
+        ```sh
+        wget -O- https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key | gpg --dearmour > /usr/share/keyrings/wsdd.gpg
+        source /etc/os-release
+        echo "deb [signed-by=/usr/share/keyrings/wsdd.gpg] https://pkg.ltec.ch/public/ ${UBUNTU_CODENAME:-${VERSION_CODENAME:-UNKNOWN}} main" > /etc/apt/sources.list.d/wsdd.list
+        apt update
+        apt install wsdd
+        ```
+
+    1. Configure `wsdd` (edit `/etc/systemd/system/wsdd.service`):
+
+        ```sh
+        [Unit]
+        Description=Web Services Dynamic Discovery host daemon
+        ; Start after the network has been configured
+        After=network-online.target
+        Wants=network-online.target
+        ; It makes sense to have Samba running when wsdd starts, but is not required
+        ;Wants=smb.service
+
+        [Service]
+        Type=simple
+        ExecStart=/usr/bin/wsdd --shortlog
+
+        ; Replace those with an unpriviledged user/group that matches your environment,
+        ; like nobody:nogroup or daemon:daemon or a dedicated user for wsdd
+        User=daemon
+        Group=daemon
+
+        ; The following lines can be used for a chroot execution of wsdd.
+        ; Also append '--chroot /run/wsdd/chroot' to ExecStart to enable chrooting
+        ;AmbientCapabilities=CAP_SYS_CHROOT
+        ;ExecStartPre=/usr/bin/install -d -o nobody -g nobody -m 0700 /run/wsdd/chroot
+        ;ExecStopPost=rmdir /run/wsdd/chroot
+
+        [Install]
+        WantedBy=multi-user.target
+        ```
+
+    A running system can be checked via 
+    
+    ```sh
+    systemctl status wsdd
+    ```
+
 ***
 
 Wikipedia: <https://wikipedia.org/wiki/Samba_(software)>  
