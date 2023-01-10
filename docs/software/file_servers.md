@@ -127,9 +127,9 @@ The Samba server lets you share files on your DietPi system with ease based on t
     1. Install `wsdd`:
        
         ```sh
-        wget -O- https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key | gpg --dearmour > /usr/share/keyrings/wsdd.gpg
+        wget -O- https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key | gpg --dearmour > /usr/share/keyrings/dietpi-wsdd.gpg
         source /etc/os-release
-        echo "deb [signed-by=/usr/share/keyrings/wsdd.gpg] https://pkg.ltec.ch/public/ ${UBUNTU_CODENAME:-${VERSION_CODENAME:-UNKNOWN}} main" > /etc/apt/sources.list.d/wsdd.list
+        echo "deb [signed-by=/usr/share/keyrings/dietpi-wsdd.gpg] https://pkg.ltec.ch/public/ $G_DISTRO_NAME main" > /etc/apt/sources.list.d/dietpi-wsdd.list
         apt update
         apt install wsdd
         ```
