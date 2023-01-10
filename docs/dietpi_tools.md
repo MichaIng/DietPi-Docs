@@ -466,6 +466,18 @@ dietpi-drive_manager
 
 ---
 
+### DietPi file explorer
+
+Lightweight file manager and explorer. To start DietPi-Explorer, use the following command:
+
+```sh
+dietpi-explorer
+```
+
+![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg){: width="646" height="355" loading="lazy"}
+
+---
+
 ### DietPi autostart
 
 Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running. To start DietPi-Autostart, use the following command:
@@ -762,6 +774,20 @@ dietpi-backup
 
     The system stores these settings in the files `/boot/dietpi/.dietpi-backup_settings` and `/boot/dietpi/.dietpi-backup_inc_exc`, which are generated from `dietpi-backup` automatically. Therefore, the files do not need to be changed manually by the user.
 
+=== "Scripted run"
+
+    DietPi-Backup can be run from the command line or from scripts without user interaction by calling it via 
+    
+    ```sh
+    dietpi-backup 1
+    ```
+
+    A similar restore procedure is not recommended to avoid accidentally system overwrites. But to skip navigating through the menu, it can be done as well via
+
+    ```sh
+    dietpi-backup -1
+    ```
+
 !!! info "DietPi userdata may not be included"
 
     If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
@@ -779,21 +805,9 @@ dietpi-backup
 
 ---
 
-### DietPi file explorer
-
-Lightweight file manager and explorer. To start DietPi-Explorer, use the following command:
-
-```sh
-dietpi-explorer
-```
-
-![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg){: width="646" height="355" loading="lazy"}
-
----
-
 ### DietPi sync
 
-DietPi-Sync allows you to duplicate a directory from one location (*Source Location*) to another (*Target Location*). To start DietPi-Sync, use the following command:
+DietPi-Sync allows you to duplicate a directory (structure) from one location (*Source Location*) to another (*Target Location*). To start DietPi-Sync, use the following command:
 
 ```sh
 dietpi-sync
@@ -801,8 +815,88 @@ dietpi-sync
 
 ![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg){: width="646" height="322" loading="lazy"}
 
-Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then, select a target location. The target location can be anything from a networked samba file server, or even an FTP server.  
-Each sync includes a leading dry run, after which you can check the expected result before deciding if you want to continue with the actual sync.
+Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then select a target location. The target location can be anything from a networked samba file server, or even an FTP server.
+
+In comparison to `DietPi-Backup` it is more a simple copy mechanism instead a system backup/restore functionality. `DietPi-Sync` shall impress with its simplicity.
+
+=== "Delete mode"
+
+    This setting gives these options:
+
+    - "Off": In this case all synchronized files are copied from the source to the target directory keeping all files previously existing in the target directory
+    - "On": In this case all files previously existing in the target directory which do not exist in the source directory will be deleted to achieve an exact copy of your source directory
+
+=== "Automatic daily sync"
+
+    `Dietpi-Sync` gives the option of an automatic daily sync operation (controlled via the Linux `cron` mechanism) by enabling the "Daily Sync" option.
+
+    **Daily sync execution time**
+
+    The automatic daily sync is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several sync clients syncing up to the same storage (data server): Shifting the synchronization starting time of these systems may reduce temporary overload of the data server by avoiding concurrent access to the storage.
+
+    The starting time is basically defined via the file `/etc/crontab` (which calls the sync function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](#dietpi-cron). It is executed by running the following command
+
+    ```sh
+    dietpi-cron
+    ```
+
+    Please keep in mind that all other daily `cron` based procedures are also started at this changed time.
+
+=== "Sync file selection (Filter)"
+
+    The definition which files are used for the synchronization procedure is defined via the file 
+    
+    ```
+    /boot/dietpi/.dietpi-sync_inc_exc
+    ``` 
+    
+    This file can be edited to set further include/exclude definitions for the synchronization. The filter definition syntax is described within the file itself.
+
+    The file structure definition is identical to the DietPi backup/restore file `/boot/dietpi/.dietpi-backup_inc_exc` where it is explained more in detail.
+
+=== "Logging"
+
+    Logging information about the synchronization procedure is given within the file  
+    
+    ```
+    .dietpi-sync.log
+    ```
+
+    which is written to the sync target directory. It gives a list of every processed file.
+
+    The execution status of a previous synchronization process is given in the "Last sync status" entry at the top of the `dietpi-sync` dialog.
+
+=== "Settings file"
+
+    Generally, the settings of the DietPi-Sync are changed via the `dietpi-sync` command menu entries.
+
+    The system stores these settings in the file `/boot/dietpi/.dietpi-sync_settings`, which is generated from `dietpi-sync` automatically. Therefore, the file do not need to be changed manually by the user.  
+    An example settings file is:
+
+    ```
+    FP_SOURCE='/mnt/source'
+    FP_TARGET='/mnt/target'
+    SYNC_DELETE_MODE=0
+    SYNC_CRONDAILY=0
+    ```
+
+=== "Scripted run"
+
+    DietPi-Sync can be run from the command line or from scripts without user interaction by calling it via 
+    
+    ```sh
+    dietpi-sync 1
+    ```
+
+=== "Dry run"
+
+    Each sync includes a leading dry run, after which you can check the expected result before deciding if you want to continue with the actual sync:
+
+    ![DietPi-Sync dry run screenshot](assets/images/dietpi-sync-dryrun.png){: width="500" height="213" loading="lazy"}
+
+!!! info "DietPi-Sync is purely based on `Rsync`"
+
+    In the case that the `rsync` package is not installed, this is done automatically once you start a synchronization process.
 
 ---
 

@@ -614,11 +614,13 @@ Source: By [nodejs.org](https://nodejs.org), [Trademark policy](https://trademar
 
 By using the event-callback/non-blocking approach, Node.js offers a single-threaded event-io model that allows orchestration of tasks running in parallel. It supports multiple connections without a need for a large memory footprint. Amazon, Netflix, eBay, Reddit, LinkedIn, Tumblr, and PayPal use Node.js.[^5]
 
-=== "Node.js version"
+=== "Update"
 
-    Starting with version 7.2, DietPi added support for [Node.js unofficial builds from unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/). In this way, you can get the benefits of using the latest Node.js version.
+    To update Node.js to the latest version, simply reinstall it:
 
-    _Why this ?_ We believe that's important and more secure to use the most recent version. At the moment of writing the documentation, latest official ARMv6 build for Node.js has the version 11 and the latest _unofficial build_ issued by Node.js is v15.14.  
+    ```sh
+    dietpi-software reinstall 9
+    ```
 
 ***
 

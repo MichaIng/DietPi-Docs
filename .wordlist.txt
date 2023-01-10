@@ -163,6 +163,7 @@ foto
 FPM
 FPU
 framebuffer
+FreeBSD
 FreeDNS
 FreshRSS
 FriendlyELEC

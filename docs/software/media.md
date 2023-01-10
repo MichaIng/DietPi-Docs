@@ -12,7 +12,7 @@ description: Description of DietPi software options related to media systems lik
 - [**myMPD - Lightweight web Interface audio player for MPD**](#mympd)
 - [**O!MPD - Feature-rich web Interface audio player for MPD**](#ompd)
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava)
-- [**Mopidy - Web Interface Music /Radio Player**](#mopidy)
+- [**Mopidy - Web Interface Music /Radio Player for MPD**](#mopidy)
 <!-- markdownlint-disable-next-line MD051 -->
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](#airsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
@@ -62,7 +62,7 @@ description: Description of DietPi software options related to media systems lik
 
 The only media centre/player you'll ever need.
 
-![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg){: width="400" height="225" loading="lazy"}
+![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg){: width="500" height="280" loading="lazy"}
 
 If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autostart`:
 
@@ -96,6 +96,23 @@ Also installs:
 
     Simply select the `Update DB` button from the settings menu in ympd.
 
+=== "Configuration"
+
+    Additional to the ympd configuration via the web interface the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "DietPi-JustBoom control panel"
 
     - Tweak audio options on the fly with the panel.
@@ -111,24 +128,13 @@ Also installs:
 
 - MPD (music player daemon)
 
-![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.gif){: width="400" height="318" loading="lazy"}
+![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.png){: width="500" height="287" loading="lazy"}
 
 === "Access to the web interface"
 
     The web interface is accessible via port **1333**:
 
-    - URL: `http://<your.IP>:1333`
-
-=== "Installation notes"
-
-    We have disabled SSL and its redirect by default with the DietPi install. This is to prevent redirects to the hostname.  
-    To re-enable the SSL connection and redirect option:
-
-    - Edit `/etc/mympd.conf`
-    - Replace `ssl = false` with `ssl = true`
-    - Save changes and exit
-    - Restart services with `systemctl restart mympd`
-    - Use the same URL address above, it will redirect to HTTPS during connection
+    - URL: `https://<your.IP>:1333`
 
 === "Transfer music to DietPi"
 
@@ -148,6 +154,80 @@ Also installs:
 
         ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
 
+=== "Service control"
+
+    Since myMPD runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status mympd
+    ```
+
+    ```sh
+    systemctl start mympd
+    ```
+
+    ```sh
+    systemctl stop mympd
+    ```
+
+    ```sh
+    systemctl restart mympd
+    ```
+
+=== "Configuration"
+
+    myMPD can be configured via individual config files, one for each setting within the config directory:
+
+    ```
+    /var/lib/mympd/config/
+    ```
+
+    Details about available settings can be found in the official docs: <https://jcorporation.github.io/myMPD/configuration/#configuration-files>
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mympd
+    ```
+
+    Additional to the myMPD configuration via the configuration files the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u mympd
+    ```
+
+=== "Update"
+
+    As myMPD is installed via APT, it can be update with the following commands:
+
+    ```sh
+    apt update
+    apt install mympd
+    ```
+
+***
+
+Official documentation: <https://jcorporation.github.io/myMPD>  
+Source code: <https://github.com/jcorporation/myMPD>  
+License: [GPLv3](https://github.com/jcorporation/myMPD/blob/master/LICENSE.md)
+
 ## O!MPD
 
 A feature-rich web interface audio player for MPD. Includes song/album scraping, ideal for music catalog browsing.
@@ -157,7 +237,7 @@ Also installs:
 - MPD (music player daemon)
 - Web server
 
-![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="400" height="199" loading="lazy"}
+![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="500" height="347" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -172,10 +252,28 @@ Also installs:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
+=== "Configuration"
+
+    Additional to the O!MPD configuration via the web interface the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "Update/scan library"
 
     Click the `settings` button (cog, top right).  
-    Click `update`.
+    Click `update`.  
+    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="500" height="190" loading="lazy"}
 
 ## CAVA
 
@@ -205,7 +303,7 @@ Also installs:
 
 Mopidy is a Python based music player web based user interface for MPD.
 
-![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="400" height="198" loading="lazy"}
+![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="500" height="230" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -228,6 +326,23 @@ Mopidy is a Python based music player web based user interface for MPD.
     mopidyctl local scan
     ```
 
+=== "Configuration"
+
+    Additional to the Mopidy configuration (extensions configuration) via the web interface the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "Adding Mopidy extensions"
 
     Mopidy is highly customisable and supports various extensions from alternative web clients to backend extensions. See [*Extensions*](https://mopidy.com/ext/) for a list.
@@ -242,6 +357,12 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     ```sh
     pip2 install --no-cache-dir -U Mopidy-Jellyfin
+    ```
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mopidy
     ```
 
 === "Support of codecs"
@@ -385,7 +506,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 ***
 
-Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>
+Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>  
 Source code: <https://github.com/Logitech/slimserver>
 
 ## Squeezelite
@@ -439,7 +560,7 @@ Squeezelite is a software audio player/client for the [Logitech Media Server](#l
 
 ***
 
-Wikipedia: <https://en.wikipedia.org/wiki/Squeezelite>
+Wikipedia: <https://en.wikipedia.org/wiki/Squeezelite>  
 Source code: <https://github.com/ralph-irving/squeezelite>
 
 ## Shairport Sync
