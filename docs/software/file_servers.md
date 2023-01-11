@@ -120,6 +120,23 @@ The Samba server lets you share files on your DietPi system with ease based on t
     systemctl restart nmbd smbd
     ```
 
+=== "Use `wsdd` to view shares"
+
+    In case of problems with the Samba share not showing up in the Windows network view, the `wsdd` daemon (Web Service Dynamic Discovery host daemon) can be installed. This is achieved with the following steps:
+      
+    ```sh
+    curl -sSfL 'https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key' | gpg --dearmor -o /etc/apt/trusted.gpg.d/dietpi-wsdd.gpg --yes
+    echo "deb https://pkg.ltec.ch/public/ $G_DISTRO_NAME main" > /etc/apt/sources.list.d/dietpi-wsdd.list
+    apt update
+    apt install wsdd
+    ```
+
+    A running system can be checked via 
+    
+    ```sh
+    systemctl status wsdd
+    ```
+
 ***
 
 Wikipedia: <https://wikipedia.org/wiki/Samba_(software)>  
