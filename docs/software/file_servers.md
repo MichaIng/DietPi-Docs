@@ -131,6 +131,12 @@ The Samba server lets you share files on your DietPi system with ease based on t
     apt install wsdd
     ```
 
+    Start the service via
+
+    ```sh
+    systemctl start wsdd
+    ```
+
     A running system can be checked via 
     
     ```sh
