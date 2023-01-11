@@ -123,52 +123,13 @@ The Samba server lets you share files on your DietPi system with ease based on t
 === "Use `wsdd` to view shares"
 
     In case of problems with the Samba share not showing up in the Windows network view, the `wsdd` daemon (Web Service Dynamic Discovery host daemon) can be installed. This is achieved with the following steps:
-
-    1. Install `wsdd`:
-       
-        ```sh
-        curl -sSfL 'https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key' | gpg --dearmor -o /etc/apt/trusted.gpg.d/dietpi-wsdd.gpg --yes
-        echo "deb https://pkg.ltec.ch/public/ $G_DISTRO_NAME main" > /etc/apt/sources.list.d/dietpi-wsdd.list
-        apt update
-        apt install wsdd
-        ```
-
-    1. Add `wsdd` to the services which are controlled by DietPi:
-
-        - start `dietpi-services`
-        - select `add`
-        - add the service by entering `wsdd`
-        - after this, the service should be listed in the `dietpi-services` main menu
-
-    1. Configure `wsdd` (edit `/etc/systemd/system/wsdd.service`):
-
-        ```sh
-        [Unit]
-        Description=Web Services Dynamic Discovery host daemon
-        ; Start after the network has been configured
-        After=network-online.target
-        Wants=network-online.target
-        ; It makes sense to have Samba running when wsdd starts, but is not required
-        ;Wants=smb.service
-
-        [Service]
-        Type=simple
-        ExecStart=/usr/bin/wsdd --shortlog
-
-        ; Replace those with an unpriviledged user/group that matches your environment,
-        ; like nobody:nogroup or daemon:daemon or a dedicated user for wsdd
-        User=daemon
-        Group=daemon
-
-        ; The following lines can be used for a chroot execution of wsdd.
-        ; Also append '--chroot /run/wsdd/chroot' to ExecStart to enable chrooting
-        ;AmbientCapabilities=CAP_SYS_CHROOT
-        ;ExecStartPre=/usr/bin/install -d -o nobody -g nobody -m 0700 /run/wsdd/chroot
-        ;ExecStopPost=rmdir /run/wsdd/chroot
-
-        [Install]
-        WantedBy=multi-user.target
-        ```
+      
+    ```sh
+    curl -sSfL 'https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key' | gpg --dearmor -o /etc/apt/trusted.gpg.d/dietpi-wsdd.gpg --yes
+    echo "deb https://pkg.ltec.ch/public/ $G_DISTRO_NAME main" > /etc/apt/sources.list.d/dietpi-wsdd.list
+    apt update
+    apt install wsdd
+    ```
 
     A running system can be checked via 
     
