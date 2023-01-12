@@ -1,3 +1,8 @@
+---
+title: Advanced Networking Software Options
+description: Description of DietPi software options related to networking
+---
+
 # Advanced Networking
 
 ## Overview
@@ -53,9 +58,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
 ***
 
-YouTube video tutorial (German language): `Raspberry Hotspot: Internet Sperren umgehen mit eigenen WiFi Hotspot unter DietPi (für alle Geräte)`.
-
-<iframe src="https://www.youtube-nocookie.com/embed/3ZROq90tM_s?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial (German language): [Raspberry Hotspot: Internet Sperren umgehen mit eigenen WiFi Hotspot unter DietPi (für alle Geräte)](https://www.youtube.com/watch?v=3ZROq90tM_s){:class="nospellcheck"}
 
 ## Tor HotSpot
 
@@ -64,7 +67,7 @@ This is perfect for users requiring anonymity and privacy.
 
 It also Installs:
 
-- [WiFi HotSpot](#wifi-hotspot_1)
+- [WiFi HotSpot](#wifi-hotspot)
 
 ![DietPi WiFi hotspot tor](../assets/images/dietpi-software-advanced-networking-torhotspot.png){: width="550" height="308" loading="lazy"}
 
@@ -77,7 +80,7 @@ It also Installs:
 
 === "Connection credentials"
 
-    These are identical to the [WiFi HotSpot credentials](#wifi-hotspot_1).
+    These are identical to the [WiFi HotSpot credentials](#wifi-hotspot).
 
 === "Verification"
 
@@ -95,9 +98,7 @@ It also Installs:
 ***
 
 Wikipedia: <https://wikipedia.org/wiki/Tor_(anonymity_network)>  
-YouTube video tutorial: *DietPi Tor Hotspot Setup on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/rik-ABzSoHM?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [DietPi Tor Hotspot Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=rik-ABzSoHM)
 
 ## HAProxy
 
@@ -122,8 +123,9 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     The stats web interface is accessible via port **1338**:
 
     - URL = `http://<your.IP>:1338`
+    - Prometheus metrics = `http://<your.IP>:1338/metrics`
     - Username = `admin`
-    - Password = `dietpi`
+    - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
     !!! hint "This installation was made possible by Jerome Queneuder, who provided the methods for compiling and installation."
 

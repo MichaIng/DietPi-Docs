@@ -1,3 +1,8 @@
+---
+title: Databases and Data Store Software Options
+description: Description of DietPi software options related to databases and data stores
+---
+
 # Databases and Data Stores
 
 ## Overview
@@ -44,11 +49,11 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
 Official documentation: <https://mariadb.org>  
 Getting started documentation: <https://mariadb.org/documentation/#getting-started>
 
-### phpMyAdmin
+## phpMyAdmin
 
 ![phpMyAdmin logo](../assets/images/dietpi-software-webstack-phpmyadmin.png){: width="160" height="120" loading="lazy"}
 
-**phpMyAdmin** is a free software tool written in [PHP](#php), intended to handle the administration of MySQL / MariaDB over the Web.
+**phpMyAdmin** is a free software tool written in [PHP](../webserver_stack/#php), intended to handle the administration of MySQL / MariaDB over the Web.
 
 Frequently used operations (_such as: managing databases, tables, columns, relations, indexes etc._) can be performed via the web user interface. Using the same application you could also directly execute any SQL statement.
 
@@ -84,9 +89,9 @@ Official documentation: <https://www.sqlite.org/docs.html>
 
 A non-SQL based data store.
 
-![Redis logo](../assets/images/dietpi-software-webstack-redis.svg){: width="200" height="67" loading="lazy"}
+![Redis logo](../assets/images/redis-logo.svg){: width="200" height="68" loading="lazy"}
 
-Source: [Carlos Prioglio](https://redis.io/images/redis-logo.svg), [licence](https://commons.wikimedia.org/w/index.php?curid=95020509).
+_[Trademark guidelines](https://redis.com/legal/trademark-guidelines/)_
 
 **Redis** is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
 

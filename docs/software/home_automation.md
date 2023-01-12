@@ -1,3 +1,8 @@
+---
+title: Home Automation Software Options
+description: Description of DietPi software options related to home automation
+---
+
 # Home Automation
 
 ## Overview
@@ -30,8 +35,9 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
 === "Initial install and access"
 
-    The install process on slower SBC models can take a very long time, up to 2 hours, hence take a coffee, find some other activity and check back once in a while. It will show Installing Python-3.x.x... a very long time.  
-    If you want to see processing details, run `htop` on a dedicated terminal or SSH session to watch Python build process live.
+    !!! info "Long installation duration"
+        The install process on slower SBC models can take a very long time, up to 2 hours, hence take a coffee, find some other activity and check back once in a while. It will show Installing Python-3.x.x... a very long time.  
+        If you want to see processing details, run `htop` on a dedicated terminal or SSH session to watch Python build process live.
 
     After `dietpi-software` has finished and the service starts the first time, please go through the following steps manually:
 
@@ -40,11 +46,15 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     - Run `htop` and wait until the CPU usage of the `homeassistant` processes goes down to nearly zero.
     - Open the HA web UI (see "Access to the web interface" tab). It will again install some Python modules on first access, which can again take a little while. Always check `htop` if you are unsure, which reveals any currently running Python/pip module install process.
 
+    !!! tip "Optional usage of the Home Assistant Community Store (HACS)"
+        The Home Assistant Community Store (HACS) provides further community driven integrations, themes, etc.  
+        To activate it, follow this guide: <https://hacs.xyz/docs/configuration/basic/>
+
 === "Access to the web interface"
 
     The web interface is accessible via port **8123**:
 
-    URL = `http://<your.IP>:8123`
+    URL: `http://<your.IP>:8123`
 
 === "Configuration files"
 
@@ -64,7 +74,19 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     pip3 install <module> # Or whichever install/update you need to do
     ```
 
-=== "Update Home Assistant to current version"
+=== "Known additional dependencies for device integration"
+
+    IKEA TRÅDFRI: `apt install autoconf`
+
+=== "View logs"
+
+    To view Home Assistant logs, run the following command from console:
+
+    ```sh
+    journalctl -u home-assistant
+    ```
+
+=== "Update"
 
     To quickly update Home Assistant to the current version, run:
 
@@ -72,9 +94,11 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     /home/homeassistant/homeassistant-update.sh
     ```
 
-=== "Known additional dependencies for device integration"
+    To update as well the whole `pyenv` Python version, reinstall Home Assistant:
 
-    IKEA TRÅDFRI: `apt install autoconf`
+    ```sh
+    dietpi-software reinstall 157
+    ```
 
 ***
 

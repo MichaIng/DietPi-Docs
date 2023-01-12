@@ -12,7 +12,7 @@ Debian Bullseye has been released on August 14, 2021, and Debian Stretch has bec
 
 If you are fine with flashing a new image, follow the brief instructions on our [blog post](https://dietpi.com/blog/?p=811#2.1-fresh-install) to cover common migration steps.
 
-If too much customisation has been done without having it well documented or scripted, an upgrade of the running system may be easier. Run the below commands step by step to perform the upgrade from Stretch to Buster in a first step. If you face any errors and are unsure how to resolve, please contact us via our [community forum](https://dietpi.com/phpbb/viewforum.php?f=11) or [GitHub issue](https://github.com/MichaIng/DietPi/issues) to find help.
+If too much customisation has been done without having it well documented or scripted, an upgrade of the running system may be easier. Run the below commands step by step to perform the upgrade from Stretch to Buster in a first step. If you face any errors and are unsure how to resolve, please contact us via our [community forum](https://dietpi.com/forum/c/troubleshooting/10) or [GitHub issue](https://github.com/MichaIng/DietPi/issues) to find help.
 
 ```sh
 dietpi-backup 1
@@ -68,7 +68,7 @@ An additional syslog daemon, like `rsyslog`, is not required and hence not pre-i
 journalctl [options]
 ```
 
-<font size="+2">Logging basic output</font>
+### Logging basic output
 
 Using simply `journalctl` prints out all logging messages stored in the system.  
 Each line shows:  
@@ -78,7 +78,7 @@ The following screenshot shows the logging of the boot process (of a DietPi virt
 
 ![DietPi logging - journalctl screenshot](assets/images/dietpi-howto-logging1.png){: width="640" height="300" loading="lazy"}
 
-<font size="+2">Logging output filtering options</font>
+### Logging output filtering options
 
 Some of the options are described in the following table.  
 More detailed options may be studied in the [man pages of `journalctl`](https://man7.org/linux/man-pages/man1/journalctl.1.html).
@@ -99,7 +99,7 @@ More detailed options may be studied in the [man pages of `journalctl`](https://
 In the software package descriptions, sometimes there is a tab called "View Logs". This gives a `jounalctl -u UNITNAME` command example how to filter the logging messages of a given software package.  
 Example: See [tab "View logs"](../software/dns_servers/#unbound) of *Unbound*. It gives: `journalctl -u unbound`.
 
-<font size="+2">Logging options</font>
+### Logging options
 
 As described in the chapter [Log system choices](../software/log_system/), DietPi has several options how the logging system operates. Especially the log history, the memory consumption and the frequency of SD card write accesses varies.  
 Find and set the options which fit to your demands, it is also an option to change the logging to examine some problems.
@@ -116,12 +116,10 @@ Find and set the options which fit to your demands, it is also an option to chan
 
 DietPi offers the option for an automatic first boot installation. Normally, during the first system boot there is an installation procedure which sets up your system initially. The steps described in the section ["First logon on DietPi"](../install/#4-first-logon-on-dietpi) are then conducted.
 
-![DietPi first login - licence agreement](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
-
 These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
 The automatized setup is based on the configuration file `/boot/dietpi.txt`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
 
-??? info "Editing the file `/boot/dietpi.text` contents"
+??? info "Editing the file `/boot/dietpi.txt` contents"
 
     On some hardware options (e.g. Raspberry Pi) the file is located on an own FAT partition which can be accessed on a Windows PC. In this case `dietpi.txt` can be found in its root.
 
@@ -163,7 +161,7 @@ To achieve the basic network configuration the following options shall be taken 
 Many of the system options can be set with the automated installation and can be also changed afterwards via `dietpi-config`:
 
 - Basic settings: `AUTO_SETUP_NET_HOSTNAME`, `AUTO_SETUP_GLOBAL_PASSWORD`
-- Localization: `AUTO_SETUP_LOCALE`, `AUTO_SETUP_KEYBOARD_LAYOUT`, `AUTO_SETUP_TIMEZONE`
+- Localization: `AUTO_SETUP_LOCALE`, `AUTO_SETUP_KEYBOARD_LAYOUT`, [`AUTO_SETUP_TIMEZONE`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#Time_Zone_abbreviations)
 - Autostart: `AUTO_SETUP_AUTOSTART_TARGET_INDEX`, `AUTO_SETUP_AUTOSTART_LOGIN_USER`
 - Overclocking: `CONFIG_CPU_GOVERNOR`, `CONFIG_CPU_MAX_FREQ`, `CONFIG_CPU_MIN_FREQ`, etc.
 - Auto-updating: `CONFIG_CHECK_DIETPI_UPDATES`, `CONFIG_CHECK_APT_UPDATES`
@@ -255,6 +253,5 @@ CONFIG_CHECK_APT_UPDATES=2
 
 ### References
 
-DietPi Community Forum: [DietPi-Automation](https://dietpi.com/phpbb/viewtopic.php?t=273)  
 Blog entry (German language) from `Holger Erbe`: [Vollautomatische Installation eines Raspberry Pi unter DietPi – Schritt für Schritt](https://blog.login.gmbh/vollautomatische-installation-eines-raspberry-pi-unter-dietpi-schritt-fuer-schritt/){:class="nospellcheck"}  
 Blog entry (German language) from `DMW007`: [Raspberry Pi Ersteinrichtung mit DietPi Installation ohne Monitor automatisiert einrichten (Windows + Linux)](https://u-labs.de/portal/raspberry-pi-ersteinrichtung-mit-dietpi-installation-ohne-monitor-automatisiert-einrichten-windows-linux/){:class="nospellcheck"}

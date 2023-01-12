@@ -3,7 +3,7 @@ site_url: https://dietpi.com/docs/
 site_description: Official documentation pages for DietPi OS
 site_author: DietPi.com Team
 copyright: Copyright © 2021 DietPi.com | Documentation Distributed under <a target="_blank"
-           href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+           href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>
 
 repo_name: DietPi-Docs
 repo_url: https://github.com/MichaIng/DietPi-Docs
@@ -13,6 +13,7 @@ docs_dir: docs
 theme:
   name: material
   custom_dir: overrides # https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir
+  font: false # Don't load fonts from Google
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -27,8 +28,6 @@ theme:
 markdown_extensions:
 - markdown.extensions.admonition # Highlighted warning/info blocks
 - markdown.extensions.attr_list # Set custom HTML attributes {: }
-- markdown.extensions.codehilite: # Highlight syntax in code blocks
-    guess_lang: false # Language must always be defined for syntax highlighting
 - markdown.extensions.footnotes # Footnotes [^1]
 - markdown.extensions.meta # Define meta data (page title and description) at the top of the Markdown document
 - markdown.extensions.smarty # Automatically convert dashes, underscore, three-dots and quotes to text symbols
@@ -45,7 +44,7 @@ markdown_extensions:
 - pymdownx.magiclink: # Auto-links non angle bracket URLs and email addresses and allows to shorten and visualise Git repo links
     repo_url_shortener: true
     repo_url_shorthand: true
-- pymdownx.superfences # Indended code blocks, e.g. within lists, admonition, details or tabbed blocks
+- pymdownx.superfences # Indented code blocks, e.g. within lists, admonition, details or tabbed blocks, implies pymdownx.highlight
 - pymdownx.tabbed: # Tabbed content blocks
     alternate_style: true
 
@@ -57,7 +56,7 @@ markdown_extensions:
 #- pymdownx.arithmatex # LaTeX math term support
 #- pymdownx.caret # Superscript <sup> and insert <ins> via caret ^
 #- pymdownx.critic # Comment, highlight, add or strikethrough text
-#- pymdownx.highlight # Configure code highlighting for all code definitions, fenced, inline and blocked by indentation
+#- pymdownx.highlight # Configure code highlighting for all code definitions, fenced, inline and blocked by indentation, implied by pymdownx.superfences
 #- pymdownx.inlinehilite # Highlight syntax in inline code
 #- pymdownx.mark # Mark text <mark> via ==text==
 #- pymdownx.smartsymbols # Easy symbols syntax (trademark, copyright, arrows, ...)
@@ -132,6 +131,17 @@ nav:
   - Web Development: software/webserver_stack.md
 - RELEASES:
   - Overview: releases.md
+  - v8.12 December 2022: releases/v8_12.md
+  - v8.11 November 2022: releases/v8_11.md
+  - v8.10 October 2022: releases/v8_10.md
+  - v8.9 September 2022: releases/v8_9.md
+  - v8.8 August 2022: releases/v8_8.md
+  - v8.7 July 2022, vol 2: releases/v8_7.md
+  - v8.6 July 2022: releases/v8_6.md
+  - v8.5 May 2022: releases/v8_5.md
+  - v8.4 April 2022, vol 2: releases/v8_4.md
+  - v8.3 April 2022: releases/v8_3.md
+  - v8.2 March 2022: releases/v8_2.md
   - v8.1 February 2022: releases/v8_1.md
   - v8.0 January 2022: releases/v8_0.md
   - v7.9 December 2021: releases/v7_9.md
@@ -152,15 +162,14 @@ nav:
   - v6.29 May 2020: releases/v6_29.md
   - v6.28 January 2020: releases/v6_28.md
   - v6.27 January 2020: releases/v6_27.md
-  - Earlier: https://dietpi.com/phpbb/viewforum.php?f=10
+  - Earlier: https://dietpi.com/forum/c/version-history/6
 - COMMUNITY:
-  # The first file "socialmedia.md" is added, otherwise in some browsers klicking on "Community" jumps directly to the first entry
-  # That was the case that a klick directly jumped to the github page. (Then you leave our genious dietpi.com/docs site...) :-)
+  # The first entry is opened when selecting "COMMUNITY" from primary navigation bar, hence should be an internal docs page.
   - Social media: socialmedia.md
   - DietPi GitHub page: https://github.com/MichaIng/DietPi
   - DietPi Blog page: https://dietpi.com/blog/
   - Report issues: https://github.com/MichaIng/DietPi/issues
   - Request features: https://github.com/MichaIng/DietPi/issues/new/choose
-  - DietPi Forum: https://dietpi.com/phpbb/
-  - Community tutorials: https://dietpi.com/phpbb/viewforum.php?f=15
-  - Troubleshooting: https://dietpi.com/phpbb/viewforum.php?f=11
+  - DietPi Forum: https://dietpi.com/forum/
+  - Community tutorials: https://dietpi.com/forum/c/community-tutorials/8
+  - Troubleshooting: https://dietpi.com/forum/c/troubleshooting/10

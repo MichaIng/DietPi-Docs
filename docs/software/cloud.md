@@ -1,3 +1,8 @@
+---
+title: Cloud and Backup Systems Software Options
+description: Description of DietPi software options related to cloud and backup systems
+---
+
 # Cloud & Backup systems
 
 ## Overview
@@ -15,6 +20,7 @@
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](#file-browser)
+- [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -43,22 +49,26 @@ Also Installs:
 
 ![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png){: width="400" height="218" loading="lazy"}
 
-=== "Access to the web interface"
+=== "Quick start"
 
-    - URL = `http://<your.IP>/owncloud`
-    - Username = `admin`
-    - Password = `<your global password>` (default: `dietpi`)
+    ownCloud is accessible via regular HTTP/HTTPS TCP ports **80**/**443** below the `/owncloud` path:
 
-    If you may want to configure your ownCloud from command line via `occ` command see the [ownCloud admin manual](https://doc.owncloud.org/server/10.5/admin_manual/configuration/server/occ_command.html).
+    - URL: `http://<your.IP>/owncloud`
+    - Username: `admin` (or the one you set in `dietpi.txt`)
+    - Password: `<your global password>` (default: `dietpi`)
 
-    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`.  
-    Just use inside your terminal:
+=== "Configuration"
+
+    You can configure ownCloud via CLI from command line. To simplify this, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`.  
+    Simply run `occ` from your console:
 
     ```sh
     occ list
     ```
 
-=== "Update ownCloud to the latest version"
+    More details about available commands can be found in the [ownCloud admin manual](https://doc.owncloud.com/server/next/admin_manual/configuration/server/occ_command.html#core-commands).
+
+=== "Update"
 
     1. Option: Use the web-based updater from within the ownCloud web UI settings.
     2. Option: Use the updater script from console (recommended):
@@ -68,7 +78,7 @@ Also Installs:
         1
         ```
 
-    3. Follow the official documentation for a manual upgrade process: <https://doc.owncloud.com/server/admin_manual/maintenance/manual_upgrade.html>
+    3. Follow the official documentation for a manual upgrade process: <https://doc.owncloud.com/server/next/admin_manual/maintenance/upgrading/manual_upgrade.html>
 
 === "FAQ"
 
@@ -80,9 +90,9 @@ Also Installs:
 
     DietPi will automatically apply the max supported upload size to the PHP and ownCloud configs.
 
-    - 32-bit systems can handle 2 GB
-    - 64-bit systems can handle 8796 PB, yep, in petabyte
-    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024))MB"`
+    - 32-bit systems can handle 2 GiB
+    - 64-bit systems can handle 8796 PiB, yep, in petabyte
+    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024)) MiB"`
 
     **Will my data be saved after deinstallation?**
 
@@ -91,12 +101,8 @@ Also Installs:
 
 ***
 
-Website: <https://owncloud.com>  
-Official documentation: <https://doc.owncloud.org/server/admin_manual>
-
-YouTube video tutorial: *How to Install DietPi OwnCloud on Raspberry Pi*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/-OatWtH1Z9c?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Official website: <https://owncloud.com/>  
+Official documentation: <https://doc.owncloud.com/server/next/admin_manual/>
 
 ## Nextcloud
 
@@ -106,24 +112,22 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Quick start"
 
-    Nextcloud is accessible via regular HTTP/HTTPS port **80**/**443** below the `/nextcloud` path:
+    Nextcloud is accessible via regular HTTP/HTTPS ports **80**/**443** below the `/nextcloud` path:
 
-    - URL = `http://<your.IP>/nextcloud/`
-    - Username = `admin`
-    - Password = `<your global password>` (default: `dietpi`)
+    - URL: `http://<your.IP>/nextcloud`
+    - Username: `admin` (or the one you set in `dietpi.txt`)
+    - Password: `<your global password>` (default: `dietpi`)
 
-    To fast access the files, a dedicated USB hard drive is highly recommended.
+=== "Configuration"
 
-=== "Advanced configuration"
-
-    For an advanced setup you could further configure your Nextcloud setup from the command line - see the [Nextcloud Admin guide](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html).
-
-    To simplify this configuration, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`.  
-    Just use inside your terminal:
+    You can configure Nextcloud via CLI from command line. To simplify this, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/nextcloud/occ`.  
+    Simply run `ncc` from your console:
 
     ```sh
     ncc list
     ```
+
+    More details about available commands can be found in the [Nextcloud admin manual](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html).
 
 === "Brute-force protection"
 
@@ -198,7 +202,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
         - <https://help.nextcloud.com/t/repeated-login-attempts-from-china/6510/11?u=michaing>
         - <https://www.c-rieger.de/nextcloud-installationsanleitung/#c06>
 
-=== "Update Nextcloud to the latest version"
+=== "Update"
 
     1. Option: Use the web-based updater from within the Nextcloud web UI settings.
     2. Option: Use the updater script from console (recommended):
@@ -219,12 +223,13 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     `/mnt/dietpi_userdata/nextcloud_data` (or `dietpi.txt` choice)
 
-    **Why am I limited to 2GB file size uploads?**
+    **Why am I limited to 2 GiB file size uploads?**
 
     DietPi will automatically apply the max supported upload size to the PHP and Nextcloud configs.
 
-    - 32bit systems can handle 2 GB
-    - 64bit systems can handle 8796 PB (petabytes)
+    - 32-bit systems can handle 2 GiB
+    - 64-bit systems can handle 8796 PiB, yep, in petabyte
+    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024)) MiB"`
 
     **Will my data be saved after deinstallation?**
 
@@ -250,7 +255,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     **What shall I do about missing `bcmath`, `gmp` and `imagick` PHP modules?**
 
-    After a fresh install via `dietpi-software`, Nextcloud shows a warning *"This instance is missing some recommended PHP modules. For improved performance and better compatibility it is highly recommended to install them."*, also described [here](https://dietpi.com/phpbb/viewtopic.php?p=27383#p27383). We propose to ignore them, `imagick` is not needed at all and a subject of discussion as of security issues, `bcmath` and `gmp` are required only if you want to use the WebAuthn passwordless authentication with Nextcloud.  
+    After a fresh install via `dietpi-software`, the Nextcloud admin panel shows warnings about three missing modules. We propose to ignore them: `imagick` is not needed at all and a subject of discussion about security issues, `bcmath` and `gmp` are required only if you want to use the WebAuthn passwordless authentication with Nextcloud.  
     If you must mute those warnings, you can install the modules manually:
 
     ```sh
@@ -262,12 +267,8 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 ***
 
 Website: <https://nextcloud.com/>  
-Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>
-
-YouTube video tutorial #1: *DietPi Nextcloud Setup on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/Q3R2RqFSyE4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
-
+Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>  
+YouTube video tutorial #1: [DietPi Nextcloud Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=Q3R2RqFSyE4)  
 YouTube video tutorial #2: [DietPi Docker Nextcloud External Storage Setup with SAMBA SERVER on RPI3B](https://www.youtube.com/watch?v=NOb12BuNpZ8)
 
 ## Nextcloud Talk
@@ -283,17 +284,17 @@ Also installs:
 
 === "Installation notes"
 
-    During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
+    For video call throughout your local network, a so called [TURN server](https://en.wikipedia.org/wiki/Traversal_Using_Relays_around_NAT) is required. *Coturn* is a common implementation and hence installed by default together with our Nextcloud Talk option.
 
-    If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
+    During installation you will be asked to enter your server's external domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
 
-    Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
-
-    Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
+    Coturn will be configured with authentication via shared secret and some additional security measures. For details, see this HowTo: <https://help.nextcloud.com/t/howto-setup-nextcloud-talk-with-turn-server/30794>
 
 ***
 
-Website: <https://nextcloud.com/talk>
+Website: <https://nextcloud.com/talk/>  
+Source code: <https://github.com/nextcloud/spreed>  
+Coturn source code: <https://github.com/coturn/coturn>
 
 ## Pydio
 
@@ -307,7 +308,7 @@ Also Installs:
 
 === "Access to the web interface"
 
-    URL = `http://<your.IP>/pydio`
+    URL: `http://<your.IP>/pydio`
 
 === "First time connect"
 
@@ -343,32 +344,99 @@ Website: <https://pydio.com>
 ## UrBackup
 
 UrBackup Server is an Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.  
-Basically, it allows you to create a complete system backup, using a simple web interface, for systems on your network.
+Basically, it allows you to create a complete system backup for systems on your network, using a simple web interface.  
+Clients are available for Windows, macOS, Linux and FreeBSD.
 
 ![UrBackup interface screenshot](../assets/images/dietpi-software-cloud-urbackup.png){: width="400" height="103" loading="lazy"}
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **55414**:
+    The web interface is accessible via TCP port **55414**:
 
-    URL = `http://<your.IP>:55414`  
-    Remark: Change the IP address for your system.
+    - URL: `http://<your.IP>:55414`
 
-=== "Backup storage location"
+=== "Configuration"
 
-    The location of the backups can be changed in the web interface:
+    The **configuration of UrBackup** is within these options:
 
-    - Select `Settings`.
-    - Change the Backup Storage Path: `/mnt/dietpi_userdata/urbackup` is recommended.
-    - Click `Save`.
-    - Restart service with `systemctl restart urbackupsrv`.
+    - UrBackup web interface, tab `Settings`
+    - UrBackup configuration file, `/etc/default/urbackupsrv`  
+
+        After editing the config file, the service needs to be restart for changes to take effect:
+
+        ```sh
+        systemctl restart urbackupsrv
+        ```
+
+    **Best practice: Disable "Allow client-side pausing of backups"**  
+    Backup procedures sometimes are paused by the client side which leads to a long backup duration. To avoid this the pausing can be deactivated via the UrBackup web interface:
+
+    - Select `Settings`
+    - Select tab `General` -> `Permissions`
+    - Uncheck option `Allow client-side pausing of backups`
+    - Alternatively this can also be set via the client resp. group based settings in the `Settings` area
+
+=== "Backup storage path"
+
+    The location of the backups can be set **prior to installing UrBackup** via `SOFTWARE_URBACKUP_BACKUPPATH` setting in `/boot/dietpi.txt`. It defaults to `/mnt/dietpi_userdata/urbackup`.
+
+    After the installation, the path can be changed via web interface:
+
+    - Select `Settings`
+    - Select tab `General` -> `Server`
+    - Change `Backup Storage Path`
+    - Click `Save`
+
+    ???+ note "Backup storage directory and access rights"
+        It is necessary that the new backup directory exists, as UrBackup usually has no permissions to pre-create it.  
+        Additionally, you need to grant UrBackup write access. It can be achieved via
+
+        ```sh
+        mkdir /path/to/backup/storage
+        chmod -R urbackup:urbackup /path/to/backup/storage
+        ```
 
 === "Download the client"
 
-    Install the appropriate client on the systems you wish to backup from <https://www.urbackup.org/download.html#client_windows>.
+    Install the appropriate client on the systems you wish to backup from <https://www.urbackup.org/download.html#client_windows>.  
+    Remark: For Windows 7 (outdated), the [client version 2.4.11](https://www.urbackup.org/downloads/Client/2.4.11/) has to be used.
+
+=== "Download cache"
+
+    Via web interface `Settings` > `Advanced` section, a temporary download buffer can be enabled, where backups are stored to during download, before being moved to the final backup path. See the [corresponding UrBackup documentation chapter](https://www.urbackup.org/administration_manual.html#x1-700008.5.1) for details.  
+    By default the `/tmp` tmpfs (RAM disk) is used for this, which causes issues if you do not have several free GiB of RAM. The directory can be changed via:
+
+    ```sh
+    nano /etc/default/urbackupsrv
+    ```
+
+    The relevant entry is `DAEMON_TMPDIR`:
+
+    ```sh
+    #Temporary file directory
+    # -- this may get very large depending on the advanced settings
+    DAEMON_TMPDIR='/tmp'
+    ```
+
+    Note that this means doubled file writes and has no benefits as long as the backup duration from clients' side is not time critical, or your backup drive is not very slow. It makes sense only if you have a much faster drive available, or plenty GiB of free RAM to use as backup download buffer.
+
+=== "View logs"
+
+    UrBackup logs to `/var/log/urbackup.log` by default. The path to the log file can be changed via `/etc/default/urbackupsrv`. See "Configuration" tab for details.
+
+=== "Update"
+
+    You can easily update UrBackup by reinstalling it. Your settings and data are preserved:
+
+    ```sh
+    dietpi-software reinstall 111
+    ```
 
 ***
-Website: <https://www.urbackup.org/index.html>
+
+Official website: <https://www.urbackup.org/>  
+Official documentation: <https://www.urbackup.org/administration_manual.html>  
+Official forums: <https://forums.urbackup.org/>
 
 ## Gogs
 
@@ -378,7 +446,7 @@ Your very own GitHub style server, with web interface.
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **3000**:
+    The web interface is accessible via TCP port **3000**:
 
     - URL: `http://<your.IP>:3000`
 
@@ -456,7 +524,7 @@ Your very own GitHub style server, with web interface.
     - Change the following values only:
         - Host: `/run/mysqld/mysqld.sock`
         - Password: `<your global password>` (default: `dietpi`)
-        - SSH Server Domain: `<your.domain/IP>`
+        - Server Domain: `<your.domain/IP>`
         - Gitea Base URL: `http://<your.domain/IP>:3000/`
         - Log Path: `/var/log/gitea` (However, file logging is disabled by default.)
     - Scroll to the bottom of page and select "Install Gitea".
@@ -851,5 +919,29 @@ Access and manage your data from anywhere via browser with this lightweight remo
 Official documentation: <https://filebrowser.org/>  
 Source code: <https://github.com/filebrowser/filebrowser>  
 License: [Apache 2.0](https://github.com/filebrowser/filebrowser/blob/master/LICENSE)
+
+## Rclone
+
+Rclone is a command-line program to manage files on cloud storage. It is a feature-rich alternative to cloud vendors' web storage interfaces. Over [40 cloud storage products](https://rclone.org/#providers) support Rclone, including S3 object stores, business & consumer file storage services, as well as standard transfer protocols.
+
+![Rclone logo](../assets/images/rclone-logo.svg){: width="300" height="69" loading="lazy"}
+
+=== "Quick start"
+
+    Run `rclone config` to setup. See [Rclone config docs](https://rclone.org/docs/) for more details.
+
+=== "Update"
+
+    Rclone can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 202
+    ```
+
+***
+
+Official documentation: <https://rclone.org/>  
+Source code: <https://github.com/rclone/rclone>  
+License: [MIT](https://github.com/rclone/rclone/blob/master/COPYING)
 
 [Return to the **Optimised Software list**](../../software/)

@@ -19,5 +19,5 @@ matrix:
       - a.magiclink
   - pyspelling.filters.url:
   sources:
-  - 'build/**/*.html|!build/docs/releases/index.html'
+  - 'build/**/*.html'
   default_encoding: utf-8
