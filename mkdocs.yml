@@ -7,6 +7,7 @@ copyright: Copyright © 2021 DietPi.com | Documentation Distributed under <a tar
 
 repo_name: DietPi-Docs
 repo_url: https://github.com/MichaIng/DietPi-Docs
+edit_uri: edit/dev/docs/
 docs_dir: docs
 
 theme:
