@@ -1,3 +1,7 @@
+---
+description: Guides about the basic DietPi tools
+---
+
 # DietPi Tools
 
 ## DietPi launcher
@@ -8,9 +12,13 @@ It provides an easy access to all DietPi OS tools, and it could be accessed by r
 dietpi-launcher
 ```
 
-![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="366" loading="lazy"}
+![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="398" loading="lazy"}
 
-## DietPi software
+---
+
+## Software installation
+
+### DietPi software
 
 `dietpi-software` will be automatically displayed on the first login after the installation. It can be accessed at any time running next command:
 
@@ -20,9 +28,9 @@ dietpi-software
 
 It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../software/) titles.
 
-![DietPi-Software screenshot](assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+![DietPi-Software screenshot](assets/images/dietpi-software.jpg){: width="640" height="306" loading="lazy"}
 
-### Software overview
+#### Software overview
 
 === "Browse Software"
 
@@ -30,7 +38,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     - Scroll through the list of available software - for more details check the [DietPi software list](../software/).
 
-    The list of optimised software is long. You either browse the list or use the option **Search**.
+    The list of optimised software is long. You either browse the list or use the option **Search Software**.
 
     - To install software on your DietPi, select it in the list and press ++space++ to add it to the installation list. If you change your mind, hit ++space++ again to remove it.
 
@@ -50,32 +58,13 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 ---
 
-### Quick selections
+#### Quick selections
 
 === "SSH Server"
 
     This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
 
     ![DietPi-Software SSH Server menu screenshot](assets/images/dietpi-software-ssh-selection.jpg){: width="550" height="320" loading="lazy"}
-
-=== "File Server"
-
-    DietPi-Software allows you to easily choose a method of **accessing the files** on your DietPi system.
-    Installing one of DietPi's file server choices will allow you to access and share files on your DietPi system.
-
-    DietPi will then automatically install and setup the file server for you. DietPi will also clean and remove any previous file server from your system.
-
-    The **default destination** directory for file servers is `/mnt/dietpi_userdata`.
-
-    The reasons for choosing **ProFTPD** over **Samba** may be:
-
-    - ProFTPD outperforms Samba in all aspects of performance.
-    - ProFTPD can max out the RPi 100 Mbit connection with minimal CPU usage.
-    - Samba server on a RPi v1 will hit 100% CPU usage at 40 Mbit transfer rate.
-
-    ![DietPi-Software File Server menu screenshot](assets/images/dietpi-software-fileserver-selection.jpg){: width="550" height="342" loading="lazy"}
-
-    See [file servers overview](../software/file_servers/) for further information.
 
 === "Log System"
 
@@ -87,18 +76,6 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     ![DietPi-Software Log System menu screenshot](assets/images/dietpi-software-log-system-selection.jpg){: width="550" height="370" loading="lazy"}
 
     See [log system choices](../software/log_system/) for further details.
-
-=== "Webserver Preference"
-
-    The DietPi **Webserver Preference** system allows you to choose your favourite webserver for use in DietPi installations. If not decided, read more on [Which WEBSERVER to CHOOSE ?](../software/webserver_stack/#which-web-application-stack-is-best-for-you)
-
-    !!! hint "Automatic selection"
-
-        When you select any software for installation that requires a webserver (e.g. Pi-hole, Nextcloud, Webmin, installed via *Browse Software*), DietPi will automatically install, configure and optimize your chosen *Webserver Preference*.  
-
-        As a result you will not need to manually select/install a webserver stack. DietPi will do it all for you.
-
-    ![DietPi-Software Webserver Preference menu screenshot](assets/images/dietpi-software-webserver-preference.png){: width="550" height="340" loading="lazy"}
 
 === "User Data Location"
 
@@ -126,7 +103,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 ---
 
-### Install or remove software
+#### Install or remove software
 
 === "Install"
 
@@ -166,8 +143,11 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 ### DietPi LetsEncrypt
 
-Access the frontend for the `Let's Encrypt` integration.  
-Run `dietpi-letsencrypt`.
+Access the frontend for the `Let's Encrypt` integration by running
+
+```sh
+dietpi-letsencrypt
+```
 
 In case of a non installed Certbot package it is installed at first:
 
@@ -183,9 +163,15 @@ When you execute the certificate installation it also installs it for your selec
     To be accessible from the internet, typically your router needs a port forwarding configuration to route incoming HTTP and HTTPS accesses to your DietPi system.  
     Although you only need a HTTPS protocol forwarding (typically port 433), you also need to forward the HTTP protocol (typically port 80) to your DietPi system, otherwise the certification renewal procedure will fail (due to the fact that the certification renewal procedure takes place several months later you may have forgotten this issue).
 
+---
+
 ### DietPi VPN
 
-DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all VPN users to quickly and easily connect to any NordVPN, ProtonVPN, or any other server that uses OpenVPN in TCP or UDP, using only open source software.
+DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Allowing all VPN users to quickly and easily connect to any NordVPN, ProtonVPN, or any other server that uses OpenVPN in TCP or UDP, using only open source software. To start DietPi-VPN, use the following command:
+
+```sh
+dietpi-vpn
+```
 
 ![DietPi-VPN screenshot](assets/images/dietpi-vpn.jpg){: width="642" height="300" loading="lazy"}
 
@@ -206,9 +192,15 @@ DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Al
 
 ![OpenVPN logo](assets/images/dietpi-software-vpn-openvpn-logo.png){: width="200" height="58" loading="lazy"}
 
+---
+
 ### DietPi DDNS
 
-DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cron job which updates your dynamically changing public IP address every defined amount of minutes against a DDNS provider, so that your public domain stays valid. It supports No-IP and replaces the No-IP client, which was available as install option on previous DietPi versions.
+DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cron job which updates your dynamically changing public IP address every defined amount of minutes against a DDNS provider, so that your public domain stays valid. It supports No-IP and replaces the No-IP client, which was available as install option on previous DietPi versions. To start DietPi-DDNS, use the following command:
+
+```sh
+dietpi-ddns
+```
 
 ![DietPi-DDNS main menu screenshot](assets/images/dietpi-ddns.jpg){: width="656" height="256" loading="lazy"}
 
@@ -217,6 +209,8 @@ DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cr
     - DuckDNS: <https://www.duckdns.org/>
     - No-IP: <https://www.noip.com/>
     - Dynu: <https://www.dynu.com/>
+    - FreeDNS: <https://freedns.afraid.org/>
+    - OVH: <https://docs.ovh.com/gb/en/domains/hosting_dynhost/>
     - Alternatively you may use any other provider which has an API URL for updating your dynamic IP address.
 
 === "CLI"
@@ -233,12 +227,17 @@ DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cr
         - If you did already setup DietPi-DDNS before, the `apply` command can also be used to change one of the above settings. All other options are optional then.
     - Use `dietpi-ddns remove` to remove any cron job that was setup before.
 
+---
+
 ## System configuration
 
 ### DietPi configuration
 
-Configure various system settings, from display / audio / network to *auto start* options.  
-Run `dietpi-config`.
+Configure various system settings, from display / audio / network to *auto start* options. To start the system configuration, use the following command:
+
+```sh
+dietpi-config
+```
 
 ![DietPi-Config screenshot](assets/images/dietpi-config.jpg){: width="643" height="335" loading="lazy"}
 
@@ -333,7 +332,11 @@ Feature-rich drive management utility. It is a lightweight program that allows y
 - Run benchmarks on drives
 - Mount network drives (NFS and Samba)
 
-Run `dietpi-drive_manager`.
+To start DietPi-Drive_Manager, use the following command:
+
+```sh
+dietpi-drive_manager
+```
 
 ![DietPi-Drive_Manager screenshot](assets/images/dietpi-drive-manager.jpg){: width="643" height="327" loading="lazy"}
 
@@ -402,6 +405,13 @@ Run `dietpi-drive_manager`.
       `-` Does not support UNIX permissions  
       `-` Does not support symbolic links
 
+    - `exFAT`  
+      Windows filesystem, intended for external drives, e.g. USB flash drives or SD cards.  
+      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>  
+      `+` Compatible on a Windows system  
+      `-` Does not support UNIX permissions  
+      `-` Does not support symbolic links
+
     - `HFS+`  
       Recommended for users who plan to use this drive on a macOS system.  
       `+` macOS filesystem  
@@ -409,20 +419,13 @@ Run `dietpi-drive_manager`.
 
     - `Btrfs`  
       A modern Linux filesystem.  
-      `+` <https://github.com/MichaIng/DietPi/issues/271#issuecomment-247173250>  
-      `-` Not compatible on a Windows system
+      `+` Advantages were described in [this DietPi issue](https://github.com/MichaIng/DietPi/issues/271#issuecomment-247173250)  
+      `-` Compatible with Windows only via additional windows driver [WinBtrfs](https://github.com/maharmstone/btrfs)
 
     - `F2FS`  
       Linux filesystem designed for flash/NAND based drives.  
       `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>  
       `-` Not compatible on a Windows system
-
-    - `exFAT`  
-      Windows filesystem, intended for external drives, e.g. USB flash drives or SD cards.  
-      `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>  
-      `+` Compatible on a Windows system  
-      `-` Does not support UNIX permissions  
-      `-` Does not support symbolic links
 
     - `XFS`  
       A modern Linux filesystem.  
@@ -463,12 +466,27 @@ Run `dietpi-drive_manager`.
 
 ---
 
+### DietPi file explorer
+
+Lightweight file manager and explorer. To start DietPi-Explorer, use the following command:
+
+```sh
+dietpi-explorer
+```
+
+![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg){: width="646" height="355" loading="lazy"}
+
+---
+
 ### DietPi autostart
 
-Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running.  
-Run `dietpi-autostart`.
+Defines software packages to start when the DietPi OS boots up. Example, boot into the desktop with Kodi running. To start DietPi-Autostart, use the following command:
 
-![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg){: width="644" height="368" loading="lazy"}
+```sh
+dietpi-autostart
+```
+
+![DietPi-Autostart screenshot](assets/images/dietpi-autostart.jpg){: width="640" height="458" loading="lazy"}
 
 !!! info "Autostart option in `dietpi.txt` (first initial boot)"
     When booting the DietPi system the first time, the autostart option can also be set via the file `dietpi.txt`. See option  
@@ -476,10 +494,15 @@ Run `dietpi-autostart`.
     for further information.  
     The numbers shown on the left in the `dietpi-autostart` command correspond to the values in `dietpi.txt`.
 
+---
+
 ### DietPi services
 
-Provides service control, priority level tweaks and status print.  
-Run `dietpi-services`.
+Provides service control, priority level tweaks and status print. To start DietPi-Services, use the following command:
+
+```sh
+dietpi-services
+```
 
 ![DietPi-Services screenshot](assets/images/dietpi-services.jpg){: width="644" height="341" loading="lazy"}
 
@@ -489,26 +512,41 @@ The dialog to tweak a service is entered by highlighting the service (keys ++arr
 
 !!! caution "Be careful at tweaking the services."
 
+---
+
 ### DietPi LED control
 
-Change triggers for the status LEDs on your SBC/motherboard.  
-Run `dietpi-led_control`.
+Change triggers for the status LEDs on your SBC/motherboard. To start DietPi-LED_Control, use the following command:
+
+```sh
+dietpi-led_control
+```
 
 ![DietPi-LED_control screenshot](assets/images/dietpi-ledcontrol.jpg){: width="643" height="269" loading="lazy"}
 
 Depending on your used hardware, the number of entries in the dialog will change.
 
+---
+
 ### DietPi cron
 
-Modify the start times of specific cron job groups.  
-Run `dietpi-cron`.
+Modify the start times of specific cron job groups. To start DietPi-Cron, use the following command:
+
+```sh
+dietpi-cron
+```
 
 ![DietPi-Cron screenshot](assets/images/dietpi-cron.jpg){: width="643" height="357" loading="lazy"}
 
+---
+
 ### DietPi JustBoom
 
-Change the audio settings.  
-Run `dietpi-justboom`.
+Change the audio settings. To start DietPi-JustBoom, use the following command:
+
+```sh
+dietpi-justboom
+```
 
 If the sound output is configured, the following dialog appears:
 
@@ -520,9 +558,15 @@ If no sound output is configured, the following dialog appears:
 
 In this case you have to e.g. install a sound program package via `dietpi-software` or configure the sound output e.g. via `dietpi-config`.
 
+---
+
 ### DietPi survey
 
-DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software.
+DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software. To start DietPi-Survey, use the following command:
+
+```sh
+dietpi-survey
+```
 
 ???+ important "Privacy and goals"
 
@@ -617,14 +661,22 @@ DietPi Survey allows the DietPi project to obtain general information regarding 
 
 ### DietPi update
 
-Update DietPi OS version to the latest version available and informs when updates for `apt upgrade` are available.  
-Run `dietpi-update`.
+Update DietPi OS version to the latest version available and informs when updates for `apt upgrade` are available. To start DietPi-Update, use the following command:
+
+```sh
+dietpi-update
+```
+
+---
 
 ### DietPi cleaner
 
 Clean up not necessary files from the operating system and free up valuable disk space.  
-Think of it as lightweight CCleaner for DietPi and Linux.  
-Run `dietpi-cleaner`.
+Think of it as lightweight CCleaner for DietPi and Linux. To start DietPi-Cleaner, use the following command:
+
+```sh
+dietpi-cleaner
+```
 
 ![DietPi-Cleaner screenshot](assets/images/dietpi-cleaner.jpg){: width="644" height="284" loading="lazy"}
 
@@ -642,12 +694,19 @@ The files cleaner allows you to customize a list of filenames to search and remo
 
 ![DietPi-Cleaner types screenshot](assets/images/dietpi-cleaner_3.png){: width="644" height="388" loading="lazy"}
 
+---
+
 ### DietPi log clear
 
-Clear log files in `/var/log/`.  
-Run `dietpi-logclear`.
+Clear log files in `/var/log/`. To start DietPi-LogClear, use the following command:
+
+```sh
+dietpi-logclear
+```
 
 ![DietPi-LogClear screenshot](assets/images/dietpi-logclear.jpg){: width="643" height="198" loading="lazy"}
+
+---
 
 ### DietPi backup (backup/restore)
 
@@ -658,7 +717,6 @@ Run `dietpi-logclear`.
 - Customization which **files and directories** are **included** and **excluded**
 - Activation of **automatic daily backups**
 - Setting of an **amount of backups to be kept**  
-  Backups are rotated automatically and if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync
 
 From the console, run the following command:
 
@@ -666,7 +724,69 @@ From the console, run the following command:
 dietpi-backup
 ```
 
-![DietPi-Backup menu screenshot](assets/images/dietpi-backup_1.png){: width="681" height="330" loading="lazy"}
+![DietPi-Backup menu screenshot](assets/images/dietpi-backup_1.png){: width="643" height="306" loading="lazy"}
+
+=== "Automatic daily backup"
+
+    `Dietpi-Backup` gives the option of an automatic daily backup function (controlled via the Linux `cron` mechanism).
+
+    It contains these options (see screenshot above):
+
+    - "Daily Backup": Activates the daily backup
+    - "Amount": Sets the number of backups to be kept. Backups are rotated automatically, if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync
+
+    **Daily backup execution time**
+
+    The automatic daily backup (activated via option "Daily Backup", see screenshot above) is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several backup clients backing up to the same storage (backup server): Shifting the backup starting time of these systems may reduce temporary overload of the backup server by avoiding concurrent access to the storage.
+
+    The starting time is basically defined via the file `/etc/crontab` (which calls the backup/restore function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](#dietpi-cron). It is executed by running the following command
+
+    ```sh
+    dietpi-cron
+    ```
+
+    Please keep in mind that all other daily `cron` based procedures are also started at this changed time.
+
+=== "Backup file selection (Filter)"
+
+    The definition which files are used for the backup procedure is defined via the option "Filter" (see screenshot above). This opens `nano` to edit the include/exclude definitions for the backup.  
+    The filter definition syntax is described within the file itself.
+
+    ![DietPi-Backup filter option screenshot](assets/images/dietpi-backup_filter-option.jpg){: width="681" height="330" loading="lazy"}
+
+    The file containing the filter definitions is `/boot/dietpi/.dietpi-backup_inc_exc`.
+
+=== "Space check"
+
+    A space check on the target location prior to the backup process can be enabled/disabled. This might be an option if there is surely enough disk space available.  
+    Enabling the space check makes the backup a bit more safe, disabling it speeds it up.
+
+=== "Logging"
+
+    Logging information about the backup procedure is given within the files `.dietpi-backup_stats` and `.dietpi-backup.log` which are located in the backup target directory ("Location" option):
+
+    - `.dietpi-backup_stats` gives a list of completed operations with time and date
+    - `.dietpi-backup.log` gives a list of every processed file
+
+=== "Settings files"
+
+    Generally, the settings of the DietPi-Backup are changed via the `dietpi-backup` command menu entries.
+
+    The system stores these settings in the files `/boot/dietpi/.dietpi-backup_settings` and `/boot/dietpi/.dietpi-backup_inc_exc`, which are generated from `dietpi-backup` automatically. Therefore, the files do not need to be changed manually by the user.
+
+=== "Scripted run"
+
+    DietPi-Backup can be run from the command line or from scripts without user interaction by calling it via 
+    
+    ```sh
+    dietpi-backup 1
+    ```
+
+    A similar restore procedure is not recommended to avoid accidentally system overwrites. But to skip navigating through the menu, it can be done as well via
+
+    ```sh
+    dietpi-backup -1
+    ```
 
 !!! info "DietPi userdata may not be included"
 
@@ -676,22 +796,109 @@ dietpi-backup
 
     In the case that the `rsync` package is not installed, this is done automatically once you start a backup or restore.
 
-### DietPi file explorer
+!!! attention "Reduced system operation while DietPi-Backup runs"
 
-Lightweight file manager and explorer.  
-Run `dietpi-explorer`.
+    During the run of `dietpi-backup`, all services are stopped. This has to be taken into account e.g. if scheduling backups.
 
-![DietPi-Explorer screenshot](assets/images/dietpi-explorer.jpg){: width="646" height="355" loading="lazy"}
+    - For example, a webserver based application (e.g. Nextcloud or many of the media servers, like Plex, Navidrome, etc.) will not run, because the webserver based UI is stopped.
+    - Also, many of the according backend services are stopped as well as basic services like the Samba or NFS service.
+
+---
 
 ### DietPi sync
 
-DietPi-Sync allows you to duplicate a directory from one location (*Source Location*) to another (*Target Location*).  
-Run `dietpi-sync`.
+DietPi-Sync allows you to duplicate a directory (structure) from one location (*Source Location*) to another (*Target Location*). To start DietPi-Sync, use the following command:
+
+```sh
+dietpi-sync
+```
 
 ![DietPi-Sync screenshot](assets/images/dietpi-sync.jpg){: width="646" height="322" loading="lazy"}
 
-Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then, select a target location. The target location can be anything from a networked samba file server, or even an FTP server.  
-Each sync includes a leading dry run, after which you can check the expected result before deciding if you want to continue with the actual sync.
+Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then select a target location. The target location can be anything from a networked samba file server, or even an FTP server.
+
+In comparison to `DietPi-Backup` it is more a simple copy mechanism instead a system backup/restore functionality. `DietPi-Sync` shall impress with its simplicity.
+
+=== "Delete mode"
+
+    This setting gives these options:
+
+    - "Off": In this case all synchronized files are copied from the source to the target directory keeping all files previously existing in the target directory
+    - "On": In this case all files previously existing in the target directory which do not exist in the source directory will be deleted to achieve an exact copy of your source directory
+
+=== "Automatic daily sync"
+
+    `Dietpi-Sync` gives the option of an automatic daily sync operation (controlled via the Linux `cron` mechanism) by enabling the "Daily Sync" option.
+
+    **Daily sync execution time**
+
+    The automatic daily sync is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several sync clients syncing up to the same storage (data server): Shifting the synchronization starting time of these systems may reduce temporary overload of the data server by avoiding concurrent access to the storage.
+
+    The starting time is basically defined via the file `/etc/crontab` (which calls the sync function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](#dietpi-cron). It is executed by running the following command
+
+    ```sh
+    dietpi-cron
+    ```
+
+    Please keep in mind that all other daily `cron` based procedures are also started at this changed time.
+
+=== "Sync file selection (Filter)"
+
+    The definition which files are used for the synchronization procedure is defined via the file 
+    
+    ```
+    /boot/dietpi/.dietpi-sync_inc_exc
+    ``` 
+    
+    This file can be edited to set further include/exclude definitions for the synchronization. The filter definition syntax is described within the file itself.
+
+    The file structure definition is identical to the DietPi backup/restore file `/boot/dietpi/.dietpi-backup_inc_exc` where it is explained more in detail.
+
+=== "Logging"
+
+    Logging information about the synchronization procedure is given within the file  
+    
+    ```
+    .dietpi-sync.log
+    ```
+
+    which is written to the sync target directory. It gives a list of every processed file.
+
+    The execution status of a previous synchronization process is given in the "Last sync status" entry at the top of the `dietpi-sync` dialog.
+
+=== "Settings file"
+
+    Generally, the settings of the DietPi-Sync are changed via the `dietpi-sync` command menu entries.
+
+    The system stores these settings in the file `/boot/dietpi/.dietpi-sync_settings`, which is generated from `dietpi-sync` automatically. Therefore, the file do not need to be changed manually by the user.  
+    An example settings file is:
+
+    ```
+    FP_SOURCE='/mnt/source'
+    FP_TARGET='/mnt/target'
+    SYNC_DELETE_MODE=0
+    SYNC_CRONDAILY=0
+    ```
+
+=== "Scripted run"
+
+    DietPi-Sync can be run from the command line or from scripts without user interaction by calling it via 
+    
+    ```sh
+    dietpi-sync 1
+    ```
+
+=== "Dry run"
+
+    Each sync includes a leading dry run, after which you can check the expected result before deciding if you want to continue with the actual sync:
+
+    ![DietPi-Sync dry run screenshot](assets/images/dietpi-sync-dryrun.png){: width="500" height="213" loading="lazy"}
+
+!!! info "DietPi-Sync is purely based on `Rsync`"
+
+    In the case that the `rsync` package is not installed, this is done automatically once you start a synchronization process.
+
+---
 
 ## Misc tools
 
@@ -712,31 +919,52 @@ The following commands are non-interactive, but error-handled wrappers for `apt-
 - `G_AGUG` - `apt-get upgrade`
 - `G_AGDUG` - `apt-get dist-upgrade`
 
+---
+
 ### DietPi Banner
 
-Enables the configuration of the initial banner, displayed on logon.
-Run `dietpi-banner`.
+Enables the configuration of the initial banner, displayed on logon. To start DietPi-Banner, use the following command:
 
-![DietPi-Banner config menu](assets/images/dietpi-banner_config.jpg){: width="643" height="338" loading="lazy"}
+```sh
+dietpi-banner
+```
+
+![DietPi-Banner config menu](assets/images/dietpi-banner_config.jpg){: width="640" height="368" loading="lazy"}
 
 Using these settings you can configure the information displayed initially, choosing the details displayed initially. See below an example where 4 options are selected:
 
 ![DietPi-Banner print on login](assets/images/dietpi-banner.jpg){: width="636" height="359" loading="lazy"}
 
+---
+
 ### DietPi CPU info
 
-Displays CPU temperature, processor frequency, throttle level etc.  
-Run `cpu`.
+Displays CPU temperature, processor frequency, throttle level etc. via the command line command
+
+```sh
+cpu
+```
 
 ![DietPi-CPU_info screenshot](assets/images/dietpi-tools-cpuinfo.png){: width="741" height="299" loading="lazy"}
 
+---
+
 ### DietPi morse code
 
-It converts a text file into morse code.  
-Run `dietpi-morsecode`.
+It converts a text file into morse code. To start DietPi morse code, use the following command:
+
+```sh
+dietpi-morsecode
+```
+
+---
 
 ### DietPi bug report
 
-Run `dietpi-bugreport`.
+To start DietPi bug report, use the following command:
 
-![DietPi-Bugreport screenshot](assets/images/dietpi-bugreport.jpg){: width="646" height="352" loading="lazy"}
+```sh
+dietpi-bugreport
+```
+
+![DietPi-BugReport screenshot](assets/images/dietpi-bugreport.jpg){: width="646" height="352" loading="lazy"}

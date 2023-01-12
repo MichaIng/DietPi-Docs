@@ -1,5 +1,4 @@
 ---
-title: DietPi Supported Hardware
 description: DietPi Supported Hardware: Raspberry Pi 4/3/2/1/Zero, Odroid, PINE64, NanoPi, Native PC & Virtual Machines (VirtualBox, VMware, Hyper-V)
 ---
 
@@ -26,10 +25,6 @@ DietPi runs also on one of the first models **Raspberry Pi 1**, launched in 2012
 and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Zero 2 W**
 
 ![Raspberry Pi Zero 2 photo](assets/images/dietpi-raspberry-pi-zero-2.jpg){: width="500" height="333" loading="lazy"}
-
-**New Zero** quick intro:
-
-<iframe src="https://www.youtube-nocookie.com/embed/V2frBYX62LU?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
 
 <div class="md-typeset__table">
     <table>
@@ -158,6 +153,8 @@ The board is backwards compatible with many of the existing PINE64 peripherals, 
 
 The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means that PINE64 is committed to provide support for at least 5 years – until year 2023 and beyond.
 
+The PINE64 family also contains the newer members Quartz64 and SOQuartz compute module.
+
 <div class="md-typeset__table">
     <table>
         <thead>
@@ -201,6 +198,24 @@ The ROCKPro64 4 GiB board is designated as LTS (Long-term support) which means t
                 <td><a class="table" href=""><strong>ROCKPro64</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPro64-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Quartz64 Model A </strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Quartz64A-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Quartz64 Model B</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Quartz64B-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>SOQuartz Compute Module</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_SOQuartz-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -250,6 +265,18 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
                 <td><a class="table" href=""><strong>Radxa Zero</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZero-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>ROCK 3A</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK3A-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>ROCK 5B</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5B-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -312,13 +339,13 @@ Careful consideration went into the design and development of the Tinker Board t
     </table>
 </div>
 
-## NanoPi Series (FriendlyARM)
+## NanoPi Series (FriendlyELEC)
 
-**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2 x 1.8 GHz A72 cores and 4 x 1.4 GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
+**FriendlyELEC's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2 x 1.8 GHz A72 cores and 4 x 1.4 GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
 
-For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) website.
+For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) website.
 
-![FriendlyARM NanoPi K2 photo](assets/images/dietpi-nanopi-k2.jpg){: width="500" height="350" loading="lazy"}
+![FriendlyELEC NanoPi K2 photo](assets/images/dietpi-nanopi-k2.jpg){: width="500" height="350" loading="lazy"}
 
 **NanoPi K2** supports DVFS and it can smooth play high-definition video streams, and it is very well suited for applications such as advertisement machines, TV boxes, home entertainment appliances or multimedia devices.
 
@@ -418,7 +445,7 @@ For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) websi
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Bullseye.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -446,6 +473,18 @@ For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) websi
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>NanoPi R5S/R5C</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>NanoPi R6S</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>ZeroPi</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ZeroPi-ARMv7-Bullseye.7z">DietPi image</a>
@@ -463,21 +502,43 @@ The Native PC images are great for those occasions where SBC performance just is
 
 ### VMware
 
-The VMware virtual machine (e.g. VMware Player, VMware Fusion) is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server (Windows, Linux, macOS) and still get the same great DietPi features and experience.
+![VMware logo](assets/images/VMwareESXi_01.jpg){: width="200" height="45" loading="lazy"}
+
+The VMware virtual machine (e.g. [VMware Workstation Player](https://www.vmware.com/products/workstation-player.html/), [VMware Workstation Pro](https://www.vmware.com/content/vmware/vmware-published-sites/us/products/workstation-pro.html/), [VMware Fusion](https://www.vmware.com/products/fusion.html/)) is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server (Windows, Linux, macOS) and still get the same great DietPi features and experience.
+
+The [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html/), described as a "Bare Metal Hypervisor" aka [Type-1 hypervisor](https://en.wikipedia.org/wiki/Hypervisor), is part of e.g. the [VMware vSphere Hypervisor platform](https://www.vmware.com/products/vsphere-hypervisor.html/) ("appliance server"). It allows to run and manage multiple virtual machines on one x86_64 machine. That way it can be compared to the [Proxmox](#proxmox) appliance server.
 
 ### VirtualBox
 
-![Oracle VirtualBox logo](assets/images/vbox.jpg){: width="133" height="136" loading="lazy"}
+![Oracle VirtualBox logo](assets/images/vbox.jpg){: width="100" height="103" loading="lazy"}
 
 VirtualBox is a general-purpose full virtualiser for x86 hardware, targeted at server, desktop and embedded use.
 
 The VirtualBox virtual machine is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server and still get the same great DietPi features and experience.
 
-### Parallels Desktop
+### Proxmox
 
-![macOS Parallels Desktop](assets/images/Parallels3.png){: width="270" height="82" loading="lazy"}
+![Proxmox logo](assets/images/proxmox-logo.svg){: width="400" height="65" loading="lazy"}
 
-The Parallels Desktop virtual machine for macOS is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 macOS system (e.g. Mac mini 2011/2012/2014/2018) and still get the same great DietPi features and experience.
+[Proxmox](https://www.proxmox.com/) is a virtual machine and container platform, based on [QEMU](https://www.qemu.org/) and [KVM](https://www.linux-kvm.org/). It allows to run and manage multiple virtual machines and containers on a Linux OS via CLI and web interface, similar to how VMware's vSphere and ESXi works.
+
+### Parallels
+
+![Parallels Desktop](assets/images/Parallels3.png){: width="270" height="82" loading="lazy"}
+
+The [Parallels Desktop virtual machine](https://www.parallels.com/products/desktop/) is great for those occasions where SBC performance just isn't enough. Run one of these e.g. on any x86_64 macOS system (e.g. Mac mini 2011/2012/2014/2018) and still get the same great DietPi features and experience.
+
+### UTM
+
+![UTM](assets/images/UTM4.png){: width="80" height="80" loading="lazy"}
+
+The [UTM virtual machine](https://mac.getutm.app/) is great for those occasions where SBC performance just isn't enough. Run one of these on any macOS system (e.g. Mac mini 2011/2012/2014/2018 and M1 Apple Silicon) and still get the same great DietPi features and experience.
+
+![UTM](assets/images/UTM3.png){: width="270" height="221" loading="lazy"}
+
+!!! info "Emulation feature of UTM"
+    The emulation feature is an option of the virtualization technique to run x86 code on a M1 Mac system and vice versa an M1 Mac code on a x86 Mac system.  
+    This might be a good choice e.g. for testing purposes, but typically there will be a performance drawback using the emulation instead of running native x86 images on a x86 system resp. native `aarch64` images on an M1 system.
 
 ### Hyper-V
 
@@ -506,27 +567,45 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>VMware</strong></a></td>
+                <td><a class="table" href=""><strong>VMware Player / Fusion</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Bullseye.7z">DietPi appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Bullseye.7z">DietPi VMX appliance</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>VMware ESXi Hypervisor</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ESXi-x86_64-Bullseye.7z">DietPi OVA appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>VirtualBox</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Bullseye.7z">DietPi appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Bullseye.7z">DietPi OVA appliance</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Parallels Desktop (x86_64 macOS system)</strong></a></td>
+                <td><a class="table" href=""><strong>Proxmox</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi installer image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bullseye.7z">DietPi QCOW2 image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Parallels</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi PVM appliance</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>UTM</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bullseye.7z">DietPi UTM appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Hyper-V</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Hyper-V-x86_64-Bullseye.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Hyper-V-x86_64-Bullseye.7z">DietPi VHDX image</a>
                 </td>
             </tr>
         </tbody>
@@ -552,7 +631,7 @@ Don't worry, DietPi contains a script which can be used to turn an installed Deb
 
 ### Basic information
 
-The image generation is based on a shell script (**PREP_SYSTEM_FOR_DIETPI.sh**, located on [GitHub DietPi share](https://github.com/MichaIng/DietPi)):
+The image generation is based on a shell script [`dietpi-installer`](https://github.com/MichaIng/DietPi/blob/master/.build/images/dietpi-installer):
 
 - **The script will** convert any 'bloated' Debian/Raspbian installation into a lightweight DietPi system.  
 - **The script will NOT** support converting existing installed software (e.g. Nextcloud, Plex Media Server) over to the DietPi system.
@@ -590,32 +669,32 @@ The script has to be executed on the running target system which you want to con
 Execute the following shell command to download and execute the script:
 
 ```sh
-bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/PREP_SYSTEM_FOR_DIETPI.sh')"
+bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/.build/images/dietpi-installer')"
 ```
 
 In the following dialog you have to select the DietPi installer branch. Generally use `master` as long as you do not want to create a development image:
 
-![DietPi-PREP branch selection](assets/images/dietpi-prep-selectbranch.png){: width="550" height="266" loading="lazy"}
+![DietPi-Installer branch selection](assets/images/dietpi-prep-selectbranch.png){: width="550" height="266" loading="lazy"}
 
 In the following dialogues enter your name and afterwards the actual image base and the device (SBC or PC) the system is running on:
 
-![DietPi-PREP pre-image entry](assets/images/dietpi-prep-preimage.png){: width="550" height="218" loading="lazy"}
+![DietPi-Installer pre-image entry](assets/images/dietpi-prep-preimage.png){: width="550" height="218" loading="lazy"}
 
-![DietPi-PREP device selection](assets/images/dietpi-prep-deviceselection.png){: width="550" height="290" loading="lazy"}
+![DietPi-Installer device selection](assets/images/dietpi-prep-deviceselection.png){: width="550" height="290" loading="lazy"}
 
 Depending on whether you want to use the WiFi feature later on, you have to select the option to keep or purge the WiFi package. To keep the package could be the case if your hardware has an onboard WiFi or you add the WiFi e.g. via an USB WiFi adapter.
 
-![DietPi-PREP WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550" height="184" loading="lazy"}
+![DietPi-Installer WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550" height="184" loading="lazy"}
 
 The last selection is the target Debian version (the old **Buster**, current stable **Bullseye**, or next testing **Bookworm**).  
 After this, the script runs a couple of minutes, finally the following message occurs:
 
-![DietPi-PREP finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}
+![DietPi-Installer finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}
 
 After this you can restart your system (`reboot`), alternatively you can copy the SC card (via `dd`) to an image (`.img`) to duplicate your base installation.
 
-A further step can be to generate a compressed DietPi image via the `dietpi-imager` script. This script is located in the `.meta` subdirectory in the [GitHub DietPi share](https://github.com/MichaIng/DietPi) or can be executed via:
+A further step can be to generate a compressed DietPi image via the [`dietpi-imager`](https://github.com/MichaIng/DietPi/blob/master/.build/images/dietpi-imager) script:
 
 ```sh
-bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/.meta/dietpi-imager')"
+bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/.build/images/dietpi-imager')"
 ```

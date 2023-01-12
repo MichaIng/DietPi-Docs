@@ -1,4 +1,9 @@
-# Social / Search
+---
+title: Social and Publishing Software Options
+description: Description of DietPi software options related to social platforms and publishing servers
+---
+
+# Social & Search
 
 ## Overview
 
@@ -6,8 +11,8 @@
 - [**phpBB - Free flat-forum bulletin board software solution**](#phpbb)
 - [**Wordpress - Website Blog and Publishing platform**](#wordpress)
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](#single-file-php-gallery)
+<!-- markdownlint-disable-next-line MD051 -->
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
-- [**OpenBazaar - Decentralized peer to peer market server using Bitcoin**](#openbazaar)
 - [**Synapse - Decentralized communication with the Matrix protocol**](#synapse)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
@@ -163,11 +168,8 @@ Also Installs:
 
 ***
 
-Website: <https://sye.dk/sfpg>
-
-YouTube video tutorial: *DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/0by117lpq_o?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Website: <https://sye.dk/sfpg>  
+YouTube video tutorial: [DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)](https://www.youtube.com/watch?v=0by117lpq_o)
 
 ## Baïkal
 
@@ -196,60 +198,6 @@ Baïkal is a lightweight CalDAV + CardDAV server.
     - Username = `admin`
     - Password = What you set during first run setup above.
 
-## OpenBazaar
-
-OpenBazaar is a free decentralised peer to peer market server for all. No fees. Usage of Bitcoins.  
-Oldschool: Think Napster, but for buying and selling stuff using your Bitcoins.
-
-![OpenBazaar client screenshot](../assets/images/dietpi-software-social-openbazaar.png){: width="400" height="240" loading="lazy"}
-
-=== "OpenBazaar client setup"
-
-    The client will allow you to browse and trade within the OpenBazaar market network.
- 
-    1. Download the client from: <https://github.com/mobazha/openbazaar-desktop/releases>
-        - Expand "Assents" below the latest releases
-        - For Windows, download `OpenBazaar2Client-x.y.z-Setup-64.exe`
-    2. Start the OpenBazaar client and add your server:
-        - Click "New"
-        - Enter the IPv4 address of your DietPi device, the username and password you entered during the OpenBazaar server install
-        - Turn off SSL, unless you manually enabled it, including TLS certificate setup
-
-=== "Configuration"
-
-    - Config and data directory:  
-        `/mnt/dietpi_userdata/openbazaar`
-    - Main config file:  
-        `/mnt/dietpi_userdata/openbazaar/config`
-
-    For changes to take effect, the service needs to be restarted:
-
-    ```sh
-    systemctl restart openbazaar
-    ```
-
-=== "Service handling"
-
-    The DietPi OpenBazaar implementation creates a systemd service `openbazaar.service` to start and control the OpenBazaar server. The following commands can be used:
-
-    - Start: `systemctl start openbazaar`
-    - Stop: `systemctl stop openbazaar`
-    - Restart: `systemctl restart openbazaar`
-    - Print status: `systemctl status openbazaar`
-
-=== "View logs"
-
-    Logs are done to the system journal an can be viewed via:
-
-    ```sh
-    journalctl -u openbazaar
-    ```
-
-***
-
-Source code: <https://github.com/mobazha/openbazaar-go>  
-License: [MIT](https://github.com/mobazha/openbazaar-go/blob/master/LICENSE)
-
 ## Synapse
 
 Synapse is a server, written in Python, for communication using the Matrix protocol.
@@ -260,7 +208,8 @@ Synapse is a server, written in Python, for communication using the Matrix proto
 
 === "Federation"
 
-    Synapse is by default set up to be a private server, with no connection to any other servers. To connect to other servers (federate), see https://github.com/matrix-org/synapse/blob/develop/docs/federate.md.  Note that frp does not currently work with Synapse.
+    Synapse is by default set up to be a private server, with no connection to any other servers. To connect to other servers (federate), see <https://github.com/matrix-org/synapse/blob/develop/docs/federate.md>.  
+    Note that [frp](../advanced_networking/#frp) does not currently work with Synapse.
 
 === "Configuration"
 

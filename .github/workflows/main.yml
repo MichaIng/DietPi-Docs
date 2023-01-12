@@ -1,18 +1,26 @@
 name: Build test and quality checks
-on: push
+on: [pull_request, push]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  Actions:
-    # https://github.com/actions/virtual-environments
-    runs-on: ubuntu-latest
+  main:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-22.04
     steps:
+    - name: Setup tmpfs
+      run: sudo mount -t tmpfs -o "noatime,lazytime,uid=$UID" tmpfs "$GITHUB_WORKSPACE"
     - name: Clone DietPi-Docs repository
       id: clone
-      # https://github.com/actions/checkout/releases
-      uses: actions/checkout@v2
-    - name: Install latest Node.js for markdownlint-cli2
-      run: |
-        sudo npm i -g n
-        sudo n latest
+      # https://github.com/actions/checkout/tags
+      uses: actions/checkout@v3
+    - name: Setup Node.js for markdownlint-cli2
+      # https://github.com/actions/setup-node/tags
+      uses: actions/setup-node@v3
+      with:
+        node-version: '*'
+        check-latest: true
     - name: Install markdownlint-cli2
       run: sudo npm i -g markdownlint-cli2
     - name: Run markdownlint-cli2 to check Markdown files
@@ -20,11 +28,11 @@ jobs:
     - name: Setup Python for MkDocs and PySpelling
       id: python
       if: always() && steps.clone.outcome == 'success'
-      # https://github.com/actions/setup-python/releases
-      uses: actions/setup-python@v2
+      # https://github.com/actions/setup-python/tags
+      uses: actions/setup-python@v4
       with:
-        # https://github.com/actions/python-versions/releases
-        python-version: '3.9.10'
+        # Match version on dietpi.com server
+        python-version: '3.10.9'
     - name: Install MkDocs
       id: mkdocs
       if: always() && steps.python.outcome == 'success'
@@ -54,4 +62,4 @@ jobs:
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
-      run: ./lychee -En --require-https --exclude '(^https://pydio.com|^https://twitter.com|wiringpi.com|fonts.gstatic.com|^admin@koel.dev$|^root@192.168.1.20$|bridges.torproject.org|www.spigotmc.org|www.audiophonics.fr|help.realvnc.com)' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+      run: ./lychee -En --require-https --cache --exclude '^(root@192.168.1.20$|http://wiringpi.com/$|https://((adguard|nginx|shiori|nextcloud).box/$|twitter.com/DietPi_$|www.linux-kvm.org/$|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details))' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'

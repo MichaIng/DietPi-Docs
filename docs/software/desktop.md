@@ -1,3 +1,8 @@
+---
+title: Graphical Desktop Environments and Utilities
+description: Description of DietPi software options related to graphical desktop environments and additional desktop utilities
+---
+
 # Desktop environments & utilities
 
 ## Overview
@@ -58,8 +63,7 @@ LXDE is highly optimised and ultra lightweight desktop. It works well with compu
 
 ***
 
-Website: <https://www.lxde.org>  
-Official documentation: <https://wiki.lxde.org/en/Main_Page>
+Official website: <https://www.lxde.org/>
 
 ## LXQt
 
@@ -87,7 +91,8 @@ Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](h
 
 ***
 
-Official documentation: <https://wiki.debian.org/LXQt>  
+Official website: <https://lxqt-project.org/>
+Source code: <https://github.com/lxqt/lxqt>
 
 ## MATE
 
@@ -177,7 +182,7 @@ Not all devices support GPU acceleration with Chromium.
 
 #### Where can I check the status of GPU acceleration?
 
-Once Chromium is running, simply go to the following address: <chrome://gpu>
+Once Chromium is running, simply go to the following address: `chrome://gpu`
 
 #### Enable support for Widevine DRM protected content on RPi
 

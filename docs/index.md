@@ -29,9 +29,9 @@ Setting up a single board computer (SBC) or even a computer, for both regular or
 
 If you are **new to DietPi**, the [_Install_](install/) provides a tutorial for everything you need to get DietPi running.
 
-If you **need help**, and have read through [_Getting Started_](getting_started/), check out [_Troubleshooting_](https://dietpi.com/phpbb/viewforum.php?f=11).
+If you **need help**, and have read through [_Getting Started_](getting_started/), check out [_Troubleshooting_](https://dietpi.com/forum/c/troubleshooting/10).
 
-For more details visit the [_DietPi Community Forum_](https://dietpi.com/phpbb/viewforum.php?f=5).
+For more details visit the [_DietPi Community Forum_](https://dietpi.com/forum/).
 
 ## Easy to install popular software
 
@@ -56,7 +56,7 @@ Check [_Supported SBCs_](hardware/) page for recently supported list.
 
 ## Community
 
-Have some feedback, questions, suggestions, or just fancy a chat ? Visit our [community](https://dietpi.com/phpbb/)!
+Have some feedback, questions, suggestions, or just fancy a chat? Visit our [community](https://dietpi.com/forum/)!
 
 ![DietPi Forum](assets/images/dietpi-forum.jpg){: width="1024" height="530" loading="lazy"}
 

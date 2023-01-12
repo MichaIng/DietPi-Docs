@@ -1,3 +1,8 @@
+---
+title: System Statistics and Management Options
+description: Description of DietPi software options related to system statistics, monitoring and management
+---
+
 # System Stats & Management
 
 ## Overview
@@ -10,6 +15,9 @@
 - [**Netdata - Web interface system stats**](#netdata)
 - [**Webmin - Remote system management with web interface**](#webmin)
 - [**K3s - Lightweight Kubernetes**](#k3s)
+- [**MicroK8s - Low-ops, minimal production Kubernetes**](#microk8s)
+- [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](#prometheus-node-exporter)
+- [**Homer - A modern homepage for your services**](#homer)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -91,7 +99,7 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     ```
     /opt/dietpi-dashboard/config.toml
     ```    
-    
+
     When doing changes, you need to restart the service afterwards:
 
     ```sh
@@ -130,10 +138,11 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 === "Update"
 
-    You can easily update DietPi-Dashboard by reinstalling it:
+    You can easily update DietPi-Dashboard by reinstalling it and restarting the service for the change to take effect:
 
     ```sh
     dietpi-software reinstall 200
+    systemctl restart dietpi-dashboard
     ```
 
 ***
@@ -171,9 +180,7 @@ The following screenshots shall give an overview over the displaying features of
 
 ***
 
-YouTube video tutorial: *DietPi CloudShell (RPi / Odroid XU4)*
-
-<iframe src="https://www.youtube-nocookie.com/embed/O-W8Z33as_U?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtube.com/watch?v=O-W8Z33as_U)
 
 ### Configuration
 
@@ -417,4 +424,334 @@ Official documentation: <https://rancher.com/docs/k3s/latest/en/>
 Source code: <https://github.com/k3s-io/k3s>  
 License: [Apache 2.0](https://github.com/k3s-io/k3s/blob/master/LICENSE)
 
+## MicroK8s
+
+High availability - Low-ops, minimal production Kubernetes, for developers, cloud, clusters, workstations, Edge and IoT.
+
+![MicroK8s logo](../assets/images/microk8s.png){: width="300" height="150" loading="lazy"}
+
+=== "Connecting to your cluster"
+
+    To create a cluster out of two or more already-running MicroK8s instances, use the `microk8s` add-node command:
+
+    ```sh
+    microk8s add-node
+    ```
+
+    From the node you wish to join to this cluster, run the following:
+
+    ```sh
+    microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05
+    ```
+
+    Use the `--worker` flag to join a node as a worker not running the control plane, e.g.:
+
+    ```sh
+    microk8s join 192.168.1.230:25000/92b2db237428470dc4fcfc4ebbd9dc81/2c0cb3284b05 --worker
+    ```
+
+    For most commands, you can use `microk8s` in front like below.
+
+    ```sh
+    microk8s kubectl get nodes
+    microk8s kubectl get napspaces
+    ```
+
+    MicroK8s does provide a few "addons", which can be seen below with the enable and disable command.
+
+    ```sh
+    microk8s status # to view the addons
+    microk8s enable dns # to enable addons
+    microk8s enable dashboard # to enable Kubernetes dashboard
+    ```
+
+=== "View logs"
+
+    Per-node log files can be in:
+
+    ```
+    /var/log/pods
+    ```
+
+***
+
+Official website: <https://microk8s.io/>  
+Official documentation: <https://microk8s.io/docs>  
+Addons documentation: <https://microk8s.io/docs/addons>  
+Source code: <https://github.com/ubuntu/microk8s>  
+License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
+
+## Prometheus Node Exporter
+
+Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by an external [Prometheus server](https://prometheus.io/), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](https://grafana.com/), the final piece of a very powerful monitoring stack.
+
+![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png){: width="800" height="395" loading="lazy"}
+
+On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](https://github.com/fahlke/raspberrypi_exporter), which will add RPi-specific metrics such as voltages, CPU frequencies and temperatures.
+
+=== "Metrics access"
+
+    The metrics endpoint of *Prometheus Node Exporter* is exposed at TCP port **9100** and can be accessed via:
+
+    - URL = `http://<your.IP>:9100/metrics`
+
+=== "Configuration"
+
+    ???+ important "Prometheus server not included"
+        Note that this software component **does not** install or configure a Prometheus server, it must be installed separately.
+
+    Your Prometheus server needs to be configured in order to scrape Node Exporter metrics. Full configuration of the Prometheus server is outside the scope of this documentation, but here is a sample `prometheus.yml` file for reference:
+
+    ```yaml
+    global:
+      scrape_interval: 15s
+
+    scrape_configs:
+    - job_name: your.hostname
+      static_configs:
+      - targets: ['your.IP:9100']
+    ```
+
+=== "Grafana dashboard"
+
+    ???+ important "Grafana not included"
+        Note that this software component **does not** install or configure Grafana, it must be installed separately.
+
+    There are [many pre-made templates](https://grafana.com/grafana/dashboards/?search=node+exporter) of Grafana dashboards for visualizing data collected from a Prometheus Node Exporter. A good starting point is [Node Exporter Full](https://grafana.com/grafana/dashboards/1860). You can import it directly into your Grafana instance by using ID **1860**.
+
+=== "Service control"
+
+    Since Prometheus Node Exporter runs as a systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status node_exporter
+    ```
+
+    ```sh
+    systemctl start node_exporter
+    ```
+
+    ```sh
+    systemctl stop node_exporter
+    ```
+
+    ```sh
+    systemctl restart node_exporter
+    ```
+
+=== "Logs"
+
+    Prometheus Node Exporter runs as a systemd service, hence logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u node_exporter
+    ```
+
+=== "Update"
+
+    Prometheus Node Exporter can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 99
+    ```
+
+***
+
+Official website: <https://github.com/prometheus/node_exporter>  
+Documentation: <https://prometheus.io/docs/guides/node-exporter/>  
+Prometheus RPi Exporter: <https://github.com/fahlke/raspberrypi_exporter>  
+License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE), [MIT](https://github.com/fahlke/raspberrypi_exporter/blob/master/LICENSE) (for RPi Exporter)
+
 [Return to the **Optimised Software list**](../../software/)
+
+## Homer
+
+Homer is a modern and lightweight dashboard & homepage for your services
+
+![Homer preview screenshot](../assets/images/homer-preview.png){: width="400" height="218" loading="lazy"}
+
+=== "Access to Homer"
+
+    The *Homer* dashboard can be accessed via:
+
+    - URL: `http://<your.IP>/homer`
+    
+    You may bookmark this and save it as your browser's home page, or alternatively look into tools like **Nginx Proxy Manager** and a DNS server such as **AdGuard Home** to give it a nice internal domain name such as `homer.box`.
+
+=== "Configuration"
+
+    To configure entries and icons for Homer, you can edit it's config file `/var/www/homer/assets/config.yml`.
+    Example contents:
+
+    ```yaml
+    services:
+      - name: "Selfhosted"
+        icon: "fas fa-cloud"
+        items:
+          - name: "Adguard Home"
+            logo: "assets/icons2/adguard.png"
+            subtitle: "A blackhole for the internet"
+            tag: "Selfhosted"
+            url: "https://adguard.box"
+            target: "_blank"
+          - name: "Nginx"
+            logo: "assets/icons2/nginx.png"
+            subtitle: "Reverse proxy - load balancer"
+            tag: "Selfhosted"
+            url: "https://nginx.box"
+            target: "_blank"
+          - name: "Shiori"
+            logo: "assets/icons2/shiori.png"
+            subtitle: "Web archiving + Read later"
+            tag: "Selfhosted"
+            url: "https://shiori.box"
+            target: "_blank"
+          - name: "Nextcloud"
+            logo: "assets/icons2/nextcloud.png"
+            subtitle: "A google suite alternative"
+            tag: "Selfhosted"
+            url: "https://nextcloud.box"
+            target: "_blank"
+    ```
+ 
+    In the example above, a column titled `Selfhosted` is being made which contains 4 entries. In the same directory as the `config.yml`, an `icons2` folder exists, which contains icon images.
+
+=== "Update"
+
+    To update Homer simply re-run the installer by executing
+
+    ```sh
+    dietpi-software reinstall 205
+    ```
+
+    Remark: The `dietpi-software` script update procedure preserves the file `config.yml` automatically, there is no necessity for the user to do a restore manually.
+
+    If other files in `/var/www/homer` were previously changed by the user, they need to be copied in place (from the backup location `/mnt/dietpi_userdata/homer_backup`). As an example for a changed file `manifest.json` this could be done via:
+
+    ```sh
+    cd /mnt/dietpi_userdata/homer_backup
+    mv manifest.json /var/www/homer/assets
+    ```
+
+=== "Theming - Dracula"
+
+    To apply the [Dracula theme](https://draculatheme.com/static/img/screenshots/homer.png) to Homer execute these steps:
+
+    1. Get theme:
+
+        ```sh
+        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/custom.css' -o /var/www/homer/assets/custom.css
+        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/dracula-background.png' -o /var/www/homer/assets/dracula-background.png
+        ```
+
+    1. Edit your `config.yml` with:
+
+        ```sh
+        nano /var/www/homer/assets/config.yml
+        ```
+
+    1. Add the following lines:
+
+        ```yaml
+        # Will load Dracula theme
+        stylesheet:
+        - "assets/custom.css"
+        ```
+
+=== "Theming - macOS"
+
+    To apply the [macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png) to Homer execute these steps:
+
+    1. Get theme:
+
+        ```sh
+        cd /tmp
+        curl -fLO 'https://github.com/walkxcode/homer-theme/archive/main.tar.gz'
+        tar xf main.tar.gz
+        rm main.tar.gz
+        cp Homer-Theme-main/custom.css /var/www/homer/assets/custom.css
+        cp Homer-Theme-main/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
+        cp -R Homer-Theme-main/fonts /var/www/homer/assets/
+        rm -R Homer-Theme-main
+        ```
+
+    1. Edit your `config.yml` with:
+
+        ```sh
+        nano /var/www/homer/assets/config.yml
+        ```
+
+    1. Add the following lines (make sure to remove content for colors, theme, and columns if they previously existed):
+
+        ```yaml
+        stylesheet:
+        - "assets/custom.css"
+
+        columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 3, 4, 6, 12)
+        theme: default
+        colors:
+        light:
+            highlight-primary: "#fff5f2"
+            highlight-secondary: "#fff5f2"
+            highlight-hover: "#bebebe"
+            background: "#12152B"
+            card-background: "rgba(255, 245, 242, 0.8)"
+            text: "#ffffff"
+            text-header: "#fafafa"
+            text-title: "#000000"
+            text-subtitle: "#111111"
+            card-shadow: rgba(0, 0, 0, 0.5)
+            link: "#3273dc"
+            link-hover: "#2e4053"
+            background-image: "../assets/wallpaper.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
+        dark:
+            highlight-primary: "#181C3A"
+            highlight-secondary: "#181C3A"
+            highlight-hover: "#1F2347"
+            background: "#12152B"
+            card-background: "rgba(24, 28, 58, 0.8)"
+            text: "#eaeaea"
+            text-header: "#7C71DD"
+            text-title: "#fafafa"
+            text-subtitle: "#8B8D9C"
+            card-shadow: rgba(0, 0, 0, 0.5)
+            link: "#c1c1c1"
+            link-hover: "#fafafa"
+            background-image: "../assets/wallpaper.jpeg"
+        ```
+
+=== "Theming - Catppuccin"
+
+    To apply the [Catppuccin theme](https://github.com/mrpbennett/catppucin-homer/blob/main/assets/images/examples/preview.png?raw=true) to Homer execute these steps:
+
+    1. Get theme:
+
+        ```sh
+        apt install git
+        git clone https://github.com/mrpbennett/catppucin-homer
+        ```
+
+    1. Choose one of the `css` files, they all have varying colour schemes, and copy it to Homer, for example the `catppuccin-macchiato` style sheet:
+
+        ```sh
+        cp catppuccin-homer/flavours/catppuccin-macchiato.css /var/www/homer/assets
+        ```
+
+    1. Edit the `config.yml` file with:
+    
+        ```sh
+        nano /var/www/homer/assets/config.yml
+        ``` 
+        
+    1. Add the following lines (change `macchiato` to the wanted theme): 
+
+        ```yaml
+        # Will load catppuccin theme.
+        stylesheet:
+        - "assets/catppuccin-macchiato.css"
+        ```
+
+***
+
+Official website: <https://github.com/bastienwirtz/homer>  
+Official demo: <https://homer-demo.netlify.app/>

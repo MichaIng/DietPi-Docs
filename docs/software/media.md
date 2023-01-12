@@ -1,3 +1,8 @@
+---
+title: Media Systems Software Options
+description: Description of DietPi software options related to media systems like media (streaming) servers and players
+---
+
 # Media Systems
 
 ## Overview
@@ -7,7 +12,8 @@
 - [**myMPD - Lightweight web Interface audio player for MPD**](#mympd)
 - [**O!MPD - Feature-rich web Interface audio player for MPD**](#ompd)
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava)
-- [**Mopidy - Web Interface Music /Radio Player**](#mopidy)
+- [**Mopidy - Web Interface Music /Radio Player for MPD**](#mopidy)
+<!-- markdownlint-disable-next-line MD051 -->
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](#airsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](#squeezelite)
@@ -34,6 +40,7 @@
 - [**Beets - Music organizer and manager**](#beets)
 - [**Snapcast Server - Multi room audio server**](#snapcast-server)
 - [**Snapcast Client - Multi room audio client**](#snapcast-client)
+- [**Navidrome - Web interface media streaming server**](#navidrome)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -55,7 +62,7 @@
 
 The only media centre/player you'll ever need.
 
-![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg){: width="400" height="225" loading="lazy"}
+![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg){: width="500" height="280" loading="lazy"}
 
 If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autostart`:
 
@@ -89,6 +96,23 @@ Also installs:
 
     Simply select the `Update DB` button from the settings menu in ympd.
 
+=== "Configuration"
+
+    Additional to the ympd configuration via the web interface the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "DietPi-JustBoom control panel"
 
     - Tweak audio options on the fly with the panel.
@@ -104,24 +128,13 @@ Also installs:
 
 - MPD (music player daemon)
 
-![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.gif){: width="400" height="318" loading="lazy"}
+![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.png){: width="500" height="287" loading="lazy"}
 
 === "Access to the web interface"
 
     The web interface is accessible via port **1333**:
 
-    - URL: `http://<your.IP>:1333`
-
-=== "Installation notes"
-
-    We have disabled SSL and its redirect by default with the DietPi install. This is to prevent redirects to the hostname.  
-    To re-enable the SSL connection and redirect option:
-
-    - Edit `/etc/mympd.conf`
-    - Replace `ssl = false` with `ssl = true`
-    - Save changes and exit
-    - Restart services with `systemctl restart mympd`
-    - Use the same URL address above, it will redirect to HTTPS during connection
+    - URL: `https://<your.IP>:1333`
 
 === "Transfer music to DietPi"
 
@@ -141,6 +154,80 @@ Also installs:
 
         ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
 
+=== "Service control"
+
+    Since myMPD runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status mympd
+    ```
+
+    ```sh
+    systemctl start mympd
+    ```
+
+    ```sh
+    systemctl stop mympd
+    ```
+
+    ```sh
+    systemctl restart mympd
+    ```
+
+=== "Configuration"
+
+    myMPD can be configured via individual config files, one for each setting within the config directory:
+
+    ```
+    /var/lib/mympd/config/
+    ```
+
+    Details about available settings can be found in the official docs: <https://jcorporation.github.io/myMPD/configuration/#configuration-files>
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mympd
+    ```
+
+    Additional to the myMPD configuration via the configuration files the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u mympd
+    ```
+
+=== "Update"
+
+    As myMPD is installed via APT, it can be update with the following commands:
+
+    ```sh
+    apt update
+    apt install mympd
+    ```
+
+***
+
+Official documentation: <https://jcorporation.github.io/myMPD>  
+Source code: <https://github.com/jcorporation/myMPD>  
+License: [GPLv3](https://github.com/jcorporation/myMPD/blob/master/LICENSE.md)
+
 ## O!MPD
 
 A feature-rich web interface audio player for MPD. Includes song/album scraping, ideal for music catalog browsing.
@@ -150,7 +237,7 @@ Also installs:
 - MPD (music player daemon)
 - Web server
 
-![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="400" height="199" loading="lazy"}
+![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="500" height="347" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -165,10 +252,28 @@ Also installs:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
+=== "Configuration"
+
+    Additional to the O!MPD configuration via the web interface the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "Update/scan library"
 
     Click the `settings` button (cog, top right).  
-    Click `update`.
+    Click `update`.  
+    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="500" height="190" loading="lazy"}
 
 ## CAVA
 
@@ -198,7 +303,7 @@ Also installs:
 
 Mopidy is a Python based music player web based user interface for MPD.
 
-![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="400" height="198" loading="lazy"}
+![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="500" height="230" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -221,6 +326,23 @@ Mopidy is a Python based music player web based user interface for MPD.
     mopidyctl local scan
     ```
 
+=== "Configuration"
+
+    Additional to the Mopidy configuration (extensions configuration) via the web interface the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "Adding Mopidy extensions"
 
     Mopidy is highly customisable and supports various extensions from alternative web clients to backend extensions. See [*Extensions*](https://mopidy.com/ext/) for a list.
@@ -237,6 +359,12 @@ Mopidy is a Python based music player web based user interface for MPD.
     pip2 install --no-cache-dir -U Mopidy-Jellyfin
     ```
 
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mopidy
+    ```
+
 === "Support of codecs"
 
     Enable support for vast number of codecs like .m4a. Execute the following installation procedure:
@@ -245,7 +373,7 @@ Mopidy is a Python based music player web based user interface for MPD.
     apt-get install -y gstreamer1.0-plugins-bad
     ```
 
-    Many thanks to Roth for [this hint](https://dietpi.com/phpbb/viewtopic.php?t=785).
+    Many thanks to Roth for [this hint](https://dietpi.com/forum/t/add-mopidy-to-software-options-advanced-alsa-configs/646).
 
 ## Airsonic-Advanced {: #airsonic }
 
@@ -281,10 +409,6 @@ Feature rich media streaming server with a web interface, coded in Java.
 
     !["Credentials" settings page](../assets/images/airsonic_setup_3.png){: width="1440" height="900" loading="lazy"}
 
-    Finally, due to a [current bug with the default web player](https://github.com/airsonic-advanced/airsonic-advanced/issues/646), we need switch to the **Players** tab, first cloning the default player, then recreating it. Finally we can hit **Refresh** at the left side panel to have media files added to the list, which enables us to play our music through the browser:
-
-    !["Players" settings page](../assets/images/airsonic_setup_4.png){: width="1440" height="900" loading="lazy"}
-
 === "Setup details"
 
     The install, config and data directory is located at:
@@ -295,7 +419,7 @@ Feature rich media streaming server with a web interface, coded in Java.
 
 === "Service control"
 
-    Since Airsonic-Advanced runs as systems service, it can be controlled with the following commands:
+    Since Airsonic-Advanced runs as systemd service, it can be controlled with the following commands:
 
     ```sh
     systemctl status airsonic
@@ -336,12 +460,12 @@ License: [GPLv3](https://github.com/airsonic-advanced/airsonic-advanced/blob/mas
 
 ## Logitech Media Server
 
-Logitech Media Server (aka LMS, Squeezebox Server) is the server software that enables web interface control of:
+Logitech Media Server (aka. LMS, fka. SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3) is the server software that enables web interface control of:
 
-- Software audio players: Squeezelite
+- Software audio players: [Squeezelite](#squeezelite)
 - Hardware audio players from Logitech: Squeezebox, SlimDevices
 
-Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting Squeezelite for installation in `dietpi-software`.
+Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting [Squeezelite](#squeezelite) for installation in `dietpi-software`.
 
 ![Logitech Media Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
 
@@ -358,66 +482,86 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
-=== "Change Squeezelite command line options"
+=== "View logs"
 
-    - Run `dietpi-services`
-    - Select `squeezelite`
-    - Select `Edit`
-    - Unset and re-set the `ExecStart` entry:
+    Logs can be viewed with the following command:
 
-      ```systemd
-      ExecStart=
-      ExecStart=/usr/bin/squeezelite [<your custom arguments>]
-      ```
+    ```sh
+    journalctl -u logitechmediaserver
+    ```
 
-      The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
+    Additionally, log files can be found in:
 
-    - Save changes with ++ctrl+o++ and exit `dietpi-services`
-    - Restart the service: `systemctl restart squeezelite`
+    ```
+    /var/log/squeezeboxserver
+    ```
 
 === "Update"
 
-    To update Logitech Media Server to the current version, execute
+    Logitech Media Server can be updated to the current version with the following command:
 
     ```sh
     dietpi-software reinstall 35
     ```
 
+***
+
+Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>  
+Source code: <https://github.com/Logitech/slimserver>
+
 ## Squeezelite
 
-Squeezelite is the audio player for the Logitech Media Server.
+Squeezelite is a software audio player/client for the [Logitech Media Server](#logitech-media-server).
 
-![Logitech Media Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
+=== "Change command-line options"
 
-=== "Access to the web interface"
+    - Edit `/etc/default/squeezelite`
+    - Restart the service:
 
-    The web interface is accessible via port **9000**:
+        ```sh
+        systemctl restart squeezelite
+        ```
 
-    - URL: `http://<your.IP>:9000`
+    !!! hint "Installs on DietPi prior to v8.10"
 
-=== "Transfer music to DietPi"
+        On earlier Squeezelite installs, this config file didn't exist yet. If you applied command-line options via `dietpi-services`, you can migrate them to the new config file:
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Default music directory:
+        - Assure Squeezelite has been updated to latest version:
 
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+        ```sh
+        dietpi-software reinstall 36
+        ```
 
-=== "Change Squeezelite command line options"
+        - Migrate options from `/etc/systemd/system/squeezelite.service.d/dietpi-services_edit.conf` to `/etc/default/squeezelite`.
+        - Remove obsolete config and restart service:
 
-    - Run `dietpi-services`
-    - Select `squeezelite`
-    - Select `Edit`
-    - Unset and re-set the `ExecStart` entry:
+        ```sh
+        rm /etc/systemd/system/squeezelite.service.d/dietpi-services_edit.conf
+        rmdir --ignore-fail-on-non-empty /etc/systemd/system/squeezelite.service.d
+        systemctl daemon-reload
+        systemctl restart squeezelite
+        ```
 
-      ```systemd
-      ExecStart=
-      ExecStart=/usr/bin/squeezelite [<your custom arguments>]
-      ```
+=== "View logs"
 
-      The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
+    Logs can be viewed with the following command:
 
-    - Save changes with ++ctrl+o++ and exit `dietpi-services`
-    - Restart the service: `systemctl restart squeezelite`
+    ```sh
+    journalctl -u squeezelite
+    ```
+
+=== "Update"
+
+    Squeezelite can be updated to the current version with the following command:
+
+    ```sh
+    dietpi-software reinstall 36
+    ```
+
+***
+
+Wikipedia: <https://en.wikipedia.org/wiki/Squeezelite>  
+Source code: <https://github.com/ralph-irving/squeezelite>
 
 ## Shairport Sync
 
@@ -426,26 +570,37 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
 
 ![Shairport Sync connection scheme](../assets/images/dietpi-software-media-shairportsync.png){: width="400" height="233" loading="lazy"}
 
+=== "Configuration"
+
+    You can configure Shairport Sync with its config file: `/usr/local/etc/shairport-sync.conf`  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart shairport-sync
+    ```
+
 === "AirPlay device name"
 
-    When searching for an Airplay device, execute `shairport-sync` on DietPi.
+    When searching for an AirPlay device, execute `shairport-sync` on DietPi.
 
-=== "Stream from Android and iPad/iPhone"
+=== "Stream from Android and iOS"
 
-    There are many AirPlay players available for Android (e.g. [AirPlay For Android](https://play.google.com/store/apps/details?id=com.screen.mirroring.airplay.streamtotv&hl=de)) and iPad/iPhone (e.g. [AirPlay](https://support.apple.com/en-gb/HT204289)).  
+    There are many AirPlay players available for Android and iOS, e.g. [AirPlay For Android & TV](https://play.google.com/store/apps/details?id=com.screen.mirroring.airplay.streamtotv) and [AirPlay on iOS](https://support.apple.com/en-gb/HT204289).  
     Download and use the player of your choice.
 
-=== "Stream from a Windows/Mac PC"
+=== "Stream from Windows and macOS"
 
-    Airfoil is an application that will let you stream audio playback directly to any Shairport Sync device. Press play on your favourite music player (e.g.: Winamp/Spotify) and click the speaker next to the DietPi device.
+    [Airfoil](https://www.rogueamoeba.com/airfoil/mac/) is an application that will let you stream audio playback directly to any Shairport Sync device. Press play on your favourite music player (e.g.: Winamp/Spotify) and click the speaker next to the DietPi device.  
+    By using Airfoil, you can master the music in real time using the CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.
 
-=== "Audiophiles - Master music in real time"
+    !!! hint "Airfoil for Windows has been retired"
 
-    By using a PC + [Airfoil](https://www.rogueamoeba.com/airfoil/), you can master the music in real time using the PCs CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.
+        From End of 2019 on, sadly Airfoil isn't developed and supported anymore for Windows: <https://www.rogueamoeba.com/airfoil/windows/>  
+        There is however an official legacy download available: <https://www.rogueamoeba.com/legacy/#retired>
 
 === "Multiple Shairport devices / Change Shairport Sync name"
 
-    If you are planning to use multiple Shairport devices on the same network, please make sure the hostname of each device is unique. The hostname will also effect the `shairport-sync` name.  
+    If you are planning to use multiple Shairport devices on the same network, please make sure the hostname of each device is unique. The hostname will also effect the `shairport-sync` name, if you do not actively set the `name` setting in the `general` block of the config file.  
     This can be completed in `dietpi-config` \> `Security Options` \> `Change Hostname`.
 
 === "Soxr interpolation"
@@ -555,6 +710,7 @@ Also Installs:
     ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
 
     !!! note "Access permissions on local directories"
+
         If Ampache fails to add a directory, assure it has read permissions, e.g. by adding global read permissions:
 
         ```sh
@@ -562,6 +718,7 @@ Also Installs:
         ```
 
     !!! note "Access permissions on remote mounts (e.g. NFS, Samba)"
+
         In case you want to access a remote mount, also read permissions for Ampache need to be assured.
 
         - For NFS, you can grant global read permissions like you would do with a local directory, e.g. via:
@@ -677,9 +834,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
 ***
 
-YouTube video tutorial: *DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/zEcNNLCFngI?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=zEcNNLCFngI)
 
 ## Plex Media Server
 
@@ -718,11 +873,8 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 ***
 
-Tutorial: [Setup Guide for Plex on Raspberry Pi](https://blog.barnettjones.com/2020/11/26/dietpi-plex-setup/)
-
-YouTube video tutorial (German language): `Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)`.
-
-<iframe src="https://www.youtube-nocookie.com/embed/EElrNjXc3aA?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Tutorial: [Setup Guide for Plex on Raspberry Pi](https://blog.barnettjones.com/2020/11/26/dietpi-plex-setup/)  
+YouTube video tutorial (German language): [Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)](https://www.youtube.com/watch?v=EElrNjXc3aA){:class="nospellcheck"}
 
 ## Tautulli
 
@@ -735,12 +887,33 @@ A Python based monitoring and tracking tool for Plex Media Server.
     The web interface is accessible via port **8181**:
 
     - URL: `http://<your.IP>:8181`
+    - After first run setup, select "SIGN IN WITH TAUTULLI" and enter the username and password you chose before. On our own tests, authentication via `plex.tv` account did not work, it may however depend on the subscription.
 
-=== "Access to the log files"
+=== "First run setup"
+
+    When accessing to the web interface for the first time, go through the following steps to setup Tautulli:
+
+    1. Click "Next"
+    2. Enter a username and password for future web interface logins and click "Next".
+    3. Click "Sign In with Plex" and log in with your `plex.tv` account in the new window, then click "Next".
+    4. Enter the IP address or hostname of your Plex Media Server, use `127.0.0.1` if it runs on the same machine, then click "Next".
+    5. Choose the activity logging ignore interval and click "Next".
+    6. Click "Next" and "Finish".
+    7. When logging in to the Tautulli web interface, first select "SIGN IN WITH TAUTULLI" and enter the username and password you chose before. On our own tests, authentication via `plex.tv` account did not work, it may however depend on the subscription.
+
+=== "View logs"
+
+    Logs can be viewed from the web interface, using the gear button at the top right corner. Log files are stored on the server in the following directory:
 
     ```
-    /mnt/dietpi_userdata/plexpy/logs/
+    /mnt/dietpi_userdata/tautulli/logs/
     ```
+
+***
+
+Official website: <https://tautulli.com/>  
+Source code: <https://github.com/Tautulli/Tautulli>  
+License: [GPLv3](https://github.com/Tautulli/Tautulli/blob/master/LICENSE)
 
 ## Murmur
 
@@ -775,14 +948,70 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 
 === "Requirements"
 
-    Roon on another system (e.g.: Windows PC) to control the player.  
-    [Roon License](https://roonlabs.com/pricing) (free trial is also available).
+    - Roon on another system (e.g.: Windows PC) to control the player.  
+    - [Roon license](https://roonlabs.com/pricing) (free trial is also available).
+
+=== "Directories"
+
+    The Roon Bridge installation can be found at:
+
+    ```
+    /opt/roonbridge
+    ```
+
+    Its configuration and data can be found at:
+
+    ```
+    /mnt/dietpi_userdata/roonbridge
+    ```
+
+=== "Service control"
+
+    The Roon Bridge by default is started as systemd service and can hence be controlled with the following commands:
+
+    ```sh
+    systemctl status roonbridge
+    ```
+
+    ```sh
+    systemctl stop roonbridge
+    ```
+
+    ```sh
+    systemctl start roonbridge
+    ```
+
+    ```sh
+    systemctl restart roonbridge
+    ```
+
+=== "View logs"
+
+    Service logs can be reviewed with the following command:
+
+    ```sh
+    journalctl -u roonbridge
+    ```
+
+    More detailed logs from the individual Roon Bridge components can be found at the following location:
+
+    ```
+    /var/log/roonbridge
+    ```
+
+=== "Update"
+
+    The Roon Bridge can be updated by reinstalling it, which preserves your data and configs:
+
+    ```sh
+    dietpi-software reinstall 121
+    ```
 
 ***
 
 Official website: <https://roonlabs.com/>  
 Official forum: <https://community.roonlabs.com/>  
-YouTube videos from `David Snyder`: <https://www.youtube.com/c/dsnyder0cnn/search?query=roon>
+YouTube videos by `David Snyder`: <https://www.youtube.com/c/dsnyder0cnn/search?query=roon>
 
 ## Roon Server
 
@@ -827,7 +1056,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Service control"
 
-    Roon Server by default is started as systemd service and can hence be controlled with the following commands:
+    The Roon Server by default is started as systemd service and can hence be controlled with the following commands:
 
     ```sh
     systemctl status roonserver
@@ -853,13 +1082,13 @@ Turns your device into a Roon capable audio player and core server.
     journalctl -u roonserver
     ```
 
-    More detailed logs from the individual Roon server components can be found in the following files:
+    More detailed logs from the individual Roon Server components can be found at the following location:
 
-    - `/mnt/dietpi_userdata/roonserver/RAATServer/Logs/RAATServer_log.txt`
-    - `/mnt/dietpi_userdata/roonserver/RoonServer/Logs/RoonServer_log.txt`
-    - `/mnt/dietpi_userdata/roonserver/RoonGoer/Logs/RoonGoer_log.txt`
+    ```
+    /var/log/roonserver
+    ```
 
-=== "Update to latest version"
+=== "Update"
 
     The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with the following commands:
 
@@ -881,6 +1110,14 @@ At startup the Roon Extension Manager accesses a repository containing the commu
 ![Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150" height="81" loading="lazy"}
 
 ![Roon Extension Manager screenshot](../assets/images/dietpi-software-media-roonextmanager.jpg){: width="400" height="225" loading="lazy"}
+
+=== "Directories"
+
+    Roon Extension Manager data and configs can be found at the following location:
+
+    ```
+    /mnt/dietpi_userdata/roon-extension-manager
+    ```
 
 ***
 
@@ -908,9 +1145,9 @@ Also works with Roon.
 
 === "How do I use Roon and HQPlayer together?"
 
-    Guide: <https://help.roonlabs.com/portal/en/kb/articles/faq-how-do-i-use-roon-and-hqplayer-together>
+    Guide: <https://help.roonlabs.com/portal/en/kb/articles/hqplayer>
 
-=== "Update method"
+=== "Update"
 
     ```sh
     dietpi-software reinstall 124
@@ -1066,6 +1303,49 @@ A DLNA audio render/endpoint. Allows you to stream and play music, from another 
 
 ![GMediaRender logo](../assets/images/dietpi-software-media-gmediarender.png){: width="128" height="128" loading="lazy"}
 
+=== "Change command-line options"
+
+    - Edit `/etc/default/gmediarender`
+    - Restart the service:
+
+        ```sh
+        systemctl restart gmediarender
+        ```
+
+    !!! hint "Installs on DietPi prior to v8.10"
+
+        On earlier GMediaRender installs, this config file didn't exist yet. If you applied command-line options via `dietpi-services`, you can migrate them to the new config file:
+
+        - Assure GMediaRender has been updated to latest version:
+
+        ```sh
+        dietpi-software reinstall 163
+        ```
+
+        - Migrate options from `/etc/systemd/system/gmediarender.service.d/dietpi-services_edit.conf` to `/etc/default/gmediarender`.
+        - Remove obsolete config and restart service:
+
+        ```sh
+        rm /etc/systemd/system/gmediarender.service.d/dietpi-services_edit.conf
+        rmdir --ignore-fail-on-non-empty /etc/systemd/system/gmediarender.service.d
+        systemctl daemon-reload
+        systemctl restart gmediarender
+        ```
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u gmediarender
+    ```
+
+=== "Update to the latest version"
+
+    ```sh
+    dietpi-software reinstall 163
+    ```
+
 ## Ubooquity
 
 Ubooquity is a free home server for your comics and ebooks library, with remote web interface viewing.
@@ -1097,9 +1377,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
 ***
 
-YouTube video tutorial: *DietPi Ubooquity Comics and Ebook Reader on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/xUewleo7f2Q?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [DietPi Ubooquity Comics and Ebook Reader on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=xUewleo7f2Q)
 
 ## Komga
 
@@ -1142,18 +1420,6 @@ Free and open source comics/mangas media server with web UI.
     ```sh
     systemctl restart komga
     ```
-
-=== "File hashing"
-
-    File hashing is by default disabled on installs via DietPi, to reduce CPU load for small hardware. The downside is that when moving or renaming media files, Komga won't be able to keep metadata and read state attached, as the database entry is associated to the file path. The original media entry will remain shown as "unavailable" in the library, so that you can manually copy metadata over to the new entry. To remove the old entry, clear the trash of the library.
-
-    With file hashing enabled, database entries and hence metadata and read state are associated to the file hash, so that it stays intact when files are moved or renamed only, with the downside of additional CPU load and resource usage, especially on smaller hardware. To enable file hashing, set the following entry in the configuration file:
-
-    ```yaml
-    file-hashing: true
-    ```
-
-    Read more: <https://komga.org/guides/trash.html#file-hashes>
 
 === "View logs"
 
@@ -1565,5 +1831,88 @@ The Snapcast client will prompt you for the server's IP and port when installing
 ***
 
 Source code: <https://github.com/badaix/snapcast>
+
+## Navidrome
+
+An open source web-based music collection server and streamer, written in Go.  
+It is compatible with the [Subsonic media player](http://www.subsonic.org/pages/index.jsp).
+
+![Navidrome web interface screenshot](../assets/images/dietpi-software-media-navidrome.png){: width="400" height="202" loading="lazy"}
+
+=== "Web interface"
+
+    The web interface uses port **4533**:
+
+    - URL: `http://<your.IP>:4533`
+
+=== "Multiple Music Folders"
+
+    Navidrome doesn't support multiple music folders out of the box. The feature is still being developed.
+
+    Related GitHub issue: <https://github.com/navidrome/navidrome/issues/192>
+
+=== "Setup details"
+
+    The install, config and data directory is located at:
+
+    ```
+    /mnt/dietpi_userdata/navidrome
+    ```
+
+=== "Service control"
+
+    Since Navidrome runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status navidrome
+    ```
+
+    ```sh
+    systemctl start navidrome
+    ```
+
+    ```sh
+    systemctl stop navidrome
+    ```
+
+    ```sh
+    systemctl restart navidrome
+    ```
+
+=== "Logs"
+
+    Since Navidrome runs as systemd service, its logs can be viewed via:
+
+    ```sh
+    journalctl -u navidrome
+    ```
+
+=== "Update"
+
+    Navidrome can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 204
+    ```
+
+=== "Transfer music to DietPi"
+
+    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Default music directory:
+
+    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+
+=== "Clients for Navidrome"
+
+    Navidrome has a Subsonic-compatible server built in, so there should be plenty of clients for different platforms available. See:
+
+    - <https://www.navidrome.org/docs/overview/#apps>
+    - <http://www.subsonic.org/pages/apps.jsp>
+
+***
+
+Website: <https://www.navidrome.org/>  
+Source code: <https://github.com/navidrome/navidrome>  
+License: [GPLv3](https://github.com/navidrome/navidrome/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)

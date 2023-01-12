@@ -1,3 +1,8 @@
+---
+title: Development and Programming Software Options
+description: Description of DietPi software options related to software development
+---
+
 # Development & Programming
 
 ## Overview
@@ -50,7 +55,6 @@ Currently, Python is 3rd most popular of programming language [^4].
 
     | Name | URL |
     | :-: | - |
-    | **Atom** | <https://atom.io> |
     | **Eclipse + Pydev** | <https://www.eclipse.org> and <https://www.pydev.org/> |
     | **IDLE** | <https://docs.python.org/3/library/idle.html> |
     | **Pycharm** | <https://www.jetbrains.com/pycharm> |
@@ -85,34 +89,6 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 
     Checkout also the official tutorial [Get started with Go](https://golang.org/doc/tutorial/getting-started).
 
-=== "Install / Uninstall"
-
-    - We switched to automatic Go version detection. Here is an example:
-
-        ```sh
-        root@DietPi3:~# go version
-        go version go1.16.3 linux/arm
-        ```
-
-    - When the Go package gets uninstalled, the folder `/mnt/dietpi_userdata/go` is still kept.  
-      This is the place where packages are installed, custom compilations are run, sources are downloaded etc.
-
-        It is especially important to keep `/mnt/dietpi_userdata/go` as long as we don't have a good dependency system that blocks uninstalls of dependencies. Otherwise it would be possible to uninstall Go while [OpenBazaar](../social/#openbazaar) is still installed.  
-        As a side effect, removing `/mnt/dietpi_userdata/go` would mean also removing [OpenBazaar](../social/#openbazaar).
-
-=== "Directories"
-
-    - `/mnt/dietpi_userdata/go`: This is the place where packages are installed, custom compilations are run, sources are downloaded etc.  
-      This path is what is given in the environment variable GOPATH.
-
-        !!! note "GOPATH is a global setting"
-            In normal Go installations, GOPATH is a user specific environment variable. In DietPi it is global, i.e. all users have the same module cache and all see the same binaries below GOPATH/bin.
-
-    - `/usr/local/go`: This is the place where the Go package is installed.
-    - `/mnt/dietpi_userdata/go/pkg/mod`: This is the path for 3rd party Go packages. The environment variable GOMODCACHE directs to this.
-
-=== "Getting started"
-
     Some common Go commands are:
 
     - `go version`: Prints the installed Go version
@@ -120,23 +96,32 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
     - `go mod tidy <MODULNAME>`: Generate a Go module
     - `go help`: Start the Go internal help in general, details for commands e.g. via `go help build`
 
+=== "Directories"
+
+    - `/usr/local/go`: This is the place where the Go development tools is installed.
+    - When installing packages via `go get` or `go install`, they are installed into the users home directory `~/go` by default. A custom path can be set via the `GOPATH` environment variable. To also load binaries of compiled Go packages into your `PATH`, something like this can be done:
+
+        ```sh
+        cat << '_EOF_' >> ~/.bashrc
+        export GOPATH=/path/to/go
+        export PATH="$PATH:$GOPATH/bin"
+        _EOF_
+        ```
+
 === "Update to latest version"
 
     ```sh
     dietpi-software reinstall 188
     ```
 
-    To check the installation, run `go version`.
-
-    See also <https://golang.org/doc/install> or  
-    <https://gist.github.com/nikhita/432436d570b89cab172dcf2894465753>.
-
 ***
 
 Website: <https://golang.org>  
-Official documentation, references and guided tours of Go programs : <https://golang.org/doc>  
-One example source to grub for Go libraries: <https://github.com/avelino/awesome-go>  
-Wikipedia: <https://en.wikipedia.org/wiki/Go_(programming_language)>
+Official documentation: <https://golang.org/doc>  
+Additional libraries: <https://github.com/avelino/awesome-go>  
+Wikipedia: <https://en.wikipedia.org/wiki/Go_(programming_language)>  
+Source code: <https://github.com/golang/go>  
+License: [BSD 3-Clause](https://github.com/golang/go/blob/master/LICENSE)
 
 ## Docker
 
@@ -144,10 +129,26 @@ In 2013, Docker introduced containers. These are a standardized unit of software
 
 A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
 
-<!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200" height="???" loading="lazy"}  -->
+<!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200" height="60" loading="lazy"}  -->
 ![Docker functional block diagram](../assets/images/dietpi-software-programming-docker2.svg){: width="400" height="369" loading="lazy"}
 
-Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)
+_Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)_
+
+=== "Configuration"
+
+    The Docker configuration files are located at:
+
+    - Docker: `/etc/docker/daemon.json`
+    - containerd: `/etc/containerd/config.toml`
+
+=== "Update"
+
+    Since Docker is installed via APT packages, it can be updated by running the following commands:
+
+    ```sh
+    apt update
+    apt install docker-ce containerd.io docker-ce-cli
+    ```
 
 === "View logs"
 
@@ -157,23 +158,16 @@ Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia
     journalctl -u docker -u containerd
     ```
 
-=== "Configuration files"
-
-    The location of the Docker configuration files:
-
-    - Docker: `/etc/docker/daemon.json`
-    - containerd: `/etc/containerd/config.toml`
-
 ***
 
-Official documentation: <https://docs.docker.com/get-started/overview>  
-Configuration file: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
-Logging: <https://docs.docker.com/config/containers/logging/configure>  
-Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
+Official documentation: <https://docs.docker.com/get-started/overview/>  
+Configuration docs: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
+Logging docs: <https://docs.docker.com/config/containers/logging/configure/>  
+Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>  
+Source code: <https://github.com/moby/moby>  
+License: [Apache-2.0](https://github.com/moby/moby/blob/master/LICENSE)
 
-For a quick intro, see **DietPi Docker Setup on Raspberry Pi 3 B Plus**:
-
-<iframe src="https://www.youtube-nocookie.com/embed/y_VfLOGm5nA?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [_DietPi Docker Setup on Raspberry Pi 3 B Plus_](https://www.youtube.com/watch?v=y_VfLOGm5nA)
 
 ## Docker Compose
 
@@ -181,26 +175,27 @@ Docker Compose is a [Docker](#docker) tool used to define and run multi-contain
 
 `docker-compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments.
 
-<!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/master/logo.png) -->
-![docker compose](../assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
+<!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/v2/logo.png){: width="200" height="219" loading="lazy"} -->
+![Docker Compose diagram](../assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
 
-_Docker (individual container) vs. Docker-Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa/)_
+_Docker (individual container) vs. Docker Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa)_
 
-=== "Update to latest version"
+=== "Update"
 
-    The tool is available soon after the installation. In case you need to upgrade it, here is the command:
+    To update Docker Compose to the latest version, simply reinstall it:
 
     ```sh
-    sudo pip3 install docker-compose --upgrade
+    dietpi-software reinstall 134
     ```
 
 ***
 
-Official documentation: <https://docs.docker.com/compose>  
-Getting started: <https://docs.docker.com/compose/gettingstarted>  
+Official documentation: <https://docs.docker.com/compose/>  
+Getting started: <https://docs.docker.com/compose/gettingstarted/>  
 Sample apps with Compose: <https://docs.docker.com/compose/samples-for-compose/>  
-Release notes: <https://docs.docker.com/compose/release-notes/>  
-Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
+Release notes: <https://github.com/docker/compose/releases>  
+Source code: <https://github.com/docker/compose>  
+License: [Apache-2.0](https://github.com/docker/compose/blob/v2/LICENSE)
 
 ## Portainer
 
@@ -251,8 +246,8 @@ License: [MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)
 
-[^1]:
-    [Logitech Media Server](../media/#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
+<!-- markdownlint-disable MD053 -->
+[^1]: [Logitech Media Server](../media/#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
 
 [^2]: [7 Most Famous Companies That Use Golang](https://www.agiratech.com/blog/companies-using-golang/)
 
