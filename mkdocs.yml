@@ -80,6 +80,7 @@ plugins:
     #minify_js: true
     #js_files:
     #- assets/javascripts/custom.js
+    cache_safe: true
 
 extra:
   social:
