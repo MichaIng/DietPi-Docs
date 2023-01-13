@@ -669,8 +669,8 @@ Homer is a modern and lightweight dashboard & homepage for your services
         curl -fLO 'https://github.com/walkxcode/homer-theme/archive/main.tar.gz'
         tar xf main.tar.gz
         rm main.tar.gz
-        cp homer-theme-main/custom.css /var/www/homer/assets/custom.css
-        cp homer-theme-main/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
+        cp homer-theme-main/assets/custom.css /var/www/homer/assets/custom.css
+        cp homer-theme-main/assets/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
         cp homer-theme-main/assets/wallpaper-light.jpeg /var/www/homer/assets/wallpaper-light.jpeg
         cp -R homer-theme-main/assets/fonts /var/www/homer/assets/
         rm -R homer-theme-main
@@ -691,7 +691,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
         columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 3, 4, 6, 12)
         theme: default
         colors:
-        light:
+          light:
             highlight-primary: "#fff5f2"
             highlight-secondary: "#fff5f2"
             highlight-hover: "#bebebe"
@@ -704,8 +704,8 @@ Homer is a modern and lightweight dashboard & homepage for your services
             card-shadow: rgba(0, 0, 0, 0.5)
             link: "#3273dc"
             link-hover: "#2e4053"
-            background-image: "../assets/wallpaper.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
-        dark:
+            background-image: "../assets/wallpaper-light.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
+          dark:
             highlight-primary: "#181C3A"
             highlight-secondary: "#181C3A"
             highlight-hover: "#1F2347"
