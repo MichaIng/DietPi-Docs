@@ -671,6 +671,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
         rm main.tar.gz
         cp homer-theme-main/custom.css /var/www/homer/assets/custom.css
         cp homer-theme-main/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
+        cp homer-theme-main/assets/wallpaper-light.jpeg /var/www/homer/assets/wallpaper-light.jpeg
         cp -R homer-theme-main/fonts /var/www/homer/assets/
         rm -R homer-theme-main
         ```
