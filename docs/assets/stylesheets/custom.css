@@ -3,8 +3,8 @@
     --md-accent-fg-color: #9ccc00;
     --md-primary-fg-color: #7b952f;
     --md-primary-fg-color--dark: #164046;
-    --md-text-font-family: "Roboto";
-    --md-code-font-family: "Roboto Mono";
+    --md-text-font: "Roboto";
+    --md-code-font: "Roboto Mono";
 }
 
 :root>* {
