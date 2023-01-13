@@ -631,6 +631,8 @@ UPnP
 uptime
 upvote
 UrBackup
+unbanned
+untrusted
 userdata
 userspace
 UTM
