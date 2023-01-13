@@ -141,7 +141,8 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Fail2Ban integration"
 
-    Using Fail2Ban your can block users after failed login attempts, which can further harden the brute-force protection of your Nextcloud instance.
+    Using Fail2Ban your can block users after failed login attempts, which can further harden the brute-force protection of your Nextcloud instance.  
+    To achieve this hardening, execute the following steps:
 
     1. If not done yet, install Fail2Ban:
 
@@ -164,7 +165,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
             The entry of the trusted domains is important, because one of the Fail2Ban filters deals with trusted domain errors ("Trusted domain error", see below). By default, if you try to access with an untrusted domain, Nextcloud will show an error message.  
 
             !!! attention
-              Take care, if you use this "Trusted domain error" `failregex` option and you then reload the page several times (more often than `maxretry` value in the Fail2Ban jail file) you lockout yourself also for logging in via a trusted domain from the IP address you are using.
+                Take care, if you use this "Trusted domain error" `failregex` option and you then reload the page several times (more often than `maxretry` value in the Fail2Ban jail file) you lockout yourself also for logging in via a trusted domain from the IP address you are using.
 
     1. Create new ***Fail2Ban filter***, e.g. `/etc/fail2ban/filter.d/nextcloud.conf`:
 
@@ -192,9 +193,10 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
         bantime = 600
         ```
 
-        Assure that the `logpath` matches the `'datadirectory'` value in the Nextcloud configuration file (`config.php` see above), or the `'logfile'` value if defined.
+        Assure that the `logpath` matches the `'datadirectory'` value in the Nextcloud configuration file (`config.php`, see above), or the `'logfile'` value, if defined.
 
-        Properties not defined here are taken from the `[DEFAULT]` block in `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local`, if present. Note the setting `backend = auto`: By default, `backend` is set to `systemd` in `/etc/fail2ban/jail.conf`. As a result, Fail2Ban would ignore the `logpath` entry here in the jail `nextcloud.conf`, with the consequence, that Fail2Ban does not recognize an attack on Nextcloud (port 80, 443) even though attacks are logged in `/mnt/dietpi_userdata/nextcloud_data/nextcloud.log`.
+        Properties not defined here are taken from the `[DEFAULT]` block in `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local`, if present. Note the setting `backend = auto`. By default, `backend` is set to `systemd` in `/etc/fail2ban/jail.conf`.  
+        As a result, Fail2Ban would ignore the `logpath` entry here in the jail `nextcloud.conf`, with the consequence, that Fail2Ban does not recognize an attack on Nextcloud (port 80, 443), even though attacks are logged in `/mnt/dietpi_userdata/nextcloud_data/nextcloud.log`.
 
     1. Restart Fail2Ban:
 

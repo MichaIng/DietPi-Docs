@@ -80,10 +80,16 @@ An IP address is by default ban triggered after 3 failed SSH login attempts. Fai
     fail2ban-client status dropbear
     ```
 
+=== "Configuration"
+
+    Fail2Ban can handle several configuration options like e.g. general configuration and configurations for special programs on a config file base. The location of these config files is a directory structure within `/etc/fail2ban/` and its subdirectories.  
+    See the [Fail2Ban configuration documentation](https://www.fail2ban.org/wiki/index.php/MANUAL_0_8#Configuration) for further information.
+
 === "Enable support for additional programs"
 
     Fail2Ban supports brute-force protection for other software (e.g. Apache, ProFTPD etc). Pre-defined software filters can be found in the `/etc/fail2ban/filter.d/` directory.  
-    You can enable/disable these by adding additional `[software]` filter blocks to the `/etc/fail2ban/jail.conf` file, using the filters' file names without file extension. Properties not defined in a specific filter block, are taken from the `[DEFAULT]` block.
+    You can enable/disable these by adding additional `[software]` filter blocks to the `/etc/fail2ban/jail.conf` file, using the filters' file names without file extension. Properties not defined in a specific filter block, are taken from the `[DEFAULT]` block.  
+    See also the Fail2Ban configuration documentation for [Vsftpd](https://www.fail2ban.org/wiki/index.php/Vsftpd) and [ProFTPd](https://www.fail2ban.org/wiki/index.php/ProFTPd).
 
 ***
 
