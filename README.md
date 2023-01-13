@@ -27,6 +27,8 @@ It uses extended Markdown, as implemented by [MkDocs](https://www.mkdocs.org/).
 
 It builds the static HTML pages into a temporary directory and starts a local web server at `http://localhost:8000`. If you have troubles accessing the MkDocs website, you could also listen on a specific IP address or all IP addresses, e.g. `mkdocs serve -a 0.0.0.0:8000`.
 
+Remark: In case of problems with updating via `pip3 install -Ur requirements.txt` getting errors on subsequent executions of `mkdocs serve`, an update via `sudo pip3 install -Ur requirements.txt` can be tested.
+
 ## Contributing
 
 There are many ways you could contribute to DietPi project. You could work on the DietPi project, website design, extend the documentation, or just run tests.
