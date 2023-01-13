@@ -89,7 +89,7 @@ An IP address is by default ban triggered after 3 failed SSH login attempts. Fai
 
     Fail2Ban supports brute-force protection for other software (e.g. Apache, ProFTPD etc). Pre-defined software filters can be found in the `/etc/fail2ban/filter.d/` directory.  
     You can enable/disable these by adding additional `[software]` filter blocks to the `/etc/fail2ban/jail.conf` file, using the filters' file names without file extension. Properties not defined in a specific filter block, are taken from the `[DEFAULT]` block.  
-    See also the Fail2Ban configuration documentation for [Vsftpd](https://www.fail2ban.org/wiki/index.php/Vsftpd) and [ProFTPd](https://www.fail2ban.org/wiki/index.php/ProFTPd).
+    See also the Fail2Ban configuration documentation for [vsftpd](https://www.fail2ban.org/wiki/index.php/Vsftpd) and [ProFTPD](https://www.fail2ban.org/wiki/index.php/ProFTPd).
 
 ***
 

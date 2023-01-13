@@ -556,6 +556,7 @@ stdout
 StackExchange
 StephanStS
 storages
+subdirectories
 subdirectory
 subshell
 sudo
