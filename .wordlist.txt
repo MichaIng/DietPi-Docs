@@ -556,6 +556,7 @@ stdout
 StackExchange
 StephanStS
 storages
+subdirectories
 subdirectory
 subshell
 sudo
@@ -631,6 +632,8 @@ UPnP
 uptime
 upvote
 UrBackup
+unbanned
+untrusted
 userdata
 userspace
 UTM
