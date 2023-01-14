@@ -22,6 +22,9 @@ theme:
   language: en
   features:
   - navigation.tabs
+  - navigation.top
+  - content.action.edit
+  - content.action.view
   #logo: assets/images/logo.png
   favicon: https://dietpi.com/favicon.ico
 
@@ -45,7 +48,8 @@ markdown_extensions:
     repo_url_shortener: true
     repo_url_shorthand: true
 - pymdownx.superfences # Indented code blocks, e.g. within lists, admonition, details or tabbed blocks, implies pymdownx.highlight
-- pymdownx.tabbed # Tabbed content blocks
+- pymdownx.tabbed: # Tabbed content blocks
+    alternate_style: true
 
 #  Markdown extensions which could be used in the future
 #
@@ -79,12 +83,13 @@ plugins:
     #minify_js: true
     #js_files:
     #- assets/javascripts/custom.js
+    cache_safe: true
 
 extra:
   social:
   - icon: fontawesome/brands/github
     link: https://github.com/MichaIng/DietPi
-  - icon: fontawesome/solid/home
+  - icon: fontawesome/solid/house
     link: https://dietpi.com/
   - icon: fontawesome/brands/twitter
     link: https://twitter.com/DietPi_
