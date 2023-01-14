@@ -357,6 +357,7 @@ nd
 Netdata
 Nextcloud
 NFS
+nftables
 Nginx
 nodejs
 nm
