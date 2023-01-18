@@ -198,13 +198,14 @@ Griesemer
 GUA
 HACS
 HAProxy
+hardcoded
 harddisk
+hardenings
 Hardkernel
 Hardkernel's
 HC
 hexa
-hardcoded
-hardenings
+HFS
 HiFi
 HiFiBerry
 Hipp
