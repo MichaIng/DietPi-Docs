@@ -279,7 +279,7 @@ dietpi-survey
 
     Following is an example how this file may look like:
 
-    ```sh
+    ```bash
     #!/bin/bash
     ((aDIETPI_VERSION[6.34]++))
     ((aGIT_BRANCH[MichaIng/master]++))
@@ -306,7 +306,7 @@ dietpi-survey
 
     This gives the IDs, names and info of software. The above example would show
 
-    ```sh
+    ```text
     # dietpi-software list | grep ' =2'
     id 103 | =2 | dietpi-ramlog: minimal, optimised logging | | https://dietpi.com/docs/software/log_system/#dietpi-ramlog
     id 104 | =2 | dropbear: lightweight ssh server | | https://dietpi.com/docs/software/ssh/#dropbear
@@ -331,7 +331,7 @@ dietpi-survey
 
     which displays the status like
 
-    ```
+    ```text
     # grep 'SURVEY_OPTED_IN' /boot/dietpi.txt
     SURVEY_OPTED_IN=1
     ```

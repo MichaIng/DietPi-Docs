@@ -187,7 +187,7 @@ Please keep in mind that all other daily `cron` based procedures are also starte
 
 The definition which files are used for the synchronization procedure is defined via the file
 
-```sh
+```text
 /boot/dietpi/.dietpi-sync_inc_exc
 ```
 
@@ -199,7 +199,7 @@ The file structure definition is identical to the DietPi backup/restore file `/b
 
 Logging information about the synchronization procedure is given within the file
 
-```
+```text
 .dietpi-sync.log
 ```
 
@@ -214,7 +214,7 @@ Generally, the settings of the DietPi-Sync are changed via the `dietpi-sync` com
 The system stores these settings in the file `/boot/dietpi/.dietpi-sync_settings`, which is generated from `dietpi-sync` automatically. Therefore, the file do not need to be changed manually by the user.  
 An example settings file is:
 
-```
+```text
 FP_SOURCE='/mnt/source'
 FP_TARGET='/mnt/target'
 SYNC_DELETE_MODE=0
