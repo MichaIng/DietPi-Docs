@@ -66,19 +66,22 @@ Formatting filesystems lead you to these dialogues:
 
 In the latter dialog you have to choose the filesystem type. The following selections may be chosen:
 
-- `ext4` (Default)  
+=== "ext4 (Default)"
+
     Recommended for users who plan to use this drive solely on Linux systems (e.g. dedicated drive).  
     `+` The standard for Linux filesystems  
     `-` Not compatible on a Windows system
 
-- `NTFS`  
+=== "NTFS"
+
     Recommended for users who plan to use this drive on a Windows system.  
     `+` Compatible on a Windows system  
     `-` Only emulated support for UNIX permissions  
     `-` Does support symbolic links (creation)  
     `-` High CPU usage during transfers (spawns a process)
 
-- `FAT32`  
+=== "FAT32"
+
     Recommended for users who want high compatibility across multiples operating systems.  
     `+` Highly compatible with all OS  
     `-` 4 GiB file size limit  
@@ -86,29 +89,34 @@ In the latter dialog you have to choose the filesystem type. The following selec
     `-` Does not support UNIX permissions  
     `-` Does not support symbolic links
 
-- `exFAT`  
+=== "exFAT"
+
     Windows filesystem, intended for external drives, e.g. USB flash drives or SD cards.  
     `+` Flash-Friendly File System: <https://en.m.wikipedia.org/wiki/ExFAT>  
     `+` Compatible on a Windows system  
     `-` Does not support UNIX permissions  
     `-` Does not support symbolic links
 
-- `HFS+`  
+=== "HFS+"
+
     Recommended for users who plan to use this drive on a macOS system.  
     `+` macOS filesystem  
     `-` Not compatible on a Windows system
 
-- `Btrfs`  
+=== "Btrfs"
+
     A modern Linux filesystem.  
     `+` Advantages were described in [this DietPi issue](https://github.com/MichaIng/DietPi/issues/271#issuecomment-247173250)  
     `-` Compatible with Windows only via additional windows driver [WinBtrfs](https://github.com/maharmstone/btrfs)
 
-- `F2FS`  
+=== "F2FS"
+
     Linux filesystem designed for flash/NAND based drives.  
     `+` Flash-Friendly File System: <https://en.wikipedia.org/wiki/F2FS>  
     `-` Not compatible on a Windows system
 
-- `XFS`  
+=== "XFS"
+
     A modern Linux filesystem.  
     `+` Well accepted for large files (typically in a file server use)  
     `-` Not compatible on a Windows system
