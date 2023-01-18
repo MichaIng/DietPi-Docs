@@ -9,4 +9,3 @@ dietpi-launcher
 ![DietPi-Launcher screenshot](../assets/images/dietpi-launcher.jpg){: width="642" height="398" loading="lazy"}
 
 ---
-

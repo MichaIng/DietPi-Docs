@@ -210,4 +210,3 @@ dietpi-ddns
     - Use `dietpi-ddns remove` to remove any cron job that was setup before.
 
 ---
-

@@ -29,7 +29,7 @@ The performance options are used to
 - Overclock your system with a vast selection of overclocking profiles for your device.
 - Change the CPU governor and tweak your ARM temperature limits.
 
-##Advanced Options
+## Advanced Options
 
 The advanced options are used to
 

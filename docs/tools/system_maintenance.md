@@ -76,11 +76,11 @@ It contains these options (see screenshot above):
 - "Daily Backup": Activates the daily backup
 - "Amount": Sets the number of backups to be kept. Backups are rotated automatically, if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync
 
-**Daily backup execution time**
+#### Daily backup execution time
 
 The automatic daily backup (activated via option "Daily Backup", see screenshot above) is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several backup clients backing up to the same storage (backup server): Shifting the backup starting time of these systems may reduce temporary overload of the backup server by avoiding concurrent access to the storage.
 
-The starting time is basically defined via the file `/etc/crontab` (which calls the backup/restore function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](#dietpi-cron). It is executed by running the following command
+The starting time is basically defined via the file `/etc/crontab` (which calls the backup/restore function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](../system_configuration/#dietpi-cron). It is executed by running the following command
 
 ```sh
 dietpi-cron
@@ -117,7 +117,7 @@ The system stores these settings in the files `/boot/dietpi/.dietpi-backup_setti
 
 ### Scripted run
 
-DietPi-Backup can be run from the command line or from scripts without user interaction by calling it via 
+DietPi-Backup can be run from the command line or from scripts without user interaction by calling it via
 
 ```sh
 dietpi-backup 1
@@ -171,11 +171,11 @@ This setting gives these options:
 
 `Dietpi-Sync` gives the option of an automatic daily sync operation (controlled via the Linux `cron` mechanism) by enabling the "Daily Sync" option.
 
-**Daily sync execution time**
+#### Daily sync execution time
 
 The automatic daily sync is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several sync clients syncing up to the same storage (data server): Shifting the synchronization starting time of these systems may reduce temporary overload of the data server by avoiding concurrent access to the storage.
 
-The starting time is basically defined via the file `/etc/crontab` (which calls the sync function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](#dietpi-cron). It is executed by running the following command
+The starting time is basically defined via the file `/etc/crontab` (which calls the sync function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](../system_configuration/#dietpi-cron). It is executed by running the following command
 
 ```sh
 dietpi-cron
@@ -185,11 +185,11 @@ Please keep in mind that all other daily `cron` based procedures are also starte
 
 ### Sync file selection (Filter)
 
-The definition which files are used for the synchronization procedure is defined via the file 
+The definition which files are used for the synchronization procedure is defined via the file
 
-```
+```sh
 /boot/dietpi/.dietpi-sync_inc_exc
-``` 
+```
 
 This file can be edited to set further include/exclude definitions for the synchronization. The filter definition syntax is described within the file itself.
 
@@ -197,7 +197,7 @@ The file structure definition is identical to the DietPi backup/restore file `/b
 
 ### Logging
 
-Logging information about the synchronization procedure is given within the file  
+Logging information about the synchronization procedure is given within the file
 
 ```
 .dietpi-sync.log
@@ -223,7 +223,7 @@ SYNC_CRONDAILY=0
 
 ### Scripted run
 
-DietPi-Sync can be run from the command line or from scripts without user interaction by calling it via 
+DietPi-Sync can be run from the command line or from scripts without user interaction by calling it via
 
 ```sh
 dietpi-sync 1
