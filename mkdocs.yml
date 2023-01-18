@@ -133,6 +133,13 @@ nav:
   - System Stats & Management: software/system_stats.md
   - VPN: software/vpn.md
   - Web Development: software/webserver_stack.md
+- DIETPI TOOLS:
+  - DietPi launcher: tools/dietpi_launcher.md
+  - Software installation: tools/software_installation.md
+  - DietPi config: tools/dietpi_config.md
+  - System configuration: tools/system_configuration.md
+  - System maintenance: tools/system_maintenance.md
+  - Miscellaneous tools: tools/misc_tools.md
 - RELEASES:
   - Overview: releases.md
   - v8.13 January 2023: releases/v8_13.md
