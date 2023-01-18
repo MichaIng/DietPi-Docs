@@ -157,17 +157,17 @@ dietpi-vpn
 
 ![DietPi-VPN screenshot](../assets/images/dietpi-vpn.jpg){: width="642" height="300" loading="lazy"}
 
-#### Requires VPN Subscription
+### Requires VPN Subscription
 
 Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical.  
 You can use any VPN provider you want, but DietPi-VPN specifically supports ProtonVPN and NordVPN.
 
-#### Usage
+### Usage
 
 Simply run `dietpi-vpn` to use the GUI, allowing you to setup your connection and provider.  
 DietPi will also automatically start and connect the VPN during system boot if you select autostart.
 
-#### Killswitch
+### Killswitch
 
 DietPi-VPN comes with an optional killswitch that will shut off your internet in the case of you losing your connection to the VPN sever.
 This will still allow access from your LAN and allow you to fix any problems using SSH, if needed.
