@@ -103,7 +103,6 @@ nav:
   - Installation: install.md
   - Getting started: getting_started.md
   - Software options: software.md
-  - DietPi tools: dietpi_tools.md
   - Usage hints / HowTo: usage.md
   - Supported hardware: hardware.md
   - Releases: releases.md
@@ -134,12 +133,12 @@ nav:
   - VPN: software/vpn.md
   - Web Development: software/webserver_stack.md
 - DIETPI TOOLS:
-  - DietPi Launcher: tools/dietpi_launcher.md
-  - Software Installation: tools/software_installation.md
-  - DietPi Config: tools/dietpi_config.md
-  - System Configuration: tools/system_configuration.md
-  - System Maintenance: tools/system_maintenance.md
-  - Miscellaneous Tools: tools/misc_tools.md
+  - DietPi Launcher: dietpi_tools.md
+  - Software Installation: dietpi_tools/software_installation.md
+  - DietPi Config: dietpi_tools/dietpi_config.md
+  - System Configuration: dietpi_tools/system_configuration.md
+  - System Maintenance: dietpi_tools/system_maintenance.md
+  - Miscellaneous Tools: dietpi_tools/misc_tools.md
 - RELEASES:
   - Overview: releases.md
   - v8.13 January 2023: releases/v8_13.md
