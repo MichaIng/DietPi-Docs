@@ -135,7 +135,6 @@ nav:
 - DIETPI TOOLS:
   - DietPi Launcher: dietpi_tools.md
   - Software Installation: dietpi_tools/software_installation.md
-  - DietPi Config: dietpi_tools/dietpi_config.md
   - System Configuration: dietpi_tools/system_configuration.md
   - System Maintenance: dietpi_tools/system_maintenance.md
   - Miscellaneous Tools: dietpi_tools/misc_tools.md
