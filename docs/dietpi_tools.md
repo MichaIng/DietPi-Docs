@@ -27,7 +27,7 @@
 - <a name="dietpi-cleaner"></a>[**DietPi Cleaner - Clean up not necessary files and free up valuable disk space**](system_maintenance/#dietpi-cleaner)
 - <a name="dietpi-log-clear"></a>[**DietPi Log Clear - Clear log files in `/var/log/`**](system_maintenance/#dietpi-log-clear)
 - <a name="dietpi-backup-backuprestore"></a>[**DietPi Backup (backup/restore) - Backup and restore your DietPi system**](system_maintenance/#dietpi-backup-backuprestore)
-- <a name="dietpi-sync"></a>[**DietPi Sync - Cuplicate a directory from one location to another**](system_maintenance/#dietpi-sync)
+- <a name="dietpi-sync"></a>[**DietPi Sync - Duplicate a directory from one location to another**](system_maintenance/#dietpi-sync)
 
 ## [Misc Tools](misc_tools/#misc-tools)
 
@@ -39,7 +39,7 @@
 
 ---
 
-# DietPi Launcher
+## DietPi Launcher
 
 It provides an easy access to all DietPi OS tools, and it could be accessed by running next command:
 
