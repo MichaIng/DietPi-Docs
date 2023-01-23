@@ -456,6 +456,10 @@ Select the following tabs for the installation description of your target.
 
     ![Proxmox VM starting](assets/images/proxmox3.png){: width="1024" height="590" loading="lazy"}
 
+    !!! info "Proxmox Helper Script to install DietPi in Proxmox"
+        There is a script from `Darren Bennett` ([GitHub `dazeb`](https://github.com/dazeb)) which makes the installation steps described above much easier by execution of the installation steps within the script.  
+        See <https://github.com/dazeb/proxmox-dietpi-installer> for details.
+
 === "Parallels"
 
     <h2>Introduction</h2>
