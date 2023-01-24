@@ -380,6 +380,10 @@ Select the following tabs for the installation description of your target.
 
     ![Proxmox web interface](assets/images/proxmox1.png){: width="800" height="439" loading="lazy"}
 
+    !!! info "Proxmox Helper Script to install DietPi in Proxmox"
+        There is a script from `Darren Bennett` ([GitHub `dazeb`](https://github.com/dazeb)) which makes the installation steps described below much easier by execution of the installation steps within the script.  
+        See <https://github.com/dazeb/proxmox-dietpi-installer> for details.
+
     <h2>Prerequisites</h2>
 
     Proxmox runs on any `x86_64` system. ISO images for the Virtual Environment server can be found here: <https://www.proxmox.com/de/downloads/category/iso-images-pve>  
