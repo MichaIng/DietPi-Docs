@@ -213,7 +213,7 @@ Website: <https://www.gimp.org>
 
 ### QuiteRSS
 
-QuiteRSS is a open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
+QuiteRSS is an open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
 
 ![QuiteRSS screenshot](../assets/images/dietpi-software-desktop-tools-quiterss.jpg){: width="760" height="564" loading="lazy"}
 
