@@ -522,8 +522,6 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
         </tbody>
     </table>
 </div>
-
-
 ## Native PC & Virtual Machines
 
 ### Native PC images
