@@ -9,7 +9,7 @@ description: Description of DietPi software options related to social platforms 
 
 - [**FreshRSS - A self-hosted RSS feed aggregator**](#freshrss)
 - [**phpBB - Free flat-forum bulletin board software solution**](#phpbb)
-- [**Wordpress - Website Blog and Publishing platform**](#wordpress)
+- [**WordPress - Website Blog and Publishing platform**](#wordpress)
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](#single-file-php-gallery)
 <!-- markdownlint-disable-next-line MD051 -->
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
@@ -114,12 +114,12 @@ rm -R /var/www/phpbb/install
 
 Your forum is now ready.
 
-## Wordpress
+## WordPress
 
 WordPress is a state-of-the-art semantic personal publishing platform with a focus on aesthetics, web standards, and usability.
 It allows you to create your own website.
 
-![Wordpress logo and usage pictogram](../assets/images/dietpi-software-social-wordpress.jpg){: width="400" height="242" loading="lazy"}
+![WordPress logo and usage pictogram](../assets/images/dietpi-software-social-wordpress.jpg){: width="400" height="242" loading="lazy"}
 
 === "Access to the web interface"
 
