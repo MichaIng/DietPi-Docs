@@ -694,7 +694,7 @@ WIP
 WireGuard
 WiringPi
 Wokandapix
-Wordpress
+WordPress
 WPA
 writeable
 WSAD
