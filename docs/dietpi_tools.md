@@ -2,6 +2,14 @@
 
 ## [DietPi Tools Launcher](#dietpi-launcher)
 
+It provides an easy access to all DietPi OS tools, and it could be accessed by running next command:
+
+```sh
+dietpi-launcher
+```
+
+![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="398" loading="lazy"}
+
 ## [Software Installation](software_installation/#software-installation)
 
 - <a name="dietpi-software"></a>[**DietPi Software - Automated installation of software packages**](software_installation/#dietpi-software)
@@ -36,17 +44,3 @@
 - <a name="dietpi-cpu-info"></a>[**DietPi CPU Info - Displays CPU temperature, processor frequency, throttle level etc.**](misc_tools/#dietpi-cpu-info)
 - <a name="dietpi-morse-code"></a>[**DietPi Morse Code - Converts a text file into morse code**](misc_tools/#dietpi-morse-code)
 - <a name="dietpi-bug-report"></a>[**DietPi Bug Report**](misc_tools/#dietpi-bug-report)
-
----
-
-## DietPi Launcher
-
-It provides an easy access to all DietPi OS tools, and it could be accessed by running next command:
-
-```sh
-dietpi-launcher
-```
-
-![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="398" loading="lazy"}
-
----

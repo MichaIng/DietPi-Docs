@@ -365,6 +365,7 @@ nm
 Nmap
 NoMachine
 NordVPN
+NPU
 NTFS
 NTP
 NUC
@@ -375,8 +376,10 @@ NZB
 NZBGet
 OCSP
 OctoPrint
+ODM
 Odroid
 Odroids
+OEM
 Ok
 Okta
 oldoldstable
@@ -522,6 +525,7 @@ SFTP
 SHA
 Shairport
 ShareAlike
+Shenzhen
 Shoutcast
 SickRage
 Signalyst
@@ -691,7 +695,7 @@ WIP
 WireGuard
 WiringPi
 Wokandapix
-Wordpress
+WordPress
 WPA
 writeable
 WSAD
@@ -701,6 +705,8 @@ XFS
 xml
 XRDP
 XU
+Xunlong
+xz
 YaCy
 YAML
 ympd
@@ -711,4 +717,3 @@ ZFS
 zlib
 zr
 zram
-xz
