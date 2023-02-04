@@ -1,8 +1,8 @@
 # DietPi Tools Overview
 
-## [DietPi Tools Launcher](#dietpi-launcher)
+## [DietPi-Launcher](#dietpi-launcher)
 
-It provides an easy access to all DietPi OS tools, and it could be accessed by running next command:
+It provides an easy access to all DietPi OS tools and can be accessed by running next command:
 
 ```sh
 dietpi-launcher
