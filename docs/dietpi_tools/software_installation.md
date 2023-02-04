@@ -18,7 +18,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 - Begin by selecting **Browse Software** in the main menu list and hit ++enter++.
 
-- Scroll through the list of available software - for more details check the [DietPi software list](../software/).
+- Scroll through the list of available software - for more details check the [DietPi software list](../../software/).
 
 The list of optimised software is long. You either browse the list or use the option **Search Software**.
 

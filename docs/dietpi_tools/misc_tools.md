@@ -66,3 +66,5 @@ dietpi-bugreport
 ```
 
 ![DietPi-BugReport screenshot](../assets/images/dietpi-bugreport.jpg){: width="646" height="352" loading="lazy"}
+
+---

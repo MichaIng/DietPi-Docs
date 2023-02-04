@@ -44,3 +44,5 @@ dietpi-launcher
 - <a name="dietpi-cpu-info"></a>[**DietPi CPU Info - Displays CPU temperature, processor frequency, throttle level etc.**](misc_tools/#dietpi-cpu-info)
 - <a name="dietpi-morse-code"></a>[**DietPi Morse Code - Converts a text file into morse code**](misc_tools/#dietpi-morse-code)
 - <a name="dietpi-bug-report"></a>[**DietPi Bug Report**](misc_tools/#dietpi-bug-report)
+
+---
