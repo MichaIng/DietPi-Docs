@@ -412,6 +412,7 @@ pasja
 passwd
 passwordless
 PCIe
+petitboot
 phpBB
 phpMyAdmin
 phpSysInfo
