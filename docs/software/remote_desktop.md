@@ -180,6 +180,12 @@ XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 
     XRDP uses port **3389** by default, so you need to open/forward it from your router to DietPi.
 
+
+??? info "Troubleshooting: Microsoft Windows RDP connection black screen"
+
+    It is sometimes reported that a Windows RDP session stucks at a black screen when trying to connect to an XRDP server.  
+    This might be resolved using this instruction: [How to Resolve Microsoft RDP Connection Black Screen](https://techdirectarchive.com/2022/01/15/how-to-resolve-microsoft-rdp-connection-black-screen/) 
+
 ## NoMachine
 
 NoMachine is a remote desktop server with advanced features, such as screen recording. The client also scans for all available NoMachine servers on your network, allowing easy connection and maintenance of your remote desktops.
