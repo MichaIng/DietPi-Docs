@@ -172,24 +172,47 @@ Website: <http://gnustep.org>
 
 ### Chromium
 
-#### Does my device support GPU acceleration?
-
-Not all devices support GPU acceleration with Chromium.
-
-- RPis supports native OpenGL and will be configured during installation.
-- Odroids support OpenGLES and will be configured during installation.
-- Other devices will most likely be limited to software rendering.
-
-#### Where can I check the status of GPU acceleration?
-
-Once Chromium is running, simply go to the following address: `chrome://gpu`
-
-#### Enable support for Widevine DRM protected content on RPi
-
-- Manually: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
-- with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... many-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
-
 ![Chromium screenshot](../assets/images/dietpi-software-desktop-tools-chromium.jpg){: width="1376" height="858" loading="lazy"}
+
+=== "Chromium kiosk mode"
+
+    The **Chromium kiosk mode** can be used to set the web browser to these properties:
+
+    - Full screen
+    - No menu bar, no toolbar, address field,...
+    - No option to exit the browser resp. change the application
+
+    The typical applications are to use your system
+
+    - as a display of only one or several web pages (via tabs) without access to the whole system
+    - as a browser based smart home GUI
+
+    To put your Chromium browser into kiosk mode the following steps have to be achieved:
+
+    1. xxx
+
+=== "Enable Widevine DRM protected content"
+
+    To enable the support for Widevine DRM protected content, these options exist:
+
+    - Manually: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
+    - with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... many-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
+
+=== "FAQs"
+
+    <h4>Does my device support GPU acceleration?</h4>
+
+    Not all devices support GPU acceleration with Chromium.
+
+    - RPis supports native OpenGL and will be configured during installation.
+    - Odroids support OpenGLES and will be configured during installation.
+    - Other devices will most likely be limited to software rendering.
+
+    <h4>Where can I check the status of GPU acceleration?</h4>
+
+    Once Chromium is running, simply go to the following address: `chrome://gpu`
+
+***
 
 ### Firefox
 
@@ -201,6 +224,8 @@ Similar to [Chromium](#chromium), Firefox has been made a separate install optio
 
 ![Firefox screenshot](../assets/images/dietpi-software-firefox-display.png){: width="1024" height="723" loading="lazy"}
 
+***
+
 ### GIMP
 
 MS Paint on steroids. If you need to edit pixels with a vast number of tools, GIMP is the only program you'll need.
@@ -211,11 +236,15 @@ MS Paint on steroids. If you need to edit pixels with a vast number of tools, GI
 
 Website: <https://www.gimp.org>
 
+***
+
 ### QuiteRSS
 
 QuiteRSS is an open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
 
 ![QuiteRSS screenshot](../assets/images/dietpi-software-desktop-tools-quiterss.jpg){: width="760" height="564" loading="lazy"}
+
+***
 
 ### Xfce Power Manager
 
