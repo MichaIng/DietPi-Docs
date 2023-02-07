@@ -201,7 +201,7 @@ Website: <http://gnustep.org>
 
         If Chromium is not installed, you will get a startup error message that the file `/var/lib/dietpi/dietpi-software/installed/chromium-autostart.sh` is not found if you activate Chromium kiosk mode via `dietpi-autostart`.
 
-    1. Select Chromium kiosk mode (i.e. automatic login) via
+    1. Select Chromium kiosk mode (with automatic login) via
 
         ```sh
         dietpi-autostart
