@@ -176,6 +176,8 @@ Website: <http://gnustep.org>
 
 === "Chromium kiosk mode"
 
+    <h4>Overview</h4>
+
     The **Chromium kiosk mode** can be used to set the web browser to these properties:
 
     - Full screen
@@ -187,9 +189,46 @@ Website: <http://gnustep.org>
     - as a display of only one or several web pages (via tabs) without access to the whole system
     - as a browser based smart home GUI
 
+    <h4>Activate Chromium kiosk mode</h4>
+
     To put your Chromium browser into kiosk mode the following steps have to be achieved:
 
-    1. xxx
+    1. Install Chromium browser via 
+
+        ```sh
+        dietpi-software install 113
+        ```
+
+        If Chromium is not installed, you will get a startup error message that the file `/var/lib/dietpi/dietpi-software/installed/chromium-autostart.sh` is not found if you activate Chromium kiosk mode via `dietpi-autostart`.
+
+    1. Select Chromium kiosk mode (i.e. autologin) via
+
+        ```sh
+        dietpi-autostart
+        ```
+
+        and select `11 : Chromium - Dedicated use without desktop` in the main dialog.  
+        In the following dialog enter the autostart web page which shall be displayed initially.
+
+    1. Reboot to the Chromium kiosk mode
+
+    <h4>Deactivate Chromium kiosk mode</h4>
+
+    To deactivate the kiosk mode, e.g. login to the system via ssh and execute `dietpi-autostart` to switch away from the kiosk mode.
+
+    <h4>Tweak kiosk mode behaviour</h4>
+
+    The kiosk mode behaviour is defined by the contents of the file  
+    `/var/lib/dietpi/dietpi-software/installed/chromium-autostart.sh`  
+    which can be tweaked by editing it.
+
+    There are some hints how to achieve tweaking:
+
+    - [DietPi issue #3389: *Chromium Autostart / Kiosk Mode*](https://github.com/MichaIng/DietPi/issues/3389)
+    - [DietPi Forum entry #14886: *Non-Interactive Kiosk Improvements*](https://dietpi.com/forum/t/non-interactive-kiosk-improvements/14886)
+    - [DietPi issue #2575: *Chromium: Hide mouse in autostart kiosk mode*](https://github.com/MichaIng/DietPi/issues/2575)
+    - [DietPi Forum entry #15769: *How do I get rid of the mouse pointer when I start chromium w/o desktop?*](https://dietpi.com/forum/t/how-do-i-get-rid-of-the-mouse-pointer-when-i-start-chromium-w-o-desktop/15769)
+    - [DietPi issue #2938: *Chromium: Allow to use app mode instead of kiosk mode*](https://github.com/MichaIng/DietPi/issues/2938)
 
 === "Enable Widevine DRM protected content"
 
