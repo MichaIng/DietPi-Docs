@@ -166,19 +166,19 @@ XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 
 ![XRDP desktop screenshot](../assets/images/dietpi-software-remotedesktop-xrdp.png){: width="648" height="507" loading="lazy"}
 
-=== "Connect to your desktop"
+### Connect to your desktop
 
-    To connect to the desktop, open the remote desktop application in Windows (or any other XRDP compatible client).  
-    Enter the IP address of your DietPi device, e.g. `192.168.0.100`.  
-    Click connect and enter the following details once connected:
+To connect to the desktop, open the remote desktop application in Windows (or any other XRDP compatible client).  
+Enter the IP address of your DietPi device, e.g. `192.168.0.100`.  
+Click connect and enter the following details once connected:
 
-    - Module = `Xorg`
-    - Username = `root`
-    - Password = `dietpi`
+- Module = `Xorg`
+- Username = `root`
+- Password = `dietpi`
 
-=== "Access from outside your local network"
+### Access from outside your local network
 
-    XRDP uses port **3389** by default, so you need to open/forward it from your router to DietPi.
+XRDP uses port **3389** by default, so you need to open/forward it from your router to DietPi.
 
 ??? info "Troubleshooting: Microsoft Windows RDP connection black screen"
 
