@@ -172,24 +172,84 @@ Website: <http://gnustep.org>
 
 ### Chromium
 
-#### Does my device support GPU acceleration?
-
-Not all devices support GPU acceleration with Chromium.
-
-- RPis supports native OpenGL and will be configured during installation.
-- Odroids support OpenGLES and will be configured during installation.
-- Other devices will most likely be limited to software rendering.
-
-#### Where can I check the status of GPU acceleration?
-
-Once Chromium is running, simply go to the following address: `chrome://gpu`
-
-#### Enable support for Widevine DRM protected content on RPi
-
-- Manually: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
-- with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... many-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
-
 ![Chromium screenshot](../assets/images/dietpi-software-desktop-tools-chromium.jpg){: width="1376" height="858" loading="lazy"}
+
+=== "Chromium kiosk mode"
+
+    <h4>Overview</h4>
+
+    The **Chromium kiosk mode** is a Chromium feature that allows your device to be used in a single-window resp. single-app kiosk mode. Generally, any access to the rest of your system is locked.  
+    The mode can be used to set the web browser to these properties:
+
+    - Full screen
+    - No menu bar, no toolbar, no address field,...
+    - No option to exit the browser resp. change the tabs
+
+    Two examples using the mode are to use your system
+
+    - as a display of only one or several web pages (via tabs) without access to the whole system
+    - as a browser based smart home GUI
+
+    The kiosk mode can be distinguished to the **Single App Kiosk Mode**, where the user is locked into one single particular site having a fullscreen mode that can't be changed or exited.  
+    Following is an example of a kiosk mode screenshot for the example site `dietpi.com`:
+
+    ![Chromium kiosk mode screenshot](../assets/images/dietpi-software-desktop-chromium-kiosk-mode.jpg){: width="360" height="208" loading="lazy"}
+
+    <h4>Activate Chromium kiosk mode</h4>
+
+    To put your Chromium browser into kiosk mode the following steps have to be achieved:
+
+    1. Install Chromium browser via 
+
+        ```sh
+        dietpi-software install 113
+        ```
+
+        If Chromium is not installed, you will get a startup error message that the file `/var/lib/dietpi/dietpi-software/installed/chromium-autostart.sh` is not found if you activate Chromium kiosk mode via `dietpi-autostart`.
+
+    1. Select Chromium kiosk mode (with automatic login) via
+
+        ```sh
+        dietpi-autostart
+        ```
+
+        and select `11 : Chromium - Dedicated use without desktop` in the main dialog.  
+        In the following dialog enter the autostart web page which shall be displayed initially.
+
+    1. Reboot to the Chromium kiosk mode
+
+    <h4>Deactivate Chromium kiosk mode</h4>
+
+    To deactivate the kiosk mode, e.g. login to the system via ssh and execute `dietpi-autostart` to switch away from the kiosk mode.
+
+    <h4>Tweak kiosk mode behaviour</h4>
+
+    The kiosk mode behaviour is defined by the contents of the file  
+    `/var/lib/dietpi/dietpi-software/installed/chromium-autostart.sh`  
+    which can be tweaked by editing it.
+
+    There are some hints how to achieve tweaking:
+
+    - [DietPi issue #3389: *Chromium Autostart / Kiosk Mode*](https://github.com/MichaIng/DietPi/issues/3389)
+    - [DietPi Forum entry #14886: *Non-Interactive Kiosk Improvements*](https://dietpi.com/forum/t/non-interactive-kiosk-improvements/14886)
+    - [DietPi issue #2575: *Chromium: Hide mouse in autostart kiosk mode*](https://github.com/MichaIng/DietPi/issues/2575)
+    - [DietPi Forum entry #15769: *How do I get rid of the mouse pointer when I start chromium w/o desktop?*](https://dietpi.com/forum/t/how-do-i-get-rid-of-the-mouse-pointer-when-i-start-chromium-w-o-desktop/15769)
+    - [DietPi issue #2938: *Chromium: Allow to use app mode instead of kiosk mode*](https://github.com/MichaIng/DietPi/issues/2938)
+
+=== "Enable Widevine DRM protected content"
+
+    To enable the support for Widevine DRM protected content, these options exist:
+
+    - Manually: [https://blog.vpetkov.net/2019/07/12/net ... -chromium/](https://blog.vpetkov.net/2019/07/12/netflix-and-spotify-on-a-raspberry-pi-4-with-latest-default-chromium/)
+    - with scripts: [https://blog.vpetkov.net/2020/03/30/ras ... many-others/](https://blog.vpetkov.net/2020/03/30/raspberry-pi-netflix-one-line-easy-install-along-with-hulu-amazon-prime-disney-plus-hbo-spotify-pandora-and-many-others/)
+
+=== "FAQs"
+
+    <h4>Where can I check the status of GPU acceleration?</h4>
+
+    Once Chromium is running, simply go to the following address: `chrome://gpu`
+
+***
 
 ### Firefox
 
@@ -201,6 +261,8 @@ Similar to [Chromium](#chromium), Firefox has been made a separate install optio
 
 ![Firefox screenshot](../assets/images/dietpi-software-firefox-display.png){: width="1024" height="723" loading="lazy"}
 
+***
+
 ### GIMP
 
 MS Paint on steroids. If you need to edit pixels with a vast number of tools, GIMP is the only program you'll need.
@@ -211,11 +273,15 @@ MS Paint on steroids. If you need to edit pixels with a vast number of tools, GI
 
 Website: <https://www.gimp.org>
 
+***
+
 ### QuiteRSS
 
 QuiteRSS is an open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
 
 ![QuiteRSS screenshot](../assets/images/dietpi-software-desktop-tools-quiterss.jpg){: width="760" height="564" loading="lazy"}
+
+***
 
 ### Xfce Power Manager
 
