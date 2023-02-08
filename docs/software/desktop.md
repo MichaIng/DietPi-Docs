@@ -190,7 +190,10 @@ Website: <http://gnustep.org>
     - as a display of only one or several web pages (via tabs) without access to the whole system
     - as a browser based smart home GUI
 
-    The kiosk mode can be distinguished to the **Single App Kiosk Mode**, where the user is locked into one single particular site having a fullscreen mode that can't be changed or exited.
+    The kiosk mode can be distinguished to the **Single App Kiosk Mode**, where the user is locked into one single particular site having a fullscreen mode that can't be changed or exited.  
+    Following is an example of a kiosk mode screenshot for the example site `dietpi.com`:
+
+    ![Chromium kiosk mode screenshot](../assets/images/dietpi-software-desktop-chromium-kiosk-mode.jpg){: width="360" height="208" loading="lazy"}
 
     <h4>Activate Chromium kiosk mode</h4>
 
