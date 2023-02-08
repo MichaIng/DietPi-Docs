@@ -178,16 +178,19 @@ Website: <http://gnustep.org>
 
     <h4>Overview</h4>
 
-    The **Chromium kiosk mode** can be used to set the web browser to these properties:
+    The **Chromium kiosk mode** is a Chromium feature that allows your device to be used in a single-window resp. single-app kiosk mode. Generally, any access to the rest of your system is locked.  
+    The mode can be used to set the web browser to these properties:
 
     - Full screen
-    - No menu bar, no toolbar, address field,...
-    - No option to exit the browser resp. change the application
+    - No menu bar, no toolbar, no address field,...
+    - No option to exit the browser resp. change the tabs
 
-    The typical applications are to use your system
+    Two examples using the mode are to use your system
 
     - as a display of only one or several web pages (via tabs) without access to the whole system
     - as a browser based smart home GUI
+
+    The kiosk mode can be distinguished to the **Single App Kiosk Mode**, where the user is locked into one single particular site having a fullscreen mode that can't be changed or exited.
 
     <h4>Activate Chromium kiosk mode</h4>
 
