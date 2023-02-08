@@ -245,14 +245,6 @@ Website: <http://gnustep.org>
 
 === "FAQs"
 
-    <h4>Does my device support GPU acceleration?</h4>
-
-    Not all devices support GPU acceleration with Chromium.
-
-    - RPis supports native OpenGL and will be configured during installation.
-    - Odroids support OpenGLES and will be configured during installation.
-    - Other devices will most likely be limited to software rendering.
-
     <h4>Where can I check the status of GPU acceleration?</h4>
 
     Once Chromium is running, simply go to the following address: `chrome://gpu`
