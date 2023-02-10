@@ -88,6 +88,7 @@ CORS
 Coturn
 CouchPotato
 COVID
+CRDA
 cron
 CSI
 CSM
@@ -210,6 +211,7 @@ HiFi
 HiFiBerry
 Hipp
 homeserver
+hostapd
 hostname
 hostnames
 hotfix
@@ -412,6 +414,7 @@ pasja
 passwd
 passwordless
 PCIe
+petitboot
 phpBB
 phpMyAdmin
 phpSysInfo
