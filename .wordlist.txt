@@ -70,7 +70,6 @@ CedArctic
 Certbot
 cgroup
 changelog
-CIDR
 CIFS
 CLI
 Clonezilla
