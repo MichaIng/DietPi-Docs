@@ -11,7 +11,7 @@ The installation of DietPi consists of few steps:
 - Get the DietPi image (and put it on the installation media)
 - Boot up the DietPi device and go through one time installation steps
 
-Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/#dietpi-software){: class="nospellcheck"}.
+Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/software_installation/#dietpi-software){: class="nospellcheck"}.
 
 Select the following tabs for the installation description of your target.
 
