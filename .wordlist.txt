@@ -561,6 +561,7 @@ SSID
 SSIDs
 SSL
 SSO
+StarFive
 stdout
 StackExchange
 StephanStS
@@ -661,6 +662,7 @@ VirtualHere
 virtualised
 virtualiser
 virtualisers
+VisionFive
 VM
 VMDK
 VMs
