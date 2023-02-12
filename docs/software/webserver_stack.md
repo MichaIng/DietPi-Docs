@@ -484,7 +484,7 @@ Official documentation: <https://httpd.apache.org/docs>
 
 ### Nginx
 
-**Nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, WordPress.com, FastMail.FM.[^1]
+**Nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, Wordpress.com, FastMail.FM.[^1]
 
 ![Nginx logo](../assets/images/dietpi-software-webstack-nginx.gif){: width="200" height="85" loading="lazy"}
 

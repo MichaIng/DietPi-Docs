@@ -220,7 +220,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 - [**FreshRSS - A self-hosted RSS feed aggregator**](social/#freshrss)
 - [**phpBB - Free flat-forum bulletin board software solution**](social/#phpbb)
-- [**WordPress - Website Blog and Publishing platform**](social/#wordpress)
+- [**Wordpress - Website Blog and Publishing platform**](social/#wordpress)
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](social/#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](social/#baikal)
 - [**Synapse - Decentralized communication with the Matrix protocol**](social/#synapse)

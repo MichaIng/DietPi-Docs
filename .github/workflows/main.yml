@@ -8,12 +8,9 @@ jobs:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
     # https://github.com/actions/runner-images
     runs-on: ubuntu-22.04
-    defaults:
-      run:
-        shell: sh
     steps:
     - name: Setup tmpfs
-      run: sudo mount -t tmpfs -o "noatime,lazytime,uid=$(id -u)" tmpfs "$GITHUB_WORKSPACE"
+      run: sudo mount -t tmpfs -o "noatime,lazytime,uid=$UID" tmpfs "$GITHUB_WORKSPACE"
     - name: Clone DietPi-Docs repository
       id: clone
       # https://github.com/actions/checkout/tags
@@ -35,7 +32,7 @@ jobs:
       uses: actions/setup-python@v4
       with:
         # Match version on dietpi.com server
-        python-version: '3.11.1'
+        python-version: '3.10.9'
     - name: Install MkDocs
       id: mkdocs
       if: always() && steps.python.outcome == 'success'
@@ -58,21 +55,11 @@ jobs:
       run: pyspelling -c .spellcheck.yml
     - name: Download lychee
       id: lychee
-      # Skip on push events into master
-      if: always() && steps.build.outcome == 'success' && ! endsWith(github.ref, '/master')
+      if: always() && steps.build.outcome == 'success'
       run: |
-        curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        curl -sSfL "$(curl -sSf 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
         tar xf lychee.tar.gz
     - name: Run lychee to check README and HTML files
-      if: always() && steps.lychee.outcome == 'success' && ! endsWith(github.ref, '/master')
+      if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
-      # Exclude URLs for newly added Markdown files as well as raw view and edit GitHub URLs for all existing Markdown files
-      run: |
-        git fetch --depth=1 origin master
-        while read -r line; do exclude="$exclude|dietpi.com/${line%.md}/"; done << _EOF_
-        $(git diff --name-only --diff-filter=A origin/master docs | grep '.md$')
-        _EOF_
-        while read -r line; do exclude="$exclude|github.com/MichaIng/DietPi-Docs/(raw|edit)/dev/$line"; done << _EOF_
-        $(find docs -type f -name '*.md')
-        _EOF_
-        ./lychee -En --require-https --cache --exclude '^(root@192.168.1.20$|http://wiringpi.com/$|https://((adguard|nginx|shiori|nextcloud).box/$|twitter.com/DietPi_$|www.linux-kvm.org/$|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details'"$exclude"'))' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+      run: ./lychee -En --require-https --cache --exclude '^(root@192.168.1.20$|http://wiringpi.com/$|https://((adguard|nginx|shiori|nextcloud).box/$|twitter.com/DietPi_$|www.linux-kvm.org/$|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details))' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'

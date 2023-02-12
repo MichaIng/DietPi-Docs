@@ -11,7 +11,7 @@ The installation of DietPi consists of few steps:
 - Get the DietPi image (and put it on the installation media)
 - Boot up the DietPi device and go through one time installation steps
 
-Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/software_installation/#dietpi-software){: class="nospellcheck"}.
+Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/#dietpi-software){: class="nospellcheck"}.
 
 Select the following tabs for the installation description of your target.
 
@@ -379,10 +379,6 @@ Select the following tabs for the installation description of your target.
     One of the options to run and manage virtual machines is [__Proxmox__](https://www.proxmox.com/).
 
     ![Proxmox web interface](assets/images/proxmox1.png){: width="800" height="439" loading="lazy"}
-
-    !!! info "Proxmox Helper Script to install DietPi in Proxmox"
-        There is a script from `Darren Bennett` ([GitHub `dazeb`](https://github.com/dazeb)) which makes the installation steps described below much easier by execution of the installation steps within the script.  
-        See <https://github.com/dazeb/proxmox-dietpi-installer> for details.
 
     <h2>Prerequisites</h2>
 

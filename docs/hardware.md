@@ -494,35 +494,6 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
     </table>
 </div>
 
-## Orange Pi Series
-
-Orange Pi is an open source product brand of Shenzhen Xunlong Software Co., Ltd, which focuses on providing cost-effective open source hardware, open source software and OEM/ODM services for individuals and enterprises worldwide.
-
-For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) website.
-
-![Orange Pi 5 photo](assets/images/dietpi-orange-pi-5.png){: width="500" height="334" loading="lazy"}
-
-**Orange Pi 5** uses Rockchip RK3588S new generation 8-core 64-bit processor, quad-core A76+quad-core A55, with 8nm process design, up to 2.4GHz main frequency, integrated ARM Mali-G610 GPU, embedded high-performance 3D/2D image acceleration module, built-in NPU with 6Tops computing power, with 4GB/8GB/16GB/32GB (LPDDR4/4x), and up to 8K display processing capability.
-
-<div class="md-typeset__table">
-    <table>
-        <thead>
-            <tr>
-                <th><strong>Product</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a class="table" href=""><strong>Orange Pi 5</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5-ARMv8-Bullseye.7z">DietPi image</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
 ## Native PC & Virtual Machines
 
 ### Native PC images
