@@ -88,6 +88,7 @@ CORS
 Coturn
 CouchPotato
 COVID
+CRDA
 cron
 CSI
 CSM
@@ -198,17 +199,19 @@ Griesemer
 GUA
 HACS
 HAProxy
+hardcoded
 harddisk
+hardenings
 Hardkernel
 Hardkernel's
 HC
 hexa
-hardcoded
-hardenings
+HFS
 HiFi
 HiFiBerry
 Hipp
 homeserver
+hostapd
 hostname
 hostnames
 hotfix
@@ -364,6 +367,7 @@ nm
 Nmap
 NoMachine
 NordVPN
+NPU
 NTFS
 NTP
 NUC
@@ -374,8 +378,10 @@ NZB
 NZBGet
 OCSP
 OctoPrint
+ODM
 Odroid
 Odroids
+OEM
 Ok
 Okta
 oldoldstable
@@ -408,6 +414,7 @@ pasja
 passwd
 passwordless
 PCIe
+petitboot
 phpBB
 phpMyAdmin
 phpSysInfo
@@ -521,6 +528,7 @@ SFTP
 SHA
 Shairport
 ShareAlike
+Shenzhen
 Shoutcast
 SickRage
 Signalyst
@@ -553,6 +561,7 @@ SSID
 SSIDs
 SSL
 SSO
+StarFive
 stdout
 StackExchange
 StephanStS
@@ -653,6 +662,7 @@ VirtualHere
 virtualised
 virtualiser
 virtualisers
+VisionFive
 VM
 VMDK
 VMs
@@ -690,7 +700,7 @@ WIP
 WireGuard
 WiringPi
 Wokandapix
-Wordpress
+WordPress
 WPA
 writeable
 WSAD
@@ -700,6 +710,8 @@ XFS
 xml
 XRDP
 XU
+Xunlong
+xz
 YaCy
 YAML
 ympd
@@ -710,4 +722,3 @@ ZFS
 zlib
 zr
 zram
-xz
