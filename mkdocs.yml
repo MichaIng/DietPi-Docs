@@ -21,10 +21,11 @@ theme:
 
   language: en
   features:
-  - navigation.tabs
-  - navigation.top
   - content.action.edit
   - content.action.view
+  - content.code.copy
+  - navigation.tabs
+  - navigation.top
   #logo: assets/images/logo.png
   favicon: https://dietpi.com/favicon.ico
 
