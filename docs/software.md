@@ -98,6 +98,8 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 - [**Python 3 - High-level interpreted programming language**](programming/#python-3)
 - [**Go - Programming language**](programming/#go)
+- [**Java - Programming language**](programming/#java)
+- [**Mono - Programming language**](programming/#mono)
 - [**Docker - Build, ship, and run distributed applications**](programming/#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](programming/#docker-compose)
 - [**Portainer - Docker container management**](programming/#portainer)

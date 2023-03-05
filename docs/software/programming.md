@@ -9,6 +9,8 @@ description: Description of DietPi software options related to software developm
 
 - [**Python 3 - High-level interpreted programming language**](#python-3)
 - [**Go - Programming language**](#go)
+- [**Java - Programming language**](#java)
+- [**Mono - Programming language**](#mono)
 - [**Node.js - open-source, JavaScript runtime environment**](../webserver_stack/#nodejs)
 - [**Docker -  Create, deploy, and run applications using containers**](#docker)
 - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
@@ -43,6 +45,12 @@ You can find Python everywhere in the world of computer programming. For example
 
 Currently, Python is 3rd most popular of programming language [^4].
 
+To find out which version of Python is installed, just run
+
+```sh
+python3 -V
+```
+
 === "Installation details"
 
     The install option explicitly installs only **Python 3**.  
@@ -73,13 +81,19 @@ Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
 
 Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 
-![DietPi Go open source programming language](../assets/images/dietpi-software-programming-golang.svg)
+![DietPi Go open source programming language](../assets/images/dietpi-software-programming-golang.svg){: width="150" height="56" loading="lazy"}
 
 Source: By [https://golang.org](https://blog.golang.org/go-brand), Creative Commons Attribution 3.0
 
 Go is a compiled, fast and high-performance language intended to be simple and is designed to be easy to read and understand. Go was created at Google by Rob Pike, Robert Griesemer, and Ken Thompson, and it first appeared in Nov 2009.
 
 Go is used by some of the big organizations such as Google, BBC, Uber, Soundcloud, Twitch, Medium, Daily Motion[^2]. Uber has reported better throughput, high performance, latency, and uptime. BBC, the house name in broadcasting the world news, uses it for backend, including crawlers and web scrapers. The build and deployment system of Soundcloud is in Go.
+
+To find out which version of Go is installed, just run
+
+```sh
+go version
+```
 
 === "Getting started"
 
@@ -91,7 +105,6 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 
     Some common Go commands are:
 
-    - `go version`: Prints the installed Go version
     - `go env`: Prints the Go internal environment variables (e.g. GOPATH). Can also be used e.g. like `$(go env GOPATH)/bin`
     - `go mod tidy <MODULNAME>`: Generate a Go module
     - `go help`: Start the Go internal help in general, details for commands e.g. via `go help build`
@@ -122,6 +135,40 @@ Additional libraries: <https://github.com/avelino/awesome-go>
 Wikipedia: <https://en.wikipedia.org/wiki/Go_(programming_language)>  
 Source code: <https://github.com/golang/go>  
 License: [BSD 3-Clause](https://github.com/golang/go/blob/master/LICENSE)
+
+## Java
+
+![DietPi Java programming language](../assets/images/dietpi-software-programming-java.svg){: width="80" height="151" loading="lazy"}
+
+Source: https://de.wikipedia.org/w/index.php?curid=2095155
+
+The Java options of DietPi contain these basic options
+
+- Java Runtime Environment JRE
+- Java Development Kit JDK
+
+The Java Runtime Environment is the runtime environment of the Java technology. It serves as a more or less hardware dependent software platform to abstract the Java applications from the host system (operating system). It defines an API (application programming interface, which is host system independent and contains the so called Java Virtual Machine (JVM).
+
+The Java Development Kit is one of several Java-SDKs and is often used by the Java developers. It contains the components Java compiler `javac`, Java debugger `jdb`, Java documentation tool `javadoc`, Java archiver `jar` and further small tools.  
+To find out which version of Java is installed, just run 
+
+```sh
+java -version
+```
+
+## Mono
+
+![DietPi Mono programming language](../assets/images/dietpi-software-programming-mono.png){: width="100" height="119" loading="lazy"}
+
+Source: User [OsamaK](http://en.wikipedia.org/wiki/User:OsamaK) - https://de.wikipedia.org/w/index.php?curid=3548404
+
+[Mono](https://www.mono-project.com/) is a cross platform, open source .NET framework. Is an alternative implementation of the Microsoft .NET framework. It support the development of platform independent software on the standards of the Common Language Infrastructure and the programming language C#.
+
+To find out which version of Mono is installed, just run
+
+```sh
+mono --version
+```
 
 ## Docker
 
