@@ -23,6 +23,7 @@ analytics
 Anestiev
 APCu
 APIs
+archiver
 Armbian
 ARMv
 ASUS
@@ -259,6 +260,7 @@ js
 JSON
 JunoBloom
 JustBoom
+JVM
 Kbit
 Keychain
 KiB
@@ -520,6 +522,7 @@ SCP
 scroller
 SCGI
 scrollback
+SDK
 SDL
 SDN
 SDRAM
