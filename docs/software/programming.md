@@ -138,7 +138,7 @@ License: [BSD 3-Clause](https://github.com/golang/go/blob/master/LICENSE)
 
 ## Java
 
-![DietPi Java programming language](../assets/images/dietpi-software-programming-java.svg){: width="80" height="151" loading="lazy"}
+![Java programming language logo](../assets/images/dietpi-software-programming-java.svg){: width="80" height="151" loading="lazy"}
 
 Source: <https://de.wikipedia.org/w/index.php?curid=2095155>
 
