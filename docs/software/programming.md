@@ -81,7 +81,7 @@ Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
 
 Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 
-![DietPi Go open source programming language](../assets/images/dietpi-software-programming-golang.svg){: width="150" height="56" loading="lazy"}
+![Go open source programming language logo](../assets/images/dietpi-software-programming-golang.svg){: width="150" height="56" loading="lazy"}
 
 Source: By [https://golang.org](https://blog.golang.org/go-brand), Creative Commons Attribution 3.0
 
