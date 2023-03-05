@@ -23,6 +23,7 @@ analytics
 Anestiev
 APCu
 APIs
+archiver
 Armbian
 ARMv
 ASUS
@@ -257,6 +258,7 @@ js
 JSON
 JunoBloom
 JustBoom
+JVM
 Kbit
 Keychain
 KiB

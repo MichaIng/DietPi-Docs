@@ -140,7 +140,7 @@ License: [BSD 3-Clause](https://github.com/golang/go/blob/master/LICENSE)
 
 ![DietPi Java programming language](../assets/images/dietpi-software-programming-java.svg){: width="80" height="151" loading="lazy"}
 
-Source: https://de.wikipedia.org/w/index.php?curid=2095155
+Source: <https://de.wikipedia.org/w/index.php?curid=2095155>
 
 The Java options of DietPi contain these basic options
 
@@ -149,8 +149,8 @@ The Java options of DietPi contain these basic options
 
 The Java Runtime Environment is the runtime environment of the Java technology. It serves as a more or less hardware dependent software platform to abstract the Java applications from the host system (operating system). It defines an API (application programming interface, which is host system independent and contains the so called Java Virtual Machine (JVM).
 
-The Java Development Kit is one of several Java-SDKs and is often used by the Java developers. It contains the components Java compiler `javac`, Java debugger `jdb`, Java documentation tool `javadoc`, Java archiver `jar` and further small tools.  
-To find out which version of Java is installed, just run 
+The Java Development Kit is one of several Java software development kits (SDK) and is often used by the Java developers. It contains the components Java compiler `javac`, Java debugger `jdb`, Java documentation tool `javadoc`, Java archiver `jar` and further small tools.  
+To find out which version of Java is installed, just run
 
 ```sh
 java -version
@@ -160,7 +160,7 @@ java -version
 
 ![DietPi Mono programming language](../assets/images/dietpi-software-programming-mono.png){: width="100" height="119" loading="lazy"}
 
-Source: User [OsamaK](http://en.wikipedia.org/wiki/User:OsamaK) - https://de.wikipedia.org/w/index.php?curid=3548404
+Source: User [`OsamaK`](https://en.wikipedia.org/wiki/User:OsamaK) - <https://de.wikipedia.org/w/index.php?curid=3548404>
 
 [Mono](https://www.mono-project.com/) is a cross platform, open source .NET framework. Is an alternative implementation of the Microsoft .NET framework. It support the development of platform independent software on the standards of the Common Language Infrastructure and the programming language C#.
 
