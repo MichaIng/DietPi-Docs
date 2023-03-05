@@ -519,6 +519,7 @@ SCP
 scroller
 SCGI
 scrollback
+SDK
 SDL
 SDN
 SDRAM
