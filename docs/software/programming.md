@@ -158,7 +158,7 @@ java -version
 
 ## Mono
 
-![DietPi Mono programming language](../assets/images/dietpi-software-programming-mono.png){: width="100" height="119" loading="lazy"}
+![Mono .NET Framework implementation logo](../assets/images/dietpi-software-programming-mono.png){: width="100" height="119" loading="lazy"}
 
 Source: User [`OsamaK`](https://en.wikipedia.org/wiki/User:OsamaK) - <https://de.wikipedia.org/w/index.php?curid=3548404>
 
