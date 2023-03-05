@@ -243,11 +243,13 @@ IPsec
 iptables
 IPv
 IPVanish
+ISA
 iZotope
 Jackett
 JanKoudijs
 JDK
 Jellyfin
+JH
 Joulinar
 journalctl
 journald
@@ -261,6 +263,7 @@ Kbit
 Keychain
 KiB
 kickstart
+Kickstarter
 kickstarts
 killswitch
 KiTTY

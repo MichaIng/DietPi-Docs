@@ -525,7 +525,7 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
 
 ## RISC-V based SBCs
 
-The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source ISA (instruction set architecture), where CPU or SoC device internals of the CPU core are transparent. This makes the technology interesting for combining it within the open source linux orbit.
+The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source ISA (instruction set architecture), where CPU or SoC device internals of the CPU core are transparent. This makes the technology interesting for combining it within the open source Linux orbit.
 
 ### StarFive
 
