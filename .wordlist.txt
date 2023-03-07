@@ -23,6 +23,7 @@ analytics
 Anestiev
 APCu
 APIs
+archiver
 Armbian
 ARMv
 ASUS
@@ -243,11 +244,13 @@ IPsec
 iptables
 IPv
 IPVanish
+ISA
 iZotope
 Jackett
 JanKoudijs
 JDK
 Jellyfin
+JH
 Joulinar
 journalctl
 journald
@@ -257,10 +260,12 @@ js
 JSON
 JunoBloom
 JustBoom
+JVM
 Kbit
 Keychain
 KiB
 kickstart
+Kickstarter
 kickstarts
 killswitch
 KiTTY
@@ -517,6 +522,7 @@ SCP
 scroller
 SCGI
 scrollback
+SDK
 SDL
 SDN
 SDRAM

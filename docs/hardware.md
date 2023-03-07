@@ -523,6 +523,35 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
     </table>
 </div>
 
+## RISC-V based SBCs
+
+The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source ISA (instruction set architecture), where CPU or SoC device internals of the CPU core are transparent. This makes the technology interesting for combining it within the open source Linux orbit.
+
+### StarFive
+
+[StarFive](https://www.starfivetech.com/en/site/soc) offers a RISC-V board, the [VisionFive 2](https://doc-en.rvspace.org/VisionFive2/PDF/VisionFive2_Datasheet.pdf) (started as a Kickstarter project): The board contains a quad-core RISC-V JH7110 system with 2/4/8 GB of RAM and many other bells and whistles of the Raspberry Pi type world.
+
+![StarFive VisionFive 2 photo](assets/images/riscv-starfive-visionfive2.jpg){: width="500" height="420" loading="lazy"}
+
+<div class="md-typeset__table">
+    <table>
+        <thead>
+            <tr>
+                <th><strong>Product</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a class="table" href=""><strong>StarFive VisionFive 2</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_VisionFive2-RISC-V-Sid.7z">DietPi image</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 ## Native PC & Virtual Machines
 
 ### Native PC images
