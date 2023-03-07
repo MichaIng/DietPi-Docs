@@ -135,6 +135,13 @@ It allows you to create your own website.
     - Database Host = `localhost`
     - Table Prefix = `wp_`
 
+    !!! info "Actively fill all fields!"
+        You need to fill out every dialog field although it seems like they are already set.
+
+        ![WordPress database initialization dialog](../assets/images/dietpi-software-social-wordpress-initialdialog.jpg){: width="350" height="274" loading="lazy"}
+
+        **Remark**: In the example screenshot the global application password is `dietpi`.
+
 ## Single File PHP Gallery
 
 *Single File PHP Gallery* allows you to host and browse your images from a web interface.
