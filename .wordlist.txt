@@ -545,6 +545,7 @@ SMB
 SMbus
 sn
 Snapcast
+snakeoil
 SNMP
 SoC
 SoCs
