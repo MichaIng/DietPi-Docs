@@ -205,6 +205,8 @@ Baïkal is a lightweight CalDAV + CardDAV server.
     - Username = `admin`
     - Password = What you set during first run setup above.
 
+Official website: <https://sabre.io/baikal/>
+
 ## Synapse
 
 Synapse is a server, written in Python, for communication using the Matrix protocol.
