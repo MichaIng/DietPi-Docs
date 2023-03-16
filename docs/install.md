@@ -258,7 +258,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__VMware Workstation Player__](https://www.vmware.com/de/products/workstation-player/workstation-player-evaluation.html) resp. [__VMware Fusion__](https://www.vmware.com/de/products/fusion/fusion-evaluation.html) (macOS).
 
-    ![DietPi-VMware-program](assets/images/dietpi-VMware-program.png){: width="769" height="588" loading="lazy"}
+    ![VMware Player GUI](assets/images/dietpi-VMware-program.png){: width="769" height="588" loading="lazy"}
 
     !!! info "Tested with Windows 10"
         This description relates to VMware Workstation 16 Player on a Microsoft Windows system.  
@@ -278,7 +278,7 @@ Select the following tabs for the installation description of your target.
 
     Download the **DietPi VMware** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
-    ![DietPi VMware download image](assets/images/dietpi-VMware-Download.png){: width="1223" height="749" loading="lazy"}
+    ![Download VMware image from DietPi website](assets/images/dietpi-VMware-Download.png){: width="1223" height="749" loading="lazy"}
 
     The zip file contains a couple of files, the important two are the `.vmx` and `.vmdk` files which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
 
@@ -486,13 +486,22 @@ Select the following tabs for the installation description of your target.
 
     Download the **DietPi Parallels** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}.
 
-    Double click on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.pvm` file to the Parallels directory (typically directory "Parallels" within your home directory).
+    Double click on the downloaded `.7z` file to extract it (or via option "Open in Finder").
 
-    <h2>2. Open the virtual machine in Parallels Desktop</h2>
+    <h2>2. Import and start the virtual machine in Parallels Desktop</h2>
 
-    As next, the Parallels virtual machine is opened by just double click the `.pvm` file. Then the machine starts up.
+    Double click on the extracted `.vmx` file, which will open a Parallels dialogue to import it as virtual machine and starts it right away after the import.
 
     ![Parallels Desktop DietPi startup](assets/images/Parallels2.png){: width="640" height="273" loading="lazy"}
+
+    ??? attention "You must disable IPv6 when the host uses WiFi"
+        Sometimes the VM has difficulties to connect to the internet. This is reported in a network bridged mode and when the host connects to the internet via WiFi: In these cases the IPv6 routing between the VM and the internet fails (e.g. see [there](https://communities.vmware.com/t5/VMware-Fusion-Discussions/IPv6-Bridged-Wireless/td-p/2038235)).  
+        A typical result is, that the system does not find the update server (e.g. at the very first update run). This is then signaled during the "apt update" procedure of the first boot startup.  
+        To overcome this, open a subshell (or an additional ssh window), start `dietpi-config` and disable **IPv6** within the Network options.
+
+        ![IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
+
+        Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
 
 === "UTM"
 

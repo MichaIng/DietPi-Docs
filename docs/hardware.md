@@ -627,7 +627,7 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>VMware Player / Fusion</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Bullseye.7z">DietPi VMX appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Bullseye.7z">DietPi VMX appliance</a>
                 </td>
             </tr>
             <tr>
@@ -651,7 +651,7 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>Parallels</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi PVM appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Bullseye.7z">DietPi VMX appliance</a>
                 </td>
             </tr>
             <tr>
