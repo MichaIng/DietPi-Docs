@@ -53,7 +53,7 @@ If you always wanted your very own forum, phpBB is all you need.
 
 Also Installs:
 
-- Webserver
+- Webserver, PHP and MariaDB
 
 ![phpBB example forum screenshot](../assets/images/dietpi-software-social-phpbb.png){: width="400" height="298" loading="lazy"}
 
@@ -114,6 +114,10 @@ rm -R /var/www/phpbb/install
 
 Your forum is now ready.
 
+***
+
+Official website: <https://www.phpbb.com/>
+
 ## WordPress
 
 WordPress is a state-of-the-art semantic personal publishing platform with a focus on aesthetics, web standards, and usability.
@@ -142,13 +146,17 @@ It allows you to create your own website.
 
         **Remark**: In the example screenshot the global application password is `dietpi`.
 
+***
+
+Official website: <https://wordpress.org/>
+
 ## Single File PHP Gallery
 
 *Single File PHP Gallery* allows you to host and browse your images from a web interface.
 
 Also Installs:
 
-- LASP Webserver
+- Webserver and PHP
 
 ![Single File PHP Gallery web interface screenshot](../assets/images/dietpi-software-social-imagegallery.png){: width="400" height="248" loading="lazy"}
 
@@ -175,7 +183,7 @@ Also Installs:
 
 ***
 
-Website: <https://sye.dk/sfpg>  
+Official website: <https://sye.dk/sfpg>  
 YouTube video tutorial: [DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)](https://www.youtube.com/watch?v=0by117lpq_o)
 
 ## Baïkal
@@ -204,6 +212,10 @@ Baïkal is a lightweight CalDAV + CardDAV server.
     - URL = `http://<your.IP>/baikal/html/admin`
     - Username = `admin`
     - Password = What you set during first run setup above.
+
+***
+
+Official website: <https://sabre.io/baikal/>
 
 ## Synapse
 
