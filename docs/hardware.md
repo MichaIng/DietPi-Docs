@@ -529,7 +529,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
 
 ### StarFive
 
-[StarFive](https://www.starfivetech.com/en/site/soc) offers a RISC-V board, the [VisionFive 2](https://doc-en.rvspace.org/VisionFive2/PDF/VisionFive2_Datasheet.pdf) (started as a Kickstarter project): The board contains a quad-core RISC-V JH7110 system with 2/4/8 GB of RAM and many other bells and whistles of the Raspberry Pi type world.
+[StarFive](https://www.starfivetech.com/en/site/soc) is a RISC-V SoC and SBC manufacturer and offers the [VisionFive 2](https://www.starfivetech.com/uploads/VisionFive%202%20isionDocumentation.pdf), started as a [Kickstarter project](https://www.kickstarter.com/projects/starfive/visionfive-2). The board contains a quad-core RISC-V JH7110 SoC, 2/4/8 GiB of RAM and many other bells and whistles of the Raspberry Pi type world.
 
 ![StarFive VisionFive 2 photo](assets/images/riscv-starfive-visionfive2.jpg){: width="500" height="420" loading="lazy"}
 
@@ -744,7 +744,7 @@ Depending on whether you want to use the WiFi feature later on, you have to sele
 
 ![DietPi-Installer WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550" height="184" loading="lazy"}
 
-The last selection is the target Debian version (the old **Buster**, current stable **Bullseye**, or next testing **Bookworm**).  
+The last selection is the target Debian version: the current stable **Bullseye** or next testing **Bookworm**.  
 After this, the script runs a couple of minutes, finally the following message occurs:
 
 ![DietPi-Installer finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}
