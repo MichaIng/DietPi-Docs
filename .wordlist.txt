@@ -1,5 +1,6 @@
 aarch
 ACP
+ActivityPub
 addictiveness
 addon
 addons
@@ -40,6 +41,7 @@ balancer
 balancers
 Balena
 balenaEtcher
+baudrate
 Bazarr
 BeagleBone
 Beelink
@@ -232,6 +234,7 @@ Imager
 Imgur
 InfluxData
 InfluxDB
+init
 initramfs
 integrations
 InterPlanetary
@@ -321,6 +324,7 @@ Meveric
 MiB
 MiBs
 MichaIng
+microblog
 microcontroller
 microcontrollers
 MicroK
@@ -378,6 +382,7 @@ NTP
 NUC
 Nukkit
 numpy
+Nvidia
 nyx
 NZB
 NZBGet
@@ -685,6 +690,7 @@ VSCodium
 vsftpd
 vSphere
 VST
+Vulkan
 Waveshare
 WebAuthn
 WebIOPi

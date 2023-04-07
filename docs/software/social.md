@@ -296,7 +296,7 @@ A self-hosted, single-user, ActivityPub powered microblog.
 
 === "Installation / configuration"
 
-    The software installes automatically with a default config. Therefore it is necessary to reconfigure it using the `microblog-pub` script, which loads the environment, and brings up the app's own configuration wizard.  
+    The software installs automatically with a default config. Therefore it is necessary to reconfigure it using the `microblog-pub` script, which loads the environment, and brings up the app's own configuration wizard.  
     This circumstance is signalled with the following dialog at the end of the installation process:
 
     ![microblog.pub installation screenshot](../assets/images/dietpi-software-social-microblogpub2.jpg){: width="640" height="142" loading="lazy"}
