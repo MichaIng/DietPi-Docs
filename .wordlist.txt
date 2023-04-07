@@ -176,7 +176,6 @@ frp
 fullscreen
 FuguHub
 Gbit
-german
 GiB
 GiBs
 GiBi
