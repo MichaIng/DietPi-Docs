@@ -329,6 +329,7 @@ Minecraft
 MineOS
 MiniDLNA
 MinIO
+Mio
 MIPI
 mjpg
 MkDocs
@@ -505,6 +506,7 @@ RootFS
 Roseapple
 rpc
 RPi
+RPiList
 RPis
 RSA
 RSS
