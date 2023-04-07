@@ -35,6 +35,7 @@ autostart
 AutoStart
 backend
 backends
+backlights
 backported
 Baïkal
 balancer
@@ -383,6 +384,7 @@ NUC
 Nukkit
 numpy
 Nvidia
+NVMe
 nyx
 NZB
 NZBGet
@@ -568,6 +570,7 @@ SqueezeboxServer
 SqueezeCenter
 Squeezelite
 SSD
+SSDs
 SSHFS
 SSID
 SSIDs
