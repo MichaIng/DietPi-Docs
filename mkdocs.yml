@@ -141,6 +141,7 @@ nav:
   - Miscellaneous Tools: dietpi_tools/misc_tools.md
 - RELEASES:
   - Overview: releases.md
+  - v8.16 April 2023: releases/v8_16.md
   - v8.15 March 2023: releases/v8_15.md
   - v8.14 February 2023: releases/v8_14.md
   - v8.13 January 2023: releases/v8_13.md

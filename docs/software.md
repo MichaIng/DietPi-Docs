@@ -226,6 +226,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](social/#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](social/#baikal)
 - [**Synapse - Decentralized communication with the Matrix protocol**](social/#synapse)
+- [**microblog.pub - A self-hosted, single-user, ActivityPub powered microblog**](social/#microblogpub)
 
 ## [SSH Server](ssh/)
 
