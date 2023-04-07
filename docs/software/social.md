@@ -304,7 +304,7 @@ A self-hosted, single-user, ActivityPub powered microblog.
     To execute this reconfiguration, you can enter the following commands:
 
     ```sh
-    bash
+    exec bash
     ```
 
     This starts a new bash where you can execute the configuration script
