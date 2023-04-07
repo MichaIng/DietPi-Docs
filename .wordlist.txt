@@ -176,6 +176,7 @@ frp
 fullscreen
 FuguHub
 Gbit
+german
 GiB
 GiBs
 GiBi
@@ -329,6 +330,7 @@ Minecraft
 MineOS
 MiniDLNA
 MinIO
+Mio
 MIPI
 mjpg
 MkDocs
@@ -505,6 +507,7 @@ RootFS
 Roseapple
 rpc
 RPi
+RPiList
 RPis
 RSA
 RSS
