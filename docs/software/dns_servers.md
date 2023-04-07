@@ -132,7 +132,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     The output value of "100 %" signals a full `/tmp` filesystem.
 
-    In this case the `/etc/fstab` could be changed to a larger `/tmp` by editing it. We propose to set it to a maximum value of 75 % of your RAM size (e.g. in case of 2 GB RAM, you could set it to 1500 M). 
+    In this case the `/etc/fstab` could be changed to a larger `/tmp` by editing it. We propose to set it to a maximum value of 75 % of your RAM size. E.g. in case of 2 GB RAM, you could adjust the mount option to `size=1500M`.
     This could lead to an output like
 
     ```
