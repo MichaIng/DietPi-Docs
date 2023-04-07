@@ -121,8 +121,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 === "Handling many lists"
 
     If you try to add many block- resp. whitelists (e.g. > 1 Mio), it can occur that the `/tmp` filesystem overflows.  
-    E.g., if `pihole -g` seems to fail with an error message like `sed: couldn't write 44 items to stdout: No space left on device`, then maybe `/tmp` is full.  
-    This can be checked using `df` command:
+    If `pihole -g` fails with an error message like `sed: couldn't write 44 items to stdout: No space left on device`, you can verify this case using the `df` command:
 
     ```
     root@dietpi:~# df -h /tmp
