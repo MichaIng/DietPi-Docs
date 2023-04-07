@@ -116,7 +116,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     - [The Big Blocklist Collection by `WaLLy3K`](https://firebog.net/)
     - [Phishing Army blocklist](https://phishing.army/)
     - [Whitelist collection by `anudeepND`](https://github.com/anudeepND/whitelist)
-    - [RPiList](https://github.com/RPiList/specials/blob/master/Blocklisten.md): Block- and whitelists with focus on german domains
+    - [RPiList](https://github.com/RPiList/specials/blob/master/Blocklisten.md): Block- and whitelists with focus on German domains
 
 === "Handling many lists"
 
