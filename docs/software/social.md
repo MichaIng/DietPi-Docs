@@ -14,6 +14,7 @@ description: Description of DietPi software options related to social platforms 
 <!-- markdownlint-disable-next-line MD051 -->
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
 - [**Synapse - Decentralized communication with the Matrix protocol**](#synapse)
+- [**microblog.pub - A self-hosted, single-user, ActivityPub powered microblog**](#microblogpub)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -284,5 +285,50 @@ Official website: <https://matrix.org/>
 Official documentation: <https://matrix.org/docs/guides>  
 Source code: <https://github.com/matrix-org/synapse>  
 License: [Apache 2.0](https://github.com/matrix-org/synapse/blob/develop/LICENSE)
+
+***
+
+## microblog.pub
+
+A self-hosted, single-user, ActivityPub powered microblog.
+
+![microblog.pub blog screenshot](../assets/images/dietpi-software-social-microblogpub1.jpg){: width="400" height="337" loading="lazy"}
+
+=== "Installation / configuration"
+
+    The software installs automatically with a default config. Therefore it is necessary to reconfigure it using the `microblog-pub` script, which loads the environment, and brings up the app's own configuration wizard.  
+    This circumstance is signalled with the following dialog at the end of the installation process:
+
+    ![microblog.pub installation screenshot](../assets/images/dietpi-software-social-microblogpub2.jpg){: width="640" height="142" loading="lazy"}
+
+    To execute this reconfiguration, you can enter the following commands:
+
+    ```sh
+    exec bash
+    ```
+
+    This starts a new bash where you can execute the configuration script
+
+    ```sh
+    microblog-pub configure
+    ```
+ 
+    Remark: You can also easily reboot your system and then execute the `microblog-pub configure` command without the `bash` command before.
+
+    ???+ warning "Setting the port number during the reconfiguration process"
+
+        During the reconfiguration via `microblog-pub configure` you are asked - amongst others - for your domain.  
+        Do not forget to add a `:8007`
+
+=== "Configuration file"
+
+    The `microblog.pub` configuration file is named `profile.toml`  
+    and is located there: `/mnt/dietpi_userdata/microblog-pub/data/profile.toml`.  
+
+    In case of a full reconfiguration you need to delete this file before starting the `microblog-pub configure` command.
+
+***
+
+Official website: <https://microblog.pub/>
 
 [Return to the **Optimised Software list**](../../software/)

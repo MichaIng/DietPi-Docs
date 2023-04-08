@@ -1,5 +1,6 @@
 aarch
 ACP
+ActivityPub
 addictiveness
 addon
 addons
@@ -34,12 +35,14 @@ autostart
 AutoStart
 backend
 backends
+backlights
 backported
 Baïkal
 balancer
 balancers
 Balena
 balenaEtcher
+baudrate
 Bazarr
 BeagleBone
 Beelink
@@ -232,6 +235,7 @@ Imager
 Imgur
 InfluxData
 InfluxDB
+init
 initramfs
 integrations
 InterPlanetary
@@ -321,6 +325,7 @@ Meveric
 MiB
 MiBs
 MichaIng
+microblog
 microcontroller
 microcontrollers
 MicroK
@@ -329,6 +334,7 @@ Minecraft
 MineOS
 MiniDLNA
 MinIO
+Mio
 MIPI
 mjpg
 MkDocs
@@ -378,6 +384,8 @@ NTP
 NUC
 Nukkit
 numpy
+Nvidia
+NVMe
 nyx
 NZB
 NZBGet
@@ -505,6 +513,7 @@ RootFS
 Roseapple
 rpc
 RPi
+RPiList
 RPis
 RSA
 RSS
@@ -563,6 +572,7 @@ SqueezeboxServer
 SqueezeCenter
 Squeezelite
 SSD
+SSDs
 SSHFS
 SSID
 SSIDs
@@ -685,6 +695,7 @@ VSCodium
 vsftpd
 vSphere
 VST
+Vulkan
 Waveshare
 WebAuthn
 WebIOPi
