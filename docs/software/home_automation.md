@@ -118,7 +118,9 @@ Domoticz is a Home Automation System that lets you monitor and configure various
     - HTTPS: `https://<your.IP>:8424`
     - Username: `admin`
     - Password: `domoticz`
-    - NB: We recommend to create a new user with admin privileges via **Setup** -> **Users** and remove the above default one, or at least change the default password.
+
+    !!! tip "Change default user and password"
+        We recommend to create a new user with admin privileges via **Setup** -> **Users** and remove the default one, or at least change the default password.
 
 === "View logs"
 
