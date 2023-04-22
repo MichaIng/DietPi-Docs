@@ -151,8 +151,8 @@ Therefore, a previous backup is needed on a USB mass storage (USB stick, USB har
 
 This procedure is achieved with these steps (example: SD card is the boot media):
 
-  1. Preparing the SD card: 
-    - Downloading an DiePi image
+  1. Preparing the SD card:
+    - Downloading an DietPi image
     - Flashing the image to the SD card
   2. Adjusting file `dietpi.txt`
     - Placing the SD card back to the computer so that an access to the boot file system is possible: In many cases this can be done directly in the PC, in other cases a mounting within a Linux system is needed.
@@ -168,7 +168,7 @@ This procedure is achieved with these steps (example: SD card is the boot media)
   3. Booting the new DietPi system with the USB mass storage is attached to it
     - This will scan all USB drives on first boot and provide a list of backups found. The appropriate backup then can be selected
     - The restore process is then executed automatically
-    
+
   4. As a final step a reboot is needed to start up with the restored DietPi environment.
 
 For further options regarding the file `/boot/dietpi.txt` refer to the usage hints [How to do an automatic base installation at first boot (DietPi-Automation)](../../usage/#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation).
