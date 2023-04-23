@@ -147,7 +147,7 @@ dietpi-backup -1
 ### Automated restore at the system's first run setup
 
 DietPi-Backup contains an option of restoring a backup automatically during the first run setup of the system (this is run once when DietPi boots the first time).  
-Therefore, a previous backup is needed on a USB mass storage (USB stick, USB hard disk or USB SSD) and it is needed to be activated via the file `/boot/dietpi.txt`.
+Therefore, a previous backup is needed on any storage device (USB stick, SSD, HDD, SD card, ...) and auto-restore needs to be activated via the file `/boot/dietpi.txt`.
 
 This procedure is achieved with these steps (example: SD card is the boot media):
 
