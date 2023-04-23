@@ -165,7 +165,7 @@ This procedure is achieved with these steps (example: SD card is the boot media)
         AUTO_SETUP_BACKUP_RESTORE=1
         ```
 
-  3. Booting the new DietPi system with the USB mass storage is attached to it
+  3. Booting the new DietPi system with the mass storage attached
     - This will scan all USB drives on first boot and provide a list of backups found. The appropriate backup then can be selected
     - The restore process is then executed automatically
 
