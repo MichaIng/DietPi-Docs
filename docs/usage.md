@@ -190,7 +190,7 @@ Search `AUTO_SETUP_CUSTOM_SCRIPT_EXEC` for details.
 
 A restore process can be executed automatically using the keyword `AUTO_SETUP_BACKUP_RESTORE`. This gives the option to start up a system with a previous made system backup (e.g. for generating many identical systems).
 
-For further details refer to the documentation section [Automated restore at the system’s first run setup](../dietpi_tools/system_maintenance/#automated-restore-at-the-systems-first-run-setup).
+For further details refer to the documentation section [Automated restore at the system's first run setup](../dietpi_tools/system_maintenance/#automated-restore-at-the-systems-first-run-setup).
 
 #### General options
 
