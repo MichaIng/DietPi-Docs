@@ -144,6 +144,35 @@ dietpi-backup -1
     - For example, a webserver based application (e.g. Nextcloud or many of the media servers, like Plex, Navidrome, etc.) will not run, because the webserver based UI is stopped.
     - Also, many of the according backend services are stopped as well as basic services like the Samba or NFS service.
 
+### Automated restore at the system's first run setup
+
+DietPi-Backup contains an option of restoring a backup automatically during the first run setup of the system (this is run once when DietPi boots the first time).  
+Therefore, a previous backup is needed on any storage device (USB stick, SSD, HDD, SD card, ...) and auto-restore needs to be activated via the file `/boot/dietpi.txt`.
+
+This procedure is achieved with these steps (example: SD card is the boot media):
+
+  1. Preparing the SD card:
+    - Downloading an DietPi image
+    - Flashing the image to the SD card
+  2. Adjusting file `dietpi.txt`
+    - Placing the SD card back to the computer so that an access to the boot file system is possible: In many cases this can be done directly in the PC, in other cases a mounting within a Linux system is needed.
+    - Editing the file `/boot/dietpi.txt` in the boot file system
+    - Activating the restore option by setting `AUTO_SETUP_BACKUP_RESTORE=1`
+
+        ```sh
+        # Restore a DietPi-Backup on first boot: 0 => disable | 1 => interactive restore (show list of found backups) | 2 => non-interactive restore (restore first found backup)
+        # - Simply attach the drive/disk/stick with contains the backup. All attached drives will be mounted temporarily and searched automatically.
+        AUTO_SETUP_BACKUP_RESTORE=1
+        ```
+
+  3. Booting the new DietPi system with the mass storage attached
+    - This will scan all drives on first boot and provide a list of backups found. The appropriate backup then can be selected
+    - The restore process is then executed automatically
+
+  4. As a final step a reboot is needed to start up with the restored DietPi environment.
+
+For further options regarding the file `/boot/dietpi.txt` refer to the usage hints [How to do an automatic base installation at first boot (DietPi-Automation)](../../usage/#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation).
+
 ---
 
 ## DietPi sync
