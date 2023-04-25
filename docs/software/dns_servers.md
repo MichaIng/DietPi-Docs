@@ -231,9 +231,9 @@ Unbound is a validating, recursive, caching DNS resolver. It can resolve hostnam
 
 ***
 
-Official website: <https://www.nlnetlabs.nl/projects/unbound/about/>  
-Official documentation: <https://nlnetlabs.nl/documentation/unbound/unbound>  
-New WIP documentation: <https://unbound.readthedocs.io/>  
+Official website: <https://nlnetlabs.nl/projects/unbound/about/>  
+Official man pages: <https://nlnetlabs.nl/documentation/unbound/unbound/>  
+Official documentation: <https://unbound.docs.nlnetlabs.nl/en/latest/>  
 Wikipedia: <https://wikipedia.org/wiki/Unbound_(DNS_server)>  
 Source code: <https://github.com/NLnetLabs/unbound>
 
