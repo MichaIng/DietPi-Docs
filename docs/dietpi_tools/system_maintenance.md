@@ -113,7 +113,7 @@ dietpi-backup
     DietPi-Backup is purely based on `Rsync`, i.e., DietPi-Backup uses a backup on a file by file basis and is not based on an archive algorithm. This leads to the fact that file permissions/attributes are only preserved correctly in case of a Linux file system as the target directory.   
     In other cases (e.g. a Samba share), file permissions are not saved in the right manner and DietPi-Backup will not work appropriate.
 
-    **Therefore, DietPi-Backup should only be used to/from a directory which handles Linux file attributes (e.g. NFS).**
+    **Therefore, DietPi-Backup should only be used to/from a directory which handles Linux file attributes (e.g. NFS mounts or ext4 file systems).**
 
 !!! info "DietPi userdata may not be included"
 
