@@ -85,7 +85,7 @@ dietpi-backup
 === "Space check"
 
     A space check on the target location prior to the backup process can be enabled/disabled. This might be an option if there is surely enough disk space available.  
-    Enabling the space check makes the backup a bit more safe, disabling it speeds it up.
+    Enabling the space check makes the backup a bit more safe, disabling it speeds it up, especially when using a network drive.
 
 === "Logging"
 
