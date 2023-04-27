@@ -99,7 +99,6 @@ dietpi-backup
 The location of the backup can be set to any directory which is not part of the backup itself. Especially, these options are typical:
 
 - Backup to/Restore from a connected USB stick or USB disk
-- Backup to/Restore from a large system disk mounted below `/media` (because `/media` is not backed up by default)
 - Backup to/Restore from an network drive (Linux file system needed!)
 
 !!! info "Backup to/Restore from a network drive: Only Linux file systems are usable (NFS)"
