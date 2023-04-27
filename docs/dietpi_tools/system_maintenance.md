@@ -89,7 +89,7 @@ dietpi-backup
     - Backup to/Restore from a connected USB stick or USB disk
     - Backup to/Restore from a network drive
 
-=== "Amount" 
+=== "Amount"
 
     Sets the number of backups to be kept.  
     Backups are rotated automatically, if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync.
