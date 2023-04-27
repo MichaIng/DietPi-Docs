@@ -82,6 +82,18 @@ dietpi-backup
 
     The file containing the filter definitions is `/boot/dietpi/.dietpi-backup_inc_exc`.
 
+=== "Backup location"
+
+    The backup target directory can be set to any directory which is not part of the backup itself. Especially, these options are typical:
+
+    - Backup to/Restore from a connected USB stick or USB disk
+    - Backup to/Restore from a network drive
+
+=== "Amount" 
+
+    Sets the number of backups to be kept.  
+    Backups are rotated automatically, if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync.
+
 === "Space check"
 
     A space check on the target location prior to the backup process can be enabled/disabled. This might be an option if there is surely enough disk space available.  
@@ -94,18 +106,25 @@ dietpi-backup
     - `.dietpi-backup_stats` gives a list of completed operations with time and date
     - `.dietpi-backup.log` gives a list of every processed file
 
-### Location of the backup
+### Important DietPi-Backup hints
 
-The location of the backup can be set to any directory which is not part of the backup itself. Especially, these options are typical:
+!!! note "File system type of the backup directory: NFS needed!"
 
-- Backup to/Restore from a connected USB stick or USB disk
-- Backup to/Restore from a network drive (Linux file system needed!)
+    DietPi-Backup is purely based on `Rsync`, i.e., DietPi-Backup uses a backup on a file by file basis and is not based on an archive algorithm. This leads to the fact that file permissions/attributes are only preserved correctly in case of a Linux file system as the target directory.   
+    In other cases (e.g. a Samba share), file permissions are not saved in the right manner and DietPi-Backup will not work appropriate.
 
-!!! info "Backup to/Restore from a network drive: Only Linux file systems are usable (NFS)"
+    **Therefore, DietPi-Backup should only be used to/from a directory which handles Linux file attributes (e.g. NFS).**
 
-    DietPi-Backup is purely based on `Rsync`, i.e., DietPi-Backup uses a backup on a file by file basis and is not based on an archive algorithm. This leads to the fact that file permissions/attributes are only preserved correctly in case of a Linux file system as the target directory. In other cases (e.g. a Samba share), file permissions are not saved in the right manner and DietPi-Backup will not work appropriate.
+!!! info "DietPi userdata may not be included"
 
-    **Therefore, DietPi-Backup should only be used to/from a directory which handles Linux file attributes like NFS.**
+    If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
+
+!!! attention "Reduced system operation while DietPi-Backup runs"
+
+    During the run of `dietpi-backup`, all services are stopped. This has to be taken into account e.g. if scheduling backups.
+
+    - For example, a webserver based application (e.g. Nextcloud or many of the media servers, like Plex, Navidrome, etc.) will not run, because the webserver based UI is stopped.
+    - Also, many of the according backend services are stopped as well as basic services like the Samba or NFS service.
 
 ### Automatic daily backup
 
@@ -114,7 +133,7 @@ The location of the backup can be set to any directory which is not part of the 
 It contains these options (see screenshot above):
 
 - "Daily Backup": Activates the daily backup
-- "Amount": Sets the number of backups to be kept. Backups are rotated automatically, if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync
+- "Amount": Sets the number of backups to be kept
 
 #### Daily backup execution time
 
@@ -141,17 +160,6 @@ A similar restore procedure is not recommended to avoid accidentally system over
 ```sh
 dietpi-backup -1
 ```
-
-!!! info "DietPi userdata may not be included"
-
-    If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
-
-!!! attention "Reduced system operation while DietPi-Backup runs"
-
-    During the run of `dietpi-backup`, all services are stopped. This has to be taken into account e.g. if scheduling backups.
-
-    - For example, a webserver based application (e.g. Nextcloud or many of the media servers, like Plex, Navidrome, etc.) will not run, because the webserver based UI is stopped.
-    - Also, many of the according backend services are stopped as well as basic services like the Samba or NFS service.
 
 ### Automated restore at the system's first run setup
 
