@@ -107,8 +107,6 @@ The location of the backup can be set to any directory which is not part of the 
 
     **Therefore, DietPi-Backup should only be used to/from a directory which handles Linux file attributes like NFS.**
 
-    Remark: In the case that the `rsync` package is not installed, this is done automatically once you start a backup or restore.
-
 ### Automatic daily backup
 
 `Dietpi-Backup` gives the option of an automatic daily backup function (controlled via the Linux `cron` mechanism).
