@@ -108,7 +108,7 @@ dietpi-backup
 
 ### Important DietPi-Backup hints
 
-!!! note "File system type of the backup directory: NFS needed!"
+!!! note "File system type of the backup directory: Linux filesystem needed!"
 
     DietPi-Backup is purely based on `Rsync`, i.e., DietPi-Backup uses a backup on a file by file basis and is not based on an archive algorithm. This leads to the fact that file permissions/attributes are only preserved correctly in case of a Linux file system as the target directory.   
     In other cases (e.g. a Samba share), file permissions are not saved in the right manner and DietPi-Backup will not work appropriate.
