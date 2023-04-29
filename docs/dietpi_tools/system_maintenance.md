@@ -67,6 +67,65 @@ dietpi-backup
 
 ![DietPi-Backup menu screenshot](../assets/images/dietpi-backup_1.png){: width="643" height="306" loading="lazy"}
 
+=== "Settings files"
+
+    Generally, the settings of the DietPi-Backup are changed via the `dietpi-backup` command menu entries.
+
+    The system stores these settings in the files `/boot/dietpi/.dietpi-backup_settings` and `/boot/dietpi/.dietpi-backup_inc_exc`, which are generated from `dietpi-backup` automatically. Therefore, the files do not need to be changed manually by the user.
+
+=== "Backup file selection (Filter)"
+
+    The definition which files are used for the backup procedure is defined via the option "Filter" (see screenshot above). This opens `nano` to edit the include/exclude definitions for the backup.  
+    The filter definition syntax is described within the file itself.
+
+    ![DietPi-Backup filter option screenshot](../assets/images/dietpi-backup_filter-option.jpg){: width="681" height="330" loading="lazy"}
+
+    The file containing the filter definitions is `/boot/dietpi/.dietpi-backup_inc_exc`.
+
+=== "Backup location"
+
+    The backup target directory can be set to any directory which is not part of the backup itself. Especially, these options are typical:
+
+    - Backup to/Restore from a connected USB stick or USB disk
+    - Backup to/Restore from a network drive
+
+=== "Amount"
+
+    Sets the number of backups to be kept.  
+    Backups are rotated automatically, if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync.
+
+=== "Space check"
+
+    A space check on the target location prior to the backup process can be enabled/disabled. This might be an option if there is surely enough disk space available.  
+    Enabling the space check makes the backup a bit more safe, disabling it speeds it up, especially when using a network drive.
+
+=== "Logging"
+
+    Logging information about the backup procedure is given within the files `.dietpi-backup_stats` and `.dietpi-backup.log` which are located in the backup target directory ("Location" option):
+
+    - `.dietpi-backup_stats` gives a list of completed operations with time and date
+    - `.dietpi-backup.log` gives a list of every processed file
+
+### Important DietPi-Backup hints
+
+!!! note "File system type of the backup directory: Linux filesystem needed!"
+
+    DietPi-Backup is purely based on `Rsync`, i.e., DietPi-Backup uses a backup on a file by file basis and is not based on an archive algorithm. This leads to the fact that file permissions/attributes are only preserved correctly in case of a Linux file system as the target directory.   
+    In other cases (e.g. a Samba share), file permissions are not saved in the right manner and DietPi-Backup will not work appropriate.
+
+    **Therefore, DietPi-Backup should only be used to/from a directory which handles Linux file attributes (e.g. NFS mounts or ext4 file systems).**
+
+!!! info "DietPi userdata may not be included"
+
+    If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
+
+!!! attention "Reduced system operation while DietPi-Backup runs"
+
+    During the run of `dietpi-backup`, all services are stopped. This has to be taken into account e.g. if scheduling backups.
+
+    - For example, a webserver based application (e.g. Nextcloud or many of the media servers, like Plex, Navidrome, etc.) will not run, because the webserver based UI is stopped.
+    - Also, many of the according backend services are stopped as well as basic services like the Samba or NFS service.
+
 ### Automatic daily backup
 
 `Dietpi-Backup` gives the option of an automatic daily backup function (controlled via the Linux `cron` mechanism).
@@ -74,7 +133,7 @@ dietpi-backup
 It contains these options (see screenshot above):
 
 - "Daily Backup": Activates the daily backup
-- "Amount": Sets the number of backups to be kept. Backups are rotated automatically, if the maximum amount has been reached, the oldest backup is used as basis for the incremental new backup sync
+- "Amount": Sets the number of backups to be kept
 
 #### Daily backup execution time
 
@@ -87,33 +146,6 @@ dietpi-cron
 ```
 
 Please keep in mind that all other daily `cron` based procedures are also started at this changed time.
-
-### Backup file selection (Filter)
-
-The definition which files are used for the backup procedure is defined via the option "Filter" (see screenshot above). This opens `nano` to edit the include/exclude definitions for the backup.  
-The filter definition syntax is described within the file itself.
-
-![DietPi-Backup filter option screenshot](../assets/images/dietpi-backup_filter-option.jpg){: width="681" height="330" loading="lazy"}
-
-The file containing the filter definitions is `/boot/dietpi/.dietpi-backup_inc_exc`.
-
-### Space check
-
-A space check on the target location prior to the backup process can be enabled/disabled. This might be an option if there is surely enough disk space available.  
-Enabling the space check makes the backup a bit more safe, disabling it speeds it up.
-
-### Logging
-
-Logging information about the backup procedure is given within the files `.dietpi-backup_stats` and `.dietpi-backup.log` which are located in the backup target directory ("Location" option):
-
-- `.dietpi-backup_stats` gives a list of completed operations with time and date
-- `.dietpi-backup.log` gives a list of every processed file
-
-### Settings files
-
-Generally, the settings of the DietPi-Backup are changed via the `dietpi-backup` command menu entries.
-
-The system stores these settings in the files `/boot/dietpi/.dietpi-backup_settings` and `/boot/dietpi/.dietpi-backup_inc_exc`, which are generated from `dietpi-backup` automatically. Therefore, the files do not need to be changed manually by the user.
 
 ### Scripted run
 
@@ -129,20 +161,34 @@ A similar restore procedure is not recommended to avoid accidentally system over
 dietpi-backup -1
 ```
 
-!!! info "DietPi userdata may not be included"
+### Automated restore at the system's first run setup
 
-    If DietPi userdata have been moved to an external drive, i.e. `/mnt/dietpi_userdata` is a symlink, its content is excluded from backup and restore by default. You can change this with the `Filter` option.
+DietPi-Backup contains an option of restoring a backup automatically during the first run setup of the system (this is run once when DietPi boots the first time).  
+Therefore, a previous backup is needed on any storage device (USB stick, SSD, HDD, SD card, ...) and auto-restore needs to be activated via the file `/boot/dietpi.txt`.
 
-!!! info "DietPi-Backup is purely based on `Rsync`"
+This procedure is achieved with these steps (example: SD card is the boot media):
 
-    In the case that the `rsync` package is not installed, this is done automatically once you start a backup or restore.
+  1. Preparing the SD card:
+    - Downloading an DietPi image
+    - Flashing the image to the SD card
+  2. Adjusting file `dietpi.txt`
+    - Placing the SD card back to the computer so that an access to the boot file system is possible: In many cases this can be done directly in the PC, in other cases a mounting within a Linux system is needed.
+    - Editing the file `/boot/dietpi.txt` in the boot file system
+    - Activating the restore option by setting `AUTO_SETUP_BACKUP_RESTORE=1`
 
-!!! attention "Reduced system operation while DietPi-Backup runs"
+        ```sh
+        # Restore a DietPi-Backup on first boot: 0 => disable | 1 => interactive restore (show list of found backups) | 2 => non-interactive restore (restore first found backup)
+        # - Simply attach the drive/disk/stick with contains the backup. All attached drives will be mounted temporarily and searched automatically.
+        AUTO_SETUP_BACKUP_RESTORE=1
+        ```
 
-    During the run of `dietpi-backup`, all services are stopped. This has to be taken into account e.g. if scheduling backups.
+  3. Booting the new DietPi system with the mass storage attached
+    - This will scan all drives on first boot and provide a list of backups found. The appropriate backup then can be selected
+    - The restore process is then executed automatically
 
-    - For example, a webserver based application (e.g. Nextcloud or many of the media servers, like Plex, Navidrome, etc.) will not run, because the webserver based UI is stopped.
-    - Also, many of the according backend services are stopped as well as basic services like the Samba or NFS service.
+  4. As a final step a reboot is needed to start up with the restored DietPi environment.
+
+For further options regarding the file `/boot/dietpi.txt` refer to the usage hints [How to do an automatic base installation at first boot (DietPi-Automation)](../../usage/#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation).
 
 ---
 
