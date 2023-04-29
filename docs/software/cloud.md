@@ -986,7 +986,7 @@ Please note that knowledge of your password is required to access the repository
 Losing your password means that your data is irrecoverably lost.
 ```
 
-***Remembering your password is important! If you lose it, you won’t be able to access data stored in the repository.***
+!!! warning "Remembering your password is important! If you lose it, you won’t be able to access data stored in the repository."
 
 For more information please read: [Preparing a new repository](https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html)
 
