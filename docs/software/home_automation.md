@@ -10,6 +10,7 @@ description: Description of DietPi software options related to home automation
 - [**Home Assistant - Open-source home automation platform running on Python 3**](#home-assistant)
 - [**Domoticz - Multi platform Home Automation System**](#domoticz)
 - [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin)
+- [**openHAB - Open Home Automation Bus, an open source home automation platform**](#openhab)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -182,5 +183,39 @@ Also installs:
 
 Source code: <https://github.com/reloxx13/TasmoAdmin>  
 Credits: Implemented by @svh1985
+
+## openHAB
+
+openHAB (open Home Automation Bus) is an open source home automation platform. The *keywords* are *Bindings*, *Things*, *Channels*, *Items*, *Rules*, *Pages*.
+
+![openHAB web interface screenshot](../assets/images/dietpi-software-homeautomation-openhab.jpg){: width="600" height="393" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8089**:
+
+    - HTTP: `http://<your.IP>:8089`
+    - Username: `root`
+    - Password = `<your global password>` (default: `dietpi`)
+
+=== "Directories"
+
+    - Install directory: `/usr/share/openhab`
+    - Data directory: `/etc/openhab`
+    - Config file: `/etc/default/openhab`
+
+=== "View logs"
+
+    ```sh
+    journalctl -u openhab
+    ```
+
+=== "HTTPS access"
+
+    The access via HTTPS can be activated in the file `/etc/default/openhab` by setting `OPENHAB_HTTPS_PORT=` to your desired HTTPS port.
+
+Official website: <https://www.openhab.org/>  
+Official docs: <https://www.openhab.org/docs/>  
+Official community: <https://community.openhab.org/>
 
 [Return to the **Optimised Software list**](../../software/)
