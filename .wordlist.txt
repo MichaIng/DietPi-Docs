@@ -411,6 +411,7 @@ OpenBazaar
 OpenJDK
 OpenGL
 OpenGLES
+openHAB
 OpenSSH
 OpenTyrian
 OpenVPN
