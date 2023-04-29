@@ -122,15 +122,9 @@ PiVPN is an OpenVPN and WireGuard installer and management tool. It also has a c
 ***
 
 Website: <https://pivpn.io/>  
-Documentation: <https://docs.pivpn.io/>
-
-YouTube video tutorial: *VPN configuration using Raspberry Pi and DietPi*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/aYPaDeqtMG8?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
-
-YouTube video tutorial: *DietPi PiVPN Server Setup on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/0t0bwskZJFw?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Documentation: <https://docs.pivpn.io/>  
+YouTube video tutorial: [VPN configuration using Raspberry Pi and DietPi](https://www.youtube.com/watch?v=aYPaDeqtMG8)  
+YouTube video tutorial: [DietPi PiVPN Server Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=0t0bwskZJFw)
 
 ## WireGuard
 
@@ -227,11 +221,8 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 ***
 
 Website: <https://www.wireguard.com>  
-Wikipedia: <https://wikipedia.org/wiki/WireGuard>
-
-YouTube video tutorial (German language): `Raspberry Pi & PiVPN mit WireGuard: Installation unter DietPi mit NoIP und AVM Fritzbox`.
-
-<iframe src="https://www.youtube-nocookie.com/embed/yRkdzGmnvA4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Wikipedia: <https://wikipedia.org/wiki/WireGuard>  
+YouTube video tutorial (German language): [Raspberry Pi & PiVPN mit WireGuard: Installation unter DietPi mit NoIP und AVM Fritzbox](https://www.youtube.com/watch?v=yRkdzGmnvA4){:class="nospellcheck"}
 
 ## Tailscale
 
@@ -262,19 +253,19 @@ Tailscale is a VPN service that makes the devices and applications you own acces
     Since Tailscale runs as a systemd service, it can be controlled with the following commands:
 
     ```sh
-    systemctl status tailscale
+    systemctl status tailscaled
     ```
 
     ```sh
-    systemctl start tailscale
+    systemctl start tailscaled
     ```
 
     ```sh
-    systemctl stop tailscale
+    systemctl stop tailscaled
     ```
 
     ```sh
-    systemctl restart tailscale
+    systemctl restart tailscaled
     ```
 
 === "Logs"
@@ -282,7 +273,7 @@ Tailscale is a VPN service that makes the devices and applications you own acces
     Tailscale runs as a systemd service, hence logs can be viewed with the following command:
 
     ```sh
-    journalctl -u tailscale
+    journalctl -u tailscaled
     ```
 
 === "Update"
@@ -299,11 +290,8 @@ Tailscale is a VPN service that makes the devices and applications you own acces
 [What is Tailscale?](https://tailscale.com/kb/1151/what-is-tailscale/)  
 Website: <https://tailscale.com/>  
 Docs: <https://tailscale.com/kb/>  
-License: [BSD 3-Clause](https://github.com/tailscale/tailscale/blob/main/LICENSE)
-
-YouTube video tutorial: *Tailscale VPN - WireGuard was never so easy!*
-
-<iframe src="https://www.youtube.com/embed/Kzyolu9yn0E" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+License: [BSD 3-Clause](https://github.com/tailscale/tailscale/blob/main/LICENSE)  
+YouTube video tutorial: [Tailscale VPN - WireGuard was never so easy!](https://www.youtube.com/watch?v=Kzyolu9yn0E)
 
 ## ZeroTier
 
@@ -386,14 +374,8 @@ ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all
 Website: <https://zerotier.com>  
 Wikipedia : <https://en.wikipedia.org/wiki/ZeroTier>  
 Source code: <https://github.com/zerotier/ZeroTierOne>
-License: [BSLv1.1](https://github.com/zerotier/ZeroTierOne/blob/master/LICENSE.txt)
-
-YouTube video tutorial: *ZeroTier Tutorial: Delivering the Capabilities of VPN, SDN, and SD-WAN via an Open Source System*.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bl_Vau8wtgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-YouTube video tutorial: *How To Work Remotely Using ZeroTier & Windows Remote Desktop (RDP)*.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZShna7v77xc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+License: [BSLv1.1](https://github.com/zerotier/ZeroTierOne/blob/master/LICENSE.txt)  
+YouTube video tutorial: [ZeroTier Tutorial: Delivering the Capabilities of VPN, SDN, and SD-WAN via an Open Source System](https://www.youtube.com/watch?v=Bl_Vau8wtgc)  
+YouTube video tutorial: [How To Work Remotely Using ZeroTier & Windows Remote Desktop (RDP)](https://www.youtube.com/watch?v=ZShna7v77xc)
 
 [Return to the **Optimised Software list**](../../software/)

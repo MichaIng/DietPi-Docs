@@ -48,7 +48,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ## [Camera & Surveillance](camera/)
 
-- [**RPi Cam Control - Web interface & controls for your RPi camera**](camera/#rpi-cam-control)
+- [**RPi Cam Web Interface - Web interface & controls for your RPi camera**](camera/#rpi-cam-web-interface)
 - [**MotionEye - Web interface & surveillance for your camera**](camera/#motioneye)
 - [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](camera/#mjpg-streamer)
 
@@ -98,6 +98,8 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 - [**Python 3 - High-level interpreted programming language**](programming/#python-3)
 - [**Go - Programming language**](programming/#go)
+- [**Java - Programming language**](programming/#java)
+- [**Mono - .NET Framework implementation**](programming/#mono)
 - [**Docker - Build, ship, and run distributed applications**](programming/#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](programming/#docker-compose)
 - [**Portainer - Docker container management**](programming/#portainer)
@@ -168,7 +170,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**myMPD - Lightweight web Interface audio player for MPD**](media/#mympd)
 - [**O!MPD - Feature-rich web Interface audio player for MPD**](media/#ompd)
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](media/#cava)
-- [**Mopidy - Web Interface Music /Radio Player**](media/#mopidy)
+- [**Mopidy - Web Interface Music /Radio Player for MPD**](media/#mopidy)
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](media/#airsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](media/#logitech-media-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](media/#squeezelite)
@@ -213,17 +215,18 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ### [Remote Access](remote_desktop/#remote-access)
 
-- [**Remot3.it - (Weaved) Access your device over the internet**](remote_desktop/#remot3it)
+- [**Remote.It - Access your device over the internet**](remote_desktop/#remoteit)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](remote_desktop/#virtualhere)
 
 ## [Social & Search](social/)
 
 - [**FreshRSS - A self-hosted RSS feed aggregator**](social/#freshrss)
 - [**phpBB - Free flat-forum bulletin board software solution**](social/#phpbb)
-- [**Wordpress - Website Blog and Publishing platform**](social/#wordpress)
+- [**WordPress - Website Blog and Publishing platform**](social/#wordpress)
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](social/#single-file-php-gallery)
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](social/#baikal)
 - [**Synapse - Decentralized communication with the Matrix protocol**](social/#synapse)
+- [**microblog.pub - A self-hosted, single-user, ActivityPub powered microblog**](social/#microblogpub)
 
 ## [SSH Server](ssh/)
 
@@ -247,6 +250,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**K3s - Lightweight Kubernetes**](system_stats/#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](system_stats/#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](system_stats/#prometheus-node-exporter)
+- [**Homer - A modern homepage for your services**](system_stats/#homer)
 
 ## [VPN](vpn/)
 

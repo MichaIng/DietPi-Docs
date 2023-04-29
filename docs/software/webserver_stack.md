@@ -116,9 +116,7 @@ Using this option you select the complete web stack for installation. Just selec
 
 ***
 
-YouTube video tutorial: *DietPi Web Server Tutorial | Host a website from Home | Raspberry Pi*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/nB-i959ZGzQ?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [*DietPi Web Server Tutorial | Host a website from Home | Raspberry Pi*](https://www.youtube.com/watch?v=nB-i959ZGzQ)
 
 ***
 
@@ -486,7 +484,7 @@ Official documentation: <https://httpd.apache.org/docs>
 
 ### Nginx
 
-**Nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, Wordpress.com, FastMail.FM.[^1]
+**Nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, WordPress.com, FastMail.FM.[^1]
 
 ![Nginx logo](../assets/images/dietpi-software-webstack-nginx.gif){: width="200" height="85" loading="lazy"}
 
@@ -616,11 +614,13 @@ Source: By [nodejs.org](https://nodejs.org), [Trademark policy](https://trademar
 
 By using the event-callback/non-blocking approach, Node.js offers a single-threaded event-io model that allows orchestration of tasks running in parallel. It supports multiple connections without a need for a large memory footprint. Amazon, Netflix, eBay, Reddit, LinkedIn, Tumblr, and PayPal use Node.js.[^5]
 
-=== "Node.js version"
+=== "Update"
 
-    Starting with version 7.2, DietPi added support for [Node.js unofficial builds from unofficial-builds.nodejs.org](https://unofficial-builds.nodejs.org/download/release/). In this way, you can get the benefits of using the latest Node.js version.
+    To update Node.js to the latest version, simply reinstall it:
 
-    _Why this ?_ We believe that's important and more secure to use the most recent version. At the moment of writing the documentation, latest official ARMv6 build for Node.js has the version 11 and the latest _unofficial build_ issued by Node.js is v15.14.  
+    ```sh
+    dietpi-software reinstall 9
+    ```
 
 ***
 

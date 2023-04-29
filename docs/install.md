@@ -11,7 +11,7 @@ The installation of DietPi consists of few steps:
 - Get the DietPi image (and put it on the installation media)
 - Boot up the DietPi device and go through one time installation steps
 
-Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/#dietpi-software){: class="nospellcheck"}.
+Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/software_installation/#dietpi-software){: class="nospellcheck"}.
 
 Select the following tabs for the installation description of your target.
 
@@ -99,7 +99,7 @@ Select the following tabs for the installation description of your target.
 
     ??? info "Option: Automatic base installation at first boot (running an _unattended base installation_)"
 
-        DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](../usage/#how-to-do-an-automatic-base-installation-at-first-boot) for details.
+        DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](../usage/#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation) for details.
 
     ???+ hint "Initial boot duration"
         Due to an automated resize of the root filesystem and basic setup steps, this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the system drive and hardware.
@@ -142,8 +142,8 @@ Select the following tabs for the installation description of your target.
              ```sh
              mkdir ~/Downloads
              cd ~/Downloads
-             curl -LO 'https://download.virtualbox.org/virtualbox/6.1.32/virtualbox-6.1_6.1.32-149290~Debian~bullseye_amd64.deb'
-             apt install ./virtualbox-6.1_6.1.32-149290~Debian~bullseye_amd64.deb
+             curl -LO 'https://download.virtualbox.org/virtualbox/7.0.4/virtualbox-7.0_7.0.4-154605~Debian~bullseye_amd64.deb'
+             apt install ./virtualbox-7.0_7.0.4-154605~Debian~bullseye_amd64.deb
              ```
 
         2. Installation of the VirtualBox extension pack on a Linux host system  
@@ -151,8 +151,8 @@ Select the following tabs for the installation description of your target.
 
              ```sh
              cd ~/Downloads
-             curl -LO 'https://download.virtualbox.org/virtualbox/6.1.32/Oracle_VM_VirtualBox_Extension_Pack-6.1.32-149290.vbox-extpack'
-             VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.32-149290.vbox-extpack
+             curl -LO 'https://download.virtualbox.org/virtualbox/7.0.4/Oracle_VM_VirtualBox_Extension_Pack-7.0.4-154605.vbox-extpack'
+             VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.4-154605.vbox-extpack
              ```
 
         After these two steps the host installation of the VirtualBox extension pack is completed. Further installation steps on the guest system are described below.
@@ -258,7 +258,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__VMware Workstation Player__](https://www.vmware.com/de/products/workstation-player/workstation-player-evaluation.html) resp. [__VMware Fusion__](https://www.vmware.com/de/products/fusion/fusion-evaluation.html) (macOS).
 
-    ![DietPi-VMware-program](assets/images/dietpi-VMware-program.png){: width="769" height="588" loading="lazy"}
+    ![VMware Player GUI](assets/images/dietpi-VMware-program.png){: width="769" height="588" loading="lazy"}
 
     !!! info "Tested with Windows 10"
         This description relates to VMware Workstation 16 Player on a Microsoft Windows system.  
@@ -278,7 +278,7 @@ Select the following tabs for the installation description of your target.
 
     Download the **DietPi VMware** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and unzip the downloaded file to a local folder. It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or other alternative tools.
 
-    ![DietPi VMware download image](assets/images/dietpi-VMware-Download.png){: width="1223" height="749" loading="lazy"}
+    ![Download VMware image from DietPi website](assets/images/dietpi-VMware-Download.png){: width="1223" height="749" loading="lazy"}
 
     The zip file contains a couple of files, the important two are the `.vmx` and `.vmdk` files which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
 
@@ -379,6 +379,10 @@ Select the following tabs for the installation description of your target.
     One of the options to run and manage virtual machines is [__Proxmox__](https://www.proxmox.com/).
 
     ![Proxmox web interface](assets/images/proxmox1.png){: width="800" height="439" loading="lazy"}
+
+    !!! info "Proxmox Helper Script to install DietPi in Proxmox"
+        There is a script from `Darren Bennett` ([GitHub `dazeb`](https://github.com/dazeb)) which makes the installation steps described below much easier by execution of the installation steps within the script.  
+        See <https://github.com/dazeb/proxmox-dietpi-installer> for details.
 
     <h2>Prerequisites</h2>
 
@@ -482,13 +486,22 @@ Select the following tabs for the installation description of your target.
 
     Download the **DietPi Parallels** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}.
 
-    Double click on the downloaded file to extract it (or via option "Open in Finder"). Copy/Move the contained `.pvm` file to the Parallels directory (typically directory "Parallels" within your home directory).
+    Double click on the downloaded `.7z` file to extract it (or via option "Open in Finder").
 
-    <h2>2. Open the virtual machine in Parallels Desktop</h2>
+    <h2>2. Import and start the virtual machine in Parallels Desktop</h2>
 
-    As next, the Parallels virtual machine is opened by just double click the `.pvm` file. Then the machine starts up.
+    Double click on the extracted `.vmx` file, which will open a Parallels dialogue to import it as virtual machine and starts it right away after the import.
 
     ![Parallels Desktop DietPi startup](assets/images/Parallels2.png){: width="640" height="273" loading="lazy"}
+
+    ??? attention "You must disable IPv6 when the host uses WiFi"
+        Sometimes the VM has difficulties to connect to the internet. This is reported in a network bridged mode and when the host connects to the internet via WiFi: In these cases the IPv6 routing between the VM and the internet fails (e.g. see [there](https://communities.vmware.com/t5/VMware-Fusion-Discussions/IPv6-Bridged-Wireless/td-p/2038235)).  
+        A typical result is, that the system does not find the update server (e.g. at the very first update run). This is then signaled during the "apt update" procedure of the first boot startup.  
+        To overcome this, open a subshell (or an additional ssh window), start `dietpi-config` and disable **IPv6** within the Network options.
+
+        ![IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
+
+        Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
 
 === "UTM"
 
@@ -920,10 +933,6 @@ A login prompt will appear. Use the initial credentials:
     ssh root@dietpi
     ```
 
-To further proceed you’ll need to accept the DietPi GPL license. Hit the ++enter++ key on your keyboard to do this.
-
-![dietpi-login01](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
-
 DietPi will then immediately begin to search for and install updated software packages, which will take some time to complete.
 
 Once the packages have been updated, DietPi will ask you to confirm whether you would like to enable user analytics.
@@ -950,14 +959,9 @@ For more details, check [DietPi Tools](../dietpi_tools/) section.
 
 ## YouTube tutorials (made by community)
 
-A video tutorial on _How to install and initially configure DietPi_ made by Roberto Jorge.
-
-<iframe src="https://www.youtube-nocookie.com/embed/Me0PfuNLl-Q?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
-
-Further videos:
-
-- YouTube video #1: [Installing DietPi : Fast Linux For Any Raspberry Pi!!!](https://www.youtube.com/watch?v=U-UXenzA2m8){: class="nospellcheck"}
-- YouTube video #2: [How Install Diet Pi Raspberry Pi 4 Or Any SBC - Install Set Up Configure](https://www.youtube.com/watch?v=qH0YsFNIyFo){: class="nospellcheck"}
-- YouTube video #3: [Headless install of Dietpi | No Monitor, No LAN, No router login | Pre Configure WiFi](https://www.youtube.com/watch?v=vlMpn9u0Y4o){: class="nospellcheck"}
-- YouTube video #4: [Installing DietPi on Raspberry Pi, First Boot and Configuration](https://www.youtube.com/watch?v=LzJpAUufyy0){: class="nospellcheck"}
-- YouTube video #5 (German language): [Raspberry Pi 4 & DietPi - die schnelle Alternative - Grundinstallation einfach erklärt](https://www.youtube.com/watch?v=J5yPeJFLSO0&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=7){: class="nospellcheck"}
+- YouTube video #1: [DietPi - HOW To Install & Initial Configuration on the Raspberry Pi 4](https://www.youtube.com/watch?v=Me0PfuNLl-Q)
+- YouTube video #2: [Installing DietPi : Fast Linux For Any Raspberry Pi!!!](https://www.youtube.com/watch?v=U-UXenzA2m8){: class="nospellcheck"}
+- YouTube video #3: [How Install Diet Pi Raspberry Pi 4 Or Any SBC - Install Set Up Configure](https://www.youtube.com/watch?v=qH0YsFNIyFo){: class="nospellcheck"}
+- YouTube video #4: [Headless install of Dietpi | No Monitor, No LAN, No router login | Pre Configure WiFi](https://www.youtube.com/watch?v=vlMpn9u0Y4o){: class="nospellcheck"}
+- YouTube video #5: [Installing DietPi on Raspberry Pi, First Boot and Configuration](https://www.youtube.com/watch?v=LzJpAUufyy0){: class="nospellcheck"}
+- YouTube video #6 (German language): [Raspberry Pi 4 & DietPi - die schnelle Alternative - Grundinstallation einfach erklärt](https://www.youtube.com/watch?v=J5yPeJFLSO0&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=7){: class="nospellcheck"}

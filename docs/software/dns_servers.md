@@ -116,6 +116,31 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     - [The Big Blocklist Collection by `WaLLy3K`](https://firebog.net/)
     - [Phishing Army blocklist](https://phishing.army/)
     - [Whitelist collection by `anudeepND`](https://github.com/anudeepND/whitelist)
+    - [RPiList](https://github.com/RPiList/specials/blob/master/Blocklisten.md): Block- and whitelists with focus on German domains
+
+=== "Handling many lists"
+
+    If you try to add many block- resp. whitelists (e.g. > 1 Mio), it can occur that the `/tmp` filesystem overflows.  
+    If `pihole -g` fails with an error message like `sed: couldn't write 44 items to stdout: No space left on device`, you can verify this case using the `df` command:
+
+    ```
+    root@dietpi:~# df -h /tmp
+    Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
+    tmpfs           995M    995M     0  100% /tmp
+    root@dietpi:~#
+    ```
+
+    The output value of "100 %" signals a full `/tmp` filesystem.
+
+    In this case the `/etc/fstab` could be changed to a larger `/tmp` by editing it. We propose to set it to a maximum value of 75 % of your RAM size. E.g. in case of 2 GB RAM, you could adjust the mount option to `size=1500M`.
+    This could lead to an output like
+
+    ```
+    root@dietpi:~# df -h /tmp
+    Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
+    tmpfs           1,5G     41M  1,5G    3% /tmp
+    root@dietpi:~#
+    ```
 
 === "Accessing via OpenVPN or WireGuard"
 
@@ -130,14 +155,9 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 Official website: <https://pi-hole.net/>  
 Official documentation: <https://docs.pi-hole.net/>  
 Wikipedia: <https://wikipedia.org/wiki/Pi-hole>  
-Source code: <https://github.com/pi-hole>
-
-DietPi Blog: [Pi-Hole & Unbound: How to have ad-free & safer internet in just few minutes](https://dietpi.com/blog/?p=564)
-
-YouTube video tutorial #1: *Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/RO2_eZlVrj4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
-
+Source code: <https://github.com/pi-hole>  
+DietPi Blog: [Pi-Hole & Unbound: How to have ad-free & safer internet in just few minutes](https://dietpi.com/blog/?p=564)  
+YouTube video tutorial #1: [Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!](https://www.youtube.com/watch?v=RO2_eZlVrj4)  
 YouTube video tutorial #2: [Block ads everywhere with Pi-hole and PiVPN on DietPi](https://www.youtube.com/watch?v=qbLEHlKkGiE){:class="nospellcheck"}  
 YouTube video tutorial #3 (German language): [Raspberry Pi & DietPi : Pi-hole der Werbeblocker für Netzwerke mit Anleitung für AVM FritzBox](https://www.youtube.com/watch?v=vXUvFWhXW6c&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=6){:class="nospellcheck"}  
 YouTube video tutorial #4 (German language): [Raspberry Pi Zero W mit Pi-hole - günstiger Werbeblocker & Schritt für Schritt Anleitung unter DietPi](https://www.youtube.com/watch?v=IxWuMHu9IYk&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=2){:class="nospellcheck"}  
@@ -211,9 +231,9 @@ Unbound is a validating, recursive, caching DNS resolver. It can resolve hostnam
 
 ***
 
-Official website: <https://www.nlnetlabs.nl/projects/unbound/about/>  
-Official documentation: <https://nlnetlabs.nl/documentation/unbound/unbound>  
-New WIP documentation: <https://unbound.readthedocs.io/>  
+Official website: <https://nlnetlabs.nl/projects/unbound/about/>  
+Official man pages: <https://nlnetlabs.nl/documentation/unbound/unbound/>  
+Official documentation: <https://unbound.docs.nlnetlabs.nl/en/latest/>  
 Wikipedia: <https://wikipedia.org/wiki/Unbound_(DNS_server)>  
 Source code: <https://github.com/NLnetLabs/unbound>
 

@@ -9,6 +9,8 @@ description: Description of DietPi software options related to software developm
 
 - [**Python 3 - High-level interpreted programming language**](#python-3)
 - [**Go - Programming language**](#go)
+- [**Java - Programming language**](#java)
+- [**Mono - Programming language**](#mono)
 - [**Node.js - open-source, JavaScript runtime environment**](../webserver_stack/#nodejs)
 - [**Docker -  Create, deploy, and run applications using containers**](#docker)
 - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
@@ -43,6 +45,12 @@ You can find Python everywhere in the world of computer programming. For example
 
 Currently, Python is 3rd most popular of programming language [^4].
 
+To find out which version of Python is installed, just run
+
+```sh
+python3 -V
+```
+
 === "Installation details"
 
     The install option explicitly installs only **Python 3**.  
@@ -55,7 +63,6 @@ Currently, Python is 3rd most popular of programming language [^4].
 
     | Name | URL |
     | :-: | - |
-    | **Atom** | <https://atom.io> |
     | **Eclipse + Pydev** | <https://www.eclipse.org> and <https://www.pydev.org/> |
     | **IDLE** | <https://docs.python.org/3/library/idle.html> |
     | **Pycharm** | <https://www.jetbrains.com/pycharm> |
@@ -74,13 +81,19 @@ Wikipedia: <https://wikipedia.org/wiki/Python_(programming_language)>
 
 Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 
-![DietPi Go open source programming language](../assets/images/dietpi-software-programming-golang.svg)
+![Go open source programming language logo](../assets/images/dietpi-software-programming-golang.svg){: width="150" height="56" loading="lazy"}
 
 Source: By [https://golang.org](https://blog.golang.org/go-brand), Creative Commons Attribution 3.0
 
 Go is a compiled, fast and high-performance language intended to be simple and is designed to be easy to read and understand. Go was created at Google by Rob Pike, Robert Griesemer, and Ken Thompson, and it first appeared in Nov 2009.
 
 Go is used by some of the big organizations such as Google, BBC, Uber, Soundcloud, Twitch, Medium, Daily Motion[^2]. Uber has reported better throughput, high performance, latency, and uptime. BBC, the house name in broadcasting the world news, uses it for backend, including crawlers and web scrapers. The build and deployment system of Soundcloud is in Go.
+
+To find out which version of Go is installed, just run
+
+```sh
+go version
+```
 
 === "Getting started"
 
@@ -90,40 +103,23 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
 
     Checkout also the official tutorial [Get started with Go](https://golang.org/doc/tutorial/getting-started).
 
-=== "Install / Uninstall"
-
-    - We switched to automatic Go version detection. Here is an example:
-
-        ```sh
-        root@DietPi3:~# go version
-        go version go1.16.3 linux/arm
-        ```
-
-    - When the Go package gets uninstalled, the folder `/mnt/dietpi_userdata/go` is still kept.  
-      This is the place where packages are installed, custom compilations are run, sources are downloaded etc.
-
-        It is especially important to keep `/mnt/dietpi_userdata/go` as long as we don't have a good dependency system that blocks uninstalls of dependencies. Otherwise it would be possible to uninstall Go while [OpenBazaar](../social/#openbazaar) is still installed.  
-        As a side effect, removing `/mnt/dietpi_userdata/go` would mean also removing [OpenBazaar](../social/#openbazaar).
-
-=== "Directories"
-
-    - `/mnt/dietpi_userdata/go`: This is the place where packages are installed, custom compilations are run, sources are downloaded etc.  
-      This path is what is given in the environment variable GOPATH.
-
-        !!! note "GOPATH is a global setting"
-            In normal Go installations, GOPATH is a user specific environment variable. In DietPi it is global, i.e. all users have the same module cache and all see the same binaries below GOPATH/bin.
-
-    - `/usr/local/go`: This is the place where the Go package is installed.
-    - `/mnt/dietpi_userdata/go/pkg/mod`: This is the path for 3rd party Go packages. The environment variable GOMODCACHE directs to this.
-
-=== "Getting started"
-
     Some common Go commands are:
 
-    - `go version`: Prints the installed Go version
     - `go env`: Prints the Go internal environment variables (e.g. GOPATH). Can also be used e.g. like `$(go env GOPATH)/bin`
     - `go mod tidy <MODULNAME>`: Generate a Go module
     - `go help`: Start the Go internal help in general, details for commands e.g. via `go help build`
+
+=== "Directories"
+
+    - `/usr/local/go`: This is the place where the Go development tools is installed.
+    - When installing packages via `go get` or `go install`, they are installed into the users home directory `~/go` by default. A custom path can be set via the `GOPATH` environment variable. To also load binaries of compiled Go packages into your `PATH`, something like this can be done:
+
+        ```sh
+        cat << '_EOF_' >> ~/.bashrc
+        export GOPATH=/path/to/go
+        export PATH="$PATH:$GOPATH/bin"
+        _EOF_
+        ```
 
 === "Update to latest version"
 
@@ -131,17 +127,48 @@ Go is used by some of the big organizations such as Google, BBC, Uber, Soundclou
     dietpi-software reinstall 188
     ```
 
-    To check the installation, run `go version`.
-
-    See also <https://golang.org/doc/install> or  
-    <https://gist.github.com/nikhita/432436d570b89cab172dcf2894465753>.
-
 ***
 
 Website: <https://golang.org>  
-Official documentation, references and guided tours of Go programs : <https://golang.org/doc>  
-One example source to grub for Go libraries: <https://github.com/avelino/awesome-go>  
-Wikipedia: <https://en.wikipedia.org/wiki/Go_(programming_language)>
+Official documentation: <https://golang.org/doc>  
+Additional libraries: <https://github.com/avelino/awesome-go>  
+Wikipedia: <https://en.wikipedia.org/wiki/Go_(programming_language)>  
+Source code: <https://github.com/golang/go>  
+License: [BSD 3-Clause](https://github.com/golang/go/blob/master/LICENSE)
+
+## Java
+
+![Java programming language logo](../assets/images/dietpi-software-programming-java.svg){: width="80" height="151" loading="lazy"}
+
+Source: <https://de.wikipedia.org/w/index.php?curid=2095155>
+
+The Java options of DietPi contain these basic options
+
+- Java Runtime Environment JRE
+- Java Development Kit JDK
+
+The Java Runtime Environment is the runtime environment of the Java technology. It serves as a more or less hardware dependent software platform to abstract the Java applications from the host system (operating system). It defines an API (application programming interface, which is host system independent and contains the so called Java Virtual Machine (JVM).
+
+The Java Development Kit is one of several Java software development kits (SDK) and is often used by the Java developers. It contains the components Java compiler `javac`, Java debugger `jdb`, Java documentation tool `javadoc`, Java archiver `jar` and further small tools.  
+To find out which version of Java is installed, just run
+
+```sh
+java -version
+```
+
+## Mono
+
+![Mono .NET Framework implementation logo](../assets/images/dietpi-software-programming-mono.png){: width="100" height="119" loading="lazy"}
+
+Source: User [`OsamaK`](https://en.wikipedia.org/wiki/User:OsamaK) - <https://de.wikipedia.org/w/index.php?curid=3548404>
+
+[Mono](https://www.mono-project.com/) is a cross platform, open source .NET framework. Is an alternative implementation of the Microsoft .NET framework. It support the development of platform independent software on the standards of the Common Language Infrastructure and the programming language C#.
+
+To find out which version of Mono is installed, just run
+
+```sh
+mono --version
+```
 
 ## Docker
 
@@ -187,9 +214,7 @@ Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
 Source code: <https://github.com/moby/moby>  
 License: [Apache-2.0](https://github.com/moby/moby/blob/master/LICENSE)
 
-For a quick intro, see **DietPi Docker Setup on Raspberry Pi 3 B Plus**:
-
-<iframe src="https://www.youtube-nocookie.com/embed/y_VfLOGm5nA?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [_DietPi Docker Setup on Raspberry Pi 3 B Plus_](https://www.youtube.com/watch?v=y_VfLOGm5nA)
 
 ## Docker Compose
 

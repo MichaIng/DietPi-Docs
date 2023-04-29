@@ -131,40 +131,43 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 === "Brute-force protection"
 
-    Nextcloud offers built-in brute force protection and additionally a plugin ***Brute-force settings***.  
-    This will delay your login rate in case of several failed login attempts.
-
-    This protection can be extended with Fail2Ban (see following tab).
+    Nextcloud offers built-in brute-force protection, which will delay your login rate in case of several failed login attempts.
 
     See also:
 
-    - <https://apps.nextcloud.com/apps/bruteforcesettings>
     - <https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/bruteforce_configuration.html>
+
+    This protection can be extended with Fail2Ban (see following tab).
 
 === "Fail2Ban integration"
 
-    Using Fail2Ban your can block users after failed login attempts. This hardens your system, e.g. against brute force attacks.
+    Using Fail2Ban your can block users after failed login attempts, which can further harden the brute-force protection of your Nextcloud instance.  
+    To achieve this hardening, execute the following steps:
 
-    - Set options in the ***Nextcloud configuration file*** (typical `/var/www/nextcloud/config/config.php`):
+    1. If not done yet, install Fail2Ban:
 
-        - Add trusted domains if not already set via the `'trusted_domains'` entry.
+        ```sh
+        dietpi-software install 73
+        ```
+
+    1. Set options in the ***Nextcloud configuration file***, typically `/var/www/nextcloud/config/config.php`:
+
+        - Assure that all domains and IPs you use to access your Nextcloud instance were added to the `'trusted_domains'` entry.
 
             ```ini
             'trusted_domains' =>
              array (
                0 => 'localhost',
-               1 => '<your_trusted_domain>',
+               1 => 'your.domain/IP.org',
              ),
             ```
 
-            The entry of the trusted domains is important, because one of the Fail2Ban regular expressions in the Fail2Ban filter file ("Trusted domain error", see below) deals with trusted domain login errors. By default, if you login via a non trusted domain, Nextcloud will show an error login dialog.  
+            The entry of the trusted domains is important, because one of the Fail2Ban filters deals with trusted domain errors ("Trusted domain error", see below). By default, if you try to access with an untrusted domain, Nextcloud will show an error message.  
 
             !!! attention
-              Take care, if you use this "Trusted domain error" `failregex` option and you then reload the page several times (more often than `maxretry` value in the Fail2Ban jail file) you lockout yourself also for logging in via a trusted domain from the IP address you are using.
+                Take care, if you use this "Trusted domain error" `failregex` option and you then reload the page several times (more often than `maxretry` value in the Fail2Ban jail file) you lockout yourself also for logging in via a trusted domain from the IP address you are using.
 
-        - log file options: These are set to appropriate values by default (e.g. `log_level`, `log_type`) resp. DietPi defaults (`logfile` via `SOFTWARE_NEXTCLOUD_DATADIR` within `/boot/dietpi.txt`), so that they do not need to be set as sometimes otherwise described.
-
-    - Create new ***Fail2Ban filter*** (e.g. `/etc/fail2ban/filter.d/nextcloud.conf`):
+    1. Create new ***Fail2Ban filter***, e.g. `/etc/fail2ban/filter.d/nextcloud.conf`:
 
         ```ini
         # Fail2Ban filter for Nextcloud
@@ -176,31 +179,50 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
         datepattern = ,?\s*"time"\s*:\s*"%%Y-%%m-%%d[T ]%%H:%%M:%%S(%%z)?"
         ```
 
-    - Create new ***Fail2Ban jail file*** `/etc/fail2ban/jail.d/nextcloud.local`:
+    1. Create new ***Fail2Ban jail file*** `/etc/fail2ban/jail.d/nextcloud.local`:
 
         ```ini
         [nextcloud]
-        backend = auto
         enabled = true
-        port = http,https
+        backend = auto
+        logpath = /mnt/dietpi_userdata/nextcloud_data/nextcloud.log
+        port = 80,443
         protocol = tcp
         filter = nextcloud
         maxretry = 5
         bantime = 600
-        logpath = /mnt/dietpi_userdata/nextcloud_data/nextcloud.log
         ```
 
-        Check whether the `logpath` is identical to the value in the Nextcloud configuration file (`config.php`see above).
+        Assure that the `logpath` matches the `'datadirectory'` value in the Nextcloud configuration file (`config.php`, see above), or the `'logfile'` value if defined.
 
-        As not specified here, Fail2Ban uses properties like `maxretry`, `bantime`, etc. from `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` (if present). Note the setting `backend = auto`. By default, `backend` is set to `systemd` in `/etc/fail2ban/jail.conf`. As a result, Fail2Ban ignores the `logpath` entry here in the jail `nextcloud.conf`, with the consequence, that Fail2Ban does not recognize an attack on Nextcloud (port 80, 443) even though attacks are listed in `/mnt/dietpi_userdata/nextcloud_data/nextcloud.log`.
+        Properties not defined here are taken from the `[DEFAULT]` block in `/etc/fail2ban/jail.conf`, or `/etc/fail2ban/jail.local` if present.  
+        Note the setting `backend = auto`: By default, `backend` is set to `systemd` in `/etc/fail2ban/jail.conf`. As a result, Fail2Ban would ignore the `logpath` entry here in the jail `nextcloud.local`, with the consequence that Fail2Ban does not recognize an attack on Nextcloud (port 80, 443), even though attacks are logged in `/mnt/dietpi_userdata/nextcloud_data/nextcloud.log`.
 
-    - Restart Fail2Ban: `systemctl restart fail2ban`.
-    - Test your settings by trying to sign in multiple times from a remote PC with a wrong user or password. After `maxretry` attempts your IP must be banned for `bantime` seconds (DietPi does not respond anymore) as the default action by Fail2Ban is `route`, specified in `/etc/fail2ban/action.d/route.conf`.
-    - Check the current status on your DietPi with `fail2ban-client status nextcloud`.
-    - See also:
-        - [Fail2Ban](../system_security/#fail2ban-protects-your-system-from-brute-force-attacks)
-        - <https://help.nextcloud.com/t/repeated-login-attempts-from-china/6510/11?u=michaing>
-        - <https://www.c-rieger.de/nextcloud-installationsanleitung/#c06>
+    1. Restart Fail2Ban:
+
+        ```sh
+        systemctl restart fail2ban
+        ```
+
+    1. Test your settings by trying to sign in multiple times from a remote PC with a wrong user or password. After `maxretry` attempts your IP should be banned for `bantime` seconds (DietPi does not respond anymore) as the default action by Fail2Ban is `route`, specified in `/etc/fail2ban/jail.conf` and defined in `/etc/fail2ban/action.d/route.conf`.
+
+    1. Check the current status on your DietPi:
+
+        ```sh
+        fail2ban-client status nextcloud
+        ```
+
+        IPs can be unbanned via:
+
+        ```sh
+        fail2ban-client unban 123.123.123.123
+        ```
+
+    See also:
+
+    - [Fail2Ban](../system_security/#fail2ban)
+    - <https://help.nextcloud.com/t/repeated-login-attempts-from-china/6510/11?u=michaing>
+    - <https://www.c-rieger.de/nextcloud-installationsanleitung/#c06>
 
 === "Update"
 
@@ -267,12 +289,8 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 ***
 
 Website: <https://nextcloud.com/>  
-Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>
-
-YouTube video tutorial #1: *DietPi Nextcloud Setup on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/Q3R2RqFSyE4?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
-
+Official documentation: <https://docs.nextcloud.com/server/latest/admin_manual/contents.html>  
+YouTube video tutorial #1: [DietPi Nextcloud Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=Q3R2RqFSyE4)  
 YouTube video tutorial #2: [DietPi Docker Nextcloud External Storage Setup with SAMBA SERVER on RPI3B](https://www.youtube.com/watch?v=NOb12BuNpZ8)
 
 ## Nextcloud Talk
@@ -288,17 +306,17 @@ Also installs:
 
 === "Installation notes"
 
-    During installation you will be asked to enter the external server domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
+    For video call throughout your local network, a so called [TURN server](https://en.wikipedia.org/wiki/Traversal_Using_Relays_around_NAT) is required. *Coturn* is a common implementation and hence installed by default together with our Nextcloud Talk option.
 
-    If HTTPS was or is enabled via `dietpi-letsencrypt`, Coturn will be configured to use the LetsEncrypt certificates for TLS connections on the chosen TURN server port automatically.  
+    During installation you will be asked to enter your server's external domain and a port, that you want to use for the Coturn TURN server. Note that you need to forward the chosen port and/or open it in your firewall.
 
-    Coturn by default will listen to non-TLS requests as well on the port configured in `/etc/turnserver.conf`. You can force TLS/control this by switching port forwarding in your router and/or opening/dropping ports in your firewall.
-
-    Coturn logging by default is disabled via `/etc/default/coturn` command arguments, since it is very verbose and produces much disk I/O. You can enable and configure logging via `/etc/turnserver.conf`, if required.
+    Coturn will be configured with authentication via shared secret and some additional security measures. For details, see this HowTo: <https://help.nextcloud.com/t/howto-setup-nextcloud-talk-with-turn-server/30794>
 
 ***
 
-Website: <https://nextcloud.com/talk>
+Website: <https://nextcloud.com/talk/>  
+Source code: <https://github.com/nextcloud/spreed>  
+Coturn source code: <https://github.com/coturn/coturn>
 
 ## Pydio
 
@@ -312,7 +330,7 @@ Also Installs:
 
 === "Access to the web interface"
 
-    URL = `http://<your.IP>/pydio`
+    URL: `http://<your.IP>/pydio`
 
 === "First time connect"
 
@@ -348,32 +366,99 @@ Website: <https://pydio.com>
 ## UrBackup
 
 UrBackup Server is an Open Source client/server backup system, that through a combination of image and file backups accomplishes both data safety and a fast restoration time.  
-Basically, it allows you to create a complete system backup, using a simple web interface, for systems on your network.
+Basically, it allows you to create a complete system backup for systems on your network, using a simple web interface.  
+Clients are available for Windows, macOS, Linux and FreeBSD.
 
 ![UrBackup interface screenshot](../assets/images/dietpi-software-cloud-urbackup.png){: width="400" height="103" loading="lazy"}
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **55414**:
+    The web interface is accessible via TCP port **55414**:
 
-    URL = `http://<your.IP>:55414`  
-    Remark: Change the IP address for your system.
+    - URL: `http://<your.IP>:55414`
 
-=== "Backup storage location"
+=== "Configuration"
 
-    The location of the backups can be changed in the web interface:
+    The **configuration of UrBackup** is within these options:
 
-    - Select `Settings`.
-    - Change the Backup Storage Path: `/mnt/dietpi_userdata/urbackup` is recommended.
-    - Click `Save`.
-    - Restart service with `systemctl restart urbackupsrv`.
+    - UrBackup web interface, tab `Settings`
+    - UrBackup configuration file, `/etc/default/urbackupsrv`  
+
+        After editing the config file, the service needs to be restart for changes to take effect:
+
+        ```sh
+        systemctl restart urbackupsrv
+        ```
+
+    **Best practice: Disable "Allow client-side pausing of backups"**  
+    Backup procedures sometimes are paused by the client side which leads to a long backup duration. To avoid this the pausing can be deactivated via the UrBackup web interface:
+
+    - Select `Settings`
+    - Select tab `General` -> `Permissions`
+    - Uncheck option `Allow client-side pausing of backups`
+    - Alternatively this can also be set via the client resp. group based settings in the `Settings` area
+
+=== "Backup storage path"
+
+    The location of the backups can be set **prior to installing UrBackup** via `SOFTWARE_URBACKUP_BACKUPPATH` setting in `/boot/dietpi.txt`. It defaults to `/mnt/dietpi_userdata/urbackup`.
+
+    After the installation, the path can be changed via web interface:
+
+    - Select `Settings`
+    - Select tab `General` -> `Server`
+    - Change `Backup Storage Path`
+    - Click `Save`
+
+    ???+ note "Backup storage directory and access rights"
+        It is necessary that the new backup directory exists, as UrBackup usually has no permissions to pre-create it.  
+        Additionally, you need to grant UrBackup write access. It can be achieved via
+
+        ```sh
+        mkdir /path/to/backup/storage
+        chmod -R urbackup:urbackup /path/to/backup/storage
+        ```
 
 === "Download the client"
 
-    Install the appropriate client on the systems you wish to backup from <https://www.urbackup.org/download.html#client_windows>.
+    Install the appropriate client on the systems you wish to backup from <https://www.urbackup.org/download.html#client_windows>.  
+    Remark: For Windows 7 (outdated), the [client version 2.4.11](https://www.urbackup.org/downloads/Client/2.4.11/) has to be used.
+
+=== "Download cache"
+
+    Via web interface `Settings` > `Advanced` section, a temporary download buffer can be enabled, where backups are stored to during download, before being moved to the final backup path. See the [corresponding UrBackup documentation chapter](https://www.urbackup.org/administration_manual.html#x1-700008.5.1) for details.  
+    By default the `/tmp` tmpfs (RAM disk) is used for this, which causes issues if you do not have several free GiB of RAM. The directory can be changed via:
+
+    ```sh
+    nano /etc/default/urbackupsrv
+    ```
+
+    The relevant entry is `DAEMON_TMPDIR`:
+
+    ```sh
+    #Temporary file directory
+    # -- this may get very large depending on the advanced settings
+    DAEMON_TMPDIR='/tmp'
+    ```
+
+    Note that this means doubled file writes and has no benefits as long as the backup duration from clients' side is not time critical, or your backup drive is not very slow. It makes sense only if you have a much faster drive available, or plenty GiB of free RAM to use as backup download buffer.
+
+=== "View logs"
+
+    UrBackup logs to `/var/log/urbackup.log` by default. The path to the log file can be changed via `/etc/default/urbackupsrv`. See "Configuration" tab for details.
+
+=== "Update"
+
+    You can easily update UrBackup by reinstalling it. Your settings and data are preserved:
+
+    ```sh
+    dietpi-software reinstall 111
+    ```
 
 ***
-Website: <https://www.urbackup.org/index.html>
+
+Official website: <https://www.urbackup.org/>  
+Official documentation: <https://www.urbackup.org/administration_manual.html>  
+Official forums: <https://forums.urbackup.org/>
 
 ## Gogs
 
@@ -383,7 +468,7 @@ Your very own GitHub style server, with web interface.
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **3000**:
+    The web interface is accessible via TCP port **3000**:
 
     - URL: `http://<your.IP>:3000`
 

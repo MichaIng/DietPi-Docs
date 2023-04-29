@@ -9,11 +9,12 @@ description: Description of DietPi software options related to social platforms 
 
 - [**FreshRSS - A self-hosted RSS feed aggregator**](#freshrss)
 - [**phpBB - Free flat-forum bulletin board software solution**](#phpbb)
-- [**Wordpress - Website Blog and Publishing platform**](#wordpress)
+- [**WordPress - Website Blog and Publishing platform**](#wordpress)
 - [**Single File PHP Gallery - Host and browse your images from a web interface**](#single-file-php-gallery)
 <!-- markdownlint-disable-next-line MD051 -->
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](#baikal)
 - [**Synapse - Decentralized communication with the Matrix protocol**](#synapse)
+- [**microblog.pub - A self-hosted, single-user, ActivityPub powered microblog**](#microblogpub)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -53,7 +54,7 @@ If you always wanted your very own forum, phpBB is all you need.
 
 Also Installs:
 
-- Webserver
+- Webserver, PHP and MariaDB
 
 ![phpBB example forum screenshot](../assets/images/dietpi-software-social-phpbb.png){: width="400" height="298" loading="lazy"}
 
@@ -114,12 +115,16 @@ rm -R /var/www/phpbb/install
 
 Your forum is now ready.
 
-## Wordpress
+***
+
+Official website: <https://www.phpbb.com/>
+
+## WordPress
 
 WordPress is a state-of-the-art semantic personal publishing platform with a focus on aesthetics, web standards, and usability.
 It allows you to create your own website.
 
-![Wordpress logo and usage pictogram](../assets/images/dietpi-software-social-wordpress.jpg){: width="400" height="242" loading="lazy"}
+![WordPress logo and usage pictogram](../assets/images/dietpi-software-social-wordpress.jpg){: width="400" height="242" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -135,13 +140,24 @@ It allows you to create your own website.
     - Database Host = `localhost`
     - Table Prefix = `wp_`
 
+    !!! info "Actively fill all fields!"
+        You need to fill out every dialog field although it seems like they are already set.
+
+        ![WordPress database initialization dialog](../assets/images/dietpi-software-social-wordpress-initialdialog.jpg){: width="350" height="274" loading="lazy"}
+
+        **Remark**: In the example screenshot the global application password is `dietpi`.
+
+***
+
+Official website: <https://wordpress.org/>
+
 ## Single File PHP Gallery
 
 *Single File PHP Gallery* allows you to host and browse your images from a web interface.
 
 Also Installs:
 
-- LASP Webserver
+- Webserver and PHP
 
 ![Single File PHP Gallery web interface screenshot](../assets/images/dietpi-software-social-imagegallery.png){: width="400" height="248" loading="lazy"}
 
@@ -168,11 +184,8 @@ Also Installs:
 
 ***
 
-Website: <https://sye.dk/sfpg>
-
-YouTube video tutorial: *DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/0by117lpq_o?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Official website: <https://sye.dk/sfpg>  
+YouTube video tutorial: [DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)](https://www.youtube.com/watch?v=0by117lpq_o)
 
 ## Baïkal
 
@@ -201,6 +214,10 @@ Baïkal is a lightweight CalDAV + CardDAV server.
     - Username = `admin`
     - Password = What you set during first run setup above.
 
+***
+
+Official website: <https://sabre.io/baikal/>
+
 ## Synapse
 
 Synapse is a server, written in Python, for communication using the Matrix protocol.
@@ -211,7 +228,8 @@ Synapse is a server, written in Python, for communication using the Matrix proto
 
 === "Federation"
 
-    Synapse is by default set up to be a private server, with no connection to any other servers. To connect to other servers (federate), see https://github.com/matrix-org/synapse/blob/develop/docs/federate.md.  Note that frp does not currently work with Synapse.
+    Synapse is by default set up to be a private server, with no connection to any other servers. To connect to other servers (federate), see <https://github.com/matrix-org/synapse/blob/develop/docs/federate.md>.  
+    Note that [frp](../advanced_networking/#frp) does not currently work with Synapse.
 
 === "Configuration"
 
@@ -267,5 +285,50 @@ Official website: <https://matrix.org/>
 Official documentation: <https://matrix.org/docs/guides>  
 Source code: <https://github.com/matrix-org/synapse>  
 License: [Apache 2.0](https://github.com/matrix-org/synapse/blob/develop/LICENSE)
+
+***
+
+## microblog.pub
+
+A self-hosted, single-user, ActivityPub powered microblog.
+
+![microblog.pub blog screenshot](../assets/images/dietpi-software-social-microblogpub1.jpg){: width="400" height="337" loading="lazy"}
+
+=== "Installation / configuration"
+
+    The software installs automatically with a default config. Therefore it is necessary to reconfigure it using the `microblog-pub` script, which loads the environment, and brings up the app's own configuration wizard.  
+    This circumstance is signalled with the following dialog at the end of the installation process:
+
+    ![microblog.pub installation screenshot](../assets/images/dietpi-software-social-microblogpub2.jpg){: width="640" height="142" loading="lazy"}
+
+    To execute this reconfiguration, you can enter the following commands:
+
+    ```sh
+    exec bash
+    ```
+
+    This starts a new bash where you can execute the configuration script
+
+    ```sh
+    microblog-pub configure
+    ```
+ 
+    Remark: You can also easily reboot your system and then execute the `microblog-pub configure` command without the `bash` command before.
+
+    ???+ warning "Setting the port number during the reconfiguration process"
+
+        During the reconfiguration via `microblog-pub configure` you are asked - amongst others - for your domain.  
+        Do not forget to add a `:8007`
+
+=== "Configuration file"
+
+    The `microblog.pub` configuration file is named `profile.toml`  
+    and is located there: `/mnt/dietpi_userdata/microblog-pub/data/profile.toml`.  
+
+    In case of a full reconfiguration you need to delete this file before starting the `microblog-pub configure` command.
+
+***
+
+Official website: <https://microblog.pub/>
 
 [Return to the **Optimised Software list**](../../software/)

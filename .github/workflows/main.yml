@@ -1,0 +1,78 @@
+name: Build test and quality checks
+on: [pull_request, push]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  main:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
+    # https://github.com/actions/runner-images
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        shell: sh
+    steps:
+    - name: Setup tmpfs
+      run: sudo mount -t tmpfs -o "noatime,lazytime,uid=$(id -u)" tmpfs "$GITHUB_WORKSPACE"
+    - name: Clone DietPi-Docs repository
+      id: clone
+      # https://github.com/actions/checkout/tags
+      uses: actions/checkout@v3
+    - name: Setup Node.js for markdownlint-cli2
+      # https://github.com/actions/setup-node/tags
+      uses: actions/setup-node@v3
+      with:
+        node-version: '*'
+        check-latest: true
+    - name: Install markdownlint-cli2
+      run: sudo npm i -g markdownlint-cli2
+    - name: Run markdownlint-cli2 to check Markdown files
+      run: markdownlint-cli2 '**.md'
+    - name: Setup Python for MkDocs and PySpelling
+      id: python
+      if: always() && steps.clone.outcome == 'success'
+      # https://github.com/actions/setup-python/tags
+      uses: actions/setup-python@v4
+      with:
+        # Match version on dietpi.com server
+        python-version: '3.11.2'
+    - name: Install MkDocs
+      id: mkdocs
+      if: always() && steps.python.outcome == 'success'
+      run: |
+        pip3 install -U pip wheel setuptools
+        pip3 install -Ur requirements.txt
+    - name: Build DietPi-Docs
+      id: build
+      if: always() && steps.mkdocs.outcome == 'success'
+      run: mkdocs build -sd build/docs
+    - name: Install PySpelling
+      id: pyspelling
+      if: always() && steps.build.outcome == 'success'
+      run: |
+        pip3 install -U pyspelling &
+        sudo apt-get -q update
+        sudo apt-get -qq --no-install-recommends install aspell-en
+    - name: Run PySpelling to check HTML files
+      if: always() && steps.pyspelling.outcome == 'success'
+      run: pyspelling -c .spellcheck.yml
+    - name: Download lychee
+      id: lychee
+      # Skip on push events into master
+      if: always() && steps.build.outcome == 'success' && ! endsWith(github.ref, '/master')
+      run: |
+        curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        tar xf lychee.tar.gz
+    - name: Run lychee to check README and HTML files
+      if: always() && steps.lychee.outcome == 'success' && ! endsWith(github.ref, '/master')
+      # "429 Too Many Requests" on GitHub despite token
+      # Exclude URLs for newly added Markdown files as well as raw view and edit GitHub URLs for all existing Markdown files
+      run: |
+        git fetch --depth=1 origin master
+        while read -r line; do exclude="$exclude|dietpi.com/${line%.md}/"; done << _EOF_
+        $(git diff --name-only --diff-filter=A origin/master docs | grep '.md$')
+        _EOF_
+        while read -r line; do exclude="$exclude|github.com/MichaIng/DietPi-Docs/(raw|edit)/dev/$line"; done << _EOF_
+        $(find docs -type f -name '*.md')
+        _EOF_
+        ./lychee -En --require-https --cache --exclude '^(http://wiringpi.com/$|https://(twitter.com/DietPi_$|www.linux-kvm.org/$|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details|www.kickstarter.com'"$exclude"'))' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'

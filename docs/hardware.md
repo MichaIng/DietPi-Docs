@@ -26,10 +26,6 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
 
 ![Raspberry Pi Zero 2 photo](assets/images/dietpi-raspberry-pi-zero-2.jpg){: width="500" height="333" loading="lazy"}
 
-**New Zero** quick intro:
-
-<iframe src="https://www.youtube-nocookie.com/embed/V2frBYX62LU?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
-
 <div class="md-typeset__table">
     <table>
         <thead>
@@ -271,6 +267,18 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZero-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
+            <tr>
+                <td><a class="table" href=""><strong>ROCK 3A</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK3A-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>ROCK 5B</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5B-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -331,13 +339,13 @@ Careful consideration went into the design and development of the Tinker Board t
     </table>
 </div>
 
-## NanoPi Series (FriendlyARM)
+## NanoPi Series (FriendlyELEC)
 
-**FriendlyARM's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2 x 1.8 GHz A72 cores and 4 x 1.4 GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
+**FriendlyELEC's next generation SBC** - One of the fastest ARM SBC (RK3399) on the market today, with 2 x 1.8 GHz A72 cores and 4 x 1.4 GHz A53 cores. One of the smallest RK3399 SBCs available, a great addition to your SBC lineup that provides next gen SBC performance.
 
-For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) website.
+For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) website.
 
-![FriendlyARM NanoPi K2 photo](assets/images/dietpi-nanopi-k2.jpg){: width="500" height="350" loading="lazy"}
+![FriendlyELEC NanoPi K2 photo](assets/images/dietpi-nanopi-k2.jpg){: width="500" height="350" loading="lazy"}
 
 **NanoPi K2** supports DVFS and it can smooth play high-definition video streams, and it is very well suited for applications such as advertisement machines, TV boxes, home entertainment appliances or multimedia devices.
 
@@ -437,7 +445,7 @@ For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) websi
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Bullseye.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -465,15 +473,79 @@ For more details visit the [**FriendlyARM**](https://www.friendlyarm.com/) websi
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>NanoPi R5S</strong></a></td>
+                <td><a class="table" href=""><strong>NanoPi R5S/R5C</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>NanoPi R6S</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bullseye.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ZeroPi</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ZeroPi-ARMv7-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+## Orange Pi Series
+
+Orange Pi is an open source product brand of Shenzhen Xunlong Software Co., Ltd, which focuses on providing cost-effective open source hardware, open source software and OEM/ODM services for individuals and enterprises worldwide.
+
+For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) website.
+
+![Orange Pi 5 photo](assets/images/dietpi-orange-pi-5.png){: width="500" height="334" loading="lazy"}
+
+**Orange Pi 5** uses Rockchip RK3588S new generation 8-core 64-bit processor, quad-core A76+quad-core A55, with 8nm process design, up to 2.4GHz main frequency, integrated ARM Mali-G610 GPU, embedded high-performance 3D/2D image acceleration module, built-in NPU with 6Tops computing power, with 4GB/8GB/16GB/32GB (LPDDR4/4x), and up to 8K display processing capability.
+
+<div class="md-typeset__table">
+    <table>
+        <thead>
+            <tr>
+                <th><strong>Product</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 5</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5-ARMv8-Bullseye.7z">DietPi image</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+## RISC-V based SBCs
+
+The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source ISA (instruction set architecture), where CPU or SoC device internals of the CPU core are transparent. This makes the technology interesting for combining it within the open source Linux orbit.
+
+### StarFive
+
+[StarFive](https://www.starfivetech.com/en/site/soc) is a RISC-V SoC and SBC manufacturer and offers the [VisionFive 2](https://www.starfivetech.com/uploads/VisionFive%202%20isionDocumentation.pdf), started as a [Kickstarter project](https://www.kickstarter.com/projects/starfive/visionfive-2). The board contains a quad-core RISC-V JH7110 SoC, 2/4/8 GiB of RAM and many other bells and whistles of the Raspberry Pi type world.
+
+![StarFive VisionFive 2 photo](assets/images/riscv-starfive-visionfive2.jpg){: width="500" height="420" loading="lazy"}
+
+<div class="md-typeset__table">
+    <table>
+        <thead>
+            <tr>
+                <th><strong>Product</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a class="table" href=""><strong>StarFive VisionFive 2</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_VisionFive2-RISC-V-Sid.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -555,7 +627,7 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>VMware Player / Fusion</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMware-x86_64-Bullseye.7z">DietPi VMX appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Bullseye.7z">DietPi VMX appliance</a>
                 </td>
             </tr>
             <tr>
@@ -579,7 +651,7 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>Parallels</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Parallels-x86_64-Bullseye.7z">DietPi PVM appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Bullseye.7z">DietPi VMX appliance</a>
                 </td>
             </tr>
             <tr>
@@ -672,7 +744,7 @@ Depending on whether you want to use the WiFi feature later on, you have to sele
 
 ![DietPi-Installer WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550" height="184" loading="lazy"}
 
-The last selection is the target Debian version (the old **Buster**, current stable **Bullseye**, or next testing **Bookworm**).  
+The last selection is the target Debian version: the current stable **Bullseye** or next testing **Bookworm**.  
 After this, the script runs a couple of minutes, finally the following message occurs:
 
 ![DietPi-Installer finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}

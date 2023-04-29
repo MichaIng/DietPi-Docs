@@ -18,7 +18,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 ### Remote Access
 
-- [**Remot3.it - (Weaved) Access your device over the internet**](#remot3it)
+- [**Remote.It - Access your device over the internet**](#remoteit)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
@@ -166,19 +166,24 @@ XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 
 ![XRDP desktop screenshot](../assets/images/dietpi-software-remotedesktop-xrdp.png){: width="648" height="507" loading="lazy"}
 
-=== "Connect to your desktop"
+### Connect to your desktop
 
-    To connect to the desktop, open the remote desktop application in Windows (or any other XRDP compatible client).  
-    Enter the IP address of your DietPi device, e.g. `192.168.0.100`.  
-    Click connect and enter the following details once connected:
+To connect to the desktop, open the remote desktop application in Windows (or any other XRDP compatible client).  
+Enter the IP address of your DietPi device, e.g. `192.168.0.100`.  
+Click connect and enter the following details once connected:
 
-    - Module = `Xorg`
-    - Username = `root`
-    - Password = `dietpi`
+- Module = `Xorg`
+- Username = `root`
+- Password = `dietpi`
 
-=== "Access from outside your local network"
+### Access from outside your local network
 
-    XRDP uses port **3389** by default, so you need to open/forward it from your router to DietPi.
+XRDP uses port **3389** by default, so you need to open/forward it from your router to DietPi.
+
+??? info "Troubleshooting: Microsoft Windows RDP connection black screen"
+
+    It is sometimes reported that a Windows RDP session hangs on a black screen when trying to connect to an XRDP server.  
+    This might be resolved using this instruction: [How to Resolve Microsoft RDP Connection Black Screen](https://techdirectarchive.com/2022/01/15/how-to-resolve-microsoft-rdp-connection-black-screen/) 
 
 ## NoMachine
 
@@ -204,41 +209,35 @@ NoMachine is a remote desktop server with advanced features, such as screen reco
 
     You will now be connected to your device.
 
-## Remot3.it
+## Remote.It
 
-Remot3.it allows you to easily access your DietPi device over the internet.
+Remote.It allows you to easily access your DietPi device over the internet.
 
-![Remot3.it web interface screenshot](../assets/images/dietpi-software-remotedesktop-remot3it.png){: width="400" height="140" loading="lazy"}
+![Remote.It web interface screenshot](../assets/images/dietpi-software-remotedesktop-remoteit.png){: width="400" height="140" loading="lazy"}
 
-Remot3.it works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
+Remote.It works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
 
-Examples of TCP ports for Remot3.it:
+Examples of TCP ports for Remote.It:
 
 - SSH port **22**. Open a remote terminal to your device.
 - Transmission port **9091**. Monitor your BitTorrent downloads.
 - Webserver port **80**. Access your internal websites.
 
-=== "First Run Setup"
+=== "Quick start"
 
-    On interactive installs, `dietpi-software` will call the setup script to setup and manage your application connections. On unattended installs, e.g. via `dietpi.txt`, you can call it manually from console:
+    While the DietPi-Software installation run, if not done yet, you may create an account at the Remote.It web portal: <https://app.remote.it/>
+
+    After the DietPi-Software installation finished, you can register the device at your Remote.It desktop application. For this, retrieve your claim code via:
 
     ```sh
-    connectd_installer
+    mawk -F\" '/claim/{print $4}' /etc/remoteit/config.json
     ```
 
-    Once your account is created and linked to this system, you can select a port for Remot3.it to enable remote access.
-
-=== "Access your device"
-
-    Sign into your Remot3.it account to access your devices remotely:
-
-    - URL = <https://remote.it/>
+    Then follow these instructions: <https://docs.remote.it/software/device-package/installation#3.-claim-and-register-the-device>
 
 ***
 
-YouTube video tutorial (German language): `Raspberry Pi einfach fernsteuern: Remote.It SSH ohne VPN von überall - Installation unter DietPi`.
-
-<iframe src="https://www.youtube-nocookie.com/embed/V5MZXBo3hGw?rel?=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial (German language): [Raspberry Pi einfach fernsteuern: Remote.It SSH ohne VPN von überall - Installation unter DietPi](https://www.youtube.com/watch?v=V5MZXBo3hGw){:class="nospellcheck"}
 
 ## VirtualHere
 
@@ -263,6 +262,15 @@ Once installed, available VirtualHere devices will be shown in the client user i
 !!! warning "USB Storage - WARNING: Data loss, service and system crashes may occur"
     USB devices cannot be used on the host server and the client system at the same time. VirtualHere will forcefully "detach" even actively used USB drives on the host system, once you start using them with the client. Be hence very careful to not select the wrong USB device in clients, especially when DietPi userdata or swap files are located on a USB drive.  
     If a device must stay available at the server, it is best to let it be ignored by VirtualHere, making use of the `IgnoredDevices` option: It takes `xxxx/yyyy` as value with `xxxx` being the vendor ID and `yyyy` being the device ID, which can be obtained from the output of `lsusb`. See the "Configuration" tab below and the official documentation link for further details.
+
+??? hint "What to do if the VirtualHere GUI client is not displayed on your DietPi graphical desktop (e.g. Xfce)"
+    In some cases, the GUI client does not start an X11 window. This might be caused by a missing root permission to access X. In this case you need to execute `xhost local:root` in advance.  
+    With this you need to execute (example 64 bit Intel machine where the VirtualHere client was copied to `/usr/local/bin`)
+
+    ```sh
+    xhost local:root
+    sudo /usr/local/bin/vhuit64
+    ```
 
 === "Network port"
 

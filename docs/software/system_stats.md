@@ -17,6 +17,7 @@ description: Description of DietPi software options related to system statistics
 - [**K3s - Lightweight Kubernetes**](#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](#prometheus-node-exporter)
+- [**Homer - A modern homepage for your services**](#homer)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -179,9 +180,7 @@ The following screenshots shall give an overview over the displaying features of
 
 ***
 
-YouTube video tutorial: *DietPi CloudShell (RPi / Odroid XU4)*
-
-<iframe src="https://www.youtube-nocookie.com/embed/O-W8Z33as_U?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtube.com/watch?v=O-W8Z33as_U)
 
 ### Configuration
 
@@ -564,3 +563,196 @@ Prometheus RPi Exporter: <https://github.com/fahlke/raspberrypi_exporter>
 License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE), [MIT](https://github.com/fahlke/raspberrypi_exporter/blob/master/LICENSE) (for RPi Exporter)
 
 [Return to the **Optimised Software list**](../../software/)
+
+## Homer
+
+Homer is a modern and lightweight dashboard & homepage for your services
+
+![Homer preview screenshot](../assets/images/homer-preview.png){: width="400" height="218" loading="lazy"}
+
+=== "Access to Homer"
+
+    The *Homer* dashboard can be accessed via:
+
+    - URL: `http://<your.IP>/homer`
+    
+    You may bookmark this and save it as your browser's home page, or alternatively look into tools like **Nginx Proxy Manager** and a DNS server such as **AdGuard Home** to give it a nice internal domain name such as `homer.box`.
+
+=== "Configuration"
+
+    To configure entries and icons for Homer, you can edit it's config file `/var/www/homer/assets/config.yml`.
+    Example contents:
+
+    ```yaml
+    services:
+      - name: "Selfhosted"
+        icon: "fas fa-cloud"
+        items:
+          - name: "Adguard Home"
+            logo: "assets/icons2/adguard.png"
+            subtitle: "A blackhole for the internet"
+            tag: "Selfhosted"
+            url: "https://adguard.box"
+            target: "_blank"
+          - name: "Nginx"
+            logo: "assets/icons2/nginx.png"
+            subtitle: "Reverse proxy - load balancer"
+            tag: "Selfhosted"
+            url: "https://nginx.box"
+            target: "_blank"
+          - name: "Shiori"
+            logo: "assets/icons2/shiori.png"
+            subtitle: "Web archiving + Read later"
+            tag: "Selfhosted"
+            url: "https://shiori.box"
+            target: "_blank"
+          - name: "Nextcloud"
+            logo: "assets/icons2/nextcloud.png"
+            subtitle: "A google suite alternative"
+            tag: "Selfhosted"
+            url: "https://nextcloud.box"
+            target: "_blank"
+    ```
+ 
+    In the example above, a column titled `Selfhosted` is being made which contains 4 entries. In the same directory as the `config.yml`, an `icons2` folder exists, which contains icon images.
+
+=== "Update"
+
+    To update Homer simply re-run the installer by executing
+
+    ```sh
+    dietpi-software reinstall 205
+    ```
+
+    Remark: The `dietpi-software` script update procedure preserves the file `config.yml` automatically, there is no necessity for the user to do a restore manually.
+
+    If other files in `/var/www/homer` were previously changed by the user, they need to be copied in place (from the backup location `/mnt/dietpi_userdata/homer_backup`). As an example for a changed file `manifest.json` this could be done via:
+
+    ```sh
+    cd /mnt/dietpi_userdata/homer_backup
+    mv manifest.json /var/www/homer/assets
+    ```
+
+=== "Theming - Dracula"
+
+    To apply the [Dracula theme](https://draculatheme.com/static/img/screenshots/homer.png) to Homer execute these steps:
+
+    1. Get theme:
+
+        ```sh
+        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/custom.css' -o /var/www/homer/assets/custom.css
+        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/dracula-background.png' -o /var/www/homer/assets/dracula-background.png
+        ```
+
+    1. Edit your `config.yml` with:
+
+        ```sh
+        nano /var/www/homer/assets/config.yml
+        ```
+
+    1. Add the following lines:
+
+        ```yaml
+        # Will load Dracula theme
+        stylesheet:
+        - "assets/custom.css"
+        ```
+
+=== "Theming - macOS"
+
+    To apply the [macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png) to Homer execute these steps:
+
+    1. Get theme:
+
+        ```sh
+        cd /tmp
+        curl -fLO 'https://github.com/walkxcode/homer-theme/archive/main.tar.gz'
+        tar xf main.tar.gz
+        rm main.tar.gz
+        cp homer-theme-main/assets/custom.css /var/www/homer/assets/custom.css
+        cp homer-theme-main/assets/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
+        cp homer-theme-main/assets/wallpaper-light.jpeg /var/www/homer/assets/wallpaper-light.jpeg
+        cp -R homer-theme-main/assets/fonts /var/www/homer/assets/
+        rm -R homer-theme-main
+        ```
+
+    1. Edit your `config.yml` with:
+
+        ```sh
+        nano /var/www/homer/assets/config.yml
+        ```
+
+    1. Add the following lines (make sure to remove content for colors, theme, and columns if they previously existed):
+
+        ```yaml
+        stylesheet:
+        - "assets/custom.css"
+
+        columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 3, 4, 6, 12)
+        theme: default
+        colors:
+          light:
+            highlight-primary: "#fff5f2"
+            highlight-secondary: "#fff5f2"
+            highlight-hover: "#bebebe"
+            background: "#12152B"
+            card-background: "rgba(255, 245, 242, 0.8)"
+            text: "#ffffff"
+            text-header: "#fafafa"
+            text-title: "#000000"
+            text-subtitle: "#111111"
+            card-shadow: rgba(0, 0, 0, 0.5)
+            link: "#3273dc"
+            link-hover: "#2e4053"
+            background-image: "../assets/wallpaper-light.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
+          dark:
+            highlight-primary: "#181C3A"
+            highlight-secondary: "#181C3A"
+            highlight-hover: "#1F2347"
+            background: "#12152B"
+            card-background: "rgba(24, 28, 58, 0.8)"
+            text: "#eaeaea"
+            text-header: "#7C71DD"
+            text-title: "#fafafa"
+            text-subtitle: "#8B8D9C"
+            card-shadow: rgba(0, 0, 0, 0.5)
+            link: "#c1c1c1"
+            link-hover: "#fafafa"
+            background-image: "../assets/wallpaper.jpeg"
+        ```
+
+=== "Theming - Catppuccin"
+
+    To apply the [Catppuccin theme](https://github.com/mrpbennett/catppucin-homer/blob/main/assets/images/examples/preview.png?raw=true) to Homer execute these steps:
+
+    1. Get theme:
+
+        ```sh
+        apt install git
+        git clone https://github.com/mrpbennett/catppucin-homer
+        ```
+
+    1. Choose one of the `css` files, they all have varying colour schemes, and copy it to Homer, for example the `catppuccin-macchiato` style sheet:
+
+        ```sh
+        cp catppuccin-homer/flavours/catppuccin-macchiato.css /var/www/homer/assets
+        ```
+
+    1. Edit the `config.yml` file with:
+    
+        ```sh
+        nano /var/www/homer/assets/config.yml
+        ``` 
+        
+    1. Add the following lines (change `macchiato` to the wanted theme): 
+
+        ```yaml
+        # Will load catppuccin theme.
+        stylesheet:
+        - "assets/catppuccin-macchiato.css"
+        ```
+
+***
+
+Official website: <https://github.com/bastienwirtz/homer>  
+Official demo: <https://homer-demo.netlify.app/>

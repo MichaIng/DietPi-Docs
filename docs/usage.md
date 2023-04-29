@@ -116,8 +116,6 @@ Find and set the options which fit to your demands, it is also an option to chan
 
 DietPi offers the option for an automatic first boot installation. Normally, during the first system boot there is an installation procedure which sets up your system initially. The steps described in the section ["First logon on DietPi"](../install/#4-first-logon-on-dietpi) are then conducted.
 
-![DietPi first login - licence agreement](assets/images/dietpi-login01.jpg){: width="640" height="371" loading="lazy"}
-
 These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
 The automatized setup is based on the configuration file `/boot/dietpi.txt`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
 
@@ -191,6 +189,8 @@ Search `AUTO_SETUP_CUSTOM_SCRIPT_EXEC` for details.
 #### System restore
 
 A restore process can be executed automatically using the keyword `AUTO_SETUP_BACKUP_RESTORE`. This gives the option to start up a system with a previous made system backup (e.g. for generating many identical systems).
+
+For further details refer to the documentation section [Automated restore at the system's first run setup](../dietpi_tools/system_maintenance/#automated-restore-at-the-systems-first-run-setup).
 
 #### General options
 

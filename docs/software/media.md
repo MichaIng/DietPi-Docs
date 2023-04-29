@@ -12,7 +12,7 @@ description: Description of DietPi software options related to media systems lik
 - [**myMPD - Lightweight web Interface audio player for MPD**](#mympd)
 - [**O!MPD - Feature-rich web Interface audio player for MPD**](#ompd)
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](#cava)
-- [**Mopidy - Web Interface Music /Radio Player**](#mopidy)
+- [**Mopidy - Web Interface Music /Radio Player for MPD**](#mopidy)
 <!-- markdownlint-disable-next-line MD051 -->
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](#airsonic)
 - [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
@@ -62,7 +62,7 @@ description: Description of DietPi software options related to media systems lik
 
 The only media centre/player you'll ever need.
 
-![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg){: width="400" height="225" loading="lazy"}
+![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg){: width="500" height="280" loading="lazy"}
 
 If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autostart`:
 
@@ -96,6 +96,23 @@ Also installs:
 
     Simply select the `Update DB` button from the settings menu in ympd.
 
+=== "Configuration"
+
+    Additional to the ympd configuration via the web interface the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "DietPi-JustBoom control panel"
 
     - Tweak audio options on the fly with the panel.
@@ -111,24 +128,13 @@ Also installs:
 
 - MPD (music player daemon)
 
-![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.gif){: width="400" height="318" loading="lazy"}
+![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.png){: width="500" height="287" loading="lazy"}
 
 === "Access to the web interface"
 
     The web interface is accessible via port **1333**:
 
-    - URL: `http://<your.IP>:1333`
-
-=== "Installation notes"
-
-    We have disabled SSL and its redirect by default with the DietPi install. This is to prevent redirects to the hostname.  
-    To re-enable the SSL connection and redirect option:
-
-    - Edit `/etc/mympd.conf`
-    - Replace `ssl = false` with `ssl = true`
-    - Save changes and exit
-    - Restart services with `systemctl restart mympd`
-    - Use the same URL address above, it will redirect to HTTPS during connection
+    - URL: `https://<your.IP>:1333`
 
 === "Transfer music to DietPi"
 
@@ -148,6 +154,80 @@ Also installs:
 
         ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
 
+=== "Service control"
+
+    Since myMPD runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status mympd
+    ```
+
+    ```sh
+    systemctl start mympd
+    ```
+
+    ```sh
+    systemctl stop mympd
+    ```
+
+    ```sh
+    systemctl restart mympd
+    ```
+
+=== "Configuration"
+
+    myMPD can be configured via individual config files, one for each setting within the config directory:
+
+    ```
+    /var/lib/mympd/config/
+    ```
+
+    Details about available settings can be found in the official docs: <https://jcorporation.github.io/myMPD/configuration/#configuration-files>
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mympd
+    ```
+
+    Additional to the myMPD configuration via the configuration files the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u mympd
+    ```
+
+=== "Update"
+
+    As myMPD is installed via APT, it can be update with the following commands:
+
+    ```sh
+    apt update
+    apt install mympd
+    ```
+
+***
+
+Official documentation: <https://jcorporation.github.io/myMPD>  
+Source code: <https://github.com/jcorporation/myMPD>  
+License: [GPLv3](https://github.com/jcorporation/myMPD/blob/master/LICENSE.md)
+
 ## O!MPD
 
 A feature-rich web interface audio player for MPD. Includes song/album scraping, ideal for music catalog browsing.
@@ -157,7 +237,7 @@ Also installs:
 - MPD (music player daemon)
 - Web server
 
-![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="400" height="199" loading="lazy"}
+![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="500" height="347" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -172,10 +252,28 @@ Also installs:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
 
+=== "Configuration"
+
+    Additional to the O!MPD configuration via the web interface the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "Update/scan library"
 
     Click the `settings` button (cog, top right).  
-    Click `update`.
+    Click `update`.  
+    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="500" height="190" loading="lazy"}
 
 ## CAVA
 
@@ -205,7 +303,7 @@ Also installs:
 
 Mopidy is a Python based music player web based user interface for MPD.
 
-![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="400" height="198" loading="lazy"}
+![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="500" height="230" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -228,6 +326,23 @@ Mopidy is a Python based music player web based user interface for MPD.
     mopidyctl local scan
     ```
 
+=== "Configuration"
+
+    Additional to the Mopidy configuration (extensions configuration) via the web interface the underlying MPD can be configured via the file 
+    
+    ```
+    /etc/mpd.conf
+    ```
+    
+    See also the [MPD user's manual](https://mpd.readthedocs.io/en/stable/user.html#configuration) for details. 
+    The MPD configuration might be used e.g. to set a different music library directory like a USB disk or an NFS mounted share.
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mpd
+    ```
+
 === "Adding Mopidy extensions"
 
     Mopidy is highly customisable and supports various extensions from alternative web clients to backend extensions. See [*Extensions*](https://mopidy.com/ext/) for a list.
@@ -242,6 +357,12 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     ```sh
     pip2 install --no-cache-dir -U Mopidy-Jellyfin
+    ```
+
+    For changes to take effect, the service needs to be restarted:
+
+    ```sh
+    systemctl restart mopidy
     ```
 
 === "Support of codecs"
@@ -385,29 +506,41 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 ***
 
-Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>
+Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>  
 Source code: <https://github.com/Logitech/slimserver>
 
 ## Squeezelite
 
 Squeezelite is a software audio player/client for the [Logitech Media Server](#logitech-media-server).
 
-=== "Change Squeezelite command line options"
+=== "Change command-line options"
 
-    - Run `dietpi-services`
-    - Select `squeezelite`
-    - Select `Edit`
-    - Unset and re-set the `ExecStart` entry:
+    - Edit `/etc/default/squeezelite`
+    - Restart the service:
 
-      ```systemd
-      ExecStart=
-      ExecStart=/usr/bin/squeezelite [<your custom arguments>]
-      ```
+        ```sh
+        systemctl restart squeezelite
+        ```
 
-      The first `ExecStart=` is required to replace the existing `ExecStart` entry instead of adding a second one.
+    !!! hint "Installs on DietPi prior to v8.10"
 
-    - Save changes with ++ctrl+o++ and exit `dietpi-services`
-    - Restart the service: `systemctl restart squeezelite`
+        On earlier Squeezelite installs, this config file didn't exist yet. If you applied command-line options via `dietpi-services`, you can migrate them to the new config file:
+
+        - Assure Squeezelite has been updated to latest version:
+
+        ```sh
+        dietpi-software reinstall 36
+        ```
+
+        - Migrate options from `/etc/systemd/system/squeezelite.service.d/dietpi-services_edit.conf` to `/etc/default/squeezelite`.
+        - Remove obsolete config and restart service:
+
+        ```sh
+        rm /etc/systemd/system/squeezelite.service.d/dietpi-services_edit.conf
+        rmdir --ignore-fail-on-non-empty /etc/systemd/system/squeezelite.service.d
+        systemctl daemon-reload
+        systemctl restart squeezelite
+        ```
 
 === "View logs"
 
@@ -427,7 +560,7 @@ Squeezelite is a software audio player/client for the [Logitech Media Server](#l
 
 ***
 
-Wikipedia: <https://en.wikipedia.org/wiki/Squeezelite>
+Wikipedia: <https://en.wikipedia.org/wiki/Squeezelite>  
 Source code: <https://github.com/ralph-irving/squeezelite>
 
 ## Shairport Sync
@@ -437,26 +570,37 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
 
 ![Shairport Sync connection scheme](../assets/images/dietpi-software-media-shairportsync.png){: width="400" height="233" loading="lazy"}
 
+=== "Configuration"
+
+    You can configure Shairport Sync with its config file: `/usr/local/etc/shairport-sync.conf`  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart shairport-sync
+    ```
+
 === "AirPlay device name"
 
-    When searching for an Airplay device, execute `shairport-sync` on DietPi.
+    When searching for an AirPlay device, execute `shairport-sync` on DietPi.
 
-=== "Stream from Android and iPad/iPhone"
+=== "Stream from Android and iOS"
 
-    There are many AirPlay players available for Android (e.g. [AirPlay For Android](https://play.google.com/store/apps/details?id=com.screen.mirroring.airplay.streamtotv&hl=de)) and iPad/iPhone (e.g. [AirPlay](https://support.apple.com/en-gb/HT204289)).  
+    There are many AirPlay players available for Android and iOS, e.g. [AirPlay For Android & TV](https://play.google.com/store/apps/details?id=com.screen.mirroring.airplay.streamtotv) and [AirPlay on iOS](https://support.apple.com/en-gb/HT204289).  
     Download and use the player of your choice.
 
-=== "Stream from a Windows/Mac PC"
+=== "Stream from Windows and macOS"
 
-    Airfoil is an application that will let you stream audio playback directly to any Shairport Sync device. Press play on your favourite music player (e.g.: Winamp/Spotify) and click the speaker next to the DietPi device.
+    [Airfoil](https://www.rogueamoeba.com/airfoil/mac/) is an application that will let you stream audio playback directly to any Shairport Sync device. Press play on your favourite music player (e.g.: Winamp/Spotify) and click the speaker next to the DietPi device.  
+    By using Airfoil, you can master the music in real time using the CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.
 
-=== "Audiophiles - Master music in real time"
+    !!! hint "Airfoil for Windows has been retired"
 
-    By using a PC + [Airfoil](https://www.rogueamoeba.com/airfoil/), you can master the music in real time using the PCs CPU. This will allow all your Shairport Sync devices to sound even better without any performance hit on the device.
+        From End of 2019 on, sadly Airfoil isn't developed and supported anymore for Windows: <https://www.rogueamoeba.com/airfoil/windows/>  
+        There is however an official legacy download available: <https://www.rogueamoeba.com/legacy/#retired>
 
 === "Multiple Shairport devices / Change Shairport Sync name"
 
-    If you are planning to use multiple Shairport devices on the same network, please make sure the hostname of each device is unique. The hostname will also effect the `shairport-sync` name.  
+    If you are planning to use multiple Shairport devices on the same network, please make sure the hostname of each device is unique. The hostname will also effect the `shairport-sync` name, if you do not actively set the `name` setting in the `general` block of the config file.  
     This can be completed in `dietpi-config` \> `Security Options` \> `Change Hostname`.
 
 === "Soxr interpolation"
@@ -566,6 +710,7 @@ Also Installs:
     ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
 
     !!! note "Access permissions on local directories"
+
         If Ampache fails to add a directory, assure it has read permissions, e.g. by adding global read permissions:
 
         ```sh
@@ -573,6 +718,7 @@ Also Installs:
         ```
 
     !!! note "Access permissions on remote mounts (e.g. NFS, Samba)"
+
         In case you want to access a remote mount, also read permissions for Ampache need to be assured.
 
         - For NFS, you can grant global read permissions like you would do with a local directory, e.g. via:
@@ -688,9 +834,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
 ***
 
-YouTube video tutorial: *DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/zEcNNLCFngI?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=zEcNNLCFngI)
 
 ## Plex Media Server
 
@@ -729,11 +873,8 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 ***
 
-Tutorial: [Setup Guide for Plex on Raspberry Pi](https://blog.barnettjones.com/2020/11/26/dietpi-plex-setup/)
-
-YouTube video tutorial (German language): `Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)`.
-
-<iframe src="https://www.youtube-nocookie.com/embed/EElrNjXc3aA?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+Tutorial: [Setup Guide for Plex on Raspberry Pi](https://blog.barnettjones.com/2020/11/26/dietpi-plex-setup/)  
+YouTube video tutorial (German language): [Raspberry Pi 4 - Plex TV Media Server unter DietPi installieren und Zugriff von aussen (FritzBox)](https://www.youtube.com/watch?v=EElrNjXc3aA){:class="nospellcheck"}
 
 ## Tautulli
 
@@ -1004,7 +1145,7 @@ Also works with Roon.
 
 === "How do I use Roon and HQPlayer together?"
 
-    Guide: <https://help.roonlabs.com/portal/en/kb/articles/faq-how-do-i-use-roon-and-hqplayer-together>
+    Guide: <https://help.roonlabs.com/portal/en/kb/articles/hqplayer>
 
 === "Update"
 
@@ -1162,6 +1303,49 @@ A DLNA audio render/endpoint. Allows you to stream and play music, from another 
 
 ![GMediaRender logo](../assets/images/dietpi-software-media-gmediarender.png){: width="128" height="128" loading="lazy"}
 
+=== "Change command-line options"
+
+    - Edit `/etc/default/gmediarender`
+    - Restart the service:
+
+        ```sh
+        systemctl restart gmediarender
+        ```
+
+    !!! hint "Installs on DietPi prior to v8.10"
+
+        On earlier GMediaRender installs, this config file didn't exist yet. If you applied command-line options via `dietpi-services`, you can migrate them to the new config file:
+
+        - Assure GMediaRender has been updated to latest version:
+
+        ```sh
+        dietpi-software reinstall 163
+        ```
+
+        - Migrate options from `/etc/systemd/system/gmediarender.service.d/dietpi-services_edit.conf` to `/etc/default/gmediarender`.
+        - Remove obsolete config and restart service:
+
+        ```sh
+        rm /etc/systemd/system/gmediarender.service.d/dietpi-services_edit.conf
+        rmdir --ignore-fail-on-non-empty /etc/systemd/system/gmediarender.service.d
+        systemctl daemon-reload
+        systemctl restart gmediarender
+        ```
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u gmediarender
+    ```
+
+=== "Update to the latest version"
+
+    ```sh
+    dietpi-software reinstall 163
+    ```
+
 ## Ubooquity
 
 Ubooquity is a free home server for your comics and ebooks library, with remote web interface viewing.
@@ -1193,9 +1377,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
 ***
 
-YouTube video tutorial: *DietPi Ubooquity Comics and Ebook Reader on Raspberry Pi 3 B Plus*.
-
-<iframe src="https://www.youtube-nocookie.com/embed/xUewleo7f2Q?rel=0" frameborder="0" allow="fullscreen" width="560" height="315" loading="lazy"></iframe>
+YouTube video tutorial: [DietPi Ubooquity Comics and Ebook Reader on Raspberry Pi 3 B Plus](https://www.youtube.com/watch?v=xUewleo7f2Q)
 
 ## Komga
 
@@ -1341,7 +1523,7 @@ Spotify Connect Web is a console client and player for Spotify Connect including
 
     The generation of the `spotify_appkey.key` is required to grant the application access to Spotify API using your account.
 
-    Fill out the application form <https://developer.spotify.com/documentation/general/guides/authorization/app-settings/>.  
+    Fill out the application form <https://developer.spotify.com/documentation/web-api/concepts/apps>.  
     Wait for it to be "accepted".
 
 === "Transfer Spotify API key"
