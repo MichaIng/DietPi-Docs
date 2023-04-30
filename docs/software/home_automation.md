@@ -192,9 +192,9 @@ openHAB (open Home Automation Bus) is an open source home automation platform. T
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8089**:
+    The web interface is accessible via port **8444**:
 
-    - HTTP: `http://<your.IP>:8089`
+    - HTTPS: `https://<your.IP>:8444`
     - Username: `root`
     - Password = `<your global password>` (default: `dietpi`)
 
@@ -213,9 +213,10 @@ openHAB (open Home Automation Bus) is an open source home automation platform. T
     journalctl -u openhab
     ```
 
-=== "HTTPS access"
+=== "HTTP access"
 
-    The access via HTTPS can be activated in the file `/etc/default/openhab` by setting `OPENHAB_HTTPS_PORT=` to your desired HTTPS port.
+    Per default, HTTPS is active and HTTP is inactive (DietPi recommendation).  
+    In cases, that HTTP shall be used, it can be activated in the file `/etc/default/openhab` by setting `OPENHAB_HTTP_PORT=` to your desired port.
 
 Official website: <https://www.openhab.org/>  
 Official docs: <https://www.openhab.org/docs/>  
