@@ -201,8 +201,11 @@ openHAB (open Home Automation Bus) is an open source home automation platform. T
 === "Directories"
 
     - Install directory: `/usr/share/openhab`
-    - Data directory: `/etc/openhab`
+    - Site configuration directory: `/etc/openhab`
     - Config file: `/etc/default/openhab`
+    - Backup directory: `/var/lib/openhab/backups`
+
+    See also [openHAB file locations](https://www.openhab.org/docs/installation/linux.html#file-locations).
 
 === "View logs"
 
