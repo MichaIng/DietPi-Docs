@@ -194,7 +194,7 @@ openHAB (open Home Automation Bus) is an open source home automation platform. T
 
     The web interface is accessible via port **8444**:
 
-    - HTTPS: `https://<your.IP>:8444`
+    - URL: `https://<your.IP>:8444`
     - Username: `root`
     - Password = `<your global password>` (default: `dietpi`)
 
