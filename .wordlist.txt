@@ -178,6 +178,7 @@ frontends
 frp
 fullscreen
 FuguHub
+GameStream
 Gbit
 GiB
 GiBs
@@ -289,7 +290,6 @@ LEDs
 LEMP
 Lerdorf
 LESP
-LetsEncrypt
 LGPL
 librespot
 Lidarr
@@ -636,6 +636,7 @@ uae
 UART
 Uber
 Ubooquity
+udev
 UDP
 UEFI
 UI
