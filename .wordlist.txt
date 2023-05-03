@@ -290,6 +290,7 @@ LEDs
 LEMP
 Lerdorf
 LESP
+LetsEncrypt
 LGPL
 librespot
 Lidarr
