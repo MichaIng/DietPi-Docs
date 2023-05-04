@@ -157,6 +157,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Home Assistant - Open-source home automation platform running on Python 3**](home_automation/#home-assistant)
 - [**Domoticz - Multi platform Home Automation System**](home_automation/#domoticz)
 - [**TasmoAdmin - Administrative website for Tasmota devices**](home_automation/#tasmoadmin)
+- [**openHAB - Open Home Automation Bus, an open source home automation platform**](home_automation/#openhab)
 
 ## [Logging Systems](log_system/)
 
