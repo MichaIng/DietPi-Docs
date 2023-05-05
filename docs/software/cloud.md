@@ -691,9 +691,10 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
 === "Quick start"
 
-    The web interface is accessible via port **9000**:
+    The web interface is accessible via TCP port **9001** and S3 clients need to connect via TCP port **9004**:
 
-    - URL: `http://<your.IP>:9000`
+    - Web UI URL: `http://<your.IP>:9001`
+    - S3 API URL: `http://<your.IP>:9004`
     - Username: `minioadmin`
     - Password: `minioadmin`
     - [MinIO Server Quick Start Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
@@ -702,8 +703,10 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
 ***
 
-Website: <https://min.io/product/overview>  
-Official documentation: <https://docs.min.io/>
+Official website: <https://min.io/product/overview>  
+Official documentation: <https://docs.min.io/>  
+Source code: <https://github.com/minio/minio>  
+License: [AGPL-3.0](https://github.com/minio/minio/blob/master/LICENSE)
 
 ## Firefox Sync Server
 
