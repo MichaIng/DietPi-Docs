@@ -706,7 +706,7 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 Official website: <https://min.io/product/overview>  
 Official documentation: <https://docs.min.io/>  
 Source code: <https://github.com/minio/minio>  
-License: [AGPL-3.0](https://github.com/minio/minio/blob/master/LICENSE)
+License: [AGPLv3](https://github.com/minio/minio/blob/master/LICENSE)
 
 ## Firefox Sync Server
 
