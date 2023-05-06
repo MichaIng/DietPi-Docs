@@ -68,6 +68,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**FuguHub - Your Own Personal Cloud Server**](cloud/#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](cloud/#file-browser)
 - [**Rclone - Utility to sync your files to cloud storages**](cloud/#rclone)
+- [**Restic - Fast, efficient and secure command-line backup program**](cloud/#restic)
 
 ## [Databases & Data Stores](databases/#overview)
 
