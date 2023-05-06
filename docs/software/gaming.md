@@ -17,6 +17,8 @@ description: Description of DietPi software options related to games and userspa
 - [**PaperMC - Fast and optimised Minecraft server**](#papermc)
 - [**Box86 - i386 userspace emulation for ARMv7**](#box86)
 - [**Box64 - x86_64 userspace emulation for ARMv8**](#box64)
+- [**Moonlight (CLI) - CLI game streaming client for Sunshine and NVIDIA GameStream**](#moonlight-cli)
+- [**Moonlight (GUI) - GUI game streaming client for Sunshine and NVIDIA GameStream**](#moonlight-gui)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -497,5 +499,99 @@ Box86 lets you run **i386** Linux programs (such as games) on **ARMv7** systems.
 ## Box64
 
 Box64 lets you run **x86_64** Linux programs (such as games) on **ARMv8** systems. Thanks to [binfmt_misc](https://en.wikipedia.org/wiki/Binfmt_misc), which is enabled by default, you can execute **x86_64** binaries like every other executable and Box64 is invoked automatically.
+
+## Moonlight (CLI)
+
+Moonlight is a game streaming client for [Sunshine](https://github.com/LizardByte/Sunshine) and NVIDIA GameStream streaming servers. This section is about the CLI variant of Moonlight, aka Moonlight Embedded.
+
+=== "Quick start"
+
+    After the installation, you need to pair your Moonlight with the streaming server with the following command:
+
+    ```sh
+    moonlight pair
+    ```
+
+    This attempts to auto-detect compatible streaming servers in your network. If this fails, you can add the hostname or IP address manually. In this example `192.168.0.1` is the IP of a Sunshine streaming server:
+
+    ```sh
+    moonlight pair 192.168.0.1
+    ```
+
+    Moonlight will print a 4-digit PIN to the console which you need to enter into the streaming server's UI to finish pairing. Then you can start streaming, in this simple example the current desktop session of the streaming server:
+
+    ```sh
+    moonlight stream -app=Desktop 192.168.0.1
+    ```
+
+    To make configuration and startup of Moonlight simpler, you can edit the config file `/etc/moonlight.conf` accordingly, enter streaming server host, app and other settings, and then start Moonlight using this config file:
+
+    ```sh
+    moonlight /etc/moonlight.conf
+    ```
+
+    !!! tip "To quit streaming and exit Moonlight, press ++ctrl+alt+shift+q++."
+
+=== "Update"
+
+    Since Moonlight is installed from an APT repository, updates will be offered via APT:
+
+    ```sh
+    apt Update
+    apt install moonlight-embedded
+    ```
+
+***
+
+Official website: <https://moonlight-stream.org/>  
+Official documentation: <https://github.com/moonlight-stream/moonlight-embedded/wiki/Usage>  
+Source code: <https://github.com/moonlight-stream/moonlight-embedded>  
+License: [GPLv3](https://github.com/moonlight-stream/moonlight-embedded/blob/master/LICENSE)
+
+## Moonlight (GUI)
+
+Moonlight is a game streaming client for [Sunshine](https://github.com/LizardByte/Sunshine) and NVIDIA GameStream streaming servers. This section is about the GUI variant of Moonlight, aka Moonlight Qt or Moonlight PC.
+
+=== "Quick start"
+
+    The Moonlight GUI can be started with the following command:
+
+    ```sh
+    moonlight-qt
+    ```
+
+    When doing this via SSH or from plain console outside of a desktop session, we observed that it can show a disturbing black border at the top of the screen, covering important parts of the GUI. If happens, it is best to start it from a terminal emulation within a desktop session.
+
+    On first start, it will search for and list compatible streaming servers on your network. If this does not work for some reason, you can enforce with a streaming server, using its IP address or hostname. In this example `192.168.0.1` is the IP of a Sunshine streaming server:
+
+    ```sh
+    moonlight-qt pair 192.168.0.1
+    ```
+
+    The GUI will show a 4-digit PIN which you need to enter into the streaming server's UI to finish pairing. Then streaming can be started by selecting an available app.
+
+    You can also quick start streaming of a specific app from a specific host. In this simple example the current desktop session of the streaming server is streamed, skipping the Moonlight GUI:
+
+    ```sh
+    moonlight-qt stream 192.168.0.1 Desktop
+    ```
+
+    !!! tip "To quit streaming, press ++ctrl+alt+shift+q++. To exit the Moonlight GUI, simply hit ++q++."
+
+=== "Update"
+
+    Since Moonlight is installed from an APT repository, updates will be offered via APT:
+
+    ```sh
+    apt Update
+    apt install moonlight-qt
+    ```
+
+***
+
+Official website: <https://moonlight-stream.org/>  
+Official documentation: <https://github.com/moonlight-stream/moonlight-docs/wiki/Setup-Guide>  
+Source code: <https://github.com/moonlight-stream/moonlight-qt>  
+License: [GPLv3](https://github.com/moonlight-stream/moonlight-qt/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)
