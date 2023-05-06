@@ -570,7 +570,7 @@ Moonlight is a game streaming client for [Sunshine](https://github.com/LizardByt
 
     The GUI will show a 4-digit PIN which you need to enter into the streaming server's UI to finish pairing. Then streaming can be started by selecting an available app.
 
-    You can also quickstart streaming of a specific app from a specific host. In this simple example the current desktop session of the streaming server is streamed, skipping the Moonlight GUI:
+    You can also quick start streaming of a specific app from a specific host. In this simple example the current desktop session of the streaming server is streamed, skipping the Moonlight GUI:
 
     ```sh
     moonlight-qt stream 192.168.0.1 Desktop
