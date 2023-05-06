@@ -992,9 +992,9 @@ For more information please read: [Preparing a new repository](https://restic.re
 
 ***
 
-Official documentation: <https://restic.readthedocs.io>
-Official website: <https://restic.net>
-Source code: <https://github.com/restic/restic>
+Official documentation: <https://restic.readthedocs.io>  
+Official website: <https://restic.net>  
+Source code: <https://github.com/restic/restic>  
 License: [BSD 2-Clause "Simplified" License](https://github.com/restic/restic/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../../software/)
