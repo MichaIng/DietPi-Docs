@@ -137,6 +137,8 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**PaperMC - Fast and optimized Minecraft server**](gaming/#papermc)
 - [**Box86 - i386 userspace emulation for ARMv7**](gaming/#box86)
 - [**Box64 - x86_64 userspace emulation for ARMv8**](gaming/#box64)
+- [**Moonlight (CLI) - CLI game streaming client for Sunshine and NVIDIA GameStream**](gaming/#moonlight-cli)
+- [**Moonlight (GUI) - GUI game streaming client for Sunshine and NVIDIA GameStream**](gaming/#moonlight-gui)
 
 ## [Hardware Projects](hardware_projects/)
 
