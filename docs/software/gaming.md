@@ -573,7 +573,7 @@ Moonlight is a game streaming client for [Sunshine](https://github.com/LizardByt
     You can also quickstart streaming of a specific app from a specific host. In this simple example the current desktop session of the streaming server is streamed, skipping the Moonlight GUI:
 
     ```sh
-    moonlight stream 192.168.0.1 Desktop
+    moonlight-qt stream 192.168.0.1 Desktop
     ```
 
     !!! tip "To quit streaming, press ++ctrl+alt+shift+q++. To exit the Moonlight GUI, simply hit ++Q++."
