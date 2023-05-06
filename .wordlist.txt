@@ -506,6 +506,7 @@ reselect
 resolvconf
 resolver
 resolvers
+Restic
 RK
 Rockchip
 ROCKPro
