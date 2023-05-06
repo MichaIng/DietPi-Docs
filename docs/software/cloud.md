@@ -978,13 +978,13 @@ Restic is a fast and secure backup program.
 
 === "Quick start"
 
-In order to create a repository at `/srv/restic-repo`, run the following command and enter the same password twice:
+In order to create a repository at `/mnt/dietpi_userdata/restic-repo`, run the following command and enter the same password twice:
 
 ```sh
-$ restic init --repo /srv/restic-repo
+$ restic init --repo /mnt/dietpi_userdata/restic-repo
 enter password for new repository:
 enter password again:
-created restic repository 085b3c76b9 at /srv/restic-repo
+created restic repository 085b3c76b9 at /mnt/dietpi_userdata/restic-repo
 Please note that knowledge of your password is required to access the repository.
 Losing your password means that your data is irrecoverably lost.
 ```
