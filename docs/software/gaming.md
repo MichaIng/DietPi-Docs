@@ -576,7 +576,7 @@ Moonlight is a game streaming client for [Sunshine](https://github.com/LizardByt
     moonlight-qt stream 192.168.0.1 Desktop
     ```
 
-    !!! tip "To quit streaming, press ++ctrl+alt+shift+q++. To exit the Moonlight GUI, simply hit ++Q++."
+    !!! tip "To quit streaming, press ++ctrl+alt+shift+q++. To exit the Moonlight GUI, simply hit ++q++."
 
 === "Update"
 
