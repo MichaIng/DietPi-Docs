@@ -974,7 +974,7 @@ License: [MIT](https://github.com/rclone/rclone/blob/master/COPYING)
 
 Restic is a fast and secure backup program.
 
-![Restic logo](../assets/images/restic-logo.png){: width="300" height="69" loading="lazy"}
+![Restic logo](../assets/images/restic-logo.png){: width="250" height="250" loading="lazy"}
 
 === "Quick start"
 
