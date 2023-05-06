@@ -966,8 +966,8 @@ Rclone is a command-line program to manage files on cloud storage. It is a featu
 
 ***
 
-Official documentation: <https://rclone.org/>
-Source code: <https://github.com/rclone/rclone>
+Official documentation: <https://rclone.org/>  
+Source code: <https://github.com/rclone/rclone>  
 License: [MIT](https://github.com/rclone/rclone/blob/master/COPYING)
 
 ## Restic
