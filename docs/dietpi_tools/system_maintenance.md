@@ -80,6 +80,37 @@ dietpi-backup
 
     ![DietPi-Backup filter option screenshot](../assets/images/dietpi-backup_filter-option.jpg){: width="681" height="330" loading="lazy"}
 
+     Every (otherwise excluded) parent directory of an included directory needs to be included as well:
+     
+     Eg. backup homeassistant userdata & default user data location:
+     
+        + /mnt/dietpi_userdata/
+        + /mnt/dietpi_userdata/homeassistant/
+        - /mnt/dietpi_userdata/Media/
+        - /mnt/dietpi_userdata/Music/
+        - /mnt/dietpi_userdata/Pictures/
+        - /mnt/dietpi_userdata/Video/
+        - /mnt/dietpi_userdata/*
+        
+        - /mnt/*
+        - /media/
+
+    User data location /mnt/dietpi_userdata has beeen moved to an external USB drive:
+    
+        + /mnt/USBdrive/
+        + /mnt/USBdrive/dietpi_userdata/
+        + /mnt/USBdrive/dietpi_userdata/homeassistant/
+        - /mnt/USBdrive/dietpi_userdata/Media/
+        - /mnt/USBdrive/dietpi_userdata/Music/
+        - /mnt/USBdrive/dietpi_userdata/Pictures/
+        - /mnt/USBdrive/dietpi_userdata/Video/
+        - /mnt/USBdrive/*
+        
+        + /mnt/dietpi_userdata/
+        - /mnt/*
+        - /media/
+
+
     The file containing the filter definitions is `/boot/dietpi/.dietpi-backup_inc_exc`.
 
 === "Backup location"
