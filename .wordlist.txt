@@ -312,6 +312,7 @@ loopback
 LPDDR
 LTS
 LuidmilaKot
+LVM
 LXC
 LXDE
 LXQt
