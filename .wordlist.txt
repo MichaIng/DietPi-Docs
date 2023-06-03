@@ -191,6 +191,7 @@ Globals
 GlusterFS
 GMediaRender
 GNUstep
+GnuTLS
 Gogs
 Golang
 GOMODCACHE
@@ -416,6 +417,7 @@ OpenGL
 OpenGLES
 openHAB
 OpenSSH
+OpenSSL
 OpenTyrian
 OpenVPN
 OTG
