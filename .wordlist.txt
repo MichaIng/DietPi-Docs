@@ -191,6 +191,7 @@ Globals
 GlusterFS
 GMediaRender
 GNUstep
+GnuTLS
 Gogs
 Golang
 GOMODCACHE
@@ -312,6 +313,7 @@ loopback
 LPDDR
 LTS
 LuidmilaKot
+LVM
 LXC
 LXDE
 LXQt
@@ -415,6 +417,7 @@ OpenGL
 OpenGLES
 openHAB
 OpenSSH
+OpenSSL
 OpenTyrian
 OpenVPN
 OTG

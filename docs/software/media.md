@@ -949,7 +949,7 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 === "Requirements"
 
     - Roon on another system (e.g.: Windows PC) to control the player.  
-    - [Roon license](https://roonlabs.com/pricing) (free trial is also available).
+    - [Roon license](https://roon.app/pricing) (free trial is also available).
 
 === "Directories"
 
@@ -1009,7 +1009,7 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 
 ***
 
-Official website: <https://roonlabs.com/>  
+Official website: <https://roon.app/>  
 Official forum: <https://community.roonlabs.com/>  
 YouTube videos by `David Snyder`: <https://www.youtube.com/c/dsnyder0cnn/search?query=roon>
 
@@ -1023,7 +1023,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Install a Roon Remote on another system"
 
-    You can use the Roon Remote apps to control and configure the Roon Server: <https://roonlabs.com/downloads>
+    You can use the Roon Remote apps to control and configure the Roon Server: <https://roon.app/downloads>
 
 === "Recommended Music Storage Directory"
 
@@ -1099,7 +1099,7 @@ Turns your device into a Roon capable audio player and core server.
 
 ***
 
-Official website: <https://roonlabs.com/>  
+Official website: <https://roon.app/>  
 Official forum: <https://community.roonlabs.com/>  
 YouTube videos from `David Snyder`: <https://www.youtube.com/c/dsnyder0cnn/search?query=roon>
 

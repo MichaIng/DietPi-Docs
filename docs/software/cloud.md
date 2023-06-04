@@ -416,7 +416,7 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
 
         ```sh
         mkdir /path/to/backup/storage
-        chmod -R urbackup:urbackup /path/to/backup/storage
+        chown -R urbackup:urbackup /path/to/backup/storage
         ```
 
 === "Download the client"
