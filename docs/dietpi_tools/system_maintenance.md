@@ -99,20 +99,20 @@ dietpi-backup
 
     User data location /mnt/dietpi_userdata has beeen moved to an external USB drive:
     
-        + /mnt/USBdrive/
-        + /mnt/USBdrive/dietpi_userdata/
-        + /mnt/USBdrive/dietpi_userdata/homeassistant/
-        - /mnt/USBdrive/dietpi_userdata/Media/
-        - /mnt/USBdrive/dietpi_userdata/Music/
-        - /mnt/USBdrive/dietpi_userdata/Pictures/
-        - /mnt/USBdrive/dietpi_userdata/Video/
-        - /mnt/USBdrive/*
-        
-        + /mnt/dietpi_userdata/
-        - /mnt/*
-        - /media/
+    ```diff
+    + /mnt/USBdrive/
+    + /mnt/USBdrive/dietpi_userdata/
+    + /mnt/USBdrive/dietpi_userdata/homeassistant/
+    - /mnt/USBdrive/dietpi_userdata/Media/
+    - /mnt/USBdrive/dietpi_userdata/Music/
+    - /mnt/USBdrive/dietpi_userdata/Pictures/
+    - /mnt/USBdrive/dietpi_userdata/Video/
+    - /mnt/USBdrive/*
 
-
+    + /mnt/dietpi_userdata/
+    - /mnt/*
+    - /media/
+    ```
     The file containing the filter definitions is `/boot/dietpi/.dietpi-backup_inc_exc`.
 
 === "Backup location"
