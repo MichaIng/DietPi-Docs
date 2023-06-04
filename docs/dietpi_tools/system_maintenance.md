@@ -84,16 +84,18 @@ dietpi-backup
      
      Eg. backup homeassistant userdata & default user data location:
      
-        + /mnt/dietpi_userdata/
-        + /mnt/dietpi_userdata/homeassistant/
-        - /mnt/dietpi_userdata/Media/
-        - /mnt/dietpi_userdata/Music/
-        - /mnt/dietpi_userdata/Pictures/
-        - /mnt/dietpi_userdata/Video/
-        - /mnt/dietpi_userdata/*
-        
-        - /mnt/*
-        - /media/
+    ```diff
+    + /mnt/dietpi_userdata/
+    + /mnt/dietpi_userdata/homeassistant/
+    - /mnt/dietpi_userdata/Media/
+    - /mnt/dietpi_userdata/Music/
+    - /mnt/dietpi_userdata/Pictures/
+    - /mnt/dietpi_userdata/Video/
+    - /mnt/dietpi_userdata/*
+
+    - /mnt/*
+    - /media/
+    ```
 
     User data location /mnt/dietpi_userdata has beeen moved to an external USB drive:
     
