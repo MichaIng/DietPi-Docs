@@ -633,6 +633,7 @@ TPM
 transactional
 transcoding
 TRÅDFRI
+Trixie
 trustable
 TTS
 TTL
