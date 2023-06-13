@@ -1657,7 +1657,7 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
     ```sh
     apt update
-    apt install jellyfin jellyfin-ffmpeg
+    apt install jellyfin jellyfin-ffmpeg5
     ```
 
 ***
