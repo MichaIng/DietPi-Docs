@@ -42,7 +42,7 @@ Select the following tabs for the installation description of your target.
 
     **Unzip the downloaded file to a local folder.**
 
-    It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://wakaba.c3.cx/s/apps/unarchiver.html). Both are free of charge and have been tested to unzip the image correctly.
+    It is a _7z_ archive format so you will need to install either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/). Both are free of charge and have been tested to unzip the image correctly.
 
     Linux users will need to download and install `p7zip` (the terminal version of `7zip`).
 

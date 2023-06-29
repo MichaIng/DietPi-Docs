@@ -282,7 +282,7 @@ Synapse is a server, written in Python, for communication using the Matrix proto
 ***
 
 Official website: <https://matrix.org/>  
-Official documentation: <https://matrix.org/docs/guides>  
+Official documentation: <https://matrix.org/docs/>  
 Source code: <https://github.com/matrix-org/synapse>  
 License: [Apache 2.0](https://github.com/matrix-org/synapse/blob/develop/LICENSE)
 
