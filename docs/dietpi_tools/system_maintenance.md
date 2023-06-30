@@ -103,7 +103,7 @@ dietpi-backup
     + /mnt/USBdrive/
     + /mnt/USBdrive/dietpi_userdata/
     + /mnt/USBdrive/dietpi_userdata/homeassistant/
-    - /mnt/USBdrive/dietpi_userdata/Media/
+    - /mnt/dietpi_userdata/downloads/
     - /mnt/USBdrive/dietpi_userdata/Music/
     - /mnt/USBdrive/dietpi_userdata/Pictures/
     - /mnt/USBdrive/dietpi_userdata/Video/
