@@ -87,7 +87,7 @@ dietpi-backup
     ```diff
     + /mnt/dietpi_userdata/
     + /mnt/dietpi_userdata/homeassistant/
-    - /mnt/dietpi_userdata/Media/
+    - /mnt/dietpi_userdata/downloads/
     - /mnt/dietpi_userdata/Music/
     - /mnt/dietpi_userdata/Pictures/
     - /mnt/dietpi_userdata/Video/
