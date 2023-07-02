@@ -147,6 +147,7 @@ emonHub
 emonPi
 emonTH
 emonTX
+EOL
 EPL
 EQ
 ESXi
@@ -324,6 +325,7 @@ MariaDB
 Mbit
 MBR
 MCrcon
+MediaWiki
 Mendis
 Meveric
 MiB

@@ -34,7 +34,6 @@ description: Description of DietPi software options related to media systems lik
 - [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity)
 - [**Komga - Free and open source comics/mangas media server with web UI**](#komga)
 - [**Raspotify - Spotify Connect client**](#raspotify)
-- [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](#spotify-connect-web)
 - [**Spotifyd - Lightweight FOSS Spotify client**](#spotifyd)
 - [**Jellyfin - Media streaming server including live TV**](#jellyfin)
 - [**Beets - Music organizer and manager**](#beets)
@@ -1508,66 +1507,6 @@ Spotify Connect client for the Raspberry Pi that Just Works™.
 
 Official website: <https://dtcooper.github.io/raspotify/>  
 Source code: <https://github.com/dtcooper/raspotify>
-
-## Spotify Connect Web
-
-Spotify Connect Web is a console client and player for Spotify Connect including a web frontend.
-
-=== "Access to the web interface"
-
-    The web interface is accessible via port **4000**:
-
-    - URL: `http://<your.IP>:4000`
-
-=== "Generate the Spotify API key"
-
-    The generation of the `spotify_appkey.key` is required to grant the application access to Spotify API using your account.
-
-    Fill out the application form <https://developer.spotify.com/documentation/web-api/concepts/apps>.  
-    Wait for it to be "accepted".
-
-=== "Transfer Spotify API key"
-
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
-    Copy the `spotify_appkey.key` to the following directory:
-
-    - Directory: `/mnt/dietpi_userdata/spotify-connect-web`
-    - Accessed from file server: `/spotify-connect-web`
-
-=== "Service control"
-
-    The service is started automatically at boot, but you can control it manually as well:
-
-    - Manually start the service:
-
-        ```sh
-        systemctl start spotify-connect-web
-        ```
-
-    - Manually stop the service:
-
-        ```sh
-        systemctl stop spotify-connect-web
-        ```
-
-    - Manually restart the service:
-
-        ```sh
-        systemctl restart spotify-connect-web
-        ```
-
-=== "View logs"
-
-    View the service logs via:
-
-    ```sh
-    journalctl -u spotify-connect-web
-    ```
-
-***
-
-Source code: <https://github.com/Fornoth/spotify-connect-web>  
-Quick start documentation: <https://developer.spotify.com/documentation/web-api/quick-start>
 
 ## Spotifyd
 

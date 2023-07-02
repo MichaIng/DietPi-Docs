@@ -63,12 +63,12 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Gitea - GitHub style server, with web interface**](cloud/#gitea)
 - [**Syncthing - Backup and sync server with web interface**](cloud/#syncthing)
 - [**MinIO - S3 compatible distributed object server**](cloud/#minio)
-- [**Firefox Sync Server - Sync bookmarks, tabs, history and passwords**](cloud/#firefox-sync-server)
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](cloud/#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](cloud/#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](cloud/#file-browser)
 - [**Rclone - Utility to sync your files to cloud storages**](cloud/#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](cloud/#restic)
+- [**MediaWiki - A collaboration and documentation platform**](cloud/#mediawiki)
 
 ## [Databases & Data Stores](databases/#overview)
 
@@ -195,7 +195,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Ubooquity - Free home server for your comics and ebooks library**](media/#ubooquity)
 - [**Komga - Free and open source comics/mangas media server with web UI**](media/#komga)
 - [**Raspotify - Spotify Connect client**](media/#raspotify)
-- [**Spotify Connect Web - Web interface, client and player for Spotify Premium**](media/#spotify-connect-web)
 - [**Spotifyd - Lightweight FOSS Spotify client**](media/#spotifyd)
 - [**Jellyfin - Media streaming server including live TV**](media/#jellyfin)
 - [**Beets - Music organizer and manager**](media/#beets)

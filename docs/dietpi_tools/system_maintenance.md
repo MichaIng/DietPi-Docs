@@ -80,6 +80,32 @@ dietpi-backup
 
     ![DietPi-Backup filter option screenshot](../assets/images/dietpi-backup_filter-option.jpg){: width="681" height="330" loading="lazy"}
 
+     Every (otherwise excluded) parent directory of an included directory needs to be included as well:
+
+     E.g. to backup Home Assistant user data while having all other user data excluded:
+
+    ```diff
+    + /mnt/dietpi_userdata/
+    + /mnt/dietpi_userdata/homeassistant/
+    - /mnt/dietpi_userdata/*
+
+    - /mnt/*
+    - /media/
+    ```
+
+    If the user data location `/mnt/dietpi_userdata` has been moved to another drive:
+
+    ```diff
+    + /mnt/USBdrive/
+    + /mnt/USBdrive/dietpi_userdata/
+    + /mnt/USBdrive/dietpi_userdata/homeassistant/
+    - /mnt/USBdrive/dietpi_userdata/*
+    - /mnt/USBdrive/*
+
+    - /mnt/*
+    - /media/
+    ```
+
     The file containing the filter definitions is `/boot/dietpi/.dietpi-backup_inc_exc`.
 
 === "Backup location"
