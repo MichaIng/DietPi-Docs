@@ -21,6 +21,7 @@ description: Description of DietPi software options related to cloud and backup 
 - [**File Browser - Light web based file manager with sharing features**](#file-browser)
 - [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](#restic)
+- [**MediaWiki - A collaboration and documentation platform**](#mediawiki)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -954,5 +955,34 @@ Official website: <https://restic.net/>
 Official documentation: <https://restic.readthedocs.io/en/stable/>  
 Source code: <https://github.com/restic/restic>  
 License: [BSD 2-Clause](https://github.com/restic/restic/blob/master/LICENSE)
+
+### MediaWiki
+
+This collaboration and documentation platform was originally developed for and is used by Wikipedia.
+
+![Restic logo](../assets/images/mediawiki-logo.svg){: width="250" height="250" loading="lazy"}
+
+=== "Quick start"
+
+    MediaWiki is accessible via regular HTTP/HTTPS ports **80**/**443** below the `/wiki` path:
+
+    - URL: `http://<your.IP>/wiki`
+
+    On first access, you need to go through the setup wizard. Enter the following database information:
+
+    1. Database type: `MariaDB, MySQL, or compatible`
+    1. Database host: `localhost`
+    1. Database name: `wikimedia`
+    1. Database table prefix: Since we use a dedicated database, you can leave this empty.
+    1. Database username: `wikimedia`
+    1. Database password: `<your global password>` (default: `dietpi`)
+
+    The next steps allow you to create an admin user to use for subsequent logins and setup wiki details. As last setup step you need to download the generated `LocalSettings.php` and upload it or copy and paste the content to `/var/www/wiki/LocalSettings.php`. When done, you can access your wikis main page, login with the previously created admin user and start creating content.
+
+***
+
+Official website: <https://www.mediawiki.org/wiki/MediaWiki>  
+Source code: <https://github.com/wikimedia/mediawiki>  
+License: [GPLv2](https://github.com/wikimedia/mediawiki/blob/master/COPYING)
 
 [Return to the **Optimised Software list**](../../software/)
