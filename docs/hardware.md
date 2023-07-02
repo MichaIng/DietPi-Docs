@@ -226,14 +226,14 @@ The PINE64 family also contains the newer members Quartz64 and SOQuartz compute 
 
 **Maker Friendly, IoT connectivity** enabled.
 
-**Radxa ROCK Pi and Radxa Zero** features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
-For more details visit the [**Radxa ROCK Pi**](https://rockpi.org/) resp. the [**Radxa Wiki**](https://wiki.radxa.com/Home) website.
+**Radxa ROCK and Radxa Zero** features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
+For more details visit the [**Radxa ROCK**](https://rockpi.org/) resp. the [**Radxa Wiki**](https://wiki.radxa.com/Home) website.
 
-One of the supported boards is ROCK Pi 4.
+One of the supported boards is ROCK 4.
 
-![Radxa ROCK Pi 4 photo](assets/images/dietpi-rockpi-4b.jpg){: width="500" height="375" loading="lazy"}
+![Radxa ROCK 4 photo](assets/images/dietpi-rockpi-4b.jpg){: width="500" height="375" loading="lazy"}
 
-**ROCK Pi 4** is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK Pi 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
+**ROCK 4** is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
 It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
 
 **Radxa Zero** is an ultra thin SBC in small form factor with powerful performance based on Amlogic S905Y2. Radxa Zero features a Quad Core 64 ARM processor, 32bit LPDDR4, up to 4K@60 HDMI, 802.11 ac WIFI, Bluetooth 5.0, USB 3.0, 40-pin GPIO header. Radxa Zero supports USB 2.0 and power via one USB-C port.
@@ -250,7 +250,7 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
         </thead>
         <tbody>
             <tr>
-                <td><a class="table" href=""><strong>ROCK Pi 4</strong></a></td>
+                <td><a class="table" href=""><strong>ROCK 4</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Bookworm.7z">DietPi image</a>
                 </td>
@@ -274,7 +274,7 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>ROCK 5B</strong></a></td>
+                <td><a class="table" href=""><strong>ROCK 5</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5B-ARMv8-Bookworm.7z">DietPi image</a>
                 </td>
@@ -479,7 +479,7 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>NanoPi R6S/R6C</strong></a></td>
+                <td><a class="table" href=""><strong>NanoPi 6 series</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bookworm.7z">DietPi image</a>
                 </td>
