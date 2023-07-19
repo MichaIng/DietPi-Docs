@@ -218,6 +218,7 @@ HFS
 HiFi
 HiFiBerry
 Hipp
+Homebridge
 homeserver
 hostapd
 hostname
