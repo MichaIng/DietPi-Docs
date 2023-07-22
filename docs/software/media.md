@@ -1449,7 +1449,7 @@ Free and open source comics/mangas media server with web UI.
 ***
 
 Official website: <https://komga.org/>  
-Official documentation: <https://komga.org/guides>  
+Official documentation: <https://komga.org/docs/category/guides>  
 Source code: <https://github.com/gotson/komga>  
 License: [MIT](https://github.com/gotson/komga/blob/master/LICENSE)
 
