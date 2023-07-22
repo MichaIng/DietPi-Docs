@@ -38,7 +38,7 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
             <tr>
                 <td><a class="table"><strong>Raspberry Pi - ALL models</strong><br>Single board computer (SBC)<br>Compute Module (CM)</a></td>
                 <td>
-                    <strong>DietPi image for ALL Raspberry Pi models</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Bullseye.7z">Download image</a>
+                    <strong>DietPi image for ALL Raspberry Pi models</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Bookworm.7z">Download image</a>
                     <strong>
                         <ul>
                             <li>Raspberry Pi Zero 2 W</li>

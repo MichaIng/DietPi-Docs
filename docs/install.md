@@ -256,7 +256,7 @@ Select the following tabs for the installation description of your target.
 
     One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
 
-    One of the options of a virtual machine is [__VMware Workstation Player__](https://www.vmware.com/de/products/workstation-player/workstation-player-evaluation.html) resp. [__VMware Fusion__](https://www.vmware.com/de/products/fusion/fusion-evaluation.html) (macOS).
+    One of the options of a virtual machine is [__VMware Workstation Player__](https://www.vmware.com/products/workstation-player.html) resp. [__VMware Fusion__](https://www.vmware.com/products/fusion.html) (macOS).
 
     ![VMware Player GUI](assets/images/dietpi-VMware-program.png){: width="769" height="588" loading="lazy"}
 
@@ -321,7 +321,7 @@ Select the following tabs for the installation description of your target.
 
     One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
 
-    One of the options of a virtual machine appliance server is the freely available [__VMware vSphere Hypervisor__](https://www.vmware.com/products/vsphere-hypervisor.html/) which contains the [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html/).
+    One of the options of a virtual machine appliance server is the freely available [__VMware vSphere Hypervisor__](https://www.vmware.com/products/vsphere-hypervisor.html) which contains the [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html).
 
     ![VMware vSphere Hypervisor program](assets/images/VMwareESXi_02.jpg){: width="1918" height="1010" loading="lazy"}
 
