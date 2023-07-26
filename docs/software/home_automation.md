@@ -269,10 +269,9 @@ Homebridge allows you to integrate with smart home devices that do not natively 
 
 === "Update Node.js"
 
-    Use the following command to update the bundled Node.js runtime:
+    Use the following command to update the bundled Node.js runtime (do not use `sudo` if running from the Homebridge UI Terminal):
 
     ```sh
-    # don't use sudo if running from the Homebridge UI Terminal
     sudo hb-service update-node 
     ```
 
