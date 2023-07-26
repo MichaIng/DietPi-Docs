@@ -237,7 +237,7 @@ Homebridge allows you to integrate with smart home devices that do not natively 
 
 === "Directories"
 
-    - Install directory: `/usr/local/bin/hb-service`
+    - Install directory: `/opt/homebridge`
     - Config, Log & Backup folder: `/var/lib/homebridge`
 
 === "View logs"
