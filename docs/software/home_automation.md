@@ -249,7 +249,7 @@ Homebridge allows you to integrate with smart home devices that do not natively 
 
 === "Service handling"
 
-    Use the following commands to control the homebridge system service:
+    Use the following commands to control the Homebridge system service:
 
     ```sh
     hb-service status
