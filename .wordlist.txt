@@ -218,6 +218,8 @@ HFS
 HiFi
 HiFiBerry
 Hipp
+Homebridge
+HomeKit
 homeserver
 hostapd
 hostname
