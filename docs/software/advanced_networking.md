@@ -81,6 +81,8 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     sed -i 's/192\.168\.42\./192.168.43./g' /etc/dhcp/dhcpd.conf /etc/network/interfaces /etc/iptables.ipv4.nat
     ```
 
+    These changes should be followed by a reboot to activate the settings (this is an easy way compared to restart the relevant services).
+
     For example, the default contents of the WiFi setting area within the file `/etc/network/interfaces` is:
 
     ```
