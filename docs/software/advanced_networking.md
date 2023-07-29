@@ -70,15 +70,15 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
     If these settings shall be changed, the following files need to be adjusted:
 
-    - /etc/dhcp/dhcp.conf
-    - /etc/network/interfaces
-    - /etc/iptables.ipv4.nat
+    - `/etc/dhcp/dhcp.conf`
+    - `/etc/network/interfaces`
+    - `/etc/iptables.ipv4.nat`
 
     These settings can be done by hand or via a shell line using this command  
-    (examplary changing IP addresses from 192.168.42.x to 192.168.43.x): 
+    (exemplary changing IP addresses from 192.168.42.x to 192.168.43.x): 
     
     ```sh
-    sed -i 's/192\.168\.42\./192.168.43./g' /etc/dhcp/dhcp.conf /etc/network/interfaces /etc/iptables.ipv4.nat
+    sed -i 's/192\.168\.42\./192.168.43./g' /etc/dhcp/dhcpd.conf /etc/network/interfaces /etc/iptables.ipv4.nat
     ```
 
     For example, the default contents of the WiFi setting area within the file `/etc/network/interfaces` is:
