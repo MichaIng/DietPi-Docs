@@ -48,7 +48,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     - SSID = `DietPi-HotSpot`
     - Access Key = `dietpihotspot`
 
-=== "Change basic settings"
+=== "Change WiFi settings"
 
     Once installed, you can change the WiFi HotSpot settings (SSID/Key/Channel) at any time:
 
