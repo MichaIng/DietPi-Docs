@@ -56,13 +56,13 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     2. Navigate to *Networking Options: Adapters*, then select *WiFi*
     3. Whilst in this menu, it is highly recommended you set the Country Code to your country. Depending on your country regulations, this could allow for channels 12/13 and increased power output (range) for the hotspot
 
-=== "Change hotspot IP address range"
+=== "Change hotspot subnet address"
 
-    The WiFi hotspot contains a DHCP server giving WiFi clients the IP settings within a certain IP address range (see lower part of graphics):
+    The WiFi hotspot contains a DHCP server giving WiFi clients the IP settings within a certain IP subnet (see lower part of graphics):
 
     ![DietPi WiFi hotspot structure](../assets/images/dietpi-software-advanced-networking-wifihotspot-address-setting.png){: width="550" height="345" loading="lazy"}
 
-    The default values for these settings are:
+    The default values for these subnet settings are:
 
     - IP address of WiFi hotspot: 192.168.42.1
     - Subnet mask: 255.255.255.0
