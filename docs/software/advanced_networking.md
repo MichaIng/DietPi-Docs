@@ -48,13 +48,55 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     - SSID = `DietPi-HotSpot`
     - Access Key = `dietpihotspot`
 
-=== "Change WiFi HotSpot settings"
+=== "Change WiFi settings"
 
     Once installed, you can change the WiFi HotSpot settings (SSID/Key/Channel) at any time:
 
     1. Run `dietpi-config`
     2. Navigate to *Networking Options: Adapters*, then select *WiFi*
     3. Whilst in this menu, it is highly recommended you set the Country Code to your country. Depending on your country regulations, this could allow for channels 12/13 and increased power output (range) for the hotspot
+
+=== "Change hotspot subnet address"
+
+    The WiFi hotspot contains a DHCP server giving WiFi clients the IP settings within a certain IP subnet (see lower part of graphics):
+
+    ![DietPi WiFi hotspot structure](../assets/images/dietpi-software-advanced-networking-wifihotspot-address-setting.png){: width="550" height="345" loading="lazy"}
+
+    The default values for these subnet settings are:
+
+    - IP address of WiFi hotspot: 192.168.42.1
+    - Subnet mask: 255.255.255.0
+    - DHCP range: 192.168.42.10 .. 192.168.42.250
+
+    If these settings shall be changed, the following files need to be adjusted:
+
+    - `/etc/dhcp/dhcp.conf`
+    - `/etc/network/interfaces`
+    - `/etc/iptables.ipv4.nat`
+
+    These settings can be done by hand or via a shell line using this command  
+    (exemplary changing IP addresses from 192.168.42.x to 192.168.43.x): 
+    
+    ```sh
+    sed -i 's/192\.168\.42\./192.168.43./g' /etc/dhcp/dhcpd.conf /etc/network/interfaces /etc/iptables.ipv4.nat
+    ```
+
+    These changes should be followed by a reboot to activate the settings (this is an easy way compared to restart the relevant services).
+
+    For example, the default contents of the WiFi setting area within the file `/etc/network/interfaces` is:
+
+    ```
+    # WiFi
+    allow-hotplug wlan0
+    iface wlan0 inet static
+    address 192.168.42.1
+    netmask 255.255.255.0
+    #gateway 192.168.0.1
+    #dns-nameservers 9.9.9.9 149.112.112.112
+    wireless-power off
+    ```
+
+    As can be seen, the address 192.168.42.1 would need to be changed.
 
 ***
 

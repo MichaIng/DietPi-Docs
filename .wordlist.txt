@@ -100,6 +100,7 @@ Ctrl
 Cuberite
 customisable
 customizable
+CVE
 DAC
 DarkBetter
 DarkIce
@@ -218,6 +219,8 @@ HFS
 HiFi
 HiFiBerry
 Hipp
+Homebridge
+HomeKit
 homeserver
 hostapd
 hostname
@@ -738,6 +741,7 @@ Xfce
 XFS
 xml
 XRDP
+XSS
 XU
 Xunlong
 xz

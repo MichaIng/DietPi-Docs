@@ -11,6 +11,7 @@ description: Description of DietPi software options related to home automation
 - [**Domoticz - Multi platform Home Automation System**](#domoticz)
 - [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin)
 - [**openHAB - Open Home Automation Bus, an open source home automation platform**](#openhab)
+- [**Homebridge - Open Home Automation Bus, an open source home automation platform**](#homebridge)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -220,5 +221,61 @@ openHAB (open Home Automation Bus) is an open source home automation platform. T
 Official website: <https://www.openhab.org/>  
 Official docs: <https://www.openhab.org/docs/>  
 Official community: <https://community.openhab.org/>
+
+## Homebridge
+
+Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.
+
+![Homebridge logo](../assets/images/dietpi-software-homeautomation-homebridge.svg){: width="300" height="300" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8581**:
+
+    - URL: `https://<your.IP>:8581`
+    - Username/Password: Are set at first web interface login
+
+=== "Directories"
+
+    - Install directory: `/opt/homebridge`
+    - Config, Log & Backup folder: `/var/lib/homebridge`
+
+=== "View logs"
+
+    ```sh
+    journalctl -u homebridge
+    cat /var/lib/homebridge/homebridge.log
+    ```
+
+=== "Service handling"
+
+    Use the following commands to control the Homebridge system service:
+
+    ```sh
+    hb-service status
+    ```
+
+    ```sh
+    hb-service start
+    ```
+
+    ```sh
+    hb-service stop
+    ```
+
+    ```sh
+    hb-service restart
+    ```
+
+=== "Update Node.js"
+
+    Use the following command to update the bundled Node.js runtime (do not use `sudo` if running from the Homebridge UI Terminal):
+
+    ```sh
+    sudo hb-service update-node 
+    ```
+
+Official website: <https://homebridge.io/>  
+Official docs: <https://github.com/homebridge/homebridge/wiki>  
 
 [Return to the **Optimised Software list**](../../software/)
