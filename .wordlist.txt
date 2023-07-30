@@ -378,7 +378,7 @@ natively
 Navidrome
 nd
 Netdata
-Netherland
+Netherlands
 Nextcloud
 NFS
 nftables
