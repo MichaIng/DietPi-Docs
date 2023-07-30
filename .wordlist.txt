@@ -100,6 +100,7 @@ Ctrl
 Cuberite
 customisable
 customizable
+CVE
 DAC
 DarkBetter
 DarkIce
@@ -740,6 +741,7 @@ Xfce
 XFS
 xml
 XRDP
+XSS
 XU
 Xunlong
 xz
