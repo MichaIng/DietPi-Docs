@@ -956,7 +956,7 @@ Official documentation: <https://restic.readthedocs.io/en/stable/>
 Source code: <https://github.com/restic/restic>  
 License: [BSD 2-Clause](https://github.com/restic/restic/blob/master/LICENSE)
 
-### MediaWiki
+## MediaWiki
 
 This collaboration and documentation platform was originally developed for and is used by Wikipedia.
 
