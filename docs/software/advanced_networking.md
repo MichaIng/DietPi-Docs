@@ -130,7 +130,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
         systemctl status isc-dhcp-server hostapd
         ```
 
-	- 
+    - 
     
         ```sh
         journalctl -u isc-dhcp-server
@@ -143,7 +143,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
         ```
 
 
-	Additionally, DHCP leases can be monitored via the file `/var/lib/dhcp/dhcpd.leases`. 
+    Additionally, DHCP leases can be monitored via the file `/var/lib/dhcp/dhcpd.leases`. 
 
 ***
 
