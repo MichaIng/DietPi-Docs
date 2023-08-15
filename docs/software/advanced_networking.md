@@ -58,7 +58,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
 === "Change hotspot settings"
 
-    Some hotspot settings can be changed to adopt to various circumstances. The main settings of the WiFi hotspot reside in the DHCP configuration file `/etc/dhcp/dhcpd.conf` and can be edited. The configuration options of the DHCP server (`isc-dhcp-server`) are manifold and can be checked out e.g. via <https://manpages.debian.org/testing/isc-dhcp-server/dhcpd.conf.5.en.html>.  
+    Some hotspot settings can be changed to adopt to various circumstances. The main settings of the WiFi hotspot reside in the DHCP configuration file `/etc/dhcp/dhcpd.conf` and can be edited. The DHCP server configuration options are manifold and can be checked out e.g. via the [man pages of `isc-dhcp-server`](https://manpages.debian.org/testing/isc-dhcp-server/dhcpd.conf.5.en.html).  
     Below there are some basic settings described.
 
     <h3>Change hotspot subnet address</h3>
@@ -110,7 +110,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
     The lease time is set via the entry `default-lease-time` within the configuration file `/etc/dhcp/dhcpd.conf`.
 
-    There are many further setting options around the lease behaviour, for details e.g. see <https://manpages.debian.org/testing/isc-dhcp-server/dhcpd.conf.5.en.html>.
+    There are many further setting options around the lease behaviour, for details e.g. see [man pages of `isc-dhcp-server`](https://manpages.debian.org/testing/isc-dhcp-server/dhcpd.conf.5.en.html).
 
     The default-lease-time time of the `isc-dhcp-server` is 43200 seconds (12 hrs). Depending of the usage situation of the WiFi hotspot, a different setting might fit better.  
     Typical good practice values are:
