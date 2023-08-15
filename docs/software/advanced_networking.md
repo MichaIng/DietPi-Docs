@@ -48,18 +48,18 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     - SSID = `DietPi-HotSpot`
     - Access Key = `dietpihotspot`
 
-=== "Change WiFi settings"
+=== "Change hotspot settings"
+
+    Some hotspot settings can be changed to adopt to various circumstances. The main settings of the WiFi hotspot reside in the DHCP configuration file `/etc/dhcp/dhcpd.conf` and can be edited. The DHCP server configuration options are manifold and can be checked out e.g. via the [man pages of `isc-dhcp-server`](https://manpages.debian.org/testing/isc-dhcp-server/dhcpd.conf.5.en.html).  
+    Below there are some basic settings described.
+
+    <h3>Change WiFi settings (SSID/Key/Channel)</h3>
 
     Once installed, you can change the WiFi HotSpot settings (SSID/Key/Channel) at any time:
 
     1. Run `dietpi-config`
     2. Navigate to *Networking Options: Adapters*, then select *WiFi*
     3. Whilst in this menu, it is highly recommended you set the Country Code to your country. Depending on your country regulations, this could allow for channels 12/13 and increased power output (range) for the hotspot
-
-=== "Change hotspot settings"
-
-    Some hotspot settings can be changed to adopt to various circumstances. The main settings of the WiFi hotspot reside in the DHCP configuration file `/etc/dhcp/dhcpd.conf` and can be edited. The DHCP server configuration options are manifold and can be checked out e.g. via the [man pages of `isc-dhcp-server`](https://manpages.debian.org/testing/isc-dhcp-server/dhcpd.conf.5.en.html).  
-    Below there are some basic settings described.
 
     <h3>Change hotspot subnet address</h3>
 
@@ -119,6 +119,31 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     - Guest networks in an office: 8 hours resp. 28800 seconds
     - Wireless devices at trusted networks / at home: 24 hours .. 1 week resp. 86.400 .. 604.800 seconds
     - (Cable connected devices / LAN: 8 days resp. 691.200 seconds)
+
+=== "Diagnosis"
+
+    The status of the WiFi hotspot can be evaluated with these commands:
+
+    - 
+
+        ```sh
+        systemctl status isc-dhcp-server hostapd
+        ```
+
+	- 
+    
+        ```sh
+        journalctl -u isc-dhcp-server
+        ```
+
+        resp.  
+
+        ```sh
+        journalctl -u isc-dhcp-server -u hostapd -u ifup@wlan0
+        ```
+
+
+	Additionally, DHCP leases can be monitored via the file `/var/lib/dhcp/dhcpd.leases`. 
 
 ***
 
