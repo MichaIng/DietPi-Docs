@@ -56,7 +56,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     2. Navigate to *Networking Options: Adapters*, then select *WiFi*
     3. Whilst in this menu, it is highly recommended you set the Country Code to your country. Depending on your country regulations, this could allow for channels 12/13 and increased power output (range) for the hotspot
 
-=== "Change hotspot settings" 
+=== "Change hotspot settings"
 
     Some hotspot settings can be changed to adopt to various circumstances. The main settings of the WiFi hotspot reside in the DHCP configuration file `/etc/dhcp/dhcpd.conf` and can be edited. The configuration options of the DHCP server (`isc-dhcp-server`) are manifold and can be checked out e.g. via <https://manpages.debian.org/testing/isc-dhcp-server/dhcpd.conf.5.en.html>.  
     Below there are some basic settings described.
@@ -116,10 +116,10 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     Typical good practice values are:
 
     - Internet cafe: 1 hour resp. 3600 seconds
-	- Guest networks in an office: 8 hours resp. 28800 seconds
+    - Guest networks in an office: 8 hours resp. 28800 seconds
     - Wireless devices at trusted networks / at home: 24 hours .. 1 week resp. 86.400 .. 604.800 seconds
-	- (Cable connected devices / LAN: 8 days resp. 691.200 seconds)
-	
+    - (Cable connected devices / LAN: 8 days resp. 691.200 seconds)
+
 ***
 
 YouTube video tutorial (German language): [Raspberry Hotspot: Internet Sperren umgehen mit eigenen WiFi Hotspot unter DietPi (für alle Geräte)](https://www.youtube.com/watch?v=3ZROq90tM_s){:class="nospellcheck"}
