@@ -68,7 +68,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**File Browser - Light web based file manager with sharing features**](cloud/#file-browser)
 - [**Rclone - Utility to sync your files to cloud storages**](cloud/#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](cloud/#restic)
-- [**MediaWiki - A collaboration and documentation platform**](cloud/#mediawiki)
 
 ## [Databases & Data Stores](databases/#overview)
 
@@ -231,6 +230,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Baïkal - Lightweight CalDAV + CardDAV server**](social/#baikal)
 - [**Synapse - Decentralized communication with the Matrix protocol**](social/#synapse)
 - [**microblog.pub - A self-hosted, single-user, ActivityPub powered microblog**](social/#microblogpub)
+- [**MediaWiki - A collaboration and documentation platform**](social/#mediawiki)
 
 ## [SSH Server](ssh/)
 
