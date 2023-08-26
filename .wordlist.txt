@@ -415,6 +415,7 @@ OneLogin
 oneshot
 OOTB
 OPcache
+OSPF
 OrangePi
 OpenBazaar
 OpenJDK
@@ -606,6 +607,7 @@ suju
 Sur
 SVG
 swapfile
+swappiness
 symlink
 Syncthing
 syscall
