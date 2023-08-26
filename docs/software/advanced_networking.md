@@ -48,7 +48,12 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     - SSID = `DietPi-HotSpot`
     - Access Key = `dietpihotspot`
 
-=== "Change WiFi settings"
+=== "Change hotspot settings"
+
+    Some hotspot settings can be changed to adopt to various circumstances. The main settings of the WiFi hotspot reside in the DHCP configuration file `/etc/dhcp/dhcpd.conf` and can be edited. The DHCP server configuration options are manifold and can be checked out e.g. via the [man pages of `isc-dhcp-server`](https://manpages.debian.org/testing/isc-dhcp-server/dhcpd.conf.5.en.html).  
+    Below there are some basic settings described.
+
+    <h3>Change WiFi settings (SSID/Key/Channel)</h3>
 
     Once installed, you can change the WiFi HotSpot settings (SSID/Key/Channel) at any time:
 
@@ -56,17 +61,17 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     2. Navigate to *Networking Options: Adapters*, then select *WiFi*
     3. Whilst in this menu, it is highly recommended you set the Country Code to your country. Depending on your country regulations, this could allow for channels 12/13 and increased power output (range) for the hotspot
 
-=== "Change hotspot subnet address"
+    <h3>Change hotspot subnet address</h3>
 
-    The WiFi hotspot contains a DHCP server giving WiFi clients the IP settings within a certain IP subnet (see lower part of graphics):
+    The WiFi hotspot offer the WiFi clients IP settings within a certain IP subnet (see lower part of graphics):
 
     ![DietPi WiFi hotspot structure](../assets/images/dietpi-software-advanced-networking-wifihotspot-address-setting.png){: width="550" height="345" loading="lazy"}
 
     The default values for these subnet settings are:
 
-    - IP address of WiFi hotspot: 192.168.42.1
+    - IP address of WiFi hotspot: 192.168.**42.1**
     - Subnet mask: 255.255.255.0
-    - DHCP range: 192.168.42.10 .. 192.168.42.250
+    - DHCP range: 192.168.**42.10** .. 192.168.**42.250**
 
     If these settings shall be changed, the following files need to be adjusted:
 
@@ -74,14 +79,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     - `/etc/network/interfaces`
     - `/etc/iptables.ipv4.nat`
 
-    These settings can be done by hand or via a shell line using this command  
-    (exemplary changing IP addresses from 192.168.42.x to 192.168.43.x): 
-    
-    ```sh
-    sed -i 's/192\.168\.42\./192.168.43./g' /etc/dhcp/dhcpd.conf /etc/network/interfaces /etc/iptables.ipv4.nat
-    ```
-
-    These changes should be followed by a reboot to activate the settings (this is an easy way compared to restart the relevant services).
+    These changes should be followed by a reboot to activate the settings (this is an easy way compared to restart the relevant services by hand).
 
     For example, the default contents of the WiFi setting area within the file `/etc/network/interfaces` is:
 
@@ -97,6 +95,55 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     ```
 
     As can be seen, the address 192.168.42.1 would need to be changed.
+
+    These setting changes can be done by hand or via a shell line using this command  
+    (exemplary changing IP addresses from 192.168.**42.x** to 192.168.**43.x**): 
+    
+    ```sh
+    sed -i 's/192\.168\.42\./192.168.43./g' /etc/dhcp/dhcpd.conf /etc/network/interfaces /etc/iptables.ipv4.nat
+    ```
+
+    <h3>Change DHCP lease time settings</h3>
+
+    The DHCP lease time denotes the time how long an IP address is bound to a DHCP client: DHCP-assigned IP addresses are typically not permanent and expire after a certain time. This time is called *DHCP lease time*.  
+    This lease time can be set, so that an IP address is not dedicated to a device forever and is available for other devices too, when needed.
+
+    The lease time is set via the entry `default-lease-time` within the configuration file `/etc/dhcp/dhcpd.conf`.
+
+    There are many further setting options around the lease behaviour, for details e.g. see [man pages of `isc-dhcp-server`](https://manpages.debian.org/testing/isc-dhcp-server/dhcpd.conf.5.en.html).
+
+    The default-lease-time time of the `isc-dhcp-server` is 43200 seconds (12 hrs). Depending of the usage situation of the WiFi hotspot, a different setting might fit better.  
+    Typical good practice values are:
+
+    - Internet cafe: 1 hour resp. 3600 seconds
+    - Guest networks in an office: 8 hours resp. 28800 seconds
+    - Wireless devices at trusted networks / at home: 24 hours .. 1 week resp. 86.400 .. 604.800 seconds
+    - (Cable connected devices / LAN: 8 days resp. 691.200 seconds)
+
+=== "Diagnosis"
+
+    The status of the WiFi hotspot can be evaluated with these commands:
+
+    - 
+
+        ```sh
+        systemctl status isc-dhcp-server hostapd
+        ```
+
+    - 
+    
+        ```sh
+        journalctl -u isc-dhcp-server
+        ```
+
+        resp.  
+
+        ```sh
+        journalctl -u isc-dhcp-server -u hostapd -u ifup@wlan0
+        ```
+
+
+    Additionally, DHCP leases can be monitored via the file `/var/lib/dhcp/dhcpd.leases`. 
 
 ***
 
