@@ -481,7 +481,7 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
             <tr>
                 <td><a class="table" href=""><strong>NanoPi 6 series</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bookworm.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPi6-ARMv8-Bookworm.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
