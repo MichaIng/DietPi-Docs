@@ -415,7 +415,7 @@ OneLogin
 oneshot
 OOTB
 OPcache
-OPSF
+OSPF
 OrangePi
 OpenBazaar
 OpenJDK
