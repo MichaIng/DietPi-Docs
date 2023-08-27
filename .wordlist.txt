@@ -26,6 +26,7 @@ APCu
 APIs
 archiver
 Armbian
+Armbian's
 ARMv
 ASUS
 Atheros
@@ -415,6 +416,7 @@ OneLogin
 oneshot
 OOTB
 OPcache
+OSPF
 OrangePi
 OpenBazaar
 OpenJDK
@@ -606,6 +608,7 @@ suju
 Sur
 SVG
 swapfile
+swappiness
 symlink
 Syncthing
 syscall

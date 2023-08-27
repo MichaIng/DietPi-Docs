@@ -481,7 +481,7 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
             <tr>
                 <td><a class="table" href=""><strong>NanoPi 6 series</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bookworm.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPi6-ARMv8-Bookworm.7z">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -517,6 +517,12 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 <td><a class="table" href=""><strong>Orange Pi 5</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5-ARMv8-Bookworm.7z">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 5 Plus</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Plus-ARMv8-Bookworm.7z">DietPi image</a>
                 </td>
             </tr>
         </tbody>
