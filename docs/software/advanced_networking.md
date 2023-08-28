@@ -240,7 +240,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 ***
 
 Website: <https://www.haproxy.org/>  
-Official documentation: <https://docs.haproxy.org>
+Official documentation: <https://docs.haproxy.org/>
 
 ## frp
 
