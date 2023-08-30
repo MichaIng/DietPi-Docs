@@ -158,11 +158,11 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     #max-lease-time 86400;
 
     subnet 192.168.42.0 netmask 255.255.255.0 {
-	    range 192.168.42.10 192.168.42.250;
-	    option broadcast-address 192.168.42.255;
-	    option routers 192.168.42.1;
-	    option domain-name "local";
-	    option domain-name-servers 9.9.9.9, 149.112.112.112;
+        range 192.168.42.10 192.168.42.250;
+        option broadcast-address 192.168.42.255;
+        option routers 192.168.42.1;
+        option domain-name "local";
+        option domain-name-servers 9.9.9.9, 149.112.112.112;
     }
     ```
 
@@ -170,10 +170,10 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
         	range 192.168.42.10 192.168.42.250;
-	        option broadcast-address 192.168.42.255;
-	        option routers 192.168.42.1;
-	        option domain-name "local";
-	        option domain-name-servers 192.168.42.1;
+            option broadcast-address 192.168.42.255;
+            option routers 192.168.42.1;
+            option domain-name "local";
+            option domain-name-servers 192.168.42.1;
         }
         ```
 
@@ -181,21 +181,20 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
         	range 192.168.42.10 192.168.42.250;
-	        option broadcast-address 192.168.42.255;
-	        option routers 192.168.42.1;
-	        option domain-name "local";
-	        option domain-name-servers 192.168.178.2;
+            option broadcast-address 192.168.42.255;
+            option routers 192.168.42.1;
+            option domain-name "local";
+            option domain-name-servers 192.168.178.2;
         }
         ```
 
     1. Pi-Hole runs in the subnet the WiFi connection belongs to. Depending on the LAN subnet (e.g. 192.168.42.0/24) the "subnet" section contents might be changed to
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
-        	range 192.168.42.10 192.168.42.250;
-	        option broadcast-address 192.168.42.255;
-	        option routers 192.168.42.1;
-	        option domain-name "local";
-	        option domain-name-servers 192.168.42.250;
+            range 192.168.42.10 192.168.42.250;
+            option broadcast-address 192.168.42.255;
+            option routers 192.168.42.1;
+            option domoption domain-name-servers 192.168.42.250;
         }
         ```
 
