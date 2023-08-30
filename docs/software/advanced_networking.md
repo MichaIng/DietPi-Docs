@@ -147,9 +147,9 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
 === "Combine with AdGuard Home resp. Pi-Hole"
 
-    The WiFi HotSpot can be combined with AdGuard Home resp. Pi-Hole. To do this, the DHCP server needs to know the IP address of the adblocker system and announces it as the DNS server for the WiFi area.
+    The WiFi HotSpot can be combined with AdGuard Home resp. Pi-Hole. To do this, the DHCP server needs to know the IP address of the Ad-Blocker system and announces it as the DNS server for the WiFi area.
 
-    The corresponding file is `/etc/dhcp/dhcpd.conf`, the entry `option domain-name-servers` has to be set to your adblocker IP address.  
+    The corresponding file is `/etc/dhcp/dhcpd.conf`, the entry `option domain-name-servers` has to be set to your Ad-Blocker IP address.  
     In the following there are three examples given starting from the following base `dhcpd.conf` content:
 
     ```
@@ -169,7 +169,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     1. AdGuard Home runs on the same system as the WiFi HotSpot runs. Then the "subnet" section contents has to be changed to
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
-        	range 192.168.42.10 192.168.42.250;
+            range 192.168.42.10 192.168.42.250;
             option broadcast-address 192.168.42.255;
             option routers 192.168.42.1;
             option domain-name "local";
@@ -180,7 +180,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     1. Pi-Hole runs in the subnet the LAN connection belongs to. Depending on the WAN subnet (e.g. 192.168.178.0/24) the "subnet" section contents might be changed to
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
-        	range 192.168.42.10 192.168.42.250;
+            range 192.168.42.10 192.168.42.250;
             option broadcast-address 192.168.42.255;
             option routers 192.168.42.1;
             option domain-name "local";
