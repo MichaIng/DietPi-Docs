@@ -223,6 +223,10 @@ What is ADS-B? Automatic Dependent Surveillance - Broadcast (ADS-B) is a surveil
 
 ![ADSB Feeder Setup Page](../assets/images/ADSB-Feeder-Setup-Page.png){: width="500" height="343" loading="lazy"}
 
+=== "Hardware requirements"
+
+While this has been tested and it works with 512MB of RAM, 1GB is a much more reasonable minimum. There seems to be no real benefit from having more than 2GB or RAM. Decoding the data streams from the SDR is somewhat CPU intensive. A simple rule of thumb is that you want one more core than you have SDRs. So for a typical setup with one SDR for 1090 ADSB signals, two cores are sufficient. If you are in the US and also want to scan for UAT traffic and therefore have two SDRs connected, three cores will get you better results.
+
 === "Setting things up"
 
 Connect an SDR to your system (lots more information at the [ADSB.im](https://adsb.im/howto) [pages](https://adsb.im/supported) - currently these pages are somewhat focused on the full Feeder images, but all of the other information applies here as well), add an antenna and set up the software. Simply connect with a browser to your DietPi system - either locally (if you have a desktop version installed), or remotely from within your network. On the initial setup page enter a name for your site plus its location and pick how you want to decide which aggregators to feed. It will take a short while to get started (depending on your system and network speed as it will download a couple Docker containers), and after that you are up and running. There are additional options for more advanced features, but even with just the information on the first page you'll already start tracking planes around you. Click on the **TAR1090 map** link on the feeder home page to see the planes around you.
