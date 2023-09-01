@@ -225,7 +225,7 @@ What is ADS-B? Automatic Dependent Surveillance - Broadcast (ADS-B) is a surveil
 
 === "Hardware requirements"
 
-While this has been tested and it works with 512MB of RAM, 1GB is a much more reasonable minimum. There seems to be no real benefit from having more than 2GB or RAM. Decoding the data streams from the SDR is somewhat CPU intensive. A simple rule of thumb is that you want one more core than you have SDRs. So for a typical setup with one SDR for 1090 ADSB signals, two cores are sufficient. If you are in the US and also want to scan for UAT traffic and therefore have two SDRs connected, three cores will get you better results.
+While this has been tested and it works with 512MB of RAM, 1GB is a much more reasonable minimum. There seems to be no real benefit from having more than 2GB of RAM. Decoding the data streams from the SDR is somewhat CPU intensive. A simple rule of thumb is that you want one more core than you have SDRs. So for a typical setup with one SDR for 1090 ADSB signals, two cores are sufficient. If you are in the US and also want to scan for UAT traffic and therefore have two SDRs connected, three cores will get you better results.
 
 === "Setting things up"
 
