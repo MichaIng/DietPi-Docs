@@ -11,7 +11,7 @@ description: Description of DietPi software options related to distributed softw
 - [**Tor Relay - Add a node to the Tor network**](#tor-relay)
 - [**YaCy - Decentralized open source search engine**](#yacy)
 - [**IPFS Node - Contribute to a decentralized internet**](#ipfs-node)
-- [**ADSB Feeder - track airplanes using SDRs and feed the data to ADS-B aggregators**](#adsb-feeder)
+- [**ADS-B Feeder - track airplanes using SDRs and feed the data to ADS-B aggregators**](#ads-b-feeder)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -214,26 +214,42 @@ Official documentation: <https://docs.ipfs.io>
 !!! warning "Do not expose to internet"
     The IPFS web interface requires no authentication to use. Do not expose it to the internet without taking proper security measures, like an authenticated reverse proxy, VPN or similar.
 
-## ADSB Feeder
+## ADS-B Feeder
 
-[ADSB.im](https://adsb.im/home/) is a project to create an easy to manage ADS-B Feeder system.
-The images available as [GitHub Releases](https://github.com/dirkhh/adsb-feeder-image/releases) are intended to be run on dedicated Single Board Computers (or VMs) - many of them are actually based on DietPi. But if you already have a DietPi system that you use for other purposes, it might make more sense to simply add the software stack to your existing setup - and this is the purpose of providing ADSB Feeder as an app in the DietPi Optimised Software list.
+[ADSB.im](https://adsb.im/home/) is a project to create an easy to manage [ADS-B Feeder system](https://wikipedia.org/wiki/Automatic_Dependent_Surveillance–Broadcast).  
+The images available as [GitHub Releases](https://github.com/dirkhh/adsb-feeder-image/releases) are intended to be run on dedicated Single Board Computers (or VMs) - many of them are actually based on DietPi. But if you already have a DietPi system that you use for other purposes, it might make more sense to simply add the software stack to your existing setup - and this is the purpose of providing ADS-B feeder as an app in the DietPi *Optimised Software list*.
 
-What is ADS-B? Automatic Dependent Surveillance - Broadcast (ADS-B) is a surveillance technology that uses satellite navigation or other sensors to determine an aircraft's position and periodically broadcast it, enabling it to be tracked. And with a simple (and relatively cheap) Software Defined Radio (SDR) USB stick, anyone can receive the ADS-B signal from planes in their vicinity. There are thousands of people all over the world who are tracking planes around them and then feed that data to sites that aggregate this data and make it available for others to use. Some of them, like [ADSB.lol](https://adsb.lol), do so under an open data license, others, like Flightaware are commercial companies that then resell the data to their customers. The ADS-B Feeder application allows you to feed any (or all) of these aggregators, currently almost two dozen.
+![A view of the planes around you](../assets/images/TAR1090-view.png){: width="400" height="403" loading="lazy"}
 
-![ADSB Feeder Setup Page](../assets/images/ADSB-Feeder-Setup-Page.png){: width="500" height="343" loading="lazy"}
+What is ADS-B? Automatic Dependent Surveillance - Broadcast (ADS-B) is a surveillance technology that uses satellite navigation or other sensors to determine an aircraft's position and periodically broadcast it, enabling it to be tracked. With a simple (and relatively cheap) Software Defined Radio (SDR) USB stick, anyone can receive the ADS-B signal from planes in their vicinity. There are thousands of people all over the world who are tracking planes around them and then feed that data to sites that aggregate this data and make it available for others to use. Some of them, like [ADSB.lol](https://adsb.lol), do so under an open data license, others, like [Flightaware](https://www.flightaware.com/) are commercial companies that then resell the data to their customers.
+
+The ADS-B Feeder application allows you to feed any (or all) of these aggregators, currently almost two dozen.
+
+=== "Access to the web interface"
+
+    The web interface is accessible via the port **1090**, e.g. this could be:  
+
+    - URL = `http://<your.IP>:1090`
+
+    The color of the plane icons is an indication of their altitude, lots more information (like call signs, routes of the planes, etc) are available as well. The system provides you with statistics, graphs, and information about the performance of your feeder, and makes it easy to explore some of the information provided by the aggregators that you are feeding.
+
+=== "Initial setup"
+
+    First of all, you need to connect an SDR to your system (lots more information at the [ADSB.im](https://adsb.im/howto) [pages](https://adsb.im/supported) - currently these pages are somewhat focused on the full feeder images, but all of the other information applies here as well), add an antenna and set up the software.  
+    Then simply connect with a browser to your DietPi system on port 1090. On the initial setup page enter a name for your site plus its location and pick how you want to decide which aggregators to feed.
+
+    ![ADSB Feeder Setup Page](../assets/images/ADSB-Feeder-Setup-Page.png){: width="500" height="343" loading="lazy"}
+
+    It will take a short while to get started (depending on your system and network speed as it will download a couple Docker containers), and after that you are up and running. 
+    
+    There are additional options for more advanced features, but even with just the information on the first page you'll already start tracking planes around you. Click on the **TAR1090 map** link on the feeder home page to see the planes around you.
 
 === "Hardware requirements"
 
-While this has been tested and it works with 512MB of RAM, 1GB is a much more reasonable minimum. There seems to be no real benefit from having more than 2GB of RAM. Decoding the data streams from the SDR is somewhat CPU intensive. A simple rule of thumb is that you want one more core than you have SDRs. So for a typical setup with one SDR for 1090 ADSB signals, two cores are sufficient. If you are in the US and also want to scan for UAT traffic and therefore have two SDRs connected, three cores will get you better results.
+    While this has been tested and works with 512MB of RAM, 1GB is a much more reasonable minimum. There seems to be no real benefit from having more than 2GB of RAM.  
+    Decoding the data streams from the SDR is somewhat CPU intensive. A simple rule of thumb is that you want one more core than you have SDRs. So for a typical setup with one SDR for ADS-B signals (sent at 1090 MHz), two cores are sufficient. If you are in the US and also want to scan for UAT traffic ("Universal Access Transceiver" sent at 978 MHz) and therefore have two SDRs connected, three cores will get you better results.
 
-=== "Setting things up"
-
-Connect an SDR to your system (lots more information at the [ADSB.im](https://adsb.im/howto) [pages](https://adsb.im/supported) - currently these pages are somewhat focused on the full Feeder images, but all of the other information applies here as well), add an antenna and set up the software. Simply connect with a browser to your DietPi system on port 1090 - either locally (http://localhost:1090 - if you have a desktop version installed), or remotely from within your network, using the IP address or a name that is resolved locally in your network. On the initial setup page enter a name for your site plus its location and pick how you want to decide which aggregators to feed. It will take a short while to get started (depending on your system and network speed as it will download a couple Docker containers), and after that you are up and running. There are additional options for more advanced features, but even with just the information on the first page you'll already start tracking planes around you. Click on the **TAR1090 map** link on the feeder home page to see the planes around you.
-
-![A view of the planes around you](../assets/images/TAR1090-view.png){: width="550" height="453" loading="lazy"}
-
-The color of the plane icons is an indication of their altitude, lots more information (like call signs, routes of the planes, etc) are available as well. The system provides you with statistics, graphs, and information about the performance of your feeder, and makes it easy to explore some of the information provided by the aggregators that you are feeding.
-
+Official documentation: <https://adsb.im/home>  
+Wikipedia page about ADS-B: <https://wikipedia.org/wiki/Automatic_Dependent_Surveillance–Broadcast>
 
 [Return to the **Optimised Software list**](../../software/)
