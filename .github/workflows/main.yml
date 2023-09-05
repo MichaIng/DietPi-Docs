@@ -17,7 +17,7 @@ jobs:
     - name: Clone DietPi-Docs repository
       id: clone
       # https://github.com/actions/checkout/tags
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Setup Node.js for markdownlint-cli2
       # https://github.com/actions/setup-node/tags
       uses: actions/setup-node@v3
