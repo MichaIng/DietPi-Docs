@@ -368,6 +368,8 @@ Select the following tabs for the installation description of your target.
         apt install open-vm-tools
         ```
 
+    Another article with DietPi install and setup instructions on vSphere has been published by `virtualizationhowto.com`: <https://www.virtualizationhowto.com/2023/09/dietpi-tiny-os-for-home-server-self-hosting/>
+
 === "Proxmox"
 
     <h2>Introduction</h2>
