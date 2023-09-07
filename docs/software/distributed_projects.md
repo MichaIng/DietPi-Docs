@@ -221,7 +221,7 @@ The images available as [GitHub Releases](https://github.com/dirkhh/adsb-feeder-
 
 ![A view of the planes around you](../assets/images/TAR1090-view.png){: width="400" height="403" loading="lazy"}
 
-What is ADS-B? Automatic Dependent Surveillance - Broadcast (ADS-B) is a surveillance technology that uses satellite navigation or other sensors to determine an aircraft's position and periodically broadcast it, enabling it to be tracked. With a simple (and relatively cheap) Software Defined Radio (SDR) USB stick, anyone can receive the ADS-B signal from planes in their vicinity. There are thousands of people all over the world who are tracking planes around them and then feed that data to sites that aggregate this data and make it available for others to use. Some of them, like [ADSB.lol](https://adsb.lol), do so under an open data license, others, like [Flightaware](https://www.flightaware.com/) are commercial companies that then resell the data to their customers.
+What is ADS-B? Automatic Dependent Surveillance - Broadcast (ADS-B) is a surveillance technology that uses satellite navigation or other sensors to determine an aircraft's position and periodically broadcast it, enabling it to be tracked. With a simple (and relatively cheap) Software Defined Radio (SDR) USB stick, anyone can receive the ADS-B signal from planes in their vicinity. There are thousands of people all over the world who are tracking planes around them and then feed that data to sites that aggregate this data and make it available for others to use. Some of them, like [ADSB.lol](https://adsb.lol){: class="nospellcheck"}, do so under an open data license, others, like [FlightAware](https://www.flightaware.com/) are commercial companies that then resell the data to their customers.
 
 The ADS-B Feeder application allows you to feed any (or all) of these aggregators, currently almost two dozen.
 
@@ -235,10 +235,10 @@ The ADS-B Feeder application allows you to feed any (or all) of these aggregator
 
 === "Initial setup"
 
-    First of all, you need to connect an SDR to your system (lots more information at the [ADSB.im](https://adsb.im/howto) [pages](https://adsb.im/supported) - currently these pages are somewhat focused on the full feeder images, but all of the other information applies here as well), add an antenna and set up the software.  
+    First of all, you need to connect an SDR to your system (lots more information at the [ADSB.im](https://adsb.im/howto){: class="nospellcheck"} [pages](https://adsb.im/supported) - currently these pages are somewhat focused on the full feeder images, but all of the other information applies here as well), add an antenna and set up the software.  
     Then simply connect with a browser to your DietPi system on port 1090. On the initial setup page enter a name for your site plus its location and pick how you want to decide which aggregators to feed.
 
-    ![ADSB Feeder Setup Page](../assets/images/ADSB-Feeder-Setup-Page.png){: width="500" height="343" loading="lazy"}
+    ![ADS-B Feeder Setup Page](../assets/images/ADSB-Feeder-Setup-Page.png){: width="500" height="343" loading="lazy"}
 
     It will take a short while to get started (depending on your system and network speed as it will download a couple Docker containers), and after that you are up and running. 
     
