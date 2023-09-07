@@ -551,6 +551,7 @@ SDL
 SDN
 SDR
 SDRAM
+SDRs
 selectable
 Servarr
 serverless
