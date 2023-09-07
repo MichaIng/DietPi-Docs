@@ -216,7 +216,7 @@ Official documentation: <https://docs.ipfs.io>
 
 ## ADS-B Feeder
 
-[ADSB.im](https://adsb.im/home/) is a project to create an easy to manage [ADS-B Feeder system](https://wikipedia.org/wiki/Automatic_Dependent_Surveillance–Broadcast).  
+[ADSB.im](https://adsb.im/home/){: class="nospellcheck"} is a project to create an easy to manage [ADS-B Feeder system](https://wikipedia.org/wiki/Automatic_Dependent_Surveillance–Broadcast).  
 The images available as [GitHub Releases](https://github.com/dirkhh/adsb-feeder-image/releases) are intended to be run on dedicated Single Board Computers (or VMs) - many of them are actually based on DietPi. But if you already have a DietPi system that you use for other purposes, it might make more sense to simply add the software stack to your existing setup - and this is the purpose of providing ADS-B feeder as an app in the DietPi *Optimised Software list*.
 
 ![A view of the planes around you](../assets/images/TAR1090-view.png){: width="400" height="403" loading="lazy"}
