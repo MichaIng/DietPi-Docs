@@ -38,7 +38,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
     The requirements are:
 
-    - 1x Ethernet connection
+    - 1x Ethernet connection (LAN)
     - 1x Supported USB WiFi adapter or onboard WiFi. This may vary depending on device and available WiFi drivers/modules. However, common adapters (e.g.: Atheros) should be fine.
 
 === "Initial connection credentials"
@@ -166,34 +166,37 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
     }
     ```
 
-    1. AdGuard Home runs on the same system as the WiFi HotSpot runs. Then the "subnet" section contents has to be changed to
+    1. AdGuard Home runs on the same DietPi system as the WiFi HotSpot runs. Then the "subnet" section contents has to be changed to
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
             range 192.168.42.10 192.168.42.250;
             option broadcast-address 192.168.42.255;
             option routers 192.168.42.1;
             option domain-name "local";
+            # AdGuard Home runs on the localhost (with IP address 192.168.42.1)
             option domain-name-servers 192.168.42.1;
         }
         ```
 
-    1. Pi-Hole runs in the subnet the LAN connection belongs to. Depending on the LAN subnet (e.g. 192.168.178.0/24) the "subnet" section contents might be changed to
+    1. Pi-Hole runs in the subnet the (superimposed) LAN connection belongs to. Depending on the LAN subnet (e.g. 192.168.178.0/24) the "subnet" section contents might be changed to
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
             range 192.168.42.10 192.168.42.250;
             option broadcast-address 192.168.42.255;
             option routers 192.168.42.1;
             option domain-name "local";
+            # Pi-Hole runs on the LAN (with IP address 192.168.178.2)
             option domain-name-servers 192.168.178.2;
         }
         ```
 
-    1. Pi-Hole runs in the subnet the WiFi connection belongs to. Depending on the LAN subnet (e.g. 192.168.42.0/24) the "subnet" section contents might be changed to
+    1. Pi-Hole runs in the subnet the WiFi connection belongs to. Depending on the WiFi HotSpot subnet (e.g. 192.168.42.0/24) the "subnet" section contents might be changed to
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
             range 192.168.42.10 192.168.42.250;
             option broadcast-address 192.168.42.255;
             option routers 192.168.42.1;
+            # Pi-Hole runs on the WiFi subnet (with IP address 192.168.42.250)
             option domoption domain-name-servers 192.168.42.250;
         }
         ```
