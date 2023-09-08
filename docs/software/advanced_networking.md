@@ -145,6 +145,59 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
     Additionally, DHCP leases can be monitored via the file `/var/lib/dhcp/dhcpd.leases`. 
 
+=== "Combine with AdGuard Home resp. Pi-hole"
+
+    The WiFi HotSpot can be combined with AdGuard Home resp. Pi-hole. To do this, the DHCP server needs to know the IP address of the Ad-Blocker system and announces it as the DNS server for the WiFi area.
+
+    The corresponding file is `/etc/dhcp/dhcpd.conf`, the entry `option domain-name-servers` has to be set to your Ad-Blocker IP address.  
+    In the following there are three examples given starting from the following base `dhcpd.conf` content:
+
+    ```
+    authoritative;
+    #default-lease-time 43200;
+    #max-lease-time 86400;
+
+    subnet 192.168.42.0 netmask 255.255.255.0 {
+        range 192.168.42.10 192.168.42.250;
+        option broadcast-address 192.168.42.255;
+        option routers 192.168.42.1;
+        option domain-name "local";
+        option domain-name-servers 9.9.9.9, 149.112.112.112;
+    }
+    ```
+
+    1. AdGuard Home runs on the same system as the WiFi HotSpot runs. Then the "subnet" section contents has to be changed to
+        ```
+        subnet 192.168.42.0 netmask 255.255.255.0 {
+            range 192.168.42.10 192.168.42.250;
+            option broadcast-address 192.168.42.255;
+            option routers 192.168.42.1;
+            option domain-name "local";
+            option domain-name-servers 192.168.42.1;
+        }
+        ```
+
+    1. Pi-hole runs in the subnet the LAN connection belongs to. Depending on the LAN subnet (e.g. 192.168.178.0/24) the "subnet" section contents might be changed to
+        ```
+        subnet 192.168.42.0 netmask 255.255.255.0 {
+            range 192.168.42.10 192.168.42.250;
+            option broadcast-address 192.168.42.255;
+            option routers 192.168.42.1;
+            option domain-name "local";
+            option domain-name-servers 192.168.178.2;
+        }
+        ```
+
+    1. Pi-hole runs in the subnet the WiFi connection belongs to. Depending on the LAN subnet (e.g. 192.168.42.0/24) the "subnet" section contents might be changed to
+        ```
+        subnet 192.168.42.0 netmask 255.255.255.0 {
+            range 192.168.42.10 192.168.42.250;
+            option broadcast-address 192.168.42.255;
+            option routers 192.168.42.1;
+            option domoption domain-name-servers 192.168.42.250;
+        }
+        ```
+
 ***
 
 YouTube video tutorial (German language): [Raspberry Hotspot: Internet Sperren umgehen mit eigenen WiFi Hotspot unter DietPi (für alle Geräte)](https://www.youtube.com/watch?v=3ZROq90tM_s){:class="nospellcheck"}
