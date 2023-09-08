@@ -177,7 +177,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
         }
         ```
 
-    1. Pi-Hole runs in the subnet the LAN connection belongs to. Depending on the WAN subnet (e.g. 192.168.178.0/24) the "subnet" section contents might be changed to
+    1. Pi-Hole runs in the subnet the LAN connection belongs to. Depending on the LAN subnet (e.g. 192.168.178.0/24) the "subnet" section contents might be changed to
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
             range 192.168.42.10 192.168.42.250;
