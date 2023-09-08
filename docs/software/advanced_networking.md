@@ -145,9 +145,9 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
     Additionally, DHCP leases can be monitored via the file `/var/lib/dhcp/dhcpd.leases`. 
 
-=== "Combine with AdGuard Home resp. Pi-Hole"
+=== "Combine with AdGuard Home resp. Pi-hole"
 
-    The WiFi HotSpot can be combined with AdGuard Home resp. Pi-Hole. To do this, the DHCP server needs to know the IP address of the Ad-Blocker system and announces it as the DNS server for the WiFi area.
+    The WiFi HotSpot can be combined with AdGuard Home resp. Pi-hole. To do this, the DHCP server needs to know the IP address of the Ad-Blocker system and announces it as the DNS server for the WiFi area.
 
     The corresponding file is `/etc/dhcp/dhcpd.conf`, the entry `option domain-name-servers` has to be set to your Ad-Blocker IP address.  
     In the following there are three examples given starting from the following base `dhcpd.conf` content:
@@ -178,25 +178,25 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
         }
         ```
 
-    1. Pi-Hole runs in the subnet the (superimposed) LAN connection belongs to. Depending on the LAN subnet (e.g. 192.168.178.0/24) the "subnet" section contents might be changed to
+    1. Pi-hole runs in the subnet the (superimposed) LAN connection belongs to. Depending on the LAN subnet (e.g. 192.168.178.0/24) the "subnet" section contents might be changed to
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
             range 192.168.42.10 192.168.42.250;
             option broadcast-address 192.168.42.255;
             option routers 192.168.42.1;
             option domain-name "local";
-            # Pi-Hole runs on the LAN (with IP address 192.168.178.2)
+            # Pi-hole runs on the LAN (with IP address 192.168.178.2)
             option domain-name-servers 192.168.178.2;
         }
         ```
 
-    1. Pi-Hole runs in the subnet the WiFi connection belongs to. Depending on the WiFi HotSpot subnet (e.g. 192.168.42.0/24) the "subnet" section contents might be changed to
+    1. Pi-hole runs in the subnet the WiFi connection belongs to. Depending on the WiFi HotSpot subnet (e.g. 192.168.42.0/24) the "subnet" section contents might be changed to
         ```
         subnet 192.168.42.0 netmask 255.255.255.0 {
             range 192.168.42.10 192.168.42.250;
             option broadcast-address 192.168.42.255;
             option routers 192.168.42.1;
-            # Pi-Hole runs on the WiFi subnet (with IP address 192.168.42.250)
+            # Pi-hole runs on the WiFi subnet (with IP address 192.168.42.250)
             option domoption domain-name-servers 192.168.42.250;
         }
         ```
