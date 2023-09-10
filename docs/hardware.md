@@ -755,7 +755,7 @@ After this, the script runs a couple of minutes, finally the following message o
 
 ![DietPi-Installer finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}
 
-After this you can restart your system (`reboot`), alternatively you can copy the SC card (via `dd`) to an image (`.img`) to duplicate your base installation.
+After this you can restart your system (`reboot`), alternatively you can copy the SD card (via `dd`) to an image (`.img`) to duplicate your base installation.
 
 A further step can be to generate a compressed DietPi image via the [`dietpi-imager`](https://github.com/MichaIng/DietPi/blob/master/.build/images/dietpi-imager) script:
 
