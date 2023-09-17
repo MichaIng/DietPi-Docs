@@ -93,6 +93,7 @@ CORS
 Coturn
 CouchPotato
 COVID
+CRC64
 CRDA
 cron
 CSI
