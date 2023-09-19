@@ -201,6 +201,7 @@ Gogs
 Golang
 GOMODCACHE
 GOPATH
+GPG
 GPIO
 GPIOs
 GPL
@@ -277,6 +278,7 @@ JustBoom
 JVM
 Kbit
 Keychain
+keyring
 KiB
 kickstart
 Kickstarter
@@ -461,6 +463,7 @@ Plex
 Portainer
 POSIX
 PostBoot
+poweroff
 pre
 preboot
 preconfigured
