@@ -40,6 +40,7 @@ description: Description of DietPi software options related to media systems lik
 - [**Snapcast Server - Multi room audio server**](#snapcast-server)
 - [**Snapcast Client - Multi room audio client**](#snapcast-client)
 - [**Navidrome - Web interface media streaming server**](#navidrome)
+- [**Kavita - Open source comics/mangas/ebooks media server**](#kavita) 
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -1853,5 +1854,15 @@ It is compatible with the [Subsonic media player](http://www.subsonic.org/pages/
 Website: <https://www.navidrome.org/>  
 Source code: <https://github.com/navidrome/navidrome>  
 License: [GPLv3](https://github.com/navidrome/navidrome/blob/master/LICENSE)
+
+## Kavita
+
+T.b.d.
+
+***
+
+Website: <https://www.kavitareader.com/>  
+Documentation: <https://wiki.kavitareader.com/en>  
+Source code: <https://github.com/Kareadita/Kavita>
 
 [Return to the **Optimised Software list**](../../software/)
