@@ -40,7 +40,7 @@ description: Description of DietPi software options related to media systems lik
 - [**Snapcast Server - Multi room audio server**](#snapcast-server)
 - [**Snapcast Client - Multi room audio client**](#snapcast-client)
 - [**Navidrome - Web interface media streaming server**](#navidrome)
-- [**Kavita - Open source comics/mangas/ebooks media server**](#kavita) 
+- [**Kavita - Open source comics/mangas/ebooks media server**](#kavita)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:

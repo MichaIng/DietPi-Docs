@@ -276,6 +276,7 @@ JSON
 JunoBloom
 JustBoom
 JVM
+Kavita
 Kbit
 Keychain
 keyring
