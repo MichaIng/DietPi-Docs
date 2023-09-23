@@ -111,6 +111,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Tor Relay - Add a node to the Tor network**](distributed_projects/#tor-relay)
 - [**YaCy - Decentralized open source search engine**](distributed_projects/#yacy)
 - [**IPFS Node - Contribute to a decentralized internet**](distributed_projects/#ipfs-node)
+- [**ADS-B Feeder - track airplanes using SDRs and feed the data to ADS-B aggregators**](distributed_projects/#ads-b-feeder)
 
 ## [DNS Servers](dns_servers/)
 

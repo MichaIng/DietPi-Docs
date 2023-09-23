@@ -166,6 +166,7 @@ filesystem
 filesystems
 FirstBoot
 fka
+FlightAware
 ForkedDaapd
 FOSS
 foto
@@ -548,7 +549,9 @@ scrollback
 SDK
 SDL
 SDN
+SDR
 SDRAM
+SDRs
 selectable
 Servarr
 serverless
@@ -650,6 +653,7 @@ Tumblr
 Tyrian
 uae
 UART
+UAT
 Uber
 Ubooquity
 udev
