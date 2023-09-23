@@ -93,6 +93,7 @@ CORS
 Coturn
 CouchPotato
 COVID
+CRC
 CRDA
 cron
 CSI
@@ -200,6 +201,7 @@ Gogs
 Golang
 GOMODCACHE
 GOPATH
+GPG
 GPIO
 GPIOs
 GPL
@@ -274,8 +276,10 @@ JSON
 JunoBloom
 JustBoom
 JVM
+Kavita
 Kbit
 Keychain
+keyring
 KiB
 kickstart
 Kickstarter
@@ -460,6 +464,7 @@ Plex
 Portainer
 POSIX
 PostBoot
+poweroff
 pre
 preboot
 preconfigured
