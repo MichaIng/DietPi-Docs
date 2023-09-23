@@ -146,7 +146,7 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
 ***
 
-Official forum: <https://discourse.codeemo.com/>  
+[//]: # (Currently not available: Official forum: <https://discourse.codeemo.com/>)
 Source code: <https://github.com/hexparrot/mineos-node>  
 License: [GPLv3](https://github.com/hexparrot/mineos-node/blob/master/LICENSE.md)
 
