@@ -93,6 +93,7 @@ CORS
 Coturn
 CouchPotato
 COVID
+CRC
 CRDA
 cron
 CSI
@@ -166,6 +167,7 @@ filesystem
 filesystems
 FirstBoot
 fka
+FlightAware
 ForkedDaapd
 FOSS
 foto
@@ -199,6 +201,7 @@ Gogs
 Golang
 GOMODCACHE
 GOPATH
+GPG
 GPIO
 GPIOs
 GPL
@@ -273,8 +276,10 @@ JSON
 JunoBloom
 JustBoom
 JVM
+Kavita
 Kbit
 Keychain
+keyring
 KiB
 kickstart
 Kickstarter
@@ -459,6 +464,7 @@ Plex
 Portainer
 POSIX
 PostBoot
+poweroff
 pre
 preboot
 preconfigured
@@ -548,7 +554,9 @@ scrollback
 SDK
 SDL
 SDN
+SDR
 SDRAM
+SDRs
 selectable
 Servarr
 serverless
@@ -650,6 +658,7 @@ Tumblr
 Tyrian
 uae
 UART
+UAT
 Uber
 Ubooquity
 udev

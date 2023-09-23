@@ -111,6 +111,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Tor Relay - Add a node to the Tor network**](distributed_projects/#tor-relay)
 - [**YaCy - Decentralized open source search engine**](distributed_projects/#yacy)
 - [**IPFS Node - Contribute to a decentralized internet**](distributed_projects/#ipfs-node)
+- [**ADS-B Feeder - track airplanes using SDRs and feed the data to ADS-B aggregators**](distributed_projects/#ads-b-feeder)
 
 ## [DNS Servers](dns_servers/)
 
@@ -201,6 +202,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Snapcast Server - Multi room audio server**](media/#snapcast-server)
 - [**Snapcast Client - Multi room audio client**](media/#snapcast-client)
 - [**Navidrome - Web interface media streaming server**](media/#navidrome)
+- [**Kavita - Open source comics/mangas/ebooks media server**](media/#kavita)
 
 ## [Printing Server](printing/)
 
