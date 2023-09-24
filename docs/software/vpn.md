@@ -303,6 +303,7 @@ ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all
 
     In order to use ZeroTier you firstly need to create network in controller either in ZeroTier ltd. hosted or self-hosted controllers.  
     Firstly let's show step-by-step instructions for ZeroTier hosted networks. For that we will need to:
+    
     1. Register on <https://my.zerotier.com>
     2. Press on **"Create A Network"**
     3. Go to page of created network, where we need to choose which type network we would like to have:
