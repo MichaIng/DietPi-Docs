@@ -280,7 +280,7 @@ Select the following tabs for the installation description of your target.
 
     ![Download VMware image from DietPi website](assets/images/dietpi-VMware-Download.png){: width="1223" height="749" loading="lazy"}
 
-    The archive contains a couple of files, the important two are the `.vmx` and `.vmdk` files which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
+    The archive contains two files: `.vmx` and `.vmdk` which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
 
     ![DietPi VMware archive content](assets/images/dietpi-VMware-7zip-file.png){: width="525" height="104" loading="lazy"}
 
@@ -333,7 +333,7 @@ Select the following tabs for the installation description of your target.
 
     Download the **DietPi ESXi** appliance image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and decompress the downloaded file to a local folder. It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or an alternative tools.
 
-    The archive contains a couple of files, the important one is `DietPi_ESXi-x86_64-Bookworm.ova`, which has to be uploaded to the ESXi server.
+    The resulting `DietPi_ESXi-x86_64-Bookworm.ova` has to be uploaded to the ESXi server.
 
     <h2>2. Create the Virtual Machine</h2>
 
