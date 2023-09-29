@@ -494,7 +494,7 @@ Your very own GitHub style server, with web interface.
     If you wish to allow external access to your Gogs server, you will need to setup port forwarding on your router, pointing to the IP address of your DietPi device.
 
     - Port: 3000
-    - Protocol: TCP+UDP
+    - Protocol: TCP
 
     If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt){:class="nospellcheck"}.
 
@@ -558,7 +558,7 @@ Your very own GitHub style server, with web interface.
     If you wish to allow external access to your Gitea server, you will need to setup port forwarding on your router, pointing to the IP address of your DietPi device.
 
     - Port: 3000
-    - Protocol: TCP+UDP
+    - Protocol: TCP
 
     If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt){:class="nospellcheck"}.
 
