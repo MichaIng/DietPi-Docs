@@ -65,7 +65,7 @@ An easy to use VPN server and client system. The DietPi installation of OpenVPN 
 === "Router setup"
 
     You have to set up your router to enable external access.  
-    OpenVPN server uses the following ports:
+    OpenVPN server uses the following port:
 
     - UDP 1194
 
