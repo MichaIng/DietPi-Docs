@@ -69,7 +69,7 @@ An easy to use VPN server and client system. The DietPi installation of OpenVPN 
 
     - UDP 1194
 
-    These ports must all be enabled in port forwarding on your router and point to the IP address of your DietPi system.
+    This port must be enabled in port forwarding on your router and point to the IP address of your DietPi system.
 
 === "Windows client"
 
