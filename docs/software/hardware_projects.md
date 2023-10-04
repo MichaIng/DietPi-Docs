@@ -298,7 +298,7 @@ MQTT provides a lightweight method of carrying out messaging using a publish/sub
     - Config file: `/etc/mosquitto/mosquitto.conf`
     - Password file: `/etc/mosquitto/passwd`
 
-    To change the default authentication password for the `dietpi` user, run the following command:
+    To change the default authentication password for the `mosquitto` user, run the following command:
 
     ```sh
     mosquitto_passwd /etc/mosquitto/passwd mosquitto
@@ -307,7 +307,7 @@ MQTT provides a lightweight method of carrying out messaging using a publish/sub
     To create a new authentication user, run the following command:
 
     ```sh
-    mosquitto_passwd /etc/mosquitto/passwd
+    mosquitto_passwd /etc/mosquitto/passwd <new_user_name>
     ```
 
     After changes have been done, you need to restart the service:
