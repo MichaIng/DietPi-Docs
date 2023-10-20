@@ -5,6 +5,7 @@ description: Overview of DietPi releases with applied new software and features,
 
 # DietPi Releases
 
+- [v8.23 October 2023](v8_23/)
 - [v8.22 September 2023](v8_22/)
 - [v8.21 August 2023](v8_21/)
 - [v8.20 July 2023, vol 2](v8_20/)
