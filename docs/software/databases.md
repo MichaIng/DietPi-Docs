@@ -25,9 +25,9 @@ description: Description of DietPi software options related to databases and dat
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## MariaDB
 
@@ -53,7 +53,7 @@ Getting started documentation: <https://mariadb.org/documentation/#getting-start
 
 ![phpMyAdmin logo](../assets/images/dietpi-software-webstack-phpmyadmin.png){: width="160" height="120" loading="lazy"}
 
-**phpMyAdmin** is a free software tool written in [PHP](../webserver_stack/#php), intended to handle the administration of MySQL / MariaDB over the Web.
+**phpMyAdmin** is a free software tool written in [PHP](webserver_stack.md#php), intended to handle the administration of MySQL / MariaDB over the Web.
 
 Frequently used operations (_such as: managing databases, tables, columns, relations, indexes etc._) can be performed via the web user interface. Using the same application you could also directly execute any SQL statement.
 
@@ -119,7 +119,7 @@ Commands: <https://redis.io/commands>
 
 The main interface to the database for management and data transferred are HTTP requests that are handled directly by the `influxdb` service, which by default listens on TCP port **8086**.
 
-The data can be nicely viewed with [**Grafana**](../hardware_projects/#grafana). This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).
+The data can be nicely viewed with [**Grafana**](hardware_projects.md#grafana). This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).
 
 ![InfluxDB logo](../assets/images/dietpi-software-webstack-influxdb.svg){: width="300" height="112" loading="lazy"}
 
@@ -281,7 +281,7 @@ Official documentation: <https://www.postgresql.org/docs/>
 Source code: <https://git.postgresql.org/gitweb/?p=postgresql.git>  
 License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 [^1]: [About MariaDB Server and MariaDB Foundation](https://mariadb.org/about/)
 

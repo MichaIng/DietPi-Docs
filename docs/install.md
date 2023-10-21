@@ -11,7 +11,7 @@ The installation of DietPi consists of few steps:
 - Get the DietPi image (and put it on the installation media)
 - Boot up the DietPi device and go through one time installation steps
 
-Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](../dietpi_tools/software_installation/#dietpi-software){: class="nospellcheck"}.
+Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using [dietpi-software](dietpi_tools/software_installation.md#dietpi-software){: class="nospellcheck"}.
 
 Select the following tabs for the installation description of your target.
 
@@ -27,7 +27,7 @@ Select the following tabs for the installation description of your target.
 
     To follow this tutorial, you will need the next hardware list:
 
-    - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](../hardware/)
+    - A Raspberry Pi, Odroid or other SBC - open [the list of all supported SBC](hardware.md)
     - An SD card, USB flash drive or eMMC of at least 4 GiB size, and a way to write it
     - Optional: Ethernet (network) cable
 
@@ -99,7 +99,7 @@ Select the following tabs for the installation description of your target.
 
     ??? info "Option: Automatic base installation at first boot (running an _unattended base installation_)"
 
-        DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](../usage/#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation) for details.
+        DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](usage.md#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation) for details.
 
     ???+ hint "Initial boot duration"
         Due to an automated resize of the root filesystem and basic setup steps, this initial boot takes a longer time than further system booting sequences. It may last up to a couple of minutes, depending on the system drive and hardware.
@@ -630,7 +630,7 @@ Select the following tabs for the installation description of your target.
 
     <h3>Generate a Hyper-V Generation 2 machine</h3>
 
-    An option to get a Hyper-V Generation 2 machine is to generate your own Hyper-V image via a **Debian network installation** (booting the Hyper-V machine from a Debian `netinst.iso` installer like you would do it on a PC). Install a minimal Debian machine (i.e. no X11 desktops, etc.). Afterwards run the procedure described in section ["Make your own distribution"](../hardware/#make-your-own-distribution). Generation 2 machines support (and require) to boot in UEFI mode, support [Secure Boot](https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface#Secure_Boot), [TPM](https://en.wikipedia.org/wiki/Trusted_Platform_Module), use modern SCSI controllers and have higher hardware limits. For use as a home server, however, you will not need any of these functions.
+    An option to get a Hyper-V Generation 2 machine is to generate your own Hyper-V image via a **Debian network installation** (booting the Hyper-V machine from a Debian `netinst.iso` installer like you would do it on a PC). Install a minimal Debian machine (i.e. no X11 desktops, etc.). Afterwards run the procedure described in section ["Make your own distribution"](hardware.md#make-your-own-distribution). Generation 2 machines support (and require) to boot in UEFI mode, support [Secure Boot](https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface#Secure_Boot), [TPM](https://en.wikipedia.org/wiki/Trusted_Platform_Module), use modern SCSI controllers and have higher hardware limits. For use as a home server, however, you will not need any of these functions.
 
 === "Native PC"
 
@@ -865,7 +865,7 @@ Select the following tabs for the installation description of your target.
 
         ??? info "Option: Automatic base installation at first boot (running an _unattended base installation_)"
 
-            DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](../usage/#how-to-do-an-automatic-base-installation-at-first-boot) for details.
+            DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](usage.md#how-to-do-an-automatic-base-installation-at-first-boot) for details.
 
 ## 4. First logon on DietPi
 
@@ -875,7 +875,7 @@ You might change the name before the first boot within the configuration file `d
 After the system has booted up, you can continue following the instructions on the screen, or connect via network:
 
 - If you have a keyboard and a monitor connected to your system you login via this console.
-- If you have a headless system without keyboard and monitor attached, you can use an **SSH** client like [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to connect from a remote system. The SSH server [Dropbear](../software/ssh/#dropbear) is installed and enabled by default on DietPi.
+- If you have a headless system without keyboard and monitor attached, you can use an **SSH** client like [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) to connect from a remote system. The SSH server [Dropbear](software/ssh.md#dropbear) is installed and enabled by default on DietPi.
 - Most SBCs alternatively allow to connect a serial console via **UART**, which is by default enabled on DietPi as well.
 
 A login prompt will appear. Use the initial credentials:
@@ -938,12 +938,12 @@ You can change the password again later by typing `passwd` at the terminal or al
 
 ## 5. Further steps
 
-The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use: Just run `dietpi-software` and install [**DietPi Optimised Software**](../software/).  
+The base installation of DietPi is minimal **by design**, allowing you to choose what software you want to install and use: Just run `dietpi-software` and install [**DietPi Optimised Software**](software.md).  
 You can return to the **DietPi-Software** tool to make further changes at any time by typing `dietpi-software` at the terminal, or enter `dietpi-launcher` and select **DietPi-Software** tool.
 
 If you want to make further changes to your DietPi configuration, you can run `dietpi-launcher` at the terminal to view all the available DietPi tools, including **DietPi-Update** to update your device and **DietPi-Backup** to back up your device.
 
-For more details, check [DietPi Tools](../dietpi_tools/) section.
+For more details, check [DietPi Tools](dietpi_tools.md) section.
 
 ## YouTube tutorials (made by community)
 

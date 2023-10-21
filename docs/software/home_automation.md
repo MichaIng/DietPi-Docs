@@ -25,9 +25,9 @@ description: Description of DietPi software options related to home automation
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## Home Assistant
 
@@ -278,4 +278,4 @@ Homebridge allows you to integrate with smart home devices that do not natively 
 Official website: <https://homebridge.io/>  
 Official docs: <https://github.com/homebridge/homebridge/wiki>  
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

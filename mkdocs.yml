@@ -42,8 +42,8 @@ markdown_extensions:
     smart_enable: all # Even smarter for both (asterisk and underscore) syntax => GitHub-like
 - pymdownx.details # Collapsible details blocks
 - pymdownx.emoji:
-    emoji_index: !!python/name:materialx.emoji.twemoji
-    emoji_generator: !!python/name:materialx.emoji.to_svg
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
 - pymdownx.keys # Keyboard key symbols
 - pymdownx.magiclink: # Auto-links non angle bracket URLs and email addresses and allows to shorten and visualise Git repo links
     repo_url_shortener: true
@@ -141,6 +141,7 @@ nav:
   - Miscellaneous Tools: dietpi_tools/misc_tools.md
 - RELEASES:
   - Overview: releases.md
+  - v8.23 October 2023: releases/v8_23.md
   - v8.22 September 2023: releases/v8_22.md
   - v8.21 August 2023: releases/v8_21.md
   - v8.20 July 2023, vol 2: releases/v8_20.md

@@ -25,9 +25,9 @@ description: Description of DietPi software options related to distributed softw
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## Folding@Home
 
@@ -189,7 +189,7 @@ This node lets you download files through IPFS and add your own files to the net
     Chromium and derivatives: https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch
 
     ??? info "Note for using with extension"
-        IPFS content will not load on `https://` pages without an SSL certificate. We recommend a free one from LetsEncrypt using [DietPi-LetsEncrypt](../../dietpi_tools/#dietpi-letsencrypt).
+        IPFS content will not load on `https://` pages without an SSL certificate. We recommend a free one from LetsEncrypt using [DietPi-LetsEncrypt](../dietpi_tools.md#dietpi-letsencrypt).
 
 === "Logging"
 
@@ -252,4 +252,4 @@ The ADS-B Feeder application allows you to feed any (or all) of these aggregator
 Official documentation: <https://adsb.im/home>  
 Wikipedia page about ADS-B: <https://wikipedia.org/wiki/Automatic_Dependent_Surveillance–Broadcast>
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

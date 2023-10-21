@@ -34,9 +34,9 @@ description: Description of DietPi software options related to cloud and backup 
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## ownCloud
 
@@ -220,7 +220,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     See also:
 
-    - [Fail2Ban](../system_security/#fail2ban)
+    - [Fail2Ban](system_security.md#fail2ban)
     - <https://help.nextcloud.com/t/repeated-login-attempts-from-china/6510/11?u=michaing>
     - <https://www.c-rieger.de/nextcloud-installationsanleitung/#c06>
 
@@ -496,7 +496,7 @@ Your very own GitHub style server, with web interface.
     - Port: 3000
     - Protocol: TCP
 
-    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt){:class="nospellcheck"}.
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../dietpi_tools.md#dietpi-letsencrypt){:class="nospellcheck"}.
 
 === "View logs"
 
@@ -560,7 +560,7 @@ Your very own GitHub style server, with web interface.
     - Port: 3000
     - Protocol: TCP
 
-    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../../dietpi_tools/#dietpi-letsencrypt){:class="nospellcheck"}.
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../dietpi_tools.md#dietpi-letsencrypt){:class="nospellcheck"}.
 
 === "Fail2Ban integration"
 
@@ -613,7 +613,7 @@ Your very own GitHub style server, with web interface.
     - Check whether the failed login has been detected: `fail2ban-client status gitea`
     - When you further try to login `maxretry` times, your IP should be banned for `bantime` seconds, so that neither the Gitea web interface, nor SSH or any other network application will respond to requests from your client. When Fail2Ban was installed via `dietpi-software`, by default `route`/`blackhole` blocking is used, so that `ip r` on the server should show a `blackhole` route for your client's IP.
     - See also:
-        - [Fail2Ban](../system_security/#fail2ban)
+        - [Fail2Ban](system_security.md#fail2ban)
         - <https://docs.gitea.io/en-us/fail2ban-setup/>
 
 === "View logs"
@@ -955,4 +955,4 @@ Official documentation: <https://restic.readthedocs.io/en/stable/>
 Source code: <https://github.com/restic/restic>  
 License: [BSD 2-Clause](https://github.com/restic/restic/blob/master/LICENSE)
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

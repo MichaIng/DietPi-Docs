@@ -43,9 +43,9 @@ description: Description of DietPi software options related to web stacks, web s
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## Stacks for Web Development
 
@@ -62,7 +62,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 
     - OS: **L** for Linux / DietPi
     - Webserver: **A** for Apache, **E** for [Nginx](#nginx), **L** for [Lighttpd](#lighttpd)
-    - Database: **M** for MariaDB, **S** for [SQLite](../databases/#sqlite)
+    - Database: **M** for MariaDB, **S** for [SQLite](databases.md#sqlite)
     - Scripting language: **P** for [PHP](#php)
 
 !!! hint ""
@@ -98,11 +98,11 @@ DietPi offers an **one-click-installation** of the following web development sta
 
 === "Which DATABASE to CHOOSE ?"
 
-    **[MariaDB](../databases/#mariadb)**  
+    **[MariaDB](databases.md#mariadb)**  
     It is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.[^2]
 
-    **[SQLite](../databases/#sqlite)**  
-    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](../databases/#mariadb). [SQLite](../databases/#sqlite) has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.[^3]
+    **[SQLite](databases.md#sqlite)**  
+    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](databases.md#mariadb). [SQLite](databases.md#sqlite) has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.[^3]
 
 ***
 
@@ -142,11 +142,11 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](../databases/#mariadb)** details.
+    For database, check **[MariaDB](databases.md#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     ??? note "Alternative way: Manually enable HTTP/SSL by installing a self-signed SSL certificate"
 
@@ -200,9 +200,9 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 ### LASP Web Stack
 
-LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [SQLite](../databases/#sqlite) instead of [MariaDB](../databases/#mariadb).
+LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [SQLite](databases.md#sqlite) instead of [MariaDB](databases.md#mariadb).
 
-[SQLite](../databases/#sqlite) is an embedded relational database engine. It is popular and together with [Apache](#apache) and PHP could be a good candidate for single board computer.
+[SQLite](databases.md#sqlite) is an embedded relational database engine. It is popular and together with [Apache](#apache) and PHP could be a good candidate for single board computer.
 
 === "Quick start"
 
@@ -218,7 +218,7 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     ??? note "Alternative way: Manually enable HTTP/SSL by installing a self-signed SSL certificate"
 
@@ -291,11 +291,11 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](../databases/#mariadb)** details.
+    For database, check **[MariaDB](databases.md#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     ??? note "Alternative way: Manually enable HTTP/SSL by installing a self-signed SSL certificate"
 
@@ -349,7 +349,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LESP Web Stack
 
-LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache](#apache) web server, and [SQLite](../databases/#sqlite) instead of MariaDB.
+LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Nginx](#nginx) instead of [Apache](#apache) web server, and [SQLite](databases.md#sqlite) instead of MariaDB.
 
 **[Nginx](#nginx)** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
@@ -366,7 +366,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     Access website:
 
@@ -394,11 +394,11 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](../databases/#mariadb)** details.
+    For database, check **[MariaDB](databases.md#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     Access website:
 
@@ -408,7 +408,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 ### LLSP web stack
 
-LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **[Lighttpd](#lighttpd)** instead of [Apache](#apache) web server and **[SQLite](../databases/#sqlite)** instead of [MariaDB](../databases/#mariadb).
+LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **[Lighttpd](#lighttpd)** instead of [Apache](#apache) web server and **[SQLite](databases.md#sqlite)** instead of [MariaDB](databases.md#mariadb).
 
 === "Quick start"
 
@@ -426,11 +426,11 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - APCu = `http://<your.IP>/apc.php`
     - OPcache = `http://<your.IP>/opcache.php`
 
-    For database, check **[MariaDB](../databases/#mariadb)** details.
+    For database, check **[MariaDB](databases.md#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
 
-    **Let's Encrypt** is highly recommended - [see here how to install](../../dietpi_tools/#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
+    **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
     Access website:
 
@@ -446,7 +446,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - Database
 
-    You may choose to install **[MariaDB](../databases/#mariadb)** or other available databases like **[InfluxDB](../databases/#influxdb)**, **[Redis](../databases/#redis)**, **[SQLite](../databases/#sqlite)**.
+    You may choose to install **[MariaDB](databases.md#mariadb)** or other available databases like **[InfluxDB](databases.md#influxdb)**, **[Redis](databases.md#redis)**, **[SQLite](databases.md#sqlite)**.
 
 ## WebServers
 
@@ -592,7 +592,7 @@ Flask is a lightweight web application framework. It is designed to make getting
 
 === "Quick start"
 
-    In order to use **Flask** it is first required first to install the Python Package Manager - [see Python 3](../programming/#python-3). Then run the next command.
+    In order to use **Flask** it is first required first to install the Python Package Manager - [see Python 3](programming.md#python-3). Then run the next command.
 
     ```sh
     pip3 install -U Flask
@@ -635,4 +635,4 @@ Official documentation: <https://nodejs.org/api/>
 [^5]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
 [^6]: [CORS Errors Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors). Retrieved 05 December 2021
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md/)
