@@ -11,7 +11,7 @@ description: Description of DietPi software options related to software developm
 - [**Go - Programming language**](#go)
 - [**Java - Programming language**](#java)
 - [**Mono - Programming language**](#mono)
-- [**Node.js - open-source, JavaScript runtime environment**](../webserver_stack/#nodejs)
+- [**Node.js - open-source, JavaScript runtime environment**](webserver_stack.md#nodejs)
 - [**Docker -  Create, deploy, and run applications using containers**](#docker)
 - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
 - [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
@@ -29,9 +29,9 @@ description: Description of DietPi software options related to software developm
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## Python 3
 
@@ -291,10 +291,10 @@ Documentation (VSCodium): <https://github.com/VSCodium/vscodium/blob/master/DOCS
 Source code: <https://github.com/VSCodium/vscodium>  
 License: [MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 <!-- markdownlint-disable MD053 -->
-[^1]: [Logitech Media Server](../media/#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
+[^1]: [Logitech Media Server](media.md#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
 
 [^2]: [7 Most Famous Companies That Use Golang](https://www.agiratech.com/blog/companies-using-golang/)
 

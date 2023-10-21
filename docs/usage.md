@@ -97,11 +97,11 @@ More detailed options may be studied in the [man pages of `journalctl`](https://
 | `journalctl --no-pager | grep <filter>` | Filters log messages (filtering with `grep`) |
 
 In the software package descriptions, sometimes there is a tab called "View Logs". This gives a `jounalctl -u UNITNAME` command example how to filter the logging messages of a given software package.  
-Example: See [tab "View logs"](../software/dns_servers/#unbound) of *Unbound*. It gives: `journalctl -u unbound`.
+Example: See [tab "View logs"](software/dns_servers.md/#unbound) of *Unbound*. It gives: `journalctl -u unbound`.
 
 ### Logging options
 
-As described in the chapter [Log system choices](../software/log_system/), DietPi has several options how the logging system operates. Especially the log history, the memory consumption and the frequency of SD card write accesses varies.  
+As described in the chapter [Log system choices](software/log_system.md), DietPi has several options how the logging system operates. Especially the log history, the memory consumption and the frequency of SD card write accesses varies.  
 Find and set the options which fit to your demands, it is also an option to change the logging to examine some problems.
 
 | Log option | location | log depth | log persistence |
@@ -114,7 +114,7 @@ Find and set the options which fit to your demands, it is also an option to chan
 
 ## How to do an automatic base installation at first boot (DietPi-Automation)
 
-DietPi offers the option for an automatic first boot installation. Normally, during the first system boot there is an installation procedure which sets up your system initially. The steps described in the section ["First logon on DietPi"](../install/#4-first-logon-on-dietpi) are then conducted.
+DietPi offers the option for an automatic first boot installation. Normally, during the first system boot there is an installation procedure which sets up your system initially. The steps described in the section ["First logon on DietPi"](install.md/#4-first-logon-on-dietpi) are then conducted.
 
 These steps need an amount of user interaction which can be overcome with the automatic base installation option described in this section.  
 The automatized setup is based on the configuration file `/boot/dietpi.txt`. It can be edited prior to the first boot and will be evaluated during the first boot procedure. On subsequent boot procedures, the most options in the file are not evaluated any more.
@@ -190,7 +190,7 @@ Search `AUTO_SETUP_CUSTOM_SCRIPT_EXEC` for details.
 
 A restore process can be executed automatically using the keyword `AUTO_SETUP_BACKUP_RESTORE`. This gives the option to start up a system with a previous made system backup (e.g. for generating many identical systems).
 
-For further details refer to the documentation section [Automated restore at the system's first run setup](../dietpi_tools/system_maintenance/#automated-restore-at-the-systems-first-run-setup).
+For further details refer to the documentation section [Automated restore at the system's first run setup](dietpi_tools/system_maintenance.md#automated-restore-at-the-systems-first-run-setup).
 
 #### General options
 

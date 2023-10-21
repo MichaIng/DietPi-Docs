@@ -29,9 +29,9 @@ description: Description of DietPi software options related to social platforms 
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## FreshRSS
 
@@ -230,7 +230,7 @@ Synapse is a server, written in Python, for communication using the Matrix proto
 === "Federation"
 
     Synapse is by default set up to be a private server, with no connection to any other servers. To connect to other servers (federate), see <https://github.com/matrix-org/synapse/blob/develop/docs/federate.md>.  
-    Note that [frp](../advanced_networking/#frp) does not currently work with Synapse.
+    Note that [frp](advanced_networking.md#frp) does not currently work with Synapse.
 
 === "Configuration"
 
@@ -361,4 +361,4 @@ Official website: <https://www.mediawiki.org/wiki/MediaWiki>
 Source code: <https://github.com/wikimedia/mediawiki>  
 License: [GPLv2](https://github.com/wikimedia/mediawiki/blob/master/COPYING)
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

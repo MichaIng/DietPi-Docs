@@ -22,9 +22,9 @@ description: Description of DietPi software options related to SSL and security
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## Let’s Encrypt
 
@@ -95,4 +95,4 @@ An IP address is by default ban triggered after 3 failed SSH login attempts. Fai
 
 Website: <https://fail2ban.org/wiki/index.php/Main_Page>
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

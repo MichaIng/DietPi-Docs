@@ -35,9 +35,9 @@ description: Description of DietPi software options related to graphical desktop
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## LXDE
 
@@ -59,7 +59,7 @@ LXDE is highly optimised and ultra lightweight desktop. It works well with compu
     dietpi-autostart
     ```
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools.md) section.
 
 ***
 
@@ -87,7 +87,7 @@ Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](h
     dietpi-autostart
     ```
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools.md) section.
 
 ***
 
@@ -114,7 +114,7 @@ Popular Gnome2 based desktop environment.
     dietpi-autostart
     ```
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools.md) section.
 
 ***
 
@@ -138,7 +138,7 @@ Website: <https://mate-desktop.org>
     dietpi-autostart
     ```
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools.md) section.
 
 ***
 
@@ -162,7 +162,7 @@ Website: <https://wiki.debian.org/Xfce>
     dietpi-autostart
     ```
 
-    To see all the DietPi configurations options, review [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review [DietPi Tools](../dietpi_tools.md) section.
 
 ***
 
@@ -289,4 +289,4 @@ Enables laptop users to set up a power profile for two different modes `on batte
 
 ![Xfce Power Manager screenshot](../assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg){: width="799" height="569" loading="lazy"}
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

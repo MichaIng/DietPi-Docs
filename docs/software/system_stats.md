@@ -31,9 +31,9 @@ description: Description of DietPi software options related to system statistics
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## DietPi-Dashboard
 
@@ -237,7 +237,7 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
 
 Linux Dash allows you to monitor your system stats from a web page.
 
-- Also Installs: [LASP webserver stack](../webserver_stack/)
+- Also Installs: [LASP webserver stack](webserver_stack.md)
 
 ![Linux Dash web interface screenshot](../assets/images/dietpi-software-systemstat-linuxdash.png){: width="500" height="270" loading="lazy"}
 
@@ -255,7 +255,7 @@ Official documentation: <https://github.com/afaqurk/linux-dash/wiki>
 
 Allows you to monitor your system stats from a web page. The display output can be customized via an `.ini` file.
 
-- Also Installs: [LASP webserver stack](../webserver_stack/)
+- Also Installs: [LASP webserver stack](webserver_stack.md)
 
 ![phpSysInfo web interface screenshot](../assets/images/dietpi-software-systemstat-phpsysinfo.png){: width="500" height="268" loading="lazy"}
 
@@ -562,8 +562,6 @@ Documentation: <https://prometheus.io/docs/guides/node-exporter/>
 Prometheus RPi Exporter: <https://github.com/fahlke/raspberrypi_exporter>  
 License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE), [MIT](https://github.com/fahlke/raspberrypi_exporter/blob/master/LICENSE) (for RPi Exporter)
 
-[Return to the **Optimised Software list**](../../software/)
-
 ## Homer
 
 Homer is a modern and lightweight dashboard & homepage for your services
@@ -756,3 +754,5 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
 Official website: <https://github.com/bastienwirtz/homer>  
 Official demo: <https://homer-demo.netlify.app/>
+
+[Return to the **Optimised Software list**](../software.md)

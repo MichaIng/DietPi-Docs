@@ -165,7 +165,7 @@ It contains these options (see screenshot above):
 
 The automatic daily backup (activated via option "Daily Backup", see screenshot above) is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several backup clients backing up to the same storage (backup server): Shifting the backup starting time of these systems may reduce temporary overload of the backup server by avoiding concurrent access to the storage.
 
-The starting time is basically defined via the file `/etc/crontab` (which calls the backup/restore function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](../system_configuration/#dietpi-cron). It is executed by running the following command
+The starting time is basically defined via the file `/etc/crontab` (which calls the backup/restore function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](system_configuration.md#dietpi-cron). It is executed by running the following command
 
 ```sh
 dietpi-cron
@@ -214,7 +214,7 @@ This procedure is achieved with these steps (example: SD card is the boot media)
 
   4. As a final step a reboot is needed to start up with the restored DietPi environment.
 
-For further options regarding the file `/boot/dietpi.txt` refer to the usage hints [How to do an automatic base installation at first boot (DietPi-Automation)](../../usage/#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation).
+For further options regarding the file `/boot/dietpi.txt` refer to the usage hints [How to do an automatic base installation at first boot (DietPi-Automation)](../usage.md#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation).
 
 ---
 
@@ -247,7 +247,7 @@ This setting gives these options:
 
 The automatic daily sync is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several sync clients syncing up to the same storage (data server): Shifting the synchronization starting time of these systems may reduce temporary overload of the data server by avoiding concurrent access to the storage.
 
-The starting time is basically defined via the file `/etc/crontab` (which calls the sync function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](../system_configuration/#dietpi-cron). It is executed by running the following command
+The starting time is basically defined via the file `/etc/crontab` (which calls the sync function via the `/etc/cron.daily/dietpi` script). It can be changed via the entry `cron.daily` within [`dietpi-cron`](system_configuration.md#dietpi-cron). It is executed by running the following command
 
 ```sh
 dietpi-cron

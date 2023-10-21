@@ -54,9 +54,9 @@ description: Description of DietPi software options related to media systems lik
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## Kodi
 
@@ -87,7 +87,7 @@ Also installs:
 
 === "Transfer music to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default music directory:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -138,7 +138,7 @@ Also installs:
 
 === "Transfer music to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default music directory:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -247,7 +247,7 @@ Also installs:
 
 === "Transfer music to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default music directory:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -313,7 +313,7 @@ Mopidy is a Python based music player web based user interface for MPD.
 
 === "Transfer music to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default music directory:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -477,7 +477,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 === "Transfer music to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default music directory:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -646,7 +646,7 @@ Stream your shared media to any DLNA/UPnP capable device.
 
 === "Transfer media files to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default media directories:
 
     - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -683,7 +683,7 @@ Also Installs:
 
 === "Transfer media files to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default media directories:
 
     - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -810,7 +810,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
 
 === "Transfer media files to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default media directories:
 
     - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -865,7 +865,7 @@ Plex organizes your video, music, and photo collections and streams them to all 
 
 === "Transfer media files to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default media directories:
 
     - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -1035,7 +1035,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Transfer music to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default music directory:
 
     - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -1269,7 +1269,7 @@ Web interface music streamer.
 
 === "Transfer music to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default music directory:
 
     - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -1361,7 +1361,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
 === "Transfer ebooks/comics to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default directories:
 
     - ebooks: `/mnt/dietpi_userdata/ebooks`, `/ebooks` from NFS/Samba
@@ -1393,7 +1393,7 @@ Free and open source comics/mangas media server with web UI.
 
 === "Transfer ebooks/comics to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default directories:
 
     - ebooks: `/mnt/dietpi_userdata/ebooks`, `/ebooks` from NFS/Samba
@@ -1837,7 +1837,7 @@ It is compatible with the [Subsonic media player](http://www.subsonic.org/pages/
 
 === "Transfer music to DietPi"
 
-    Make sure you have one of DietPi's [File Servers](../file_servers/) installed.  
+    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Default music directory:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
@@ -1865,4 +1865,4 @@ Website: <https://www.kavitareader.com/>
 Documentation: <https://wiki.kavitareader.com/en>  
 Source code: <https://github.com/Kareadita/Kavita>
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

@@ -32,9 +32,9 @@ description: Description of DietPi software options related to games and userspa
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## OpenTyrian
 
@@ -594,4 +594,4 @@ Official documentation: <https://github.com/moonlight-stream/moonlight-docs/wiki
 Source code: <https://github.com/moonlight-stream/moonlight-qt>  
 License: [GPLv3](https://github.com/moonlight-stream/moonlight-qt/blob/master/LICENSE)
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

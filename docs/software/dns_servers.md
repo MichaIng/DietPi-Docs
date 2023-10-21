@@ -23,15 +23,15 @@ description: Description of DietPi software options related to DNS servers
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## Pi-hole
 
 Pi-hole is a DNS sinkhole with web interface that will block ads for any device on your network.
 
-- Also Installs: [Webserver stack](../webserver_stack/)
+- Also Installs: [Webserver stack](webserver_stack.md)
 
 ![Pi-hole web interface screenshot](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500" height="410" loading="lazy"}
 
@@ -87,7 +87,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
         pihole -l on
         ```
 
-        Also the DietPi [logging system](../../dietpi_tools/#quick-selections) needs to be changed, to disable DietPi-RAMlog, as otherwise `/var/log/pihole.log` is cleared hourly.
+        Also the DietPi [logging system](../dietpi_tools.md#quick-selections) needs to be changed, to disable DietPi-RAMlog, as otherwise `/var/log/pihole.log` is cleared hourly.
     2. The logging duration for the database-wise DNS query log in `/etc/pihole/pihole-FTL.db` is reduced from 365 days to 2 days. An internal discussion revealed that no-one of us uses logs old than a few hours. One year of logs leads to database sizes from hundreds of MiBs to GiBs. We leave it at 2 days so that web interface dashboard graphs/diagrams are not empty after Pi-hole (re)starts. You can easily adjust the logging duration by editing the `/etc/pihole/pihole-FTL.conf` config file. E.g. to restore the default 365 days of logs:
 
         ```sh
@@ -148,7 +148,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
 === "Monitor Pi-hole"
 
-    [DietPi-CloudShell](../system_stats/#dietpi-cloudshell) has a Pi-hole scene included, which can be used to monitor the most important DNS query and block statistics. Simply run `dietpi-cloudshell`, select `Scenes` and assure that `8 Pi-hole` is selected. Toggle `Output Display` to choose whether to print the output to the current console or the main screen, then select `Start / Restart` to start the output.
+    [DietPi-CloudShell](system_stats.md#dietpi-cloudshell) has a Pi-hole scene included, which can be used to monitor the most important DNS query and block statistics. Simply run `dietpi-cloudshell`, select `Scenes` and assure that `8 Pi-hole` is selected. Toggle `Output Display` to choose whether to print the output to the current console or the main screen, then select `Start / Restart` to start the output.
 
 ***
 
@@ -318,4 +318,4 @@ Wikipedia: <https://en.wikipedia.org/wiki/AdGuard#AdGuard_Home>
 Source code: <https://github.com/AdguardTeam/AdGuardHome>  
 License: [GPLv3](https://github.com/AdguardTeam/AdGuardHome/blob/master/LICENSE.txt)
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

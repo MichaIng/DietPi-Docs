@@ -33,13 +33,13 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
 !!! info Desktop environment
 
-    From the list of **Browse Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](../desktop/). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
+    From the list of **Browse Software**, together with any of the Remote Desktop Software choose also one of [_Graphical Desktop environment_](desktop.md). DietPi will install both of them, enabling you to use your keyboard and mouse to interact with a graphical desktop environment on your device.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## TigerVNC Server
 
@@ -331,4 +331,4 @@ Once installed, available VirtualHere devices will be shown in the client user i
 Official website: <https://virtualhere.com/>  
 Official server docs: <https://virtualhere.com/configuration_faq>
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
