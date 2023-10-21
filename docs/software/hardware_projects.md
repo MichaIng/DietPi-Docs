@@ -414,7 +414,7 @@ Also installs:
     1. Download the Blynk app for Android: <https://play.google.com/store/apps/details?id=cc.blynk>
     2. To log into your own server, press `Log In`, then the three dots at the bottom and switch the slider to `CUSTOM`.
     3. There you can enter your own Blynk server's IP/domain and use the above login credentials.
-    4. Create a new project by following this guide: <https://docs.blynk.cc/#getting-started-getting-started-with-the-blynk-app-2-create-a-new-project>
+    4. Create a new project by following this guide: <https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk>
     5. The authentication token for the new project can be obtained from the app and as well from the web interface at `Users` > `admin@blynk.cc` within the `Profile DashBoards` section. Use it to connect with your Blynk library Node scripts.
 
 === "Run test script"

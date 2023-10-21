@@ -633,7 +633,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
 === "Theming - Dracula"
 
-    To apply the [Dracula theme](https://draculatheme.com/static/img/screenshots/homer.png) to Homer execute these steps:
+    To apply the [Dracula theme](https://raw.githubusercontent.com/dracula/homer/master/screenshot.png) to Homer execute these steps:
 
     1. Get theme:
 
@@ -655,6 +655,8 @@ Homer is a modern and lightweight dashboard & homepage for your services
         stylesheet:
         - "assets/custom.css"
         ```
+
+    Source code: <https://github.com/dracula/homer>
 
 === "Theming - macOS"
 
@@ -719,9 +721,11 @@ Homer is a modern and lightweight dashboard & homepage for your services
             background-image: "../assets/wallpaper.jpeg"
         ```
 
+    Source code: <https://github.com/walkxcode/homer-theme>
+
 === "Theming - Catppuccin"
 
-    To apply the [Catppuccin theme](https://github.com/mrpbennett/catppucin-homer/blob/main/assets/images/examples/preview.png?raw=true) to Homer execute these steps:
+    To apply the [Catppuccin theme](https://raw.githubusercontent.com/mrpbennett/catppuccin-homer/main/assets/images/examples/preview.png) to Homer execute these steps:
 
     1. Get theme:
 
@@ -749,6 +753,8 @@ Homer is a modern and lightweight dashboard & homepage for your services
         stylesheet:
         - "assets/catppuccin-macchiato.css"
         ```
+
+    Source code: <https://github.com/mrpbennett/catppucin-homer>
 
 ***
 
