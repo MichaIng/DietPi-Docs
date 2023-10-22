@@ -8,7 +8,7 @@
 dietpi-software
 ```
 
-It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../../software/) titles.
+It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../software.md) titles.
 
 ![DietPi-Software screenshot](../assets/images/dietpi-software.jpg){: width="640" height="306" loading="lazy"}
 
@@ -18,7 +18,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 - Begin by selecting **Browse Software** in the main menu list and hit ++enter++.
 
-- Scroll through the list of available software - for more details check the [DietPi software list](../../software/).
+- Scroll through the list of available software - for more details check the [DietPi software list](../software.md).
 
 The list of optimised software is long. You either browse the list or use the option **Search Software**.
 
@@ -57,7 +57,7 @@ The Log System can be changed at any time by selecting a different “Log System
 
 ![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg){: width="550" height="370" loading="lazy"}
 
-See [log system choices](../../software/log_system/) for further details.
+See [log system choices](../software/log_system.md) for further details.
 
 #### User Data Location
 

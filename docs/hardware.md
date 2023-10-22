@@ -8,7 +8,7 @@ description: DietPi Supported Hardware: Raspberry Pi 4/3/2/1/Zero, Odroid, PINE6
 
 The Raspberry Pi has sold more than 31 million units since it launched in 2012. Any Raspberry Pi can serve as a secondary computer for email and web surfing. The real fun starts when you use your Pi for projects, which can range from robots to retro arcade machines to home media servers, security cameras and so on.
 
-You can install DietPi by following the step by step [Starting guide](../install/).
+You can install DietPi by following the step by step [Starting guide](install.md).
 
 DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400/?resellerType=home),
 

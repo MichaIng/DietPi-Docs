@@ -25,9 +25,9 @@ description: Description of DietPi software options related to VPNs
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)
 
 ## OpenVPN
 
@@ -65,13 +65,11 @@ An easy to use VPN server and client system. The DietPi installation of OpenVPN 
 === "Router setup"
 
     You have to set up your router to enable external access.  
-    OpenVPN server uses the following ports:
+    OpenVPN server uses the following port:
 
-    - TCP 443
-    - TCP 943
     - UDP 1194
 
-    These ports must all be enabled in port forwarding on your router and point to the IP address of your DietPi system.
+    This port must be enabled in port forwarding on your router and point to the IP address of your DietPi system.
 
 === "Windows client"
 
@@ -379,4 +377,4 @@ License: [BSLv1.1](https://github.com/zerotier/ZeroTierOne/blob/master/LICENSE.t
 YouTube video tutorial: [ZeroTier Tutorial: Delivering the Capabilities of VPN, SDN, and SD-WAN via an Open Source System](https://www.youtube.com/watch?v=Bl_Vau8wtgc)  
 YouTube video tutorial: [How To Work Remotely Using ZeroTier & Windows Remote Desktop (RDP)](https://www.youtube.com/watch?v=ZShna7v77xc)
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

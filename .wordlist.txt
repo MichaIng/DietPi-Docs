@@ -630,8 +630,9 @@ TasmoAdmin
 Tasmota
 Tautulli
 TCP
-teleporter
 tcpdump
+teleporter
+TFTP
 th
 thechildofroth
 theming
@@ -759,6 +760,7 @@ Xunlong
 xz
 YaCy
 YAML
+YDNS
 ympd
 youtube
 ZeroPi

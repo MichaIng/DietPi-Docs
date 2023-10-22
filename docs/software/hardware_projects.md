@@ -31,7 +31,9 @@ description: Description of DietPi software options related to hardware
 
     ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 
-    To see all the DietPi configurations options, review the [DietPi Tools](../../dietpi_tools/) section.
+    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+
+[Return to the **Optimised Software list**](../software.md)
 
 ## Google AIY
 
@@ -41,7 +43,7 @@ description: Description of DietPi software options related to hardware
 
     We do not install a desktop environment. User will be required to setup Google API and keys on another system (please see first run setup below).  
     We highly recommend SSH to allow for a quick setup of Google API and device link.  
-    We also recommend one of [DietPi file servers](../file_servers/), for easy transfer of `assistant.json`, generated during Google API setup.
+    We also recommend one of [DietPi file servers](file_servers.md), for easy transfer of `assistant.json`, generated during Google API setup.
 
 ![Google AIY logo](../assets/images/dietpi-software-hardwareprojects-googleaiy.jpg){: width="400" height="239" loading="lazy"}
 
@@ -52,7 +54,7 @@ description: Description of DietPi software options related to hardware
     - Follow the link below, to setup Google API and download client keys, required to enable the speech API:  
       <https://aiyprojects.withgoogle.com/voice#google-assistant--get-credentials>  
       Remark: When setting up the activity controls, ensure you also enable "Include Chrome browsing history and activity from websites and apps that use Google services", else she will not function ;).
-    - Make sure you have one of [DietPi's file servers](../file_servers/) installed.  
+    - Make sure you have one of [DietPi's file servers](file_servers.md) installed.  
       Once completed, download the `client_secret.json` and save it to:
         - If using SSH: `/mnt/dietpi_userdata/voice-recognizer-raspi/assistant.json`
         - If using file server: `voice-recognizer-raspi/assistant.json`
@@ -218,7 +220,7 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
 
 === "Access WebIOPi over the internet"
 
-    To be able to access your WebIOPi interface over the internet, you may install [Remot3.it (Weaved)](../remote_desktop/#remot3it).
+    To be able to access your WebIOPi interface over the internet, you may install [Remot3.it (Weaved)](remote_desktop.md#remot3it).
 
 ***
 
@@ -298,7 +300,7 @@ MQTT provides a lightweight method of carrying out messaging using a publish/sub
     - Config file: `/etc/mosquitto/mosquitto.conf`
     - Password file: `/etc/mosquitto/passwd`
 
-    To change the default authentication password for the `dietpi` user, run the following command:
+    To change the default authentication password for the `mosquitto` user, run the following command:
 
     ```sh
     mosquitto_passwd /etc/mosquitto/passwd mosquitto
@@ -307,7 +309,7 @@ MQTT provides a lightweight method of carrying out messaging using a publish/sub
     To create a new authentication user, run the following command:
 
     ```sh
-    mosquitto_passwd /etc/mosquitto/passwd
+    mosquitto_passwd /etc/mosquitto/passwd <new_user_name>
     ```
 
     After changes have been done, you need to restart the service:
@@ -412,7 +414,7 @@ Also installs:
     1. Download the Blynk app for Android: <https://play.google.com/store/apps/details?id=cc.blynk>
     2. To log into your own server, press `Log In`, then the three dots at the bottom and switch the slider to `CUSTOM`.
     3. There you can enter your own Blynk server's IP/domain and use the above login credentials.
-    4. Create a new project by following this guide: <https://docs.blynk.cc/#getting-started-getting-started-with-the-blynk-app-2-create-a-new-project>
+    4. Create a new project by following this guide: <https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk>
     5. The authentication token for the new project can be obtained from the app and as well from the web interface at `Users` > `admin@blynk.cc` within the `Profile DashBoards` section. Use it to connect with your Blynk library Node scripts.
 
 === "Run test script"
@@ -479,7 +481,7 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
 === "Prerequisites"
 
     A database server is required for Grafana. As Grafana offers many options (InfluxDB/MySQL), we have not automatically installed either as manual configuration may be preferred.  
-    However, we highly recommend installing [InfluxDB](../databases/#influxdb).
+    However, we highly recommend installing [InfluxDB](databases.md#influxdb).
 
     You can do this using the install steps provided by **DietPi-Software** tool or running the next command line in the terminal:
 
@@ -487,7 +489,7 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
     dietpi-software install 74
     ```
 
-    After the InfluxDB is installed, please follow the database creation guide [here](../databases/#influxdb).
+    After the InfluxDB is installed, please follow the database creation guide [here](databases.md#influxdb).
 
 === "Access to the web interface"
 
@@ -519,4 +521,4 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
 
     The data location for Grafana is stored resp. linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/grafana`
 
-[Return to the **Optimised Software list**](../../software/)
+[Return to the **Optimised Software list**](../software.md)

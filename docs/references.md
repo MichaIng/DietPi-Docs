@@ -6,7 +6,7 @@ description: Read external references, articles and watch videos and guides abou
 # References
 
 At this page, links to general information are referenced.  
-Links to special software packages are located at the end of the according software package description in the [Optimised Software](../software/) documentation area.
+Links to special software packages are located at the end of the according software package description in the [Optimised Software](software.md) documentation area.
 
 ## General links
 
