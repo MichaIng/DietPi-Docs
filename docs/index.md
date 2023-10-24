@@ -73,6 +73,6 @@ Have some feedback, questions, suggestions, or just fancy a chat? Visit our [com
 
 We would really appreciate it if you would consider contributing to the project however you can.
 
-Donating is the easiest way to help us via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6DVBECXRW3TAA) or become a [Patron](https://www.patreon.com/bePatron?u=12464530).
+Donating is the easiest way to help us via [PayPal](https://www.paypal.com/donate?hosted_button_id=6DVBECXRW3TAA) or become a [Patron](https://www.patreon.com/DietPi).
 
 Thank you !
