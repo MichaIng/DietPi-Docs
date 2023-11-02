@@ -274,6 +274,12 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>ROCK 5A</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5A-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>ROCK 5B</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5B-ARMv8-Bookworm.img.xz">DietPi image</a>
@@ -320,6 +326,8 @@ Tinker Board is equipped with one DSI MIPI connection for displays and touchscre
 
 Careful consideration went into the design and development of the Tinker Board to ensure that it provides a superior user experience for first-time builders or for seasoned hobbyists. Builders appreciate the color-coded GPIO header, which makes it easy to recognize respective pin headers.
 
+With the ASUS Tinker Board 2, a successor has been released, based on the 64-bit capable Rockchip RK3399 SoC.
+
 <div class="md-typeset__table">
     <table>
         <thead>
@@ -333,6 +341,12 @@ Careful consideration went into the design and development of the Tinker Board t
                 <td><a class="table" href=""><strong>ASUS Tinker Board</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ASUSTB-ARMv7-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>ASUS Tinker Board 2</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ASUSTB2-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
