@@ -441,6 +441,26 @@ Select the following tabs for the installation description of your target.
 
     ![Proxmox VM starting](assets/images/proxmox3.png){: width="1024" height="590" loading="lazy"}
 
+    ???+ info "Optional: QEMU guest agent to comfortably control the DietPi VM from the Proxmox GUI"
+        In Proxmox there is the option to start/stop VMs resp. Container via 
+        
+        - the mouse context menu on the VM in the tree view 
+
+            ![Proxmox DietPi VM context menu](assets/images/Proxmox_VM-context-menu.png){: width="120" height="200" loading="lazy"}
+
+        - the pulldown menu "bulk actions" which appears, when the Proxmox node in the tree is selected
+
+            ![Proxmox node pulldown menu](assets/images/Proxmox_ServerNode-pulldown-menu.png){: width="400" height="90" loading="lazy"}
+
+        In order to be able to use these Proxmox GUI controlling of the VM, the `dbus` and `qemu-guest-agent` needs to be installed in the DietPi VM, afterwards it should be followed by a DietPi VM reboot:
+
+        ```sh
+        systemctl unmask systemd-logind
+        apt install dbus
+        systemctl start systemd-logind
+        apt install  qemu-guest-agent
+        ```
+
 === "Parallels"
 
     <h2>Introduction</h2>
