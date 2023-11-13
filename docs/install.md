@@ -448,9 +448,9 @@ Select the following tabs for the installation description of your target.
 
             ![Proxmox DietPi VM context menu](assets/images/Proxmox_VM-context-menu.png){: width="120" height="200" loading="lazy"}
 
-        - the pulldown menu "bulk actions" which appears, when the Proxmox node in the tree is selected
+        - the pull down menu "bulk actions" which appears, when the Proxmox node in the tree is selected
 
-            ![Proxmox node pulldown menu](assets/images/Proxmox_ServerNode-pulldown-menu.png){: width="400" height="90" loading="lazy"}
+            ![Proxmox node pull down menu](assets/images/Proxmox_ServerNode-pulldown-menu.png){: width="400" height="90" loading="lazy"}
 
         In order to be able to use these Proxmox GUI controlling of the VM, the `dbus` and `qemu-guest-agent` needs to be installed in the DietPi VM, afterwards it should be followed by a DietPi VM reboot:
 
