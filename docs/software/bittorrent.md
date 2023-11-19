@@ -53,17 +53,17 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
     The web interface is accessible via port **9091**:
 
-    - URL = `http://<your.IP>:9091`
-    - Username = `root`
-    - Password = `<your global password>`
+    - URL: `http://<your.IP>:9091`
+    - Username: `root`
+    - Password: `<your global password>`
 
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Folders used by Transmission:
 
-    - folder accessed via file server = `downloads`
-    - local folder = `/mnt/dietpi_userdata/downloads`
+    - folder accessed via file server: `downloads`
+    - local folder: `/mnt/dietpi_userdata/downloads`
 
 === "Port closed Issues"
 
@@ -99,8 +99,8 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 
     The web interface is accessible via port **8112**:
 
-    - URL = `http://<your.IP>:8112`
-    - Password = `<your global password>`
+    - URL: `http://<your.IP>:8112`
+    - Password: `<your global password>`
 
     Select the host 127.0.0.1 and click `connect`.
 
@@ -116,10 +116,10 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     - Select `Preferences` \> `Interface` and disable (uncheck) `Classic Mode`. Save changes and restart Deluge
     - When the connection manager appears, select `Add`.
     - Enter the following details:
-        - Hostname = Your device's IP address (e.g.: 192.168.0.100)
-        - Port = 58846
-        - Username = `root`
-        - Password = `<your global password>`
+        - Hostname: Your device's IP address (e.g.: 192.168.0.100)
+        - Port: 58846
+        - Username: `root`
+        - Password: `<your global password>`
     - Simply select and connect to the new entry
 
 === "Access Downloads"
@@ -127,8 +127,8 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Folders used by Deluge:
 
-    - Folder accessed via file server = `downloads`
-    - Local folder = `/mnt/dietpi_userdata/downloads`
+    - Folder accessed via file server: `downloads`
+    - Local folder: `/mnt/dietpi_userdata/downloads`
 
 === "Recommended: Protect your privacy with a VPN"
 
@@ -147,9 +147,9 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
     The web interface is accessible via port **1340**:
 
-    - URL = `http://<your.IP>:1340`
-    - Username = `qbittorrent`
-    - Password = `<your global password>` (default: `dietpi`)  
+    - URL: `http://<your.IP>:1340`
+    - Username: `qbittorrent`
+    - Password: `<your global password>` (default: `dietpi`)  
         NB: Since qBittorrent v4.2.0 (Debian Bullseye), a new safer hash algorithm is used, which we are currently not able to replicate dynamically for the global software password with common shell tools. Until then, for your first login the password is `dietpi`. Please change it directly after first login: <https://github.com/MichaIng/DietPi/issues/5078>
 
 === "Access Downloads"
@@ -157,8 +157,8 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Folders used by qBittorrent:
 
-    - Folder accessed via file server = `downloads`
-    - Local folder = `/mnt/dietpi_userdata/downloads`
+    - Folder accessed via file server: `downloads`
+    - Local folder: `/mnt/dietpi_userdata/downloads`
 
 === "Using of search plugins"
 
@@ -183,9 +183,9 @@ Also installs:
 
 === "Access to the web interface"
 
-    - URL = `http://<your.IP>/rutorrent`
-    - Username = `root`
-    - Password = `<your global password>` (default: `dietpi`)
+    - URL: `http://<your.IP>/rutorrent`
+    - Username: `root`
+    - Password: `<your global password>` (default: `dietpi`)
 
     The login credentials can be changed, depending on the webserver choice, with the following commands:
 
@@ -205,8 +205,8 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Folders used by rTorrent:
 
-    - Folder accessed via file server = `downloads`
-    - Local folder = `/mnt/dietpi_userdata/downloads`
+    - Folder accessed via file server: `downloads`
+    - Local folder: `/mnt/dietpi_userdata/downloads`
 
     Important note:  
     rTorrent creates a lock file based on the systems hostname. When the hostname is changed (e.g. via `dietpi-config` \> `Security Options`), then the old lock file needs to be removed to allow rTorrent creating a new one based on the new hostname:
@@ -288,8 +288,8 @@ Also installs:
 
 === "Access to the web interface"
 
-    - URL = `http://<your.IP>/aria2/docs`
-    - rpc secret password = `<your global password>`
+    - URL: `http://<your.IP>/aria2/docs`
+    - rpc secret password: `<your global password>`
 
     This needs to be entered in the following location, in the web interface:
 
@@ -302,8 +302,8 @@ Also installs:
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Folders used by Aria2:
 
-    - Folder accessed via file server = `downloads`
-    - Local folder = `/mnt/dietpi_userdata/downloads`
+    - Folder accessed via file server: `downloads`
+    - Local folder: `/mnt/dietpi_userdata/downloads`
 
 === "Make setting changes permanently"
 
@@ -330,7 +330,7 @@ NZB download manager with web interface.
 
     The web interface uses port **8080**:
 
-    - URL = `http://<your.IP>:8080/sabnzbd`
+    - URL: `http://<your.IP>:8080/sabnzbd`
 
 === "Web interface not loading / Unable to access"
 
@@ -357,8 +357,8 @@ NZB download manager with web interface.
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Folders used by SABnzbd:
 
-    - folder accessed via file server = `downloads/complete`
-    - local folder = `/mnt/dietpi_userdata/downloads/complete`
+    - folder accessed via file server: `downloads/complete`
+    - local folder: `/mnt/dietpi_userdata/downloads/complete`
 
 === "Optional: Multi threaded PAR2"
 
@@ -390,7 +390,7 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
     The web interface is accessible via port **8081**:
 
-    - URL = `http://<your.IP>:8081`
+    - URL: `http://<your.IP>:8081`
 
 === "Add a TV show"
 
@@ -441,7 +441,7 @@ Automatically download your favorite TV shows, as they become available.
 
     The web interface is accessible via port **8989**:
 
-    - URL = `http://<your.IP>:8989`
+    - URL: `http://<your.IP>:8989`
 
 === "First run setup"
 
@@ -509,7 +509,7 @@ Automatically download your favorite movies, as they become available.
 
     The web interface is accessible via port **7878**:
 
-    - URL = `http://<your.IP>:7878`
+    - URL: `http://<your.IP>:7878`
 
 === "First run setup"
 
@@ -582,7 +582,7 @@ Key features:
 
     The web interface is accessible via port **6767**:
 
-    - URL = `http://<your.IP>:6767`
+    - URL: `http://<your.IP>:6767`
 
     ![Bazarr subtitle finds list](../assets/images/dietpi-software-download-bazarr.jpg){: width="1105" height="490" loading="lazy"}
 
@@ -595,7 +595,7 @@ Key features:
 === "View logs"
 
     - Service: `journalctl -u bazarr`
-    - Binary: `/var/log/bazarr/bazarr.log`
+    - Daemon: `/var/log/bazarr/bazarr.log`
 
 === "Update to latest version"
 
@@ -620,7 +620,7 @@ Automatically download your favorite music.
 
     The web interface is accessible via port **8686**:
 
-    - URL = `http://<your.IP>:8686`
+    - URL: `http://<your.IP>:8686`
 
 === "First run setup"
 
@@ -684,7 +684,7 @@ Automatically download your favorite ebook, as they become available.
 
     The web interface is accessible via port **8787**:
 
-    - URL = `http://<your.IP>:8787`
+    - URL: `http://<your.IP>:8787`
 
 === "First run setup"
 
@@ -756,7 +756,7 @@ Automatically download your favorite ebook, as they become available.
 === "View logs"
 
     - Service: `journalctl -u readarr`
-    - Binary: `/var/log/readarr/Readarr.txt`
+    - Daemon: `/var/log/readarr/Readarr.txt`
 
 === "Update"
 
@@ -784,7 +784,7 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
 
     The web interface is accessible via port **9696**:
 
-    - URL = `http://<your.IP>:9696`
+    - URL: `http://<your.IP>:9696`
 
 === "Recommended: Protect your privacy with a VPN"
 
@@ -808,7 +808,7 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
 
     The web interface is accessible via port **9117**:
 
-    - URL = `http://<your.IP>:9117`
+    - URL: `http://<your.IP>:9117`
 
 === "Recommended: Protect your privacy with a VPN"
 
@@ -825,17 +825,28 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
     The web interface is accessible via port **6789**:
 
-    - URL = `http://<your.IP>:6789`
-    - Username = `admin`
-    - Password = `<your global password>`
+    - URL: `http://<your.IP>:6789`
+    - Username: `admin`
+    - Password: `<your global password>`
 
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Folders used by Transmission:
 
-    - Folder accessed via file server = `downloads/complete`
-    - Local folder = `/mnt/dietpi_userdata/downloads/complete`
+    - Folder accessed via file server: `downloads/complete`
+    - Local folder: `/mnt/dietpi_userdata/downloads/complete`
+
+=== "View logs"
+
+    - Service: `journalctl -u nzbget`
+    - Daemon: `/var/log/nzbget.log`
+
+=== "Update"
+
+    ```sh
+    dietpi-software reinstall 149
+    ```
 
 === "Recommended: Protect your privacy with a VPN"
 
@@ -853,7 +864,7 @@ Do all your HTPC tasks without using 5 different interfaces!
 
     The web interface is accessible via port **8085**:
 
-    - URL = `http://<your.IP>:8085`
+    - URL: `http://<your.IP>:8085`
 
 === "Update to latest version"
 
