@@ -636,9 +636,9 @@ Select the following tabs for the installation description of your target.
 
     <h2>Introduction</h2>
 
-    The Native PC images are great for those occasions where SBC performance is just not enough. One example could be [Intel NUC Kit](https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits.html?page=2). It is a small, versatile, upgradable, and affordable desktop PC with the same basic feature set as that of a much larger machine.
+    The Native PC images are great for those occasions where SBC performance is just not enough, or where you require an x86_64 system. It also works great with small [Thin Clients](https://dietpi.com/blog/?p=2918), affordable little x86 machines, settled somewhere between SBCs and desktop PCs.
 
-    ![DietPi-Intel-NUC](assets/images/dietpi-nuc8.jpg){: width="300" height="200" loading="lazy"}
+    ![Photo of some Thin Clients](https://dietpi.com/blog/wp-content/uploads/2023/03/image-3-e1681412993591.png){: width="300" height="237" loading="lazy"}
 
     It could be also a great way to make use of an old computer that’s not capable of running the latest version of Windows or macOS.
 
