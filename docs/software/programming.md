@@ -16,6 +16,7 @@ description: Description of DietPi software options related to software developm
 - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
 - [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
 - [**VSCodium - FLOSS version of Microsoft VSCode**](#vscodium)
+- [**Git - Distributed version control system**](#git)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -301,3 +302,17 @@ License: [MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
 [^3]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
 
 [^4]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
+
+## Git
+
+![Git logo](../assets/images/dietpi-software-programming-git.png){: width="200" height="200" loading="lazy"}
+
+Source: <https://git-scm.com/downloads/logos>
+
+[Git](https://git-scm.com) is a distributed version control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows.
+
+To find out which version of Git is installed, just run
+
+```sh
+git --version
+```
