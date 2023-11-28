@@ -316,3 +316,10 @@ To find out which version of Git is installed, just run
 ```sh
 git --version
 ```
+
+***
+
+Official website: <https://git-scm.com/>  
+Official documentation: <https://git-scm.com/docs>  
+Source code: <https://github.com/git/git>  
+License: [GPLv2](https://github.com/git/git/blob/master/COPYING)
