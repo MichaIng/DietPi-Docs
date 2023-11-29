@@ -305,7 +305,7 @@ License: [MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
 
 ## Git
 
-![Git logo](../assets/images/dietpi-software-programming-git.png){: width="200" height="200" loading="lazy"}
+![Git logo](../assets/images/dietpi-software-programming-git.svg){: width="200" height="200" loading="lazy"}
 
 Source: <https://git-scm.com/downloads/logos>
 
