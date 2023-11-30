@@ -292,17 +292,6 @@ Documentation (VSCodium): <https://github.com/VSCodium/vscodium/blob/master/DOCS
 Source code: <https://github.com/VSCodium/vscodium>  
 License: [MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
 
-[Return to the **Optimised Software list**](../software.md)
-
-<!-- markdownlint-disable MD053 -->
-[^1]: [Logitech Media Server](media.md#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
-
-[^2]: [7 Most Famous Companies That Use Golang](https://www.agiratech.com/blog/companies-using-golang/)
-
-[^3]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
-
-[^4]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
-
 ## Git
 
 ![Git logo](../assets/images/dietpi-software-programming-git.svg){: width="292" height="92" loading="lazy"}
@@ -323,3 +312,14 @@ Official website: <https://git-scm.com/>
 Official documentation: <https://git-scm.com/docs>  
 Source code: <https://github.com/git/git>  
 License: [GPLv2](https://github.com/git/git/blob/master/COPYING)
+
+[Return to the **Optimised Software list**](../software.md)
+
+<!-- markdownlint-disable MD053 -->
+[^1]: [Logitech Media Server](media.md#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
+
+[^2]: [7 Most Famous Companies That Use Golang](https://www.agiratech.com/blog/companies-using-golang/)
+
+[^3]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
+
+[^4]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
