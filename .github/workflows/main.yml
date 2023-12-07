@@ -32,7 +32,7 @@ jobs:
       id: python
       if: always() && steps.clone.outcome == 'success'
       # https://github.com/actions/setup-python/tags
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         # Match version on dietpi.com server
         python-version: '3.11.2'
