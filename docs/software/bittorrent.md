@@ -839,8 +839,11 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
 === "View logs"
 
-    - Service: `journalctl -u nzbget`
-    - Daemon: `/var/log/nzbget.log`
+    NZBGet service logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u nzbget`
+    ```
 
 === "Update"
 
