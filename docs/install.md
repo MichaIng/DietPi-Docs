@@ -441,7 +441,7 @@ Select the following tabs for the installation description of your target.
 
     ![Proxmox VM starting](assets/images/proxmox3.png){: width="1024" height="590" loading="lazy"}
 
-    ???+ info "Optional: QEMU guest agent to comfortably control the DietPi VM from the Proxmox GUI"
+    ??? info "Comfortably control the DietPi VM from the Proxmox GUI"
         In Proxmox there is the option to start/stop VMs resp. Container via 
         
         - the mouse context menu on the VM in the tree view 
@@ -452,7 +452,10 @@ Select the following tabs for the installation description of your target.
 
             ![Proxmox node pull down menu](assets/images/Proxmox_ServerNode-pulldown-menu.png){: width="400" height="90" loading="lazy"}
 
-        In order to be able to use these Proxmox GUI controlling of the VM, the `dbus` and `qemu-guest-agent` needs to be installed in the DietPi VM, afterwards it should be followed by a DietPi VM reboot:
+        Note: Keep the Proxmox VM option "QEMU Guest Agent" option inactive (uncheck check box) to be able to control the VM via the Proxmox GUI.
+
+        DietPi versions before v8.25:  
+        Since DietPi v8.25, the first run installation script enables this feature. For older Proxmox DietPi VMs, it can be achieved by installing the `dbus` and `qemu-guest-agent` within the DietPi VM followed by a DietPi VM reboot:
 
         ```sh
         systemctl unmask systemd-logind
