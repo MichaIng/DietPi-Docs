@@ -842,7 +842,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
     NZBGet service logs can be viewed with the following command:
 
     ```sh
-    journalctl -u nzbget`
+    journalctl -u nzbget
     ```
 
 === "Update"
