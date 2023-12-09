@@ -539,6 +539,12 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Plus-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi Zero3</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -565,7 +571,32 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
             <tr>
                 <td><a class="table" href=""><strong>StarFive VisionFive 2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_VisionFive2-RISC-V-Sid.7z">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_VisionFive2-RISC-V-Sid.img.xz">DietPi image</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+### PINE64
+
+[PINE64](https://wiki.pine64.org/wiki/Main_Page) is a RISC-V SoC and SBC manufacturer (see also [PINE64 hardware support](#pine64)) and offers the [STAR64](https://wiki.pine64.org/wiki/STAR64). The board contains a quad-core RISC-V JH7110 SoC, 2/4/8 GiB of RAM.
+
+![PINE64 STAR64 photo](assets/images/PINE64-STAR64.jpg){: width="584" height="338" loading="lazy"}
+
+<div class="md-typeset__table">
+    <table>
+        <thead>
+            <tr>
+                <th><strong>Product</strong></th>
+                <th><strong>Description</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a class="table" href=""><strong>PINE64 STAR64</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_Star64-RISC-V-Sid.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
