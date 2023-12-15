@@ -678,8 +678,8 @@ Also Installs:
 === "Access to the web interface"
 
     - URL: `http://<your.IP>/ampache`
-    - Username: `admin`
-    - Password: `dietpi`
+    - Username: `dietpi` (DietPi v8.24 and earlier: `admin`)
+    - Password: `<your global password>` (default: `dietpi`)
 
 === "Transfer media files to DietPi"
 
@@ -729,7 +729,7 @@ Also Installs:
 
             In case the the NFS client has no write permissions, this needs to be done at the NFS server.
 
-        - For Samba, edit `/etc/fstab` and add or set the mount options `file_mode=0775,dir_mode=0775`. Important is the last digit of each mode, which indicates read (and execute) permissions for all users. Stricter modes, still working with Ampache, would be: `file_mode=0644,dir_mode=0755`  
+        - For Samba, edit `/etc/fstab` and add or set the mount options `file_mode=0644,dir_mode=0755`. Important is the last digit of each mode, which indicates read (and execute) permissions for all users.  
             Then remount the the Samba share for the change to take effect:
 
             ```sh
@@ -738,7 +738,7 @@ Also Installs:
 
 === "Configuration"
 
-    Since Debian Bullseye (Ampache v5), the main configuration file is located at:
+    Since Debian Bullseye (Ampache v6), the main configuration file is located at:
 
     ```
     /mnt/dietpi_userdata/ampache/config/ampache.cfg.php
@@ -754,7 +754,7 @@ Also Installs:
 
     E.g. to allow .m4a playback:
 
-    - Since Debian Bullseye (Ampache v5):
+    - Since Debian Bullseye (Ampache v6):
 
         ```sh
         G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /mnt/dietpi_userdata/ampache/config/ampache.cfg.php
@@ -768,13 +768,20 @@ Also Installs:
 
     More info: <https://github.com/ampache/ampache/wiki/Transcoding>
 
-=== "Update Ampache"
+=== "Update"
 
     To update Ampache to the current version, execute
 
     ```sh
     dietpi-software reinstall 40
     ```
+
+***
+
+Official website: <https://ampache.org/>  
+Official documentation: <https://github.com/ampache/ampache/wiki>  
+Source code: <https://github.com/ampache/ampache>  
+License: [AGPLv3](https://github.com/ampache/ampache/blob/develop/LICENSE.md)
 
 ## Emby
 
