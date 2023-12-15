@@ -466,6 +466,8 @@ Your very own GitHub style server, with web interface.
 
 ![Gogs web interface screenshot](../assets/images/dietpi-software-cloud-gogs.png){: width="400" height="175" loading="lazy"}
 
+See also the [**Git**](../programming/#git) client which is available in `dietpi-software` as an installation package.
+
 === "Access to the web interface"
 
     The web interface is accessible via TCP port **3000**:
@@ -532,6 +534,8 @@ License: [MIT](https://github.com/gogs/gogs/blob/main/LICENSE)
 Your very own GitHub style server, with web interface.
 
 ![Gitea logo](../assets/images/dietpi-software-cloud-gitea.jpg){: width="320" height="200" loading="lazy"}
+
+See also the [**Git**](../programming/#git) client which is available in `dietpi-software` as an installation package.
 
 === "Access to the web interface"
 
