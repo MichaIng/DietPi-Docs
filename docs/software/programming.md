@@ -306,6 +306,8 @@ To find out which version of Git is installed, just run
 git --version
 ```
 
+See also [**Gogs**](../cloud/#gogs) and [**Gitea**](../cloud/#gitea), the GitHub style servers which are available in `dietpi-software` as an installation package.
+
 ***
 
 Official website: <https://git-scm.com/>  

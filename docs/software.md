@@ -104,6 +104,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Docker-Compose - Run multi-container applications on Docker**](software/programming.md#docker-compose)
 - [**Portainer - Docker container management**](software/programming.md#portainer)
 - [**VSCodium - FLOSS version of Microsoft VSCode**](software/programming.md#vscodium)
+- [**Git - Distributed version control system**](software/programming.md#git)
 
 ## [Distributed Projects](software/distributed_projects.md)
 
