@@ -545,6 +545,12 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 3B</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePi3B-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
