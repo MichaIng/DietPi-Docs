@@ -466,7 +466,7 @@ Your very own GitHub style server, with web interface.
 
 ![Gogs web interface screenshot](../assets/images/dietpi-software-cloud-gogs.png){: width="400" height="175" loading="lazy"}
 
-See also the [**Git**](../programming/#git) client which is available in `dietpi-software` as an installation package.
+See also the [**Git**](programming.md#git) client which is available in `dietpi-software` as an installation package.
 
 === "Access to the web interface"
 
@@ -535,7 +535,7 @@ Your very own GitHub style server, with web interface.
 
 ![Gitea logo](../assets/images/dietpi-software-cloud-gitea.jpg){: width="320" height="200" loading="lazy"}
 
-See also the [**Git**](../programming/#git) client which is available in `dietpi-software` as an installation package.
+See also the [**Git**](programming.md#git) client which is available in `dietpi-software` as an installation package.
 
 === "Access to the web interface"
 

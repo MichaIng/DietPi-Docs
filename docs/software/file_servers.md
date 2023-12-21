@@ -123,25 +123,53 @@ The Samba server lets you share files on your DietPi system with ease based on t
 === "Use `wsdd` to view shares"
 
     In case of problems with the Samba share not showing up in the Windows network view, the `wsdd` daemon (Web Service Dynamic Discovery host daemon) can be installed. This is achieved with the following steps:
-      
-    ```sh
-    curl -sSfL 'https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key' | gpg --dearmor -o /etc/apt/trusted.gpg.d/dietpi-wsdd.gpg --yes
-    echo "deb https://pkg.ltec.ch/public/ $G_DISTRO_NAME main" > /etc/apt/sources.list.d/dietpi-wsdd.list
-    apt update
-    apt install wsdd
-    ```
 
-    Start the service via
+    === "Bookworm and later"
 
-    ```sh
-    systemctl start wsdd
-    ```
+        Install WSDD via APT:
 
-    A running system can be checked via 
-    
-    ```sh
-    systemctl status wsdd
-    ```
+        ```sh
+        apt install wsdd2
+        ```
+
+        Start the service via:
+
+        ```sh
+        systemctl start wsdd2
+        ```
+
+        Check the service status via:
+
+        ```sh
+        systemctl status wsdd2
+        ```
+
+        !!! note "We use the WSDD2 variant written in C here."
+
+            The original WSDD is written in Python, but we prefer the C variant, for less dependencies and RAM usage. In case, you could also use the original variant, where package and service are called `wsdd` instead of `wsdd2`.
+
+    === "Bullseye and earlier"
+
+        Add the 3rd party repository and install WSDD via APT:
+
+        ```sh
+        curl -sSfL 'https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key' | gpg --dearmor -o /etc/apt/trusted.gpg.d/dietpi-wsdd.gpg --yes
+        echo "deb https://pkg.ltec.ch/public/ $G_DISTRO_NAME main" > /etc/apt/sources.list.d/dietpi-wsdd.list
+        apt update
+        apt install wsdd
+        ```
+
+        Start the service via:
+
+        ```sh
+        systemctl start wsdd
+        ```
+
+        Check the service status via:
+
+        ```sh
+        systemctl status wsdd
+        ```
 
 ***
 
