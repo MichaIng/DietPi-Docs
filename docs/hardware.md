@@ -540,13 +540,13 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi Zero3</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi Zero3 (testing)</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi 3B</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi 3B (testing)</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePi3B-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
@@ -575,7 +575,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
         </thead>
         <tbody>
             <tr>
-                <td><a class="table" href=""><strong>StarFive VisionFive 2</strong></a></td>
+                <td><a class="table" href=""><strong>StarFive VisionFive 2 (testing)</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_VisionFive2-RISC-V-Sid.img.xz">DietPi image</a>
                 </td>
@@ -600,7 +600,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
         </thead>
         <tbody>
             <tr>
-                <td><a class="table" href=""><strong>PINE64 STAR64</strong></a></td>
+                <td><a class="table" href=""><strong>PINE64 Star64 (testing)</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_Star64-RISC-V-Sid.img.xz">DietPi image</a>
                 </td>
