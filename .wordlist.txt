@@ -752,6 +752,7 @@ WordPress
 WPA
 writeable
 WSAD
+WSDD
 www
 Xfce
 XFS

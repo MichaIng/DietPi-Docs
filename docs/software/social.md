@@ -43,7 +43,7 @@ FreshRSS is a self-hosted RSS feed aggregator.
 
     - URL = `<http://<your.IP>/freshrss`
     - Username = `dietpi`
-    - Password = `dietpi`
+    - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
 ***
 
