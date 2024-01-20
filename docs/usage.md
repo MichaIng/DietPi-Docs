@@ -94,7 +94,7 @@ More detailed options may be studied in the [man pages of `journalctl`](https://
 | `journalctl -p PRIORITY` <br>(--priority PRIORITY) | Displays messages with the given priority. PRIORITY may be `merg`, `alert`, `crit`, `err`, `warning`, `notice`, `info` and `debug`. Also numbers as PRIORITY are possible |
 | `journalctl -o verbose` | Displays additional meta data |
 | `journalctl --disk-usage` | Displays the amount of disk space used by the logging messages |
-| `journalctl --no-pager &#124 grep <filter>` | Filters log messages (filtering with `grep`) |
+| `journalctl --no-pager | grep <filter>` | Filters log messages (filtering with `grep`) |
 
 In the software package descriptions, sometimes there is a tab called "View Logs". This gives a `jounalctl -u UNITNAME` command example how to filter the logging messages of a given software package.  
 Example: See [tab "View logs"](software/dns_servers.md/#unbound) of *Unbound*. It gives: `journalctl -u unbound`.
