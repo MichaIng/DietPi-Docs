@@ -250,7 +250,7 @@ PostgreSQL is a persistent advanced object-relational database server, used in s
     - Stop: `systemctl stop postgresql`
     - Restart: `systemctl restart postgresql`
     - Reload config: `systemctl reload postgresql`
-    - Print status: `systemctl start postgresql`
+    - Print status: `systemctl status postgresql`
 
 === "View logs"
 
