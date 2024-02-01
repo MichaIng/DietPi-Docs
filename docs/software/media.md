@@ -40,7 +40,7 @@ description: Description of DietPi software options related to media systems lik
 - [**Snapcast Server - Multi room audio server**](#snapcast-server)
 - [**Snapcast Client - Multi room audio client**](#snapcast-client)
 - [**Navidrome - Web interface media streaming server**](#navidrome)
-- [**Kavita - Open source comics/mangas/ebooks media server**](#kavita)
+- [**Kavita - Your digital library in one place (manga, comics, and books)**](#kavita)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -1864,8 +1864,52 @@ License: [GPLv3](https://github.com/navidrome/navidrome/blob/master/LICENSE)
 
 ## Kavita
 
-T.b.d.
+Kavita is self-hosted library, for comics, manga or books. A highlight of some of its key features:
 
+- _Versatile Content Support_: Kavita ensures a comprehensive library experiencecaters by serving Manga, Webtoons, Comics (cbr, cbz, zip/rar/rar5, 7zip, raw images), and Books (epub, pdf) with a responsive reading experience.
+
+- _Efficient Organization_ with metadata richness: Kavita has a rich metadata support, enhancing user experience with effective filtering and searching. Users can efficiently organize their reading materials through Collections, Reading Lists (CBL Import), and a Want to Read feature, ensuring a well-structured library.
+
+- _Personalization and Theming_: With support for Dark mode and customizable theming, Kavita allows users to tailor their reading environment according to their preferences for a personalized and visually comfortable experience.
+
+![Kavita web interface screenshot](../assets/images/dietpi-software-media-kavita.jpg){: width="600" height="378" loading="lazy"}
+
+=== "Web interface"
+
+    The web interface uses port **XXXX**:
+    - URL: `http://<your.IP>:XXXX`
+
+=== "Setup details"
+
+    The install, config and data directory is located at:
+
+    ```
+    /mnt/dietpi_userdata/navidrome
+    ```
+
+=== "Service control"
+
+    Kavita runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status navidrome
+    ```
+
+=== "Logs"
+
+    Kavita runs as systemd service, its logs can be viewed via:
+
+    ```sh
+    journalctl -u navidrome
+    ```
+
+=== "Update"
+
+    Navidrome can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 204
+    ```
 ***
 
 Website: <https://www.kavitareader.com/>  
