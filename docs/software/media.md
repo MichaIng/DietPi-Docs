@@ -1870,21 +1870,22 @@ Kavita is self-hosted library, for comics, manga or books. A highlight of some o
 
 - _Efficient Organization_ with metadata richness: Kavita has a rich metadata support, enhancing user experience with effective filtering and searching. Users can efficiently organize their reading materials through Collections, Reading Lists (CBL Import), and a Want to Read feature, ensuring a well-structured library.
 
-- _Personalization and Theming_: With support for Dark mode and customizable theming, Kavita allows users to tailor their reading environment according to their preferences for a personalized and visually comfortable experience.
+- _Personalization and Theming_: With support for Dark mode and customizable theming, Kavita allows users to tailor their reading environment according to their preferences for a personalized and visually comfortable experience. It has a responsive interface that work great on any device (phone, tablet, desktop). Dark mode and customizable theming support
+
 
 ![Kavita web interface screenshot](../assets/images/dietpi-software-media-kavita.jpg){: width="600" height="378" loading="lazy"}
 
 === "Web interface"
 
-    The web interface uses port **XXXX**:
-    - URL: `http://<your.IP>:XXXX`
+    The web interface uses port **2036**:
+    - URL: `http://<your.IP>:2036`
 
 === "Setup details"
 
     The install, config and data directory is located at:
 
     ```
-    /mnt/dietpi_userdata/navidrome
+    /mnt/dietpi_userdata/{ebooks,comics}
     ```
 
 === "Service control"
@@ -1892,7 +1893,7 @@ Kavita is self-hosted library, for comics, manga or books. A highlight of some o
     Kavita runs as systemd service, it can be controlled with the following commands:
 
     ```sh
-    systemctl status navidrome
+    systemctl status kavita
     ```
 
 === "Logs"
@@ -1900,15 +1901,15 @@ Kavita is self-hosted library, for comics, manga or books. A highlight of some o
     Kavita runs as systemd service, its logs can be viewed via:
 
     ```sh
-    journalctl -u navidrome
+    journalctl -u kavita
     ```
 
 === "Update"
 
-    Navidrome can be updated by simply reinstalling it:
+    Kavita can be updated by simply reinstalling it:
 
     ```sh
-    dietpi-software reinstall 204
+    dietpi-software reinstall 212
     ```
 ***
 
