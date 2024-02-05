@@ -133,15 +133,6 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
 
-    **Access PHP info page:**
-
-    - URL = `http://<your.IP>/phpinfo.php`
-
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
-
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
@@ -211,11 +202,6 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
 
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
-
 === "Secured access - HTTPS/SSL"
 
     **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
@@ -283,13 +269,6 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - URL = `http://<your.IP>` or `http://<your.host.name>`
 
     **Access PHP info page:**
-
-    - URL = `http://<your.IP>/phpinfo.php`
-
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -359,11 +338,6 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
 
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
-
 === "Secured access - HTTPS/SSL"
 
     **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
@@ -384,15 +358,6 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
-
-    **Access PHP info page:**
-
-    - URL = `http://<your.IP>/phpinfo.php`
-
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -416,15 +381,6 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
-
-    **Access PHP info page:**
-
-    - URL = `http://<your.IP>/phpinfo.php`
-
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
