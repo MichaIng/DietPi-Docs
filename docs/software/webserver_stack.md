@@ -186,6 +186,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 ***
 
@@ -253,6 +254,7 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 ***
 
@@ -267,8 +269,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     **Access website:**
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
-
-    **Access PHP info page:**
+    - Local directory = `/var/www`
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -323,6 +324,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 ***
 
@@ -337,6 +339,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     **Access website:**
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
+    - Local directory = `/var/www`
 
 === "Secured access - HTTPS/SSL"
 
@@ -345,6 +348,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 ***
 
@@ -368,6 +372,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 ***
 
@@ -391,6 +396,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 === "Individual installation"
 
