@@ -193,6 +193,7 @@ dietpi-ddns
 - Dynu: <https://www.dynu.com/>
 - FreeDNS: <https://freedns.afraid.org/>
 - OVH: <https://docs.ovh.com/gb/en/domains/hosting_dynhost/>
+- YDNS: <https://ydns.io/>
 - Alternatively you may use any other provider which has an API URL for updating your dynamic IP address.
 
 ### CLI
