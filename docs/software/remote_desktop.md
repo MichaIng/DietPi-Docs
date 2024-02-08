@@ -142,7 +142,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
 === "Setup the VNC Viewer"
 
-    Simply select a VNC viewer for your system and download: <https://www.realvnc.com/connect/download/viewer/>
+    Simply select a VNC viewer for your system and download: <https://www.realvnc.com/en/connect/download/viewer/>
 
     #### Connection details
 

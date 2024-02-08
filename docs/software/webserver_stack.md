@@ -133,15 +133,6 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
 
-    **Access PHP info page:**
-
-    - URL = `http://<your.IP>/phpinfo.php`
-
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
-
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
@@ -195,6 +186,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 ***
 
@@ -211,11 +203,6 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
 
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
-
 === "Secured access - HTTPS/SSL"
 
     **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
@@ -267,6 +254,7 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 ***
 
@@ -281,15 +269,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     **Access website:**
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
-
-    **Access PHP info page:**
-
-    - URL = `http://<your.IP>/phpinfo.php`
-
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
+    - Local directory = `/var/www`
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -344,6 +324,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 ***
 
@@ -358,11 +339,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     **Access website:**
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
-
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
+    - Local directory = `/var/www`
 
 === "Secured access - HTTPS/SSL"
 
@@ -371,6 +348,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 ***
 
@@ -385,15 +363,6 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
 
-    **Access PHP info page:**
-
-    - URL = `http://<your.IP>/phpinfo.php`
-
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
-
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
@@ -403,6 +372,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 ***
 
@@ -417,15 +387,6 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
 
-    **Access PHP info page:**
-
-    - URL = `http://<your.IP>/phpinfo.php`
-
-    **Access memory cache info:**
-
-    - APCu = `http://<your.IP>/apc.php`
-    - OPcache = `http://<your.IP>/opcache.php`
-
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
 === "Secured access - HTTPS/SSL"
@@ -435,6 +396,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     Access website:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
+    - Local directory = `/var/www`
 
 === "Individual installation"
 
