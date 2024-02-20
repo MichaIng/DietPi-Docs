@@ -528,6 +528,7 @@ resolvers
 Restic
 RK
 Rockchip
+Rockchip's
 ROCKPro
 Roon
 Roon's
