@@ -517,15 +517,21 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>NanoPi R6C (testing)</strong></a></td>
+                <td><a class="table" href=""><strong>NanoPi R6S</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiR6C-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>NanoPi R6S (testing)</strong></a></td>
+                <td><a class="table" href=""><strong>NanoPi R6C</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiR6S-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6C-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>NanoPC T6</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT6-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
