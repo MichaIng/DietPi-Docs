@@ -10,7 +10,7 @@ The Raspberry Pi has sold more than 31 million units since it launched in 2012. 
 
 You can install DietPi by following the step by step [Starting guide](install.md).
 
-DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400/?resellerType=home),
+DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.com/products/raspberry-pi-400/),
 
 ![Raspberry Pi 400 photo](assets/images/dietpi-raspberry-pi-400-back.jpg){: width="800" height="571" loading="lazy"}
 
@@ -457,15 +457,9 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>NanoPi M4V2</strong></a></td>
+                <td><a class="table" href=""><strong>NanoPi Fire3</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4V2-ARMv8-Bookworm.img.xz">DietPi image</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table" href=""><strong>NanoPC T4</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Bullseye.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -475,9 +469,15 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>NanoPi Fire3</strong></a></td>
+                <td><a class="table" href=""><strong>NanoPi M4V2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Bullseye.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4V2-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>NanoPC T4</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -508,12 +508,6 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 <td><a class="table" href=""><strong>NanoPi R5C</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5C-ARMv8-Bookworm.img.xz">DietPi image</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table" href=""><strong>NanoPi 6 series</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPi6-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -576,21 +570,21 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi Zero 3 (testing)</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi Zero 3</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi Zero 3 1.5 GB RAM (testing)</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi Zero 3 (1.5 GB RAM)</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePiZero3-1.5G-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-1.5G-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi 3B (testing)</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi 3B</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePi3B-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3B-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>

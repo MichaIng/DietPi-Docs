@@ -434,6 +434,7 @@ openHAB
 OpenSSH
 OpenSSL
 OpenTyrian
+OpenVoiceOS
 OpenVPN
 OTG
 OTP
