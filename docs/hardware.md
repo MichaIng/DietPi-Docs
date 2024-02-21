@@ -507,7 +507,7 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R5C</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiR5C-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5C-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
