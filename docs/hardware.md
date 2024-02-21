@@ -511,12 +511,6 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>NanoPi R5S (testing)</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiR5S-ARMv8-Bookworm.img.xz">DietPi image</a>
-                </td>
-            </tr>
-            <tr>
                 <td><a class="table" href=""><strong>NanoPi 6 series</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPi6-ARMv8-Bookworm.img.xz">DietPi image</a>
