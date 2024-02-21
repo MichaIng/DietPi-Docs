@@ -294,7 +294,7 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
             <tr>
                 <td><a class="table" href=""><strong>ROCK 4 SE</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_ROCK4SE-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK4SE-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
