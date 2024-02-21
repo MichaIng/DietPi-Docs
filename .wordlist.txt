@@ -434,6 +434,7 @@ openHAB
 OpenSSH
 OpenSSL
 OpenTyrian
+OpenVoiceOS
 OpenVPN
 OTG
 OTP
@@ -528,6 +529,7 @@ resolvers
 Restic
 RK
 Rockchip
+Rockchip's
 ROCKPro
 Roon
 Roon's
@@ -686,6 +688,7 @@ UTF
 UnRAR
 upgradable
 UPnP
+upstreamed
 uptime
 upvote
 UrBackup

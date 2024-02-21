@@ -1782,7 +1782,7 @@ Source code: <https://github.com/badaix/snapcast>
 ## Navidrome
 
 An open source web-based music collection server and streamer, written in Go.  
-It is compatible with the [Subsonic media player](http://www.subsonic.org/pages/index.jsp).
+It is compatible with the [Subsonic media player](https://www.subsonic.org/pages/index.jsp).
 
 ![Navidrome web interface screenshot](../assets/images/dietpi-software-media-navidrome.png){: width="400" height="202" loading="lazy"}
 
@@ -1854,7 +1854,7 @@ It is compatible with the [Subsonic media player](http://www.subsonic.org/pages/
     Navidrome has a Subsonic-compatible server built in, so there should be plenty of clients for different platforms available. See:
 
     - <https://www.navidrome.org/docs/overview/#apps>
-    - <http://www.subsonic.org/pages/apps.jsp>
+    - <https://www.subsonic.org/pages/apps.jsp>
 
 ***
 

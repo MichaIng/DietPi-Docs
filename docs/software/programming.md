@@ -209,7 +209,7 @@ _Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedi
 ***
 
 Official documentation: <https://docs.docker.com/get-started/overview/>  
-Configuration docs: <https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file>  
+Configuration docs: <https://docs.docker.com/reference/cli/dockerd/#daemon-configuration-file>  
 Logging docs: <https://docs.docker.com/config/containers/logging/configure/>  
 Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>  
 Source code: <https://github.com/moby/moby>  

@@ -69,7 +69,7 @@ Lightweight tmpfs-based RAM logging solution, which reduces disk I/O and might i
     Remark: If Rsyslog is required, it can be manually installed with `apt install rsyslog`.
 
     Remark: This option significantly writes less so than a constant log writing system, e.g. the *Full logging mode*.  
-    See also <https://www.raspberrypi.org/forums/viewtopic.php?t=11258>.
+    See also <https://forums.raspberrypi.com/viewtopic.php?t=11258>.
 
 ## Full Logging
 
