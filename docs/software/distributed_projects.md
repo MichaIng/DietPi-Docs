@@ -184,9 +184,9 @@ This node lets you download files through IPFS and add your own files to the net
     You can use your IPFS node with the IPFS Companion browser extension to automatically download IPFS-hosted files through your node.
     In the settings page of the extension, change "IPFS API URL" to `http://<your.IP>:5003`, and "Local Gateway" to `http://<your.IP>:8087`.
 
-    Firefox: https://addons.mozilla.org/en-US/firefox/addon/ipfs-companion/
+    Firefox: <https://addons.mozilla.org/en-US/firefox/addon/ipfs-companion/>
 
-    Chromium and derivatives: https://chrome.google.com/webstore/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch
+    Chromium and derivatives: <https://chromewebstore.google.com/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch>
 
     ??? info "Note for using with extension"
         IPFS content will not load on `https://` pages without an SSL certificate. We recommend a free one from LetsEncrypt using [DietPi-LetsEncrypt](../dietpi_tools.md#dietpi-letsencrypt).
