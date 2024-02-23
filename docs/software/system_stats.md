@@ -337,7 +337,7 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
 
 ***
 
-Official documentation: <https://learn.netdata.cloud/docs/overview/what-is-netdata>  
+Official documentation: <https://learn.netdata.cloud/docs/netdata-agent/>  
 Wikipedia: <https://wikipedia.org/wiki/Netdata>
 
 ## Webmin

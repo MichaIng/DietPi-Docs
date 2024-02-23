@@ -16,7 +16,7 @@ Links to special software packages are located at the end of the according softw
 
 ## General articles
 
-- Raspberry Pi Foundation: [DietPi | Minimal image, highly extensible](https://www.raspberrypi.org/forums/viewtopic.php?t=285096)
+- Raspberry Pi Foundation: [DietPi | Minimal image, highly extensible](https://forums.raspberrypi.com/viewtopic.php?t=285096)
 - Hardkernel ODROID: [\[OS\] DietPi | Minimal image, highly extensible](https://forum.odroid.com/viewtopic.php?t=40392)
 - PC-WELT (German language): [Diet Pi ist erste Wahl für Headlessplatinen](https://www.pcwelt.de/article/1172801){:class="nospellcheck"}
 - Raspberry Pi GEEK (German language): [Schlankes Raspbian-Derivat DietPi](https://www.raspberry-pi-geek.de/ausgaben/rpg/2017/10/schlankes-raspbian-derivat-dietpi/){:class="nospellcheck"}
