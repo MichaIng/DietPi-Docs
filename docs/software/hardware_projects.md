@@ -95,6 +95,10 @@ Mycroft AI is a free and open source voice assistant.
 
 ![Mycroft AI logo](../assets/images/dietpi-software-hardwareprojects-mycroftai.png){: width="200" height="33" loading="lazy"}
 
+!!! warning "The company behind Mycroft AI is out of business"
+
+    The below setup method hence does not work anymore, all servers have been shut down. OpenVoiceOS and Neon AI forked it and we will try to migrate to one of these. Until then, our Mycroft AI software option is not functional. We are happy for anyone helping with the migration. More information can be found on Reddit: <https://www.reddit.com/r/Mycroftai/comments/1av7t0o/mycroftai_website_is_down_anyone_have_an_update/>
+
 === "Interactive install"
 
     1. Branch selection: For inexperienced users we recommend the master branch as well: ++y++
@@ -107,7 +111,7 @@ Mycroft AI is a free and open source voice assistant.
     1. If you did no reboot after install, load Mycroft commands to current shell session: `. /etc/bashrc.d/mycroft.sh`
     2. Start CLI client: `mycroft-cli-client`
     3. You should see and at best hear the invitation to pair your device, e.g.: `PairingSkill - INFO - Pairing code: XXYYZZ`
-    4. Visit <https://home.mycroft.ai/> to start pairing and configuring your device and skills.
+    4. Visit **REMOVED** (EDIT: Link is permanently down) to start pairing and configuring your device and skills.
 
 === "Build Mimic for offline TTS (British Male) support (optional)""
 
