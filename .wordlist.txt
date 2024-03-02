@@ -70,6 +70,7 @@ CalDAV
 CardDAV
 Catppuccin
 CAVA
+CBL
 CCleaner
 CDTV
 CedArctic
@@ -738,6 +739,7 @@ webserver
 webservers
 WebServers
 webstack
+Webtoons
 WebUI
 whiptail
 WH

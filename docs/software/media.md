@@ -1864,36 +1864,55 @@ License: [GPLv3](https://github.com/navidrome/navidrome/blob/master/LICENSE)
 
 ## Kavita
 
-Kavita is self-hosted library, for comics, manga or books. A highlight of some of its key features:
-
-- _Versatile Content Support_: Kavita ensures a comprehensive library experiencecaters by serving Manga, Webtoons, Comics (cbr, cbz, zip/rar/rar5, 7zip, raw images), and Books (epub, pdf) with a responsive reading experience.
-
-- _Efficient Organization_ with metadata richness: Kavita has a rich metadata support, enhancing user experience with effective filtering and searching. Users can efficiently organize their reading materials through Collections, Reading Lists (CBL Import), and a Want to Read feature, ensuring a well-structured library.
-
-- _Personalization and Theming_: With support for Dark mode and customizable theming, Kavita allows users to tailor their reading environment according to their preferences for a personalized and visually comfortable experience. It has a responsive interface that work great on any device (phone, tablet, desktop). Dark mode and customizable theming support
-
-
+Kavita is a self-hosted library, for comics, manga or books. 
 ![Kavita web interface screenshot](../assets/images/dietpi-software-media-kavita.jpg){: width="600" height="378" loading="lazy"}
+
+A highlight of some of its key features:
+
+- _Versatile Content Support_: Kavita ensures a comprehensive library experience by serving Manga, Webtoons, Comics (`cbr`, `cbz`, `zip`/`rar`/`rar5`, `7zip`, raw images), and eBooks (`epub`, `pdf`).
+
+- _Efficient Organization_ with metadata richness: Kavita has a rich metadata support, enhancing user experience with effective filtering and searching. Users can efficiently organize their reading materials through Collections, Reading Lists (CBL Import), and a _Want to Read feature_, ensuring a well-structured library.
+
+- _Personalisation and Theming_: With support for Dark mode and customizable theming, Kavita allows users to tailor their reading environment according to their preferences for a personalised and visually comfortable experience. It has a responsive interface that works great on any device (phone, tablet, desktop). Dark mode and customizable theming support
 
 === "Web interface"
 
-    The web interface uses port **2036**:
+    The web interface is accessible via port **2036**:
     - URL: `http://<your.IP>:2036`
 
 === "Setup details"
 
-    The install, config and data directory is located at:
-
+    The configuration directory is located at:    
     ```
-    /mnt/dietpi_userdata/{ebooks,comics}
+    /opt/kavita/config
     ```
+    
+    For comics and ebooks, the following two directories have been prepared.
+    ```
+    /mnt/dietpi_userdata/comics
+    /mnt/dietpi_userdata/ebooks
+    ```
+    
+    Any other directory could be used, as long as `kavita` or `dietpi` users have read and write permissions.
 
 === "Service control"
 
-    Kavita runs as systemd service, it can be controlled with the following commands:
+    Kavita runs as `systemd` service and it can be controlled with the following commands:
 
     ```sh
     systemctl status kavita
+    ```
+
+    ```sh
+    systemctl start kavita
+    ```
+
+    ```sh
+    systemctl stop kavita
+    ```
+
+    ```sh
+    systemctl restart kavita
     ```
 
 === "Logs"
@@ -1911,6 +1930,7 @@ Kavita is self-hosted library, for comics, manga or books. A highlight of some o
     ```sh
     dietpi-software reinstall 212
     ```
+
 ***
 
 Website: <https://www.kavitareader.com/>  
