@@ -1874,7 +1874,7 @@ A highlight of some of its key features:
 
 - _Efficient Organization_ with metadata richness: Kavita has a rich metadata support, enhancing user experience with effective filtering and searching. Users can efficiently organize their reading materials through Collections, Reading Lists (CBL Import), and a _Want to Read feature_, ensuring a well-structured library.
 
-- _Personalization and Theming_: With support for Dark mode and customizable theming, Kavita allows users to tailor their reading environment according to their preferences for a personalised and visually comfortable experience. It has a responsive interface that works great on any device (phone, tablet, desktop). Dark mode and customizable theming support
+- _Personalisation and Theming_: With support for Dark mode and customizable theming, Kavita allows users to tailor their reading environment according to their preferences for a personalised and visually comfortable experience. It has a responsive interface that works great on any device (phone, tablet, desktop). Dark mode and customizable theming support
 
 === "Web interface"
 
