@@ -452,6 +452,7 @@ passwd
 passwordless
 PCIe
 petitboot
+Personalisation
 phpBB
 phpMyAdmin
 phpSysInfo
