@@ -142,7 +142,6 @@ DXX
 Dynu
 ebook
 ebooks
-eBooks
 EDL
 EEPROM
 Emby

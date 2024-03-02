@@ -1870,7 +1870,7 @@ Kavita is a self-hosted library, for comics, manga or books.
 
 A highlight of some of its key features:
 
-- _Versatile Content Support_: Kavita ensures a comprehensive library experience by serving Manga, Webtoons, Comics (`cbr`, `cbz`, `zip`/`rar`/`rar5`, `7zip`, raw images), and eBooks (`epub`, `pdf`).
+- _Versatile Content Support_: Kavita ensures a comprehensive library experience by serving Manga, Webtoons, Comics (`cbr`, `cbz`, `zip`/`rar`/`rar5`, `7zip`, raw images), and ebooks (`epub`, `pdf`).
 
 - _Efficient Organization_ with metadata richness: Kavita has a rich metadata support, enhancing user experience with effective filtering and searching. Users can efficiently organize their reading materials through Collections, Reading Lists (CBL Import), and a _Want to Read feature_, ensuring a well-structured library.
 
