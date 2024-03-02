@@ -1,4 +1,5 @@
 /* Colours */
+
 :root {
     --md-accent-fg-color: #9ccc00;
     --md-primary-fg-color: #7b952f;
@@ -22,6 +23,24 @@
     .md-nav--primary .md-nav__title a:hover {
         color: #164046;
     }
+}
+
+/* Menu buttons */
+
+.navbar > .container-xl > .navbar-collapse > a {
+	color: #ffffff;
+	font-size: 15px;
+	margin: 4px 0;
+	padding: 10px 14px;
+	border: 1px solid #164046;
+	border-radius: 4px;
+	transition: border-color 1s;
+}
+.navbar > .container-xl > .navbar-collapse > a:hover,
+.navbar > .container-xl > .navbar-collapse > a:focus,
+.navbar > .container-xl > .navbar-collapse > a:active,
+.navbar > .container-xl > .navbar-collapse > a.active {
+	border-color: #c5ff00;
 }
 
 /* Announcement */
