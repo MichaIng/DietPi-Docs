@@ -1884,12 +1884,14 @@ A highlight of some of its key features:
 
 === "Setup details"
 
-    The configuration directory is located at:    
+    The configuration directory is located at:
+
     ```
     /opt/kavita/config
     ```
     
     For comics and ebooks, the following two directories have been prepared.
+    
     ```
     /mnt/dietpi_userdata/comics
     /mnt/dietpi_userdata/ebooks
