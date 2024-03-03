@@ -1879,6 +1879,7 @@ A highlight of some of its key features:
 === "Web interface"
 
     The web interface is accessible via port **2036**:
+    
     - URL: `http://<your.IP>:2036`
 
 === "Setup details"
