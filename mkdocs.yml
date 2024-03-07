@@ -26,7 +26,7 @@ theme:
   - content.code.copy
   - navigation.tabs
   - navigation.top
-  #logo: assets/images/logo.png
+  logo: assets/images/dietpi-logo_180x180.png
   favicon: https://dietpi.com/favicon.ico
 
 markdown_extensions:
