@@ -885,7 +885,7 @@ Access and manage your data from anywhere via browser with this lightweight remo
 
 === "Modify the default config"
 
-    It comes with a powerful CLI with which you can change the configuration, but also execute commands, set rules, etc. pp. (Some settings can also be changed via the web interface.)
+    File Browser comes with a powerful CLI not only allowing to change the configuration, but also execute commands, set rules, etc. (some settings can also be changed via the web interface).  
     You can find the full feature set in the official documentation of File Browser, linked below, or run:
 
     ```sh
