@@ -79,9 +79,9 @@ plugins:
       remove_optional_attribute_quotes: true
       convert_charrefs: true
     minify_css: true
-    css_files:
-    - assets/stylesheets/custom.css
-    #minify_js: true
+    #css_files:
+    #- assets/stylesheets/custom.css
+    minify_js: true
     #js_files:
     #- assets/javascripts/custom.js
     cache_safe: true
