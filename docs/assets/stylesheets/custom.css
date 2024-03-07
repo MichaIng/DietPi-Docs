@@ -27,19 +27,28 @@
 
 /* Menu buttons */
 
-.navbar > .container-xl > .navbar-collapse > a {
-	color: #ffffff;
+.md-banner__inner {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 5px 15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.md-banner__inner > a {
+	font-family: Arial, sans-serif;
 	font-size: 15px;
+	line-height: 20px;
 	margin: 4px 0;
 	padding: 10px 14px;
 	border: 1px solid #164046;
 	border-radius: 4px;
-	transition: border-color 1s;
+	transition: border-color 1s !important;
 }
-.navbar > .container-xl > .navbar-collapse > a:hover,
-.navbar > .container-xl > .navbar-collapse > a:focus,
-.navbar > .container-xl > .navbar-collapse > a:active,
-.navbar > .container-xl > .navbar-collapse > a.active {
+.md-banner__inner > a:hover,
+.md-banner__inner > a:focus,
+.md-banner__inner > a:active {
+	color: #fff;
 	border-color: #c5ff00;
 }
 
