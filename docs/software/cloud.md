@@ -886,11 +886,30 @@ Access and manage your data from anywhere via browser with this lightweight remo
 === "Modify the default config"
 
     It comes with a powerful CLI with which you can change the configuration, but also execute commands, set rules, etc. pp. (Some settings can also be changed via the web interface.)
-    You can find the full feature set in the official documentation of File Browser, linked below, or run `/opt/filebrowser/filebrowser --help`.
-    Here is an example for how to change the default data directory (in this example set to `/foo/bar/baz`).
-    - stop the service: `systemctl stop filebrowser.service`
-    - apply new config: `/opt/filebrowser/filebrowser config set -r /foo/bar/baz -d /mnt/dietpi_userdata/filebrowser/filebrowser.db`
-    - bring the service back: `systemctl start filebrowser.service`
+    You can find the full feature set in the official documentation of File Browser, linked below, or run:
+
+    ```sh
+    /opt/filebrowser/filebrowser --help
+    ```
+
+    Here is an example for how to change the default data directory (in this example set to `/foo/bar/baz`):
+    - Stop the service:
+
+        ```sh
+        systemctl stop filebrowser
+        ```
+
+    - Apply new config:
+
+        ```sh
+        /opt/filebrowser/filebrowser config set -r /foo/bar/baz -d /mnt/dietpi_userdata/filebrowser/filebrowser.db
+        ```
+
+    - Bring the service back:
+
+        ```sh
+        systemctl start filebrowser
+        ```
 
 === "View logs"
 
