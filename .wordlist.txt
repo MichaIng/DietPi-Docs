@@ -46,6 +46,7 @@ Balena
 balenaEtcher
 baudrate
 Bazarr
+bcm
 BeagleBone
 Beelink
 binfmt
@@ -244,6 +245,7 @@ HTPC
 HTTPS
 IceCast
 ICMP
+IEC
 Imager
 Imgur
 InfluxData
@@ -450,6 +452,7 @@ pasja
 passwd
 passwordless
 PCIe
+PCM
 petitboot
 Personalisation
 phpBB
@@ -702,6 +705,7 @@ UTM
 UUID
 Vae
 vaultwarden
+VC
 VCSM
 VHDX
 vhost
