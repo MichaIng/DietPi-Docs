@@ -348,9 +348,9 @@ This collaboration and documentation platform was originally developed for and i
 
     1. Database type: `MariaDB, MySQL, or compatible`
     1. Database host: `localhost`
-    1. Database name: `wikimedia`
+    1. Database name: `mediawiki`
     1. Database table prefix: Since we use a dedicated database, you can leave this empty.
-    1. Database username: `wikimedia`
+    1. Database username: `mediawiki`
     1. Database password: `<your global password>` (default: `dietpi`)
 
     The next steps allow you to create an admin user to use for subsequent logins and setup wiki details. As last setup step you need to download the generated `LocalSettings.php` and upload it or copy and paste the content to `/var/www/wiki/LocalSettings.php`. When done, you can access your wikis main page, login with the previously created admin user and start creating content.
