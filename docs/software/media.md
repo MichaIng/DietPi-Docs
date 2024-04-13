@@ -1938,7 +1938,7 @@ A highlight of some of its key features:
 ***
 
 Website: <https://www.kavitareader.com/>  
-Documentation: <https://wiki.kavitareader.com/en>  
+Documentation: <https://wiki.kavitareader.com/>  
 Source code: <https://github.com/Kareadita/Kavita>
 
 [Return to the **Optimised Software list**](../software.md)
