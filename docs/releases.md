@@ -5,6 +5,7 @@ description: Overview of DietPi releases with applied new software and features,
 
 # DietPi Releases
 
+- [v9.3 April 2024](releases/v9_3.md)
 - [v9.2 March 2024](releases/v9_2.md)
 - [v9.1 February 2024](releases/v9_1.md)
 - [v9.0 January 2024](releases/v9_0.md)
