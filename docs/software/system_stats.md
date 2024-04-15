@@ -454,7 +454,7 @@ High availability - Low-ops, minimal production Kubernetes, for developers, clou
 
     ```sh
     microk8s kubectl get nodes
-    microk8s kubectl get napspaces
+    microk8s kubectl get namespaces
     ```
 
     MicroK8s does provide a few "addons", which can be seen below with the enable and disable command.

@@ -339,16 +339,15 @@ NZB download manager with web interface.
 
     ```sh
     systemctl stop sabnzbd
-    G_CONFIG_INJECT 'download_dir =' "download_dir = /mnt/dietpi_userdata/downloads/incomplete" /etc/sabnzbd/sabnzbd.ini
-    G_CONFIG_INJECT 'complete_dir =' "complete_dir = /mnt/dietpi_userdata/downloads/complete" /etc/sabnzbd/sabnzbd.ini
-    G_CONFIG_INJECT 'nzb_backup_dir =' "nzb_backup_dir = /mnt/dietpi_userdata/downloads/sabnzbd_nzb_backup" /etc/sabnzbd/sabnzbd.ini
-    G_CONFIG_INJECT 'admin_dir =' "admin_dir = /mnt/dietpi_userdata/downloads/sabnzbd_admin" /etc/sabnzbd/sabnzbd.ini
-    G_CONFIG_INJECT 'log_dir =' 'log_dir = /var/log/sabnzbd' /etc/sabnzbd/sabnzbd.ini
-    G_CONFIG_INJECT 'log_level =' 'log_level = 0' /etc/sabnzbd/sabnzbd.ini
-    G_CONFIG_INJECT 'refresh_rate =' 'refresh_rate = 2' /etc/sabnzbd/sabnzbd.ini
-    G_CONFIG_INJECT 'host =' 'host = 0.0.0.0' /etc/sabnzbd/sabnzbd.ini
-    G_CONFIG_INJECT 'permissions =' 'permissions = 0775' /etc/sabnzbd/sabnzbd.ini
-    G_CONFIG_INJECT 'auto_browser =' 'auto_browser = 0' /etc/sabnzbd/sabnzbd.ini
+    G_CONFIG_INJECT 'log_level[[:blank:]]+=' 'log_level = 0' /etc/sabnzbd/sabnzbd.ini # Warnings and errors only
+    G_CONFIG_INJECT 'auto_browser[[:blank:]]+=' 'auto_browser = 0' /etc/sabnzbd/sabnzbd.ini
+    G_CONFIG_INJECT 'host[[:blank:]]+=' 'host = 0.0.0.0' /etc/sabnzbd/sabnzbd.ini
+    G_CONFIG_INJECT 'admin_dir[[:blank:]]+=' 'admin_dir = /mnt/dietpi_userdata/downloads/sabnzbd_admin' /etc/sabnzbd/sabnzbd.ini
+    G_CONFIG_INJECT 'download_dir[[:blank:]]+=' 'download_dir = /mnt/dietpi_userdata/downloads/incomplete' /etc/sabnzbd/sabnzbd.ini
+    G_CONFIG_INJECT 'complete_dir[[:blank:]]+=' 'complete_dir = /mnt/dietpi_userdata/downloads/complete' /etc/sabnzbd/sabnzbd.ini
+    G_CONFIG_INJECT 'nzb_backup_dir[[:blank:]]+=' 'nzb_backup_dir = /mnt/dietpi_userdata/downloads/sabnzbd_nzb_backup' /etc/sabnzbd/sabnzbd.ini
+    G_CONFIG_INJECT 'permissions[[:blank:]]+=' 'permissions = 0775' /etc/sabnzbd/sabnzbd.ini
+    G_CONFIG_INJECT 'refresh_rate[[:blank:]]+=' 'refresh_rate = 2' /etc/sabnzbd/sabnzbd.ini
     systemctl start sabnzbd
     ```
 
@@ -357,23 +356,35 @@ NZB download manager with web interface.
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
     Folders used by SABnzbd:
 
-    - folder accessed via file server: `downloads/complete`
-    - local folder: `/mnt/dietpi_userdata/downloads/complete`
+    - Folder accessed via file server: `downloads/complete`
+    - Local folder: `/mnt/dietpi_userdata/downloads/complete`
 
 === "Optional: Multi threaded PAR2"
 
     Requires compile install, please see: <https://sabnzbd.org/wiki/installation/multicore-par2>
 
-    Remark: The steps require a Git client and build tools (Build-Essentials). You can install these running next command in the terminal:
+    The steps require a Git client and build tools. You can install these running next command in the terminal:
 
     ```sh
-    dietpi-software install 16 17
+    apt install git build-essential
     ```
 
 === "Recommended: Protect your privacy with a VPN"
 
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
     [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+
+=== "View logs"
+
+    ```sh
+    journalctl -u sabnzbd
+    ```
+
+=== "Update to latest version"
+
+    ```sh
+    dietpi-software reinstall 139
+    ```
 
 ## Medusa
 
@@ -491,6 +502,15 @@ Automatically download your favorite TV shows, as they become available.
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
     [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
 
+=== "View logs"
+
+    - Service: `journalctl -u sonarr`
+    - Daemon: `/var/log/bazarr/sonarr.log`
+
+=== "Update to latest version"
+
+    - Use the internal web based updater
+
 ***
 
 YouTube video tutorial: [How to install and configure Sonarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=3h0GvdKcR0Y)
@@ -558,6 +578,15 @@ Automatically download your favorite movies, as they become available.
 
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
     [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+
+=== "View logs"
+
+    - Service: `journalctl -u radarr`
+    - Daemon: `/var/log/bazarr/radarr.log`
+
+=== "Update to latest version"
+
+    - Use the internal web based updater
 
 ***
 
@@ -669,6 +698,15 @@ Automatically download your favorite music.
 
     Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
     [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+
+=== "View logs"
+
+    - Service: `journalctl -u lidarr`
+    - Daemon: `/var/log/bazarr/lidarr.log`
+
+=== "Update to latest version"
+
+    - Use the internal web based updater
 
 ## Readarr
 
