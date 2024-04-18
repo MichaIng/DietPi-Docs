@@ -17,6 +17,7 @@ If too much customisation has been done without having it well documented or scr
 ```sh
 dietpi-backup 1
 sed -i 's/stretch/buster/g' /etc/apt/sources.list{,.d/*.list}
+sed -i '/ buster-backports /d' /etc/apt/sources.list
 rm -f /etc/apt/sources.list.d/dietpi-php.list
 rm -f /etc/apt/trusted.gpg.d/dietpi-php.gpg
 rm -f /etc/apt/preferences.d/dietpi-{php,openssl,xrdp}
