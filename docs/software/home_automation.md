@@ -39,7 +39,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
     !!! info "Automate install of additional dependencies"
         Some integrations may require additional APT and/or Python dependencies. The latter are usually installed ondemand by the Home Assistant core, when installing or accessing the integration, but APT packages need to be installed manually.  
-	This can be automated with two `dietpi.txt` settings: `SOFTWARE_HOMEASSISTANT_APT_DEPS` and `SOFTWARE_HOMEASSISTANT_PIP_DEPS`
+        This can be automated with two `dietpi.txt` settings: `SOFTWARE_HOMEASSISTANT_APT_DEPS` and `SOFTWARE_HOMEASSISTANT_PIP_DEPS`
 
     !!! warning "Long installation duration"
         The install process on slower SBC models can take a up to 2 hours, hence take a coffee, find some other activity and check back once in a while. It will show "Installing Python-3.x.x..." a very long time.  
