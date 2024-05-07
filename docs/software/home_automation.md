@@ -37,8 +37,12 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
 === "Initial install and access"
 
-    !!! info "Long installation duration"
-        The install process on slower SBC models can take a very long time, up to 2 hours, hence take a coffee, find some other activity and check back once in a while. It will show Installing Python-3.x.x... a very long time.  
+    !!! info "Automate install of additional dependencies"
+        Some integrations may require additional APT and/or Python dependencies. The latter are usually installed ondemand by the Home Assistant core, when installing or accessing the integration, but APT packages need to be installed manually.  
+	This can be automated with two `dietpi.txt` settings: `SOFTWARE_HOMEASSISTANT_APT_DEPS` and `SOFTWARE_HOMEASSISTANT_PIP_DEPS`
+
+    !!! warning "Long installation duration"
+        The install process on slower SBC models can take a up to 2 hours, hence take a coffee, find some other activity and check back once in a while. It will show "Installing Python-3.x.x..." a very long time.  
         If you want to see processing details, run `htop` on a dedicated terminal or SSH session to watch Python build process live.
 
     After `dietpi-software` has finished and the service starts the first time, please go through the following steps manually:
@@ -96,7 +100,8 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     /home/homeassistant/homeassistant-update.sh
     ```
 
-    To update as well the whole `pyenv` Python version, reinstall Home Assistant:
+    Home Assistant updates may drop support for old Python versions. The release notes would inform about this: <https://github.com/home-assistant/core/releases>  
+    To update the `pyenv` Python version along with Home Assistant, reinstall it. Since Python dependencies need to be reinstalled, the first service start, and accessing certain integrations for the first time, may again take a while:
 
     ```sh
     dietpi-software reinstall 157
@@ -104,7 +109,10 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
 ***
 
-Official documentation: <https://home-assistant.io/docs>
+Official website: <https://www.home-assistant.io/>  
+Official documentation: <https://home-assistant.io/docs>  
+Source code: <https://github.com/home-assistant/core>  
+License: [Apache-2.0](https://github.com/home-assistant/core/blob/dev/LICENSE.md)
 
 ## Domoticz
 
