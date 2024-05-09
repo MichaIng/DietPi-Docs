@@ -262,6 +262,18 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>ROCK 4 SE</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK4SE-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>ROCK 4C Plus</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK4CPlus-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>ROCK Pi S</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Bookworm.img.xz">DietPi image</a>
@@ -271,6 +283,12 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
                 <td><a class="table" href=""><strong>Radxa Zero</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZero-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Radxa ZERO 3E / ZERO 3W (testing)</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_RadxaZERO3-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -289,24 +307,6 @@ It also features a Gbit LAN for network, with dedicated bus and controller, it w
                 <td><a class="table" href=""><strong>ROCK 5B</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5B-ARMv8-Bookworm.img.xz">DietPi image</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table" href=""><strong>ROCK 4 SE</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK4SE-ARMv8-Bookworm.img.xz">DietPi image</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table" href=""><strong>ROCK 4C Plus</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK4CPlus-ARMv8-Bookworm.img.xz">DietPi image</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table"><strong>Radxa ZERO 3E / ZERO 3W (testing)</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_RadxaZERO3-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -582,6 +582,12 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>Orange Pi Zero 2W (testing)</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePiZero2W-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>Orange Pi Zero 3</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz">DietPi image</a>
@@ -600,7 +606,7 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 </td>
             </tr>
             <tr>
-                <td><a class="table"><strong>Orange Pi 3 LTS (testing)</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi 3 LTS (testing)</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePi3LTS-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>

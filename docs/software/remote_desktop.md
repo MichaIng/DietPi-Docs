@@ -233,7 +233,7 @@ Examples of TCP ports for Remote.It:
     mawk -F\" '/claim/{print $4}' /etc/remoteit/config.json
     ```
 
-    Then follow these instructions: <https://docs.remote.it/software/device-package/installation#3.-claim-and-register-the-device>
+    Then follow these instructions: <https://docs.remote.it/software/device-package/installation#id-3.-claim-and-register-the-device>
 
 ***
 

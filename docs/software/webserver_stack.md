@@ -102,7 +102,7 @@ DietPi offers an **one-click-installation** of the following web development sta
     It is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.[^2]
 
     **[SQLite](databases.md#sqlite)**  
-    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](databases.md#mariadb). [SQLite](databases.md#sqlite) has a very small footprint. As drawbacks, it has no multi user capabilities and a couple of SQL features are missing.[^3]
+    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](databases.md#mariadb). [SQLite](databases.md#sqlite) has a very small footprint. As drawbacks, it has no memory caching, no multi user capabilities and a couple of SQL features are missing.[^3]
 
 ***
 
