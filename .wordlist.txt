@@ -37,6 +37,7 @@ autostart
 AutoStart
 backend
 backends
+backlight
 backlights
 backported
 Baïkal
@@ -300,6 +301,7 @@ Kubernetes
 KVM
 LASP
 Laravel
+LBA
 LeMaker
 lcd
 LEDs
@@ -451,6 +453,7 @@ PaperMC
 pasja
 passwd
 passwordless
+PCI
 PCIe
 PCM
 petitboot
