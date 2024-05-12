@@ -37,6 +37,7 @@ autostart
 AutoStart
 backend
 backends
+backlight
 backlights
 backported
 Baïkal
@@ -452,6 +453,7 @@ PaperMC
 pasja
 passwd
 passwordless
+PCI
 PCIe
 PCM
 petitboot

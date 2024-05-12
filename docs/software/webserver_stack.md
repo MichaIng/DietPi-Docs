@@ -99,7 +99,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 === "Which DATABASE to CHOOSE ?"
 
     **[MariaDB](databases.md#mariadb)**  
-    It is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.[^2]
+    It is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.
 
     **[SQLite](databases.md#sqlite)**  
     It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](databases.md#mariadb). [SQLite](databases.md#sqlite) has a very small footprint. As drawbacks, it has no memory caching, no multi user capabilities and a couple of SQL features are missing.[^3]
@@ -591,7 +591,6 @@ Official documentation: <https://nodejs.org/api/>
 
 <!-- markdownlint-disable MD053 -->
 [^1]: Find out more about the success stories of Nginx on: <https://nginx.org/en/>
-[^2]: ["Dead database walking: MySQL's creator on why the future belongs to MariaDB - MariaDB, open source, mysql, Oracle"](https://www2.computerworld.com.au/article/457551/dead_database_walking_mysql_creator_why_future_belongs_mariadb/). Computerworld. Retrieved 22 November 2020.
 [^3]: [Most Widely Deployed and Used Database Engine](https://www.sqlite.org/mostdeployed.html). Retrieved 12 December 2020
 [^4]: [NGINX vs. Apache: Our View of a Decade-Old Question](https://www.nginx.com/blog/nginx-vs-apache-our-view/). Retrieved 12 December 2020
 [^5]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
