@@ -594,12 +594,6 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi Zero 3 (1.5 GB RAM)</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-1.5G-ARMv8-Bookworm.img.xz">DietPi image</a>
-                </td>
-            </tr>
-            <tr>
                 <td><a class="table" href=""><strong>Orange Pi 3B</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3B-ARMv8-Bookworm.img.xz">DietPi image</a>
