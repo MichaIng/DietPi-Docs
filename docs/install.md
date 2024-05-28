@@ -406,7 +406,7 @@ Select the following tabs for the installation description of your target.
 
         Remember the VM ID, you need it later.
 
-    1. Tab **OS**: Select "**Do not use any media** ", for the **Guest OS** assure that **Linux** and version "**5.x - 2.6 Kernel**" is selected, then click **Next**.
+    1. Tab **OS**: Select "**Do not use any media** ", for the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected, then click **Next**.
     1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default. Click **Next**.
     1. Tab **Disks**: Delete the default `scsi0` disk with the red trash bin button, then click **Next**.
     1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `kvm64` type. Then click **Next**.
