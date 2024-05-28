@@ -489,7 +489,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
 ***
 
-Official website: <https://paper.readthedocs.io>  
+Official website: <https://docs.papermc.io/paper/admin>  
 Source code: <https://github.com/PaperMC/Paper>
 
 ## Box86
