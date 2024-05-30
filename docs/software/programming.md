@@ -206,6 +206,29 @@ _Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedi
     journalctl -u docker -u containerd
     ```
 
+=== "Plugins"
+
+    Docker offers plugins on its website (e.g. [Docker Plugins amd64 stable](https://download.docker.com/linux/debian/dists/bookworm/pool/stable/amd64/){: class="nospellcheck"}), some of them are not installed by the Docker installation by default resp. are no install option from `dietpi-software` (like the Docker Compose plugin is one).  
+    These additional plugins can be installed by the user as described below.
+
+    [Docker Buildx](https://docs.docker.com/build/architecture/){: class="nospellcheck"} CLI plugin:
+
+    ```sh
+    apt install docker-buildx-plugin
+    ```
+
+    [Docker vulnerability scan](https://docs.docker.com/docker-hub/vulnerability-scanning/) CLI plugin:
+
+    ```sh
+    apt install docker-scan-plugin
+    ```
+
+    For [running container rootless](https://docs.docker.com/engine/security/rootless/):
+
+    ```sh
+    apt install docker-ce-rootless-extras
+    ```
+
 === "Speed up image creation with a tmpfs"
 
     Docker downloads image file chunks to `/mnt/dietpi_userdata/docker-data/tmp` when generating a Docker image. After this, the file chunks are deleted as they are only temporary files.  
