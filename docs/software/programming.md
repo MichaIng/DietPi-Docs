@@ -218,7 +218,7 @@ _Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedi
     tmpfs /mnt/dietpi_userdata/docker-data/tmp tmpfs size=2G,noatime,lazytime,nodev,nosuid
     ```
 
-    The `size=` option should be adjusted to the systems RAM size: Only a part of the total RAM size should be used to avoid memory underrun issues.  
+    The `size=` option should be adjusted to the systems RAM size: Only a part of the total RAM size should be used to avoid low memory issues.  
     After changing the file `/etc/fstab` the tmpfs needs to be activated. This can be done via a file system remount via 
     
     ```sh
