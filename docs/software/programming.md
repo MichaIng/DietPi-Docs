@@ -206,7 +206,7 @@ _Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedi
     journalctl -u docker -u containerd
     ```
 
-=== "Docker plugins"
+=== "Plugins"
 
     Docker offers plugins on its website (e.g. [Docker Plugins amd64 stable](https://download.docker.com/linux/debian/dists/bookworm/pool/stable/amd64/){: class="nospellcheck"}), some of them are not installed by the Docker installation by default resp. are no install option from `dietpi-software` (like the Docker Compose plugin is one).  
     These additional plugins can be installed by the user as described below.
@@ -228,6 +228,27 @@ _Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedi
     ```sh
     apt install docker-ce-rootless-extras
     ```
+
+=== "Speed up image creation with a tmpfs"
+
+    Docker downloads image file chunks to `/mnt/dietpi_userdata/docker-data/tmp` when generating a Docker image. After this, the file chunks are deleted as they are only temporary files.  
+    In case of a slower disk (e.g. SD Card) this takes a longer time due to the SD Card reading/writing speed. To speedup the image generation, a tmpfs file system can be used.  
+    A drawback of using a tmpfs is the required RAM, i.e. enough RAM memory (e.g. > 2 GB) should be present for the tmpfs.
+
+    The tmpfs file system can be added manually via the file `/etc/fstab` by entering a line (e.g. in the `TMPFS` area) like:
+
+    ```
+    tmpfs /mnt/dietpi_userdata/docker-data/tmp tmpfs size=2G,noatime,lazytime,nodev,nosuid
+    ```
+
+    The `size=` option should be adjusted to the systems RAM size: Only a part of the total RAM size should be used to avoid low memory issues.  
+    After changing the file `/etc/fstab` the tmpfs needs to be activated. This can be done via a file system remount via 
+    
+    ```sh
+    mount -o remount /mnt/dietpi_userdata/docker-data/tmp
+    ```
+
+    or a system reboot.
 
 ***
 
