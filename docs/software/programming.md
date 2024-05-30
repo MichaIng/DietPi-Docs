@@ -208,10 +208,10 @@ _Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedi
 
 === "Docker plugins"
 
-    Docker offers plugins on its website (e.g. [Docker Plugins amd64 stable](https://download.docker.com/linux/debian/dists/bookworm/pool/stable/amd64/)), some of them are not installed by the Docker installation by default resp. are no install option from `dietpi-software` (like the Docker Compose plugin is one).  
+    Docker offers plugins on its website (e.g. [Docker Plugins amd64 stable](https://download.docker.com/linux/debian/dists/bookworm/pool/stable/amd64/){: class="nospellcheck"}), some of them are not installed by the Docker installation by default resp. are no install option from `dietpi-software` (like the Docker Compose plugin is one).  
     These additional plugins can be installed by the user as described below.
 
-    [Docker Buildx](https://docs.docker.com/build/architecture/) CLI plugin:
+    [Docker Buildx](https://docs.docker.com/build/architecture/){: class="nospellcheck"} CLI plugin:
 
     ```sh
     apt install docker-buildx-plugin
