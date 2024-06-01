@@ -3,23 +3,17 @@ on: [pull_request, push]
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+permissions: { contents: read }
 jobs:
   main:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
     # https://github.com/actions/runner-images
-    runs-on: ubuntu-22.04
-    defaults:
-      run:
-        shell: sh
+    runs-on: ubuntu-24.04
     steps:
-    - name: Setup tmpfs
-      run: sudo mount -t tmpfs -o "noatime,lazytime,uid=$(id -u)" tmpfs "$GITHUB_WORKSPACE"
     - name: Clone DietPi-Docs repository
       id: clone
-      # https://github.com/actions/checkout/tags
       uses: actions/checkout@v4
     - name: Setup Node.js for markdownlint-cli2
-      # https://github.com/actions/setup-node/tags
       uses: actions/setup-node@v4
       with:
         node-version: '*'
@@ -31,11 +25,10 @@ jobs:
     - name: Setup Python for MkDocs and PySpelling
       id: python
       if: always() && steps.clone.outcome == 'success'
-      # https://github.com/actions/setup-python/tags
       uses: actions/setup-python@v5
       with:
         # Match version on dietpi.com server
-        python-version: '3.11.2'
+        python-version: '3.11.9'
     - name: Install MkDocs
       id: mkdocs
       if: always() && steps.python.outcome == 'success'
@@ -68,13 +61,9 @@ jobs:
       # "429 Too Many Requests" on GitHub despite token
       # Exclude URLs for newly added Markdown files as well as raw view and edit GitHub URLs for all existing Markdown files
       # parallels.com|chromewebstore.google.com: Cloudflare lets client enter redirect loop, if it does not send a cookie, set in response.
-      # raspberrypi.com|www.reddit.com|superuser.com: Network error: Forbidden
+      # raspberrypi.com|www.reddit.com|superuser.com|twitter.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
       run: |
         git fetch --depth=1 origin master
-        while read -r line; do exclude="$exclude|dietpi.com/${line%.md}/"; done << _EOF_
-        $(git diff --name-only --diff-filter=A origin/master docs | grep '.md$')
-        _EOF_
-        while read -r line; do exclude="$exclude|github.com/MichaIng/DietPi-Docs/(raw|edit)/dev/$line"; done << _EOF_
-        $(find docs -type f -name '*.md')
-        _EOF_
+        while read -r line; do exclude="$exclude|dietpi.com/${line%.md}/"; done < <(git diff --name-only --diff-filter=A origin/master docs | grep '.md$')
+        while read -r line; do exclude="$exclude|github.com/MichaIng/DietPi-Docs/(raw|edit)/dev/$line"; done < <(find docs -type f -name '*.md')
         ./lychee -En --require-https --cache --exclude '^(http://wiringpi.com/$|https://(twitter.com/DietPi_$|www.patreon.com/DietPi$|www.linux-kvm.org/$|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details|www.kickstarter.com|theunarchiver.com/$|www.parallels.com/|(www|forums).raspberrypi.com/|www.reddit.com/|superuser.com|chromewebstore.google.com'"$exclude"'))' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
