@@ -454,7 +454,7 @@ The innovation of Nginx compared to earlier servers such as Apache was to use an
 
 ***
 
-Official documentation: <https://www.nginx.com>
+Official documentation: <https://docs.nginx.com/nginx/admin-guide/>
 
 ### Lighttpd
 
@@ -592,7 +592,7 @@ Official documentation: <https://nodejs.org/api/>
 <!-- markdownlint-disable MD053 -->
 [^1]: Find out more about the success stories of Nginx on: <https://nginx.org/en/>
 [^3]: [Most Widely Deployed and Used Database Engine](https://www.sqlite.org/mostdeployed.html). Retrieved 12 December 2020
-[^4]: [NGINX vs. Apache: Our View of a Decade-Old Question](https://www.nginx.com/blog/nginx-vs-apache-our-view/). Retrieved 12 December 2020
+[^4]: [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations). Retrieved 30 May 2024
 [^5]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
 [^6]: [CORS Errors Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors). Retrieved 05 December 2021
 

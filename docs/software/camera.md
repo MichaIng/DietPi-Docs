@@ -49,7 +49,7 @@ It consists of full control of the camera in a web-based interface.
 === "Access recordings (w/o web interface)"
 
     To access you recordings remotely without the web interface, you might want to have one of [DietPi's file servers](file_servers.md) installed.  
-    Directories used by motionEye:
+    Directories used by RPi Cam Web Interface:
 
     - Media directory = `/mnt/dietpi_userdata/rpicam`
     - Accessed from file server = `/rpicam`
