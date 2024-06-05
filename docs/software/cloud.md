@@ -14,6 +14,7 @@ description: Description of DietPi software options related to cloud and backup 
 - [**UrBackup Server - Full backups for systems on your network**](#urbackup)
 - [**Gogs - GitHub style server, with web interface**](#gogs)
 - [**Gitea - GitHub style server, with web interface**](#gitea)
+- [**Forgejo - GitHub style server, with web interface**](#forgejo)
 - [**Syncthing - Backup and sync server with web interface**](#syncthing)
 - [**MinIO - S3 compatible distributed object server**](#minio)
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
@@ -645,6 +646,126 @@ Official documentation: <https://docs.gitea.com/>
 Official forum: <https://forum.gitea.com/>  
 Source code: <https://github.com/go-gitea/gitea>  
 License: [MIT](https://github.com/go-gitea/gitea/blob/main/LICENSE)
+
+## Forgejo
+
+Your very own GitHub style server, with web interface.
+
+![Forgejo logo](../assets/images/dietpi-software-cloud-forgejo.svg){: width="320" height="200" loading="lazy"}
+
+See also the [**Git**](programming.md#git) client which is available in `dietpi-software` as an installation package.
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **3000**:
+
+    - URL: `http://<your.IP>:3000`
+
+=== "First run setup"
+
+    Has to be done once, when connected to the web interface:
+
+    - Change the following values only:
+        - Host: `/run/mysqld/mysqld.sock`
+        - Password: `<your global password>` (default: `dietpi`)
+        - Server Domain: `<your.domain/IP>`
+        - Forgejo Base URL: `http://<your.domain/IP>:3000/`
+        - Log Path: `/var/log/forgejo` (However, file logging is disabled by default.)
+    - Scroll to the bottom of page and select "Install Forgejo".
+    - Depending on whether the base URL above was entered correctly/is accessible by the connected browser, you may need to reconnect to the web page using the IP address, e.g.: `http://<your.IP>:3000`
+    - Once the page has reloaded, you will need to click `Register` to create the admin account.
+
+=== "External access"
+
+    If you wish to allow external access to your Forgejo server, there are some options, here are two of them:
+    
+    1 - You will need to setup port forwarding on your router, pointing to the IP address of your DietPi device.
+
+    - Port: 3000
+    - Protocol: TCP
+
+    If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../dietpi_tools.md#dietpi-letsencrypt){:class="nospellcheck"}.
+
+    2 - Without port forwarding, you can setup a Tunnel or Reverse Proxy with services like [Cloudflare Tunnel]([https://www.cloudflare.com/en-ca/products/tunnel/](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/))
+
+=== "Fail2Ban integration"
+
+    Using Fail2Ban your can block IP addresses after failed login attempts. This hardens your system against e.g. brute-force attacks.
+
+    === "When using journal logging (default)"
+
+        By default Forgejo logs to the systemd journal (see "View logs" tab), in which case Fail2Ban protection can be enabled with the following steps:
+
+        Create a new filter `/etc/fail2ban/filter.d/forgejo.conf`:
+
+        ```ini
+        [Definition]
+        journalmatch = _SYSTEMD_UNIT=forgejo.service
+        failregex = Failed authentication attempt for \x1b\[1m.+\x1b\[0m from \x1b\[1m<HOST>:\d+\x1b\[0m:
+        ```
+
+        Create a new jail `/etc/fail2ban/jail.d/forgejo.conf`:
+
+        ```ini
+        [forgejo]
+        enabled = true
+        backend = systemd
+        ```
+
+    === "When using file logging"
+
+        When file logging is enabled (see "View logs" tab), Fail2Ban protection can be enabled with the following steps:
+
+        Create a new filter `/etc/fail2ban/filter.d/forgejo.conf`:
+
+        ```ini
+        [Definition]
+        failregex = Failed authentication attempt for .+ from <HOST>:\d+:
+        ```
+
+        Create a new jail `/etc/fail2ban/jail.d/forgejo.conf`:
+
+        ```ini
+        [forgejo]
+        enabled = true
+        backend = auto
+        logpath = /var/log/forgejo/forgejo.log
+        ```
+
+    You can specify other properties like `maxretry` or `bantime` to overwrite the defaults in `/etc/fail2ban/jail.conf` or `/etc/fail2ban/jail.local` if present. When done:
+
+    - Restart Fail2Ban: `systemctl restart fail2ban`
+    - Try to login to the Forgejo web interface with a wrong password.
+    - Check whether the failed login has been detected: `fail2ban-client status forgejo`
+    - When you further try to login `maxretry` times, your IP should be banned for `bantime` seconds, so that neither the Forgejo web interface, nor SSH or any other network application will respond to requests from your client. When Fail2Ban was installed via `dietpi-software`, by default `route`/`blackhole` blocking is used, so that `ip r` on the server should show a `blackhole` route for your client's IP.
+    - See also:
+        - [Fail2Ban](system_security.md#fail2ban)
+        - <https://docs.forgejo.com/administration/fail2ban-setup>
+
+=== "View logs"
+
+    By default, logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u forgejo
+    ```
+
+    File logging to `/var/log/forgejo/forgejo.log` can be enabled by editing `/mnt/dietpi_userdata/forgejo/custom/conf/app.ini` and changing `MODE = console` in the `[log]` section to `MODE = file`.
+
+=== "Update to latest version"
+
+    You can easily update Forgejo by reinstalling it. Your settings and data are preserved by this:
+
+    ```sh
+    dietpi-software reinstall 177
+    ```
+
+***
+
+Official website: <https://forgejo.org/>  
+Official documentation: <https://forgejo.org/docs/latest/>   
+Source code: <https://codeberg.org/forgejo/forgejo>  
+License: [MIT](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/LICENSE)
 
 ## Syncthing
 
