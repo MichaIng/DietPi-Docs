@@ -188,13 +188,8 @@ Select the following tabs for the installation description of your target.
     Press the start button (green arrow) to 'boot up' your system based on the DietPi image.
 
     ??? attention "You must disable IPv6 when the host uses WiFi"
-        Sometimes the VM has difficulties to connect to the internet. This is reported in a network bridged mode and when the host connects to the internet via WiFi: In these cases the IPv6 routing between the VM and the internet fails (e.g. see [there](https://communities.vmware.com/t5/VMware-Fusion-Discussions/IPv6-Bridged-Wireless/td-p/2038235)).  
-        A typical result is, that the system does not find the update server (e.g. at the very first update run). This is then signaled during the "apt update" procedure of the first boot startup.  
-        To overcome this, open a subshell (or an additional ssh window), start `dietpi-config` and disable **IPv6** within the Network options.
-
-        ![IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
-
-        Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
+        When your host uses WiFi to connect to the Internet, and the VM network is attached in bridged mode (default for DietPi appliances), IPv6 routes to the Internet from within the VM will fail, e.g. reported [here](https://community.broadcom.com/vmware-cloud-foundation/communities/community-home/digestviewer/viewthread?MessageKey=d24d5de6-3973-45e8-b38f-5b4e9d2860cd)).  
+        As a result, the IPv6 connection test on very first boot/login of the VM fails. the error dialogue offers the option to disable IPv6, which is the correct way to overcome the issue.
 
     ??? important "Installation steps within the DietPi guest system when using the VirtualBox extension pack"
         If you use the VirtualBox extension pack, after the DietPi base installation (done during the very first boot of the DietPi system), further installation steps within the DietPi guest system have to be done to achieve a working time synchronization. In general you have to use the following **Time sync mode** options set via the `dietpi-config` command (in the **Advanced Options**):
@@ -301,13 +296,8 @@ Select the following tabs for the installation description of your target.
     If you want to use a WiFi connection you have to change the network settings matching your environment (files `\boot\dietpi.txt` and `\boot\dietpi-wifi.txt`).
 
     ??? attention "You must disable IPv6 when the host uses WiFi"
-        Sometimes the VM has difficulties to connect to the internet. This is reported in a network bridged mode and when the host connects to the internet via WiFi: In these cases the IPv6 routing between the VM and the internet fails (e.g. see [there](https://communities.vmware.com/t5/VMware-Fusion-Discussions/IPv6-Bridged-Wireless/td-p/2038235)).  
-        A typical result is, that the system does not find the update server (e.g. at the very first update run). This is then signaled during the "apt update" procedure of the first boot startup.  
-        To overcome this, open a subshell (or an additional ssh window), start `dietpi-config` and disable **IPv6** within the Network options.
-
-        ![IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
-
-        Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
+        When your host uses WiFi to connect to the Internet, and the VM network is attached in bridged mode (default for DietPi appliances), IPv6 routes to the Internet from within the VM will fail, e.g. reported [here](https://community.broadcom.com/vmware-cloud-foundation/communities/community-home/digestviewer/viewthread?MessageKey=d24d5de6-3973-45e8-b38f-5b4e9d2860cd)).  
+        As a result, the IPv6 connection test on very first boot/login of the VM fails. the error dialogue offers the option to disable IPv6, which is the correct way to overcome the issue.
 
     <h2>Additional information</h2>
 
@@ -486,13 +476,8 @@ Select the following tabs for the installation description of your target.
     ![Parallels Desktop DietPi startup](assets/images/Parallels2.png){: width="640" height="273" loading="lazy"}
 
     ??? attention "You must disable IPv6 when the host uses WiFi"
-        Sometimes the VM has difficulties to connect to the internet. This is reported in a network bridged mode and when the host connects to the internet via WiFi: In these cases the IPv6 routing between the VM and the internet fails (e.g. see [there](https://communities.vmware.com/t5/VMware-Fusion-Discussions/IPv6-Bridged-Wireless/td-p/2038235)).  
-        A typical result is, that the system does not find the update server (e.g. at the very first update run). This is then signaled during the "apt update" procedure of the first boot startup.  
-        To overcome this, open a subshell (or an additional ssh window), start `dietpi-config` and disable **IPv6** within the Network options.
-
-        ![IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
-
-        Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
+        When your host uses WiFi to connect to the Internet, and the VM network is attached in bridged mode (default for DietPi appliances), IPv6 routes to the Internet from within the VM will fail, e.g. reported [here](https://community.broadcom.com/vmware-cloud-foundation/communities/community-home/digestviewer/viewthread?MessageKey=d24d5de6-3973-45e8-b38f-5b4e9d2860cd)).  
+        As a result, the IPv6 connection test on very first boot/login of the VM fails. the error dialogue offers the option to disable IPv6, which is the correct way to overcome the issue.
 
 === "UTM"
 
@@ -610,13 +595,8 @@ Select the following tabs for the installation description of your target.
     After this, your machine should boot up.
 
     ??? attention "You must disable IPv6 when the host uses WiFi"
-        Sometimes the VM has difficulties to connect to the internet. This is reported in a network bridged mode and when the host connects to the internet via WiFi: In these cases the IPv6 routing between the VM and the internet fails (e.g. see [there](https://communities.vmware.com/t5/VMware-Fusion-Discussions/IPv6-Bridged-Wireless/td-p/2038235)).  
-        A typical result is, that the system does not find the update server (e.g. at the very first update run). This is then signaled during the "apt update" procedure of the first boot startup.  
-        To overcome this, open a subshell (or an additional ssh window), start `dietpi-config` and disable **IPv6** within the Network options.
-
-        ![IPv6 deactivate screenshot](assets/images/dietpi-VirtualBox-IPv6.png){: width="500" height="225" loading="lazy"}
-
-        Then exit `dietpi-config`. After this the first time installer procedure should run again from the start.
+        When your host uses WiFi to connect to the Internet, and the VM network is attached in bridged mode (default for DietPi appliances), IPv6 routes to the Internet from within the VM will fail, e.g. reported [here](https://community.broadcom.com/vmware-cloud-foundation/communities/community-home/digestviewer/viewthread?MessageKey=d24d5de6-3973-45e8-b38f-5b4e9d2860cd)).  
+        As a result, the IPv6 connection test on very first boot/login of the VM fails. the error dialogue offers the option to disable IPv6, which is the correct way to overcome the issue.
 
     <h2>Additional information / troubleshooting</h2>
 
