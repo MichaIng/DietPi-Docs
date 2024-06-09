@@ -127,6 +127,7 @@ distro
 DIY
 DLNA
 dl
+dm
 DNS
 Domoticz
 DoT
@@ -172,6 +173,7 @@ filesystems
 FirstBoot
 fka
 FlightAware
+Forgejo
 ForkedDaapd
 FOSS
 foto
@@ -328,6 +330,7 @@ Logrotate
 loopback
 LPDDR
 LTS
+LUCS
 LuidmilaKot
 LVM
 LXC

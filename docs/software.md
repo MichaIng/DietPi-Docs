@@ -61,6 +61,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**UrBackup Server - Full backups for systems on your network**](software/cloud.md#urbackup)
 - [**Gogs - GitHub style server, with web interface**](software/cloud.md#gogs)
 - [**Gitea - GitHub style server, with web interface**](software/cloud.md#gitea)
+- [**Forgejo - GitHub style server, with web interface**](software/cloud.md#forgejo)
 - [**Syncthing - Backup and sync server with web interface**](software/cloud.md#syncthing)
 - [**MinIO - S3 compatible distributed object server**](software/cloud.md#minio)
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](software/cloud.md#vaultwarden)
