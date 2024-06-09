@@ -1724,29 +1724,22 @@ The Snapcast server needs to have its audio sources manually configured after in
 
 === "Using AirPlay (Shairport Sync) as an input"
 
-    First install `shairport-sync`.
-
-    Then (at the moment - see: <https://github.com/MichaIng/DietPi/issues/4470>) we need to replace the Shairport Sync binary with one that supports `stdout`. To do this we need to compile a new binary - you will find details here:  
-    <https://github.com/mikebrady/shairport-sync/blob/master/INSTALL.md#build-and-install>
-
-    You need to use this line when configuring instead of the line from the docs:
+    First install [Shairport Sync](#shairport-sync):
 
     ```sh
-    ./configure --sysconfdir=/etc --with-alsa --with-soxr --with-avahi --with-ssl=openssl --with-systemd --with-metadata --with-stdout
+    dietpi-software install 37
     ```
 
-    Don't forget to run `make` and `make install`.
-
-    Then add the following config under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myAirport`. The `devicename` is the name that will be shown when searching for Airport devices. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
+    Then add the following config to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myAirport`. The `devicename` is the name that will be shown when searching for Airport devices. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
 
     ```
     source = airplay:///usr/local/bin/shairport-sync?name=myAirport&devicename=SnapcastAirport&params=--configfile=/usr/local/etc/shairport-sync.conf
     ```
 
-    You will then either need to mask the original Shairport Sync service
+    You will then either need to disable the original Shairport Sync service
 
     ```sh
-    systemctl mask shairport-sync
+    systemctl disable --now shairport-sync
     ```
 
     or you can try to run one of them on a different port - Snapcast docs shows how to do this here: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>

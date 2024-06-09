@@ -127,6 +127,7 @@ distro
 DIY
 DLNA
 dl
+dm
 DNS
 Domoticz
 DoT
@@ -329,6 +330,7 @@ Logrotate
 loopback
 LPDDR
 LTS
+LUCS
 LuidmilaKot
 LVM
 LXC
