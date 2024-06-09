@@ -172,6 +172,7 @@ filesystems
 FirstBoot
 fka
 FlightAware
+Forgejo
 ForkedDaapd
 FOSS
 foto

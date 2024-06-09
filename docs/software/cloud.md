@@ -761,7 +761,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 ***
 
 Official website: <https://forgejo.org/>  
-Official documentation: <https://forgejo.org/docs/latest/>   
+Official documentation: <https://forgejo.org/docs/latest/>  
 Source code: <https://codeberg.org/forgejo/forgejo>  
 License: [MIT](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/LICENSE)
 
