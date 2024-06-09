@@ -651,7 +651,7 @@ License: [MIT](https://github.com/go-gitea/gitea/blob/main/LICENSE)
 
 Your very own GitHub style server, with web interface.
 
-![Forgejo logo](../assets/images/dietpi-software-cloud-forgejo.svg){: width="320" height="200" loading="lazy"}
+![Forgejo logo](../assets/images/dietpi-software-cloud-forgejo.svg){: width="300" height="113" loading="lazy"}
 
 See also the [**Git**](programming.md#git) client which is available in `dietpi-software` as an installation package.
 
@@ -679,14 +679,14 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
     If you wish to allow external access to your Forgejo server, there are some options, here are two of them:
     
-    1 - You will need to setup port forwarding on your router, pointing to the IP address of your DietPi device.
+    1. You can setup port forwarding on your router, pointing to the IP address of your DietPi device.
 
-    - Port: 3000
-    - Protocol: TCP
+        - Port: 3000
+        - Protocol: TCP
+
+    2. Without port forwarding, you can setup a tunnel or reverse proxy with services like [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/).
 
     If an external access is used, HTTPS is strongly recommended to increase your system security. You can get a free certificate e.g. via [dietpi-letsencrypt](../dietpi_tools.md#dietpi-letsencrypt){:class="nospellcheck"}.
-
-    2 - Without port forwarding, you can setup a Tunnel or Reverse Proxy with services like [Cloudflare Tunnel]([https://www.cloudflare.com/en-ca/products/tunnel/](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/))
 
 === "Fail2Ban integration"
 
@@ -701,7 +701,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
         ```ini
         [Definition]
         journalmatch = _SYSTEMD_UNIT=forgejo.service
-        failregex = Failed authentication attempt for \x1b\[1m.+\x1b\[0m from \x1b\[1m<HOST>:\d+\x1b\[0m:
+        failregex = Failed authentication attempt for .+ from <HOST>:\d+:
         ```
 
         Create a new jail `/etc/fail2ban/jail.d/forgejo.conf`:
@@ -738,9 +738,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     - Try to login to the Forgejo web interface with a wrong password.
     - Check whether the failed login has been detected: `fail2ban-client status forgejo`
     - When you further try to login `maxretry` times, your IP should be banned for `bantime` seconds, so that neither the Forgejo web interface, nor SSH or any other network application will respond to requests from your client. When Fail2Ban was installed via `dietpi-software`, by default `route`/`blackhole` blocking is used, so that `ip r` on the server should show a `blackhole` route for your client's IP.
-    - See also:
-        - [Fail2Ban](system_security.md#fail2ban)
-        - <https://docs.forgejo.com/administration/fail2ban-setup>
+    - See also: [Fail2Ban](system_security.md#fail2ban)
 
 === "View logs"
 
