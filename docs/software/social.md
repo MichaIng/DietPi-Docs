@@ -364,7 +364,7 @@ License: [GPLv2](https://github.com/wikimedia/mediawiki/blob/master/COPYING)
 
 ## soju
 
-soju is an IRC bouncer – it connects to upstream IRC servers on your behalf, and then you can connect to it using multiple IRC clients. This causes chat history to be preserved without having to have the IRC client connected all the time.
+soju is an [IRC bouncer](https://wikipedia.org/wiki/BNC_(software)#IRC) – it connects to upstream IRC servers on your behalf, and then you can connect to it using multiple IRC clients. This causes chat history to be preserved without having to have the IRC client connected all the time.
 
 === "Quick start"
 
@@ -372,7 +372,7 @@ soju is an IRC bouncer – it connects to upstream IRC servers on your behalf, a
 
 === "Configuration file"
 
-    The configuration file is `/mnt/dietpi_userdata/soju/config`
+    The configuration file is `/mnt/dietpi_userdata/soju/config`. Its structure and configuration options are described in the [soju man page](https://soju.im/doc/soju.1.html).  
 
 ***
 
