@@ -368,7 +368,7 @@ soju is an [IRC bouncer](https://wikipedia.org/wiki/BNC_(software)#IRC) – it c
 
 === "Quick start"
 
-    By default, soju listens on the **6667** port, which is the default for plaintext (insecure) IRC connections.
+    By default, soju listens on the **6667** port, which is the default for plain text (insecure) IRC connections.
 
 === "Configuration file"
 
