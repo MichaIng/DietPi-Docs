@@ -596,6 +596,7 @@ snakeoil
 SNMP
 SoC
 SoCs
+soju
 Sonarr
 SOQuartz
 Soundcloud
