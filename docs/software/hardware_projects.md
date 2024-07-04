@@ -273,11 +273,17 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
     ```sh
     systemctl stop node-red
     cd /mnt/dietpi_userdata/node-red
-    sudo -u nodered npm up --no-audit node-red
+    sudo -u nodered npm i --no-audit node-red@latest
     systemctl start node-red
     ```
 
     The current Node-RED version can be read in the programming IDE in the *burger menu* at the right upper corner.
+
+    Newer Node-RED versions might require a newer Node.js version. If this is the case, to update Node.js as well, easiest is to reinstall Node-RED. Your additional plugins, data and configs are preserved:
+
+    ```sh
+    dietpi-software reinstall 122
+    ```
 
 ***
 

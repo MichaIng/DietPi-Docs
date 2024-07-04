@@ -16,6 +16,7 @@ description: Description of DietPi software options related to social platforms 
 - [**Synapse - Decentralized communication with the Matrix protocol**](#synapse)
 - [**microblog.pub - A self-hosted, single-user, ActivityPub powered microblog**](#microblogpub)
 - [**MediaWiki - A collaboration and documentation platform**](#mediawiki)
+- [**soju - A user-friendly IRC bouncer**](#soju)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -360,5 +361,22 @@ This collaboration and documentation platform was originally developed for and i
 Official website: <https://www.mediawiki.org/wiki/MediaWiki>  
 Source code: <https://github.com/wikimedia/mediawiki>  
 License: [GPLv2](https://github.com/wikimedia/mediawiki/blob/master/COPYING)
+
+## soju
+
+soju is an [IRC bouncer](https://wikipedia.org/wiki/BNC_(software)#IRC) – it connects to upstream IRC servers on your behalf, and then you can connect to it using multiple IRC clients. This causes chat history to be preserved without having to have the IRC client connected all the time.
+
+=== "Quick start"
+
+    By default, soju listens on the **6667** port, which is the default for plain text (insecure) IRC connections.
+
+=== "Configuration file"
+
+    The configuration file is `/mnt/dietpi_userdata/soju/config`. Its structure and configuration options are described in the [soju man page](https://soju.im/doc/soju.1.html).  
+
+***
+
+Official website: <https://soju.im>  
+Source code: <https://git.sr.ht/~emersion/soju>  
 
 [Return to the **Optimised Software list**](../software.md)
