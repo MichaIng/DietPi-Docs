@@ -141,6 +141,7 @@ nav:
   - Miscellaneous Tools: dietpi_tools/misc_tools.md
 - RELEASES:
   - Overview: releases.md
+  - v9.6 July 2024: releases/v9_6.md
   - v9.5 June 2024: releases/v9_5.md
   - v9.4 May 2024: releases/v9_4.md
   - v9.3 April 2024: releases/v9_3.md
