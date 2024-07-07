@@ -249,6 +249,7 @@ HTTPS
 IceCast
 ICMP
 IEC
+ilex
 Imager
 Imgur
 InfluxData
@@ -596,6 +597,7 @@ snakeoil
 SNMP
 SoC
 SoCs
+soju
 Sonarr
 SOQuartz
 Soundcloud

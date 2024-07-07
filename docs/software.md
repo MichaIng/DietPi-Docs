@@ -235,6 +235,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Synapse - Decentralized communication with the Matrix protocol**](software/social.md#synapse)
 - [**microblog.pub - A self-hosted, single-user, ActivityPub powered microblog**](software/social.md#microblogpub)
 - [**MediaWiki - A collaboration and documentation platform**](software/social.md#mediawiki)
+- [**soju - A user-friendly IRC bouncer**](software/social.md#soju)
 
 ## [SSH Server](software/ssh.md)
 
