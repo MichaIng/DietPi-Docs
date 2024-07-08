@@ -57,7 +57,7 @@ jobs:
         curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
         tar xf lychee.tar.gz
     - name: Run lychee to check README and HTML files
-      if: always() && steps.lychee.outcome == 'success' && ! endsWith(github.ref, '/master')
+      if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
       # Exclude URLs for newly added Markdown files as well as raw view and edit GitHub URLs for all existing Markdown files
       # parallels.com|chromewebstore.google.com: Cloudflare lets client enter redirect loop, if it does not send a cookie, set in response.
