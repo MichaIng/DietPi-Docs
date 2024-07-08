@@ -28,7 +28,7 @@ jobs:
       uses: actions/setup-python@v5
       with:
         # Match version on dietpi.com server
-        python-version: '3.11.9'
+        python-version: '3.12.4'
     - name: Install MkDocs
       id: mkdocs
       if: always() && steps.python.outcome == 'success'
