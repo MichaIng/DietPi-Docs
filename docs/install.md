@@ -454,16 +454,6 @@ Select the following tabs for the installation description of your target.
 
         Note: Keep the Proxmox VM option "QEMU Guest Agent" option inactive (uncheck check box) to be able to control the VM via the Proxmox GUI.
 
-        DietPi versions before v8.25:  
-        Since DietPi v8.25, the first run installation script enables this feature. For older Proxmox DietPi VMs, it can be achieved by installing the `dbus` and `qemu-guest-agent` within the DietPi VM followed by a DietPi VM reboot:
-
-        ```sh
-        systemctl unmask systemd-logind
-        apt install dbus
-        systemctl start systemd-logind
-        apt install  qemu-guest-agent
-        ```
-
 === "Parallels"
 
     <h2>Introduction</h2>
