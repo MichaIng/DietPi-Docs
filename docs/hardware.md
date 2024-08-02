@@ -673,9 +673,9 @@ The Native PC images are great for those occasions where SBC performance just is
 
 ![VMware logo](assets/images/VMwareESXi_01.jpg){: width="200" height="45" loading="lazy"}
 
-The VMware virtual machine (e.g. [VMware Workstation Player](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html.html.html), [VMware Workstation Pro or Fusion](https://www.vmware.com/content/vmware/vmware-published-sites/us/products/desktop-hypervisor.html.html.html)) is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server (Windows, Linux, macOS) and still get the same great DietPi features and experience.
+The VMware virtual machine (e.g. [VMware Workstation Player](https://www.vmware.com/info/workstation-player/evaluation), [VMware Workstation Pro or Fusion](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)) is great for those occasions where SBC performance just isn't enough. Run one of these on any x86_64 PC/server (Windows, Linux, macOS) and still get the same great DietPi features and experience.
 
-The [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html/), described as a "Bare Metal Hypervisor" aka [Type-1 hypervisor](https://en.wikipedia.org/wiki/Hypervisor), is part of e.g. the [VMware vSphere Hypervisor platform](https://www.vmware.com/products/vsphere-hypervisor.html/) ("appliance server"). It allows to run and manage multiple virtual machines on one x86_64 machine. That way it can be compared to the [Proxmox](#proxmox) appliance server.
+The [VMware ESXi hypervisor](https://www.vmware.com/products/cloud-infrastructure/esxi-and-esx), described as a "bare-metal hypervisor" aka [Type-1 hypervisor](https://en.wikipedia.org/wiki/Hypervisor), is part of e.g. the [VMware vSphere hypervisor platform](https://www.vmware.com/products/cloud-infrastructure/vsphere) ("appliance server"). It allows to run and manage multiple virtual machines on one x86_64 machine. That way it can be compared to the [Proxmox](#proxmox) appliance server.
 
 ### VirtualBox
 
