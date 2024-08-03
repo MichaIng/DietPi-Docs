@@ -17,7 +17,7 @@ This will be the first screen displayed.
 
 ## DietPi-Launcher
 
-Run `dietpi-launcher` to see all available DietPi tools. It provides a quick way to run any of the [DietPi tools](dietpi_tools.md): From installing [**DietPi optimized software items**](software.md) to simple [configure](dietpi_tools/system_configuration.md#dietpi-configuration) your device, from enabling services to start to backup your installation and so on.
+Run `dietpi-launcher` to see all available DietPi tools. It provides a quick way to run any of the [DietPi tools](dietpi_tools.md): From installing [**DietPi optimized software items**](software.md) to simple [configure](dietpi_tools/system_configuration.md#dietpi-config) your device, from enabling services to start to backup your installation and so on.
 
 ![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="366" loading="lazy"}
 
@@ -43,7 +43,7 @@ The list of DietPi optimised software includes:
 - Printing
 - and [much more...](software.md).
 
-To install and configure them use the `dietpi-software` tool - [click for more details](dietpi_tools/system_configuration.md#dietpi-software).
+To install and configure them use the `dietpi-software` tool - [click for more details](dietpi_tools/software_installation.md#dietpi-software).
 
 ![DietPi-Software screenshot](assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
 

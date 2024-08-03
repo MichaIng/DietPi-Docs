@@ -858,7 +858,7 @@ Select the following tabs for the installation description of your target.
 
         ??? info "Option: Automatic base installation at first boot (running an _unattended base installation_)"
 
-            DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](usage.md#how-to-do-an-automatic-base-installation-at-first-boot) for details.
+            DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](usage.md#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation) for details.
 
 ## 4. First logon on DietPi
 
