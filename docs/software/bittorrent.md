@@ -732,7 +732,7 @@ Automatically download your favorite ebook, as they become available.
 
     Setup your download client:
 
-    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission-lightweight-bittorrent-server-with-web-interface).
+    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission).
 
     Setup folder creation mask:  
     If you require write access from other applications, you'll also need to set the folder creation mask to allow this.
