@@ -51,6 +51,10 @@ markdown_extensions:
 - pymdownx.superfences # Indented code blocks, e.g. within lists, admonition, details or tabbed blocks, implies pymdownx.highlight
 - pymdownx.tabbed: # Tabbed content blocks
     alternate_style: true
+    slugify: !!python/object/apply:pymdownx.slugs.slugify
+      kwds:
+        case: lower
+    combine_header_slug: true
 
 #  Markdown extensions which could be used in the future
 #
