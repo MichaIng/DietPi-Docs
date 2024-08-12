@@ -254,7 +254,7 @@ _Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedi
 
 Official documentation: <https://docs.docker.com/get-started/overview/>  
 Configuration docs: <https://docs.docker.com/reference/cli/dockerd/#daemon-configuration-file>  
-Logging docs: <https://docs.docker.com/config/containers/logging/configure/>  
+Logging docs: <https://docs.docker.com/engine/logging/>  
 Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>  
 Source code: <https://github.com/moby/moby>  
 License: [Apache-2.0](https://github.com/moby/moby/blob/master/LICENSE)
