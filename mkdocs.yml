@@ -51,6 +51,10 @@ markdown_extensions:
 - pymdownx.superfences # Indented code blocks, e.g. within lists, admonition, details or tabbed blocks, implies pymdownx.highlight
 - pymdownx.tabbed: # Tabbed content blocks
     alternate_style: true
+    slugify: !!python/object/apply:pymdownx.slugs.slugify
+      kwds:
+        case: lower
+    combine_header_slug: true
 
 #  Markdown extensions which could be used in the future
 #
@@ -141,6 +145,7 @@ nav:
   - Miscellaneous Tools: dietpi_tools/misc_tools.md
 - RELEASES:
   - Overview: releases.md
+  - v9.7 August 2024: releases/v9_7.md
   - v9.6 July 2024: releases/v9_6.md
   - v9.5 June 2024: releases/v9_5.md
   - v9.4 May 2024: releases/v9_4.md

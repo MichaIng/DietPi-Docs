@@ -224,7 +224,7 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
 
 === "Access WebIOPi over the internet"
 
-    To be able to access your WebIOPi interface over the internet, you may install [Remot3.it (Weaved)](remote_desktop.md#remot3it).
+    To be able to access your WebIOPi interface over the internet, you may install [Remote.it (Weaved)](remote_desktop.md#remoteit).
 
 ***
 

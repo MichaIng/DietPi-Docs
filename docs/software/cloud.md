@@ -925,8 +925,11 @@ vaultwarden is an unofficial Bitwarden password manager server with web interfac
 
 === "Update to latest version"
 
+    As vaultwarden is installed via APT, it can be update with the following commands:
+
     ```sh
-    dietpi-software reinstall 183
+    apt Update
+    apt install vaultwarden
     ```
 
 ***

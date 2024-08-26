@@ -152,11 +152,11 @@ Stream JPEG frames from various sources to various possible outputs. With the de
 
 === "Setup for OctoPrint"
 
-    When [OctoPrint](printing.md#octprint) is installed, it will be automatically configured to use the mjpg-streamer HTTP stream and snapshots, as this is the major use case this software title was requested for. You can review and test the setup from within the OctoPrint web interface settings.
+    When [OctoPrint](printing.md#octoprint) is installed, it will be automatically configured to use the mjpg-streamer HTTP stream and snapshots, as this is the major use case this software title was requested for. You can review and test the setup from within the OctoPrint web interface settings.
 
 === "HTML authentication"
 
-    By default, the HTTP stream is accessible on port **8082** without any authentication. This is required when you embed it into [OctoPrint](printing.md#octprint), since the browser sends the request and cannot pass credentials currently. If you however use the stream otherwise, especially when you expose it to the world-wide-web, we recommend to setup a password. For this:
+    By default, the HTTP stream is accessible on port **8082** without any authentication. This is required when you embed it into [OctoPrint](printing.md#octoprint), since the browser sends the request and cannot pass credentials currently. If you however use the stream otherwise, especially when you expose it to the world-wide-web, we recommend to setup a password. For this:
 
     1. Run `dietpi-services`
     2. Select `mjpg-streamer`

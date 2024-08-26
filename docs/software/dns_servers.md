@@ -87,7 +87,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
         pihole -l on
         ```
 
-        Also the DietPi [logging system](../dietpi_tools.md#quick-selections) needs to be changed, to disable DietPi-RAMlog, as otherwise `/var/log/pihole.log` is cleared hourly.
+        Also the DietPi [logging system](../dietpi_tools/software_installation.md#log-system) needs to be changed, to disable DietPi-RAMlog, as otherwise `/var/log/pihole.log` is cleared hourly.
     2. The logging duration for the database-wise DNS query log in `/etc/pihole/pihole-FTL.db` is reduced from 365 days to 2 days. An internal discussion revealed that no-one of us uses logs old than a few hours. One year of logs leads to database sizes from hundreds of MiBs to GiBs. We leave it at 2 days so that web interface dashboard graphs/diagrams are not empty after Pi-hole (re)starts. You can easily adjust the logging duration by editing the `/etc/pihole/pihole-FTL.conf` config file. E.g. to restore the default 365 days of logs:
 
         ```sh

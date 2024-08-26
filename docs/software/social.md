@@ -331,7 +331,7 @@ A self-hosted, single-user, ActivityPub powered microblog.
 
 ***
 
-Official website: <https://microblog.pub/>
+Official website: <https://sr.ht/~tsileo/microblog.pub/>
 
 ## MediaWiki
 

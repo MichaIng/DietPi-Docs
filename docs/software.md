@@ -70,7 +70,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Rclone - Utility to sync your files to cloud storages**](software/cloud.md#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](software/cloud.md#restic)
 
-## [Databases & Data Stores](software/databases.md#overview.md)
+## [Databases & Data Stores](software/databases.md)
 
 - [**MariaDB - Open Source Relational Database**](software/databases.md#mariadb)
 - [**phpMyAdmin - SQL Administration Tool for MariaDB**](software/databases.md#phpmyadmin)  

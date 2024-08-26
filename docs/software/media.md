@@ -120,6 +120,23 @@ Also installs:
 
         ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
 
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u ympd
+    ```
+
+=== "Update"
+
+    As ympd is installed via APT, it can be update with the following commands:
+
+    ```sh
+    apt update
+    apt install ympd
+    ```
+
 ## myMPD
 
 A lightweight, bare-bones, no frills HiFi music player with a web based interface. myMPD is a front end for MPD, and a recent fork of ympd.
@@ -552,10 +569,11 @@ Squeezelite is a software audio player/client for the [Logitech Media Server](#l
 
 === "Update"
 
-    Squeezelite can be updated to the current version with the following command:
+    As Squeezelite is installed via APT, it can be update with the following commands:
 
     ```sh
-    dietpi-software reinstall 36
+    apt Update
+    apt install squeezelite
     ```
 
 ***
@@ -631,6 +649,23 @@ Audio played by a Shairport Sync-powered device stays synchronised with the sour
     DietPi will then automatically apply and set the nice level.
 
     If the choppy playback continues, the CPU most likely is insufficient for the processing required for Soxr. Then Soxr should be disabled.
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u shairport-sync
+    ```
+
+=== "Update"
+
+    As Shairport Sync is installed via APT, it can be update with the following commands:
+
+    ```sh
+    apt Update
+    apt install shairport-sync
+    ```
 
 ## ReadyMedia
 
@@ -1349,8 +1384,11 @@ A DLNA audio render/endpoint. Allows you to stream and play music, from another 
 
 === "Update to the latest version"
 
+    As GMediaRender is installed via APT, it can be update with the following commands:
+
     ```sh
-    dietpi-software reinstall 163
+    apt update
+    apt install gmediarender
     ```
 
 ## Ubooquity
