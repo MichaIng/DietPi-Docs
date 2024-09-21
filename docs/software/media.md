@@ -673,11 +673,20 @@ Stream your shared media to any DLNA/UPnP capable device.
 
 ![ReadyMedia logo](../assets/images/dietpi-software-media-readymedia.jpg){: width="351" height="341" loading="lazy"}
 
-=== "Access to ReadyMedia status"
+=== "Access to the web interface"
 
     The web interface is accessible via port **8200**:
 
     - URL: `http://<your.IP>:8200`
+
+=== "Configuration"
+
+    You can configure ReadyMedia with its config file: `/etc/minidlna.conf`  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart minidlna
+    ```
 
 === "Transfer media files to DietPi"
 
@@ -688,12 +697,13 @@ Stream your shared media to any DLNA/UPnP capable device.
     - Video: `/mnt/dietpi_userdata/Video`, `/Video` from NFS/Samba
     - Images: `/mnt/dietpi_userdata/Pictures`, `/Pictures` from NFS/Samba
 
-=== "Refresh the ReadyMedia database"
+=== "Refresh the database"
 
-    The database can be refreshed with this command:
+    The database can be refreshed with these commands:
 
     ```sh
-    rm -r /mnt/dietpi_userdata/.MiniDLNA_Cache/* && systemctl restart minidlna
+    rm -R /mnt/dietpi_userdata/.MiniDLNA_Cache/*
+    systemctl restart minidlna
     ```
 
 ***
