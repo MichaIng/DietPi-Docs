@@ -199,7 +199,7 @@ Also installs:
     /var/lib/mympd/config/
     ```
 
-    Details about available settings can be found in the official docs: <https://jcorporation.github.io/myMPD/configuration/#configuration-files>
+    Details about available settings can be found in the official docs: <https://jcorporation.github.io/myMPD/020-configuration/configuration-files/>
 
     For changes to take effect, the service needs to be restarted:
 
