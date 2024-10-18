@@ -128,7 +128,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     ncc list
     ```
 
-    More details about available commands can be found in the [Nextcloud admin manual](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html).
+    More details about available commands can be found in the [Nextcloud admin manual](https://docs.nextcloud.com/server/latest/admin_manual/occ_command.html).
 
 === "Brute-force protection"
 
