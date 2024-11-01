@@ -299,7 +299,7 @@ Network file system server.
 
     The example output gives that NFS v3 is not active (-3) whereas NFS v4 is active (+4 +4.1 +4.2).
 
-    To re-enable NFS v3 again, the entry "vers3=y" can be used, or the complete file `/etc/nfs.conf.d/00-dietpi.conf` can be deleted (also restarting the `nfs-kernel-server` service afterwards).
+    To re-enable NFS v3 again, the entry `vers3=y` can be used, or the complete file `/etc/nfs.conf.d/00-dietpi.conf` can be deleted (also restarting the `nfs-kernel-server` service afterwards).
 
 ***
 

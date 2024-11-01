@@ -563,7 +563,7 @@ Flask is a lightweight web application framework. It is designed to make getting
 ***
 
 Website: <https://palletsprojects.com/p/flask>  
-Official documentation: <https://flask.palletsprojects.com/en/1.1.x>  
+Official documentation: <https://flask.palletsprojects.com/en/stable/>  
 PyPI package page: <https://pypi.org/project/Flask>
 
 ### Node.js
