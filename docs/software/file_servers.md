@@ -259,9 +259,9 @@ Network file system server.
 
     E.g. access to the NFS share can be limited to the IP address range of 192.168.0.1-255, by editing `/etc/exports.d/dietpi.exports` as follows:
 
-        ```
-        /mnt/dietpi_userdata 192.168.0.*(rw,async,no_root_squash,fsid=0,crossmnt,no_subtree_check)
-        ```
+    ```
+    /mnt/dietpi_userdata 192.168.0.*(rw,async,no_root_squash,fsid=0,crossmnt,no_subtree_check)
+    ```
 
     Apply the new configuration via `systemctl restart nfs-server` or `exportfs -ra`.
 
@@ -296,7 +296,7 @@ Network file system server.
 
     The example output gives that NFS v3 is not active (-3) whereas NFS v4 is active (+4 +4.1 +4.2).
 
-    To re-enable NFS v3 again, the entry `vers3=y` can be used, or the complete file `/etc/nfs.conf.d/00-dietpi.conf` can be deleted (also restarting the `nfs-kernel-server` service afterwards).
+    To re-enable NFS v3 again, the entry `vers3=y` can be used, or the complete file `/etc/nfs.conf.d/00-dietpi.conf` can be deleted (also restarting the `nfs-server` service afterwards).
 
 ***
 
