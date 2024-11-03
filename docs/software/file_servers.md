@@ -259,9 +259,6 @@ Network file system server.
 
     E.g. access to the NFS share can be limited to the IP address range of 192.168.0.1-255, by editing `/etc/exports.d/dietpi.exports` as follows:
 
-    - Editing the file `/etc/exports.d/dietpi.exports`
-    - Changing the file to only allow users access e.g. with an IP address range of 192.168.0.1-255 
-
         ```
         /mnt/dietpi_userdata 192.168.0.*(rw,async,no_root_squash,fsid=0,crossmnt,no_subtree_check)
         ```
