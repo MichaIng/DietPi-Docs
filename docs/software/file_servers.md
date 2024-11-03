@@ -263,7 +263,7 @@ Network file system server.
         /mnt/dietpi_userdata 192.168.0.*(rw,async,no_root_squash,fsid=0,crossmnt,no_subtree_check)
         ```
 
-    - Activating the new configuration (`systemctl restart nfs-kernel-server` or `exportfs -ra`)
+    Apply the new configuration via `systemctl restart nfs-server` or `exportfs -ra`.
 
 === "NFS v3 disable/enable"
 
