@@ -284,7 +284,7 @@ Network file system server.
     A restart of the NFS service is then necessary:
 
     ```sh
-    systemctl restart nfs-kernel-server.service
+    systemctl restart nfs-server
     ```
 
     The disabled NFS v3 can be examined with:
