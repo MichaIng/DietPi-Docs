@@ -267,7 +267,7 @@ Network file system server.
 
 === "NFS v3 disable/enable"
 
-    One option to disable NFS v3 is to add a file to the directory `/etc/nfs.conf.d/` within the section `[nfsd]`:
+    One option to disable NFS v3 is to add a file to the directory `/etc/nfs.conf.d/` with the following content:
 
     ```sh
     cat << _EOF_ > "/etc/nfs.conf.d/00-dietpi.conf"
