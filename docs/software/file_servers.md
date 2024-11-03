@@ -289,7 +289,7 @@ Network file system server.
 
     The disabled NFS v3 can be examined with:
 
-    ```sh
+    ```console
     root@NFS-server:/etc/nfs.conf.d# cat /proc/fs/nfsd/versions
     -3 +4 +4.1 +4.2
     ```
