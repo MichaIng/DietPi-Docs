@@ -257,7 +257,7 @@ Network file system server.
 
     By default the DietPi NFS installation exports the directory `/mnt/dietpi_userdata` for everyone. This is configured in `/etc/exports.d/dietpi.exports`. You can edit this file to restrict the access.
 
-    E.g. the access to the NFS share can be limited by setting a IP address range with these steps:
+    E.g. access to the NFS share can be limited to the IP address range of 192.168.0.1-255, by editing `/etc/exports.d/dietpi.exports` as follows:
 
     - Editing the file `/etc/exports.d/dietpi.exports`
     - Changing the file to only allow users access e.g. with an IP address range of 192.168.0.1-255 
