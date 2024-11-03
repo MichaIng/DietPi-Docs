@@ -239,7 +239,7 @@ Network file system server.
     exportfs -ra
     ```
 
-    Alternatively the service can be restarted (`systemctl restart nfs-kernel-server`).
+    Alternatively the service can be restarted (`systemctl restart nfs-server`).
 
     The actual access configuration can be displayed with the command
 
