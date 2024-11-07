@@ -145,8 +145,10 @@ Essentially, it is a "peer-to-peer" Google search engine, not controlled by Goog
     The web interface is accessible via port **8090**:
 
     - URL = `http://<your.IP>:8090`
+    - Username = `admin`
+    - Password: `<your global password>` (default: `dietpi`)
 
-=== "Admin Interface Login"
+=== "Reset password"
 
     Set password with:
 
