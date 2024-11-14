@@ -67,8 +67,6 @@ We have enabled detection for SSH servers (OpenSSH and Dropbear), however, Fail2
 
 ![Fail2Ban example console logs output](../assets/images/dietpi-software-security-fail2ban2.jpg){: width="550" height="360" loading="lazy"}
 
-Source: [`Lostcontrol` of Fail2ban wiki](https://fail2ban.org/wiki/index.php/File:Fail2ban-screenshot.jpg), [GPL](https://commons.wikimedia.org/w/index.php?curid=19776087)
-
 An IP address is by default ban triggered after 3 failed SSH login attempts. Fail2Ban will ban the source IP address for 10 minutes.
 
 === "Check status of block activity"
@@ -83,16 +81,16 @@ An IP address is by default ban triggered after 3 failed SSH login attempts. Fai
 === "Configuration"
 
     Fail2Ban can handle several configuration options like general configuration and configurations for special programs on a config file base. The location of these config files is a directory structure within `/etc/fail2ban/` and its subdirectories.  
-    See the [Fail2Ban configuration documentation](https://www.fail2ban.org/wiki/index.php/MANUAL_0_8#Configuration) for further information.
+    See the [Fail2Ban documentation](https://github.com/fail2ban/fail2ban/wiki) for further information including [many filter configuration examples for programs](https://github.com/fail2ban/fail2ban/tree/master/config/filter.d).
 
 === "Enable support for additional programs"
 
     Fail2Ban supports brute-force protection for other software, like Apache and ProFTPD. Pre-defined software filters can be found in the `/etc/fail2ban/filter.d/` directory.  
     You can enable/disable these by adding additional `[software]` filter blocks to the `/etc/fail2ban/jail.conf` file, using the filters' file names without file extension. Properties not defined in a specific filter block, are taken from the `[DEFAULT]` block.  
-    See also the Fail2Ban configuration documentation for [vsftpd](https://www.fail2ban.org/wiki/index.php/Vsftpd) and [ProFTPD](https://www.fail2ban.org/wiki/index.php/ProFTPd).
+    See also the Fail2Ban configuration examples for [vsftpd](https://github.com/fail2ban/fail2ban/blob/master/config/filter.d/vsftpd.conf) and [ProFTPD](https://github.com/fail2ban/fail2ban/blob/master/config/filter.d/proftpd.conf).
 
 ***
 
-Website: <https://fail2ban.org/wiki/index.php/Main_Page>
+Website: <https://github.com/fail2ban/fail2ban/wiki>
 
 [Return to the **Optimised Software list**](../software.md)
