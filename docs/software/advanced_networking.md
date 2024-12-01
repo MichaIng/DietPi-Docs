@@ -316,7 +316,7 @@ A fast reverse proxy, helping you to expose a local server behind a NAT or firew
     Depending on whether you have installed as client, server, or both, there will be only the configuration files for that component.
 
     - Client: `/etc/frp/frpc.toml`
-    - Server: `/etc/frp/frps.topl`
+    - Server: `/etc/frp/frps.toml`
 
     Note: You will need `root` access to edit these files. You can also edit the _client_ configuration file using Admin UI.
 
