@@ -393,7 +393,7 @@ Select the following tabs for the installation description of your target.
 
         ![Proxmox ISO file storage](assets/images/Proxmox_ISO-Upload1.png){: width="122" height="32" loading="lazy"}
 
-        Download the DietPi VM Installer ISO image [DietPi_VM-x86_64-Bookworm_Installer.iso](https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso) to the Proxmox local ISO storage by first clicking the button "Download from URL" and then entering the necessary fields in the following dialog:
+        Download the DietPi VM Installer ISO image [`DietPi_VM-x86_64-Bookworm_Installer.iso`](https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso) to the Proxmox local ISO storage by first clicking the button "Download from URL" and then entering the necessary fields in the following dialog:
 
         ![Proxmox ISO file download dialog](assets/images/Proxmox_ISO-Upload2.png){: width="472" height="133" loading="lazy"}
 
