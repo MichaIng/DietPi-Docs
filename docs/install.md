@@ -393,7 +393,7 @@ Select the following tabs for the installation description of your target.
 
         ![Proxmox ISO file storage](assets/images/Proxmox_ISO-Upload1.png){: width="122" height="32" loading="lazy"}
 
-        Download the DietPi VM Installer ISO image [DietPi_VM-x86_64-Bookworm_Installer.iso](https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso) to the Proxmox local ISO storage by first clicking the button "Donwload from URL" and then entering the necessary fields in the following dialog:
+        Download the DietPi VM Installer ISO image [DietPi_VM-x86_64-Bookworm_Installer.iso](https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso) to the Proxmox local ISO storage by first clicking the button "Download from URL" and then entering the necessary fields in the following dialog:
 
         ![Proxmox ISO file download dialog](assets/images/Proxmox_ISO-Upload2.png){: width="472" height="133" loading="lazy"}
 
@@ -487,7 +487,7 @@ Select the following tabs for the installation description of your target.
 
         1. Tab **OS**: Select "**Do not use any media** ", for the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected, then click **Next**.
         1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default.  
-            Activate the check box **Qemu Agent**.  
+            Activate the check box `Qemu Agent`.  
             Click **Next**.
         1. Tab **Disks**: Delete the default `scsi0` disk with the trash bin button, then click **Next**.
         1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `x86-64-v2-AES` type.  
