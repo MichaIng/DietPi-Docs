@@ -382,7 +382,7 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Get the DietPi VM ISO image to the Proxmox system</h2>
 
-    1. Download the .iso file to the Proxmox system.  
+    1. Download the `.iso` file to the Proxmox system.  
         Therefore access the Proxmox web interface via HTTPS on TCP port **8006**:
 
         - URL: `https://<your.IP>:8006`
@@ -427,7 +427,7 @@ Select the following tabs for the installation description of your target.
         Click **Next**.
 
     1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default.  
-        Activate the check box **Qemu Agent**.  
+        Activate the check box `Qemu Agent`.  
         Click **Next**. 
     
     1. Tab **Disks**: Optionally, change the VM disk storage location ("Storage"), optionally adjust the disk size ("Disk size (GiB)").  
@@ -444,9 +444,9 @@ Select the following tabs for the installation description of your target.
         Click **Next**.
     1. Tab **Confirm**: Start the VM creation by clicking **Finish**.
 
-    <h2>3. Execute the CloneZilla based DietPi installation</h2>
+    <h2>3. Execute the Clonezilla based DietPi installation</h2>
 
-    The VM can now be started, select it via left side navigation of the Proxmox web interface, then the **Start** button at the top right side, finally the **Console** button to watch and execute the DietPi installation (CloneZilla based installation procedure). The CloneZilla setup finishes its procedure by shutting down the VM.  
+    The VM can now be started, select it via left side navigation of the Proxmox web interface, then the **Start** button at the top right side, finally the **Console** button to watch and execute the DietPi installation (Clonezilla based installation procedure). The Clonezilla setup finishes its procedure by shutting down the VM.  
     Then the CD/DVD drive of the VM can be removed via the "Hardware" option dialog of the created VM. After this, the VM can be restarted again, so that the DietPi first run installation procedure is executed.  
     This first run setup can be monitored by clicking the "Console" button to watch and finish the DietPi first run setup. 
     Alternatively the VM can be connected via SSH, after giving it some time to finish initial setup steps (typically obtaining its IP from the router).
@@ -466,8 +466,8 @@ Select the following tabs for the installation description of your target.
 
         Note: Keep the Proxmox VM option "QEMU Guest Agent" option active (check check box) during the first run of the VM so that the QEMU Guest Agent package is installed within the VM. This enables the control of the VM via the Proxmox GUI.
 
-    ??? info "Deprecated installation method by importing the disk image (qcow2 image)"
-        Following is the older installation description where a .xz based disk image of format .qcow2 was used. This is now superseeded by the more "Proxmox-typical" installation method with an .ISO file.
+    ??? info "Deprecated installation method by importing the disk image (QCOW2 image)"
+        Following is the older installation description where a `.xz` based disk image of format `.qcow2` was used. This is now superseded by the more "Proxmox-typical" installation method with an `.iso` file.
 
         !!! info "Proxmox Helper Script to install DietPi in Proxmox"
             There is a script from `Darren Bennett` ([GitHub `dazeb`](https://github.com/dazeb)) which makes the installation steps described below much easier by execution of the installation steps within the script.  
@@ -547,9 +547,6 @@ Select the following tabs for the installation description of your target.
                 ![Proxmox node pull down menu](assets/images/Proxmox_ServerNode-pulldown-menu.png){: width="400" height="90" loading="lazy"}
 
             Note: Keep the Proxmox VM option "QEMU Guest Agent" option active (check check box) during the first run of the VM so that the QEMU Guest Agent package is installed within the VM. This enables the control of the VM via the Proxmox GUI.
-
-
-
 
 === "Parallels"
 
