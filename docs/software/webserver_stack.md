@@ -498,7 +498,7 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
 
 === "Install"
 
-    Starting with DietPi 7.3 `Tomcat 8` has been removed from the DietPi Software List. The reason is that `Tomcat 8` is available until Debian Stretch only. From Debian Buster and newer versions, it will be supported only Tomcat 9 and newer (see also the [Debian Tomcat package information](https://packages.debian.org/search?section=all&arch=any&searchon=names&keywords=tomcat)).
+    Depending on the Debian version, different Apache Tomcat versions are compatible (see also the [Debian Tomcat package information](https://packages.debian.org/search?section=all&arch=any&searchon=names&keywords=tomcat)):
 
     | Debian version | Installation command | 
     | - | - |
@@ -507,11 +507,13 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
     | Debian 10 (Buster)    | `apt install tomcat9`|
     | Debian 9 (Stretch)    | `apt install tomcat8`|
 
-    To install Tomcat, run the command in the console, e.g. for Debian Bookworm:
+    To install Tomcat, run the according command in the console, e.g. for Debian Bookworm:
 
     ```sh
     apt install tomcat10
     ```
+
+    Remark: Starting with DietPi 7.3 `Tomcat 8` has been removed from the DietPi Software List due to the Tomcat version dependency. Since then, Tomcat needs to be installed manually.
 
 === "Quick access"
 
