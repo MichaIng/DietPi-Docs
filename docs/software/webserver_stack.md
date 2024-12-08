@@ -512,9 +512,6 @@ Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/s
     ```sh
     apt install tomcat10
     ```
-
-    Remark: Starting with DietPi 7.3 `Tomcat 8` has been removed from the DietPi Software List due to the Tomcat version dependency. Since then, Tomcat needs to be installed manually.
-
 === "Quick access"
 
     The web interface is accessible via port **8080**:
