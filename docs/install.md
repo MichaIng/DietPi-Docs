@@ -382,36 +382,43 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Get the DietPi VM ISO image to the Proxmox system</h2>
 
-    1. Download the `.iso` file to the Proxmox system.  
+    In this step, the `.iso` file is downloaded to be used as the boot image (CD/DVD) when starting the VM for the first time.
+
+    1. Login to the Proxmox GUI  
         Therefore access the Proxmox web interface via HTTPS on TCP port **8006**:
 
         - URL: `https://<your.IP>:8006`
         - Username: `root`
         - Password: `<root user password you entered during Proxmox VE install>`
 
-        Select the local storage where ISO files reside (ISO file repository):
+    1. Select the local storage where ISO files reside (ISO file repository)
 
         ![Proxmox ISO file storage](assets/images/Proxmox_ISO-Upload1.png){: width="122" height="32" loading="lazy"}
 
-        Download the DietPi VM Installer ISO image [`DietPi_VM-x86_64-Bookworm_Installer.iso`](https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso) to the Proxmox local ISO storage by first clicking the button "Download from URL" and then entering the necessary fields in the following dialog:
+    1. Click the button "Download from URL" and enter the necessary fields in the following dialog
 
-        ![Proxmox ISO file download dialog](assets/images/Proxmox_ISO-Upload2.png){: width="472" height="133" loading="lazy"}
+        - Insert the URL of the ISO image to the dialog  
+            (e.g. https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso)
 
-        - Insert the URL of the ISO image (e.g. https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso) to the dialog
-        - Press the button "Query URL" to verify the URL.  
-        - Optionally, check the SHA256 checksum. Therefore 
+        - Press the button "Query URL" to verify the URL
+
+            ![Proxmox ISO file download dialog](assets/images/Proxmox_ISO-Upload2.png){: width="472" height="133" loading="lazy"}
+
+        - Optionally, check the SHA256 checksum  
+            Therefore 
         
-            - Activate the "Advanced" dialog option.
-            - Select SHA-256 as the "Hash algorithm".
-            - Open or download the SHA checksum (e.g. https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso.sha256) and paste the checksum value from the file into the "Checksum" field.
+            - Activate the "Advanced" dialog option
+            - Select SHA-256 as the "Hash algorithm"
+            - Open or download the SHA checksum (e.g. https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso.sha256) and paste the checksum value from the file into the "Checksum" field
 
-        - Click **Download**. The file is downloaded and the checksum is verified.
+    1. Click **Download**  
+        The file is downloaded and the checksum is verified.
 
-            ![Proxmox ISO file download status dialog](assets/images/Proxmox_ISO-Upload3.png){: width="987" height="611" loading="lazy"}
+        ![Proxmox ISO file download status dialog](assets/images/Proxmox_ISO-Upload3.png){: width="987" height="611" loading="lazy"}
 
-        - After this, the file should appear in the ISO file repository.
+    After this, the file should appear in the ISO file repository.
 
-            ![Proxmox ISO file repository](assets/images/Proxmox_ISO-Upload4.png){: width="466" height="135" loading="lazy"}
+    ![Proxmox ISO file repository](assets/images/Proxmox_ISO-Upload4.png){: width="466" height="135" loading="lazy"}
 
     <h2>2. Generate a new Proxmox VM</h2>
 
