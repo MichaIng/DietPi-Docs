@@ -466,12 +466,17 @@ Select the following tabs for the installation description of your target.
 
         Note: Keep the Proxmox VM option "QEMU Guest Agent" option active (check check box) during the first run of the VM so that the QEMU Guest Agent package is installed within the VM. This enables the control of the VM via the Proxmox GUI.
 
-    ??? info "Alternative installation method by importing the disk image (QCOW2 image)"
-        Following is an alternative installation description where a `.xz` based disk image of format `.qcow2` was used. It contains command line based procedure steps instead of the Proxmox GUI supported VM creation with an `.iso` file described above.
+    <h2>Alternative: Import virtual disk image via console</h2>
 
-        !!! info "Proxmox Helper Script to install DietPi in Proxmox"
-            There is a script from `Darren Bennett` ([GitHub `dazeb`](https://github.com/dazeb)) which makes the installation steps described below much easier by execution of the installation steps within the script.  
-            See <https://github.com/dazeb/proxmox-dietpi-installer> for details.
+    An alternative installation method is to import a virtual disk image (QCOW2 format) directly into a newly generated VM. This skips the additional installation process when using the ISO image, but requires some manual commands on the Proxmox OS console. To simplify the process, there is a script from [`Darren Bennett`](https://github.com/dazeb) which allows to enter the essential parameters via terminal UI and creates the VM and volume for you. See <https://github.com/dazeb/proxmox-dietpi-installer> for details.
+
+    The script can be executed with this command from the Proxmox OS console:
+
+    ```sh
+    bash <(curl -sSfL https://raw.githubusercontent.com/dazeb/proxmox-dietpi-installer/main/dietpi-install.sh)
+    ```
+
+    ??? info "Click here if you want to do the VM creation and image import manually"
 
         <h2>1. Generate a new Proxmox VM</h2>
 
