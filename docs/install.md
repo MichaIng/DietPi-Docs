@@ -533,21 +533,6 @@ Select the following tabs for the installation description of your target.
         The VM can now be started, select it via left side navigation of the Proxmox web interface, then the **Start** button at the top right side, finally the **Console** button to watch and finish the DietPi first run setup.  
         Alternatively you can connect to the VM via SSH, after giving it some time to finish initial setup steps and obtaining its IP with your router or IP scanner.
 
-        ![Proxmox VM starting](assets/images/proxmox3.png){: width="1024" height="590" loading="lazy"}
-
-        ??? info "Comfortably control the DietPi VM from the Proxmox GUI"
-            In Proxmox there is the option to start/stop VMs resp. Container via 
-            
-            - the mouse context menu on the VM in the tree view 
-
-                ![Proxmox DietPi VM context menu](assets/images/Proxmox_VM-context-menu.png){: width="120" height="200" loading="lazy"}
-
-            - the pull down menu "bulk actions" which appears, when the Proxmox node in the tree is selected
-
-                ![Proxmox node pull down menu](assets/images/Proxmox_ServerNode-pulldown-menu.png){: width="400" height="90" loading="lazy"}
-
-            Note: Keep the Proxmox VM option "QEMU Guest Agent" option active (check check box) during the first run of the VM so that the QEMU Guest Agent package is installed within the VM. This enables the control of the VM via the Proxmox GUI.
-
 === "Parallels"
 
     <h2>Introduction</h2>
