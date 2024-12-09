@@ -416,7 +416,7 @@ Select the following tabs for the installation description of your target.
 
         ![Proxmox ISO file download status dialog](assets/images/Proxmox_ISO-Upload3.png){: width="987" height="611" loading="lazy"}
 
-    After this, the file should appear in the ISO file repository.
+    After these steps, the file should appear in the ISO file repository.
 
     ![Proxmox ISO file repository](assets/images/Proxmox_ISO-Upload4.png){: width="466" height="135" loading="lazy"}
 
