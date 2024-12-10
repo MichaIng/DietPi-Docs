@@ -372,10 +372,6 @@ Select the following tabs for the installation description of your target.
 
     ![Proxmox web interface](assets/images/proxmox1.png){: width="800" height="439" loading="lazy"}
 
-    !!! info "Proxmox Helper Script to install DietPi in Proxmox"
-        There is a script from `Darren Bennett` ([GitHub `dazeb`](https://github.com/dazeb)) which makes the installation steps described below much easier by execution of the installation steps within the script.  
-        See <https://github.com/dazeb/proxmox-dietpi-installer> for details.
-
     <h2>Prerequisites</h2>
 
     Proxmox runs on any `x86_64` system. ISO images for the Virtual Environment server can be found here: <https://www.proxmox.com/de/downloads/category/iso-images-pve>  
@@ -384,60 +380,83 @@ Select the following tabs for the installation description of your target.
     - 1.2 GiB for a minimal DietPi system
     - 5 - 10 GiB for a typical running system with X11
 
-    <h2>1. Generate a new Proxmox VM</h2>
+    <h2>1. Get the DietPi VM ISO image to the Proxmox system</h2>
 
-    1. Access the Proxmox web interface via HTTPS on TCP port **8006**:
+    In this step, the `.iso` file is downloaded to be used as the boot image (CD/DVD) when starting the VM for the first time.
+
+    1. Login to the Proxmox GUI  
+        Therefore access the Proxmox web interface via HTTPS on TCP port **8006**:
+
         - URL: `https://<your.IP>:8006`
         - Username: `root`
         - Password: `<root user password you entered during Proxmox VE install>`
-    1. Tab **General**: Select the **Create VM** button at the top right corner. Choose a **Node** , a **VM ID** and a **Name**, then click **Next**.
+
+    1. Select the local storage where ISO files reside (ISO file repository)
+
+        ![Proxmox ISO file storage](assets/images/Proxmox_ISO-Upload1.png){: width="122" height="32" loading="lazy"}
+
+    1. Click the button "Download from URL" and enter the necessary fields in the following dialog
+
+        - Insert the URL of the ISO image to the dialog  
+            (e.g. https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso)
+
+        - Press the button "Query URL" to verify the URL
+
+            ![Proxmox ISO file download dialog](assets/images/Proxmox_ISO-Upload2.png){: width="472" height="133" loading="lazy"}
+
+        - Optionally, check the SHA256 checksum  
+            Therefore 
+        
+            - Activate the "Advanced" dialog option
+            - Select SHA-256 as the "Hash algorithm"
+            - Open or download the SHA checksum (e.g. https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso.sha256) and paste the checksum value from the file into the "Checksum" field
+
+    1. Click **Download**  
+        The file is downloaded and the checksum is verified.
+
+        ![Proxmox ISO file download status dialog](assets/images/Proxmox_ISO-Upload3.png){: width="987" height="611" loading="lazy"}
+
+    After these steps, the file should appear in the ISO file repository.
+
+    ![Proxmox ISO file repository](assets/images/Proxmox_ISO-Upload4.png){: width="466" height="135" loading="lazy"}
+
+    <h2>2. Generate a new Proxmox VM</h2>
+
+    1. In the Proxmox web interface, select the **Create VM** button at the top right corner. Choose a **Node** , a **VM ID** and a **Name**, then click **Next**.
 
         ![Proxmox VM creation](assets/images/proxmox2.png){: width="722" height="314" loading="lazy"}
 
-        Remember the VM ID, you need it later.
+    1. Tab **OS**: Select the downloaded DietPi ISO file:
 
-    1. Tab **OS**: Select "**Do not use any media** ", for the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected, then click **Next**.
-    1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default. Click **Next**.
-    1. Tab **Disks**: Delete the default `scsi0` disk with the red trash bin button, then click **Next**.
-    1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `kvm64` type. Then click **Next**.
-    1. Tab **Memory**: While DietPi runs with less, depending on the software you want to install and run within the VM, we recommend at least 1024 MiB memory size, 2048 MiB allows the DietPi system to setup itself without a swap file by default. When done, click **Next**.
+        ![Proxmox VM creation - usage of the ISO file](assets/images/Proxmox_VM-generation-ISO.png){: width="789" height="229" loading="lazy"}
+
+        For the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected.  
+        Click **Next**.
+
+    1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default.  
+        Activate the check box `Qemu Agent`.  
+        Click **Next**. 
+    
+    1. Tab **Disks**: Optionally, change the VM disk storage location ("Storage"), optionally adjust the disk size ("Disk size (GiB)").  
+        Click **Next**.
+    1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `x86-64-v2-AES` type.  
+        Click **Next**.
+    1. Tab **Memory**: While DietPi runs with less, depending on the software you want to install and run within the VM, we recommend at least 1024 MiB memory size, 2048 MiB allows the DietPi system to setup itself without a swap file by default.  
+        Click **Next**.
 
         ??? info "Dynamic memory allocation via ballooning device"
             The [ballooning device](https://wikipedia.org/wiki/Memory_ballooning) allows Proxmox to dynamically allocate memory from the host system based on actual memory usage within the VM. I.e. you are able to run VMs with a higher overall memory size than the host system has, as long as all VMs do not fully use their memory at the same time.
 
-    1. Tab **Network**: Using a network bridge allows the VM to show up as dedicated system in your LAN, which simplifies SSH and network application access. We recommend to use the default para-virtualised **VirtIO** adapter model. When done, click **Next**.
+    1. Tab **Network**: Using a network bridge allows the VM to show up as dedicated system in your LAN, which simplifies SSH and network application access. We recommend to use the default para-virtualised **VirtIO** adapter model.  
+        Click **Next**.
     1. Tab **Confirm**: Start the VM creation by clicking **Finish**.
 
-    <h2>2. Download, extract and import the DietPi image</h2>
+    <h2>3. Execute the Clonezilla based DietPi installation</h2>
 
-    !!! info "Transferring a disk image to Proxmox"
-        A DietPi disk image can be transferred to the Proxmox server via e.g. USB flash drive or by uploading it as CD/DVD ISO image. Since the import needs to be done via console (accessible via web interface and SSH), we guide you through the path of downloading it directly on the Proxmox server.
-
-    1. Select the Proxmox node, then click the **Shell** button at the top right corner. Alternatively connect via SSH to the Proxmox server, using the same login credentials you used for the Proxmox web interface.
-    1. In the console window, enter the following commands to download the DietPi image, optionally check its integrity, decompress it via `xz`, import it as disk to your new VM (using the **VM ID** you chose during creation) and make it the boot drive.  
-        _If not done yet, we recommend to upgrade all APT packages to the latest version._
-
-        ```sh
-        apt update
-        apt full-upgrade
-        apt install xz-utils
-        curl -O https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bookworm.qcow2.xz
-        sha256sum -c <(curl -sSf 'https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bookworm.qcow2.xz.sha256')
-        xz -d DietPi_Proxmox-x86_64-Bookworm.qcow2.xz
-        ```
-
-        Next, the disk image is imported.  
-        **Note**: Replace `100` below with the **VM ID** entered during VM creation.
-
-        ```sh
-        ID=100
-        qm importdisk "$ID" DietPi_Proxmox-x86_64-Bookworm.qcow2 local-lvm
-        qm set "$ID" --scsi0 "local-lvm:vm-$ID-disk-0"
-        qm set "$ID" --boot order=scsi0
-        ```
-
-    The VM can now be started, select it via left side navigation of the Proxmox web interface, then the **Start** button at the top right side, finally the **Console** button to watch and finish the DietPi first run setup.  
-    Alternatively you can connect to the VM via SSH, after giving it some time to finish initial setup steps and obtaining its IP with your router or IP scanner.
+    The VM can now be started, select it via left side navigation of the Proxmox web interface, then the **Start** button at the top right side, finally the **Console** button to watch and execute the DietPi installation (Clonezilla based installation procedure). The Clonezilla setup finishes its procedure by shutting down the VM.  
+    Then the CD/DVD drive of the VM can be removed via the "Hardware" option dialog of the created VM. After this, the VM can be restarted again, so that the DietPi first run installation procedure is executed.  
+    This first run setup can be monitored by clicking the "Console" button to watch and finish the DietPi first run setup. 
+    Alternatively the VM can be connected via SSH, after giving it some time to finish initial setup steps (typically obtaining its IP from the router).
 
     ![Proxmox VM starting](assets/images/proxmox3.png){: width="1024" height="590" loading="lazy"}
 
@@ -452,7 +471,79 @@ Select the following tabs for the installation description of your target.
 
             ![Proxmox node pull down menu](assets/images/Proxmox_ServerNode-pulldown-menu.png){: width="400" height="90" loading="lazy"}
 
-        Note: Keep the Proxmox VM option "QEMU Guest Agent" option inactive (uncheck check box) to be able to control the VM via the Proxmox GUI.
+        Note: Keep the Proxmox VM option "QEMU Guest Agent" option active (check check box) during the first run of the VM so that the QEMU Guest Agent package is installed within the VM. This enables the control of the VM via the Proxmox GUI.
+
+    <h2>Alternative: Import virtual disk image via console</h2>
+
+    An alternative installation method is to import a virtual disk image (QCOW2 format) directly into a newly generated VM. This skips the additional installation process when using the ISO image, but requires some manual commands on the Proxmox OS console. To simplify the process, there is a script from [`Darren Bennett`](https://github.com/dazeb) which allows to enter the essential parameters via terminal UI and creates the VM and volume for you. See <https://github.com/dazeb/proxmox-dietpi-installer> for details.
+
+    The script can be executed with this command from the Proxmox OS console:
+
+    ```sh
+    bash <(curl -sSfL https://raw.githubusercontent.com/dazeb/proxmox-dietpi-installer/main/dietpi-install.sh)
+    ```
+
+    ??? info "Click here if you want to do the VM creation and image import manually"
+
+        <h2>1. Generate a new Proxmox VM</h2>
+
+        1. Access the Proxmox web interface via HTTPS on TCP port **8006**:
+            - URL: `https://<your.IP>:8006`
+            - Username: `root`
+            - Password: `<root user password you entered during Proxmox VE install>`
+        1. Tab **General**: Select the **Create VM** button at the top right corner. Choose a **Node** , a **VM ID** and a **Name**, then click **Next**.
+
+            ![Proxmox VM creation](assets/images/proxmox2.png){: width="722" height="314" loading="lazy"}
+
+            Remember the VM ID, you need it later.
+
+        1. Tab **OS**: Select "**Do not use any media** ", for the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected, then click **Next**.
+        1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default.  
+            Activate the check box `Qemu Agent`.  
+            Click **Next**.
+        1. Tab **Disks**: Delete the default `scsi0` disk with the trash bin button, then click **Next**.
+        1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `x86-64-v2-AES` type.  
+            Click **Next**.
+        1. Tab **Memory**: While DietPi runs with less, depending on the software you want to install and run within the VM, we recommend at least 1024 MiB memory size, 2048 MiB allows the DietPi system to setup itself without a swap file by default.  
+            Click **Next**.
+
+            ??? info "Dynamic memory allocation via ballooning device"
+                The [ballooning device](https://wikipedia.org/wiki/Memory_ballooning) allows Proxmox to dynamically allocate memory from the host system based on actual memory usage within the VM. I.e. you are able to run VMs with a higher overall memory size than the host system has, as long as all VMs do not fully use their memory at the same time.
+
+        1. Tab **Network**: Using a network bridge allows the VM to show up as dedicated system in your LAN, which simplifies SSH and network application access. We recommend to use the default para-virtualised **VirtIO** adapter model.  
+            Click **Next**.
+        1. Tab **Confirm**: Start the VM creation by clicking **Finish**.
+
+        <h2>2. Download, extract and import the DietPi image</h2>
+
+        !!! info "Transferring a disk image to Proxmox"
+            A DietPi disk image can be transferred to the Proxmox server via e.g. USB flash drive or by uploading it as CD/DVD ISO image. Since the import needs to be done via console (accessible via web interface and SSH), we guide you through the path of downloading it directly on the Proxmox server.
+
+        1. Select the Proxmox node, then click the **Shell** button at the top right corner. Alternatively connect via SSH to the Proxmox server, using the same login credentials you used for the Proxmox web interface.
+        1. In the console window, enter the following commands to download the DietPi image, optionally check its integrity, decompress it via `xz`, import it as disk to your new VM (using the **VM ID** you chose during creation) and make it the boot drive.  
+            _If not done yet, we recommend to upgrade all APT packages to the latest version._
+
+            ```sh
+            apt update
+            apt full-upgrade
+            apt install xz-utils
+            curl -O https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bookworm.qcow2.xz
+            sha256sum -c <(curl -sSf 'https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bookworm.qcow2.xz.sha256')
+            xz -d DietPi_Proxmox-x86_64-Bookworm.qcow2.xz
+            ```
+
+            Next, the disk image is imported.  
+            **Note**: Replace `100` below with the **VM ID** entered during VM creation.
+
+            ```sh
+            ID=100
+            qm importdisk "$ID" DietPi_Proxmox-x86_64-Bookworm.qcow2 local-lvm
+            qm set "$ID" --scsi0 "local-lvm:vm-$ID-disk-0"
+            qm set "$ID" --boot order=scsi0
+            ```
+
+        The VM can now be started, select it via left side navigation of the Proxmox web interface, then the **Start** button at the top right side, finally the **Console** button to watch and finish the DietPi first run setup.  
+        Alternatively you can connect to the VM via SSH, after giving it some time to finish initial setup steps and obtaining its IP with your router or IP scanner.
 
 === "Parallels"
 
