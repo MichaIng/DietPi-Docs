@@ -337,6 +337,7 @@ LVM
 LXC
 LXDE
 LXQt
+Lyrion
 macOS
 mangas
 marcobrianza
@@ -783,6 +784,7 @@ xz
 YaCy
 YAML
 YDNS
+yescrypt
 ympd
 youtube
 ZeroPi
