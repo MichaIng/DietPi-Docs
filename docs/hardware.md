@@ -541,6 +541,12 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>NanoPi M6 (testing)</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiM6-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>ZeroPi</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ZeroPi-ARMv7-Bookworm.img.xz">DietPi image</a>
@@ -579,6 +585,18 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 <td><a class="table" href=""><strong>Orange Pi 5 Plus</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Plus-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 5 Max (testing)</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePi5Max-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 5 Pro (testing)</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePi5Pro-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
