@@ -774,7 +774,8 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>Proxmox</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bookworm.qcow2.xz">DietPi QCOW2 image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso">DietPi installer ISO image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bookworm.qcow2.xz">DietPi QCOW2 image</a>
                 </td>
             </tr>
             <tr>
