@@ -332,7 +332,7 @@ VSCodium is a FLOSS version of [Microsoft's Visual Studio code](https://code.vis
     ```
 
 Documentation (Visual Studio Code): <https://code.visualstudio.com/docs>  
-Documentation (VSCodium): <https://github.com/VSCodium/vscodium/blob/master/DOCS.md>  
+Documentation (VSCodium): <https://github.com/VSCodium/vscodium/blob/master/docs/index.md>  
 Source code: <https://github.com/VSCodium/vscodium>  
 License: [MIT](https://github.com/VSCodium/vscodium/blob/master/LICENSE)
 
