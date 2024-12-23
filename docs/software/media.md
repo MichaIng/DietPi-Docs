@@ -15,7 +15,7 @@ description: Description of DietPi software options related to media systems lik
 - [**Mopidy - Web Interface Music /Radio Player for MPD**](#mopidy)
 <!-- markdownlint-disable-next-line MD051 -->
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](#airsonic)
-- [**Logitech Media Server - aka LMS, Squeezebox Server**](#logitech-media-server)
+- [**Lyrion Music Server - aka Logitech Media Server, LMS, Squeezebox Server**](#lyrion-music-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](#squeezelite)
 - [**Shairport Sync - AirPlay audio player with multiroom sync**](#shairport-sync)
 - [**ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)**](#readymedia)
@@ -475,16 +475,16 @@ Feature rich media streaming server with a web interface, coded in Java.
 Source code: <https://github.com/airsonic-advanced/airsonic-advanced>  
 License: [GPLv3](https://github.com/airsonic-advanced/airsonic-advanced/blob/master/LICENSE.txt)
 
-## Logitech Media Server
+## Lyrion Music Server
 
-Logitech Media Server (aka. LMS, fka. SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3) is the server software that enables web interface control of:
+Lyrion Music Server (aka. Logitech Media Server, LMS, fka. SlimServer, SqueezeCenter, SqueezeboxServer, SliMP3) is the server software that enables web interface control of:
 
 - Software audio players: [Squeezelite](#squeezelite)
 - Hardware audio players from Logitech: Squeezebox, SlimDevices
 
 Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting [Squeezelite](#squeezelite) for installation in `dietpi-software`.
 
-![Logitech Media Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
+![Lyrion Music Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -504,7 +504,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
     Logs can be viewed with the following command:
 
     ```sh
-    journalctl -u logitechmediaserver
+    journalctl -u lyrionmusicserver
     ```
 
     Additionally, log files can be found in:
@@ -515,7 +515,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 === "Update"
 
-    Logitech Media Server can be updated to the current version with the following command:
+    Lyrion Music Server can be updated to the current version with the following command:
 
     ```sh
     dietpi-software reinstall 35
@@ -523,7 +523,8 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 ***
 
-Wikipedia: <https://en.wikipedia.org/wiki/Logitech_Media_Server>  
+Official Website: <https://lyrion.org/reference/lyrion-music-server/>  
+Wikipedia: <https://en.wikipedia.org/wiki/Lyrion_Music_Server>  
 Source code: <https://github.com/Logitech/slimserver>
 
 ## Squeezelite
