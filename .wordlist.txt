@@ -1,5 +1,6 @@
 aarch
 ACP
+ACPI
 ActivityPub
 addictiveness
 addon
@@ -337,6 +338,7 @@ LVM
 LXC
 LXDE
 LXQt
+Lyrion
 macOS
 mangas
 marcobrianza
@@ -578,6 +580,7 @@ selectable
 Servarr
 serverless
 servlet
+severities
 SFTP
 SHA
 Shairport
@@ -783,6 +786,7 @@ xz
 YaCy
 YAML
 YDNS
+yescrypt
 ympd
 youtube
 ZeroPi

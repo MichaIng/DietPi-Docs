@@ -229,7 +229,7 @@ Network file system server.
 === "Access configuration"
 
     The NFS access configuration is done via **export files**.  
-    You can edit the `/etc/exports` file as well as adding further export files within the `/etc/exports.d` directory.
+    Therefore, the file `/etc/exports` can be edited as well as adding further export files within the `/etc/exports.d` directory.
 
     **Explanations of the export file format** are available in the internet or can be read in the man pages (use `man exports`, therefore the package **man** needs to be installed).
 
@@ -239,7 +239,7 @@ Network file system server.
     exportfs -ra
     ```
 
-    Alternatively you can restart the service (`systemctl restart nfs-kernel-server`).
+    Alternatively the service can be restarted (`systemctl restart nfs-server`).
 
     The actual access configuration can be displayed with the command
 
@@ -247,29 +247,60 @@ Network file system server.
     exportfs
     ```
 
-    On the client side you can query the mountable exports with the command
+    On the client side the mountable exports can be queried with the command
 
     ```
     showmount -e <NFS_SERVER>
     ```
 
-=== "Default configuration / increase security"
+=== "Default configuration / limit access"
 
     By default the DietPi NFS installation exports the directory `/mnt/dietpi_userdata` for everyone. This is configured in `/etc/exports.d/dietpi.exports`. You can edit this file to restrict the access.
 
-    E.g. you could limit the access to the NFS share by setting a IP address range:
+    E.g. access to the NFS share can be limited to the IP address range of 192.168.0.1-255, by editing `/etc/exports.d/dietpi.exports` as follows:
 
-    - Edit the following file: `/etc/exports.d/dietpi.exports`
-    - To only allow users access with an IP address range of 192.168.0.1-255
+    ```
+    /mnt/dietpi_userdata 192.168.0.*(rw,async,no_root_squash,crossmnt,no_subtree_check)
+    ```
 
-        ```
-        /mnt/dietpi_userdata 192.168.0.*(rw,async,no_root_squash,fsid=0,crossmnt,no_subtree_check)
-        ```
+    Apply the new configuration via `systemctl restart nfs-server` or `exportfs -ra`.
 
-    - Activate the new configuration (`systemctl restart nfs-kernel-server` or `exportfs -ra`)
+=== "NFS v3 disable/enable"
+
+    One option to disable NFS v3 is to add a file to the directory `/etc/nfs.conf.d/` with the following content:
+
+    ```sh
+    cat << _EOF_ > "/etc/nfs.conf.d/00-dietpi.conf"
+    # Disable NFS v3 (to only have NFS v4 enabled)
+    #
+    [nfsd]
+    vers3=n
+    #vers4=y
+    #vers4.1=y
+    #vers4.2=y
+    _EOF_
+    ```
+
+    A restart of the NFS service is then necessary:
+
+    ```sh
+    systemctl restart nfs-server
+    ```
+
+    The disabled NFS v3 can be examined with:
+
+    ```console
+    root@NFS-server:/etc/nfs.conf.d# cat /proc/fs/nfsd/versions
+    -3 +4 +4.1 +4.2
+    ```
+
+    The example output gives that NFS v3 is not active (-3) whereas NFS v4 is active (+4 +4.1 +4.2).
+
+    To re-enable NFS v3 again, the entry `vers3=y` can be used, or the complete file `/etc/nfs.conf.d/00-dietpi.conf` can be deleted (also restarting the `nfs-server` service afterwards).
 
 ***
 
-Wikipedia: <https://wikipedia.org/wiki/Network_File_System>
+Wikipedia: <https://wikipedia.org/wiki/Network_File_System>  
+DietPi Blog: [DietPi and NFS: Basics and improving security](https://dietpi.com/blog/?p=3581)
 
 [Return to the **Optimised Software list**](../software.md)
