@@ -125,8 +125,14 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
     - URL: `https://<your.IP>:8443`  
       You can safely ignore the certificate "warning" if one appears.
-    - Username: `root`
-    - Password: The same as your root login password. Default is `dietpi`
+    - Username: `mineos`
+    - Password = `<globalSoftwarePassword>` (default: `dietpi`)
+
+    To change the password to `myPassword`, run the following command:
+
+    ```sh
+    sudo chpasswd --crypt-method SHA512 <<< 'mineos:myPassword'
+    ```
 
 === "1st run setup"
 
@@ -143,6 +149,10 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
     9. Click Start
 
     Your server should now be running, on the default port 25565.
+
+    !!! warning "Minecraft Java version requirements"
+        Note that Minecraft 1.20.5 and above requires Java 21, which is available on Debian Trixie/testing only, or with a custom Java installation.  
+        ARMv6 RPi models (RPi 1 and Zero 1) can only run Minecraft 1.16 or older, as newer Java versions do not support ARMv6 with Hotspot VM anymore.
 
 ***
 
