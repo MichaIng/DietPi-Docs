@@ -541,9 +541,9 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>NanoPi M6 (testing)</strong></a></td>
+                <td><a class="table" href=""><strong>NanoPi M6</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiM6-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM6-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -588,15 +588,15 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi 5 Max (testing)</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi 5 Max</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePi5Max-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Max-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi 5 Pro (testing)</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi 5 Pro</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_OrangePi5Pro-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Pro-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -744,13 +744,13 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
                 <td><a class="table" href=""><strong>Native PC for BIOS/CSM</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Bookworm.img.xz">DietPi image</a>
-                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Bookworm_Installer.iso.xz">DietPi installer image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Bookworm_Installer.iso">DietPi installer image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Native PC for UEFI</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Bookworm_Installer.iso.xz">DietPi installer image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Bookworm_Installer.iso">DietPi installer image</a>
                 </td>
             </tr>
             <tr>
