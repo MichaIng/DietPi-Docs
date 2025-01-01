@@ -443,7 +443,7 @@ Select the following tabs for the installation description of your target.
     1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `x86-64-v2-AES` type.  
         Click **Next**.
     1. Tab **Memory**: While DietPi runs with less, depending on the software you want to install and run within the VM, we recommend at least 1024 MiB memory size, 2048 MiB allows the DietPi system to setup itself without a swap file by default.  
-        _**Important:** During the first run (i.e. during the CloneZilla based installation) a memory size of at least **1024 MB** is required. Afterwards this might be reduced depending on the target VM memory size._  
+        _**Important:** During the first run (i.e. during the Clonezilla based installation) a memory size of at least **1024 MB** is required. Afterwards this might be reduced depending on the target VM memory size._  
         Click **Next**.
 
         ??? info "Dynamic memory allocation via ballooning device"
