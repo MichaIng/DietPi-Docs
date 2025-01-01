@@ -529,7 +529,7 @@ Source code: <https://github.com/Logitech/slimserver>
 
 ## Squeezelite
 
-Squeezelite is a software audio player/client for the [Logitech Media Server](#logitech-media-server).
+Squeezelite is a software audio player/client for the [Lyrion Music Server](#lyrion-music-server).
 
 === "Change command-line options"
 
