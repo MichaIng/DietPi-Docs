@@ -179,7 +179,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**CAVA - Optional: Console-based audio visualizer for MPD**](software/media.md#cava)
 - [**Mopidy - Web Interface Music /Radio Player for MPD**](software/media.md#mopidy)
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](software/media.md#airsonic)
-- [**Logitech Media Server - aka LMS, Squeezebox Server**](software/media.md#logitech-media-server)
+- [**Lyrion Music Server - aka Logitech Media Server, LMS, Squeezebox Server**](software/media.md#lyrion-music-server)
 - [**Squeezelite - Audio player for Logitech Media Server**](software/media.md#squeezelite)
 - [**Shairport Sync - AirPlay audio player with multiroom sync**](software/media.md#shairport-sync)
 - [**ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)**](software/media.md#readymedia)

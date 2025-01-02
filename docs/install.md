@@ -377,8 +377,8 @@ Select the following tabs for the installation description of your target.
     Proxmox runs on any `x86_64` system. ISO images for the Virtual Environment server can be found here: <https://www.proxmox.com/de/downloads/category/iso-images-pve>  
     Aside of the Proxmox server's [system requirements](https://www.proxmox.com/en/proxmox-ve/requirements), a DietPi VM additionally requires:
 
-    - 1.2 GiB for a minimal DietPi system
-    - 5 - 10 GiB for a typical running system with X11
+    - 1.2 GiB RAM for a minimal DietPi system
+    - 5 - 10 GiB RAM for a typical running system with X11
 
     <h2>1. Get the DietPi VM ISO image to the Proxmox system</h2>
 
@@ -432,16 +432,17 @@ Select the following tabs for the installation description of your target.
 
         For the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected.  
         Click **Next**.
-
     1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default.  
-        Activate the check box `Qemu Agent`.  
-        Click **Next**. 
-    
-    1. Tab **Disks**: Optionally, change the VM disk storage location ("Storage"), optionally adjust the disk size ("Disk size (GiB)").  
         Click **Next**.
+    1. Tab **Disks**: Optionally, change the VM disk storage location ("Storage"), optionally adjust the disk size ("Disk size (GiB)").  
+        _**Important:** A disk size of at least 8 GB is required._  
+        Click **Next**.
+
+        [//]: # (With less than 8 GB, Clonezilla can run into errors.)
     1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `x86-64-v2-AES` type.  
         Click **Next**.
     1. Tab **Memory**: While DietPi runs with less, depending on the software you want to install and run within the VM, we recommend at least 1024 MiB memory size, 2048 MiB allows the DietPi system to setup itself without a swap file by default.  
+        _**Important:** During the first run (i.e. during the Clonezilla based installation) a memory size of at least **1024 MB** is required. Afterwards this might be reduced depending on the target VM memory size._  
         Click **Next**.
 
         ??? info "Dynamic memory allocation via ballooning device"
@@ -471,8 +472,6 @@ Select the following tabs for the installation description of your target.
 
             ![Proxmox node pull down menu](assets/images/Proxmox_ServerNode-pulldown-menu.png){: width="400" height="90" loading="lazy"}
 
-        Note: Keep the Proxmox VM option "QEMU Guest Agent" option active (check check box) during the first run of the VM so that the QEMU Guest Agent package is installed within the VM. This enables the control of the VM via the Proxmox GUI.
-
     <h2>Alternative: Import virtual disk image via console</h2>
 
     An alternative installation method is to import a virtual disk image (QCOW2 format) directly into a newly generated VM. This skips the additional installation process when using the ISO image, but requires some manual commands on the Proxmox OS console. To simplify the process, there is a script from [`Darren Bennett`](https://github.com/dazeb) which allows to enter the essential parameters via terminal UI and creates the VM and volume for you. See <https://github.com/dazeb/proxmox-dietpi-installer> for details.
@@ -499,7 +498,6 @@ Select the following tabs for the installation description of your target.
 
         1. Tab **OS**: Select "**Do not use any media** ", for the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected, then click **Next**.
         1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default.  
-            Activate the check box `Qemu Agent`.  
             Click **Next**.
         1. Tab **Disks**: Delete the default `scsi0` disk with the trash bin button, then click **Next**.
         1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `x86-64-v2-AES` type.  
