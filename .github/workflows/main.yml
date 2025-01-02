@@ -70,4 +70,5 @@ jobs:
         git fetch --depth=1 origin master
         while read -r line; do exclude="$exclude|dietpi.com/${line%.md}/"; done < <(git diff --name-only --diff-filter=A origin/master docs | grep '.md$')
         while read -r line; do exclude="$exclude|github.com/MichaIng/DietPi-Docs/(raw|edit)/dev/$line"; done < <(find docs -type f -name '*.md')
+        curl -sSfH 'Authorization: token ${{ secrets.GH_TOKEN }}' -X GET 'https://api.github.com/rate_limit'
         ./lychee -En --require-https --cache --include-fragments --exclude '^(http://wiringpi.com/$|https://(www.wireguard.com/$|twitter.com/DietPi_$|www.patreon.com/DietPi$|www.linux-kvm.org/$|www.domoticz.com/|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details|www.kickstarter.com|theunarchiver.com/$|www.parallels.com/|(www|forums).raspberrypi.com/|www.reddit.com/|superuser.com|chromewebstore.google.com'"$exclude"'))' -a 429 --github-token '${{ secrets.GH_TOKEN }}' -b build README.md 'build/**/*.html'
