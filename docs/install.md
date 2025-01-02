@@ -434,7 +434,6 @@ Select the following tabs for the installation description of your target.
         Click **Next**.
 
     1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default.  
-        _**Important:** Activate the check box `Qemu Agent`._  
         Click **Next**. 
     
     1. Tab **Disks**: Optionally, change the VM disk storage location ("Storage"), optionally adjust the disk size ("Disk size (GiB)").  
@@ -473,8 +472,6 @@ Select the following tabs for the installation description of your target.
 
             ![Proxmox node pull down menu](assets/images/Proxmox_ServerNode-pulldown-menu.png){: width="400" height="90" loading="lazy"}
 
-        Note: Keep the Proxmox VM option "QEMU Guest Agent" option active (check check box) during the first run of the VM so that the QEMU Guest Agent package is installed within the VM. This enables the control of the VM via the Proxmox GUI.
-
     <h2>Alternative: Import virtual disk image via console</h2>
 
     An alternative installation method is to import a virtual disk image (QCOW2 format) directly into a newly generated VM. This skips the additional installation process when using the ISO image, but requires some manual commands on the Proxmox OS console. To simplify the process, there is a script from [`Darren Bennett`](https://github.com/dazeb) which allows to enter the essential parameters via terminal UI and creates the VM and volume for you. See <https://github.com/dazeb/proxmox-dietpi-installer> for details.
@@ -501,7 +498,6 @@ Select the following tabs for the installation description of your target.
 
         1. Tab **OS**: Select "**Do not use any media** ", for the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected, then click **Next**.
         1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default.  
-            Activate the check box `Qemu Agent`.  
             Click **Next**.
         1. Tab **Disks**: Delete the default `scsi0` disk with the trash bin button, then click **Next**.
         1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `x86-64-v2-AES` type.  
