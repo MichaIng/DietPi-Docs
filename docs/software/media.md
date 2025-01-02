@@ -16,7 +16,7 @@ description: Description of DietPi software options related to media systems lik
 <!-- markdownlint-disable-next-line MD051 -->
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](#airsonic)
 - [**Lyrion Music Server - aka Logitech Media Server, LMS, Squeezebox Server**](#lyrion-music-server)
-- [**Squeezelite - Audio player for Logitech Media Server**](#squeezelite)
+- [**Squeezelite - Audio player for Lyrion Music Server**](#squeezelite)
 - [**Shairport Sync - AirPlay audio player with multiroom sync**](#shairport-sync)
 - [**ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)**](#readymedia)
 - [**Ampache - Web interface media streaming server**](#ampache)
@@ -525,7 +525,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
 Official Website: <https://lyrion.org/reference/lyrion-music-server/>  
 Wikipedia: <https://en.wikipedia.org/wiki/Lyrion_Music_Server>  
-Source code: <https://github.com/Logitech/slimserver>
+Source code: <https://github.com/LMS-Community/slimserver>
 
 ## Squeezelite
 

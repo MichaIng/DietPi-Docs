@@ -362,7 +362,7 @@ License: [GPLv2](https://github.com/git/git/blob/master/COPYING)
 [Return to the **Optimised Software list**](../software.md)
 
 <!-- markdownlint-disable MD053 -->
-[^1]: [Logitech Media Server](media.md#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
+[^1]: [Lyrion Music Server](media.md#lyrion-music-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
 
 [^2]: [7 Most Famous Companies That Use Golang](https://www.agiratech.com/blog/companies-using-golang/)
 
