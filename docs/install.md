@@ -432,13 +432,13 @@ Select the following tabs for the installation description of your target.
 
         For the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected.  
         Click **Next**.
-
     1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default.  
-        Click **Next**. 
-    
+        Click **Next**.
     1. Tab **Disks**: Optionally, change the VM disk storage location ("Storage"), optionally adjust the disk size ("Disk size (GiB)").  
         _**Important:** A disk size of at least 8 GB is required._  
         Click **Next**.
+
+        [//]: # (With less than 8 GB, Clonezilla can run into errors.)
     1. Tab **CPU**: Adjust CPU details as required, we recommend to use the default `x86-64-v2-AES` type.  
         Click **Next**.
     1. Tab **Memory**: While DietPi runs with less, depending on the software you want to install and run within the VM, we recommend at least 1024 MiB memory size, 2048 MiB allows the DietPi system to setup itself without a swap file by default.  
