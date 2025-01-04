@@ -433,17 +433,17 @@ Select the following tabs for the installation description of your target.
         For the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected.  
         Click **Next**.
     1. Tab **System**: As **Machine** you can select `q35`, but the older default will work as well. We recommend the para-virtualised **VirtIO SCSI** controller, which should be the default.  
-        _**Important:** The check box "Qemu Agent" should to be activated._  
+        _**Important:** The check box `Qemu Agent` should to be activated._  
         Click **Next**.
 
-        ??? info "Why to activate the "Qemu Agent" check box?"
-            The QEMU Guest Agent (QGA) is a service that runs inside the virtual machine (VM) and enables better communication between the host (Proxmox VE) and the guest operating system:
+        ??? info "Why to activate the `Qemu Agent` check box?"
+            The QEMU Guest Agent (QGA) is a service that runs inside the virtual machine (VM) and enables better communication between the host (`Proxmox VE`) and the guest operating system:
 
-            - **Accurate Guest Information**: QGA lets Proxmox VE fetch real-time IP addresses and guest details, providing a more seamless management experience.
+            - **Accurate Guest Information**: QGA lets `Proxmox VE` fetch real-time IP addresses and guest details, providing a more seamless management experience.
             - **Consistent Backups**: Using QGA’s `fs-freeze` and `fs-thaw` commands helps to ensure that the guest’s filesystem is in a consistent state before snapshots or backups are made, therefore reducing the risk of data corruption.
             - **Automated TRIM**: When moving or migrating VMs on thin-provisioned storage, QGA triggers TRIM commands to reclaim unused disk space, optimizing storage usage.
             
-            The QEMU Guest Agent is installed by DietPi during the initial firstrun setup. Therefore only the check box needs to be activated during the creation of the VM.
+            The QEMU Guest Agent is installed by DietPi during the initial first run setup. Therefore only the check box needs to be activated during the creation of the VM.
 
     1. Tab **Disks**: Optionally, change the VM disk storage location ("Storage"), optionally adjust the disk size ("Disk size (GiB)").  
         _**Important:** A disk size of at least 8 GB is required._  
