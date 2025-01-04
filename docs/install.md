@@ -440,7 +440,7 @@ Select the following tabs for the installation description of your target.
             The QEMU Guest Agent (QGA) is a service that runs inside the virtual machine (VM) and enables better communication between the host (`Proxmox VE`) and the guest operating system:
 
             - **Accurate Guest Information**: QGA lets `Proxmox VE` fetch real-time IP addresses and guest details, providing a more seamless management experience.
-            - **Consistent Backups**: Using QGA’s `fs-freeze` and `fs-thaw` commands helps to ensure that the guest’s filesystem is in a consistent state before snapshots or backups are made, therefore reducing the risk of data corruption.
+            - **Consistent Backups**: Using the QGA commands `fs-freeze` and `fs-thaw` helps to ensure that the guest’s filesystem is in a consistent state before snapshots or backups are made, therefore reducing the risk of data corruption.
             - **Automated TRIM**: When moving or migrating VMs on thin-provisioned storage, QGA triggers TRIM commands to reclaim unused disk space, optimizing storage usage.
             
             The QEMU Guest Agent is installed by DietPi during the initial first run setup. Therefore only the check box needs to be activated during the creation of the VM.
