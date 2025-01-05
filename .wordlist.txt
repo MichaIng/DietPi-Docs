@@ -507,6 +507,7 @@ RAR
 qBittorrent
 QCOW
 QEMU
+QGA
 Queneuder
 Quickstart
 QuiteRSS
