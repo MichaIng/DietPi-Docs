@@ -443,7 +443,7 @@ Select the following tabs for the installation description of your target.
             - **Consistent Backups**: Using the QGA commands `fs-freeze` and `fs-thaw` helps to ensure that the guest’s filesystem is in a consistent state before snapshots or backups are made, therefore reducing the risk of data corruption.
             - **Automated TRIM**: When moving or migrating VMs on thin-provisioned storage, QGA triggers TRIM commands to reclaim unused disk space, optimizing storage usage.
             
-            The QEMU Guest Agent is installed by DietPi during the initial first run setup. Therefore only the check box needs to be activated during the creation of the VM.
+            The QEMU Guest Agent is installed automatically by DietPi during the initial first run setup, if the check box has been activated before the first startup of the VM.
 
     1. Tab **Disks**: Optionally, change the VM disk storage location ("Storage"), optionally adjust the disk size ("Disk size (GiB)").  
         _**Important:** A disk size of at least 8 GB is required._  
