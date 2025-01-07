@@ -794,6 +794,7 @@ YDNS
 yescrypt
 ympd
 youtube
+Zeroconf
 ZeroPi
 ZeroTier
 ZFS
