@@ -335,11 +335,14 @@ More generally it enables programs to publish and discover services and hosts ru
     journalctl -t avahi-daemon
     ```
 
+    There are also some tools available to monitor resp. diagnose Avahi. See [Avahi utilities](https://wiki.debian.org/Avahi?action=fullsearch&context=180&value=avahi-utils&titlesearch=Titel#Avahi_Utilities) for more details.
+
 ***
 
 Official website: <https://avahi.org/>  
-Avahi daemon man page: <https://linux.die.net/man/8/avahi-daemon>  
-Configuration file man page: <https://linux.die.net/man/5/avahi-daemon.conf>  
+Avahi daemon man page: <https://manpages.debian.org/bookworm/avahi-daemon/avahi-daemon.8.en.html>  
+Configuration file man page: <https://manpages.debian.org/bookworm/avahi-daemon/avahi-daemon.conf.5.en.html>  
+Avahi tools: <https://wiki.debian.org/Avahi?action=fullsearch&context=180&value=avahi-utils&titlesearch=Titel#Avahi_Utilities>  
 Source code: <https://github.com/avahi/avahi>
 
 ## frp
