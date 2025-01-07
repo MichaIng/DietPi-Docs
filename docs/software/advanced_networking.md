@@ -327,6 +327,14 @@ More generally it enables programs to publish and discover services and hosts ru
     - Config directory: `/etc/avahi`
     - Config file: `/etc/avahi/avahi-daemon.conf`
 
+=== "View logs"
+
+    Avahi daemon service logs can be viewed with the following command:
+
+    ```sh
+    journalctl -t avahi-daemon
+    ```
+
 ***
 
 Official website: <https://avahi.org/>  
