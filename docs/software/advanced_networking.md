@@ -300,24 +300,25 @@ Website: <https://www.haproxy.org/>
 Official documentation: <https://docs.haproxy.org/>
 
 ## Avahi-Daemon
-Avahi is a zeroconf networking implementation, offering DNS Service Discovery for a local network.  
+
+Avahi is a Zeroconf networking implementation, offering DNS Service Discovery for a local network.  
 It is an open source implementation of DNS Service Discovery (DNS-SD) over Multicast DNS (mDNS), commonly known as and compatible with **Apple Bonjour**.
 
-Avahi is often used for a simple name resolution of a host on a local network (e.g. accessing a host via `<hostname>.local`). 
-More generally it enables programs to publish and discover services and hosts running on a local network. 
+Avahi is often used for a simple name resolution of a host on a local network (e.g. accessing a host via `<hostname>.local`).  
+More generally it enables programs to publish and discover services and hosts running on a local network.
 
 ![Avahi logo](../assets/images/dietpi-software-advanced-networking-avahi-logo.png){: width="200" height="150" loading="lazy"}
 
 === "Client access"
 
-    A client accessing a system running the Avahi daemon must have the MDNS tools Linux package installed (`libnss-mdns`). This can be achieved via
+    A client accessing a system running the Avahi daemon must have the mDNS tools Linux package installed (`libnss-mdns`). This can be achieved via
 
     ```sh
     apt install libnss-mdns
     ```
 
     **Access example:**  
-    A DietPi server running the installed Avahi daemon has the hostname "dietpi-srv". On a client system (where the MDNS tools are installed), the server can then be accessed via the address `dietpi-srv.local`.
+    A DietPi server running the installed Avahi daemon has the hostname `dietpi-srv`. On a client system (where the mDNS tools are installed), the server can then be accessed via the address `dietpi-srv.local`.
 
 === "Configuration Files"
 
