@@ -10,6 +10,7 @@ description: Description of DietPi software options related to networking
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi HotSpot traffic through the Tor network**](#tor-hotspot)
 - [**HAProxy - High performance TCP/HTTP load balancer**](#haproxy)
+- [**Avahi-Daemon - Zero configuration DNS service for the local network**](#avahi-daemon)
 - [**frp - Reverse Proxy**](#frp)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
@@ -297,6 +298,40 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
 Website: <https://www.haproxy.org/>  
 Official documentation: <https://docs.haproxy.org/>
+
+## Avahi-Daemon
+Avahi is a zeroconf networking implementation, offering DNS Service Discovery for a local network.  
+It is an open source implementation of DNS Service Discovery (DNS-SD) over Multicast DNS (mDNS), commonly known as and compatible with **Apple Bonjour**.
+
+Avahi is often used for a simple name resolution of a host on a local network (e.g. accessing a host via `<hostname>.local`). 
+More generally it enables programs to publish and discover services and hosts running on a local network. 
+
+![Avahi logo](../assets/images/dietpi-software-advanced-networking-avahi-logo.png){: width="200" height="150" loading="lazy"}
+
+=== "Client access"
+
+    A client accessing a system running the Avahi daemon must have the MDNS tools Linux package installed (`libnss-mdns`). This can be achieved via
+
+    ```sh
+    apt install libnss-mdns
+    ```
+
+    **Access example:**  
+    A DietPi server running the installed Avahi daemon has the hostname "dietpi-srv". On a client system (where the MDNS tools are installed), the server can then be accessed via the address `dietpi-srv.local`.
+
+=== "Configuration Files"
+
+    The main configuration is defined by the configuration file `avahi-daemon.conf`, see the [`avahi-daemon.conf` man page](https://linux.die.net/man/5/avahi-daemon.conf) for further details.
+
+    - Config directory: `/etc/avahi`
+    - Config file: `/etc/avahi/avahi-daemon.conf`
+
+***
+
+Official website: <https://avahi.org/>  
+Avahi daemon man page: <https://linux.die.net/man/8/avahi-daemon>  
+Configuration file man page: <https://linux.die.net/man/5/avahi-daemon.conf>  
+Source code: <https://github.com/avahi/avahi>
 
 ## frp
 
