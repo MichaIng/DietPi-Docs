@@ -322,7 +322,7 @@ More generally it enables programs to publish and discover services and hosts ru
 
 === "Configuration Files"
 
-    The main configuration is defined by the configuration file `avahi-daemon.conf`, see the [`avahi-daemon.conf` man page](https://linux.die.net/man/5/avahi-daemon.conf) for further details.
+    The main configuration is defined by the configuration file `avahi-daemon.conf`, see the [`avahi-daemon.conf` man page](https://manpages.debian.org/bookworm/avahi-daemon/avahi-daemon.conf.5.en.html) for further details.
 
     - Config directory: `/etc/avahi`
     - Config file: `/etc/avahi/avahi-daemon.conf`
