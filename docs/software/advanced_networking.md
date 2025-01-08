@@ -311,7 +311,7 @@ More generally it enables programs to publish and discover services and hosts ru
 
 === "Client access"
 
-    A client accessing a system running the Avahi daemon must have the mDNS tools Linux package installed (`libnss-mdns`). This can be achieved via
+    To listen and resolve hostnames distributed via mDNS, Linux systems need to have a package installed (`libnss-mdns`). This can be achieved via
 
     ```sh
     apt install libnss-mdns
