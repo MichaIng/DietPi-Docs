@@ -10,6 +10,7 @@ description: Description of DietPi software options related to networking
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi HotSpot traffic through the Tor network**](#tor-hotspot)
 - [**HAProxy - High performance TCP/HTTP load balancer**](#haproxy)
+- [**Avahi-Daemon - Zero configuration DNS service for the local network**](#avahi-daemon)
 - [**frp - Reverse Proxy**](#frp)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
@@ -297,6 +298,52 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
 Website: <https://www.haproxy.org/>  
 Official documentation: <https://docs.haproxy.org/>
+
+## Avahi-Daemon
+
+Avahi is a Zeroconf networking implementation, offering DNS Service Discovery for a local network.  
+It is an open source implementation of DNS Service Discovery (DNS-SD) over Multicast DNS (mDNS), commonly known as and compatible with **Apple Bonjour**.
+
+Avahi is often used for a simple name resolution of a host on a local network (e.g. accessing a host via `<hostname>.local`).  
+More generally it enables programs to publish and discover services and hosts running on a local network.
+
+![Avahi logo](../assets/images/dietpi-software-advanced-networking-avahi-logo.png){: width="200" height="150" loading="lazy"}
+
+=== "Client access"
+
+    To listen and resolve hostnames distributed via mDNS, Linux systems need to have a package installed (`libnss-mdns`). This can be achieved via
+
+    ```sh
+    apt install libnss-mdns
+    ```
+
+    **Access example:**  
+    A DietPi server running the installed Avahi daemon has the hostname `dietpi-srv`. On a client system (where the mDNS tools are installed), the server can then be accessed via the address `dietpi-srv.local`.
+
+=== "Configuration Files"
+
+    The main configuration is defined by the configuration file `avahi-daemon.conf`, see the [`avahi-daemon.conf` man page](https://manpages.debian.org/bookworm/avahi-daemon/avahi-daemon.conf.5.en.html) for further details.
+
+    - Config directory: `/etc/avahi`
+    - Config file: `/etc/avahi/avahi-daemon.conf`
+
+=== "View logs"
+
+    Avahi daemon service logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u avahi-daemon
+    ```
+
+    There are also some tools available to monitor resp. diagnose Avahi. See [Avahi utilities](https://wiki.debian.org/Avahi#Avahi_Utilities) for more details.
+
+***
+
+Official website: <https://avahi.org/>  
+Avahi daemon man page: <https://manpages.debian.org/avahi-daemon>  
+Configuration file man page: <https://manpages.debian.org/avahi-daemon.conf>  
+Avahi tools: <https://wiki.debian.org/Avahi#Avahi_Utilities>  
+Source code: <https://github.com/avahi/avahi>
 
 ## frp
 

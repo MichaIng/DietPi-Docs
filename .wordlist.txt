@@ -36,6 +36,7 @@ Autobooting
 autologin
 autostart
 AutoStart
+Avahi
 backend
 backends
 backlight
@@ -59,6 +60,7 @@ blocklist
 blocklists
 Bluetooth
 Blynk
+Bonjour
 bootable
 bootloader
 BPF
@@ -346,6 +348,7 @@ MariaDB
 Mbit
 MBR
 MCrcon
+mDNS
 MediaWiki
 Mendis
 Meveric
@@ -377,6 +380,7 @@ MPL
 MQTT
 MTA
 mtime
+Multicast
 multiroom
 multithreaded
 multithreading
@@ -790,6 +794,7 @@ YDNS
 yescrypt
 ympd
 youtube
+Zeroconf
 ZeroPi
 ZeroTier
 ZFS

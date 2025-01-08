@@ -24,6 +24,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](software/advanced_networking.md#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](software/advanced_networking.md#tor-hotspot)
 - [**HAProxy - High performance TCP/HTTP load balancer**](software/advanced_networking.md#haproxy)
+- [**Avahi-Daemon - Zero configuration DNS service for the local network**](software/advanced_networking.md#avahi-daemon)
 - [**frp - Reverse Proxy**](software/advanced_networking.md#frp)
 
 ## [BitTorrent & Download Tools](software/bittorrent.md)
