@@ -341,7 +341,7 @@ More generally it enables programs to publish and discover services and hosts ru
 
 Official website: <https://avahi.org/>  
 Avahi daemon man page: <https://manpages.debian.org/avahi-daemon>  
-Configuration file man page: <https://manpages.debian.org/bookworm/avahi-daemon/avahi-daemon.conf.5.en.html>  
+Configuration file man page: <https://manpages.debian.org/avahi-daemon.conf>  
 Avahi tools: <https://wiki.debian.org/Avahi?action=fullsearch&context=180&value=avahi-utils&titlesearch=Titel#Avahi_Utilities>  
 Source code: <https://github.com/avahi/avahi>
 
