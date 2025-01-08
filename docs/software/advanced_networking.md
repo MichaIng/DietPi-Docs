@@ -335,7 +335,7 @@ More generally it enables programs to publish and discover services and hosts ru
     journalctl -u avahi-daemon
     ```
 
-    There are also some tools available to monitor resp. diagnose Avahi. See [Avahi utilities](https://wiki.debian.org/Avahi?action=fullsearch&context=180&value=avahi-utils&titlesearch=Titel#Avahi_Utilities) for more details.
+    There are also some tools available to monitor resp. diagnose Avahi. See [Avahi utilities](https://wiki.debian.org/Avahi#Avahi_Utilities) for more details.
 
 ***
 
