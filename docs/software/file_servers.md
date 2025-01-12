@@ -32,7 +32,7 @@ description: Description of DietPi software options related to file servers
 
 ProFTPD gives you access to files/music/downloads etc. on your DietPi system quickly and efficiently with minimal overhead.
 
-![DietPi file server software ProFTPD](../assets/images/dietpi-software-fileservers-proftpd.png)
+![DietPi file server software ProFTPD](../assets/images/dietpi-software-fileservers-proftpd.png){: width="240" height="190" loading="lazy"}
 
 === "Access with Windows"
 
@@ -82,7 +82,7 @@ Wikipedia: <https://wikipedia.org/wiki/ProFTPD>
 
 The Samba server lets you share files on your DietPi system with ease based on the well known SMB networking protocol.
 
-![DietPi file server software samba](../assets/images/dietpi-software-fileservers-samba.png)
+![DietPi file server software samba](../assets/images/dietpi-software-fileservers-samba.png){: width="400" height="290" loading="lazy"}
 
 === "Access to Samba"
 
@@ -180,7 +180,7 @@ YouTube video tutorial (German language): [Raspberry Pi als Datei-Server - einfa
 
 Very secure FTP file server with feature rich security options.
 
-![DietPi file server software vsftpd](../assets/images/dietpi-software-fileservers-vsftpd.png)
+![DietPi file server software vsftpd](../assets/images/dietpi-software-fileservers-vsftpd.png){: width="236" height="120" loading="lazy"}
 
 === "Access with Windows"
 
@@ -217,7 +217,7 @@ Wikipedia: <https://wikipedia.org/wiki/Vsftpd>
 
 Network file system server.
 
-![DietPi file server software NFS](../assets/images/dietpi-software-fileservers-nfs.png)
+![DietPi file server software NFS](../assets/images/dietpi-software-fileservers-nfs.png){: width="350" height="158" loading="lazy"}
 
 === "Access to an NFS share"
 
@@ -303,8 +303,34 @@ Network file system server.
 
     There are some specialities when using NFS mounts on macOS:
 
-    - Since macOS uses a non standard port to connect to NFS shares, port usage above port number 1024 need to be enabled via the `insecure` option in the mount command.
-    - Also, the remote mount path must be the full path and not only the IP (e.g. in the macOS Finder).
+    - Since macOS uses a non standard port to connect to NFS shares, port usage above port number 1024 need to be enabled via the `insecure` option in the server configuration.
+    - Also, the remote exported path must be the full path and not only the IP address (e.g. in the macOS Finder or the mount command).
+
+    <h3>NFS Server configuration</h3>
+
+    On the **NFS Server** side, the `/etc/exports` resp. files in the `/etc/exports.d/` directory need to contain the `insecure` option, e.g. for the default DiePi NFS Server configuration:
+
+    ```
+    /mnt/dietpi_userdata 192.168.0.*(rw,async,insecure,no_root_squash,crossmnt,no_subtree_check)
+    ```
+
+    <h3>NFS Client configuration</h3>
+
+    To mount a DietPi NFS share on a **macOS client**, the full remote exported path is entered, e.g. with the following command: 
+
+    ```
+    mkdir ~/dietpi.exports
+    mount_nfs -o vers=4 192.168.0.100:/mnt/dietpi_userdata ~/dietpi.exports
+    ```
+
+    This generates a mount point in the macOS user's directory space and mounts the exported `/mnt/dietpi_userdata` from the NFS Server (with IP address 192.168.0.100) to it.  
+    **Note:** NFS v4 is recommended via the `vers=4` option.
+
+    On macOS, a permanent mount can be achieved by going to the System Settings, searching for Login Items and drag&drop the mount:
+
+    ![macOS permanent NFS mount](../assets/images/dietpi-software-fileserver-macos_permanent_nfs_mount.jpg){: width="695" height="145" loading="lazy"}
+
+    **Note:** Further details about the `nfs` and `mount_nfs` man pages can be found on macOS, the man pages contain valuable information about how the system behaves and parameters on how to mount successfully.
 
 ***
 
