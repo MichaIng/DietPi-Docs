@@ -305,6 +305,13 @@ Network file system server.
 
     - Since macOS uses a non standard port to connect to NFS shares, port usage above port number 1024 need to be enabled via the `insecure` option in the server configuration.
     - Also, the remote exported path must be the full path and not only the IP address (e.g. in the macOS Finder or the mount command).
+    - If an NFSv4 share shall be mounted via the macOS Finder, the file `/etc/nfs.conf` must contain `nfs.client.mount.options = vers=4`:
+      
+        ```sh
+        sudo echo "nfs.client.mount.options = vers=4.0" >> /etc/nfs.conf
+        ```
+      
+        It should be ensured beforehand that this line is not already included in `/etc/nfs.conf`.
 
     <h3>NFS Server configuration</h3>
 
@@ -330,7 +337,7 @@ Network file system server.
 
     ![macOS permanent NFS mount](../assets/images/dietpi-software-fileserver-macos_permanent_nfs_mount.jpg){: width="695" height="145" loading="lazy"}
 
-    **Note:** Further details about the `nfs` and `mount_nfs` man pages can be found on macOS, the man pages contain valuable information about how the system behaves and parameters on how to mount successfully.
+    **Note:** Further details about the `nfs` and `mount_nfs` commands can be found with typing `man nfs` and `man mount_nfs` in the terminal on macOS. The man pages contain the current information about how the system behaves and optional parameters on how to mount successfully.
 
 ***
 
