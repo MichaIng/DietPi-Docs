@@ -308,7 +308,7 @@ Network file system server.
 
     <h3>NFS Server configuration</h3>
 
-    On the **NFS Server** side, the `/etc/exports` resp. files in the `/etc/exports.d/` directory need to contain the `insecure` option, e.g. for the default DiePi NFS Server configuration:
+    On the **NFS Server** side, the `/etc/exports` resp. files in the `/etc/exports.d/` directory need to contain the `insecure` option, e.g. for the default DietPi NFS Server configuration:
 
     ```
     /mnt/dietpi_userdata 192.168.0.*(rw,async,insecure,no_root_squash,crossmnt,no_subtree_check)
