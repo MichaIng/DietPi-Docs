@@ -267,6 +267,7 @@ Network file system server.
 
 === "NFS v3 disable/enable"
 
+    NFS v3 is an older NFS version which ideally should be replaced by the usage of NFS v4.  
     One option to disable NFS v3 is to add a file to the directory `/etc/nfs.conf.d/` with the following content:
 
     ```sh
@@ -297,6 +298,13 @@ Network file system server.
     The example output gives that NFS v3 is not active (-3) whereas NFS v4 is active (+4 +4.1 +4.2).
 
     To re-enable NFS v3 again, the entry `vers3=y` can be used, or the complete file `/etc/nfs.conf.d/00-dietpi.conf` can be deleted (also restarting the `nfs-server` service afterwards).
+
+=== "NFS mount on macOS"
+
+    There are some specialities when using NFS mounts on macOS:
+
+    - Since macOS uses a non standard port to connect to NFS shares, port usage above port number 1024 need to be enabled via the `insecure` option in the mount command.
+    - Also, the remote mount path must be the full path and not only the IP (e.g. in the macOS Finder).
 
 ***
 
