@@ -375,7 +375,7 @@ Select the following tabs for the installation description of your target.
     <h2>Prerequisites</h2>
 
     Proxmox runs on any `x86_64` system. ISO images for the Virtual Environment server can be found here: <https://www.proxmox.com/de/downloads/category/iso-images-pve>  
-    Aside of the Proxmox server's [system requirements](https://www.proxmox.com/en/proxmox-ve/requirements), a DietPi VM additionally requires:
+    Aside of the Proxmox server's [system requirements](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_system_requirements), a DietPi VM additionally requires:
 
     - 1.2 GiB RAM for a minimal DietPi system
     - 5 - 10 GiB RAM for a typical running system with X11
