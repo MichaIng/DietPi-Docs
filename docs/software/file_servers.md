@@ -100,6 +100,9 @@ The Samba server lets you share files on your DietPi system with ease based on t
     smbpasswd -a dietpi
     ```
 
+    In case of further users added to the system (e.g. via `adduser smbuser`), they need to be added to the group `sambashare` (e.g. via `adduser smbuser sambashare`) to be able to access the Samba exported shares.  
+    In addition the Samba passwords of these users also have to be set via the `smbpasswd` command (e.g. `smbpasswd -a smbuser`).
+
 === "Add/change the valid user"
 
     To add/change the valid user do the following steps:
