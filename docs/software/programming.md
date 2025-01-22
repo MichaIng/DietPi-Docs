@@ -42,9 +42,9 @@ Python is a text based interpreted programming language with object oriented pro
 
 Source: By [www.python.org](https://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
-You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^3], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
+You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^2], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
 
-Currently, Python is 3rd most popular of programming language [^4].
+Currently, Python is 3rd most popular of programming language [^3].
 
 To find out which version of Python is installed, just run
 
@@ -88,7 +88,7 @@ Source: By [https://golang.org](https://blog.golang.org/go-brand), Creative Comm
 
 Go is a compiled, fast and high-performance language intended to be simple and is designed to be easy to read and understand. Go was created at Google by Rob Pike, Robert Griesemer, and Ken Thompson, and it first appeared in Nov 2009.
 
-Go is used by some of the big organizations such as Google, BBC, Uber, Soundcloud, Twitch, Medium, Daily Motion[^2]. Uber has reported better throughput, high performance, latency, and uptime. BBC, the house name in broadcasting the world news, uses it for backend, including crawlers and web scrapers. The build and deployment system of Soundcloud is in Go.
+Go is used by some of the big organizations such as Google, BBC, Uber, Soundcloud, Twitch, Medium, Daily Motion. Uber has reported better throughput, high performance, latency, and uptime. BBC, the house name in broadcasting the world news, uses it for backend, including crawlers and web scrapers. The build and deployment system of Soundcloud is in Go.
 
 To find out which version of Go is installed, just run
 
@@ -364,8 +364,6 @@ License: [GPLv2](https://github.com/git/git/blob/master/COPYING)
 <!-- markdownlint-disable MD053 -->
 [^1]: [Lyrion Music Server](media.md#lyrion-music-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
 
-[^2]: [7 Most Famous Companies That Use Golang](https://www.agiratech.com/blog/companies-using-golang/)
+[^2]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
 
-[^3]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
-
-[^4]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
+[^3]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
