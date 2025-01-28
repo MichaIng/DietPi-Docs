@@ -1014,8 +1014,8 @@ Access and manage your data from anywhere via browser with this lightweight remo
     /opt/filebrowser/filebrowser --help
     ```
 
-    Here is an example for how to change the default data directory (in this example set to `/foo/bar/baz`):  
-    
+    Here is an example for how to change the default data directory (in this example set to `/foo/bar/baz`):
+
     - Stop the service:
 
         ```sh
