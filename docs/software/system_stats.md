@@ -386,7 +386,7 @@ A Docker container image is a lightweight, standalone, executable package of sof
 <!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200" height="60" loading="lazy"}  -->
 ![Docker functional block diagram](../assets/images/dietpi-software-programming-docker2.svg){: width="400" height="369" loading="lazy"}
 
-_Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)_
+*Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)*
 
 === "Configuration"
 
@@ -465,7 +465,7 @@ Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>
 Source code: <https://github.com/moby/moby>  
 License: [Apache-2.0](https://github.com/moby/moby/blob/master/LICENSE)
 
-YouTube video tutorial: [_DietPi Docker Setup on Raspberry Pi 3 B Plus_](https://www.youtube.com/watch?v=y_VfLOGm5nA)
+YouTube video tutorial: [*DietPi Docker Setup on Raspberry Pi 3 B Plus*](https://www.youtube.com/watch?v=y_VfLOGm5nA)
 
 ## Docker Compose
 
@@ -476,7 +476,7 @@ Docker Compose is a [Docker](#docker) tool used to define and run multi-contain
 <!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/v2/logo.png){: width="200" height="219" loading="lazy"} -->
 ![Docker Compose diagram](../assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
 
-_Docker (individual container) vs. Docker Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa)_
+*Docker (individual container) vs. Docker Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa)*
 
 === "Update"
 
