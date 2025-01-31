@@ -27,9 +27,7 @@ description: Description of DietPi software options related to web stacks, web s
 [**Web development - Programming & Frameworks**](#web-development-programming-frameworks)
 
 - [**PHP** - Scripting language suited to web development](#php)
-- [**PHP Composer** - A Dependency Manager for PHP](#php-composer)
 - [**Flask** - Micro web framework powered by Python](#flask)
-- [**Node.js** - JavaScript runtime designed to build scalable network applications](#nodejs)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -82,7 +80,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 
     - Memory use = **Medium** | Multithreaded = **Yes**
 
-    It is a lightweight alternative to [Apache](#apache) and claims[^4] faster webserver performance compared to [Apache](#apache). It is ideal for medium-high traffic situations where [Lighttpd](#lighttpd) will suffer.
+    It is a lightweight alternative to [Apache](#apache) and claims[^3] faster webserver performance compared to [Apache](#apache). It is ideal for medium-high traffic situations where [Lighttpd](#lighttpd) will suffer.
 
     **[Lighttpd](#lighttpd)**
 
@@ -94,7 +92,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 
     !!! info ""
 
-        For further details see [The battle of the web servers Apache vs. Nginx vs. Lighttpd 2](https://detechter.com/the-battle-of-the-web-servers-apache-vs-Nginx-vs-lighttpd-2/) and [^4].
+        For further details see [The battle of the web servers Apache vs. Nginx vs. Lighttpd 2](https://detechter.com/the-battle-of-the-web-servers-apache-vs-Nginx-vs-lighttpd-2/) and [^3].
 
 === "Which DATABASE to CHOOSE ?"
 
@@ -102,7 +100,7 @@ DietPi offers an **one-click-installation** of the following web development sta
     It is an open source RDBMS (relational data base management system). It is application compatible to MySQL, i.e. it can be used as a *drop in* replacement for MySQL. It has more features, fewer bugs, and a better performance compared to MySQL.
 
     **[SQLite](databases.md#sqlite)**  
-    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](databases.md#mariadb). [SQLite](databases.md#sqlite) has a very small footprint. As drawbacks, it has no memory caching, no multi user capabilities and a couple of SQL features are missing.[^3]
+    It is an RDBMS, also compatible to MySQL. It offers a broader language support (i.e. more bindings to programming languages) compared to [MariaDB](databases.md#mariadb). [SQLite](databases.md#sqlite) has a very small footprint. As drawbacks, it has no memory caching, no multi user capabilities and a couple of SQL features are missing.[^2]
 
 ***
 
@@ -436,7 +434,7 @@ Apache is a Apache Software Foundation project. The goal is to provide a secure,
 
     **Notes:**
 
-    - This may imply access and CORS failures [^6] when applications check for the server name. In such case, generally applications provide a way to define a list of permitted hostnames.
+    - This may imply access and CORS failures [^4] when applications check for the server name. In such case, generally applications provide a way to define a list of permitted hostnames.
 
     - Without a server name set, usually webserver simply apply the HTTP_HOST header, which bypasses every related check. Apache, according to the logged warning, seems to use 127.0.1.1 then.
 
@@ -541,19 +539,6 @@ First introduced by Rasmus Lerdorf, PHP is an open-source, server-side general s
 Website: <https://www.php.net>  
 Official documentation: <https://www.php.net/manual/en/index.php>
 
-### PHP Composer
-
-![Composer logo](../assets/images/dietpi-software-php-composer.png){: width="150" height="182" loading="lazy"}
-
-Source: [WizardCat](https://getcomposer.org){: class="nospellcheck"} via [Wikimedia tech blog, MIT](https://commons.wikimedia.org/w/index.php?curid=38131432).
-
-Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
-
-***
-
-Website: <https://getcomposer.org/>  
-Official documentation: <https://getcomposer.org/doc/>
-
 ### Flask
 
 Flask is a lightweight web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications and it has become one of the most popular Python web application frameworks.
@@ -574,34 +559,10 @@ Website: <https://palletsprojects.com/p/flask>
 Official documentation: <https://flask.palletsprojects.com/en/stable/>  
 PyPI package page: <https://pypi.org/project/Flask>
 
-### Node.js
-
-Node.js is JavaScript runtime built on Chrome's V8 JavaScript engine.
-
-![Node.js](../assets/images/dietpi-software-nodejs.jpg)
-
-Source: By [nodejs.org](https://nodejs.org), [Trademark policy](https://trademark-policy.openjsf.org/)
-
-By using the event-callback/non-blocking approach, Node.js offers a single-threaded event-io model that allows orchestration of tasks running in parallel. It supports multiple connections without a need for a large memory footprint. Amazon, Netflix, eBay, Reddit, LinkedIn, Tumblr, and PayPal use Node.js.[^5]
-
-=== "Update"
-
-    To update Node.js to the latest version, simply reinstall it:
-
-    ```sh
-    dietpi-software reinstall 9
-    ```
-
-***
-
-Website: <https://nodejs.org/>  
-Official documentation: <https://nodejs.org/api/>  
-
 <!-- markdownlint-disable MD053 -->
 [^1]: Find out more about the success stories of Nginx on: <https://nginx.org/en/>
-[^3]: [Most Widely Deployed and Used Database Engine](https://www.sqlite.org/mostdeployed.html). Retrieved 12 December 2020
-[^4]: [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations). Retrieved 30 May 2024
-[^5]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
-[^6]: [CORS Errors Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors). Retrieved 05 December 2021
+[^2]: [Most Widely Deployed and Used Database Engine](https://www.sqlite.org/mostdeployed.html). Retrieved 12 December 2020
+[^3]: [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations). Retrieved 30 May 2024
+[^4]: [CORS Errors Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors). Retrieved 05 December 2021
 
 [Return to the **Optimised Software list**](../software.md/)
