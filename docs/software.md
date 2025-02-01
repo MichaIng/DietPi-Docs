@@ -252,6 +252,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 - [**DietPi-Dashboard - Official lightweight standalone DietPi web interface**](software/system_stats.md#dietpi-dashboard)
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](software/system_stats.md#dietpi-cloudshell)
+- [**GNU Midnight Commander - Console based visual file manager**](software/system_stats.md#gnu-midnight-commander)
 - [**Linux Dash - Web interface system stats**](software/system_stats.md#linux-dash)
 - [**phpSysInfo - Web interface system stats**](software/system_stats.md#phpsysinfo)
 - [**RPi-Monitor - Web interface system stats**](software/system_stats.md#rpi-monitor)
