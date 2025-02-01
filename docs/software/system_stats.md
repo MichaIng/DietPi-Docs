@@ -236,7 +236,7 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
 
 ## GNU Midnight Commander
 
-The GNU Midnight Commander (`mc`) is a visual file manager with a two coloumn view. It allows to copy, move and delete files resp. whole directory trees as well as searching for files and run commands in a subshell. It also contains an internal viewer and editor.  
+The GNU Midnight Commander (`mc`) is a visual file manager with a two column view. It allows to copy, move and delete files resp. whole directory trees as well as searching for files and run commands in a subshell. It also contains an internal viewer and editor.  
 Midnight Commander is a full-screen text mode application running on a regular console, inside an X Window terminal, over SSH connections and all kinds of remote shells.
 
 ![GNU Midnight Commander screenshot](../assets/images/dietpi-software-systemstat-midnightcommander.png){: width="500" height="322" loading="lazy"}
