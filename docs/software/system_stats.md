@@ -9,6 +9,7 @@ description: Description of DietPi software options related to system statistics
 
 - [**DietPi-Dashboard - Official lightweight standalone DietPi web interface**](#dietpi-dashboard)
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](#dietpi-cloudshell)
+- [**GNU Midnight Commander - Console based visual file manager**](#gnu-midnight-commander)
 - [**Linux Dash - Web interface system stats**](#linux-dash)
 - [**phpSysInfo - Web interface system stats**](#phpsysinfo)
 - [**RPi-Monitor - Web interface system stats**](#rpi-monitor)
@@ -232,6 +233,18 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
 === "Other touchscreens"
 
     The display feature of *DietPi-CloudShell* works generally with any LCD display or monitor with a resolution of at least 320x240 pixels.
+
+## GNU Midnight Commander
+
+The GNU Midnight Commander (`mc`) is a visual file manager with a two coloumn view. It allows to copy, move and delete files resp. whole directory trees as well as searching for files and run commands in a subshell. It also contains an internal viewer and editor.  
+Midnight Commander is a full-screen text mode application running on a regular console, inside an X Window terminal, over SSH connections and all kinds of remote shells.
+
+![GNU Midnight Commander screenshot](../assets/images/dietpi-software-systemstat-midnightcommander.png){: width="500" height="322" loading="lazy"}
+
+***
+
+Official website: <https://midnight-commander.org/>  
+Official documentation: <https://midnight-commander.org/wiki/doc>
 
 ## Linux Dash
 
