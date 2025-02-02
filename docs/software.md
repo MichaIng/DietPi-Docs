@@ -102,11 +102,10 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Go - Programming language**](software/programming.md#go)
 - [**Java - Programming language**](software/programming.md#java)
 - [**Mono - .NET Framework implementation**](software/programming.md#mono)
-- [**Docker - Build, ship, and run distributed applications**](software/programming.md#docker)
-- [**Docker-Compose - Run multi-container applications on Docker**](software/programming.md#docker-compose)
-- [**Portainer - Docker container management**](software/programming.md#portainer)
 - [**VSCodium - FLOSS version of Microsoft VSCode**](software/programming.md#vscodium)
 - [**Git - Distributed version control system**](software/programming.md#git)
+- [**PHP Composer - A Dependency Manager for PHP**](software/programming.md#php-composer)
+- [**Node.js - open-source, JavaScript runtime environment**](software/programming.md#nodejs)
 
 ## [Distributed Projects](software/distributed_projects.md)
 
@@ -258,6 +257,9 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**RPi-Monitor - Web interface system stats**](software/system_stats.md#rpi-monitor)
 - [**Netdata - Web interface system stats**](software/system_stats.md#netdata)
 - [**Webmin - Remote system management with web interface**](software/system_stats.md#webmin)
+- [**Docker - Build, ship, and run distributed applications**](software/system_stats.md#docker)
+- [**Docker-Compose - Run multi-container applications on Docker**](software/system_stats.md#docker-compose)
+- [**Portainer - Docker container management**](software/system_stats.md#portainer)
 - [**K3s - Lightweight Kubernetes**](software/system_stats.md#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](software/system_stats.md#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](software/system_stats.md#prometheus-node-exporter)
@@ -292,6 +294,4 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 ### [Programming & Web development Frameworks](software/webserver_stack.md#web-development-programming-frameworks)
 
 - [**PHP - Scripting language especially suited to web development**](software/webserver_stack.md#php)
-- [**PHP Composer** - A Dependency Manager for PHP](software/webserver_stack.md#php-composer)
 - [**Flask - Micro web framework powered by Python**](software/webserver_stack.md#flask)
-- [**Node.js** - JavaScript runtime designed to build scalable network applications](software/webserver_stack.md#nodejs)
