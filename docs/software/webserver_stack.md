@@ -80,7 +80,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 
     - Memory use = **Medium** | Multithreaded = **Yes**
 
-    It is a lightweight alternative to [Apache](#apache) and claims[^3] faster webserver performance compared to [Apache](#apache). It is ideal for medium-high traffic situations where [Lighttpd](#lighttpd) will suffer.
+    It is a lightweight alternative to [Apache](#apache) and claims[^1] faster webserver performance compared to [Apache](#apache). It is ideal for medium-high traffic situations where [Lighttpd](#lighttpd) will suffer.
 
     **[Lighttpd](#lighttpd)**
 
@@ -92,7 +92,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 
     !!! info ""
 
-        For further details see [The battle of the web servers Apache vs. Nginx vs. Lighttpd 2](https://detechter.com/the-battle-of-the-web-servers-apache-vs-Nginx-vs-lighttpd-2/) and [^3].
+        For further details see [The battle of the web servers Apache vs. Nginx vs. Lighttpd 2](https://detechter.com/the-battle-of-the-web-servers-apache-vs-Nginx-vs-lighttpd-2/) and [^1].
 
 === "Which DATABASE to CHOOSE ?"
 
@@ -434,7 +434,7 @@ Apache is a Apache Software Foundation project. The goal is to provide a secure,
 
     **Notes:**
 
-    - This may imply access and CORS failures [^4] when applications check for the server name. In such case, generally applications provide a way to define a list of permitted hostnames.
+    - This may imply access and CORS failures [^3] when applications check for the server name. In such case, generally applications provide a way to define a list of permitted hostnames.
 
     - Without a server name set, usually webserver simply apply the HTTP_HOST header, which bypasses every related check. Apache, according to the logged warning, seems to use 127.0.1.1 then.
 
@@ -444,7 +444,7 @@ Official documentation: <https://httpd.apache.org/docs>
 
 ### Nginx
 
-**Nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, WordPress.com, FastMail.FM.[^1]
+**Nginx** [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server. It was released in 2004 to address the problem of increased web traffic. It has earned an excellent reputation and it is used in top million busiest sites - some of the success stories are: Dropbox, Netflix, WordPress.com, FastMail.FM.[^4]
 
 ![Nginx logo](../assets/images/dietpi-software-webstack-nginx.gif){: width="200" height="85" loading="lazy"}
 
@@ -559,10 +559,9 @@ Website: <https://palletsprojects.com/p/flask>
 Official documentation: <https://flask.palletsprojects.com/en/stable/>  
 PyPI package page: <https://pypi.org/project/Flask>
 
-<!-- markdownlint-disable MD053 -->
-[^1]: Find out more about the success stories of Nginx on: <https://nginx.org/en/>
+[^1]: [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations). Retrieved 30 May 2024
 [^2]: [Most Widely Deployed and Used Database Engine](https://www.sqlite.org/mostdeployed.html). Retrieved 12 December 2020
-[^3]: [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations). Retrieved 30 May 2024
-[^4]: [CORS Errors Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors). Retrieved 05 December 2021
+[^3]: [CORS Errors Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors). Retrieved 05 December 2021
+[^4]: Find out more about the success stories of Nginx on: <https://nginx.org/en/>
 
 [Return to the **Optimised Software list**](../software.md/)

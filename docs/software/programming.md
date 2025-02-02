@@ -40,9 +40,9 @@ Python is a text based interpreted programming language with object oriented pro
 
 Source: By [www.python.org](https://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
-You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^2], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
+You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^1], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
 
-Currently, Python is 3rd most popular of programming language [^3].
+Currently, Python is 3rd most popular of programming language [^2].
 
 To find out which version of Python is installed, just run
 
@@ -212,15 +212,6 @@ Official documentation: <https://git-scm.com/docs>
 Source code: <https://github.com/git/git>  
 License: [GPLv2](https://github.com/git/git/blob/master/COPYING)
 
-[Return to the **Optimised Software list**](../software.md)
-
-<!-- markdownlint-disable MD053 -->
-[^1]: [Lyrion Music Server](media.md#lyrion-music-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
-
-[^2]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
-
-[^3]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
-
 ## PHP Composer
 
 ![Composer logo](../assets/images/dietpi-software-php-composer.png){: width="150" height="182" loading="lazy"}
@@ -242,7 +233,7 @@ Node.js is JavaScript runtime built on Chrome's V8 JavaScript engine.
 
 Source: By [nodejs.org](https://nodejs.org), [Trademark policy](https://trademark-policy.openjsf.org/)
 
-By using the event-callback/non-blocking approach, Node.js offers a single-threaded event-io model that allows orchestration of tasks running in parallel. It supports multiple connections without a need for a large memory footprint. Amazon, Netflix, eBay, Reddit, LinkedIn, Tumblr, and PayPal use Node.js.[^4]
+By using the event-callback/non-blocking approach, Node.js offers a single-threaded event-io model that allows orchestration of tasks running in parallel. It supports multiple connections without a need for a large memory footprint. Amazon, Netflix, eBay, Reddit, LinkedIn, Tumblr, and PayPal use Node.js.[^3]
 
 === "Update"
 
@@ -257,7 +248,8 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
 Website: <https://nodejs.org/>  
 Official documentation: <https://nodejs.org/api/>  
 
-<!-- markdownlint-disable MD053 -->
-[^4]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
+[^1]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
+[^2]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
+[^3]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
 
 [Return to the **Optimised Software list**](../software.md/)

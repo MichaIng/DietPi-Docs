@@ -922,4 +922,6 @@ Homer is a modern and lightweight dashboard & homepage for your services
 Official website: <https://github.com/bastienwirtz/homer>  
 Official demo: <https://homer-demo.netlify.app/>
 
+[^1]: [Lyrion Music Server](media.md#lyrion-music-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
+
 [Return to the **Optimised Software list**](../software.md)
