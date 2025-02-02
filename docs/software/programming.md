@@ -40,7 +40,7 @@ Python is a text based interpreted programming language with object oriented pro
 
 Source: By [www.python.org](https://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
-You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^1], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
+You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world's most popular websites [^1], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
 
 Currently, Python is 3rd most popular of programming language [^2].
 
@@ -233,7 +233,7 @@ Node.js is JavaScript runtime built on Chrome's V8 JavaScript engine.
 
 Source: By [nodejs.org](https://nodejs.org), [Trademark policy](https://trademark-policy.openjsf.org/)
 
-By using the event-callback/non-blocking approach, Node.js offers a single-threaded event-io model that allows orchestration of tasks running in parallel. It supports multiple connections without a need for a large memory footprint. Amazon, Netflix, eBay, Reddit, LinkedIn, Tumblr, and PayPal use Node.js.[^3]
+By using the event-callback/non-blocking approach, Node.js offers a single-threaded event-io model that allows orchestration of tasks running in parallel. It supports multiple connections without a need for a large memory footprint. Amazon, Netflix, eBay, Reddit, LinkedIn, Tumblr, and PayPal use Node.js [^3].
 
 === "Update"
 
@@ -246,10 +246,10 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
 ***
 
 Website: <https://nodejs.org/>  
-Official documentation: <https://nodejs.org/api/>  
+Official documentation: <https://nodejs.org/api/>
+
+[Return to the **Optimised Software list**](../software.md)
 
 [^1]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
 [^2]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
-[^3]: <https://hostingtribunal.com/blog/node-js-stats/#gref>. Retrieved 29 May 2021
-
-[Return to the **Optimised Software list**](../software.md/)
+[^3]: <https://webtribunal.net/blog/node-js-stats>. Retrieved 29 May 2021
