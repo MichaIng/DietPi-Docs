@@ -132,7 +132,7 @@ The result of the automated installation can cover the following areas:
 - **System options** (e.g. timezone, hostname, root password)
 - **Software preferences** (e.g. SSH server, file server, web server)
 - **Software options** (e.g. VNC, Nextcloud, DietPi Dashboard)
-- **Automatic software installation** (packages from `dietpi-software`)
+- **Automatic software installation** (packages from `dietpi-software` as well as plain APT installations)
 - **User script** pre and post initial installation
 - **Restore** from a previous made system backup
 
@@ -177,6 +177,16 @@ All software packages, which can be installed via `dietpi-software` can also be 
 The software packages are given with their software ID (a number) which can be found on the left side when browsing the software in the `dietpi-software` script. Additionally they are given in the [list of available software IDs](https://github.com/MichaIng/DietPi/wiki/DietPi-Software-list).
 
 As an example the software package "Plex Media Server" has the ID 42.
+
+#### APT software packages installation
+
+Debian software packages which can be installed via the APT command, can also be installed automated via the keyword `AUTO_SETUP_APT_INSTALLS`.  
+The setting installs these APT packages automatically at the end of the first run setup of DietPi systems.  
+Example: The following will install the APT packages iotop, iptables and xz-utils:
+
+```sh
+AUTO_SETUP_APT_INSTALLS=iotop iptables xz-utils
+```
 
 #### User script
 
