@@ -182,7 +182,7 @@ As an example the software package "Plex Media Server" has the ID 42.
 
 Debian software packages which can be installed via the APT command, can also be installed automated via the keyword `AUTO_SETUP_APT_INSTALLS`.  
 The setting installs these APT packages automatically at the end of the first run setup of DietPi systems.  
-Example: The following will install the APT packages iotop, iptables and xz-utils:
+Example: The following will install the APT packages `iotop`, `iptables` and `xz-utils`:
 
 ```sh
 AUTO_SETUP_APT_INSTALLS=iotop iptables xz-utils
