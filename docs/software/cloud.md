@@ -1033,6 +1033,15 @@ Access and manage your data from anywhere via browser with this lightweight remo
         ```sh
         systemctl start filebrowser
         ```
+    **Important for execute configuration commands:** The filebrowser service need to be stopped during the commands as given in the example above.  
+    Otherwise, a timeout may occur with an `timeout` error message like:
+
+    ```
+    root@dietpi:~# /opt/filebrowser/filebrowser config cat
+    2025/02/09 14:53:05 Using database: /mnt/dietpi_userdata/filebrowser/filebrowser.db
+    2025/02/09 14:53:06 timeout
+    ```
+
 
 === "View logs"
 
