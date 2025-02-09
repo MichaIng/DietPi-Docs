@@ -1003,12 +1003,20 @@ Access and manage your data from anywhere via browser with this lightweight remo
 
     - Install directory: `/opt/filebrowser`
     - Config directory: `/mnt/dietpi_userdata/filebrowser`
-    - Default data directory: `/mnt`
+    - Default data directory: `/mnt`  
+        **Remark:** If the Default data directory is changed, the new data directory should have the group `dietpi` set to ensure that the filebrowser users can manage directories via the filebrowser UI (e.g. add a new directory). Additionally, the directory permission should be set to `drwxrwxr-x` (0775).  
+        Example:
+
+        ```sh
+        mkdir -p /mnt/dietpi_userdata/FilebrowserData
+        chown dietpi:dietpi /mnt/dietpi_userdata/FilebrowserData
+        chmod 0775 /mnt/dietpi_userdata/FilebrowserData
+        ```
 
 === "Modify the default config"
 
     File Browser comes with a powerful CLI not only allowing to change the configuration, but also execute commands, set rules, etc. (some settings can also be changed via the web interface).  
-    You can find the full feature set in the official documentation of File Browser, linked below, or run:
+    The full feature set can be found in the official documentation of File Browser, linked below, or by running:
 
     ```sh
     /opt/filebrowser/filebrowser --help
@@ -1036,12 +1044,17 @@ Access and manage your data from anywhere via browser with this lightweight remo
     **Important for execute configuration commands:** The filebrowser service need to be stopped during the commands as given in the example above.  
     Otherwise, a timeout may occur with an `timeout` error message like:
 
-    ```
-    root@dietpi:~# /opt/filebrowser/filebrowser config cat
+    ```sh
+    root@dietpi:~# /opt/filebrowser/filebrowser config cat -d /mnt/dietpi_userdata/filebrowser/filebrowser.db
     2025/02/09 14:53:05 Using database: /mnt/dietpi_userdata/filebrowser/filebrowser.db
     2025/02/09 14:53:06 timeout
     ```
 
+=== "User management"
+
+    The filebrowser contains its own user management. To add/change/remove users, the filebrowser UI contains a *Settings* section with a *User Management* tab.
+
+    ![File Browser UI - User Management](../assets/images/dietpi-software-cloud-filebrowser-usermgmt.png){: width="600" height="200" loading="lazy"}
 
 === "View logs"
 
