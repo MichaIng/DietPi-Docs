@@ -342,7 +342,7 @@ In this case you have to e.g. install a sound program package via `dietpi-softwa
 
 ## DietPi display
 
-DietPi Display allows the configuration of console display modes and rotation via KMS/DRM (Kernel Mode Setting, Direct Rendering Manager). This is e.g. valid for a local display of the Raspberry Pi and the NanoPi M6: 
+DietPi Display allows the configuration of console display modes and rotation via KMS/DRM (Kernel Mode Setting, Direct Rendering Manager). This is e.g. valid for a local display of the Raspberry Pi and the NanoPi M6:
 
 ```sh
 dietpi-display
