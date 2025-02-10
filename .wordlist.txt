@@ -82,6 +82,7 @@ CedArctic
 Certbot
 cgroup
 changelog
+ChatGPT
 CIFS
 CLI
 Clonezilla
@@ -111,6 +112,7 @@ customisable
 customizable
 CVE
 DAC
+DALL
 DarkBetter
 DarkIce
 DDNS
