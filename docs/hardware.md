@@ -45,7 +45,7 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
                             <li>Raspberry Pi Zero / Zero W / Zero WH</li>
                         </ul>
                     </strong>
-		    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi1-ARMv6-Bookworm.img.xz">DietPi image</a>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi1-ARMv6-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -57,7 +57,7 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
                             <li>Raspberry Pi 2 Model B v1.1</li>
                         </ul>
                     </strong>
-		    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi2-ARMv7-Bookworm.img.xz">DietPi image</a>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi2-ARMv7-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -73,17 +73,17 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
                             <li>Raspberry Pi Zero 2 W</li>
                         </ul>
                     </strong>
-		    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi5-ARMv8-Bookworm.img.xz">DietPi image</a>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi5-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table"><strong>Raspberry Pi 5 - ARMv8</strong></a></td>
                 <td>
-		    This image is compatible with all Raspberry Pi 5 models:
+                    This image is compatible with all Raspberry Pi 5 models:
                     <strong>
                         <ul>
                             <li>Raspberry Pi 5</li>
-			    <li>Raspberry Pi Compute Module 5</li>
+                            <li>Raspberry Pi Compute Module 5</li>
                             <li>Raspberry Pi 500</li>
                         </ul>
                     </strong>
