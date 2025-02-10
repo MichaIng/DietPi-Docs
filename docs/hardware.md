@@ -73,7 +73,7 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
                             <li>Raspberry Pi Zero 2 W</li>
                         </ul>
                     </strong>
-                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi5-ARMv8-Bookworm.img.xz">DietPi image</a>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi234-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
