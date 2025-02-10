@@ -36,6 +36,7 @@ Autobooting
 autologin
 autostart
 AutoStart
+Avahi
 backend
 backends
 backlight
@@ -59,6 +60,7 @@ blocklist
 blocklists
 Bluetooth
 Blynk
+Bonjour
 bootable
 bootloader
 BPF
@@ -80,6 +82,7 @@ CedArctic
 Certbot
 cgroup
 changelog
+ChatGPT
 CIFS
 CLI
 Clonezilla
@@ -109,6 +112,7 @@ customisable
 customizable
 CVE
 DAC
+DALL
 DarkBetter
 DarkIce
 DDNS
@@ -346,6 +350,7 @@ MariaDB
 Mbit
 MBR
 MCrcon
+mDNS
 MediaWiki
 Mendis
 Meveric
@@ -377,6 +382,7 @@ MPL
 MQTT
 MTA
 mtime
+Multicast
 multiroom
 multithreaded
 multithreading
@@ -507,6 +513,7 @@ RAR
 qBittorrent
 QCOW
 QEMU
+QGA
 Queneuder
 Quickstart
 QuiteRSS
@@ -789,6 +796,7 @@ YDNS
 yescrypt
 ympd
 youtube
+Zeroconf
 ZeroPi
 ZeroTier
 ZFS

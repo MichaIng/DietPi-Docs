@@ -24,6 +24,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**WiFi HotSpot - Turn your device into a wireless hotspot/access point**](software/advanced_networking.md#wifi-hotspot)
 - [**Tor HotSpot - Optional: Routes all WiFi hotspot traffic through the Tor network**](software/advanced_networking.md#tor-hotspot)
 - [**HAProxy - High performance TCP/HTTP load balancer**](software/advanced_networking.md#haproxy)
+- [**Avahi-Daemon - Zero configuration DNS service for the local network**](software/advanced_networking.md#avahi-daemon)
 - [**frp - Reverse Proxy**](software/advanced_networking.md#frp)
 
 ## [BitTorrent & Download Tools](software/bittorrent.md)
@@ -101,11 +102,10 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Go - Programming language**](software/programming.md#go)
 - [**Java - Programming language**](software/programming.md#java)
 - [**Mono - .NET Framework implementation**](software/programming.md#mono)
-- [**Docker - Build, ship, and run distributed applications**](software/programming.md#docker)
-- [**Docker-Compose - Run multi-container applications on Docker**](software/programming.md#docker-compose)
-- [**Portainer - Docker container management**](software/programming.md#portainer)
 - [**VSCodium - FLOSS version of Microsoft VSCode**](software/programming.md#vscodium)
 - [**Git - Distributed version control system**](software/programming.md#git)
+- [**PHP Composer - A Dependency Manager for PHP**](software/programming.md#php-composer)
+- [**Node.js - open-source, JavaScript runtime environment**](software/programming.md#nodejs)
 
 ## [Distributed Projects](software/distributed_projects.md)
 
@@ -180,7 +180,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Mopidy - Web Interface Music /Radio Player for MPD**](software/media.md#mopidy)
 - [**Airsonic-Advanced - Feature rich media streaming server with web interface**](software/media.md#airsonic)
 - [**Lyrion Music Server - aka Logitech Media Server, LMS, Squeezebox Server**](software/media.md#lyrion-music-server)
-- [**Squeezelite - Audio player for Logitech Media Server**](software/media.md#squeezelite)
+- [**Squeezelite - Audio player for Lyrion Music Server**](software/media.md#squeezelite)
 - [**Shairport Sync - AirPlay audio player with multiroom sync**](software/media.md#shairport-sync)
 - [**ReadyMedia - (MiniDLNA) Media streaming server (DLNA, UPnP)**](software/media.md#readymedia)
 - [**Ampache - Web interface media streaming server**](software/media.md#ampache)
@@ -251,11 +251,15 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 - [**DietPi-Dashboard - Official lightweight standalone DietPi web interface**](software/system_stats.md#dietpi-dashboard)
 - [**DietPi-CloudShell - Lightweight system stats for your LCD display or monitor**](software/system_stats.md#dietpi-cloudshell)
+- [**GNU Midnight Commander - Console based visual file manager**](software/system_stats.md#gnu-midnight-commander)
 - [**Linux Dash - Web interface system stats**](software/system_stats.md#linux-dash)
 - [**phpSysInfo - Web interface system stats**](software/system_stats.md#phpsysinfo)
 - [**RPi-Monitor - Web interface system stats**](software/system_stats.md#rpi-monitor)
 - [**Netdata - Web interface system stats**](software/system_stats.md#netdata)
 - [**Webmin - Remote system management with web interface**](software/system_stats.md#webmin)
+- [**Docker - Build, ship, and run distributed applications**](software/system_stats.md#docker)
+- [**Docker-Compose - Run multi-container applications on Docker**](software/system_stats.md#docker-compose)
+- [**Portainer - Docker container management**](software/system_stats.md#portainer)
 - [**K3s - Lightweight Kubernetes**](software/system_stats.md#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](software/system_stats.md#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](software/system_stats.md#prometheus-node-exporter)
@@ -290,6 +294,4 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 ### [Programming & Web development Frameworks](software/webserver_stack.md#web-development-programming-frameworks)
 
 - [**PHP - Scripting language especially suited to web development**](software/webserver_stack.md#php)
-- [**PHP Composer** - A Dependency Manager for PHP](software/webserver_stack.md#php-composer)
 - [**Flask - Micro web framework powered by Python**](software/webserver_stack.md#flask)
-- [**Node.js** - JavaScript runtime designed to build scalable network applications](software/webserver_stack.md#nodejs)

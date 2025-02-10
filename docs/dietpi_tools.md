@@ -27,6 +27,7 @@ dietpi-launcher
 - <a name="dietpi-led-control"></a>[**DietPi LED Control - Change triggers for the status LEDs on your SBC/motherboard**](dietpi_tools/system_configuration.md#dietpi-led-control)
 - <a name="dietpi-cron"></a>[**DietPi Cron - Modify the start times of specific cron job groups**](dietpi_tools/system_configuration.md#dietpi-cron)
 - <a name="dietpi-justboom"></a>[**DietPi JustBoom - Change the audio settings**](dietpi_tools/system_configuration.md#dietpi-justboom)
+- <a name="dietpi-display"></a>[**DietPi Display - Allow controlling the console display modes and rotation via KMS/DRM**](dietpi_tools/system_configuration.md#dietpi-display)
 - <a name="dietpi-survey"></a>[**DietPi Survey - Allow to obtain general information regarding your system and installed software**](dietpi_tools/system_configuration.md#dietpi-survey)
 
 ## [System Maintenance](dietpi_tools/system_maintenance.md)

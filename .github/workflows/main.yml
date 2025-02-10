@@ -28,7 +28,7 @@ jobs:
       uses: actions/setup-python@v5
       with:
         # Match version on dietpi.com server
-        python-version: '3.12.4'
+        python-version: '3.13.1'
     - name: Install MkDocs
       id: mkdocs
       if: always() && steps.python.outcome == 'success'
@@ -67,9 +67,10 @@ jobs:
       # www.wireguard.com: Regularly Timeout
       # www.domoticz.com: Protected by Cloudflare CAPTCHA
       # github.com/MichaIng/: Even with GITHUB_TOKEN or a PAT, checks run into 403 and timeouts. Hence skip checks on own repositories, which we expect to remain valid.
+      # www.duckdns.org/: Regular "Network error: error sending request for url"
       run: |
         git fetch --depth=1 origin master
         while read -r line; do exclude="$exclude|dietpi.com/${line%.md}/"; done < <(git diff --name-only --diff-filter=A origin/master docs | grep '.md$')
         while read -r line; do exclude="$exclude|github.com/MichaIng/DietPi-Docs/(raw|edit)/dev/$line"; done < <(find docs -type f -name '*.md')
         #curl -sSfH 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' -X GET 'https://api.github.com/rate_limit'
-        ./lychee -En --require-https --cache --include-fragments --exclude '^(http://wiringpi.com/$|https://(github.com/MichaIng/|www.wireguard.com/$|twitter.com/DietPi_$|www.patreon.com/DietPi$|www.linux-kvm.org/$|www.domoticz.com/|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details|www.kickstarter.com|theunarchiver.com/$|www.parallels.com/|(www|forums).raspberrypi.com/|www.reddit.com/|superuser.com|chromewebstore.google.com'"$exclude"'))' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+        ./lychee -En --require-https --cache --include-fragments --exclude '^(http://wiringpi.com/$|https://(github.com/MichaIng/|www.duckdns.org/$|www.wireguard.com/$|twitter.com/DietPi_$|www.patreon.com/DietPi$|www.linux-kvm.org/$|www.domoticz.com/|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details|www.kickstarter.com|theunarchiver.com/$|www.parallels.com/|(www|forums).raspberrypi.com/|www.reddit.com/|superuser.com|chromewebstore.google.com'"$exclude"'))' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'

@@ -340,6 +340,18 @@ In this case you have to e.g. install a sound program package via `dietpi-softwa
 
 ---
 
+## DietPi display
+
+DietPi Display allows the configuration of console display modes and rotation via KMS/DRM (Kernel Mode Setting, Direct Rendering Manager). This is e.g. valid for a local display of the Raspberry Pi and the NanoPi M6:
+
+```sh
+dietpi-display
+```
+
+![DietPi Tools - Dietpi Display](../assets/images/dietpi-tools-dietpidisplay.png){: width="640" height="258" loading="lazy"}
+
+---
+
 ## DietPi survey
 
 DietPi Survey allows the DietPi project to obtain general information regarding your system and installed software. To start DietPi-Survey, use the following command:

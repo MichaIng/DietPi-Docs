@@ -11,12 +11,10 @@ description: Description of DietPi software options related to software developm
 - [**Go - Programming language**](#go)
 - [**Java - Programming language**](#java)
 - [**Mono - Programming language**](#mono)
-- [**Node.js - open-source, JavaScript runtime environment**](webserver_stack.md#nodejs)
-- [**Docker -  Create, deploy, and run applications using containers**](#docker)
-- [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
-- [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
 - [**VSCodium - FLOSS version of Microsoft VSCode**](#vscodium)
 - [**Git - Distributed version control system**](#git)
+- [**PHP Composer - A Dependency Manager for PHP**](#php-composer)
+- [**Node.js - open-source, JavaScript runtime environment**](#nodejs)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -42,9 +40,9 @@ Python is a text based interpreted programming language with object oriented pro
 
 Source: By [www.python.org](https://www.python.org/community/logos/), [GPL](https://commons.wikimedia.org/w/index.php?curid=34991637)
 
-You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world’s most popular websites [^3], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
+You can find Python everywhere in the world of computer programming. For example, Python is the foundation of some of the world's most popular websites [^1], including Reddit, Dropbox, and YouTube, to name a few. The Python web framework [Django](https://www.djangoproject.com) powers both Instagram and Pinterest.
 
-Currently, Python is 3rd most popular of programming language [^4].
+Currently, Python is 3rd most popular of programming language [^2].
 
 To find out which version of Python is installed, just run
 
@@ -88,7 +86,7 @@ Source: By [https://golang.org](https://blog.golang.org/go-brand), Creative Comm
 
 Go is a compiled, fast and high-performance language intended to be simple and is designed to be easy to read and understand. Go was created at Google by Rob Pike, Robert Griesemer, and Ken Thompson, and it first appeared in Nov 2009.
 
-Go is used by some of the big organizations such as Google, BBC, Uber, Soundcloud, Twitch, Medium, Daily Motion[^2]. Uber has reported better throughput, high performance, latency, and uptime. BBC, the house name in broadcasting the world news, uses it for backend, including crawlers and web scrapers. The build and deployment system of Soundcloud is in Go.
+Go is used by some of the big organizations such as Google, BBC, Uber, Soundcloud, Twitch, Medium, Daily Motion. Uber has reported better throughput, high performance, latency, and uptime. BBC, the house name in broadcasting the world news, uses it for backend, including crawlers and web scrapers. The build and deployment system of Soundcloud is in Go.
 
 To find out which version of Go is installed, just run
 
@@ -171,151 +169,6 @@ To find out which version of Mono is installed, just run
 mono --version
 ```
 
-## Docker
-
-In 2013, Docker introduced containers. These are a standardized unit of software that allows developers to isolate their application from the environment. Docker is de facto standard to build and share containerized apps - from single board computers (SBC), to desktop or cloud.
-
-A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries and settings.
-
-<!-- ![Docker logo](../assets/images/dietpi-software-programming-docker1.svg){: width="200" height="60" loading="lazy"}  -->
-![Docker functional block diagram](../assets/images/dietpi-software-programming-docker2.svg){: width="400" height="369" loading="lazy"}
-
-_Source: [User:`Maklaan` - Based on a Docker blog post](https://commons.wikimedia.org/w/index.php?curid=37965701)_
-
-=== "Configuration"
-
-    The Docker configuration files are located at:
-
-    - Docker: `/etc/docker/daemon.json`
-    - containerd: `/etc/containerd/config.toml`
-
-=== "Update"
-
-    Since Docker is installed via APT packages, it can be updated by running the following commands:
-
-    ```sh
-    apt update
-    apt install docker-ce containerd.io docker-ce-cli
-    ```
-
-=== "View logs"
-
-    Docker logs can be accessed using next command:
-
-    ```sh
-    journalctl -u docker -u containerd
-    ```
-
-=== "Plugins"
-
-    Docker offers plugins on its website (e.g. [Docker Plugins amd64 stable](https://download.docker.com/linux/debian/dists/bookworm/pool/stable/amd64/){: class="nospellcheck"}), some of them are not installed by the Docker installation by default resp. are no install option from `dietpi-software` (like the Docker Compose plugin is one).  
-    These additional plugins can be installed by the user as described below.
-
-    [Docker Buildx](https://docs.docker.com/build/architecture/){: class="nospellcheck"} CLI plugin:
-
-    ```sh
-    apt install docker-buildx-plugin
-    ```
-
-    [Docker vulnerability scan](https://docs.docker.com/docker-hub/vulnerability-scanning/) CLI plugin:
-
-    ```sh
-    apt install docker-scan-plugin
-    ```
-
-    For [running container rootless](https://docs.docker.com/engine/security/rootless/):
-
-    ```sh
-    apt install docker-ce-rootless-extras
-    ```
-
-=== "Speed up image creation with a tmpfs"
-
-    Docker downloads image file chunks to `/mnt/dietpi_userdata/docker-data/tmp` when generating a Docker image. After this, the file chunks are deleted as they are only temporary files.  
-    In case of a slower disk (e.g. SD Card) this takes a longer time due to the SD Card reading/writing speed. To speedup the image generation, a tmpfs file system can be used.  
-    A drawback of using a tmpfs is the required RAM, i.e. enough RAM memory (e.g. > 2 GB) should be present for the tmpfs.
-
-    The tmpfs file system can be added manually via the file `/etc/fstab` by entering a line (e.g. in the `TMPFS` area) like:
-
-    ```
-    tmpfs /mnt/dietpi_userdata/docker-data/tmp tmpfs size=2G,noatime,lazytime,nodev,nosuid
-    ```
-
-    The `size=` option should be adjusted to the systems RAM size: Only a part of the total RAM size should be used to avoid low memory issues.  
-    After changing the file `/etc/fstab` the tmpfs needs to be activated. This can be done via a file system remount via 
-    
-    ```sh
-    mount -o remount /mnt/dietpi_userdata/docker-data/tmp
-    ```
-
-    or a system reboot.
-
-***
-
-Official documentation: <https://docs.docker.com/get-started/overview/>  
-Configuration docs: <https://docs.docker.com/reference/cli/dockerd/#daemon-configuration-file>  
-Logging docs: <https://docs.docker.com/engine/logging/>  
-Wikipedia: <https://wikipedia.org/wiki/Docker_(software)>  
-Source code: <https://github.com/moby/moby>  
-License: [Apache-2.0](https://github.com/moby/moby/blob/master/LICENSE)
-
-YouTube video tutorial: [_DietPi Docker Setup on Raspberry Pi 3 B Plus_](https://www.youtube.com/watch?v=y_VfLOGm5nA)
-
-## Docker Compose
-
-Docker Compose is a [Docker](#docker) tool used to define and run multi-container applications. With Compose, you use a `YAML` file to create and configure your application's services from this configuration file.
-
-`docker-compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments.
-
-<!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/v2/logo.png){: width="200" height="219" loading="lazy"} -->
-![Docker Compose diagram](../assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
-
-_Docker (individual container) vs. Docker Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa)_
-
-=== "Update"
-
-    To update Docker Compose to the latest version, simply reinstall it:
-
-    ```sh
-    dietpi-software reinstall 134
-    ```
-
-***
-
-Official documentation: <https://docs.docker.com/compose/>  
-Getting started: <https://docs.docker.com/compose/gettingstarted/>  
-Sample apps with Compose: <https://docs.docker.com/compose/samples-for-compose/>  
-Release notes: <https://github.com/docker/compose/releases>  
-Source code: <https://github.com/docker/compose>  
-License: [Apache-2.0](https://github.com/docker/compose/blob/v2/LICENSE)
-
-## Portainer
-
-Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
-
-![Portainer screenshot](../assets/images/dietpi-software-portainer.jpg){: width="1159" height="636" loading="lazy"}
-
-=== "Access to the web interface"
-
-    The web interface is accessible via port **9002**[^1]:
-
-    - URL = `http://<your.IP>:9002`
-
-=== "Update to latest version"
-
-    To update Portainer, simply reinstall it:
-
-    ```sh
-    dietpi-software reinstall 185
-    ```
-
-***
-
-Official documentation: <https://docs.portainer.io>  
-Beginners guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>
-Source code: <https://github.com/portainer/portainer>  
-Open-source license: [zlib](https://github.com/portainer/portainer/blob/develop/LICENSE)
-
 ## VSCodium
 
 VSCodium is a FLOSS version of [Microsoft's Visual Studio code](https://code.visualstudio.com/), built directly from the source on GitHub, without branding, tracking, or telemetry.
@@ -359,13 +212,44 @@ Official documentation: <https://git-scm.com/docs>
 Source code: <https://github.com/git/git>  
 License: [GPLv2](https://github.com/git/git/blob/master/COPYING)
 
+## PHP Composer
+
+![Composer logo](../assets/images/dietpi-software-php-composer.png){: width="150" height="182" loading="lazy"}
+
+Source: [WizardCat](https://getcomposer.org){: class="nospellcheck"} via [Wikimedia tech blog, MIT](https://commons.wikimedia.org/w/index.php?curid=38131432).
+
+Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
+
+***
+
+Website: <https://getcomposer.org/>  
+Official documentation: <https://getcomposer.org/doc/>
+
+## Node.js
+
+Node.js is JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+![Node.js](../assets/images/dietpi-software-nodejs.jpg)
+
+Source: By [nodejs.org](https://nodejs.org), [Trademark policy](https://trademark-policy.openjsf.org/)
+
+By using the event-callback/non-blocking approach, Node.js offers a single-threaded event-io model that allows orchestration of tasks running in parallel. It supports multiple connections without a need for a large memory footprint. Amazon, Netflix, eBay, Reddit, LinkedIn, Tumblr, and PayPal use Node.js [^3].
+
+=== "Update"
+
+    To update Node.js to the latest version, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 9
+    ```
+
+***
+
+Website: <https://nodejs.org/>  
+Official documentation: <https://nodejs.org/api/>
+
 [Return to the **Optimised Software list**](../software.md)
 
-<!-- markdownlint-disable MD053 -->
-[^1]: [Logitech Media Server](media.md#logitech-media-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
-
-[^2]: [7 Most Famous Companies That Use Golang](https://www.agiratech.com/blog/companies-using-golang/)
-
-[^3]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
-
-[^4]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
+[^1]: [8 World-Class Software Companies That Use Python](https://realpython.com/world-class-companies-using-python/)
+[^2]: [TIOBE Programming Community index](https://www.tiobe.com/tiobe-index/)
+[^3]: <https://webtribunal.net/blog/node-js-stats>. Retrieved 29 May 2021
