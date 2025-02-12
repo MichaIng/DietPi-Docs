@@ -284,6 +284,10 @@ Provides service control, priority level tweaks and status print. To start DietP
 dietpi-services
 ```
 
+### Interactive menu
+
+If DietPi services are called via the command line without arguments, an interactive menu to apply service modes and settings comes up:
+
 ![DietPi-Services screenshot](../assets/images/dietpi-services.jpg){: width="644" height="341" loading="lazy"}
 
 The dialog to tweak a service is entered by highlighting the service (keys ++arrow-up++ and ++arrow-down++) and pressing ++enter++. The configuration dialog (example: cron service) looks like this:
@@ -291,6 +295,50 @@ The dialog to tweak a service is entered by highlighting the service (keys ++arr
 ![DietPi-Services tweaking screenshot](../assets/images/dietpi-services_2.png){: width="644" height="461" loading="lazy"}
 
 !!! caution "Be careful at tweaking the services."
+
+### Command line options
+
+`dietpi-services` can be called with these command line options:
+
+```sh
+Available commands:
+  status		Print service status info
+  start			Start service
+  stop			Stop service
+  restart		Restart service
+  enable		Autostart service on boot
+  disable		Do not autostart service on boot
+  mask			Mask service to prevent its usage entirely
+  unmask		Unmask service to allow its usage
+Available services:
+  <service_name>	Apply command to a single available systemd or sysvinit service
+  <empty>		Apply command to all available services known to DietPi
+			- Masked services are skipped unless command is "unmask".
+			- Disabled services are skipped if command is "restart".
+  			- Services required for network or shell sessions are skipped.
+			- You can include/exclude services by editing the following file:
+			  /boot/dietpi/.dietpi-services_include_exclude
+```
+
+Example:
+
+```
+root@dietpi:~# dietpi-services status
+
+ DietPi-Services
+─────────────────────────────────────────────────────
+ Mode: status 
+
+[  OK  ] DietPi-Services | cron			active (running) since Mon 2025-02-10 05:06:57 CET; 7h ago
+[  OK  ] DietPi-Services | ssh			active (running) since Fri 2025-01-17 15:03:59 CET; 3 weeks 2 days ago
+[ INFO ] DietPi-Services | dietpi-vpn		inactive (dead)
+[ INFO ] DietPi-Services | dietpi-cloudshell	inactive (dead)
+[  OK  ] DietPi-Services | dietpi-ramlog	active (exited) since Fri 2025-01-17 15:04:00 CET; 3 weeks 2 days ago
+[  OK  ] DietPi-Services | dietpi-preboot	active (exited) since Fri 2025-01-17 15:04:00 CET; 3 weeks 2 days ago
+[  OK  ] DietPi-Services | dietpi-postboot	active (exited) since Fri 2025-01-17 15:03:59 CET; 3 weeks 2 days ago
+[ INFO ] DietPi-Services | dietpi-wifi-monitor	inactive (dead)
+root@dietpi:~#
+```
 
 ---
 
