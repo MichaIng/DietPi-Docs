@@ -12,7 +12,7 @@ docs_dir: docs
 
 theme:
   name: material
-  custom_dir: overrides # https://www.mkdocs.org/user-guide/styling-your-docs/#using-the-theme-custom_dir
+  custom_dir: overrides # https://www.mkdocs.org/user-guide/customizing-your-theme/#using-the-theme-custom_dir
   font: false # Don't load fonts from Google
 
   # Don't include MkDocs' JavaScript
