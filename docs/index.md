@@ -1,5 +1,4 @@
 ---
-title: DietPi Documentation
 description: How to install DietPi on SBCs, PCs and virtualized environments. Install & configure optimised software and much more.
 ---
 
