@@ -9,7 +9,7 @@
 
   <meta property="og:locale" content="en_GB">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="DietPi Documentation">
+  <meta property="og:site_name" content="DietPi.com Docs">
   <meta property="og:title" content="{{ title }}">
   {% if page and page.meta and page.meta.description %}
     <meta property="og:description" content="{{ page.meta.description }}">
@@ -19,7 +19,11 @@
   {% if page.canonical_url %}
     <meta property="og:url" content="{{ page.canonical_url }}">
   {% endif %}
-  <meta property="og:image" content="https://dietpi.com/images/dietpi-logo_720x720.png">
+  {% if page and page.meta and page.meta.image %}
+      <meta name="og:image" content="{{ page.meta.image }}">
+  {% else %}
+      <meta name="og:image" content="https://dietpi.com/images/dietpi-logo_720x720.png">
+  {% endif %}
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@DietPi_">
@@ -30,7 +34,11 @@
   {% elif config.site_description %}
     <meta name="twitter:description" content="{{ config.site_description }}">
   {% endif %}
-  <meta name="twitter:image" content="https://dietpi.com/images/dietpi-logo_720x720.png">
+  {% if page and page.meta and page.meta.image %}
+      <meta name="twitter:image" content="{{ page.meta.image }}">
+  {% else %}
+      <meta name="twitter:image" content="https://dietpi.com/images/dietpi-logo_720x720.png">
+  {% endif %}
 {% endblock %}
 {% block announce %}
   <a href="https://dietpi.com/">DIETPI HOME</a>

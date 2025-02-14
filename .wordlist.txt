@@ -173,6 +173,7 @@ FastMail
 FB
 FFmpeg
 FHS
+filebrowser
 filesystem
 filesystems
 FirstBoot
