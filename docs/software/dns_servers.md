@@ -78,7 +78,12 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     1. The Pi-hole web UI port is set to 8089, i.e. it can be accessed via: `http://<your.IP>:8089/admin/`
     1. The Pi-hole web UI is secured with the global software password you chose during first run setup, default: `dietpi`
-    1. DNS query logging to `/var/log/pihole/pihole.log` is disabled. This does not affect the query logs in the web UI and database, but the `pihole -t`/`pihole tail` command does not show DNS queries anymore. If you want to use this command or need query logs in `/var/log/pihole/pihole.log` for other reasons, it can be re-enabled via web UI privacy settings or running: `sudo pihole-FTL --config dns.queryLogging true`
+    1. DNS query logging to `/var/log/pihole/pihole.log` is disabled. This does not affect the query logs in the web UI and database, but the `pihole -t`/`pihole tail` command does not show DNS queries anymore. If you want to use this command or need query logs in `/var/log/pihole/pihole.log` for other reasons, it can be re-enabled via web UI privacy settings or running: 
+
+        ```sh
+        sudo pihole-FTL --config dns.queryLogging true
+        ```
+
     1. DNS query logging to database (as shown in web UI) is reduced to 2 days. This can be changed via web UI privacy settings or e.g. `sudo pihole-FTL --config database.maxDBdays 7` to raise it to 7 days.
 
 === "Updating Pi-hole"
