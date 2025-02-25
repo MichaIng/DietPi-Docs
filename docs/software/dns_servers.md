@@ -31,25 +31,20 @@ description: Description of DietPi software options related to DNS servers
 
 Pi-hole is a DNS sinkhole with web interface that will block ads for any device on your network.
 
-- Also Installs: [Webserver stack](webserver_stack.md)
-
 ![Pi-hole web interface screenshot](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500" height="410" loading="lazy"}
-
-!!! warning "Webserver installation"
-    DietPi-Software calls the Pi-hole installer with the `--disable-install-webserver` flag, which skips the Lighttpd and PHP installation parts. Instead, Lighttpd, Nginx or Apache is installed separately, based on user choice, and PHP as standalone PHP-FPM server or module for Apache respectively. This allows more flexible webserver configurations as well, easy HTTPS, other web sites/applications on the same server etc. When **repairing** and **reconfiguring** Pi-hole (see "Repairing Pi-hole" tab below), it is important to **NOT** select to install Lighttpd when being asked, as this would lead to doubled PHP and webserver installs or conflicting webserver settings.
 
 === "Access the web interface"
 
     The web interface of Pi-hole can be accessed via:
 
-    - URL = `http://<your.IP>/admin`
+    - URL = `http://<your.IP>:8089/admin/`
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
-=== "Configuration"
+=== "Setup"
 
-    The configuration contains setting devices (e.g. router) to use Pi-hole for DNS resolution.
+    The setup contains setting devices (e.g. router) to use Pi-hole for DNS resolution.
 
-    <h2>Option 1 - Setup single devices to use the Pi-hole DNS server</h2>
+    <h3>Option 1 - Setup single devices to use the Pi-hole DNS server</h3>
 
     Simply change your DNS settings to use the IP address of your Pi-hole device. This will need to be done for each device that you want Pi-hole to work with.
 
@@ -59,7 +54,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     - On my PC, I would set the DNS address to 192.168.0.100
     - Tutorial [The Ultimate Guide to Changing Your DNS settings](https://www.howtogeek.com/167533/the-ultimate-guide-to-changing-your-dns-server/).
 
-    <h2>Option 2 - Setup your router to use the Pi-hole DNS server</h2>
+    <h3>Option 2 - Setup your router to use the Pi-hole DNS server</h3>
 
     This method will automatically point every device (that uses DHCP) on your network to Pi-hole.
     On your routers control panel web page, you will need to find a option called "DNS server". This should be located under DHCP settings.
@@ -81,33 +76,33 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     The DietPi Pi-hole implementation uses the official installer script, but it comes with a few differences, compared to the official default setup:
 
-    1. The `/var/log/pihole.log` plain text DNS query log is disabled by default. It is a second query log implementation, as `/etc/pihole/pihole-FTL.db` is used as a database-wise log implementation already, used by the web interface to search long-term logs. If you however want to use the `pihole -t`/`pihole tail` command, to print colourised logs to console, you need to re-enable the file-based logging:
+    1. The Pi-hole web UI port is set to 8089, i.e. it can be accessed via: `http://<your.IP>:8089/admin/`
+    1. The Pi-hole web UI is secured with the global software password you chose during first run setup, default: `dietpi`
+    1. DNS query logging to `/var/log/pihole/pihole.log` is disabled. This does not affect the query logs in the web UI and database, but the `pihole -t`/`pihole tail` command does not show DNS queries anymore. If you want to use this command or need query logs in `/var/log/pihole/pihole.log` for other reasons, it can be re-enabled via web UI privacy settings or running: 
 
         ```sh
-        pihole -l on
+        sudo pihole-FTL --config dns.queryLogging true
         ```
 
-        Also the DietPi [logging system](../dietpi_tools/software_installation.md#log-system) needs to be changed, to disable DietPi-RAMlog, as otherwise `/var/log/pihole.log` is cleared hourly.
-    2. The logging duration for the database-wise DNS query log in `/etc/pihole/pihole-FTL.db` is reduced from 365 days to 2 days. An internal discussion revealed that no-one of us uses logs old than a few hours. One year of logs leads to database sizes from hundreds of MiBs to GiBs. We leave it at 2 days so that web interface dashboard graphs/diagrams are not empty after Pi-hole (re)starts. You can easily adjust the logging duration by editing the `/etc/pihole/pihole-FTL.conf` config file. E.g. to restore the default 365 days of logs:
+    1. DNS query logging to database (as shown in web UI) is reduced to 2 days. This can be changed via web UI privacy settings or e.g. 
 
         ```sh
-        MAXDBDAYS=365
+        sudo pihole-FTL --config database.maxDBdays 7
         ```
+
+        to raise it to 7 days.
 
 === "Updating Pi-hole"
 
-    Pi-hole can be updated via the shell command `pihole -up`.
+    Pi-hole can be updated via the shell command `sudo pihole -up`.
 
 === "Repairing Pi-hole"
 
-    You can use `pihole -r` to repair or reconfigure your Pi-hole instance.
-
-    !!! warning "Do **NOT** select to install Lighttpd"
-        Do **NOT** select to install Lighttpd when being asked, as this would lead to doubled PHP and webserver installs or conflicting webserver settings.
+    You can use `sudo pihole -r` to repair or reconfigure your Pi-hole instance.
 
 === "Setting the password"
 
-    If you forgot your login password for the Pi-hole admin web page, you can set it with the shell command `pihole -a -p` on your Pi-hole device.
+    If you forgot your login password for the Pi-hole admin web page, you can set it with the shell command `sudo pihole setpassword` on your Pi-hole device.
 
 === "Blocklists and whitelists"
 
@@ -123,28 +118,24 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     If you try to add many block- resp. whitelists (e.g. > 1 Mio), it can occur that the `/tmp` filesystem overflows.  
     If `pihole -g` fails with an error message like `sed: couldn't write 44 items to stdout: No space left on device`, you can verify this case using the `df` command:
 
-    ```
+    ```console
     root@dietpi:~# df -h /tmp
-    Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
-    tmpfs           995M    995M     0  100% /tmp
+    Filesystem      Size  Used Avail Use% Mounted on
+    tmpfs           995M  995M     0 100% /tmp
     root@dietpi:~#
     ```
 
-    The output value of "100 %" signals a full `/tmp` filesystem.
+    The output value of `100%` signals a full `/tmp` filesystem.
 
     In this case the `/etc/fstab` could be changed to a larger `/tmp` by editing it. We propose to set it to a maximum value of 75 % of your RAM size. E.g. in case of 2 GB RAM, you could adjust the mount option to `size=1500M`.
     This could lead to an output like
 
-    ```
+    ```console
     root@dietpi:~# df -h /tmp
-    Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
-    tmpfs           1,5G     41M  1,5G    3% /tmp
+    Filesystem      Size  Used Avail Use% Mounted on
+    tmpfs           1,5G   41M  1,5G   3% /tmp
     root@dietpi:~#
     ```
-
-=== "Accessing via OpenVPN or WireGuard"
-
-    To allow (OpenVPN or WireGuard) VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`.
 
 === "Monitor Pi-hole"
 
