@@ -84,7 +84,13 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
         sudo pihole-FTL --config dns.queryLogging true
         ```
 
-    1. DNS query logging to database (as shown in web UI) is reduced to 2 days. This can be changed via web UI privacy settings or e.g. `sudo pihole-FTL --config database.maxDBdays 7` to raise it to 7 days.
+    1. DNS query logging to database (as shown in web UI) is reduced to 2 days. This can be changed via web UI privacy settings or e.g. 
+
+        ```sh
+        sudo pihole-FTL --config database.maxDBdays 7
+        ```
+
+        to raise it to 7 days.
 
 === "Updating Pi-hole"
 
