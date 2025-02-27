@@ -31,7 +31,7 @@ description: Description of DietPi software options related to DNS servers
 
 Pi-hole is a DNS sinkhole with web interface that will block ads for any device on your network.
 
-![Pi-hole web interface screenshot](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500" height="410" loading="lazy"}
+![Pi-hole web interface screenshot](../assets/images/dietpi-software-dnsserver-pihole.png "Pi-hole v6 screenshot"){: width="626" height="517" loading="lazy"}
 
 === "Access the web interface"
 
