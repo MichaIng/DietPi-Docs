@@ -112,7 +112,9 @@ dietpi-drive_manager
 
 ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager.jpg){: width="643" height="327" loading="lazy"}
 
-### Setup a dedicated drive for DietPi
+### Software overview
+
+#### Setup a dedicated drive for DietPi
 
 To use an additional drive (example USB drive) the following steps have to be done:
 
@@ -130,7 +132,7 @@ To use an additional drive (example USB drive) the following steps have to be do
 
     ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_3.png){: width="600" height="395" loading="lazy"}
 
-### Move the location of user data and swap file
+#### Move the location of user data and swap file
 
 You can move the location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swap file to a different location on a target drive. This may be useful if your filesystem containing the DietPi user data resp. swap file has only little space left.
 Therefore execute the following steps (example user data, swap file is quite similar):
@@ -142,13 +144,13 @@ Therefore execute the following steps (example user data, swap file is quite sim
 
 - Move user data:
 
-![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_4.png){: width="500" height="139" loading="lazy"}
+    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_4.png){: width="500" height="139" loading="lazy"}
 
 - Change swap file size:
 
-![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_5.png){: width="500" height="188" loading="lazy"}
+    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_5.png){: width="500" height="188" loading="lazy"}
 
-### Format filesystem types
+#### Format filesystem types
 
 Formatting filesystems lead you to these dialogues:
 
@@ -212,7 +214,7 @@ In the latter dialog you have to choose the filesystem type. The following selec
     `+` Well accepted for large files (typically in a file server use)  
     `-` Not compatible on a Windows system
 
-### Move DietPi system to a larger SD card
+#### Move DietPi system to a larger SD card
 
 If you want to extend your DietPi SD card space by moving the system to a larger memory card, this can be achieved by the following steps:
 
@@ -232,7 +234,7 @@ If you want to extend your DietPi SD card space by moving the system to a larger
 
 A similar procedure may be used when moving the SD card contents to a smaller SD card. During this procedure you typically need to shrink the partition size (e.g. with `parted` or `gparted`) before copying the partition image to a different memory card. Also, do the resize to use the full space on the new card.
 
-### Mount network drive
+#### Mount network drive
 
 If you want to mount a NFS drive or a Samba share, you can do this by:
 
@@ -243,6 +245,23 @@ If you want to mount a NFS drive or a Samba share, you can do this by:
 
 !!! info "Mounting a macOS Samba share"
     To mount a macOS Samba share enabled in `Sharing`, you need to (in the server) go to `Sharing > File Sharing > Options > Windows File Sharing` and select your username.
+
+### DietPi drive manager - Command line usage
+
+Beside the interactive drive management via `dietpi-drive_manager`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-drive_manager [<command>]
+Available commands:
+  <empty>		Interactive menu
+  1        		Select an available drive mount which is then saved to: 
+                /tmp/dietpi-drive_manager_selmnt
+  3        		Scan for new drives and re-create fstab non-interactively, 
+                then exit
+  4	        	Reset /etc/fstab with currently attached local drives 
+                and /tmp + /var/log tmpfs mount 
+                (command shall only used internally by DietPi-Installer)
+```
 
 ---
 
@@ -256,6 +275,23 @@ dietpi-explorer
 
 ![DietPi-Explorer screenshot](../assets/images/dietpi-explorer.jpg){: width="646" height="355" loading="lazy"}
 
+### DietPi file explorer - Command line usage
+
+Beside the interactive file management via `dietpi-explorer`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-explorer [<command>]
+Available commands:
+    <empty>		Interactive menu
+    1		    Select a file/dir mode
+                - Return result for other applications to /tmp/.dietpi-explorer_selected_location
+                - Return an error code when no selection is given
+	1 <path>	Select a file/dir mode, start from <path>
+
+xxx 
+
+```
+
 ---
 
 ## DietPi autostart
@@ -267,6 +303,19 @@ dietpi-autostart
 ```
 
 ![DietPi-Autostart screenshot](../assets/images/dietpi-autostart.jpg){: width="640" height="458" loading="lazy"}
+
+### DietPi autostart - Command line usage
+
+Beside the interactive autostart selection via `dietpi-autostart`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-autostart [<index>]
+Available values of <index>:
+    <empty>		Interactive menu
+    <not empty> Apply autostart <index> non-interactively
+```
+
+See the screenshot above for values of `<index>` left in the menu lines (`0`, `7`, `16`,...).
 
 !!! info "Autostart option in `dietpi.txt` (first initial boot)"
     When booting the DietPi system the first time, the autostart option can also be set via the file `dietpi.txt`. See option  
@@ -284,7 +333,7 @@ Provides service control, priority level tweaks and status print. To start DietP
 dietpi-services
 ```
 
-### Interactive menu
+### Software overview
 
 If DietPi services are called via the command line without arguments, an interactive menu to apply service modes and settings comes up:
 
@@ -296,28 +345,32 @@ The dialog to tweak a service is entered by highlighting the service (keys ++arr
 
 !!! caution "Be careful at tweaking the services."
 
-### Command line options
+### DietPi services - Command line usage
 
-`dietpi-services` can be called with these command line options:
+Beside the interactive handling via `dietpi-services`, there is the option of the shell command line:
 
-```sh
+```console
+Usage: dietpi-services [<command> [<service_name>]]
 Available commands:
-  status		Print service status info
-  start			Start service
-  stop			Stop service
-  restart		Restart service
-  enable		Autostart service on boot
-  disable		Do not autostart service on boot
-  mask			Mask service to prevent its usage entirely
-  unmask		Unmask service to allow its usage
-Available services:
-  <service_name>	Apply command to a single available systemd or sysvinit service
-  <empty>		Apply command to all available services known to DietPi
-			- Masked services are skipped unless command is "unmask".
-			- Disabled services are skipped if command is "restart".
-  			- Services required for network or shell sessions are skipped.
-			- You can include/exclude services by editing the following file:
-			  /boot/dietpi/.dietpi-services_include_exclude
+    <empty>	    Interactive menu
+    status		Print service status info
+    start		Start service <service_name>
+    stop		Stop service <service_name>
+    restart		Restart service <service_name>
+    enable		Autostart service on boot <service_name>
+    disable		Do not autostart service on boot <service_name>
+    mask		Mask service to prevent its usage entirely <service_name>
+    unmask		Unmask service to allow its usage <service_name>
+
+Available service_names:
+    <name>      Apply command to a single available systemd or sysvinit
+                service <name> (e.g. "cron")
+    <empty>		Apply command to all available services known to DietPi
+			    - Masked services are skipped unless command is "unmask".
+			    - Disabled services are skipped if command is "restart".
+  			    - Services required for network or shell sessions are skipped.
+			    - You can include/exclude services by editing the following file:
+			      /boot/dietpi/.dietpi-services_include_exclude
 ```
 
 Example:
@@ -397,6 +450,8 @@ dietpi-display
 ```
 
 ![DietPi Tools - Dietpi Display](../assets/images/dietpi-tools-dietpidisplay.png){: width="640" height="258" loading="lazy"}
+
+xxx CLI options?
 
 ---
 
@@ -494,5 +549,16 @@ dietpi-survey
     # grep 'SURVEY_OPTED_IN' /boot/dietpi.txt
     SURVEY_OPTED_IN=1
     ```
+
+### DietPi survey - Command line usage
+
+Beside the interactive setting via `dietpi-survey`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-survey [<command>]
+Available commands:
+    <empty>	    Interactive menu to opt in or out
+    1           Send survey data or empty file, based on previous user choice
+```
 
 ---
