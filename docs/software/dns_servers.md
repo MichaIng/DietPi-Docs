@@ -31,7 +31,7 @@ description: Description of DietPi software options related to DNS servers
 
 Pi-hole is a DNS sinkhole with web interface that will block ads for any device on your network.
 
-![Pi-hole web interface screenshot](../assets/images/dietpi-software-dnsserver-pihole.png){: width="500" height="410" loading="lazy"}
+![Pi-hole web interface screenshot](../assets/images/dietpi-software-dnsserver-pihole.png "Pi-hole v6 screenshot"){: width="626" height="517" loading="lazy"}
 
 === "Access the web interface"
 
@@ -147,7 +147,7 @@ Official website: <https://pi-hole.net/>
 Official documentation: <https://docs.pi-hole.net/>  
 Wikipedia: <https://wikipedia.org/wiki/Pi-hole>  
 Source code: <https://github.com/pi-hole>  
-DietPi Blog: [Pi-Hole & Unbound: How to have ad-free & safer internet in just few minutes](https://dietpi.com/blog/?p=564)  
+DietPi Blog: [DietPi and the new Pi-hole version 6](https://dietpi.com/blog/?p=3866)  
 YouTube video tutorial #1: [Raspberry Pi / Pi-hole / Diet-Pi / Network wide Ad Blocker !!!!](https://www.youtube.com/watch?v=RO2_eZlVrj4)  
 YouTube video tutorial #2: [Block ads everywhere with Pi-hole and PiVPN on DietPi](https://www.youtube.com/watch?v=qbLEHlKkGiE){:class="nospellcheck"}  
 YouTube video tutorial #3 (German language): [Raspberry Pi & DietPi : Pi-hole der Werbeblocker für Netzwerke mit Anleitung für AVM FritzBox](https://www.youtube.com/watch?v=vXUvFWhXW6c&list=PLQIL7cyHMGboXtOzwAcX4hGPW6ECbVinp&index=6){:class="nospellcheck"}  
@@ -228,7 +228,7 @@ Official documentation: <https://unbound.docs.nlnetlabs.nl/en/latest/>
 Wikipedia: <https://wikipedia.org/wiki/Unbound_(DNS_server)>  
 Source code: <https://github.com/NLnetLabs/unbound>
 
-DietPi Blog: [Pi-Hole & Unbound: How to have ad-free & safer internet in just few minutes](https://dietpi.com/blog/?p=564)
+DietPi Blog: [DietPi and the new Pi-hole version 6](https://dietpi.com/blog/?p=3866)
 
 Blog entry with YouTube video (German language): [Unbound Installation für PiHole unter DietPi](https://blog.login.gmbh/unbound-installation-fuer-pihole-unter-dietpi/){:class="nospellcheck"}
 

@@ -492,7 +492,7 @@ What is **Apache Tomcat**? Essentially it’s an open-source Java servlet and Ja
 
 ![Tomcat logo](../assets/images/dietpi-software-webstack-tomcat.svg){: width="200" height="133" loading="lazy"}
 
-Source: [The Apache Software Foundation](https://svn.apache.org/viewvc/jakarta/site/xdocs/images/logos/tomcat.eps), [Apache License 2.0](https://commons.wikimedia.org/w/index.php?curid=11302180).
+Source: [The Apache Software Foundation](https://www.apache.org/logos/originals/tomcat.svg), [Apache License 2.0](https://commons.wikimedia.org/w/index.php?curid=11302180).
 
 === "Install"
 
