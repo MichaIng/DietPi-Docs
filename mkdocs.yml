@@ -133,6 +133,7 @@ nav:
   - Remote Desktop & Remote Access: software/remote_desktop.md
   - Social & Search: software/social.md
   - SSH Servers: software/ssh.md
+  - System software: software/system_software.md
   - System Security: software/system_security.md
   - System Stats & Management: software/system_stats.md
   - VPN: software/vpn.md
