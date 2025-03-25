@@ -27,7 +27,7 @@ description: Description of DietPi software options related to system base packa
 
 ## fish
 
-fish ( <b>f</b>riendly <b>i</b>nteractive <b>sh</b>ell) is a smart and user-friendly command line shell for Linux, macOS, and the rest of the family.
+fish ( **f**`riendly` **i**`nteractive` **sh**`ell`) is a smart and user-friendly command line shell for Linux, macOS, and the rest of the family.
 
 ![fish logo](../assets/images/dietpi-software-system-fish.png "fish shell logo"){: width="256" height="256" loading="lazy"}
 
