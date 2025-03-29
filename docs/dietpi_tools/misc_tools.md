@@ -88,7 +88,7 @@ Beside the interactive managing via `dietpi-bugreport`, there is the option of t
 ```console
 Usage: dietpi-bugreport [<command>]
 Available commands:
-    <empty>	    Interactive manage bug reporting
+    <empty>     Interactive manage bug reporting
     1           Send a bug report noninteractively
     -1          Remove an already uploaded bug report noninteractively
 ```
