@@ -192,7 +192,7 @@ Beside the interactive VPN installation via `dietpi-vpn`, there is the option of
 Usage: dietpi-vpn [<command>]
 Available commands:
     <empty>     Interactive menu to control VPN settings and connection
-    status	    Print VPN connection status
+    status      Print VPN connection status
 
 ```
 

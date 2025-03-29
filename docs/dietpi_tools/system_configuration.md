@@ -320,7 +320,7 @@ Available commands:
     1           Select a file/dir mode
                 - Return result for other applications to /tmp/.dietpi-explorer_selected_location
                 - Return an error code when no selection is given
-	1 <path>    Select a file/dir mode, start from <path>
+    1 <path>    Select a file/dir mode, start from <path>
 
 ```
 
