@@ -77,8 +77,8 @@ DietPi-LogClear only has the option of the shell command line:
 Usage: dietpi-logclear [<options>]
 Available options:
     0           Update current log files data to "$FP_BACKUP/*. Then clear contents
-	1           Clear contents of all logs in $FP_LOG
-	2           Delete all logs in $FP_LOG and backups
+    1           Clear contents of all logs in $FP_LOG
+    2           Delete all logs in $FP_LOG and backups
 ```
 
 ![DietPi-LogClear screenshot](../assets/images/dietpi-logclear.jpg){: width="643" height="198" loading="lazy"}
