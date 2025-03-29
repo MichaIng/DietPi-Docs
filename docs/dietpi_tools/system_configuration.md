@@ -10,6 +10,8 @@ dietpi-config
 
 ![DietPi-Config screenshot](../assets/images/dietpi-config.jpg){: width="643" height="335" loading="lazy"}
 
+### Software oerview
+
 === "Display Options"
 
     The display options are used to
@@ -88,6 +90,38 @@ dietpi-config
 
     - Perform CPU, RAM, filesystem and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark>
     - Perform CPU/IO/RAM/DISK **stress tests** to test the stability of your system, e.g. after applying some overclocking.
+
+### DietPi-Config - Command line usage
+
+Beside the interactive configuration via `dietpi-config`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-config [<targetmenu_id>]
+Available values for <targetmenu_id>:
+    1		    Open menu "Display Options"
+    2   		Open menu "Display Options" -> "Display Resolution"
+    3           Open menu "Advanced Options"
+    4           Open menu "Performance Options"
+    5           Open menu "Security Options"
+    6           Open menu "Display Options" -> "GPU Memory Options xxx"
+    7           Open menu "Language/Regional Options"
+    8           Open menu "Network Options: Adapters"
+    9           Open menu "Netword Options: Adapters" -> "Ethernet"
+    10          Open menu "Netword Options: Adapters" -> "WiFi"
+    11          Open menu "Tools"
+    12          Open menu "Tools" -> "Benchmarks"
+    13          Open menu "Advanced Options" -> Overclocking xxx"
+    14          Open menu "Audio Options"
+    15          Open menu "Tools" -> "Stress test"
+    16          Open menu "Network Options: Misc"
+    17          Open menu "Network Options: Adapters" -> "Proxy"
+    18          Open menu "Advanced Options" -> "Serial/UART"
+    19          Open menu "Advanced Options" -> "APT"
+    20          Open menu "Network Options: Misc" -> "Test IPv4 address"
+    21          Open menu "Network Options: Misc" -> "Test IPv6 address"
+    22          Open menu "Network Options: Misc" -> "Test domain name"
+
+```
 
 ---
 
@@ -288,8 +322,6 @@ Available commands:
                 - Return an error code when no selection is given
 	1 <path>	Select a file/dir mode, start from <path>
 
-xxx 
-
 ```
 
 ---
@@ -453,6 +485,15 @@ dietpi-display
 
 xxx CLI options?
 
+```
+		'--display'|'-d') shift; DISPLAY=$1;;
+		'--mode'|'-m') shift; aMODE[$DISPLAY]=$1;;
+		'--rotation'|'-r') shift; aROTATION[$DISPLAY]=$1;;
+		'--disable'|'-D') aENABLED[$DISPLAY]='disabled';;
+		'--enable'|'-e') aENABLED[$DISPLAY]='enabled';;
+		'apply'|'a') COMMAND='apply';;
+```
+
 ---
 
 ## DietPi survey
@@ -478,6 +519,8 @@ dietpi-survey
     **In short words:** By selecting ***Opt IN***, you are supporting the DietPi project with no impact to your system or private data.
 
 ![DietPi Survey screenshot](../assets/images/dietpi-survey.jpg){: width="645" height="368" loading="lazy"}
+
+### Software overview
 
 === "Data transmission events"
 
