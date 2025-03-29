@@ -36,56 +36,58 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
         </thead>
         <tbody>
             <tr>
-                <td><a class="table"><strong>Raspberry Pi - ALL models</strong><br>Single board computer (SBC)<br>Compute Module (CM)</a></td>
+                <td><a class="table"><strong>Raspberry Pi 1/Zero (1) - ARMv6</strong><br>Single board computer (SBC)<br>Compute Module (CM)</a></td>
                 <td>
-                    <strong>DietPi image for ALL Raspberry Pi models</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv6-Bookworm.img.xz">Download image</a>
+                    This image is compatible with all Raspberry Pi models, but we recommend it only for the following:
                     <strong>
                         <ul>
-                            <li>Raspberry Pi Zero 2 W</li>
-                            <li>Raspberry Pi 400</li>
-                            <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
-                            <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
-                            <li>Raspberry Pi 2 Model B v1.1 / B v1.2</li>
                             <li>Raspberry Pi 1 Model A / A+ / B / B+<br>Compute Module 1</li>
                             <li>Raspberry Pi Zero / Zero W / Zero WH</li>
                         </ul>
                     </strong>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi1-ARMv6-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table"><strong>Raspberry Pi - ARMv7</strong><br>Single board computer (SBC)<br>Compute Module (CM)</a></td>
+                <td><a class="table"><strong>Raspberry Pi 2 PCB v1.1 - ARMv7</strong><br>Single board computer (SBC)<br>Compute Module (CM)</a></td>
                 <td>
-                    <strong>DietPi image for Raspberry Pi with ARMv7 CPU or above</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv7-Bookworm.img.xz">Download image</a>
+                    This image is compatible with all Raspberry Pi models with ARMv7 CPU or above, but we recommend it only for the following:
                     <strong>
                         <ul>
-                            <li>Raspberry Pi Zero 2 W</li>
-                            <li>Raspberry Pi 400</li>
-                            <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
-                            <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
-                            <li>Raspberry Pi 2 Model B v1.1 / B v1.2</li>
+                            <li>Raspberry Pi 2 Model B v1.1</li>
                         </ul>
                     </strong>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi2-ARMv7-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table"><strong>Raspberry Pi - ARMv8</strong><br>Single board computer (SBC)<br>Compute Module (CM)</a></td>
+                <td><a class="table"><strong>Raspberry Pi 2/3/4/Zero 2 - ARMv8</strong><br>Single board computer (SBC)<br>Compute Module (CM)</a></td>
                 <td>
-                    <strong>DietPi image for Raspberry Pi with ARMv8/64-bit CPU</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi-ARMv8-Bookworm.img.xz">Download image</a>
+                    This image is compatible with all Raspberry Pi models with ARMv8 CPU or above, but we recommend it only for the following:
                     <strong>
                         <ul>
-                            <li>Raspberry Pi Zero 2 W</li>
-                            <li>Raspberry Pi 400</li>
-                            <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
-                            <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
                             <li>Raspberry Pi 2 Model B v1.2</li>
+                            <li>Raspberry Pi 3 Model A+ / B / B+<br>Compute Module 3 / 3+</li>
+                            <li>Raspberry Pi 4 Model B<br>Compute Module 4</li>
+                            <li>Raspberry Pi 400</li>
+                            <li>Raspberry Pi Zero 2 W</li>
                         </ul>
                     </strong>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi234-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table"><strong>Raspberry Pi 5 - ARMv8 (testing)</strong></a></td>
+                <td><a class="table"><strong>Raspberry Pi 5 - ARMv8</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_RPi5-ARMv8-Bookworm.img.xz">DietPi image</a>
+                    This image is compatible with all Raspberry Pi 5 models:
+                    <strong>
+                        <ul>
+                            <li>Raspberry Pi 5</li>
+                            <li>Raspberry Pi Compute Module 5</li>
+                            <li>Raspberry Pi 500</li>
+                        </ul>
+                    </strong>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi5-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
