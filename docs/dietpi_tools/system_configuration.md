@@ -10,7 +10,7 @@ dietpi-config
 
 ![DietPi-Config screenshot](../assets/images/dietpi-config.jpg){: width="643" height="335" loading="lazy"}
 
-### Software oerview
+### Software overview
 
 === "Display Options"
 
