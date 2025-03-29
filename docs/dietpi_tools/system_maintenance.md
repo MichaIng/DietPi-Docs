@@ -8,6 +8,24 @@ Update DietPi OS version to the latest version available and informs when update
 dietpi-update
 ```
 
+### DietPi update - Command line usage
+
+Beside the interactive menu via `dietpi-update`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-update [<command>]
+Available commands:
+    <empty>	    Check for DietPi update and if available open interactive menu
+                    Else, if CONFIG_CHECK_APT_UPDATES=[12] is set, check for APT updates 
+                    and store results to /run/dietpi/.apt_updates to be used by DietPi-Banner
+    1           Check for DietPi update and in case apply noninteractively
+                    Else, if CONFIG_CHECK_APT_UPDATES=2 is set, check for and apply APT updates noninteractively
+    2           Check for DietPi update and in case store result to /run/dietpi/.update_available to be used by DietPi-Banner
+	        		Else, if CONFIG_CHECK_APT_UPDATES=[12] is set, check for APT updates 
+                    and store results to /run/dietpi/.apt_updates to be used by DietPi-Banner
+	-1          Like "1" but internally reduce subversion by 1 to reapply the last update, e.g. to apply latest dev branch changes
+```
+
 ---
 
 ## DietPi cleaner
@@ -35,14 +53,32 @@ The files cleaner allows you to customize a list of filenames to search and remo
 
 ![DietPi-Cleaner types screenshot](../assets/images/dietpi-cleaner_3.png){: width="644" height="388" loading="lazy"}
 
+### DietPi cleaner - Command line usage
+
+Beside the interactive cleaning via `dietpi-cleaner`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-cleaner [<options>]
+Available options:
+    <empty>	    Interactive menu to handle cleaning tasks
+    1           Run Enabled cleaners
+    2           Run All cleaners
+```
+
 ---
 
 ## DietPi log clear
 
-Clear log files in `/var/log/`. To start DietPi-LogClear, use the following command:
+Clear log files in `/var/log/`. 
 
-```sh
-dietpi-logclear
+DietPi-LogClear only has the option of the shell command line:
+
+```console
+Usage: dietpi-logclear [<options>]
+Available options:
+    0		    Update current log files data to "$FP_BACKUP/*. Then clear contents
+	1		    Clear contents of all logs in $FP_LOG
+	2           Delete all logs in $FP_LOG and backups
 ```
 
 ![DietPi-LogClear screenshot](../assets/images/dietpi-logclear.jpg){: width="643" height="198" loading="lazy"}
@@ -66,6 +102,8 @@ dietpi-backup
 ```
 
 ![DietPi-Backup menu screenshot](../assets/images/dietpi-backup_1.png){: width="643" height="306" loading="lazy"}
+
+### Software Overview
 
 === "Settings files"
 
@@ -173,20 +211,6 @@ dietpi-cron
 
 Please keep in mind that all other daily `cron` based procedures are also started at this changed time.
 
-### Scripted run
-
-DietPi-Backup can be run from the command line or from scripts without user interaction by calling it via
-
-```sh
-dietpi-backup 1
-```
-
-A similar restore procedure is not recommended to avoid accidentally system overwrites. But to skip navigating through the menu, it can be done as well via
-
-```sh
-dietpi-backup -1
-```
-
 ### Automated restore at the system's first run setup
 
 DietPi-Backup contains an option of restoring a backup automatically during the first run setup of the system (this is run once when DietPi boots the first time).  
@@ -216,6 +240,23 @@ This procedure is achieved with these steps (example: SD card is the boot media)
 
 For further options regarding the file `/boot/dietpi.txt` refer to the usage hints [How to do an automatic base installation at first boot (DietPi-Automation)](../usage.md#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation).
 
+### DietPi Backup - Command line usage
+
+Beside the interactive backup/restore via `dietpi-backup`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-backup [<command> [<path>]]
+Available commands:
+    <empty>	    Interactive menu to handle backup and restore tasks
+    1           Execute backup procedure noninteractively
+    -1          Execute restore procedure noninteractively
+
+Optional path:
+    <path/to/target>    Sets the path to the backup/restore files directory
+```
+
+**Remark:** Generally, the automated restore procedure is not recommended to avoid accidentally system overwrites. But to skip navigating through the menu, it can be done like described above
+
 ---
 
 ## DietPi sync
@@ -228,22 +269,24 @@ dietpi-sync
 
 ![DietPi-Sync screenshot](../assets/images/dietpi-sync.jpg){: width="646" height="322" loading="lazy"}
 
+### Software Overview
+
 Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then select a target location. The target location can be anything from a networked samba file server, or even an FTP server.
 
 In comparison to `DietPi-Backup` it is more a simple copy mechanism instead a system backup/restore functionality. `DietPi-Sync` shall impress with its simplicity.
 
-### Delete mode
+#### Delete mode
 
 This setting gives these options:
 
 - "Off": In this case all synchronized files are copied from the source to the target directory keeping all files previously existing in the target directory
 - "On": In this case all files previously existing in the target directory which do not exist in the source directory will be deleted to achieve an exact copy of your source directory
 
-### Automatic daily sync
+#### Automatic daily sync
 
 `Dietpi-Sync` gives the option of an automatic daily sync operation (controlled via the Linux `cron` mechanism) by enabling the "Daily Sync" option.
 
-#### Daily sync execution time
+**Daily sync execution time**
 
 The automatic daily sync is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several sync clients syncing up to the same storage (data server): Shifting the synchronization starting time of these systems may reduce temporary overload of the data server by avoiding concurrent access to the storage.
 
@@ -255,7 +298,7 @@ dietpi-cron
 
 Please keep in mind that all other daily `cron` based procedures are also started at this changed time.
 
-### Sync file selection (Filter)
+#### Sync file selection (Filter)
 
 The definition which files are used for the synchronization procedure is defined via the file
 
@@ -267,7 +310,7 @@ This file can be edited to set further include/exclude definitions for the synch
 
 The file structure definition is identical to the DietPi backup/restore file `/boot/dietpi/.dietpi-backup_inc_exc` where it is explained more in detail.
 
-### Logging
+#### Logging
 
 Logging information about the synchronization procedure is given within the file
 
@@ -279,7 +322,7 @@ which is written to the sync target directory. It gives a list of every processe
 
 The execution status of a previous synchronization process is given in the "Last sync status" entry at the top of the `dietpi-sync` dialog.
 
-### Settings file
+#### Settings file
 
 Generally, the settings of the DietPi-Sync are changed via the `dietpi-sync` command menu entries.
 
@@ -293,15 +336,7 @@ SYNC_DELETE_MODE=0
 SYNC_CRONDAILY=0
 ```
 
-### Scripted run
-
-DietPi-Sync can be run from the command line or from scripts without user interaction by calling it via
-
-```sh
-dietpi-sync 1
-```
-
-### Dry run
+#### Dry run
 
 Each sync includes a leading dry run, after which you can check the expected result before deciding if you want to continue with the actual sync:
 
@@ -310,5 +345,16 @@ Each sync includes a leading dry run, after which you can check the expected res
 !!! info "DietPi-Sync is purely based on `Rsync`"
 
     In the case that the `rsync` package is not installed, this is done automatically once you start a synchronization process.
+
+### DietPi sync - Command line usage
+
+Beside the interactive sync via `dietpi-sync`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-sync [<command>]
+Available commands:
+    <empty>	    Interactive menu to handle backup and restore tasks
+    1           Execute sync procedure noninteractively
+```
 
 ---

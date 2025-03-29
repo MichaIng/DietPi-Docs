@@ -29,9 +29,23 @@ dietpi-banner
 
 ![DietPi-Banner config menu](../assets/images/dietpi-banner_config.jpg){: width="640" height="368" loading="lazy"}
 
+### Software Overview
+
 Using these settings you can configure the information displayed initially, choosing the details displayed initially. See below an example where 4 options are selected:
 
 ![DietPi-Banner print on login](../assets/images/dietpi-banner.jpg){: width="636" height="359" loading="lazy"}
+
+### DietPi banner - Command line usage
+
+Beside the interactive setting via `dietpi-banner`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-banner [<command>]
+Available commands:
+    <empty>	    Interactive menu to select banner entries
+    0           Top section + LAN IP
+    1           Clear terminal + top section + chosen entries
+```
 
 ---
 
@@ -66,5 +80,17 @@ dietpi-bugreport
 ```
 
 ![DietPi-BugReport screenshot](../assets/images/dietpi-bugreport.jpg){: width="646" height="352" loading="lazy"}
+
+### DietPi bug report - Command line usage
+
+Beside the interactive managing via `dietpi-bugreport`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-bugreport [<command>]
+Available commands:
+    <empty>	    Interactive manage bug reporting
+    1           Send a bug report noninteractively
+    -1          Remove an already uploaded bug report noninteractively
+```
 
 ---
