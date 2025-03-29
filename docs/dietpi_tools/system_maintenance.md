@@ -15,15 +15,15 @@ Beside the interactive menu via `dietpi-update`, there is the option of the shel
 ```console
 Usage: dietpi-update [<command>]
 Available commands:
-    <empty>	    Check for DietPi update and if available open interactive menu
+    <empty>     Check for DietPi update and if available open interactive menu
                     Else, if CONFIG_CHECK_APT_UPDATES=[12] is set, check for APT updates 
                     and store results to /run/dietpi/.apt_updates to be used by DietPi-Banner
     1           Check for DietPi update and in case apply noninteractively
                     Else, if CONFIG_CHECK_APT_UPDATES=2 is set, check for and apply APT updates noninteractively
     2           Check for DietPi update and in case store result to /run/dietpi/.update_available to be used by DietPi-Banner
-	        		Else, if CONFIG_CHECK_APT_UPDATES=[12] is set, check for APT updates 
+                    Else, if CONFIG_CHECK_APT_UPDATES=[12] is set, check for APT updates 
                     and store results to /run/dietpi/.apt_updates to be used by DietPi-Banner
-	-1          Like "1" but internally reduce subversion by 1 to reapply the last update, e.g. to apply latest dev branch changes
+    -1          Like "1" but internally reduce subversion by 1 to reapply the last update, e.g. to apply latest dev branch changes
 ```
 
 ---
@@ -60,7 +60,7 @@ Beside the interactive cleaning via `dietpi-cleaner`, there is the option of the
 ```console
 Usage: dietpi-cleaner [<options>]
 Available options:
-    <empty>	    Interactive menu to handle cleaning tasks
+    <empty>     Interactive menu to handle cleaning tasks
     1           Run Enabled cleaners
     2           Run All cleaners
 ```
@@ -69,15 +69,15 @@ Available options:
 
 ## DietPi log clear
 
-Clear log files in `/var/log/`. 
+Clear log files in `/var/log/`.
 
 DietPi-LogClear only has the option of the shell command line:
 
 ```console
 Usage: dietpi-logclear [<options>]
 Available options:
-    0		    Update current log files data to "$FP_BACKUP/*. Then clear contents
-	1		    Clear contents of all logs in $FP_LOG
+    0           Update current log files data to "$FP_BACKUP/*. Then clear contents
+	1           Clear contents of all logs in $FP_LOG
 	2           Delete all logs in $FP_LOG and backups
 ```
 
@@ -247,7 +247,7 @@ Beside the interactive backup/restore via `dietpi-backup`, there is the option o
 ```console
 Usage: dietpi-backup [<command> [<path>]]
 Available commands:
-    <empty>	    Interactive menu to handle backup and restore tasks
+    <empty>     Interactive menu to handle backup and restore tasks
     1           Execute backup procedure noninteractively
     -1          Execute restore procedure noninteractively
 
@@ -286,7 +286,7 @@ This setting gives these options:
 
 `Dietpi-Sync` gives the option of an automatic daily sync operation (controlled via the Linux `cron` mechanism) by enabling the "Daily Sync" option.
 
-**Daily sync execution time**
+#### Daily sync execution time
 
 The automatic daily sync is controlled via the Linux `cron` mechanism. Setting a different starting time can be an option, e.g. if you have several sync clients syncing up to the same storage (data server): Shifting the synchronization starting time of these systems may reduce temporary overload of the data server by avoiding concurrent access to the storage.
 
@@ -353,7 +353,7 @@ Beside the interactive sync via `dietpi-sync`, there is the option of the shell 
 ```console
 Usage: dietpi-sync [<command>]
 Available commands:
-    <empty>	    Interactive menu to handle backup and restore tasks
+    <empty>     Interactive menu to handle backup and restore tasks
     1           Execute sync procedure noninteractively
 ```
 
