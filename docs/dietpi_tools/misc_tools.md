@@ -42,7 +42,7 @@ Beside the interactive setting via `dietpi-banner`, there is the option of the s
 ```console
 Usage: dietpi-banner [<command>]
 Available commands:
-    <empty>	    Interactive menu to select banner entries
+    <empty>     Interactive menu to select banner entries
     0           Top section + LAN IP
     1           Clear terminal + top section + chosen entries
 ```

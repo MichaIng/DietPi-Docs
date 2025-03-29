@@ -98,8 +98,8 @@ Beside the interactive configuration via `dietpi-config`, there is the option of
 ```console
 Usage: dietpi-config [<targetmenu_id>]
 Available values for <targetmenu_id>:
-    1		    Open menu "Display Options"
-    2   		Open menu "Display Options" -> "Display Resolution"
+    1           Open menu "Display Options"
+    2           Open menu "Display Options" -> "Display Resolution"
     3           Open menu "Advanced Options"
     4           Open menu "Performance Options"
     5           Open menu "Security Options"
@@ -287,12 +287,12 @@ Beside the interactive drive management via `dietpi-drive_manager`, there is the
 ```console
 Usage: dietpi-drive_manager [<command>]
 Available commands:
-  <empty>		Interactive menu
-  1        		Select an available drive mount which is then saved to: 
+  <empty>       Interactive menu
+  1             Select an available drive mount which is then saved to: 
                 /tmp/dietpi-drive_manager_selmnt
-  3        		Scan for new drives and re-create fstab non-interactively, 
+  3             Scan for new drives and re-create fstab non-interactively, 
                 then exit
-  4	        	Reset /etc/fstab with currently attached local drives 
+  4             Reset /etc/fstab with currently attached local drives 
                 and /tmp + /var/log tmpfs mount 
                 (command shall only used internally by DietPi-Installer)
 ```
@@ -316,11 +316,11 @@ Beside the interactive file management via `dietpi-explorer`, there is the optio
 ```console
 Usage: dietpi-explorer [<command>]
 Available commands:
-    <empty>		Interactive menu
-    1		    Select a file/dir mode
+    <empty>     Interactive menu
+    1           Select a file/dir mode
                 - Return result for other applications to /tmp/.dietpi-explorer_selected_location
                 - Return an error code when no selection is given
-	1 <path>	Select a file/dir mode, start from <path>
+	1 <path>    Select a file/dir mode, start from <path>
 
 ```
 
@@ -343,7 +343,7 @@ Beside the interactive autostart selection via `dietpi-autostart`, there is the 
 ```console
 Usage: dietpi-autostart [<index>]
 Available values of <index>:
-    <empty>		Interactive menu
+    <empty>     Interactive menu
     <not empty> Apply autostart <index> non-interactively
 ```
 
@@ -384,44 +384,44 @@ Beside the interactive handling via `dietpi-services`, there is the option of th
 ```console
 Usage: dietpi-services [<command> [<service_name>]]
 Available commands:
-    <empty>	    Interactive menu
-    status		Print service status info
-    start		Start service <service_name>
-    stop		Stop service <service_name>
-    restart		Restart service <service_name>
-    enable		Autostart service on boot <service_name>
-    disable		Do not autostart service on boot <service_name>
-    mask		Mask service to prevent its usage entirely <service_name>
-    unmask		Unmask service to allow its usage <service_name>
+    <empty>     Interactive menu
+    status      Print service status info
+    start       Start service <service_name>
+    stop        Stop service <service_name>
+    restart     Restart service <service_name>
+    enable      Autostart service on boot <service_name>
+    disable     Do not autostart service on boot <service_name>
+    mask        Mask service to prevent its usage entirely <service_name>
+    unmask      Unmask service to allow its usage <service_name>
 
 Available service_names:
     <name>      Apply command to a single available systemd or sysvinit
                 service <name> (e.g. "cron")
-    <empty>		Apply command to all available services known to DietPi
-			    - Masked services are skipped unless command is "unmask".
-			    - Disabled services are skipped if command is "restart".
-  			    - Services required for network or shell sessions are skipped.
-			    - You can include/exclude services by editing the following file:
-			      /boot/dietpi/.dietpi-services_include_exclude
+    <empty>     Apply command to all available services known to DietPi
+                - Masked services are skipped unless command is "unmask".
+                - Disabled services are skipped if command is "restart".
+                - Services required for network or shell sessions are skipped.
+                - You can include/exclude services by editing the following file:
+                  /boot/dietpi/.dietpi-services_include_exclude
 ```
 
 Example:
 
-```
+```console
 root@dietpi:~# dietpi-services status
 
  DietPi-Services
 ─────────────────────────────────────────────────────
  Mode: status 
 
-[  OK  ] DietPi-Services | cron			active (running) since Mon 2025-02-10 05:06:57 CET; 7h ago
-[  OK  ] DietPi-Services | ssh			active (running) since Fri 2025-01-17 15:03:59 CET; 3 weeks 2 days ago
-[ INFO ] DietPi-Services | dietpi-vpn		inactive (dead)
-[ INFO ] DietPi-Services | dietpi-cloudshell	inactive (dead)
-[  OK  ] DietPi-Services | dietpi-ramlog	active (exited) since Fri 2025-01-17 15:04:00 CET; 3 weeks 2 days ago
-[  OK  ] DietPi-Services | dietpi-preboot	active (exited) since Fri 2025-01-17 15:04:00 CET; 3 weeks 2 days ago
-[  OK  ] DietPi-Services | dietpi-postboot	active (exited) since Fri 2025-01-17 15:03:59 CET; 3 weeks 2 days ago
-[ INFO ] DietPi-Services | dietpi-wifi-monitor	inactive (dead)
+[  OK  ] DietPi-Services | cron                 active (running) since Mon 2025-02-10 05:06:57 CET; 7h ago
+[  OK  ] DietPi-Services | ssh                  active (running) since Fri 2025-01-17 15:03:59 CET; 3 weeks 2 days ago
+[ INFO ] DietPi-Services | dietpi-vpn           inactive (dead)
+[ INFO ] DietPi-Services | dietpi-cloudshell    inactive (dead)
+[  OK  ] DietPi-Services | dietpi-ramlog        active (exited) since Fri 2025-01-17 15:04:00 CET; 3 weeks 2 days ago
+[  OK  ] DietPi-Services | dietpi-preboot       active (exited) since Fri 2025-01-17 15:04:00 CET; 3 weeks 2 days ago
+[  OK  ] DietPi-Services | dietpi-postboot      active (exited) since Fri 2025-01-17 15:03:59 CET; 3 weeks 2 days ago
+[ INFO ] DietPi-Services | dietpi-wifi-monitor  inactive (dead)
 root@dietpi:~#
 ```
 
@@ -485,13 +485,13 @@ dietpi-display
 
 xxx CLI options?
 
-```
-		'--display'|'-d') shift; DISPLAY=$1;;
-		'--mode'|'-m') shift; aMODE[$DISPLAY]=$1;;
-		'--rotation'|'-r') shift; aROTATION[$DISPLAY]=$1;;
-		'--disable'|'-D') aENABLED[$DISPLAY]='disabled';;
-		'--enable'|'-e') aENABLED[$DISPLAY]='enabled';;
-		'apply'|'a') COMMAND='apply';;
+```console
+        '--display'|'-d') shift; DISPLAY=$1;;
+        '--mode'|'-m') shift; aMODE[$DISPLAY]=$1;;
+        '--rotation'|'-r') shift; aROTATION[$DISPLAY]=$1;;
+        '--disable'|'-D') aENABLED[$DISPLAY]='disabled';;
+        '--enable'|'-e') aENABLED[$DISPLAY]='enabled';;
+        'apply'|'a') COMMAND='apply';;
 ```
 
 ---
@@ -600,7 +600,7 @@ Beside the interactive setting via `dietpi-survey`, there is the option of the s
 ```console
 Usage: dietpi-survey [<command>]
 Available commands:
-    <empty>	    Interactive menu to opt in or out
+    <empty>     Interactive menu to opt in or out
     1           Send survey data or empty file, based on previous user choice
 ```
 
