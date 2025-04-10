@@ -577,6 +577,7 @@ scalable
 SCP
 scroller
 SCGI
+scriptable
 scrollback
 SDK
 SDL
