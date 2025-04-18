@@ -242,6 +242,10 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Dropbear - Lightweight SSH Server**](software/ssh.md#dropbear)
 - [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](software/ssh.md#openssh)
 
+## [System software](software/system_software.md)
+
+- [**fish - the friendly interactive shell**](software/system_software.md#fish)
+
 ## [System Security](software/system_security.md)
 
 - [**Let’s Encrypt - Enable HTTPS / SSL**](software/system_security.md#lets-encrypt)

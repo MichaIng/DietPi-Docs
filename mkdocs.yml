@@ -133,6 +133,7 @@ nav:
   - Remote Desktop & Remote Access: software/remote_desktop.md
   - Social & Search: software/social.md
   - SSH Servers: software/ssh.md
+  - System software: software/system_software.md
   - System Security: software/system_security.md
   - System Stats & Management: software/system_stats.md
   - VPN: software/vpn.md
@@ -145,6 +146,7 @@ nav:
   - Miscellaneous Tools: dietpi_tools/misc_tools.md
 - RELEASES:
   - Overview: releases.md
+  - v9.12 April 2025: releases/v9_12.md
   - v9.11 February 2025, vol 2: releases/v9_11.md
   - v9.10 February 2025: releases/v9_10.md
   - v9.9 December 2024: releases/v9_9.md

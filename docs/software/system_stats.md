@@ -247,7 +247,7 @@ Midnight Commander is a full-screen text mode application running on a regular c
 ***
 
 Official website: <https://midnight-commander.org/>  
-Official documentation: <https://midnight-commander.org/wiki/doc>
+Official documentation: <https://midnight-commander.org/#documentation>
 
 ## Linux Dash
 
