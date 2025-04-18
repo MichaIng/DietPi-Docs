@@ -148,7 +148,6 @@ DuckDNS
 DVFS
 DXX
 Dynu
-easter
 ebook
 ebooks
 EDL
