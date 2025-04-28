@@ -1649,11 +1649,11 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
 === "Update to latest version"
 
-    Code: Select all
+    Since Jellyfin is installed as APT packages, it can be updated with these commands:
 
     ```sh
     apt update
-    apt install jellyfin jellyfin-ffmpeg5
+    apt upgrade
     ```
 
 ***
