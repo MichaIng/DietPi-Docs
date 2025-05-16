@@ -915,7 +915,7 @@ Do all your HTPC tasks without using 5 different interfaces!
 
 ## youtube-dl
 
-`youtube-dl` is a command-line program to download videos from YouTube.com and many more sites. See here the full list of supported websites - [link](https://ytdl-org.github.io/youtube-dl/supportedsites.html).
+`youtube-dl` is a command-line program to download videos from YouTube.com and many more sites. See here the full list of supported websites: <https://ytdl-org.github.io/youtube-dl/supportedsites.html>
 
 === "Quick start"
 
@@ -925,11 +925,11 @@ Do all your HTPC tasks without using 5 different interfaces!
     youtube-dl [OPTIONS] URL [URL...]
     ```
 
-    Read the documentation for more details on the options used - [link](https://github.com/ytdl-org/youtube-dl).
+    Read the documentation for more details on the options used: <https://github.com/ytdl-org/youtube-dl#options>
 
 ***
 
 Website: <https://ytdl-org.github.io/youtube-dl/>  
-Documentation: <https://github.com/ytdl-org/youtube-dl/blob/master/README.md#readme>
+Documentation: <https://github.com/ytdl-org/youtube-dl/blob/master/README.md>
 
 [Return to the **Optimised Software list**](../software.md)
