@@ -7,7 +7,11 @@ description: The social media channels maintained by the DietPi project team whe
 
 ## DietPi on Twitter
 
-DietPi announcements are done via Twitter: <https://twitter.com/DietPi_>
+DietPi announcements are done via X: <https://x.com/DietPi_>
+
+## DietPi on Bluesky
+
+DietPi announcements are done via Bluesky: <https://bsky.app/profile/dietpi.com>
 
 ## DietPi on Facebook
 

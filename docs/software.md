@@ -145,8 +145,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ## [Hardware Projects](software/hardware_projects.md)
 
-- [**Google AIY - Voice kit "Ok, Google"!**](software/hardware_projects.md#google-aiy)
-- [**Mycroft AI - Open source voice assistant**](software/hardware_projects.md#mycroft-ai)
 - [**PiJuice - PiSupply UPS/battery power system**](software/hardware_projects.md#pijuice)
 - [**RPi.GPIO - GPIO Interface library for RPi (python)**](software/hardware_projects.md#rpigpio)
 - [**WiringPi - GPIO Interface library**](software/hardware_projects.md#wiringpi)

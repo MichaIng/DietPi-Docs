@@ -7,8 +7,6 @@ description: Description of DietPi software options related to hardware
 
 ## Overview
 
-- [**Google AIY - Voice kit "Ok, Google"!**](#google-aiy)
-- [**Mycroft AI - Open source voice assistant**](#mycroft-ai)
 - [**PiJuice - PiSupply UPS/battery power system**](#pijuice)
 - [**RPi.GPIO - GPIO Interface library for RPi (python)**](#rpigpio)
 - [**WiringPi - GPIO Interface library**](#wiringpi)
@@ -34,93 +32,6 @@ description: Description of DietPi software options related to hardware
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
 [Return to the **Optimised Software list**](../software.md)
-
-## Google AIY
-
-"Ok Google. Who is your daddy?"
-
-???+ note "Our installation is highly optimized and lightweight"
-
-    We do not install a desktop environment. User will be required to setup Google API and keys on another system (please see first run setup below).  
-    We highly recommend SSH to allow for a quick setup of Google API and device link.  
-    We also recommend one of [DietPi file servers](file_servers.md), for easy transfer of `assistant.json`, generated during Google API setup.
-
-![Google AIY logo](../assets/images/dietpi-software-hardwareprojects-googleaiy.jpg){: width="400" height="239" loading="lazy"}
-
-=== "First run setup"
-
-    Once DietPi has installed the Google AIY Voice Kit, and rebooted, you will need to setup your Google API account and link the device.
-
-    - Follow the link below, to setup Google API and download client keys, required to enable the speech API:  
-      <https://aiyprojects.withgoogle.com/voice#google-assistant--get-credentials>  
-      Remark: When setting up the activity controls, ensure you also enable "Include Chrome browsing history and activity from websites and apps that use Google services", else she will not function ;).
-    - Make sure you have one of [DietPi's file servers](file_servers.md) installed.  
-      Once completed, download the `client_secret.json` and save it to:
-        - If using SSH: `/mnt/dietpi_userdata/voice-recognizer-raspi/assistant.json`
-        - If using file server: `voice-recognizer-raspi/assistant.json`
-    - Run the command below, then follow the onscreen link/instructions to setup verification:
-
-        ```sh
-        cd /mnt/dietpi_userdata/voice-recognizer-raspi
-        sudo -u dietpi env/bin/python3 -u src/main.py
-        ```
-
-    - Once the "Ok, Google" prompt appears, test the device. Then you can terminate the program with ++ctrl+c++ and restart the service:
-
-      ```sh
-      systemctl restart voice-recognizer
-      ```
-
-=== "Installation notes"
-
-    The Voice Kit software is located at:
-
-      ```
-      /mnt/dietpi_userdata/voice-recognizer-raspi
-      ```
-
-=== "Check service status"
-
-    To check the status of the service run:
-
-    ```sh
-    systemctl status voice-recognizer
-    ```
-
-    ![htop screenshot showing Google AIY Voice Kit service running](../assets/images/dietpi-software-hardwareprojects-googleaiy-htop.png){: width="400" height="238" loading="lazy"}
-
-## Mycroft AI
-
-Mycroft AI is a free and open source voice assistant.
-
-![Mycroft AI logo](../assets/images/dietpi-software-hardwareprojects-mycroftai.png){: width="200" height="33" loading="lazy"}
-
-!!! warning "The company behind Mycroft AI is out of business"
-
-    The below setup method hence does not work anymore, all servers have been shut down. OpenVoiceOS and Neon AI forked it and we will try to migrate to one of these. Until then, our Mycroft AI software option is not functional. We are happy for anyone helping with the migration. More information can be found on Reddit: <https://www.reddit.com/r/Mycroftai/comments/1av7t0o/mycroftai_website_is_down_anyone_have_an_update/>
-
-=== "Interactive install"
-
-    1. Branch selection: For inexperienced users we recommend the master branch as well: ++y++
-    2. Auto updates: It slows down the the startup process a bit, but it anyway takes a while to load all skills, so we recommend this as well: ++y++
-    3. Add Mycroft commands to PATH: Chose *NO* here, since the installer runs as user `mycroft`, which is no login user, which is why this has no effect: ++n++
-    4. Check code before submitting: If you are an official Mycroft developer, choose ++y++, else: ++n++
-
-=== "Initial setup"
-
-    1. If you did no reboot after install, load Mycroft commands to current shell session: `. /etc/bashrc.d/mycroft.sh`
-    2. Start CLI client: `mycroft-cli-client`
-    3. You should see and at best hear the invitation to pair your device, e.g.: `PairingSkill - INFO - Pairing code: XXYYZZ`
-    4. Visit **REMOVED** (EDIT: Link is permanently down) to start pairing and configuring your device and skills.
-
-=== "Build Mimic for offline TTS (British Male) support (optional)""
-
-    Remark: this requires about 3 GiB of RAM and takes a while, so assure that you have enough memory (4 GiB recommended), in case increase your swap file size and grab yourself a coffee.
-
-    ```sh
-    cd /mnt/dietpi_userdata/mycroft-core
-    sudo -u mycroft ./scripts/install-mimic.sh $(nproc)
-    ```
 
 ## PiJuice
 
