@@ -7,7 +7,6 @@ description: Description of DietPi software options related to hardware
 
 ## Overview
 
-- [**Mycroft AI - Open source voice assistant**](#mycroft-ai)
 - [**PiJuice - PiSupply UPS/battery power system**](#pijuice)
 - [**RPi.GPIO - GPIO Interface library for RPi (python)**](#rpigpio)
 - [**WiringPi - GPIO Interface library**](#wiringpi)
@@ -33,39 +32,6 @@ description: Description of DietPi software options related to hardware
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
 [Return to the **Optimised Software list**](../software.md)
-
-## Mycroft AI
-
-Mycroft AI is a free and open source voice assistant.
-
-![Mycroft AI logo](../assets/images/dietpi-software-hardwareprojects-mycroftai.png){: width="200" height="33" loading="lazy"}
-
-!!! warning "The company behind Mycroft AI is out of business"
-
-    The below setup method hence does not work anymore, all servers have been shut down. OpenVoiceOS and Neon AI forked it and we will try to migrate to one of these. Until then, our Mycroft AI software option is not functional. We are happy for anyone helping with the migration. More information can be found on Reddit: <https://www.reddit.com/r/Mycroftai/comments/1av7t0o/mycroftai_website_is_down_anyone_have_an_update/>
-
-=== "Interactive install"
-
-    1. Branch selection: For inexperienced users we recommend the master branch as well: ++y++
-    2. Auto updates: It slows down the the startup process a bit, but it anyway takes a while to load all skills, so we recommend this as well: ++y++
-    3. Add Mycroft commands to PATH: Chose *NO* here, since the installer runs as user `mycroft`, which is no login user, which is why this has no effect: ++n++
-    4. Check code before submitting: If you are an official Mycroft developer, choose ++y++, else: ++n++
-
-=== "Initial setup"
-
-    1. If you did no reboot after install, load Mycroft commands to current shell session: `. /etc/bashrc.d/mycroft.sh`
-    2. Start CLI client: `mycroft-cli-client`
-    3. You should see and at best hear the invitation to pair your device, e.g.: `PairingSkill - INFO - Pairing code: XXYYZZ`
-    4. Visit **REMOVED** (EDIT: Link is permanently down) to start pairing and configuring your device and skills.
-
-=== "Build Mimic for offline TTS (British Male) support (optional)""
-
-    Remark: this requires about 3 GiB of RAM and takes a while, so assure that you have enough memory (4 GiB recommended), in case increase your swap file size and grab yourself a coffee.
-
-    ```sh
-    cd /mnt/dietpi_userdata/mycroft-core
-    sudo -u mycroft ./scripts/install-mimic.sh $(nproc)
-    ```
 
 ## PiJuice
 
