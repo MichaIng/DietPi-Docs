@@ -58,6 +58,7 @@ Bitwarden
 blazingly
 blocklist
 blocklists
+Bluesky
 Bluetooth
 Blynk
 Bonjour
