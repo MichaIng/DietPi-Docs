@@ -28,7 +28,7 @@ jobs:
       uses: actions/setup-python@v5
       with:
         # Match version on dietpi.com server
-        python-version: '3.13.1'
+        python-version: '3.13.3'
     - name: Install MkDocs
       id: mkdocs
       if: always() && steps.python.outcome == 'success'
@@ -54,23 +54,35 @@ jobs:
       # Skip on push events into master
       if: always() && steps.build.outcome == 'success' && ! endsWith(github.ref, '/master')
       run: |
-        # Workaround for broken local link checks in v0.17.0: https://github.com/lycheeverse/lychee/issues/1574
-        #curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
-        curl -sSfL 'https://github.com/lycheeverse/lychee/releases/download/lychee-v0.16.1/lychee-x86_64-unknown-linux-musl.tar.gz' -o lychee.tar.gz
+        curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
         tar xf lychee.tar.gz
+    - name: Restore lychee cache
+      uses: actions/cache/restore@v4
+      if: always() && steps.lychee.outcome == 'success'
+      with:
+        path: .lycheecache
+        key: lycheecache-${{ github.run_id }}
+        restore-keys: lycheecache-
     - name: Run lychee to check README and HTML files
       if: always() && steps.lychee.outcome == 'success'
       # "429 Too Many Requests" on GitHub despite token
       # Exclude URLs for newly added Markdown files as well as raw view and edit GitHub URLs for all existing Markdown files
       # parallels.com|chromewebstore.google.com: Cloudflare lets client enter redirect loop, if it does not send a cookie, set in response.
-      # raspberrypi.com|www.reddit.com|superuser.com|twitter.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
+      # raspberrypi.com|www.reddit.com|superuser.com|x.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
       # www.wireguard.com: Regularly Timeout
       # www.domoticz.com/forum.odroid.com: Protected by Cloudflare CAPTCHA
       # github.com/MichaIng/: Even with GITHUB_TOKEN or a PAT, checks run into 403 and timeouts. Hence skip checks on own repositories, which we expect to remain valid.
       # www.duckdns.org/: Regular "Network error: error sending request for url"
+      # https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902: 403
       run: |
         git fetch --depth=1 origin master
         while read -r line; do exclude="$exclude|dietpi.com/${line%.md}/"; done < <(git diff --name-only --diff-filter=A origin/master docs | grep '.md$')
         while read -r line; do exclude="$exclude|github.com/MichaIng/DietPi-Docs/(raw|edit)/dev/$line"; done < <(find docs -type f -name '*.md')
         #curl -sSfH 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' -X GET 'https://api.github.com/rate_limit'
-        ./lychee -En --require-https --cache --include-fragments --exclude '^(http://wiringpi.com/$|https://(github.com/MichaIng/|www.duckdns.org/$|www.wireguard.com/$|twitter.com/DietPi_$|www.patreon.com/DietPi$|www.linux-kvm.org/$|www.domoticz.com/|forum.odroid.com/|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details|www.kickstarter.com|theunarchiver.com/$|www.parallels.com/|(www|forums).raspberrypi.com/|www.reddit.com/|superuser.com|chromewebstore.google.com'"$exclude"'))' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' -b build README.md 'build/**/*.html'
+        ./lychee -En --require-https --cache --max-cache-age 2d --cache-exclude-status '201..600' --include-fragments --exclude '^(http://wiringpi.com/$|https://(github.com/MichaIng/|go.nordvpn.net/aff_c?|www.duckdns.org/$|www.wireguard.com/$|x.com/DietPi_$|www.patreon.com/DietPi$|www.linux-kvm.org/$|www.domoticz.com/|forum.odroid.com/|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details|www.kickstarter.com|theunarchiver.com/$|www.parallels.com/|(www|forums).raspberrypi.com/|www.reddit.com/|superuser.com|chromewebstore.google.com'"$exclude"'))' -a 429 --github-token '${{ secrets.GITHUB_TOKEN }}' --root-dir "$PWD/build" README.md 'build/**/*.html'
+    - name: Save lychee cache
+      uses: actions/cache/save@v4
+      if: always() && steps.lychee.outcome == 'success'
+      with:
+        path: .lycheecache
+        key: lycheecache-${{ github.run_id }}

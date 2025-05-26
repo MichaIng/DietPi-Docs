@@ -89,7 +89,7 @@ The Samba server lets you share files on your DietPi system with ease based on t
     The access to the Samba file server is achieved as follows:
 
     - Address = `\\192.168.0.100\dietpi`
-    - Username = `dietpi`
+    - Username = `samba`
     - Password = `<your global application password>` (default: `dietpi`)
 
 === "Change the Samba password"
@@ -97,7 +97,7 @@ The Samba server lets you share files on your DietPi system with ease based on t
     The Samba password can be changed with
 
     ```sh
-    smbpasswd -a dietpi
+    smbpasswd -a samba
     ```
 
     In case of further users added to the system (e.g. via `adduser smbuser`), they need to be added to the group `sambashare` (e.g. via `adduser smbuser sambashare`) to be able to access the Samba exported shares.  

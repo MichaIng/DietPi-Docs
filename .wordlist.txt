@@ -58,11 +58,13 @@ Bitwarden
 blazingly
 blocklist
 blocklists
+Bluesky
 Bluetooth
 Blynk
 Bonjour
 bootable
 bootloader
+bootloaders
 BPF
 BruteFIR
 BSLv
@@ -166,6 +168,7 @@ EQ
 ESXi
 executables
 exFAT
+extlinux
 FS
 facto
 FAHClient
@@ -505,6 +508,7 @@ PSU
 PuTTY
 PVM
 PVR
+PWM
 Pycharm
 Pydev
 Pydio

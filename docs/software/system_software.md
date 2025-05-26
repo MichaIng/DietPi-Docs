@@ -31,7 +31,7 @@ fish ( **f**`riendly` **i**`nteractive` **sh**`ell`) is a smart and user-friendl
 
 ![fish logo](../assets/images/dietpi-software-system-fish.png "fish shell logo"){: width="256" height="256" loading="lazy"}
 
-!!! cite "*Logo by `Axel Liljencrantz`, [GitHub Fish shell](https://github.com/fish-shell/fish-shell/blob/master/doc_src/ascii_fish.png)*"
+!!! cite "*Logo by `Axel Liljencrantz`, [GitHub Fish shell](https://github.com/fish-shell/fish-shell/blob/master/doc_src/python_docs_theme/static/fish.png)*"
 
 fish is a shell with nice features like e.g.
 
