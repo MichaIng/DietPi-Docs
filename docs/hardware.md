@@ -651,7 +651,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
             <tr>
                 <td><a class="table" href=""><strong>StarFive VisionFive 2 (testing)</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_VisionFive2-RISC-V-Trixie.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VisionFive2-RISC-V-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -676,7 +676,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
             <tr>
                 <td><a class="table" href=""><strong>PINE64 Star64 (testing)</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_Star64-RISC-V-Trixie.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Star64-RISC-V-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
