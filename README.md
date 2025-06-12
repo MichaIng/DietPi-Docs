@@ -22,8 +22,8 @@ It uses extended Markdown, as implemented by [MkDocs](https://www.mkdocs.org/).
 
 ## Building the documentation
 
-- Install/update dependencies: `pip3 install -Ur requirements.txt`
-- From the root directory, run: `mkdocs serve`
+- Install/update dependencies: `python3 -m pip install -Ur requirements.txt`
+- From the root directory, run: `python3 -m mkdocs serve`
 
 It builds the static HTML pages into a temporary directory and starts a local web server at `http://localhost:8000`. If you have troubles accessing the MkDocs website, you could also listen on a specific IP address or all IP addresses, e.g. `mkdocs serve -a 0.0.0.0:8000`.
 
