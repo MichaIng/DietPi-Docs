@@ -608,6 +608,12 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>Orange Pi CM5</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiCM5-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>Orange Pi Zero 2W</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero2W-ARMv8-Bookworm.img.xz">DietPi image</a>
