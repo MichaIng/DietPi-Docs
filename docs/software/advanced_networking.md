@@ -258,7 +258,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
 === "Quick start"
 
-    After installation, you need to manually modify the `haproxy.cfg` to best fit your network requirements. Check the configuration manual [here](https://www.haproxy.org/#docs).
+    After installation, you need to manually modify the `haproxy.cfg` to best fit your network requirements. Check the configuration manual [here](https://docs.haproxy.org/).
 
     ```sh
     systemctl stop haproxy

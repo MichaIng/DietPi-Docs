@@ -142,6 +142,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Box64 - x86_64 userspace emulation for ARMv8**](software/gaming.md#box64)
 - [**Moonlight (CLI) - CLI game streaming client for Sunshine and NVIDIA GameStream**](software/gaming.md#moonlight-cli)
 - [**Moonlight (GUI) - GUI game streaming client for Sunshine and NVIDIA GameStream**](software/gaming.md#moonlight-gui)
+- [**GZDoom - Modder-friendly OpenGL and Vulkan source port based on the DOOM engine**](software/gaming.md#gzdoom)
 
 ## [Hardware Projects](software/hardware_projects.md)
 

@@ -10,7 +10,7 @@ This chapter contains several documents describing the usage of DietPi.
 
 Debian Bullseye has been released on August 14, 2021, and Debian Stretch has become "oldoldstable". Regular support for Debian Stretch ended last year and LTS support will end in 2022. We hence highly recommend to upgrade to the new Debian Bullseye.
 
-If you are fine with flashing a new image, follow the brief instructions on our [blog post](https://dietpi.com/blog/?p=811#2.1-fresh-install) to cover common migration steps.
+If you are fine with flashing a new image, follow the brief instructions on our [blog post](https://dietpi.com/blog/?p=811#fresh-install) to cover common migration steps.
 
 If too much customisation has been done without having it well documented or scripted, an upgrade of the running system may be easier. Run the below commands step by step to perform the upgrade from Stretch to Buster in a first step. If you face any errors and are unsure how to resolve, please contact us via our [community forum](https://dietpi.com/forum/c/troubleshooting/10) or [GitHub issue](https://github.com/MichaIng/DietPi/issues) to find help.
 
@@ -56,7 +56,7 @@ dietpi-software reinstall 130
 
 You may need to reinstall other Python-based software titles as well and modules manually installed with the `pip3` command. Your data and settings are preserved.
 
-Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#2.2-manual-upgrade>
+Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#manual-upgrade>
 
 ---
 
@@ -162,7 +162,7 @@ To achieve the basic network configuration the following options shall be taken 
 Many of the system options can be set with the automated installation and can be also changed afterwards via `dietpi-config`:
 
 - Basic settings: `AUTO_SETUP_NET_HOSTNAME`, `AUTO_SETUP_GLOBAL_PASSWORD`
-- Localization: `AUTO_SETUP_LOCALE`, `AUTO_SETUP_KEYBOARD_LAYOUT`, [`AUTO_SETUP_TIMEZONE`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#Time_Zone_abbreviations)
+- Localization: `AUTO_SETUP_LOCALE`, `AUTO_SETUP_KEYBOARD_LAYOUT`, [`AUTO_SETUP_TIMEZONE`](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#Time_zone_abbreviations)
 - Autostart: `AUTO_SETUP_AUTOSTART_TARGET_INDEX`, `AUTO_SETUP_AUTOSTART_LOGIN_USER`
 - Overclocking: `CONFIG_CPU_GOVERNOR`, `CONFIG_CPU_MAX_FREQ`, `CONFIG_CPU_MIN_FREQ`, etc.
 - Auto-updating: `CONFIG_CHECK_DIETPI_UPDATES`, `CONFIG_CHECK_APT_UPDATES`
