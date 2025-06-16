@@ -629,7 +629,9 @@ GZDoom is a modder-friendly OpenGL and Vulkan source port based on the DOOM engi
 
 === "Package info"
 
-    Our `gzdoom` APT package ships with an own build of ZMusic, GZDoom's separated stand-alone music system library, as well as a tailored build of the SDL2 library. If you face problems or miss features related to video, audio, or input devices, feel free to reach out.
+    Our `gzdoom` APT package ships with an own build of ZMusic, GZDoom's separated stand-alone music system library, as well as a tailored build of the SDL2 library. It has been compiled with Vulkan renderer support, additionally OpenGLES 2.0 for ARM and RISC-V systems, and full OpenGL for x86_64.
+
+    If you face problems or miss features related to video, audio, or input devices, feel free to reach out.
 
     The build script can be found here: <https://github.com/MichaIng/DietPi/blob/dev/.build/software/gzdoom/build.bash>
 
@@ -638,7 +640,7 @@ GZDoom is a modder-friendly OpenGL and Vulkan source port based on the DOOM engi
     Since GZDoom is installed from our APT repository, updates will be offered via APT:
 
     ```sh
-    apt Update
+    apt update
     apt install gzdoom
     ```
 
