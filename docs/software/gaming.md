@@ -19,6 +19,7 @@ description: Description of DietPi software options related to games and userspa
 - [**Box64 - x86_64 userspace emulation for ARMv8**](#box64)
 - [**Moonlight (CLI) - CLI game streaming client for Sunshine and NVIDIA GameStream**](#moonlight-cli)
 - [**Moonlight (GUI) - GUI game streaming client for Sunshine and NVIDIA GameStream**](#moonlight-gui)
+- [**GZDoom - Modder-friendly OpenGL and Vulkan source port based on the DOOM engine**](gaming.md#gzdoom)
 
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
@@ -603,5 +604,52 @@ Official website: <https://moonlight-stream.org/>
 Official documentation: <https://github.com/moonlight-stream/moonlight-docs/wiki/Setup-Guide>  
 Source code: <https://github.com/moonlight-stream/moonlight-qt>  
 License: [GPLv3](https://github.com/moonlight-stream/moonlight-qt/blob/master/LICENSE)
+
+## GZDoom
+
+GZDoom is a modder-friendly OpenGL and Vulkan source port based on the DOOM engine.
+
+![GZDoom logo](../assets/images/gzdoom-logo.png){: width="256" height="256" loading="lazy"}
+
+=== "Quick start"
+
+    To play Doom, you need to obtain an actual Doom game in IWAD format. Aside of the official commercial Doom and Doom II, there are also free ports, like the [Freedoom](https://freedoom.github.io/) project, which aims to be compatible with most custom levels, music, graphics and other mods made for the original Doom and Doom II games.
+
+    An overview of available and supported IWADs, and where to obtain them, can be found here: <https://zdoom.org/wiki/IWAD>  
+    For GZDoom to find the IWADs, place them into the current directory, or one of the directories defined in `~/.config/gzdoom/gzdoom.ini`, e.g. `~/.config/gzdoom/`.
+
+    From console, run the following command to start GZDoom:
+
+    ```sh
+    gzdoom
+    ```
+
+    Here an overview of optional command-line parameters: <https://zdoom.org/wiki/Command_line_parameters>  
+    By default, it will start a launcher to select a game/IWAD with some options.
+
+=== "Package info"
+
+    Our `gzdoom` APT package ships with an own build of ZMusic, GZDoom's separated stand-alone music system library, as well as a tailored build of the SDL2 library. It has been compiled with Vulkan renderer support, additionally OpenGLES 2.0 for ARM and RISC-V systems, and full OpenGL for x86_64.
+
+    If you face problems or miss features related to video, audio, or input devices, feel free to reach out.
+
+    The build script can be found here: <https://github.com/MichaIng/DietPi/blob/dev/.build/software/gzdoom/build.bash>
+
+=== "Update"
+
+    Since GZDoom is installed from our APT repository, updates will be offered via APT:
+
+    ```sh
+    apt update
+    apt install gzdoom
+    ```
+
+***
+
+Official website: <https://zdoom.org/index>  
+Official documentation: <https://zdoom.org/wiki/Main_Page>  
+Official forum: <https://forum.zdoom.org/>  
+Source code: <https://github.com/ZDoom/gzdoom>  
+License: [GPLv3](https://github.com/ZDoom/gzdoom/blob/master/README.md)
 
 [Return to the **Optimised Software list**](../software.md)

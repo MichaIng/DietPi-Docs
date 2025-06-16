@@ -81,7 +81,7 @@ The standard, well known GPIO interface library for the RPi (Python). Bring out 
 
 ***
 
-Website: <https://pypi.python.org/pypi/RPi.GPIO>
+Website: <https://pypi.org/project/RPi.GPIO/>
 
 ## WiringPi
 

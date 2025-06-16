@@ -578,7 +578,7 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
         </thead>
         <tbody>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi 5</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi 5/5B</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
@@ -590,15 +590,27 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>Orange Pi 5 Pro</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Pro-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>Orange Pi 5 Max</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Max-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi 5 Pro</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi 5 Ultra</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Pro-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Ultra-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi CM5</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiCM5-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -651,7 +663,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
             <tr>
                 <td><a class="table" href=""><strong>StarFive VisionFive 2 (testing)</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_VisionFive2-RISC-V-Trixie.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VisionFive2-RISC-V-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -676,7 +688,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
             <tr>
                 <td><a class="table" href=""><strong>PINE64 Star64 (testing)</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_Star64-RISC-V-Trixie.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Star64-RISC-V-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
