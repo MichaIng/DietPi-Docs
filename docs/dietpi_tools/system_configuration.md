@@ -219,7 +219,7 @@ If you want to extend your DietPi SD card space by moving the system to a larger
 1. Shutdown your system and put the SD card into a card reader of a different systems.
 1. Copy the SD card contents to the new (larger) SD card. This can e.g. be done using
     - the `dd` command (command line option)
-    - [balenaEtcher](https://etcher.io/) or [Rufus](https://rufus.ie/) (graphical user interface option)
+    - [balenaEtcher](https://etcher.balena.io/) or [Rufus](https://rufus.ie/) (graphical user interface option)
     - `gnome-disks` (graphical user interface option)
 1. Boot the system with the copied memory card.
 1. Run `dietpi-drive_manager` to bring up the main menu.

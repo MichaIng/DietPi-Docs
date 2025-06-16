@@ -191,6 +191,7 @@ FPU
 framebuffer
 FreeBSD
 FreeDNS
+Freedoom
 FreshRSS
 FriendlyELEC
 FriendlyELEC's
@@ -225,6 +226,8 @@ GPT
 Grafana
 Griesemer
 GUA
+GZDoom
+GZDoom's
 HACS
 HAProxy
 hardcoded
@@ -277,6 +280,8 @@ iptables
 IPv
 IPVanish
 ISA
+IWAD
+IWADs
 iZotope
 Jackett
 JanKoudijs
@@ -374,6 +379,7 @@ Mio
 MIPI
 mjpg
 MkDocs
+modder
 Mopidy
 morse
 Morsecode
@@ -807,5 +813,6 @@ ZeroPi
 ZeroTier
 ZFS
 zlib
+ZMusic
 zr
 zram

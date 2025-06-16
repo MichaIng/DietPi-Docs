@@ -646,7 +646,7 @@ Select the following tabs for the installation description of your target.
 
     One big advantage of such a VM is that it needs only a couple of minutes coming to a running DietPi system.
 
-    One of the options of a virtual machine is [__Microsoft Hyper-V__](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview).
+    One of the options of a virtual machine is [__Microsoft Hyper-V__](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-overview?pivots=windows).
 
     ![Hyper-V-Manager screenshot](assets/images/dietpi-HyperV-program.png){: width="722" height="450" loading="lazy"}
 
@@ -658,7 +658,7 @@ Select the following tabs for the installation description of your target.
     As a starting point you need a **PC with a activated Hyper-V** on which the DietPi system will run.
 
     ??? info "Hyper-V activation within Windows"
-        Hyper-V needs to be activated within Windows (e.g. [see there](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)). The activation is done by enabling all Hyper-V features in the ***Turn Windows features on or off*** within the ***Apps and Features*** area in the Windows settings.
+        Hyper-V needs to be activated within Windows (e.g. [see there](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/install-hyper-v?pivots=windows&tabs=powershell)). The activation is done by enabling all Hyper-V features in the ***Turn Windows features on or off*** within the ***Apps and Features*** area in the Windows settings.
 
         ![Hyper-V activation](assets/images/dietpi-HyperV-activation.png){: width="367" height="328" loading="lazy"}
 
