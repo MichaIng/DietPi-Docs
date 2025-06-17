@@ -613,19 +613,36 @@ GZDoom is a modder-friendly OpenGL and Vulkan source port based on the DOOM engi
 
 === "Quick start"
 
-    To play Doom, you need to obtain an actual Doom game in IWAD format. Aside of the official commercial Doom and Doom II, there are also free ports, like the [Freedoom](https://freedoom.github.io/) project, which aims to be compatible with most custom levels, music, graphics and other mods made for the original Doom and Doom II games.
+    While GZDoom is a game engine, it does not contain actual game content. To play, a Doom game in _IWAD_ format is needed. Aside of the official commercial Doom and Doom II, and a free-to-play shareware version of those, there are FLOSS ports, like the [Freedoom](https://freedoom.github.io/) project, which aims to be compatible with most custom levels, music, graphics and other mods made for the original Doom and Doom II games.
+
+    To get you started, the DietPi GZDoom package contains Freedoom, including its multi-player deathmatch version _FreeDM_.
 
     An overview of available and supported IWADs, and where to obtain them, can be found here: <https://zdoom.org/wiki/IWAD>  
     For GZDoom to find the IWADs, place them into the current directory, or one of the directories defined in `~/.config/gzdoom/gzdoom.ini`, e.g. `~/.config/gzdoom/`.
 
-    From console, run the following command to start GZDoom:
+    From console, run the following command to start the GZDoom launcher and select an IWAD to play:
 
     ```sh
     gzdoom
     ```
 
-    Here an overview of optional command-line parameters: <https://zdoom.org/wiki/Command_line_parameters>  
-    By default, it will start a launcher to select a game/IWAD with some options.
+    To start Freedoom Phase 1, Phase 2, or FreeDM directly:
+
+    ```sh
+    gzdoom -iwad freedoom1
+    gzdoom -iwad freedoom2
+    gzdoom -iwad freedm
+    ```
+
+    An overview of available command-line parameters can be found here: <https://zdoom.org/wiki/Command_line_parameters>
+
+    !!! tip "Run GZDoom as non-root user"
+
+        For GZDoom to access audio, video, and input devices, additional permissions are required. To apply them for the user `dietpi`, run the following command:
+
+        ```sh
+        sudo usermod -aG audio,video,render,input dietpi
+        ```
 
 === "Package info"
 
