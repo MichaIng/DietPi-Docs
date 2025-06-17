@@ -641,8 +641,8 @@ GZDoom is a modder-friendly OpenGL and Vulkan source port based on the DOOM engi
         For GZDoom to access audio, video, and input devices, additional permissions are required. To apply them for the user `dietpi`, run the following command:
 
         ```sh
-	sudo usermod -aG audio,video,render,input dietpi
-	```
+        sudo usermod -aG audio,video,render,input dietpi
+        ```
 
 === "Package info"
 

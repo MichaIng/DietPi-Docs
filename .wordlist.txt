@@ -120,6 +120,7 @@ DarkIce
 DDNS
 DDX
 de
+deathmatch
 deinstallation
 DER
 DHCP
@@ -190,6 +191,7 @@ FPM
 FPU
 framebuffer
 FreeBSD
+FreeDM
 FreeDNS
 Freedoom
 FreshRSS
