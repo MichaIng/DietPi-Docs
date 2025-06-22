@@ -552,6 +552,7 @@ RDP
 reactjs
 Readarr
 ReadyMedia
+Realtek
 RealVNC
 reconfigures
 reconfiguring
