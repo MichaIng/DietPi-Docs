@@ -118,6 +118,7 @@ DALL
 DarkBetter
 DarkIce
 DDNS
+DDR
 DDX
 de
 deathmatch
