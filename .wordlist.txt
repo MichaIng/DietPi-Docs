@@ -118,6 +118,7 @@ DALL
 DarkBetter
 DarkIce
 DDNS
+DDR
 DDX
 de
 deathmatch
@@ -138,6 +139,7 @@ dl
 dm
 DNS
 Domoticz
+Doomguy
 DoT
 downloader
 DPMS
@@ -550,6 +552,7 @@ RDP
 reactjs
 Readarr
 ReadyMedia
+Realtek
 RealVNC
 reconfigures
 reconfiguring
