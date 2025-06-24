@@ -126,13 +126,19 @@ It is a new generation single-board computer based on the Amlogic S922X SoC and 
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Odroid C4 / HC4</strong></a></td>
+                <td><a class="table" href=""><strong>Odroid C4</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC4-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Odroid N2</strong></a></td>
+                <td><a class="table" href=""><strong>Odroid HC4</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidHC4-ARMv8-Bookworm.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Odroid N2 / N2+</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Bookworm.img.xz">DietPi image</a>
                 </td>
