@@ -793,6 +793,8 @@ Homer is a modern and lightweight dashboard & homepage for your services
     ```
 
 === "Theming"
+
+    You can customize Homer's appearance by creating a theme, as described in the [Homer documentation](https://github.com/bastienwirtz/homer/blob/main/docs/theming.md). Below are some community themes and examples of how to integrate them.
     
     === "DietPi"
 
