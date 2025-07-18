@@ -795,6 +795,39 @@ Homer is a modern and lightweight dashboard & homepage for your services
 === "Theming"
 
     You can customize Homer's appearance by creating a theme, as described in the [Homer documentation](https://github.com/bastienwirtz/homer/blob/main/docs/theming.md). Below are some community themes and examples of how to integrate them.
+
+    === "Catppuccin"
+
+        To apply the [Catppuccin theme](https://raw.githubusercontent.com/mrpbennett/catppuccin-homer/main/assets/images/examples/preview.png) to Homer execute these steps:
+
+        1. Get theme:
+
+            ```sh
+            apt install git
+            git clone https://github.com/mrpbennett/catppucin-homer
+            ```
+
+        1. Choose one of the `css` files, they all have varying colour schemes, and copy it to Homer, for example the `catppuccin-macchiato` style sheet:
+
+            ```sh
+            cp catppuccin-homer/flavours/catppuccin-macchiato.css /var/www/homer/assets
+            ```
+
+        1. Edit the `config.yml` file with:
+        
+            ```sh
+            nano /var/www/homer/assets/config.yml
+            ``` 
+            
+        1. Add the following lines (change `macchiato` to the wanted theme): 
+
+            ```yaml
+            # Will load catppuccin theme.
+            stylesheet:
+            - "assets/catppuccin-macchiato.css"
+            ```
+
+        Source code: <https://github.com/mrpbennett/catppucin-homer>
     
     === "DietPi"
 
@@ -913,39 +946,6 @@ Homer is a modern and lightweight dashboard & homepage for your services
             ```
 
         Source code: <https://github.com/walkxcode/homer-theme>
-
-    === "Catppuccin"
-
-        To apply the [Catppuccin theme](https://raw.githubusercontent.com/mrpbennett/catppuccin-homer/main/assets/images/examples/preview.png) to Homer execute these steps:
-
-        1. Get theme:
-
-            ```sh
-            apt install git
-            git clone https://github.com/mrpbennett/catppucin-homer
-            ```
-
-        1. Choose one of the `css` files, they all have varying colour schemes, and copy it to Homer, for example the `catppuccin-macchiato` style sheet:
-
-            ```sh
-            cp catppuccin-homer/flavours/catppuccin-macchiato.css /var/www/homer/assets
-            ```
-
-        1. Edit the `config.yml` file with:
-        
-            ```sh
-            nano /var/www/homer/assets/config.yml
-            ``` 
-            
-        1. Add the following lines (change `macchiato` to the wanted theme): 
-
-            ```yaml
-            # Will load catppuccin theme.
-            stylesheet:
-            - "assets/catppuccin-macchiato.css"
-            ```
-
-        Source code: <https://github.com/mrpbennett/catppucin-homer>
 
 ***
 
