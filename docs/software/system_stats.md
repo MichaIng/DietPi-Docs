@@ -792,6 +792,32 @@ Homer is a modern and lightweight dashboard & homepage for your services
     mv manifest.json /var/www/homer/assets
     ```
 
+=== "Theming - DietPi"
+
+    To apply the [DietPi theme](https://codeberg.org/Cs137/homer-theme-dietpi/media/branch/main/demo/screenshot_dark.png) to Homer execute these steps:
+
+    1. Get theme:
+
+        ```sh
+        curl -fL 'https://codeberg.org/Cs137/homer-theme-dietpi/raw/branch/main/assets/dietpi-theme.css' -o /var/www/homer/assets/dietpi-theme.css
+        ```
+
+    1. Edit your `config.yml` with:
+
+        ```sh
+        nano /var/www/homer/assets/config.yml
+        ```
+
+    1. Add the following lines:
+
+        ```yaml
+        # Will load DietPi theme
+        stylesheet:
+        - "assets/dietpi-theme.css"
+        ```
+
+    Source code: <https://codeberg.org/Cs137/homer-theme-dietpi>
+
 === "Theming - Dracula"
 
     To apply the [Dracula theme](https://raw.githubusercontent.com/dracula/homer/master/screenshot.png) to Homer execute these steps:
