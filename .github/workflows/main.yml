@@ -73,7 +73,7 @@ jobs:
       # parallels.com|chromewebstore.google.com: Cloudflare lets client enter redirect loop, if it does not send a cookie, set in response.
       # raspberrypi.com|www.reddit.com|superuser.com|x.com/DietPi_|www.patreon.com/DietPi: Network error: Forbidden
       # www.wireguard.com: Regularly Timeout
-      # www.domoticz.com/forum.odroid.com: Protected by Cloudflare CAPTCHA
+      # www.domoticz.com/forum.odroid.com/webtribunal.net/www.phpbb.com: Protected by Cloudflare CAPTCHA
       # github.com/MichaIng/: Even with GITHUB_TOKEN or a PAT, checks run into 403 and timeouts. Hence skip checks on own repositories, which we expect to remain valid.
       # www.duckdns.org/: Regular "Network error: error sending request for url"
       # https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902: 403
@@ -83,7 +83,7 @@ jobs:
         git fetch --depth=1 origin master
         while read -r line; do exclude="$exclude|dietpi.com/${line%.md}/"; done < <(git diff --name-only --diff-filter=A origin/master docs | grep '\.md$')
         while read -r line; do exclude="$exclude|github.com/MichaIng/DietPi-Docs/(raw|edit)/dev/$line"; done < <(find docs -type f -name '*.md')
-        ./lychee -Enm 2 --require-https --cache --max-cache-age 2d --cache-exclude-status '201..' -a 200,429 --exclude '^(http://wiringpi.com/$|https://(github.com/MichaIng/|zdoom.org/|forum.zdoom.org/|go.nordvpn.net/aff_c?|www.duckdns.org/$|www.wireguard.com/$|x.com/DietPi_$|www.patreon.com/DietPi$|www.linux-kvm.org/$|www.domoticz.com/|forum.odroid.com/|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details|www.kickstarter.com|theunarchiver.com/$|www.parallels.com/|(www|forums).raspberrypi.com/|www.reddit.com/|superuser.com|chromewebstore.google.com'"$exclude"'))' --github-token '${{ github.token }}' --root-dir "$PWD/build" README.md 'build/**/*.html'
+        ./lychee -Enm 2 --require-https --cache --max-cache-age 2d --cache-exclude-status '201..' -a 200,429 --exclude '^(http://wiringpi.com/$|https://(github.com/MichaIng/|zdoom.org/|forum.zdoom.org/|go.nordvpn.net/aff_c?|www.duckdns.org/$|www.wireguard.com/$|x.com/DietPi_$|www.patreon.com/DietPi$|www.linux-kvm.org/$|www.domoticz.com/|forum.odroid.com/|webtribunal.net/|www.phpbb.com/|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details|www.kickstarter.com|theunarchiver.com/$|www.parallels.com/|(www|forums).raspberrypi.com/|www.reddit.com/|superuser.com|chromewebstore.google.com'"$exclude"'))' --github-token '${{ github.token }}' --root-dir "$PWD/build" README.md 'build/**/*.html'
     - name: Save lychee cache
       uses: actions/cache/save@v4
       if: always() && steps.lychee.outcome == 'success'

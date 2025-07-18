@@ -820,9 +820,9 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
     - S3 API URL: `http://<your.IP>:9004`
     - Username: `minioadmin`
     - Password: `minioadmin`
-    - [MinIO Server Quick Start Guide](https://docs.min.io/docs/minio-quickstart-guide.html)
-    - [Python Client Quick Start Guide - MinIO](https://docs.min.io/docs/python-client-quickstart-guide.html)
-    - [JavaScript Client Quick Start Guide - MinIO](https://docs.min.io/docs/javascript-client-quickstart-guide.html)
+    - [MinIO Object Storage docs](https://docs.min.io/community/minio-object-store/)
+    - [MinIO Python Client docs](https://docs.min.io/community/minio-object-store/developers/python/minio-py.html)
+    - [MinIO JavaScript Client docs](https://docs.min.io/community/minio-object-store/developers/javascript/minio-javascript.html)
 
 ***
 

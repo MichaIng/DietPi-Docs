@@ -241,7 +241,7 @@ The PINE64 family also contains the newer members Quartz64 and SOQuartz compute 
 **Maker Friendly, IoT connectivity** enabled.
 
 **Radxa ROCK and Radxa Zero** features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
-For more details visit the [**Radxa ROCK**](https://rockpi.org/) resp. the [**Radxa Wiki**](https://wiki.radxa.com/Home) website.
+For more details visit the [**Radxa ROCK**](https://radxa.com/) resp. the [**Radxa Wiki**](https://wiki.radxa.com/Home) website.
 
 One of the supported boards is ROCK 4.
 
