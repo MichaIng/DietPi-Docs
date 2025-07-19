@@ -797,7 +797,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
     You can customize Homer's appearance by creating a theme, as described in the [Homer documentation](https://github.com/bastienwirtz/homer/blob/main/docs/theming.md). Below are some community themes and examples of how to integrate them.
 
     === "Catppuccin"
-    
+
         ![Homer preview screenshot showing the Cappuccino theme](https://raw.githubusercontent.com/mrpbennett/catppuccin-homer/main/assets/images/examples/preview.png){: width="4146" height="2600" loading="lazy"}
 
         To apply the **Catppuccin theme** to Homer execute these steps:
@@ -830,10 +830,10 @@ Homer is a modern and lightweight dashboard & homepage for your services
             ```
 
         Source code: <https://github.com/mrpbennett/catppucin-homer>
-    
+
     === "DietPi"
-    
-        ![Homer preview screenshot showing the DietPi theme](https://codeberg.org/Cs137/homer-theme-dietpi/media/branch/main/demo/screenshot_dark.png){: width="1043" height="825" loading="lazy"}
+
+        ![Homer preview screenshot showing the DietPi theme](https://codeberg.org/Cs137/homer-theme-dietpi/media/branch/main/demo/screenshot_dark.png){: width="1920" height="1080" loading="lazy"}
 
         To apply the **DietPi theme** to Homer execute these steps:
 
@@ -860,7 +860,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
         Source code: <https://codeberg.org/Cs137/homer-theme-dietpi>
 
     === "Dracula"
-    
+
         ![Homer preview screenshot showing the Dracula theme](https://raw.githubusercontent.com/dracula/homer/master/screenshot.png){: width="1920" height="947" loading="lazy"}
 
         To apply the **Dracula theme** to Homer execute these steps:
@@ -889,7 +889,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
         Source code: <https://github.com/dracula/homer>
 
     === "macOS"
-    
+
         ![Homer preview screenshot showing the macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png){: width="1904" height="1080" loading="lazy"}
 
         To apply the **macOS styled theme** to Homer execute these steps:
@@ -964,4 +964,4 @@ Official demo: <https://homer-demo.netlify.app/>
 
 [//]: # (markdownlint does not recognise references in pymdownx.tabbed blocks.)
 <!-- markdownlint-disable MD053 -->
-[^1]: [Lyrion Music Server](media.md#lyrion-music-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
+[^1]: [Lyrion Music Server](media.md#lyrion-music-server) listeners on port `9000` already, hence **Portainer** is configured to use port `9002`. For more details on the Portainer implementation in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
