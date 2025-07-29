@@ -727,7 +727,7 @@ License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LI
 
 Homer is a modern and lightweight dashboard & homepage for your services
 
-![Homer preview screenshot](../assets/images/homer-preview.png){: width="400" height="218" loading="lazy"}
+![Homer preview screenshot](../assets/images/homer-preview.png){: width="1920" height="1080" loading="lazy"}
 
 === "Access to Homer"
 
@@ -792,130 +792,168 @@ Homer is a modern and lightweight dashboard & homepage for your services
     mv manifest.json /var/www/homer/assets
     ```
 
-=== "Theming - Dracula"
+=== "Theming"
 
-    To apply the [Dracula theme](https://raw.githubusercontent.com/dracula/homer/master/screenshot.png) to Homer execute these steps:
+    You can customize Homer's appearance by creating a theme, as described in the [Homer documentation](https://github.com/bastienwirtz/homer/blob/main/docs/theming.md). Below are some community themes and examples of how to integrate them.
 
-    1. Get theme:
+    === "Catppuccin"
 
-        ```sh
-        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/custom.css' -o /var/www/homer/assets/custom.css
-        curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/dracula-background.png' -o /var/www/homer/assets/dracula-background.png
-        ```
+        ![Homer preview screenshot showing the Cappuccino theme](https://raw.githubusercontent.com/mrpbennett/catppuccin-homer/main/assets/images/examples/preview.png){: width="4146" height="2600" loading="lazy"}
 
-    1. Edit your `config.yml` with:
+        To apply the **Catppuccin theme** to Homer execute these steps:
 
-        ```sh
-        nano /var/www/homer/assets/config.yml
-        ```
+        1. Get theme:
 
-    1. Add the following lines:
+            ```sh
+            apt install git
+            git clone https://github.com/mrpbennett/catppucin-homer
+            ```
 
-        ```yaml
-        # Will load Dracula theme
-        stylesheet:
-        - "assets/custom.css"
-        ```
+        1. Choose one of the `css` files, they all have varying colour schemes, and copy it to Homer, for example the `catppuccin-macchiato` style sheet:
 
-    Source code: <https://github.com/dracula/homer>
+            ```sh
+            cp catppuccin-homer/flavours/catppuccin-macchiato.css /var/www/homer/assets
+            ```
 
-=== "Theming - macOS"
-
-    To apply the [macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png) to Homer execute these steps:
-
-    1. Get theme:
-
-        ```sh
-        cd /tmp
-        curl -fLO 'https://github.com/walkxcode/homer-theme/archive/main.tar.gz'
-        tar xf main.tar.gz
-        rm main.tar.gz
-        cp homer-theme-main/assets/custom.css /var/www/homer/assets/custom.css
-        cp homer-theme-main/assets/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
-        cp homer-theme-main/assets/wallpaper-light.jpeg /var/www/homer/assets/wallpaper-light.jpeg
-        cp -R homer-theme-main/assets/fonts /var/www/homer/assets/
-        rm -R homer-theme-main
-        ```
-
-    1. Edit your `config.yml` with:
-
-        ```sh
-        nano /var/www/homer/assets/config.yml
-        ```
-
-    1. Add the following lines (make sure to remove content for colors, theme, and columns if they previously existed):
-
-        ```yaml
-        stylesheet:
-        - "assets/custom.css"
-
-        columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 3, 4, 6, 12)
-        theme: default
-        colors:
-          light:
-            highlight-primary: "#fff5f2"
-            highlight-secondary: "#fff5f2"
-            highlight-hover: "#bebebe"
-            background: "#12152B"
-            card-background: "rgba(255, 245, 242, 0.8)"
-            text: "#ffffff"
-            text-header: "#fafafa"
-            text-title: "#000000"
-            text-subtitle: "#111111"
-            card-shadow: rgba(0, 0, 0, 0.5)
-            link: "#3273dc"
-            link-hover: "#2e4053"
-            background-image: "../assets/wallpaper-light.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
-          dark:
-            highlight-primary: "#181C3A"
-            highlight-secondary: "#181C3A"
-            highlight-hover: "#1F2347"
-            background: "#12152B"
-            card-background: "rgba(24, 28, 58, 0.8)"
-            text: "#eaeaea"
-            text-header: "#7C71DD"
-            text-title: "#fafafa"
-            text-subtitle: "#8B8D9C"
-            card-shadow: rgba(0, 0, 0, 0.5)
-            link: "#c1c1c1"
-            link-hover: "#fafafa"
-            background-image: "../assets/wallpaper.jpeg"
-        ```
-
-    Source code: <https://github.com/walkxcode/homer-theme>
-
-=== "Theming - Catppuccin"
-
-    To apply the [Catppuccin theme](https://raw.githubusercontent.com/mrpbennett/catppuccin-homer/main/assets/images/examples/preview.png) to Homer execute these steps:
-
-    1. Get theme:
-
-        ```sh
-        apt install git
-        git clone https://github.com/mrpbennett/catppucin-homer
-        ```
-
-    1. Choose one of the `css` files, they all have varying colour schemes, and copy it to Homer, for example the `catppuccin-macchiato` style sheet:
-
-        ```sh
-        cp catppuccin-homer/flavours/catppuccin-macchiato.css /var/www/homer/assets
-        ```
-
-    1. Edit the `config.yml` file with:
-    
-        ```sh
-        nano /var/www/homer/assets/config.yml
-        ``` 
+        1. Edit the `config.yml` file with:
         
-    1. Add the following lines (change `macchiato` to the wanted theme): 
+            ```sh
+            nano /var/www/homer/assets/config.yml
+            ``` 
+            
+        1. Add the following lines (change `macchiato` to the wanted theme): 
 
-        ```yaml
-        # Will load catppuccin theme.
-        stylesheet:
-        - "assets/catppuccin-macchiato.css"
-        ```
+            ```yaml
+            # Will load catppuccin theme.
+            stylesheet:
+            - "assets/catppuccin-macchiato.css"
+            ```
 
-    Source code: <https://github.com/mrpbennett/catppucin-homer>
+        Source code: <https://github.com/mrpbennett/catppucin-homer>
+
+    === "DietPi"
+
+        ![Homer preview screenshot showing the DietPi theme](https://codeberg.org/Cs137/homer-theme-dietpi/media/branch/main/demo/screenshot_dark.png){: width="1920" height="1080" loading="lazy"}
+
+        To apply the **DietPi theme** to Homer execute these steps:
+
+        1. Get theme:
+
+            ```sh
+            curl -fL 'https://codeberg.org/Cs137/homer-theme-dietpi/raw/branch/main/assets/dietpi-theme.css' -o /var/www/homer/assets/dietpi-theme.css
+            ```
+
+        1. Edit your `config.yml` with:
+
+            ```sh
+            nano /var/www/homer/assets/config.yml
+            ```
+
+        1. Add the following lines:
+
+            ```yaml
+            # Will load DietPi theme
+            stylesheet:
+            - "assets/dietpi-theme.css"
+            ```
+
+        Source code: <https://codeberg.org/Cs137/homer-theme-dietpi>
+
+    === "Dracula"
+
+        ![Homer preview screenshot showing the Dracula theme](https://raw.githubusercontent.com/dracula/homer/master/screenshot.png){: width="1920" height="947" loading="lazy"}
+
+        To apply the **Dracula theme** to Homer execute these steps:
+
+        1. Get theme:
+
+            ```sh
+            curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/custom.css' -o /var/www/homer/assets/custom.css
+            curl -fL 'https://raw.githubusercontent.com/dracula/homer/master/dracula-background.png' -o /var/www/homer/assets/dracula-background.png
+            ```
+
+        1. Edit your `config.yml` with:
+
+            ```sh
+            nano /var/www/homer/assets/config.yml
+            ```
+
+        1. Add the following lines:
+
+            ```yaml
+            # Will load Dracula theme
+            stylesheet:
+            - "assets/custom.css"
+            ```
+
+        Source code: <https://github.com/dracula/homer>
+
+    === "macOS"
+
+        ![Homer preview screenshot showing the macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png){: width="1904" height="1080" loading="lazy"}
+
+        To apply the **macOS styled theme** to Homer execute these steps:
+
+        1. Get theme:
+
+            ```sh
+            cd /tmp
+            curl -fLO 'https://github.com/walkxcode/homer-theme/archive/main.tar.gz'
+            tar xf main.tar.gz
+            rm main.tar.gz
+            cp homer-theme-main/assets/custom.css /var/www/homer/assets/custom.css
+            cp homer-theme-main/assets/wallpaper.jpeg /var/www/homer/assets/wallpaper.jpeg
+            cp homer-theme-main/assets/wallpaper-light.jpeg /var/www/homer/assets/wallpaper-light.jpeg
+            cp -R homer-theme-main/assets/fonts /var/www/homer/assets/
+            rm -R homer-theme-main
+            ```
+
+        1. Edit your `config.yml` with:
+
+            ```sh
+            nano /var/www/homer/assets/config.yml
+            ```
+
+        1. Add the following lines (make sure to remove content for colors, theme, and columns if they previously existed):
+
+            ```yaml
+            stylesheet:
+            - "assets/custom.css"
+
+            columns: "3" # You can change this to any number that is a factor of 12: (1, 2, 3, 4, 6, 12)
+            theme: default
+            colors:
+            light:
+                highlight-primary: "#fff5f2"
+                highlight-secondary: "#fff5f2"
+                highlight-hover: "#bebebe"
+                background: "#12152B"
+                card-background: "rgba(255, 245, 242, 0.8)"
+                text: "#ffffff"
+                text-header: "#fafafa"
+                text-title: "#000000"
+                text-subtitle: "#111111"
+                card-shadow: rgba(0, 0, 0, 0.5)
+                link: "#3273dc"
+                link-hover: "#2e4053"
+                background-image: "../assets/wallpaper-light.jpeg" # Change wallpaper.jpeg to the name of your own custom wallpaper!
+            dark:
+                highlight-primary: "#181C3A"
+                highlight-secondary: "#181C3A"
+                highlight-hover: "#1F2347"
+                background: "#12152B"
+                card-background: "rgba(24, 28, 58, 0.8)"
+                text: "#eaeaea"
+                text-header: "#7C71DD"
+                text-title: "#fafafa"
+                text-subtitle: "#8B8D9C"
+                card-shadow: rgba(0, 0, 0, 0.5)
+                link: "#c1c1c1"
+                link-hover: "#fafafa"
+                background-image: "../assets/wallpaper.jpeg"
+            ```
+
+        Source code: <https://github.com/walkxcode/homer-theme>
 
 ***
 
@@ -926,4 +964,4 @@ Official demo: <https://homer-demo.netlify.app/>
 
 [//]: # (markdownlint does not recognise references in pymdownx.tabbed blocks.)
 <!-- markdownlint-disable MD053 -->
-[^1]: [Lyrion Music Server](media.md#lyrion-music-server) already listened to port `9000`, and this is why **Portainer** has been configured to start using port `9002`. For more details on the implementation Portainer in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
+[^1]: [Lyrion Music Server](media.md#lyrion-music-server) listeners on port `9000` already, hence **Portainer** is configured to use port `9002`. For more details on the Portainer implementation in DietPi see the GitHub task: <https://github.com/MichaIng/DietPi/pull/3933>
