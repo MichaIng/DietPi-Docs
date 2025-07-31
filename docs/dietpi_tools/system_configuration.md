@@ -483,17 +483,6 @@ dietpi-display
 
 ![DietPi Tools - Dietpi Display](../assets/images/dietpi-tools-dietpidisplay.png){: width="640" height="258" loading="lazy"}
 
-xxx CLI options?
-
-```console
-        '--display'|'-d') shift; DISPLAY=$1;;
-        '--mode'|'-m') shift; aMODE[$DISPLAY]=$1;;
-        '--rotation'|'-r') shift; aROTATION[$DISPLAY]=$1;;
-        '--disable'|'-D') aENABLED[$DISPLAY]='disabled';;
-        '--enable'|'-e') aENABLED[$DISPLAY]='enabled';;
-        'apply'|'a') COMMAND='apply';;
-```
-
 ---
 
 ## DietPi survey
