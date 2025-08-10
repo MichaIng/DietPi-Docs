@@ -76,7 +76,7 @@ The WiFi HotSpot package turns your device into a wireless hotspot/access point.
 
     If these settings shall be changed, the following files need to be adjusted:
 
-    - `/etc/dhcp/dhcp.conf`
+    - `/etc/dhcp/dhcpd.conf`
     - `/etc/network/interfaces`
     - `/etc/iptables.ipv4.nat`
 
