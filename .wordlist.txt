@@ -319,6 +319,7 @@ Koel
 Komga
 KristinaStrapcova
 Kubernetes
+Kubo
 KVM
 LASP
 Laravel
