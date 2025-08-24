@@ -1,4 +1,5 @@
 aarch
+ABI
 ACP
 ACPI
 ActivityPub
@@ -229,6 +230,7 @@ GPLv
 GPT
 Grafana
 Griesemer
+GTK
 GUA
 GZDoom
 GZDoom's
