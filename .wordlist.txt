@@ -188,6 +188,7 @@ fka
 FlightAware
 Forgejo
 ForkedDaapd
+Forky
 FOSS
 foto
 FPM
