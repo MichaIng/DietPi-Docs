@@ -1,4 +1,5 @@
 aarch
+ABI
 ACP
 ACPI
 ActivityPub
@@ -187,6 +188,7 @@ fka
 FlightAware
 Forgejo
 ForkedDaapd
+Forky
 FOSS
 foto
 FPM
@@ -229,6 +231,7 @@ GPLv
 GPT
 Grafana
 Griesemer
+GTK
 GUA
 GZDoom
 GZDoom's
@@ -319,6 +322,7 @@ Koel
 Komga
 KristinaStrapcova
 Kubernetes
+Kubo
 KVM
 LASP
 Laravel
