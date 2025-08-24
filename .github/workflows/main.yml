@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: Clone DietPi-Docs repository
       id: clone
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     - name: Setup Node.js for markdownlint-cli2
       uses: actions/setup-node@v4
       with:

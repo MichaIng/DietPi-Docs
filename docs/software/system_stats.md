@@ -414,7 +414,7 @@ A Docker container image is a lightweight, standalone, executable package of sof
 
     ```sh
     apt update
-    apt install docker-ce containerd.io docker-ce-cli
+    apt upgrade
     ```
 
 === "View logs"
@@ -482,21 +482,22 @@ YouTube video tutorial: [*DietPi Docker Setup on Raspberry Pi 3 B Plus*](https:/
 
 ## Docker Compose
 
-Docker Compose is a [Docker](#docker) tool used to define and run multi-container applications. With Compose, you use a `YAML` file to create and configure your application's services from this configuration file.
+Docker Compose is a [Docker](#docker) tool used to define and run multi-container applications. With Compose, you use a `YAML` file to create and configure your application's services from this configuration file.
 
-`docker-compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments.
+`docker compose` is an excellent tool for development, testing, continuous integration (CI) workflows, and staging environments.
 
 <!-- ![Docker Compose logo](https://raw.githubusercontent.com/docker/compose/v2/logo.png){: width="200" height="219" loading="lazy"} -->
 ![Docker Compose diagram](../assets/images/dietpi-docker-compose.png){: width="500" height="351" loading="lazy"}
 
-*Docker (individual container) vs. Docker Compose (several containers) - source: [A beginner’s guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa)*
+*Docker (individual container) vs. Docker Compose (several containers) - source: [A beginner's guide to Docker](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa)*
 
 === "Update"
 
-    To update Docker Compose to the latest version, simply reinstall it:
+    Since Docker Compose is installed via APT package, it can be updated by running the following commands:
 
     ```sh
-    dietpi-software reinstall 134
+    apt update
+    apt upgrade
     ```
 
 ***
@@ -516,11 +517,11 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **9002**[^1]:
+    The web interface is accessible via HTTPS on port **9442**[^1]:
 
-    - URL = `http://<your.IP>:9002`
+    - URL = `https://<your.IP>:9442`
 
-=== "Update to latest version"
+=== "Update"
 
     To update Portainer, simply reinstall it:
 

@@ -149,7 +149,7 @@ Also installs:
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **1333**:
+    The web interface is accessible via HTTPS on port **1333**:
 
     - URL: `https://<your.IP>:1333`
 

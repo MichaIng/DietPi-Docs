@@ -122,10 +122,9 @@ Domoticz is a Home Automation System that lets you monitor and configure various
 
 === "Access to the web interface"
 
-    The web interface is accessible via port **8124** resp. **8424**:
+    The web interface is accessible via HTTPS on port **8424**:
 
-    - HTTP: `http://<your.IP>:8124`
-    - HTTPS: `https://<your.IP>:8424`
+    - URL: `https://<your.IP>:8424`
     - Username: `admin`
     - Password: `domoticz`
 
