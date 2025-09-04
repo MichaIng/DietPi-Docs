@@ -17,7 +17,7 @@ jobs:
       id: clone
       uses: actions/checkout@v5
     - name: Setup Node.js for markdownlint-cli2
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v5
       with:
         node-version: '*'
         check-latest: true
