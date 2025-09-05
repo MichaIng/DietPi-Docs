@@ -28,7 +28,7 @@ jobs:
     - name: Setup Python for MkDocs and PySpelling
       id: python
       if: always() && steps.clone.outcome == 'success'
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         # Match version on dietpi.com server
         python-version: 3.13.3
