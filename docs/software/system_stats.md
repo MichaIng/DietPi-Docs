@@ -364,25 +364,48 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
 
 === "Access to Webmin"
 
-    The web interface is accessible via port **10000**:
+    The web interface is accessible via **HTTPS** on port **10000**:
 
-    - URL = `https://<your.IP>:10000`
-    - Username = `root`
-    - Password = `<your software password>` (default: `dietpi`)
+    - URL: `https://<your.IP>:10000`
+    - Username: `root` (or any UNIX user with full `sudo` permissions)
+    - Password: `<this UNIX user's password>` (default: `dietpi`)
 
-    ???+ hint "Use HTTPS"
+=== "Service control"
 
-        Please ensure `https://` URL is typed, `http://` won't work!
-
-=== "System logging"
-
-    The Webmin system logging panel still depends on a classical file logger, like Rsyslog. However DietPi will not impose this logging overhead on systems by default. If you need to see system logs via the *Webmin online panel*, you can either configure a custom *syslog* daemon or install *Rsyslog* manually:
+    Since Webmin runs as a systemd service, it can be controlled with the following commands:
 
     ```sh
-    apt install rsyslog
+    systemctl status webmin
     ```
 
-    DietPi comes with *systemd* and the related *journald* system logger, which can be accessed via the command `journalctl`.
+    ```sh
+    systemctl start webmin
+    ```
+
+    ```sh
+    systemctl stop webmin
+    ```
+
+    ```sh
+    systemctl restart webmin
+    ```
+
+=== "Update"
+
+    Since Webmin is installed as APT package, it can be updated with the following commands:
+
+    ```sh
+    apt update
+    apt install webmin
+    ```
+
+=== "View logs"
+
+    Webmin service logs can be accessed with the following command:
+
+    ```sh
+    journalctl -u webmin
+    ```
 
 ***
 
