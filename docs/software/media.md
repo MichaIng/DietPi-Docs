@@ -1834,12 +1834,6 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
 
     - URL: `http://<your.IP>:4533`
 
-=== "Multiple Music Folders"
-
-    Navidrome doesn't support multiple music folders out of the box. The feature is still being developed.
-
-    Related GitHub issue: <https://github.com/navidrome/navidrome/issues/192>
-
 === "Setup details"
 
     The install, config and data directory is located at:
@@ -1847,6 +1841,21 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
     ```
     /mnt/dietpi_userdata/navidrome
     ```
+
+    The default music directory is located at:
+
+    ```
+    /mnt/dietpi_userdata/Music
+    ```
+
+    When transferring via NFS or Samba, it may appear just as `/Music`.
+
+=== "Clients/Players"
+
+    Navidrome has a Subsonic-compatible server built in, so there should be plenty of clients for different platforms available. See:
+
+    - <https://www.navidrome.org/docs/overview/#apps>
+    - <https://www.subsonic.org/pages/apps.jsp>
 
 === "Service control"
 
@@ -1883,20 +1892,6 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
     ```sh
     dietpi-software reinstall 204
     ```
-
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
-
-=== "Clients for Navidrome"
-
-    Navidrome has a Subsonic-compatible server built in, so there should be plenty of clients for different platforms available. See:
-
-    - <https://www.navidrome.org/docs/overview/#apps>
-    - <https://www.subsonic.org/pages/apps.jsp>
 
 ***
 
