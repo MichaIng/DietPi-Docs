@@ -631,6 +631,7 @@ SoCs
 soju
 Sonarr
 SOQuartz
+Sora
 Soundcloud
 Soxr
 SPC
