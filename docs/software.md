@@ -191,7 +191,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Roon Server - Turns your device into a Roon capable audio player and Roon core**](software/media.md#roon-server)
 - [**Roon Extension Manager - Manage extensions from within Roon**](software/media.md#roon-extension-manager)
 - [**NAA Daemon - Signalyst Network Audio Adaptor (NAA)**](software/media.md#naa-daemon)
-- [**IceCast - Shoutcast Streaming Server, including DarkIce**](software/media.md#icecast)
+- [**Icecast - Shoutcast Streaming Server, including DarkIce**](software/media.md#icecast)
 - [**Koel - Web interface streaming server**](software/media.md#koel)
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](software/media.md#gmediarender)
 - [**Ubooquity - Free home server for your comics and ebooks library**](software/media.md#ubooquity)

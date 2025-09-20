@@ -28,7 +28,7 @@ description: Description of DietPi software options related to media systems lik
 - [**Roon Server - Turns your device into a Roon capable audio player and Roon core**](#roon-server)
 - [**Roon Extension Manager - Manage extensions from within Roon**](#roon-extension-manager)
 - [**NAA Daemon - Signalyst Network Audio Adaptor (NAA)**](#naa-daemon)
-- [**IceCast - Shoutcast Streaming Server, including DarkIce**](#icecast)
+- [**Icecast - Shoutcast Streaming Server, including DarkIce**](#icecast)
 - [**Koel - Web interface streaming server**](#koel)
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](#gmediarender)
 - [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity)
@@ -1074,25 +1074,6 @@ Turns your device into a Roon capable audio player and core server.
 
 ![Roon Server usage scheme](../assets/images/dietpi-software-media-roonserver.png){: width="400" height="134" loading="lazy"}
 
-=== "Install a Roon Remote on another system"
-
-    You can use the Roon Remote apps to control and configure the Roon Server: <https://roon.app/downloads>
-
-=== "Recommended Music Storage Directory"
-
-    When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer music tab), and storing the music on your Roon Server system:
-
-    ```
-    /mnt/dietpi_userdata/Music
-    ```
-
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
-
 === "Directories"
 
     The Roon Server installation can be found at:
@@ -1101,15 +1082,43 @@ Turns your device into a Roon capable audio player and core server.
     /opt/roonserver
     ```
 
-    Its configuration and data can be found at:
+    Its configuration and database can be found at:
 
     ```
     /mnt/dietpi_userdata/roonserver
     ```
 
+    The following music directory is prepared with permissions for Roon access and easy network transfer, as well as some default media to test the setup:
+
+    ```
+    /mnt/dietpi_userdata/Music
+    ```
+
+    _When transferring media via NFS or Samba, it may appear as `/Music`._
+
+=== "Early Access Program"
+
+    `dietpi-software` allows you to select between stable and early access Roon Server builds.
+
+    To install early access builds of Roon Server automatically on first boot, adjust the following settings in `dietpi.txt`:
+
+    ```sh
+    AUTO_SETUP_AUTOMATED=1
+    AUTO_SETUP_INSTALL_SOFTWARE_ID=154
+    SOFTWARE_ROONSERVER_EARLYACCESS=1
+    ```
+
+    !!! warning "Early access builds have a higher chance to contain bugs, and you may need to restore a database backup when reverting from early access to stable builds."
+
+    More information about the Roon Early Access Program can be found here: <https://help.roonlabs.com/portal/en/kb/articles/roon-early-access-program>
+
+=== "Roon Remote"
+
+    You can use the Roon Remote apps to control and configure the Roon Server: <https://roon.app/downloads>
+
 === "Service control"
 
-    The Roon Server by default is started as systemd service and can hence be controlled with the following commands:
+    The Roon Server is started as systemd service by default and can hence be controlled with the following commands:
 
     ```sh
     systemctl status roonserver
@@ -1129,7 +1138,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "View logs"
 
-    Service logs can be reviewed with the following command:
+    Service logs can be viewed with the following command:
 
     ```sh
     journalctl -u roonserver
@@ -1143,10 +1152,9 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Update"
 
-    The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with the following commands:
+    The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with a reinstall:
 
     ```sh
-    rm -R /opt/roonserver
     dietpi-software reinstall 154
     ```
 
@@ -1210,11 +1218,11 @@ Also works with Roon.
 
 Website: <https://www.signalyst.eu/consumer.html>
 
-## IceCast
+## Icecast
 
 Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
-![IceCast web interface screenshot](../assets/images/dietpi-software-media-icecast.png){: width="400" height="218" loading="lazy"}
+![Icecast web interface screenshot](../assets/images/dietpi-software-media-icecast.png){: width="400" height="218" loading="lazy"}
 
 === "Installation notes"
 
@@ -1237,14 +1245,14 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
         systemctl restart darkice
         ```
 
-    We create `systemd` services for both, IceCast and DarkIce, automatically started by DietPi. You can check their status by running the following command:
+    We create `systemd` services for both, Icecast and DarkIce, automatically started by DietPi. You can check their status by running the following command:
 
     ```sh
     systemctl status icecast2
     systemctl status darkice
     ```
 
-=== "Access IceCast web interface"
+=== "Access Icecast web interface"
 
     The web interface is accessible via port **8000**:
 
@@ -1274,23 +1282,23 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
 === "Configuration files"
 
-    - IceCast: `/etc/icecast2/icecast.xml`
+    - Icecast: `/etc/icecast2/icecast.xml`
     - DarkIce: `/etc/darkice.cfg`
 
 === "View logs"
 
-    Run the following commands on a console to view logs for IceCast and DarkIce:
+    Run the following commands on a console to view logs for Icecast and DarkIce:
 
     ```sh
     journalctl -u icecast2
     journalctl -u darkice
     ```
 
-    IceCast additionally creates access and error log files at: `/var/log/icecast2/`
+    Icecast additionally creates access and error log files at: `/var/log/icecast2/`
 
 === "Update to latest version"
 
-    IceCast and DarkIce are installed from the Debian APT repository and hence can be updated by running the following commands:
+    Icecast and DarkIce are installed from the Debian APT repository and hence can be updated by running the following commands:
 
     ```sh
     apt update
@@ -1738,7 +1746,7 @@ The Snapcast server needs to have its audio sources manually configured after in
         }
         ```
 
-    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myMPD`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#user-content-pipe>
+    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myMPD`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
 
     ```
     source = pipe:///tmp/mpd.fifo?name=myMPD&mode=read
@@ -1755,7 +1763,7 @@ The Snapcast server needs to have its audio sources manually configured after in
     output = audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/tmp/mopidy.fifo
     ```
 
-    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myMopidy`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#user-content-pipe>
+    Once you have done that you then need to add the following to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myMopidy`. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#pipe>
 
     ```
     source = pipe:///tmp/mopidy.fifo?name=myMopidy&mode=read
@@ -1765,7 +1773,7 @@ The Snapcast server needs to have its audio sources manually configured after in
 
     If you have Raspotify installed you can use it as an input source.
 
-    Add the following config under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `mySpotify`. The `devicename` is the name that will be shown when connecting in Spotify. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#user-content-librespot>. I have disabled the audio cache to protect the SD card.
+    Add the following config under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `mySpotify`. The `devicename` is the name that will be shown when connecting in Spotify. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#librespot>. I have disabled the audio cache to protect the SD card.
 
     ```
     source = librespot:///usr/bin/librespot?name=mySpotify&devicename=SnapcastSpotify&disable_audio_cache=true
@@ -1779,7 +1787,7 @@ The Snapcast server needs to have its audio sources manually configured after in
     dietpi-software install 37
     ```
 
-    Then add the following config to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myAirport`. The `devicename` is the name that will be shown when searching for Airport devices. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#user-content-airplay>
+    Then add the following config to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myAirport`. The `devicename` is the name that will be shown when searching for Airport devices. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
 
     ```
     source = airplay:///usr/local/bin/shairport-sync?name=myAirport&devicename=SnapcastAirport&params=--configfile=/usr/local/etc/shairport-sync.conf
@@ -1791,7 +1799,7 @@ The Snapcast server needs to have its audio sources manually configured after in
     systemctl disable --now shairport-sync
     ```
 
-    or you can try to run one of them on a different port - Snapcast docs shows how to do this here: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#user-content-airplay>
+    or you can try to run one of them on a different port - Snapcast docs shows how to do this here: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
 
 ***
 
@@ -1834,12 +1842,6 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
 
     - URL: `http://<your.IP>:4533`
 
-=== "Multiple Music Folders"
-
-    Navidrome doesn't support multiple music folders out of the box. The feature is still being developed.
-
-    Related GitHub issue: <https://github.com/navidrome/navidrome/issues/192>
-
 === "Setup details"
 
     The install, config and data directory is located at:
@@ -1847,6 +1849,21 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
     ```
     /mnt/dietpi_userdata/navidrome
     ```
+
+    The default music directory is located at:
+
+    ```
+    /mnt/dietpi_userdata/Music
+    ```
+
+    When transferring via NFS or Samba, it may appear just as `/Music`.
+
+=== "Clients/Players"
+
+    Navidrome has a Subsonic-compatible server built in, so there should be plenty of clients for different platforms available. See:
+
+    - <https://www.navidrome.org/docs/overview/#apps>
+    - <https://www.subsonic.org/pages/apps.jsp>
 
 === "Service control"
 
@@ -1883,20 +1900,6 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
     ```sh
     dietpi-software reinstall 204
     ```
-
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
-
-=== "Clients for Navidrome"
-
-    Navidrome has a Subsonic-compatible server built in, so there should be plenty of clients for different platforms available. See:
-
-    - <https://www.navidrome.org/docs/overview/#apps>
-    - <https://www.subsonic.org/pages/apps.jsp>
 
 ***
 

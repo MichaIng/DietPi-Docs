@@ -265,7 +265,7 @@ HQPlayer
 HSTS
 HTPC
 HTTPS
-IceCast
+Icecast
 ICMP
 IEC
 ilex
@@ -631,6 +631,7 @@ SoCs
 soju
 Sonarr
 SOQuartz
+Sora
 Soundcloud
 Soxr
 SPC
