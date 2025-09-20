@@ -28,7 +28,7 @@ description: Description of DietPi software options related to media systems lik
 - [**Roon Server - Turns your device into a Roon capable audio player and Roon core**](#roon-server)
 - [**Roon Extension Manager - Manage extensions from within Roon**](#roon-extension-manager)
 - [**NAA Daemon - Signalyst Network Audio Adaptor (NAA)**](#naa-daemon)
-- [**IceCast - Shoutcast Streaming Server, including DarkIce**](#icecast)
+- [**Icecast - Shoutcast Streaming Server, including DarkIce**](#icecast)
 - [**Koel - Web interface streaming server**](#koel)
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](#gmediarender)
 - [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity)
@@ -1074,25 +1074,6 @@ Turns your device into a Roon capable audio player and core server.
 
 ![Roon Server usage scheme](../assets/images/dietpi-software-media-roonserver.png){: width="400" height="134" loading="lazy"}
 
-=== "Install a Roon Remote on another system"
-
-    You can use the Roon Remote apps to control and configure the Roon Server: <https://roon.app/downloads>
-
-=== "Recommended Music Storage Directory"
-
-    When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer music tab), and storing the music on your Roon Server system:
-
-    ```
-    /mnt/dietpi_userdata/Music
-    ```
-
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
-
 === "Directories"
 
     The Roon Server installation can be found at:
@@ -1101,15 +1082,35 @@ Turns your device into a Roon capable audio player and core server.
     /opt/roonserver
     ```
 
-    Its configuration and data can be found at:
+    Its configuration and database can be found at:
 
     ```
     /mnt/dietpi_userdata/roonserver
     ```
 
+    The following music directory is prepared with permissions for Roon access and easy network transfer, as well as some default media to test the setup:
+
+    ```
+    /mnt/dietpi_userdata/Music
+    ```
+
+    _When transferring media via NFS or Samba, it may appear as `/Music`._
+
+=== "Early Access Program"
+
+    `dietpi-software` allows you to select between stable and early access Roon Server builds. For automated installations on first boot via `AUTO_SETUP_AUTOMATED=1` + `AUTO_SETUP_INSTALL_SOFTWARE_ID=154` in `dietpi.txt`, early access builds can be selected with the additional `SOFTWARE_ROONSERVER_EARLYACCESS=1` setting.
+
+     !!! warning "Early access builds have a higher chance to contain bugs, and you may need to restore a database backup when reverting from early access to stable builds."
+
+     More information about the Roon Early Access Program can be found here: <https://help.roonlabs.com/portal/en/kb/articles/roon-early-access-program>
+
+=== "Roon Remote"
+
+    You can use the Roon Remote apps to control and configure the Roon Server: <https://roon.app/downloads>
+
 === "Service control"
 
-    The Roon Server by default is started as systemd service and can hence be controlled with the following commands:
+    The Roon Server is started as systemd service by default and can hence be controlled with the following commands:
 
     ```sh
     systemctl status roonserver
@@ -1129,7 +1130,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "View logs"
 
-    Service logs can be reviewed with the following command:
+    Service logs can be viewed with the following command:
 
     ```sh
     journalctl -u roonserver
@@ -1143,10 +1144,9 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Update"
 
-    The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with the following commands:
+    The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with a reinstall:
 
     ```sh
-    rm -R /opt/roonserver
     dietpi-software reinstall 154
     ```
 
@@ -1210,11 +1210,11 @@ Also works with Roon.
 
 Website: <https://www.signalyst.eu/consumer.html>
 
-## IceCast
+## Icecast
 
 Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
-![IceCast web interface screenshot](../assets/images/dietpi-software-media-icecast.png){: width="400" height="218" loading="lazy"}
+![Icecast web interface screenshot](../assets/images/dietpi-software-media-icecast.png){: width="400" height="218" loading="lazy"}
 
 === "Installation notes"
 
@@ -1237,14 +1237,14 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
         systemctl restart darkice
         ```
 
-    We create `systemd` services for both, IceCast and DarkIce, automatically started by DietPi. You can check their status by running the following command:
+    We create `systemd` services for both, Icecast and DarkIce, automatically started by DietPi. You can check their status by running the following command:
 
     ```sh
     systemctl status icecast2
     systemctl status darkice
     ```
 
-=== "Access IceCast web interface"
+=== "Access Icecast web interface"
 
     The web interface is accessible via port **8000**:
 
@@ -1274,23 +1274,23 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
 === "Configuration files"
 
-    - IceCast: `/etc/icecast2/icecast.xml`
+    - Icecast: `/etc/icecast2/icecast.xml`
     - DarkIce: `/etc/darkice.cfg`
 
 === "View logs"
 
-    Run the following commands on a console to view logs for IceCast and DarkIce:
+    Run the following commands on a console to view logs for Icecast and DarkIce:
 
     ```sh
     journalctl -u icecast2
     journalctl -u darkice
     ```
 
-    IceCast additionally creates access and error log files at: `/var/log/icecast2/`
+    Icecast additionally creates access and error log files at: `/var/log/icecast2/`
 
 === "Update to latest version"
 
-    IceCast and DarkIce are installed from the Debian APT repository and hence can be updated by running the following commands:
+    Icecast and DarkIce are installed from the Debian APT repository and hence can be updated by running the following commands:
 
     ```sh
     apt update

@@ -240,17 +240,17 @@ The PINE64 family also contains the newer members Quartz64 and SOQuartz compute 
 
 **Maker Friendly, IoT connectivity** enabled.
 
-**Radxa ROCK and Radxa Zero** features maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
-For more details visit the [**Radxa ROCK**](https://radxa.com/) resp. the [**Radxa Wiki**](https://wiki.radxa.com/Home) website.
+**Radxa** features single-board computers with maker friendly expansion options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and more.
+For more details visit the [**Radxa website**](https://radxa.com/) and [**documentation**](https://docs.radxa.com/en/welcome).
 
-One of the supported boards is ROCK 4.
+One of the supported boards is the ROCK 4.
 
 ![Radxa ROCK 4 photo](assets/images/dietpi-rockpi-4b.jpg){: width="500" height="375" loading="lazy"}
 
-**ROCK 4** is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The ROCK 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
+The **ROCK 4** is a single-board computers (SBC) in a credit card factor that, which offers class-leading performance, while leveraging outstanding mechanical compatibility. The ROCK 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
 It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
 
-**Radxa Zero** is an ultra thin SBC in small form factor with powerful performance based on Amlogic S905Y2. Radxa Zero features a Quad Core 64 ARM processor, 32bit LPDDR4, up to 4K@60 HDMI, 802.11 ac WIFI, Bluetooth 5.0, USB 3.0, 40-pin GPIO header. Radxa Zero supports USB 2.0 and power via one USB-C port.
+The **Radxa Zero** is an ultra thin SBC in smaller form factor with still powerful performance based on Amlogic S905Y2. It features a Quad Core 64 ARM processor, 32-bit LPDDR4, up to 4K@60 HDMI, 802.11 ac WiFi, Bluetooth 5.0, USB 3.0, 40-pin GPIO header, and is powered via USB-C port.
 
 ![Radxa Zero photo](assets/images/dietpi-radxa-zero.jpg){: width="500" loading="lazy"}
 
