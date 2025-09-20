@@ -1074,25 +1074,6 @@ Turns your device into a Roon capable audio player and core server.
 
 ![Roon Server usage scheme](../assets/images/dietpi-software-media-roonserver.png){: width="400" height="134" loading="lazy"}
 
-=== "Install a Roon Remote on another system"
-
-    You can use the Roon Remote apps to control and configure the Roon Server: <https://roon.app/downloads>
-
-=== "Recommended Music Storage Directory"
-
-    When configuring your Roon Server, we highly recommend using the DietPi user data directory. This will allow you to transfer music over the network easily (see Transfer music tab), and storing the music on your Roon Server system:
-
-    ```
-    /mnt/dietpi_userdata/Music
-    ```
-
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
-
 === "Directories"
 
     The Roon Server installation can be found at:
@@ -1101,15 +1082,35 @@ Turns your device into a Roon capable audio player and core server.
     /opt/roonserver
     ```
 
-    Its configuration and data can be found at:
+    Its configuration and database can be found at:
 
     ```
     /mnt/dietpi_userdata/roonserver
     ```
 
+    The following music directory is prepared with permissions for Roon access and easy network transfer, as well as some default media to test the setup:
+
+    ```
+    /mnt/dietpi_userdata/Music
+    ```
+
+    _When transferring media via NFS or Samba, it may appear as `/Music`._
+
+=== "Early Access Program"
+
+    `dietpi-software` allows you to select between stable and early access Roon Server builds. For automated installations on first boot via `AUTO_SETUP_AUTOMATED=1` + `AUTO_SETUP_INSTALL_SOFTWARE_ID=154` in `dietpi.txt`, early access builds can be selected with the additional `SOFTWARE_ROONSERVER_EARLYACCESS=1` setting.
+
+     !!! warning "Early access builds have a higher chance to contain bugs, and you may need to restore a database backup when reverting from early access to stable builds."
+
+     More information about the Roon Early Access Program can be found here: <https://help.roonlabs.com/portal/en/kb/articles/roon-early-access-program>
+
+=== "Roon Remote"
+
+    You can use the Roon Remote apps to control and configure the Roon Server: <https://roon.app/downloads>
+
 === "Service control"
 
-    The Roon Server by default is started as systemd service and can hence be controlled with the following commands:
+    The Roon Server is started as systemd service by default and can hence be controlled with the following commands:
 
     ```sh
     systemctl status roonserver
@@ -1129,7 +1130,7 @@ Turns your device into a Roon capable audio player and core server.
 
 === "View logs"
 
-    Service logs can be reviewed with the following command:
+    Service logs can be viewed with the following command:
 
     ```sh
     journalctl -u roonserver
@@ -1143,10 +1144,9 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Update"
 
-    The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with the following commands:
+    The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with a reinstall:
 
     ```sh
-    rm -R /opt/roonserver
     dietpi-software reinstall 154
     ```
 
