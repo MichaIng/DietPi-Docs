@@ -1098,11 +1098,19 @@ Turns your device into a Roon capable audio player and core server.
 
 === "Early Access Program"
 
-    `dietpi-software` allows you to select between stable and early access Roon Server builds. For automated installations on first boot via `AUTO_SETUP_AUTOMATED=1` + `AUTO_SETUP_INSTALL_SOFTWARE_ID=154` in `dietpi.txt`, early access builds can be selected with the additional `SOFTWARE_ROONSERVER_EARLYACCESS=1` setting.
+    `dietpi-software` allows you to select between stable and early access Roon Server builds.
 
-     !!! warning "Early access builds have a higher chance to contain bugs, and you may need to restore a database backup when reverting from early access to stable builds."
+    To install early access builds of Roon Server automatically on first boot, adjust the following settings in `dietpi.txt`:
 
-     More information about the Roon Early Access Program can be found here: <https://help.roonlabs.com/portal/en/kb/articles/roon-early-access-program>
+    ```sh
+    AUTO_SETUP_AUTOMATED=1
+    AUTO_SETUP_INSTALL_SOFTWARE_ID=154
+    SOFTWARE_ROONSERVER_EARLYACCESS=1
+    ```
+
+    !!! warning "Early access builds have a higher chance to contain bugs, and you may need to restore a database backup when reverting from early access to stable builds."
+
+    More information about the Roon Early Access Program can be found here: <https://help.roonlabs.com/portal/en/kb/articles/roon-early-access-program>
 
 === "Roon Remote"
 
