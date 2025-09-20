@@ -28,7 +28,7 @@ description: Description of DietPi software options related to media systems lik
 - [**Roon Server - Turns your device into a Roon capable audio player and Roon core**](#roon-server)
 - [**Roon Extension Manager - Manage extensions from within Roon**](#roon-extension-manager)
 - [**NAA Daemon - Signalyst Network Audio Adaptor (NAA)**](#naa-daemon)
-- [**IceCast - Shoutcast Streaming Server, including DarkIce**](#icecast)
+- [**Icecast - Shoutcast Streaming Server, including DarkIce**](#icecast)
 - [**Koel - Web interface streaming server**](#koel)
 - [**GMediaRender - Resource efficient UPnP/DLNA renderer**](#gmediarender)
 - [**Ubooquity - Free home server for your comics and ebooks library**](#ubooquity)
@@ -1210,11 +1210,11 @@ Also works with Roon.
 
 Website: <https://www.signalyst.eu/consumer.html>
 
-## IceCast
+## Icecast
 
 Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
-![IceCast web interface screenshot](../assets/images/dietpi-software-media-icecast.png){: width="400" height="218" loading="lazy"}
+![Icecast web interface screenshot](../assets/images/dietpi-software-media-icecast.png){: width="400" height="218" loading="lazy"}
 
 === "Installation notes"
 
@@ -1237,14 +1237,14 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
         systemctl restart darkice
         ```
 
-    We create `systemd` services for both, IceCast and DarkIce, automatically started by DietPi. You can check their status by running the following command:
+    We create `systemd` services for both, Icecast and DarkIce, automatically started by DietPi. You can check their status by running the following command:
 
     ```sh
     systemctl status icecast2
     systemctl status darkice
     ```
 
-=== "Access IceCast web interface"
+=== "Access Icecast web interface"
 
     The web interface is accessible via port **8000**:
 
@@ -1274,23 +1274,23 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
 === "Configuration files"
 
-    - IceCast: `/etc/icecast2/icecast.xml`
+    - Icecast: `/etc/icecast2/icecast.xml`
     - DarkIce: `/etc/darkice.cfg`
 
 === "View logs"
 
-    Run the following commands on a console to view logs for IceCast and DarkIce:
+    Run the following commands on a console to view logs for Icecast and DarkIce:
 
     ```sh
     journalctl -u icecast2
     journalctl -u darkice
     ```
 
-    IceCast additionally creates access and error log files at: `/var/log/icecast2/`
+    Icecast additionally creates access and error log files at: `/var/log/icecast2/`
 
 === "Update to latest version"
 
-    IceCast and DarkIce are installed from the Debian APT repository and hence can be updated by running the following commands:
+    Icecast and DarkIce are installed from the Debian APT repository and hence can be updated by running the following commands:
 
     ```sh
     apt update

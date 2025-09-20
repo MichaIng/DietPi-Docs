@@ -265,7 +265,7 @@ HQPlayer
 HSTS
 HTPC
 HTTPS
-IceCast
+Icecast
 ICMP
 IEC
 ilex
