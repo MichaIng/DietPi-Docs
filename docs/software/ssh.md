@@ -42,27 +42,23 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
     - Username = `root`
     - Password = `dietpi`
 
-=== "Control login options"
+=== "Restrict root logins"
 
-    The login options of Dropbear can be set. Valid options are:
+    Root logins via Dropbear can be restricted from first boot on with the `SOFTWARE_DISABLE_SSH_PASSWORD_LOGINS` setting in the `dietpi.txt` file. Valid options are:
 
     - `0` : Allow password logins for all users, including root (default case)
     - `root` : Disable password login for root user only
-    - `1` : Disable password logins for all users (assure that you have a valid SSH key applied!)
+	- `1` : Disable password logins for all users (assure that you have a valid SSH key applied!)
 
-    The options will lead in changes of the file `/etc/default/dropbear` (in `DROPBEAR_EXTRA_ARGS`) and can be set by the configuration option `SOFTWARE_DISABLE_SSH_PASSWORD_LOGINS` in the file `/boot/dietpi.txt` to be examined during the initial first boot sequence.
+    The first boot scripts apply them via `DROPBEAR_EXTRA_ARGS` setting in `/etc/default/dropbear`, before the SSH server starts and before the network is set up.
 
-    Later on (after the first installation run has completed), the option can be changed by the command
+    Later on (after the first installation run has completed), these options can be changed by the command
     
     ```sh
     /boot/dietpi/func/dietpi-set_software disable_ssh_password_logins <option>
     ```
     
-    This command sets the option and also modifies the file `/boot/dietpi.txt` accordingly.  
-    Valid `<options>` are
-
-    - `0`, `root`, `1` : Set option as described above
-    - Without `<option>` (e.g. `/boot/dietpi/func/dietpi-set_software disable_ssh_password_logins`) : Use option from file `/boot/dietpi.txt`
+    If `<option>` is skipped/empty, the one from `/boot/dietpi.txt` will be reapplied to `/etc/default/dropbear`.
 
 === "SSH server public keys"
 
