@@ -48,7 +48,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
     - `0` : Allow password logins for all users, including root (default case)
     - `root` : Disable password login for root user only
-	- `1` : Disable password logins for all users (assure that you have a valid SSH key applied!)
+    - `1` : Disable password logins for all users (assure that you have a valid SSH key applied!)
 
     The options will lead in changes of the file `/etc/default/dropbear` (in `DROPBEAR_EXTRA_ARGS`) and can be set by the configuration option `SOFTWARE_DISABLE_SSH_PASSWORD_LOGINS` in the file `/boot/dietpi.txt` to be examined during the initial first boot sequence.
 
@@ -75,7 +75,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
     ssh-keygen -f keys
     ``` 
     
-    which asks for a passphase and generates files `keys` resp. `keys.pub` in the actual directory. The file `keys.pub` holds the SSH public key to be used within `/boot/dietpi.txt`. See the comment in `/boot/dietpi.txt` and `man ssh-keygen` for further details.
+    which asks for a passphrase and generates files `keys` resp. `keys.pub` in the actual directory. The file `keys.pub` holds the SSH public key to be used within `/boot/dietpi.txt`. See the comment in `/boot/dietpi.txt` and `man ssh-keygen` for further details.
 
 === "Windows SSH client"
 
@@ -108,7 +108,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
     - `0` : Allow password logins for all users, including root (default case)
     - `root` : Disable password login for root user only
-	- `1` : Disable password logins for all users (assure that you have a valid SSH key applied!)
+    - `1` : Disable password logins for all users (assure that you have a valid SSH key applied!)
 
     The options will lead in changes of the file `/etc/ssh/sshd_config` (values `PubkeyAuthentication`, `PasswordAuthentication` and `PermitRootLogin`) and can be set by the configuration option `SOFTWARE_DISABLE_SSH_PASSWORD_LOGINS` in the file `/boot/dietpi.txt` to be examined during the initial first boot sequence.
 
@@ -135,7 +135,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
     ssh-keygen -f keys
     ``` 
     
-    which asks for a passphase and generates files `keys` resp. `keys.pub` in the actual directory. The file `keys.pub` holds the SSH public key to be used within `/boot/dietpi.txt`. See the comment in `/boot/dietpi.txt` and `man ssh-keygen` for further details.
+    which asks for a passphrase and generates files `keys` resp. `keys.pub` in the actual directory. The file `keys.pub` holds the SSH public key to be used within `/boot/dietpi.txt`. See the comment in `/boot/dietpi.txt` and `man ssh-keygen` for further details.
 
 === "Windows SSH client"
 
