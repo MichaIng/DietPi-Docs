@@ -48,7 +48,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
     - `0` : Allow password logins for all users, including root (default case)
     - `root` : Disable password login for root user only
-	- `1` : Disable password logins for all users (assure that you have a valid SSH key applied!)
+    - `1` : Disable password logins for all users (assure that you have a valid SSH key applied!)
 
     The first boot scripts apply them via `DROPBEAR_EXTRA_ARGS` setting in `/etc/default/dropbear`, before the SSH server starts and before the network is set up.
 
@@ -104,7 +104,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
     - `0` : Allow password logins for all users, including root (default case)
     - `root` : Disable password login for root user only
-	- `1` : Disable password logins for all users (assure that you have a valid SSH key applied!)
+    - `1` : Disable password logins for all users (assure that you have a valid SSH key applied!)
 
     The options will lead in changes of the file `/etc/ssh/sshd_config` (values `PubkeyAuthentication`, `PasswordAuthentication` and `PermitRootLogin`) and can be set by the configuration option `SOFTWARE_DISABLE_SSH_PASSWORD_LOGINS` in the file `/boot/dietpi.txt` to be examined during the initial first boot sequence.
 
