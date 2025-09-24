@@ -668,7 +668,7 @@ Automatically download your favorite music.
     - Toggle to `Advanced settings` slider (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-        ![Lidarr permissions options](../assets/images/dietpi-software-download-lidarrpermissions.png "Lidarr permissons options dialog"){: width="400" height="257" loading="lazy"}
+        ![Lidarr permissions options](../assets/images/dietpi-software-download-lidarrpermissions.png "Lidarr permissions options dialog"){: width="400" height="257" loading="lazy"}
 
     - Save changes
 
@@ -741,7 +741,7 @@ Automatically download your favorite ebook, as they become available.
     - Toggle to `Advanced settings` (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-      ![Readarr permissions options](../assets/images/dietpi-software-download-readarrpermissions.png "Readarr permissons options dialog"){: width="400" height="254" loading="lazy"}
+      ![Readarr permissions options](../assets/images/dietpi-software-download-readarrpermissions.png "Readarr permissions options dialog"){: width="400" height="254" loading="lazy"}
 
     - Save changes
 
