@@ -845,7 +845,7 @@ Select the following tabs for the installation description of your target.
 
         Download the **Native PC for BIOS/CSM** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}. It is `xz`-compressed, but most flashing tools support flashing `xz`-compressed images without the need to first decompress them. Otherwise we recommend [7zip for Windows](https://www.7-zip.org/) to decompress the image.
 
-        ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg  "Native PC BIOS installer image download dialog"){: width="722" height="218" loading="lazy"}
+        ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg "Native PC BIOS installer image download dialog"){: width="722" height="218" loading="lazy"}
 
         Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
@@ -1000,7 +1000,7 @@ A login prompt will appear. Use the initial credentials:
     Depending on your DHCP configuration, also just `dietpi` may be sufficient as the hostname.  
     Sometimes it needs to be followed by your router's domain (e.g. `dietpi.fritz.box`).
 
-    ![DietPi-SSH](assets/images/dietpi-ssh.jpg "puTTY configuration for DietPi SSH")
+    ![DietPi-SSH](assets/images/dietpi-ssh.jpg "PuTTY configuration for DietPi SSH")
 
     Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address `192.168.1.20` with the one found via scanning the network):
 
