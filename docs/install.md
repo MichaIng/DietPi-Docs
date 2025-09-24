@@ -1021,7 +1021,7 @@ Once the packages have been updated, DietPi will ask you to confirm whether you 
 !!! info "DietPi Survey"
     DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/){: class="nospellcheck"} page. Checkout and see how DietPi is used!
 
-![dietpi-data](assets/images/dietpi-data-policy.jpg "DietPi-Survey Opt IN / Opt OUT dialog){: width="642" height="385" loading="lazy"}
+![dietpi-data](assets/images/dietpi-data-policy.jpg "DietPi-Survey Opt IN / Opt OUT dialog"){: width="642" height="385" loading="lazy"}
 
 The default DietPi password is public, so you’ll be asked to change this at the next stage for both the `root` and `dietpi` user accounts. Select OK and hit ++enter++, then provide your password (twice) to confirm.
 
