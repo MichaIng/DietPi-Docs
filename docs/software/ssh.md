@@ -64,7 +64,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
     A public SSH authentication key for the users `root` and `dietpi` can be added from first boot on with the `AUTO_SETUP_SSH_PUBKEY` setting in the `dietpi.txt` file. The first boot scripts apply them to `~/.ssh/authorized_keys` of both users, before the SSH server starts and before the network is set up.
 
-    A key pair can be generated with most SSH clients, e.g. with OpenSSH or Dropbear from the console:
+    A key pair can be generated with most SSH clients, e.g. with OpenSSH or Dropbear from the console (`dropbearkey` is only available if Dropbear is selected as the SSH server option):
 
     ```sh
     # OpenSSH client:
