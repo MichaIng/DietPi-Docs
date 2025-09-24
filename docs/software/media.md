@@ -118,7 +118,7 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
+        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png "DietPi-JustBoom main menu"){: width="400" height="269" loading="lazy"}
 
 === "View logs"
 
@@ -169,7 +169,7 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
+        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png "DietPi-JustBoom main menu"){: width="400" height="269" loading="lazy"}
 
 === "Service control"
 
@@ -290,7 +290,7 @@ Also installs:
 
     Click the `settings` button (cog, top right).  
     Click `update`.  
-    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="500" height="190" loading="lazy"}
+    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png "O!MPD library update dialog"){: width="500" height="190" loading="lazy"}
 
 ## CAVA
 
@@ -314,7 +314,7 @@ Also installs:
     - Tweak CAVA options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
+        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png "DietPi-JustBoom main menu"){: width="400" height="269" loading="lazy"}
 
 ## Mopidy
 
@@ -416,15 +416,15 @@ Feature rich media streaming server with a web interface, coded in Java.
 
     First we check off the **Getting started** page and head over to **Settings**:
 
-    !["Getting started" page](../assets/images/airsonic_setup_1.png){: width="1440" height="900" loading="lazy"}
+    !["Getting started" page](../assets/images/airsonic_setup_1.png "Airsonic 'Getting started' dialog"){: width="1440" height="900" loading="lazy"}
 
     On the **Media folders** tab we change the path to DietPi's default music directory `/mnt/dietpi_userdata/Music`, save and scan the new media directory:
 
-    !["Media folders" settings page](../assets/images/airsonic_setup_2.png){: width="1440" height="900" loading="lazy"}
+    !["Media folders" settings page](../assets/images/airsonic_setup_2.png "Airsonic 'Media folders' dialog"){: width="1440" height="900" loading="lazy"}
 
     On the **Credentials** tab we add a new admin password, the default `bcrypt` encoding is very good for secure password storage. Then we delete the initial default password:
 
-    !["Credentials" settings page](../assets/images/airsonic_setup_3.png){: width="1440" height="900" loading="lazy"}
+    !["Credentials" settings page](../assets/images/airsonic_setup_3.png "Airsonic 'Credentials' dialog"){: width="1440" height="900" loading="lazy"}
 
 === "Setup details"
 
@@ -744,7 +744,7 @@ Also Installs:
     - Select `show catalogues` from the left hand side.
     - Select `Update all`.
 
-    ![Ampache web interface screenshot with database update instructions](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png){: width="400" height="193" loading="lazy"}
+    ![Ampache web interface screenshot with database update instructions](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png "Ampache media database update dialog"){: width="400" height="193" loading="lazy"}
 
 === "Add media directories"
 
@@ -753,7 +753,7 @@ Also Installs:
     - Enter the details of your path.
     - Select the `add catalogue` button.
 
-    ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
+    ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png "Ampache media directories dialog"){: width="400" height="180" loading="lazy"}
 
     !!! note "Access permissions on local directories"
 

@@ -564,7 +564,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__Parallels Desktop__](https://www.parallels.com/products/desktop/).
 
-    ![Parallels Desktop DietPi machine](assets/images/Parallels1.jpg "Parallels Desktop on Apple MacOS"){: width="896" height="504" loading="lazy"}
+    ![Parallels Desktop DietPi machine](assets/images/Parallels1.jpg "Parallels Desktop on Apple macOS"){: width="896" height="504" loading="lazy"}
 
     <h2>Prerequisites</h2>
 
@@ -602,7 +602,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__UTM__](https://mac.getutm.app/).
 
-    ![UTM Desktop DietPi machine](assets/images/UTM1.png "UTM Desktop on Apple MacOS"){: width="900" height="506" loading="lazy"}
+    ![UTM Desktop DietPi machine](assets/images/UTM1.png "UTM Desktop on Apple macOS"){: width="900" height="506" loading="lazy"}
 
     <h2>Prerequisites</h2>
 

@@ -338,7 +338,7 @@ Network file system server.
 
     On macOS, a permanent mount can be achieved by going to the System Settings, searching for Login Items and drag&drop the mount:
 
-    ![macOS permanent NFS mount](../assets/images/dietpi-software-fileserver-macos_permanent_nfs_mount.jpg){: width="695" height="145" loading="lazy"}
+    ![macOS permanent NFS mount](../assets/images/dietpi-software-fileserver-macos_permanent_nfs_mount.jpg "macOS permanent mount"){: width="695" height="145" loading="lazy"}
 
     **Note:** Further details about the `nfs` and `mount_nfs` commands can be found with typing `man nfs` and `man mount_nfs` in the terminal on macOS. The man pages contain the current information about how the system behaves and optional parameters on how to mount successfully.
 

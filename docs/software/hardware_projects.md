@@ -385,7 +385,7 @@ See <https://www.audiophonics.fr/en/raspberry-pi-and-other-sbc-accessories/audio
 
     Please ensure the correct GPIO pins are used, when connecting Pi-SPC to RPi (see image below).
 
-    ![Raspberry Pi GPIO scheme](../assets/images/dietpi-software-hardwareprojects-audiophonics-gpionumbers.png){: width="400" height="119" loading="lazy"}
+    ![Raspberry Pi GPIO scheme](../assets/images/dietpi-software-hardwareprojects-audiophonics-gpionumbers.png "Raspberry Pi GPIO scheme"){: width="400" height="119" loading="lazy"}
 
 To power off the system begin the shutdown process: Hold the power button for < 0.5 seconds. If you don't have a button, you can also close the pins `BP PIN C` and `BP PIN NO`, with your favorite electrically conductive metal (e.g.: tweezers).  
 Remark: Avoid holding the power button for longer than 2 seconds, as this will hard power off the system (same effect as pulling the power cord). Doing so will create file-system corruptions, during shutdown IO operations.

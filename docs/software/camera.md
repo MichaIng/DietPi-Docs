@@ -69,7 +69,7 @@ It consists of full control of the camera in a web-based interface.
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
-    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png "DietPi-Config camera activation dialog"){: width="500" height="290" loading="lazy"}
 
 ***
 
@@ -126,7 +126,7 @@ from any RPi camera, USB camera or an IP camera network stream.
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
-    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png "DietPi-Config camera activation dialog"){: width="500" height="290" loading="lazy"}
 
 ***
 
@@ -218,7 +218,7 @@ Stream JPEG frames from various sources to various possible outputs. With the de
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
-    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png "DietPi-Config camera activation dialog"){: width="500" height="290" loading="lazy"}
 
 ***
 

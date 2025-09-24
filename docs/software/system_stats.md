@@ -164,23 +164,23 @@ The following screenshots shall give an overview over the displaying features of
 
 === "CPU usage"
 
-    ![DietPi-CloudShell CPU usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-cpuusage.jpg){: width="400" height="305" loading="lazy"}
+    ![DietPi-CloudShell CPU usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-cpuusage.jpg "DietPi-CloudShell CPU usage dialog"){: width="400" height="305" loading="lazy"}
 
 === "Memory usage"
 
-    ![DietPi-CloudShell memory usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-memoryusage.jpg){: width="400" height="293" loading="lazy"}
+    ![DietPi-CloudShell memory usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-memoryusage.jpg "DietPi-CloudShell memory usage dialog"){: width="400" height="293" loading="lazy"}
 
 === "Storage details"
 
-    ![DietPi-CloudShell storage details dialog](../assets/images/dietpi-software-systemstat-cloudshare-storagedetails.png){: width="400" height="292" loading="lazy"}
+    ![DietPi-CloudShell storage details dialog](../assets/images/dietpi-software-systemstat-cloudshare-storagedetails.png "DietPi-CloudShell storage details dialog"){: width="400" height="292" loading="lazy"}
 
 === "Network details"
 
-    ![DietPi-CloudShell network details dialog](../assets/images/dietpi-software-systemstat-cloudshare-networkstats.jpg){: width="400" height="303" loading="lazy"}
+    ![DietPi-CloudShell network details dialog](../assets/images/dietpi-software-systemstat-cloudshare-networkstats.jpg "DietPi-CloudShell network details dialog"){: width="400" height="303" loading="lazy"}
 
 === "Pi-hole stats"
 
-    ![DietPi-CloudShell Pi-hole dialog](../assets/images/dietpi-software-systemstat-cloudshare-piholestats.jpg){: width="400" height="305" loading="lazy"}
+    ![DietPi-CloudShell Pi-hole dialog](../assets/images/dietpi-software-systemstat-cloudshare-piholestats.jpg "DietPi-CloudShell Pi-hole statistics dialog"){: width="400" height="305" loading="lazy"}
 
 ***
 
@@ -196,14 +196,14 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
     dietpi-cloudshell
     ```
 
-    ![DietPi-CloudShell main menu](../assets/images/dietpi-software-systemstat-cloudshare-configuration.png){: width="600" height="298" loading="lazy"}
+    ![DietPi-CloudShell main menu](../assets/images/dietpi-software-systemstat-cloudshare-configuration.png "DietPi-CloudShell main menu"){: width="600" height="298" loading="lazy"}
 
 === "Scenes"
 
     DietPi-CloudShell offers scenes with predefined display outputs resp. layouts.  
     Scenes are configured in the *Scenes* dialog within `dietpi-cloudshell`.
 
-    ![DietPi-CloudShell scenes menu](../assets/images/dietpi-software-systemstat-cloudshare-scenes.png){: width="600" height="283" loading="lazy"}
+    ![DietPi-CloudShell scenes menu](../assets/images/dietpi-software-systemstat-cloudshare-scenes.png "DietPi-CloudShell scenes dialog"){: width="600" height="283" loading="lazy"}
 
 === "Power saving"
 
@@ -222,7 +222,7 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
     Simply run `dietpi-config`, select `Display Options`, then select `waveshare32`.   
     After a reboot, your *Waveshare32* will become active.
 
-    ![DietPi-CloudShell on Waveshare32 touchscreen photo](../assets/images/dietpi-software-systemstat-cloudshell-wavesharesupport.png){: width="400" height="258" loading="lazy"}
+    ![DietPi-CloudShell on Waveshare32 touchscreen photo](../assets/images/dietpi-software-systemstat-cloudshell-wavesharesupport.png "DietPi-CloudShell Waveshare32 touchscreen"){: width="400" height="258" loading="lazy"}
 
 === "Odroid 3.5 LCD shield"
 
@@ -231,7 +231,7 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
     Simply run `dietpi-config`, select `Display Options`, then select `odroid-lcd35`.   
     After a reboot, your *Odroid 3.5 LCD* will become active.
 
-    ![DietPi-CloudShell on Odroid 3.5 LCD photo](../assets/images/dietpi-software-systemstat-cloudshell-touchscreensupport.jpg){: width="400" height="224" loading="lazy"}
+    ![DietPi-CloudShell on Odroid 3.5 LCD photo](../assets/images/dietpi-software-systemstat-cloudshell-touchscreensupport.jpg "DietPi-CloudShell Odroid 3.5 LCD shield touchscreen"){: width="400" height="224" loading="lazy"}
 
 === "Other touchscreens"
 
@@ -822,7 +822,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     === "Catppuccin"
 
-        ![Homer preview screenshot showing the Cappuccino theme](https://raw.githubusercontent.com/mrpbennett/catppuccin-homer/main/assets/images/examples/preview.png){: width="4146" height="2600" loading="lazy"}
+        ![Homer preview screenshot showing the Cappuccino theme](https://raw.githubusercontent.com/mrpbennett/catppuccin-homer/main/assets/images/examples/preview.png "Homer Catppuccin theme"){: width="4146" height="2600" loading="lazy"}
 
         To apply the **Catppuccin theme** to Homer execute these steps:
 
@@ -857,7 +857,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     === "DietPi"
 
-        ![Homer preview screenshot showing the DietPi theme](https://codeberg.org/Cs137/homer-theme-dietpi/media/branch/main/demo/screenshot_dark.png){: width="1920" height="1080" loading="lazy"}
+        ![Homer preview screenshot showing the DietPi theme](https://codeberg.org/Cs137/homer-theme-dietpi/media/branch/main/demo/screenshot_dark.png "Homer DietPi theme"){: width="1920" height="1080" loading="lazy"}
 
         To apply the **DietPi theme** to Homer execute these steps:
 
@@ -885,7 +885,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     === "Dracula"
 
-        ![Homer preview screenshot showing the Dracula theme](https://raw.githubusercontent.com/dracula/homer/master/screenshot.png){: width="1920" height="947" loading="lazy"}
+        ![Homer preview screenshot showing the Dracula theme](https://raw.githubusercontent.com/dracula/homer/master/screenshot.png "Homer Dracula theme"){: width="1920" height="947" loading="lazy"}
 
         To apply the **Dracula theme** to Homer execute these steps:
 
@@ -914,7 +914,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     === "macOS"
 
-        ![Homer preview screenshot showing the macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png){: width="1904" height="1080" loading="lazy"}
+        ![Homer preview screenshot showing the macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png "Homer macOS theme"){: width="1904" height="1080" loading="lazy"}
 
         To apply the **macOS styled theme** to Homer execute these steps:
 

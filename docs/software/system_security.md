@@ -41,7 +41,7 @@ To use Certbot you need:
 ???+ important "Keep port 80 open for Certbot renewal"
     Even when you use only HTTPS on port 443, Let's Encrypt requires port 80 to stay opened for certificate renewals (in your router's forwarding functionality).
 
-![DietPi-LetsEncrypt interface screenshot](../assets/images/dietpi-software-security-certbot.png){: width="400" height="183" loading="lazy"}
+![DietPi-LetsEncrypt interface screenshot](../assets/images/dietpi-software-security-certbot.png "DietPi-LetsEncrypt main menu"){: width="400" height="183" loading="lazy"}
 
 ### Create and apply your cert
 

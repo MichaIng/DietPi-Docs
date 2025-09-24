@@ -272,7 +272,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     - URL: `http://<your.IP>/opcache.php`
 
-    ![OPcache statistics page](../assets/images/OpCache_php_output.png){: width="700" height="976" loading="lazy"}
+    ![OPcache statistics page](../assets/images/OpCache_php_output.png "Nextcloud OPcache statistics output"){: width="700" height="976" loading="lazy"}
 
     The dialog shows the cache status as well as the settings.
 
@@ -851,50 +851,50 @@ vaultwarden is an unofficial Bitwarden password manager server with web interfac
             1. In your browser, next to the address bar, select the warning or lock icon.
                 Then select the certificate button to open Windows' Certificate view.
             2. Switch to the "Details" tab.  
-                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
+                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png "Import certificate on Windows 10 - Details tab")
             3. Select "Save to file".
             4. In the newly opened window, select "Continue".  
-                ![Import certificate on Windows 10, screenshot 2](../assets/images/import_cert_windows_2.png)
+                ![Import certificate on Windows 10, screenshot 2](../assets/images/import_cert_windows_2.png "Import certificate on Windows 10 - Continue")
             5. Leave default DER coding and select "Continue".
             6. Select "Browse" to chose a target file location.  
-                ![Import certificate on Windows 10, screenshot 3](../assets/images/import_cert_windows_3.png)
+                ![Import certificate on Windows 10, screenshot 3](../assets/images/import_cert_windows_3.png "Import certificate on Windows 10 - Browser selection")
             7. Choose a target file location and name, it is only required temporarily.
             8. Select "Continue".
             9. Select "Finish".  
-                ![Import certificate on Windows 10, screenshot 4](../assets/images/import_cert_windows_4.png)
+                ![Import certificate on Windows 10, screenshot 4](../assets/images/import_cert_windows_4.png "Import certificate on Windows 10 - Finish dialog")
             10. Double-click the created certificate file and select "Install certificate".
             11. Select "Local system".
             12. Select "Continue", which requires administrator permissions.  
-                ![Import certificate on Windows 10, screenshot 5](../assets/images/import_cert_windows_5.png)
+                ![Import certificate on Windows 10, screenshot 5](../assets/images/import_cert_windows_5.png "Import certificate on Windows 10 - Administrator permissions")
             13. Choose "Save all certificates to the following store".
             14. Select "Browse".
             15. Select "Trusted Root Certification Authorities".
             16. Select "Ok".
             17. Select "Continue".
             18. Select "Finish".  
-                ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png)
+                ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png "Import certificate on Windows 10 - Finish dialog")
 
         === "macOS"
 
             1. In your browser (note that this cannot be done in Safari), next to the address bar, select the warning or lock icon.
                 Then select the "Certificate (Invalid)" button.  
-                ![Import certificate on macOS, screenshot 1](../assets/images/import_cert_mac_1.png){: width="250px"}
+                ![Import certificate on macOS, screenshot 1](../assets/images/import_cert_mac_1.png "Import certificate on MacOS - Certificate import"){: width="250px"}
             2. Drag the certificate icon to your desktop, it is only required temporarily.
             3. Double-click on the certificate file.  
-                ![Import certificate on macOS, screenshot 2](../assets/images/import_cert_mac_2.png)
+                ![Import certificate on macOS, screenshot 2](../assets/images/import_cert_mac_2.png "Import certificate on MacOS - Certificate file selection")
             4. On the "Keychain" dropdown, select "System".
             5. Select "Add".
             6. Enter an administrator username and password.
             7. Select "Modify Keychain".  
-                ![Import certificate on macOS, screenshot 3](../assets/images/import_cert_mac_3.png)
+                ![Import certificate on macOS, screenshot 3](../assets/images/import_cert_mac_3.png "Import certificate on MacOS - Keychain modification")
             8. Double-click on the certificate in the list.
             9. Select "Trust".  
-                ![Import certificate on macOS, screenshot 4](../assets/images/import_cert_mac_4.png)
+                ![Import certificate on macOS, screenshot 4](../assets/images/import_cert_mac_4.png "Import certificate on MacOS - Trust selection")
             10. On the "Secure Sockets Layer (SSL)" dropdown, select "Always Trust".
             11. Click the red button in the top left corner of the window.
             12. Enter an administrator username and password.
             13. Select "Update Settings".  
-                ![Import certificate on macOS, screenshot 5](../assets/images/import_cert_mac_5.png)
+                ![Import certificate on macOS, screenshot 5](../assets/images/import_cert_mac_5.png "Import certificate on MacOS - Update settings")
 
 === "Web access"
 
@@ -957,7 +957,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
     !!! warning "The fact that FuguHub runs on ports 80 and 443 by default makes it incompatible with regular web servers when using the default setup."
 
-    ![FuguHub web interface screenshot](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png){: width="1920" height="1088" loading="lazy"}
+    ![FuguHub web interface screenshot](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png "FuguHub web interface main menu"){: width="1920" height="1088" loading="lazy"}
 
 === "Setup details"
 
@@ -1054,7 +1054,7 @@ Access and manage your data from anywhere via browser with this lightweight remo
 
     The filebrowser contains its own user management. To add/change/remove users, the filebrowser UI contains a *Settings* section with a *User Management* tab.
 
-    ![File Browser UI - User Management](../assets/images/dietpi-software-cloud-filebrowser-usermgmt.png){: width="600" height="200" loading="lazy"}
+    ![File Browser UI - User Management](../assets/images/dietpi-software-cloud-filebrowser-usermgmt.png "File Browser user management dialog"){: width="600" height="200" loading="lazy"}
 
 === "View logs"
 

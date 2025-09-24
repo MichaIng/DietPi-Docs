@@ -193,7 +193,7 @@ Website: <http://gnustep.org>
     The kiosk mode can be distinguished to the **Single App Kiosk Mode**, where the user is locked into one single particular site having a fullscreen mode that can't be changed or exited.  
     Following is an example of a kiosk mode screenshot for the example site `dietpi.com`:
 
-    ![Chromium kiosk mode screenshot](../assets/images/dietpi-software-desktop-chromium-kiosk-mode.jpg){: width="360" height="208" loading="lazy"}
+    ![Chromium kiosk mode screenshot](../assets/images/dietpi-software-desktop-chromium-kiosk-mode.jpg "Chromium kiosk mode"){: width="360" height="208" loading="lazy"}
 
     <h4>Activate Chromium kiosk mode</h4>
 
@@ -259,7 +259,7 @@ Firefox Browser, also known as simply Firefox, is a free and open-source web bro
 
 Similar to [Chromium](#chromium), Firefox has been made a separate install option. For desktop installs users can choose between Chromium, Firefox or no web browser.
 
-![Firefox screenshot](../assets/images/dietpi-software-firefox-display.png){: width="1024" height="723" loading="lazy"}
+![Firefox screenshot](../assets/images/dietpi-software-firefox-display.png "Firefox Browser"){: width="1024" height="723" loading="lazy"}
 
 ***
 

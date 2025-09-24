@@ -145,7 +145,7 @@ It allows you to create your own website.
     !!! info "Actively fill all fields!"
         You need to fill out every dialog field although it seems like they are already set.
 
-        ![WordPress database initialization dialog](../assets/images/dietpi-software-social-wordpress-initialdialog.jpg){: width="350" height="274" loading="lazy"}
+        ![WordPress database initialisation dialog](../assets/images/dietpi-software-social-wordpress-initialdialog.jpg "WordPress database initialisation dialog"){: width="350" height="274" loading="lazy"}
 
         **Remark**: In the example screenshot the global application password is `dietpi`.
 
@@ -301,7 +301,7 @@ A self-hosted, single-user, ActivityPub powered microblog.
     The software installs automatically with a default config. Therefore it is necessary to reconfigure it using the `microblog-pub` script, which loads the environment, and brings up the app's own configuration wizard.  
     This circumstance is signalled with the following dialog at the end of the installation process:
 
-    ![microblog.pub installation screenshot](../assets/images/dietpi-software-social-microblogpub2.jpg){: width="640" height="142" loading="lazy"}
+    ![microblog.pub installation screenshot](../assets/images/dietpi-software-social-microblogpub2.jpg "microblog.pub installation dialog"){: width="640" height="142" loading="lazy"}
 
     To execute this reconfiguration, you can enter the following commands:
 

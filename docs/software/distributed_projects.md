@@ -240,7 +240,7 @@ The ADS-B Feeder application allows you to feed any (or all) of these aggregator
     First of all, you need to connect an SDR to your system (lots more information at the [ADSB.im](https://adsb.im/howto){: class="nospellcheck"} [pages](https://adsb.im/supported) - currently these pages are somewhat focused on the full feeder images, but all of the other information applies here as well), add an antenna and set up the software.  
     Then simply connect with a browser to your DietPi system on port 1099. On the initial setup page enter a name for your site plus its location and pick how you want to decide which aggregators to feed.
 
-    ![ADS-B Feeder Setup Page](../assets/images/ADSB-Feeder-Setup-Page.png){: width="500" height="343" loading="lazy"}
+    ![ADS-B Feeder Setup Page](../assets/images/ADSB-Feeder-Setup-Page.png "ADS-B Feeder Setup Page"){: width="500" height="343" loading="lazy"}
 
     It will take a short while to get started (depending on your system and network speed as it will download a couple Docker containers), and after that you are up and running.
     

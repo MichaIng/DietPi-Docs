@@ -279,7 +279,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
 
     The simplest way to load balance network traffic to multiple servers is to use layer 4 (transport layer) load balancing. Load balancing this way will forward user traffic based on IP range and port.
 
-    ![Layer 4 load balancing pictogram](../assets/images/dietpi-software-advanced-networking-layer4.jpg){: width="690" height="248" loading="lazy"}
+    ![Layer 4 load balancing pictogram](../assets/images/dietpi-software-advanced-networking-layer4.jpg "HAProxy load balancing"){: width="690" height="248" loading="lazy"}
 
     The user accesses the load balancer, which forwards the user’s request to the web-backend group of backend servers. Whichever backend server is selected will respond directly to the user’s request.
 
@@ -290,7 +290,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     A high availability (HA) setup is an infrastructure without a single point of failure. It prevents a single server failure from being a downtime event by adding redundancy to every layer of your architecture. A load balancer facilitates redundancy for the backend layer (web/app servers), but for a true high availability setup, you need to have redundant load balancers as well.
 
     Here is a diagram of a basic high availability setup:
-    ![Animated high availability setup diagram](../assets/images/dietpi-software-advanced-networking-high-availability.gif){: width="1200" height="577" loading="lazy"}
+    ![Animated high availability setup diagram](../assets/images/dietpi-software-advanced-networking-high-availability.gif "HAProxy high availability"){: width="1200" height="577" loading="lazy"}
 
     Help text extracted from the tutorial: [An Introduction to HAProxy and Load Balancing Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
 

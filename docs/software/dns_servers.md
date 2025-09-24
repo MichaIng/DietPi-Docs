@@ -61,7 +61,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     Simply enter the IP address of your Pi-hole device under "DNS server":
 
-    ![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: width="400" height="240" loading="lazy"}
+    ![Pi-hole DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png "Pi-hole DNS server software router setup"){: width="400" height="240" loading="lazy"}
 
     On your Pi-hole device, you will need to set a different DNS server.  
     Depending on your router configuration, if you don't do this step, the Pi-hole device may not be able to access the internet. It's highly recommended to have the device running Pi-hole, pointing to a DNS server outside your network.
@@ -267,7 +267,7 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
 
     Simply enter the IP address of your AdGuard Home device under "DNS server":
 
-    ![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: width="400" height="240" loading="lazy"}
+    ![AdGuard Home DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png "AdGuard Home DNS server software router setup"){: width="400" height="240" loading="lazy"}
 
     On your AdGuard Home device, you will need to set a different DNS server.  
     Depending on your router configuration, if you don't do this step, the AdGuard Home device may not be able to access the internet. It's highly recommended to have the device running AdGuard Home, pointing to a DNS server outside your network.
@@ -282,7 +282,7 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
 
     Please use the internal updater from the web interface to update your AdGuard Home. You will see a notification at the top of the page once an update is available.
 
-    ![AdGuard Home update notification](../assets/images/adguardhome-update-notification.png){: width="753" height="95" loading="lazy"}
+    ![AdGuard Home update notification](../assets/images/adguardhome-update-notification.png "AdGuard Home update notification"){: width="753" height="95" loading="lazy"}
 
 === "Setting the password"
 

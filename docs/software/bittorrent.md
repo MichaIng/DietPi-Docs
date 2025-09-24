@@ -471,7 +471,7 @@ Automatically download your favorite TV shows, as they become available.
     - Toggle to `Advanced settings` slider (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-      ![Sonarr permissions options](../assets/images/dietpi-software-download-sonarrpermissions.png){: width="400" height="171" loading="lazy"}
+      ![Sonarr permissions options](../assets/images/dietpi-software-download-sonarrpermissions.png "Sonarr permissions dialog"){: width="400" height="171" loading="lazy"}
 
     - Save changes
 
@@ -548,7 +548,7 @@ Automatically download your favorite movies, as they become available.
     - Toggle to `Advanced settings` (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-      ![Radarr permissions options](../assets/images/dietpi-software-download-readarrpermissions.png){: width="400" height="254" loading="lazy"}
+      ![Radarr permissions options](../assets/images/dietpi-software-download-readarrpermissions.png "Radarr permissions dialog"){: width="400" height="254" loading="lazy"}
 
     - Save changes
 
@@ -613,7 +613,7 @@ Key features:
 
     - URL: `http://<your.IP>:6767`
 
-    ![Bazarr subtitle finds list](../assets/images/dietpi-software-download-bazarr.jpg){: width="1105" height="490" loading="lazy"}
+    ![Bazarr subtitle finds list](../assets/images/dietpi-software-download-bazarr.jpg "Bazarr subtitle list"){: width="1105" height="490" loading="lazy"}
 
 === "Advanced"
 
@@ -668,7 +668,7 @@ Automatically download your favorite music.
     - Toggle to `Advanced settings` slider (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-        ![Lidarr permissions options](../assets/images/dietpi-software-download-lidarrpermissions.png){: width="400" height="257" loading="lazy"}
+        ![Lidarr permissions options](../assets/images/dietpi-software-download-lidarrpermissions.png "Lidarr permissons options dialog"){: width="400" height="257" loading="lazy"}
 
     - Save changes
 
@@ -741,7 +741,7 @@ Automatically download your favorite ebook, as they become available.
     - Toggle to `Advanced settings` (enable it)
     - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
 
-      ![Readarr permissions options](../assets/images/dietpi-software-download-readarrpermissions.png){: width="400" height="254" loading="lazy"}
+      ![Readarr permissions options](../assets/images/dietpi-software-download-readarrpermissions.png "Readarr permissons options dialog"){: width="400" height="254" loading="lazy"}
 
     - Save changes
 
