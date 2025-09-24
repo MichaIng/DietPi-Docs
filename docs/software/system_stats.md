@@ -43,7 +43,7 @@ description: Description of DietPi software options related to system statistics
 
 DietPi-Dashboard is a very lightweight and standalone web interface for monitoring and managing your DietPi system with your favourite web browser. It is written in Rust. An overview of its features is given by our article: <https://dietpi.com/blog/?p=1137>
 
-![DietPi-Dashboard screenshot](../assets/images/dietpi-dashboard.jpg){: width="700" height="346" loading="lazy"}
+![DietPi-Dashboard screenshot](../assets/images/dietpi-dashboard.jpg "DietPi-Dashboard screen"){: width="700" height="346" loading="lazy"}
 
 !!! warning "DietPi-Dashboard is still in Beta!"
 
@@ -242,7 +242,7 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
 The GNU Midnight Commander (`mc`) is a visual file manager with a two column view. It allows to copy, move and delete files resp. whole directory trees as well as searching for files and run commands in a subshell. It also contains an internal viewer and editor.  
 Midnight Commander is a full-screen text mode application running on a regular console, inside an X Window terminal, over SSH connections and all kinds of remote shells.
 
-![GNU Midnight Commander screenshot](../assets/images/dietpi-software-systemstat-midnightcommander.png){: width="500" height="322" loading="lazy"}
+![GNU Midnight Commander screenshot](../assets/images/dietpi-software-systemstat-midnightcommander.png "GNU Midnight Commander dialog"){: width="500" height="322" loading="lazy"}
 
 ***
 
@@ -255,7 +255,7 @@ Linux Dash allows you to monitor your system stats from a web page.
 
 - Also Installs: [LASP webserver stack](webserver_stack.md)
 
-![Linux Dash web interface screenshot](../assets/images/dietpi-software-systemstat-linuxdash.png){: width="500" height="270" loading="lazy"}
+![Linux Dash web interface screenshot](../assets/images/dietpi-software-systemstat-linuxdash.png "Linux Dash web interface dialog"){: width="500" height="270" loading="lazy"}
 
 === "Access to Linux Dash"
 
@@ -273,7 +273,7 @@ Allows you to monitor your system stats from a web page. The display output can 
 
 - Also Installs: [LASP webserver stack](webserver_stack.md)
 
-![phpSysInfo web interface screenshot](../assets/images/dietpi-software-systemstat-phpsysinfo.png){: width="500" height="268" loading="lazy"}
+![phpSysInfo web interface screenshot](../assets/images/dietpi-software-systemstat-phpsysinfo.png "phpSysInfo web interface dialog"){: width="500" height="268" loading="lazy"}
 
 === "Access to phpSysInfo"
 
@@ -293,7 +293,7 @@ Official website: <https://phpsysinfo.github.io/phpsysinfo>
 
 RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
-![RPi-Monitor web interface screenshot](../assets/images/dietpi-software-systemstat-rpimonitor.png){: width="500" height="364" loading="lazy"}
+![RPi-Monitor web interface screenshot](../assets/images/dietpi-software-systemstat-rpimonitor.png "RPi-Monitor web interface dialog"){: width="500" height="364" loading="lazy"}
 
 === "Main features"
 
@@ -323,7 +323,7 @@ Official website: <https://github.com/XavierBerger/RPi-Monitor>.
 
 Netdata is a slick and feature-rich system stats monitor, with web interface.
 
-![Netdata web interface screenshot](../assets/images/dietpi-software-systemstat-netdata.png){: width="500" height="260" loading="lazy"}
+![Netdata web interface screenshot](../assets/images/dietpi-software-systemstat-netdata.png "Netdata web interface dialog"){: width="500" height="260" loading="lazy"}
 
 === "Access to Netdata"
 
@@ -360,7 +360,7 @@ Wikipedia: <https://wikipedia.org/wiki/Netdata>
 
 Webmin is a web-based feature-rich remote system management tool. Many system settings can easily be set using the web interface dialogues.
 
-![Webmin interface screenshot](../assets/images/dietpi-software-systemstat-webmin.png){: width="500" height="276" loading="lazy"}
+![Webmin interface screenshot](../assets/images/dietpi-software-systemstat-webmin.png "Webmin main menu"){: width="500" height="276" loading="lazy"}
 
 === "Access to Webmin"
 
@@ -536,7 +536,7 @@ License: [Apache-2.0](https://github.com/docker/compose/blob/v2/LICENSE)
 
 Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
 
-![Portainer screenshot](../assets/images/dietpi-software-portainer.jpg){: width="1159" height="636" loading="lazy"}
+![Portainer screenshot](../assets/images/dietpi-software-portainer.jpg "Portainer web interface dialog"){: width="1159" height="636" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -670,7 +670,7 @@ License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
 Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by an external [Prometheus server](https://prometheus.io/), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](https://grafana.com/), the final piece of a very powerful monitoring stack.
 
-![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png){: width="800" height="395" loading="lazy"}
+![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png "Prometheus Node Exporter dialog"){: width="800" height="395" loading="lazy"}
 
 On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](https://github.com/fahlke/raspberrypi_exporter), which will add RPi-specific metrics such as voltages, CPU frequencies and temperatures.
 
@@ -751,7 +751,7 @@ License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LI
 
 Homer is a modern and lightweight dashboard & homepage for your services
 
-![Homer preview screenshot](../assets/images/homer-preview.png){: width="1920" height="1080" loading="lazy"}
+![Homer preview screenshot](../assets/images/homer-preview.png "Homer web interface dialog"){: width="1920" height="1080" loading="lazy"}
 
 === "Access to Homer"
 

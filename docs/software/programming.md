@@ -173,7 +173,7 @@ mono --version
 
 VSCodium is a FLOSS version of [Microsoft's Visual Studio code](https://code.visualstudio.com/), built directly from the source on GitHub, without branding, tracking, or telemetry.
 
-![VSCodium screenshot](../assets/images/dietpi-software-programming-vscodium.png){: width="1028" height="799" loading="lazy"}
+![VSCodium screenshot](../assets/images/dietpi-software-programming-vscodium.png "VSCodium screen"){: width="1028" height="799" loading="lazy"}
 
 === "Update to latest version"
 

@@ -65,7 +65,7 @@ We have enabled detection for SSH servers (OpenSSH and Dropbear), however, Fail2
 
 ![Fail2Ban logo](../assets/images/dietpi-software-security-fail2ban1.jpg){: width="200" height="157" loading="lazy"}
 
-![Fail2Ban example console logs output](../assets/images/dietpi-software-security-fail2ban2.jpg){: width="550" height="360" loading="lazy"}
+![Fail2Ban example console logs output](../assets/images/dietpi-software-security-fail2ban2.jpg "Fail2Ban console log output"){: width="550" height="360" loading="lazy"}
 
 An IP address is by default ban triggered after 3 failed SSH login attempts. Fail2Ban will ban the source IP address for 10 minutes.
 

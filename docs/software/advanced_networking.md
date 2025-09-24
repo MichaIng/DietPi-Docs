@@ -252,7 +252,7 @@ HAProxy, which stands for High Availability Proxy, is a popular open source soft
 
 It is best suited for high traffic web sites and powers quite a number of the world's most visited ones: GitHub, Imgur, Instagram, and Twitter. It has become the de-facto standard open-source load balancer, and it is often deployed by default in cloud platforms.
 
-![HAProxy statistics web page](../assets/images/dietpi-software-advanced-networking-haproxy2.jpg){: width="1898" height="650" loading="lazy"}
+![HAProxy statistics web page](../assets/images/dietpi-software-advanced-networking-haproxy2.jpg "HAProxy statistics web page"){: width="1898" height="650" loading="lazy"}
 
 !!! warning "This software title is recommended ONLY for advanced users!"
 

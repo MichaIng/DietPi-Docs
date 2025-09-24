@@ -38,7 +38,7 @@ description: Description of DietPi software options related to social platforms 
 
 FreshRSS is a self-hosted RSS feed aggregator.
 
-![FreshRSS screenshot](../assets/images/dietpi-software-social-freshrss.jpg){: width="400" height="247" loading="lazy"}
+![FreshRSS screenshot](../assets/images/dietpi-software-social-freshrss.jpg "FreshRSS main menu"){: width="400" height="247" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -58,7 +58,7 @@ Also Installs:
 
 - Webserver, PHP and MariaDB
 
-![phpBB example forum screenshot](../assets/images/dietpi-software-social-phpbb.png){: width="400" height="298" loading="lazy"}
+![phpBB example forum screenshot](../assets/images/dietpi-software-social-phpbb.png "phpBB main dialog"){: width="400" height="298" loading="lazy"}
 
 ### Access Forums
 
@@ -161,7 +161,7 @@ Also Installs:
 
 - Webserver and PHP
 
-![Single File PHP Gallery web interface screenshot](../assets/images/dietpi-software-social-imagegallery.png){: width="400" height="248" loading="lazy"}
+![Single File PHP Gallery web interface screenshot](../assets/images/dietpi-software-social-imagegallery.png "Single File PHP Gallery web interface dialog"){: width="400" height="248" loading="lazy"}
 
 === "Access to Image Gallery"
 
@@ -193,7 +193,7 @@ YouTube video tutorial: [DietPi: Easily set up Raspberry Pi projects (e.g. a sha
 
 Baïkal is a lightweight CalDAV + CardDAV server.
 
-![Baïkal web interface screenshot](../assets/images/dietpi-software-social-baikal.png){: width="400" height="219" loading="lazy"}
+![Baïkal web interface screenshot](../assets/images/dietpi-software-social-baikal.png "Baïkal web interface dialog"){: width="400" height="219" loading="lazy"}
 
 === "First run setup"
 
@@ -294,7 +294,7 @@ License: [Apache 2.0](https://github.com/matrix-org/synapse/blob/develop/LICENSE
 
 A self-hosted, single-user, ActivityPub powered microblog.
 
-![microblog.pub blog screenshot](../assets/images/dietpi-software-social-microblogpub1.jpg){: width="400" height="337" loading="lazy"}
+![microblog.pub blog screenshot](../assets/images/dietpi-software-social-microblogpub1.jpg "microblog.pub blog screen"){: width="400" height="337" loading="lazy"}
 
 === "Installation / configuration"
 

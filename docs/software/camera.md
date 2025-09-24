@@ -38,7 +38,7 @@ The *RPi Cam Web Interface* package can be used in combination with a Raspberry 
 
 It consists of full control of the camera in a web-based interface.
 
-![RPi Cam Web Interface screenshot](../assets/images/dietpi-software-camera-rpicamcontrol.png){: width="500" height="395" loading="lazy"}
+![RPi Cam Web Interface screenshot](../assets/images/dietpi-software-camera-rpicamcontrol.png "RPi Cam Web Interface screen"){: width="500" height="395" loading="lazy"}
 
 === "Access the web interface"
 
@@ -91,7 +91,7 @@ The software can
 
 from any RPi camera, USB camera or an IP camera network stream.
 
-![motionEye web interface screenshot](../assets/images/dietpi-software-camera-motioneye.png){: width="500" height="246" loading="lazy"}
+![motionEye web interface screenshot](../assets/images/dietpi-software-camera-motioneye.png "motionEye web interface screen"){: width="500" height="246" loading="lazy"}
 
 === "Access the web interface"
 
@@ -139,7 +139,7 @@ License: [GPLv3](https://github.com/motioneye-project/motioneye/blob/main/LICENS
 
 Stream JPEG frames from various sources to various possible outputs. With the default setup it streams an attached camera image to a simple web page with the included HTTP plugin.
 
-![mjpg-streamer HTML stream GIF](../assets/images/mjpg-streamer.gif){: width="500" height="400" loading="lazy"}
+![mjpg-streamer HTML stream GIF](../assets/images/mjpg-streamer.gif "mjpg-streamer HTML stream GIF"){: width="500" height="400" loading="lazy"}
 
 === "Access the HTTP stream"
 

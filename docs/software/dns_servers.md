@@ -160,7 +160,7 @@ Unbound is a validating, recursive, caching DNS resolver. It can resolve hostnam
 
 ![Unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: width="150" height="34" loading="lazy"}
 
-![Unbound monitor screenshot](../assets/images/dietpi-software-unbound.jpg){: width="500" height="274" loading="lazy"}
+![Unbound monitor screenshot](../assets/images/dietpi-software-unbound.jpg "Unbound monitor dialog"){: width="500" height="274" loading="lazy"}
 
 === "Default DNS ports"
 
@@ -236,7 +236,7 @@ Blog entry with YouTube video (German language): [Unbound Installation für PiHo
 
 AdGuard Home is a DNS sinkhole with web interface that will block ads for any device on your network.
 
-![AdGuard Home web interface screenshot](../assets/images/dietpi-software-dnsserver-adguardhome.png){: width="500" height="410" loading="lazy"}
+![AdGuard Home web interface screenshot](../assets/images/dietpi-software-dnsserver-adguardhome.png "AdGuard Home web interface screen"){: width="500" height="410" loading="lazy"}
 
 === "Access the web interface"
 

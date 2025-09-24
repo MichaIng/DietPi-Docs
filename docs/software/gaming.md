@@ -43,7 +43,7 @@ Tyrian is an arcade-style vertical scrolling shooter. The story is set
 in 20,031 where you play as Trent Hawkins, a skilled fighter pilot employed
 to fight MicroSol and save the galaxy.
 
-![OpenTyrian screenshot](../assets/images/dietpi-software-games-opentyrian.jpg){: width="400" height="251" loading="lazy"}
+![OpenTyrian screenshot](../assets/images/dietpi-software-games-opentyrian.jpg "OpenTyrian screen"){: width="400" height="251" loading="lazy"}
 
 === "Start the game"
 
@@ -61,7 +61,7 @@ to fight MicroSol and save the galaxy.
 
 Cuberite allows you to create a single, blazingly fast Minecraft server, which utilizes the performance benefits of C++ (instead of Java) and comes with a handy web interface.
 
-![Cuberite web interface view](../assets/images/dietpi-software-games-cuberite.png){: width="400" height="198" loading="lazy"}
+![Cuberite web interface view](../assets/images/dietpi-software-games-cuberite.png "Cuberite web interface screen"){: width="400" height="198" loading="lazy"}
 
 === "Access the web interface"
 
@@ -118,7 +118,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
 MineOS allows you to create multiple Minecraft servers with ease, using a simple web interface.
 
-![MineOS web interface view](../assets/images/dietpi-software-games-mineos.png){: width="400" height="208" loading="lazy"}
+![MineOS web interface view](../assets/images/dietpi-software-games-mineos.png "MineOS web interface screen"){: width="400" height="208" loading="lazy"}
 
 === "Access to web interface"
 
@@ -165,7 +165,7 @@ License: [GPLv3](https://github.com/hexparrot/mineos-node/blob/master/LICENSE.md
 
 Nukkit is a Java-based server for Minecraft Pocket Edition.
 
-![Nukkit screenshot](../assets/images/dietpi-software-games-nukkit.png){: width="400" height="225" loading="lazy"}
+![Nukkit screenshot](../assets/images/dietpi-software-games-nukkit.png "Nukkit screen"){: width="400" height="225" loading="lazy"}
 
 === "Info"
 
@@ -418,7 +418,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
 ![PaperMC logo](../assets/images/dietpi-software-games-papermc.jpg){: width="100" height="100" loading="lazy"}
 
-![PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg){: width="500" height="300" loading="lazy"}
+![PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg "PaperMC screen"){: width="500" height="300" loading="lazy"}
 
 === "Default server/query port"
 

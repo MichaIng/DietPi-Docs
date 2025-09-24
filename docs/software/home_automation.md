@@ -118,7 +118,7 @@ License: [Apache-2.0](https://github.com/home-assistant/core/blob/dev/LICENSE.md
 
 Domoticz is a Home Automation System that lets you monitor and configure various devices like lights, switches, various sensors/meters like for temperature, rain, wind, UV radiation, electric fields, gas, water and much more. Notifications/Alerts can be sent to any mobile device.
 
-![Domoticz web interface screenshot](../assets/images/dietpi-software-homeautomation-domoticz.jpg){: width="600" height="226" loading="lazy"}
+![Domoticz web interface screenshot](../assets/images/dietpi-software-homeautomation-domoticz.jpg "Domoticz web interface screen"){: width="600" height="226" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -196,7 +196,7 @@ Credits: Implemented by @svh1985
 
 openHAB (open Home Automation Bus) is an open source home automation platform. The *keywords* are *Bindings*, *Things*, *Channels*, *Items*, *Rules*, *Pages*.
 
-![openHAB web interface screenshot](../assets/images/dietpi-software-homeautomation-openhab.jpg){: width="600" height="393" loading="lazy"}
+![openHAB web interface screenshot](../assets/images/dietpi-software-homeautomation-openhab.jpg "openHAB web interface screen"){: width="600" height="393" loading="lazy"}
 
 === "Access to the web interface"
 

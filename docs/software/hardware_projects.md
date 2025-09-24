@@ -145,7 +145,7 @@ Website: <https://webiopi.trouch.com>
 
 Node-RED is a visual tool for wiring together hardware devices, APIs and online services in new and interesting ways. Node-RED uses a standalone web server that can be accessed remotely.
 
-![Node-RED web interface screenshot](../assets/images/dietpi-software-hardwareprojects-nodered.png){: width="400" height="286" loading="lazy"}
+![Node-RED web interface screenshot](../assets/images/dietpi-software-hardwareprojects-nodered.png "Node-RED web interface screen"){: width="400" height="286" loading="lazy"}
 
 === "Access to the programming IDE"
 
@@ -397,7 +397,7 @@ The open platform for beautiful analytics and monitoring.
 This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).  
 Remark: Grafana binaries are specific to the CPU architecture, therefore, swapping SD cards between RPi 1 <> 2+, is not recommended.
 
-![Grafana web interface screenshot](../assets/images/dietpi-software-hardwareprojects-grafana.png){: width="400" height="197" loading="lazy"}
+![Grafana web interface screenshot](../assets/images/dietpi-software-hardwareprojects-grafana.png "Grafana web interface screen"){: width="400" height="197" loading="lazy"}
 
 === "Prerequisites"
 

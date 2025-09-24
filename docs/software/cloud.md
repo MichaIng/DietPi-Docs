@@ -48,7 +48,7 @@ Also Installs:
 - Webserver
 - USB dedicated hard drive highly recommended
 
-![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png){: width="400" height="218" loading="lazy"}
+![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png "ownCloud web interface screen"){: width="400" height="218" loading="lazy"}
 
 === "Quick start"
 
@@ -109,7 +109,7 @@ Official documentation: <https://doc.owncloud.com/server/next/admin_manual/>
 
 Nextcloud gives you access to all your files wherever you are. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust.
 
-![Nextcloud web interface screenshot](../assets/images/dietpi-software-cloud-nextcloud.jpg){: width="2048" height="1280" loading="lazy"}
+![Nextcloud web interface screenshot](../assets/images/dietpi-software-cloud-nextcloud.jpg "Nextcloud web interface screen"){: width="2048" height="1280" loading="lazy"}
 
 === "Quick start"
 
@@ -303,7 +303,7 @@ Also installs:
 - [**Nextcloud**](#nextcloud)
 - **Coturn**
 
-![Nextcloud Talk app screenshot](../assets/images/dietpi-software-cloud-nextcloudtalk.png){: width="2560" height="1440" loading="lazy"}
+![Nextcloud Talk app screenshot](../assets/images/dietpi-software-cloud-nextcloudtalk.png "Nextcloud Talk app screen"){: width="2560" height="1440" loading="lazy"}
 
 === "Installation notes"
 
@@ -327,7 +327,7 @@ Also Installs:
 
 - Webserver
 
-![Pydio web interface screenshot](../assets/images/dietpi-software-cloud-pydio.png){: width="400" height="243" loading="lazy"}
+![Pydio web interface screenshot](../assets/images/dietpi-software-cloud-pydio.png "Pydio web interface screen"){: width="400" height="243" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -370,7 +370,7 @@ UrBackup Server is an Open Source client/server backup system, that through a co
 Basically, it allows you to create a complete system backup for systems on your network, using a simple web interface.  
 Clients are available for Windows, macOS, Linux and FreeBSD.
 
-![UrBackup interface screenshot](../assets/images/dietpi-software-cloud-urbackup.png){: width="400" height="103" loading="lazy"}
+![UrBackup interface screenshot](../assets/images/dietpi-software-cloud-urbackup.png "UrBackup interface screen"){: width="400" height="103" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -465,7 +465,7 @@ Official forums: <https://forums.urbackup.org/>
 
 Your very own GitHub style server, with web interface.
 
-![Gogs web interface screenshot](../assets/images/dietpi-software-cloud-gogs.png){: width="400" height="175" loading="lazy"}
+![Gogs web interface screenshot](../assets/images/dietpi-software-cloud-gogs.png "Gogs web interface screen"){: width="400" height="175" loading="lazy"}
 
 See also the [**Git**](programming.md#git) client which is available in `dietpi-software` as an installation package.
 
@@ -769,7 +769,7 @@ License: [MIT](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/LICENSE)
 
 Backup and sync server with web interface. Extremely lightweight and efficient as no webserver is required.
 
-![Syncthing interface screenshot](../assets/images/dietpi-software-cloud-syncthing.png){: width="400" height="195" loading="lazy"}
+![Syncthing web interface screenshot](../assets/images/dietpi-software-cloud-syncthing.png "Syncthing web interface screen"){: width="400" height="195" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -835,7 +835,7 @@ License: [AGPLv3](https://github.com/minio/minio/blob/master/LICENSE)
 
 vaultwarden is an unofficial Bitwarden password manager server with web interface, written in Rust.
 
-![vaultwarden web vault screenshot](../assets/images/dietpi-software-vaultwarden.jpg){: width="600" height="247" loading="lazy"}
+![vaultwarden web vault screenshot](../assets/images/dietpi-software-vaultwarden.jpg "vaultwarden web vault screen"){: width="600" height="247" loading="lazy"}
 
 === "First access"
 

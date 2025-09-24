@@ -47,7 +47,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
 !!! hint "USB dedicated hard drive highly recommended"
 
-![Transmission web interface screenshot](../assets/images/dietpi-software-download-transmission.png){: width="500" height="334" loading="lazy"}
+![Transmission web interface screenshot](../assets/images/dietpi-software-download-transmission.png "Transmission web interface screen"){: width="500" height="334" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -141,7 +141,7 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
 !!! hint "USB dedicated hard drive highly recommended"
 
-![qBittorrent web interface screenshot](../assets/images/dietpi-software-download-qbittorrent.png){: width="400" height="236" loading="lazy"}
+![qBittorrent web interface screenshot](../assets/images/dietpi-software-download-qbittorrent.png "qBittorrent web interface screen"){: width="400" height="236" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -179,7 +179,7 @@ Also installs:
 
 !!! hint "USB dedicated hard drive highly recommended"
 
-![ruTorrent screenshot](../assets/images/dietpi-software-download-rtorrent.png){: width="400" height="201" loading="lazy"}
+![ruTorrent screenshot](../assets/images/dietpi-software-download-rtorrent.png "ruTorrent web interface screen"){: width="400" height="201" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -284,7 +284,7 @@ Also installs:
 
 - Webserver
 
-![Aria2 web interface screenshot](../assets/images/dietpi-software-download-aria2.png){: width="400" height="199" loading="lazy"}
+![Aria2 web interface screenshot](../assets/images/dietpi-software-download-aria2.png "Aria2 web interface screen"){: width="400" height="199" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -324,7 +324,7 @@ Also installs:
 
 NZB download manager with web interface.
 
-![SABnzbd web interface screenshot](../assets/images/dietpi-software-download-sabnzbd.png){: width="400" height="328" loading="lazy"}
+![SABnzbd web interface screenshot](../assets/images/dietpi-software-download-sabnzbd.png "SABnzbd web interface screen"){: width="400" height="328" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -395,7 +395,7 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
-![Medusa web interface screenshot](../assets/images/dietpi-software-download-medusa.jpg){: width="400" height="225" loading="lazy"}
+![Medusa web interface screenshot](../assets/images/dietpi-software-download-medusa.jpg "Medusa web interface screen"){: width="400" height="225" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -446,7 +446,7 @@ Automatically download your favorite TV shows, as they become available.
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
-![Sonarr web interface screenshot](../assets/images/dietpi-software-download-sonarr.png){: width="400" height="200" loading="lazy"}
+![Sonarr web interface screenshot](../assets/images/dietpi-software-download-sonarr.png "Sonarr web interface screen"){: width="400" height="200" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -523,7 +523,7 @@ Automatically download your favorite movies, as they become available.
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
-![Radarr web interface screenshot](../assets/images/dietpi-software-download-radarr.png){: width="400" height="207" loading="lazy"}
+![Radarr web interface screenshot](../assets/images/dietpi-software-download-radarr.png "Radarr web interface screen"){: width="400" height="207" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -605,7 +605,7 @@ Key features:
 - **Subtitles upgrade**
     Search for matching subtitles on a regular basis and upgrade the one you previously downloaded if a better one is found.
 
-![Bazarr web interface screenshot](../assets/images/dietpi-software-download-bazarr1.jpg){: width="1898" height="1080" loading="lazy"}
+![Bazarr web interface screenshot](../assets/images/dietpi-software-download-bazarr1.jpg "Bazarr web interface screen"){: width="1898" height="1080" loading="lazy"}
 
 === "Quick start"
 
@@ -643,7 +643,7 @@ Automatically download your favorite music.
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
-![Lidarr web interface screenshot](../assets/images/dietpi-software-download-lidarr.jpg){: width="400" height="205" loading="lazy"}
+![Lidarr web interface screenshot](../assets/images/dietpi-software-download-lidarr.jpg "Lidarr web interface screen"){: width="400" height="205" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -716,7 +716,7 @@ Automatically download your favorite ebook, as they become available.
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
-![Readarr web interface screenshot](../assets/images/dietpi-software-download-readarr.png){: width="400" height="183" loading="lazy"}
+![Readarr web interface screenshot](../assets/images/dietpi-software-download-readarr.png "Readarr web interface screen"){: width="400" height="183" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -816,7 +816,7 @@ License: [GPLv3](https://github.com/Readarr/Readarr/blob/develop/LICENSE.md)
 
 Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Lidarr, Mylar3, Radarr, Readarr, and Sonarr offering complete management of your indexers.
 
-![Prowlarr web interface screenshot](../assets/images/dietpi-software-download-prowlarr.png){: width="400" height="262" loading="lazy"}
+![Prowlarr web interface screenshot](../assets/images/dietpi-software-download-prowlarr.png "Prowlarr web interface screen"){: width="400" height="262" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -840,7 +840,7 @@ License: [GPLv3](https://github.com/Prowlarr/Prowlarr/blob/develop/LICENSE)
 
 Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, Lidarr, Medusa) into tracker-site-specific HTTP queries, parses the HTML response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.
 
-![Jackett web interface screenshot](../assets/images/dietpi-software-download-jackett.png){: width="400" height="262" loading="lazy"}
+![Jackett web interface screenshot](../assets/images/dietpi-software-download-jackett.png "Jackett web interface screen"){: width="400" height="262" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -857,7 +857,7 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
 
 Extremely efficient and fast NZB download manager with web interface. Coded in C++.
 
-![NZBGet web interface screenshot](../assets/images/dietpi-software-download-nzbget.jpg){: width="400" height="270" loading="lazy"}
+![NZBGet web interface screenshot](../assets/images/dietpi-software-download-nzbget.jpg "NZBGet web interface screen"){: width="400" height="270" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -899,7 +899,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 HTPC Manager combines all your favourite software into one slick interface.  
 Do all your HTPC tasks without using 5 different interfaces!
 
-![HTPC Manager web interface screenshot](../assets/images/dietpi-software-download-htpc-manager.png){: width="400" height="191" loading="lazy"}
+![HTPC Manager web interface screenshot](../assets/images/dietpi-software-download-htpc-manager.png "HTPC Manager web interface screen"){: width="400" height="191" loading="lazy"}
 
 === "Access to the web interface"
 
