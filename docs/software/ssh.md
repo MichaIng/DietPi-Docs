@@ -122,18 +122,24 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
     
     If `<option>` is skipped/empty, the one from `/boot/dietpi.txt` will be reapplied to `/etc/default/dropbear`.
 
-=== "SSH server public keys"
+=== "Public Key Authentication"
 
-    SSH server public keys for users `root` and `dietpi` can be added to the system.  
-    The options will lead in changes of the file `~/.ssh/authorized_keys` and can be set by the configuration option `AUTO_SETUP_SSH_PUBKEY` in the file `/boot/dietpi.txt` to be examined during the initial first boot sequence.
+    A public SSH authentication key for the users `root` and `dietpi` can be added from first boot on with the `AUTO_SETUP_SSH_PUBKEY` setting in the `dietpi.txt` file. The first boot scripts apply them to `~/.ssh/authorized_keys` of both users, before the SSH server starts and before the network is set up.
 
-    The needed public key (`ssh-ed25519` format) can be generated via 
-    
+    A key pair can be generated with most SSH clients, e.g. with OpenSSH or Dropbear from the console (`dropbearkey` is only available if Dropbear is selected as the SSH server option):
+
     ```sh
-    ssh-keygen -f keys
+    # OpenSSH client:
+    ssh-keygen -t ed25519
+    # Dropbear client:
+    dropbearkey -t ed25519 -f ~/.ssh/id_dropbear
     ``` 
-    
-    which asks for a passphrase and generates files `keys` resp. `keys.pub` in the actual directory. The file `keys.pub` holds the SSH public key to be used within `/boot/dietpi.txt`. See the comment in `/boot/dietpi.txt` and `man ssh-keygen` for further details.
+
+    Other key types are supported, but we suggest Ed25519, a modern scheme which provides best security with a small key size.
+
+    `ssh-keygen` asks for an optional passphrase and file path, where we suggest to use the default `~/.ssh/id_ed25519`, where the client will be able to use it OOTB. The file `id_ed25519.pub` holds the public key to be used within `/boot/dietpi.txt`. See the comment in `/boot/dietpi.txt` and [`man ssh-keygen`](https://manpages.debian.org/ssh-keygen) for further details.
+
+    `dropbearkey` prints the public key portion to the console instead. See [`man dropbearkey`](https://manpages.debian.org/dropbearkey) for further details.
 
 === "Windows SSH client"
 
