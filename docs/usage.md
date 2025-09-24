@@ -77,7 +77,7 @@ Each line shows:
 
 The following screenshot shows the logging of the boot process (of a DietPi virtual machine). You can see the various fields (timestamp, hostname, etc.) in the log entries:
 
-![DietPi logging - journalctl screenshot](assets/images/dietpi-howto-logging1.png){: width="640" height="300" loading="lazy"}
+![DietPi logging - journalctl screenshot](assets/images/dietpi-howto-logging1.png "DietPi journalctl output"){: width="640" height="300" loading="lazy"}
 
 ### Logging output filtering options
 
