@@ -10,7 +10,7 @@ dietpi-software
 
 It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../software.md) titles.
 
-![DietPi-Software screenshot](../assets/images/dietpi-software.jpg){: width="640" height="306" loading="lazy"}
+![DietPi-Software screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main dialog"){: width="640" height="306" loading="lazy"}
 
 ### Software overview
 
@@ -30,13 +30,13 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     The software you selected will begin to install at this point. Once the process is completed, you may be asked to restart your device. Press **OK** to confirm.
 
-    ![DietPi-Software Software Optimised menu screenshot](../assets/images/dietpi-software-optimised.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software Software Optimised menu screenshot](../assets/images/dietpi-software-optimised.jpg "DietPi-Software Software Optimised menu"){: width="643" height="365" loading="lazy"}
 
 === "Search Software"
 
     DietPi supports a large number of software titles. Instead of scrolling through the **Browse Software** list to find a specific software title, you may use the **Search Software** option. Type in the software ID or any keyword from its title or description and you'll get a list filtered by matching results.
 
-    ![DietPi-Software Search menu screenshot](../assets/images/dietpi-software-search.png){: with="752" height="321" loading="lazy"}
+    ![DietPi-Software Search menu screenshot](../assets/images/dietpi-software-search.png "DietPi-Software Search menu"){: with="752" height="321" loading="lazy"}
 
 ### Quick selections
 
@@ -44,7 +44,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
 
-    ![DietPi-Software SSH Server menu screenshot](../assets/images/dietpi-software-ssh-selection.jpg){: width="550" height="320" loading="lazy"}
+    ![DietPi-Software SSH Server menu screenshot](../assets/images/dietpi-software-ssh-selection.jpg "DietPi-Software SSH Server menu"){: width="550" height="320" loading="lazy"}
 
 === "Log System"
 
@@ -53,7 +53,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     The Log System can be changed at any time by selecting a different “Log System” from the menu.
 
-    ![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg){: width="550" height="370" loading="lazy"}
+    ![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg "DietPi-Software Log System menu"){: width="550" height="370" loading="lazy"}
 
     See [log system choices](../software/log_system.md) for further details.
 
@@ -79,7 +79,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     DietPi will automatically move your existing user data to your new location.
 
-    ![DietPi-Software User Data Location menu screenshot](../assets/images/dietpi-software-user-data-location-selection.jpg){: width="550" height="287" loading="lazy"}
+    ![DietPi-Software User Data Location menu screenshot](../assets/images/dietpi-software-user-data-location-selection.jpg "DietPi-Software User Data Location menu"){: width="550" height="287" loading="lazy"}
 
 ### Install or remove software
 
@@ -108,7 +108,7 @@ Available commands:
 
 The `<software_id>` which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:
 
-![DietPi-Tools command line installation](../assets/images/dietpi-tools-command-line-installation.png){: width="454" height="129" loading="lazy"}
+![DietPi-Tools command line installation](../assets/images/dietpi-tools-command-line-installation.png "DietPi software IDs"){: width="454" height="129" loading="lazy"}
 
 E.g. to install Chromium, LXQt and GIMP you have to run next command in the terminal:
 
@@ -130,11 +130,11 @@ dietpi-letsencrypt
 
 In case of a non installed Certbot package it is installed at first:
 
-![DietPi-LetsEncrypt screenshot](../assets/images/dietpi-letsencrypt.jpg){: width="642" height="216" loading="lazy"}
+![DietPi-LetsEncrypt screenshot](../assets/images/dietpi-letsencrypt.jpg "DietPi-LetsEncrypt dialog"){: width="642" height="216" loading="lazy"}
 
 In the installation dialog some entries have to be made which are needed for the certificate (domain, Email), the other entries are configuration options. It is recommended to leave the key size at 4096 bits.
 
-![DietPi-LetsEncrypt configuration screenshot](../assets/images/dietpi-letsencrypt_2.png){: width="642" height="279" loading="lazy"}
+![DietPi-LetsEncrypt configuration screenshot](../assets/images/dietpi-letsencrypt_2.png "DietPi-LetsEncrypt configuration"){: width="642" height="279" loading="lazy"}
 
 When you execute the certificate installation it also installs it for your selected web server, i.e. you do not have to edit your web server configuration files, the installation routine does all for you.
 
@@ -163,7 +163,7 @@ DietPi-VPN is a combination of OpenVPN installation and DietPi front end GUI. Al
 dietpi-vpn
 ```
 
-![DietPi-VPN screenshot](../assets/images/dietpi-vpn.jpg){: width="642" height="300" loading="lazy"}
+![DietPi-VPN screenshot](../assets/images/dietpi-vpn.jpg "DietPi-VPN main dialog"){: width="642" height="300" loading="lazy"}
 
 ![OpenVPN logo](../assets/images/dietpi-software-vpn-openvpn-logo.png){: width="200" height="58" loading="lazy"}
 
@@ -206,7 +206,7 @@ DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cr
 dietpi-ddns
 ```
 
-![DietPi-DDNS main menu screenshot](../assets/images/dietpi-ddns.jpg){: width="656" height="256" loading="lazy"}
+![DietPi-DDNS main menu screenshot](../assets/images/dietpi-ddns.jpg "DietPi-DDNS main menu"){: width="656" height="256" loading="lazy"}
 
 ### Supported providers
 

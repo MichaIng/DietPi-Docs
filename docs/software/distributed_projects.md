@@ -23,7 +23,7 @@ description: Description of DietPi software options related to distributed softw
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
@@ -36,7 +36,7 @@ The problems which are solved require so many computer calculations that help fr
 
 *By default, our installation will add you to the DietPi team group, however, you can change this in the web interface at any time.*
 
-![Folding@Home web interface screenshot](../assets/images/dietpi-software-distributed-projects-foldingathome.png){: width="550" height="424" loading="lazy"}
+![Folding@Home web interface screenshot](../assets/images/dietpi-software-distributed-projects-foldingathome.png "Folding@Home web interface screen"){: width="550" height="424" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -138,7 +138,7 @@ Official documentation: <https://community.torproject.org/relay/setup>
 YaCy is a decentralized open source search engine.  
 Essentially, it is a "peer-to-peer" Google search engine, not controlled by Google.
 
-![YaCy search web page screenshot](../assets/images/dietpi-software-distributed-projects-yacy.png){: width="400" height="233" loading="lazy"}
+![YaCy search web page screenshot](../assets/images/dietpi-software-distributed-projects-yacy.png "YaCy search web page dialog"){: width="400" height="233" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -172,7 +172,7 @@ Essentially, it is a "peer-to-peer" Google search engine, not controlled by Goog
 IPFS (InterPlanetary File System) is a peer-to-peer hypermedia protocol designed to make the web faster, safer, and more open.
 This node lets you download files through IPFS and add your own files to the network.
 
-![IPFS web interface screenshot](../assets/images/dietpi-software-distributed-projects-ipfs.png){: width="400" height="233" loading="lazy"}
+![IPFS web interface screenshot](../assets/images/dietpi-software-distributed-projects-ipfs.png "IPFS web interface screen"){: width="400" height="233" loading="lazy"}
 
 === "Access to the web interface and IPFS gateway"
 
@@ -221,7 +221,7 @@ Official documentation: <https://docs.ipfs.io>
 [ADSB.im](https://adsb.im/home/){: class="nospellcheck"} is a project to create an easy to manage [ADS-B Feeder system](https://wikipedia.org/wiki/Automatic_Dependent_Surveillance–Broadcast).  
 The images available as [GitHub Releases](https://github.com/dirkhh/adsb-feeder-image/releases) are intended to be run on dedicated Single Board Computers (or VMs) - many of them are actually based on DietPi. But if you already have a DietPi system that you use for other purposes, it might make more sense to simply add the software stack to your existing setup - and this is the purpose of providing ADS-B feeder as an app in the DietPi *Optimised Software list*.
 
-![A view of the planes around you](../assets/images/TAR1090-view.png){: width="400" height="403" loading="lazy"}
+![A view of the planes around you](../assets/images/TAR1090-view.png "ADS-B Feeder view of the planes"){: width="400" height="403" loading="lazy"}
 
 What is ADS-B? Automatic Dependent Surveillance - Broadcast (ADS-B) is a surveillance technology that uses satellite navigation or other sensors to determine an aircraft's position and periodically broadcast it, enabling it to be tracked. With a simple (and relatively cheap) Software Defined Radio (SDR) USB stick, anyone can receive the ADS-B signal from planes in their vicinity. There are thousands of people all over the world who are tracking planes around them and then feed that data to sites that aggregate this data and make it available for others to use. Some of them, like [ADSB.lol](https://adsb.lol){: class="nospellcheck"}, do so under an open data license, others, like [FlightAware](https://www.flightaware.com/) are commercial companies that then resell the data to their customers.
 
@@ -240,7 +240,7 @@ The ADS-B Feeder application allows you to feed any (or all) of these aggregator
     First of all, you need to connect an SDR to your system (lots more information at the [ADSB.im](https://adsb.im/howto){: class="nospellcheck"} [pages](https://adsb.im/supported) - currently these pages are somewhat focused on the full feeder images, but all of the other information applies here as well), add an antenna and set up the software.  
     Then simply connect with a browser to your DietPi system on port 1099. On the initial setup page enter a name for your site plus its location and pick how you want to decide which aggregators to feed.
 
-    ![ADS-B Feeder Setup Page](../assets/images/ADSB-Feeder-Setup-Page.png){: width="500" height="343" loading="lazy"}
+    ![ADS-B Feeder Setup Page](../assets/images/ADSB-Feeder-Setup-Page.png "ADS-B Feeder Setup Page"){: width="500" height="343" loading="lazy"}
 
     It will take a short while to get started (depending on your system and network speed as it will download a couple Docker containers), and after that you are up and running.
     

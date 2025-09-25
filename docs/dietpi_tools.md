@@ -8,7 +8,7 @@ It provides an easy access to all DietPi OS tools and can be accessed by running
 dietpi-launcher
 ```
 
-![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg){: width="642" height="398" loading="lazy"}
+![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg "DietPi-Launcher main menu"){: width="642" height="398" loading="lazy"}
 
 ## [Software Installation](dietpi_tools/software_installation.md)
 

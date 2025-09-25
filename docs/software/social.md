@@ -28,7 +28,7 @@ description: Description of DietPi software options related to social platforms 
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
@@ -38,7 +38,7 @@ description: Description of DietPi software options related to social platforms 
 
 FreshRSS is a self-hosted RSS feed aggregator.
 
-![FreshRSS screenshot](../assets/images/dietpi-software-social-freshrss.jpg){: width="400" height="247" loading="lazy"}
+![FreshRSS screenshot](../assets/images/dietpi-software-social-freshrss.jpg "FreshRSS main menu"){: width="400" height="247" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -58,7 +58,7 @@ Also Installs:
 
 - Webserver, PHP and MariaDB
 
-![phpBB example forum screenshot](../assets/images/dietpi-software-social-phpbb.png){: width="400" height="298" loading="lazy"}
+![phpBB example forum screenshot](../assets/images/dietpi-software-social-phpbb.png "phpBB main dialog"){: width="400" height="298" loading="lazy"}
 
 ### Access Forums
 
@@ -145,7 +145,7 @@ It allows you to create your own website.
     !!! info "Actively fill all fields!"
         You need to fill out every dialog field although it seems like they are already set.
 
-        ![WordPress database initialization dialog](../assets/images/dietpi-software-social-wordpress-initialdialog.jpg){: width="350" height="274" loading="lazy"}
+        ![WordPress database initialisation dialog](../assets/images/dietpi-software-social-wordpress-initialdialog.jpg "WordPress database initialisation dialog"){: width="350" height="274" loading="lazy"}
 
         **Remark**: In the example screenshot the global application password is `dietpi`.
 
@@ -161,7 +161,7 @@ Also Installs:
 
 - Webserver and PHP
 
-![Single File PHP Gallery web interface screenshot](../assets/images/dietpi-software-social-imagegallery.png){: width="400" height="248" loading="lazy"}
+![Single File PHP Gallery web interface screenshot](../assets/images/dietpi-software-social-imagegallery.png "Single File PHP Gallery web interface dialog"){: width="400" height="248" loading="lazy"}
 
 === "Access to Image Gallery"
 
@@ -193,7 +193,7 @@ YouTube video tutorial: [DietPi: Easily set up Raspberry Pi projects (e.g. a sha
 
 Baïkal is a lightweight CalDAV + CardDAV server.
 
-![Baïkal web interface screenshot](../assets/images/dietpi-software-social-baikal.png){: width="400" height="219" loading="lazy"}
+![Baïkal web interface screenshot](../assets/images/dietpi-software-social-baikal.png "Baïkal web interface dialog"){: width="400" height="219" loading="lazy"}
 
 === "First run setup"
 
@@ -294,14 +294,14 @@ License: [Apache 2.0](https://github.com/matrix-org/synapse/blob/develop/LICENSE
 
 A self-hosted, single-user, ActivityPub powered microblog.
 
-![microblog.pub blog screenshot](../assets/images/dietpi-software-social-microblogpub1.jpg){: width="400" height="337" loading="lazy"}
+![microblog.pub blog screenshot](../assets/images/dietpi-software-social-microblogpub1.jpg "microblog.pub blog screen"){: width="400" height="337" loading="lazy"}
 
 === "Installation / configuration"
 
     The software installs automatically with a default config. Therefore it is necessary to reconfigure it using the `microblog-pub` script, which loads the environment, and brings up the app's own configuration wizard.  
     This circumstance is signalled with the following dialog at the end of the installation process:
 
-    ![microblog.pub installation screenshot](../assets/images/dietpi-software-social-microblogpub2.jpg){: width="640" height="142" loading="lazy"}
+    ![microblog.pub installation screenshot](../assets/images/dietpi-software-social-microblogpub2.jpg "microblog.pub installation dialog"){: width="640" height="142" loading="lazy"}
 
     To execute this reconfiguration, you can enter the following commands:
 

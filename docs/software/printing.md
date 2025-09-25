@@ -20,7 +20,7 @@ description: Description of DietPi software options related to printers
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
@@ -30,7 +30,7 @@ description: Description of DietPi software options related to printers
 
 OctoPrint provides a web interface for controlling consumer 3D printers.
 
-![OctoPrint web interface screenshot](../assets/images/dietpi-software-printserver-octoprint.png){: width="400" height="297" loading="lazy"}
+![OctoPrint web interface screenshot](../assets/images/dietpi-software-printserver-octoprint.png "OctoPrint web interface dialog"){: width="400" height="297" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -73,7 +73,7 @@ License: [AGPLv3](https://github.com/OctoPrint/OctoPrint/blob/master/LICENSE.txt
 
 The Common UNIX Printing System (CUPS) provides a command-line interface (CLI) and a web interface for managing your local and network printers.
 
-![CUPS web interface screenshot](../assets/images/dietpi-software-printserver-cups.png){: width="500" height="385" loading="lazy"}
+![CUPS web interface screenshot](../assets/images/dietpi-software-printserver-cups.png "CUPS web interface dialog"){: width="500" height="385" loading="lazy"}
 
 === "Access to the web interface"
 
