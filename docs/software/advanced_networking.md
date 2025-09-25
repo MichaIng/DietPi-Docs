@@ -13,7 +13,8 @@ description: Description of DietPi software options related to networking
 - [**Avahi-Daemon - Zero configuration DNS service for the local network**](#avahi-daemon)
 - [**frp - Reverse Proxy**](#frp)
 
---8<-- "snippet-includes/DietPi-Software_infoblock.md"
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 ## WiFi HotSpot
 
