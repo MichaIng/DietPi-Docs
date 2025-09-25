@@ -55,6 +55,7 @@ markdown_extensions:
       kwds:
         case: lower
     combine_header_slug: true
+- pymdownx.snippets # Insert Markdown files into others
 
 #  Markdown extensions which could be used in the future
 #
@@ -68,7 +69,6 @@ markdown_extensions:
 #- pymdownx.inlinehilite # Highlight syntax in inline code
 #- pymdownx.mark # Mark text <mark> via ==text==
 #- pymdownx.smartsymbols # Easy symbols syntax (trademark, copyright, arrows, ...)
-#- pymdownx.snippets # Insert Markdown files into others
 #- pymdownx.tilde # Subscript <sub> and strikethrough <del> text via tilde ~
 
 plugins:
