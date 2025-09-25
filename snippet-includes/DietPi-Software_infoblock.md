@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD041 -->
 ??? info "How do I run **DietPi-Software** and install **optimised software** items?"
     To install any of the **DietPi optimised software items** listed below run from the command line:
 
