@@ -81,7 +81,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
     ```
 
     Other key types are supported, but we suggest Ed25519, a modern scheme which provides best security with a small key size.  
-    The commands generate a public key with an additional **key comment** at the end of the generated line. This comment has generally no function and can be used to understand the entry better. It can be set in `dietpi.txt` for the users convenience.
+    The commands generate a public key with an additional **key comment** at the end of the generated line, `root@dietpi` in the above example. This comment has generally no function, but is shown by SSH clients when performing a key authentication, and can be used to understand the entry better. It can be set or omitted in `dietpi.txt` for the users convenience.
 
     `ssh-keygen` asks for an optional passphrase and file path, where we suggest to use the default `~/.ssh/id_ed25519`, where the client will be able to use it OOTB. The file `id_ed25519.pub` holds the public key to be used within `/boot/dietpi.txt`. See the comments in `/boot/dietpi.txt` and [`man ssh-keygen`](https://manpages.debian.org/ssh-keygen) for further details.
 
