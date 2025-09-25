@@ -74,12 +74,8 @@ Also installs:
 
     - URL: `http://<your.IP>:1337`
 
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "Refresh music files / database"
 
@@ -142,12 +138,8 @@ Also installs:
 
     - URL: `https://<your.IP>:1333`
 
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "Refresh music files / database"
 
@@ -251,12 +243,8 @@ Also installs:
     - Username: `admin`
     - Password: `admin`
 
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "Configuration"
 
@@ -317,12 +305,8 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     - URL: `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
 
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "Refresh music files / database"
 
@@ -481,12 +465,8 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
     - URL: `http://<your.IP>:9000`
 
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "View logs"
 
@@ -1317,12 +1297,8 @@ Web interface music streamer.
     3. However over the user tile and select "Update Profile"
     4. Change name and credentials and select "Save"
 
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "View logs"
 
