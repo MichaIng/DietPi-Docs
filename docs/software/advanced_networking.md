@@ -16,6 +16,8 @@ description: Description of DietPi software options related to networking
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
+[Return to the **Optimised Software list**](../software.md)
+
 ## WiFi HotSpot
 
 The WiFi HotSpot package turns your device into a wireless hotspot/access point. This allows other wireless devices to connect and share the internet connection.
