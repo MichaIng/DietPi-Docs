@@ -132,9 +132,10 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
 === "Public Key Authentication"
 
-    A public SSH authentication key for the users `root` and `dietpi` can be added from first boot on with the `AUTO_SETUP_SSH_PUBKEY` setting in the `dietpi.txt` file. The first boot scripts apply them to `~/.ssh/authorized_keys` of both users, before the SSH server starts and before the network is set up.
+    Public **SSH authentication keys** for the users `root` and `dietpi` can be added from first boot on with the `AUTO_SETUP_SSH_PUBKEY` setting in the `dietpi.txt` file. The first boot procedure apply them to `~/.ssh/authorized_keys` of both users, before the SSH server starts and before the network is set up.  
+    If **multiple keys** are used in `dietpi.txt`, each key will be added to both users root and dietpi. Multiple keys can be relevant in case multiple SSH clients which each have their on key pair(s) are used.
 
-    A key pair can be generated with most SSH clients, e.g. with OpenSSH or Dropbear from the console (`dropbearkey` is only available if Dropbear is selected as the SSH server option):
+    A key pair can be generated with most SSH clients, e.g. with **OpenSSH** or **Dropbear** from the console (`dropbearkey` is only available if Dropbear is selected as the SSH server option):
 
     ```sh
     # OpenSSH client:
@@ -143,11 +144,18 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
     dropbearkey -t ed25519 -f ~/.ssh/id_dropbear
     ``` 
 
-    Other key types are supported, but we suggest Ed25519, a modern scheme which provides best security with a small key size.
+    An example output or `~/.ssh/id_ed25519.pub` content (for the `AUTO_SETUP_SSH_PUBKEY` setting in `dietpi.txt`) could be
 
-    `ssh-keygen` asks for an optional passphrase and file path, where we suggest to use the default `~/.ssh/id_ed25519`, where the client will be able to use it OOTB. The file `id_ed25519.pub` holds the public key to be used within `/boot/dietpi.txt`. See the comment in `/boot/dietpi.txt` and [`man ssh-keygen`](https://manpages.debian.org/ssh-keygen) for further details.
+    ```
+    ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAcoZfa+8uivetL4FTstsMl1MsnkjM1ssYW9wQh77xaS root@dietpi
+    ```
 
-    `dropbearkey` prints the public key portion to the console instead. See [`man dropbearkey`](https://manpages.debian.org/dropbearkey) for further details.
+    Other key types are supported, but we suggest Ed25519, a modern scheme which provides best security with a small key size.  
+    The commands generate a public key with an additional **key comment** at the end of the generated line, `root@dietpi` in the above example. This comment has generally no function, but is shown by SSH clients when performing a key authentication, and can be used to understand the entry better. It can be set or omitted in `dietpi.txt` for the users convenience.
+
+    `ssh-keygen` asks for an optional passphrase and file path, where we suggest to use the default `~/.ssh/id_ed25519`, where the client will be able to use it OOTB. The file `id_ed25519.pub` holds the public key to be used within `/boot/dietpi.txt`. See the comments in `/boot/dietpi.txt` and [`man ssh-keygen`](https://manpages.debian.org/ssh-keygen) for further details.
+
+    `dropbearkey` prints the public key portion to the console instead. The command can also be extended with the option `-C <key comment>`. See [`man dropbearkey`](https://manpages.debian.org/dropbearkey) for further details.
 
 === "Windows SSH client"
 
