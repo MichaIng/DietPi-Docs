@@ -33,7 +33,7 @@ description: Description of DietPi software options related to graphical desktop
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
@@ -43,7 +43,7 @@ description: Description of DietPi software options related to graphical desktop
 
 LXDE is highly optimised and ultra lightweight desktop. It works well with computers on the low end of the performance spectrum such as new generation netbooks and small computers, or older resource-constrained machines.
 
-![LXDE screenshot](../assets/images/dietpi-software-LXDE_desktop.jpg){: width="795" height="600" loading="lazy"}
+![LXDE screenshot](../assets/images/dietpi-software-LXDE_desktop.jpg "LXDE screen"){: width="795" height="600" loading="lazy"}
 
 === "Quick start"
     After installation, desktop can be run by typing
@@ -69,7 +69,7 @@ Official website: <https://sourceforge.net/projects/lxde/>
 
 Optimised lightweight desktop without the bloatware. Slick and fluid GUI, however, more resource heavy than LXDE.
 
-![LXQt screenshot](../assets/images/dietpi-software-LXQt_desktop.png){: width="1280" height="720" loading="lazy"}
+![LXQt screenshot](../assets/images/dietpi-software-LXQt_desktop.png "LXQt screen"){: width="1280" height="720" loading="lazy"}
 
 Source: [LXQt](https://lxqt.github.io/screenshots/), CC BY-SA 3.0, [wikimedia](https://commons.wikimedia.org/w/index.php?curid=52420839).
 
@@ -98,7 +98,7 @@ Source code: <https://github.com/lxqt/lxqt>
 
 Popular Gnome2 based desktop environment.
 
-![MATE screenshot](../assets/images/dietpi-software-mate-desktop.jpg){: width="1280" height="960" loading="lazy"}
+![MATE screenshot](../assets/images/dietpi-software-mate-desktop.jpg "MATE screen"){: width="1280" height="960" loading="lazy"}
 
 === "Quick start"
     After installation, desktop can be run by typing
@@ -122,7 +122,7 @@ Website: <https://mate-desktop.org>
 
 ## Xfce
 
-![Xfce screenshot](../assets/images/dietpi-software-xfce-desktop.jpg){: width="800" height="450" loading="lazy"}
+![Xfce screenshot](../assets/images/dietpi-software-xfce-desktop.jpg "Xfce screen"){: width="800" height="450" loading="lazy"}
 
 === "Quick start"
     After installation, desktop can be run by typing
@@ -146,7 +146,7 @@ Website: <https://wiki.debian.org/Xfce>
 
 ## GNUstep
 
-![GNUstep screenshot](../assets/images/dietpi-software-gnustep-desktop.jpg){: width="885" height="720" loading="lazy"}
+![GNUstep screenshot](../assets/images/dietpi-software-gnustep-desktop.jpg "GNUstep screen"){: width="885" height="720" loading="lazy"}
 
 === "Quick start"
     After installation, desktop can be run by typing
@@ -172,7 +172,7 @@ Website: <http://gnustep.org>
 
 ### Chromium
 
-![Chromium screenshot](../assets/images/dietpi-software-desktop-tools-chromium.jpg){: width="1376" height="858" loading="lazy"}
+![Chromium screenshot](../assets/images/dietpi-software-desktop-tools-chromium.jpg "Chromium screen"){: width="1376" height="858" loading="lazy"}
 
 === "Chromium kiosk mode"
 
@@ -193,7 +193,7 @@ Website: <http://gnustep.org>
     The kiosk mode can be distinguished to the **Single App Kiosk Mode**, where the user is locked into one single particular site having a fullscreen mode that can't be changed or exited.  
     Following is an example of a kiosk mode screenshot for the example site `dietpi.com`:
 
-    ![Chromium kiosk mode screenshot](../assets/images/dietpi-software-desktop-chromium-kiosk-mode.jpg){: width="360" height="208" loading="lazy"}
+    ![Chromium kiosk mode screenshot](../assets/images/dietpi-software-desktop-chromium-kiosk-mode.jpg "Chromium kiosk mode"){: width="360" height="208" loading="lazy"}
 
     <h4>Activate Chromium kiosk mode</h4>
 
@@ -259,7 +259,7 @@ Firefox Browser, also known as simply Firefox, is a free and open-source web bro
 
 Similar to [Chromium](#chromium), Firefox has been made a separate install option. For desktop installs users can choose between Chromium, Firefox or no web browser.
 
-![Firefox screenshot](../assets/images/dietpi-software-firefox-display.png){: width="1024" height="723" loading="lazy"}
+![Firefox screenshot](../assets/images/dietpi-software-firefox-display.png "Firefox Browser"){: width="1024" height="723" loading="lazy"}
 
 ***
 
@@ -267,7 +267,7 @@ Similar to [Chromium](#chromium), Firefox has been made a separate install optio
 
 MS Paint on steroids. If you need to edit pixels with a vast number of tools, GIMP is the only program you'll need.
 
-![GIMP screenshot](../assets/images/dietpi-software-desktop-tools-gimp.jpg){: width="960" height="587" loading="lazy"}
+![GIMP screenshot](../assets/images/dietpi-software-desktop-tools-gimp.jpg "GIMP screen"){: width="960" height="587" loading="lazy"}
 
 ***
 
@@ -279,7 +279,7 @@ Website: <https://www.gimp.org>
 
 QuiteRSS is an open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
 
-![QuiteRSS screenshot](../assets/images/dietpi-software-desktop-tools-quiterss.jpg){: width="760" height="564" loading="lazy"}
+![QuiteRSS screenshot](../assets/images/dietpi-software-desktop-tools-quiterss.jpg "QuiteRSS screen"){: width="760" height="564" loading="lazy"}
 
 ***
 
@@ -287,6 +287,6 @@ QuiteRSS is an open-source cross-platform RSS / Atom news feeds reader, with the
 
 Enables laptop users to set up a power profile for two different modes `on battery power` and `on AC Power` while still allowing desktop users to at least change the DPMS settings and CPU frequency using the settings dialogue.
 
-![Xfce Power Manager screenshot](../assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg){: width="799" height="569" loading="lazy"}
+![Xfce Power Manager screenshot](../assets/images/dietpi-software-desktop-tools-xfce4-power-manager.jpg "Xfce Power Manager dialog"){: width="799" height="569" loading="lazy"}
 
 [Return to the **Optimised Software list**](../software.md)

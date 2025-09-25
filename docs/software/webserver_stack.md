@@ -39,7 +39,7 @@ description: Description of DietPi software options related to web stacks, web s
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
@@ -108,7 +108,7 @@ DietPi offers an **one-click-installation** of the following web development sta
 
 DietPi contains the option to choose the web stack of your favourite. Basically choosing the web stack resp. webserver is done via ***Browse Software*** within `dietpi-software`:
 
-![DietPi-Software menu software list](../assets/images/dietpi-software-webstack-selection.png){: width="680" height="162" loading="lazy"}
+![DietPi-Software menu software list](../assets/images/dietpi-software-webstack-selection.png "DietPi-Software Webserver stack options"){: width="680" height="162" loading="lazy"}
 
 Using this option you select the complete web stack for installation. Just select the web stack you want to install and do the installation via the *Install* execution within `dietpi-software`.
 

@@ -37,7 +37,7 @@ Think of it as lightweight CCleaner for DietPi and Linux. To start DietPi-Cleane
 dietpi-cleaner
 ```
 
-![DietPi-Cleaner screenshot](../assets/images/dietpi-cleaner.jpg){: width="644" height="284" loading="lazy"}
+![DietPi-Cleaner screenshot](../assets/images/dietpi-cleaner.jpg "DietPi-Cleaner main menu"){: width="644" height="284" loading="lazy"}
 
 By simulating the cleaner process (via menu entry `Test`) you get a preview of the deletions the cleaner does before you start the cleaning process (via menu entry `Run`).
 
@@ -45,13 +45,13 @@ By simulating the cleaner process (via menu entry `Test`) you get a preview of t
 
 DietPi-Cleaner uses modules which you can be switched on or off before running the cleaning process. Select them via the main menu entry `Cleaners`.
 
-![DietPi-Cleaner types screenshot](../assets/images/dietpi-cleaner_2.png){: width="644" height="242" loading="lazy"}
+![DietPi-Cleaner types screenshot](../assets/images/dietpi-cleaner_2.png "DietPi-Cleaner cleaner types"){: width="644" height="242" loading="lazy"}
 
 ### Files cleaner
 
 The files cleaner allows you to customize a list of filenames to search and remove, during the cleaning process. Select them via the main menu entry `Files`.
 
-![DietPi-Cleaner types screenshot](../assets/images/dietpi-cleaner_3.png){: width="644" height="388" loading="lazy"}
+![DietPi-Cleaner include list screenshot](../assets/images/dietpi-cleaner_3.png "DietPi-Cleaner include list"){: width="644" height="388" loading="lazy"}
 
 ### DietPi cleaner - Command line usage
 
@@ -81,7 +81,7 @@ Available options:
     2           Delete all logs in $FP_LOG and backups
 ```
 
-![DietPi-LogClear screenshot](../assets/images/dietpi-logclear.jpg){: width="643" height="198" loading="lazy"}
+![DietPi-LogClear screenshot](../assets/images/dietpi-logclear.jpg "DietPi-LogClear screenshot"){: width="643" height="198" loading="lazy"}
 
 ---
 
@@ -101,7 +101,7 @@ From the console, run the following command:
 dietpi-backup
 ```
 
-![DietPi-Backup menu screenshot](../assets/images/dietpi-backup_1.png){: width="643" height="306" loading="lazy"}
+![DietPi-Backup menu screenshot](../assets/images/dietpi-backup_1.png "DietPi-Backup main menu"){: width="643" height="306" loading="lazy"}
 
 ### Software Overview
 
@@ -116,7 +116,7 @@ dietpi-backup
     The definition which files are used for the backup procedure is defined via the option "Filter" (see screenshot above). This opens `nano` to edit the include/exclude definitions for the backup.  
     The filter definition syntax is described within the file itself.
 
-    ![DietPi-Backup filter option screenshot](../assets/images/dietpi-backup_filter-option.jpg){: width="681" height="330" loading="lazy"}
+    ![DietPi-Backup filter option screenshot](../assets/images/dietpi-backup_filter-option.jpg "DietPi-Backup include/exclude configuration file"){: width="681" height="330" loading="lazy"}
 
      Every (otherwise excluded) parent directory of an included directory needs to be included as well:
 
@@ -267,7 +267,7 @@ DietPi-Sync allows you to duplicate a directory (structure) from one location (*
 dietpi-sync
 ```
 
-![DietPi-Sync screenshot](../assets/images/dietpi-sync.jpg){: width="646" height="322" loading="lazy"}
+![DietPi-Sync screenshot](../assets/images/dietpi-sync.jpg "DietPi-Sync main menu"){: width="646" height="322" loading="lazy"}
 
 ### Software Overview
 
@@ -340,7 +340,7 @@ SYNC_CRONDAILY=0
 
 Each sync includes a leading dry run, after which you can check the expected result before deciding if you want to continue with the actual sync:
 
-![DietPi-Sync dry run screenshot](../assets/images/dietpi-sync-dryrun.png){: width="500" height="213" loading="lazy"}
+![DietPi-Sync dry run screenshot](../assets/images/dietpi-sync-dryrun.png "DietPi-Sync dry run dialog"){: width="500" height="213" loading="lazy"}
 
 !!! info "DietPi-Sync is purely based on `Rsync`"
 

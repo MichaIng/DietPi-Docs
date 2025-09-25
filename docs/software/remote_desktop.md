@@ -31,7 +31,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
@@ -43,7 +43,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 ## TigerVNC Server
 
-![TigerVNC desktop screenshot](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg){: width="600" height="482" loading="lazy"}
+![TigerVNC desktop screenshot](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg "TigerVNC desktop screen"){: width="600" height="482" loading="lazy"}
 
 === "Quick start"
 
@@ -115,7 +115,7 @@ Source code: <https://github.com/TigerVNC/tigervnc>
 
 RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share the desktop or control the computer running the VNC Server.
 
-![RealVNC desktop screenshot](../assets/images/dietpi-software-remotedesktop-realvnc.png){: width="600" height="450" loading="lazy"}
+![RealVNC desktop screenshot](../assets/images/dietpi-software-remotedesktop-realvnc.png "RealVNC desktop screen"){: width="600" height="450" loading="lazy"}
 
 === "VNC Server modes"
 
@@ -164,7 +164,7 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
 XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 
-![XRDP desktop screenshot](../assets/images/dietpi-software-remotedesktop-xrdp.png){: width="648" height="507" loading="lazy"}
+![XRDP desktop screenshot](../assets/images/dietpi-software-remotedesktop-xrdp.png "XRDP desktop screen"){: width="648" height="507" loading="lazy"}
 
 ### Connect to your desktop
 
@@ -189,7 +189,7 @@ XRDP uses port **3389** by default, so you need to open/forward it from your rou
 
 NoMachine is a remote desktop server with advanced features, such as screen recording. The client also scans for all available NoMachine servers on your network, allowing easy connection and maintenance of your remote desktops.
 
-![NoMachine client and desktop screenshot](../assets/images/dietpi-software-remotedesktop-nomachine.png){: width="600" height="299" loading="lazy"}
+![NoMachine client and desktop screenshot](../assets/images/dietpi-software-remotedesktop-nomachine.png "NoMachine client and desktop screens"){: width="600" height="299" loading="lazy"}
 
 === "Download NoMachine Client"
 
@@ -213,7 +213,7 @@ NoMachine is a remote desktop server with advanced features, such as screen reco
 
 Remote.It allows you to easily access your DietPi device over the internet.
 
-![Remote.It web interface screenshot](../assets/images/dietpi-software-remotedesktop-remoteit.png){: width="400" height="140" loading="lazy"}
+![Remote.It web interface screenshot](../assets/images/dietpi-software-remotedesktop-remoteit.png "Remote.It web interface screen"){: width="400" height="140" loading="lazy"}
 
 Remote.It works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
 
@@ -243,7 +243,7 @@ YouTube video tutorial (German language): [Raspberry Pi einfach fernsteuern: Rem
 
 VirtualHere allows USB devices to be used remotely over a network just as if they were locally connected!
 
-![VirtualHere client screenshot](../assets/images/dietpi-software-remotedesktop-virtualhere.png){: width="400" height="252" loading="lazy"}
+![VirtualHere client screenshot](../assets/images/dietpi-software-remotedesktop-virtualhere.png "VirtualHere main dialog"){: width="400" height="252" loading="lazy"}
 
 The functionality consists of two parts:
 

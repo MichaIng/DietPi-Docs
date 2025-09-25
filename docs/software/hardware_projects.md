@@ -27,7 +27,7 @@ description: Description of DietPi software options related to hardware
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
@@ -145,7 +145,7 @@ Website: <https://webiopi.trouch.com>
 
 Node-RED is a visual tool for wiring together hardware devices, APIs and online services in new and interesting ways. Node-RED uses a standalone web server that can be accessed remotely.
 
-![Node-RED web interface screenshot](../assets/images/dietpi-software-hardwareprojects-nodered.png){: width="400" height="286" loading="lazy"}
+![Node-RED web interface screenshot](../assets/images/dietpi-software-hardwareprojects-nodered.png "Node-RED web interface screen"){: width="400" height="286" loading="lazy"}
 
 === "Access to the programming IDE"
 
@@ -385,7 +385,7 @@ See <https://www.audiophonics.fr/en/raspberry-pi-and-other-sbc-accessories/audio
 
     Please ensure the correct GPIO pins are used, when connecting Pi-SPC to RPi (see image below).
 
-    ![Raspberry Pi GPIO scheme](../assets/images/dietpi-software-hardwareprojects-audiophonics-gpionumbers.png){: width="400" height="119" loading="lazy"}
+    ![Raspberry Pi GPIO scheme](../assets/images/dietpi-software-hardwareprojects-audiophonics-gpionumbers.png "Raspberry Pi GPIO scheme"){: width="400" height="119" loading="lazy"}
 
 To power off the system begin the shutdown process: Hold the power button for < 0.5 seconds. If you don't have a button, you can also close the pins `BP PIN C` and `BP PIN NO`, with your favorite electrically conductive metal (e.g.: tweezers).  
 Remark: Avoid holding the power button for longer than 2 seconds, as this will hard power off the system (same effect as pulling the power cord). Doing so will create file-system corruptions, during shutdown IO operations.
@@ -397,7 +397,7 @@ The open platform for beautiful analytics and monitoring.
 This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).  
 Remark: Grafana binaries are specific to the CPU architecture, therefore, swapping SD cards between RPi 1 <> 2+, is not recommended.
 
-![Grafana web interface screenshot](../assets/images/dietpi-software-hardwareprojects-grafana.png){: width="400" height="197" loading="lazy"}
+![Grafana web interface screenshot](../assets/images/dietpi-software-hardwareprojects-grafana.png "Grafana web interface screen"){: width="400" height="197" loading="lazy"}
 
 === "Prerequisites"
 
