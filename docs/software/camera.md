@@ -21,7 +21,7 @@ description: Description of DietPi software options related to camera and survei
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
@@ -38,7 +38,7 @@ The *RPi Cam Web Interface* package can be used in combination with a Raspberry 
 
 It consists of full control of the camera in a web-based interface.
 
-![RPi Cam Web Interface screenshot](../assets/images/dietpi-software-camera-rpicamcontrol.png){: width="500" height="395" loading="lazy"}
+![RPi Cam Web Interface screenshot](../assets/images/dietpi-software-camera-rpicamcontrol.png "RPi Cam Web Interface screen"){: width="500" height="395" loading="lazy"}
 
 === "Access the web interface"
 
@@ -69,7 +69,7 @@ It consists of full control of the camera in a web-based interface.
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
-    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png "DietPi-Config camera activation dialog"){: width="500" height="290" loading="lazy"}
 
 ***
 
@@ -91,7 +91,7 @@ The software can
 
 from any RPi camera, USB camera or an IP camera network stream.
 
-![motionEye web interface screenshot](../assets/images/dietpi-software-camera-motioneye.png){: width="500" height="246" loading="lazy"}
+![motionEye web interface screenshot](../assets/images/dietpi-software-camera-motioneye.png "motionEye web interface screen"){: width="500" height="246" loading="lazy"}
 
 === "Access the web interface"
 
@@ -126,7 +126,7 @@ from any RPi camera, USB camera or an IP camera network stream.
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
-    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png "DietPi-Config camera activation dialog"){: width="500" height="290" loading="lazy"}
 
 ***
 
@@ -139,7 +139,7 @@ License: [GPLv3](https://github.com/motioneye-project/motioneye/blob/main/LICENS
 
 Stream JPEG frames from various sources to various possible outputs. With the default setup it streams an attached camera image to a simple web page with the included HTTP plugin.
 
-![mjpg-streamer HTML stream GIF](../assets/images/mjpg-streamer.gif){: width="500" height="400" loading="lazy"}
+![mjpg-streamer HTML stream GIF](../assets/images/mjpg-streamer.gif "mjpg-streamer HTML stream GIF"){: width="500" height="400" loading="lazy"}
 
 === "Access the HTTP stream"
 
@@ -218,7 +218,7 @@ Stream JPEG frames from various sources to various possible outputs. With the de
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
-    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png "DietPi-Config camera activation dialog"){: width="500" height="290" loading="lazy"}
 
 ***
 

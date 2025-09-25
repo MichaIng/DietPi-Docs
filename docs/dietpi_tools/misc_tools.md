@@ -27,13 +27,13 @@ Enables the configuration of the initial banner, displayed on logon. To start Di
 dietpi-banner
 ```
 
-![DietPi-Banner config menu](../assets/images/dietpi-banner_config.jpg){: width="640" height="368" loading="lazy"}
+![DietPi-Banner config menu](../assets/images/dietpi-banner_config.jpg "DietPi-Banner main menu"){: width="640" height="368" loading="lazy"}
 
 ### Software Overview
 
 Using these settings you can configure the information displayed initially, choosing the details displayed initially. See below an example where 4 options are selected:
 
-![DietPi-Banner print on login](../assets/images/dietpi-banner.jpg){: width="636" height="359" loading="lazy"}
+![DietPi-Banner print on login](../assets/images/dietpi-banner.jpg "DietPi-Banner output"){: width="636" height="359" loading="lazy"}
 
 ### DietPi banner - Command line usage
 
@@ -57,7 +57,7 @@ Displays CPU temperature, processor frequency, throttle level etc. via the comma
 cpu
 ```
 
-![DietPi-CPU_info screenshot](../assets/images/dietpi-tools-cpuinfo.png){: width="741" height="299" loading="lazy"}
+![DietPi-CPU_info screenshot](../assets/images/dietpi-tools-cpuinfo.png "DietPi-CPU_info output"){: width="741" height="299" loading="lazy"}
 
 ---
 
@@ -79,7 +79,7 @@ To start DietPi bug report, use the following command:
 dietpi-bugreport
 ```
 
-![DietPi-BugReport screenshot](../assets/images/dietpi-bugreport.jpg){: width="646" height="352" loading="lazy"}
+![DietPi-BugReport screenshot](../assets/images/dietpi-bugreport.jpg "DietPi-BugReport main menu"){: width="646" height="352" loading="lazy"}
 
 ### DietPi bug report - Command line usage
 

@@ -22,7 +22,7 @@ description: Description of DietPi software options related to file servers
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
 
@@ -338,7 +338,7 @@ Network file system server.
 
     On macOS, a permanent mount can be achieved by going to the System Settings, searching for Login Items and drag&drop the mount:
 
-    ![macOS permanent NFS mount](../assets/images/dietpi-software-fileserver-macos_permanent_nfs_mount.jpg){: width="695" height="145" loading="lazy"}
+    ![macOS permanent NFS mount](../assets/images/dietpi-software-fileserver-macos_permanent_nfs_mount.jpg "macOS permanent mount"){: width="695" height="145" loading="lazy"}
 
     **Note:** Further details about the `nfs` and `mount_nfs` commands can be found with typing `man nfs` and `man mount_nfs` in the terminal on macOS. The man pages contain the current information about how the system behaves and optional parameters on how to mount successfully.
 
