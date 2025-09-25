@@ -19,6 +19,9 @@ The *Log System* can be changed at any time by running `dietpi-software` and sel
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
+???+ seealso "Examining the logging information"
+    A description of the basic log information display and filter option is given in the [HowTo section of the DietPi documentation](../usage.md).
+
 [Return to the **Optimised Software list**](../software.md)
 
 ## DietPi-RAMlog
