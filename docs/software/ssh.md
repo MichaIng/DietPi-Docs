@@ -74,7 +74,7 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
     dropbearkey -t ed25519 -f ~/.ssh/id_dropbear
     ``` 
 
-    An example output (for the `AUTO_SETUP_SSH_PUBKEY` setting in `dietpi.txt`) could be
+    An example output or `~/.ssh/id_ed25519.pub` content (for the `AUTO_SETUP_SSH_PUBKEY` setting in `dietpi.txt`) could be
 
     ```
     ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAcoZfa+8uivetL4FTstsMl1MsnkjM1ssYW9wQh77xaS root@dietpi
