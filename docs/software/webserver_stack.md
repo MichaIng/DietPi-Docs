@@ -525,7 +525,7 @@ Source: [The Apache Software Foundation](https://www.apache.org/logos/originals/
     To install Tomcat, run the according command in the console, e.g. for Debian Trixie:
 
     ```sh
-    apt install tomcat10
+    apt install tomcat11
     ```
     
 === "Access to the web interface"
