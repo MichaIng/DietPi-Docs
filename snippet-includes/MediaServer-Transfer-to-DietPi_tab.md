@@ -4,4 +4,3 @@
     Default music directory:
 
     - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
-    

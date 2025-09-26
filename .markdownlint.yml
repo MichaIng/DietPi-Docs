@@ -16,5 +16,7 @@ MD025:
   front_matter_title: ''
 # We allow inline HTML, e.g. for YouTube frames.
 MD033: false
+# The snippets includes typically do not start with the h1 heading level. Therefore disabling this check
+MD041: false
 # Some Markdown extensions use 4 space indentation as well, which must not be interpreted as inconsistent code block syntax.
 MD046: false
