@@ -113,12 +113,13 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
 
 ![LAMP stack component logos](../assets/images/dietpi-software-webstack-lamp.jpg){: width="702" height="369" loading="lazy"}
 
-=== "Quick start"
-
-    **Access website:**
+=== "Access to the web interface"
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -170,10 +171,13 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
         systemctl restart apache2
         ```
 
-    Access website:
+    Access to the web interface:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -183,12 +187,13 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 [SQLite](databases.md#sqlite) is an embedded relational database engine. It is popular and together with [Apache](#apache) and PHP could be a good candidate for single board computer.
 
-=== "Quick start"
-
-    **Access website:**
+=== "Access to the web interface"
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Secured access - HTTPS/SSL"
 
@@ -238,10 +243,13 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
         systemctl restart apache2
         ```
 
-    Access website:
+    Access to the web interface:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -251,12 +259,13 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 **Nginx** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
-=== "Quick start"
-
-    **Access website:**
+=== "Access to the web interface"
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -308,10 +317,13 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
         systemctl restart apache2
         ```
 
-    Access website:
+    Access to the web interface:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -321,21 +333,25 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 **[Nginx](#nginx)** is a popular choice, thanks to its lightweight utilization of resources and its flexibility to scale simply even with minimal equipment.
 
-=== "Quick start"
-
-    **Access website:**
+=== "Access to the web interface"
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Secured access - HTTPS/SSL"
 
     **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
-    Access website:
+    Access to the web interface:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -343,12 +359,13 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing [Lighttpd](#lighttpd) instead of [Apache](#apache) web server.
 
-=== "Quick start"
-
-    **Access website:**
+=== "Access to the web interface"
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -356,10 +373,13 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
-    Access website:
+    Access to the web interface:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -367,12 +387,13 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
 LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack), providing **[Lighttpd](#lighttpd)** instead of [Apache](#apache) web server and **[SQLite](databases.md#sqlite)** instead of [MariaDB](databases.md#mariadb).
 
-=== "Quick start"
-
-    **Access website:**
+=== "Access to the web interface"
 
     - URL = `http://<your.IP>` or `http://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -380,10 +401,13 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
 
     **Let's Encrypt** is highly recommended - [see here how to install](../dietpi_tools.md#dietpi-letsencrypt). This will automate the creation and setup of your free SSL cert.
 
-    Access website:
+    Access to the web interface:
 
     - URL = `https://<your.IP>` or `https://<your.host.name>`
     - Local directory = `/var/www`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Individual installation"
 
@@ -453,9 +477,12 @@ Source: Fair use, <https://en.wikipedia.org/w/index.php?curid=10881730>.
 
 It is designed to be secure, fast, standards-compliant, and flexible while being optimized for speed-critical environments. Its low memory footprint compared to other web servers, light CPU load and its speed goals make Lighttpd a perfect candidate for SBCs.
 
-=== "Quick access"
+=== "Access to the web interface"
 
-    After the installation, check if Lighttpd service is running on `http://<your.IP>`.
+    - URL = `http://<your.IP>`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Scale to multiple CPU"
 
@@ -489,21 +516,26 @@ Source: [The Apache Software Foundation](https://www.apache.org/logos/originals/
 
     | Debian version | Installation command | 
     | - | - |
+    | Debian 13 (Trixie)    | `apt install tomcat10`| 
     | Debian 12 (Bookworm)  | `apt install tomcat10`| 
     | Debian 11 (Bullseye)  | `apt install tomcat9`|
     | Debian 10 (Buster)    | `apt install tomcat9`|
     | Debian 9 (Stretch)    | `apt install tomcat8`|
 
-    To install Tomcat, run the according command in the console, e.g. for Debian Bookworm:
+    To install Tomcat, run the according command in the console, e.g. for Debian Trixie:
 
     ```sh
     apt install tomcat10
     ```
-=== "Quick access"
+    
+=== "Access to the web interface"
 
     The web interface is accessible via port **8080**:
 
     - URL = `http://<your.IP>:8080`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 

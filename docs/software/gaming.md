@@ -60,6 +60,9 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
     - Username = `admin`
     - Password = `<globalSoftwarePassword>` (default: `dietpi`)
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Tweaking"
 
     Tweak the server settings by modifying the following files:
@@ -118,13 +121,16 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
     - Username: `mineos`
     - Password = `<globalSoftwarePassword>` (default: `dietpi`)
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
     To change the password to `myPassword`, run the following command:
 
     ```sh
     sudo chpasswd --crypt-method SHA512 <<< 'mineos:myPassword'
     ```
 
-=== "1st run setup"
+=== "First run setup"
 
     Once logged into the web interface:
 
@@ -187,7 +193,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
 ![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: width="400" height="189" loading="lazy"}
 
-=== "1st run setup"
+=== "First run setup"
 
     - **Kickstarts (Amiga BIOS/boot system)**  
       Amiga Kickstart ROM images are required to run the system(s) you want to emulate. These can not be bundled due to copyright restrictions.  

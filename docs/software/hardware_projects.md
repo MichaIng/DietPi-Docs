@@ -110,6 +110,9 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
     - Username = `webiopi`
     - Password = `raspberry`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Change the login password"
 
     - Run `webiopi-passwd`
@@ -142,6 +145,9 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 
     - URL = `http://<your.IP>:1880`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Access to the dashboard"
 
     To install the Node-RED dashboard, the user interface of Node-RED, use settings "Manage palette" from programming IDE or run the following command from console:
@@ -152,6 +158,9 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 
     Use the following URL to connect to the dashboard from your browser:  
     `https://<your.IP>:1880/ui/`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Data and config directory"
 
@@ -270,6 +279,9 @@ Also installs:
     - URL: `https://<your.IP>:9443/admin` (You may ignore the browser warning, as a self-signed certificate is used by default.)
     - Email address: `admin@blynk.cc`
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Setup details"
 
@@ -408,6 +420,9 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
     - URL: `http://<your.IP>:3001`
     - Username: `admin`
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Usage information"
 
