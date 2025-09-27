@@ -75,7 +75,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
     Simply close and reopen this screen to refresh the port status.
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## Deluge
 
@@ -124,7 +124,7 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     - Local folder: `/mnt/dietpi_userdata/downloads`
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## qBittorrent
 
@@ -159,7 +159,7 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
     Before activating search plugins within qBittorrent, you would need to install Python first. Afterwards you can search and activate the plugins.
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## rTorrent
 
@@ -216,7 +216,7 @@ Also installs:
     rTorrent by default listens on the UNIX domain socket at `/mnt/dietpi_userdata/downloads/.session/rpc.socket`. The webserver is configured to proxy `http://<your.IP>/RPC2` calls to the UNIX socket, but HTTP authentication is enforced for that URL.
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 === "View logs"
 
@@ -312,7 +312,7 @@ Also installs:
     Full list of `aria2.conf` settings: <https://aria2.github.io/manual/en/html/aria2c.html>
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## SABnzbd
 
@@ -367,7 +367,7 @@ NZB download manager with web interface.
     ```
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 === "View logs"
 
@@ -432,7 +432,7 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
     - Finally click `Save changes` (bottom of the page)
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## Sonarr
 
@@ -497,7 +497,7 @@ Automatically download your favorite TV shows, as they become available.
     Link the Sonarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 === "View logs"
 
@@ -575,7 +575,7 @@ Automatically download your favorite movies, as they become available.
     Link the Radarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 === "View logs"
 
@@ -699,7 +699,7 @@ Automatically download your favorite music.
     Link the Lidarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 === "View logs"
 
@@ -806,7 +806,7 @@ Automatically download your favorite ebook, as they become available.
     - Use the internal web based updater
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ***
 
@@ -831,7 +831,7 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ***
 
@@ -856,7 +856,7 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## NZBGet
 
@@ -898,7 +898,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
     ```
 
 [//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Bittorrent-Protect-privacy_tab.md"
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## HTPC Manager
 
