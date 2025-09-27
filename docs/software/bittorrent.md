@@ -47,7 +47,7 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
     - Password: `<your global password>`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Access Downloads"
 
@@ -95,7 +95,7 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     Select the host 127.0.0.1 and click `connect`.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Access Deluge console"
 
@@ -144,7 +144,7 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
         NB: Since qBittorrent v4.2.0 (Debian Bullseye), a new safer hash algorithm is used, which we are currently not able to replicate dynamically for the global software password with common shell tools. Until then, for your first login the password is `dietpi`. Please change it directly after first login: <https://github.com/MichaIng/DietPi/issues/5078>
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Access Downloads"
 
@@ -180,7 +180,7 @@ Also installs:
     - Password: `<your global password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     The login credentials can be changed, depending on the webserver choice, with the following commands:
 
@@ -285,7 +285,7 @@ Also installs:
     - rpc secret password: `<your global password>`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     This needs to be entered in the following location, in the web interface:
 
@@ -327,7 +327,7 @@ NZB download manager with web interface.
     - URL: `http://<your.IP>:8080/sabnzbd`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Web interface not loading / Unable to access"
 
@@ -399,7 +399,7 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
     - URL: `http://<your.IP>:8081`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Add a TV show"
 
@@ -451,7 +451,7 @@ Automatically download your favorite TV shows, as they become available.
     - URL: `http://<your.IP>:8989`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -529,7 +529,7 @@ Automatically download your favorite movies, as they become available.
     - URL: `http://<your.IP>:7878`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -612,7 +612,7 @@ Key features:
     - URL: `http://<your.IP>:6767`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     ![Bazarr subtitle finds list](../assets/images/dietpi-software-download-bazarr.jpg "Bazarr subtitle list"){: width="1105" height="490" loading="lazy"}
 
@@ -653,7 +653,7 @@ Automatically download your favorite music.
     - URL: `http://<your.IP>:8686`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -727,7 +727,7 @@ Automatically download your favorite ebook, as they become available.
     - URL: `http://<your.IP>:8787`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -828,7 +828,7 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
     - URL: `http://<your.IP>:9696`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
@@ -853,7 +853,7 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
     - URL: `http://<your.IP>:9117`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
@@ -873,7 +873,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
     - Password: `<your global password>`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Access Downloads"
 
@@ -914,7 +914,7 @@ Do all your HTPC tasks without using 5 different interfaces!
     - URL: `http://<your.IP>:8085`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Update to latest version"
 
