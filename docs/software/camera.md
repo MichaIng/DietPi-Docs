@@ -35,6 +35,9 @@ It consists of full control of the camera in a web-based interface.
 
     - URL = `http://<your.IP>/rpicam`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Access recordings (w/o web interface)"
 
     To access you recordings remotely without the web interface, you might want to have one of [DietPi's file servers](file_servers.md) installed.  
@@ -90,6 +93,9 @@ from any RPi camera, USB camera or an IP camera network stream.
     - User = `admin`
     - Password = not required
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
     Passwords can be configured in the web interface.
 
 === "Access recordings (w/o web interface)"
@@ -137,6 +143,9 @@ Stream JPEG frames from various sources to various possible outputs. With the de
     - Stream: `http://<your.IP>:8082/?action=stream`
     - Snapshot: `http://<your.IP>:8082/?action=snapshot`
     - HTTP plugin docs: <https://github.com/jacksonliam/mjpg-streamer/blob/master/mjpg-streamer-experimental/plugins/output_http/README.md>
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Setup for OctoPrint"
 

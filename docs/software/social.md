@@ -31,9 +31,14 @@ FreshRSS is a self-hosted RSS feed aggregator.
 
 === "Access to the web interface"
 
+    The web interface of *FreshRSS* can be accessed via:
+
     - URL = `<http://<your.IP>/freshrss`
     - Username = `dietpi`
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -49,62 +54,70 @@ Also Installs:
 
 ![phpBB example forum screenshot](../assets/images/dietpi-software-social-phpbb.png "phpBB main dialog"){: width="400" height="298" loading="lazy"}
 
-### Access Forums
+=== "Access to the web interface"
 
-URL = `http://<your.IP>/phpbb`
+    The web interface of *phpBB* can be accessed via:
 
-### First Run Setup
+    - URL = `http://<your.IP>/phpbb`
 
-DietPi automatically creates the SQL database for phpBB. Please follow the steps below to enter those details into phpBB to complete the setup.
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
-#### Access to the phpBB website
+=== "First run setup"
 
-- URL = `http://<your.IP>/phpbb`
-- Click the "Install" tab
-- Click "Proceed to next step"
-- Click "Start install"
+    DietPi automatically creates the SQL database for phpBB. Please follow the steps below to enter those details into phpBB to complete the setup.
 
-#### MySQL/MariaDB database details
+    1. Access to the phpBB website
 
-To enter the MySQL/MariaDB database details:
+        - URL = `http://<your.IP>/phpbb`
+        - Click the "Install" tab
+        - Click "Proceed to next step"
+        - Click "Start install"
 
-- Database server hostname or data source name (DSN) = `localhost`
-- Database username = `phpbb`
-- Database name = `phpbb`
-- Database password = `dietpi` (respectively your chosen global software password)
+        [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+        --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
-- Click "Proceed to next step"
-- Click "Proceed to next step"
+    1. MySQL/MariaDB database details
 
-#### Create your admin account
+        To enter the MySQL/MariaDB database details:
 
-This account will be used for full access to phpBB forum.
+        - Database server hostname or data source name (DSN) = `localhost`
+        - Database username = `phpbb`
+        - Database name = `phpbb`
+        - Database password = `dietpi` (respectively your chosen global software password)
 
-- Click "Proceed to next step"
-- Click "Proceed to next step"
-- Click "Proceed to next step"
+        - Click "Proceed to next step"
+        - Click "Proceed to next step"
 
-#### Email and Server URL settings
+    1. Create your admin account
 
-Use the default values.
+        This account will be used for full access to phpBB forum.
 
-- Click "Proceed to next step"
-- Click "Proceed to next step"
+        - Click "Proceed to next step"
+        - Click "Proceed to next step"
+        - Click "Proceed to next step"
 
-The database tables will now be generated, please wait.
+    1. Email and Server URL settings
 
-#### Login
+        Use the default values.
 
-Click "Login"  
-Using your admin login details that you created previously, you can now manage and create your forum pages.
+        - Click "Proceed to next step"
+        - Click "Proceed to next step"
 
-As the installation is now completed, you will need to remove the installation folder, before the forum can be live. Run the following command:
+        The database tables will now be generated, please wait.
 
-```sh
-rm -R /var/www/phpbb/install
-```
+    1. Login
 
-Your forum is now ready.
+        Click "Login"  
+        Using your admin login details that you created previously, you can now manage and create your forum pages.
+
+        As the installation is now completed, you will need to remove the installation folder, before the forum can be live. Run the following command:
+
+        ```sh
+        rm -R /var/www/phpbb/install
+        ```
+
+    Your forum is now ready.
 
 ***
 
@@ -119,9 +132,14 @@ It allows you to create your own website.
 
 === "Access to the web interface"
 
-    URL = `http://<your.IP>/wordpress`
+    The web interface of *WordPress* can be accessed via:
 
-=== "First time connect"
+    - URL = `http://<your.IP>/wordpress`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
+=== "First run setup"
 
     The first time you connect, enter the following MySQL database details:
 
@@ -154,7 +172,12 @@ Also Installs:
 
 === "Access to Image Gallery"
 
-    URL = `http://<your.IP>/gallery`
+    The web interface of *Single File PHP Gallery* can be accessed via:
+
+    - URL = `http://<your.IP>/gallery`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Add images"
 
@@ -184,9 +207,20 @@ Baïkal is a lightweight CalDAV + CardDAV server.
 
 ![Baïkal web interface screenshot](../assets/images/dietpi-software-social-baikal.png "Baïkal web interface dialog"){: width="400" height="219" loading="lazy"}
 
+=== "Access the web interface"
+
+    The web interface of *Baïkal* can be accessed via:
+
+    - URL = `http://<your.IP>/baikal/html/admin`
+    - Username = `admin`
+    - Password = What you set during first run setup above.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "First run setup"
 
-    Access the setup page:
+    The setup page of *Baïkal* can be accessed via:
 
     - URL = `http://<your.IP>/baikal/html`
     - Enter a new admin password for your account, then click the next/save button.
@@ -199,11 +233,8 @@ Baïkal is a lightweight CalDAV + CardDAV server.
     - MySQL username = `baikal`
     - MySQL password = your global software password (default: `dietpi`)
 
-=== "Access the web interface"
-
-    - URL = `http://<your.IP>/baikal/html/admin`
-    - Username = `admin`
-    - Password = What you set during first run setup above.
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -328,11 +359,16 @@ This collaboration and documentation platform was originally developed for and i
 
 ![Restic logo](../assets/images/mediawiki-logo.svg){: width="250" height="250" loading="lazy"}
 
-=== "Quick start"
+=== "Access the web interface"
 
-    MediaWiki is accessible via regular HTTP/HTTPS ports **80**/**443** below the `/wiki` path:
+    The web interface of *MediaWiki* can be accessed via:
 
     - URL: `http://<your.IP>/wiki`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
+=== "First run setup"
 
     On first access, you need to go through the setup wizard. Enter the following database information:
 
@@ -355,7 +391,7 @@ License: [GPLv2](https://github.com/wikimedia/mediawiki/blob/master/COPYING)
 
 soju is an [IRC bouncer](https://wikipedia.org/wiki/BNC_(software)#IRC) – it connects to upstream IRC servers on your behalf, and then you can connect to it using multiple IRC clients. This causes chat history to be preserved without having to have the IRC client connected all the time.
 
-=== "Quick start"
+=== "Access to soju"
 
     By default, soju listens on the **6667** port, which is the default for plain text (insecure) IRC connections.
 

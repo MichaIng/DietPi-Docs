@@ -47,11 +47,14 @@ Getting started documentation: <https://mariadb.org/documentation/#getting-start
 
 Frequently used operations (_such as: managing databases, tables, columns, relations, indexes etc._) can be performed via the web user interface. Using the same application you could also directly execute any SQL statement.
 
-=== "Quick access"
+=== "Access to the web interface"
 
     - URL = `http://<your.IP>/phpmyadmin`
     - Username = `phpmyadmin`
     - Password = The same as your root login password, default is `dietpi`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 

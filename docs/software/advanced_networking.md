@@ -255,12 +255,17 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     systemctl start haproxy    
     ```
 
+=== "Access to the web interface"
+
     The stats web interface is accessible via port **1338**:
 
     - URL = `http://<your.IP>:1338`
     - Prometheus metrics = `http://<your.IP>:1338/metrics`
     - Username = `admin`
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     !!! hint "This installation was made possible by Jerome Queneuder, who provided the methods for compiling and installation."
 
@@ -346,6 +351,9 @@ A fast reverse proxy, helping you to expose a local server behind a NAT or firew
     - Dashboard (Server): `http://<your.IP>:7500`
         - User name: `admin`
         - Password: `<yourGlobalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration Files"
 

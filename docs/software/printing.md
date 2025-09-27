@@ -27,6 +27,9 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 
     - URL = `http://<your.IP>:5001`  
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "First run setup"
 
     Once you are connected to the web interface, simply run through the setup wizard and configure the software and printers as needed. A login user and password needs to be created, but it does not need to match any existing UNIX login user, i.e. can be freely chosen.
@@ -71,6 +74,9 @@ The Common UNIX Printing System (CUPS) provides a command-line interface (CLI) a
     - URL = `http(s)://<your.IP>:631`  
     - Username = `root`
     - Password = `<your root password>`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     Checkout the official docs for quick start instructions: <https://www.cups.org/doc/overview.html>
 
