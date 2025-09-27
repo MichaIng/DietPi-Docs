@@ -804,8 +804,8 @@ Select the following tabs for the installation description of your target.
         - In case of an UEFI based PC see the "**UEFI Installer image**" tab.
         - In case of a BIOS based PC see the "**BIOS Installer image**" tab or "**BIOS direct write image**" tab.
 
-    !!! question ""**BIOS Installer image**" or "**BIOS direct write image**"?"
-        The "**BIOS installer image**" is used to boot from and install the DietPi system on a different target boot drive (storage medium). In contrary to that the "**BIOS direct write image**" is used to be write the image directly to the target DietPi boot drive.
+    !!! question ""**Live image**" or "**Installer image**"?"
+        The "**Installer image**" is used to boot from and install the DietPi system on a different target boot drive (storage medium). In contrary to that the "**Live image**" is used to be write the image directly to the target DietPi boot drive.
 
     === "UEFI installer image"
 
@@ -892,6 +892,58 @@ Select the following tabs for the installation description of your target.
 
         For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
 
+    === "UEFI Live image"
+
+        <h2>Prerequisites</h2>
+
+        You would need the next:
+
+        - one **working PC with internet access**, helping to write the boot media
+        - one **disk drive**, to hold the DietPi system. It is written with the direct write image and will be the disk drive in the DietPi system.
+        - **target PC** to be installed
+
+        <h2>1. Download the DietPi Live image</h2>
+
+        Download the **Native PC for UEFI** > **Live Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}. It is `xz`-compressed, but most flashing tools support flashing `xz`-compressed images without the need to first decompress them. Otherwise we recommend [7zip for Windows](https://www.7-zip.org/) to decompress the image.
+
+        ![DietPi download UEFI installer image](assets/images/dietpi-download-nativepc-uefi.jpg "Native PC UEFI installer image download dialog"){: width="722" height="211" loading="lazy"}
+
+        Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
+
+        <h2>2. Write image to disk drive</h2>
+
+        Start [Rufus](https://rufus.ie/) application and make sure you have your disk drive connected into your computer. This may e.g. be done using an USB to SATA controller if you use a SATA disk drive. Follow the next steps:
+
+        1. Show advanced drive properties and select **List USB hard drives**  
+          (in case that you have connected your disk drive via a USB adapter)
+        2. Select the disk drive device
+        3. Select the downloaded **DietPi** image
+        4. Click on **Start** button
+
+        Ensure that the selected disk drive is the correct one.
+
+        !!! warning "All data on the disk drive will be erased!"
+            Before starting the installation first make a backup of the data available on the disk drive if you need it later again!
+
+        ![Rufus UEFI Live image selections screenshot](assets/images/dietpi-rufus-bios-direct-write-image.png "Rufus main menu"){: width="474" height="607" loading="lazy"}
+
+        <h2>3. Boot the target PC</h2>
+
+        ??? info "Click here if you want to use a WiFi connection"
+            To setup the WiFi, you have to change the network settings matching to your environment:
+
+            1.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+            2.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
+            3.  Save and close the files
+
+            You need to set these values before you boot up the PC for the first time (initial boot).
+
+        For the first boot up of your PC disconnect your disk drive from your working PC and connect it to the target PC. Then power on the target PC to login and execute the first boot procedure.
+
+        ??? info "Option: Automatic base installation at first boot (running an _unattended base installation_)"
+
+            DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](usage.md#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation) for details.
+
     === "BIOS installer image"
 
         <h2>Prerequisites</h2>
@@ -971,7 +1023,7 @@ Select the following tabs for the installation description of your target.
 
         For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
 
-    === "BIOS direct write image"
+    === "BIOS Live image"
 
         <h2>Prerequisites</h2>
 
@@ -981,11 +1033,11 @@ Select the following tabs for the installation description of your target.
         - one **disk drive**, to hold the DietPi system. It is written with the direct write image and will be the disk drive in the DietPi system.
         - **target PC** to be installed
 
-        <h2>1. Download the DietPi direct write image</h2>
+        <h2>1. Download the DietPi Live image</h2>
 
-        Download the **Native PC for BIOS/CSM** > **Direct write Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}. It is `xz`-compressed, but most flashing tools support flashing `xz`-compressed images without the need to first decompress them. Otherwise we recommend [7zip for Windows](https://www.7-zip.org/) to decompress the image.
+        Download the **Native PC for BIOS/CSM** > **Live Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}. It is `xz`-compressed, but most flashing tools support flashing `xz`-compressed images without the need to first decompress them. Otherwise we recommend [7zip for Windows](https://www.7-zip.org/) to decompress the image.
 
-        ![DietPi download BIOS direct write image](assets/images/dietpi-download-nativepc-bios.jpg "Native PC BIOS direct write image download dialog"){: width="722" height="218" loading="lazy"}
+        ![DietPi download BIOS Live image](assets/images/dietpi-download-nativepc-bios.jpg "Native PC BIOS Live image download dialog"){: width="722" height="218" loading="lazy"}
 
         Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
@@ -1004,7 +1056,7 @@ Select the following tabs for the installation description of your target.
         !!! warning "All data on the disk drive will be erased!"
             Before starting the installation first make a backup of the data available on the disk drive if you need it later again!
 
-        ![Rufus BIOS direct write image selections screenshot](assets/images/dietpi-rufus-bios-direct-write-image.png "Rufus main menu"){: width="474" height="607" loading="lazy"}
+        ![Rufus BIOS Live image selections screenshot](assets/images/dietpi-rufus-bios-direct-write-image.png "Rufus main menu"){: width="474" height="607" loading="lazy"}
 
         <h2>3. Boot the target PC</h2>
 
