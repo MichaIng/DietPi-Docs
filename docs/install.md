@@ -48,7 +48,7 @@ Select the following tabs for the installation description of your target.
         1. Install the extraction tool (e.g. [7zip for Windows](https://www.7-zip.org/), [The Unarchiver (Macintosh)](https://theunarchiver.com/), [`xz-utils`](https://tukaani.org/xz/) (Linux)
         1. Extract the downloaded `.xz` formatted file. This will generate the image file (file format`.img`).
 
-        ??? hint "How to extract DietPi images on Linux"
+        ??? hint "How to extract DietPi images on Linux (`xz-utils`)"
             On Debian and Ubuntu-based systems, open a terminal and type:
 
             ```sh
@@ -167,7 +167,7 @@ Select the following tabs for the installation description of your target.
 
     The downloaded file is `xz`-compressed and contains the .ova file for VirtualBox, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ??? hint "How to extract DietPi images on Linux (xz-utils)"
+    ??? hint "How to extract DietPi images on Linux (`xz-utils`)"
         On Debian and Ubuntu-based systems, open a terminal and type:
 
         ```sh
@@ -291,7 +291,7 @@ Select the following tabs for the installation description of your target.
     
     The downloaded file is `xz`-compressed and contains the `.vmx` and `.vmdk` file for VMware, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ??? hint "How to extract DietPi images on Linux (xz-utils)"
+    ??? hint "How to extract DietPi images on Linux (`xz-utils`)"
         On Debian and Ubuntu-based systems, open a terminal and type:
 
         ```sh
@@ -354,7 +354,7 @@ Select the following tabs for the installation description of your target.
 
     The downloaded file is `xz`-compressed and contains the .ova file for the ESXi server, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ??? hint "How to extract DietPi images on Linux (xz-utils)"
+    ??? hint "How to extract DietPi images on Linux (`xz-utils`)"
         On Debian and Ubuntu-based systems, open a terminal and type:
 
         ```sh
@@ -721,9 +721,9 @@ Select the following tabs for the installation description of your target.
 
     ![DietPi Hyper-V image download](assets/images/dietpi-HyperV-Download.jpg "Hyper-V image download dialog"){: width="722" height="463" loading="lazy"}
 
-    The downloaded file is `xz`-compressed and contains the .vhdx file for Hyper-V, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
+    The downloaded file is `xz`-compressed and contains the `.vhdx` file for Hyper-V, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ??? hint "How to extract DietPi images on Linux (xz-utils)"
+    ??? hint "How to extract DietPi images on Linux (`xz-utils`)"
         On Debian and Ubuntu-based systems, open a terminal and type:
 
         ```sh
