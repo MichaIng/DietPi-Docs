@@ -33,33 +33,35 @@ Select the following tabs for the installation description of your target.
 
     _Note_: Following this guide you could run the installation directly from a console via keyboard and screen, via SSH client or serial console.
 
-    ## 1. Download and extract the DietPi disk image
+    ## 1. Download and optionally extract the DietPi disk image
 
     Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select your SBC and click on **Download**. The disk image will be downloaded locally.
 
     _Example:_
     ![DietPi for Raspberry Pi download page](assets/images/DietPi-RaspberryPi-image.jpg "DietPi for Raspberry Pi download page"){: width="1186" height="561" loading="lazy"}
 
-    **Unzip the downloaded file to a local folder.**
+    The downloaded file is compressed (`.xz` file extension). Many flash tools (e.g. [balenaEtcher](https://www.balena.io/etcher/), [Rufus](https://rufus.ie/), [Raspberry Pi Imager](https://www.raspberrypi.com/software/)) can directly use this file format.  
+    Otherwise an appropriate extraction tool has to be installed (e.g. [7zip for Windows](https://www.7-zip.org/), [The Unarchiver (Macintosh)](https://theunarchiver.com/), [`xz-utils`](https://tukaani.org/xz/) (Linux)) to extract the `.img` file. They are free of charge and have been tested to decompress the image correctly (see below for extract instructions).
 
-    It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/). Both are free of charge and have been tested to decompress the image correctly.
+    ??? hint "Extracting DietPi images (for flash tools not supporting the `.xz` file format)"
+        
+        1. Install the extraction tool (e.g. [7zip for Windows](https://www.7-zip.org/), [The Unarchiver (Macintosh)](https://theunarchiver.com/), [`xz-utils`](https://tukaani.org/xz/) (Linux)
+        1. Extract the downloaded `.xz` formatted file. This will generate the image file (file format`.img`).
 
-    Linux users will need to download and install `xz-utils`.
+        ??? hint "How to extract DietPi images on Linux"
+            On Debian and Ubuntu-based systems, open a terminal and type:
 
-    ??? hint "How to extract DietPi images on Linux"
-        On Debian and Ubuntu-based systems, open a terminal and type:
+            ```sh
+            sudo apt install xz-utils
+            ```
 
-        ```sh
-        sudo apt install xz-utils
-        ```
+            Once `xz-utils` is installed, type the following at the terminal to decompress the file:
 
-        Once `xz-utils` is installed, type the following at the terminal to decompress the file:
+            ```sh
+            xz -d DietPi-Image.img.xz
+            ```
 
-        ```sh
-        xz -d DietPi-Image.img.xz
-        ```
-
-        Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_RPi-ARMv6-Bookworm.img.xz`. This will decompress the DietPi image file for you to use.
+            Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_RPi-ARMv6-Bookworm.img.xz`. This will decompress the DietPi image file for you to use.
 
     ## 2. Flash the DietPi image
 
@@ -68,7 +70,7 @@ Select the following tabs for the installation description of your target.
     !!! note "On Windows you may also use [Rufus](https://rufus.ie/) to flash the image."
         Click on the **Install on native PC** tab above to see an example of using Rufus. In case of SBC images, all options are greyed out, which is correct, so after selecting the image and the target drive, you only need to hit **START**.
 
-    Start balenaEtcher and make sure you have your drive or SD card inserted into your computer. Locate and select the DietPi image.
+    Start balenaEtcher and make sure you have your drive or SD card inserted into your computer. Locate and select the DietPi image (`.xz` resp. `.img`).
 
     ![DietPi-Etcher-install-01](assets/images/DietPi-Etcher-install-01.jpg "Balena Etcher file selection"){: width="795" height="529" loading="lazy"}
 
@@ -159,17 +161,31 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi disk image</h2>
 
-    Download the **DietPi VirtualBox** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and decompress the downloaded file to a local folder. It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or an alternative tools.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `VirtualBox`. Download the **OVA appliance** file locally.
 
     ![DietPi-VirtualBox-download-image](assets/images/dietpi-VirtualBox-Download.png "VirtualBox image download dialog"){: width="1152" height="733" loading="lazy"}
 
-    The .ova file has to be imported into VirtualBox.
+    The downloaded file is `xz`-compressed and contains the .ova file for VirtualBox, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ![DietPi VirtualBox archive content](assets/images/dietpi-VirtualBox-7zip-file.png "DietPi VirtualBox archive contents"){: width="533" height="83" loading="lazy"}
+    ??? hint "How to extract DietPi images on Linux (xz-utils)"
+        On Debian and Ubuntu-based systems, open a terminal and type:
+
+        ```sh
+        sudo apt install xz-utils
+        ```
+
+        Once `xz-utils` is installed, type the following at the terminal to decompress the file:
+
+        ```sh
+        xz -d DietPi-Image.img.xz
+        ```
+
+        Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_VirtualBox-x86_64-Buster.ova.xz`. This will decompress the DietPi image file for you to use.
 
     <h2>2. Import of the .ova file in VirtualBox</h2>
 
-    As next, the VirtualBox virtual machine has to be setup by importing the .ova file (via \File\Import Appliance):
+    As next, the .ova file is imported into VirtualBox.  
+    Therefore, the VirtualBox virtual machine has to be instantiated by importing the .ova file (via \File\Import Appliance):
 
     ![VirtualBox appliance import screenshot](assets/images/dietpi-VirtualBox-import1.png "VirtualBox appliance import dialog"){: width="483" height="308" loading="lazy"}
 
@@ -271,13 +287,26 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi disk image</h2>
 
-    Download the **DietPi VMware** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and decompress the downloaded file to a local folder. It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or an alternative tools.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `VMware/ESXi`. Download the **VMX appliance** file locally.
+    
+    The downloaded file is `xz`-compressed and contains the `.vmx` and `.vmdk` file for VMware, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ![Download VMware image from DietPi website](assets/images/dietpi-VMware-Download.png "VMware image download dialog"){: width="1223" height="749" loading="lazy"}
+    ??? hint "How to extract DietPi images on Linux (xz-utils)"
+        On Debian and Ubuntu-based systems, open a terminal and type:
+
+        ```sh
+        sudo apt install xz-utils
+        ```
+
+        Once `xz-utils` is installed, type the following at the terminal to decompress the file:
+
+        ```sh
+        xz -d DietPi-Image.img.xz
+        ```
+
+        Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_VMware-x86_64-Buster.ova.xz`. This will decompress the DietPi image file for you to use.
 
     The archive contains two files: `.vmx` and `.vmdk` which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
-
-    ![DietPi VMware archive content](assets/images/dietpi-VMware-7zip-file.png "DietPi VMware archive contents"){: width="525" height="104" loading="lazy"}
 
     <h2>2. Add the files in VMware</h2>
 
@@ -321,7 +350,24 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi appliance image</h2>
 
-    Download the **DietPi ESXi** appliance image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and decompress the downloaded file to a local folder. It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or an alternative tools.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `VMware/ESXi`. Download the **OVA appliance** file locally.
+
+    The downloaded file is `xz`-compressed and contains the .ova file for the ESXi server, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
+
+    ??? hint "How to extract DietPi images on Linux (xz-utils)"
+        On Debian and Ubuntu-based systems, open a terminal and type:
+
+        ```sh
+        sudo apt install xz-utils
+        ```
+
+        Once `xz-utils` is installed, type the following at the terminal to decompress the file:
+
+        ```sh
+        xz -d DietPi-Image.img.xz
+        ```
+
+        Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_VirtualBox-x86_64-Buster.ova.xz`. This will decompress the DietPi image file for you to use.
 
     The resulting `DietPi_ESXi-x86_64-Bookworm.ova` has to be uploaded to the ESXi server.
 
@@ -578,7 +624,7 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi disk image</h2>
 
-    Download the **DietPi Parallels** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `Parallels`. Download the **VMX appliance** file locally.
 
     Double click on the downloaded `tar.xz` file to extract it (or via option "Open in Finder").
 
@@ -624,7 +670,7 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi disk image</h2>
 
-    Download the **DietPi UTM** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `UTM`. Download the **UTM appliance** file locally.
 
     Double click on the downloaded file to decompress it (or via option "Open in Finder"). Copy/Move the contained `.utm` file to the UTM virtual machine directory. This is typically located within the (hidden) user subdirectory `.../Library/Containers/com.utmapp.UTM/Data/Documents`.
 
@@ -671,9 +717,26 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi disk image</h2>
 
-    Download the **DietPi Hyper-V** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and decompress the downloaded file to a local folder. It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or an alternative tools.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `Hyper-V`. Download the **Virtual disk image** file locally.
 
     ![DietPi Hyper-V image download](assets/images/dietpi-HyperV-Download.jpg "Hyper-V image download dialog"){: width="722" height="463" loading="lazy"}
+
+    The downloaded file is `xz`-compressed and contains the .vhdx file for Hyper-V, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
+
+    ??? hint "How to extract DietPi images on Linux (xz-utils)"
+        On Debian and Ubuntu-based systems, open a terminal and type:
+
+        ```sh
+        sudo apt install xz-utils
+        ```
+
+        Once `xz-utils` is installed, type the following at the terminal to decompress the file:
+
+        ```sh
+        xz -d DietPi-Image.img.xz
+        ```
+
+        Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_Hyper-V-x86_64-Buster.vhdx.xz`. This will decompress the DietPi image file for you to use.
 
     Move the `.vhdx` file to the desired virtual machine folder on your harddisk.
 
