@@ -48,20 +48,8 @@ Select the following tabs for the installation description of your target.
         1. Install the extraction tool (e.g. [7zip for Windows](https://www.7-zip.org/), [The Unarchiver (Macintosh)](https://theunarchiver.com/), [`xz-utils`](https://tukaani.org/xz/) (Linux)
         1. Extract the downloaded `.xz` formatted file. This will generate the image file (file format`.img`).
 
-        ??? hint "How to extract DietPi images on Linux (`xz-utils`)"
-            On Debian and Ubuntu-based systems, open a terminal and type:
-
-            ```sh
-            sudo apt install xz-utils
-            ```
-
-            Once `xz-utils` is installed, type the following at the terminal to decompress the file:
-
-            ```sh
-            xz -d DietPi-Image.img.xz
-            ```
-
-            Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_RPi-ARMv6-Bookworm.img.xz`. This will decompress the DietPi image file for you to use.
+        [//]: # (Include hint how to extract .xz files with xz-utils)
+        --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
     ## 2. Flash the DietPi image
 
@@ -167,20 +155,8 @@ Select the following tabs for the installation description of your target.
 
     The downloaded file is `xz`-compressed and contains the .ova file for VirtualBox, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ??? hint "How to extract DietPi images on Linux (`xz-utils`)"
-        On Debian and Ubuntu-based systems, open a terminal and type:
-
-        ```sh
-        sudo apt install xz-utils
-        ```
-
-        Once `xz-utils` is installed, type the following at the terminal to decompress the file:
-
-        ```sh
-        xz -d DietPi-Image.img.xz
-        ```
-
-        Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_VirtualBox-x86_64-Buster.ova.xz`. This will decompress the DietPi image file for you to use.
+    [//]: # (Include hint how to extract .xz files with xz-utils)
+    --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
     <h2>2. Import of the .ova file in VirtualBox</h2>
 
@@ -291,20 +267,8 @@ Select the following tabs for the installation description of your target.
     
     The downloaded file is `xz`-compressed and contains the `.vmx` and `.vmdk` file for VMware, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ??? hint "How to extract DietPi images on Linux (`xz-utils`)"
-        On Debian and Ubuntu-based systems, open a terminal and type:
-
-        ```sh
-        sudo apt install xz-utils
-        ```
-
-        Once `xz-utils` is installed, type the following at the terminal to decompress the file:
-
-        ```sh
-        xz -d DietPi-Image.img.xz
-        ```
-
-        Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_VMware-x86_64-Buster.ova.xz`. This will decompress the DietPi image file for you to use.
+    [//]: # (Include hint how to extract .xz files with xz-utils)
+    --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
     The archive contains two files: `.vmx` and `.vmdk` which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
 
@@ -354,20 +318,8 @@ Select the following tabs for the installation description of your target.
 
     The downloaded file is `xz`-compressed and contains the .ova file for the ESXi server, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ??? hint "How to extract DietPi images on Linux (`xz-utils`)"
-        On Debian and Ubuntu-based systems, open a terminal and type:
-
-        ```sh
-        sudo apt install xz-utils
-        ```
-
-        Once `xz-utils` is installed, type the following at the terminal to decompress the file:
-
-        ```sh
-        xz -d DietPi-Image.img.xz
-        ```
-
-        Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_VirtualBox-x86_64-Buster.ova.xz`. This will decompress the DietPi image file for you to use.
+    [//]: # (Include hint how to extract .xz files with xz-utils)
+    --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
     The resulting `DietPi_ESXi-x86_64-Bookworm.ova` has to be uploaded to the ESXi server.
 
@@ -723,20 +675,8 @@ Select the following tabs for the installation description of your target.
 
     The downloaded file is `xz`-compressed and contains the `.vhdx` file for Hyper-V, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ??? hint "How to extract DietPi images on Linux (`xz-utils`)"
-        On Debian and Ubuntu-based systems, open a terminal and type:
-
-        ```sh
-        sudo apt install xz-utils
-        ```
-
-        Once `xz-utils` is installed, type the following at the terminal to decompress the file:
-
-        ```sh
-        xz -d DietPi-Image.img.xz
-        ```
-
-        Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_Hyper-V-x86_64-Buster.vhdx.xz`. This will decompress the DietPi image file for you to use.
+    [//]: # (Include hint how to extract .xz files with xz-utils)
+    --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
     Move the `.vhdx` file to the desired virtual machine folder on your harddisk.
 
