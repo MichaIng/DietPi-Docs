@@ -34,10 +34,56 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
     - Username = `root`
     - Password = The same as your root login password, default is `dietpi`
 
+=== "Directories"
+
+    - Database files: `/mnt/dietpi_userdata/mysql`
+    - Configuration files: `/etc/mysql`
+
+=== "Configuration"
+
+    The MariaDB/MySQL tools read configuration files in the following order:
+    
+    1. `/etc/mysql/my.cnf` symlinks to this file, reason why all the rest is read.
+    1. `/etc/mysql/mariadb.cnf` (this file) to set global defaults.
+    1. `/etc/mysql/conf.d/*.cnf` to set global options.
+    1. `/etc/mysql/mariadb.conf.d/*.cnf` to set MariaDB-only options.
+    1. `~/.my.cnf` to set user-specific options.
+    
+    As a best practice, it is recommended to place MariaDB related user configuration files into `/etc/mysql/mariadb.conf.d/*.cnf` and to name the files in the manner of `<2-digit-number>-<configurationname>.cnf` (example: `99-myMariaDB_config.cnf`).
+
+    **Configuration example (for a Nextcloud instance)**  
+
+    ```
+    [mysqld]
+    # Disable file logging in favour of "journalctl -u mariadb"
+    skip_log_error=0
+    # Disable host name resolving
+    # NB: For remote access, IP addresses then need to be used when creating/altering database users.
+    skip_name_resolve=1
+    # Disable the TCP listener all together
+    # NB: For any database access, the UNIX socket "/run/mysqld/mysqld.sock" then needs to be used.
+    skip_networking=1
+    # The query cache is not recommended on multi-core machines.
+    query_cache_size=0
+    query_cache_type=0
+    # Since we use no MyISAM tables, disable key buffer
+    key_buffer_size=0
+    # Since we have only 336 KiB Aria tables, limit Aria page cache to 512 KiB
+    aria_pagecache_buffer_size=512k
+    # Since max 8 concurrent connections were reported by MySQLTuner, max connections are limited to 16.
+    max_connections=16
+    # All InnoDB databases are around 30 MiB, hence a buffer of 64 MiB is sufficient, including future growth.
+    innodb_buffer_pool_size=64M
+    # MySQLTuner recommends 25% InnoDB buffer size as log file size.
+    innodb_log_file_size=16M
+    ```
+
 ***
 
 Official documentation: <https://mariadb.org>  
-Getting started documentation: <https://mariadb.org/documentation/#getting-started>
+Getting started documentation: <https://mariadb.org/documentation/#getting-started>  
+MariaDB configuration variables: <https://mariadb.com/kb/en/server-system-variables/>  
+MySQLTuner-perl, a tool to get optimisation ideas: <https://github.com/major/MySQLTuner-perl>
 
 ## phpMyAdmin
 
@@ -73,6 +119,10 @@ Source: Part of the SQLite documentation, which has been released by author D. R
 
     To create a database and run commands, use the [quick start documentation](https://www.sqlite.org/quickstart.html).
 
+=== "Directories"
+
+    Since SQLite is a filebased, zeroconf database without any server process, no dedicated database and configuration directories are defined.  
+        
 ***
 
 Website: <https://www.sqlite.org/index.html>  
