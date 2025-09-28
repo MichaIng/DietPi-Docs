@@ -43,7 +43,7 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
 
     The MariaDB/MySQL tools read configuration files in the following order:
     
-    1. `/etc/mysql/my.cnf` symlinks to this file, reason why all the rest is read.
+    1. `/etc/mysql/my.cnf` symbolic links to this file, reason why all the rest is read.
     1. `/etc/mysql/mariadb.cnf` (this file) to set global defaults.
     1. `/etc/mysql/conf.d/*.cnf` to set global options.
     1. `/etc/mysql/mariadb.conf.d/*.cnf` to set MariaDB-only options.
@@ -83,7 +83,7 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
 Official documentation: <https://mariadb.org>  
 Getting started documentation: <https://mariadb.org/documentation/#getting-started>  
 MariaDB configuration variables: <https://mariadb.com/kb/en/server-system-variables/>  
-MySQLTuner-perl, a tool to get optimisation ideas: <https://github.com/major/MySQLTuner-perl>
+`MySQLTuner-perl`, a tool to get optimisation ideas: <https://github.com/major/MySQLTuner-perl>
 
 ## phpMyAdmin
 
@@ -121,7 +121,7 @@ Source: Part of the SQLite documentation, which has been released by author D. R
 
 === "Directories"
 
-    Since SQLite is a filebased, zeroconf database without any server process, no dedicated database and configuration directories are defined.  
+    Since SQLite is a file based, zero configuration database without any server process, no dedicated database and configuration directories are defined.  
         
 ***
 
