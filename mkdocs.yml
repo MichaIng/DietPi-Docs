@@ -9,6 +9,8 @@ repo_name: DietPi-Docs
 repo_url: https://github.com/MichaIng/DietPi-Docs
 edit_uri: edit/dev/docs/
 docs_dir: docs
+watch: 
+- snippet-includes
 
 theme:
   name: material
