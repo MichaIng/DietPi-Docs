@@ -235,14 +235,17 @@ The data can be nicely viewed with [**Grafana**](hardware_projects.md#grafana). 
         systemctl restart influxdb
         ```
 
-=== "Install information"
+=== "Directories"
 
-    The data location for InfluxDB is stored respectively linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`
+    - Data location (database files): `/mnt/dietpi_userdata/influxdb`  
+      (The data location for InfluxDB is stored respectively linked with symbolic links.)
+    - Configuration file: `/etc/influxdb/influxdb.conf`
 
 ***
 
 Website: <https://www.influxdata.com/products/influxdb/>  
 Official documentation: <https://docs.influxdata.com/influxdb/v1.8/>  
+Configuration file documentation: <https://docs.influxdata.com/influxdb/v1/administration/config/>  
 Getting started: <https://docs.influxdata.com/influxdb/v1.8/introduction/get-started/>
 
 ## PostgreSQL
