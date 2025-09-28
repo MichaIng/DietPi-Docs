@@ -29,6 +29,9 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     - URL = `http://<your.IP>:8089/admin/`
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Setup"
 
     The setup contains setting devices (e.g. router) to use Pi-hole for DNS resolution.
@@ -234,6 +237,9 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
     - URL = `http://<your.IP>:8083`
     - User = `admin`
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration"
 
