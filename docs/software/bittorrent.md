@@ -46,6 +46,9 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
     - Username: `root`
     - Password: `<your global password>`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -71,10 +74,8 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
     Simply close and reopen this screen to refresh the port status.
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## Deluge
 
@@ -92,6 +93,9 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     - Password: `<your global password>`
 
     Select the host 127.0.0.1 and click `connect`.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Access Deluge console"
 
@@ -119,10 +123,8 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     - Folder accessed via file server: `downloads`
     - Local folder: `/mnt/dietpi_userdata/downloads`
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## qBittorrent
 
@@ -141,6 +143,9 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
     - Password: `<your global password>` (default: `dietpi`)  
         NB: Since qBittorrent v4.2.0 (Debian Bullseye), a new safer hash algorithm is used, which we are currently not able to replicate dynamically for the global software password with common shell tools. Until then, for your first login the password is `dietpi`. Please change it directly after first login: <https://github.com/MichaIng/DietPi/issues/5078>
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -153,10 +158,8 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
     Before activating search plugins within qBittorrent, you would need to install Python first. Afterwards you can search and activate the plugins.
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## rTorrent
 
@@ -175,6 +178,9 @@ Also installs:
     - URL: `http://<your.IP>/rutorrent`
     - Username: `root`
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     The login credentials can be changed, depending on the webserver choice, with the following commands:
 
@@ -209,10 +215,8 @@ Also installs:
 
     rTorrent by default listens on the UNIX domain socket at `/mnt/dietpi_userdata/downloads/.session/rpc.socket`. The webserver is configured to proxy `http://<your.IP>/RPC2` calls to the UNIX socket, but HTTP authentication is enforced for that URL.
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 === "View logs"
 
@@ -280,6 +284,9 @@ Also installs:
     - URL: `http://<your.IP>/aria2/docs`
     - rpc secret password: `<your global password>`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
     This needs to be entered in the following location, in the web interface:
 
     - `Settings`
@@ -304,10 +311,8 @@ Also installs:
 
     Full list of `aria2.conf` settings: <https://aria2.github.io/manual/en/html/aria2c.html>
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## SABnzbd
 
@@ -320,6 +325,9 @@ NZB download manager with web interface.
     The web interface uses port **8080**:
 
     - URL: `http://<your.IP>:8080/sabnzbd`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Web interface not loading / Unable to access"
 
@@ -358,10 +366,8 @@ NZB download manager with web interface.
     apt install git build-essential
     ```
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 === "View logs"
 
@@ -391,6 +397,9 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
     The web interface is accessible via port **8081**:
 
     - URL: `http://<your.IP>:8081`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Add a TV show"
 
@@ -422,10 +431,8 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
     - Use the `Test connection` button at the bottom of the page to ensure Medusa can connect to your BitTorrent server.
     - Finally click `Save changes` (bottom of the page)
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## Sonarr
 
@@ -442,6 +449,9 @@ Automatically download your favorite TV shows, as they become available.
     The web interface is accessible via port **8989**:
 
     - URL: `http://<your.IP>:8989`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -486,10 +496,8 @@ Automatically download your favorite TV shows, as they become available.
 
     Link the Sonarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 === "View logs"
 
@@ -519,6 +527,9 @@ Automatically download your favorite movies, as they become available.
     The web interface is accessible via port **7878**:
 
     - URL: `http://<your.IP>:7878`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -563,10 +574,8 @@ Automatically download your favorite movies, as they become available.
 
     Link the Radarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 === "View logs"
 
@@ -596,11 +605,14 @@ Key features:
 
 ![Bazarr web interface screenshot](../assets/images/dietpi-software-download-bazarr1.jpg "Bazarr web interface screen"){: width="1898" height="1080" loading="lazy"}
 
-=== "Quick start"
+=== "Access to the web interface"
 
     The web interface is accessible via port **6767**:
 
     - URL: `http://<your.IP>:6767`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     ![Bazarr subtitle finds list](../assets/images/dietpi-software-download-bazarr.jpg "Bazarr subtitle list"){: width="1105" height="490" loading="lazy"}
 
@@ -639,6 +651,9 @@ Automatically download your favorite music.
     The web interface is accessible via port **8686**:
 
     - URL: `http://<your.IP>:8686`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -683,10 +698,8 @@ Automatically download your favorite music.
 
     Link the Lidarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 === "View logs"
 
@@ -712,6 +725,9 @@ Automatically download your favorite ebook, as they become available.
     The web interface is accessible via port **8787**:
 
     - URL: `http://<your.IP>:8787`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -789,10 +805,8 @@ Automatically download your favorite ebook, as they become available.
 
     - Use the internal web based updater
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ***
 
@@ -813,10 +827,11 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
 
     - URL: `http://<your.IP>:9696`
 
-=== "Recommended: Protect your privacy with a VPN"
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ***
 
@@ -837,10 +852,11 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
 
     - URL: `http://<your.IP>:9117`
 
-=== "Recommended: Protect your privacy with a VPN"
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## NZBGet
 
@@ -855,6 +871,9 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
     - URL: `http://<your.IP>:6789`
     - Username: `admin`
     - Password: `<your global password>`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Access Downloads"
 
@@ -878,10 +897,8 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
     dietpi-software reinstall 149
     ```
 
-=== "Recommended: Protect your privacy with a VPN"
-
-    Although we enable forced encryption on all our BitTorrent clients, if you wish to ensure complete privacy and piece of mind for all your downloaded content, using a VPN is critical. We highly recommend [**NordVPN**](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902) as it offers unlimited bandwidth, zero logging and up to 6 devices on a single account. It can be easily setup using our [**DietPi-VPN**](../dietpi_tools.md#dietpi-vpn) tool.  
-    [![NordVPN logo](../assets/images/nordvpn-logo.svg){: width="300" height="65" loading="lazy"}](https://go.nordvpn.net/aff_c?offer_id=15&aff_id=5305&url_id=902)
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## HTPC Manager
 
@@ -895,6 +912,9 @@ Do all your HTPC tasks without using 5 different interfaces!
     The web interface is accessible via port **8085**:
 
     - URL: `http://<your.IP>:8085`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Update to latest version"
 

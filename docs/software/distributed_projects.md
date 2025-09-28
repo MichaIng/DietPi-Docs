@@ -33,6 +33,9 @@ The problems which are solved require so many computer calculations that help fr
 
     - URL = `http://<your.IP>:7396`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Configuration"
 
     The configuration is located in the file `/mnt/dietpi_userdata/fahclient/config.xml`.  
@@ -137,6 +140,9 @@ Essentially, it is a "peer-to-peer" Google search engine, not controlled by Goog
     - Username = `admin`
     - Password: `<your global password>` (default: `dietpi`)
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Reset password"
 
     Set password with:
@@ -169,6 +175,9 @@ This node lets you download files through IPFS and add your own files to the net
 
     - WebUI = `http://<your.IP>:5003/webui`
     - Gateway = `http://<your.IP>:8087/ipfs/IPFSHash`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Usage with IPFS Companion browser extension"
 
@@ -218,9 +227,12 @@ The ADS-B Feeder application allows you to feed any (or all) of these aggregator
 
 === "Access to the web interface"
 
-    The web interface is accessible via the port **1099**, e.g. this could be:
+    The web interface is accessible via the port **1099**:
 
     - URL = `http://<your.IP>:1099`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     The color of the plane icons is an indication of their altitude, lots more information (like call signs, routes of the planes, etc) are available as well. The system provides you with statistics, graphs, and information about the performance of your feeder, and makes it easy to explore some of the information provided by the aggregators that you are feeding.
 
