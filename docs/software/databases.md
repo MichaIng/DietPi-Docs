@@ -34,12 +34,14 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
     - Username = `root`
     - Password = The same as your root login password, default is `dietpi`
 
-=== "Directories"
+=== "Configuration"
+
+    <h2>Directories</h2>
 
     - Database files: `/mnt/dietpi_userdata/mysql`
     - Configuration files: `/etc/mysql`
 
-=== "Configuration"
+    <h2>Configuration files</h2>
 
     The MariaDB/MySQL tools read configuration files in the following order:
     
@@ -51,7 +53,7 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
     
     As a best practice, it is recommended to place MariaDB related user configuration files into `/etc/mysql/mariadb.conf.d/*.cnf` and to name the files in the manner of `<2-digit-number>-<configurationname>.cnf` (example: `99-myMariaDB_config.cnf`).
 
-    **Configuration example (for a Nextcloud instance)**  
+    <h2>Configuration example (for a Nextcloud instance)</h2>
 
     ```
     [mysqld]
@@ -119,9 +121,9 @@ Source: Part of the SQLite documentation, which has been released by author D. R
 
     To create a database and run commands, use the [quick start documentation](https://www.sqlite.org/quickstart.html).
 
-=== "Directories"
+=== "Configuration"
 
-    Since SQLite is a file based, zero configuration database without any server process, no dedicated database and configuration directories are defined.  
+    Since SQLite is a file based, zero configuration database without any server process, no dedicated database and configuration directories are defined.
         
 ***
 
@@ -150,11 +152,21 @@ _[Trademark policy](https://redis.io/legal/trademark-policy/)_
 
     For more commands and an introduction to Redis data types and commands, read the [quick start documentation](https://redis.io/topics/data-types-intro).
 
+=== "Configuration"
+
+    <h2>Directories</h2>
+
+    - Configuration directory:  
+        `/etc/redis`  
+    - Main configuration file:  
+        `/etc/redis/redis.conf`
+
 ***
 
 Website: <https://redis.io/>  
 Official documentation: <https://redis.io/documentation>  
-Commands: <https://redis.io/commands>
+Commands: <https://redis.io/commands>  
+Configuration: <https://redis.io/docs/latest/operate/oss_and_stack/management/config/>
 
 ## InfluxDB
 
@@ -235,7 +247,9 @@ The data can be nicely viewed with [**Grafana**](hardware_projects.md#grafana). 
         systemctl restart influxdb
         ```
 
-=== "Directories"
+=== "Configuration"
+
+    <h2>Directories</h2>
 
     - Data location (database files): `/mnt/dietpi_userdata/influxdb`  
       (The data location for InfluxDB is stored respectively linked with symbolic links.)
@@ -268,13 +282,17 @@ PostgreSQL is a persistent advanced object-relational database server, used in s
 
 === "Configuration"
 
+    <h2>Directories</h2>
+
     - Config directory:  
         `/etc/postgresql/*/main`  
-        with the asterisk being the PostgreSQL version number, e.g. `11` or `13`
+        with the asterisk `*` being the PostgreSQL version number, e.g. `11` or `13`
     - Main config file:  
         `/etc/postgresql/*/main/postgresql.conf`
     - DietPi config override:  
         `/etc/postgresql/*/main/conf.d/00dietpi.conf`
+
+    <h2>Configuration override</h2>
 
     To add or change settings, best practice is to create a new override configuration, e.g.:
 
