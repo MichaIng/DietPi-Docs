@@ -1213,6 +1213,34 @@ Also works with Roon.
 
     Guide: <https://help.roonlabs.com/portal/en/kb/articles/hqplayer>
 
+=== "View logs"
+
+    Run the following command on a console to view logs for NAA Daemon:
+
+    ```sh
+    journalctl -u networkaudiod
+    ```
+
+=== "Service control"
+
+    Since NAA Daemon runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status networkaudiod
+    ```
+
+    ```sh
+    systemctl start networkaudiod
+    ```
+
+    ```sh
+    systemctl stop networkaudiod
+    ```
+
+    ```sh
+    systemctl restart networkaudiod
+    ```
+
 === "Update"
 
     ```sh
