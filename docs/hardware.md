@@ -323,7 +323,7 @@ The **Radxa Zero** is an ultra thin SBC in smaller form factor with still powerf
 
 ## Allo Sparky SBC
 
-Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit the [**Allo Sparky SBC**](https://www.allo.com/sparky/sparky-sbc.html) website.
+The Sparky SBC was an audiophile focused single-board computer produced by Allo. The product has however been discontinued and the company shut down some years ago. DietPi still provides images, but will drop support with its first release in 2026.
 
 ![Allo Sparky SBC photo](assets/images/dietpi-sparky-sbc.jpg "Allo Sparky SBC"){: width="500" height="412" loading="lazy"}
 
