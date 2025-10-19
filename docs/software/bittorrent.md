@@ -18,12 +18,13 @@ description: Description of DietPi software options related to BitTorrent and ot
 - [**Radarr - Automatically download Movies**](#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](#bazarr)
 - [**Lidarr - Automatically download Music**](#lidarr)
-- [**Readarr - Automatically download Ebooks**](#readarr)
+- [**Readarr - Ebook and audiobook collection manager**](#readarr)
 - [**Prowlarr - Indexer manager & proxy for PVR**](#prowlarr)
 - [**Jackett - API Support for your favourite torrent trackers**](#jackett)
 - [**NZBGet - NZB download manager with web interface**](#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](#htpc-manager)
 - [**youtube-dl - download videos from YouTube and other sites**](#youtube-dl)
+- [**LazyLibrarian - Ebook and audiobook collection manager**](#lazylibrarian)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -483,7 +484,7 @@ Automatically download your favorite TV shows, as they become available.
 
 === "Using custom download/media directories"
 
-    By default Sonarr has strict permissions to only access download and media directories inside `/mnt/`. If you need to use a different location, please do the following:
+    By default Sonarr has strict permissions to only access download and media directories inside `/mnt/` and `/media`. If you need to use a different location, please do the following:
 
     1. Run `dietpi-services` from console
     2. Select `sonarr`
@@ -561,7 +562,7 @@ Automatically download your favorite movies, as they become available.
 
 === "Using custom download/media directories"
 
-    By default Radarr has strict permissions to only access download and media directories inside `/mnt/`. If you need to use a different location, please do the following:
+    By default Radarr has strict permissions to only access download and media directories inside `/mnt/` and `/media`. If you need to use a different location, please do the following:
 
     1. Run `dietpi-services` from console
     2. Select `radarr`
@@ -685,7 +686,7 @@ Automatically download your favorite music.
 
 === "Using custom download/media directories"
 
-    By default Lidarr has strict permissions to only access download and media directories inside `/mnt/`. If you need to use a different location, please do the following:
+    By default Lidarr has strict permissions to only access download and media directories inside `/mnt/` and `/media`. If you need to use a different location, please do the following:
 
     1. Run `dietpi-services` from console
     2. Select `lidarr`
@@ -759,7 +760,7 @@ Automatically download your favorite ebook, as they become available.
 
 === "Using custom download/media directories"
 
-    By default Readarr has strict permissions to only access download and media directories inside `/mnt/`. If you need to use a different location, please do the following:
+    By default Readarr has strict permissions to only access download and media directories inside `/mnt/` and `/media`. If you need to use a different location, please do the following:
 
     1. Run `dietpi-services` from console
     2. Select `readarr`
@@ -940,5 +941,84 @@ Do all your HTPC tasks without using 5 different interfaces!
 
 Website: <https://ytdl-org.github.io/youtube-dl/>  
 Documentation: <https://github.com/ytdl-org/youtube-dl/blob/master/README.md>
+
+## LazyLibrarian
+
+LazyLibrarian is a program to follow authors and grab metadata for all your digital reading needs, including ebooks and audiobooks.
+
+??? note "A download client is required"
+
+    Transmission BitTorrent server is recommended to enable automatic downloads
+
+![LazyLibrarian web interface screenshot](../assets/images/lazylibrarian.png "LazyLibrarian web interface screen"){: width="600" height="439" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via TCP port **5299**:
+
+    - URL: `http://<your.IP>:5299`
+
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Using custom download/media directories"
+
+    By default LazyLibrarian has strict permissions to only access download and media directories inside `/mnt/` and `/media`. If you need to use a different location, please do the following:
+
+    1. Run `dietpi-services` from console
+    2. Select `lazylibrarian`
+    3. Select `Edit`
+    4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=`
+    5. Add your custom path to the end of this line, separated by one space
+    6. Press ++ctrl+o++ buttons to save and ++ctrl+x++ to exit
+
+=== "Setup details"
+
+    The install, config and data directory is located at:
+
+    - Install directory: `/opt/lazylibrarian`
+    - Data directory: `/mnt/dietpi_userdata/lazylibrarian`
+    - Configuration file: `/mnt/dietpi_userdata/lazylibrarian/config.ini`
+
+=== "Service control"
+
+    Since LazyLibrarian runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    sudo systemctl status lazylibrarian
+    ```
+
+    ```sh
+    sudo systemctl start lazylibrarian
+    ```
+
+    ```sh
+    sudo systemctl stop lazylibrarian
+    ```
+
+    ```sh
+    sudo systemctl restart lazylibrarian
+    ```
+
+=== "View logs"
+
+    - Service: `journalctl -u lazylibrarian`
+    - Daemon: `/var/log/lazylibrarian/`
+
+=== "Update"
+
+    To update LazyLibrarian, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 169
+    ```
+
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official documentation: <https://lazylibrarian.gitlab.io/>  
+Source code: <https://gitlab.com/LazyLibrarian/LazyLibrarian>  
+License: [GPLv3](https://gitlab.com/LazyLibrarian/LazyLibrarian/-/blob/master/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)
