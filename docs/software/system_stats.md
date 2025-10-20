@@ -34,9 +34,11 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 ![DietPi-Dashboard screenshot](../assets/images/dietpi-dashboard.jpg "DietPi-Dashboard screen"){: width="700" height="346" loading="lazy"}
 
-!!! warning "DietPi-Dashboard is still in Beta!"
+!!! warning "DietPi-Dashboard rework is still in Beta!"
 
-    We hence do not recommend to actively use it on sensitive production systems yet.
+    Please assure to close its network ports (default: TCP **5252** and **5253**) on your NAT/router or via firewall, to protect them from public access.
+
+    If you need to access the DietPi-Dashboard remotely, please use a VPN server on this system, like WireGuard.
 
 === "Web interface"
 
