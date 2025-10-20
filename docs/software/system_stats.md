@@ -40,17 +40,18 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 === "Web interface"
 
-    DietPi-Dashboard is accessible by default at TCP port **5252**:
+    DietPi-Dashboard is accessible by default via HTTPS at TCP port **5252**:
 
-    - URL: `http://<your.IP>:5252`
+    - URL: `https://<your.IP>:5252`
     - Password: `<your software password>` (default: `dietpi`)
 
-    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
+    For communication between the web UI and the backend nodes, by default TCP port **5253** is additionally used.
 
 === "Directories"
 
-    The DietPi-Dashboard executable and its configuration file can be found at:
+    The DietPi-Dashboard executable and its configuration files can be found at:
 
     ```
     /opt/dietpi-dashboard
@@ -58,70 +59,67 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 === "Configuration"
 
-    The configuration file is located at:
+    The configuration files for the frontend (web UI) and backend (system node) are located at:
 
     ```
-    /opt/dietpi-dashboard/config.toml
+    /opt/dietpi-dashboard/config-frontend.toml
+    /opt/dietpi-dashboard/config-backend.toml
     ```
 
-    When doing changes, you need to restart the service afterwards:
+    When doing changes, you need to restart the respective service afterwards:
 
     ```sh
-    systemctl restart dietpi-dashboard
+    systemctl restart dietpi-dashboard-frontend
+    systemctl restart dietpi-dashboard-backend
     ```
 
-=== "Password protection"
+=== "Change password"
 
-    Password protection is enabled by default from DietPi v7.9 on. If you installed it before, you'll need to enable it via configuration file. For this, create a SHA512 hash of the `PASSWORD` you want to use for logging into the web interface, and a random 64-character secret which is used to generate a token to transfer and store securely in your browser. Apply those to the configuration file and restart the service for the changes to take effect:
+    To change the password for the web UI, create a SHA512 hash of the `PASSWORD` you want to use for login. Apply it to the frontend configuration file and restart the service for the change to take effect:
 
     ```sh
     hash=$(echo -n 'PASSWORD' | sha512sum | mawk '{print $1}')
-    secret=$(openssl rand -hex 32)
-    G_CONFIG_INJECT 'pass[[:blank:]]' 'pass = true' /opt/dietpi-dashboard/config.toml
-    GCI_PASSWORD=1 G_CONFIG_INJECT 'hash[[:blank:]]' "hash = \"$hash\"" /opt/dietpi-dashboard/config.toml
-    GCI_PASSWORD=1 G_CONFIG_INJECT 'secret[[:blank:]]' "secret = \"$secret\"" /opt/dietpi-dashboard/config.toml
-    unset -v hash secret
+    GCI_PASSWORD=1 G_CONFIG_INJECT 'hash[[:blank:]]' "hash = \"$hash\"" /opt/dietpi-dashboard/config-frontend.toml
+    unset -v hash
+    G_CONFIG_INJECT 'enable_login[[:blank:]]' 'enable_login = true' /opt/dietpi-dashboard/config-frontend.toml
     systemctl restart dietpi-dashboard
     ```
-
-    To change the password, just replace the hash in the config file and restart the service.
-
-    If you want to force a logout of all browsers without changing the password, you can instead change the secret. Generate an apply a new secret to the configuration file and restart the service. Every client and browser will then need to login again to continue using the DietPi-Dashboard, as the stored token that is based on password and secret has been invalidated.
 
 === "Multiple nodes"
 
-    From DietPi v8.0 on, you can install DietPi-Dashboard as backend only node, with does not include an own web interface. Such backend only nodes can then be accessed from another full DietPi-Dashboard frontend/web interface. Additional nodes would need to be added manually into configuration file located at:
+    The new DietPi-Dashboard consists of two components, the frontend which provides the web interface, and the backend which enables communication with the system. One frontend can be used with multiple backend nodes, and when installing the dashboard with `dietpi-software`, it is possible to install the backend only, to use it with a frontend installed on another system already.
+    The backend-only installation will ask for the needed info, but in case of non-interactive/automated installation, or if you want to change or setup this later:
 
-    ```
-    /opt/dietpi-dashboard/config.toml
-    ```    
+    1. Check `/opt/dietpi-dashboard/config-frontend.toml` on the frontend host, or the "Config" page on its web UI. There is a `secret` setting, and a `backend_port` setting, which defaults to **5253**.
+    1. Open `/opt/dietpi-dashboard/config-backend.toml` on the host of the backend node. Replace `secret` to match the one from the frontend, and `frontend_addr` with `IP:port` of the frontend.
+    1. Restart the backend service:
 
-    When doing changes, you need to restart the service afterwards:
-
-    ```sh
-    systemctl restart dietpi-dashboard
-    ```
-
-    !!! hint "Full DietPi-Dashboard nodes with frontend included can currently not be accessed from other frontends."
+        ```sh
+        systemctl restart dietpi-dashboard-backend
+        ```
 
 === "Service control"
 
-    DietPi-Dashboard by default is started as systemd service and can hence be controlled with the following commands:
+    DietPi-Dashboard by default is started as systemd services for frontend and backend, and can hence be controlled with the following commands:
 
     ```sh
-    systemctl status dietpi-dashboard
+    systemctl status dietpi-dashboard-frontend
+    systemctl status dietpi-dashboard-backend
     ```
 
     ```sh
-    systemctl stop dietpi-dashboard
+    systemctl stop dietpi-dashboard-frontend
+    systemctl stop dietpi-dashboard-backend
     ```
 
     ```sh
-    systemctl start dietpi-dashboard
+    systemctl start dietpi-dashboard-frontend
+    systemctl start dietpi-dashboard-backend
     ```
 
     ```sh
-    systemctl restart dietpi-dashboard
+    systemctl restart dietpi-dashboard-frontend
+    systemctl restart dietpi-dashboard-backend
     ```
 
 === "Logs"
@@ -129,22 +127,23 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     Service logs can be reviewed with the following command:
 
     ```sh
-    journalctl -u dietpi-dashboard
+    journalctl -u dietpi-dashboard-frontend -u dietpi-dashboard-backend
     ```
 
 === "Update"
 
-    You can easily update DietPi-Dashboard by reinstalling it and restarting the service for the change to take effect:
+    You can easily update DietPi-Dashboard by reinstalling it and restarting the services for the change to take effect:
 
     ```sh
     dietpi-software reinstall 200
-    systemctl restart dietpi-dashboard
+    systemctl restart dietpi-dashboard-frontend
+    systemctl restart dietpi-dashboard-backend
     ```
 
 ***
 
-Source code: <https://github.com/ravenclaw900/DietPi-Dashboard>  
-License: [GPLv3](https://github.com/ravenclaw900/DietPi-Dashboard/blob/main/LICENSE)
+Source code: <https://github.com/nonnorm/DietPi-Dashboard>  
+License: [GPLv3](https://github.com/nonnorm/DietPi-Dashboard/blob/main/LICENSE)
 
 ## DietPi-CloudShell
 
