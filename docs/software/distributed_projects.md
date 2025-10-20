@@ -13,19 +13,8 @@ description: Description of DietPi software options related to distributed softw
 - [**IPFS Node - Contribute to a decentralized internet**](#ipfs-node)
 - [**ADS-B Feeder - track airplanes using SDRs and feed the data to ADS-B aggregators**](#ads-b-feeder)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -43,6 +32,9 @@ The problems which are solved require so many computer calculations that help fr
     The web interface is accessible via the port **7396**, e.g. this could be:  
 
     - URL = `http://<your.IP>:7396`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration"
 
@@ -148,6 +140,9 @@ Essentially, it is a "peer-to-peer" Google search engine, not controlled by Goog
     - Username = `admin`
     - Password: `<your global password>` (default: `dietpi`)
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Reset password"
 
     Set password with:
@@ -180,6 +175,9 @@ This node lets you download files through IPFS and add your own files to the net
 
     - WebUI = `http://<your.IP>:5003/webui`
     - Gateway = `http://<your.IP>:8087/ipfs/IPFSHash`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Usage with IPFS Companion browser extension"
 
@@ -229,9 +227,12 @@ The ADS-B Feeder application allows you to feed any (or all) of these aggregator
 
 === "Access to the web interface"
 
-    The web interface is accessible via the port **1099**, e.g. this could be:
+    The web interface is accessible via the port **1099**:
 
     - URL = `http://<your.IP>:1099`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     The color of the plane icons is an indication of their altitude, lots more information (like call signs, routes of the planes, etc) are available as well. The system provides you with statistics, graphs, and information about the performance of your feeder, and makes it easy to explore some of the information provided by the aggregators that you are feeding.
 

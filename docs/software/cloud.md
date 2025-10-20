@@ -23,19 +23,8 @@ description: Description of DietPi software options related to cloud and backup 
 - [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](#restic)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -50,13 +39,16 @@ Also Installs:
 
 ![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png "ownCloud web interface screen"){: width="400" height="218" loading="lazy"}
 
-=== "Quick start"
+=== "Access to the web interface"
 
     ownCloud is accessible via regular HTTP/HTTPS TCP ports **80**/**443** below the `/owncloud` path:
 
     - URL: `http://<your.IP>/owncloud`
     - Username: `admin` (or the one you set in `dietpi.txt`)
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration"
 
@@ -111,13 +103,16 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
 ![Nextcloud web interface screenshot](../assets/images/dietpi-software-cloud-nextcloud.jpg "Nextcloud web interface screen"){: width="2048" height="1280" loading="lazy"}
 
-=== "Quick start"
+=== "Access to the web interface"
 
     Nextcloud is accessible via regular HTTP/HTTPS ports **80**/**443** below the `/nextcloud` path:
 
     - URL: `http://<your.IP>/nextcloud`
     - Username: `admin` (or the one you set in `dietpi.txt`)
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration"
 
@@ -331,7 +326,12 @@ Also Installs:
 
 === "Access to the web interface"
 
-    URL: `http://<your.IP>/pydio`
+    The web interface of *Pydio* can be accessed via:
+
+    - URL: `http://<your.IP>/pydio`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First time connect"
 
@@ -377,6 +377,9 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
     The web interface is accessible via TCP port **55414**:
 
     - URL: `http://<your.IP>:55414`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration"
 
@@ -475,6 +478,9 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
     - URL: `http://<your.IP>:3000`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "First run setup"
 
     Has to be done once, when connected to the web interface:
@@ -543,6 +549,9 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     The web interface is accessible via port **3000**:
 
     - URL: `http://<your.IP>:3000`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First run setup"
 
@@ -661,6 +670,9 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
     - URL: `http://<your.IP>:3000`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "First run setup"
 
     Has to be done once, when connected to the web interface:
@@ -777,6 +789,9 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     URL = `http://<your.IP>:8384`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "First run setup"
 
     Has to be done once, when connected to the web interface.
@@ -812,7 +827,7 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
 ![MinIO setup diagram](../assets/images/dietpi-software-cloud-minio.jpg){: width="417" height="443" loading="lazy"}
 
-=== "Quick start"
+=== "Access to the web interface"
 
     The web interface is accessible via TCP port **9001** and S3 clients need to connect via TCP port **9004**:
 
@@ -823,6 +838,9 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
     - [MinIO Object Storage docs](https://docs.min.io/community/minio-object-store/)
     - [MinIO Python Client docs](https://docs.min.io/community/minio-object-store/developers/python/minio-py.html)
     - [MinIO JavaScript Client docs](https://docs.min.io/community/minio-object-store/developers/javascript/minio-javascript.html)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -896,12 +914,15 @@ vaultwarden is an unofficial Bitwarden password manager server with web interfac
             13. Select "Update Settings".  
                 ![Import certificate on macOS, screenshot 5](../assets/images/import_cert_mac_5.png "Import certificate on MacOS - Update settings")
 
-=== "Web access"
+=== "Access to the web interface"
 
     The web interface is accessible via port **8001**:
 
     - URL = `https://<your.IP>:8001`
     - On first access, you need to create an account, either via web UI or via client (see "Client access" tab).
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Client access"
 
@@ -947,13 +968,16 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
 ![FuguHub logo](../assets/images/dietpi-software-cloud-fuguhub.png){: width="149" height="140" loading="lazy"}
 
-=== "Web interface"
+=== "Access to the web interface"
 
     The web interface is accessible via regular HTTP and HTTPS ports **80** and **443**:
 
     - URL: `http://<your.IP>` or `https://<your.IP>` (When using HTTPS, you may ignore the browser warning because of the self-signed certificate which is used by default.)
     - Username: `dietpi`
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     !!! warning "The fact that FuguHub runs on ports 80 and 443 by default makes it incompatible with regular web servers when using the default setup."
 
@@ -998,6 +1022,9 @@ Access and manage your data from anywhere via browser with this lightweight remo
     - URL = `http://<your.IP>:8084`
     - Username = `dietpi`
     - Password = `<your global password>`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Directories"
 

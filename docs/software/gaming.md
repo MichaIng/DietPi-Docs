@@ -21,19 +21,8 @@ description: Description of DietPi software options related to games and userspa
 - [**Moonlight (GUI) - GUI game streaming client for Sunshine and NVIDIA GameStream**](#moonlight-gui)
 - [**GZDoom - Modder-friendly OpenGL and Vulkan source port based on the DOOM engine**](gaming.md#gzdoom)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -70,6 +59,9 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
     - URL = `http://<your.IP>:1339`
     - Username = `admin`
     - Password = `<globalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Tweaking"
 
@@ -129,13 +121,16 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
     - Username: `mineos`
     - Password = `<globalSoftwarePassword>` (default: `dietpi`)
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
     To change the password to `myPassword`, run the following command:
 
     ```sh
     sudo chpasswd --crypt-method SHA512 <<< 'mineos:myPassword'
     ```
 
-=== "1st run setup"
+=== "First run setup"
 
     Once logged into the web interface:
 
@@ -198,7 +193,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
 ![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: width="400" height="189" loading="lazy"}
 
-=== "1st run setup"
+=== "First run setup"
 
     - **Kickstarts (Amiga BIOS/boot system)**  
       Amiga Kickstart ROM images are required to run the system(s) you want to emulate. These can not be bundled due to copyright restrictions.  

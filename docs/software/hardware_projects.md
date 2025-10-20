@@ -17,19 +17,8 @@ description: Description of DietPi software options related to hardware
 - [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](#audiophonics-pi-spc)
 - [**Grafana - The open platform for beautiful analytics and monitoring**](#grafana)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -121,6 +110,9 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
     - Username = `webiopi`
     - Password = `raspberry`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Change the login password"
 
     - Run `webiopi-passwd`
@@ -153,6 +145,9 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 
     - URL = `http://<your.IP>:1880`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Access to the dashboard"
 
     To install the Node-RED dashboard, the user interface of Node-RED, use settings "Manage palette" from programming IDE or run the following command from console:
@@ -163,6 +158,9 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 
     Use the following URL to connect to the dashboard from your browser:  
     `https://<your.IP>:1880/ui/`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Data and config directory"
 
@@ -281,6 +279,9 @@ Also installs:
     - URL: `https://<your.IP>:9443/admin` (You may ignore the browser warning, as a self-signed certificate is used by default.)
     - Email address: `admin@blynk.cc`
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Setup details"
 
@@ -419,6 +420,9 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
     - URL: `http://<your.IP>:3001`
     - Username: `admin`
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Usage information"
 

@@ -32,6 +32,8 @@ Armbian's
 ARMv
 ASUS
 Atheros
+audiobook
+audiobooks
 Audiophonics
 Autobooting
 autologin
@@ -275,6 +277,7 @@ InfluxData
 InfluxDB
 init
 initramfs
+inode
 integrations
 InterPlanetary
 io
@@ -326,6 +329,7 @@ Kubo
 KVM
 LASP
 Laravel
+LazyLibrarian
 LBA
 LeMaker
 lcd
@@ -804,6 +808,7 @@ writeable
 WSAD
 WSDD
 www
+Xen
 Xfce
 XFS
 xml

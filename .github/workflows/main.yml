@@ -17,7 +17,7 @@ jobs:
       id: clone
       uses: actions/checkout@v5
     - name: Setup Node.js for markdownlint-cli2
-      uses: actions/setup-node@v5
+      uses: actions/setup-node@v6
       with:
         node-version: '*'
         check-latest: true
@@ -31,7 +31,7 @@ jobs:
       uses: actions/setup-python@v6
       with:
         # Match version on dietpi.com server
-        python-version: 3.13.3
+        python-version: 3.13.8
     - name: Install MkDocs
       id: mkdocs
       if: always() && steps.python.outcome == 'success'
@@ -57,7 +57,7 @@ jobs:
       # Skip on push events into master
       if: always() && steps.build.outcome == 'success' && ! endsWith(github.ref, '/master')
       run: |
-        curl -sSfL "$(curl -sSfH 'Authorization: Bearer ${{ github.token }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/"browser_download_url.*x86_64-unknown-linux-musl\.tar\.gz"/{print $4;exit}')" -o lychee.tar.gz
+        curl -sSfLo lychee.tar.gz "$(curl -sSfH 'Authorization: Bearer ${{ github.token }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/^ *"browser_download_url": ".*x86_64-unknown-linux-gnu\.tar\.gz"$/{print $4;exit}')"
         tar xf lychee.tar.gz
     - name: Restore lychee cache
       uses: actions/cache/restore@v4

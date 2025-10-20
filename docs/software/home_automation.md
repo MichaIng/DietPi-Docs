@@ -13,19 +13,8 @@ description: Description of DietPi software options related to home automation
 - [**openHAB - Open Home Automation Bus, an open source home automation platform**](#openhab)
 - [**Homebridge - Open Home Automation Bus, an open source home automation platform**](#homebridge)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -61,6 +50,9 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     The web interface is accessible via port **8123**:
 
     URL: `http://<your.IP>:8123`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration files"
 
@@ -128,6 +120,9 @@ Domoticz is a Home Automation System that lets you monitor and configure various
     - Username: `admin`
     - Password: `domoticz`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
     !!! tip "Change default user and password"
         We recommend to create a new user with admin privileges via **Setup** -> **Users** and remove the default one, or at least change the default password.
 
@@ -185,7 +180,12 @@ Also installs:
 
 === "Access to the web interface"
 
-    `http://<your.IP>/tasmoadmin`
+    The web interface of *TasmoAdmin* can be accessed via:
+
+    - `http://<your.IP>/tasmoadmin`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -204,6 +204,9 @@ openHAB (open Home Automation Bus) is an open source home automation platform. T
 
     - URL: `https://<your.IP>:8444`
     - Username/Password: Are set at first web interface login
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Directories"
 
@@ -225,6 +228,8 @@ openHAB (open Home Automation Bus) is an open source home automation platform. T
     Per default, HTTPS is active and HTTP is inactive (DietPi recommendation).  
     In cases, that HTTP shall be used, it can be activated in the file `/etc/default/openhab` by setting `OPENHAB_HTTP_PORT=` to your desired port.
 
+***
+
 Official website: <https://www.openhab.org/>  
 Official docs: <https://www.openhab.org/docs/>  
 Official community: <https://community.openhab.org/>
@@ -241,6 +246,9 @@ Homebridge allows you to integrate with smart home devices that do not natively 
 
     - URL: `https://<your.IP>:8581`
     - Username/Password: Are set at first web interface login
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Directories"
 
@@ -281,6 +289,8 @@ Homebridge allows you to integrate with smart home devices that do not natively 
     ```sh
     sudo hb-service update-node 
     ```
+
+***
 
 Official website: <https://homebridge.io/>  
 Official docs: <https://github.com/homebridge/homebridge/wiki>  

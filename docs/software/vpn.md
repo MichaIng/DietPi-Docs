@@ -13,19 +13,8 @@ description: Description of DietPi software options related to VPNs
 - [**Tailscale - Zero config VPN**](#tailscale)
 - [**ZeroTier - Free easy to deploy cloud-hosted VPN service**](#zerotier)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -147,41 +136,45 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     - `AllowedIPs = 192.168.0.100/32` (where the IP needs to match your DietPi servers local IP)
 
     If your client is another Linux machine with iptables installed, you can uncomment the two kill switch lines to have all network traffic automatically disabled, when VPN connection is lost.
-    If your client is a mobile phone with WireGuard app installed, you can simply apply the config by printing a QR code onto the servers terminal via:  
-    `grep -v '^#' /etc/wireguard/wg0-client.conf | qrencode -t ansiutf8`.  
+    If your client is a mobile phone with WireGuard app installed, you can simply apply the config by printing a QR code onto the servers terminal via:
+
+    ```sh
+    grep -v '^#' /etc/wireguard/wg0-client.conf | qrencode -t ansiutf8
+    ```
+
     To allow VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`
 
     #### Adding multiple clients
 
     Navigate to the servers WireGuard configuration directory: `cd /etc/wireguard`
 
-    Create a second client key pair:
+    Create a new client key pair. We use a shell variable `$name` here to give the client key and config files a consistent name `client2` throughout the steps. Use a unique and meaningful name so that you can identify and manage multiple clients easily:
 
     ```sh
+    name='client2'
     umask 0077
-    wg genkey > client2_private.key
-    wg pubkey < client2_private.key > client2_public.key
+    wg genkey > "${name}_private.key"
+    wg pubkey < "${name}_private.key" > "${name}_public.key"
     umask 0022
     ```
 
-    Clone and configure the client config:
+    Create a new client config. Use `wg0-client.conf` as template, copy and edit it with below commands. In case adjust the client IP `10.9.0.3` to assure every client has its unique IP address.
 
     ```sh
-    cp -a wg0-client.conf wg0-client2.conf
-    G_CONFIG_INJECT 'Address = ' 'Address = 10.9.0.3/24' wg0-client2.conf
-    G_CONFIG_INJECT 'PrivateKey = ' "PrivateKey = $(<client2_private.key)" wg0-client2.conf
+    cp -a wg0-client.conf "wg0-$name.conf"
+    G_CONFIG_INJECT 'Address = ' 'Address = 10.9.0.3/24' "wg0-$name.conf"
+    G_CONFIG_INJECT 'PrivateKey = ' "PrivateKey = $(<"${name}_private.key")" "wg0-$name.conf"
     ```
 
-    Configure `wg0.conf` (server config) so the last lines match:
+    Add the following lines to the server config `wg0.conf` to allow the new client to connect:
 
-    ```
+    ```ini
     [Peer]
-    PublicKey = <paste content of client2_public.key here>
+    PublicKey = <paste content of ${name}_public.key here>
     AllowedIPs = 10.9.0.3/32
     ```
 
-    Restart the VPN server (`systemctl restart wg-quick@wg0`) and apply `wg0-client2.conf` to your second VPN client as you did for the first before.  
-    Repeat similar for third, fourth, ... VPN client.
+    Restart the WireGuard service (`systemctl restart wg-quick@wg0`) and apply `wg0-$name.conf` to your new WireGuard client as you did before.
 
 === "Installing as VPN client"
 
@@ -195,11 +188,21 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     - To autostart the VPN interface on boot, run: `systemctl enable wg-quick@wg0-client`
     - To disable autostart again, run: `systemctl disable wg-quick@wg0-client`
 
-    Remark: If the client config sets the DNS server via `DNS = ...` directive, assure that resolvconf is installed: `apt install resolvconf`
+    Remark: If the client config sets the DNS server via `DNS = ...` directive, assure that the `resolvconf` package is installed:
+
+    ```sh
+    apt install resolvconf
+    ```
 
 === "View logs"
 
-    Logging can be viewed with:
+    The status of connected clients/peers can be viewed with:
+
+    ```sh
+    wg
+    ```
+
+    Local service logs can be viewed with:
 
     ```sh
     journalctl -u wg-quick@wg0
@@ -210,11 +213,6 @@ When installing using `dietpi-software`, you can choose whether to install WireG
     ```sh
     journalctl -u wg-quick@<config_name>
     ```
-
-???+ info "Kernel update"
-
-    The WireGuard kernel module needs to rebuild whenever the kernel is updated. On most devices this will be done automatically, when the kernel (+headers) is updated via APT package, which then usually triggers the module rebuild.  
-    If you update the kernel outside of APT, via `source build` or commands like `rpi-update`, assure that matching kernel headers are installed as well and rebuild the WireGuard module via: `dpkg-reconfigure wireguard-dkms`
 
 ***
 

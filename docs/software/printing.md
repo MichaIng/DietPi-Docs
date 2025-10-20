@@ -10,19 +10,8 @@ description: Description of DietPi software options related to printers
 - [**OctoPrint - Web interface for controlling 3D printers**](#octoprint)
 - [**CUPS - Common UNIX printing system**](#cups)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -37,6 +26,9 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
     The web interface is accessible via port **5001**:
 
     - URL = `http://<your.IP>:5001`  
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First run setup"
 
@@ -82,6 +74,9 @@ The Common UNIX Printing System (CUPS) provides a command-line interface (CLI) a
     - URL = `http(s)://<your.IP>:631`  
     - Username = `root`
     - Password = `<your root password>`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     Checkout the official docs for quick start instructions: <https://www.cups.org/doc/overview.html>
 

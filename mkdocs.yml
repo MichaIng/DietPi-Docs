@@ -9,6 +9,8 @@ repo_name: DietPi-Docs
 repo_url: https://github.com/MichaIng/DietPi-Docs
 edit_uri: edit/dev/docs/
 docs_dir: docs
+watch: 
+- snippet-includes
 
 theme:
   name: material
@@ -55,6 +57,7 @@ markdown_extensions:
       kwds:
         case: lower
     combine_header_slug: true
+- pymdownx.snippets # Insert Markdown files into others
 
 #  Markdown extensions which could be used in the future
 #
@@ -68,7 +71,6 @@ markdown_extensions:
 #- pymdownx.inlinehilite # Highlight syntax in inline code
 #- pymdownx.mark # Mark text <mark> via ==text==
 #- pymdownx.smartsymbols # Easy symbols syntax (trademark, copyright, arrows, ...)
-#- pymdownx.snippets # Insert Markdown files into others
 #- pymdownx.tilde # Subscript <sub> and strikethrough <del> text via tilde ~
 
 plugins:
@@ -106,10 +108,10 @@ nav:
 - HOME:
   - Overview: index.md
   - Installation: install.md
-  - Getting started: getting_started.md
-  - Software options: software.md
-  - Usage hints / HowTo: usage.md
-  - Supported hardware: hardware.md
+  - Getting Started: getting_started.md
+  - Software Options: software.md
+  - Usage Hints / HowTo: usage.md
+  - Supported Hardware: hardware.md
   - Releases: releases.md
   - References: references.md
 - OPTIMISED SOFTWARE:
@@ -133,7 +135,7 @@ nav:
   - Remote Desktop & Remote Access: software/remote_desktop.md
   - Social & Search: software/social.md
   - SSH Servers: software/ssh.md
-  - System software: software/system_software.md
+  - System Software: software/system_software.md
   - System Security: software/system_security.md
   - System Stats & Management: software/system_stats.md
   - VPN: software/vpn.md
@@ -146,6 +148,7 @@ nav:
   - Miscellaneous Tools: dietpi_tools/misc_tools.md
 - RELEASES:
   - Overview: releases.md
+  - v9.18 October 2025: releases/v9_18.md
   - v9.17 September 2025: releases/v9_17.md
   - v9.16 August 2025: releases/v9_16.md
   - v9.15 July 2025: releases/v9_15.md

@@ -13,19 +13,8 @@ description: Description of DietPi software options related to networking
 - [**Avahi-Daemon - Zero configuration DNS service for the local network**](#avahi-daemon)
 - [**frp - Reverse Proxy**](#frp)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -266,12 +255,17 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     systemctl start haproxy    
     ```
 
+=== "Access to the web interface"
+
     The stats web interface is accessible via port **1338**:
 
     - URL = `http://<your.IP>:1338`
     - Prometheus metrics = `http://<your.IP>:1338/metrics`
     - Username = `admin`
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     !!! hint "This installation was made possible by Jerome Queneuder, who provided the methods for compiling and installation."
 
@@ -357,6 +351,9 @@ A fast reverse proxy, helping you to expose a local server behind a NAT or firew
     - Dashboard (Server): `http://<your.IP>:7500`
         - User name: `admin`
         - Password: `<yourGlobalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration Files"
 

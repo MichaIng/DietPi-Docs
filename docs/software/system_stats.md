@@ -23,19 +23,8 @@ description: Description of DietPi software options related to system statistics
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](#prometheus-node-exporter)
 - [**Homer - A modern homepage for your services**](#homer)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -45,20 +34,26 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 ![DietPi-Dashboard screenshot](../assets/images/dietpi-dashboard.jpg "DietPi-Dashboard screen"){: width="700" height="346" loading="lazy"}
 
-!!! warning "DietPi-Dashboard is still in Beta!"
+!!! warning "DietPi-Dashboard rework is still in Beta!"
 
-    We hence do not recommend to actively use it on sensitive production systems yet.
+    Please assure to close its network ports (default: TCP **5252** and **5253**) on your NAT/router or via firewall, to protect them from public access.
+
+    If you need to access the DietPi-Dashboard remotely, please use a VPN server on this system, like WireGuard.
 
 === "Web interface"
 
-    DietPi-Dashboard is accessible by default at TCP port **5252**:
+    DietPi-Dashboard is accessible by default via HTTPS at TCP port **5252**:
 
-    - URL: `http://<your.IP>:5252`
+    - URL: `https://<your.IP>:5252`
     - Password: `<your software password>` (default: `dietpi`)
+
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
+    For communication between the web UI and the backend nodes, by default TCP port **5253** is additionally used.
 
 === "Directories"
 
-    The DietPi-Dashboard executable and its configuration file can be found at:
+    The DietPi-Dashboard executable and its configuration files can be found at:
 
     ```
     /opt/dietpi-dashboard
@@ -66,70 +61,67 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 === "Configuration"
 
-    The configuration file is located at:
+    The configuration files for the frontend (web UI) and backend (system node) are located at:
 
     ```
-    /opt/dietpi-dashboard/config.toml
+    /opt/dietpi-dashboard/config-frontend.toml
+    /opt/dietpi-dashboard/config-backend.toml
     ```
 
-    When doing changes, you need to restart the service afterwards:
+    When doing changes, you need to restart the respective service afterwards:
 
     ```sh
-    systemctl restart dietpi-dashboard
+    systemctl restart dietpi-dashboard-frontend
+    systemctl restart dietpi-dashboard-backend
     ```
 
-=== "Password protection"
+=== "Change password"
 
-    Password protection is enabled by default from DietPi v7.9 on. If you installed it before, you'll need to enable it via configuration file. For this, create a SHA512 hash of the `PASSWORD` you want to use for logging into the web interface, and a random 64-character secret which is used to generate a token to transfer and store securely in your browser. Apply those to the configuration file and restart the service for the changes to take effect:
+    To change the password for the web UI, create a SHA512 hash of the `PASSWORD` you want to use for login. Apply it to the frontend configuration file and restart the service for the change to take effect:
 
     ```sh
     hash=$(echo -n 'PASSWORD' | sha512sum | mawk '{print $1}')
-    secret=$(openssl rand -hex 32)
-    G_CONFIG_INJECT 'pass[[:blank:]]' 'pass = true' /opt/dietpi-dashboard/config.toml
-    GCI_PASSWORD=1 G_CONFIG_INJECT 'hash[[:blank:]]' "hash = \"$hash\"" /opt/dietpi-dashboard/config.toml
-    GCI_PASSWORD=1 G_CONFIG_INJECT 'secret[[:blank:]]' "secret = \"$secret\"" /opt/dietpi-dashboard/config.toml
-    unset -v hash secret
+    GCI_PASSWORD=1 G_CONFIG_INJECT 'hash[[:blank:]]' "hash = \"$hash\"" /opt/dietpi-dashboard/config-frontend.toml
+    unset -v hash
+    G_CONFIG_INJECT 'enable_login[[:blank:]]' 'enable_login = true' /opt/dietpi-dashboard/config-frontend.toml
     systemctl restart dietpi-dashboard
     ```
-
-    To change the password, just replace the hash in the config file and restart the service.
-
-    If you want to force a logout of all browsers without changing the password, you can instead change the secret. Generate an apply a new secret to the configuration file and restart the service. Every client and browser will then need to login again to continue using the DietPi-Dashboard, as the stored token that is based on password and secret has been invalidated.
 
 === "Multiple nodes"
 
-    From DietPi v8.0 on, you can install DietPi-Dashboard as backend only node, with does not include an own web interface. Such backend only nodes can then be accessed from another full DietPi-Dashboard frontend/web interface. Additional nodes would need to be added manually into configuration file located at:
+    The new DietPi-Dashboard consists of two components, the frontend which provides the web interface, and the backend which enables communication with the system. One frontend can be used with multiple backend nodes, and when installing the dashboard with `dietpi-software`, it is possible to install the backend only, to use it with a frontend installed on another system already.
+    The backend-only installation will ask for the needed info, but in case of non-interactive/automated installation, or if you want to change or setup this later:
 
-    ```
-    /opt/dietpi-dashboard/config.toml
-    ```    
+    1. Check `/opt/dietpi-dashboard/config-frontend.toml` on the frontend host, or the "Config" page on its web UI. There is a `secret` setting, and a `backend_port` setting, which defaults to **5253**.
+    1. Open `/opt/dietpi-dashboard/config-backend.toml` on the host of the backend node. Replace `secret` to match the one from the frontend, and `frontend_addr` with `IP:port` of the frontend.
+    1. Restart the backend service:
 
-    When doing changes, you need to restart the service afterwards:
-
-    ```sh
-    systemctl restart dietpi-dashboard
-    ```
-
-    !!! hint "Full DietPi-Dashboard nodes with frontend included can currently not be accessed from other frontends."
+        ```sh
+        systemctl restart dietpi-dashboard-backend
+        ```
 
 === "Service control"
 
-    DietPi-Dashboard by default is started as systemd service and can hence be controlled with the following commands:
+    DietPi-Dashboard by default is started as systemd services for frontend and backend, and can hence be controlled with the following commands:
 
     ```sh
-    systemctl status dietpi-dashboard
+    systemctl status dietpi-dashboard-frontend
+    systemctl status dietpi-dashboard-backend
     ```
 
     ```sh
-    systemctl stop dietpi-dashboard
+    systemctl stop dietpi-dashboard-frontend
+    systemctl stop dietpi-dashboard-backend
     ```
 
     ```sh
-    systemctl start dietpi-dashboard
+    systemctl start dietpi-dashboard-frontend
+    systemctl start dietpi-dashboard-backend
     ```
 
     ```sh
-    systemctl restart dietpi-dashboard
+    systemctl restart dietpi-dashboard-frontend
+    systemctl restart dietpi-dashboard-backend
     ```
 
 === "Logs"
@@ -137,22 +129,23 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     Service logs can be reviewed with the following command:
 
     ```sh
-    journalctl -u dietpi-dashboard
+    journalctl -u dietpi-dashboard-frontend -u dietpi-dashboard-backend
     ```
 
 === "Update"
 
-    You can easily update DietPi-Dashboard by reinstalling it and restarting the service for the change to take effect:
+    You can easily update DietPi-Dashboard by reinstalling it and restarting the services for the change to take effect:
 
     ```sh
     dietpi-software reinstall 200
-    systemctl restart dietpi-dashboard
+    systemctl restart dietpi-dashboard-frontend
+    systemctl restart dietpi-dashboard-backend
     ```
 
 ***
 
-Source code: <https://github.com/ravenclaw900/DietPi-Dashboard>  
-License: [GPLv3](https://github.com/ravenclaw900/DietPi-Dashboard/blob/main/LICENSE)
+Source code: <https://github.com/nonnorm/DietPi-Dashboard>  
+License: [GPLv3](https://github.com/nonnorm/DietPi-Dashboard/blob/main/LICENSE)
 
 ## DietPi-CloudShell
 
@@ -263,6 +256,9 @@ Linux Dash allows you to monitor your system stats from a web page.
 
     - URL = `http://<your.IP>/linuxdash/app`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 ***
 
 Official documentation: <https://github.com/afaqurk/linux-dash/wiki>
@@ -280,6 +276,9 @@ Allows you to monitor your system stats from a web page. The display output can 
     The web interface of *phpSysInfo* can be accessed via:
 
     - URL = `http://<your.IP>/phpsysinfo`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Customization"
 
@@ -311,6 +310,9 @@ RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
     - URL = `http://<your.IP>:8888`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Configuration"
 
     The configuration is described there: <https://xavierberger.github.io/RPi-Monitor-docs/20_index.html>
@@ -330,6 +332,9 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
     The web interface is accessible via port **19999**:
 
     - URL = `http://<your.IP>:19999`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Troubleshooting"
 
@@ -369,6 +374,9 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
     - URL: `https://<your.IP>:10000`
     - Username: `root` (or any UNIX user with full `sudo` permissions)
     - Password: `<this UNIX user's password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Service control"
 
@@ -544,6 +552,9 @@ Portainer simplifies your Docker container management via Portainer web interfac
 
     - URL = `https://<your.IP>:9442`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Update"
 
     To update Portainer, simply reinstall it:
@@ -555,7 +566,6 @@ Portainer simplifies your Docker container management via Portainer web interfac
 ***
 
 Official documentation: <https://docs.portainer.io>  
-Beginners guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>
 Source code: <https://github.com/portainer/portainer>  
 Open-source license: [zlib](https://github.com/portainer/portainer/blob/develop/LICENSE)
 
@@ -680,6 +690,9 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
 
     - URL = `http://<your.IP>:9100/metrics`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Configuration"
 
     ???+ important "Prometheus server not included"
@@ -759,6 +772,9 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     - URL: `http://<your.IP>/homer`
     
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
     You may bookmark this and save it as your browser's home page, or alternatively look into tools like **Nginx Proxy Manager** and a DNS server such as **AdGuard Home** to give it a nice internal domain name such as `homer.box`.
 
 === "Configuration"
