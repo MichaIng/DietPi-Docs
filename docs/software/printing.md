@@ -27,14 +27,11 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
 
     - URL = `http://<your.IP>:5001`  
 
-    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
-=== "First run setup"
+    On first access, simply run through the setup wizard and configure the software and printers as needed. A login user and password needs to be created, but it does not need to match any existing UNIX user, i.e. can be freely chosen.
 
-    Once you are connected to the web interface, simply run through the setup wizard and configure the software and printers as needed. A login user and password needs to be created, but it does not need to match any existing UNIX login user, i.e. can be freely chosen.
-
-=== "OctoPrint directories"
+=== "Directories"
 
     - Base directory: `/mnt/dietpi_userdata/octoprint`
     - Data and config: `/mnt/dietpi_userdata/octoprint/.octoprint`
@@ -47,11 +44,19 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
     - Log files and plugin logs: `/mnt/dietpi_userdata/octoprint/.octoprint/logs/`
     - Configure logging via web interface > **Settings** > **Logging**
 
-=== "Command line interface (CLI)"
+=== "Command-line interface (CLI)"
 
     OctoPrint offers a command line interface to execute OctoPrint commands. To use it, simply run `octoprint --help` from the command line.
 
     The current shell needs to be `bash` and the user needs to be allowed to use `sudo`, as the above command is an alias to call a local OctoPrint binary as system user `octoprint`. The alias is defined in `/etc/bashrc.d/dietpi-octoprint.sh`, which is loaded automatically from bash shells. But you can as well load it from non-bash shells, if required.
+
+=== "Update"
+
+    You can run the following command from console to update OctoPrint to the latest version:
+
+    ```sh
+    sudo -u octoprint pip3 install -U --user octoprint
+    ```
 
 ***
 
