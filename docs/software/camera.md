@@ -10,6 +10,7 @@ description: Description of DietPi software options related to camera and survei
 - [**RPi Cam Web Interface - Web interface & controls for your RPi camera**](#rpi-cam-web-interface)
 - [**motionEye - Web interface & surveillance for your camera**](#motioneye)
 - [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](#mjpg-streamer)
+- [**BirdNET-Go - AI solution for continuous avian monitoring and identification**](#birdnet-go)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -223,5 +224,62 @@ Stream JPEG frames from various sources to various possible outputs. With the de
 Github page: <https://github.com/jacksonliam/mjpg-streamer>  
 Plugin docs: <https://github.com/jacksonliam/mjpg-streamer/tree/master/mjpg-streamer-experimental>  
 License: [GPLv2](https://github.com/jacksonliam/mjpg-streamer#license)
+
+## BirdNET-Go
+
+BirdNET-Go is an AI solution for continuous avian monitoring and identification.  
+It has these basic features:
+
+- 24/7 realtime bird song analysis of soundcard capture
+- Utilizes BirdNET AI model trained with more than 6500 bird species
+- Local processing, Internet connectivity not required
+- Web interface for data visualisation
+- Supports over 40 languages for species names
+
+![BirdNet-Go logo](../assets/images/dietpi-software-camera-birdnet-go-logo.webp "BirdNet-Go logo"){: width="300" height="300" loading="lazy"}
+
+=== "Access to the web interface"
+
+    - URL: `http://<your.IP>:8127`
+    - Username: `root`
+    - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration files"
+
+    The configuration files are stored system-wide within:  
+    `/mnt/dietpi_userdata/birdnet/.config/birdnet-go/config.yaml`
+
+    Please see the online documentation: <https://github.com/tphakala/birdnet-go/blob/main/doc/wiki/guide.md>
+
+=== "Update to latest version"
+
+    BirdNET-Go can be updated to the latest version by reinstalling it via
+
+    ```sh
+    dietpi-software reinstall 127
+    ```
+
+=== "View logs"
+
+    You can view the service logs via
+
+    ```sh
+    journalctl -u birdnet-go
+    ```
+
+    and the service status via
+
+    ```sh
+    systemctl status birdnet-go
+    ```
+
+***
+
+Github page: <https://github.com/tphakala/birdnet-go>  
+Configuration documentation: <https://github.com/tphakala/birdnet-go/blob/main/doc/wiki/guide.md>  
+License: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://github.com/tphakala/birdnet-go?tab=License-1-ov-file#readme)
 
 [Return to the **Optimised Software list**](../software.md)
