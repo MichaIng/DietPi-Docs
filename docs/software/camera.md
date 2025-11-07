@@ -236,7 +236,7 @@ It has these basic features:
 - Web interface for data visualisation
 - Supports over 40 languages for species names
 
-![BirdNet-Go logo](../assets/images/dietpi-software-camera-birdnet-go-logo.webp "BirdNet-Go logo"){: width="300" height="300" loading="lazy"}
+![BirdNET-Go logo](../assets/images/dietpi-software-camera-birdnet-go-logo.webp "BirdNET-Go logo"){: width="300" height="300" loading="lazy"}
 
 === "Access to the web interface"
 
