@@ -230,7 +230,7 @@ License: [GPLv2](https://github.com/jacksonliam/mjpg-streamer#license)
 BirdNET-Go is an AI solution for continuous avian monitoring and identification.  
 It has these basic features:
 
-- 24/7 realtime bird song analysis of soundcard capture
+- 24/7 real time bird song analysis of sound card capture
 - Utilizes BirdNET AI model trained with more than 6500 bird species
 - Local processing, Internet connectivity not required
 - Web interface for data visualisation
@@ -280,6 +280,6 @@ It has these basic features:
 
 Github page: <https://github.com/tphakala/birdnet-go>  
 Configuration documentation: <https://github.com/tphakala/birdnet-go/blob/main/doc/wiki/guide.md>  
-License: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://github.com/tphakala/birdnet-go?tab=License-1-ov-file#readme)
+License: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://github.com/tphakala/birdnet-go?tab=License-1-ov-file#readme){:class="nospellcheck"}
 
 [Return to the **Optimised Software list**](../software.md)

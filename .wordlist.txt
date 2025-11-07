@@ -56,6 +56,7 @@ bcm
 BeagleBone
 Beelink
 binfmt
+BirdNET
 Bitcoin
 Bitwarden
 blazingly
