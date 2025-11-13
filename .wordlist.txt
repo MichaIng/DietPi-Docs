@@ -594,6 +594,7 @@ rTorrent
 runtime
 ruTorrent
 SABnzbd
+sandboxing
 SATA
 SBC
 SBCs
