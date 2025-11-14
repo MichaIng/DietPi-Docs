@@ -34,10 +34,65 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
     - Username = `root`
     - Password = The same as your root login password, default is `dietpi`
 
+=== "Configuration"
+
+    <h2>Directories</h2>
+
+    - Database files: `/mnt/dietpi_userdata/mysql`
+    - Configuration files: `/etc/mysql`
+
+    <h2>Configuration files</h2>
+
+    The MariaDB/MySQL tools read configuration files in the following order:
+    
+    1. `/etc/mysql/my.cnf` symbolic links to this file, reason why all the rest is read.
+    1. `/etc/mysql/mariadb.cnf` (this file) to set global defaults.
+    1. `/etc/mysql/conf.d/*.cnf` to set global options.
+    1. `/etc/mysql/mariadb.conf.d/*.cnf` to set MariaDB-only options.
+    1. `~/.my.cnf` to set user-specific options.
+    
+    As a best practice, it is recommended to place MariaDB related user configuration files into `/etc/mysql/mariadb.conf.d/*.cnf` and to name the files in the manner of `<2-digit-number>-<configurationname>.cnf` (example: `99-my_config.cnf`).
+
+    <h2>Configuration example</h2>
+
+    ```
+    [mysqld]
+    # Disable file logging in favour of "journalctl -u mariadb"
+    skip_log_error=1
+    # Disable host name resolving
+    # NB: For remote access, IP addresses then need to be used when creating/altering database users.
+    skip_name_resolve=1
+    # Disable the TCP listener all together
+    # NB: Prefer "/run/mysqld/mysqld.sock" as database host, but "127.0.0.1" is usually resolved to the UNIX socket, too.
+    skip_networking=1
+    # The query cache is not recommended on multi-core machines.
+    query_cache_size=0
+    query_cache_type=0
+    # Since MyISAM tables are usually not used, disable key buffer
+    key_buffer_size=0
+    # Reduce Aria page cache to 512 KiB, usually used by some internal tables only
+    aria_pagecache_buffer_size=512k
+    # Reduce the number of concurrent connections to ~2x the number of PHP-FPM workers
+    max_connections=16
+    ```
+
+    The above can be applied almost as is for MariaDB instances used only by software which runs on the same host. There are other settings like `innodb_buffer_pool_size` and `innodb_log_file_size` for the commonly used InnoDB engine, which have a much larger impact on performance and resource usage. However, to get a performance benefit instead of a penalty, those should only be set after estimating the actual database usage.
+
+    A common tool to collect info and get performance recommendations is [MySQLTuner](https://github.com/major/MySQLTuner-perl). Run the following commands after your database was in production use for some days:
+
+    ```sh
+    curl -sSf https://raw.githubusercontent.com/major/MySQLTuner-perl/master/mysqltuner.pl | sudo perl - --skippassword
+    ```
+
+    It will show you a bunch of info and some recommendations, e.g. assuring that `innodb_buffer_pool_size` has at least the size of all InnoDB tables, and `innodb_log_file_size` being 25% of the former. We recommend to use the next power of two above the InnoDB data/table size.
+
+    Not all recommendations are reasonable in every case. E.g. it recommends to raise `tmp_table_size` and `max_heap_table_size` if more than 25% of temporary tables were created on disk. However, some queries simply cannot used the memory engine, and raising those settings then won't reduce the temporary tables on disk ratio, but just consume unnecessarily much RAM.
+
 ***
 
-Official documentation: <https://mariadb.org>  
-Getting started documentation: <https://mariadb.org/documentation/#getting-started>
+Official documentation: <https://mariadb.com/docs/server>  
+MariaDB configuration variables: <https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables>  
+MySQLTuner, a tool to get optimisation ideas: <https://github.com/major/MySQLTuner-perl>
 
 ## phpMyAdmin
 
@@ -73,6 +128,10 @@ Source: Part of the SQLite documentation, which has been released by author D. R
 
     To create a database and run commands, use the [quick start documentation](https://www.sqlite.org/quickstart.html).
 
+=== "Configuration"
+
+    Since SQLite is a file based, zero configuration database without any server process, no dedicated database and configuration directories are defined.
+        
 ***
 
 Website: <https://www.sqlite.org/index.html>  
@@ -98,13 +157,23 @@ _[Trademark policy](https://redis.io/legal/trademark-policy/)_
     redis-cli ping
     ```
 
-    For more commands and an introduction to Redis data types and commands, read the [quick start documentation](https://redis.io/topics/data-types-intro).
+    For more commands and an introduction to Redis data types and commands, read the [quick start documentation](https://redis.io/docs/latest/develop/data-types/).
+
+=== "Configuration"
+
+    <h2>Directories</h2>
+
+    - Configuration directory:  
+        `/etc/redis`  
+    - Main configuration file:  
+        `/etc/redis/redis.conf`
 
 ***
 
 Website: <https://redis.io/>  
-Official documentation: <https://redis.io/documentation>  
-Commands: <https://redis.io/commands>
+Official documentation: <https://redis.io/docs/latest/>  
+Commands: <https://redis.io/docs/latest/commands/>  
+Configuration: <https://redis.io/docs/latest/operate/oss_and_stack/management/config/>
 
 ## InfluxDB
 
@@ -185,14 +254,19 @@ The data can be nicely viewed with [**Grafana**](hardware_projects.md#grafana). 
         systemctl restart influxdb
         ```
 
-=== "Install information"
+=== "Configuration"
 
-    The data location for InfluxDB is stored respectively linked with symbolic links to the DietPi userdata directory: `/mnt/dietpi_userdata/influxdb`
+    <h2>Directories</h2>
+
+    - Data location (database files): `/mnt/dietpi_userdata/influxdb`  
+      (The data location for InfluxDB is stored respectively linked with symbolic links.)
+    - Configuration file: `/etc/influxdb/influxdb.conf`
 
 ***
 
 Website: <https://www.influxdata.com/products/influxdb/>  
 Official documentation: <https://docs.influxdata.com/influxdb/v1.8/>  
+Configuration file documentation: <https://docs.influxdata.com/influxdb/v1/administration/config/>  
 Getting started: <https://docs.influxdata.com/influxdb/v1.8/introduction/get-started/>
 
 ## PostgreSQL
@@ -215,13 +289,17 @@ PostgreSQL is a persistent advanced object-relational database server, used in s
 
 === "Configuration"
 
+    <h2>Directories</h2>
+
     - Config directory:  
         `/etc/postgresql/*/main`  
-        with the asterisk being the PostgreSQL version number, e.g. `11` or `13`
+        with the asterisk `*` being the PostgreSQL version number, e.g. `11` or `13`
     - Main config file:  
         `/etc/postgresql/*/main/postgresql.conf`
     - DietPi config override:  
         `/etc/postgresql/*/main/conf.d/00dietpi.conf`
+
+    <h2>Configuration override</h2>
 
     To add or change settings, best practice is to create a new override configuration, e.g.:
 

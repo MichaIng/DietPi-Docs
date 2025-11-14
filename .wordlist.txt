@@ -277,6 +277,7 @@ InfluxData
 InfluxDB
 init
 initramfs
+InnoDB
 inode
 integrations
 InterPlanetary
@@ -413,8 +414,9 @@ Munin
 Mycroft
 MyHome
 myMPD
-MySqli
 mysql
+MySqli
+MySQLTuner
 NAA
 NAND
 nano
