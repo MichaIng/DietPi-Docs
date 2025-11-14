@@ -92,7 +92,7 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
 
 Official documentation: <https://mariadb.com/docs/server>  
 MariaDB configuration variables: <https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables>  
-`MySQLTuner-perl`, a tool to get optimisation ideas: <https://github.com/major/MySQLTuner-perl>
+MySQLTuner, a tool to get optimisation ideas: <https://github.com/major/MySQLTuner-perl>
 
 ## phpMyAdmin
 
