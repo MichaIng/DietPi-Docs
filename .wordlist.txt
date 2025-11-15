@@ -592,6 +592,8 @@ RSA
 RSS
 rsync
 Rsyslog
+RTC
+RTCs
 rTorrent
 runtime
 ruTorrent
