@@ -42,15 +42,13 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     systemctl status vncserver
     ```
 
-    Although any VNC viewer may work, the latest official TigerVNC viewer can be downloaded here: <https://sourceforge.net/projects/tigervnc/files/stable/>
+    Although any VNC viewer will work, the latest official TigerVNC viewer can be downloaded here: <https://sourceforge.net/projects/tigervnc/files/stable/>
 
     #### Connection Details
 
-    - Use the IP address of your DietPi device, e.g.: `192.168.0.100`.  
-      If you can't connect, try connecting to screen `1`, e.g.: `192.168.0.100:1`.
-    - Use the password you entered during the installation. If you would like to change the password execute from the console/terminal, run `vncpasswd`.
-    - The default port is **5901**.  
-      **Note:** To enable access from outside of your local network, this port needs to be forwarded from your router.
+    - To connect on the persistent VNC session on screen :1, add the screen index to your local IP or hostname, e.g. `192.168.0.100:1`, which refers to port 5901.
+    - To connect to a shared desktop session, skip the screen index, e.g. `192.168.0.100`, which refers to port 5900.
+    - Use the default `dietpi-software` password to authenticate. If you would like to change the password, run `sudo tigervncpasswd` from the console/terminal.
 
 === "Config options"
 
@@ -117,9 +115,8 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
     #### Shared desktop
 
-    If you set `SOFTWARE_VNCSERVER_SHARE_DESKTOP=1` in `/boot/dietpi.txt` or select desktop auto login via `dietpi-autostart` (index 2), RealVNC server will be started on boot in shared desktop mode, attaching to the first found local desktop session.  
-    Check the service status via `systemctl status vncserver-x11-serviced`.
-    Check all logs via `journalctl -u vncserver-x11-serviced`.
+    If you set `SOFTWARE_VNCSERVER_SHARE_DESKTOP=1` in `/boot/dietpi.txt`, RealVNC server will be started on boot in shared desktop mode, attaching to the first found local desktop session.  
+    Run `dietpi-autostart 2` to start a local desktop session automatically on boot, which RealVNC can connect to.
 
     #### RealVNC enterprise subscription
 
@@ -131,23 +128,18 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
 === "Setup the VNC Viewer"
 
-    Simply select a VNC viewer for your system and download: <https://www.realvnc.com/en/connect/download/viewer/>
+    Although any VNC viewer will work, the latest official RealVNC viewer can be downloaded here: <https://www.realvnc.com/en/connect/download/viewer/>
 
     #### Connection details
 
-    - To connect on the persistent VNC session on screen :1, add the screen index to your local IP or hostname, e.g. `192.168.0.100:1`.
-    - To connect to a shared desktop session, skip the screen index, e.g. `192.168.0.100`.
-    - Username = `root`
-    - Password = `<root password>` (default: `dietpi`)
+    - To connect on the persistent VNC session on screen :1, add the screen index to your local IP or hostname, e.g. `192.168.0.100:1`, which refers to port 5901.
+    - To connect to a shared desktop session, skip the screen index, e.g. `192.168.0.100`, which refers to port 5900.
+    - Use the default `dietpi-software` password to authenticate. If you would like to change the password, run these commands from the console/terminal:
 
-=== "Running directly rendered apps"
-
-     This may be the case e.g. if you want to run Minecraft remotely.
-
-    - Enable shared desktop mode:
-        - Run `dietpi-autostart 2` to autostart into a desktop session and have RealVNC attached to it automatically.
-        - Then `reboot` the system to have the changes taking effect.
-    - Follow the instructions within the section *Running directly rendered apps such as Minecraft remotely* in <https://help.realvnc.com/hc/en-us/articles/360002249917-VNC-Connect-and-Raspberry-Pi>.
+    ```sh
+    sudo vncpasswd -virtual
+    sudo vncpasswd -service
+    ```
 
 ## XRDP
 

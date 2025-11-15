@@ -503,7 +503,7 @@ Automatically download your favorite TV shows, as they become available.
 === "View logs"
 
     - Service: `journalctl -u sonarr`
-    - Daemon: `/var/log/bazarr/sonarr.log`
+    - Daemon: `/var/log/sonarr/sonarr.log`
 
 === "Update to latest version"
 
@@ -581,7 +581,7 @@ Automatically download your favorite movies, as they become available.
 === "View logs"
 
     - Service: `journalctl -u radarr`
-    - Daemon: `/var/log/bazarr/radarr.log`
+    - Daemon: `/var/log/radarr/radarr.log`
 
 === "Update to latest version"
 
@@ -621,7 +621,7 @@ Key features:
 
     - Install directory: `/opt/bazarr`
     - Data directory: `/mnt/dietpi_userdata/bazarr`
-    - Bazarr configuration file: `/mnt/dietpi_userdata/bazarr/config/config.ini`
+    - Bazarr configuration file: `/mnt/dietpi_userdata/bazarr/config/config.yaml`
 
 === "View logs"
 
@@ -705,7 +705,7 @@ Automatically download your favorite music.
 === "View logs"
 
     - Service: `journalctl -u lidarr`
-    - Daemon: `/var/log/bazarr/lidarr.log`
+    - Daemon: `/var/log/lidarr/lidarr.log`
 
 === "Update to latest version"
 

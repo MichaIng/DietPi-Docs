@@ -56,6 +56,7 @@ bcm
 BeagleBone
 Beelink
 binfmt
+BirdNET
 Bitcoin
 Bitwarden
 blazingly
@@ -591,10 +592,13 @@ RSA
 RSS
 rsync
 Rsyslog
+RTC
+RTCs
 rTorrent
 runtime
 ruTorrent
 SABnzbd
+sandboxing
 SATA
 SBC
 SBCs
