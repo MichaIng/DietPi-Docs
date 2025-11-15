@@ -109,7 +109,7 @@ Find and set the options which fit to your demands, it is also an option to chan
 | - | - | - | - |
 | DietPi-RAMlog #1 | RAM | last hour | volatile, i.e. not saved to disk |
 | DietPi-RAMlog #2 | RAM | long term | stored, i.e. hourly saved to disk |
-| Full logging | disk | long term | stored, i.e. immediately saved to disk <br>(with Rsyslog and Logrotate)|
+| Full logging | disk | long term | stored, i.e. immediately saved to disk <br>(with Rsyslog and Logrotate) |
 
 ---
 
