@@ -75,6 +75,31 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
     Simply close and reopen this screen to refresh the port status.
 
+=== "Service control"
+
+    Since Transmission runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status transmission
+    ```
+
+    ```sh
+    systemctl start transmission
+    ```
+
+    ```sh
+    systemctl stop transmission
+    ```
+
+    ```sh
+    systemctl restart transmission
+    ```
+
+=== "View logs"
+
+    - Service: `journalctl -u transmission`
+    - Daemon: `/var/log/transmission/Transmission.txt`
+
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
@@ -124,6 +149,31 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     - Folder accessed via file server: `downloads`
     - Local folder: `/mnt/dietpi_userdata/downloads`
 
+=== "Service control"
+
+    Since Deluge runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status deluge
+    ```
+
+    ```sh
+    systemctl start deluge
+    ```
+
+    ```sh
+    systemctl stop deluge
+    ```
+
+    ```sh
+    systemctl restart deluge
+    ```
+
+=== "View logs"
+
+    - Service: `journalctl -u deluge`
+    - Daemon: `/var/log/deluge/Deluge.txt`
+
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
@@ -158,6 +208,31 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 === "Using of search plugins"
 
     Before activating search plugins within qBittorrent, you would need to install Python first. Afterwards you can search and activate the plugins.
+
+=== "Service control"
+
+    Since qBittorrent runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status qbittorrent
+    ```
+
+    ```sh
+    systemctl start qbittorrent
+    ```
+
+    ```sh
+    systemctl stop qbittorrent
+    ```
+
+    ```sh
+    systemctl restart qbittorrent
+    ```
+
+=== "View logs"
+
+    - Service: `journalctl -u qbittorrent`
+    - Daemon: `/var/log/qbittorrent/qBittorrent.txt`
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
@@ -831,6 +906,31 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Service control"
+
+    Since Prowlarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status prowlarr
+    ```
+
+    ```sh
+    systemctl start prowlarr
+    ```
+
+    ```sh
+    systemctl stop prowlarr
+    ```
+
+    ```sh
+    systemctl restart prowlarr
+    ```
+
+=== "View logs"
+
+    - Service: `journalctl -u prowlarr`
+    - Daemon: `/var/log/prowlarr/Prowlarr.txt`
+
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
@@ -855,6 +955,31 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Service control"
+
+    Since Jackett runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status jackett
+    ```
+
+    ```sh
+    systemctl start jackett
+    ```
+
+    ```sh
+    systemctl stop jackett
+    ```
+
+    ```sh
+    systemctl restart jackett
+    ```
+
+=== "View logs"
+
+    - Service: `journalctl -u jackett`
+    - Daemon: `/var/log/jackett/Jackett.txt`
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
