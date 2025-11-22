@@ -733,7 +733,7 @@ Automatically download your favorite music.
 
 === "First run setup"
 
-    Before you can music, you'll need to select a search indexer to use from the web interface:
+    Before you can add music, you'll need to select a search indexer to use from the web interface:
 
     - Simply go to `Settings` \> `Indexer` then choose at least one indexer.
 
