@@ -97,8 +97,11 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
 === "View logs"
 
-    - Service: `journalctl -u transmission`
-    - Daemon: `/var/log/transmission/Transmission.txt`
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u transmission-daemon
+    ```
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
@@ -154,25 +157,32 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     Since Deluge runs as systemd service, it can be controlled with the following commands:
 
     ```sh
-    systemctl status deluge
+    systemctl status deluged
     ```
 
     ```sh
-    systemctl start deluge
+    systemctl start deluged
     ```
 
     ```sh
-    systemctl stop deluge
+    systemctl stop deluged
     ```
 
     ```sh
-    systemctl restart deluge
+    systemctl restart deluged
     ```
 
 === "View logs"
 
-    - Service: `journalctl -u deluge`
-    - Daemon: `/var/log/deluge/Deluge.txt`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u deluged
+    ```
+
+    ```sh
+    journalctl -u deluge-web
+    ```
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
@@ -231,8 +241,15 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
 === "View logs"
 
-    - Service: `journalctl -u qbittorrent`
-    - Daemon: `/var/log/qbittorrent/qBittorrent.txt`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u qbittorrent
+    ```
+
+    ```sh
+    cat /var/log/qbittorrent/qbittorrent.log
+    ```
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
@@ -291,12 +308,29 @@ Also installs:
 
     rTorrent by default listens on the UNIX domain socket at `/mnt/dietpi_userdata/downloads/.session/rpc.socket`. The webserver is configured to proxy `http://<your.IP>/RPC2` calls to the UNIX socket, but HTTP authentication is enforced for that URL.
 
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+=== "Service control"
+
+    Since rtorrent runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status rtorrent
+    ```
+
+    ```sh
+    systemctl start rtorrent
+    ```
+
+    ```sh
+    systemctl stop rtorrent
+    ```
+
+    ```sh
+    systemctl restart rtorrent
+    ```
 
 === "View logs"
 
-    To view rTorrent service logs, run the following command:
+    Logs can be viewed with the following commands:
 
     ```sh
     journalctl -u rtorrent
@@ -332,6 +366,9 @@ Also installs:
     ```sh
     dietpi-software reinstall 107
     ```
+
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ***
 
@@ -386,6 +423,54 @@ Also installs:
     - Start services with `systemctl start aria2`
 
     Full list of `aria2.conf` settings: <https://aria2.github.io/manual/en/html/aria2c.html>
+
+=== "Service control"
+
+    Since Aria2 runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status aria2
+    ```
+
+    ```sh
+    systemctl start aria2
+    ```
+
+    ```sh
+    systemctl stop aria2
+    ```
+
+    ```sh
+    systemctl restart aria2
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u aria2
+    ```
+
+    ```sh
+    cat /var/log/aria2.log
+    ```
+
+    Issues with the web interface can be debugged via webserver logs:
+
+    ```sh
+    # With Lighttpd (default):
+    journalctl -u lighttpd
+    more /var/log/lighttpd/error.log
+
+    # With Apache:
+    journalctl -u apache2
+    more /var/log/apache2/error.log
+
+    # With Nginx:
+    journalctl -u nginx
+    more /var/log/nginx/error.log
+    ```
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
@@ -442,10 +527,29 @@ NZB download manager with web interface.
     apt install git build-essential
     ```
 
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+=== "Service control"
+
+    Since SABnzbd runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status sabnzbd
+    ```
+
+    ```sh
+    systemctl start sabnzbd
+    ```
+
+    ```sh
+    systemctl stop sabnzbd
+    ```
+
+    ```sh
+    systemctl restart sabnzbd
+    ```
 
 === "View logs"
+
+    Logs can be viewed with the following commands:
 
     ```sh
     journalctl -u sabnzbd
@@ -456,6 +560,9 @@ NZB download manager with web interface.
     ```sh
     dietpi-software reinstall 139
     ```
+
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## Medusa
 
@@ -506,6 +613,40 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
     - Under the section `Send .torrent files to`, select the BitTorrent program you have installed, then enter the details.
     - Use the `Test connection` button at the bottom of the page to ensure Medusa can connect to your BitTorrent server.
     - Finally click `Save changes` (bottom of the page)
+
+=== "Service control"
+
+    Since Medusa runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status medusa
+    ```
+
+    ```sh
+    systemctl start medusa
+    ```
+
+    ```sh
+    systemctl stop medusa
+    ```
+
+    ```sh
+    systemctl restart medusa
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u medusa
+    ```
+
+=== "Update to latest version"
+
+    ```sh
+    dietpi-software reinstall 139
+    ```
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
@@ -572,17 +713,44 @@ Automatically download your favorite TV shows, as they become available.
 
     Link the Sonarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+=== "Service control"
+
+    Since Sonarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status sonarr
+    ```
+
+    ```sh
+    systemctl start sonarr
+    ```
+
+    ```sh
+    systemctl stop sonarr
+    ```
+
+    ```sh
+    systemctl restart sonarr
+    ```
 
 === "View logs"
 
-    - Service: `journalctl -u sonarr`
-    - Daemon: `/var/log/sonarr/sonarr.log`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u sonarr
+    ```
+
+    ```sh
+    cat /var/log/sonarr/sonarr.txt
+    ```
 
 === "Update to latest version"
 
     - Use the internal web based updater
+
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ***
 
@@ -650,17 +818,44 @@ Automatically download your favorite movies, as they become available.
 
     Link the Radarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+=== "Service control"
+
+    Since Radarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status radarr
+    ```
+
+    ```sh
+    systemctl start radarr
+    ```
+
+    ```sh
+    systemctl stop radarr
+    ```
+
+    ```sh
+    systemctl restart radarr
+    ```
 
 === "View logs"
 
-    - Service: `journalctl -u radarr`
-    - Daemon: `/var/log/radarr/radarr.log`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u radarr
+    ```
+
+    ```sh
+    cat /var/log/radarr/radarr.txt
+    ```
 
 === "Update to latest version"
 
     - Use the internal web based updater
+
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ***
 
@@ -698,10 +893,37 @@ Key features:
     - Data directory: `/mnt/dietpi_userdata/bazarr`
     - Bazarr configuration file: `/mnt/dietpi_userdata/bazarr/config/config.yaml`
 
+=== "Service control"
+
+    Since Bazarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status bazarr
+    ```
+
+    ```sh
+    systemctl start bazarr
+    ```
+
+    ```sh
+    systemctl stop bazarr
+    ```
+
+    ```sh
+    systemctl restart bazarr
+    ```
+
 === "View logs"
 
-    - Service: `journalctl -u bazarr`
-    - Daemon: `/var/log/bazarr/bazarr.log`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u bazarr
+    ```
+
+    ```sh
+    cat /var/log/bazarr/bazarr.log
+    ```
 
 === "Update to latest version"
 
@@ -774,17 +996,44 @@ Automatically download your favorite music.
 
     Link the Lidarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+=== "Service control"
+
+    Since Lidarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status lidarr
+    ```
+
+    ```sh
+    systemctl start lidarr
+    ```
+
+    ```sh
+    systemctl stop lidarr
+    ```
+
+    ```sh
+    systemctl restart lidarr
+    ```
 
 === "View logs"
 
-    - Service: `journalctl -u lidarr`
-    - Daemon: `/var/log/lidarr/lidarr.log`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u lidarr
+    ```
+
+    ```sh
+    cat /var/log/lidarr/lidarr.txt
+    ```
 
 === "Update to latest version"
 
     - Use the internal web based updater
+
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ## Readarr
 
@@ -874,8 +1123,15 @@ Automatically download your favorite ebook, as they become available.
 
 === "View logs"
 
-    - Service: `journalctl -u readarr`
-    - Daemon: `/var/log/readarr/Readarr.txt`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u readarr
+    ```
+
+    ```sh
+    cat /var/log/readarr/readarr.txt
+    ```
 
 === "Update"
 
@@ -928,8 +1184,15 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
 
 === "View logs"
 
-    - Service: `journalctl -u prowlarr`
-    - Daemon: `/var/log/prowlarr/Prowlarr.txt`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u prowlarr
+    ```
+
+    ```sh
+    cat /var/log/prowlarr/prowlarr.txt
+    ```
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
@@ -978,8 +1241,11 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
 
 === "View logs"
 
-    - Service: `journalctl -u jackett`
-    - Daemon: `/var/log/jackett/Jackett.txt`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u jackett
+    ```
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
@@ -1009,9 +1275,29 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
     - Folder accessed via file server: `downloads/complete`
     - Local folder: `/mnt/dietpi_userdata/downloads/complete`
 
+=== "Service control"
+
+    Since NZBget runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status nzbget
+    ```
+
+    ```sh
+    systemctl start nzbget
+    ```
+
+    ```sh
+    systemctl stop nzbget
+    ```
+
+    ```sh
+    systemctl restart nzbget
+    ```
+
 === "View logs"
 
-    NZBGet service logs can be viewed with the following command:
+    Logs can be viewed with the following commands:
 
     ```sh
     journalctl -u nzbget
@@ -1041,6 +1327,34 @@ Do all your HTPC tasks without using 5 different interfaces!
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Service control"
+
+    Since HTPC Manager runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status htpc-manager
+    ```
+
+    ```sh
+    systemctl start htpc-manager
+    ```
+
+    ```sh
+    systemctl stop htpc-manager
+    ```
+
+    ```sh
+    systemctl restart htpc-manager
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u htpc-manager
+    ```
 
 === "Update to latest version"
 
@@ -1109,25 +1423,36 @@ LazyLibrarian is a program to follow authors and grab metadata for all your digi
     Since LazyLibrarian runs as systemd service, it can be controlled with the following commands:
 
     ```sh
-    sudo systemctl status lazylibrarian
+    systemctl status lazylibrarian
     ```
 
     ```sh
-    sudo systemctl start lazylibrarian
+    systemctl start lazylibrarian
     ```
 
     ```sh
-    sudo systemctl stop lazylibrarian
+    systemctl stop lazylibrarian
     ```
 
     ```sh
-    sudo systemctl restart lazylibrarian
+    systemctl restart lazylibrarian
     ```
 
 === "View logs"
 
-    - Service: `journalctl -u lazylibrarian`
-    - Daemon: `/var/log/lazylibrarian/`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u lazylibrarian
+    ```
+
+    ```sh
+    cat /var/log/lazylibrarian/lazylibrarian.log
+    ```
+
+    ```sh
+    cat /var/log/lazylibrarian/dbupgrade.log
+    ```
 
 === "Update"
 
