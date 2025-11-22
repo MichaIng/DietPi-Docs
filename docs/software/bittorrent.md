@@ -310,7 +310,7 @@ Also installs:
 
 === "Service control"
 
-    Since rtorrent runs as systemd service, it can be controlled with the following commands:
+    Since rTorrent runs as systemd service, it can be controlled with the following commands:
 
     ```sh
     systemctl status rtorrent
@@ -1277,7 +1277,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
 === "Service control"
 
-    Since NZBget runs as systemd service, it can be controlled with the following commands:
+    Since NZBGet runs as systemd service, it can be controlled with the following commands:
 
     ```sh
     systemctl status nzbget
