@@ -1,5 +1,6 @@
 aarch
 ABI
+ACARS
 ACP
 ACPI
 ActivityPub
@@ -11,6 +12,7 @@ AdGuard
 advanxer
 AdoptOpenJDK
 AGPLv
+aircrafts
 AirPlay
 Airsonic
 AIY
@@ -247,6 +249,7 @@ Hardkernel
 Hardkernel's
 HC
 hexa
+HFDL
 HFS
 HiFi
 HiFiBerry
@@ -757,6 +760,7 @@ Vae
 vaultwarden
 VC
 VCSM
+VDL
 VHDX
 vhost
 vhosts
