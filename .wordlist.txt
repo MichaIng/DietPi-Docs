@@ -12,7 +12,7 @@ AdGuard
 advanxer
 AdoptOpenJDK
 AGPLv
-aircraft
+aircrafts
 AirPlay
 Airsonic
 AIY
