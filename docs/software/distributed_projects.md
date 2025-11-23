@@ -73,6 +73,11 @@ The problems which are solved require so many computer calculations that help fr
     </config>
     ```
 
+***
+
+Official website: <https://foldingathome.org/>
+Official documentation: <https://foldingathome.org/guides/>
+
 ## Tor Relay
 
 ![Tor logo](../assets/images/dietpi-software-tor-logo.png){: width="150" height="91" loading="lazy"}
@@ -123,6 +128,7 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
 
 ***
 
+Official website: <https://www.torproject.org/>
 Official documentation: <https://community.torproject.org/relay/setup>
 
 ## YaCy
@@ -161,6 +167,11 @@ Essentially, it is a "peer-to-peer" Google search engine, not controlled by Goog
     YaCy is extremely CPU intensive, coupled with constant background processing, we highly recommend using `dietpi-services` to reduce process priority.
 
     Recommended setting: Nice = 19
+
+***
+
+Official website: <https://yacy.net/>
+Official documentation: <https://yacy.net/docs/>
 
 ## IPFS Node
 
@@ -208,6 +219,8 @@ This node lets you download files through IPFS and add your own files to the net
     ```
 
     IPFS has a built in update command (`ipfs update`), but this requires the `ipfs-update` binary found at https://dist.ipfs.io/#ipfs-update.
+
+***
 
 Official documentation: <https://docs.ipfs.io>
 
@@ -268,6 +281,8 @@ What is **Radiosonde**? A radiosonde is a telemetry instrument carried into the 
 === "Update to latest version"
 
     The update of ADS-B Feeder is done via the web interface, options for updating to the stable version as well as to a beta version are available.
+
+***
 
 Official documentation: <https://adsb.im/home>  
 Wikipedia page about ADS-B: <https://wikipedia.org/wiki/Automatic_Dependent_Surveillance–Broadcast>  
