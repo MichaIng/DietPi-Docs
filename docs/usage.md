@@ -6,57 +6,13 @@ description: Miscellaneous usage hints and guides for the DietPi OS
 
 This chapter contains several documents describing the usage of DietPi.
 
-## How to upgrade to Buster
+## How to upgrade
 
-Debian Bullseye has been released on August 14, 2021, and Debian Stretch has become "oldoldstable". Regular support for Debian Stretch ended last year and LTS support will end in 2022. We hence highly recommend to upgrade to the new Debian Bullseye.
+For comprehensive information on upgrading between supported Debian releases, please refer to the following guides.
+Each post includes a feature overview, release schedule, software changes, incompatible software, and detailed upgrade instructions.
 
-If you are fine with flashing a new image, follow the brief instructions on our [blog post](https://dietpi.com/blog/?p=811#fresh-install) to cover common migration steps.
-
-If too much customisation has been done without having it well documented or scripted, an upgrade of the running system may be easier. Run the below commands step by step to perform the upgrade from Stretch to Buster in a first step. If you face any errors and are unsure how to resolve, please contact us via our [community forum](https://dietpi.com/forum/c/troubleshooting/10) or [GitHub issue](https://github.com/MichaIng/DietPi/issues) to find help.
-
-```sh
-dietpi-backup 1
-sed -i 's/stretch/buster/g' /etc/apt/sources.list{,.d/*.list}
-sed -i '/ buster-backports /d' /etc/apt/sources.list
-rm -f /etc/apt/sources.list.d/dietpi-php.list
-rm -f /etc/apt/trusted.gpg.d/dietpi-php.gpg
-rm -f /etc/apt/preferences.d/dietpi-{php,openssl,xrdp}
-rm -f /etc/mysql/mariadb.conf.d/97-dietpi.cnf
-/boot/dietpi/func/dietpi-set_software apt-cache clean
-apt update
-apt upgrade
-apt full-upgrade
-apt autopurge
-/boot/dietpi/func/dietpi-obtain_hw_model
-. /boot/dietpi/func/dietpi-globals
-```
-
-If you have PHP installed, also run the following commands to prevent issues when installing additional PHP modules:
-
-```bash
-mapfile -t packages < <(dpkg --get-selections '*php*' | mawk '$2=="install" {print $1}')
-dpkg -r --force-depends "${packages[@]}"
-apt -y install "${packages[@]}"
-unset -v packages
-```
-
-If `dietpi-update` migrated you to the dedicated Stretch update branch already, you can now migrate back to the stable `master` branch to apply DietPi updates to v8.0 and above:
-
-```sh
-G_CONFIG_INJECT 'DEV_GITBRANCH=' 'DEV_GITBRANCH=master' /boot/dietpi.txt
-dietpi-update
-```
-
-If you have **Python 3** installed, as of its upgrade from v3.5 to v3.7, it needs to be reinstalled and old modules can be removed for cleanup:
-
-```sh
-rm -Rf /usr/local/lib/python3.5 /usr/local/bin/pip3*
-dietpi-software reinstall 130
-```
-
-You may need to reinstall other Python-based software titles as well and modules manually installed with the `pip3` command. Your data and settings are preserved.
-
-Check if everything is working fine, do a `reboot` and check again. If so, we recommend to continue directly upgrading further to the current stable Debian Bullseye release, following the instructions given in our blog post: <https://dietpi.com/blog/?p=811#manual-upgrade>
+- [Upgrade from Bookworm to Trixie](https://dietpi.com/blog/?p=4014)
+- [Upgrade from Bullseye to Bookworm](https://dietpi.com/blog/?p=3128)
 
 ---
 
