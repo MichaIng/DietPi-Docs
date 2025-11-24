@@ -58,6 +58,13 @@ If you did not select Kodi to start from boot, you can modify the autostart opti
 - Desktop: Kodi is available via the LXDE start menu, and, desktop.
 - Console: Kodi can also be run by typing `startkodi`.
 
+***
+
+Website: <https://kodi.tv/>  
+Quick start guide: <https://kodi.wiki/view/Quick_start_guide>  
+Documentation: <https://kodi.wiki/view/Main_Page>  
+Source code: <https://github.com/xbmc>
+
 ## ympd
 
 A lightweight, bare-bones, no frills HiFi music player with a web based interface. ympd is a front end for MPD.
