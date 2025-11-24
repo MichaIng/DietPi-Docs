@@ -452,24 +452,20 @@ Also installs:
     journalctl -u aria2
     ```
 
-    ```sh
-    cat /var/log/aria2.log
-    ```
-
     Issues with the web interface can be debugged via webserver logs:
 
     ```sh
-    # With Lighttpd (default):
-    journalctl -u lighttpd
-    more /var/log/lighttpd/error.log
-
-    # With Apache:
+    # With Apache (default):
     journalctl -u apache2
     more /var/log/apache2/error.log
 
     # With Nginx:
     journalctl -u nginx
     more /var/log/nginx/error.log
+
+    # With Lighttpd:
+    journalctl -u lighttpd
+    more /var/log/lighttpd/error.log
     ```
 
 [//]: # (Include software expandable infoblock)
