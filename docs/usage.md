@@ -6,7 +6,7 @@ description: Miscellaneous usage hints and guides for the DietPi OS
 
 This chapter contains several documents describing the usage of DietPi.
 
-## How to upgrade
+## How to upgrade the Debian base OS
 
 For comprehensive information on upgrading between supported Debian releases, please refer to the following guides.
 Each post includes a feature overview, release schedule, software changes, incompatible software, and detailed upgrade instructions.
