@@ -17,19 +17,8 @@ description: Description of DietPi software options related to hardware
 - [**Audiophonics PI-SPC - Power control module for Raspberry Pi, allowing physical button power on/off**](#audiophonics-pi-spc)
 - [**Grafana - The open platform for beautiful analytics and monitoring**](#grafana)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -121,6 +110,9 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
     - Username = `webiopi`
     - Password = `raspberry`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Change the login password"
 
     - Run `webiopi-passwd`
@@ -145,13 +137,16 @@ Website: <https://webiopi.trouch.com>
 
 Node-RED is a visual tool for wiring together hardware devices, APIs and online services in new and interesting ways. Node-RED uses a standalone web server that can be accessed remotely.
 
-![Node-RED web interface screenshot](../assets/images/dietpi-software-hardwareprojects-nodered.png){: width="400" height="286" loading="lazy"}
+![Node-RED web interface screenshot](../assets/images/dietpi-software-hardwareprojects-nodered.png "Node-RED web interface screen"){: width="400" height="286" loading="lazy"}
 
 === "Access to the programming IDE"
 
     The web interface is accessible via port **1880**:
 
     - URL = `http://<your.IP>:1880`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Access to the dashboard"
 
@@ -163,6 +158,9 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
 
     Use the following URL to connect to the dashboard from your browser:  
     `https://<your.IP>:1880/ui/`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Data and config directory"
 
@@ -282,6 +280,9 @@ Also installs:
     - Email address: `admin@blynk.cc`
     - Password: `<your global password>` (default: `dietpi`)
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Setup details"
 
     DietPi installs Blynk (including user data and config file) to the following location:
@@ -385,7 +386,7 @@ See <https://www.audiophonics.fr/en/raspberry-pi-and-other-sbc-accessories/audio
 
     Please ensure the correct GPIO pins are used, when connecting Pi-SPC to RPi (see image below).
 
-    ![Raspberry Pi GPIO scheme](../assets/images/dietpi-software-hardwareprojects-audiophonics-gpionumbers.png){: width="400" height="119" loading="lazy"}
+    ![Raspberry Pi GPIO scheme](../assets/images/dietpi-software-hardwareprojects-audiophonics-gpionumbers.png "Raspberry Pi GPIO scheme"){: width="400" height="119" loading="lazy"}
 
 To power off the system begin the shutdown process: Hold the power button for < 0.5 seconds. If you don't have a button, you can also close the pins `BP PIN C` and `BP PIN NO`, with your favorite electrically conductive metal (e.g.: tweezers).  
 Remark: Avoid holding the power button for longer than 2 seconds, as this will hard power off the system (same effect as pulling the power cord). Doing so will create file-system corruptions, during shutdown IO operations.
@@ -397,7 +398,7 @@ The open platform for beautiful analytics and monitoring.
 This installation and documentation was possible, thanks to [@marcobrianza](https://github.com/MichaIng/DietPi/issues/1784#issuecomment-390778313).  
 Remark: Grafana binaries are specific to the CPU architecture, therefore, swapping SD cards between RPi 1 <> 2+, is not recommended.
 
-![Grafana web interface screenshot](../assets/images/dietpi-software-hardwareprojects-grafana.png){: width="400" height="197" loading="lazy"}
+![Grafana web interface screenshot](../assets/images/dietpi-software-hardwareprojects-grafana.png "Grafana web interface screen"){: width="400" height="197" loading="lazy"}
 
 === "Prerequisites"
 
@@ -419,6 +420,9 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
     - URL: `http://<your.IP>:3001`
     - Username: `admin`
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Usage information"
 

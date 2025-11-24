@@ -12,19 +12,19 @@ You can install DietPi by following the step by step [Starting guide](install.md
 
 DietPi runs on the full range of Raspberry Pi boards and computers. This includes the newly launched [Raspberry Pi 400](https://www.raspberrypi.com/products/raspberry-pi-400/),
 
-![Raspberry Pi 400 photo](assets/images/dietpi-raspberry-pi-400-back.jpg){: width="800" height="571" loading="lazy"}
+![Raspberry Pi 400 photo](assets/images/dietpi-raspberry-pi-400-back.jpg "Raspberry Pi 400"){: width="800" height="571" loading="lazy"}
 
 or the most recent **Raspberry Pi 4 Model B** boards, launched in 2019, as well as in 2020.
 
-![Raspberry Pi 4 Model B photo](assets/images/raspberry-pi-4-labelled.png){: width="500" height="292" loading="lazy"}
+![Raspberry Pi 4 Model B photo](assets/images/raspberry-pi-4-labelled.png "Raspberry Pi 4 Model B"){: width="500" height="292" loading="lazy"}
 
 DietPi runs also on one of the first models **Raspberry Pi 1**, launched in 2012
 
-![Raspberry Pi 1 Model B photo](assets/images/raspberry-pi-1b.jpg){: width="500" height="242" loading="lazy"}
+![Raspberry Pi 1 Model B photo](assets/images/raspberry-pi-1b.jpg "Raspberry Pi 1 Model B"){: width="500" height="242" loading="lazy"}
 
 and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Zero 2 W**
 
-![Raspberry Pi Zero 2 photo](assets/images/dietpi-raspberry-pi-zero-2.jpg){: width="500" height="333" loading="lazy"}
+![Raspberry Pi Zero 2 photo](assets/images/dietpi-raspberry-pi-zero-2.jpg "Raspberry Pi Zero 2"){: width="500" height="333" loading="lazy"}
 
 <div class="md-typeset__table">
     <table>
@@ -45,7 +45,7 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
                             <li>Raspberry Pi Zero / Zero W / Zero WH</li>
                         </ul>
                     </strong>
-                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi1-ARMv6-Bookworm.img.xz">DietPi image</a>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi1-ARMv6-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -57,7 +57,7 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
                             <li>Raspberry Pi 2 Model B v1.1</li>
                         </ul>
                     </strong>
-                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi2-ARMv7-Bookworm.img.xz">DietPi image</a>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi2-ARMv7-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -73,7 +73,7 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
                             <li>Raspberry Pi Zero 2 W</li>
                         </ul>
                     </strong>
-                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi234-ARMv8-Bookworm.img.xz">DietPi image</a>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi234-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -87,7 +87,7 @@ and even on the compact form **Raspberry Pi Zero**, both **Zero W / WH** and **Z
                             <li>Raspberry Pi 500</li>
                         </ul>
                     </strong>
-                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi5-ARMv8-Bookworm.img.xz">DietPi image</a>
+                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RPi5-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -100,7 +100,7 @@ ODROID single board computers are powerful, stable, and fast performing. They ca
 
 ODROID-N2 is one of the supported boards.
 
-![Odroid N2 photo](assets/images/dietpi-odroid-n2-plus.jpg){: width="500" height="353" loading="lazy"}
+![Odroid N2 photo](assets/images/dietpi-odroid-n2-plus.jpg "Odroid N2"){: width="500" height="353" loading="lazy"}
 
 It is a new generation single-board computer based on the Amlogic S922X SoC and the [fastest](https://dietpi.com/survey/#benchmark) we measured until time of writing. The main CPU of the N2 consists of a big.LITTLE quad-core Cortex-A73 + dual-core Cortex-A53 combination. Thanks to the modern 12nm silicon technology, the A73 cores run at up to 1.8 GHz (N2) respectively 2.4 GHz (N2+) without thermal throttling using the stock metal-housing heat sink allowing a robust and quiet computer.
 
@@ -116,37 +116,37 @@ It is a new generation single-board computer based on the Amlogic S922X SoC and 
             <tr>
                 <td><a class="table" href=""><strong>Odroid C1</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC1-ARMv7-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC1-ARMv7-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid C2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC2-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC2-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid C4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC4-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC4-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid HC4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidHC4-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidHC4-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid N2 / N2+</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidN2-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Odroid XU3 / XU4 / MC1 / HC1 / HC2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidXU4-ARMv7-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidXU4-ARMv7-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -159,7 +159,7 @@ This is where PINE64 journey began. The PINE A64 is their first Single Board Com
 
 The ROCKPro64 is the most powerful single board computer offered by PINE64.
 
-![PINE64 ROCKPro64 photo](assets/images/dietpi-rockpro64.jpg){: width="500" height="375" loading="lazy"}
+![PINE64 ROCKPro64 photo](assets/images/dietpi-rockpro64.jpg "PINE64 ROCKPro64"){: width="500" height="375" loading="lazy"}
 
 It features a Rockchip RK3399 hexa-core SOC and up-to 4 GiB of dual-channel LPDDR4 system memory. Moreover, the board comes packed with features, including: an USB 3.0 and USB type C with DP1.2 port, a full PCIe x4 as well as eMMC module socket. You also get a 40pin header with I2C, SPI, UART and GPIO.
 
@@ -181,55 +181,55 @@ The PINE64 family also contains the newer members Quartz64 and SOQuartz compute 
             <tr>
                 <td><a class="table" href=""><strong>PINE A64</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PINEA64-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PINEA64-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>PINE H64</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PINEH64-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PINEH64-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Pinebook</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Pinebook-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Pinebook-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Pinebook Pro</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PinebookPro-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_PinebookPro-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCK64</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK64-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK64-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCKPro64</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPro64-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPro64-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Quartz64 Model A </strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Quartz64A-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Quartz64A-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Quartz64 Model B</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Quartz64B-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Quartz64B-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>SOQuartz Compute Module</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_SOQuartz-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_SOQuartz-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -245,14 +245,14 @@ For more details visit the [**Radxa website**](https://radxa.com/) and [**docume
 
 One of the supported boards is the ROCK 4.
 
-![Radxa ROCK 4 photo](assets/images/dietpi-rockpi-4b.jpg){: width="500" height="375" loading="lazy"}
+![Radxa ROCK 4 photo](assets/images/dietpi-rockpi-4b.jpg "Radxa ROCK 4"){: width="500" height="375" loading="lazy"}
 
 The **ROCK 4** is a single-board computers (SBC) in a credit card factor that, which offers class-leading performance, while leveraging outstanding mechanical compatibility. The ROCK 4 offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality.
 It also features a Gbit LAN for network, with dedicated bus and controller, it works without latency under heavy load network applications.
 
 The **Radxa Zero** is an ultra thin SBC in smaller form factor with still powerful performance based on Amlogic S905Y2. It features a Quad Core 64 ARM processor, 32-bit LPDDR4, up to 4K@60 HDMI, 802.11 ac WiFi, Bluetooth 5.0, USB 3.0, 40-pin GPIO header, and is powered via USB-C port.
 
-![Radxa Zero photo](assets/images/dietpi-radxa-zero.jpg){: width="500" loading="lazy"}
+![Radxa Zero photo](assets/images/dietpi-radxa-zero.jpg "Radxa Zero"){: width="500" loading="lazy"}
 
 <div class="md-typeset__table">
     <table>
@@ -266,55 +266,55 @@ The **Radxa Zero** is an ultra thin SBC in smaller form factor with still powerf
             <tr>
                 <td><a class="table" href=""><strong>ROCK 4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPi4-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCK 4 SE</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK4SE-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK4SE-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCK 4C Plus</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK4CPlus-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK4CPlus-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCK Pi S</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCKPiS-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Radxa Zero</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZero-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZero-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Radxa ZERO 3E / ZERO 3W</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZERO3-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_RadxaZERO3-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCK 3A</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK3A-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK3A-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCK 5A</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5A-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5A-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ROCK 5B</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5B-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ROCK5B-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -323,9 +323,9 @@ The **Radxa Zero** is an ultra thin SBC in smaller form factor with still powerf
 
 ## Allo Sparky SBC
 
-Sparky Single Board Computer (SBC) is a credit card-sized board that can be used as a standalone computer, in electronics projects, games, and also in many other applications. A true open hardware, community-supported embedded computer for developers and hobbyists. The Sparky SBC has all the functionality of a basic computer. For more details visit the [**Allo Sparky SBC**](https://www.allo.com/sparky/sparky-sbc.html) website.
+The Sparky SBC was an audiophile focused single-board computer produced by Allo. The product has however been discontinued and the company shut down some years ago. DietPi still provides images, but will drop support with its first release in 2026.
 
-![Allo Sparky SBC photo](assets/images/dietpi-sparky-sbc.jpg){: width="500" height="412" loading="lazy"}
+![Allo Sparky SBC photo](assets/images/dietpi-sparky-sbc.jpg "Allo Sparky SBC"){: width="500" height="412" loading="lazy"}
 
 <div class="md-typeset__table">
     <table>
@@ -352,7 +352,7 @@ Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that
 
 Tinker Board features standard maker connectivity options, including a 40-pin GPIO interface that allow for interfacing with a range inputs from buttons, switches, sensors, LEDs, and much more.
 
-![ASUS Tinker Board photo](assets/images/dietpi-tinkerboard.jpg){: width="500" height="353" loading="lazy"}
+![ASUS Tinker Board photo](assets/images/dietpi-tinkerboard.jpg "ASUS Tinker Board"){: width="500" height="353" loading="lazy"}
 
 Tinker Board is equipped with one DSI MIPI connection for displays and touchscreens. The secondary CSI MIPI connection is for connection to compatible cameras allowing for computer vision, and much more.
 
@@ -372,13 +372,13 @@ With the ASUS Tinker Board 2, a successor has been released, based on the 64-bit
             <tr>
                 <td><a class="table" href=""><strong>ASUS Tinker Board</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ASUSTB-ARMv7-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ASUSTB-ARMv7-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ASUS Tinker Board 2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ASUSTB2-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ASUSTB2-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -391,7 +391,7 @@ With the ASUS Tinker Board 2, a successor has been released, based on the 64-bit
 
 For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) website.
 
-![FriendlyELEC NanoPi K2 photo](assets/images/dietpi-nanopi-k2.jpg){: width="500" height="350" loading="lazy"}
+![FriendlyELEC NanoPi K2 photo](assets/images/dietpi-nanopi-k2.jpg "FriendlyELEC NanoPi K2"){: width="500" height="350" loading="lazy"}
 
 **NanoPi K2** supports DVFS and it can smooth play high-definition video streams, and it is very well suited for applications such as advertisement machines, TV boxes, home entertainment appliances or multimedia devices.
 
@@ -407,61 +407,61 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO-ARMv7-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO-ARMv7-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO Plus2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEOPlus2-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEOPlus2-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO2 Black</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2Black-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO2Black-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO3</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO3-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO3-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi NEO4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO4-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiNEO4-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi K1 Plus</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiK1Plus-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiK1Plus-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi K2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiK2-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiK2-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M1 Plus</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1Plus-ARMv7-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1Plus-ARMv7-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M1/T1</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1-ARMv7-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1-ARMv7-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -485,79 +485,103 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M4V2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4V2-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM4V2-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPC T4</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT4-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>NanoPi M5</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM5-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R1</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR1-ARMv7-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR1-ARMv7-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R2S</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR2S-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR2S-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>NanoPi R3S</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR3S-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>NanoPi R3S LTS</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR3SLTS-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R4S</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR4S-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR4S-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R5S</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5S-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R5C</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5C-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR5C-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R6S</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6S-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi R6C</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6C-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR6C-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPC T6</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT6-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPCT6-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>NanoPi M6</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM6-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM6-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>NanoPi R76S</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiR76S-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>ZeroPi</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ZeroPi-ARMv7-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ZeroPi-ARMv7-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -570,7 +594,7 @@ Orange Pi is an open source product brand of Shenzhen Xunlong Software Co., Ltd,
 
 For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) website.
 
-![Orange Pi 5 photo](assets/images/dietpi-orange-pi-5.png){: width="500" height="334" loading="lazy"}
+![Orange Pi 5 photo](assets/images/dietpi-orange-pi-5.png "Orange Pi 5"){: width="500" height="334" loading="lazy"}
 
 **Orange Pi 5** uses Rockchip RK3588S new generation 8-core 64-bit processor, quad-core A76+quad-core A55, with 8nm process design, up to 2.4GHz main frequency, integrated ARM Mali-G610 GPU, embedded high-performance 3D/2D image acceleration module, built-in NPU with 6Tops computing power, with 4GB/8GB/16GB/32GB (LPDDR4/4x), and up to 8K display processing capability.
 
@@ -586,67 +610,67 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi 5/5B</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi 5 Plus</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Plus-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Plus-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi 5 Pro</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Pro-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Pro-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi 5 Max</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Max-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Max-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi 5 Ultra</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Ultra-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5Ultra-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi CM5</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiCM5-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiCM5-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi Zero 2W</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero2W-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero2W-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi Zero 3</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi 3</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi 3B</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3B-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3B-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi 3 LTS</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3LTS-ARMv8-Bookworm.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3LTS-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
@@ -661,7 +685,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
 
 [StarFive](https://www.starfivetech.com/en/site/soc) is a RISC-V SoC and SBC manufacturer and offers the [VisionFive 2](https://www.starfivetech.com/uploads/VisionFive%202%20isionDocumentation.pdf), started as a [Kickstarter project](https://www.kickstarter.com/projects/starfive/visionfive-2). The board contains a quad-core RISC-V JH7110 SoC, 2/4/8 GiB of RAM and many other bells and whistles of the Raspberry Pi type world.
 
-![StarFive VisionFive 2 photo](assets/images/riscv-starfive-visionfive2.jpg){: width="500" height="420" loading="lazy"}
+![StarFive VisionFive 2 photo](assets/images/riscv-starfive-visionfive2.jpg "StarFive VisionFive 2"){: width="500" height="420" loading="lazy"}
 
 <div class="md-typeset__table">
     <table>
@@ -686,7 +710,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
 
 [PINE64](https://wiki.pine64.org/wiki/Main_Page) is a RISC-V SoC and SBC manufacturer (see also [PINE64 hardware support](#pine64)) and offers the [STAR64](https://wiki.pine64.org/wiki/STAR64). The board contains a quad-core RISC-V JH7110 SoC, 2/4/8 GiB of RAM.
 
-![PINE64 STAR64 photo](assets/images/PINE64-STAR64.jpg){: width="584" height="338" loading="lazy"}
+![PINE64 STAR64 photo](assets/images/PINE64-STAR64.jpg "PINE64 STAR64"){: width="584" height="338" loading="lazy"}
 
 <div class="md-typeset__table">
     <table>
@@ -747,7 +771,7 @@ The [Parallels Desktop virtual machine](https://www.parallels.com/products/deskt
 
 The [UTM virtual machine](https://mac.getutm.app/) is great for those occasions where SBC performance just isn't enough. Run one of these on any macOS system (e.g. Mac mini 2011/2012/2014/2018 and M1 Apple Silicon) and still get the same great DietPi features and experience.
 
-![UTM](assets/images/UTM3.png){: width="270" height="221" loading="lazy"}
+![UTM](assets/images/UTM3.png "UTM virtual machine list"){: width="270" height="221" loading="lazy"}
 
 !!! info "Emulation feature of UTM"
     The emulation feature is an option of the virtualization technique to run x86 code on a M1 Mac system and vice versa an M1 Mac code on a x86 Mac system.  
@@ -769,57 +793,57 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
             <tr>
                 <td><a class="table" href=""><strong>Native PC for BIOS/CSM</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Bookworm.img.xz">DietPi image</a>
-                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Bookworm_Installer.iso">DietPi installer image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Trixie.img.xz">DietPi image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Trixie_Installer.iso">DietPi installer image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Native PC for UEFI</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Bookworm_Installer.iso">DietPi installer image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Trixie_Installer.iso">DietPi installer image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>VMware Player / Fusion</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Bookworm.tar.xz">DietPi VMX appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Trixie.tar.xz">DietPi VMX appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>VMware ESXi Hypervisor</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ESXi-x86_64-Bookworm.ova.xz">DietPi OVA appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ESXi-x86_64-Trixie.ova.xz">DietPi OVA appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>VirtualBox</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Bookworm.ova.xz">DietPi OVA appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Trixie.ova.xz">DietPi OVA appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Proxmox</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso">DietPi installer ISO image</a>
-                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bookworm.qcow2.xz">DietPi QCOW2 image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie_Installer.iso">DietPi installer ISO image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Trixie.qcow2.xz">DietPi QCOW2 image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Parallels</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Bookworm.tar.xz">DietPi VMX appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Trixie.tar.xz">DietPi VMX appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>UTM</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Bookworm.tar.xz">DietPi UTM appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Trixie.tar.xz">DietPi UTM appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Hyper-V</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Hyper-V-x86_64-Bookworm.vhdx.xz">DietPi VHDX image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Hyper-V-x86_64-Trixie.vhdx.xz">DietPi VHDX image</a>
                 </td>
             </tr>
         </tbody>
@@ -888,22 +912,22 @@ bash -c "$(curl -sSfL 'https://raw.githubusercontent.com/MichaIng/DietPi/master/
 
 In the following dialog you have to select the DietPi installer branch. Generally use `master` as long as you do not want to create a development image:
 
-![DietPi-Installer branch selection](assets/images/dietpi-prep-selectbranch.png){: width="550" height="266" loading="lazy"}
+![DietPi-Installer branch selection](assets/images/dietpi-prep-selectbranch.png "DietPi-Installer branch selection dialog"){: width="550" height="266" loading="lazy"}
 
 In the following dialogues enter your name and afterwards the actual image base and the device (SBC or PC) the system is running on:
 
-![DietPi-Installer pre-image entry](assets/images/dietpi-prep-preimage.png){: width="550" height="218" loading="lazy"}
+![DietPi-Installer pre-image entry](assets/images/dietpi-prep-preimage.png "DietPi-Installer pre-image dialog"){: width="550" height="218" loading="lazy"}
 
-![DietPi-Installer device selection](assets/images/dietpi-prep-deviceselection.png){: width="550" height="290" loading="lazy"}
+![DietPi-Installer device selection](assets/images/dietpi-prep-deviceselection.png "DietPi-Installer device selection dialog"){: width="550" height="290" loading="lazy"}
 
 Depending on whether you want to use the WiFi feature later on, you have to select the option to keep or purge the WiFi package. To keep the package could be the case if your hardware has an onboard WiFi or you add the WiFi e.g. via an USB WiFi adapter.
 
-![DietPi-Installer WiFi selection](assets/images/dietpi-prep-wifiselection.png){: width="550" height="184" loading="lazy"}
+![DietPi-Installer WiFi selection](assets/images/dietpi-prep-wifiselection.png "DietPi-Installer WiFi selection dialog"){: width="550" height="184" loading="lazy"}
 
-The last selection is the target Debian version: the current stable **Bookworm** or next testing **Trixie**.  
+The last selection is the target Debian version: the current stable **Trixie** or next testing **Forky**.  
 After this, the script runs a couple of minutes, finally the following message occurs:
 
-![DietPi-Installer finish output](assets/images/dietpi-prep-finish.png){: width="550" height="113" loading="lazy"}
+![DietPi-Installer finish output](assets/images/dietpi-prep-finish.png "DietPi-Installer finish output"){: width="550" height="113" loading="lazy"}
 
 After this you can restart your system (`reboot`), alternatively you can copy the SD card (via `dd`) to an image (`.img`) to duplicate your base installation.
 

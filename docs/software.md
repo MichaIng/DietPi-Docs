@@ -15,7 +15,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software menu screenshot](assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](dietpi_tools.md) section.
 
@@ -40,18 +40,20 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Radarr - Automatically download Movies**](software/bittorrent.md#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](software/bittorrent.md#bazarr)
 - [**Lidarr - Automatically download Music**](software/bittorrent.md#lidarr)
-- [**Readarr - Automatically download Ebooks**](software/bittorrent.md#readarr)
+- [**Readarr - Ebook and audiobook collection manager**](software/bittorrent.md#readarr)
 - [**Prowlarr - Indexer manager & proxy for PVR**](software/bittorrent.md#prowlarr)
 - [**Jackett - API Support for your favourite torrent trackers**](software/bittorrent.md#jackett)
 - [**NZBGet - NZB download manager with web interface**](software/bittorrent.md#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](software/bittorrent.md#htpc-manager)
 - [**youtube-dl - download videos from YouTube and other sites**](software/bittorrent.md#youtube-dl)
+- [**LazyLibrarian - Ebook and audiobook collection manager**](software/bittorrent.md#lazylibrarian)
 
 ## [Camera & Surveillance](software/camera.md)
 
 - [**RPi Cam Web Interface - Web interface & controls for your RPi camera**](software/camera.md#rpi-cam-web-interface)
 - [**MotionEye - Web interface & surveillance for your camera**](software/camera.md#motioneye)
 - [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](software/camera.md#mjpg-streamer)
+- [**BirdNET-Go - AI solution for continuous avian monitoring and identification**](software/camera.md#birdnet-go)
 
 ## [Cloud & Backup systems](software/cloud.md)
 
@@ -113,7 +115,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Tor Relay - Add a node to the Tor network**](software/distributed_projects.md#tor-relay)
 - [**YaCy - Decentralized open source search engine**](software/distributed_projects.md#yacy)
 - [**IPFS Node - Contribute to a decentralized internet**](software/distributed_projects.md#ipfs-node)
-- [**ADS-B Feeder - track airplanes using SDRs and feed the data to ADS-B aggregators**](software/distributed_projects.md#ads-b-feeder)
+- [**ADS-B Feeder - track airplanes, ships and weather balloons and share data**](software/distributed_projects.md#ads-b-feeder)
 
 ## [DNS Servers](software/dns_servers.md)
 
@@ -241,7 +243,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Dropbear - Lightweight SSH Server**](software/ssh.md#dropbear)
 - [**OpenSSH - Feature rich SSH server with SFTP/SCP support**](software/ssh.md#openssh)
 
-## [System software](software/system_software.md)
+## [System Software](software/system_software.md)
 
 - [**fish - the friendly interactive shell**](software/system_software.md#fish)
 

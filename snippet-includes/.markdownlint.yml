@@ -1,0 +1,6 @@
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+default: true
+# We do not enforce a line length limit.
+MD013: false
+# The snippets includes typically do not start with the h1 heading level. Therefore disabling this check
+MD041: false

@@ -10,19 +10,8 @@ description: Description of DietPi software options related to SSL and security
 - [**Let’s Encrypt - Enable HTTPS / SSL**](#lets-encrypt)
 - [**Fail2Ban - Protects your system from brute-force attacks**](#fail2ban)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -41,7 +30,7 @@ To use Certbot you need:
 ???+ important "Keep port 80 open for Certbot renewal"
     Even when you use only HTTPS on port 443, Let's Encrypt requires port 80 to stay opened for certificate renewals (in your router's forwarding functionality).
 
-![DietPi-LetsEncrypt interface screenshot](../assets/images/dietpi-software-security-certbot.png){: width="400" height="183" loading="lazy"}
+![DietPi-LetsEncrypt interface screenshot](../assets/images/dietpi-software-security-certbot.png "DietPi-LetsEncrypt main menu"){: width="400" height="183" loading="lazy"}
 
 ### Create and apply your cert
 
@@ -65,7 +54,7 @@ We have enabled detection for SSH servers (OpenSSH and Dropbear), however, Fail2
 
 ![Fail2Ban logo](../assets/images/dietpi-software-security-fail2ban1.jpg){: width="200" height="157" loading="lazy"}
 
-![Fail2Ban example console logs output](../assets/images/dietpi-software-security-fail2ban2.jpg){: width="550" height="360" loading="lazy"}
+![Fail2Ban example console logs output](../assets/images/dietpi-software-security-fail2ban2.jpg "Fail2Ban console log output"){: width="550" height="360" loading="lazy"}
 
 An IP address is by default ban triggered after 3 failed SSH login attempts. Fail2Ban will ban the source IP address for 10 minutes.
 

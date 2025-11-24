@@ -1,5 +1,6 @@
 aarch
 ABI
+ACARS
 ACP
 ACPI
 ActivityPub
@@ -11,6 +12,7 @@ AdGuard
 advanxer
 AdoptOpenJDK
 AGPLv
+aircrafts
 AirPlay
 Airsonic
 AIY
@@ -32,6 +34,8 @@ Armbian's
 ARMv
 ASUS
 Atheros
+audiobook
+audiobooks
 Audiophonics
 Autobooting
 autologin
@@ -54,6 +58,7 @@ bcm
 BeagleBone
 Beelink
 binfmt
+BirdNET
 Bitcoin
 Bitwarden
 blazingly
@@ -244,6 +249,7 @@ Hardkernel
 Hardkernel's
 HC
 hexa
+HFDL
 HFS
 HiFi
 HiFiBerry
@@ -275,6 +281,8 @@ InfluxData
 InfluxDB
 init
 initramfs
+InnoDB
+inode
 integrations
 InterPlanetary
 io
@@ -326,6 +334,7 @@ Kubo
 KVM
 LASP
 Laravel
+LazyLibrarian
 LBA
 LeMaker
 lcd
@@ -409,8 +418,9 @@ Munin
 Mycroft
 MyHome
 myMPD
-MySqli
 mysql
+MySqli
+MySQLTuner
 NAA
 NAND
 nano
@@ -585,10 +595,13 @@ RSA
 RSS
 rsync
 Rsyslog
+RTC
+RTCs
 rTorrent
 runtime
 ruTorrent
 SABnzbd
+sandboxing
 SATA
 SBC
 SBCs
@@ -747,6 +760,7 @@ Vae
 vaultwarden
 VC
 VCSM
+VDL
 VHDX
 vhost
 vhosts
@@ -804,6 +818,7 @@ writeable
 WSAD
 WSDD
 www
+Xen
 Xfce
 XFS
 xml

@@ -11,19 +11,8 @@ description: Description of DietPi software options related to DNS servers
 - [**Unbound - A validating, recursive and caching DNS resolver**](#unbound)
 - [**AdGuard Home - A powerful network-wide ads & trackers blocking DNS server**](#adguard-home)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -39,6 +28,9 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     - URL = `http://<your.IP>:8089/admin/`
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Setup"
 
@@ -61,7 +53,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
 
     Simply enter the IP address of your Pi-hole device under "DNS server":
 
-    ![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: width="400" height="240" loading="lazy"}
+    ![Pi-hole DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png "Pi-hole DNS server software router setup"){: width="400" height="240" loading="lazy"}
 
     On your Pi-hole device, you will need to set a different DNS server.  
     Depending on your router configuration, if you don't do this step, the Pi-hole device may not be able to access the internet. It's highly recommended to have the device running Pi-hole, pointing to a DNS server outside your network.
@@ -160,7 +152,7 @@ Unbound is a validating, recursive, caching DNS resolver. It can resolve hostnam
 
 ![Unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: width="150" height="34" loading="lazy"}
 
-![Unbound monitor screenshot](../assets/images/dietpi-software-unbound.jpg){: width="500" height="274" loading="lazy"}
+![Unbound monitor screenshot](../assets/images/dietpi-software-unbound.jpg "Unbound monitor dialog"){: width="500" height="274" loading="lazy"}
 
 === "Default DNS ports"
 
@@ -236,7 +228,7 @@ Blog entry with YouTube video (German language): [Unbound Installation für PiHo
 
 AdGuard Home is a DNS sinkhole with web interface that will block ads for any device on your network.
 
-![AdGuard Home web interface screenshot](../assets/images/dietpi-software-dnsserver-adguardhome.png){: width="500" height="410" loading="lazy"}
+![AdGuard Home web interface screenshot](../assets/images/dietpi-software-dnsserver-adguardhome.png "AdGuard Home web interface screen"){: width="500" height="410" loading="lazy"}
 
 === "Access the web interface"
 
@@ -245,6 +237,9 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
     - URL = `http://<your.IP>:8083`
     - User = `admin`
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration"
 
@@ -267,7 +262,7 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
 
     Simply enter the IP address of your AdGuard Home device under "DNS server":
 
-    ![DietPi DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png){: width="400" height="240" loading="lazy"}
+    ![AdGuard Home DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png "AdGuard Home DNS server software router setup"){: width="400" height="240" loading="lazy"}
 
     On your AdGuard Home device, you will need to set a different DNS server.  
     Depending on your router configuration, if you don't do this step, the AdGuard Home device may not be able to access the internet. It's highly recommended to have the device running AdGuard Home, pointing to a DNS server outside your network.
@@ -282,7 +277,7 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
 
     Please use the internal updater from the web interface to update your AdGuard Home. You will see a notification at the top of the page once an update is available.
 
-    ![AdGuard Home update notification](../assets/images/adguardhome-update-notification.png){: width="753" height="95" loading="lazy"}
+    ![AdGuard Home update notification](../assets/images/adguardhome-update-notification.png "AdGuard Home update notification"){: width="753" height="95" loading="lazy"}
 
 === "Setting the password"
 

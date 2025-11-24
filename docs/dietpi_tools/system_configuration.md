@@ -8,7 +8,7 @@ Configure various system settings, from display / audio / network to *auto start
 dietpi-config
 ```
 
-![DietPi-Config screenshot](../assets/images/dietpi-config.jpg){: width="643" height="335" loading="lazy"}
+![DietPi-Config screenshot](../assets/images/dietpi-config.jpg "DietPi-Config main menu"){: width="643" height="335" loading="lazy"}
 
 ### Software overview
 
@@ -144,7 +144,7 @@ To start DietPi-Drive_Manager, use the following command:
 dietpi-drive_manager
 ```
 
-![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager.jpg){: width="643" height="327" loading="lazy"}
+![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager.jpg "DietPi-Drive_Manager main menu"){: width="643" height="327" loading="lazy"}
 
 ### Software overview
 
@@ -157,14 +157,14 @@ To use an additional drive (example USB drive) the following steps have to be do
 1. Select `Refresh` from the menu (if it doesn't show up straight away, give it a few seconds for system to update, then try again).
 1. Select the drive you wish to use from the list, then press ++enter++.
 
-    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_2.png){: width="600" height="297" loading="lazy"}
+    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_2.png "DietPi-Drive_Manager unmounted drive dialog"){: width="600" height="297" loading="lazy"}
 
     If needed, format the drive before usage selecting the `Format` option (filesystem type description see below).  
     Remark: Formatting drives can only be done unmounted.
 
     If needed, mount the drive via the `Mount` selection. If mounted, commands `Unmount`, `Benchmark`, `User data`, `Swapfile` and `Read only` are present.
 
-    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_3.png){: width="600" height="395" loading="lazy"}
+    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_3.png "DietPi-Drive_Manager mounted drive dialog"){: width="600" height="395" loading="lazy"}
 
 #### Move the location of user data and swap file
 
@@ -178,18 +178,18 @@ Therefore execute the following steps (example user data, swap file is quite sim
 
 - Move user data:
 
-    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_4.png){: width="500" height="139" loading="lazy"}
+    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_4.png "DietPi-Drive_Manager user data move confirmation"){: width="500" height="139" loading="lazy"}
 
 - Change swap file size:
 
-    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_5.png){: width="500" height="188" loading="lazy"}
+    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_5.png "DietPi-Drive_Manager change swap file size"){: width="500" height="188" loading="lazy"}
 
 #### Format filesystem types
 
 Formatting filesystems lead you to these dialogues:
 
-![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_6.png){: width="500" height="137" loading="lazy"}
-![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_7.png){: width="500" height="326" loading="lazy"}
+![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_6.png "DietPi-Drive_Manager format dialog"){: width="500" height="137" loading="lazy"}
+![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_7.png "DietPi-Drive_Manager format file system type options"){: width="500" height="326" loading="lazy"}
 
 In the latter dialog you have to choose the filesystem type. The following selections may be chosen:
 
@@ -262,7 +262,7 @@ If you want to extend your DietPi SD card space by moving the system to a larger
 1. Select the disk containing the root (`/`) partition and press ++enter++.
 1. Select `Resize` and press ++enter++.
 
-    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_8.png){: width="500" height="138" loading="lazy"}
+    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_8.png "DietPi-Drive_Manager resize filesystem"){: width="500" height="138" loading="lazy"}
 
 1. Reboot your system to expand the root filesystem to use the whole space of the new memory card.
 
@@ -307,7 +307,7 @@ Lightweight file manager and explorer. To start DietPi-Explorer, use the followi
 dietpi-explorer
 ```
 
-![DietPi-Explorer screenshot](../assets/images/dietpi-explorer.jpg){: width="646" height="355" loading="lazy"}
+![DietPi-Explorer screenshot](../assets/images/dietpi-explorer.jpg "DietPi-Explorer main menu"){: width="646" height="355" loading="lazy"}
 
 ### DietPi file explorer - Command line usage
 
@@ -334,7 +334,7 @@ Defines software packages to start when the DietPi OS boots up. Example, boot in
 dietpi-autostart
 ```
 
-![DietPi-Autostart screenshot](../assets/images/dietpi-autostart.jpg){: width="640" height="458" loading="lazy"}
+![DietPi-Autostart screenshot](../assets/images/dietpi-autostart.jpg "DietPi-Autostart main menu"){: width="640" height="458" loading="lazy"}
 
 ### DietPi autostart - Command line usage
 
@@ -369,11 +369,11 @@ dietpi-services
 
 If DietPi services are called via the command line without arguments, an interactive menu to apply service modes and settings comes up:
 
-![DietPi-Services screenshot](../assets/images/dietpi-services.jpg){: width="644" height="341" loading="lazy"}
+![DietPi-Services screenshot](../assets/images/dietpi-services.jpg "DietPi-Services main menu"){: width="644" height="341" loading="lazy"}
 
 The dialog to tweak a service is entered by highlighting the service (keys ++arrow-up++ and ++arrow-down++) and pressing ++enter++. The configuration dialog (example: cron service) looks like this:
 
-![DietPi-Services tweaking screenshot](../assets/images/dietpi-services_2.png){: width="644" height="461" loading="lazy"}
+![DietPi-Services tweaking screenshot](../assets/images/dietpi-services_2.png "DietPi-Services tweaking dialog"){: width="644" height="461" loading="lazy"}
 
 !!! caution "Be careful at tweaking the services."
 
@@ -435,7 +435,7 @@ Change triggers for the status LEDs on your SBC/motherboard. To start DietPi-LED
 dietpi-led_control
 ```
 
-![DietPi-LED_control screenshot](../assets/images/dietpi-ledcontrol.jpg){: width="643" height="269" loading="lazy"}
+![DietPi-LED_control screenshot](../assets/images/dietpi-ledcontrol.jpg "DietPi-LED_control main menu"){: width="643" height="269" loading="lazy"}
 
 Depending on your used hardware, the number of entries in the dialog will change.
 
@@ -449,7 +449,7 @@ Modify the start times of specific cron job groups. To start DietPi-Cron, use th
 dietpi-cron
 ```
 
-![DietPi-Cron screenshot](../assets/images/dietpi-cron.jpg){: width="643" height="357" loading="lazy"}
+![DietPi-Cron screenshot](../assets/images/dietpi-cron.jpg "DietPi-Cron main menu"){: width="643" height="357" loading="lazy"}
 
 ---
 
@@ -463,11 +463,11 @@ dietpi-justboom
 
 If the sound output is configured, the following dialog appears:
 
-![DietPi-JustBoom screenshot](../assets/images/dietpi-justboom_2.jpg){: width="642" height="223" loading="lazy"}
+![DietPi-JustBoom screenshot](../assets/images/dietpi-justboom_2.jpg "DietPi-JustBoom main menu"){: width="642" height="223" loading="lazy"}
 
 If no sound output is configured, the following dialog appears:
 
-![DietPi-JustBoom screenshot](../assets/images/dietpi-justboom.jpg){: width="642" height="228" loading="lazy"}
+![DietPi-JustBoom screenshot](../assets/images/dietpi-justboom.jpg "DietPi-JustBoom no sound output message dialog"){: width="642" height="228" loading="lazy"}
 
 In this case you have to e.g. install a sound program package via `dietpi-software` or configure the sound output e.g. via `dietpi-config`.
 
@@ -481,7 +481,7 @@ DietPi Display allows the configuration of console display modes and rotation vi
 dietpi-display
 ```
 
-![DietPi Tools - Dietpi Display](../assets/images/dietpi-tools-dietpidisplay.png){: width="640" height="258" loading="lazy"}
+![DietPi Tools - Dietpi-Display](../assets/images/dietpi-tools-dietpidisplay.png "Dietpi-Display main menu"){: width="640" height="258" loading="lazy"}
 
 ---
 
@@ -507,7 +507,7 @@ dietpi-survey
 
     **In short words:** By selecting ***Opt IN***, you are supporting the DietPi project with no impact to your system or private data.
 
-![DietPi Survey screenshot](../assets/images/dietpi-survey.jpg){: width="645" height="368" loading="lazy"}
+![DietPi-Survey screenshot](../assets/images/dietpi-survey.jpg "DietPi-Survey main menu"){: width="645" height="368" loading="lazy"}
 
 ### Software overview
 

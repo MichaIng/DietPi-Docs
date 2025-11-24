@@ -10,20 +10,10 @@ description: Description of DietPi software options related to camera and survei
 - [**RPi Cam Web Interface - Web interface & controls for your RPi camera**](#rpi-cam-web-interface)
 - [**motionEye - Web interface & surveillance for your camera**](#motioneye)
 - [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](#mjpg-streamer)
+- [**BirdNET-Go - AI solution for continuous avian monitoring and identification**](#birdnet-go)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -38,13 +28,16 @@ The *RPi Cam Web Interface* package can be used in combination with a Raspberry 
 
 It consists of full control of the camera in a web-based interface.
 
-![RPi Cam Web Interface screenshot](../assets/images/dietpi-software-camera-rpicamcontrol.png){: width="500" height="395" loading="lazy"}
+![RPi Cam Web Interface screenshot](../assets/images/dietpi-software-camera-rpicamcontrol.png "RPi Cam Web Interface screen"){: width="500" height="395" loading="lazy"}
 
 === "Access the web interface"
 
     The web interface is accessible via:
 
     - URL = `http://<your.IP>/rpicam`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Access recordings (w/o web interface)"
 
@@ -69,7 +62,7 @@ It consists of full control of the camera in a web-based interface.
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
-    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png "DietPi-Config camera activation dialog"){: width="500" height="290" loading="lazy"}
 
 ***
 
@@ -91,7 +84,7 @@ The software can
 
 from any RPi camera, USB camera or an IP camera network stream.
 
-![motionEye web interface screenshot](../assets/images/dietpi-software-camera-motioneye.png){: width="500" height="246" loading="lazy"}
+![motionEye web interface screenshot](../assets/images/dietpi-software-camera-motioneye.png "motionEye web interface screen"){: width="500" height="246" loading="lazy"}
 
 === "Access the web interface"
 
@@ -100,6 +93,9 @@ from any RPi camera, USB camera or an IP camera network stream.
     - URL = `http://<your.IP>:8765`
     - User = `admin`
     - Password = not required
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
     Passwords can be configured in the web interface.
 
@@ -126,7 +122,7 @@ from any RPi camera, USB camera or an IP camera network stream.
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
-    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png "DietPi-Config camera activation dialog"){: width="500" height="290" loading="lazy"}
 
 ***
 
@@ -139,7 +135,7 @@ License: [GPLv3](https://github.com/motioneye-project/motioneye/blob/main/LICENS
 
 Stream JPEG frames from various sources to various possible outputs. With the default setup it streams an attached camera image to a simple web page with the included HTTP plugin.
 
-![mjpg-streamer HTML stream GIF](../assets/images/mjpg-streamer.gif){: width="500" height="400" loading="lazy"}
+![mjpg-streamer HTML stream GIF](../assets/images/mjpg-streamer.gif "mjpg-streamer HTML stream GIF"){: width="500" height="400" loading="lazy"}
 
 === "Access the HTTP stream"
 
@@ -148,6 +144,9 @@ Stream JPEG frames from various sources to various possible outputs. With the de
     - Stream: `http://<your.IP>:8082/?action=stream`
     - Snapshot: `http://<your.IP>:8082/?action=snapshot`
     - HTTP plugin docs: <https://github.com/jacksonliam/mjpg-streamer/blob/master/mjpg-streamer-experimental/plugins/output_http/README.md>
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Setup for OctoPrint"
 
@@ -218,12 +217,69 @@ Stream JPEG frames from various sources to various possible outputs. With the de
 
     Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
 
-    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png){: width="500" height="290" loading="lazy"}
+    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png "DietPi-Config camera activation dialog"){: width="500" height="290" loading="lazy"}
 
 ***
 
 Github page: <https://github.com/jacksonliam/mjpg-streamer>  
 Plugin docs: <https://github.com/jacksonliam/mjpg-streamer/tree/master/mjpg-streamer-experimental>  
 License: [GPLv2](https://github.com/jacksonliam/mjpg-streamer#license)
+
+## BirdNET-Go
+
+BirdNET-Go is an AI solution for continuous avian monitoring and identification.  
+It has these basic features:
+
+- 24/7 real time bird song analysis of sound card capture
+- Utilizes BirdNET AI model trained with more than 6500 bird species
+- Local processing, Internet connectivity not required
+- Web interface for data visualisation
+- Supports over 40 languages for species names
+
+![BirdNET-Go logo](../assets/images/dietpi-software-camera-birdnet-go-logo.webp "BirdNET-Go logo"){: width="300" height="300" loading="lazy"}
+
+=== "Access to the web interface"
+
+    - URL: `http://<your.IP>:8127`
+    - Username: `root`
+    - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration files"
+
+    The configuration files are stored system-wide within:  
+    `/mnt/dietpi_userdata/birdnet/.config/birdnet-go/config.yaml`
+
+    Please see the online documentation: <https://github.com/tphakala/birdnet-go/blob/main/doc/wiki/guide.md>
+
+=== "Update to latest version"
+
+    BirdNET-Go can be updated to the latest version by reinstalling it via
+
+    ```sh
+    dietpi-software reinstall 127
+    ```
+
+=== "View logs"
+
+    You can view the service logs via
+
+    ```sh
+    journalctl -u birdnet-go
+    ```
+
+    and the service status via
+
+    ```sh
+    systemctl status birdnet-go
+    ```
+
+***
+
+Github page: <https://github.com/tphakala/birdnet-go>  
+Configuration documentation: <https://github.com/tphakala/birdnet-go/blob/main/doc/wiki/guide.md>  
+License: [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License](https://github.com/tphakala/birdnet-go?tab=License-1-ov-file#readme){:class="nospellcheck"}
 
 [Return to the **Optimised Software list**](../software.md)

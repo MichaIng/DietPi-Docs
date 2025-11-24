@@ -21,19 +21,8 @@ description: Description of DietPi software options related to games and userspa
 - [**Moonlight (GUI) - GUI game streaming client for Sunshine and NVIDIA GameStream**](#moonlight-gui)
 - [**GZDoom - Modder-friendly OpenGL and Vulkan source port based on the DOOM engine**](gaming.md#gzdoom)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -43,7 +32,7 @@ Tyrian is an arcade-style vertical scrolling shooter. The story is set
 in 20,031 where you play as Trent Hawkins, a skilled fighter pilot employed
 to fight MicroSol and save the galaxy.
 
-![OpenTyrian screenshot](../assets/images/dietpi-software-games-opentyrian.jpg){: width="400" height="251" loading="lazy"}
+![OpenTyrian screenshot](../assets/images/dietpi-software-games-opentyrian.jpg "OpenTyrian screen"){: width="400" height="251" loading="lazy"}
 
 === "Start the game"
 
@@ -61,7 +50,7 @@ to fight MicroSol and save the galaxy.
 
 Cuberite allows you to create a single, blazingly fast Minecraft server, which utilizes the performance benefits of C++ (instead of Java) and comes with a handy web interface.
 
-![Cuberite web interface view](../assets/images/dietpi-software-games-cuberite.png){: width="400" height="198" loading="lazy"}
+![Cuberite web interface view](../assets/images/dietpi-software-games-cuberite.png "Cuberite web interface screen"){: width="400" height="198" loading="lazy"}
 
 === "Access the web interface"
 
@@ -70,6 +59,9 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
     - URL = `http://<your.IP>:1339`
     - Username = `admin`
     - Password = `<globalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Tweaking"
 
@@ -118,7 +110,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
 MineOS allows you to create multiple Minecraft servers with ease, using a simple web interface.
 
-![MineOS web interface view](../assets/images/dietpi-software-games-mineos.png){: width="400" height="208" loading="lazy"}
+![MineOS web interface view](../assets/images/dietpi-software-games-mineos.png "MineOS web interface screen"){: width="400" height="208" loading="lazy"}
 
 === "Access to web interface"
 
@@ -129,13 +121,16 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
     - Username: `mineos`
     - Password = `<globalSoftwarePassword>` (default: `dietpi`)
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
     To change the password to `myPassword`, run the following command:
 
     ```sh
     sudo chpasswd --crypt-method SHA512 <<< 'mineos:myPassword'
     ```
 
-=== "1st run setup"
+=== "First run setup"
 
     Once logged into the web interface:
 
@@ -165,7 +160,7 @@ License: [GPLv3](https://github.com/hexparrot/mineos-node/blob/master/LICENSE.md
 
 Nukkit is a Java-based server for Minecraft Pocket Edition.
 
-![Nukkit screenshot](../assets/images/dietpi-software-games-nukkit.png){: width="400" height="225" loading="lazy"}
+![Nukkit screenshot](../assets/images/dietpi-software-games-nukkit.png "Nukkit screen"){: width="400" height="225" loading="lazy"}
 
 === "Info"
 
@@ -198,7 +193,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
 
 ![Amiberry logo](../assets/images/dietpi-software-games-amiberry.jpg){: width="400" height="189" loading="lazy"}
 
-=== "1st run setup"
+=== "First run setup"
 
     - **Kickstarts (Amiga BIOS/boot system)**  
       Amiga Kickstart ROM images are required to run the system(s) you want to emulate. These can not be bundled due to copyright restrictions.  
@@ -418,7 +413,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 
 ![PaperMC logo](../assets/images/dietpi-software-games-papermc.jpg){: width="100" height="100" loading="lazy"}
 
-![PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg){: width="500" height="300" loading="lazy"}
+![PaperMC screenshot](../assets/images/dietpi-software-papermc.jpg "PaperMC screen"){: width="500" height="300" loading="lazy"}
 
 === "Default server/query port"
 

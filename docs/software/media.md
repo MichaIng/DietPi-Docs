@@ -42,19 +42,8 @@ description: Description of DietPi software options related to media systems lik
 - [**Navidrome - Web interface media streaming server**](#navidrome)
 - [**Kavita - Your digital library in one place (manga, comics, and books)**](#kavita)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -62,7 +51,7 @@ description: Description of DietPi software options related to media systems lik
 
 The only media centre/player you'll ever need.
 
-![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg){: width="500" height="280" loading="lazy"}
+![Kodi screenshot](../assets/images/dietpi-software-media-kodi.jpg "Kodi main menu"){: width="500" height="280" loading="lazy"}
 
 If you did not select Kodi to start from boot, you can modify the autostart options in `dietpi-autostart`:
 
@@ -77,7 +66,7 @@ Also installs:
 
 - MPD (music player daemon)
 
-![ympd web interface screenshot](../assets/images/dietpi-software-media-ympd.png){: width="400" height="162" loading="lazy"}
+![ympd web interface screenshot](../assets/images/dietpi-software-media-ympd.png "ympd web interface screen"){: width="400" height="162" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -85,12 +74,11 @@ Also installs:
 
     - URL: `http://<your.IP>:1337`
 
-=== "Transfer music to DietPi"
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "Refresh music files / database"
 
@@ -118,7 +106,7 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
+        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png "DietPi-JustBoom main menu"){: width="400" height="269" loading="lazy"}
 
 === "View logs"
 
@@ -145,7 +133,7 @@ Also installs:
 
 - MPD (music player daemon)
 
-![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.png){: width="500" height="287" loading="lazy"}
+![myMPD web interface screenshot](../assets/images/dietpi-software-media-mympd.png "myMPD web interface screen"){: width="500" height="287" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -153,12 +141,11 @@ Also installs:
 
     - URL: `https://<your.IP>:1333`
 
-=== "Transfer music to DietPi"
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "Refresh music files / database"
 
@@ -169,7 +156,7 @@ Also installs:
     - Tweak audio options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
+        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png "DietPi-JustBoom main menu"){: width="400" height="269" loading="lazy"}
 
 === "Service control"
 
@@ -254,7 +241,7 @@ Also installs:
 - MPD (music player daemon)
 - Web server
 
-![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png){: width="500" height="347" loading="lazy"}
+![O!MPD web interface screenshot](../assets/images/dietpi-software-media-ompd.png "O!MPD web interface screen"){: width="500" height="347" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -262,12 +249,11 @@ Also installs:
     - Username: `admin`
     - Password: `admin`
 
-=== "Transfer music to DietPi"
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "Configuration"
 
@@ -290,7 +276,7 @@ Also installs:
 
     Click the `settings` button (cog, top right).  
     Click `update`.  
-    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png){: width="500" height="190" loading="lazy"}
+    ![O!MPD library update screenshot](../assets/images/dietpi-software-media-ompd-update.png "O!MPD library update dialog"){: width="500" height="190" loading="lazy"}
 
 ## CAVA
 
@@ -314,13 +300,13 @@ Also installs:
     - Tweak CAVA options on the fly with the panel.
     - Simply run `dietpi-justboom` from the command line to launch it.
 
-        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png){: width="400" height="269" loading="lazy"}
+        ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png "DietPi-JustBoom main menu"){: width="400" height="269" loading="lazy"}
 
 ## Mopidy
 
 Mopidy is a Python based music player web based user interface for MPD.
 
-![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png){: width="500" height="230" loading="lazy"}
+![Mopidy web interface screenshot](../assets/images/dietpi-software-media-mopidy.png "Mopidy web interface screen"){: width="500" height="230" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -328,12 +314,11 @@ Mopidy is a Python based music player web based user interface for MPD.
 
     - URL: `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
 
-=== "Transfer music to DietPi"
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "Refresh music files / database"
 
@@ -406,6 +391,9 @@ Feature rich media streaming server with a web interface, coded in Java.
     - Username: `admin`
     - Password: `admin`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
     !!! hint "The web interface may feel sluggish on first access."
 
         This is normal on first access after service start. Once a page has been viewed, respectively an element selected the first time, subsequent accesses will perform much faster.
@@ -416,15 +404,15 @@ Feature rich media streaming server with a web interface, coded in Java.
 
     First we check off the **Getting started** page and head over to **Settings**:
 
-    !["Getting started" page](../assets/images/airsonic_setup_1.png){: width="1440" height="900" loading="lazy"}
+    !["Getting started" page](../assets/images/airsonic_setup_1.png "Airsonic 'Getting started' dialog"){: width="1440" height="900" loading="lazy"}
 
     On the **Media folders** tab we change the path to DietPi's default music directory `/mnt/dietpi_userdata/Music`, save and scan the new media directory:
 
-    !["Media folders" settings page](../assets/images/airsonic_setup_2.png){: width="1440" height="900" loading="lazy"}
+    !["Media folders" settings page](../assets/images/airsonic_setup_2.png "Airsonic 'Media folders' dialog"){: width="1440" height="900" loading="lazy"}
 
     On the **Credentials** tab we add a new admin password, the default `bcrypt` encoding is very good for secure password storage. Then we delete the initial default password:
 
-    !["Credentials" settings page](../assets/images/airsonic_setup_3.png){: width="1440" height="900" loading="lazy"}
+    !["Credentials" settings page](../assets/images/airsonic_setup_3.png "Airsonic 'Credentials' dialog"){: width="1440" height="900" loading="lazy"}
 
 === "Setup details"
 
@@ -484,7 +472,7 @@ Lyrion Music Server (aka. Logitech Media Server, LMS, fka. SlimServer, SqueezeCe
 
 Remark: If you do not own a hardware player, you can turn your DietPi system into a Squeezebox audio capable player, by selecting [Squeezelite](#squeezelite) for installation in `dietpi-software`.
 
-![Lyrion Music Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png){: width="400" height="216" loading="lazy"}
+![Lyrion Music Server web interface screenshot](../assets/images/dietpi-software-media-squeezebox.png "Lyrion Music Server web interface screen"){: width="400" height="216" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -492,12 +480,11 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
 
     - URL: `http://<your.IP>:9000`
 
-=== "Transfer music to DietPi"
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "View logs"
 
@@ -680,6 +667,9 @@ Stream your shared media to any DLNA/UPnP capable device.
 
     - URL: `http://<your.IP>:8200`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Configuration"
 
     You can configure ReadyMedia with its config file: `/etc/minidlna.conf`  
@@ -719,13 +709,16 @@ Also Installs:
 
 - Webserver stack
 
-![Ampache web interface screenshot](../assets/images/dietpi-software-media-ampacheinterface.png){: width="400" height="202" loading="lazy"}
+![Ampache web interface screenshot](../assets/images/dietpi-software-media-ampacheinterface.png "Ampache web interface screen"){: width="400" height="202" loading="lazy"}
 
 === "Access to the web interface"
 
     - URL: `http://<your.IP>/ampache`
     - Username: `dietpi` (DietPi v8.24 and earlier: `admin`)
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Transfer media files to DietPi"
 
@@ -744,7 +737,7 @@ Also Installs:
     - Select `show catalogues` from the left hand side.
     - Select `Update all`.
 
-    ![Ampache web interface screenshot with database update instructions](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png){: width="400" height="193" loading="lazy"}
+    ![Ampache web interface screenshot with database update instructions](../assets/images/dietpi-software-media-ampacheupdatecatalogue.png "Ampache media database update dialog"){: width="400" height="193" loading="lazy"}
 
 === "Add media directories"
 
@@ -753,7 +746,7 @@ Also Installs:
     - Enter the details of your path.
     - Select the `add catalogue` button.
 
-    ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png){: width="400" height="180" loading="lazy"}
+    ![Ampache web interface screenshot with instructions how to add media](../assets/images/dietpi-software-media-ampacheaddcatalogue.png "Ampache media directories dialog"){: width="400" height="180" loading="lazy"}
 
     !!! note "Access permissions on local directories"
 
@@ -841,13 +834,16 @@ A web interface media streaming server. Think Kodi, but using any device with a 
     A Virtual Machine is highly recommended for Video transcoding:  
     <https://github.com/MichaIng/DietPi/issues/310#issuecomment-219067830>
 
-![Emby web interface screenshot](../assets/images/dietpi-software-media-embyserver.png){: width="400" height="199" loading="lazy"}
+![Emby web interface screenshot](../assets/images/dietpi-software-media-embyserver.png "Emby web interface screen"){: width="400" height="199" loading="lazy"}
 
 === "Access to the web interface"
 
     The web interface is accessible via port **8096**:
 
     URL: `http://<your.IP>:8096`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First run setup"
 
@@ -893,13 +889,16 @@ YouTube video tutorial: [DietPi Emby Media Server Setup on Raspberry Pi 3 B Plus
 
 Plex organizes your video, music, and photo collections and streams them to all of your screens. Also known as a "Web interface media streaming server".
 
-![Plex Media Server web interface screenshot](../assets/images/dietpi-software-media-plexmediaserver.png){: width="400" height="199" loading="lazy"}
+![Plex Media Server web interface screenshot](../assets/images/dietpi-software-media-plexmediaserver.png "Plex Media Server web interface screen"){: width="400" height="199" loading="lazy"}
 
 === "Access to the web interface"
 
     The web interface uses port **32400**:
 
     URL: `http://<your.IP>:32400/web`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First run setup"
 
@@ -933,7 +932,7 @@ YouTube video tutorial (German language): [Raspberry Pi 4 - Plex TV Media Server
 
 A Python based monitoring and tracking tool for Plex Media Server.
 
-![Tautulli web interface screenshot](../assets/images/dietpi-software-media-tautulli.png){: width="400" height="273" loading="lazy"}
+![Tautulli web interface screenshot](../assets/images/dietpi-software-media-tautulli.png "Tautulli web interface screen"){: width="400" height="273" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -941,6 +940,9 @@ A Python based monitoring and tracking tool for Plex Media Server.
 
     - URL: `http://<your.IP>:8181`
     - After first run setup, select "SIGN IN WITH TAUTULLI" and enter the username and password you chose before. On our own tests, authentication via `plex.tv` account did not work, it may however depend on the subscription.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First run setup"
 
@@ -982,6 +984,9 @@ Turn your device into a lightweight Mumble VoIP server.
     - Password: No password required
     - Superuser Password: `dietpi`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Change Murmur Server settings"
 
     You will need to edit the Murmur config file:
@@ -997,7 +1002,7 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
 
 ![Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150" height="81" loading="lazy"}
 
-![Roon Bridge interface screenshot](../assets/images/dietpi-software-media-roonbridge.png){: width="400" height="225" loading="lazy"}
+![Roon Bridge interface screenshot](../assets/images/dietpi-software-media-roonbridge.png "Roon Bridge web interface screen"){: width="400" height="225" loading="lazy"}
 
 === "Requirements"
 
@@ -1170,7 +1175,7 @@ At startup the Roon Extension Manager accesses a repository containing the commu
 
 ![Roon logo](../assets/images/dietpi-software-media-roon.png){: width="150" height="81" loading="lazy"}
 
-![Roon Extension Manager screenshot](../assets/images/dietpi-software-media-roonextmanager.jpg){: width="400" height="225" loading="lazy"}
+![Roon Extension Manager screenshot](../assets/images/dietpi-software-media-roonextmanager.jpg "Roon Extension Manager screen"){: width="400" height="225" loading="lazy"}
 
 === "Directories"
 
@@ -1190,7 +1195,7 @@ Credits: Many thanks to @JanKoudijs for contributing this into DietPi
 Signalyst Network Audio Adapter (NAA) daemon allows you to stream music from an HQPlayer source (like Windows) and output directly from your DietPi device. Features DRC, high quality up-sampling (like 192 kHz) and more.  
 Also works with Roon.
 
-![HQPlayer screenshot](../assets/images/dietpi-software-media-naa.png){: width="400" height="300" loading="lazy"}
+![NAA Daemon web interface screenshot](../assets/images/dietpi-software-media-naa.png "NAA Daemon web interface screen"){: width="400" height="300" loading="lazy"}
 
 === "HQPlayer Desktop (Windows)"
 
@@ -1208,6 +1213,34 @@ Also works with Roon.
 
     Guide: <https://help.roonlabs.com/portal/en/kb/articles/hqplayer>
 
+=== "View logs"
+
+    Run the following command on a console to view logs for NAA Daemon:
+
+    ```sh
+    journalctl -u networkaudiod
+    ```
+
+=== "Service control"
+
+    Since NAA Daemon runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status networkaudiod
+    ```
+
+    ```sh
+    systemctl start networkaudiod
+    ```
+
+    ```sh
+    systemctl stop networkaudiod
+    ```
+
+    ```sh
+    systemctl restart networkaudiod
+    ```
+
 === "Update"
 
     ```sh
@@ -1222,7 +1255,7 @@ Website: <https://www.signalyst.eu/consumer.html>
 
 Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
-![Icecast web interface screenshot](../assets/images/dietpi-software-media-icecast.png){: width="400" height="218" loading="lazy"}
+![Icecast web interface screenshot](../assets/images/dietpi-software-media-icecast.png "Icecast web interface screen"){: width="400" height="218" loading="lazy"}
 
 === "Installation notes"
 
@@ -1261,6 +1294,9 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
     - Admin password: `<your global password>` (default: `dietpi`)
     - Source password: `<your global password>` (default: `dietpi`)
     - Relay password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Access recording file"
 
@@ -1309,7 +1345,7 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
 Web interface music streamer.
 
-![Koel web interface screenshot](../assets/images/dietpi-software-media-koel.png){: width="400" height="197" loading="lazy"}
+![Koel web interface screenshot](../assets/images/dietpi-software-media-koel.png "Koel web interface screen"){: width="400" height="197" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -1318,6 +1354,9 @@ Web interface music streamer.
     - URL: `http://<your.IP>:8003`
     - Email address: `admin@koel.dev`
     - Password: `KoelIsCool`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First run setup"
 
@@ -1328,12 +1367,8 @@ Web interface music streamer.
     3. However over the user tile and select "Update Profile"
     4. Change name and credentials and select "Save"
 
-=== "Transfer music to DietPi"
-
-    Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
-    Default music directory:
-
-    - Audio: `/mnt/dietpi_userdata/Music`, `/Music` from NFS/Samba
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
 
 === "View logs"
 
@@ -1414,7 +1449,7 @@ A DLNA audio render/endpoint. Allows you to stream and play music, from another 
 
 Ubooquity is a free home server for your comics and ebooks library, with remote web interface viewing.
 
-![Ubooquity web interface screenshot](../assets/images/dietpi-software-media-ubooquity.jpg){: width="400" height="188" loading="lazy"}
+![Ubooquity web interface screenshot](../assets/images/dietpi-software-media-ubooquity.jpg "Ubooquity web interface screen"){: width="400" height="188" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -1422,6 +1457,9 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
     - Admin page: `http://<your.IP>:2038/admin`
     - Library view page: `http://<your.IP>:2039`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Transfer ebooks/comics to DietPi"
 
@@ -1447,13 +1485,16 @@ YouTube video tutorial: [DietPi Ubooquity Comics and Ebook Reader on Raspberry P
 
 Free and open source comics/mangas media server with web UI.
 
-![Komga web interface screenshot](../assets/images/dietpi-software-media-komga.jpg){: width="500" height="306" loading="lazy"}
+![Komga web interface screenshot](../assets/images/dietpi-software-media-komga.jpg "Komga web interface screen"){: width="500" height="306" loading="lazy"}
 
 === "Access to the web interface"
 
     The web interface is accessible via port **2037**:
 
     - URL: `http://<your.IP>:2037`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Transfer ebooks/comics to DietPi"
 
@@ -1633,13 +1674,16 @@ License: [GPLv3](https://github.com/Spotifyd/spotifyd/blob/master/LICENSE)
 
 A FOSS web interface media streaming server, including live TV, forked from Emby.
 
-![Jellyfin web interface screenshot](../assets/images/dietpi-software-media-jellyfin.jpg){: width="600" height="341" loading="lazy"}
+![Jellyfin web interface screenshot](../assets/images/dietpi-software-media-jellyfin.jpg "Jellyfin web interface screen"){: width="600" height="341" loading="lazy"}
 
 === "Access to the web interface"
 
     The web interface is accessible via port **8097**:
 
     - URL: `http://<your.IP>:8097`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "View logs"
 
@@ -1712,6 +1756,9 @@ The Snapcast server needs to have its audio sources manually configured after in
     The Snapcast server provides a web interface on port **1780**, which allows you to control volumes for all clients and optionally play audio through your browser:
 
     - URL: `http://<your.IP>:1780`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Implementation details"
 
@@ -1834,13 +1881,16 @@ Source code: <https://github.com/badaix/snapcast>
 An open source web-based music collection server and streamer, written in Go.  
 It is compatible with the [Subsonic media player](https://www.subsonic.org/pages/index.jsp).
 
-![Navidrome web interface screenshot](../assets/images/dietpi-software-media-navidrome.png){: width="400" height="202" loading="lazy"}
+![Navidrome web interface screenshot](../assets/images/dietpi-software-media-navidrome.png "Navidrome web interface screen"){: width="400" height="202" loading="lazy"}
 
 === "Web interface"
 
     The web interface uses port **4533**:
 
     - URL: `http://<your.IP>:4533`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Setup details"
 
@@ -1911,7 +1961,7 @@ License: [GPLv3](https://github.com/navidrome/navidrome/blob/master/LICENSE)
 
 Kavita is a self-hosted library, for comics, manga or books.
 
-![Kavita web interface screenshot](../assets/images/dietpi-software-media-kavita.jpg){: width="600" height="378" loading="lazy"}
+![Kavita web interface screenshot](../assets/images/dietpi-software-media-kavita.jpg "Kavita web interface screen"){: width="600" height="378" loading="lazy"}
 
 A highlight of some of its key features:
 
@@ -1926,6 +1976,9 @@ A highlight of some of its key features:
     The web interface is accessible via port **2036**:
     
     - URL: `http://<your.IP>:2036`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Setup details"
 

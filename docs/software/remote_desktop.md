@@ -21,19 +21,8 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**Remote.It - Access your device over the internet**](#remoteit)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 !!! info Desktop environment
 
@@ -43,7 +32,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 ## TigerVNC Server
 
-![TigerVNC desktop screenshot](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg){: width="600" height="482" loading="lazy"}
+![TigerVNC desktop screenshot](../assets/images/dietpi-software-remote-desktop-tigervnc.jpg "TigerVNC desktop screen"){: width="600" height="482" loading="lazy"}
 
 === "Quick start"
 
@@ -53,15 +42,13 @@ Run a **Desktop environment** on your device and access it accessed remotely via
     systemctl status vncserver
     ```
 
-    Although any VNC viewer may work, the latest official TigerVNC viewer can be downloaded here: <https://sourceforge.net/projects/tigervnc/files/stable/>
+    Although any VNC viewer will work, the latest official TigerVNC viewer can be downloaded here: <https://sourceforge.net/projects/tigervnc/files/stable/>
 
     #### Connection Details
 
-    - Use the IP address of your DietPi device, e.g.: `192.168.0.100`.  
-      If you can't connect, try connecting to screen `1`, e.g.: `192.168.0.100:1`.
-    - Use the password you entered during the installation. If you would like to change the password execute from the console/terminal, run `vncpasswd`.
-    - The default port is **5901**.  
-      **Note:** To enable access from outside of your local network, this port needs to be forwarded from your router.
+    - To connect on the persistent VNC session on screen :1, add the screen index to your local IP or hostname, e.g. `192.168.0.100:1`, which refers to port 5901.
+    - To connect to a shared desktop session, skip the screen index, e.g. `192.168.0.100`, which refers to port 5900.
+    - Use the default `dietpi-software` password to authenticate. If you would like to change the password, run `sudo tigervncpasswd` from the console/terminal.
 
 === "Config options"
 
@@ -115,7 +102,7 @@ Source code: <https://github.com/TigerVNC/tigervnc>
 
 RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share the desktop or control the computer running the VNC Server.
 
-![RealVNC desktop screenshot](../assets/images/dietpi-software-remotedesktop-realvnc.png){: width="600" height="450" loading="lazy"}
+![RealVNC desktop screenshot](../assets/images/dietpi-software-remotedesktop-realvnc.png "RealVNC desktop screen"){: width="600" height="450" loading="lazy"}
 
 === "VNC Server modes"
 
@@ -128,9 +115,8 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
     #### Shared desktop
 
-    If you set `SOFTWARE_VNCSERVER_SHARE_DESKTOP=1` in `/boot/dietpi.txt` or select desktop auto login via `dietpi-autostart` (index 2), RealVNC server will be started on boot in shared desktop mode, attaching to the first found local desktop session.  
-    Check the service status via `systemctl status vncserver-x11-serviced`.
-    Check all logs via `journalctl -u vncserver-x11-serviced`.
+    If you set `SOFTWARE_VNCSERVER_SHARE_DESKTOP=1` in `/boot/dietpi.txt`, RealVNC server will be started on boot in shared desktop mode, attaching to the first found local desktop session.  
+    Run `dietpi-autostart 2` to start a local desktop session automatically on boot, which RealVNC can connect to.
 
     #### RealVNC enterprise subscription
 
@@ -142,29 +128,24 @@ RealVNC consists of the *VNC Server* and the *VNC Viewer* application to share t
 
 === "Setup the VNC Viewer"
 
-    Simply select a VNC viewer for your system and download: <https://www.realvnc.com/en/connect/download/viewer/>
+    Although any VNC viewer will work, the latest official RealVNC viewer can be downloaded here: <https://www.realvnc.com/en/connect/download/viewer/>
 
     #### Connection details
 
-    - To connect on the persistent VNC session on screen :1, add the screen index to your local IP or hostname, e.g. `192.168.0.100:1`.
-    - To connect to a shared desktop session, skip the screen index, e.g. `192.168.0.100`.
-    - Username = `root`
-    - Password = `<root password>` (default: `dietpi`)
+    - To connect on the persistent VNC session on screen :1, add the screen index to your local IP or hostname, e.g. `192.168.0.100:1`, which refers to port 5901.
+    - To connect to a shared desktop session, skip the screen index, e.g. `192.168.0.100`, which refers to port 5900.
+    - Use the default `dietpi-software` password to authenticate. If you would like to change the password, run these commands from the console/terminal:
 
-=== "Running directly rendered apps"
-
-     This may be the case e.g. if you want to run Minecraft remotely.
-
-    - Enable shared desktop mode:
-        - Run `dietpi-autostart 2` to autostart into a desktop session and have RealVNC attached to it automatically.
-        - Then `reboot` the system to have the changes taking effect.
-    - Follow the instructions within the section *Running directly rendered apps such as Minecraft remotely* in <https://help.realvnc.com/hc/en-us/articles/360002249917-VNC-Connect-and-Raspberry-Pi>.
+    ```sh
+    sudo vncpasswd -virtual
+    sudo vncpasswd -service
+    ```
 
 ## XRDP
 
 XRDP is a remote desktop application using the *Windows Remote Desktop Client*.
 
-![XRDP desktop screenshot](../assets/images/dietpi-software-remotedesktop-xrdp.png){: width="648" height="507" loading="lazy"}
+![XRDP desktop screenshot](../assets/images/dietpi-software-remotedesktop-xrdp.png "XRDP desktop screen"){: width="648" height="507" loading="lazy"}
 
 ### Connect to your desktop
 
@@ -189,7 +170,7 @@ XRDP uses port **3389** by default, so you need to open/forward it from your rou
 
 NoMachine is a remote desktop server with advanced features, such as screen recording. The client also scans for all available NoMachine servers on your network, allowing easy connection and maintenance of your remote desktops.
 
-![NoMachine client and desktop screenshot](../assets/images/dietpi-software-remotedesktop-nomachine.png){: width="600" height="299" loading="lazy"}
+![NoMachine client and desktop screenshot](../assets/images/dietpi-software-remotedesktop-nomachine.png "NoMachine client and desktop screens"){: width="600" height="299" loading="lazy"}
 
 === "Download NoMachine Client"
 
@@ -213,7 +194,7 @@ NoMachine is a remote desktop server with advanced features, such as screen reco
 
 Remote.It allows you to easily access your DietPi device over the internet.
 
-![Remote.It web interface screenshot](../assets/images/dietpi-software-remotedesktop-remoteit.png){: width="400" height="140" loading="lazy"}
+![Remote.It web interface screenshot](../assets/images/dietpi-software-remotedesktop-remoteit.png "Remote.It web interface screen"){: width="400" height="140" loading="lazy"}
 
 Remote.It works by connecting you to a specific TCP port on your device, all of which can be customised during first run setup.
 
@@ -243,7 +224,7 @@ YouTube video tutorial (German language): [Raspberry Pi einfach fernsteuern: Rem
 
 VirtualHere allows USB devices to be used remotely over a network just as if they were locally connected!
 
-![VirtualHere client screenshot](../assets/images/dietpi-software-remotedesktop-virtualhere.png){: width="400" height="252" loading="lazy"}
+![VirtualHere client screenshot](../assets/images/dietpi-software-remotedesktop-virtualhere.png "VirtualHere main dialog"){: width="400" height="252" loading="lazy"}
 
 The functionality consists of two parts:
 

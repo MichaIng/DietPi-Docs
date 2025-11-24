@@ -21,7 +21,7 @@ Select the following tabs for the installation description of your target.
 
     Single board computers (SBCs) based on the well known Raspberry PI ARM based architecture gained more and more friends in the last years. The low cost in combination with the power and hardware flexibility makes these SBCs optimal for embedded systems, like e.g. home automation or cloud applications.
 
-    ![Raspberry Pi 1 Model B photo](assets/images/raspberry-pi-1b.jpg){: width="400" height="200" loading="lazy"}
+    ![Raspberry Pi 1 Model B photo](assets/images/raspberry-pi-1b.jpg "Raspberry Pi 1 Model B"){: width="400" height="200" loading="lazy"}
 
     ## Prerequisites
 
@@ -33,33 +33,23 @@ Select the following tabs for the installation description of your target.
 
     _Note_: Following this guide you could run the installation directly from a console via keyboard and screen, via SSH client or serial console.
 
-    ## 1. Download and extract the DietPi disk image
+    ## 1. Download and optionally extract the DietPi disk image
 
     Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select your SBC and click on **Download**. The disk image will be downloaded locally.
 
     _Example:_
-    ![DietPi for Raspberry Pi download page](assets/images/DietPi-RaspberryPi-image.jpg){: width="1186" height="561" loading="lazy"}
+    ![DietPi for Raspberry Pi download page](assets/images/DietPi-RaspberryPi-image.jpg "DietPi for Raspberry Pi download page"){: width="1186" height="561" loading="lazy"}
 
-    **Unzip the downloaded file to a local folder.**
+    The downloaded file is compressed (`.xz` file extension). Many flash tools (e.g. [balenaEtcher](https://www.balena.io/etcher/), [Rufus](https://rufus.ie/), [Raspberry Pi Imager](https://www.raspberrypi.com/software/)) can directly use this file format.  
+    Otherwise an appropriate extraction tool has to be installed (e.g. [7zip for Windows](https://www.7-zip.org/), [The Unarchiver (Macintosh)](https://theunarchiver.com/), [`xz-utils`](https://tukaani.org/xz/) (Linux)) to extract the `.img` file. They are free of charge and have been tested to decompress the image correctly (see below for extract instructions).
 
-    It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/). Both are free of charge and have been tested to decompress the image correctly.
+    ??? hint "Extracting DietPi images (for flash tools not supporting the `.xz` file format)"
+        
+        1. Install the extraction tool (e.g. [7zip for Windows](https://www.7-zip.org/), [The Unarchiver (Macintosh)](https://theunarchiver.com/), [`xz-utils`](https://tukaani.org/xz/) (Linux)
+        1. Extract the downloaded `.xz` formatted file. This will generate the image file (file format`.img`).
 
-    Linux users will need to download and install `xz-utils`.
-
-    ??? hint "How to extract DietPi images on Linux"
-        On Debian and Ubuntu-based systems, open a terminal and type:
-
-        ```sh
-        sudo apt install xz-utils
-        ```
-
-        Once `xz-utils` is installed, type the following at the terminal to decompress the file:
-
-        ```sh
-        xz -d DietPi-Image.img.xz
-        ```
-
-        Replace `DietPi-Image.img.xz` with the correct name of the downloaded archive, e.g. `DietPi_RPi-ARMv6-Bookworm.img.xz`. This will decompress the DietPi image file for you to use.
+        [//]: # (Include hint how to extract .xz files with xz-utils)
+        --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
     ## 2. Flash the DietPi image
 
@@ -68,9 +58,9 @@ Select the following tabs for the installation description of your target.
     !!! note "On Windows you may also use [Rufus](https://rufus.ie/) to flash the image."
         Click on the **Install on native PC** tab above to see an example of using Rufus. In case of SBC images, all options are greyed out, which is correct, so after selecting the image and the target drive, you only need to hit **START**.
 
-    Start balenaEtcher and make sure you have your drive or SD card inserted into your computer. Locate and select the DietPi image.
+    Start balenaEtcher and make sure you have your drive or SD card inserted into your computer. Locate and select the DietPi image (`.xz` resp. `.img`).
 
-    ![DietPi-Etcher-install-01](assets/images/DietPi-Etcher-install-01.jpg){: width="795" height="529" loading="lazy"}
+    ![DietPi-Etcher-install-01](assets/images/DietPi-Etcher-install-01.jpg "Balena Etcher file selection"){: width="795" height="529" loading="lazy"}
 
     Next, ensure that the selected device is the correct one.
 
@@ -78,11 +68,11 @@ Select the following tabs for the installation description of your target.
         The flash procedure will wipe the drive clean, so if you choose the wrong one, you may risk losing data.
 
 
-    ![DietPi-Etcher-install-02](assets/images/DietPi-Etcher-install-02.jpg){: width="796" height="478" loading="lazy"}
+    ![DietPi-Etcher-install-02](assets/images/DietPi-Etcher-install-02.jpg "Balena Etcher target selection"){: width="796" height="478" loading="lazy"}
 
     Once you have confirmed all the details are correct, proceed to flash the SD card. This process may take a while.
 
-    ![DietPi-Etcher-install-03](assets/images/DietPi-Etcher-install-03.jpg){: width="796" height="478" loading="lazy"}
+    ![DietPi-Etcher-install-03](assets/images/DietPi-Etcher-install-03.jpg "Balena Etcher flash dialog"){: width="796" height="478" loading="lazy"}
 
     ??? info "Click here if you want to use a WiFi connection"
         To setup the WiFi, open the SD card folder, and update next two files using a text editor of your choice:
@@ -114,7 +104,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__Oracle VirtualBox__](https://www.oracle.com/virtualization/virtualbox/).
 
-    ![DietPi-VirtualBox-program](assets/images/dietpi-VirtualBox-program.png){: width="1593" height="814" loading="lazy"}
+    ![DietPi-VirtualBox-program](assets/images/dietpi-VirtualBox-program.png "VirtualBox main menu"){: width="1593" height="814" loading="lazy"}
 
     <h2>Prerequisites</h2>
 
@@ -159,29 +149,31 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi disk image</h2>
 
-    Download the **DietPi VirtualBox** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and decompress the downloaded file to a local folder. It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or an alternative tools.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `VirtualBox`. Download the **OVA appliance** file locally.
 
-    ![DietPi-VirtualBox-download-image](assets/images/dietpi-VirtualBox-Download.png){: width="1152" height="733" loading="lazy"}
+    ![DietPi-VirtualBox-download-image](assets/images/dietpi-VirtualBox-Download.png "VirtualBox image download dialog"){: width="1152" height="733" loading="lazy"}
 
-    The .ova file has to be imported into VirtualBox.
+    The downloaded file is `xz`-compressed and contains the .ova file for VirtualBox, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ![DietPi VirtualBox archive content](assets/images/dietpi-VirtualBox-7zip-file.png){: width="533" height="83" loading="lazy"}
+    [//]: # (Include hint how to extract .xz files with xz-utils)
+    --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
     <h2>2. Import of the .ova file in VirtualBox</h2>
 
-    As next, the VirtualBox virtual machine has to be setup by importing the .ova file (via \File\Import Appliance):
+    As next, the .ova file is imported into VirtualBox.  
+    Therefore, the VirtualBox virtual machine has to be instantiated by importing the .ova file (via \File\Import Appliance):
 
-    ![VirtualBox appliance import screenshot](assets/images/dietpi-VirtualBox-import1.png){: width="483" height="308" loading="lazy"}
+    ![VirtualBox appliance import screenshot](assets/images/dietpi-VirtualBox-import1.png "VirtualBox appliance import dialog"){: width="483" height="308" loading="lazy"}
 
     In the following dialog the user has to choose the `.ova` file which shall be imported.
 
-    ![VirtualBox appliance import selection screenshot](assets/images/dietpi-VirtualBox-import2.png){: width="971" height="775" loading="lazy"}
+    ![VirtualBox appliance import selection screenshot](assets/images/dietpi-VirtualBox-import2.png "VirtualBox appliance import"){: width="971" height="775" loading="lazy"}
 
     Keep the settings in the next dialog and klick “Import”.
 
     After the importing has finished the DietPi VirtualBox virtual machine is present:
 
-    ![VirtualBox virtual machine list screenshot](assets/images/dietpi-VirtualBox-VB-Machine.png){: width="245" height="55" loading="lazy"}
+    ![VirtualBox virtual machine list screenshot](assets/images/dietpi-VirtualBox-VB-Machine.png "VirtualBox virtual machine list"){: width="245" height="55" loading="lazy"}
 
     <h2>3. First boot of the new VirtualBox image</h2>
 
@@ -197,7 +189,7 @@ Select the following tabs for the installation description of your target.
         - VirtualBox without extension pack: The time synchronisation has to use options 1..4 ("Boot only", "Boot + Daily", "Boot + Hourly", "Daemon + Drift"). No further installation steps are necessary.
         - VirtualBox with extension pack: The time synchronisation must use option 0 ("Custom"). Further installation steps are necessary, see below.
 
-            ![DietPi-config time synchronization](assets/images/dietpi-config-timesync.png){: width="600" height="328" loading="lazy"}
+            ![DietPi-Config time synchronization](assets/images/dietpi-config-timesync.png "DietPi-Config time synchronisation dialog"){: width="600" height="328" loading="lazy"}
 
         Additional installation steps in case of the use of the extension pack (the description assumes a root user, otherwise add `sudo` appropriate):
 
@@ -253,7 +245,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__VMware Workstation Player__](https://www.vmware.com/products/workstation-player.html) resp. [__VMware Fusion__](https://www.vmware.com/products/fusion.html) (macOS).
 
-    ![VMware Player GUI](assets/images/dietpi-VMware-program.png){: width="769" height="588" loading="lazy"}
+    ![VMware Player GUI](assets/images/dietpi-VMware-program.png "VMware Player main menu"){: width="769" height="588" loading="lazy"}
 
     !!! info "Tested with Windows 10"
         This description relates to VMware Workstation 16 Player on a Microsoft Windows system.  
@@ -271,24 +263,25 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi disk image</h2>
 
-    Download the **DietPi VMware** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and decompress the downloaded file to a local folder. It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or an alternative tools.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `VMware/ESXi`. Download the **VMX appliance** file locally.
+    
+    The downloaded file is `xz`-compressed and contains the `.vmx` and `.vmdk` file for VMware, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
 
-    ![Download VMware image from DietPi website](assets/images/dietpi-VMware-Download.png){: width="1223" height="749" loading="lazy"}
+    [//]: # (Include hint how to extract .xz files with xz-utils)
+    --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
     The archive contains two files: `.vmx` and `.vmdk` which have to be copied to a VMware machine folder (The folder can be located anywhere on the PCs harddisk).
-
-    ![DietPi VMware archive content](assets/images/dietpi-VMware-7zip-file.png){: width="525" height="104" loading="lazy"}
 
     <h2>2. Add the files in VMware</h2>
 
     As next, the VMware virtual machine is setup by just opening the `.vmx` file (via ***Open a Virtual Machine***):
 
-    ![VMware file open screenshot](assets/images/dietpi-VMware-import1.png){: width="715" height="585" loading="lazy"}
+    ![VMware file open screenshot](assets/images/dietpi-VMware-import1.png "VMware VM open dialog"){: width="715" height="585" loading="lazy"}
 
     In the following dialog the user has to navigate to the directory where the `.vmx` and `.vmdk` files were stored. Choose the `.vmx` file to open.  
     After this the DietPi VMware virtual machine is present and can be started:
 
-    ![VMware virtual machine list screenshot](assets/images/dietpi-VMware-VM-Machine.png){: width="714" height="588" loading="lazy"}
+    ![VMware virtual machine list screenshot](assets/images/dietpi-VMware-VM-Machine.png "VMware virtual machine list"){: width="714" height="588" loading="lazy"}
 
     <h2>3. First boot of the new VMware image</h2>
 
@@ -313,7 +306,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine appliance server is the freely available [__VMware vSphere Hypervisor__](https://www.vmware.com/products/vsphere-hypervisor.html) which contains the [VMware ESXi Hypervisor](https://www.vmware.com/products/esxi-and-esx.html).
 
-    ![VMware vSphere Hypervisor program](assets/images/VMwareESXi_02.jpg){: width="1918" height="1010" loading="lazy"}
+    ![VMware vSphere Hypervisor program](assets/images/VMwareESXi_02.jpg "VMware vSphere Hypervisor main menu"){: width="1918" height="1010" loading="lazy"}
 
     <h2>Prerequisites</h2>
 
@@ -321,7 +314,12 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi appliance image</h2>
 
-    Download the **DietPi ESXi** appliance image from [dietpi.com](https://dietpi.com/#download){:class="nospellcheck"} and decompress the downloaded file to a local folder. It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or an alternative tools.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `VMware/ESXi`. Download the **OVA appliance** file locally.
+
+    The downloaded file is `xz`-compressed and contains the .ova file for the ESXi server, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
+
+    [//]: # (Include hint how to extract .xz files with xz-utils)
+    --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
     The resulting `DietPi_ESXi-x86_64-Bookworm.ova` has to be uploaded to the ESXi server.
 
@@ -329,14 +327,14 @@ Select the following tabs for the installation description of your target.
 
     The first step is to select the Virtual Machine management tab on the left to create the DietPi VM:
 
-    ![vSphere VM management screenshot 1](assets/images/VMwareESXi_03.jpg){: width="1178" height="275" loading="lazy"}
+    ![vSphere VM management screenshot 1](assets/images/VMwareESXi_03.jpg "VMware vSphere VM creation dialog"){: width="1178" height="275" loading="lazy"}
 
     As next, enter the following in the VM creation dialog:
 
     1. Tab **Select creation type**: Choose *Deploy a virtual machine from an OVF or OVA file*. Then click **Next**.
     1. Tab **Select OVF and VMDK files**: Enter the name of your VM and drop or select the decompressed `.ova` file. Then click **Next**.
 
-        ![DietPi VM creation screenshot](assets/images/VMwareESXi_04.jpg){: width="942" height="556" loading="lazy"}
+        ![DietPi VM creation screenshot](assets/images/VMwareESXi_04.jpg "VMware vSphere VM import dialog"){: width="942" height="556" loading="lazy"}
 
     1. Tab **Select storage**: Choose the location where the VM shall reside. Then click **Next**.
     1. Tab **Deployment options**: Set options according to your preferences and click **Next**.
@@ -346,7 +344,7 @@ Select the following tabs for the installation description of your target.
 
     Depending on your settings the VM automatically starts up and is shown in the VM management dialog. Otherwise click on the VM name.
 
-    ![vSphere VM management screenshot 2](assets/images/VMwareESXi_05.jpg){: width="1669" height="859" loading="lazy"}
+    ![vSphere VM management screenshot 2](assets/images/VMwareESXi_05.jpg "VMware vSphere first boot"){: width="1669" height="859" loading="lazy"}
 
     You can open a console of your VM just by clicking on the small VM screen output to open a console window. Klick into the new console window to redirect your keyboard to this console.
 
@@ -370,7 +368,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options to run and manage virtual machines is [__Proxmox__](https://www.proxmox.com/).
 
-    ![Proxmox web interface](assets/images/proxmox1.png){: width="800" height="439" loading="lazy"}
+    ![Proxmox web interface](assets/images/proxmox1.png "Proxmox main menu"){: width="800" height="439" loading="lazy"}
 
     <h2>Prerequisites</h2>
 
@@ -393,7 +391,7 @@ Select the following tabs for the installation description of your target.
 
     1. Select the local storage where ISO files reside (ISO file repository)
 
-        ![Proxmox ISO file storage](assets/images/Proxmox_ISO-Upload1.png){: width="122" height="32" loading="lazy"}
+        ![Proxmox ISO file storage](assets/images/Proxmox_ISO-Upload1.png "Proxmox ISO file storage"){: width="122" height="32" loading="lazy"}
 
     1. Click the button "Download from URL" and enter the necessary fields in the following dialog
 
@@ -402,7 +400,7 @@ Select the following tabs for the installation description of your target.
 
         - Press the button "Query URL" to verify the URL
 
-            ![Proxmox ISO file download dialog](assets/images/Proxmox_ISO-Upload2.png){: width="472" height="133" loading="lazy"}
+            ![Proxmox ISO file download dialog](assets/images/Proxmox_ISO-Upload2.png "Proxmox ISO file download dialog"){: width="472" height="133" loading="lazy"}
 
         - Optionally, check the SHA256 checksum  
             Therefore 
@@ -414,21 +412,21 @@ Select the following tabs for the installation description of your target.
     1. Click **Download**  
         The file is downloaded and the checksum is verified.
 
-        ![Proxmox ISO file download status dialog](assets/images/Proxmox_ISO-Upload3.png){: width="987" height="611" loading="lazy"}
+        ![Proxmox ISO file download status dialog](assets/images/Proxmox_ISO-Upload3.png "Proxmox ISO file download progress dialog"){: width="987" height="611" loading="lazy"}
 
     After these steps, the file should appear in the ISO file repository.
 
-    ![Proxmox ISO file repository](assets/images/Proxmox_ISO-Upload4.png){: width="466" height="135" loading="lazy"}
+    ![Proxmox ISO file repository](assets/images/Proxmox_ISO-Upload4.png "Proxmox ISO file repository dialog"){: width="466" height="135" loading="lazy"}
 
     <h2>2. Generate a new Proxmox VM</h2>
 
     1. In the Proxmox web interface, select the **Create VM** button at the top right corner. Choose a **Node** , a **VM ID** and a **Name**, then click **Next**.
 
-        ![Proxmox VM creation](assets/images/proxmox2.png){: width="722" height="314" loading="lazy"}
+        ![Proxmox VM creation](assets/images/proxmox2.png "Proxmox VM creation start dialog"){: width="722" height="314" loading="lazy"}
 
     1. Tab **OS**: Select the downloaded DietPi ISO file:
 
-        ![Proxmox VM creation - usage of the ISO file](assets/images/Proxmox_VM-generation-ISO.png){: width="789" height="229" loading="lazy"}
+        ![Proxmox VM creation - usage of the ISO file](assets/images/Proxmox_VM-generation-ISO.png "Proxmox VM creation ISO file selection dialog"){: width="789" height="229" loading="lazy"}
 
         For the **Guest OS** assure that **Linux** and version "**6.x - 2.6 Kernel**" is selected.  
         Click **Next**.
@@ -470,7 +468,7 @@ Select the following tabs for the installation description of your target.
     This first run setup can be monitored by clicking the "Console" button to watch and finish the DietPi first run setup. 
     Alternatively the VM can be connected via SSH, after giving it some time to finish initial setup steps (typically obtaining its IP from the router).
 
-    ![Proxmox VM starting](assets/images/proxmox3.png){: width="1024" height="590" loading="lazy"}
+    ![Proxmox VM starting](assets/images/proxmox3.png "Proxmox VM start output"){: width="1024" height="590" loading="lazy"}
 
     ??? info "Comfortably control the DietPi VM from the Proxmox GUI"
         In Proxmox there is the option to start/stop VMs resp. Container via 
@@ -503,7 +501,7 @@ Select the following tabs for the installation description of your target.
             - Password: `<root user password you entered during Proxmox VE install>`
         1. Tab **General**: Select the **Create VM** button at the top right corner. Choose a **Node** , a **VM ID** and a **Name**, then click **Next**.
 
-            ![Proxmox VM creation](assets/images/proxmox2.png){: width="722" height="314" loading="lazy"}
+            ![Proxmox VM creation](assets/images/proxmox2.png "Proxmox VM creation start dialog"){: width="722" height="314" loading="lazy"}
 
             Remember the VM ID, you need it later.
 
@@ -564,7 +562,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__Parallels Desktop__](https://www.parallels.com/products/desktop/).
 
-    ![Parallels Desktop DietPi machine](assets/images/Parallels1.jpg){: width="896" height="504" loading="lazy"}
+    ![Parallels Desktop DietPi machine](assets/images/Parallels1.jpg "Parallels Desktop on Apple macOS"){: width="896" height="504" loading="lazy"}
 
     <h2>Prerequisites</h2>
 
@@ -578,7 +576,7 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi disk image</h2>
 
-    Download the **DietPi Parallels** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `Parallels`. Download the **VMX appliance** file locally.
 
     Double click on the downloaded `tar.xz` file to extract it (or via option "Open in Finder").
 
@@ -586,7 +584,7 @@ Select the following tabs for the installation description of your target.
 
     Double click on the extracted `.vmx` file, which will open a Parallels dialogue to import it as virtual machine and starts it right away after the import.
 
-    ![Parallels Desktop DietPi startup](assets/images/Parallels2.png){: width="640" height="273" loading="lazy"}
+    ![Parallels Desktop DietPi startup](assets/images/Parallels2.png "Parallels Desktop DietPi login screen"){: width="640" height="273" loading="lazy"}
 
     ??? attention "You must disable IPv6 when the host uses WiFi"
         When your host uses WiFi to connect to the Internet, and the VM network is attached in bridged mode (default for DietPi appliances), IPv6 routes to the Internet from within the VM will fail, e.g. reported [here](https://community.broadcom.com/vmware-cloud-foundation/communities/community-home/digestviewer/viewthread?MessageKey=d24d5de6-3973-45e8-b38f-5b4e9d2860cd)).  
@@ -602,7 +600,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__UTM__](https://mac.getutm.app/).
 
-    ![UTM Desktop DietPi machine](assets/images/UTM1.png){: width="900" height="506" loading="lazy"}
+    ![UTM Desktop DietPi machine](assets/images/UTM1.png "UTM Desktop on Apple macOS"){: width="900" height="506" loading="lazy"}
 
     <h2>Prerequisites</h2>
 
@@ -624,7 +622,7 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi disk image</h2>
 
-    Download the **DietPi UTM** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `UTM`. Download the **UTM appliance** file locally.
 
     Double click on the downloaded file to decompress it (or via option "Open in Finder"). Copy/Move the contained `.utm` file to the UTM virtual machine directory. This is typically located within the (hidden) user subdirectory `.../Library/Containers/com.utmapp.UTM/Data/Documents`.
 
@@ -632,11 +630,11 @@ Select the following tabs for the installation description of your target.
 
     As next, start resp. restart the UTM program. The imported DietPi virtual machine should be visible there.
 
-    ![UTM GUI](assets/images/UTM3.png){: width="350" height="283" loading="lazy"}
+    ![UTM GUI](assets/images/UTM3.png "UTM virtual machine list dialog"){: width="350" height="283" loading="lazy"}
 
     Then select the imported machine to start it up.
 
-    ![UTM DietPi startup](assets/images/UTM2.png){: width="640" height="265" loading="lazy"}
+    ![UTM DietPi startup](assets/images/UTM2.png "UTM DietPi login screen"){: width="640" height="265" loading="lazy"}
 
 === "Hyper-V"
 
@@ -648,7 +646,7 @@ Select the following tabs for the installation description of your target.
 
     One of the options of a virtual machine is [__Microsoft Hyper-V__](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-overview?pivots=windows).
 
-    ![Hyper-V-Manager screenshot](assets/images/dietpi-HyperV-program.png){: width="722" height="450" loading="lazy"}
+    ![Hyper-V-Manager screenshot](assets/images/dietpi-HyperV-program.png "Hyper-V-Manager main menu"){: width="722" height="450" loading="lazy"}
 
     !!! info "Tested with Windows 10"
         This description relates to Hyper-V on a Microsoft Windows system.
@@ -660,7 +658,7 @@ Select the following tabs for the installation description of your target.
     ??? info "Hyper-V activation within Windows"
         Hyper-V needs to be activated within Windows (e.g. [see there](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/install-hyper-v?pivots=windows&tabs=powershell)). The activation is done by enabling all Hyper-V features in the ***Turn Windows features on or off*** within the ***Apps and Features*** area in the Windows settings.
 
-        ![Hyper-V activation](assets/images/dietpi-HyperV-activation.png){: width="367" height="328" loading="lazy"}
+        ![Hyper-V activation](assets/images/dietpi-HyperV-activation.png "Hyper-V activation in 'Apps and Features'"){: width="367" height="328" loading="lazy"}
 
     On this PC a free harddisk space of about
 
@@ -671,9 +669,14 @@ Select the following tabs for the installation description of your target.
 
     <h2>1. Download and extract the DietPi disk image</h2>
 
-    Download the **DietPi Hyper-V** image from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"} and decompress the downloaded file to a local folder. It is `xz`-compressed so you will need to install either [7zip for Windows](https://www.7-zip.org/) or an alternative tools.
+    Open [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}, select `PC/VM`, then `Hyper-V`. Download the **Virtual disk image** file locally.
 
-    ![DietPi Hyper-V image download](assets/images/dietpi-HyperV-Download.jpg){: width="722" height="463" loading="lazy"}
+    ![DietPi Hyper-V image download](assets/images/dietpi-HyperV-Download.jpg "Hyper-V image download dialog"){: width="722" height="463" loading="lazy"}
+
+    The downloaded file is `xz`-compressed and contains the `.vhdx` file for Hyper-V, so you will need to have installed either [7zip for Windows](https://www.7-zip.org/) or [The Unarchiver (Macintosh)](https://theunarchiver.com/) or [`xz-utils`](https://tukaani.org/xz/) (Linux) to extract it. They are free of charge and have been tested to decompress the image correctly.
+
+    [//]: # (Include hint how to extract .xz files with xz-utils)
+    --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
     Move the `.vhdx` file to the desired virtual machine folder on your harddisk.
 
@@ -681,7 +684,7 @@ Select the following tabs for the installation description of your target.
 
     Next, a Hyper-V machine needs to be created. Start the Hyper-V-Manager, right click on your PCs node in the left tree and open the dialog wizard for the machine generation ("New" -> "Virtual Machine"):
 
-    ![Hyper-V machine generation](assets/images/dietpi-HyperV-VM-generation.png){: width="450" height="364" loading="lazy"}
+    ![Hyper-V machine generation](assets/images/dietpi-HyperV-VM-generation.png "Hyper-V VM creation dialog"){: width="450" height="364" loading="lazy"}
 
     In the following wizard you have to set the following:
 
@@ -693,17 +696,17 @@ Select the following tabs for the installation description of your target.
 
     If you have not set up any network connection, go on with the **Virtual Switch Manager** and add a network. Select that network in your virtual machine settings afterwards.  
 
-    ![Hyper-V network management](assets/images/dietpi-HyperV-manage-network.png){: width="250" height="284" loading="lazy"}
+    ![Hyper-V network management](assets/images/dietpi-HyperV-manage-network.png "Hyper-V Virtual Switch Manager"){: width="250" height="284" loading="lazy"}
 
     <h2>3. First boot of the new Hyper-V machine</h2>
 
     First, click on ***Connect*** to open a window of the virtual machine:
 
-    ![Hyper-V machine connection](assets/images/dietpi-HyperV-connect-machine.png){: width="450" height="205" loading="lazy"}
+    ![Hyper-V machine connection](assets/images/dietpi-HyperV-connect-machine.png "Hyper-V DietPi VM first boot"){: width="450" height="205" loading="lazy"}
 
     Then press ***Start*** to boot up the machine:
 
-    ![Hyper-V machine start](assets/images/dietpi-HyperV-start-machine.png){: width="550" height="420" loading="lazy"}
+    ![Hyper-V machine start](assets/images/dietpi-HyperV-start-machine.png "Hyper-V VM start dialog"){: width="550" height="420" loading="lazy"}
 
     After this, your machine should boot up.
 
@@ -717,7 +720,7 @@ Select the following tabs for the installation description of your target.
 
     In the case that you did not setup your network configuration properly, the booting procedure will not find a network connection and may respond with this boot console output:
 
-    ![Hyper-V boot without network](assets/images/dietpi-HyperV-boot-wo-network.jpg){: width="722" height="164" loading="lazy"}
+    ![Hyper-V boot without network](assets/images/dietpi-HyperV-boot-wo-network.jpg "Hyper-V network error message output"){: width="722" height="164" loading="lazy"}
 
     Then you have to check and repair your network configuration within the **Virtual Switch Manager**.
 
@@ -731,7 +734,7 @@ Select the following tabs for the installation description of your target.
 
     The Native PC images are great for those occasions where SBC performance is just not enough, or where you require an x86_64 system. It also works great with small [Thin Clients](https://dietpi.com/blog/?p=2918), affordable little x86 machines, settled somewhere between SBCs and desktop PCs.
 
-    ![Photo of some Thin Clients](https://dietpi.com/blog/wp-content/uploads/2023/03/image-3-e1681412993591.png){: width="300" height="237" loading="lazy"}
+    ![Photo of some Thin Clients](https://dietpi.com/blog/wp-content/uploads/2023/03/image-3-e1681412993591.png "Native PC thin clients"){: width="300" height="237" loading="lazy"}
 
     It could be also a great way to make use of an old computer that’s not capable of running the latest version of Windows or macOS.
 
@@ -741,8 +744,8 @@ Select the following tabs for the installation description of your target.
         - In case of an UEFI based PC see the "**UEFI Installer image**" tab.
         - In case of a BIOS based PC see the "**BIOS Installer image**" tab or "**BIOS direct write image**" tab.
 
-    !!! question ""**BIOS Installer image**" or "**BIOS direct write image**"?"
-        The "**BIOS installer image**" is used to boot from and install the DietPi system on a different target boot drive (storage medium). In contrary to that the "**BIOS direct write image**" is used to be write the image directly to the target DietPi boot drive.
+    !!! question ""**Live image**" or "**Installer image**"?"
+        The "**Installer image**" is used to boot from and install the DietPi system on a different target boot drive (storage medium). In contrary to that the "**Live image**" is used to be write the image directly to the target DietPi boot drive.
 
     === "UEFI installer image"
 
@@ -758,7 +761,7 @@ Select the following tabs for the installation description of your target.
 
         Download the **Native PC for UEFI** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}. It is `xz`-compressed, but most flashing tools support flashing `xz`-compressed images without the need to first decompress them. Otherwise we recommend [7zip for Windows](https://www.7-zip.org/) to decompress the image.
 
-        ![DietPi download UEFI installer image](assets/images/dietpi-download-nativepc-uefi.jpg){: width="722" height="211" loading="lazy"}
+        ![DietPi download UEFI installer image](assets/images/dietpi-download-nativepc-uefi.jpg "Native PC UEFI installer image download dialog"){: width="722" height="211" loading="lazy"}
 
         Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
@@ -780,7 +783,7 @@ Select the following tabs for the installation description of your target.
         !!! warning "All data on the USB medium and later on the target PCs harddisk will be erased!"
             Before starting the installation first make a backup of the data available on the target PC and USB drive if you need it later again!
 
-        ![Rufus UEFI installer image selections screenshot](assets/images/dietpi-rufus-uefi-installer.png){: width="473" height="579" loading="lazy"}
+        ![Rufus UEFI installer image selections screenshot](assets/images/dietpi-rufus-uefi-installer.png "Rufus main menu"){: width="473" height="579" loading="lazy"}
 
         <h2>3. Boot the target PC and install the image on the local disk</h2>
 
@@ -791,11 +794,11 @@ Select the following tabs for the installation description of your target.
 
         During the initial boot, the following dialog may appear to boot from the USB stick:
 
-        ![Bootloader menu screenshot](assets/images/dietpi-uefi-boot.jpg){: width="483" height="230" loading="lazy"}
+        ![Bootloader menu screenshot](assets/images/dietpi-uefi-boot.jpg "Native PC Bootloader menu"){: width="483" height="230" loading="lazy"}
 
         After booting the graphics selection dialog appears:
 
-        ![Clonezilla main menu screenshot](assets/images/dietpi-uefi-boot-graphic.jpg){: width="834" height="394" loading="lazy"}
+        ![Clonezilla main menu screenshot](assets/images/dietpi-uefi-boot-graphic.jpg "Native PC Clonezilla main menu"){: width="834" height="394" loading="lazy"}
 
         You can select the default settings. In case of problems, please select "Safe graphic settings".
 
@@ -805,15 +808,15 @@ Select the following tabs for the installation description of your target.
 
         Select the image file to be installed on the target PCs harddisk. Normally you should only see one single option:
 
-        ![Clonezilla source image selection screenshot](assets/images/dietpi-boot-clonezilla.jpg){: width="656" height="198" loading="lazy"}
+        ![Clonezilla source image selection screenshot](assets/images/dietpi-boot-clonezilla.jpg "Native PC Clonezilla image selection dialog"){: width="656" height="198" loading="lazy"}
 
         After this, you have to select the target PCs harddisk where your DietPi shall be installed. In this example there is only one harddisk present:
 
-        ![Clonezilla target drive selection screenshot](assets/images/dietpi-boot-clonezilla-run.jpg){: width="853" height="181" loading="lazy"}
+        ![Clonezilla target drive selection screenshot](assets/images/dietpi-boot-clonezilla-run.jpg "Native PC Clonezilla disk selection dialog"){: width="853" height="181" loading="lazy"}
 
         After this, the installation process starts with several steps, e.g. showing the process of the image copying:
 
-        ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg){: width="500" height="350" loading="lazy"}
+        ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg "Clonezilla imaging progress dialog"){: width="500" height="350" loading="lazy"}
 
         These steps take some time, be patient! Otherwise buy an SSD. :-)  
         At the end the system executes a shutdown.
@@ -829,86 +832,7 @@ Select the following tabs for the installation description of your target.
 
         For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
 
-    === "BIOS installer image"
-
-        <h2>Prerequisites</h2>
-
-        You would need the next:
-
-        - one **working PC with internet access**, helping to write the boot media
-        - one **bootable USB drive** (e.g. flash disk, at least 2 GiB), to hold the DietPi installer image and to boot the target PC
-        - **target PC** to be installed
-
-        Remark: If your PC is not able to boot from a USB drive you can do a similar installation by burning the installer image onto a DVD and boot from the DVD. The same installation procedure will take place. Do not forget to eject your DVD before the installed DietPi shall boot from the hard disk for the first time.
-
-        <h2>1. Download the DietPi installer image</h2>
-
-        Download the **Native PC for BIOS/CSM** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}. It is `xz`-compressed, but most flashing tools support flashing `xz`-compressed images without the need to first decompress them. Otherwise we recommend [7zip for Windows](https://www.7-zip.org/) to decompress the image.
-
-        ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
-
-        Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
-
-        <h2>2. Write image to USB drive</h2>
-
-        Start [Rufus](https://rufus.ie/) application and make sure you have your USB drive inserted into your computer. Follow the next steps:
-
-        1. Select the USB device
-        2. Select the downloaded **DietPi** image
-        3. Select **MBR** as partition scheme and **BIOS or UEFI** as target system
-        4. Click on **Start** button
-
-        Ensure that the selected USB medium is the correct one.
-
-        !!! warning "All data on the USB medium and later on the target PCs harddisk will be erased!"
-            Before starting the installation first make a backup of the data available on the target PC and USB drive if you need it later again!
-
-        ![Rufus BIOS installer image selections screenshot](assets/images/dietpi-rufus-bios-installer.png){: width="474" height="580" loading="lazy"}
-
-        <h2>3. Boot the target PC and install the image on the local disk</h2>
-
-        Boot the **target PC** from the USB image and install the image on the local disk / harddisk. Put the USB stick into the target PC and boot from this USB stick.  
-
-        !!! note "BIOS settings"
-            It may be necessary to change BIOS settings to enable the boot from the USB stick. This action is not described here.
-
-        After booting the graphics selection dialog appears:
-
-        ![Clonezilla main menu screenshot](assets/images/dietpi-uefi-boot-graphic.jpg){: width="834" height="394" loading="lazy"}
-
-        You can select the default settings. In case of problems, please select "Safe graphic settings".
-
-        Once this step is completed, you will able to select a different keyboard. If necessary, change your keyboard settings and go through the appropriate dialogues.
-
-        Then the installation process begins with the help of the wonderful Clonezilla tool.
-
-        Select the image file to be installed on the target PCs harddisk. Normally you should only see one single option:
-
-        ![Clonezilla source image selection screenshot](assets/images/dietpi-boot-clonezilla.jpg){: width="656" height="198" loading="lazy"}
-
-        After this, you have to select the target PCs harddisk where your DietPi shall be installed. In this example there is only one harddisk present:
-
-        ![Clonezilla target drive selection screenshot](assets/images/dietpi-boot-clonezilla-run.jpg){: width="853" height="181" loading="lazy"}
-
-        After this, the installation process starts with several steps, e.g. showing the process of the image copying:
-
-        ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg){: width="500" height="350" loading="lazy"}
-
-        These steps take some time, be patient! Otherwise buy an SSD. :-)  
-        At the end the system executes a shutdown.
-
-        ??? info "Click here if you want to use a WiFi connection"
-            To setup the WiFi, you have to change the network settings matching to your environment:
-
-            1.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
-            2.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
-            3.  Save and close the files
-
-            You need to set these values before you boot up the PC for the first time (initial boot).
-
-        For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
-
-    === "BIOS direct write image"
+    === "UEFI Live image"
 
         <h2>Prerequisites</h2>
 
@@ -918,11 +842,11 @@ Select the following tabs for the installation description of your target.
         - one **disk drive**, to hold the DietPi system. It is written with the direct write image and will be the disk drive in the DietPi system.
         - **target PC** to be installed
 
-        <h2>1. Download the DietPi direct write image</h2>
+        <h2>1. Download the DietPi Live image</h2>
 
-        Download the **Native PC for BIOS/CSM** > **Direct write Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}. It is `xz`-compressed, but most flashing tools support flashing `xz`-compressed images without the need to first decompress them. Otherwise we recommend [7zip for Windows](https://www.7-zip.org/) to decompress the image.
+        Download the **Native PC for UEFI** > **Live Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}. It is `xz`-compressed, but most flashing tools support flashing `xz`-compressed images without the need to first decompress them. Otherwise we recommend [7zip for Windows](https://www.7-zip.org/) to decompress the image.
 
-        ![DietPi download BIOS direct write image](assets/images/dietpi-download-nativepc-bios.jpg){: width="722" height="218" loading="lazy"}
+        ![DietPi download UEFI installer image](assets/images/dietpi-download-nativepc-uefi.jpg "Native PC UEFI installer image download dialog"){: width="722" height="211" loading="lazy"}
 
         Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
@@ -941,7 +865,138 @@ Select the following tabs for the installation description of your target.
         !!! warning "All data on the disk drive will be erased!"
             Before starting the installation first make a backup of the data available on the disk drive if you need it later again!
 
-        ![Rufus BIOS direct write image selections screenshot](assets/images/dietpi-rufus-bios-direct-write-image.png){: width="474" height="607" loading="lazy"}
+        ![Rufus UEFI Live image selections screenshot](assets/images/dietpi-rufus-bios-direct-write-image.png "Rufus main menu"){: width="474" height="607" loading="lazy"}
+
+        <h2>3. Boot the target PC</h2>
+
+        ??? info "Click here if you want to use a WiFi connection"
+            To setup the WiFi, you have to change the network settings matching to your environment:
+
+            1.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+            2.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
+            3.  Save and close the files
+
+            You need to set these values before you boot up the PC for the first time (initial boot).
+
+        For the first boot up of your PC disconnect your disk drive from your working PC and connect it to the target PC. Then power on the target PC to login and execute the first boot procedure.
+
+        ??? info "Option: Automatic base installation at first boot (running an _unattended base installation_)"
+
+            DietPi offers the option for an automatic first boot installation. See section ["How to do an automatic base installation at first boot"](usage.md#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation) for details.
+
+    === "BIOS installer image"
+
+        <h2>Prerequisites</h2>
+
+        You would need the next:
+
+        - one **working PC with internet access**, helping to write the boot media
+        - one **bootable USB drive** (e.g. flash disk, at least 2 GiB), to hold the DietPi installer image and to boot the target PC
+        - **target PC** to be installed
+
+        Remark: If your PC is not able to boot from a USB drive you can do a similar installation by burning the installer image onto a DVD and boot from the DVD. The same installation procedure will take place. Do not forget to eject your DVD before the installed DietPi shall boot from the hard disk for the first time.
+
+        <h2>1. Download the DietPi installer image</h2>
+
+        Download the **Native PC for BIOS/CSM** > **Installer Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}. It is `xz`-compressed, but most flashing tools support flashing `xz`-compressed images without the need to first decompress them. Otherwise we recommend [7zip for Windows](https://www.7-zip.org/) to decompress the image.
+
+        ![DietPi download BIOS installer image](assets/images/dietpi-download-nativepc-bios.jpg "Native PC BIOS installer image download dialog"){: width="722" height="218" loading="lazy"}
+
+        Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
+
+        <h2>2. Write image to USB drive</h2>
+
+        Start [Rufus](https://rufus.ie/) application and make sure you have your USB drive inserted into your computer. Follow the next steps:
+
+        1. Select the USB device
+        2. Select the downloaded **DietPi** image
+        3. Select **MBR** as partition scheme and **BIOS or UEFI** as target system
+        4. Click on **Start** button
+
+        Ensure that the selected USB medium is the correct one.
+
+        !!! warning "All data on the USB medium and later on the target PCs harddisk will be erased!"
+            Before starting the installation first make a backup of the data available on the target PC and USB drive if you need it later again!
+
+        ![Rufus BIOS installer image selections screenshot](assets/images/dietpi-rufus-bios-installer.png "Rufus main menu"){: width="474" height="580" loading="lazy"}
+
+        <h2>3. Boot the target PC and install the image on the local disk</h2>
+
+        Boot the **target PC** from the USB image and install the image on the local disk / harddisk. Put the USB stick into the target PC and boot from this USB stick.  
+
+        !!! note "BIOS settings"
+            It may be necessary to change BIOS settings to enable the boot from the USB stick. This action is not described here.
+
+        After booting the graphics selection dialog appears:
+
+        ![Clonezilla main menu screenshot](assets/images/dietpi-uefi-boot-graphic.jpg "Native PC Clonezilla main menu"){: width="834" height="394" loading="lazy"}
+
+        You can select the default settings. In case of problems, please select "Safe graphic settings".
+
+        Once this step is completed, you will able to select a different keyboard. If necessary, change your keyboard settings and go through the appropriate dialogues.
+
+        Then the installation process begins with the help of the wonderful Clonezilla tool.
+
+        Select the image file to be installed on the target PCs harddisk. Normally you should only see one single option:
+
+        ![Clonezilla source image selection screenshot](assets/images/dietpi-boot-clonezilla.jpg "Native PC Clonezilla image selection dialog"){: width="656" height="198" loading="lazy"}
+
+        After this, you have to select the target PCs harddisk where your DietPi shall be installed. In this example there is only one harddisk present:
+
+        ![Clonezilla target drive selection screenshot](assets/images/dietpi-boot-clonezilla-run.jpg "Native PC Clonezilla disk selection dialog"){: width="853" height="181" loading="lazy"}
+
+        After this, the installation process starts with several steps, e.g. showing the process of the image copying:
+
+        ![Clonezilla processing screenshot](assets/images/dietpi-boot-partclone.jpg "Clonezilla imaging progress dialog"){: width="500" height="350" loading="lazy"}
+
+        These steps take some time, be patient! Otherwise buy an SSD. :-)  
+        At the end the system executes a shutdown.
+
+        ??? info "Click here if you want to use a WiFi connection"
+            To setup the WiFi, you have to change the network settings matching to your environment:
+
+            1.  Open the file `dietpi-wifi.txt` and set `aWIFI_SSID[0]` to the name of your WiFi network.
+            2.  In the same file `dietpi-wifi.txt`, set `aWIFI_KEY[0]` to the password of your WiFi network.
+            3.  Save and close the files
+
+            You need to set these values before you boot up the PC for the first time (initial boot).
+
+        For the first boot up of your PC disconnect your USB stick from the target PC and power on the PC to login and execute the first boot procedure.
+
+    === "BIOS Live image"
+
+        <h2>Prerequisites</h2>
+
+        You would need the next:
+
+        - one **working PC with internet access**, helping to write the boot media
+        - one **disk drive**, to hold the DietPi system. It is written with the direct write image and will be the disk drive in the DietPi system.
+        - **target PC** to be installed
+
+        <h2>1. Download the DietPi Live image</h2>
+
+        Download the **Native PC for BIOS/CSM** > **Live Image** from [dietpi.com](https://dietpi.com/#download){: class="nospellcheck"}. It is `xz`-compressed, but most flashing tools support flashing `xz`-compressed images without the need to first decompress them. Otherwise we recommend [7zip for Windows](https://www.7-zip.org/) to decompress the image.
+
+        ![DietPi download BIOS Live image](assets/images/dietpi-download-nativepc-bios.jpg "Native PC BIOS Live image download dialog"){: width="722" height="218" loading="lazy"}
+
+        Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
+
+        <h2>2. Write image to disk drive</h2>
+
+        Start [Rufus](https://rufus.ie/) application and make sure you have your disk drive connected into your computer. This may e.g. be done using an USB to SATA controller if you use a SATA disk drive. Follow the next steps:
+
+        1. Show advanced drive properties and select **List USB hard drives**  
+          (in case that you have connected your disk drive via a USB adapter)
+        2. Select the disk drive device
+        3. Select the downloaded **DietPi** image
+        4. Click on **Start** button
+
+        Ensure that the selected disk drive is the correct one.
+
+        !!! warning "All data on the disk drive will be erased!"
+            Before starting the installation first make a backup of the data available on the disk drive if you need it later again!
+
+        ![Rufus BIOS Live image selections screenshot](assets/images/dietpi-rufus-bios-direct-write-image.png "Rufus main menu"){: width="474" height="607" loading="lazy"}
 
         <h2>3. Boot the target PC</h2>
 
@@ -1000,7 +1055,7 @@ A login prompt will appear. Use the initial credentials:
     Depending on your DHCP configuration, also just `dietpi` may be sufficient as the hostname.  
     Sometimes it needs to be followed by your router's domain (e.g. `dietpi.fritz.box`).
 
-    ![DietPi-SSH](assets/images/dietpi-ssh.jpg)
+    ![DietPi-SSH](assets/images/dietpi-ssh.jpg "PuTTY configuration for DietPi SSH")
 
     Most Linux distributions come packaged with an ssh client. Type in your Terminal next command (replace the sample IP address `192.168.1.20` with the one found via scanning the network):
 
@@ -1021,13 +1076,13 @@ Once the packages have been updated, DietPi will ask you to confirm whether you 
 !!! info "DietPi Survey"
     DietPi Survey is **optional, and not enabled by default**. It is anonymous, secured and requires a minimal data transfer. ALL the shared details are published on the [dietpi.com/survey](https://dietpi.com/survey/){: class="nospellcheck"} page. Checkout and see how DietPi is used!
 
-![dietpi-data](assets/images/dietpi-data-policy.jpg){: width="642" height="385" loading="lazy"}
+![dietpi-data](assets/images/dietpi-data-policy.jpg "DietPi-Survey Opt IN / Opt OUT dialog"){: width="642" height="385" loading="lazy"}
 
 The default DietPi password is public, so you’ll be asked to change this at the next stage for both the `root` and `dietpi` user accounts. Select OK and hit ++enter++, then provide your password (twice) to confirm.
 
 You can change the password again later by typing `passwd` at the terminal or also via the command line script `dietpi-config` (within the "Security options").
 
-![dietpi-password](assets/images/dietpi-password-01.jpg){: width="643" height="386" loading="lazy"}
+![dietpi-password](assets/images/dietpi-password-01.jpg "Change default password dialog"){: width="643" height="386" loading="lazy"}
 
 ## 5. Further steps
 

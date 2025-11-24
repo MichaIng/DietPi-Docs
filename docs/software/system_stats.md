@@ -23,19 +23,8 @@ description: Description of DietPi software options related to system statistics
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](#prometheus-node-exporter)
 - [**Homer - A modern homepage for your services**](#homer)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -43,22 +32,28 @@ description: Description of DietPi software options related to system statistics
 
 DietPi-Dashboard is a very lightweight and standalone web interface for monitoring and managing your DietPi system with your favourite web browser. It is written in Rust. An overview of its features is given by our article: <https://dietpi.com/blog/?p=1137>
 
-![DietPi-Dashboard screenshot](../assets/images/dietpi-dashboard.jpg){: width="700" height="346" loading="lazy"}
+![DietPi-Dashboard screenshot](../assets/images/dietpi-dashboard.jpg "DietPi-Dashboard screen"){: width="700" height="346" loading="lazy"}
 
-!!! warning "DietPi-Dashboard is still in Beta!"
+!!! warning "DietPi-Dashboard rework is still in Beta!"
 
-    We hence do not recommend to actively use it on sensitive production systems yet.
+    Please assure to close its network ports (default: TCP **5252** and **5253**) on your NAT/router or via firewall, to protect them from public access.
+
+    If you need to access the DietPi-Dashboard remotely, please use a VPN server on this system, like WireGuard.
 
 === "Web interface"
 
-    DietPi-Dashboard is accessible by default at TCP port **5252**:
+    DietPi-Dashboard is accessible by default via HTTPS at TCP port **5252**:
 
-    - URL: `http://<your.IP>:5252`
+    - URL: `https://<your.IP>:5252`
     - Password: `<your software password>` (default: `dietpi`)
+
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
+    For communication between the web UI and the backend nodes, by default TCP port **5253** is additionally used.
 
 === "Directories"
 
-    The DietPi-Dashboard executable and its configuration file can be found at:
+    The DietPi-Dashboard executable and its configuration files can be found at:
 
     ```
     /opt/dietpi-dashboard
@@ -66,70 +61,67 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 === "Configuration"
 
-    The configuration file is located at:
+    The configuration files for the frontend (web UI) and backend (system node) are located at:
 
     ```
-    /opt/dietpi-dashboard/config.toml
+    /opt/dietpi-dashboard/config-frontend.toml
+    /opt/dietpi-dashboard/config-backend.toml
     ```
 
-    When doing changes, you need to restart the service afterwards:
+    When doing changes, you need to restart the respective service afterwards:
 
     ```sh
-    systemctl restart dietpi-dashboard
+    systemctl restart dietpi-dashboard-frontend
+    systemctl restart dietpi-dashboard-backend
     ```
 
-=== "Password protection"
+=== "Change password"
 
-    Password protection is enabled by default from DietPi v7.9 on. If you installed it before, you'll need to enable it via configuration file. For this, create a SHA512 hash of the `PASSWORD` you want to use for logging into the web interface, and a random 64-character secret which is used to generate a token to transfer and store securely in your browser. Apply those to the configuration file and restart the service for the changes to take effect:
+    To change the password for the web UI, create a SHA512 hash of the `PASSWORD` you want to use for login. Apply it to the frontend configuration file and restart the service for the change to take effect:
 
     ```sh
     hash=$(echo -n 'PASSWORD' | sha512sum | mawk '{print $1}')
-    secret=$(openssl rand -hex 32)
-    G_CONFIG_INJECT 'pass[[:blank:]]' 'pass = true' /opt/dietpi-dashboard/config.toml
-    GCI_PASSWORD=1 G_CONFIG_INJECT 'hash[[:blank:]]' "hash = \"$hash\"" /opt/dietpi-dashboard/config.toml
-    GCI_PASSWORD=1 G_CONFIG_INJECT 'secret[[:blank:]]' "secret = \"$secret\"" /opt/dietpi-dashboard/config.toml
-    unset -v hash secret
+    GCI_PASSWORD=1 G_CONFIG_INJECT 'hash[[:blank:]]' "hash = \"$hash\"" /opt/dietpi-dashboard/config-frontend.toml
+    unset -v hash
+    G_CONFIG_INJECT 'enable_login[[:blank:]]' 'enable_login = true' /opt/dietpi-dashboard/config-frontend.toml
     systemctl restart dietpi-dashboard
     ```
-
-    To change the password, just replace the hash in the config file and restart the service.
-
-    If you want to force a logout of all browsers without changing the password, you can instead change the secret. Generate an apply a new secret to the configuration file and restart the service. Every client and browser will then need to login again to continue using the DietPi-Dashboard, as the stored token that is based on password and secret has been invalidated.
 
 === "Multiple nodes"
 
-    From DietPi v8.0 on, you can install DietPi-Dashboard as backend only node, with does not include an own web interface. Such backend only nodes can then be accessed from another full DietPi-Dashboard frontend/web interface. Additional nodes would need to be added manually into configuration file located at:
+    The new DietPi-Dashboard consists of two components, the frontend which provides the web interface, and the backend which enables communication with the system. One frontend can be used with multiple backend nodes, and when installing the dashboard with `dietpi-software`, it is possible to install the backend only, to use it with a frontend installed on another system already.
+    The backend-only installation will ask for the needed info, but in case of non-interactive/automated installation, or if you want to change or setup this later:
 
-    ```
-    /opt/dietpi-dashboard/config.toml
-    ```    
+    1. Check `/opt/dietpi-dashboard/config-frontend.toml` on the frontend host, or the "Config" page on its web UI. There is a `secret` setting, and a `backend_port` setting, which defaults to **5253**.
+    1. Open `/opt/dietpi-dashboard/config-backend.toml` on the host of the backend node. Replace `secret` to match the one from the frontend, and `frontend_addr` with `IP:port` of the frontend.
+    1. Restart the backend service:
 
-    When doing changes, you need to restart the service afterwards:
-
-    ```sh
-    systemctl restart dietpi-dashboard
-    ```
-
-    !!! hint "Full DietPi-Dashboard nodes with frontend included can currently not be accessed from other frontends."
+        ```sh
+        systemctl restart dietpi-dashboard-backend
+        ```
 
 === "Service control"
 
-    DietPi-Dashboard by default is started as systemd service and can hence be controlled with the following commands:
+    DietPi-Dashboard by default is started as systemd services for frontend and backend, and can hence be controlled with the following commands:
 
     ```sh
-    systemctl status dietpi-dashboard
+    systemctl status dietpi-dashboard-frontend
+    systemctl status dietpi-dashboard-backend
     ```
 
     ```sh
-    systemctl stop dietpi-dashboard
+    systemctl stop dietpi-dashboard-frontend
+    systemctl stop dietpi-dashboard-backend
     ```
 
     ```sh
-    systemctl start dietpi-dashboard
+    systemctl start dietpi-dashboard-frontend
+    systemctl start dietpi-dashboard-backend
     ```
 
     ```sh
-    systemctl restart dietpi-dashboard
+    systemctl restart dietpi-dashboard-frontend
+    systemctl restart dietpi-dashboard-backend
     ```
 
 === "Logs"
@@ -137,22 +129,23 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     Service logs can be reviewed with the following command:
 
     ```sh
-    journalctl -u dietpi-dashboard
+    journalctl -u dietpi-dashboard-frontend -u dietpi-dashboard-backend
     ```
 
 === "Update"
 
-    You can easily update DietPi-Dashboard by reinstalling it and restarting the service for the change to take effect:
+    You can easily update DietPi-Dashboard by reinstalling it and restarting the services for the change to take effect:
 
     ```sh
     dietpi-software reinstall 200
-    systemctl restart dietpi-dashboard
+    systemctl restart dietpi-dashboard-frontend
+    systemctl restart dietpi-dashboard-backend
     ```
 
 ***
 
-Source code: <https://github.com/ravenclaw900/DietPi-Dashboard>  
-License: [GPLv3](https://github.com/ravenclaw900/DietPi-Dashboard/blob/main/LICENSE)
+Source code: <https://github.com/nonnorm/DietPi-Dashboard>  
+License: [GPLv3](https://github.com/nonnorm/DietPi-Dashboard/blob/main/LICENSE)
 
 ## DietPi-CloudShell
 
@@ -164,23 +157,23 @@ The following screenshots shall give an overview over the displaying features of
 
 === "CPU usage"
 
-    ![DietPi-CloudShell CPU usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-cpuusage.jpg){: width="400" height="305" loading="lazy"}
+    ![DietPi-CloudShell CPU usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-cpuusage.jpg "DietPi-CloudShell CPU usage dialog"){: width="400" height="305" loading="lazy"}
 
 === "Memory usage"
 
-    ![DietPi-CloudShell memory usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-memoryusage.jpg){: width="400" height="293" loading="lazy"}
+    ![DietPi-CloudShell memory usage dialog](../assets/images/dietpi-software-systemstat-cloudshare-memoryusage.jpg "DietPi-CloudShell memory usage dialog"){: width="400" height="293" loading="lazy"}
 
 === "Storage details"
 
-    ![DietPi-CloudShell storage details dialog](../assets/images/dietpi-software-systemstat-cloudshare-storagedetails.png){: width="400" height="292" loading="lazy"}
+    ![DietPi-CloudShell storage details dialog](../assets/images/dietpi-software-systemstat-cloudshare-storagedetails.png "DietPi-CloudShell storage details dialog"){: width="400" height="292" loading="lazy"}
 
 === "Network details"
 
-    ![DietPi-CloudShell network details dialog](../assets/images/dietpi-software-systemstat-cloudshare-networkstats.jpg){: width="400" height="303" loading="lazy"}
+    ![DietPi-CloudShell network details dialog](../assets/images/dietpi-software-systemstat-cloudshare-networkstats.jpg "DietPi-CloudShell network details dialog"){: width="400" height="303" loading="lazy"}
 
 === "Pi-hole stats"
 
-    ![DietPi-CloudShell Pi-hole dialog](../assets/images/dietpi-software-systemstat-cloudshare-piholestats.jpg){: width="400" height="305" loading="lazy"}
+    ![DietPi-CloudShell Pi-hole dialog](../assets/images/dietpi-software-systemstat-cloudshare-piholestats.jpg "DietPi-CloudShell Pi-hole statistics dialog"){: width="400" height="305" loading="lazy"}
 
 ***
 
@@ -196,14 +189,14 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
     dietpi-cloudshell
     ```
 
-    ![DietPi-CloudShell main menu](../assets/images/dietpi-software-systemstat-cloudshare-configuration.png){: width="600" height="298" loading="lazy"}
+    ![DietPi-CloudShell main menu](../assets/images/dietpi-software-systemstat-cloudshare-configuration.png "DietPi-CloudShell main menu"){: width="600" height="298" loading="lazy"}
 
 === "Scenes"
 
     DietPi-CloudShell offers scenes with predefined display outputs resp. layouts.  
     Scenes are configured in the *Scenes* dialog within `dietpi-cloudshell`.
 
-    ![DietPi-CloudShell scenes menu](../assets/images/dietpi-software-systemstat-cloudshare-scenes.png){: width="600" height="283" loading="lazy"}
+    ![DietPi-CloudShell scenes menu](../assets/images/dietpi-software-systemstat-cloudshare-scenes.png "DietPi-CloudShell scenes dialog"){: width="600" height="283" loading="lazy"}
 
 === "Power saving"
 
@@ -222,7 +215,7 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
     Simply run `dietpi-config`, select `Display Options`, then select `waveshare32`.   
     After a reboot, your *Waveshare32* will become active.
 
-    ![DietPi-CloudShell on Waveshare32 touchscreen photo](../assets/images/dietpi-software-systemstat-cloudshell-wavesharesupport.png){: width="400" height="258" loading="lazy"}
+    ![DietPi-CloudShell on Waveshare32 touchscreen photo](../assets/images/dietpi-software-systemstat-cloudshell-wavesharesupport.png "DietPi-CloudShell Waveshare32 touchscreen"){: width="400" height="258" loading="lazy"}
 
 === "Odroid 3.5 LCD shield"
 
@@ -231,7 +224,7 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
     Simply run `dietpi-config`, select `Display Options`, then select `odroid-lcd35`.   
     After a reboot, your *Odroid 3.5 LCD* will become active.
 
-    ![DietPi-CloudShell on Odroid 3.5 LCD photo](../assets/images/dietpi-software-systemstat-cloudshell-touchscreensupport.jpg){: width="400" height="224" loading="lazy"}
+    ![DietPi-CloudShell on Odroid 3.5 LCD photo](../assets/images/dietpi-software-systemstat-cloudshell-touchscreensupport.jpg "DietPi-CloudShell Odroid 3.5 LCD shield touchscreen"){: width="400" height="224" loading="lazy"}
 
 === "Other touchscreens"
 
@@ -242,7 +235,7 @@ YouTube video tutorial: [DietPi CloudShell (RPi / Odroid XU4)](https://www.youtu
 The GNU Midnight Commander (`mc`) is a visual file manager with a two column view. It allows to copy, move and delete files resp. whole directory trees as well as searching for files and run commands in a subshell. It also contains an internal viewer and editor.  
 Midnight Commander is a full-screen text mode application running on a regular console, inside an X Window terminal, over SSH connections and all kinds of remote shells.
 
-![GNU Midnight Commander screenshot](../assets/images/dietpi-software-systemstat-midnightcommander.png){: width="500" height="322" loading="lazy"}
+![GNU Midnight Commander screenshot](../assets/images/dietpi-software-systemstat-midnightcommander.png "GNU Midnight Commander dialog"){: width="500" height="322" loading="lazy"}
 
 ***
 
@@ -255,13 +248,16 @@ Linux Dash allows you to monitor your system stats from a web page.
 
 - Also Installs: [LASP webserver stack](webserver_stack.md)
 
-![Linux Dash web interface screenshot](../assets/images/dietpi-software-systemstat-linuxdash.png){: width="500" height="270" loading="lazy"}
+![Linux Dash web interface screenshot](../assets/images/dietpi-software-systemstat-linuxdash.png "Linux Dash web interface dialog"){: width="500" height="270" loading="lazy"}
 
 === "Access to Linux Dash"
 
     The web interface of *Linux Dash* can be accessed via:
 
     - URL = `http://<your.IP>/linuxdash/app`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -273,13 +269,16 @@ Allows you to monitor your system stats from a web page. The display output can 
 
 - Also Installs: [LASP webserver stack](webserver_stack.md)
 
-![phpSysInfo web interface screenshot](../assets/images/dietpi-software-systemstat-phpsysinfo.png){: width="500" height="268" loading="lazy"}
+![phpSysInfo web interface screenshot](../assets/images/dietpi-software-systemstat-phpsysinfo.png "phpSysInfo web interface dialog"){: width="500" height="268" loading="lazy"}
 
 === "Access to phpSysInfo"
 
     The web interface of *phpSysInfo* can be accessed via:
 
     - URL = `http://<your.IP>/phpsysinfo`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Customization"
 
@@ -293,7 +292,7 @@ Official website: <https://phpsysinfo.github.io/phpsysinfo>
 
 RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
-![RPi-Monitor web interface screenshot](../assets/images/dietpi-software-systemstat-rpimonitor.png){: width="500" height="364" loading="lazy"}
+![RPi-Monitor web interface screenshot](../assets/images/dietpi-software-systemstat-rpimonitor.png "RPi-Monitor web interface dialog"){: width="500" height="364" loading="lazy"}
 
 === "Main features"
 
@@ -311,6 +310,9 @@ RPi-Monitor is a slick, lightweight system stats monitor with web interface.
 
     - URL = `http://<your.IP>:8888`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "Configuration"
 
     The configuration is described there: <https://xavierberger.github.io/RPi-Monitor-docs/20_index.html>
@@ -323,13 +325,16 @@ Official website: <https://github.com/XavierBerger/RPi-Monitor>.
 
 Netdata is a slick and feature-rich system stats monitor, with web interface.
 
-![Netdata web interface screenshot](../assets/images/dietpi-software-systemstat-netdata.png){: width="500" height="260" loading="lazy"}
+![Netdata web interface screenshot](../assets/images/dietpi-software-systemstat-netdata.png "Netdata web interface dialog"){: width="500" height="260" loading="lazy"}
 
 === "Access to Netdata"
 
     The web interface is accessible via port **19999**:
 
     - URL = `http://<your.IP>:19999`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Troubleshooting"
 
@@ -360,7 +365,7 @@ Wikipedia: <https://wikipedia.org/wiki/Netdata>
 
 Webmin is a web-based feature-rich remote system management tool. Many system settings can easily be set using the web interface dialogues.
 
-![Webmin interface screenshot](../assets/images/dietpi-software-systemstat-webmin.png){: width="500" height="276" loading="lazy"}
+![Webmin interface screenshot](../assets/images/dietpi-software-systemstat-webmin.png "Webmin main menu"){: width="500" height="276" loading="lazy"}
 
 === "Access to Webmin"
 
@@ -369,6 +374,9 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
     - URL: `https://<your.IP>:10000`
     - Username: `root` (or any UNIX user with full `sudo` permissions)
     - Password: `<this UNIX user's password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Service control"
 
@@ -536,13 +544,16 @@ License: [Apache-2.0](https://github.com/docker/compose/blob/v2/LICENSE)
 
 Portainer simplifies your Docker container management via Portainer web interface. It enables faster deploy of the applications and it gives real time visibility.
 
-![Portainer screenshot](../assets/images/dietpi-software-portainer.jpg){: width="1159" height="636" loading="lazy"}
+![Portainer screenshot](../assets/images/dietpi-software-portainer.jpg "Portainer web interface dialog"){: width="1159" height="636" loading="lazy"}
 
 === "Access to the web interface"
 
     The web interface is accessible via HTTPS on port **9442**[^1]:
 
     - URL = `https://<your.IP>:9442`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Update"
 
@@ -555,7 +566,6 @@ Portainer simplifies your Docker container management via Portainer web interfac
 ***
 
 Official documentation: <https://docs.portainer.io>  
-Beginners guide: <https://codeopolis.com/posts/beginners-guide-to-portainer/>
 Source code: <https://github.com/portainer/portainer>  
 Open-source license: [zlib](https://github.com/portainer/portainer/blob/develop/LICENSE)
 
@@ -670,7 +680,7 @@ License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
 Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by an external [Prometheus server](https://prometheus.io/), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](https://grafana.com/), the final piece of a very powerful monitoring stack.
 
-![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png){: width="800" height="395" loading="lazy"}
+![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png "Prometheus Node Exporter dialog"){: width="800" height="395" loading="lazy"}
 
 On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](https://github.com/fahlke/raspberrypi_exporter), which will add RPi-specific metrics such as voltages, CPU frequencies and temperatures.
 
@@ -679,6 +689,9 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
     The metrics endpoint of *Prometheus Node Exporter* is exposed at TCP port **9100** and can be accessed via:
 
     - URL = `http://<your.IP>:9100/metrics`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration"
 
@@ -751,7 +764,7 @@ License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LI
 
 Homer is a modern and lightweight dashboard & homepage for your services
 
-![Homer preview screenshot](../assets/images/homer-preview.png){: width="1920" height="1080" loading="lazy"}
+![Homer preview screenshot](../assets/images/homer-preview.png "Homer web interface dialog"){: width="1920" height="1080" loading="lazy"}
 
 === "Access to Homer"
 
@@ -759,6 +772,9 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     - URL: `http://<your.IP>/homer`
     
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
     You may bookmark this and save it as your browser's home page, or alternatively look into tools like **Nginx Proxy Manager** and a DNS server such as **AdGuard Home** to give it a nice internal domain name such as `homer.box`.
 
 === "Configuration"
@@ -822,7 +838,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     === "Catppuccin"
 
-        ![Homer preview screenshot showing the Cappuccino theme](https://raw.githubusercontent.com/mrpbennett/catppuccin-homer/main/assets/images/examples/preview.png){: width="4146" height="2600" loading="lazy"}
+        ![Homer preview screenshot showing the Cappuccino theme](https://raw.githubusercontent.com/mrpbennett/catppuccin-homer/main/assets/images/examples/preview.png "Homer Catppuccin theme"){: width="4146" height="2600" loading="lazy"}
 
         To apply the **Catppuccin theme** to Homer execute these steps:
 
@@ -857,7 +873,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     === "DietPi"
 
-        ![Homer preview screenshot showing the DietPi theme](https://codeberg.org/Cs137/homer-theme-dietpi/media/branch/main/demo/screenshot_dark.png){: width="1920" height="1080" loading="lazy"}
+        ![Homer preview screenshot showing the DietPi theme](https://codeberg.org/Cs137/homer-theme-dietpi/media/branch/main/demo/screenshot_dark.png "Homer DietPi theme"){: width="1920" height="1080" loading="lazy"}
 
         To apply the **DietPi theme** to Homer execute these steps:
 
@@ -885,7 +901,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     === "Dracula"
 
-        ![Homer preview screenshot showing the Dracula theme](https://raw.githubusercontent.com/dracula/homer/master/screenshot.png){: width="1920" height="947" loading="lazy"}
+        ![Homer preview screenshot showing the Dracula theme](https://raw.githubusercontent.com/dracula/homer/master/screenshot.png "Homer Dracula theme"){: width="1920" height="947" loading="lazy"}
 
         To apply the **Dracula theme** to Homer execute these steps:
 
@@ -914,7 +930,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
     === "macOS"
 
-        ![Homer preview screenshot showing the macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png){: width="1904" height="1080" loading="lazy"}
+        ![Homer preview screenshot showing the macOS styled theme](https://raw.githubusercontent.com/WalkxCode/Homer-Theme/main/preview.png "Homer macOS theme"){: width="1904" height="1080" loading="lazy"}
 
         To apply the **macOS styled theme** to Homer execute these steps:
 

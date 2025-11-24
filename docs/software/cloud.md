@@ -23,19 +23,8 @@ description: Description of DietPi software options related to cloud and backup 
 - [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](#restic)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -48,15 +37,18 @@ Also Installs:
 - Webserver
 - USB dedicated hard drive highly recommended
 
-![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png){: width="400" height="218" loading="lazy"}
+![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png "ownCloud web interface screen"){: width="400" height="218" loading="lazy"}
 
-=== "Quick start"
+=== "Access to the web interface"
 
     ownCloud is accessible via regular HTTP/HTTPS TCP ports **80**/**443** below the `/owncloud` path:
 
     - URL: `http://<your.IP>/owncloud`
     - Username: `admin` (or the one you set in `dietpi.txt`)
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration"
 
@@ -109,15 +101,18 @@ Official documentation: <https://doc.owncloud.com/server/next/admin_manual/>
 
 Nextcloud gives you access to all your files wherever you are. Store your documents, calendar, contacts and photos on a server at home, at one of our providers or in a data center you trust.
 
-![Nextcloud web interface screenshot](../assets/images/dietpi-software-cloud-nextcloud.jpg){: width="2048" height="1280" loading="lazy"}
+![Nextcloud web interface screenshot](../assets/images/dietpi-software-cloud-nextcloud.jpg "Nextcloud web interface screen"){: width="2048" height="1280" loading="lazy"}
 
-=== "Quick start"
+=== "Access to the web interface"
 
     Nextcloud is accessible via regular HTTP/HTTPS ports **80**/**443** below the `/nextcloud` path:
 
     - URL: `http://<your.IP>/nextcloud`
     - Username: `admin` (or the one you set in `dietpi.txt`)
     - Password: `<your global password>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration"
 
@@ -272,7 +267,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     - URL: `http://<your.IP>/opcache.php`
 
-    ![OPcache statistics page](../assets/images/OpCache_php_output.png){: width="700" height="976" loading="lazy"}
+    ![OPcache statistics page](../assets/images/OpCache_php_output.png "Nextcloud OPcache statistics output"){: width="700" height="976" loading="lazy"}
 
     The dialog shows the cache status as well as the settings.
 
@@ -303,7 +298,7 @@ Also installs:
 - [**Nextcloud**](#nextcloud)
 - **Coturn**
 
-![Nextcloud Talk app screenshot](../assets/images/dietpi-software-cloud-nextcloudtalk.png){: width="2560" height="1440" loading="lazy"}
+![Nextcloud Talk app screenshot](../assets/images/dietpi-software-cloud-nextcloudtalk.png "Nextcloud Talk app screen"){: width="2560" height="1440" loading="lazy"}
 
 === "Installation notes"
 
@@ -327,11 +322,16 @@ Also Installs:
 
 - Webserver
 
-![Pydio web interface screenshot](../assets/images/dietpi-software-cloud-pydio.png){: width="400" height="243" loading="lazy"}
+![Pydio web interface screenshot](../assets/images/dietpi-software-cloud-pydio.png "Pydio web interface screen"){: width="400" height="243" loading="lazy"}
 
 === "Access to the web interface"
 
-    URL: `http://<your.IP>/pydio`
+    The web interface of *Pydio* can be accessed via:
+
+    - URL: `http://<your.IP>/pydio`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First time connect"
 
@@ -370,13 +370,16 @@ UrBackup Server is an Open Source client/server backup system, that through a co
 Basically, it allows you to create a complete system backup for systems on your network, using a simple web interface.  
 Clients are available for Windows, macOS, Linux and FreeBSD.
 
-![UrBackup interface screenshot](../assets/images/dietpi-software-cloud-urbackup.png){: width="400" height="103" loading="lazy"}
+![UrBackup interface screenshot](../assets/images/dietpi-software-cloud-urbackup.png "UrBackup interface screen"){: width="400" height="103" loading="lazy"}
 
 === "Access to the web interface"
 
     The web interface is accessible via TCP port **55414**:
 
     - URL: `http://<your.IP>:55414`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration"
 
@@ -465,7 +468,7 @@ Official forums: <https://forums.urbackup.org/>
 
 Your very own GitHub style server, with web interface.
 
-![Gogs web interface screenshot](../assets/images/dietpi-software-cloud-gogs.png){: width="400" height="175" loading="lazy"}
+![Gogs web interface screenshot](../assets/images/dietpi-software-cloud-gogs.png "Gogs web interface screen"){: width="400" height="175" loading="lazy"}
 
 See also the [**Git**](programming.md#git) client which is available in `dietpi-software` as an installation package.
 
@@ -474,6 +477,9 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     The web interface is accessible via TCP port **3000**:
 
     - URL: `http://<your.IP>:3000`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First run setup"
 
@@ -543,6 +549,9 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     The web interface is accessible via port **3000**:
 
     - URL: `http://<your.IP>:3000`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First run setup"
 
@@ -661,6 +670,9 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
     - URL: `http://<your.IP>:3000`
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
 === "First run setup"
 
     Has to be done once, when connected to the web interface:
@@ -769,13 +781,16 @@ License: [MIT](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/LICENSE)
 
 Backup and sync server with web interface. Extremely lightweight and efficient as no webserver is required.
 
-![Syncthing interface screenshot](../assets/images/dietpi-software-cloud-syncthing.png){: width="400" height="195" loading="lazy"}
+![Syncthing web interface screenshot](../assets/images/dietpi-software-cloud-syncthing.png "Syncthing web interface screen"){: width="400" height="195" loading="lazy"}
 
 === "Access to the web interface"
 
     The web interface is accessible via port **8384**:
 
     URL = `http://<your.IP>:8384`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "First run setup"
 
@@ -812,7 +827,7 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
 ![MinIO setup diagram](../assets/images/dietpi-software-cloud-minio.jpg){: width="417" height="443" loading="lazy"}
 
-=== "Quick start"
+=== "Access to the web interface"
 
     The web interface is accessible via TCP port **9001** and S3 clients need to connect via TCP port **9004**:
 
@@ -823,6 +838,9 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
     - [MinIO Object Storage docs](https://docs.min.io/community/minio-object-store/)
     - [MinIO Python Client docs](https://docs.min.io/community/minio-object-store/developers/python/minio-py.html)
     - [MinIO JavaScript Client docs](https://docs.min.io/community/minio-object-store/developers/javascript/minio-javascript.html)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 ***
 
@@ -835,7 +853,7 @@ License: [AGPLv3](https://github.com/minio/minio/blob/master/LICENSE)
 
 vaultwarden is an unofficial Bitwarden password manager server with web interface, written in Rust.
 
-![vaultwarden web vault screenshot](../assets/images/dietpi-software-vaultwarden.jpg){: width="600" height="247" loading="lazy"}
+![vaultwarden web vault screenshot](../assets/images/dietpi-software-vaultwarden.jpg "vaultwarden web vault screen"){: width="600" height="247" loading="lazy"}
 
 === "First access"
 
@@ -851,57 +869,60 @@ vaultwarden is an unofficial Bitwarden password manager server with web interfac
             1. In your browser, next to the address bar, select the warning or lock icon.
                 Then select the certificate button to open Windows' Certificate view.
             2. Switch to the "Details" tab.  
-                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png)
+                ![Import certificate on Windows 10, screenshot 1](../assets/images/import_cert_windows_1.png "Import certificate on Windows 10 - Details tab")
             3. Select "Save to file".
             4. In the newly opened window, select "Continue".  
-                ![Import certificate on Windows 10, screenshot 2](../assets/images/import_cert_windows_2.png)
+                ![Import certificate on Windows 10, screenshot 2](../assets/images/import_cert_windows_2.png "Import certificate on Windows 10 - Continue")
             5. Leave default DER coding and select "Continue".
             6. Select "Browse" to chose a target file location.  
-                ![Import certificate on Windows 10, screenshot 3](../assets/images/import_cert_windows_3.png)
+                ![Import certificate on Windows 10, screenshot 3](../assets/images/import_cert_windows_3.png "Import certificate on Windows 10 - Browser selection")
             7. Choose a target file location and name, it is only required temporarily.
             8. Select "Continue".
             9. Select "Finish".  
-                ![Import certificate on Windows 10, screenshot 4](../assets/images/import_cert_windows_4.png)
+                ![Import certificate on Windows 10, screenshot 4](../assets/images/import_cert_windows_4.png "Import certificate on Windows 10 - Finish dialog")
             10. Double-click the created certificate file and select "Install certificate".
             11. Select "Local system".
             12. Select "Continue", which requires administrator permissions.  
-                ![Import certificate on Windows 10, screenshot 5](../assets/images/import_cert_windows_5.png)
+                ![Import certificate on Windows 10, screenshot 5](../assets/images/import_cert_windows_5.png "Import certificate on Windows 10 - Administrator permissions")
             13. Choose "Save all certificates to the following store".
             14. Select "Browse".
             15. Select "Trusted Root Certification Authorities".
             16. Select "Ok".
             17. Select "Continue".
             18. Select "Finish".  
-                ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png)
+                ![Import certificate on Windows 10, screenshot 6](../assets/images/import_cert_windows_6.png "Import certificate on Windows 10 - Finish dialog")
 
         === "macOS"
 
             1. In your browser (note that this cannot be done in Safari), next to the address bar, select the warning or lock icon.
                 Then select the "Certificate (Invalid)" button.  
-                ![Import certificate on macOS, screenshot 1](../assets/images/import_cert_mac_1.png){: width="250px"}
+                ![Import certificate on macOS, screenshot 1](../assets/images/import_cert_mac_1.png "Import certificate on MacOS - Certificate import"){: width="250px"}
             2. Drag the certificate icon to your desktop, it is only required temporarily.
             3. Double-click on the certificate file.  
-                ![Import certificate on macOS, screenshot 2](../assets/images/import_cert_mac_2.png)
+                ![Import certificate on macOS, screenshot 2](../assets/images/import_cert_mac_2.png "Import certificate on MacOS - Certificate file selection")
             4. On the "Keychain" dropdown, select "System".
             5. Select "Add".
             6. Enter an administrator username and password.
             7. Select "Modify Keychain".  
-                ![Import certificate on macOS, screenshot 3](../assets/images/import_cert_mac_3.png)
+                ![Import certificate on macOS, screenshot 3](../assets/images/import_cert_mac_3.png "Import certificate on MacOS - Keychain modification")
             8. Double-click on the certificate in the list.
             9. Select "Trust".  
-                ![Import certificate on macOS, screenshot 4](../assets/images/import_cert_mac_4.png)
+                ![Import certificate on macOS, screenshot 4](../assets/images/import_cert_mac_4.png "Import certificate on MacOS - Trust selection")
             10. On the "Secure Sockets Layer (SSL)" dropdown, select "Always Trust".
             11. Click the red button in the top left corner of the window.
             12. Enter an administrator username and password.
             13. Select "Update Settings".  
-                ![Import certificate on macOS, screenshot 5](../assets/images/import_cert_mac_5.png)
+                ![Import certificate on macOS, screenshot 5](../assets/images/import_cert_mac_5.png "Import certificate on MacOS - Update settings")
 
-=== "Web access"
+=== "Access to the web interface"
 
     The web interface is accessible via port **8001**:
 
     - URL = `https://<your.IP>:8001`
     - On first access, you need to create an account, either via web UI or via client (see "Client access" tab).
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Client access"
 
@@ -947,7 +968,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
 
 ![FuguHub logo](../assets/images/dietpi-software-cloud-fuguhub.png){: width="149" height="140" loading="lazy"}
 
-=== "Web interface"
+=== "Access to the web interface"
 
     The web interface is accessible via regular HTTP and HTTPS ports **80** and **443**:
 
@@ -955,9 +976,12 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     - Username: `dietpi`
     - Password: `<your global password>` (default: `dietpi`)
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
     !!! warning "The fact that FuguHub runs on ports 80 and 443 by default makes it incompatible with regular web servers when using the default setup."
 
-    ![FuguHub web interface screenshot](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png){: width="1920" height="1088" loading="lazy"}
+    ![FuguHub web interface screenshot](https://user-images.githubusercontent.com/28480705/99921345-12aaec80-2d2a-11eb-8503-1687b4997db1.png "FuguHub web interface main menu"){: width="1920" height="1088" loading="lazy"}
 
 === "Setup details"
 
@@ -998,6 +1022,9 @@ Access and manage your data from anywhere via browser with this lightweight remo
     - URL = `http://<your.IP>:8084`
     - Username = `dietpi`
     - Password = `<your global password>`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Directories"
 
@@ -1054,7 +1081,7 @@ Access and manage your data from anywhere via browser with this lightweight remo
 
     The filebrowser contains its own user management. To add/change/remove users, the filebrowser UI contains a *Settings* section with a *User Management* tab.
 
-    ![File Browser UI - User Management](../assets/images/dietpi-software-cloud-filebrowser-usermgmt.png){: width="600" height="200" loading="lazy"}
+    ![File Browser UI - User Management](../assets/images/dietpi-software-cloud-filebrowser-usermgmt.png "File Browser user management dialog"){: width="600" height="200" loading="lazy"}
 
 === "View logs"
 

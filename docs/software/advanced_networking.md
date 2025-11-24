@@ -13,19 +13,8 @@ description: Description of DietPi software options related to networking
 - [**Avahi-Daemon - Zero configuration DNS service for the local network**](#avahi-daemon)
 - [**frp - Reverse Proxy**](#frp)
 
-??? info "How do I run **DietPi-Software** and install **optimised software** items?"
-    To install any of the **DietPi optimised software items** listed below run from the command line:
-
-    ```sh
-    dietpi-software
-    ```
-
-    Choose **Browse Software** and select one or more items. Finally select `Install`.  
-    DietPi will do all the necessary steps to install and start these software items.
-
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg){: width="643" height="365" loading="lazy"}
-
-    To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
 
@@ -252,7 +241,7 @@ HAProxy, which stands for High Availability Proxy, is a popular open source soft
 
 It is best suited for high traffic web sites and powers quite a number of the world's most visited ones: GitHub, Imgur, Instagram, and Twitter. It has become the de-facto standard open-source load balancer, and it is often deployed by default in cloud platforms.
 
-![HAProxy statistics web page](../assets/images/dietpi-software-advanced-networking-haproxy2.jpg){: width="1898" height="650" loading="lazy"}
+![HAProxy statistics web page](../assets/images/dietpi-software-advanced-networking-haproxy2.jpg "HAProxy statistics web page"){: width="1898" height="650" loading="lazy"}
 
 !!! warning "This software title is recommended ONLY for advanced users!"
 
@@ -266,6 +255,8 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     systemctl start haproxy    
     ```
 
+=== "Access to the web interface"
+
     The stats web interface is accessible via port **1338**:
 
     - URL = `http://<your.IP>:1338`
@@ -273,13 +264,16 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     - Username = `admin`
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+
     !!! hint "This installation was made possible by Jerome Queneuder, who provided the methods for compiling and installation."
 
 === "Load balancing"
 
     The simplest way to load balance network traffic to multiple servers is to use layer 4 (transport layer) load balancing. Load balancing this way will forward user traffic based on IP range and port.
 
-    ![Layer 4 load balancing pictogram](../assets/images/dietpi-software-advanced-networking-layer4.jpg){: width="690" height="248" loading="lazy"}
+    ![Layer 4 load balancing pictogram](../assets/images/dietpi-software-advanced-networking-layer4.jpg "HAProxy load balancing"){: width="690" height="248" loading="lazy"}
 
     The user accesses the load balancer, which forwards the user’s request to the web-backend group of backend servers. Whichever backend server is selected will respond directly to the user’s request.
 
@@ -290,7 +284,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     A high availability (HA) setup is an infrastructure without a single point of failure. It prevents a single server failure from being a downtime event by adding redundancy to every layer of your architecture. A load balancer facilitates redundancy for the backend layer (web/app servers), but for a true high availability setup, you need to have redundant load balancers as well.
 
     Here is a diagram of a basic high availability setup:
-    ![Animated high availability setup diagram](../assets/images/dietpi-software-advanced-networking-high-availability.gif){: width="1200" height="577" loading="lazy"}
+    ![Animated high availability setup diagram](../assets/images/dietpi-software-advanced-networking-high-availability.gif "HAProxy high availability"){: width="1200" height="577" loading="lazy"}
 
     Help text extracted from the tutorial: [An Introduction to HAProxy and Load Balancing Concepts](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
 
@@ -357,6 +351,9 @@ A fast reverse proxy, helping you to expose a local server behind a NAT or firew
     - Dashboard (Server): `http://<your.IP>:7500`
         - User name: `admin`
         - Password: `<yourGlobalSoftwarePassword>` (default: `dietpi`)
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
 
 === "Configuration Files"
 
