@@ -6,69 +6,6 @@ description: Miscellaneous usage hints and guides for the DietPi OS
 
 This chapter contains several documents describing the usage of DietPi.
 
-## How to upgrade the Debian base OS
-
-For comprehensive information on upgrading between supported Debian releases, please refer to the following guides.
-Each post includes a feature overview, release schedule, software changes, incompatible software, and detailed upgrade instructions.
-
-- [Upgrade from Bookworm to Trixie](https://dietpi.com/blog/?p=4014)
-- [Upgrade from Bullseye to Bookworm](https://dietpi.com/blog/?p=3128)
-
----
-
-## How to use the logging mechanism
-
-DietPi uses systemd as system and service manager, which includes the `systemd-journald` logging daemon.
-An additional syslog daemon, like `rsyslog`, is not required and hence not pre-installed on DietPi. The basic command to access `systemd-journald` logs is
-
-```sh
-journalctl [options]
-```
-
-### Logging basic output
-
-Using simply `journalctl` prints out all logging messages stored in the system.  
-Each line shows:  
-<timestamp\> <hostname\> <process name\>[PID]: <log message\>
-
-The following screenshot shows the logging of the boot process (of a DietPi virtual machine). You can see the various fields (timestamp, hostname, etc.) in the log entries:
-
-![DietPi logging - journalctl screenshot](assets/images/dietpi-howto-logging1.png "DietPi journalctl output"){: width="640" height="300" loading="lazy"}
-
-### Logging output filtering options
-
-Some of the options are described in the following table.  
-More detailed options may be studied in the [man pages of `journalctl`](https://man7.org/linux/man-pages/man1/journalctl.1.html).
-
-| Command | Remark |
-| - | - |
-| `journalctl -u UNITNAME` <br>(`--unit UNITNAME`) | Displays messages of the given unit |
-| `journalctl _PID=<process_id>` | Displays messages of process with PID equals to <process_id\> |
-| `journalctl -r` <br>(`--reverse`) | Displays list in reverse order, i.e. newest messages first |
-| `journalctl -f` <br>(`--follow`) | Displays the tail of the log message list and shows new entries *live* |
-| `journalctl -b` <br>(`--boot`) | Displays messages since the last boot (i.e. no older messages). See also option `--list-boots` |
-| `journalctl -k` <br>(`--dmesg`) | Displays kernel messages |
-| `journalctl -p PRIORITY` <br>(--priority PRIORITY) | Displays messages with the given priority. PRIORITY may be `merg`, `alert`, `crit`, `err`, `warning`, `notice`, `info` and `debug`. Also numbers as PRIORITY are possible |
-| `journalctl -o verbose` | Displays additional meta data |
-| `journalctl --disk-usage` | Displays the amount of disk space used by the logging messages |
-| `journalctl --no-pager &#124 grep <filter>` | Filters log messages (filtering with `grep`) |
-
-In the software package descriptions, sometimes there is a tab called "View Logs". This gives a `jounalctl -u UNITNAME` command example how to filter the logging messages of a given software package.  
-Example: See [tab "View logs"](software/dns_servers.md#unbound) of *Unbound*. It gives: `journalctl -u unbound`.
-
-### Logging options
-
-As described in the chapter [Log system choices](software/log_system.md), DietPi has several options how the logging system operates. Especially the log history, the memory consumption and the frequency of SD card write accesses varies.  
-Find and set the options which fit to your demands, it is also an option to change the logging to examine some problems.
-
-| Log option | location | log depth | log persistence |
-| - | - | - | - |
-| DietPi-RAMlog #1 | RAM | last hour | volatile, i.e. not saved to disk |
-| DietPi-RAMlog #2 | RAM | long term | stored, i.e. hourly saved to disk |
-| Full logging | disk | long term | stored, i.e. immediately saved to disk <br>(with Rsyslog and Logrotate) |
-
----
-
 ## How to do an automatic base installation at first boot (DietPi-Automation)
 
 DietPi offers the option for an automatic first boot installation. Normally, during the first system boot there is an installation procedure which sets up your system initially. The steps described in the section ["First logon on DietPi"](install.md#4-first-logon-on-dietpi) are then conducted.

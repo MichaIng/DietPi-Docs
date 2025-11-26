@@ -8,6 +8,16 @@ Update DietPi OS version to the latest version available and informs when update
 dietpi-update
 ```
 
+## How to upgrade the Debian base OS
+
+For comprehensive information on upgrading between supported Debian releases, please refer to the following guides.
+Each post includes a feature overview, release schedule, software changes, incompatible software, and detailed upgrade instructions.
+
+- [Upgrade from Bookworm to Trixie](https://dietpi.com/blog/?p=4014)
+- [Upgrade from Bullseye to Bookworm](https://dietpi.com/blog/?p=3128)
+
+---
+
 ### DietPi update - Command line usage
 
 Beside the interactive menu via `dietpi-update`, there is the option of the shell command line:
