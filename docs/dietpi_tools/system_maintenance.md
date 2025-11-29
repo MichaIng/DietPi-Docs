@@ -1,5 +1,17 @@
 # System maintenance
 
+## How to upgrade the Debian base OS
+
+For comprehensive information on upgrading between supported Debian releases, please refer to the following guides.
+Each post includes a feature overview, release schedule, software changes, incompatible software, and detailed upgrade instructions.
+
+- [Upgrade from Bookworm to Trixie (Debian 12 to Debian 13)](https://dietpi.com/blog/?p=4014)
+- [Upgrade from Bullseye to Bookworm (Debian 11 to Debian 12)](https://dietpi.com/blog/?p=3128)
+- [Upgrade from Buster to Bullseye (Debian 10 to Debian 11)](https://dietpi.com/blog/?p=811)
+- [Upgrade from Stretch to Buster (Debian 9 to Debian 10)](https://dietpi.com/blog/?p=1001)
+
+---
+
 ## DietPi update
 
 Update DietPi OS version to the latest version available and informs when updates for `apt upgrade` are available. To start DietPi-Update, use the following command:
@@ -7,16 +19,6 @@ Update DietPi OS version to the latest version available and informs when update
 ```sh
 dietpi-update
 ```
-
-## How to upgrade the Debian base OS
-
-For comprehensive information on upgrading between supported Debian releases, please refer to the following guides.
-Each post includes a feature overview, release schedule, software changes, incompatible software, and detailed upgrade instructions.
-
-- [Upgrade from Bookworm to Trixie](https://dietpi.com/blog/?p=4014)
-- [Upgrade from Bullseye to Bookworm](https://dietpi.com/blog/?p=3128)
-
----
 
 ### DietPi update - Command line usage
 

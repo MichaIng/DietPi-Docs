@@ -12,7 +12,9 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
 ![DietPi-Software screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main dialog"){: width="640" height="306" loading="lazy"}
 
-### Software overview
+### Software package selection
+
+Software packages which shall be installed have to be selected prior to the installation via "Install" at the bottom of the dialog.
 
 === "Display Options"
 
@@ -38,33 +40,29 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi-Software Search menu screenshot](../assets/images/dietpi-software-search.png "DietPi-Software Search menu"){: with="752" height="321" loading="lazy"}
 
-### Quick selections
+### SSH server selection
 
-=== "SSH Server"
+This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
 
-    This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
+![DietPi-Software SSH Server menu screenshot](../assets/images/dietpi-software-ssh-selection.jpg "DietPi-Software SSH Server menu"){: width="550" height="320" loading="lazy"}
 
-    ![DietPi-Software SSH Server menu screenshot](../assets/images/dietpi-software-ssh-selection.jpg "DietPi-Software SSH Server menu"){: width="550" height="320" loading="lazy"}
+### Log system selection
 
-=== "Log System"
+Various logging methods can be selected from lightweight to full.
+If you don’t require log files, get a performance boost. If you need full system logging features, DietPi can do that too.
 
-    Various logging methods can be selected from lightweight to full.
-    If you don’t require log files, get a performance boost. If you need full system logging features, DietPi can do that too.
+The Log System can be changed at any time by selecting a different “Log System” from the menu.
 
-    The Log System can be changed at any time by selecting a different “Log System” from the menu.
+![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg "DietPi-Software Log System menu"){: width="550" height="370" loading="lazy"}
 
-    ![DietPi-Software Log System menu screenshot](../assets/images/dietpi-software-log-system-selection.jpg "DietPi-Software Log System menu"){: width="550" height="370" loading="lazy"}
+DietPi uses systemd as system and service manager, which includes the `systemd-journald` logging daemon.
+An additional syslog daemon, like `rsyslog`, is not required and hence not pre-installed on DietPi. The basic command to access `systemd-journald` logs is
 
-    ## How to use the logging mechanism
+```sh
+journalctl [options]
+```
 
-    DietPi uses systemd as system and service manager, which includes the `systemd-journald` logging daemon.
-    An additional syslog daemon, like `rsyslog`, is not required and hence not pre-installed on DietPi. The basic command to access `systemd-journald` logs is
-
-    ```sh
-    journalctl [options]
-    ```
-
-    ### Logging basic output
+=== "Logging basic output"
 
     Using simply `journalctl` prints out all logging messages stored in the system.  
     Each line shows:  
@@ -74,7 +72,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
 
     ![DietPi logging - journalctl screenshot](../assets/images/dietpi-howto-logging1.png "DietPi journalctl output"){: width="640" height="300" loading="lazy"}
 
-    ### Logging output filtering options
+=== "Logging output filtering options"
 
     Some of the options are described in the following table.  
     More detailed options may be studied in the [man pages of `journalctl`](https://man7.org/linux/man-pages/man1/journalctl.1.html).
@@ -95,7 +93,7 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     In the software package descriptions, sometimes there is a tab called "View Logs". This gives a `jounalctl -u UNITNAME` command example how to filter the logging messages of a given software package.  
     Example: See [tab "View logs"](../software/dns_servers.md#unbound) of *Unbound*. It gives: `journalctl -u unbound`.
 
-    ### Logging options
+=== "Logging options"
 
     As described in the chapter [Log system choices](../software/log_system.md), DietPi has several options how the logging system operates. Especially the log history, the memory consumption and the frequency of SD card write accesses varies.  
     Find and set the options which fit to your demands, it is also an option to change the logging to examine some problems.
@@ -106,34 +104,31 @@ It is one of the core tools, enabling you to install or uninstall one or more [*
     | DietPi-RAMlog #2 | RAM | long term | stored, i.e. hourly saved to disk |
     | Full logging | disk | long term | stored, i.e. immediately saved to disk <br>(with Rsyslog and Logrotate) |
 
-    ---
-
-
     See [log system choices](../software/log_system.md) for further details.
 
-=== "User Data Location"
+### User data location selection
 
-    In DietPi, we class user data as:
+In DietPi, we class user data as:
 
-    - **Data storage for applications**. Some examples are ownCloud/Nextcloud data store, BitTorrent downloads and SQL data store.
-    - The location where your **File Server** choice will point to, if you install one, like Samba Server or ProFTPD.
-    - The location where you can upload and store your **media content**, for other applications to use, like Kodi, Emby or Plex.
+- **Data storage for applications**. Some examples are ownCloud/Nextcloud data store, BitTorrent downloads and SQL data store.
+- The location where your **File Server** choice will point to, if you install one, like Samba Server or ProFTPD.
+- The location where you can upload and store your **media content**, for other applications to use, like Kodi, Emby or Plex.
 
-    For all software you install in dietpi-software, you can access your user data with `/mnt/dietpi_userdata`. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
-    To check where the physical location is, you can run the following command:  
+For all software you install in dietpi-software, you can access your user data with `/mnt/dietpi_userdata`. Regardless of where the data is physically stored, a symlink will automatically be created for you if needed.  
+To check where the physical location is, you can run the following command:  
 
-    ```sh
-    readlink -f /mnt/dietpi_userdata
-    ```
+```sh
+readlink -f /mnt/dietpi_userdata
+```
 
-    You can **move your user data** to another location (e.g. USB drive). Simply run `dietpi-software` and enter the *User data location* menu option:
+You can **move your user data** to another location (e.g. USB drive). Simply run `dietpi-software` and enter the *User data location* menu option:
 
-    - If you need to setup a new external drive, select *Drive Manager* to launch *DietPi-Drive Manager*.
-    - Use the *List* option to select from a list of mounted drives, or, select *Manual* for a custom location.
+- If you need to setup a new external drive, select *Drive Manager* to launch *DietPi-Drive Manager*.
+- Use the *List* option to select from a list of mounted drives, or, select *Manual* for a custom location.
 
-    DietPi will automatically move your existing user data to your new location.
+DietPi will automatically move your existing user data to your new location.
 
-    ![DietPi-Software User Data Location menu screenshot](../assets/images/dietpi-software-user-data-location-selection.jpg "DietPi-Software User Data Location menu"){: width="550" height="287" loading="lazy"}
+![DietPi-Software User Data Location menu screenshot](../assets/images/dietpi-software-user-data-location-selection.jpg "DietPi-Software User Data Location menu"){: width="550" height="287" loading="lazy"}
 
 ### Install or remove software
 
