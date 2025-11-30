@@ -112,12 +112,12 @@
   display: table;
   table-layout: auto;
 }
-#logging-output-filtering-options ~ div div.md-typeset__table table {
-  table-layout: fixed;
-}
-
-#logging-options ~ div div.md-typeset__table table {
-  table-layout: auto;
+table tbody tr td:first-of-type code {
+  /* table-layout: fixed; */
+  white-space: pre-wrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  hyphens: none;
 }
 
 /* Footer */
