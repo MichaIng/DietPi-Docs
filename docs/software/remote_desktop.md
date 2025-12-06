@@ -15,6 +15,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**RealVNC Server - Desktop for remote connection**](#realvnc-server)
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](#xrdp)
 - [**NoMachine - Feature rich remote desktop connection**](#nomachine)
+- [**RustDesk Server - Open source remote access and support software**](#rustdesk)
 
 ### Remote Access
 
@@ -311,5 +312,155 @@ Once installed, available VirtualHere devices will be shown in the client user i
 
 Official website: <https://virtualhere.com/>  
 Official server docs: <https://virtualhere.com/configuration_faq>
+
+## RustDesk Server
+
+RustDesk server is an open source remote access server with minimal configuration.  
+The installed package is the OSS variant of the RustDesk server. It is installed to be self-hosted to minimize concerns about security of an otherwise publicly known server.
+
+![RustDesk logo](../assets/images/dietpi-software-remotedesktop-rustdesk-logo.svg "RustDesk logo"){: width="300" height="68" loading="lazy"}
+
+The functionality consists of two parts:
+
+- The server: This software part is installed with the DietPi software package. It handles the connection between RustDesk clients.
+- The client: This software part needs to be installed on every PC which wants to connect to another RustDesk client.
+
+RustDesk clients for several operating systems are also available as open source packages. Download the client for your PC from:
+
+- <https://github.com/rustdesk/rustdesk/releases>
+
+=== "General architecture"
+
+    - picture(s): local and remote
+
+=== "Server configuration"
+
+    - Directories
+
+    The configuration files `hbbs.env` (signaling server) and `hbbr.env` (relay server) can be found at:
+
+    ```
+    /mnt/dietpi_userdata/rustdesk/
+    ```
+
+    When doing changes, apply them by restart the services:
+
+    ```sh
+    systemctl restart rustdesksignal rustdeskrelay
+    ```
+
+
+    - Key files /mnt/dietpi_userdata/rustdesk/id_ed25519 and /mnt/dietpi_userdata/rustdesk/id_ed25519.pub
+    - Database files?
+    - env files? /mnt/dietpi_userdata/rustdesk/relay.env and /mnt/dietpi_userdata/rustdesk/signal.env
+
+    - Used ports list (for which functionality?)
+    - Router configuration (port forwarding)
+    - New key files generate via /opt/rustdesk/rustdesk-utils
+
+=== "Client configuration"
+
+    - Relay server setup
+    - @public
+
+=== "Service control"
+
+    The services are started automatically at boot. As systemd service, they can be controlled with the following commands:
+
+    ```sh
+    systemctl status rustdesksignal
+    systemctl status rustdeskrelay
+    ```
+
+    ```sh
+    systemctl start rustdesksignal
+    systemctl start rustdeskrelay
+    ```
+
+    ```sh
+    systemctl stop rustdesksignal
+    systemctl stop rustdeskrelay
+    ```
+
+    ```sh
+    systemctl restart rustdesksignal
+    systemctl restart rustdeskrelay
+    ```
+
+=== "Moving RustDesk to a different system"
+
+    - Installation on new system
+    - Copy files /mnt/dietpi_userdata/rustdesk/ (key files and configuration data)
+    - Copy files /mnt/dietpi_userdata/rustdesk/relay.env and /mnt/dietpi_userdata/rustdesk/signal.env
+    - Restart services or reboot
+
+=== "Logs"
+
+    Since RustDesk runs as two systemd services, its logs can be viewed via:
+
+    ```sh
+    journalctl -u rustdesksignal
+    ```
+
+    resp. 
+
+    ```sh
+    journalctl -u rustdeskrelay
+
+    ```
+
+=== "Update"
+
+    When a new version is available, RustDesk server can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 12
+    ```
+
+    xxx optional via script and version info 
+    Showing installed server versions
+    This can be achieved via (a lousy script, e.g. named ShowRustdeskVersions.sh)
+
+    #!/bin/bash
+    /opt/rustdesk/hbbr -V
+    /opt/rustdesk/hbbs -V
+
+    https://github.com/techahold/rustdeskinstall
+
+
+=== "Configuration"
+
+    The configuration file can be found at:
+
+    ```
+    /opt/virtualhere/config.ini
+    ```
+
+    When doing changes, apply them by restart the service:
+
+    ```sh
+    systemctl restart virtualhere
+    ```
+
+=== "Logs"
+
+    Since VirtualHere runs as systemd service, its logs can be viewed via:
+
+    ```sh
+    journalctl -u virtualhere
+    ```
+
+=== "Update"
+
+    When a new version is available, VirtualHere can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 138
+    ```
+
+***
+
+Official website: <https://rustdesk.com/>  
+Official server docs: <https://rustdesk.com/docs>
 
 [Return to the **Optimised Software list**](../software.md)
