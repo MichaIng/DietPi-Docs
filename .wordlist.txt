@@ -1,6 +1,7 @@
 aarch
 ABI
 ACARS
+ACL
 ACP
 ACPI
 ActivityPub
@@ -739,6 +740,7 @@ unbootable
 uncheck
 uncomment
 unencrypted
+unformatted
 unmount
 unicast
 USBridge
