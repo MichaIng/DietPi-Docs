@@ -40,7 +40,7 @@ Select the following tabs for the installation description of your target.
     _Example:_
     ![DietPi for Raspberry Pi download page](assets/images/DietPi-RaspberryPi-image.jpg "DietPi for Raspberry Pi download page"){: width="1186" height="561" loading="lazy"}
 
-    The downloaded file is compressed (`.xz` file extension). Many flash tools (e.g. [balenaEtcher](https://www.balena.io/etcher/), [Rufus](https://rufus.ie/), [Raspberry Pi Imager](https://www.raspberrypi.com/software/)) can directly use this file format.  
+    The downloaded file is compressed (`.xz` file extension). Many flash tools (e.g. [balenaEtcher](https://etcher.balena.io/), [Rufus](https://rufus.ie/), [Raspberry Pi Imager](https://www.raspberrypi.com/software/)) can directly use this file format.  
     Otherwise an appropriate extraction tool has to be installed (e.g. [7zip for Windows](https://www.7-zip.org/), [The Unarchiver (Macintosh)](https://theunarchiver.com/), [`xz-utils`](https://tukaani.org/xz/) (Linux)) to extract the `.img` file. They are free of charge and have been tested to decompress the image correctly (see below for extract instructions).
 
     ??? hint "Extracting DietPi images (for flash tools not supporting the `.xz` file format)"
@@ -53,7 +53,7 @@ Select the following tabs for the installation description of your target.
 
     ## 2. Flash the DietPi image
 
-    At first, download and install [balenaEtcher](https://www.balena.io/etcher/). This application flashes OS images to SD cards and USB drives, safely and easily on Windows, macOS, Linux.  
+    At first, download and install [balenaEtcher](https://etcher.balena.io/). This application flashes OS images to SD cards and USB drives, safely and easily on Windows, macOS, Linux.  
 
     !!! note "On Windows you may also use [Rufus](https://rufus.ie/) to flash the image."
         Click on the **Install on native PC** tab above to see an example of using Rufus. In case of SBC images, all options are greyed out, which is correct, so after selecting the image and the target drive, you only need to hit **START**.
@@ -766,7 +766,7 @@ Select the following tabs for the installation description of your target.
         Download [Rufus](https://rufus.ie/) and run the application. There is a portable version of Rufus available which doesn't require any local installation.
 
         !!! warning "Be careful if you run alternative applications!"
-            While [Balena Etcher](https://www.balena.io/etcher/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
+            While [Balena Etcher](https://etcher.balena.io/) is recommended for installing DietPi on SBCs, it does not provide good results for UEFI images. The same also with win32diskimager, which does not work as an alternative.
 
         <h2>2. Write image to USB drive</h2>
 
