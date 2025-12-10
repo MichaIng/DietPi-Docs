@@ -323,45 +323,39 @@ The installed package is the OSS variant of the RustDesk server. It is installed
 The functionality consists of two parts:
 
 - The server: This software part is installed with the DietPi software package. It handles the connection between RustDesk clients.
-- The client: This software part needs to be installed on every PC which wants to connect to another RustDesk client.
+- The client: This software part needs to be installed on every system which wants to connect to another RustDesk client.
 
-RustDesk clients for several operating systems are also available as open source packages. Download the client for your PC from:
+xxx General architecture
 
-- <https://github.com/rustdesk/rustdesk/releases>
+- picture(s): local and remote
 
-=== "General architecture"
-
-    - picture(s): local and remote
+### Server management
 
 === "Server configuration"
 
-    - Directories
-
-    The configuration files `hbbs.env` (signaling server) and `hbbr.env` (relay server) can be found at:
+    The configuration files 
+    
+    - `hbbs.env` (signaling server configuration)
+    - `hbbr.env` (relay server configuration)
+    - `id_ed25519` (private key file)
+    - `id_ed25519.pub` (public key file)
+    
+    can be found at:
 
     ```
     /mnt/dietpi_userdata/rustdesk/
     ```
 
-    When doing changes, apply them by restart the services:
+    Typically, no changes are necessary within these files.  
+    When doing changes, they are applied by restarting the RustDesk services:
 
     ```sh
     systemctl restart rustdesksignal rustdeskrelay
     ```
 
 
-    - Key files /mnt/dietpi_userdata/rustdesk/id_ed25519 and /mnt/dietpi_userdata/rustdesk/id_ed25519.pub
+    xxx
     - Database files?
-    - env files? /mnt/dietpi_userdata/rustdesk/relay.env and /mnt/dietpi_userdata/rustdesk/signal.env
-
-    - Used ports list (for which functionality?)
-    - Router configuration (port forwarding)
-    - New key files generate via /opt/rustdesk/rustdesk-utils
-
-=== "Client configuration"
-
-    - Relay server setup
-    - @public
 
 === "Service control"
 
@@ -417,46 +411,36 @@ RustDesk clients for several operating systems are also available as open source
     dietpi-software reinstall 12
     ```
 
-    xxx optional via script and version info 
-    Showing installed server versions
+    xxx optional via script and version info  
+    Showing installed server versions  
     This can be achieved via (a lousy script, e.g. named ShowRustdeskVersions.sh)
 
+    ```sh
     #!/bin/bash
     /opt/rustdesk/hbbr -V
     /opt/rustdesk/hbbs -V
+    ```
 
     https://github.com/techahold/rustdeskinstall
 
+### Router configuration
 
-=== "Configuration"
+In case of an access to the RustDesk server from outside of the LAN, ports need to be forwarded by the router.
 
-    The configuration file can be found at:
+    xxx
+    - Used ports list (for which functionality?)
+    - Router configuration (port forwarding)
+    - New key files generate via /opt/rustdesk/rustdesk-utils
 
-    ```
-    /opt/virtualhere/config.ini
-    ```
+### Client installation and setup
 
-    When doing changes, apply them by restart the service:
+RustDesk clients for several operating systems are also available as open source packages. Clients for PCs can be downloaded from:
 
-    ```sh
-    systemctl restart virtualhere
-    ```
+- <https://github.com/rustdesk/rustdesk/releases>
 
-=== "Logs"
 
-    Since VirtualHere runs as systemd service, its logs can be viewed via:
-
-    ```sh
-    journalctl -u virtualhere
-    ```
-
-=== "Update"
-
-    When a new version is available, VirtualHere can be updated by simply reinstalling it:
-
-    ```sh
-    dietpi-software reinstall 138
-    ```
+    - Relay server setup
+    - @public
 
 ***
 
