@@ -322,7 +322,7 @@ The installed package is the OSS variant of the RustDesk server. It is installed
 
 The functionality consists of two parts:
 
-- The server: Is installed with the DietPi software package **Rustdesk Server**. It handles the connection between RustDesk clients.
+- The server: Is installed with the DietPi software package **RustDesk Server**. It handles the connection between RustDesk clients.
 - The client: Needs to be installed on every system which wants to connect to another RustDesk client.
 
 ![RustDesk architecture](../assets/images/dietpi-software-remotedesktop-rustdeskserver_01.png "RustDesk client/server architecture"){: width="927" height="462" loading="lazy"}
