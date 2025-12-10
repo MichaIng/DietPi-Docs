@@ -5,6 +5,7 @@ description: Overview of DietPi releases with applied new software and features,
 
 # DietPi Releases
 
+- [v9.20 December 2025](releases/v9_20.md)
 - [v9.19 November 2025](releases/v9_19.md)
 - [v9.18 October 2025](releases/v9_18.md)
 - [v9.17 September 2025](releases/v9_17.md)
