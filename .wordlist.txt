@@ -2,6 +2,7 @@ aarch
 ABI
 ACARS
 ACL
+ACLs
 ACP
 ACPI
 ActivityPub
@@ -603,6 +604,7 @@ rTorrent
 runtime
 RustDesk
 ruTorrent
+RustDesk
 SABnzbd
 sandboxing
 SATA
