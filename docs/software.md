@@ -220,7 +220,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**RealVNC Server - Desktop for remote connection**](software/remote_desktop.md#realvnc-server)
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](software/remote_desktop.md#xrdp)
 - [**NoMachine - Feature rich remote desktop connection**](software/remote_desktop.md#nomachine)
-- [**RustDesk Server - Open source remote access and support software**](software/remote_desktop.md#rustdesk)
+- [**RustDesk Server - Open source remote access and support software**](software/remote_desktop.md#rustdesk-server)
 
 ### [Remote Access](software/remote_desktop.md#remote-access)
 

@@ -15,7 +15,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**RealVNC Server - Desktop for remote connection**](#realvnc-server)
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](#xrdp)
 - [**NoMachine - Feature rich remote desktop connection**](#nomachine)
-- [**RustDesk Server - Open source remote access and support software**](#rustdesk_server)
+- [**RustDesk Server - Open source remote access and support software**](#rustdesk-server)
 
 ### Remote Access
 
