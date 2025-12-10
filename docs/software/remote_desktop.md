@@ -15,7 +15,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**RealVNC Server - Desktop for remote connection**](#realvnc-server)
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](#xrdp)
 - [**NoMachine - Feature rich remote desktop connection**](#nomachine)
-- [**RustDesk Server - Open source remote access and support software**](#rustdesk)
+- [**RustDesk Server - Open source remote access and support software**](#rustdesk_server)
 
 ### Remote Access
 
@@ -369,9 +369,6 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
         validatekeypair [public key] [secret key]    Validate an existing keypair
         doctor [rustdesk-server]                     Check for server connection problems
     ```
-
-    xxx
-    - Database files?
 
 === "Service control"
 
