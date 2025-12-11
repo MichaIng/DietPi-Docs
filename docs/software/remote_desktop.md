@@ -336,8 +336,8 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
 
     The configuration files 
     
-    - `hbbs.env` (signaling server configuration)
-    - `hbbr.env` (relay server configuration)
+    - `signal.env` (signaling server configuration)
+    - `relay.env` (relay server configuration)
     - `id_ed25519` (private key file)
     - `id_ed25519.pub` (public key file)
     
