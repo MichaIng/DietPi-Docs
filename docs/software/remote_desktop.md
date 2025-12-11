@@ -379,18 +379,15 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
     ```
 
     ```sh
-    systemctl start rustdesksignal
-    systemctl start rustdeskrelay
+    systemctl start rustdesksignal rustdeskrelay
     ```
 
     ```sh
-    systemctl stop rustdesksignal
-    systemctl stop rustdeskrelay
+    systemctl stop rustdesksignal rustdeskrelay
     ```
 
     ```sh
-    systemctl restart rustdesksignal
-    systemctl restart rustdeskrelay
+    systemctl restart rustdesksignal rustdeskrelay
     ```
 
 === "Moving RustDesk to a different system"
