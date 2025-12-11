@@ -336,8 +336,8 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
 
     The configuration files 
     
-    - `signal.env` (signaling server configuration)
-    - `relay.env` (relay server configuration)
+    - `signal.env` (signaling server configuration, process name `hbbs`)
+    - `relay.env` (relay server configuration, process name `hbbr`)
     - `id_ed25519` (private key file)
     - `id_ed25519.pub` (public key file)
     
@@ -375,8 +375,7 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
     The services are started automatically at boot. As systemd service, they can be controlled with the following commands:
 
     ```sh
-    systemctl status rustdesksignal
-    systemctl status rustdeskrelay
+    systemctl status rustdesksignal rustdeskrelay
     ```
 
     ```sh
@@ -399,8 +398,7 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
     If a RustDesk Server shall be moved to a different system with keeping the original configuration, the following steps can be used:
 
     1. Installation of RustDesk Server on the new system
-    1. Copying the key files `/mnt/dietpi_userdata/rustdesk/id_ed25519` and `/mnt/dietpi_userdata/rustdesk/id_ed25519.pub` to the new system
-    1. Copying the server configuration files `/mnt/dietpi_userdata/rustdesk/relay.env` and `/mnt/dietpi_userdata/rustdesk/signal.env` to the new system
+    1. Copying the directory `/mnt/dietpi_userdata/rustdesk` to the new system
     1. Restart of the services or reboot
 
 === "Logs"
@@ -408,14 +406,7 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
     Since RustDesk runs as two systemd services, its logs can be viewed via:
 
     ```sh
-    journalctl -u rustdesksignal
-    ```
-
-    resp. 
-
-    ```sh
-    journalctl -u rustdeskrelay
-
+    journalctl -u rustdesksignal -u rustdeskrelay
     ```
 
 === "Update"
@@ -426,11 +417,9 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
     dietpi-software reinstall 12
     ```
 
-    Optionally the update script from <https://github.com/techahold/rustdeskinstall> can be used.  
     The version info of the installed server versions can be displayed via
 
     ```sh
-    #!/bin/bash
     /opt/rustdesk/hbbr -V
     /opt/rustdesk/hbbs -V
     ```
