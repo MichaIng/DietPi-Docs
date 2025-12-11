@@ -469,7 +469,6 @@ OneLogin
 oneshot
 OOTB
 OPcache
-OSPF
 OrangePi
 OpenBazaar
 OpenJDK
@@ -481,6 +480,8 @@ OpenSSL
 OpenTyrian
 OpenVoiceOS
 OpenVPN
+OSPF
+OSS
 OTG
 OTP
 overvoltage
@@ -599,6 +600,7 @@ RTC
 RTCs
 rTorrent
 runtime
+RustDesk
 ruTorrent
 SABnzbd
 sandboxing
