@@ -60,7 +60,7 @@ jobs:
         curl -sSfLo lychee.tar.gz "$(curl -sSfH 'Authorization: Bearer ${{ github.token }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/^ *"browser_download_url": ".*x86_64-unknown-linux-gnu\.tar\.gz"$/{print $4;exit}')"
         tar xf lychee.tar.gz
     - name: Restore lychee cache
-      uses: actions/cache/restore@v4
+      uses: actions/cache/restore@v5
       if: always() && steps.lychee.outcome == 'success'
       with:
         path: .lycheecache
@@ -85,7 +85,7 @@ jobs:
         while read -r line; do exclude="$exclude|github.com/MichaIng/DietPi-Docs/(raw|edit)/dev/$line"; done < <(find docs -type f -name '*.md')
         ./lychee -Enm 2 --require-https --cache --max-cache-age 2d --cache-exclude-status '201..' -a 200,429 --exclude '^(http://wiringpi.com/$|https://(github.com/MichaIng/|zdoom.org/|forum.zdoom.org/|planefinder.net/$|go.nordvpn.net/aff_c?|www.duckdns.org/$|www.wireguard.com/$|x.com/DietPi_$|www.patreon.com/DietPi$|www.linux-kvm.org/$|www.domoticz.com/|forum.odroid.com/|webtribunal.net/|www.phpbb.com/|www.npmjs.com/|pydio.com/|www.spigotmc.org/|help.realvnc.com/|help.roonlabs.com/|blynk.io/|play.google.com/store/apps/details|www.kickstarter.com|theunarchiver.com/$|www.parallels.com/|(www|forums).raspberrypi.com/|www.reddit.com/|superuser.com|chromewebstore.google.com'"$exclude"'))' --github-token '${{ github.token }}' --root-dir "$PWD/build" README.md 'build/**/*.html'
     - name: Save lychee cache
-      uses: actions/cache/save@v4
+      uses: actions/cache/save@v5
       if: always() && steps.lychee.outcome == 'success'
       with:
         path: .lycheecache
