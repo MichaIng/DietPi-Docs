@@ -34,12 +34,6 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
 
 ![DietPi-Dashboard screenshot](../assets/images/dietpi-dashboard.jpg "DietPi-Dashboard screen"){: width="700" height="346" loading="lazy"}
 
-!!! warning "DietPi-Dashboard rework is still in Beta!"
-
-    Please assure to close its network ports (default: TCP **5252** and **5253**) on your NAT/router or via firewall, to protect them from public access.
-
-    If you need to access the DietPi-Dashboard remotely, please use a VPN server on this system, like WireGuard.
-
 === "Web interface"
 
     DietPi-Dashboard is accessible by default via HTTPS at TCP port **5252**:
@@ -47,7 +41,8 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     - URL: `https://<your.IP>:5252`
     - Password: `<your software password>` (default: `dietpi`)
 
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     For communication between the web UI and the backend nodes, by default TCP port **5253** is additionally used.
 
@@ -257,7 +252,7 @@ Linux Dash allows you to monitor your system stats from a web page.
     - URL = `http://<your.IP>/linuxdash/app`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
@@ -278,7 +273,7 @@ Allows you to monitor your system stats from a web page. The display output can 
     - URL = `http://<your.IP>/phpsysinfo`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Customization"
 
@@ -311,7 +306,7 @@ RPi-Monitor is a slick, lightweight system stats monitor with web interface.
     - URL = `http://<your.IP>:8888`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration"
 
@@ -334,7 +329,7 @@ Netdata is a slick and feature-rich system stats monitor, with web interface.
     - URL = `http://<your.IP>:19999`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Troubleshooting"
 
@@ -376,7 +371,7 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
     - Password: `<this UNIX user's password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Service control"
 
@@ -553,7 +548,7 @@ Portainer simplifies your Docker container management via Portainer web interfac
     - URL = `https://<your.IP>:9442`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Update"
 
@@ -691,7 +686,7 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
     - URL = `http://<your.IP>:9100/metrics`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration"
 
@@ -773,7 +768,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
     - URL: `http://<your.IP>/homer`
     
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     You may bookmark this and save it as your browser's home page, or alternatively look into tools like **Nginx Proxy Manager** and a DNS server such as **AdGuard Home** to give it a nice internal domain name such as `homer.box`.
 

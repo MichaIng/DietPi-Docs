@@ -61,7 +61,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
     - Password = `<globalSoftwarePassword>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Tweaking"
 
@@ -122,7 +122,7 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
     - Password = `<globalSoftwarePassword>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     To change the password to `myPassword`, run the following command:
 

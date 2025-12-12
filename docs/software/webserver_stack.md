@@ -119,7 +119,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -177,7 +177,7 @@ LAMP stack is a popular open source web platform commonly used to run dynamic we
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
@@ -193,7 +193,7 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Secured access - HTTPS/SSL"
 
@@ -249,7 +249,7 @@ LASP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
@@ -265,7 +265,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -323,7 +323,7 @@ LEMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
@@ -339,7 +339,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Secured access - HTTPS/SSL"
 
@@ -351,7 +351,7 @@ LESP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
@@ -365,7 +365,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -379,7 +379,7 @@ LLMP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
@@ -393,7 +393,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     For database, check **[MariaDB](databases.md#mariadb)** details.
 
@@ -407,7 +407,7 @@ LLSP is a variation of the popular open source [LAMP web stack](#lamp-web-stack)
     - Local directory = `/var/www`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Individual installation"
 
@@ -482,7 +482,7 @@ It is designed to be secure, fast, standards-compliant, and flexible while being
     - URL = `http://<your.IP>`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Scale to multiple CPU"
 
@@ -535,7 +535,7 @@ Source: [The Apache Software Foundation](https://www.apache.org/logos/originals/
     - URL = `http://<your.IP>:8080`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
