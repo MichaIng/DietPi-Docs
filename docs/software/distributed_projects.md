@@ -34,7 +34,7 @@ The problems which are solved require so many computer calculations that help fr
     - URL = `http://<your.IP>:7396`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration"
 
@@ -147,7 +147,7 @@ Essentially, it is a "peer-to-peer" Google search engine, not controlled by Goog
     - Password: `<your global password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Reset password"
 
@@ -188,7 +188,7 @@ This node lets you download files through IPFS and add your own files to the net
     - Gateway = `http://<your.IP>:8087/ipfs/IPFSHash`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Usage with IPFS Companion browser extension"
 
@@ -258,7 +258,7 @@ What is **Radiosonde**? A radiosonde is a telemetry instrument carried into the 
     - URL = `http://<your.IP>:1099`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     The color of the plane icons is an indication of their altitude, lots more information (like call signs, routes of the planes, etc) are available as well. The system provides you with statistics, graphs, and information about the performance of your feeder, and makes it easy to explore some of the information provided by the aggregators that you are feeding.
 

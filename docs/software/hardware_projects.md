@@ -111,7 +111,7 @@ WebIOPi allows you to control your Raspberry Pi's GPIO hardware using a web inte
     - Password = `raspberry`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Change the login password"
 
@@ -146,7 +146,7 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
     - URL = `http://<your.IP>:1880`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Access to the dashboard"
 
@@ -160,7 +160,7 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
     `https://<your.IP>:1880/ui/`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Data and config directory"
 
@@ -281,7 +281,7 @@ Also installs:
     - Password: `<your global password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Setup details"
 
@@ -422,7 +422,7 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
     - Password: `<your global password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Usage information"
 

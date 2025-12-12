@@ -37,7 +37,7 @@ It consists of full control of the camera in a web-based interface.
     - URL = `http://<your.IP>/rpicam`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Access recordings (w/o web interface)"
 
@@ -95,7 +95,7 @@ from any RPi camera, USB camera or an IP camera network stream.
     - Password = not required
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     Passwords can be configured in the web interface.
 
@@ -146,7 +146,7 @@ Stream JPEG frames from various sources to various possible outputs. With the de
     - HTTP plugin docs: <https://github.com/jacksonliam/mjpg-streamer/blob/master/mjpg-streamer-experimental/plugins/output_http/README.md>
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Setup for OctoPrint"
 

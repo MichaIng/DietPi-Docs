@@ -52,7 +52,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     URL: `http://<your.IP>:8123`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration files"
 
@@ -121,7 +121,7 @@ Domoticz is a Home Automation System that lets you monitor and configure various
     - Password: `domoticz`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     !!! tip "Change default user and password"
         We recommend to create a new user with admin privileges via **Setup** -> **Users** and remove the default one, or at least change the default password.
@@ -185,7 +185,7 @@ Also installs:
     - `http://<your.IP>/tasmoadmin`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
@@ -206,7 +206,7 @@ openHAB (open Home Automation Bus) is an open source home automation platform. T
     - Username/Password: Are set at first web interface login
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Directories"
 
@@ -248,7 +248,7 @@ Homebridge allows you to integrate with smart home devices that do not natively 
     - Username/Password: Are set at first web interface login
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Directories"
 
