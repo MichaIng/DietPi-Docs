@@ -157,7 +157,7 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     To apply changes, restart the service:
 
     ```sh
-    systemctl restart deluged
+    systemctl restart deluged deluge-web
     ```
 
 === "Connect using your desktop Deluge client"
