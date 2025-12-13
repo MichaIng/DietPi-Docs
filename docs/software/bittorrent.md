@@ -50,6 +50,15 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Configuration"
+
+    Transmission can be configured via its config file: `/etc/transmission-daemon/settings.json`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart transmission
+    ```
+
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -106,6 +115,11 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://transmissionbt.com/>  
+Official documentation: <https://github.com/transmission/transmission/blob/main/docs/README.md>
+
 ## Deluge
 
 Deluge, the web interface BitTorrent server that allows you to download BitTorrent files. This Python coded BitTorrent server is an alternative to the [Lightweight Transmission](#transmission) option.
@@ -130,6 +144,20 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 
     ```sh
     sudo -u debian-deluged deluge-console
+    ```
+
+=== "Configuration"
+
+    Deluge can be configured via its config files in `/mnt/dietpi_userdata/deluge/.config/deluge/`:
+
+    - `core.conf`
+    - `web.conf`
+    - `hostlist.conf`
+
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart deluged
     ```
 
 === "Connect using your desktop Deluge client"
@@ -187,6 +215,12 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://deluge-torrent.org/>  
+Official documentation: <https://deluge.readthedocs.io/en/latest/index.html>  
+Configuration options: <https://deluge.readthedocs.io/en/latest/modules/deluge.core.html>
+
 ## qBittorrent
 
 qBittorrent is a lightweight BitTorrent server with a slick web interface. As its coded in C++ (Qt), it offers excellent performance on any device.
@@ -206,6 +240,16 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    qBittorrent can be configured via its config file: `/home/qbittorrent/.config/qBittorrent/qBittorrent.conf`:
+
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart qbittorrent
+    ```
 
 === "Access Downloads"
 
@@ -254,6 +298,11 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://www.qbittorrent.org/>  
+Official documentation (wiki): <https://github.com/qbittorrent/qBittorrent/wiki/>
+
 ## rTorrent
 
 rTorrent is a BitTorrent server. ruTorrent is also installed to allow for web interface access and control.  
@@ -287,6 +336,20 @@ Also installs:
     # With Nginx:
     echo "username:$(openssl passwd -apr1 'password')" > /etc/.rutorrent-htaccess
     ```
+
+=== "Configuration"
+
+    rTorrent can be configured via its config file: `/mnt/dietpi_userdata/rtorrent/.rtorrent.rc`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart rtorrent
+    ```
+
+    **Remark #1:** The rTorrent configuration via the web interface will be overwritten from the `.rtorrent.rc` file at every start/restart of rTorrent.  
+    **Remark #2:** If rTorrent signals `Tracker: [Failure reason "Invalid key: port"]`, check the setting in `rtorrent.rc`: `network.port_open.set = yes` (which is the installation default value).
+
+    See also [rTorrent Performance Tuning by Mikhail Zadorsky](https://github.com/rakshasa/rtorrent/wiki/Performance-Tuning) on GitHub.
 
 === "Access downloads"
 
@@ -406,6 +469,15 @@ Also installs:
     - `Connection Settings`
     - Enter the rpc secret password into the `Enter the secret token (optional):` box, then save changes
 
+=== "Configuration"
+
+    Aria2 can be configured via its config file: `/mnt/dietpi_userdata/aria2/aria2.conf`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart aria2
+    ```
+
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -470,6 +542,11 @@ Also installs:
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://aria2.github.io/>  
+Official documentation: <https://aria2.github.io/manual/en/html/index.html>
 
 ## SABnzbd
 
