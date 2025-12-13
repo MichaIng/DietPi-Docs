@@ -563,6 +563,16 @@ NZB download manager with web interface.
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Configuration"
+
+    SABnzbd can be configured via its config file: `/etc/sabnzbd/sabnzbd.ini`.  
+    See <https://sabnzbd.org/wiki/configuration/4.5/configure> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart sabnzbd
+    ```
+
 === "Web interface not loading / Unable to access"
 
     In some instances, initial config generation during installation isn't successful.  
@@ -637,6 +647,11 @@ NZB download manager with web interface.
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://sabnzbd.org/>  
+Official documentation: <https://sabnzbd.org/wiki/>
+
 ## Medusa
 
 Automatically download your favorite TV shows, as they become available.  
@@ -656,6 +671,15 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    Medusa can be configured via its config file: `/mnt/dietpi_userdata/medusa/config.ini`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart medusa
+    ```
 
 === "Add a TV show"
 
@@ -724,6 +748,11 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://github.com/pymedusa/Medusa>  
+Official documentation: <https://github.com/pymedusa/Medusa/wiki/Installation-&-Configuration-Guides>
+
 ## Sonarr
 
 Automatically download your favorite TV shows, as they become available.
@@ -742,6 +771,16 @@ Automatically download your favorite TV shows, as they become available.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    Sonarr can be configured via its config file: `/mnt/dietpi_userdata/sonarr/config.xml`.  
+    See <https://wiki.servarr.com/sonarr/environment-variables> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart sonarr
+    ```
 
 === "First run setup"
 
@@ -827,6 +866,8 @@ Automatically download your favorite TV shows, as they become available.
 
 ***
 
+Official website: <https://sonarr.tv/>  
+Official documentation: <https://wiki.servarr.com/sonarr>  
 YouTube video tutorial: [How to install and configure Sonarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=3h0GvdKcR0Y)
 
 ## Radarr
