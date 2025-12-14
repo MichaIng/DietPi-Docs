@@ -349,7 +349,7 @@ Also installs:
     **Remark #1:** The rTorrent configuration via the web interface will be overwritten from the `.rtorrent.rc` file at every start/restart of rTorrent.  
     **Remark #2:** If rTorrent signals `Tracker: [Failure reason "Invalid key: port"]`, check the setting in `rtorrent.rc`: `network.port_open.set = yes` (which is the installation default value).
 
-    See also [rTorrent Performance Tuning by Mikhail Zadorsky](https://github.com/rakshasa/rtorrent/wiki/Performance-Tuning) on GitHub.
+    See also [rTorrent Performance Tuning by Mikhail Zadorsky](https://github.com/rakshasa/rtorrent/wiki/Performance-Tuning){: class="nospellcheck"} on GitHub.
 
 === "Access downloads"
 
