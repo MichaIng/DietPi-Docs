@@ -1,5 +1,8 @@
 aarch
 ABI
+ACARS
+ACL
+ACLs
 ACP
 ACPI
 ActivityPub
@@ -11,6 +14,7 @@ AdGuard
 advanxer
 AdoptOpenJDK
 AGPLv
+aircrafts
 AirPlay
 Airsonic
 AIY
@@ -247,6 +251,7 @@ Hardkernel
 Hardkernel's
 HC
 hexa
+HFDL
 HFS
 HiFi
 HiFiBerry
@@ -466,7 +471,6 @@ OneLogin
 oneshot
 OOTB
 OPcache
-OSPF
 OrangePi
 OpenBazaar
 OpenJDK
@@ -478,6 +482,8 @@ OpenSSL
 OpenTyrian
 OpenVoiceOS
 OpenVPN
+OSPF
+OSS
 OTG
 OTP
 overvoltage
@@ -596,7 +602,9 @@ RTC
 RTCs
 rTorrent
 runtime
+RustDesk
 ruTorrent
+RustDesk
 SABnzbd
 sandboxing
 SATA
@@ -734,6 +742,7 @@ unbootable
 uncheck
 uncomment
 unencrypted
+unformatted
 unmount
 unicast
 USBridge
@@ -757,6 +766,7 @@ Vae
 vaultwarden
 VC
 VCSM
+VDL
 VHDX
 vhost
 vhosts

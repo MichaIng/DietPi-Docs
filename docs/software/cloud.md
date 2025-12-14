@@ -48,7 +48,7 @@ Also Installs:
     - Password: `<your global password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration"
 
@@ -112,7 +112,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     - Password: `<your global password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration"
 
@@ -331,7 +331,7 @@ Also Installs:
     - URL: `http://<your.IP>/pydio`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First time connect"
 
@@ -379,7 +379,7 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
     - URL: `http://<your.IP>:55414`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration"
 
@@ -479,7 +479,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     - URL: `http://<your.IP>:3000`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -551,7 +551,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     - URL: `http://<your.IP>:3000`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -671,7 +671,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     - URL: `http://<your.IP>:3000`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -790,7 +790,7 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
     URL = `http://<your.IP>:8384`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -840,7 +840,7 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
     - [MinIO JavaScript Client docs](https://docs.min.io/community/minio-object-store/developers/javascript/minio-javascript.html)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
@@ -922,7 +922,7 @@ vaultwarden is an unofficial Bitwarden password manager server with web interfac
     - On first access, you need to create an account, either via web UI or via client (see "Client access" tab).
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Client access"
 
@@ -977,7 +977,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     - Password: `<your global password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     !!! warning "The fact that FuguHub runs on ports 80 and 443 by default makes it incompatible with regular web servers when using the default setup."
 
@@ -1024,7 +1024,7 @@ Access and manage your data from anywhere via browser with this lightweight remo
     - Password = `<your global password>`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Directories"
 

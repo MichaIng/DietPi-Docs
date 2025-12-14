@@ -115,7 +115,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Tor Relay - Add a node to the Tor network**](software/distributed_projects.md#tor-relay)
 - [**YaCy - Decentralized open source search engine**](software/distributed_projects.md#yacy)
 - [**IPFS Node - Contribute to a decentralized internet**](software/distributed_projects.md#ipfs-node)
-- [**ADS-B Feeder - track airplanes using SDRs and feed the data to ADS-B aggregators**](software/distributed_projects.md#ads-b-feeder)
+- [**ADS-B Feeder - track airplanes, ships and weather balloons and share data**](software/distributed_projects.md#ads-b-feeder)
 
 ## [DNS Servers](software/dns_servers.md)
 
@@ -220,6 +220,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**RealVNC Server - Desktop for remote connection**](software/remote_desktop.md#realvnc-server)
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](software/remote_desktop.md#xrdp)
 - [**NoMachine - Feature rich remote desktop connection**](software/remote_desktop.md#nomachine)
+- [**RustDesk Server - Open source remote access and support software**](software/remote_desktop.md#rustdesk-server)
 
 ### [Remote Access](software/remote_desktop.md#remote-access)
 

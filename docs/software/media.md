@@ -58,6 +58,13 @@ If you did not select Kodi to start from boot, you can modify the autostart opti
 - Desktop: Kodi is available via the LXDE start menu, and, desktop.
 - Console: Kodi can also be run by typing `startkodi`.
 
+***
+
+Website: <https://kodi.tv/>  
+Quick start guide: <https://kodi.wiki/view/Quick_start_guide>  
+Documentation: <https://kodi.wiki/view/Main_Page>  
+Source code: <https://github.com/xbmc>
+
 ## ympd
 
 A lightweight, bare-bones, no frills HiFi music player with a web based interface. ympd is a front end for MPD.
@@ -75,7 +82,7 @@ Also installs:
     - URL: `http://<your.IP>:1337`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
@@ -142,7 +149,7 @@ Also installs:
     - URL: `https://<your.IP>:1333`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
@@ -250,7 +257,7 @@ Also installs:
     - Password: `admin`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
@@ -315,7 +322,7 @@ Mopidy is a Python based music player web based user interface for MPD.
     - URL: `http://<your.IP>:6680/musicbox_webclient` or just `http://<your.IP>:6680`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
@@ -392,7 +399,7 @@ Feature rich media streaming server with a web interface, coded in Java.
     - Password: `admin`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     !!! hint "The web interface may feel sluggish on first access."
 
@@ -481,7 +488,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
     - URL: `http://<your.IP>:9000`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/MediaServer-Transfer-to-DietPi_tab.md"
@@ -668,7 +675,7 @@ Stream your shared media to any DLNA/UPnP capable device.
     - URL: `http://<your.IP>:8200`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration"
 
@@ -718,7 +725,7 @@ Also Installs:
     - Password: `<your global password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Transfer media files to DietPi"
 
@@ -843,7 +850,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
     URL: `http://<your.IP>:8096`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -898,7 +905,7 @@ Plex organizes your video, music, and photo collections and streams them to all 
     URL: `http://<your.IP>:32400/web`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -942,7 +949,7 @@ A Python based monitoring and tracking tool for Plex Media Server.
     - After first run setup, select "SIGN IN WITH TAUTULLI" and enter the username and password you chose before. On our own tests, authentication via `plex.tv` account did not work, it may however depend on the subscription.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -985,7 +992,7 @@ Turn your device into a lightweight Mumble VoIP server.
     - Superuser Password: `dietpi`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Change Murmur Server settings"
 
@@ -1296,7 +1303,7 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
     - Relay password: `<your global password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Access recording file"
 
@@ -1356,7 +1363,7 @@ Web interface music streamer.
     - Password: `KoelIsCool`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -1459,7 +1466,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
     - Library view page: `http://<your.IP>:2039`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Transfer ebooks/comics to DietPi"
 
@@ -1494,7 +1501,7 @@ Free and open source comics/mangas media server with web UI.
     - URL: `http://<your.IP>:2037`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Transfer ebooks/comics to DietPi"
 
@@ -1683,7 +1690,7 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
     - URL: `http://<your.IP>:8097`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "View logs"
 
@@ -1758,7 +1765,7 @@ The Snapcast server needs to have its audio sources manually configured after in
     - URL: `http://<your.IP>:1780`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Implementation details"
 
@@ -1890,7 +1897,7 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
     - URL: `http://<your.IP>:4533`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Setup details"
 
@@ -1978,7 +1985,7 @@ A highlight of some of its key features:
     - URL: `http://<your.IP>:2036`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Setup details"
 

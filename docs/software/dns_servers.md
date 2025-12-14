@@ -30,7 +30,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Setup"
 
@@ -239,7 +239,7 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration"
 

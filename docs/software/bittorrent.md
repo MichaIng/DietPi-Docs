@@ -50,6 +50,15 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Configuration"
+
+    Transmission can be configured via its config file: `/etc/transmission-daemon/settings.json`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart transmission
+    ```
+
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -75,8 +84,41 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 
     Simply close and reopen this screen to refresh the port status.
 
+=== "Service control"
+
+    Since Transmission runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status transmission
+    ```
+
+    ```sh
+    systemctl start transmission
+    ```
+
+    ```sh
+    systemctl stop transmission
+    ```
+
+    ```sh
+    systemctl restart transmission
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u transmission-daemon
+    ```
+
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://transmissionbt.com/>  
+Official documentation: <https://github.com/transmission/transmission/blob/main/docs/README.md>
 
 ## Deluge
 
@@ -104,6 +146,20 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     sudo -u debian-deluged deluge-console
     ```
 
+=== "Configuration"
+
+    Deluge can be configured via its config files in `/mnt/dietpi_userdata/deluge/.config/deluge/`:
+
+    - `core.conf`
+    - `web.conf`
+    - `hostlist.conf`
+
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart deluged deluge-web
+    ```
+
 === "Connect using your desktop Deluge client"
 
     - Open up Deluge client on your other system
@@ -124,8 +180,46 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
     - Folder accessed via file server: `downloads`
     - Local folder: `/mnt/dietpi_userdata/downloads`
 
+=== "Service control"
+
+    Since Deluge runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status deluged
+    ```
+
+    ```sh
+    systemctl start deluged
+    ```
+
+    ```sh
+    systemctl stop deluged
+    ```
+
+    ```sh
+    systemctl restart deluged
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u deluged
+    ```
+
+    ```sh
+    journalctl -u deluge-web
+    ```
+
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://deluge-torrent.org/>  
+Official documentation: <https://deluge.readthedocs.io/en/latest/index.html>  
+Configuration options: <https://deluge.readthedocs.io/en/latest/modules/deluge.core.html>
 
 ## qBittorrent
 
@@ -147,6 +241,16 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Configuration"
+
+    qBittorrent can be configured via its config file: `/home/qbittorrent/.config/qBittorrent/qBittorrent.conf`:
+
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart qbittorrent
+    ```
+
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -159,8 +263,45 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
     Before activating search plugins within qBittorrent, you would need to install Python first. Afterwards you can search and activate the plugins.
 
+=== "Service control"
+
+    Since qBittorrent runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status qbittorrent
+    ```
+
+    ```sh
+    systemctl start qbittorrent
+    ```
+
+    ```sh
+    systemctl stop qbittorrent
+    ```
+
+    ```sh
+    systemctl restart qbittorrent
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u qbittorrent
+    ```
+
+    ```sh
+    cat /var/log/qbittorrent/qbittorrent.log
+    ```
+
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://www.qbittorrent.org/>  
+Official documentation (wiki): <https://github.com/qbittorrent/qBittorrent/wiki/>
 
 ## rTorrent
 
@@ -196,6 +337,20 @@ Also installs:
     echo "username:$(openssl passwd -apr1 'password')" > /etc/.rutorrent-htaccess
     ```
 
+=== "Configuration"
+
+    rTorrent can be configured via its config file: `/mnt/dietpi_userdata/rtorrent/.rtorrent.rc`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart rtorrent
+    ```
+
+    **Remark #1:** The rTorrent configuration via the web interface will be overwritten from the `.rtorrent.rc` file at every start/restart of rTorrent.  
+    **Remark #2:** If rTorrent signals `Tracker: [Failure reason "Invalid key: port"]`, check the setting in `rtorrent.rc`: `network.port_open.set = yes` (which is the installation default value).
+
+    See also [rTorrent Performance Tuning by Mikhail Zadorsky](https://github.com/rakshasa/rtorrent/wiki/Performance-Tuning){: class="nospellcheck"} on GitHub.
+
 === "Access downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -216,12 +371,29 @@ Also installs:
 
     rTorrent by default listens on the UNIX domain socket at `/mnt/dietpi_userdata/downloads/.session/rpc.socket`. The webserver is configured to proxy `http://<your.IP>/RPC2` calls to the UNIX socket, but HTTP authentication is enforced for that URL.
 
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+=== "Service control"
+
+    Since rTorrent runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status rtorrent
+    ```
+
+    ```sh
+    systemctl start rtorrent
+    ```
+
+    ```sh
+    systemctl stop rtorrent
+    ```
+
+    ```sh
+    systemctl restart rtorrent
+    ```
 
 === "View logs"
 
-    To view rTorrent service logs, run the following command:
+    Logs can be viewed with the following commands:
 
     ```sh
     journalctl -u rtorrent
@@ -257,6 +429,9 @@ Also installs:
     ```sh
     dietpi-software reinstall 107
     ```
+
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
 ***
 
@@ -294,6 +469,15 @@ Also installs:
     - `Connection Settings`
     - Enter the rpc secret password into the `Enter the secret token (optional):` box, then save changes
 
+=== "Configuration"
+
+    Aria2 can be configured via its config file: `/mnt/dietpi_userdata/aria2/aria2.conf`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart aria2
+    ```
+
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -312,8 +496,57 @@ Also installs:
 
     Full list of `aria2.conf` settings: <https://aria2.github.io/manual/en/html/aria2c.html>
 
+=== "Service control"
+
+    Since Aria2 runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status aria2
+    ```
+
+    ```sh
+    systemctl start aria2
+    ```
+
+    ```sh
+    systemctl stop aria2
+    ```
+
+    ```sh
+    systemctl restart aria2
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u aria2
+    ```
+
+    Issues with the web interface can be debugged via webserver logs:
+
+    ```sh
+    # With Apache (default):
+    journalctl -u apache2
+    more /var/log/apache2/error.log
+
+    # With Nginx:
+    journalctl -u nginx
+    more /var/log/nginx/error.log
+
+    # With Lighttpd:
+    journalctl -u lighttpd
+    more /var/log/lighttpd/error.log
+    ```
+
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://aria2.github.io/>  
+Official documentation: <https://aria2.github.io/manual/en/html/index.html>
 
 ## SABnzbd
 
@@ -329,6 +562,16 @@ NZB download manager with web interface.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    SABnzbd can be configured via its config file: `/etc/sabnzbd/sabnzbd.ini`.  
+    See <https://sabnzbd.org/wiki/configuration/4.5/configure> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart sabnzbd
+    ```
 
 === "Web interface not loading / Unable to access"
 
@@ -367,10 +610,29 @@ NZB download manager with web interface.
     apt install git build-essential
     ```
 
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+=== "Service control"
+
+    Since SABnzbd runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status sabnzbd
+    ```
+
+    ```sh
+    systemctl start sabnzbd
+    ```
+
+    ```sh
+    systemctl stop sabnzbd
+    ```
+
+    ```sh
+    systemctl restart sabnzbd
+    ```
 
 === "View logs"
+
+    Logs can be viewed with the following commands:
 
     ```sh
     journalctl -u sabnzbd
@@ -381,6 +643,14 @@ NZB download manager with web interface.
     ```sh
     dietpi-software reinstall 139
     ```
+
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://sabnzbd.org/>  
+Official documentation: <https://sabnzbd.org/wiki/>
 
 ## Medusa
 
@@ -401,6 +671,15 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    Medusa can be configured via its config file: `/mnt/dietpi_userdata/medusa/config.ini`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart medusa
+    ```
 
 === "Add a TV show"
 
@@ -432,8 +711,47 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
     - Use the `Test connection` button at the bottom of the page to ensure Medusa can connect to your BitTorrent server.
     - Finally click `Save changes` (bottom of the page)
 
+=== "Service control"
+
+    Since Medusa runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status medusa
+    ```
+
+    ```sh
+    systemctl start medusa
+    ```
+
+    ```sh
+    systemctl stop medusa
+    ```
+
+    ```sh
+    systemctl restart medusa
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u medusa
+    ```
+
+=== "Update to latest version"
+
+    ```sh
+    dietpi-software reinstall 139
+    ```
+
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://github.com/pymedusa/Medusa>  
+Official documentation: <https://github.com/pymedusa/Medusa/wiki/Installation-&-Configuration-Guides>
 
 ## Sonarr
 
@@ -482,6 +800,16 @@ Automatically download your favorite TV shows, as they become available.
     - Once found, under path use the following location `/mnt/dietpi_userdata/downloads`
     - Change any further options (such as video quality) if needed, then select `+`
 
+=== "Configuration"
+
+    Sonarr can be configured via its config file: `/mnt/dietpi_userdata/sonarr/config.xml`.  
+    See <https://wiki.servarr.com/sonarr/environment-variables> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart sonarr
+    ```
+
 === "Using custom download/media directories"
 
     By default Sonarr has strict permissions to only access download and media directories inside `/mnt/` and `/media`. If you need to use a different location, please do the following:
@@ -497,20 +825,49 @@ Automatically download your favorite TV shows, as they become available.
 
     Link the Sonarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+=== "Service control"
+
+    Since Sonarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status sonarr
+    ```
+
+    ```sh
+    systemctl start sonarr
+    ```
+
+    ```sh
+    systemctl stop sonarr
+    ```
+
+    ```sh
+    systemctl restart sonarr
+    ```
 
 === "View logs"
 
-    - Service: `journalctl -u sonarr`
-    - Daemon: `/var/log/sonarr/sonarr.log`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u sonarr
+    ```
+
+    ```sh
+    cat /var/log/sonarr/sonarr.txt
+    ```
 
 === "Update to latest version"
 
     - Use the internal web based updater
 
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
 ***
 
+Official website: <https://sonarr.tv/>  
+Official documentation: <https://wiki.servarr.com/sonarr>  
 YouTube video tutorial: [How to install and configure Sonarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=3h0GvdKcR0Y)
 
 ## Radarr
@@ -560,6 +917,16 @@ Automatically download your favorite movies, as they become available.
     - Once found, under `path` use the following location `/mnt/dietpi_userdata/downloads`
     - Change any further options (such as video quality) if needed, then select `+`
 
+=== "Configuration"
+
+    Radarr can be configured via its config file: `/mnt/dietpi_userdata/radarr/config.xml`.  
+    See <https://wiki.servarr.com/radarr/environment-variables> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart radarr
+    ```
+
 === "Using custom download/media directories"
 
     By default Radarr has strict permissions to only access download and media directories inside `/mnt/` and `/media`. If you need to use a different location, please do the following:
@@ -575,20 +942,49 @@ Automatically download your favorite movies, as they become available.
 
     Link the Radarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+=== "Service control"
+
+    Since Radarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status radarr
+    ```
+
+    ```sh
+    systemctl start radarr
+    ```
+
+    ```sh
+    systemctl stop radarr
+    ```
+
+    ```sh
+    systemctl restart radarr
+    ```
 
 === "View logs"
 
-    - Service: `journalctl -u radarr`
-    - Daemon: `/var/log/radarr/radarr.log`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u radarr
+    ```
+
+    ```sh
+    cat /var/log/radarr/radarr.txt
+    ```
 
 === "Update to latest version"
 
     - Use the internal web based updater
 
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
 ***
 
+Official website: <https://radarr.video/>  
+Official documentation: <https://wiki.servarr.com/radarr>  
 YouTube video tutorial: [How to install and configure Radarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=ji9CgSBcf5E)
 
 ## Bazarr
@@ -617,16 +1013,46 @@ Key features:
 
     ![Bazarr subtitle finds list](../assets/images/dietpi-software-download-bazarr.jpg "Bazarr subtitle list"){: width="1105" height="490" loading="lazy"}
 
-=== "Advanced"
+=== "Configuration"
 
-    - Install directory: `/opt/bazarr`
-    - Data directory: `/mnt/dietpi_userdata/bazarr`
-    - Bazarr configuration file: `/mnt/dietpi_userdata/bazarr/config/config.yaml`
+    Bazarr can be configured via its config file: `/mnt/dietpi_userdata/bazarr/config`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart bazarr
+    ```
+
+=== "Service control"
+
+    Since Bazarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status bazarr
+    ```
+
+    ```sh
+    systemctl start bazarr
+    ```
+
+    ```sh
+    systemctl stop bazarr
+    ```
+
+    ```sh
+    systemctl restart bazarr
+    ```
 
 === "View logs"
 
-    - Service: `journalctl -u bazarr`
-    - Daemon: `/var/log/bazarr/bazarr.log`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u bazarr
+    ```
+
+    ```sh
+    cat /var/log/bazarr/bazarr.log
+    ```
 
 === "Update to latest version"
 
@@ -634,7 +1060,9 @@ Key features:
 
 ***
 
-Official documentation: <https://github.com/morpheus65535/bazarr/wiki>  
+Official website: <https://www.bazarr.media/>  
+Official documentation: <https://wiki.bazarr.media/>  
+GitHub page: <https://github.com/morpheus65535/bazarr/wiki>  
 Source code: <https://github.com/morpheus65535/bazarr>
 
 ## Lidarr
@@ -658,7 +1086,7 @@ Automatically download your favorite music.
 
 === "First run setup"
 
-    Before you can music, you'll need to select a search indexer to use from the web interface:
+    Before you can add music, you'll need to select a search indexer to use from the web interface:
 
     - Simply go to `Settings` \> `Indexer` then choose at least one indexer.
 
@@ -684,6 +1112,16 @@ Automatically download your favorite music.
     - Once found, under root folder, use the following location `/mnt/dietpi_userdata/downloads`
     - Change any other settings as required, then select `Add`
 
+=== "Configuration"
+
+    Lidarr can be configured via its config file: `/mnt/dietpi_userdata/lidarr/config.xml`.  
+    See <https://wiki.servarr.com/lidarr/environment-variables> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart lidarr
+    ```
+
 === "Using custom download/media directories"
 
     By default Lidarr has strict permissions to only access download and media directories inside `/mnt/` and `/media`. If you need to use a different location, please do the following:
@@ -699,17 +1137,49 @@ Automatically download your favorite music.
 
     Link the Lidarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
 
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+=== "Service control"
+
+    Since Lidarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status lidarr
+    ```
+
+    ```sh
+    systemctl start lidarr
+    ```
+
+    ```sh
+    systemctl stop lidarr
+    ```
+
+    ```sh
+    systemctl restart lidarr
+    ```
 
 === "View logs"
 
-    - Service: `journalctl -u lidarr`
-    - Daemon: `/var/log/lidarr/lidarr.log`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u lidarr
+    ```
+
+    ```sh
+    cat /var/log/lidarr/lidarr.txt
+    ```
 
 === "Update to latest version"
 
     - Use the internal web based updater
+
+[//]: # (Include software expandable infoblock)
+--8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://lidarr.audio/>  
+Official documentation: <https://wiki.servarr.com/lidarr>  
 
 ## Readarr
 
@@ -758,6 +1228,16 @@ Automatically download your favorite ebook, as they become available.
     - Once found, under `path` use the following location `/mnt/dietpi_userdata/downloads`
     - Change any further options if needed, then select `Add`
 
+=== "Configuration"
+
+    Readarr can be configured via its config file: `/mnt/dietpi_userdata/readarr/config.xml`.  
+    See <https://wiki.servarr.com/readarr/settings> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart readarr
+    ```
+
 === "Using custom download/media directories"
 
     By default Readarr has strict permissions to only access download and media directories inside `/mnt/` and `/media`. If you need to use a different location, please do the following:
@@ -799,8 +1279,15 @@ Automatically download your favorite ebook, as they become available.
 
 === "View logs"
 
-    - Service: `journalctl -u readarr`
-    - Daemon: `/var/log/readarr/Readarr.txt`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u readarr
+    ```
+
+    ```sh
+    cat /var/log/readarr/readarr.txt
+    ```
 
 === "Update"
 
@@ -831,6 +1318,48 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Configuration"
+
+    Prowlarr can be configured via its config file: `/mnt/dietpi_userdata/prowlarr/config.xml`.  
+    See <https://wiki.servarr.com/prowlarr/environment-variables> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart prowlarr
+    ```
+
+=== "Service control"
+
+    Since Prowlarr runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status prowlarr
+    ```
+
+    ```sh
+    systemctl start prowlarr
+    ```
+
+    ```sh
+    systemctl stop prowlarr
+    ```
+
+    ```sh
+    systemctl restart prowlarr
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u prowlarr
+    ```
+
+    ```sh
+    cat /var/log/prowlarr/prowlarr.txt
+    ```
+
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
@@ -856,8 +1385,40 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Service control"
+
+    Since Jackett runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status jackett
+    ```
+
+    ```sh
+    systemctl start jackett
+    ```
+
+    ```sh
+    systemctl stop jackett
+    ```
+
+    ```sh
+    systemctl restart jackett
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u jackett
+    ```
+
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://github.com/Jackett/Jackett/>  
 
 ## NZBGet
 
@@ -876,6 +1437,16 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Configuration"
+
+    NZBGet can be configured via its config file: `/mnt/dietpi_userdata/nzbget/nzbget.conf`.  
+    See <https://nzbget.com/documentation/>, tab "Configuration" for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart nzbget
+    ```
+
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -884,9 +1455,29 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
     - Folder accessed via file server: `downloads/complete`
     - Local folder: `/mnt/dietpi_userdata/downloads/complete`
 
+=== "Service control"
+
+    Since NZBGet runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status nzbget
+    ```
+
+    ```sh
+    systemctl start nzbget
+    ```
+
+    ```sh
+    systemctl stop nzbget
+    ```
+
+    ```sh
+    systemctl restart nzbget
+    ```
+
 === "View logs"
 
-    NZBGet service logs can be viewed with the following command:
+    Logs can be viewed with the following commands:
 
     ```sh
     journalctl -u nzbget
@@ -900,6 +1491,11 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://nzbget.com/>  
+Official documentation: <https://nzbget.com/documentation/>  
 
 ## HTPC Manager
 
@@ -917,11 +1513,44 @@ Do all your HTPC tasks without using 5 different interfaces!
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Service control"
+
+    Since HTPC Manager runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status htpc-manager
+    ```
+
+    ```sh
+    systemctl start htpc-manager
+    ```
+
+    ```sh
+    systemctl stop htpc-manager
+    ```
+
+    ```sh
+    systemctl restart htpc-manager
+    ```
+
+=== "View logs"
+
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u htpc-manager
+    ```
+
 === "Update to latest version"
 
     ```sh
     dietpi-software reinstall 155
     ```
+
+***
+
+Official website: <https://htpc.io/>  
+Official documentation: <https://nzbget.com/documentation/>  
 
 ## youtube-dl
 
@@ -939,8 +1568,8 @@ Do all your HTPC tasks without using 5 different interfaces!
 
 ***
 
-Website: <https://ytdl-org.github.io/youtube-dl/>  
-Documentation: <https://github.com/ytdl-org/youtube-dl/blob/master/README.md>
+Official website: <https://ytdl-org.github.io/youtube-dl/>  
+Official documentation: <https://github.com/ytdl-org/youtube-dl/blob/master/README.md>
 
 ## LazyLibrarian
 
@@ -971,6 +1600,15 @@ LazyLibrarian is a program to follow authors and grab metadata for all your digi
     5. Add your custom path to the end of this line, separated by one space
     6. Press ++ctrl+o++ buttons to save and ++ctrl+x++ to exit
 
+=== "Configuration"
+
+    LazyLibrarian can be configured via its config file: `/mnt/dietpi_userdata/lazylibrarian/config.ini`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart lazylibrarian
+    ```
+
 === "Setup details"
 
     The install, config and data directory is located at:
@@ -984,25 +1622,36 @@ LazyLibrarian is a program to follow authors and grab metadata for all your digi
     Since LazyLibrarian runs as systemd service, it can be controlled with the following commands:
 
     ```sh
-    sudo systemctl status lazylibrarian
+    systemctl status lazylibrarian
     ```
 
     ```sh
-    sudo systemctl start lazylibrarian
+    systemctl start lazylibrarian
     ```
 
     ```sh
-    sudo systemctl stop lazylibrarian
+    systemctl stop lazylibrarian
     ```
 
     ```sh
-    sudo systemctl restart lazylibrarian
+    systemctl restart lazylibrarian
     ```
 
 === "View logs"
 
-    - Service: `journalctl -u lazylibrarian`
-    - Daemon: `/var/log/lazylibrarian/`
+    Logs can be viewed with the following commands:
+
+    ```sh
+    journalctl -u lazylibrarian
+    ```
+
+    ```sh
+    cat /var/log/lazylibrarian/lazylibrarian.log
+    ```
+
+    ```sh
+    cat /var/log/lazylibrarian/dbupgrade.log
+    ```
 
 === "Update"
 
@@ -1017,7 +1666,7 @@ LazyLibrarian is a program to follow authors and grab metadata for all your digi
 
 ***
 
-Official documentation: <https://lazylibrarian.gitlab.io/>  
+Official website: <https://lazylibrarian.gitlab.io/>  
 Source code: <https://gitlab.com/LazyLibrarian/LazyLibrarian>  
 License: [GPLv3](https://gitlab.com/LazyLibrarian/LazyLibrarian/-/blob/master/LICENSE)
 

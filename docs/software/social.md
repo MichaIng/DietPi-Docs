@@ -38,7 +38,7 @@ FreshRSS is a self-hosted RSS feed aggregator.
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
@@ -61,7 +61,7 @@ Also Installs:
     - URL = `http://<your.IP>/phpbb`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -75,7 +75,7 @@ Also Installs:
         - Click "Start install"
 
         [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-        --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+        --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     1. MySQL/MariaDB database details
 
@@ -137,7 +137,7 @@ It allows you to create your own website.
     - URL = `http://<your.IP>/wordpress`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -177,7 +177,7 @@ Also Installs:
     - URL = `http://<your.IP>/gallery`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Add images"
 
@@ -198,7 +198,7 @@ Also Installs:
 
 ***
 
-Official website: <https://sye.dk/sfpg>  
+Official website: <https://sye.dk/sfpg/>  
 YouTube video tutorial: [DietPi: Easily set up Raspberry Pi projects (e.g. a shared photo gallery)](https://www.youtube.com/watch?v=0by117lpq_o)
 
 ## Baïkal
@@ -216,7 +216,7 @@ Baïkal is a lightweight CalDAV + CardDAV server.
     - Password = What you set during first run setup above.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 
@@ -234,7 +234,7 @@ Baïkal is a lightweight CalDAV + CardDAV server.
     - MySQL password = your global software password (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 ***
 
@@ -366,7 +366,7 @@ This collaboration and documentation platform was originally developed for and i
     - URL: `http://<your.IP>/wiki`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "First run setup"
 

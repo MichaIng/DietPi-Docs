@@ -265,7 +265,7 @@ It is best suited for high traffic web sites and powers quite a number of the wo
     - Password = `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
     !!! hint "This installation was made possible by Jerome Queneuder, who provided the methods for compiling and installation."
 
@@ -353,7 +353,7 @@ A fast reverse proxy, helping you to expose a local server behind a NAT or firew
         - Password: `<yourGlobalSoftwarePassword>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_textblock.md"
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration Files"
 
