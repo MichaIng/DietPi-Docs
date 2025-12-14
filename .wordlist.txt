@@ -1,6 +1,8 @@
 aarch
 ABI
 ACARS
+ACL
+ACLs
 ACP
 ACPI
 ActivityPub
@@ -602,6 +604,7 @@ rTorrent
 runtime
 RustDesk
 ruTorrent
+RustDesk
 SABnzbd
 sandboxing
 SATA
@@ -739,6 +742,7 @@ unbootable
 uncheck
 uncomment
 unencrypted
+unformatted
 unmount
 unicast
 USBridge
