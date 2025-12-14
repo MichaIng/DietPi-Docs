@@ -50,6 +50,15 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Configuration"
+
+    Transmission can be configured via its config file: `/etc/transmission-daemon/settings.json`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart transmission
+    ```
+
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -106,6 +115,11 @@ Transmission, the lightweight web interface BitTorrent server that allows you to
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://transmissionbt.com/>  
+Official documentation: <https://github.com/transmission/transmission/blob/main/docs/README.md>
+
 ## Deluge
 
 Deluge, the web interface BitTorrent server that allows you to download BitTorrent files. This Python coded BitTorrent server is an alternative to the [Lightweight Transmission](#transmission) option.
@@ -130,6 +144,20 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 
     ```sh
     sudo -u debian-deluged deluge-console
+    ```
+
+=== "Configuration"
+
+    Deluge can be configured via its config files in `/mnt/dietpi_userdata/deluge/.config/deluge/`:
+
+    - `core.conf`
+    - `web.conf`
+    - `hostlist.conf`
+
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart deluged deluge-web
     ```
 
 === "Connect using your desktop Deluge client"
@@ -187,6 +215,12 @@ Deluge, the web interface BitTorrent server that allows you to download BitTorre
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://deluge-torrent.org/>  
+Official documentation: <https://deluge.readthedocs.io/en/latest/index.html>  
+Configuration options: <https://deluge.readthedocs.io/en/latest/modules/deluge.core.html>
+
 ## qBittorrent
 
 qBittorrent is a lightweight BitTorrent server with a slick web interface. As its coded in C++ (Qt), it offers excellent performance on any device.
@@ -206,6 +240,16 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    qBittorrent can be configured via its config file: `/home/qbittorrent/.config/qBittorrent/qBittorrent.conf`:
+
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart qbittorrent
+    ```
 
 === "Access Downloads"
 
@@ -254,6 +298,11 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://www.qbittorrent.org/>  
+Official documentation (wiki): <https://github.com/qbittorrent/qBittorrent/wiki/>
+
 ## rTorrent
 
 rTorrent is a BitTorrent server. ruTorrent is also installed to allow for web interface access and control.  
@@ -287,6 +336,20 @@ Also installs:
     # With Nginx:
     echo "username:$(openssl passwd -apr1 'password')" > /etc/.rutorrent-htaccess
     ```
+
+=== "Configuration"
+
+    rTorrent can be configured via its config file: `/mnt/dietpi_userdata/rtorrent/.rtorrent.rc`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart rtorrent
+    ```
+
+    **Remark #1:** The rTorrent configuration via the web interface will be overwritten from the `.rtorrent.rc` file at every start/restart of rTorrent.  
+    **Remark #2:** If rTorrent signals `Tracker: [Failure reason "Invalid key: port"]`, check the setting in `rtorrent.rc`: `network.port_open.set = yes` (which is the installation default value).
+
+    See also [rTorrent Performance Tuning by Mikhail Zadorsky](https://github.com/rakshasa/rtorrent/wiki/Performance-Tuning){: class="nospellcheck"} on GitHub.
 
 === "Access downloads"
 
@@ -406,6 +469,15 @@ Also installs:
     - `Connection Settings`
     - Enter the rpc secret password into the `Enter the secret token (optional):` box, then save changes
 
+=== "Configuration"
+
+    Aria2 can be configured via its config file: `/mnt/dietpi_userdata/aria2/aria2.conf`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart aria2
+    ```
+
 === "Access Downloads"
 
     Make sure you have one of DietPi's [File Servers](file_servers.md) installed.  
@@ -471,6 +543,11 @@ Also installs:
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://aria2.github.io/>  
+Official documentation: <https://aria2.github.io/manual/en/html/index.html>
+
 ## SABnzbd
 
 NZB download manager with web interface.
@@ -485,6 +562,16 @@ NZB download manager with web interface.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    SABnzbd can be configured via its config file: `/etc/sabnzbd/sabnzbd.ini`.  
+    See <https://sabnzbd.org/wiki/configuration/4.5/configure> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart sabnzbd
+    ```
 
 === "Web interface not loading / Unable to access"
 
@@ -560,6 +647,11 @@ NZB download manager with web interface.
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://sabnzbd.org/>  
+Official documentation: <https://sabnzbd.org/wiki/>
+
 ## Medusa
 
 Automatically download your favorite TV shows, as they become available.  
@@ -579,6 +671,15 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    Medusa can be configured via its config file: `/mnt/dietpi_userdata/medusa/config.ini`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart medusa
+    ```
 
 === "Add a TV show"
 
@@ -647,6 +748,11 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://github.com/pymedusa/Medusa>  
+Official documentation: <https://github.com/pymedusa/Medusa/wiki/Installation-&-Configuration-Guides>
+
 ## Sonarr
 
 Automatically download your favorite TV shows, as they become available.
@@ -693,6 +799,16 @@ Automatically download your favorite TV shows, as they become available.
     - Type a name of the show you wish to find
     - Once found, under path use the following location `/mnt/dietpi_userdata/downloads`
     - Change any further options (such as video quality) if needed, then select `+`
+
+=== "Configuration"
+
+    Sonarr can be configured via its config file: `/mnt/dietpi_userdata/sonarr/config.xml`.  
+    See <https://wiki.servarr.com/sonarr/environment-variables> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart sonarr
+    ```
 
 === "Using custom download/media directories"
 
@@ -750,6 +866,8 @@ Automatically download your favorite TV shows, as they become available.
 
 ***
 
+Official website: <https://sonarr.tv/>  
+Official documentation: <https://wiki.servarr.com/sonarr>  
 YouTube video tutorial: [How to install and configure Sonarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=3h0GvdKcR0Y)
 
 ## Radarr
@@ -798,6 +916,16 @@ Automatically download your favorite movies, as they become available.
     - Type a name of the movie you wish to find
     - Once found, under `path` use the following location `/mnt/dietpi_userdata/downloads`
     - Change any further options (such as video quality) if needed, then select `+`
+
+=== "Configuration"
+
+    Radarr can be configured via its config file: `/mnt/dietpi_userdata/radarr/config.xml`.  
+    See <https://wiki.servarr.com/radarr/environment-variables> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart radarr
+    ```
 
 === "Using custom download/media directories"
 
@@ -855,6 +983,8 @@ Automatically download your favorite movies, as they become available.
 
 ***
 
+Official website: <https://radarr.video/>  
+Official documentation: <https://wiki.servarr.com/radarr>  
 YouTube video tutorial: [How to install and configure Radarr on Raspberry Pi with DietPi](https://www.youtube.com/watch?v=ji9CgSBcf5E)
 
 ## Bazarr
@@ -883,11 +1013,14 @@ Key features:
 
     ![Bazarr subtitle finds list](../assets/images/dietpi-software-download-bazarr.jpg "Bazarr subtitle list"){: width="1105" height="490" loading="lazy"}
 
-=== "Advanced"
+=== "Configuration"
 
-    - Install directory: `/opt/bazarr`
-    - Data directory: `/mnt/dietpi_userdata/bazarr`
-    - Bazarr configuration file: `/mnt/dietpi_userdata/bazarr/config/config.yaml`
+    Bazarr can be configured via its config file: `/mnt/dietpi_userdata/bazarr/config`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart bazarr
+    ```
 
 === "Service control"
 
@@ -927,7 +1060,9 @@ Key features:
 
 ***
 
-Official documentation: <https://github.com/morpheus65535/bazarr/wiki>  
+Official website: <https://www.bazarr.media/>  
+Official documentation: <https://wiki.bazarr.media/>  
+GitHub page: <https://github.com/morpheus65535/bazarr/wiki>  
 Source code: <https://github.com/morpheus65535/bazarr>
 
 ## Lidarr
@@ -976,6 +1111,16 @@ Automatically download your favorite music.
     - Type a name of the artist you wish to find
     - Once found, under root folder, use the following location `/mnt/dietpi_userdata/downloads`
     - Change any other settings as required, then select `Add`
+
+=== "Configuration"
+
+    Lidarr can be configured via its config file: `/mnt/dietpi_userdata/lidarr/config.xml`.  
+    See <https://wiki.servarr.com/lidarr/environment-variables> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart lidarr
+    ```
 
 === "Using custom download/media directories"
 
@@ -1031,6 +1176,11 @@ Automatically download your favorite music.
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://lidarr.audio/>  
+Official documentation: <https://wiki.servarr.com/lidarr>  
+
 ## Readarr
 
 Automatically download your favorite ebook, as they become available.
@@ -1077,6 +1227,16 @@ Automatically download your favorite ebook, as they become available.
     - Type a name of the ebook or author you wish to find
     - Once found, under `path` use the following location `/mnt/dietpi_userdata/downloads`
     - Change any further options if needed, then select `Add`
+
+=== "Configuration"
+
+    Readarr can be configured via its config file: `/mnt/dietpi_userdata/readarr/config.xml`.  
+    See <https://wiki.servarr.com/readarr/settings> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart readarr
+    ```
 
 === "Using custom download/media directories"
 
@@ -1157,6 +1317,16 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    Prowlarr can be configured via its config file: `/mnt/dietpi_userdata/prowlarr/config.xml`.  
+    See <https://wiki.servarr.com/prowlarr/environment-variables> for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart prowlarr
+    ```
 
 === "Service control"
 
@@ -1246,6 +1416,10 @@ Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
 
+***
+
+Official website: <https://github.com/Jackett/Jackett/>  
+
 ## NZBGet
 
 Extremely efficient and fast NZB download manager with web interface. Coded in C++.
@@ -1262,6 +1436,16 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    NZBGet can be configured via its config file: `/mnt/dietpi_userdata/nzbget/nzbget.conf`.  
+    See <https://nzbget.com/documentation/>, tab "Configuration" for details.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart nzbget
+    ```
 
 === "Access Downloads"
 
@@ -1307,6 +1491,11 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
+
+***
+
+Official website: <https://nzbget.com/>  
+Official documentation: <https://nzbget.com/documentation/>  
 
 ## HTPC Manager
 
@@ -1358,6 +1547,11 @@ Do all your HTPC tasks without using 5 different interfaces!
     dietpi-software reinstall 155
     ```
 
+***
+
+Official website: <https://htpc.io/>  
+Official documentation: <https://nzbget.com/documentation/>  
+
 ## youtube-dl
 
 `youtube-dl` is a command-line program to download videos from YouTube.com and many more sites. See here the full list of supported websites: <https://ytdl-org.github.io/youtube-dl/supportedsites.html>
@@ -1374,8 +1568,8 @@ Do all your HTPC tasks without using 5 different interfaces!
 
 ***
 
-Website: <https://ytdl-org.github.io/youtube-dl/>  
-Documentation: <https://github.com/ytdl-org/youtube-dl/blob/master/README.md>
+Official website: <https://ytdl-org.github.io/youtube-dl/>  
+Official documentation: <https://github.com/ytdl-org/youtube-dl/blob/master/README.md>
 
 ## LazyLibrarian
 
@@ -1405,6 +1599,15 @@ LazyLibrarian is a program to follow authors and grab metadata for all your digi
     4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=`
     5. Add your custom path to the end of this line, separated by one space
     6. Press ++ctrl+o++ buttons to save and ++ctrl+x++ to exit
+
+=== "Configuration"
+
+    LazyLibrarian can be configured via its config file: `/mnt/dietpi_userdata/lazylibrarian/config.ini`.  
+    To apply changes, restart the service:
+
+    ```sh
+    systemctl restart lazylibrarian
+    ```
 
 === "Setup details"
 
@@ -1463,7 +1666,7 @@ LazyLibrarian is a program to follow authors and grab metadata for all your digi
 
 ***
 
-Official documentation: <https://lazylibrarian.gitlab.io/>  
+Official website: <https://lazylibrarian.gitlab.io/>  
 Source code: <https://gitlab.com/LazyLibrarian/LazyLibrarian>  
 License: [GPLv3](https://gitlab.com/LazyLibrarian/LazyLibrarian/-/blob/master/LICENSE)
 
