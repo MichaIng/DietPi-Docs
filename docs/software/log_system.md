@@ -20,7 +20,7 @@ The *Log System* can be changed at any time by running `dietpi-software` and sel
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 ???+ seealso "Examining the logging information"
-    A description of the basic log information display and filter option is given in the [HowTo section of the DietPi documentation](../usage.md).
+    A description of the basic log information display and filter option is given in the [HowTo section of the DietPi documentation](../dietpi_tools/software_installation.md#log-system-selection).
 
 [Return to the **Optimised Software list**](../software.md)
 
