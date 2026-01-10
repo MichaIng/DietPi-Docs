@@ -50,7 +50,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ## [Camera & Surveillance](software/camera.md)
 
-- [**RPi Cam Web Interface - Web interface & controls for your RPi camera**](software/camera.md#rpi-cam-web-interface)
 - [**MotionEye - Web interface & surveillance for your camera**](software/camera.md#motioneye)
 - [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](software/camera.md#mjpg-streamer)
 - [**BirdNET-Go - AI solution for continuous avian monitoring and identification**](software/camera.md#birdnet-go)

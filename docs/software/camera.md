@@ -7,7 +7,6 @@ description: Description of DietPi software options related to camera and survei
 
 ## Overview
 
-- [**RPi Cam Web Interface - Web interface & controls for your RPi camera**](#rpi-cam-web-interface)
 - [**motionEye - Web interface & surveillance for your camera**](#motioneye)
 - [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](#mjpg-streamer)
 - [**BirdNET-Go - AI solution for continuous avian monitoring and identification**](#birdnet-go)
@@ -16,59 +15,6 @@ description: Description of DietPi software options related to camera and survei
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
 
 [Return to the **Optimised Software list**](../software.md)
-
-## RPi Cam Web Interface
-
-The *RPi Cam Web Interface* package can be used in combination with a Raspberry Pi camera module to
-
-- take an image
-- record a video
-- observe based on motion detection
-- record a video with time lapse
-
-It consists of full control of the camera in a web-based interface.
-
-![RPi Cam Web Interface screenshot](../assets/images/dietpi-software-camera-rpicamcontrol.png "RPi Cam Web Interface screen"){: width="500" height="395" loading="lazy"}
-
-=== "Access the web interface"
-
-    The web interface is accessible via:
-
-    - URL = `http://<your.IP>/rpicam`
-
-    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
-
-=== "Access recordings (w/o web interface)"
-
-    To access you recordings remotely without the web interface, you might want to have one of [DietPi's file servers](file_servers.md) installed.  
-    Directories used by RPi Cam Web Interface:
-
-    - Media directory = `/mnt/dietpi_userdata/rpicam`
-    - Accessed from file server = `/rpicam`
-
-=== "Update to latest version"
-
-    RPi Cam Web Interface can be updated to the latest version by reinstalling it via
-
-    ```sh
-    dietpi-software reinstall 59
-    ```
-
-=== "RPi camera module"
-
-    The RPi camera module is automatically enabled during the installation process. However, It requires a reboot and/or sometimes a power cycle to take effect.  
-    The camera activation may be checked via `dietpi-config` > `Display Options` > `RPi Camera` to show `[On]`. Additionally, the behaviour of the cameras LED can be set in the same dialog via `RPi Camera LED`.
-
-    Remark: After changing the camera activation you need to reboot and/or sometimes power cycle the SBC incl. camera.
-
-    ![DietPi-Config camera activation](../assets/images/dietpi-config_camera-activation.png "DietPi-Config camera activation dialog"){: width="500" height="290" loading="lazy"}
-
-***
-
-Github page: <https://github.com/silvanmelchior/RPi_Cam_Web_Interface>  
-Wiki: <https://elinux.org/RPi-Cam-Web-Interface>  
-License: [MIT](https://github.com/silvanmelchior/RPi_Cam_Web_Interface/blob/master/LICENSE.txt)
 
 ## motionEye
 
