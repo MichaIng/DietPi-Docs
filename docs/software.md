@@ -270,6 +270,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](software/system_stats.md#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](software/system_stats.md#prometheus-node-exporter)
 - [**Homer - A modern homepage for your services**](software/system_stats.md#homer)
+- [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](software/system_stats.md#uptime-kuma)
 
 ## [VPN](software/vpn.md)
 
