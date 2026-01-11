@@ -321,31 +321,6 @@ The **Radxa Zero** is an ultra thin SBC in smaller form factor with still powerf
     </table>
 </div>
 
-## Allo Sparky SBC
-
-The Sparky SBC was an audiophile focused single-board computer produced by Allo. The product has however been discontinued and the company shut down some years ago. DietPi still provides images, but will drop support with its first release in 2026.
-
-![Allo Sparky SBC photo](assets/images/dietpi-sparky-sbc.jpg "Allo Sparky SBC"){: width="500" height="412" loading="lazy"}
-
-<div class="md-typeset__table">
-    <table>
-        <thead>
-            <tr>
-                <th><strong>Product</strong></th>
-                <th><strong>Description</strong></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a class="table" href=""><strong>Sparky SBC</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_SparkySBC-ARMv7-Bullseye.img.xz">DietPi image</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
 ## ASUS Tinker Board
 
 Tinker Board is a Single Board Computer (SBC) in an ultra-small form factor that offers class-leading performance while leveraging outstanding mechanical compatibility. The Tinker Board offers makers, IoT enthusiasts, hobbyists, PC DIY enthusiasts and others a reliable and extremely capable platform for building and tinkering their ideas into reality. For more details visit the [**ASUS Tinker Board**](https://tinker-board.asus.com/index.html) website.
@@ -462,24 +437,6 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 <td><a class="table" href=""><strong>NanoPi M1/T1</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM1-ARMv7-Trixie.img.xz">DietPi image</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table" href=""><strong>NanoPi M2/T2</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM2-ARMv7-Bullseye.img.xz">DietPi image</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table" href=""><strong>NanoPi M3/T3</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiM3-ARMv8-Bullseye.img.xz">DietPi image</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table" href=""><strong>NanoPi Fire3</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiFire3-ARMv8-Bullseye.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
