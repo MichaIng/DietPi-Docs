@@ -74,6 +74,7 @@ bootable
 bootloader
 bootloaders
 BPF
+Broadcom
 BruteFIR
 BSLv
 Bticino
@@ -132,6 +133,8 @@ de
 deathmatch
 deinstallation
 DER
+dereference
+detections
 DHCP
 dhcpcd
 dietpi
@@ -562,6 +565,7 @@ Raspbian
 Raspotify
 Rclone
 README
+rebase
 Reddit
 reinstalls
 repo
