@@ -10,7 +10,6 @@ description: Description of DietPi software options related to cloud and backup 
 - [**ownCloud - Your own personal cloud based backup/data storage system**](#owncloud)
 - [**Nextcloud - Self-hosted productivity platform**](#nextcloud)
 - [**Nextcloud Talk - Video calls via Nextcloud, including TURN server**](#nextcloud-talk)
-- [**Pydio - Feature-rich backup and sync server with web interface**](#pydio)
 - [**UrBackup Server - Full backups for systems on your network**](#urbackup)
 - [**Gogs - GitHub style server, with web interface**](#gogs)
 - [**Gitea - GitHub style server, with web interface**](#gitea)
@@ -313,56 +312,6 @@ Also installs:
 Website: <https://nextcloud.com/talk/>  
 Source code: <https://github.com/nextcloud/spreed>  
 Coturn source code: <https://github.com/coturn/coturn>
-
-## Pydio
-
-Pydio is a feature-rich backup and sync server with web interface. Similar to ownCloud with vast configuration options to meet your "cloud" needs.
-
-Also Installs:
-
-- Webserver
-
-![Pydio web interface screenshot](../assets/images/dietpi-software-cloud-pydio.png "Pydio web interface screen"){: width="400" height="243" loading="lazy"}
-
-=== "Access to the web interface"
-
-    The web interface of *Pydio* can be accessed via:
-
-    - URL: `http://<your.IP>/pydio`
-
-    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
-
-=== "First time connect"
-
-    - Ignore the warnings and click the button titled `CLICK HERE TO CONTINUE TO PYDIO`.  
-      Remark: If you require SSL access, please use LetsEncrypt to set this up.
-    - The wizard can now be started, click the `start wizard >` button to begin.
-    - Enter and create a new admin account for use with Pydio. Then click the `>>` button.
-    - Under database details, enter the following:
-        - Database type = `MySQL`
-        - Host = `localhost`
-        - Database = `pydio`
-        - User = `pydio`
-        - Password = `<your global password>` (default: `dietpi`)
-        - Use MySqli = No
-    - Click test connection, when successful, click the `>>` button.
-    - Under advanced options, use the default values, then click the `Install Pydio` button.
-
-=== "Setup sync client on remote systems"
-
-    Once the server has been configured (as per above):
-
-    - Download the sync client for your system: <https://pydio.com/en/get-pydio/downloads/pydiosync-desktop-app>
-    - When configuring the remote server, use the following:
-        - Select HTTP option (unless you have setup an SSL cert)
-        - URL = `http://<your.IP>/pydio` (replace IP with your system IP)
-        - User = The "admin" user you setup in initial setup.
-        - Password = The "admin" password you setup in initial setup.
-
-***
-
-Website: <https://pydio.com>
 
 ## UrBackup
 

@@ -59,7 +59,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**ownCloud - Your own personal cloud based backup/data storage system**](software/cloud.md#owncloud)
 - [**Nextcloud - Self-hosted productivity platform**](software/cloud.md#nextcloud)
 - [**Nextcloud Talk - Video calls via Nextcloud, including TURN server**](software/cloud.md#nextcloud-talk)
-- [**Pydio - Feature-rich backup and sync server with web interface**](software/cloud.md#pydio)
 - [**UrBackup Server - Full backups for systems on your network**](software/cloud.md#urbackup)
 - [**Gogs - GitHub style server, with web interface**](software/cloud.md#gogs)
 - [**Gitea - GitHub style server, with web interface**](software/cloud.md#gitea)
