@@ -114,6 +114,7 @@ CORS
 Coturn
 CouchPotato
 COVID
+CPUFreq
 CRC
 CRDA
 cron
@@ -290,6 +291,7 @@ InfluxDB
 init
 initramfs
 InnoDB
+Innosilicon
 inode
 integrations
 InterPlanetary
@@ -512,6 +514,7 @@ Personalisation
 phpBB
 phpMyAdmin
 phpSysInfo
+PHY
 PID
 PIA
 Pi-hole
