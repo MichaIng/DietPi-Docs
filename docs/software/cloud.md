@@ -32,7 +32,7 @@ description: Description of DietPi software options related to cloud and backup 
 
 ownCloud Infinite Scale (oCIS) is the new file sync & share platform that will be the foundation of your data management platform.
 
-![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png "ownCloud web interface screen"){: width="400" height="218" loading="lazy"}
+![ownCloud Infinite Scale web interface screenshot](../assets/images/ocis.webp "ownCloud web Infinite Scale interface screen"){: width="1920" height="1080" loading="lazy"}
 
 === "Access to the web interface"
 
