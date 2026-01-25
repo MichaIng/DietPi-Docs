@@ -193,7 +193,7 @@ Also installs:
     /var/lib/mympd/config/
     ```
 
-    Details about available settings can be found in the official docs: <https://jcorporation.github.io/myMPD/020-configuration/configuration-files/>
+    Details about available settings can be found in the official docs: <https://jcorporation.github.io/myMPD/020-configuration/configuration-files.html>
 
     For changes to take effect, the service needs to be restarted:
 
@@ -1578,7 +1578,7 @@ Spotify Connect client for the Raspberry Pi that Just Works™.
 
     Raspotify should work straight out of the box. However, you can change the available options in:
 
-    - `/etc/default/raspotify`
+    - `/etc/raspotify/conf`
 
     Then restart the service with:
 

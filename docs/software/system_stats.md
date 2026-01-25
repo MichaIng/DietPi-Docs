@@ -22,6 +22,7 @@ description: Description of DietPi software options related to system statistics
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](#prometheus-node-exporter)
 - [**Homer - A modern homepage for your services**](#homer)
+- [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](#uptime-kuma)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -751,7 +752,7 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
 ***
 
 Official website: <https://github.com/prometheus/node_exporter>  
-Documentation: <https://prometheus.io/docs/guides/node-exporter/>  
+Official documentation: <https://prometheus.io/docs/guides/node-exporter/>  
 Prometheus RPi Exporter: <https://github.com/fahlke/raspberrypi_exporter>  
 License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE), [MIT](https://github.com/fahlke/raspberrypi_exporter/blob/master/LICENSE) (for RPi Exporter)
 
@@ -994,6 +995,51 @@ Homer is a modern and lightweight dashboard & homepage for your services
 
 Official website: <https://github.com/bastienwirtz/homer>  
 Official demo: <https://homer-demo.netlify.app/>
+
+## Uptime Kuma
+
+Uptime Kuma is a fancy self-hosted monitoring tool.
+
+![Uptime Kuma dashboard screenshot](../assets/images/uptime-kuma.webp "Uptime Kuma dashboard"){: width="1559" height="895" loading="lazy"}
+
+=== "Access to Uptime Kuma"
+
+    The *Uptime Kuma* dashboard can be accessed via:
+
+    - URL: `http://<your.IP>:3002`
+    
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Directories/Configuration"
+
+    The Uptime Kuma executable files can be found at:
+
+    ```
+    /opt/uptime-kuma
+    ```
+
+    The configuration of Uptime Kuma is done within the UI itself, no special configuration files are needed to be handled by the user. Uptime Kuma itself holds a database which is located at:
+
+    ```
+    /mnt/dietpi_userdata/uptime-kuma
+    ```
+
+=== "Update"
+
+    To update Uptime Kuma simply re-run the installer by executing
+
+    ```sh
+    dietpi-software reinstall 176
+    ```
+
+***
+
+Official website: <https://github.com/louislam/uptime-kuma>  
+Official documentation: <https://github.com/louislam/uptime-kuma/wiki>  
+Official demo: <https://uptime.kuma.pet/>  
+License: [MIT](https://github.com/louislam/uptime-kuma/blob/master/LICENSE)  
+Additional information page: <https://uptimekuma.org/>
 
 [Return to the **Optimised Software list**](../software.md)
 

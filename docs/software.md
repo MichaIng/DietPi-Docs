@@ -50,17 +50,15 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ## [Camera & Surveillance](software/camera.md)
 
-- [**RPi Cam Web Interface - Web interface & controls for your RPi camera**](software/camera.md#rpi-cam-web-interface)
 - [**MotionEye - Web interface & surveillance for your camera**](software/camera.md#motioneye)
 - [**mjpg-streamer - Simple camera streaming tool with HTML plugin**](software/camera.md#mjpg-streamer)
 - [**BirdNET-Go - AI solution for continuous avian monitoring and identification**](software/camera.md#birdnet-go)
 
 ## [Cloud & Backup systems](software/cloud.md)
 
-- [**ownCloud - Your own personal cloud based backup/data storage system**](software/cloud.md#owncloud)
+- [**ownCloud Infinite Scale - File sync & share platform (Go)**](software/cloud.md#owncloud)
 - [**Nextcloud - Self-hosted productivity platform**](software/cloud.md#nextcloud)
 - [**Nextcloud Talk - Video calls via Nextcloud, including TURN server**](software/cloud.md#nextcloud-talk)
-- [**Pydio - Feature-rich backup and sync server with web interface**](software/cloud.md#pydio)
 - [**UrBackup Server - Full backups for systems on your network**](software/cloud.md#urbackup)
 - [**Gogs - GitHub style server, with web interface**](software/cloud.md#gogs)
 - [**Gitea - GitHub style server, with web interface**](software/cloud.md#gitea)
@@ -270,6 +268,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](software/system_stats.md#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](software/system_stats.md#prometheus-node-exporter)
 - [**Homer - A modern homepage for your services**](software/system_stats.md#homer)
+- [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](software/system_stats.md#uptime-kuma)
 
 ## [VPN](software/vpn.md)
 

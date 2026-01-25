@@ -43,7 +43,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
     !!! tip "Optional usage of the Home Assistant Community Store (HACS)"
         The Home Assistant Community Store (HACS) provides further community driven integrations, themes, etc.  
-        To activate it, follow this guide: <https://hacs.xyz/docs/use/configuration/basic/>
+        To activate it, follow this guide: <https://hacs.xyz/docs/use/configuration/basic/#to-set-up-the-hacs-integration>
 
 === "Access to the web interface"
 
