@@ -48,6 +48,7 @@ backend
 backends
 backlight
 backlights
+backport
 backported
 Baïkal
 balancer
@@ -102,6 +103,7 @@ CloudPrint
 CloudShell
 codec
 codecs
+compat
 Computerworld
 congerdesign
 conf
