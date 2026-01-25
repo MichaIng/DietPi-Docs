@@ -243,6 +243,7 @@ GPLv
 GPT
 Grafana
 Griesemer
+GStreamer
 GTK
 GUA
 GZDoom
@@ -665,6 +666,7 @@ SPI
 spindown
 Spotify
 Spotifyd
+Spreadtrum
 Spyder
 SqueezeboxServer
 SqueezeCenter
@@ -753,6 +755,7 @@ unencrypted
 unformatted
 unmount
 unicast
+UNISOC
 USBridge
 USBridgeSig
 userland
