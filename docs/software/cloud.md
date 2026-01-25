@@ -7,7 +7,7 @@ description: Description of DietPi software options related to cloud and backup 
 
 ## Overview
 
-- [**ownCloud - Your own personal cloud based backup/data storage system**](#owncloud)
+- [**ownCloud Infinite Scale - File sync & share platform (Go)**](#owncloud)
 - [**Nextcloud - Self-hosted productivity platform**](#nextcloud)
 - [**Nextcloud Talk - Video calls via Nextcloud, including TURN server**](#nextcloud-talk)
 - [**UrBackup Server - Full backups for systems on your network**](#urbackup)
@@ -27,74 +27,83 @@ description: Description of DietPi software options related to cloud and backup 
 
 [Return to the **Optimised Software list**](../software.md)
 
-## ownCloud
+## ownCloud Infinite Scale {: #owncloud }
 
-The ownCloud package turns your DietPi system into your very own personal cloud based backup/data storage system (e.g.: Dropbox).
-
-Also Installs:
-
-- Webserver
-- USB dedicated hard drive highly recommended
+ownCloud Infinite Scale (oCIS) is the new file sync & share platform that will be the foundation of your data management platform.
 
 ![ownCloud web interface screenshot](../assets/images/dietpi-software-cloud-owncloud.png "ownCloud web interface screen"){: width="400" height="218" loading="lazy"}
 
 === "Access to the web interface"
 
-    ownCloud is accessible via regular HTTP/HTTPS TCP ports **80**/**443** below the `/owncloud` path:
+    ownCloud is accessible via HTTPS on TCP ports **9200**:
 
-    - URL: `http://<your.IP>/owncloud`
-    - Username: `admin` (or the one you set in `dietpi.txt`)
+    - URL: `https://<your.IP>:9200`
+    - Username: `admin`
     - Password: `<your global password>` (default: `dietpi`)
+
+    !!! attention "Initial access possible only via HTTPS and LAN IP address!"
+        oCIS has a strict security concept, allows access via HTTPS only (using a self-signed default certificate initially), and only with a single hostname or IP. It is initially configured to permit access with the local IP of the system only, i.e. the one you can print with `G_GET_NET ip` on DietPi.
+
+        If access with a different IP or hostname is needed, change `OCIS_URL` in `/mnt/dietpi_userdata/ocis/ocis.env`, and restart the service.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
 === "Configuration"
 
-    You can configure ownCloud via CLI from command line. To simplify this, DietPi has added a shortcut to the otherwise necessary `sudo -u www-data php /var/www/owncloud/occ`.  
-    Simply run `occ` from your console:
+    oCIS has two config files:
+
+    1. The environment file `/mnt/dietpi_userdata/ocis/ocis.env` needs to be edited manually as needed, and requires a service restart to become effective. More variables can be found in the [official documentation](https://doc.owncloud.com/ocis/7.3/deployment/general/general-info.html#default-paths).
+    2. Other settings are stored in `/mnt/dietpi_userdata/ocis/ocis.yaml`, which however can be usually done via web interface. oCIS internally starts features as so called "services", which can be configured with individual config files as well. See the [official docs](https://doc.owncloud.com/ocis/7.3/deployment/general/general-info.html#configuration-rules) for further details.
+
+=== "Directories"
+
+    - Install directory: `/opt/ocis`
+    - Config and data directory: `/mnt/dietpi_userdata/ocis`
+
+=== "View logs"
 
     ```sh
-    occ list
+    journalctl -u ocis
     ```
 
-    More details about available commands can be found in the [ownCloud admin manual](https://doc.owncloud.com/server/next/admin_manual/configuration/server/occ_command.html#core-commands).
+=== "Service handling"
+
+    Use the following commands to control the oCIS system service:
+
+    ```sh
+    systemctl status ocis
+    ```
+
+    ```sh
+    systemctl stop ocis
+    ```
+
+    ```sh
+    systemctl start ocis
+    ```
+
+    ```sh
+    systemctl restart ocis
+    ```
 
 === "Update"
 
-    1. Option: Use the web-based updater from within the ownCloud web UI settings.
-    2. Option: Use the updater script from console (recommended):
+    Update ownCloud Infinite Scale with a reinstall, which preserves existing data and configs:
 
-        ```sh
-        sudo -u www-data php /var/www/owncloud/updater/application.php
-        1
-        ```
+    ```sh
+    dietpi-software reinstall 47
+    ```
 
-    3. Follow the official documentation for a manual upgrade process: <https://doc.owncloud.com/server/next/admin_manual/maintenance/upgrading/manual_upgrade.html>
-
-=== "FAQ"
-
-    **Where is my data stored?**
-
-    `/mnt/dietpi_userdata/owncloud_data` (or `dietpi.txt` choice)
-
-    **Why am I limited to 2 GiB file size uploads?**
-
-    DietPi will automatically apply the max supported upload size to the PHP and ownCloud configs.
-
-    - 32-bit systems can handle 2 GiB
-    - 64-bit systems can handle 8796 PiB, yep, in petabyte
-    - `echo -e "$(( $(php -r 'print(PHP_INT_MAX);') / 1024 / 1024)) MiB"`
-
-    **Will my data be saved after deinstallation?**
-
-    Your userdata directory will stay after deinstallation.  
-    As well a database backup will be saved to your userdata directory. Thus you can easily restore your instance by reinstalling ownCloud and restore the database dump.
+    Manual migration steps might be needed between major version upgrades. See the related official migration docs before upgrading: <https://doc.owncloud.com/ocis/next/migration/upgrading-ocis.html#introduction>
 
 ***
 
-Official website: <https://owncloud.com/>  
-Official documentation: <https://doc.owncloud.com/server/next/admin_manual/>
+Official website: <https://owncloud.com/infinite-scale/>  
+Official documentation: <https://doc.owncloud.com/ocis/>  
+Official forum: <https://central.owncloud.org/>  
+Source code: <https://github.com/owncloud/ocis>  
+License: [Apache 2.0](https://github.com/owncloud/ocis/blob/master/LICENSE)
 
 ## Nextcloud
 
