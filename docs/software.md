@@ -56,7 +56,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ## [Cloud & Backup systems](software/cloud.md)
 
-- [**ownCloud - Your own personal cloud based backup/data storage system**](software/cloud.md#owncloud)
+- [**ownCloud Infinite Scale - File sync & share platform (Go)**](software/cloud.md#owncloud)
 - [**Nextcloud - Self-hosted productivity platform**](software/cloud.md#nextcloud)
 - [**Nextcloud Talk - Video calls via Nextcloud, including TURN server**](software/cloud.md#nextcloud-talk)
 - [**UrBackup Server - Full backups for systems on your network**](software/cloud.md#urbackup)
