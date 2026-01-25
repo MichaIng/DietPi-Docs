@@ -48,6 +48,7 @@ backend
 backends
 backlight
 backlights
+backport
 backported
 Baïkal
 balancer
@@ -74,6 +75,7 @@ bootable
 bootloader
 bootloaders
 BPF
+Broadcom
 BruteFIR
 BSLv
 Bticino
@@ -101,6 +103,7 @@ CloudPrint
 CloudShell
 codec
 codecs
+compat
 Computerworld
 congerdesign
 conf
@@ -111,6 +114,7 @@ CORS
 Coturn
 CouchPotato
 COVID
+CPUFreq
 CRC
 CRDA
 cron
@@ -132,6 +136,8 @@ de
 deathmatch
 deinstallation
 DER
+dereference
+detections
 DHCP
 dhcpcd
 dietpi
@@ -238,6 +244,7 @@ GPLv
 GPT
 Grafana
 Griesemer
+GStreamer
 GTK
 GUA
 GZDoom
@@ -284,6 +291,7 @@ InfluxDB
 init
 initramfs
 InnoDB
+Innosilicon
 inode
 integrations
 InterPlanetary
@@ -506,6 +514,7 @@ Personalisation
 phpBB
 phpMyAdmin
 phpSysInfo
+PHY
 PID
 PIA
 Pi-hole
@@ -562,6 +571,7 @@ Raspbian
 Raspotify
 Rclone
 README
+rebase
 Reddit
 reinstalls
 repo
@@ -659,6 +669,7 @@ SPI
 spindown
 Spotify
 Spotifyd
+Spreadtrum
 Spyder
 SqueezeboxServer
 SqueezeCenter
@@ -747,6 +758,7 @@ unencrypted
 unformatted
 unmount
 unicast
+UNISOC
 USBridge
 USBridgeSig
 userland

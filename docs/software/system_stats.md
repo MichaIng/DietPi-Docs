@@ -1000,7 +1000,7 @@ Official demo: <https://homer-demo.netlify.app/>
 
 Uptime Kuma is a fancy self-hosted monitoring tool.
 
-![Uptime Kuma dashboard screenshot](../assets/images/dietpi-software-systemstat-uptime-kuma.png "Uptime Kuma dashboard"){: width="1559" height="895" loading="lazy"}
+![Uptime Kuma dashboard screenshot](../assets/images/uptime-kuma.webp "Uptime Kuma dashboard"){: width="1559" height="895" loading="lazy"}
 
 === "Access to Uptime Kuma"
 
@@ -1038,6 +1038,7 @@ Uptime Kuma is a fancy self-hosted monitoring tool.
 Official website: <https://github.com/louislam/uptime-kuma>  
 Official documentation: <https://github.com/louislam/uptime-kuma/wiki>  
 Official demo: <https://uptime.kuma.pet/>  
+License: [MIT](https://github.com/louislam/uptime-kuma/blob/master/LICENSE)  
 Additional information page: <https://uptimekuma.org/>
 
 [Return to the **Optimised Software list**](../software.md)
