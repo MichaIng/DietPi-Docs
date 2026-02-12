@@ -51,6 +51,22 @@ Select the following tabs for the installation description of your target.
         [//]: # (Include hint how to extract .xz files with xz-utils)
         --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
+    ??? hint "Raspberry Pi family: Using `rpi-imager` to download and flash the DietPi image in one step"
+
+        The flash tool Raspberry Pi Imager (`rpi-imager`) (download e.g. [Windows or MacOS installer here #1](https://www.raspberrypi.com/software/) resp. [Debian `.deb` file here #2](https://github.com/raspberrypi/rpi-imager/releases)) contains an option to download and flash images for the Raspberry Pi family quite easily:  
+        In the step when `rpi-imager` asks for the OS version ("Choose operating system"), the "General purpose OS" option is selected:
+
+        ![DietPi-RPI-Imager-install-01](assets/images/DietPi-rpi-imager-install-01.png "Raspberry Pi Imager OS selection"){: width="795" height="529" loading="lazy"}
+
+        In the next step, select "DietPi", afterwards select the DietPi image version:
+
+        ![DietPi-RPI-Imager-install-02](assets/images/DietPi-rpi-imager-install-02.png "Raspberry Pi Imager DietPi image selection"){: width="795" height="529" loading="lazy"}
+
+        If previously a Raspberry Pi hardware was selected (e.g. Raspberry Pi 5), invalid image versions are filtered and not listed.  
+        Then the rest of the wizard can be executed and at least the SD card is flashed.
+
+        Remark: In Debian systems it might be necessary to install the OpenGL lib via `apt install libopengl0` when a corresponding message about a missing libOpenGL.so library occurs.
+
     ## 2. Flash the DietPi image
 
     At first, download and install [balenaEtcher](https://etcher.balena.io/). This application flashes OS images to SD cards and USB drives, safely and easily on Windows, macOS, Linux.  
