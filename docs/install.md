@@ -65,7 +65,7 @@ Select the following tabs for the installation description of your target.
         If previously a Raspberry Pi hardware was selected (e.g. Raspberry Pi 5), invalid image versions are filtered and not listed.  
         Then the rest of the wizard can be executed and at least the SD card is flashed.
 
-        Remark: In Debian systems it might be necessary to install the OpenGL lib via `apt install libopengl0` when a corresponding message about a missing libOpenGL.so library occurs.
+        Remark: In Debian systems it might be necessary to install the OpenGL lib via `apt install libopengl0` when a corresponding message about a missing `libOpenGL.so` library occurs.
 
     ## 2. Flash the DietPi image
 
