@@ -60,7 +60,7 @@ Select the following tabs for the installation description of your target.
 
         In the next step, select "DietPi", afterwards select the DietPi image version:
 
-        ![DietPi-RPI-Imager-install-02](assets/images/DietPi-rpi-imager-install-02.png "Raspberry Pi Imager DietPi image selection"){: width="795" height="529" loading="lazy"}
+        ![Raspberry Pi Imager DietPi image selection](assets/images/DietPi-rpi-imager-install-02.png "Raspberry Pi Imager DietPi image selection"){: width="795" height="529" loading="lazy"}
 
         If previously a Raspberry Pi hardware was selected (e.g. Raspberry Pi 5), invalid image versions are filtered and not listed.  
         Then the rest of the wizard can be executed and at least the SD card is flashed.
