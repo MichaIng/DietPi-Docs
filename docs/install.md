@@ -56,7 +56,7 @@ Select the following tabs for the installation description of your target.
         The flash tool Raspberry Pi Imager (`rpi-imager`) (download e.g. [Windows or MacOS installer here #1](https://www.raspberrypi.com/software/) resp. [Debian `.deb` file here #2](https://github.com/raspberrypi/rpi-imager/releases)) contains an option to download and flash images for the Raspberry Pi family quite easily:  
         In the step when `rpi-imager` asks for the OS version ("Choose operating system"), the "General purpose OS" option is selected:
 
-        ![DietPi-RPI-Imager-install-01](assets/images/DietPi-rpi-imager-install-01.png "Raspberry Pi Imager OS selection"){: width="795" height="529" loading="lazy"}
+        ![Raspberry Pi Imager OS selection](assets/images/DietPi-rpi-imager-install-01.png "Raspberry Pi Imager OS selection"){: width="795" height="529" loading="lazy"}
 
         In the next step, select "DietPi", afterwards select the DietPi image version:
 
