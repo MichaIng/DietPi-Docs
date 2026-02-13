@@ -51,14 +51,14 @@ Select the following tabs for the installation description of your target.
         [//]: # (Include hint how to extract .xz files with xz-utils)
         --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
-    ??? hint "Raspberry Pi family: Using `rpi-imager` to download and flash the DietPi image in one step"
+    ??? hint "Raspberry Pi: Using the _Raspberry Pi Imager_ tool to download and flash the image in one step"
 
-        The flash tool Raspberry Pi Imager (`rpi-imager`) (download e.g. [Windows or MacOS installer here #1](https://www.raspberrypi.com/software/) resp. [Debian `.deb` file here #2](https://github.com/raspberrypi/rpi-imager/releases)) contains an option to download and flash images for the Raspberry Pi family quite easily:  
-        In the step when `rpi-imager` asks for the OS version ("Choose operating system"), the "General purpose OS" option is selected:
+        The _Raspberry Pi Imager_ (`rpi-imager`, download e.g. [Windows or MacOS installer here #1](https://www.raspberrypi.com/software/) resp. [Debian `.deb` file here #2](https://github.com/raspberrypi/rpi-imager/releases)) contains an option to download and flash images for the Raspberry Pi family quite easily:  
+        In the step when the Raspberry Pi Imager asks for the OS version ("Choose operating system"), the "Other general-purpose OS" option is selected:
 
         ![Raspberry Pi Imager OS selection](assets/images/DietPi-rpi-imager-install-01.png "Raspberry Pi Imager OS selection"){: width="795" height="529" loading="lazy"}
 
-        In the next step, select "DietPi", afterwards select the DietPi image version:
+        In the next step, "DietPi" is selected, afterwards the DietPi image version has to be chosen:
 
         ![Raspberry Pi Imager DietPi image selection](assets/images/DietPi-rpi-imager-install-02.png "Raspberry Pi Imager DietPi image selection"){: width="795" height="529" loading="lazy"}
 
