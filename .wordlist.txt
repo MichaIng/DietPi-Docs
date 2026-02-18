@@ -140,6 +140,7 @@ dereference
 detections
 DHCP
 dhcpcd
+dialogs
 dietpi
 DietPi
 DietPi's
@@ -682,6 +683,7 @@ SSIDs
 SSL
 SSO
 StarFive
+STDERR
 stdout
 StackExchange
 StephanStS
