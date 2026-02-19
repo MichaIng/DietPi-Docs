@@ -386,7 +386,7 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
     The following variables are set by default:
 
     - `PORT=8091` — TCP port WhoDB listens on
-    - `WHODB_LOG_LEVEL=error` — only error-level events are logged
+    - `WHODB_LOG_LEVEL=warning ` — only warning and error level events are logged
 
     For a full list of supported environment variables (e.g. `WHODB_POSTGRESQL`, `WHODB_MYSQL`, `WHODB_TOKENS`, `WHODB_ALLOWED_ORIGINS`), see the [WhoDB documentation](https://github.com/clidey/whodb).
 
