@@ -13,7 +13,7 @@ description: Description of DietPi software options related to databases and dat
 - [**Redis** - Open Source In-memory key–value Data Store](#redis)
 - [**InfluxDB** - Open Source Time Series Database](#influxdb)
 - [**PostgreSQL** - Persistent and advanced SQL database engine](#postgresql)
-- [**WhoDB** - Modern database management tool](#whodb)
+- [**WhoDB** - Lightweight, fast and beautiful database management tool](#whodb)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -355,28 +355,61 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 
 ## WhoDB
 
-**WhoDB** is the modern database management tool that developers actually want to use. It provides a clean and intuitive web interface to manage various database types.
+**WhoDB** is a lightweight, fast and beautiful next-gen database explorer. It supports Postgres, MySQL, SQLite, MongoDB, Redis, MariaDB, Elastic Search and ClickHouse — all through a single clean web interface, with an optional AI-powered chat interface for querying your data.
 
-=== "Access to the web interface"
+![WhoDB logo](../assets/images/dietpi-software-whodb.png){: width="300" height="auto" loading="lazy"}
 
-    The web interface is accessible via port **8091**:
+=== "Quick start"
+
+    After installation, open the WhoDB web interface in your browser:
 
     - URL = `http://<your.IP>:8091`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
-=== "Update to latest version"
+=== "Configuration"
 
-    You can easily update WhoDB by reinstalling it:
+    <h2>Directories</h2>
+
+    - Data directory: `/mnt/dietpi_userdata/whodb`
+    - Config file: `/mnt/dietpi_userdata/whodb/.local/share/whodb/config.json`
+
+    <h2>Service configuration</h2>
+
+    The service is configured via environment variables in the systemd unit file:
+
+    ```
+    /etc/systemd/system/whodb.service
+    ```
+
+    The following variables are set by default:
+
+    - `PORT=8091` — TCP port WhoDB listens on
+    - `WHODB_LOG_LEVEL=error` — only error-level events are logged
+
+    For a full list of supported environment variables (e.g. `WHODB_POSTGRESQL`, `WHODB_MYSQL`, `WHODB_TOKENS`, `WHODB_ALLOWED_ORIGINS`), see the [WhoDB documentation](https://github.com/clidey/whodb).
+
+=== "Service handling"
+
+    - Start: `systemctl start whodb`
+    - Stop: `systemctl stop whodb`
+    - Restart: `systemctl restart whodb`
+    - Print status: `systemctl status whodb`
+
+=== "View logs"
+
+    Logs are written to the system journal:
 
     ```sh
-    dietpi-software reinstall 214
+    journalctl -u whodb
     ```
 
 ***
 
-Website: <https://whodb.com>
+Website: <https://github.com/clidey/whodb>  
+Official documentation: <https://github.com/clidey/whodb/wiki>  
+License: [Apache 2.0](https://github.com/clidey/whodb/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)
 
