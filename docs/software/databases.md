@@ -373,20 +373,20 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
     <h2>Directories</h2>
 
     - Data directory: `/mnt/dietpi_userdata/whodb`
-    - Config file: `/mnt/dietpi_userdata/whodb/.local/share/whodb/config.json`
+    - Environment file: `/mnt/dietpi_userdata/whodb/whodb.env`
 
     <h2>Service configuration</h2>
 
-    The service is configured via environment variables in the systemd unit file:
+    The service is configured via environment variables in the env file:
 
     ```
-    /etc/systemd/system/whodb.service
+    /mnt/dietpi_userdata/whodb/whodb.env
     ```
 
     The following variables are set by default:
 
     - `PORT=8091` — TCP port WhoDB listens on
-    - `WHODB_LOG_LEVEL=warning ` — only warning and error level events are logged
+    - `WHODB_LOG_LEVEL=warning` — only warning and error level events are logged
 
     For a full list of supported environment variables (e.g. `WHODB_POSTGRESQL`, `WHODB_MYSQL`, `WHODB_TOKENS`, `WHODB_ALLOWED_ORIGINS`), see the [WhoDB documentation](https://github.com/clidey/whodb).
 
