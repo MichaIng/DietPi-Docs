@@ -13,6 +13,7 @@ description: Description of DietPi software options related to databases and dat
 - [**Redis** - Open Source In-memory key–value Data Store](#redis)
 - [**InfluxDB** - Open Source Time Series Database](#influxdb)
 - [**PostgreSQL** - Persistent and advanced SQL database engine](#postgresql)
+- [**WhoDB** - Modern database management tool](#whodb)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -351,6 +352,31 @@ Official website: <https://www.postgresql.org/>
 Official documentation: <https://www.postgresql.org/docs/>  
 Source code: <https://git.postgresql.org/gitweb/?p=postgresql.git>  
 License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
+
+## WhoDB
+
+**WhoDB** is the modern database management tool that developers actually want to use. It provides a clean and intuitive web interface to manage various database types.
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8091**:
+
+    - URL = `http://<your.IP>:8091`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Update to latest version"
+
+    You can easily update WhoDB by reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 214
+    ```
+
+***
+
+Website: <https://whodb.com>
 
 [Return to the **Optimised Software list**](../software.md)
 
