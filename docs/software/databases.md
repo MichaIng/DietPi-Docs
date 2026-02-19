@@ -408,7 +408,7 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 ***
 
 Website: <https://github.com/clidey/whodb>  
-Official documentation: <https://github.com/clidey/whodb/wiki>  
+Official documentation: <https://docs.whodb.com/>  
 License: [Apache 2.0](https://github.com/clidey/whodb/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)
