@@ -531,7 +531,7 @@ Plex
 Portainer
 POSIX
 PostBoot
-Postgres
+PostgreSQL
 poweroff
 pre
 preboot

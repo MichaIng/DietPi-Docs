@@ -355,7 +355,7 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 
 ## WhoDB
 
-**WhoDB** is a lightweight, fast and beautiful next-gen database explorer. It supports Postgres, MySQL, SQLite, MongoDB, Redis, MariaDB, Elastic Search and ClickHouse — all through a single clean web interface, with an optional AI-powered chat interface for querying your data.
+**WhoDB** is a lightweight, fast and beautiful next-gen database explorer. It supports PostgreSQL, MySQL, SQLite, MongoDB, Redis, MariaDB, Elastic Search and ClickHouse — all through a single clean web interface, with an optional AI-powered chat interface for querying your data.
 
 ![WhoDB database explorer screenshot](../assets/images/dietpi-software-databases-whodb.png){: width="800" height="auto" loading="lazy"}
 
