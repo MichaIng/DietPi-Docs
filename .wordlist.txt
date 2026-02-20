@@ -95,7 +95,7 @@ Certbot
 cgroup
 changelog
 ChatGPT
-Clickhouse
+ClickHouse
 CIFS
 CLI
 Clonezilla
