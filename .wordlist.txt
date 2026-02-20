@@ -822,6 +822,7 @@ Webtoons
 WebUI
 whiptail
 WH
+WhoDB
 WHOIS
 Widevine
 wikimedia

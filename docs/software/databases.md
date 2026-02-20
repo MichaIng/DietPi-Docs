@@ -375,7 +375,7 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 
     <h2>Service configuration</h2>
 
-    The service is configured via environment variables in the env file:
+    The service is configured via environment variables in the `env` file:
 
     ```
     /mnt/dietpi_userdata/whodb/whodb.env
