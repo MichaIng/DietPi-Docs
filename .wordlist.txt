@@ -95,6 +95,7 @@ Certbot
 cgroup
 changelog
 ChatGPT
+Clickhouse
 CIFS
 CLI
 Clonezilla
@@ -530,6 +531,7 @@ Plex
 Portainer
 POSIX
 PostBoot
+Postgres
 poweroff
 pre
 preboot
