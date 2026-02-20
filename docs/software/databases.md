@@ -361,8 +361,6 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 
 === "Access to the web interface"
 
-    After installation, open the WhoDB web interface in your browser:
-
     - URL = `http://<your.IP>:8091`
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
