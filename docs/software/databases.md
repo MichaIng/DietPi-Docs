@@ -405,7 +405,7 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 
 === "Update"
 
-    You can easily update WhoDB by reinstalling it. Your settings and databases are preserved:
+    You can easily update WhoDB by reinstalling it. Your settings are preserved:
 
     ```sh
     dietpi-software reinstall 214
