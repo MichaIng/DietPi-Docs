@@ -403,6 +403,14 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
     journalctl -u whodb
     ```
 
+=== "Update"
+
+    You can easily update WhoDB by reinstalling it. Your settings and databases are preserved:
+
+    ```sh
+    dietpi-software reinstall 214
+    ```
+
 ***
 
 Website: <https://github.com/clidey/whodb>  
