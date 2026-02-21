@@ -375,18 +375,36 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 
     <h2>Service configuration</h2>
 
-    The service is configured via environment variables in the `env` file:
+    The service is configured via environment variables in the env file:
 
     ```
     /mnt/dietpi_userdata/whodb/whodb.env
     ```
 
-    The following variables are set by default:
+    The file is pre-populated with the following options:
 
-    - `PORT=8091` — TCP port WhoDB listens on
-    - `WHODB_LOG_LEVEL=warning` — only warning and error level events are logged
+    | Variable | Default | Description |
+    |---|---|---|
+    | `PORT` | `8091` | TCP port WhoDB listens on |
+    | `WHODB_LOG_LEVEL` | `warning` | Log level: `debug`, `info`, `warning`, `error`, `none` |
+    | `WHODB_LOG_FORMAT` | `text` | Log format: `text` or `json` (useful for log aggregators) |
+    | `WHODB_TOKENS` | *(unset)* | Comma-separated static tokens to restrict API/UI access |
+    | `WHODB_ALLOWED_ORIGINS` | *(unset)* | Comma-separated CORS origins (defaults to all origins) |
+    | `WHODB_DISABLE_CREDENTIAL_FORM` | *(unset)* | Set `true` to hide the database credential entry form in the UI |
+    | `WHODB_POSTGRESQL` | *(unset)* | Pre-configure PostgreSQL connection profile (JSON array) |
+    | `WHODB_MYSQL` | *(unset)* | Pre-configure MySQL/MariaDB connection profile (JSON array) |
+    | `WHODB_SQLITE3` | *(unset)* | Pre-configure SQLite connection profile (JSON array) |
+    | `WHODB_MONGODB` | *(unset)* | Pre-configure MongoDB connection profile (JSON array) |
+    | `WHODB_REDIS` | *(unset)* | Pre-configure Redis connection profile (JSON array) |
+    | `WHODB_CLICKHOUSE` | *(unset)* | Pre-configure ClickHouse connection profile (JSON array) |
+    | `WHODB_OLLAMA_HOST` | *(unset)* | Ollama AI chat host (local AI, no API key required) |
+    | `WHODB_OLLAMA_PORT` | *(unset)* | Ollama AI chat port |
 
-    For a full list of supported environment variables (e.g. `WHODB_POSTGRESQL`, `WHODB_MYSQL`, `WHODB_TOKENS`, `WHODB_ALLOWED_ORIGINS`), see the [WhoDB documentation](https://github.com/clidey/whodb).
+    All options except `PORT` and `WHODB_LOG_LEVEL` are commented out by default. To apply changes, restart the service:
+
+    ```sh
+    systemctl restart whodb
+    ```
 
 === "Service handling"
 
