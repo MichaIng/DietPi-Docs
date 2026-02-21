@@ -58,7 +58,7 @@ from any RPi camera, USB camera or an IP camera network stream.
     motionEye can be updated to the latest version via
 
     ```sh
-    sudo pip3 install -U --pre motioneye
+    sudo /opt/motioneye/bin/pip3 install -U motioneye
     ```
 
 === "RPi camera module"
