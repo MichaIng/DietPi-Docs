@@ -79,6 +79,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Redis - Open Source In-memory key–value Data Store**](software/databases.md#redis)
 - [**InfluxDB - Open Source Time Series Database**](software/databases.md#influxdb)
 - [**PostgreSQL - Persistent and advanced SQL database engine**](software/databases.md#postgresql)
+- [**WhoDB - Database management tool with AI-powered chat interface**](software/databases.md#whodb)
 
 ## [Desktops](software/desktop.md)
 
