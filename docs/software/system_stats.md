@@ -232,7 +232,13 @@ The GNU Midnight Commander (`mc`) is a visual file manager with a two column vie
 Midnight Commander is a full-screen text mode application running on a regular console, inside an X Window terminal, over SSH connections and all kinds of remote shells.
 
 !!! note "Conflict with MinIO console client"
-    The command `mc` is also used by the [MinIO](../cloud/#minio) console client. If MinIO is installed on the same system, the `mc` shell alias is configured to call the MinIO console client instead. In that case, you can still run GNU Midnight Commander explicitly via its full binary path `/usr/bin/mc`.
+    The command `mc` is also used by the [MinIO](../cloud/#minio) console client. If MinIO is installed on the same system, the `mc` shell alias is configured to call the MinIO console client instead. In that case, you can still run Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
+
+        ```sh
+        echo 'alias mnc=/usr/bin/mc' | sudo tee /etc/bashrc.d/midnight-commander.sh
+        source /etc/bashrc.d/midnight-commander.sh
+        mnc
+        ```
 
 ![GNU Midnight Commander screenshot](../assets/images/dietpi-software-systemstat-midnightcommander.png "GNU Midnight Commander dialog"){: width="500" height="322" loading="lazy"}
 
