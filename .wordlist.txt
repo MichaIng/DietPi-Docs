@@ -786,6 +786,7 @@ vaultwarden
 VC
 VCSM
 VDL
+venv
 VHDX
 vhost
 vhosts

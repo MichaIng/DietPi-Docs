@@ -359,13 +359,7 @@ Mopidy is a Python based music player web based user interface for MPD.
     Those can be installed via `pip`, e.g.:
 
     ```sh
-    pip3 install --no-cache-dir -U Mopidy-Jellyfin
-    ```
-
-    or on Stretch:
-
-    ```sh
-    pip2 install --no-cache-dir -U Mopidy-Jellyfin
+    pip3 install --break-system-packages -U Mopidy-Jellyfin
     ```
 
     For changes to take effect, the service needs to be restarted:

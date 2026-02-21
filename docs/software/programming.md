@@ -42,8 +42,7 @@ python3 -V
 === "Installation details"
 
     The install option explicitly installs only **Python 3**.  
-    The `pip`/`pip3` Python package manager and development headers are included.
-    To use the `pip` package manager, a typical usage will be `pip3 install -U <module>`.
+    The `python3-venv` module and development headers are included.
 
 === "Python IDE packages"
 
