@@ -234,11 +234,11 @@ Midnight Commander is a full-screen text mode application running on a regular c
 !!! note "Conflict with MinIO console client"
     The command `mc` is also used by the [MinIO](../cloud/#minio) console client. If MinIO is installed on the same system, the `mc` shell alias is configured to call the MinIO console client instead. In that case, you can still run Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
 
-        ```sh
-        echo 'alias mnc=/usr/bin/mc' | sudo tee /etc/bashrc.d/midnight-commander.sh
-        source /etc/bashrc.d/midnight-commander.sh
-        mnc
-        ```
+    ```sh
+    echo 'alias mnc=/usr/bin/mc' | sudo tee /etc/bashrc.d/midnight-commander.sh
+    source /etc/bashrc.d/midnight-commander.sh
+    mnc
+    ```
 
 ![GNU Midnight Commander screenshot](../assets/images/dietpi-software-systemstat-midnightcommander.png "GNU Midnight Commander dialog"){: width="500" height="322" loading="lazy"}
 
