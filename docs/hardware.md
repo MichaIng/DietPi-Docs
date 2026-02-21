@@ -542,9 +542,9 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>NanoPi Zero2 (testing)</strong></a></td>
+                <td><a class="table" href=""><strong>NanoPi Zero2</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/testing/DietPi_NanoPiZero2-ARMv8-Trixie.img.xz">DietPi image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NanoPiZero2-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
