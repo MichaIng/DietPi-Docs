@@ -95,6 +95,7 @@ Certbot
 cgroup
 changelog
 ChatGPT
+ClickHouse
 CIFS
 CLI
 Clonezilla
@@ -472,6 +473,7 @@ Odroids
 OEM
 Ok
 Okta
+Ollama
 oldoldstable
 OLED
 Oldschool
@@ -530,6 +532,7 @@ Plex
 Portainer
 POSIX
 PostBoot
+PostgreSQL
 poweroff
 pre
 preboot
@@ -822,6 +825,7 @@ Webtoons
 WebUI
 whiptail
 WH
+WhoDB
 WHOIS
 Widevine
 wikimedia

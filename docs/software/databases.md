@@ -13,6 +13,7 @@ description: Description of DietPi software options related to databases and dat
 - [**Redis** - Open Source In-memory key–value Data Store](#redis)
 - [**InfluxDB** - Open Source Time Series Database](#influxdb)
 - [**PostgreSQL** - Persistent and advanced SQL database engine](#postgresql)
+- [**WhoDB** - Database management tool with AI-powered chat interface](#whodb)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -351,6 +352,88 @@ Official website: <https://www.postgresql.org/>
 Official documentation: <https://www.postgresql.org/docs/>  
 Source code: <https://git.postgresql.org/gitweb/?p=postgresql.git>  
 License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
+
+## WhoDB
+
+**WhoDB** is a database management tool with an AI-powered chat interface. It supports PostgreSQL, MySQL, SQLite3, MongoDB, Redis, MariaDB, Elastic Search and ClickHouse — all through a single clean web interface.
+
+![WhoDB database explorer screenshot](../assets/images/dietpi-software-databases-whodb.webp){: width="1438" height="747" loading="lazy"}
+
+=== "Access to the web interface"
+
+    - URL = `http://<your.IP>:8091`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    <h2>Directories</h2>
+
+    - Data directory: `/mnt/dietpi_userdata/whodb`
+    - Environment file: `/mnt/dietpi_userdata/whodb/whodb.env`
+
+    <h2>Service configuration</h2>
+
+    The service is configured via variables in the environment file:
+
+    ```
+    /mnt/dietpi_userdata/whodb/whodb.env
+    ```
+
+    The file is pre-populated with the following options:
+
+    | Variable | Default | Description |
+    |---|---|---|
+    | `PORT` | `8091` | TCP port WhoDB listens on |
+    | `WHODB_LOG_LEVEL` | `warning` | Log level: `debug`, `info`, `warning`, `error`, `none` |
+    | `WHODB_LOG_FORMAT` | `text` | Log format: `text` or `json` (useful for log aggregators) |
+    | `WHODB_TOKENS` | *(unset)* | Comma-separated static tokens to restrict API/UI access |
+    | `WHODB_ALLOWED_ORIGINS` | *(unset)* | Comma-separated CORS origins (defaults to all origins) |
+    | `WHODB_DISABLE_CREDENTIAL_FORM` | *(unset)* | Set `true` to hide the database credential entry form in the UI |
+    | `WHODB_POSTGRESQL` | *(unset)* | Pre-configure PostgreSQL connection profile (JSON array) |
+    | `WHODB_MYSQL` | *(unset)* | Pre-configure MySQL/MariaDB connection profile (JSON array) |
+    | `WHODB_SQLITE3` | *(unset)* | Pre-configure SQLite connection profile (JSON array) |
+    | `WHODB_MONGODB` | *(unset)* | Pre-configure MongoDB connection profile (JSON array) |
+    | `WHODB_REDIS` | *(unset)* | Pre-configure Redis connection profile (JSON array) |
+    | `WHODB_CLICKHOUSE` | *(unset)* | Pre-configure ClickHouse connection profile (JSON array) |
+    | `WHODB_OLLAMA_HOST` | *(unset)* | Ollama AI chat host (local AI, no API key required) |
+    | `WHODB_OLLAMA_PORT` | *(unset)* | Ollama AI chat port |
+
+    All options except `PORT` and `WHODB_LOG_LEVEL` are commented out by default. To apply changes, restart the service:
+
+    ```sh
+    systemctl restart whodb
+    ```
+
+=== "Service handling"
+
+    - Start: `systemctl start whodb`
+    - Stop: `systemctl stop whodb`
+    - Restart: `systemctl restart whodb`
+    - Print status: `systemctl status whodb`
+
+=== "View logs"
+
+    Logs are written to the system journal:
+
+    ```sh
+    journalctl -u whodb
+    ```
+
+=== "Update"
+
+    You can easily update WhoDB by reinstalling it. Your settings are preserved:
+
+    ```sh
+    dietpi-software reinstall 214
+    ```
+
+***
+
+Website: <https://github.com/clidey/whodb>  
+Official documentation: <https://docs.whodb.com/>  
+License: [Apache 2.0](https://github.com/clidey/whodb/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)
 
