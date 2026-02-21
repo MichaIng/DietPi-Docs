@@ -22,35 +22,29 @@ jobs:
         node-version: '*'
         check-latest: true
     - name: Install markdownlint-cli2
-      run: sudo npm i -g markdownlint-cli2
+      run: sudo npm i -g markdownlint-cli2@latest
     - name: Run markdownlint-cli2 to check Markdown files
       run: markdownlint-cli2 '**.md'
-    - name: Setup Python for MkDocs and PySpelling
+    - name: Install MkDocs and PySpelling
       id: python
       if: always() && steps.clone.outcome == 'success'
       uses: actions/setup-python@v6
       with:
         # Match version on dietpi.com server
-        python-version: 3.13.8
-    - name: Install MkDocs
-      id: mkdocs
-      if: always() && steps.python.outcome == 'success'
-      run: |
-        pip3 install -U pip wheel setuptools
-        pip3 install -Ur requirements.txt
+        python-version: 3.13.12
+        pip-install: -Ur requirements.txt pyspelling
     - name: Build DietPi-Docs
       id: build
-      if: always() && steps.mkdocs.outcome == 'success'
+      if: always() && steps.python.outcome == 'success'
       run: mkdocs build -sd build/docs
-    - name: Install PySpelling
-      id: pyspelling
+    - name: Install Aspell
+      id: aspell
       if: always() && steps.build.outcome == 'success'
       run: |
-        pip3 install -U pyspelling &
         sudo apt-get -q update
         sudo apt-get -qq --no-install-recommends install aspell-en
     - name: Run PySpelling to check HTML files
-      if: always() && steps.pyspelling.outcome == 'success'
+      if: always() && steps.aspell.outcome == 'success'
       run: pyspelling -c .spellcheck.yml
     - name: Download lychee
       id: lychee
