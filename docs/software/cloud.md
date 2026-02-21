@@ -827,10 +827,13 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
     ```
 
     !!! note "Conflict with GNU Midnight Commander"
-        The command `mc` is also used by [GNU Midnight Commander](../system_stats/#gnu-midnight-commander), a visual console file manager. On DietPi, the `mc` shell alias is set up so that it calls the MinIO console client (if MinIO is installed). If both are installed, you can run the full path of either binary directly to avoid ambiguity:
+        The command `mc` is also used by [GNU Midnight Commander](../system_stats/#gnu-midnight-commander), a visual console file manager. If both are installed, the MinIO client takes precedence, hence either call Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
 
-        - MinIO client: `/usr/local/bin/mc`
-        - GNU Midnight Commander: `/usr/bin/mc`
+        ```sh
+        echo 'alias mnc=/usr/bin/mc' | sudo tee /etc/bashrc.d/midnight-commander.sh
+        source /etc/bashrc.d/midnight-commander.sh
+        mnc
+        ```
 
     The client config, including the `local` server alias, is stored at `/mnt/dietpi_userdata/minio-data/.mc/config.json`.
 
