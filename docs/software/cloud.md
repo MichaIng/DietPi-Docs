@@ -796,12 +796,12 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
     - Password: `<your global software password>` (default: `dietpi`). Note: MinIO requires passwords of at least 8 characters. If your global software password is shorter, it will be automatically repeated until reaching 8 characters (e.g. `dietpi` becomes `dietpidietpi`).
 
     !!! warning "Passwords stored unencrypted"
-        The admin password is stored unencrypted in two locations:
+        The admin password is stored unencrypted in two locations, readable by `root` and the `minio-user` group:
 
-        - `/etc/default/minio` (readable by root and the `minio-user` group)
-        - `/mnt/dietpi_userdata/minio-data/.mc/config.json` (readable by root and the `minio-user` group)
+        - `/etc/default/minio` for the MinIO server
+        - `/mnt/dietpi_userdata/minio-data/.mc/config.json` for the console client `mc`
 
-        Make sure to use a strong password and restrict access to these files accordingly.
+        Change the password ASAP after initial setup, and keep access to these files restricted.
 
     - [MinIO Object Storage docs](https://minio.community/community/minio-object-store/)
     - [MinIO Python Client docs](https://minio.community/community/minio-object-store/developers/python/minio-py.html)
