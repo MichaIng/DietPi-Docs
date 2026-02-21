@@ -13,7 +13,7 @@ description: Description of DietPi software options related to databases and dat
 - [**Redis** - Open Source In-memory key–value Data Store](#redis)
 - [**InfluxDB** - Open Source Time Series Database](#influxdb)
 - [**PostgreSQL** - Persistent and advanced SQL database engine](#postgresql)
-- [**WhoDB** - Lightweight, fast and beautiful database management tool](#whodb)
+- [**WhoDB** - Database management tool with AI-powered chat interface](#whodb)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -355,9 +355,9 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 
 ## WhoDB
 
-**WhoDB** is a lightweight, fast and beautiful next-gen database explorer. It supports PostgreSQL, MySQL, SQLite, MongoDB, Redis, MariaDB, Elastic Search and ClickHouse — all through a single clean web interface, with an optional AI-powered chat interface for querying your data.
+**WhoDB** is a database management tool with an AI-powered chat interface. It supports PostgreSQL, MySQL, SQLite3, MongoDB, Redis, MariaDB, Elastic Search and ClickHouse — all through a single clean web interface.
 
-![WhoDB database explorer screenshot](../assets/images/dietpi-software-databases-whodb.png){: width="800" height="auto" loading="lazy"}
+![WhoDB database explorer screenshot](../assets/images/dietpi-software-databases-whodb.webp){: width="1438" height="747" loading="lazy"}
 
 === "Access to the web interface"
 
