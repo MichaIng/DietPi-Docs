@@ -806,7 +806,7 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
-=== "Console client (mc)"
+=== "Console client (`mc`)"
 
     The MinIO console client `mc` is installed alongside the server and pre-configured with a `local` alias pointing to the local MinIO instance. A shell alias is set up so that `mc` can be invoked directly from the command line, running as the `minio-user` system user:
 
