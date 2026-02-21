@@ -473,6 +473,7 @@ Odroids
 OEM
 Ok
 Okta
+Ollama
 oldoldstable
 OLED
 Oldschool
