@@ -37,7 +37,7 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
     - Base directory: `/mnt/dietpi_userdata/octoprint`
     - Data and config: `/mnt/dietpi_userdata/octoprint/.octoprint`
     - Main config file: `/mnt/dietpi_userdata/octoprint/.octoprint/config.yaml`
-    - Binaries and plugins: `/mnt/dietpi_userdata/octoprint/.local`
+    - Binaries and plugins: `/mnt/dietpi_userdata/octoprint/venv`
 
 === "View logs"
 
@@ -56,7 +56,7 @@ OctoPrint provides a web interface for controlling consumer 3D printers.
     You can run the following command from console to update OctoPrint to the latest version:
 
     ```sh
-    sudo -u octoprint pip3 install -U --user octoprint
+    sudo -u octoprint /mnt/dietpi_userdata/octoprint/venv/bin/pip3 install -U octoprint
     ```
 
 ***
