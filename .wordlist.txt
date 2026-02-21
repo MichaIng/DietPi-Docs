@@ -857,6 +857,7 @@ YDNS
 yescrypt
 ympd
 youtube
+Zensical
 Zeroconf
 ZeroPi
 ZeroTier
