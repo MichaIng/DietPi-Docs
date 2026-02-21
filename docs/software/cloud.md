@@ -803,10 +803,6 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
         Change the password ASAP after initial setup, and keep access to these files restricted.
 
-    - [MinIO Object Storage docs](https://minio.community/community/minio-object-store/)
-    - [MinIO Python Client docs](https://minio.community/community/minio-object-store/developers/python/minio-py.html)
-    - [MinIO JavaScript Client docs](https://minio.community/community/minio-object-store/developers/javascript/minio-javascript.html)
-
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
