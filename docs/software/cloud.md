@@ -792,19 +792,53 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
 
     - Web UI URL: `http://<your.IP>:9001`
     - S3 API URL: `http://<your.IP>:9004`
-    - Username: `minioadmin`
-    - Password: `minioadmin`
-    - [MinIO Object Storage docs](https://docs.min.io/community/minio-object-store/)
-    - [MinIO Python Client docs](https://docs.min.io/community/minio-object-store/developers/python/minio-py.html)
-    - [MinIO JavaScript Client docs](https://docs.min.io/community/minio-object-store/developers/javascript/minio-javascript.html)
+    - Username: `dietpi`
+    - Password: `<your global software password>` (default: `dietpi`). Note: MinIO requires passwords of at least 8 characters. If your global software password is shorter, it will be automatically repeated until reaching 8 characters (e.g. `dietpi` becomes `dietpidietpi`).
+
+    !!! warning "Passwords stored unencrypted"
+        The admin password is stored unencrypted in two locations, readable by `root` and the `minio-user` group:
+
+        - `/etc/default/minio` for the MinIO server
+        - `/mnt/dietpi_userdata/minio-data/.mc/config.json` for the console client `mc`
+
+        Change the password ASAP after initial setup, and keep access to these files restricted.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
+=== "Console client (`mc`)"
+
+    The MinIO console client `mc` is installed alongside the server and pre-configured with a `local` alias pointing to the local MinIO instance. A shell alias is set up so that `mc` can be invoked directly from the command line, running as the `minio-user` system user:
+
+    ```sh
+    mc admin info local
+    ```
+
+    ```sh
+    mc ls local
+    ```
+
+    ```sh
+    mc mb local/mybucket
+    ```
+
+    !!! note "Conflict with GNU Midnight Commander"
+        The command `mc` is also used by [GNU Midnight Commander](../system_stats/#gnu-midnight-commander), a visual console file manager. If both are installed, the MinIO client takes precedence, hence either call Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
+
+        ```sh
+        echo 'alias mnc=/usr/bin/mc' | sudo tee /etc/bashrc.d/midnight-commander.sh
+        source /etc/bashrc.d/midnight-commander.sh
+        mnc
+        ```
+
+    The client config, including the `local` server alias, is stored at `/mnt/dietpi_userdata/minio-data/.mc/config.json`.
+
+    Official docs: <https://minio.community/community/minio-object-store/reference/minio-mc.html>
+
 ***
 
 Official website: <https://min.io/product/overview>  
-Official documentation: <https://docs.min.io/>  
+Official documentation: <https://minio.community/community/minio-object-store/>  
 Source code: <https://github.com/minio/minio>  
 License: [AGPLv3](https://github.com/minio/minio/blob/master/LICENSE)
 

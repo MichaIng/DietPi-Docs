@@ -95,6 +95,7 @@ Certbot
 cgroup
 changelog
 ChatGPT
+ClickHouse
 CIFS
 CLI
 Clonezilla
@@ -140,6 +141,7 @@ dereference
 detections
 DHCP
 dhcpcd
+dialogs
 dietpi
 DietPi
 DietPi's
@@ -472,6 +474,7 @@ Odroids
 OEM
 Ok
 Okta
+Ollama
 oldoldstable
 OLED
 Oldschool
@@ -530,6 +533,7 @@ Plex
 Portainer
 POSIX
 PostBoot
+PostgreSQL
 poweroff
 pre
 preboot
@@ -682,6 +686,7 @@ SSIDs
 SSL
 SSO
 StarFive
+STDERR
 stdout
 StackExchange
 StephanStS
@@ -781,6 +786,7 @@ vaultwarden
 VC
 VCSM
 VDL
+venv
 VHDX
 vhost
 vhosts
@@ -822,6 +828,7 @@ Webtoons
 WebUI
 whiptail
 WH
+WhoDB
 WHOIS
 Widevine
 wikimedia

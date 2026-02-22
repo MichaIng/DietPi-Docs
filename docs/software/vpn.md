@@ -325,7 +325,8 @@ ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all
 
 === "Self-hosting controllers"
 
-    ZeroTier supports self-hosting controllers on nodes.
+    ZeroTier supports self-hosting controllers on nodes:
+
     - Self-hosting a controller: <https://docs.zerotier.com/self-hosting/network-controllers>
     - Self-hosting the controller UI: <https://github.com/dec0dOS/zero-ui>
 

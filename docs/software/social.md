@@ -295,10 +295,10 @@ Synapse is a server, written in Python, for communication using the Matrix proto
 
 === "Update to latest version"
 
-    Since Synapse is installed via Python 3 pip, you can update it via:
+    Since Synapse is installed into a Python venv at `/opt/synapse`, you can update it via:
 
     ```sh
-    pip3 install -U matrix-synapse
+    /opt/synapse/bin/pip3 install -U matrix-synapse
     ```
 
 ***
