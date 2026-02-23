@@ -942,7 +942,7 @@ vaultwarden is an unofficial Bitwarden password manager server with web interfac
     As vaultwarden is installed via APT, it can be update with the following commands:
 
     ```sh
-    apt Update
+    apt update
     apt install vaultwarden
     ```
 
