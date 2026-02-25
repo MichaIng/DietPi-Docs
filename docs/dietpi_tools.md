@@ -43,7 +43,7 @@ dietpi-launcher
 - <a name="dietpi-cpu-info"></a>[**DietPi CPU Info - Displays CPU temperature, processor frequency, throttle level etc.**](dietpi_tools/misc_tools.md#dietpi-cpu-info)
 - <a name="dietpi-benchmark"></a>[**DietPi Benchmark - Measure CPU speed, RAM and Flash access speed etc.**](dietpi_tools/misc_tools.md#dietpi-benchmark)
 - <a name="dietpi-survey"></a>[**DietPi Survey - Allow to obtain general information regarding your system and installed software**](dietpi_tools/misc_tools.md#dietpi-survey)
-- <a name="dietpi-cloudshell"></a>[**DietPi Cloudshell - Adjust update rate, scene settings and more**](software/system_stats.md#dietpi-cloudshell)
+- <a name="dietpi-cloudshell"></a>[**DietPi CloudShell - Adjust update rate, scene settings and more**](software/system_stats.md#dietpi-cloudshell)
 - <a name="dietpi-bug-report"></a>[**DietPi Bug Report**](dietpi_tools/misc_tools.md#dietpi-bug-report)
 - <a name="dietpi-morse-code"></a>[**DietPi Morse Code - Converts a text file into morse code**](dietpi_tools/misc_tools.md#dietpi-morse-code)
 - <a name="useful-dietpi-shell-functions"></a>[**Useful DietPi Shell Functions**](dietpi_tools/misc_tools.md#useful-dietpi-shell-functions)

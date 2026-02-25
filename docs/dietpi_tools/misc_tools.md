@@ -14,8 +14,7 @@ cpu
 
 ## DietPi Benchmark
 
-DietPi Benchmark executes benchmark and system load functions. Some of the evaluated data can be uploaded to our survey report (DietPi survey). 
-To start DietPi-Survey, use the following command:
+DietPi Benchmark executes benchmark and system load functions. Some of the evaluated data can be uploaded to our survey report (DietPi survey). To start DietPi-Survey, use the following command:
 
 ```sh
 dietpi-benchmark
