@@ -40,63 +40,6 @@ Available commands:
 
 ---
 
-## DietPi cleaner
-
-Clean up not necessary files from the operating system and free up valuable disk space.  
-Think of it as lightweight CCleaner for DietPi and Linux. To start DietPi-Cleaner, use the following command:
-
-```sh
-dietpi-cleaner
-```
-
-![DietPi-Cleaner screenshot](../assets/images/dietpi-cleaner.jpg "DietPi-Cleaner main menu"){: width="644" height="284" loading="lazy"}
-
-By simulating the cleaner process (via menu entry `Test`) you get a preview of the deletions the cleaner does before you start the cleaning process (via menu entry `Run`).
-
-### Cleaner Types
-
-DietPi-Cleaner uses modules which you can be switched on or off before running the cleaning process. Select them via the main menu entry `Cleaners`.
-
-![DietPi-Cleaner types screenshot](../assets/images/dietpi-cleaner_2.png "DietPi-Cleaner cleaner types"){: width="644" height="242" loading="lazy"}
-
-### Files cleaner
-
-The files cleaner allows you to customize a list of filenames to search and remove, during the cleaning process. Select them via the main menu entry `Files`.
-
-![DietPi-Cleaner include list screenshot](../assets/images/dietpi-cleaner_3.png "DietPi-Cleaner include list"){: width="644" height="388" loading="lazy"}
-
-### DietPi cleaner - Command line usage
-
-Beside the interactive cleaning via `dietpi-cleaner`, there is the option of the shell command line:
-
-```console
-Usage: dietpi-cleaner [<options>]
-Available options:
-    <empty>     Interactive menu to handle cleaning tasks
-    1           Run Enabled cleaners
-    2           Run All cleaners
-```
-
----
-
-## DietPi log clear
-
-Clear log files in `/var/log/`.
-
-DietPi-LogClear only has the option of the shell command line:
-
-```console
-Usage: dietpi-logclear [<options>]
-Available options:
-    0           Update current log files data to "$FP_BACKUP/*. Then clear contents
-    1           Clear contents of all logs in $FP_LOG
-    2           Delete all logs in $FP_LOG and backups
-```
-
-![DietPi-LogClear screenshot](../assets/images/dietpi-logclear.jpg "DietPi-LogClear screenshot"){: width="643" height="198" loading="lazy"}
-
----
-
 ## DietPi backup (backup/restore)
 
 `DietPi-Backup` allows you to backup and restore your DietPi system, similar to *Windows system restore*. It creates a snapshot of the system that can be restored at any time.  
@@ -368,5 +311,89 @@ Available commands:
     <empty>     Interactive menu to handle backup and restore tasks
     1           Execute sync procedure noninteractively
 ```
+
+---
+
+## DietPi file explorer
+
+Lightweight file manager and explorer. To start DietPi-Explorer, use the following command:
+
+```sh
+dietpi-explorer
+```
+
+![DietPi-Explorer screenshot](../assets/images/dietpi-explorer.jpg "DietPi-Explorer main menu"){: width="646" height="355" loading="lazy"}
+
+### DietPi file explorer - Command line usage
+
+Beside the interactive file management via `dietpi-explorer`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-explorer [<command>]
+Available commands:
+    <empty>     Interactive menu
+    1           Select a file/dir mode
+                - Return result for other applications to /tmp/.dietpi-explorer_selected_location
+                - Return an error code when no selection is given
+    1 <path>    Select a file/dir mode, start from <path>
+
+```
+
+---
+
+## DietPi cleaner
+
+Clean up not necessary files from the operating system and free up valuable disk space.  
+Think of it as lightweight CCleaner for DietPi and Linux. To start DietPi-Cleaner, use the following command:
+
+```sh
+dietpi-cleaner
+```
+
+![DietPi-Cleaner screenshot](../assets/images/dietpi-cleaner.jpg "DietPi-Cleaner main menu"){: width="644" height="284" loading="lazy"}
+
+By simulating the cleaner process (via menu entry `Test`) you get a preview of the deletions the cleaner does before you start the cleaning process (via menu entry `Run`).
+
+### Cleaner Types
+
+DietPi-Cleaner uses modules which you can be switched on or off before running the cleaning process. Select them via the main menu entry `Cleaners`.
+
+![DietPi-Cleaner types screenshot](../assets/images/dietpi-cleaner_2.png "DietPi-Cleaner cleaner types"){: width="644" height="242" loading="lazy"}
+
+### Files cleaner
+
+The files cleaner allows you to customize a list of filenames to search and remove, during the cleaning process. Select them via the main menu entry `Files`.
+
+![DietPi-Cleaner include list screenshot](../assets/images/dietpi-cleaner_3.png "DietPi-Cleaner include list"){: width="644" height="388" loading="lazy"}
+
+### DietPi cleaner - Command line usage
+
+Beside the interactive cleaning via `dietpi-cleaner`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-cleaner [<options>]
+Available options:
+    <empty>     Interactive menu to handle cleaning tasks
+    1           Run Enabled cleaners
+    2           Run All cleaners
+```
+
+---
+
+## DietPi log clear
+
+Clear log files in `/var/log/`.
+
+DietPi-LogClear only has the option of the shell command line:
+
+```console
+Usage: dietpi-logclear [<options>]
+Available options:
+    0           Update current log files data to "$FP_BACKUP/*. Then clear contents
+    1           Clear contents of all logs in $FP_LOG
+    2           Delete all logs in $FP_LOG and backups
+```
+
+![DietPi-LogClear screenshot](../assets/images/dietpi-logclear.jpg "DietPi-LogClear screenshot"){: width="643" height="198" loading="lazy"}
 
 ---
