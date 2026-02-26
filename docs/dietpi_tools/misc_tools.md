@@ -20,14 +20,14 @@ DietPi Benchmark executes benchmark and system load functions. Some of the evalu
 dietpi-benchmark
 ```
 
+![DietPi-Benchmark screenshot](../assets/images/dietpi-tools-dietpi-benchmark.webp "DietPi-Benchmark menu"){: width="960" height="323" loading="lazy"}
+
 ### Software overview
 
 The benchmark covers
 
-- CPU performance
-- CPU temperature
-- Root filesystem speed
-- RAM speed
+- CPU performance, CPU temperature
+- Root filesystem speed, RAM speed
 - Custom filesystem speed
 - LAN network speed
 

@@ -491,7 +491,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 ***
 
 Official website: <https://gogs.io/>  
-Official documentation: <https://gogs.io/docs>  
+Official documentation: <https://gogs.io/getting-started/introduction>  
 Source code: <https://github.com/gogs/gogs>  
 License: [MIT](https://github.com/gogs/gogs/blob/main/LICENSE)
 
@@ -823,7 +823,7 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
     ```
 
     !!! note "Conflict with GNU Midnight Commander"
-        The command `mc` is also used by [GNU Midnight Commander](../system_stats/#gnu-midnight-commander), a visual console file manager. If both are installed, the MinIO client takes precedence, hence either call Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
+        The command `mc` is also used by [GNU Midnight Commander](system_stats.md#gnu-midnight-commander), a visual console file manager. If both are installed, the MinIO client takes precedence, hence either call Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
 
         ```sh
         echo 'alias mnc=/usr/bin/mc' | sudo tee /etc/bashrc.d/midnight-commander.sh
