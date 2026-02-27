@@ -184,6 +184,39 @@ Available commands:
 
 ---
 
+## DietPi Servarr to RAM
+
+It moves Sonarr, Radarr, Lidarr and Prowlarr database files to RAM, leaving symlinks on disk. This reduces disk I/O and enhances database I/O performance.  
+The script first creates a backup and automatically restores from backup on next start in case of system crash.
+
+To start DietPi Servarr to RAM, use the following command:
+
+```sh
+dietpi-servarr_to_ram
+```
+
+### DietPi Servarr to RAM - Command line usage
+
+Beside the interactive managing via `dietpi-servarr_to_ram`, there is the option of the shell command line:
+
+```console
+Usage: dietpi-servarr_to_ram <command> [<program>]
+Available commands:
+  1 [<program>]		Link (program) database(s) to RAM
+  2 [<program>]		Update (program) database backup(s)
+  0 [<program>]		Store (program) database(s) back to disk
+  enable		Enable Link to RAM on boot
+  disable		Disable Link to RAM on boot
+Supported programs:
+  <empty>		Apply to all supported and installed programs
+  sonarr		Apply to Sonarr database only
+  radarr		Apply to Radarr database only
+  lidarr		Apply to Lidarr database only
+  prowlarr		Apply to Prowlarr database only
+```
+
+---
+
 ## DietPi morse code
 
 It converts a text file into morse code. To start DietPi morse code, use the following command:
