@@ -947,8 +947,8 @@ Automatically download your favorite movies, as they become available.
 
 === "Link databases to RAM"
 
-    Linking the Radarr info/settings database to RAM increases access performance, reduces disk operation and avoids constant external HDD spinning due to the very regular access to these files.  
-    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram` which can be run out of `dietpi-launcher` or directly called via 
+    Linking the Radarr info/settings database to RAM increases access performance, reduces disk I/O and avoids constant external HDD spinning due to the very regular access to these files.  
+    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram`, which can be run from `dietpi-launcher` or directly via the `dietpi-servarr_to_ram` command: 
 
     ```sh
     dietpi-servarr_to_ram
@@ -1149,8 +1149,8 @@ Automatically download your favorite music.
 
 === "Link databases to RAM"
 
-    Linking the Lidarr info/settings database to RAM increases access performance, reduces disk operation and avoids constant external HDD spinning due to the very regular access to these files.  
-    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram` which can be run out of `dietpi-launcher` or directly called via 
+    Linking the Lidarr info/settings database to RAM increases access performance, reduces disk I/O and avoids constant external HDD spinning due to the very regular access to these files.  
+    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram`, which can be run from `dietpi-launcher` or directly via the `dietpi-servarr_to_ram` command: 
 
     ```sh
     dietpi-servarr_to_ram
@@ -1351,8 +1351,8 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
 
 === "Link databases to RAM"
 
-    Linking the Prowlarr info/settings database to RAM increases access performance, reduces disk operation and avoids constant external HDD spinning due to the very regular access to these files.  
-    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram` which can be run out of `dietpi-launcher` or directly called via 
+    Linking the Prowlarr info/settings database to RAM increases access performance, reduces disk I/O and avoids constant external HDD spinning due to the very regular access to these files.  
+    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram`, which can be run from `dietpi-launcher` or directly via the `dietpi-servarr_to_ram` command:
 
     ```sh
     dietpi-servarr_to_ram
