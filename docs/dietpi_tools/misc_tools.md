@@ -202,9 +202,9 @@ Besides the interactive menu of `dietpi-servarr_to_ram`, you can use it from the
 ```console
 Usage: dietpi-servarr_to_ram <command> [<program>]
 Available commands:
-  1 [<program>]	    Link (program) database(s) to RAM
-  2 [<program>]	    Update (program) database backup(s)
-  0 [<program>]	    Store (program) database(s) back to disk
+  1 [<program>]     Link (program) database(s) to RAM
+  2 [<program>]     Update (program) database backup(s)
+  0 [<program>]     Store (program) database(s) back to disk
   enable            Enable Link to RAM on boot
   disable           Disable Link to RAM on boot
 Supported programs:
