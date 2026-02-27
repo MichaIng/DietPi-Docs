@@ -202,17 +202,17 @@ Beside the interactive managing via `dietpi-servarr_to_ram`, there is the option
 ```console
 Usage: dietpi-servarr_to_ram <command> [<program>]
 Available commands:
-  1 [<program>]		Link (program) database(s) to RAM
-  2 [<program>]		Update (program) database backup(s)
-  0 [<program>]		Store (program) database(s) back to disk
-  enable		Enable Link to RAM on boot
-  disable		Disable Link to RAM on boot
+  1 [<program>]	    Link (program) database(s) to RAM
+  2 [<program>]	    Update (program) database backup(s)
+  0 [<program>]	    Store (program) database(s) back to disk
+  enable            Enable Link to RAM on boot
+  disable           Disable Link to RAM on boot
 Supported programs:
-  <empty>		Apply to all supported and installed programs
-  sonarr		Apply to Sonarr database only
-  radarr		Apply to Radarr database only
-  lidarr		Apply to Lidarr database only
-  prowlarr		Apply to Prowlarr database only
+  <empty>       Apply to all supported and installed programs
+  sonarr        Apply to Sonarr database only
+  radarr        Apply to Radarr database only
+  lidarr        Apply to Lidarr database only
+  prowlarr      Apply to Prowlarr database only
 ```
 
 ---
