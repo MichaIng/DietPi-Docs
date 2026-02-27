@@ -187,7 +187,7 @@ Available commands:
 ## DietPi Servarr to RAM
 
 It moves Sonarr, Radarr, Lidarr and Prowlarr database files to RAM, leaving symlinks on disk. This reduces disk I/O and enhances database I/O performance.  
-The script first creates a backup and automatically restores from backup on next start in case of system crash.
+The script first creates a backup and automatically restores from backup on next start in case of a system crash.
 
 To start DietPi Servarr to RAM, use the following command:
 
