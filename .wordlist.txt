@@ -705,6 +705,7 @@ SVG
 swapfile
 swappiness
 symlink
+symlinks
 Syncthing
 syscall
 sysfs
