@@ -1150,7 +1150,7 @@ Automatically download your favorite music.
 === "Link databases to RAM"
 
     Linking the Lidarr info/settings database to RAM increases access performance, reduces disk operation and avoids constant external HDD spinning due to the very regular access to these files.  
-    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram` which can be run out of `dietpi-launcher` or directly called via 
+    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram`, which can be run from `dietpi-launcher` or directly via the following command:
 
     ```sh
     dietpi-servarr_to_ram
