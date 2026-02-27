@@ -197,7 +197,7 @@ dietpi-servarr_to_ram
 
 ### DietPi Servarr to RAM - Command line usage
 
-Beside the interactive managing via `dietpi-servarr_to_ram`, there is the option of the shell command line:
+Besides the interactive menu of `dietpi-servarr_to_ram`, you can use it from the shell command line:
 
 ```console
 Usage: dietpi-servarr_to_ram <command> [<program>]
