@@ -1158,7 +1158,7 @@ License: [BSD 2-Clause](https://github.com/restic/restic/blob/master/LICENSE)
 Immich is a self-hosted photo and video management solution. It provides a fast backup tool, allowing you to browse, search and organise your photos and videos without relying on cloud services. It includes features like facial recognition, object tagging, album sharing and a mobile app for automatic backup.
 
 !!! warning "64-bit only"
-    Immich requires a 64-bit operating system (arm64 or amd64). It cannot be installed on 32-bit systems.
+    Immich requires a 64-bit operating system (x86_64 or ARMv8). It cannot be installed on 32-bit systems.
 
 !!! warning "High resource requirements"
     The Immich build process requires significant memory. `dietpi-software` hence temporarily expands the swap size where needed. On low-memory devices with slow drive, swapping can raise the build time to several hours.
