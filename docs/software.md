@@ -70,6 +70,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**File Browser - Light web based file manager with sharing features**](software/cloud.md#file-browser)
 - [**Rclone - Utility to sync your files to cloud storages**](software/cloud.md#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](software/cloud.md#restic)
+- [**Immich - Self-hosted photo and video management solution**](software/cloud.md#immich)
 
 ## [Databases & Data Stores](software/databases.md)
 
