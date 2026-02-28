@@ -1161,9 +1161,9 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
     Immich requires a 64-bit operating system (arm64 or amd64). It cannot be installed on 32-bit systems.
 
 !!! warning "High resource requirements"
-    Installing Immich involves compiling from source, which requires significant RAM and time. The build process temporarily expands swap to at least 8 GiB. On low-memory devices or systems running from SD card, the build can take several hours. After installation, Immich itself requires at least 2 GiB of RAM for stable operation.
+    The Immich build process requires significant memory. `dietpi-software` hence temporarily expands the swap size where needed. On low-memory devices with slow drive, swapping can raise the build time to several hours.
 
-![Immich logo](../assets/images/dietpi-software-cloud-immich.png){: width="200" height="200" loading="lazy"}
+![Immich logo](../assets/images/dietpi-software-cloud-immich.svg){: width="300" height="101" loading="lazy"}
 
 === "Access to the web interface"
 
@@ -1186,7 +1186,7 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
     The file is pre-populated with the following options:
 
-    | Variable | Default | Description |
+    | Variable | Initial value | Description |
     |---|---|---|
     | `IMMICH_PORT` | `2283` | TCP port Immich listens on |
     | `IMMICH_HOST` | `0.0.0.0` | Bind address for the Immich server |
