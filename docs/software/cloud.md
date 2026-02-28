@@ -1235,6 +1235,6 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 Official website: <https://immich.app/>  
 Official documentation: <https://immich.app/docs/>  
 Source code: <https://github.com/immich-app/immich>  
-License: [AGPL-3.0](https://github.com/immich-app/immich/blob/main/LICENSE)
+License: [AGPLv3](https://github.com/immich-app/immich/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)
