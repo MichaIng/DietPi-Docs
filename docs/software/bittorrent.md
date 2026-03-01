@@ -830,7 +830,7 @@ Automatically download your favorite TV shows, as they become available.
     dietpi-servarr_to_ram
     ```
 
-    Further information can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
+    Further information about `DietPi Servarr to RAM` can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
 
 === "Service control"
 
@@ -954,7 +954,7 @@ Automatically download your favorite movies, as they become available.
     dietpi-servarr_to_ram
     ```
 
-    Further information can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
+    Further information about `DietPi Servarr to RAM` can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
 
 === "Service control"
 
@@ -1156,7 +1156,7 @@ Automatically download your favorite music.
     dietpi-servarr_to_ram
     ```
 
-    Further information can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
+    Further information about `DietPi Servarr to RAM` can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
 
 === "Service control"
 
@@ -1358,7 +1358,7 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
     dietpi-servarr_to_ram
     ```
 
-    Further information can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
+    Further information about `DietPi Servarr to RAM` can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
 
 === "Service control"
 
