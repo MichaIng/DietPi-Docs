@@ -288,6 +288,7 @@ IEC
 ilex
 Imager
 Imgur
+Immich
 InfluxData
 InfluxDB
 init
