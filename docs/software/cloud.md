@@ -779,7 +779,7 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
 === "Update to latest version"
 
-    **Normally, the built in update should be used from the web UI.**
+    **Normally, the built-in update should be used from the web UI.**
 
     If Syncthing needs to be reinstalled (e.g. broken instance), the install directories `/opt/syncthing`, `/mnt/dietpi_userdata/syncthing`, `/mnt/dietpi_userdata/syncthing_data` need to be deleted and the installation executed again:
 
