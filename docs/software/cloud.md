@@ -777,6 +777,19 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     You devices should now duplicate the user data from your DietPi device to your Windows PC.
 
+=== "Update to latest version"
+
+    **Normally, the built in update should be used from the web UI.**
+
+    If Syncthing needs to be reinstalled (e.g. broken instance), the install directories `/opt/syncthing`, `/mnt/dietpi_userdata/syncthing`, `/mnt/dietpi_userdata/syncthing_data` need to be deleted and the installation executed again:
+
+    ```sh
+    rm -rf /opt/syncthing
+    rm -rf /mnt/dietpi_userdata/syncthing
+    rm -rf /mnt/dietpi_userdata/syncthing_data
+    dietpi-software install 50
+    ```
+
 ***
 
 Website: <https://syncthing.net>
