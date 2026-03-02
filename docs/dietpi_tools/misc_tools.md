@@ -195,7 +195,7 @@ To start DietPi Servarr to RAM, use the following command:
 dietpi-servarr_to_ram
 ```
 
-When running 
+When running
 
 ```sh
 dietpi-servarr_to_ram 1
@@ -204,7 +204,7 @@ dietpi-servarr_to_ram 1
 all found databases are linked to RAM. You find them in at:  
 `/tmp/{sonarr,radarr,lidarr,prowlarr}_db_link`
 
-A backup for each linked file is created automatically (and recovered if required), so in case of a system crash only changes from the time of the link are lost. When running the above manually, before shutting down, run 
+A backup for each linked file is created automatically (and recovered if required), so in case of a system crash only changes from the time of the link are lost. When running the above manually, before shutting down, run
 
 ```sh
 dietpi-servarr_to_ram 0
@@ -212,7 +212,7 @@ dietpi-servarr_to_ram 0
 
 to store the files back to disk.
 
-To have all databases linked to RAM at boot and stored back to disk on shutdown automatically, execute 
+To have all databases linked to RAM at boot and stored back to disk on shutdown automatically, execute
 
 ```sh
 dietpi-servarr_to_ram enable
@@ -220,7 +220,7 @@ dietpi-servarr_to_ram enable
 
 ### Handling backups
 
-To further reduce the risk of lost info/settings 
+To further reduce the risk of lost info/settings
 
 ```sh
 dietpi-servarr_to_ram 2
