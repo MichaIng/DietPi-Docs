@@ -781,13 +781,19 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     **Normally, the built-in update should be used from the web UI.**
 
-    If Syncthing needs to be reinstalled (e.g. broken instance), the install directories `/opt/syncthing`, `/mnt/dietpi_userdata/syncthing`, `/mnt/dietpi_userdata/syncthing_data` need to be deleted and the installation executed again:
+    If Syncthing needs to be reinstalled or repaired (e.g. broken instance), use the DietPi software reinstall command:
+
+    ```sh
+    dietpi-software reinstall 50
+    ```
+
+    If reinstalling does not resolve the issue, remove the Syncthing install and data directories and run the reinstall command again:
 
     ```sh
     rm -rf /opt/syncthing
     rm -rf /mnt/dietpi_userdata/syncthing
     rm -rf /mnt/dietpi_userdata/syncthing_data
-    dietpi-software install 50
+    dietpi-software reinstall 50
     ```
 
 ***
