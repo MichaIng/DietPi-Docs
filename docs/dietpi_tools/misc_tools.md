@@ -201,7 +201,7 @@ When running
 dietpi-servarr_to_ram 1
 ```
 
-all found databases are linked to RAM. You find them in at:  
+all found databases are linked to RAM. They can be found at:  
 `/tmp/{sonarr,radarr,lidarr,prowlarr}_db_link`
 
 A backup for each linked file is created automatically (and recovered if required), so in case of a system crash only changes from the time of the link are lost. When running the above manually, before shutting down, run
@@ -220,13 +220,13 @@ dietpi-servarr_to_ram enable
 
 ### Handling backups
 
-To further reduce the risk of lost info/settings
+To further reduce the risk of lost info/settings, the following command updates the backups:
 
 ```sh
 dietpi-servarr_to_ram 2
 ```
 
-can be executed to update the backups. This can also be done per program, e.g.
+This can also be done per program, e.g.
 
 ```sh
 dietpi-servarr_to_ram 2 sonarr
