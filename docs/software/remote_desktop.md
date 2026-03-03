@@ -434,7 +434,7 @@ The following ports need to be forwarded:
 ### Client installation and setup
 
 RustDesk clients for several operating systems are also available as open source packages. Clients for PCs can be downloaded from <https://github.com/rustdesk/rustdesk/releases>.  
-In addition, RustDesk Client can be installed via `dietpi-software` in the category "Remote Desktop" or by executing 
+In addition, RustDesk Client can be installed via `dietpi-software` in the category "Remote Desktop" or by executing
 
 ```sh
 dietpi-software install 13
@@ -476,7 +476,7 @@ An X11 desktop environment is required by RustDesk Client and will be installed 
     ~/.config/rustdesk/
     ```
 
-    By default, RustDesk Client uses the public RustDesk server ('rs-ny.rustdesk.com').  
+    By default, RustDesk Client uses the public RustDesk server (`rs-ny.rustdesk.com`).  
     To use a self-hosted RustDesk Server instead, the server address can be changed via the client's network settings, as described in the [Client installation and setup](#client-installation-and-setup_1) section below.
 
 === "Service control"
