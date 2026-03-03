@@ -784,15 +784,7 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
     If Syncthing needs to be reinstalled or repaired (e.g. broken instance), use the DietPi software reinstall command:
 
     ```sh
-    dietpi-software reinstall 50
-    ```
-
-    If reinstalling does not resolve the issue, remove the Syncthing install and data directories and run the reinstall command again:
-
-    ```sh
-    rm -rf /opt/syncthing
-    rm -rf /mnt/dietpi_userdata/syncthing
-    rm -rf /mnt/dietpi_userdata/syncthing_data
+    rm -R /opt/syncthing
     dietpi-software reinstall 50
     ```
 
