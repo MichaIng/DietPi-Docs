@@ -433,7 +433,12 @@ The following ports need to be forwarded:
 
 ### Client installation and setup
 
-RustDesk clients for several operating systems are also available as open source packages. Clients for PCs can be downloaded from <https://github.com/rustdesk/rustdesk/releases>.
+RustDesk clients for several operating systems are also available as open source packages. Clients for PCs can be downloaded from <https://github.com/rustdesk/rustdesk/releases>.  
+In addition, RustDesk Client can be installed via `dietpi-software` in the category "Remote Desktop" or by executing 
+
+```sh
+dietpi-software install 13
+```
 
 To connect to the self hosted RustDesk Server (instead of the public server from RustDesk), the configuration of the client has to be adjusted to the hostname resp. IP address of the RustDesk server in the field "ID Server" and the public key of the RustDesk server (contents of `id_ed25519.pub`) in the field "Key":
 
@@ -464,24 +469,15 @@ An X11 desktop environment is required by RustDesk Client and will be installed 
 
 === "Client configuration"
 
-    The configuration files can be found at:
+    The client configuration is normally done completely in the client user interface and the user do not need to know where they reside.  
+    For special cases the configuration files which the client user interface generates/modifies can be found at:
 
     ```
     ~/.config/rustdesk/
     ```
 
-    The main configuration file `RustDesk2.toml` contains amongst others the server settings. By default, RustDesk Client uses the public RustDesk server:
-
-    ```toml
-    rendezvous_server = 'rs-ny.rustdesk.com:21116'
-    ```
-
-    To use a self-hosted RustDesk Server instead, the server address can be changed via the client's network settings, as described in the [Client installation and setup](#client-installation-and-setup_1) section below.  
-    When doing changes to the configuration file directly, restart the service to apply them:
-
-    ```sh
-    systemctl restart rustdesk
-    ```
+    By default, RustDesk Client uses the public RustDesk server ('rs-ny.rustdesk.com').  
+    To use a self-hosted RustDesk Server instead, the server address can be changed via the client's network settings, as described in the [Client installation and setup](#client-installation-and-setup_1) section below.
 
 === "Service control"
 
@@ -529,26 +525,26 @@ An X11 desktop environment is required by RustDesk Client and will be installed 
 
 After the DietPi installation of RustDesk Client, the client is already configured to use the public RustDesk server (`rs-ny.rustdesk.com`). The client can be started and used immediately without any further configuration.
 
-#### Standard connection using the public RustDesk server
+=== "Using the public RustDesk server"
 
-By default, the RustDesk Client is configured to use the public RustDesk server. This is defined in the configuration file `~/.config/rustdesk/RustDesk2.toml`:
+    By default, the RustDesk Client is configured to use the public RustDesk server. This is defined in the configuration file `~/.config/rustdesk/RustDesk2.toml`:
 
-```toml
-rendezvous_server = 'rs-ny.rustdesk.com:21116'
-```
+    ```toml
+    rendezvous_server = 'rs-ny.rustdesk.com:21116'
+    ```
 
-With this default configuration, the RustDesk Client connects to the public RustDesk relay server on startup. The client ID displayed in the RustDesk window can be shared with others to allow them to connect to your DietPi device.
+    With this default configuration, the RustDesk Client connects to the public RustDesk relay server on startup. The client ID displayed in the RustDesk window can be shared with others to allow them to connect to your DietPi device.
 
-#### Connection to a self-hosted RustDesk Server
+=== "Using a self-hosted RustDesk Server"
 
-To connect to a self-hosted [RustDesk Server](#rustdesk-server) instead of the public server, the client has to be configured to use the hostname resp. IP address of the RustDesk server. Open the RustDesk Client, go to **Settings > Network** and set the **ID Server** to the hostname or IP address of your self-hosted RustDesk Server, and set the **Key** to the public key of your RustDesk server (contents of `/mnt/dietpi_userdata/rustdesk/id_ed25519.pub`):
+    To connect to a self-hosted [RustDesk Server](#rustdesk-server) instead of the public server, the client has to be configured to use the hostname resp. IP address of the RustDesk server. Open the RustDesk Client, go to **Settings > Network** and set the **ID server** to the hostname or IP address of your self-hosted RustDesk Server, and set the **Key** to the public key of your RustDesk server (e.g. contents of `/mnt/dietpi_userdata/rustdesk/id_ed25519.pub` in case of a self-hosted server installed via `dietpi-software install 12`):
 
-![RustDesk client setup](../assets/images/dietpi-software-remotedesktop-rustdeskclient_02.png "RustDesk client configuration"){: width="549" height="321" loading="lazy"}
+    ![RustDesk client setup](../assets/images/dietpi-software-remotedesktop-rustdeskclient_02.png "RustDesk client configuration"){: width="549" height="321" loading="lazy"}
 
-With this configuration, the RustDesk Client attaches to the self-hosted RustDesk Server on startup.  
-In the case that the user wants to connect to another RustDesk client which is attached to the public RustDesk server, the ID of the other client has to be followed by `@public`:
+    With this configuration, the RustDesk Client attaches to the self-hosted RustDesk Server on startup.  
+    In the case that the user wants to connect to another RustDesk client which is attached to the public RustDesk server, the ID of the other client has to be followed by `@public`:
 
-![RustDesk Client connect to the public RustDesk Server](../assets/images/dietpi-software-remotedesktop-rustdeskclient_03.png "RustDesk Client connect to the public RustDesk Server"){: width="343" height="147" loading="lazy"}
+    ![RustDesk Client connect to the public RustDesk Server](../assets/images/dietpi-software-remotedesktop-rustdeskclient_03.png "RustDesk Client connect to the public RustDesk Server"){: width="343" height="147" loading="lazy"}
 
 ***
 
