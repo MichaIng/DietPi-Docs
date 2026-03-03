@@ -459,7 +459,7 @@ Official server docs: <https://rustdesk.com/docs>
 RustDesk is an open source remote desktop client software, written in Rust.  
 The installed package is the official RustDesk client. It allows you to connect to and control other systems running the RustDesk client, using either the public RustDesk relay servers or a self-hosted [RustDesk Server](#rustdesk-server).
 
-![RustDesk logo](../assets/images/dietpi-software-remotedesktop-rustdesk-logo.webp "RustDesk logo"){: width="300" height="68" loading="lazy"}
+![RustDesk logo](../assets/images/dietpi-software-remotedesktop-rustdesk-logo.svg "RustDesk logo"){: width="300" height="68" loading="lazy"}
 
 An X11 desktop environment is required by RustDesk Client and will be installed during the RustDesk Client installation process if not already present.
 
@@ -478,34 +478,6 @@ An X11 desktop environment is required by RustDesk Client and will be installed 
 
     By default, RustDesk Client uses the public RustDesk server (`rs-ny.rustdesk.com`).  
     To use a self-hosted RustDesk Server instead, the server address can be changed via the client's network settings, as described in the [Client installation and setup](#client-installation-and-setup_1) section below.
-
-=== "Service control"
-
-    The service is started automatically at boot. As systemd service, it can be controlled with the following commands:
-
-    ```sh
-    systemctl status rustdesk
-    ```
-
-    ```sh
-    systemctl start rustdesk
-    ```
-
-    ```sh
-    systemctl stop rustdesk
-    ```
-
-    ```sh
-    systemctl restart rustdesk
-    ```
-
-=== "Logs"
-
-    Since RustDesk runs as a systemd service, its logs can be viewed via:
-
-    ```sh
-    journalctl -u rustdesk
-    ```
 
 === "Update"
 
@@ -545,6 +517,22 @@ After the DietPi installation of RustDesk Client, the client is already configur
     In the case that the user wants to connect to another RustDesk client which is attached to the public RustDesk server, the ID of the other client has to be followed by `@public`:
 
     ![RustDesk Client connect to the public RustDesk Server](../assets/images/dietpi-software-remotedesktop-rustdeskclient_03.png "RustDesk Client connect to the public RustDesk Server"){: width="343" height="147" loading="lazy"}
+
+    #### Persistent background service
+
+    Optionally, the `rustdesk` systemd service can be enabled to keep a persistent background connection to the self-hosted RustDesk Server. This allows other clients to always initiate remote desktop connections to this DietPi device, even when the RustDesk Client GUI is not open. Note that this is only recommended with a self-hosted server.
+
+    ```sh
+    systemctl enable --now rustdesk
+    ```
+
+    The service can be controlled with the usual systemctl commands, and its logs can be viewed via:
+
+    ```sh
+    systemctl status rustdesk
+    systemctl restart rustdesk
+    journalctl -u rustdesk
+    ```
 
 ***
 
