@@ -526,7 +526,7 @@ After the DietPi installation of RustDesk Client, the client is already configur
     systemctl enable --now rustdesk
     ```
 
-    The service can be controlled with the usual systemctl commands, and its logs can be viewed via:
+    The service can be controlled with the usual `systemctl` commands, and its logs can be viewed via:
 
     ```sh
     systemctl status rustdesk
