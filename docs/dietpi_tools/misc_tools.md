@@ -184,6 +184,105 @@ Available commands:
 
 ---
 
+## DietPi Servarr to RAM
+
+It moves Sonarr, Radarr, Lidarr and Prowlarr database files to RAM, leaving symlinks on disk. This reduces disk I/O and enhances database I/O performance.  
+The script first creates a backup and automatically restores from backup on next start in case of a system crash.
+
+To start DietPi Servarr to RAM, use the following command:
+
+```sh
+dietpi-servarr_to_ram
+```
+
+![DietPi-Servarr_to_RAM screenshot](../assets/images/dietpi-tools-dietpi-servarr-to-ram.webp "DietPi-Servarr_to_RAM main menu"){: width="960" height="272" loading="lazy"}
+
+### Software overview
+
+=== "Link databases to RAM"
+
+    When running
+
+    ```sh
+    dietpi-servarr_to_ram 1
+    ```
+
+    all found databases are linked to RAM. They can be found at:  
+    `/tmp/{sonarr,radarr,lidarr,prowlarr}_db_link`
+
+    A backup for each linked file is created automatically (and recovered if required), so in case of a system crash only changes from the time of the link are lost. When running the above manually, before shutting down, run
+
+    ```sh
+    dietpi-servarr_to_ram 0
+    ```
+
+    to store the files back to disk.
+
+=== "Enable/Disable on boot"
+
+    To have all databases linked to RAM at boot and stored back to disk on shutdown automatically, execute
+
+    ```sh
+    dietpi-servarr_to_ram enable
+    ```
+
+    resp.
+
+    ```sh
+    dietpi-servarr_to_ram disable
+    ```
+
+    to stop this automatism.
+
+=== "Handling backups"
+
+    To further reduce the risk of lost info/settings, the following command updates the backups:
+
+    ```sh
+    dietpi-servarr_to_ram 2
+    ```
+
+    This can also be done per program, e.g. to only update the Sonarr database backup:
+
+    ```sh
+    dietpi-servarr_to_ram 2 sonarr
+    ```
+      
+    This allows the program itself to do this as well. Within Sonarr, Radarr, Lidarr and Prowlarr web UI configured custom scripts can be run by the user on certain triggers, e.g. when a download has been finished.  
+    For this the following steps are conducted:
+
+    1. Open the web UI, e.g. for Sonarr `http://<your.IP>:8989`
+    1. Go to `Settings`
+    1. Select the tab `Connect`
+    1. Select + to add a new notification
+    1. Select `Custom Script`
+    1. Give it some name and select the trigger sliders as desired, `On Download` makes most sense here since after download the disk is spinning already and the info is important enough to assure it is preserved even on system crash.
+    1. As path type: `/boot/dietpi/misc/dietpi-servarr_to_ram`
+    1. As arguments enter e.g. `2 sonarr` for Sonarr, `2 radarr` for Radarr etc.
+    1. Select `Test` to verify you entered everything correctly, then `Save`
+
+### DietPi Servarr to RAM - Command line usage
+
+Besides the interactive menu of `dietpi-servarr_to_ram`, you can use it from the shell command line:
+
+```console
+Usage: dietpi-servarr_to_ram <command> [<program>]
+Available commands:
+  1 [<program>]     Link (program) database(s) to RAM
+  2 [<program>]     Update (program) database backup(s)
+  0 [<program>]     Store (program) database(s) back to disk
+  enable            Enable Link to RAM on boot
+  disable           Disable Link to RAM on boot
+Supported programs:
+  <empty>       Apply to all supported and installed programs
+  sonarr        Apply to Sonarr database only
+  radarr        Apply to Radarr database only
+  lidarr        Apply to Lidarr database only
+  prowlarr      Apply to Prowlarr database only
+```
+
+---
+
 ## DietPi morse code
 
 It converts a text file into morse code. To start DietPi morse code, use the following command:

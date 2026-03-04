@@ -45,6 +45,7 @@ dietpi-launcher
 - <a name="dietpi-survey"></a>[**DietPi Survey - Allow to obtain general information regarding your system and installed software**](dietpi_tools/misc_tools.md#dietpi-survey)
 - <a name="dietpi-cloudshell"></a>[**DietPi CloudShell - Adjust update rate, scene settings and more**](software/system_stats.md#dietpi-cloudshell)
 - <a name="dietpi-bug-report"></a>[**DietPi Bug Report**](dietpi_tools/misc_tools.md#dietpi-bug-report)
+- <a name="dietpi-servarr_to_ram"></a>[**DietPi Servarr to RAM - Moves Sonarr, Radarr, Lidarr and Prowlarr database files to RAM**](dietpi_tools/misc_tools.md#dietpi-servarr-to-ram)
 - <a name="dietpi-morse-code"></a>[**DietPi Morse Code - Converts a text file into morse code**](dietpi_tools/misc_tools.md#dietpi-morse-code)
 - <a name="useful-dietpi-shell-functions"></a>[**Useful DietPi Shell Functions**](dietpi_tools/misc_tools.md#useful-dietpi-shell-functions)
 
