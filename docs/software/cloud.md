@@ -491,7 +491,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
 ***
 
-Official website: <https://gogs.io/>  
+Official documentation: <https://gogs.io/getting-started/introduction>  
 Source code: <https://github.com/gogs/gogs>  
 License: [MIT](https://github.com/gogs/gogs/blob/main/LICENSE)
 
