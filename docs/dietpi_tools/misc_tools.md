@@ -195,6 +195,8 @@ To start DietPi Servarr to RAM, use the following command:
 dietpi-servarr_to_ram
 ```
 
+![DietPi-Servarr_to_RAM screenshot](../assets/images/dietpi-tools-dietpi-servarr-to-ram.webp "DietPi-Servarr_to_RAM main menu"){: width="960" height="272" loading="lazy"}
+
 ### Software overview
 
 === "Link databases to RAM"
