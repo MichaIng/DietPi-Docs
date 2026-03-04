@@ -518,7 +518,7 @@ After the DietPi installation of RustDesk Client, the client is already configur
 
     ![RustDesk Client connect to the public RustDesk Server](../assets/images/dietpi-software-remotedesktop-rustdeskclient_03.png "RustDesk Client connect to the public RustDesk Server"){: width="343" height="147" loading="lazy"}
 
-    #### Persistent background service
+    <h4>Persistent background service</h4>
 
     Optionally, the `rustdesk` systemd service can be enabled to keep a persistent background connection to the self-hosted RustDesk Server. This allows other clients to always initiate remote desktop connections to this DietPi device, even when the RustDesk Client GUI is not open. Note that this is only recommended with a self-hosted server.
 
