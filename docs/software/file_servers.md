@@ -132,7 +132,7 @@ The Samba server lets you share files on your DietPi system with ease based on t
     systemctl status wsdd2
     ```
 
-    !!! note "We use the WSDD2 variant written in C here."
+    !!! note "We use the WSDD2 variant written in C here"
 
         The original WSDD is written in Python, but we prefer the C variant, for less dependencies and RAM usage. In case, you could also use the original variant, where package and service are called `wsdd` instead of `wsdd2`.
 
