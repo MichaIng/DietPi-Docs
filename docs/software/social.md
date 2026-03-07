@@ -391,6 +391,8 @@ License: [GPLv2](https://github.com/wikimedia/mediawiki/blob/master/COPYING)
 
 soju is an [IRC bouncer](https://wikipedia.org/wiki/BNC_(software)#IRC) – it connects to upstream IRC servers on your behalf, and then you can connect to it using multiple IRC clients. This causes chat history to be preserved without having to have the IRC client connected all the time.
 
+![Soju graphic](../assets/images/dietpi-software-social-soju.webp "Soju graphic"){: width="400" height="201" loading="lazy"}
+
 === "Access to soju"
 
     By default, soju listens on the **6667** port, which is the default for plain text (insecure) IRC connections.
