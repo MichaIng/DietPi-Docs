@@ -112,56 +112,29 @@ The Samba server lets you share files on your DietPi system with ease based on t
     systemctl restart nmbd smbd
     ```
 
-=== "Use `wsdd` to view shares"
+=== "Use `wsdd2` to view shares"
 
-    In case of problems with the Samba share not showing up in the Windows network view, the `wsdd` daemon (Web Service Dynamic Discovery host daemon) can be installed. This is achieved with the following steps:
+    In case of problems with the Samba share not showing up in the Windows network view, the `wsdd2` daemon (Web Service Dynamic Discovery host daemon) can be installed. This is achieved with the following steps:
 
-    === "Bookworm and later"
+    ```sh
+    apt install wsdd2
+    ```
 
-        Install WSDD via APT:
+    Start the service via:
 
-        ```sh
-        apt install wsdd2
-        ```
+    ```sh
+    systemctl start wsdd2
+    ```
 
-        Start the service via:
+    Check the service status via:
 
-        ```sh
-        systemctl start wsdd2
-        ```
+    ```sh
+    systemctl status wsdd2
+    ```
 
-        Check the service status via:
+    !!! note "We use the WSDD2 variant written in C here"
 
-        ```sh
-        systemctl status wsdd2
-        ```
-
-        !!! note "We use the WSDD2 variant written in C here."
-
-            The original WSDD is written in Python, but we prefer the C variant, for less dependencies and RAM usage. In case, you could also use the original variant, where package and service are called `wsdd` instead of `wsdd2`.
-
-    === "Bullseye and earlier"
-
-        Add the 3rd party repository and install WSDD via APT:
-
-        ```sh
-        curl -sSfL 'https://pkg.ltec.ch/public/conf/ltec-ag.gpg.key' | gpg --dearmor -o /etc/apt/trusted.gpg.d/dietpi-wsdd.gpg --yes
-        echo "deb https://pkg.ltec.ch/public/ $G_DISTRO_NAME main" > /etc/apt/sources.list.d/dietpi-wsdd.list
-        apt update
-        apt install wsdd
-        ```
-
-        Start the service via:
-
-        ```sh
-        systemctl start wsdd
-        ```
-
-        Check the service status via:
-
-        ```sh
-        systemctl status wsdd
-        ```
+        The original WSDD is written in Python, but we prefer the C variant, for less dependencies and RAM usage. In case, you could also use the original variant, where package and service are called `wsdd` instead of `wsdd2`.
 
 ***
 
