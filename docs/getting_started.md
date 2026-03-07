@@ -45,7 +45,7 @@ The list of DietPi optimised software includes:
 
 To install and configure them use the `dietpi-software` tool - [click for more details](dietpi_tools/software_installation.md#dietpi-software).
 
-![DietPi-Software screenshot](assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
+![DietPi-Software screenshot](assets/images/dietpi-software.webp "DietPi-Software main menu"){: width="641" height="323" loading="lazy"}
 
 ## Supported SBC
 
