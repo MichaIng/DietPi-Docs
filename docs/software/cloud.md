@@ -1240,7 +1240,7 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
     **a) Distributed installation**
 
-    Immich is installed on server A and the ML server on a separate server B. In this case, you need to manually activate the machine learning configuration in Immich itself by editing the environment file and setting `IMMICH_MACHINE_LEARNING_ENABLED=true` along with the correct ML server URL.
+    Immich is installed on server A and the ML server on a separate server B. In this case, you need to manually activate the machine learning configuration in Immich itself — either via the Immich web UI or by editing the environment file and setting `IMMICH_MACHINE_LEARNING_ENABLED=true` along with the correct ML server URL.
 
     **b) Combined installation on one server**
 
@@ -1260,8 +1260,8 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
     **Immich ML server (option 216)**
 
-    - During build (standalone): **3 GiB** of memory are assured.
-    - During build (together with Immich): **5 GiB** of memory are assured.
+    - During operation (standalone): **3 GiB** of memory are required.
+    - During operation (together with Immich): **5 GiB** of memory are required.
 
 === "Update"
 
