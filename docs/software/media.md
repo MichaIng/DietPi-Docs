@@ -977,6 +977,18 @@ Turn your device into a lightweight Mumble VoIP server.
 
 ![Mumble logo](../assets/images/dietpi-software-media-murmur.png){: width="100" height="100" loading="lazy"}
 
+![Mumble client screenshot](../assets/images/dietpi-software-media-mumble-client.webp){: width="600" height="330" loading="lazy"}
+
+=== "Mumble Client installation"
+
+    In order to connect to the Mumble server, a Mumble client is needed. They can be downloaded for various operating systems from the Mumble website <https://www.mumble.info/downloads/>.
+
+    In a DietPi system with a graphical desktop, the Mumble client can easily installed via
+
+    ```sh
+    apt install mumble
+    ```
+
 === "Murmur Server connection details"
 
     The server is accessible via port **64738**:
@@ -993,9 +1005,16 @@ Turn your device into a lightweight Mumble VoIP server.
     You will need to edit the Murmur config file:
 
     ```sh
-    nano /etc/mumble-server.ini
+    nano /etc/mumble/mumble-server.ini
     systemctl restart mumble-server
     ```
+
+    _On Debian Bookworm systems, the config file is located at `/etc/mumble-server.ini`._
+
+***
+
+Official website: <https://www.mumble.info/>  
+Source code: <https://github.com/mumble-voip/mumble>  
 
 ## Roon Bridge
 
