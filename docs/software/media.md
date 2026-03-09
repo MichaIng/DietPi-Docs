@@ -1009,6 +1009,8 @@ Turn your device into a lightweight Mumble VoIP server.
     systemctl restart mumble-server
     ```
 
+    _On Debian Bookworm systems, the config file is located at `/etc/mumble-server.ini`._
+
 ***
 
 Official website: <https://www.mumble.info/>  
