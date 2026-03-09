@@ -46,6 +46,9 @@ This lets you enable a graphical desktop installation and to select the desktop 
 
 ![DietPi-Software desktop menu screenshot](../assets/images/dietpi-software-desktop-selection.webp "DietPi-Software desktop menu"){: width="550" height="168" loading="lazy"}
 
+!!! tip "Uninstall desktop via console (and not within a running graphical desktop)"
+    When uninstalling a graphical desktop (option `None`), it is good practice to do so via console or SSH login, and not with a terminal emulator (e.g. `xterm`) within its running X11 session. In the latter case, it's like the running desktop pulls the rug out from under its own feet, which might lead to a dead black screen.
+
 ### SSH server selection
 
 This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
