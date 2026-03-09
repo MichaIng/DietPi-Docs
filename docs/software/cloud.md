@@ -1265,10 +1265,18 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
 === "Update"
 
-    You can update Immich by reinstalling it. Your data and configuration are preserved:
+    You can update Immich and Immich ML by reinstalling it. Your data and configuration are preserved:
+
+    - Immich
 
     ```sh
     dietpi-software reinstall 215
+    ```
+
+    - Immich Machine Learning
+
+    ```sh
+    dietpi-software reinstall 216
     ```
 
 ***
