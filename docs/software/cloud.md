@@ -1232,6 +1232,37 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
     journalctl -u immich
     ```
 
+=== "Machine Learning"
+
+    Machine Learning (ML) features in Immich are **not active by default**. The ML server must be installed separately as software option **216** via `dietpi-software`.
+
+    There are two supported setups:
+
+    **a) Distributed installation**
+
+    Immich is installed on server A and the ML server on a separate server B. In this case, you need to manually activate the machine learning configuration in Immich itself by editing the environment file and setting `IMMICH_MACHINE_LEARNING_ENABLED=true` along with the correct ML server URL.
+
+    **b) Combined installation on one server**
+
+    Install both Immich (option 215) and the ML server (option 216) on the same device. `dietpi-software` will automatically activate the machine learning configuration for you.
+
+    !!! warning "High memory demand"
+        Running Immich and the ML server together requires substantial memory. Only install both on a device with at least **4 GiB of RAM**.
+
+=== "Memory usage"
+
+    Due to their high memory demand, `dietpi-software` temporarily assures sufficient swap or RAM during the build and reduces it again afterwards.
+
+    **Immich (option 215)**
+
+    - During build: **5 GiB** of memory are assured.
+    - After build: memory is reduced back to the system minimum of **2 GiB**, unless the Immich ML server (option 216) is installed as well.
+
+    **Immich ML server (option 216)**
+
+    - During build (standalone): **3 GiB** of memory are assured.
+    - During build (together with Immich): **5 GiB** of memory are assured.
+
 === "Update"
 
     You can update Immich by reinstalling it. Your data and configuration are preserved:
