@@ -10,7 +10,7 @@ dietpi-software
 
 It is one of the core tools, enabling you to install or uninstall one or more [**DietPi optimised software**](../software.md) titles.
 
-![DietPi-Software screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main dialog"){: width="640" height="306" loading="lazy"}
+![DietPi-Software screenshot](../assets/images/dietpi-software.webp "DietPi-Software main dialog"){: width="641" height="323" loading="lazy"}
 
 ### Software package selection
 
@@ -39,6 +39,15 @@ Software packages which shall be installed have to be selected prior to the inst
     DietPi supports a large number of software titles. Instead of scrolling through the **Browse Software** list to find a specific software title, you may use the **Search Software** option. Type in the software ID or any keyword from its title or description and you'll get a list filtered by matching results.
 
     ![DietPi-Software Search menu screenshot](../assets/images/dietpi-software-search.png "DietPi-Software Search menu"){: with="752" height="321" loading="lazy"}
+
+### Desktop selection
+
+This lets you enable a graphical desktop installation and to select the desktop (e.g. LXQt, MATE, XFCE). Choosing `None` initiates the removal of an installed desktop.
+
+![DietPi-Software desktop menu screenshot](../assets/images/dietpi-software-desktop-selection.webp "DietPi-Software desktop menu"){: width="550" height="168" loading="lazy"}
+
+!!! tip "Uninstall desktop via console (and not within a running graphical desktop)"
+    When uninstalling a graphical desktop (option `None`), it is good practice to do so via console or SSH login, and not with a terminal emulator (e.g. `xterm`) within its running X11 session. In the latter case, it's like the running desktop pulls the rug out from under its own feet, which might lead to a dead black screen.
 
 ### SSH server selection
 
@@ -151,8 +160,8 @@ Available commands:
     install     <software_id>...  Install each software given by space-separated list of IDs
     reinstall   <software_id>...  Reinstall each software given by space-separated list of IDs
     uninstall   <software_id>...  Uninstall each software given by space-separated list of IDs
-    list        Print a list with IDs and info for all available software titles
-    free        Print an unused software ID, free for a new software implementation
+    list[--machine-readable]      Print a list with IDs and info for all available software titles
+    free                          Print an unused software ID, free for a new software implementation
 ```
 
 The `<software_id>` which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:

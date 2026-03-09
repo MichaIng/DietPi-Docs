@@ -9,6 +9,6 @@
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](../assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software screenshot](../assets/images/dietpi-software.webp "DietPi-Software main dialog"){: width="641" height="323" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](../dietpi_tools.md) section.

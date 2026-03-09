@@ -22,6 +22,7 @@ description: Description of DietPi software options related to cloud and backup 
 - [**File Browser - Light web based file manager with sharing features**](#file-browser)
 - [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](#restic)
+- [**Immich - Self-hosted photo and video management solution**](#immich)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -490,8 +491,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
 ***
 
-Official website: <https://gogs.io/>  
-Official documentation: <https://gogs.io/docs>  
+Official documentation: <https://gogs.io/getting-started/introduction>  
 Source code: <https://github.com/gogs/gogs>  
 License: [MIT](https://github.com/gogs/gogs/blob/main/LICENSE)
 
@@ -776,6 +776,17 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     You devices should now duplicate the user data from your DietPi device to your Windows PC.
 
+=== "Update to latest version"
+
+    **Normally, the built-in update should be used from the web UI.**
+
+    If Syncthing needs to be reinstalled or repaired (e.g. broken instance), use the DietPi software reinstall command:
+
+    ```sh
+    rm -R /opt/syncthing
+    dietpi-software reinstall 50
+    ```
+
 ***
 
 Website: <https://syncthing.net>
@@ -823,7 +834,7 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
     ```
 
     !!! note "Conflict with GNU Midnight Commander"
-        The command `mc` is also used by [GNU Midnight Commander](../system_stats/#gnu-midnight-commander), a visual console file manager. If both are installed, the MinIO client takes precedence, hence either call Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
+        The command `mc` is also used by [GNU Midnight Commander](system_stats.md#gnu-midnight-commander), a visual console file manager. If both are installed, the MinIO client takes precedence, hence either call Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
 
         ```sh
         echo 'alias mnc=/usr/bin/mc' | sudo tee /etc/bashrc.d/midnight-commander.sh
@@ -942,7 +953,7 @@ vaultwarden is an unofficial Bitwarden password manager server with web interfac
     As vaultwarden is installed via APT, it can be update with the following commands:
 
     ```sh
-    apt Update
+    apt update
     apt install vaultwarden
     ```
 
@@ -1151,5 +1162,89 @@ Official website: <https://restic.net/>
 Official documentation: <https://restic.readthedocs.io/en/stable/>  
 Source code: <https://github.com/restic/restic>  
 License: [BSD 2-Clause](https://github.com/restic/restic/blob/master/LICENSE)
+
+## Immich
+
+Immich is a self-hosted photo and video management solution. It provides a fast backup tool, allowing you to browse, search and organise your photos and videos without relying on cloud services. It includes features like facial recognition, object tagging, album sharing and a mobile app for automatic backup.
+
+!!! warning "64-bit only"
+    Immich requires a 64-bit operating system (x86_64 or ARMv8). It cannot be installed on 32-bit systems.
+
+!!! warning "High resource requirements"
+    The Immich build process requires significant memory. `dietpi-software` hence temporarily expands the swap size where needed. On low-memory devices with slow drive, swapping can raise the build time to several hours.
+
+![Immich logo](../assets/images/dietpi-software-cloud-immich.svg){: width="300" height="101" loading="lazy"}
+
+=== "Access to the web interface"
+
+    Immich is accessible via HTTP on TCP port **2283**:
+
+    - URL: `http://<your.IP>:2283`
+
+    On first access, create an admin account via the registration form.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    The service is configured via the environment file:
+
+    ```
+    /mnt/dietpi_userdata/immich/immich.env
+    ```
+
+    The file is pre-populated with the following options:
+
+    | Variable | Initial value | Description |
+    |---|---|---|
+    | `IMMICH_PORT` | `2283` | TCP port Immich listens on |
+    | `IMMICH_HOST` | `0.0.0.0` | Bind address for the Immich server |
+    | `IMMICH_MEDIA_LOCATION` | `/mnt/dietpi_userdata/immich/upload` | Upload location for photos and videos |
+    | `IMMICH_LOG_LEVEL` | `warn` | Log level: `verbose`, `debug`, `log`, `warn`, `error`, `fatal` |
+    | `IMMICH_MACHINE_LEARNING_ENABLED` | `false` | Enable machine learning features (requires separate ML server) |
+    | `DB_URL` | *(set during install)* | PostgreSQL connection URL |
+    | `REDIS_SOCKET` | *(set during install)* | Redis Unix socket path |
+
+    After editing the file, restart the service to apply changes:
+
+    ```sh
+    systemctl restart immich
+    ```
+
+=== "Directories"
+
+    - Install directory: `/opt/immich`
+    - Data directory: `/mnt/dietpi_userdata/immich`
+    - Environment file: `/mnt/dietpi_userdata/immich/immich.env`
+    - Upload directory: `/mnt/dietpi_userdata/immich/upload`
+
+=== "Service handling"
+
+    - Start: `systemctl start immich`
+    - Stop: `systemctl stop immich`
+    - Restart: `systemctl restart immich`
+    - Print status: `systemctl status immich`
+
+=== "View logs"
+
+    ```sh
+    journalctl -u immich
+    ```
+
+=== "Update"
+
+    You can update Immich by reinstalling it. Your data and configuration are preserved:
+
+    ```sh
+    dietpi-software reinstall 215
+    ```
+
+***
+
+Official website: <https://immich.app/>  
+Official documentation: <https://docs.immich.app/overview/quick-start/>  
+Source code: <https://github.com/immich-app/immich>  
+License: [AGPLv3](https://github.com/immich-app/immich/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)

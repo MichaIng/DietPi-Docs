@@ -823,7 +823,14 @@ Automatically download your favorite TV shows, as they become available.
 
 === "Link databases to RAM"
 
-    Link the Sonarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
+    Linking the Sonarr info/settings database to RAM increases access performance, reduces disk I/O and avoids constant external HDD spinning due to the very regular access to these files.  
+    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram`, which can be run from `dietpi-launcher` or directly via the `dietpi-servarr_to_ram` command:
+
+    ```sh
+    dietpi-servarr_to_ram
+    ```
+
+    Further information about `DietPi Servarr to RAM` can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
 
 === "Service control"
 
@@ -940,7 +947,14 @@ Automatically download your favorite movies, as they become available.
 
 === "Link databases to RAM"
 
-    Link the Radarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
+    Linking the Radarr info/settings database to RAM increases access performance, reduces disk I/O and avoids constant external HDD spinning due to the very regular access to these files.  
+    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram`, which can be run from `dietpi-launcher` or directly via the `dietpi-servarr_to_ram` command:
+
+    ```sh
+    dietpi-servarr_to_ram
+    ```
+
+    Further information about `DietPi Servarr to RAM` can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
 
 === "Service control"
 
@@ -1135,7 +1149,14 @@ Automatically download your favorite music.
 
 === "Link databases to RAM"
 
-    Link the Lidarr info/settings database to RAM to increase access performance, reduce disk I/O and avoid constant external HDD spinning due to the very regular access to these files: <https://dietpi.com/forum/t/dietpi-arr-to-ram-link-sonarr-radarr-lidarr-database-files-to-ram/3120>
+    Linking the Lidarr info/settings database to RAM increases access performance, reduces disk I/O and avoids constant external HDD spinning due to the very regular access to these files.  
+    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram`, which can be run from `dietpi-launcher` or directly via the `dietpi-servarr_to_ram` command: 
+
+    ```sh
+    dietpi-servarr_to_ram
+    ```
+
+    Further information about `DietPi Servarr to RAM` can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
 
 === "Service control"
 
@@ -1327,6 +1348,17 @@ Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs bas
     ```sh
     systemctl restart prowlarr
     ```
+
+=== "Link databases to RAM"
+
+    Linking the Prowlarr info/settings database to RAM increases access performance, reduces disk I/O and avoids constant external HDD spinning due to the very regular access to these files.  
+    Therefore, DietPi has implemented the script `dietpi-servarr_to_ram`, which can be run from `dietpi-launcher` or directly via the `dietpi-servarr_to_ram` command:
+
+    ```sh
+    dietpi-servarr_to_ram
+    ```
+
+    Further information about `DietPi Servarr to RAM` can be found in the [DietPi-Tools documentation](../dietpi_tools/misc_tools.md#dietpi-servarr-to-ram).
 
 === "Service control"
 

@@ -19,7 +19,7 @@ This will be the first screen displayed.
 
 Run `dietpi-launcher` to see all available DietPi tools. It provides a quick way to run any of the [DietPi tools](dietpi_tools.md): From installing [**DietPi optimized software items**](software.md) to simple [configure](dietpi_tools/system_configuration.md#dietpi-config) your device, from enabling services to start to backup your installation and so on.
 
-![DietPi-Launcher screenshot](assets/images/dietpi-launcher.jpg "DietPi-Launcher main menu"){: width="642" height="366" loading="lazy"}
+![DietPi-Launcher screenshot](assets/images/dietpi-launcher.webp "DietPi-Launcher main menu"){: width="960" height="595" loading="lazy"}
 
 ## DietPi-Software -- Choose the software you need
 
@@ -45,7 +45,7 @@ The list of DietPi optimised software includes:
 
 To install and configure them use the `dietpi-software` tool - [click for more details](dietpi_tools/software_installation.md#dietpi-software).
 
-![DietPi-Software screenshot](assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
+![DietPi-Software screenshot](assets/images/dietpi-software.webp "DietPi-Software main dialog"){: width="641" height="323" loading="lazy"}
 
 ## Supported SBC
 

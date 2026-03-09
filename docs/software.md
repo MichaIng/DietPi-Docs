@@ -15,7 +15,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
     Choose **Browse Software** and select one or more items. Finally select `Install`.  
     DietPi will do all the necessary steps to install and start these software items.
 
-    ![DietPi-Software menu screenshot](assets/images/dietpi-software.jpg "DietPi-Software main menu"){: width="643" height="365" loading="lazy"}
+    ![DietPi-Software screenshot](assets/images/dietpi-software.webp "DietPi-Software main dialog"){: width="641" height="323" loading="lazy"}
 
     To see all the DietPi configurations options, review the [DietPi Tools](dietpi_tools.md) section.
 
@@ -70,6 +70,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**File Browser - Light web based file manager with sharing features**](software/cloud.md#file-browser)
 - [**Rclone - Utility to sync your files to cloud storages**](software/cloud.md#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](software/cloud.md#restic)
+- [**Immich - Self-hosted photo and video management solution**](software/cloud.md#immich)
 
 ## [Databases & Data Stores](software/databases.md)
 
@@ -220,6 +221,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](software/remote_desktop.md#xrdp)
 - [**NoMachine - Feature rich remote desktop connection**](software/remote_desktop.md#nomachine)
 - [**RustDesk Server - Open source remote access and support software**](software/remote_desktop.md#rustdesk-server)
+- [**RustDesk Client - Open source remote desktop client**](software/remote_desktop.md#rustdesk-client)
 
 ### [Remote Access](software/remote_desktop.md#remote-access)
 

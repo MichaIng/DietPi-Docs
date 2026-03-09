@@ -288,6 +288,7 @@ IEC
 ilex
 Imager
 Imgur
+Immich
 InfluxData
 InfluxDB
 init
@@ -704,6 +705,7 @@ SVG
 swapfile
 swappiness
 symlink
+symlinks
 Syncthing
 syscall
 sysfs

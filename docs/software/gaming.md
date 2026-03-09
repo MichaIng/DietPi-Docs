@@ -152,7 +152,6 @@ MineOS allows you to create multiple Minecraft servers with ease, using a simple
 
 ***
 
-Official forum: <https://discourse.codeemo.com/>  
 Source code: <https://github.com/hexparrot/mineos-node>  
 License: [GPLv3](https://github.com/hexparrot/mineos-node/blob/master/LICENSE.md)
 
@@ -510,6 +509,8 @@ Box64 lets you run **x86_64** Linux programs (such as games) on **ARMv8** system
 
 Moonlight is a game streaming client for [Sunshine](https://github.com/LizardByte/Sunshine) and NVIDIA GameStream streaming servers. This section is about the CLI variant of Moonlight, aka Moonlight Embedded.
 
+![Moonlight logo](../assets/images/dietpi-software-games-moonlight.webp "Moonlight logo"){: width="400" height="195" loading="lazy"}
+
 === "Quick start"
 
     After the installation, you need to pair your Moonlight with the streaming server with the following command:
@@ -557,6 +558,8 @@ License: [GPLv3](https://github.com/moonlight-stream/moonlight-embedded/blob/mas
 ## Moonlight (GUI)
 
 Moonlight is a game streaming client for [Sunshine](https://github.com/LizardByte/Sunshine) and NVIDIA GameStream streaming servers. This section is about the GUI variant of Moonlight, aka Moonlight Qt or Moonlight PC.
+
+![Moonlight logo](../assets/images/dietpi-software-games-moonlight.webp "Moonlight logo"){: width="400" height="195" loading="lazy"}
 
 === "Quick start"
 
