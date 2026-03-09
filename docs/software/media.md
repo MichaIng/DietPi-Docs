@@ -993,7 +993,7 @@ Turn your device into a lightweight Mumble VoIP server.
     You will need to edit the Murmur config file:
 
     ```sh
-    nano /etc/mumble-server.ini
+    nano /etc/mumble/mumble-server.ini
     systemctl restart mumble-server
     ```
 
