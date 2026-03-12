@@ -1170,7 +1170,6 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
 !!! warning "64-bit only"
     Immich requires a 64-bit operating system (x86_64 or ARMv8). It cannot be installed on 32-bit systems.
-
 !!! warning "High resource requirements"
     The Immich build process requires significant memory. `dietpi-software` hence temporarily expands the swap size where needed. On low-memory devices with slow drive, swapping can raise the build time to several hours. Generally, while it is possible, we do not recommend to run Immich on a system with less than 2 GB RAM, or less than 4 GB when running [Immich Machine Learning](#immich-machine-learning) on the same host.
 
