@@ -1206,7 +1206,7 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
     | `DB_USERNAME` | `immich` | PostgreSQL user name |
     | `DB_PASSWORD` | *(set during install)* | PostgreSQL password |
     | `DB_DATABASE` | `immich` | PostgreSQL database name |
-    | `REDIS_SOCKET` | *(set during install)* | Redis Unix socket path |
+    | `REDIS_SOCKET` | `/run/redis/redis-server.sock` | Redis Unix socket path |
 
     After editing the file, restart the service to apply changes:
 
