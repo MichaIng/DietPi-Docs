@@ -23,6 +23,7 @@ description: Description of DietPi software options related to cloud and backup 
 - [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](#restic)
 - [**Immich - Self-hosted photo and video management solution**](#immich)
+- [**Immich Machine Learning - Machine learning server for Immich facial recognition and smart search**](#immich-machine-learning)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -1203,6 +1204,7 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
     | `IMMICH_MEDIA_LOCATION` | `/mnt/dietpi_userdata/immich/upload` | Upload location for photos and videos |
     | `IMMICH_LOG_LEVEL` | `warn` | Log level: `verbose`, `debug`, `log`, `warn`, `error`, `fatal` |
     | `IMMICH_MACHINE_LEARNING_ENABLED` | `false` | Enable machine learning features (requires separate ML server) |
+    | `IMMICH_MACHINE_LEARNING_URL` | `http://127.0.0.1:3003` | URL of the ML server (auto-configured when co-installed) |
     | `DB_URL` | *(set during install)* | PostgreSQL connection URL |
     | `REDIS_SOCKET` | *(set during install)* | Redis Unix socket path |
 
@@ -1234,46 +1236,107 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
 === "Machine Learning"
 
-    Machine Learning (ML) features in Immich are **not active by default**. The ML server must be installed separately as software option **216** via `dietpi-software`.
+    Machine Learning (ML) features in Immich require the **Immich Machine Learning** server (software option **216**). Refer to the [Immich Machine Learning](#immich-machine-learning) section for installation and configuration details.
 
-    There are two supported setups:
-
-    **a) Distributed installation**
-
-    Immich is installed on server A and the ML server on a separate server B. In this case, you need to manually activate the machine learning configuration in Immich itself — either via the Immich web UI or by editing the environment file and setting `IMMICH_MACHINE_LEARNING_ENABLED=true` along with the correct ML server URL.
-
-    **b) Combined installation on one server**
-
-    Install both Immich (option 215) and the ML server (option 216) on the same device. `dietpi-software` will automatically activate the machine learning configuration for you.
-
-    !!! warning "High memory demand"
-        Running Immich and the ML server together requires substantial memory. Only install both on a device with at least **4 GiB of RAM**.
+    When both Immich and the ML server are installed on the same device, `dietpi-software` automatically activates the ML connection in the Immich environment file. No manual configuration is needed.
 
 === "Memory usage"
 
-    Due to their high memory demand, `dietpi-software` temporarily assures sufficient swap or RAM during the build and reduces it again afterwards.
-
-    **Immich (option 215)**
+    Due to its high memory demand, `dietpi-software` temporarily assures sufficient swap or RAM during the Immich build and reduces it again afterwards.
 
     - During build: **5 GiB** of memory are assured.
-    - After build: memory is reduced back to the system minimum of **2 GiB**, unless the Immich ML server (option 216) is installed as well.
-
-    **Immich ML server (option 216)**
-
-    - During operation (standalone): **3 GiB** of memory are required.
-    - During operation (together with Immich): **5 GiB** of memory are required.
+    - After build: memory is reduced back to the system minimum of **2 GiB**.
 
 === "Update"
 
-    You can update Immich and Immich ML by reinstalling it. Your data and configuration are preserved:
-
-    - Immich
+    You can update Immich by reinstalling it. Your data and configuration are preserved:
 
     ```sh
     dietpi-software reinstall 215
     ```
 
-    - Immich Machine Learning
+***
+
+Official website: <https://immich.app/>  
+Official documentation: <https://docs.immich.app/overview/quick-start/>  
+Source code: <https://github.com/immich-app/immich>  
+License: [AGPLv3](https://github.com/immich-app/immich/blob/main/LICENSE)
+
+## Immich Machine Learning
+
+The Immich Machine Learning server adds facial recognition and smart search via CLIP embeddings to your Immich installation. It can be installed on the same device as Immich (option **215**) or on a separate machine for distributed deployments.
+
+!!! warning "64-bit only"
+    Immich Machine Learning requires a 64-bit operating system (x86_64 or ARMv8). It cannot be installed on 32-bit systems.
+
+!!! warning "High memory demand"
+    The Immich ML server requires substantial memory at runtime. Ensure at least **3 GiB** of total memory (RAM + swap) is available on standalone deployments, or at least **5 GiB** when running together with Immich on the same device.
+
+!!! info "Hardware-accelerated inference on RK3588"
+    On devices with an RK3588 SoC running the Rockchip vendor kernel (`linux-image-vendor-rk35xx`), `dietpi-software` automatically enables RKNPU-accelerated ML inference during installation.
+
+=== "Configuration"
+
+    The service is configured via the environment file:
+
+    ```
+    /mnt/dietpi_userdata/immich-ml/immich-ml.env
+    ```
+
+    The file is pre-populated with the following options:
+
+    | Variable | Initial value | Description |
+    |---|---|---|
+    | `IMMICH_PORT` | `3003` | TCP port the ML server listens on |
+    | `IMMICH_HOST` | `127.0.0.1` | Bind address; set to `0.0.0.0` to allow connections from a remote Immich server |
+    | `IMMICH_LOG_LEVEL` | `warn` | Log level: `verbose`, `debug`, `log`, `warn`, `error`, `fatal` |
+    | `MACHINE_LEARNING_CACHE_FOLDER` | `/mnt/dietpi_userdata/immich-ml/model-cache` | Directory for downloaded AI model files |
+
+    After editing the file, restart the service to apply changes:
+
+    ```sh
+    systemctl restart immich-ml
+    ```
+
+=== "Directories"
+
+    - Install directory: `/opt/immich-ml`
+    - Data directory: `/mnt/dietpi_userdata/immich-ml`
+    - Environment file: `/mnt/dietpi_userdata/immich-ml/immich-ml.env`
+    - Model cache: `/mnt/dietpi_userdata/immich-ml/model-cache`
+
+=== "Service handling"
+
+    - Start: `systemctl start immich-ml`
+    - Stop: `systemctl stop immich-ml`
+    - Restart: `systemctl restart immich-ml`
+    - Print status: `systemctl status immich-ml`
+
+=== "View logs"
+
+    ```sh
+    journalctl -u immich-ml
+    ```
+
+=== "Immich integration"
+
+    **Combined installation (same device)**
+
+    Install both Immich (option 215) and the ML server (option 216) on the same device. `dietpi-software` automatically sets `IMMICH_MACHINE_LEARNING_ENABLED=true` and `IMMICH_MACHINE_LEARNING_URL=http://127.0.0.1:3003` in `/mnt/dietpi_userdata/immich/immich.env`. No manual configuration is needed.
+
+    **Distributed installation (separate devices)**
+
+    To connect a remote Immich server to this ML server:
+
+    1. Set `IMMICH_HOST=0.0.0.0` in `/mnt/dietpi_userdata/immich-ml/immich-ml.env` to allow incoming connections.
+    2. Restart the ML service: `systemctl restart immich-ml`
+    3. Enable ML in Immich — either via the Immich web UI or by editing `/mnt/dietpi_userdata/immich/immich.env` and setting:
+        - `IMMICH_MACHINE_LEARNING_ENABLED=true`
+        - `IMMICH_MACHINE_LEARNING_URL=http://<ml-server-ip>:3003`
+
+=== "Update"
+
+    You can update Immich Machine Learning by reinstalling it. Your data and configuration are preserved:
 
     ```sh
     dietpi-software reinstall 216
@@ -1283,7 +1346,7 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
 Official website: <https://immich.app/>  
 Official documentation: <https://docs.immich.app/overview/quick-start/>  
-Source code: <https://github.com/immich-app/immich>  
+Source code: <https://github.com/immich-app/immich/tree/main/machine-learning>  
 License: [AGPLv3](https://github.com/immich-app/immich/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)
