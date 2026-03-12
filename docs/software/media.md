@@ -706,7 +706,7 @@ Available UPnP clients: <https://www.wikipedia.org/wiki/List_of_UPnP_AV_media_se
 
 A web based audio/video streaming application and file manager allowing you to access your music & videos from anywhere, using almost any internet enabled device.
 
-Also Installs:
+Also installs:
 
 - Webserver stack
 
@@ -1996,6 +1996,8 @@ A highlight of some of its key features:
     The web interface is accessible via port **2036**:
     
     - URL: `http://<your.IP>:2036`
+
+    The first time the user logs in, an admin account with a username and password has to be entered in the initial login dialog.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
