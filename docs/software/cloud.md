@@ -1243,13 +1243,6 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
     When both Immich and the ML server are installed on the same device, `dietpi-software` automatically activates the ML connection in the Immich environment file. No manual configuration is needed.
 
-=== "Memory usage"
-
-    Due to its high memory demand, `dietpi-software` temporarily assures sufficient swap or RAM during the Immich build and reduces it again afterwards.
-
-    - During build: **5 GiB** of memory are assured.
-    - After build: memory is reduced back to the system minimum of **2 GiB**.
-
 === "Update"
 
     You can update Immich by reinstalling it. Your data and configuration are preserved:
