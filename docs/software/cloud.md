@@ -1272,9 +1272,6 @@ The Immich Machine Learning server adds facial recognition and smart search via 
 !!! warning "High memory demand"
     The Immich ML server requires substantial memory at runtime. Ensure at least **3 GiB** of total memory (RAM + swap) is available on standalone deployments, or at least **5 GiB** when running together with Immich on the same device.
 
-!!! info "Hardware-accelerated inference on RK3588"
-    On devices with an RK3588 SoC running the Rockchip vendor kernel (`linux-image-vendor-rk35xx`), `dietpi-software` automatically enables RKNPU-accelerated ML inference during installation.
-
 === "Configuration"
 
     The service is configured via the environment file:
