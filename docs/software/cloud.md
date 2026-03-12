@@ -1259,11 +1259,8 @@ License: [AGPLv3](https://github.com/immich-app/immich/blob/main/LICENSE)
 
 The Immich Machine Learning server adds facial recognition and smart search via CLIP embeddings to your Immich installation. It can be installed on the same device as Immich (option **215**) or on a separate machine for distributed deployments.
 
-!!! warning "64-bit only"
-    Immich Machine Learning requires a 64-bit operating system (x86_64 or ARMv8). It cannot be installed on 32-bit systems.
-
 !!! warning "High memory demand"
-    The Immich ML server requires substantial memory at runtime. Ensure at least **3 GiB** of total memory (RAM + swap) is available on standalone deployments, or at least **5 GiB** when running together with Immich on the same device.
+    The Immich ML server requires substantial memory at runtime. `dietpi-software` hence expands the swap size where needed. Generally, while it is possible, we do not recommend to run Immich ML on a system with less than 2 GB RAM, or less than 4 GB when running [Immich Machine Learning](#immich-machine-learning) on the same host.
 
 === "Configuration"
 
