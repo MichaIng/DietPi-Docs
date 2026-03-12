@@ -1205,7 +1205,10 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
     | `IMMICH_LOG_LEVEL` | `warn` | Log level: `verbose`, `debug`, `log`, `warn`, `error`, `fatal` |
     | `IMMICH_MACHINE_LEARNING_ENABLED` | `false` | Enable machine learning features (requires separate ML server) |
     | `IMMICH_MACHINE_LEARNING_URL` | `http://127.0.0.1:3003` | URL of the ML server (auto-configured when co-installed) |
-    | `DB_URL` | *(set during install)* | PostgreSQL connection URL |
+    | `DB_HOSTNAME` | `/run/postgresql` | PostgreSQL UNIX socket path |
+    | `DB_USERNAME` | `immich` | PostgreSQL user name |
+    | `DB_PASSWORD` | *(set during install)* | PostgreSQL password |
+    | `DB_DATABASE` | `immich` | PostgreSQL database name |
     | `REDIS_SOCKET` | *(set during install)* | Redis Unix socket path |
 
     After editing the file, restart the service to apply changes:
