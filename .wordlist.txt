@@ -11,8 +11,9 @@ addon
 addons
 ADF
 AdGuard
-advanxer
 AdoptOpenJDK
+advanxer
+Adwaita
 AGPLv
 aircrafts
 AirPlay
@@ -784,6 +785,7 @@ userdata
 userspace
 UTM
 UUID
+uv
 Vae
 vaultwarden
 VC
