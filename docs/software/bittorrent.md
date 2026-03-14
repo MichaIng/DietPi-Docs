@@ -415,7 +415,7 @@ Also installs:
     more /var/log/nginx/error.log
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     rTorrent itself is installed via APT, and hence can be updated by running the following commands:
 
@@ -638,7 +638,7 @@ NZB download manager with web interface.
     journalctl -u sabnzbd
     ```
 
-=== "Update to latest version"
+=== "Update
 
     ```sh
     dietpi-software reinstall 139
@@ -739,7 +739,7 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
     journalctl -u medusa
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     ```sh
     dietpi-software reinstall 139
@@ -864,7 +864,7 @@ Automatically download your favorite TV shows, as they become available.
     cat /var/log/sonarr/sonarr.txt
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     - Use the internal web based updater
 
@@ -988,7 +988,7 @@ Automatically download your favorite movies, as they become available.
     cat /var/log/radarr/radarr.txt
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     - Use the internal web based updater
 
@@ -1068,7 +1068,7 @@ Key features:
     cat /var/log/bazarr/bazarr.log
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     - Use the internal web based updater
 
@@ -1190,7 +1190,7 @@ Automatically download your favorite music.
     cat /var/log/lidarr/lidarr.txt
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     - Use the internal web based updater
 
@@ -1573,7 +1573,7 @@ Do all your HTPC tasks without using 5 different interfaces!
     journalctl -u htpc-manager
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     ```sh
     dietpi-software reinstall 155

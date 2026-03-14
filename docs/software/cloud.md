@@ -63,15 +63,9 @@ ownCloud Infinite Scale (oCIS) is the new file sync & share platform that will b
     - Install directory: `/opt/ocis`
     - Config and data directory: `/mnt/dietpi_userdata/ocis`
 
-=== "View logs"
-
-    ```sh
-    journalctl -u ocis
-    ```
-
 === "Service handling"
 
-    Use the following commands to control the oCIS system service:
+    Since ownCloud Infinite Scale runs as systemd service, it can be controlled with the following commands:
 
     ```sh
     systemctl status ocis
@@ -87,6 +81,12 @@ ownCloud Infinite Scale (oCIS) is the new file sync & share platform that will b
 
     ```sh
     systemctl restart ocis
+    ```
+
+=== "View logs"
+
+    ```sh
+    journalctl -u ocis
     ```
 
 === "Update"
@@ -481,7 +481,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     /var/log/gogs
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     You can easily update Gogs by reinstalling it. Your settings and data are preserved by this:
 
@@ -599,7 +599,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
     File logging to `/var/log/gitea/gitea.log` can be enabled by editing `/mnt/dietpi_userdata/gitea/custom/conf/app.ini` and changing `MODE = console` in the `[log]` section to `MODE = file`.
 
-=== "Update to latest version"
+=== "Update"
 
     You can easily update Gitea by reinstalling it. Your settings and data are preserved by this:
 
@@ -721,7 +721,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
     File logging to `/var/log/forgejo/forgejo.log` can be enabled by editing `/mnt/dietpi_userdata/forgejo/custom/conf/app.ini` and changing `MODE = console` in the `[log]` section to `MODE = file`.
 
-=== "Update to latest version"
+=== "Update"
 
     You can easily update Forgejo by reinstalling it. Your settings and data are preserved by this:
 
@@ -776,7 +776,7 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     You devices should now duplicate the user data from your DietPi device to your Windows PC.
 
-=== "Update to latest version"
+=== "Update"
 
     **Normally, the built-in update should be used from the web UI.**
 
@@ -948,7 +948,7 @@ vaultwarden is an unofficial Bitwarden password manager server with web interfac
     journalctl -u vaultwarden
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     As vaultwarden is installed via APT, it can be update with the following commands:
 
@@ -1095,7 +1095,7 @@ Access and manage your data from anywhere via browser with this lightweight remo
      journalctl -u filebrowser
      ```
 
-=== "Update to latest version"
+=== "Update"
 
     You can easily update File Browser by reinstalling it. Your settings and data are preserved by this:
 
@@ -1221,10 +1221,23 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
 === "Service handling"
 
-    - Start: `systemctl start immich`
-    - Stop: `systemctl stop immich`
-    - Restart: `systemctl restart immich`
-    - Print status: `systemctl status immich`
+    Since Immich runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status immich
+    ```
+
+    ```sh
+    systemctl stop immich
+    ```
+
+    ```sh
+    systemctl start immich
+    ```
+
+    ```sh
+    systemctl restart immich
+    ```
 
 === "View logs"
 

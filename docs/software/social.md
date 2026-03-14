@@ -293,7 +293,7 @@ Synapse is a server, written in Python, for communication using the Matrix proto
     journalctl -u synapse
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     Since Synapse is installed into a Python venv at `/opt/synapse`, you can update it via:
 

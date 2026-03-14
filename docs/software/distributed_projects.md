@@ -109,21 +109,21 @@ Contribute a node to the Tor network, which allows people to be anonymous on the
         The Tor relay search will not always work for bridges, sometimes showing them as down when they are running. In that case, use the specific Tor bridge monitoring URL:  
         `https://bridges.torproject.org/status?type=obfs4&id=<FINGERPRINT>`
 
-=== "Keeping up-to-date"
-
-    Keeping Tor relays updated is important to the safety of both the users and the operator. Because of this, automated upgrades are recommended and asked about when first installing. Otherwise, regularly run the following commands to keep your system packages up-to-date:
-
-    ```sh
-    apt update
-    apt upgrade
-    ```
-
 === "View logs"
 
     Tor service logs can be viewed with the following command:
 
     ```sh
     journalctl -t tor
+    ```
+
+=== "Update"
+
+    Keeping Tor relays updated is important to the safety of both the users and the operator. Because of this, automated upgrades are recommended and asked about when first installing. Otherwise, regularly run the following commands to keep your system packages up-to-date:
+
+    ```sh
+    apt update
+    apt upgrade
     ```
 
 ***
@@ -278,7 +278,7 @@ What is **Radiosonde**? A radiosonde is a telemetry instrument carried into the 
     While this has been tested and works with 512MB of RAM, 1GB is a much more reasonable minimum. There seems to be no real benefit from having more than 2GB of RAM.  
     Decoding the data streams from the SDR is somewhat CPU intensive. A simple rule of thumb is that you want one more core than you have SDRs. So for a typical setup with one SDR for ADS-B signals (sent at 1090 MHz), two cores are sufficient. If you are in the US and also want to scan for UAT traffic ("Universal Access Transceiver" sent at 978 MHz) and therefore have two SDRs connected, three cores will get you better results.
 
-=== "Update to latest version"
+=== "Update"
 
     The update of ADS-B Feeder is done via the web interface, options for updating to the stable version as well as to a beta version are available.
 

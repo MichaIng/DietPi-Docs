@@ -126,11 +126,13 @@ Domoticz is a Home Automation System that lets you monitor and configure various
     !!! tip "Change default user and password"
         We recommend to create a new user with admin privileges via **Setup** -> **Users** and remove the default one, or at least change the default password.
 
-=== "View logs"
+=== "Install directory"
 
-    ```sh
-    journalctl -u domoticz
-    ```
+    `/opt/domoticz`
+
+=== "Data directory"
+
+    `/mnt/dietpi_userdata/domoticz`
 
 === "Service handling"
 
@@ -152,13 +154,11 @@ Domoticz is a Home Automation System that lets you monitor and configure various
     systemctl restart domoticz
     ```
 
-=== "Install directory"
+=== "View logs"
 
-    `/opt/domoticz`
-
-=== "Data directory"
-
-    `/mnt/dietpi_userdata/domoticz`
+    ```sh
+    journalctl -u domoticz
+    ```
 
 ***
 
@@ -255,13 +255,6 @@ Homebridge allows you to integrate with smart home devices that do not natively 
     - Install directory: `/opt/homebridge`
     - Config, Log & Backup folder: `/var/lib/homebridge`
 
-=== "View logs"
-
-    ```sh
-    journalctl -u homebridge
-    cat /var/lib/homebridge/homebridge.log
-    ```
-
 === "Service handling"
 
     Use the following commands to control the Homebridge system service:
@@ -280,6 +273,13 @@ Homebridge allows you to integrate with smart home devices that do not natively 
 
     ```sh
     hb-service restart
+    ```
+
+=== "View logs"
+
+    ```sh
+    journalctl -u homebridge
+    cat /var/lib/homebridge/homebridge.log
     ```
 
 === "Update Node.js"

@@ -1352,7 +1352,7 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
     Icecast additionally creates access and error log files at: `/var/log/icecast2/`
 
-=== "Update to latest version"
+=== "Update"
 
     Icecast and DarkIce are installed from the Debian APT repository and hence can be updated by running the following commands:
 
@@ -1398,7 +1398,7 @@ Web interface music streamer.
     journalctl -u koel
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     To update Koel to the recent version, simply reinstall it:
 
@@ -1456,7 +1456,7 @@ A DLNA audio render/endpoint. Allows you to stream and play music, from another 
     journalctl -u gmediarender
     ```
 
-=== "Update to the latest version"
+=== "Update"
 
     As GMediaRender is installed via APT, it can be update with the following commands:
 
@@ -1491,7 +1491,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
     Use the admin page to set the above locations for ebook and comic storage, then run a scan to update the database.
 
-=== "Update to the latest version"
+=== "Update"
 
     ```sh
     dietpi-software reinstall 80
@@ -1564,7 +1564,7 @@ Free and open source comics/mangas media server with web UI.
 
     Assure that the directory exists and the `komga` user or group has write permissions.
 
-=== "Update to latest version"
+=== "Update"
 
     To update Komga to the latest version, simply reinstall it via DietPi-Software:
 
@@ -1719,7 +1719,7 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
     `/mnt/dietpi_userdata/jellyfin`
 
-=== "Update to latest version"
+=== "Update"
 
     Since Jellyfin is installed as APT packages, it can be updated with these commands:
 
