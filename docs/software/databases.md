@@ -314,7 +314,7 @@ PostgreSQL is a persistent advanced object-relational database server, used in s
     systemctl reload postgresql
     ```
 
-=== "Service handling"
+=== "Service control"
 
     Since PostgreSQL runs as systemd service, it can be controlled with the following commands:
 
@@ -422,7 +422,7 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
     systemctl restart whodb
     ```
 
-=== "Service handling"
+=== "Service control"
 
     Since WhoDB runs as systemd service, it can be controlled with the following commands:
 

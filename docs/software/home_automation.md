@@ -134,7 +134,7 @@ Domoticz is a Home Automation System that lets you monitor and configure various
 
     `/mnt/dietpi_userdata/domoticz`
 
-=== "Service handling"
+=== "Service control"
 
     Use the following commands to control the Domoticz system service:
 
@@ -255,7 +255,7 @@ Homebridge allows you to integrate with smart home devices that do not natively 
     - Install directory: `/opt/homebridge`
     - Config, Log & Backup folder: `/var/lib/homebridge`
 
-=== "Service handling"
+=== "Service control"
 
     Use the following commands to control the Homebridge system service:
 

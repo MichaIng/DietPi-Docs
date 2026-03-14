@@ -165,26 +165,6 @@ Also installs:
 
         ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png "DietPi-JustBoom main menu"){: width="400" height="269" loading="lazy"}
 
-=== "Service control"
-
-    Since myMPD runs as systemd service, it can be controlled with the following commands:
-
-    ```sh
-    systemctl status mympd
-    ```
-
-    ```sh
-    systemctl start mympd
-    ```
-
-    ```sh
-    systemctl stop mympd
-    ```
-
-    ```sh
-    systemctl restart mympd
-    ```
-
 === "Configuration"
 
     myMPD can be configured via individual config files, one for each setting within the config directory:
@@ -214,6 +194,26 @@ Also installs:
 
     ```sh
     systemctl restart mpd
+    ```
+
+=== "Service control"
+
+    Since myMPD runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status mympd
+    ```
+
+    ```sh
+    systemctl start mympd
+    ```
+
+    ```sh
+    systemctl stop mympd
+    ```
+
+    ```sh
+    systemctl restart mympd
     ```
 
 === "View logs"
@@ -443,7 +443,7 @@ Feature rich media streaming server with a web interface, coded in Java.
     systemctl restart airsonic
     ```
 
-=== "Logs"
+=== "View logs"
 
     Since Airsonic-Advanced runs as systemd service, its logs can be viewed via:
 
@@ -1233,14 +1233,6 @@ Also works with Roon.
 
     Guide: <https://help.roonlabs.com/portal/en/kb/articles/hqplayer>
 
-=== "View logs"
-
-    Run the following command on a console to view logs for NAA Daemon:
-
-    ```sh
-    journalctl -u networkaudiod
-    ```
-
 === "Service control"
 
     Since NAA Daemon runs as systemd service, it can be controlled with the following commands:
@@ -1259,6 +1251,14 @@ Also works with Roon.
 
     ```sh
     systemctl restart networkaudiod
+    ```
+
+=== "View logs"
+
+    Run the following command on a console to view logs for NAA Daemon:
+
+    ```sh
+    journalctl -u networkaudiod
     ```
 
 === "Update"
@@ -1955,7 +1955,7 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
     systemctl restart navidrome
     ```
 
-=== "Logs"
+=== "View logs"
 
     Since Navidrome runs as systemd service, its logs can be viewed via:
 
@@ -2039,7 +2039,7 @@ A highlight of some of its key features:
     systemctl restart kavita
     ```
 
-=== "Logs"
+=== "View logs"
 
     Kavita runs as systemd service, its logs can be viewed via:
 

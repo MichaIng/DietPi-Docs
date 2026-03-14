@@ -456,7 +456,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
     !!! warning "Do not keep your swap file on an SD card!"
         If the used system memory exceeds the physical RAM of your SBC, we highly recommend to **not** store the swap file on an SD card, but on an external drive, in case, as SD cards usually won't survive regularly used swap file writes for long, leading to server crashes and data loss in worst case.
 
-=== "Service handling"
+=== "Service control"
 
     Since PaperMC runs as systemd service, it can be controlled with the following commands:
 

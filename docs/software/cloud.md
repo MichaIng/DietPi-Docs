@@ -63,7 +63,7 @@ ownCloud Infinite Scale (oCIS) is the new file sync & share platform that will b
     - Install directory: `/opt/ocis`
     - Config and data directory: `/mnt/dietpi_userdata/ocis`
 
-=== "Service handling"
+=== "Service control"
 
     Since ownCloud Infinite Scale runs as systemd service, it can be controlled with the following commands:
 
@@ -993,7 +993,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     - Config file: `/home/bd/bdd.conf`
     - File server directory: `/mnt/dietpi_userdata/fuguhub-data`
 
-=== "Logs"
+=== "View logs"
 
     - Service: `journalctl -u bdd`
     - Trace: `/home/bd/trace/`  
@@ -1219,7 +1219,7 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
     - Environment file: `/mnt/dietpi_userdata/immich/immich.env`
     - Upload directory: `/mnt/dietpi_userdata/immich/upload`
 
-=== "Service handling"
+=== "Service control"
 
     Since Immich runs as systemd service, it can be controlled with the following commands:
 

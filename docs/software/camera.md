@@ -200,7 +200,7 @@ It has these basic features:
 
     Please see the online documentation: <https://github.com/tphakala/birdnet-go/blob/main/doc/wiki/guide.md>
 
-=== "Service handling"
+=== "Service control"
 
     Since BirdNET-Go runs as systemd service, it can be controlled with the following commands:
 
