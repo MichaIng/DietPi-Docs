@@ -108,6 +108,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Git - Distributed version control system**](software/programming.md#git)
 - [**PHP Composer - A Dependency Manager for PHP**](software/programming.md#php-composer)
 - [**Node.js - open-source, JavaScript runtime environment**](software/programming.md#nodejs)
+- [**uv - Python package and project manager**](software/programming.md#uv)
 
 ## [Distributed Projects](software/distributed_projects.md)
 

@@ -267,7 +267,6 @@ uv --version
 
 ***
 
-Website: <https://astral.sh/uv>  
 Official documentation: <https://docs.astral.sh/uv/>  
 Source code: <https://github.com/astral-sh/uv>  
 License: [MIT or Apache 2.0](https://github.com/astral-sh/uv?tab=readme-ov-file#license)
