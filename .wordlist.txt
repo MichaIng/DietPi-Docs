@@ -173,6 +173,7 @@ ebook
 ebooks
 EDL
 EEPROM
+embeddings
 Emby
 eMMC
 emoncms
