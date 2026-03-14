@@ -259,6 +259,20 @@ Once installed, available VirtualHere devices will be shown in the client user i
 
     The VirtualHere server listens on the TCP port **7575** by default for client connections.
 
+=== "Configuration"
+
+    The configuration file can be found at:
+
+    ```
+    /opt/virtualhere/config.ini
+    ```
+
+    When doing changes, apply them by restart the service:
+
+    ```sh
+    systemctl restart virtualhere
+    ```
+
 === "Service control"
 
     The service is started automatically at boot. As systemd service, it can be controlled with the following commands:
@@ -279,21 +293,7 @@ Once installed, available VirtualHere devices will be shown in the client user i
     systemctl restart virtualhere
     ```
 
-=== "Configuration"
-
-    The configuration file can be found at:
-
-    ```
-    /opt/virtualhere/config.ini
-    ```
-
-    When doing changes, apply them by restart the service:
-
-    ```sh
-    systemctl restart virtualhere
-    ```
-
-=== "Logs"
+=== "View logs"
 
     Since VirtualHere runs as systemd service, its logs can be viewed via:
 
@@ -371,6 +371,14 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
         doctor [rustdesk-server]                     Check for server connection problems
     ```
 
+=== "Moving RustDesk to a different system"
+
+    If a RustDesk Server shall be moved to a different system with keeping the original configuration, the following steps can be used:
+
+    1. Installation of RustDesk Server on the new system
+    1. Copying the directory `/mnt/dietpi_userdata/rustdesk` to the new system
+    1. Restart of the services or reboot
+
 === "Service control"
 
     The services are started automatically at boot. As systemd service, they can be controlled with the following commands:
@@ -391,15 +399,7 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
     systemctl restart rustdesksignal rustdeskrelay
     ```
 
-=== "Moving RustDesk to a different system"
-
-    If a RustDesk Server shall be moved to a different system with keeping the original configuration, the following steps can be used:
-
-    1. Installation of RustDesk Server on the new system
-    1. Copying the directory `/mnt/dietpi_userdata/rustdesk` to the new system
-    1. Restart of the services or reboot
-
-=== "Logs"
+=== "View logs"
 
     Since RustDesk runs as two systemd services, its logs can be viewed via:
 

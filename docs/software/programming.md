@@ -108,7 +108,7 @@ go version
         _EOF_
         ```
 
-=== "Update to latest version"
+=== "Update"
 
     ```sh
     dietpi-software reinstall 188
@@ -163,7 +163,7 @@ VSCodium is a FLOSS version of [Microsoft's Visual Studio code](https://code.vis
 
 ![VSCodium screenshot](../assets/images/dietpi-software-programming-vscodium.png "VSCodium screen"){: width="1028" height="799" loading="lazy"}
 
-=== "Update to latest version"
+=== "Update"
 
     VSCodium is installed as APT package, hence you can update it by running the following commands:
 

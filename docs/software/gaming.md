@@ -100,7 +100,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
 === "Update"
 
-    Update to newest version:
+    Cuberite can be updated to the latest version by reinstalling it via
 
     ```sh
     dietpi-software reinstall 52
@@ -430,11 +430,6 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
     - Config and data: `/mnt/dietpi_userdata/papermc`
     - Logs: `/var/log/papermc`
 
-=== "View logs"
-
-    - Service: `journalctl -u papermc`
-    - File: `/var/log/papermc/latest.log`
-
 === "Tweaking"
 
     Tweak the server settings by modifying the following file or any file within the config directory that ends in `.yml`:  
@@ -461,15 +456,32 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
     !!! warning "Do not keep your swap file on an SD card!"
         If the used system memory exceeds the physical RAM of your SBC, we highly recommend to **not** store the swap file on an SD card, but on an external drive, in case, as SD cards usually won't survive regularly used swap file writes for long, leading to server crashes and data loss in worst case.
 
-=== "Restart service"
+=== "Service control"
 
-    You can restart the service by running:
+    Since PaperMC runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status papermc
+    ```
+
+    ```sh
+    systemctl stop papermc
+    ```
+
+    ```sh
+    systemctl start papermc
+    ```
 
     ```sh
     systemctl restart papermc
     ```
 
-=== "Update to latest version"
+=== "View logs"
+
+    - Service: `journalctl -u papermc`
+    - File: `/var/log/papermc/latest.log`
+
+=== "Update"
 
     ```sh
     dietpi-software reinstall 181

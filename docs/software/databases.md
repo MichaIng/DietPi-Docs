@@ -314,15 +314,31 @@ PostgreSQL is a persistent advanced object-relational database server, used in s
     systemctl reload postgresql
     ```
 
-=== "Service handling"
+=== "Service control"
 
-    The systemd service `postgresql.service` is used to start and control the PostgreSQL server. The following commands can be used:
+    Since PostgreSQL runs as systemd service, it can be controlled with the following commands:
 
-    - Start: `systemctl start postgresql`
-    - Stop: `systemctl stop postgresql`
-    - Restart: `systemctl restart postgresql`
-    - Reload config: `systemctl reload postgresql`
-    - Print status: `systemctl status postgresql`
+    ```sh
+    systemctl status postgresql
+    ```
+
+    ```sh
+    systemctl stop postgresql
+    ```
+
+    ```sh
+    systemctl start postgresql
+    ```
+
+    ```sh
+    systemctl restart postgresql
+    ```
+
+    Reload configuration:
+
+    ```sh
+    systemctl reload postgresql
+    ```
 
 === "View logs"
 
@@ -338,7 +354,7 @@ PostgreSQL is a persistent advanced object-relational database server, used in s
     cat /var/log/postgresql/postgresql-*-main.log
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     Since PostgreSQL is installed via APT, it can be updated via:
 
@@ -406,12 +422,25 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
     systemctl restart whodb
     ```
 
-=== "Service handling"
+=== "Service control"
 
-    - Start: `systemctl start whodb`
-    - Stop: `systemctl stop whodb`
-    - Restart: `systemctl restart whodb`
-    - Print status: `systemctl status whodb`
+    Since WhoDB runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status whodb
+    ```
+
+    ```sh
+    systemctl stop whodb
+    ```
+
+    ```sh
+    systemctl start whodb
+    ```
+
+    ```sh
+    systemctl restart whodb
+    ```
 
 === "View logs"
 

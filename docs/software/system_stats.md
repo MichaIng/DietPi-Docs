@@ -120,7 +120,7 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     systemctl restart dietpi-dashboard-backend
     ```
 
-=== "Logs"
+=== "View logs"
 
     Service logs can be reviewed with the following command:
 
@@ -403,6 +403,14 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
     systemctl restart webmin
     ```
 
+=== "View logs"
+
+    Webmin service logs can be accessed with the following command:
+
+    ```sh
+    journalctl -u webmin
+    ```
+
 === "Update"
 
     Since Webmin is installed as APT package, it can be updated with the following commands:
@@ -410,14 +418,6 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
     ```sh
     apt update
     apt install webmin
-    ```
-
-=== "View logs"
-
-    Webmin service logs can be accessed with the following command:
-
-    ```sh
-    journalctl -u webmin
     ```
 
 ***
@@ -742,7 +742,7 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
     systemctl restart node_exporter
     ```
 
-=== "Logs"
+=== "View logs"
 
     Prometheus Node Exporter runs as a systemd service, hence logs can be viewed with the following command:
 
