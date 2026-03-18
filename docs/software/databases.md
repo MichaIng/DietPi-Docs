@@ -399,22 +399,32 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
 
     The file is pre-populated with the following options:
 
+    **Server**
+
     | Variable | Default | Description |
     |---|---|---|
     | `PORT` | `8091` | TCP port WhoDB listens on |
     | `WHODB_LOG_LEVEL` | `warning` | Log level: `debug`, `info`, `warning`, `error`, `none` |
-    | `WHODB_LOG_FORMAT` | `text` | Log format: `text` or `json` (useful for log aggregators) |
-    | `WHODB_TOKENS` | *(unset)* | Comma-separated static tokens to restrict API/UI access |
+    | `WHODB_LOG_FILE` | *(unset)* | Log file path for non-HTTP logs. When unset, logs go to stdout (journal via systemd) |
+    | `WHODB_ACCESS_LOG_FILE` | *(unset)* | Log file path for HTTP access logs. When unset, logs go to stdout (journal via systemd) |
     | `WHODB_ALLOWED_ORIGINS` | *(unset)* | Comma-separated CORS origins (defaults to all origins) |
-    | `WHODB_DISABLE_CREDENTIAL_FORM` | *(unset)* | Set `true` to hide the database credential entry form in the UI |
-    | `WHODB_POSTGRESQL` | *(unset)* | Pre-configure PostgreSQL connection profile (JSON array) |
-    | `WHODB_MYSQL` | *(unset)* | Pre-configure MySQL/MariaDB connection profile (JSON array) |
-    | `WHODB_SQLITE3` | *(unset)* | Pre-configure SQLite connection profile (JSON array) |
-    | `WHODB_MONGODB` | *(unset)* | Pre-configure MongoDB connection profile (JSON array) |
-    | `WHODB_REDIS` | *(unset)* | Pre-configure Redis connection profile (JSON array) |
-    | `WHODB_CLICKHOUSE` | *(unset)* | Pre-configure ClickHouse connection profile (JSON array) |
-    | `WHODB_OLLAMA_HOST` | *(unset)* | Ollama AI chat host (local AI, no API key required) |
-    | `WHODB_OLLAMA_PORT` | *(unset)* | Ollama AI chat port |
+
+    **Database connection profiles**
+
+    Database connections can be configured via environment variables in two formats:
+
+    ```bash
+    # Array format — multiple connections in a single variable
+    WHODB_MYSQL='[{"alias":"prod","host":"localhost","user":"user","password":"password","database":"mysql","port":"3306"},{"alias":"dev","host":"localhost","user":"user","password":"secret","database":"test_db","port":"3306"}]'
+
+    # Numbered format — one connection per variable
+    WHODB_POSTGRES_1='{"alias":"local","host":"localhost","user":"user","password":"secret","database":"test_db","port":"5432"}'
+    WHODB_POSTGRES_2='{"alias":"staging","host":"staging.example.com","user":"user","password":"secret","database":"app","port":"5432"}'
+    ```
+
+    If the variable name does not end in a number, the value must be a JSON **array** of connections. If it ends in a number (e.g. `_1`, `_2`), the value is a single JSON **object**. Each connection object supports the fields `alias`, `host`, `user`, `password`, `database` and `port`.
+
+    For a full list of all environment variables, including AI provider configuration and advanced connection options, see the official [WhoDB documentation](https://docs.whodb.com/installation#configuration-options).
 
     All options except `PORT` and `WHODB_LOG_LEVEL` are commented out by default. To apply changes, restart the service:
 
