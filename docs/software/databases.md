@@ -389,107 +389,26 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
     |---|---|---|
     | `PORT` | `8091` | TCP port WhoDB listens on |
     | `WHODB_LOG_LEVEL` | `warning` | Log level: `debug`, `info`, `warning`, `error`, `none` |
-    | `WHODB_LOG_FORMAT` | `text` | Log format: `text` or `json` (useful for log aggregators) |
-    | `WHODB_LOG_FILE` | *(unset)* | Log (non-HTTP) file location. `default` uses `/var/log/whodb/whodb.log`, or specify a custom path |
-    | `WHODB_ACCESS_LOG_FILE` | *(unset)* | Access log (HTTP-only) file location. `default` uses `/var/log/whodb/whodb.access.log`, or specify a custom path |
-    | `WHODB_TOKENS` | *(unset)* | Comma-separated static tokens to restrict API/UI access |
+    | `WHODB_LOG_FILE` | *(unset)* | Log file path for non-HTTP logs. When unset, logs go to stdout (journal via systemd) |
+    | `WHODB_ACCESS_LOG_FILE` | *(unset)* | Log file path for HTTP access logs. When unset, logs go to stdout (journal via systemd) |
     | `WHODB_ALLOWED_ORIGINS` | *(unset)* | Comma-separated CORS origins (defaults to all origins) |
-    | `WHODB_DISABLE_CREDENTIAL_FORM` | *(unset)* | Set `true` to hide the database credential entry form in the UI. Default is false. |
-    | `WHODB_MAX_PAGE_SIZE` | *(unset)* | Maximum number of rows returned per page. Default set to 10000. |
-    | `WHODB_DISABLE_MOCK_DATA_GENERATION` | *(unset)* | Disable mock data generation. `*` disables for all tables, or a comma-separated list of table names (e.g., `logs, metrics`) |
 
     **Database connection profiles**
 
-    | Variable | Description |
-    |---|---|
-    | `WHODB_POSTGRES` | Pre-configure PostgreSQL connection profiles (JSON array) |
-    | `WHODB_MYSQL` | Pre-configure MySQL connection profiles (JSON array) |
-    | `WHODB_MARIADB` | Pre-configure MariaDB connection profiles (JSON array) |
-    | `WHODB_SQLITE3` | Pre-configure SQLite connection profiles (JSON array) |
-    | `WHODB_MONGODB` | Pre-configure MongoDB connection profiles (JSON array) |
-    | `WHODB_REDIS` | Pre-configure Redis connection profiles (JSON array) |
-    | `WHODB_CLICKHOUSE` | Pre-configure ClickHouse connection profiles (JSON array) |
-    | `WHODB_ELASTICSEARCH` | Pre-configure Elasticsearch connection profiles (JSON array) |
-
-    **AI providers**
-
-    | Variable | Default | Description |
-    |---|---|---|
-    | `WHODB_OLLAMA_HOST` | `localhost` (`host.docker.internal` in Docker) | Ollama server hostname (local AI, no API key required) |
-    | `WHODB_OLLAMA_PORT` | `11434` | Ollama server port |
-    | `WHODB_OLLAMA_NAME` | *(unset)* | Display name for Ollama in the provider dropdown |
-    | `WHODB_OPENAI_API_KEY` | *(unset)* | OpenAI API key |
-    | `WHODB_OPENAI_ENDPOINT` | `https://api.openai.com/v1` | OpenAI API endpoint |
-    | `WHODB_OPENAI_NAME` | *(unset)* | Display name for OpenAI in the provider dropdown |
-    | `WHODB_ANTHROPIC_API_KEY` | *(unset)* | Anthropic API key |
-    | `WHODB_ANTHROPIC_ENDPOINT` | `https://api.anthropic.com/v1` | Anthropic API endpoint |
-    | `WHODB_ANTHROPIC_NAME` | *(unset)* | Display name for Anthropic in the provider dropdown |
-
-    **Generic AI providers**
-
-    Connect any OpenAI-compatible provider (LM Studio, OpenRouter, vLLM, etc.) using `WHODB_AI_GENERIC_<ID>_*` variables, where `<ID>` is a unique identifier (e.g., `LMSTUDIO`, `OPENROUTER`).
-
-    | Variable | Required | Default | Description |
-    |---|---|---|---|
-    | `WHODB_AI_GENERIC_<ID>_NAME` | No | `<ID>` | Display name in provider dropdown |
-    | `WHODB_AI_GENERIC_<ID>_TYPE` | No | `openai-generic` | Client type |
-    | `WHODB_AI_GENERIC_<ID>_BASE_URL` | Yes | | API base URL |
-    | `WHODB_AI_GENERIC_<ID>_API_KEY` | No | | API key |
-    | `WHODB_AI_GENERIC_<ID>_MODELS` | Yes | | Comma-separated list of model names |
-
-    Example — connect to a local LM Studio instance:
-
-    ```bash
-    WHODB_AI_GENERIC_LMSTUDIO_NAME="LM Studio"
-    WHODB_AI_GENERIC_LMSTUDIO_BASE_URL="http://localhost:1234/v1"
-    WHODB_AI_GENERIC_LMSTUDIO_MODELS="mistral-7b,llama-3-8b"
-    ```
-
-    Database connections can be configured via environment variables in two JSON formats:
+    Database connections can be configured via environment variables in two formats:
 
     ```bash
     # Array format — multiple connections in a single variable
-    export WHODB_MYSQL='[{"alias":"prod","host":"localhost","user":"user","password":"password","database":"mysql","port":"3306"},{"alias":"local","host":"localhost","user":"user","password":"secret","database":"test_db","port":"5432"}]'
+    WHODB_MYSQL='[{"alias":"prod","host":"localhost","user":"user","password":"password","database":"mysql","port":"3306"},{"alias":"dev","host":"localhost","user":"user","password":"secret","database":"test_db","port":"3306"}]'
 
     # Numbered format — one connection per variable
-    export WHODB_POSTGRES_1='{"alias":"local","host":"localhost","user":"user","password":"secret","database":"test_db","port":"5432"}'
-    export WHODB_POSTGRES_2='{"alias":"staging","host":"staging.example.com","user":"user","password":"secret","database":"app","port":"5432"}'
+    WHODB_POSTGRES_1='{"alias":"local","host":"localhost","user":"user","password":"secret","database":"test_db","port":"5432"}'
+    WHODB_POSTGRES_2='{"alias":"staging","host":"staging.example.com","user":"user","password":"secret","database":"app","port":"5432"}'
     ```
 
-    If the variable name does not end in a number, the value must be a JSON **array** of connections. If it ends in a number (e.g. `_1`, `_2`), the value is a single JSON **object**.
+    If the variable name does not end in a number, the value must be a JSON **array** of connections. If it ends in a number (e.g. `_1`, `_2`), the value is a single JSON **object**. Each connection object supports the fields `alias`, `host`, `user`, `password`, `database` and `port`.
 
-    Each connection object supports these fields:
-
-    ```json
-    {
-      "alias": "my-db",
-      "host": "localhost",
-      "user": "user",
-      "password": "password",
-      "database": "mydb",
-      "port": "3306",
-      "advanced": {}
-    }
-    ```
-
-    The `advanced` field accepts key-value pairs for SSL and database-specific settings:
-
-    | Key | Default | Applies to |
-    |---|---|---|
-    | `SSL Mode` | `disabled` | All databases. Values: `disabled`, `require`, `verify-ca`, `verify-full` |
-    | `SSL CA Path` | | All databases. Path to CA certificate file |
-    | `SSL Client Cert Path` | | All databases. Path to client certificate file |
-    | `SSL Client Key Path` | | All databases. Path to client key file |
-    | `SSL Server Name` | hostname | All databases. Server name for certificate verification |
-    | `Connection Timeout` | `90` | PostgreSQL, MySQL, MariaDB, ClickHouse. Timeout in seconds |
-    | `Parse Time` | `True` | MySQL/MariaDB |
-    | `Loc` | `UTC` | MySQL/MariaDB. Time zone location |
-    | `Allow clear text passwords` | `0` | MySQL/MariaDB |
-    | `HTTP Protocol` | `disable` | ClickHouse |
-    | `Readonly` | `disable` | ClickHouse |
-    | `Debug` | `disable` | ClickHouse |
-    | `URL Params` | | MongoDB. Additional URL query parameters |
-    | `DNS Enabled` | `false` | MongoDB. Use `mongodb+srv://` scheme |
+    For a full list of all environment variables, including AI provider configuration and advanced connection options, see the official [WhoDB documentation](https://docs.whodb.com/installation#configuration-options).
 
     All options except `PORT` and `WHODB_LOG_LEVEL` are commented out by default. To apply changes, restart the service:
 
