@@ -495,7 +495,7 @@ OpenGLES
 openHAB
 OpenSSH
 OpenSSL
-oenSUSE
+openSUSE
 OpenTyrian
 OpenVoiceOS
 OpenVPN
