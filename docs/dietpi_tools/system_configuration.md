@@ -32,6 +32,7 @@ dietpi-config
 
     - Overclock your system with a vast selection of overclocking profiles for your device.
     - Change the CPU governor and tweak your ARM temperature limits.
+    - Change the source for the CPU temperature value.
 
 === "Advanced Options"
 
