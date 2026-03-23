@@ -11,8 +11,9 @@ addon
 addons
 ADF
 AdGuard
-advanxer
 AdoptOpenJDK
+advanxer
+Adwaita
 AGPLv
 aircrafts
 AirPlay
@@ -494,6 +495,7 @@ OpenGLES
 openHAB
 OpenSSH
 OpenSSL
+openSUSE
 OpenTyrian
 OpenVoiceOS
 OpenVPN

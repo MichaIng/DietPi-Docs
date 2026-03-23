@@ -261,6 +261,8 @@ uv --version
 
 === "Update"
 
+    To update uv to the latest version, simply reinstall it:
+
     ```sh
     dietpi-software reinstall 217
     ```
