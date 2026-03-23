@@ -53,7 +53,7 @@ from any RPi camera, USB camera or an IP camera network stream.
     - Media directory = `/mnt/dietpi_userdata/motioneye`
     - Accessed from file server = `/motioneye`
 
-=== "Update to latest version"
+=== "Update"
 
     motionEye can be updated to the latest version via
 
@@ -134,7 +134,7 @@ Stream JPEG frames from various sources to various possible outputs. With the de
 
     6. Press ++ctrl+o++ to save the file and ++ctrl+x++ to exit the editor. When exiting `dietpi-services`, the service is automatically reloaded to be password-protected from now on.
 
-=== "Update to latest version"
+=== "Update"
 
     mjpg-streamer can be updated to the latest version by reinstalling it via
 
@@ -200,12 +200,24 @@ It has these basic features:
 
     Please see the online documentation: <https://github.com/tphakala/birdnet-go/blob/main/doc/wiki/guide.md>
 
-=== "Update to latest version"
+=== "Service control"
 
-    BirdNET-Go can be updated to the latest version by reinstalling it via
+    Since BirdNET-Go runs as systemd service, it can be controlled with the following commands:
 
     ```sh
-    dietpi-software reinstall 127
+    systemctl status birdnet
+    ```
+
+    ```sh
+    systemctl stop birdnet
+    ```
+
+    ```sh
+    systemctl start birdnet
+    ```
+
+    ```sh
+    systemctl restart birdnet
     ```
 
 === "View logs"
@@ -213,13 +225,15 @@ It has these basic features:
     You can view the service logs via
 
     ```sh
-    journalctl -u birdnet-go
+    journalctl -u birdnet
     ```
 
-    and the service status via
+=== "Update"
+
+    BirdNET-Go can be updated to the latest version by reinstalling it via
 
     ```sh
-    systemctl status birdnet-go
+    dietpi-software reinstall 127
     ```
 
 ***

@@ -22,6 +22,8 @@ description: Description of DietPi software options related to cloud and backup 
 - [**File Browser - Light web based file manager with sharing features**](#file-browser)
 - [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](#restic)
+- [**Immich - Self-hosted photo and video management solution**](#immich)
+- [**Immich Machine Learning - Machine learning server for Immich facial recognition and smart search**](#immich-machine-learning)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -62,15 +64,9 @@ ownCloud Infinite Scale (oCIS) is the new file sync & share platform that will b
     - Install directory: `/opt/ocis`
     - Config and data directory: `/mnt/dietpi_userdata/ocis`
 
-=== "View logs"
+=== "Service control"
 
-    ```sh
-    journalctl -u ocis
-    ```
-
-=== "Service handling"
-
-    Use the following commands to control the oCIS system service:
+    Since ownCloud Infinite Scale runs as systemd service, it can be controlled with the following commands:
 
     ```sh
     systemctl status ocis
@@ -86,6 +82,12 @@ ownCloud Infinite Scale (oCIS) is the new file sync & share platform that will b
 
     ```sh
     systemctl restart ocis
+    ```
+
+=== "View logs"
+
+    ```sh
+    journalctl -u ocis
     ```
 
 === "Update"
@@ -480,7 +482,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     /var/log/gogs
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     You can easily update Gogs by reinstalling it. Your settings and data are preserved by this:
 
@@ -490,8 +492,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
 ***
 
-Official website: <https://gogs.io/>  
-Official documentation: <https://gogs.io/docs>  
+Official documentation: <https://gogs.io/getting-started/introduction>  
 Source code: <https://github.com/gogs/gogs>  
 License: [MIT](https://github.com/gogs/gogs/blob/main/LICENSE)
 
@@ -599,7 +600,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
     File logging to `/var/log/gitea/gitea.log` can be enabled by editing `/mnt/dietpi_userdata/gitea/custom/conf/app.ini` and changing `MODE = console` in the `[log]` section to `MODE = file`.
 
-=== "Update to latest version"
+=== "Update"
 
     You can easily update Gitea by reinstalling it. Your settings and data are preserved by this:
 
@@ -721,7 +722,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
 
     File logging to `/var/log/forgejo/forgejo.log` can be enabled by editing `/mnt/dietpi_userdata/forgejo/custom/conf/app.ini` and changing `MODE = console` in the `[log]` section to `MODE = file`.
 
-=== "Update to latest version"
+=== "Update"
 
     You can easily update Forgejo by reinstalling it. Your settings and data are preserved by this:
 
@@ -776,6 +777,17 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     You devices should now duplicate the user data from your DietPi device to your Windows PC.
 
+=== "Update"
+
+    **Normally, the built-in update should be used from the web UI.**
+
+    If Syncthing needs to be reinstalled or repaired (e.g. broken instance), use the DietPi software reinstall command:
+
+    ```sh
+    rm -R /opt/syncthing
+    dietpi-software reinstall 50
+    ```
+
 ***
 
 Website: <https://syncthing.net>
@@ -823,7 +835,7 @@ It is an open source Kubernetes Native, High Performance Object Storage (S3 Comp
     ```
 
     !!! note "Conflict with GNU Midnight Commander"
-        The command `mc` is also used by [GNU Midnight Commander](../system_stats/#gnu-midnight-commander), a visual console file manager. If both are installed, the MinIO client takes precedence, hence either call Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
+        The command `mc` is also used by [GNU Midnight Commander](system_stats.md#gnu-midnight-commander), a visual console file manager. If both are installed, the MinIO client takes precedence, hence either call Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
 
         ```sh
         echo 'alias mnc=/usr/bin/mc' | sudo tee /etc/bashrc.d/midnight-commander.sh
@@ -937,12 +949,12 @@ vaultwarden is an unofficial Bitwarden password manager server with web interfac
     journalctl -u vaultwarden
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     As vaultwarden is installed via APT, it can be update with the following commands:
 
     ```sh
-    apt Update
+    apt update
     apt install vaultwarden
     ```
 
@@ -982,7 +994,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     - Config file: `/home/bd/bdd.conf`
     - File server directory: `/mnt/dietpi_userdata/fuguhub-data`
 
-=== "Logs"
+=== "View logs"
 
     - Service: `journalctl -u bdd`
     - Trace: `/home/bd/trace/`  
@@ -1084,7 +1096,7 @@ Access and manage your data from anywhere via browser with this lightweight remo
      journalctl -u filebrowser
      ```
 
-=== "Update to latest version"
+=== "Update"
 
     You can easily update File Browser by reinstalling it. Your settings and data are preserved by this:
 
@@ -1151,5 +1163,190 @@ Official website: <https://restic.net/>
 Official documentation: <https://restic.readthedocs.io/en/stable/>  
 Source code: <https://github.com/restic/restic>  
 License: [BSD 2-Clause](https://github.com/restic/restic/blob/master/LICENSE)
+
+## Immich
+
+Immich is a self-hosted photo and video management solution. It provides a fast backup tool, allowing you to browse, search and organise your photos and videos without relying on cloud services. It includes features like facial recognition, object tagging, album sharing and a mobile app for automatic backup.
+
+!!! warning "High resource requirements"
+    The Immich build process requires significant memory. `dietpi-software` hence temporarily expands the swap size where needed. On low-memory devices with slow drive, swapping can raise the build time to several hours. Generally, while it is possible, we do not recommend to run Immich on a system with less than 2 GB RAM, or less than 4 GB when running [Immich Machine Learning](#immich-machine-learning) on the same host.
+
+![Immich logo](../assets/images/dietpi-software-cloud-immich.svg){: width="300" height="101" loading="lazy"}
+
+=== "Access to the web interface"
+
+    Immich is accessible via HTTP on TCP port **2283**:
+
+    - URL: `http://<your.IP>:2283`
+
+    On first access, create an admin account via the registration form.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Configuration"
+
+    The service is configured via the environment file:
+
+    ```
+    /mnt/dietpi_userdata/immich/immich.env
+    ```
+
+    The file is pre-populated with the following options:
+
+    | Variable | Initial value | Description |
+    |---|---|---|
+    | `IMMICH_PORT` | `2283` | TCP port Immich listens on |
+    | `IMMICH_HOST` | `0.0.0.0` | Bind address for the Immich server |
+    | `IMMICH_MEDIA_LOCATION` | `/mnt/dietpi_userdata/immich/upload` | Upload location for photos and videos |
+    | `IMMICH_LOG_LEVEL` | `warn` | Log level: `verbose`, `debug`, `log`, `warn`, `error`, `fatal` |
+    | `IMMICH_MACHINE_LEARNING_ENABLED` | `false` | Enable machine learning features (requires separate ML server) |
+    | `IMMICH_MACHINE_LEARNING_URL` | `http://127.0.0.1:3003` | URL of the ML server (auto-configured when co-installed) |
+    | `DB_HOSTNAME` | `/run/postgresql` | PostgreSQL UNIX socket path |
+    | `DB_USERNAME` | `immich` | PostgreSQL user name |
+    | `DB_PASSWORD` | *(set during install)* | PostgreSQL password |
+    | `DB_DATABASE` | `immich` | PostgreSQL database name |
+    | `REDIS_SOCKET` | `/run/redis/redis-server.sock` | Redis Unix socket path |
+
+    After editing the file, restart the service to apply changes:
+
+    ```sh
+    systemctl restart immich
+    ```
+
+=== "Directories"
+
+    - Install directory: `/opt/immich`
+    - Data directory: `/mnt/dietpi_userdata/immich`
+    - Environment file: `/mnt/dietpi_userdata/immich/immich.env`
+    - Upload directory: `/mnt/dietpi_userdata/immich/upload`
+
+=== "Service control"
+
+    Since Immich runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status immich
+    ```
+
+    ```sh
+    systemctl stop immich
+    ```
+
+    ```sh
+    systemctl start immich
+    ```
+
+    ```sh
+    systemctl restart immich
+    ```
+
+=== "View logs"
+
+    ```sh
+    journalctl -u immich
+    ```
+
+=== "Machine Learning"
+
+    Machine Learning (ML) features in Immich require the **Immich Machine Learning** server (software option **216**). Refer to the [Immich Machine Learning](#immich-machine-learning) section for installation and configuration details.
+
+    When both Immich and the ML server are installed on the same device, `dietpi-software` automatically activates the ML connection in the Immich environment file. No manual configuration is needed.
+
+=== "Update"
+
+    You can update Immich by reinstalling it. Your data and configuration are preserved:
+
+    ```sh
+    dietpi-software reinstall 215
+    ```
+
+***
+
+Official website: <https://immich.app/>  
+Official documentation: <https://docs.immich.app/overview/quick-start/>  
+Source code: <https://github.com/immich-app/immich>  
+License: [AGPLv3](https://github.com/immich-app/immich/blob/main/LICENSE)
+
+## Immich Machine Learning
+
+The Immich Machine Learning server adds facial recognition and smart search via CLIP embeddings to your Immich installation. It can be installed on the same device as Immich (option **215**) or on a separate machine for distributed deployments.
+
+!!! warning "High memory demand"
+    The Immich ML server requires substantial memory at runtime. `dietpi-software` hence expands the swap size where needed. Generally, while it is possible, we do not recommend to run Immich ML on a system with less than 2 GB RAM, or less than 4 GB when running [Immich Machine Learning](#immich-machine-learning) on the same host.
+
+=== "Configuration"
+
+    The service is configured via the environment file:
+
+    ```
+    /mnt/dietpi_userdata/immich-ml/immich-ml.env
+    ```
+
+    The file is pre-populated with the following options:
+
+    | Variable | Initial value | Description |
+    |---|---|---|
+    | `IMMICH_PORT` | `3003` | TCP port the ML server listens on |
+    | `IMMICH_HOST` | `127.0.0.1` | Bind address; set to `0.0.0.0` to allow connections from a remote Immich server |
+    | `IMMICH_LOG_LEVEL` | `warn` | Log level: `verbose`, `debug`, `log`, `warn`, `error`, `fatal` |
+    | `MACHINE_LEARNING_CACHE_FOLDER` | `/mnt/dietpi_userdata/immich-ml/model-cache` | Directory for downloaded AI model files |
+
+    After editing the file, restart the service to apply changes:
+
+    ```sh
+    systemctl restart immich-ml
+    ```
+
+=== "Directories"
+
+    - Install directory: `/opt/immich-ml`
+    - Data directory: `/mnt/dietpi_userdata/immich-ml`
+    - Environment file: `/mnt/dietpi_userdata/immich-ml/immich-ml.env`
+    - Model cache: `/mnt/dietpi_userdata/immich-ml/model-cache`
+
+=== "Service handling"
+
+    - Start: `systemctl start immich-ml`
+    - Stop: `systemctl stop immich-ml`
+    - Restart: `systemctl restart immich-ml`
+    - Print status: `systemctl status immich-ml`
+
+=== "View logs"
+
+    ```sh
+    journalctl -u immich-ml
+    ```
+
+=== "Immich integration"
+
+    **Combined installation (same device)**
+
+    Install both Immich (option 215) and the ML server (option 216) on the same device. `dietpi-software` automatically sets `IMMICH_MACHINE_LEARNING_ENABLED=true` and `IMMICH_MACHINE_LEARNING_URL=http://127.0.0.1:3003` in `/mnt/dietpi_userdata/immich/immich.env`. No manual configuration is needed.
+
+    **Distributed installation (separate devices)**
+
+    To connect a remote Immich server to this ML server:
+
+    1. Set `IMMICH_HOST=0.0.0.0` in `/mnt/dietpi_userdata/immich-ml/immich-ml.env` to allow incoming connections.
+    2. Restart the ML service: `systemctl restart immich-ml`
+    3. Enable ML in Immich — either via the Immich web UI or by editing `/mnt/dietpi_userdata/immich/immich.env` and setting:
+        - `IMMICH_MACHINE_LEARNING_ENABLED=true`
+        - `IMMICH_MACHINE_LEARNING_URL=http://<ml-server-ip>:3003`
+
+=== "Update"
+
+    You can update Immich Machine Learning by reinstalling it. Your data and configuration are preserved:
+
+    ```sh
+    dietpi-software reinstall 216
+    ```
+
+***
+
+Official website: <https://immich.app/>  
+Official documentation: <https://docs.immich.app/overview/quick-start/>  
+Source code: <https://github.com/immich-app/immich/tree/main/machine-learning>  
+License: [AGPLv3](https://github.com/immich-app/immich/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)

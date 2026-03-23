@@ -275,15 +275,31 @@ Synapse is a server, written in Python, for communication using the Matrix proto
     systemctl reload synapse
     ```
 
-=== "Service handling"
+=== "Service control"
 
     The DietPi Synapse implementation creates a systemd service `synapse.service` to start and control the Synapse server. The following commands can be used:
 
-    - Start: `systemctl start synapse`
-    - Stop: `systemctl stop synapse`
-    - Restart: `systemctl restart synapse`
-    - Reload config: `systemctl reload synapse`
-    - Print status: `systemctl status synapse`
+    ```sh
+    systemctl status synapse
+    ```
+
+    ```sh
+    systemctl start synapse
+    ```
+
+    ```sh
+    systemctl stop synapse
+    ```
+
+    ```sh
+    systemctl restart synapse
+    ```
+
+    Reload configuration:
+
+    ```sh
+    systemctl reload synapse
+    ```
 
 === "View logs"
 
@@ -293,7 +309,7 @@ Synapse is a server, written in Python, for communication using the Matrix proto
     journalctl -u synapse
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     Since Synapse is installed into a Python venv at `/opt/synapse`, you can update it via:
 
@@ -390,6 +406,8 @@ License: [GPLv2](https://github.com/wikimedia/mediawiki/blob/master/COPYING)
 ## soju
 
 soju is an [IRC bouncer](https://wikipedia.org/wiki/BNC_(software)#IRC) – it connects to upstream IRC servers on your behalf, and then you can connect to it using multiple IRC clients. This causes chat history to be preserved without having to have the IRC client connected all the time.
+
+![Soju graphic](../assets/images/dietpi-software-social-soju.webp "Soju graphic"){: width="400" height="201" loading="lazy"}
 
 === "Access to soju"
 

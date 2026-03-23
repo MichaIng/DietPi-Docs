@@ -15,6 +15,7 @@ description: Description of DietPi software options related to software developm
 - [**Git - Distributed version control system**](#git)
 - [**PHP Composer - A Dependency Manager for PHP**](#php-composer)
 - [**Node.js - open-source, JavaScript runtime environment**](#nodejs)
+- [**uv - Python package and project manager**](#uv)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -108,7 +109,7 @@ go version
         _EOF_
         ```
 
-=== "Update to latest version"
+=== "Update"
 
     ```sh
     dietpi-software reinstall 188
@@ -163,7 +164,7 @@ VSCodium is a FLOSS version of [Microsoft's Visual Studio code](https://code.vis
 
 ![VSCodium screenshot](../assets/images/dietpi-software-programming-vscodium.png "VSCodium screen"){: width="1028" height="799" loading="lazy"}
 
-=== "Update to latest version"
+=== "Update"
 
     VSCodium is installed as APT package, hence you can update it by running the following commands:
 
@@ -235,6 +236,42 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
 
 Website: <https://nodejs.org/>  
 Official documentation: <https://nodejs.org/api/>
+
+## uv
+
+uv is an extremely fast Python package and project manager, written in Rust. It serves as a drop-in replacement for common Python tools like `pip`, `pip-tools`, `pipx`, `poetry`, `pyenv`, and `virtualenv`, combining their functionality into a single, unified tool.
+
+To find out which version of uv is installed, just run
+
+```sh
+uv --version
+```
+
+=== "Getting started"
+
+    Some common uv commands are:
+
+    - `uv pip install <package>`: Install a Python package
+    - `uv venv`: Create a virtual environment
+    - `uv run <script>`: Run a Python script, automatically managing its dependencies
+    - `uv tool install <tool>`: Install and run a Python CLI tool (e.g. `ruff`, `black`)
+    - `uv python install <version>`: Install a specific Python version
+
+    For a full overview of available commands, see the [official documentation](https://docs.astral.sh/uv/getting-started/features/).
+
+=== "Update"
+
+    To update uv to the latest version, simply reinstall it:
+
+    ```sh
+    dietpi-software reinstall 217
+    ```
+
+***
+
+Official documentation: <https://docs.astral.sh/uv/>  
+Source code: <https://github.com/astral-sh/uv>  
+License: [MIT or Apache 2.0](https://github.com/astral-sh/uv?tab=readme-ov-file#license)
 
 [Return to the **Optimised Software list**](../software.md)
 

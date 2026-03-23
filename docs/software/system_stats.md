@@ -120,7 +120,7 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     systemctl restart dietpi-dashboard-backend
     ```
 
-=== "Logs"
+=== "View logs"
 
     Service logs can be reviewed with the following command:
 
@@ -232,7 +232,7 @@ The GNU Midnight Commander (`mc`) is a visual file manager with a two column vie
 Midnight Commander is a full-screen text mode application running on a regular console, inside an X Window terminal, over SSH connections and all kinds of remote shells.
 
 !!! note "Conflict with MinIO console client"
-    The command `mc` is also used by the [MinIO](../cloud/#minio) console client. If MinIO is installed on the same system, the `mc` shell alias is configured to call the MinIO console client instead. In that case, you can still run Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
+    The command `mc` is also used by the [MinIO](cloud.md#minio) console client. If MinIO is installed on the same system, the `mc` shell alias is configured to call the MinIO console client instead. In that case, you can still run Midnight Commander with full path `/usr/bin/mc`, or setup an additional alias:
 
     ```sh
     echo 'alias mnc=/usr/bin/mc' | sudo tee /etc/bashrc.d/midnight-commander.sh
@@ -403,6 +403,14 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
     systemctl restart webmin
     ```
 
+=== "View logs"
+
+    Webmin service logs can be accessed with the following command:
+
+    ```sh
+    journalctl -u webmin
+    ```
+
 === "Update"
 
     Since Webmin is installed as APT package, it can be updated with the following commands:
@@ -410,14 +418,6 @@ Webmin is a web-based feature-rich remote system management tool. Many system se
     ```sh
     apt update
     apt install webmin
-    ```
-
-=== "View logs"
-
-    Webmin service logs can be accessed with the following command:
-
-    ```sh
-    journalctl -u webmin
     ```
 
 ***
@@ -742,7 +742,7 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
     systemctl restart node_exporter
     ```
 
-=== "Logs"
+=== "View logs"
 
     Prometheus Node Exporter runs as a systemd service, hence logs can be viewed with the following command:
 

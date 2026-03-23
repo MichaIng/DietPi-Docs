@@ -171,9 +171,9 @@ Unbound is a validating, recursive, caching DNS resolver. It can resolve hostnam
      journalctl -u unbound
      ```
 
-=== "Updating unbound"
+=== "Update"
 
-    Update to latest version:
+    Unbound can be updated to the latest version by executing
 
     ```sh
     apt update

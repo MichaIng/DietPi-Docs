@@ -165,26 +165,6 @@ Also installs:
 
         ![DietPi-JustBoom menu screenshot](../assets/images/dietpi-software-media-dietpi-justboom.png "DietPi-JustBoom main menu"){: width="400" height="269" loading="lazy"}
 
-=== "Service control"
-
-    Since myMPD runs as systemd service, it can be controlled with the following commands:
-
-    ```sh
-    systemctl status mympd
-    ```
-
-    ```sh
-    systemctl start mympd
-    ```
-
-    ```sh
-    systemctl stop mympd
-    ```
-
-    ```sh
-    systemctl restart mympd
-    ```
-
 === "Configuration"
 
     myMPD can be configured via individual config files, one for each setting within the config directory:
@@ -214,6 +194,26 @@ Also installs:
 
     ```sh
     systemctl restart mpd
+    ```
+
+=== "Service control"
+
+    Since myMPD runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status mympd
+    ```
+
+    ```sh
+    systemctl start mympd
+    ```
+
+    ```sh
+    systemctl stop mympd
+    ```
+
+    ```sh
+    systemctl restart mympd
     ```
 
 === "View logs"
@@ -443,7 +443,7 @@ Feature rich media streaming server with a web interface, coded in Java.
     systemctl restart airsonic
     ```
 
-=== "Logs"
+=== "View logs"
 
     Since Airsonic-Advanced runs as systemd service, its logs can be viewed via:
 
@@ -706,7 +706,7 @@ Available UPnP clients: <https://www.wikipedia.org/wiki/List_of_UPnP_AV_media_se
 
 A web based audio/video streaming application and file manager allowing you to access your music & videos from anywhere, using almost any internet enabled device.
 
-Also Installs:
+Also installs:
 
 - Webserver stack
 
@@ -977,6 +977,18 @@ Turn your device into a lightweight Mumble VoIP server.
 
 ![Mumble logo](../assets/images/dietpi-software-media-murmur.png){: width="100" height="100" loading="lazy"}
 
+![Mumble client screenshot](../assets/images/dietpi-software-media-mumble-client.webp){: width="600" height="330" loading="lazy"}
+
+=== "Mumble Client installation"
+
+    In order to connect to the Mumble server, a Mumble client is needed. They can be downloaded for various operating systems from the Mumble website <https://www.mumble.info/downloads/>.
+
+    In a DietPi system with a graphical desktop, the Mumble client can easily installed via
+
+    ```sh
+    apt install mumble
+    ```
+
 === "Murmur Server connection details"
 
     The server is accessible via port **64738**:
@@ -993,9 +1005,16 @@ Turn your device into a lightweight Mumble VoIP server.
     You will need to edit the Murmur config file:
 
     ```sh
-    nano /etc/mumble-server.ini
+    nano /etc/mumble/mumble-server.ini
     systemctl restart mumble-server
     ```
+
+    _On Debian Bookworm systems, the config file is located at `/etc/mumble-server.ini`._
+
+***
+
+Official website: <https://www.mumble.info/>  
+Source code: <https://github.com/mumble-voip/mumble>  
 
 ## Roon Bridge
 
@@ -1214,14 +1233,6 @@ Also works with Roon.
 
     Guide: <https://help.roonlabs.com/portal/en/kb/articles/hqplayer>
 
-=== "View logs"
-
-    Run the following command on a console to view logs for NAA Daemon:
-
-    ```sh
-    journalctl -u networkaudiod
-    ```
-
 === "Service control"
 
     Since NAA Daemon runs as systemd service, it can be controlled with the following commands:
@@ -1240,6 +1251,14 @@ Also works with Roon.
 
     ```sh
     systemctl restart networkaudiod
+    ```
+
+=== "View logs"
+
+    Run the following command on a console to view logs for NAA Daemon:
+
+    ```sh
+    journalctl -u networkaudiod
     ```
 
 === "Update"
@@ -1333,7 +1352,7 @@ Shoutcast streaming server, includes DarkIce for audio input, like a microphone.
 
     Icecast additionally creates access and error log files at: `/var/log/icecast2/`
 
-=== "Update to latest version"
+=== "Update"
 
     Icecast and DarkIce are installed from the Debian APT repository and hence can be updated by running the following commands:
 
@@ -1379,7 +1398,7 @@ Web interface music streamer.
     journalctl -u koel
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     To update Koel to the recent version, simply reinstall it:
 
@@ -1437,7 +1456,7 @@ A DLNA audio render/endpoint. Allows you to stream and play music, from another 
     journalctl -u gmediarender
     ```
 
-=== "Update to the latest version"
+=== "Update"
 
     As GMediaRender is installed via APT, it can be update with the following commands:
 
@@ -1472,7 +1491,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 
     Use the admin page to set the above locations for ebook and comic storage, then run a scan to update the database.
 
-=== "Update to the latest version"
+=== "Update"
 
     ```sh
     dietpi-software reinstall 80
@@ -1545,7 +1564,7 @@ Free and open source comics/mangas media server with web UI.
 
     Assure that the directory exists and the `komga` user or group has write permissions.
 
-=== "Update to latest version"
+=== "Update"
 
     To update Komga to the latest version, simply reinstall it via DietPi-Software:
 
@@ -1700,7 +1719,7 @@ A FOSS web interface media streaming server, including live TV, forked from Emby
 
     `/mnt/dietpi_userdata/jellyfin`
 
-=== "Update to latest version"
+=== "Update"
 
     Since Jellyfin is installed as APT packages, it can be updated with these commands:
 
@@ -1936,7 +1955,7 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
     systemctl restart navidrome
     ```
 
-=== "Logs"
+=== "View logs"
 
     Since Navidrome runs as systemd service, its logs can be viewed via:
 
@@ -1978,6 +1997,8 @@ A highlight of some of its key features:
     
     - URL: `http://<your.IP>:2036`
 
+    The first time the user logs in, an admin account with a username and password has to be entered in the initial login dialog.
+
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
 
@@ -2018,7 +2039,7 @@ A highlight of some of its key features:
     systemctl restart kavita
     ```
 
-=== "Logs"
+=== "View logs"
 
     Kavita runs as systemd service, its logs can be viewed via:
 

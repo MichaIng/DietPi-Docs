@@ -16,6 +16,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 - [**XRDP - Remote desktop server for Windows Remote Desktop Client**](#xrdp)
 - [**NoMachine - Feature rich remote desktop connection**](#nomachine)
 - [**RustDesk Server - Open source remote access and support software**](#rustdesk-server)
+- [**RustDesk Client - Open source remote desktop client**](#rustdesk-client)
 
 ### Remote Access
 
@@ -258,6 +259,20 @@ Once installed, available VirtualHere devices will be shown in the client user i
 
     The VirtualHere server listens on the TCP port **7575** by default for client connections.
 
+=== "Configuration"
+
+    The configuration file can be found at:
+
+    ```
+    /opt/virtualhere/config.ini
+    ```
+
+    When doing changes, apply them by restart the service:
+
+    ```sh
+    systemctl restart virtualhere
+    ```
+
 === "Service control"
 
     The service is started automatically at boot. As systemd service, it can be controlled with the following commands:
@@ -278,21 +293,7 @@ Once installed, available VirtualHere devices will be shown in the client user i
     systemctl restart virtualhere
     ```
 
-=== "Configuration"
-
-    The configuration file can be found at:
-
-    ```
-    /opt/virtualhere/config.ini
-    ```
-
-    When doing changes, apply them by restart the service:
-
-    ```sh
-    systemctl restart virtualhere
-    ```
-
-=== "Logs"
+=== "View logs"
 
     Since VirtualHere runs as systemd service, its logs can be viewed via:
 
@@ -370,6 +371,14 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
         doctor [rustdesk-server]                     Check for server connection problems
     ```
 
+=== "Moving RustDesk to a different system"
+
+    If a RustDesk Server shall be moved to a different system with keeping the original configuration, the following steps can be used:
+
+    1. Installation of RustDesk Server on the new system
+    1. Copying the directory `/mnt/dietpi_userdata/rustdesk` to the new system
+    1. Restart of the services or reboot
+
 === "Service control"
 
     The services are started automatically at boot. As systemd service, they can be controlled with the following commands:
@@ -390,15 +399,7 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
     systemctl restart rustdesksignal rustdeskrelay
     ```
 
-=== "Moving RustDesk to a different system"
-
-    If a RustDesk Server shall be moved to a different system with keeping the original configuration, the following steps can be used:
-
-    1. Installation of RustDesk Server on the new system
-    1. Copying the directory `/mnt/dietpi_userdata/rustdesk` to the new system
-    1. Restart of the services or reboot
-
-=== "Logs"
+=== "View logs"
 
     Since RustDesk runs as two systemd services, its logs can be viewed via:
 
@@ -432,7 +433,12 @@ The following ports need to be forwarded:
 
 ### Client installation and setup
 
-RustDesk clients for several operating systems are also available as open source packages. Clients for PCs can be downloaded from <https://github.com/rustdesk/rustdesk/releases>.
+RustDesk clients for several operating systems are also available as open source packages. Clients for PCs can be downloaded from <https://github.com/rustdesk/rustdesk/releases>.  
+In addition, RustDesk Client can be installed via `dietpi-software` in the category "Remote Desktop" or by executing
+
+```sh
+dietpi-software install 13
+```
 
 To connect to the self hosted RustDesk Server (instead of the public server from RustDesk), the configuration of the client has to be adjusted to the hostname resp. IP address of the RustDesk server in the field "ID Server" and the public key of the RustDesk server (contents of `id_ed25519.pub`) in the field "Key":
 
@@ -447,5 +453,90 @@ In the case that the user wants to connect to another RustDesk client which is a
 
 Official website: <https://rustdesk.com/>  
 Official server docs: <https://rustdesk.com/docs>
+
+## RustDesk Client
+
+RustDesk is an open source remote desktop client software, written in Rust.  
+The installed package is the official RustDesk client. It allows you to connect to and control other systems running the RustDesk client, using either the public RustDesk relay servers or a self-hosted [RustDesk Server](#rustdesk-server).
+
+![RustDesk logo](../assets/images/dietpi-software-remotedesktop-rustdesk-logo.svg "RustDesk logo"){: width="300" height="68" loading="lazy"}
+
+An X11 desktop environment is required by RustDesk Client and will be installed during the RustDesk Client installation process if not already present.
+
+![RustDesk Client main window](../assets/images/dietpi-software-remotedesktop-rustdeskclient_01.png "RustDesk Client main window"){: width="400" height="300" loading="lazy"}
+
+### Client management
+
+=== "Client configuration"
+
+    The client configuration is normally done completely in the client user interface and the user do not need to know where they reside.  
+    For special cases the configuration files which the client user interface generates/modifies can be found at:
+
+    ```
+    ~/.config/rustdesk/
+    ```
+
+    By default, RustDesk Client uses the public RustDesk server (`rs-ny.rustdesk.com`).  
+    To use a self-hosted RustDesk Server instead, the server address can be changed via the client's network settings, as described in the [Client installation and setup](#client-installation-and-setup_1) section below.
+
+=== "Update"
+
+    When a new version is available, RustDesk Client can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 13
+    ```
+
+    The version info of the installed client can be displayed via:
+
+    ```sh
+    rustdesk --version
+    ```
+
+### Client installation and setup
+
+After the DietPi installation of RustDesk Client, the client is already configured to use the public RustDesk server (`rs-ny.rustdesk.com`). The client can be started and used immediately without any further configuration.
+
+=== "Using the public RustDesk server"
+
+    By default, the RustDesk Client is configured to use the public RustDesk server. This is defined in the configuration file `~/.config/rustdesk/RustDesk2.toml`:
+
+    ```toml
+    rendezvous_server = 'rs-ny.rustdesk.com:21116'
+    ```
+
+    With this default configuration, the RustDesk Client connects to the public RustDesk relay server on startup. The client ID displayed in the RustDesk window can be shared with others to allow them to connect to your DietPi device.
+
+=== "Using a self-hosted RustDesk Server"
+
+    To connect to a self-hosted [RustDesk Server](#rustdesk-server) instead of the public server, the client has to be configured to use the hostname resp. IP address of the RustDesk server. Open the RustDesk Client, go to **Settings > Network** and set the **ID server** to the hostname or IP address of your self-hosted RustDesk Server, and set the **Key** to the public key of your RustDesk server (e.g. contents of `/mnt/dietpi_userdata/rustdesk/id_ed25519.pub` in case of a self-hosted server installed via `dietpi-software install 12`):
+
+    ![RustDesk client setup](../assets/images/dietpi-software-remotedesktop-rustdeskclient_02.png "RustDesk client configuration"){: width="549" height="321" loading="lazy"}
+
+    With this configuration, the RustDesk Client attaches to the self-hosted RustDesk Server on startup.  
+    In the case that the user wants to connect to another RustDesk client which is attached to the public RustDesk server, the ID of the other client has to be followed by `@public`:
+
+    ![RustDesk Client connect to the public RustDesk Server](../assets/images/dietpi-software-remotedesktop-rustdeskclient_03.png "RustDesk Client connect to the public RustDesk Server"){: width="343" height="147" loading="lazy"}
+
+    <h4>Persistent background service</h4>
+
+    Optionally, the `rustdesk` systemd service can be enabled to keep a persistent background connection to the self-hosted RustDesk Server. This allows other clients to always initiate remote desktop connections to this DietPi device, even when the RustDesk Client GUI is not open. Note that this is only recommended with a self-hosted server.
+
+    ```sh
+    systemctl enable --now rustdesk
+    ```
+
+    The service can be controlled with the usual `systemctl` commands, and its logs can be viewed via:
+
+    ```sh
+    systemctl status rustdesk
+    systemctl restart rustdesk
+    journalctl -u rustdesk
+    ```
+
+***
+
+Official website: <https://rustdesk.com/>  
+Official client docs: <https://rustdesk.com/docs>
 
 [Return to the **Optimised Software list**](../software.md)

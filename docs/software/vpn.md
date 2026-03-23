@@ -264,7 +264,7 @@ Tailscale is a VPN service that makes the devices and applications you own acces
     systemctl restart tailscaled
     ```
 
-=== "Logs"
+=== "View logs"
 
     Tailscale runs as a systemd service, hence logs can be viewed with the following command:
 
@@ -350,7 +350,7 @@ ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all
     systemctl restart zerotier-one
     ```
 
-=== "Logs"
+=== "View logs"
 
     ZeroTier runs as a systemd service, hence logs can be viewed with the following command:
 

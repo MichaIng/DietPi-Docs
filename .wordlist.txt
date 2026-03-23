@@ -11,8 +11,9 @@ addon
 addons
 ADF
 AdGuard
-advanxer
 AdoptOpenJDK
+advanxer
+Adwaita
 AGPLv
 aircrafts
 AirPlay
@@ -173,6 +174,7 @@ ebook
 ebooks
 EDL
 EEPROM
+embeddings
 Emby
 eMMC
 emoncms
@@ -288,6 +290,7 @@ IEC
 ilex
 Imager
 Imgur
+Immich
 InfluxData
 InfluxDB
 init
@@ -492,6 +495,7 @@ OpenGLES
 openHAB
 OpenSSH
 OpenSSL
+openSUSE
 OpenTyrian
 OpenVoiceOS
 OpenVPN
@@ -704,6 +708,7 @@ SVG
 swapfile
 swappiness
 symlink
+symlinks
 Syncthing
 syscall
 sysfs
@@ -781,6 +786,7 @@ userdata
 userspace
 UTM
 UUID
+uv
 Vae
 vaultwarden
 VC

@@ -175,7 +175,7 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
     journalctl -u node-red
     ```
 
-=== "Update to current version"
+=== "Update to latest version"
 
     You can update Node-RED modules via programming IDE. To update the "node-red" core module, run the following command from console:
 
@@ -247,7 +247,7 @@ MQTT provides a lightweight method of carrying out messaging using a publish/sub
     journalctl -u mosquitto
     ```
 
-=== "Update to latest version"
+=== "Update"
 
     Mosquitto is installed via its official APT repository, hence the following commands can be used to update it to the latest version:
 
