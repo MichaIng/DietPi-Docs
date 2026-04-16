@@ -684,7 +684,7 @@ License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
 ## Prometheus Node Exporter
 
-Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by an external [Prometheus server](https://prometheus.io/), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](../hardware_projects/#grafana), the final piece of a very powerful monitoring stack.
+Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by an external [Prometheus Server](#prometheus-server), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](../hardware_projects/#grafana), the final piece of a very powerful monitoring stack.
 
 ![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png "Prometheus Node Exporter dialog"){: width="800" height="395" loading="lazy"}
 
