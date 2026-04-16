@@ -684,7 +684,7 @@ License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
 ## Prometheus Node Exporter
 
-Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by an external [Prometheus server](https://prometheus.io/), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](https://grafana.com/), the final piece of a very powerful monitoring stack.
+Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by an external [Prometheus server](https://prometheus.io/), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](../hardware_projects/#grafana), the final piece of a very powerful monitoring stack.
 
 ![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png "Prometheus Node Exporter dialog"){: width="800" height="395" loading="lazy"}
 
@@ -701,20 +701,7 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
 
 === "Configuration"
 
-    ???+ important "Prometheus server not included"
-        Note that this software component **does not** install or configure a Prometheus server. DietPi provides [**Prometheus Server**](#prometheus-server) as a separate software title (ID 218) that can be installed alongside this exporter.
-
-    Your Prometheus server needs to be configured in order to scrape Node Exporter metrics. Full configuration of the Prometheus server is outside the scope of this documentation, but here is a sample `prometheus.yml` file for reference:
-
-    ```yaml
-    global:
-      scrape_interval: 15s
-
-    scrape_configs:
-    - job_name: your.hostname
-      static_configs:
-      - targets: ['your.IP:9100']
-    ```
+    A Prometheus server is required to scrape the metrics exposed by this exporter. It can be installed on this or another machine. DietPi provides [**Prometheus Server**](#prometheus-server) as a separate software title (ID 218), including a ready-to-use example configuration for this exporter.
 
 === "Grafana dashboard"
 
@@ -768,7 +755,7 @@ License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LI
 
 ## Prometheus Server
 
-Prometheus is an open-source monitoring system and time series database. It scrapes metrics from configured targets at given intervals, evaluates rule expressions, displays results, and can trigger alerts when specified conditions are observed. It is the natural companion to [**Prometheus Node Exporter**](#prometheus-node-exporter) and provides the server-side component of a monitoring stack that can be visualized through [Grafana](https://grafana.com/).
+Prometheus is an open-source monitoring system and time series database. It scrapes metrics from configured targets at given intervals, evaluates rule expressions, displays results, and can trigger alerts when specified conditions are observed. It is the natural companion to [**Prometheus Node Exporter**](#prometheus-node-exporter) and provides the server-side component of a monitoring stack that can be visualized through [Grafana](../hardware_projects/#grafana).
 
 === "Web interface"
 
@@ -796,7 +783,7 @@ Prometheus is an open-source monitoring system and time series database. It scra
     scrape_configs:
     - job_name: your.hostname
       static_configs:
-      - targets: ['localhost:9100']
+      - targets: ['127.0.0.1:9100']
     ```
 
     After editing the configuration file, restart the service to apply changes:
