@@ -21,6 +21,7 @@ description: Description of DietPi software options related to system statistics
 - [**K3s - Lightweight Kubernetes**](#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](#prometheus-node-exporter)
+- [**Prometheus Server - Monitoring system and time series database**](#prometheus-server)
 - [**Homer - A modern homepage for your services**](#homer)
 - [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](#uptime-kuma)
 
@@ -701,7 +702,7 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
 === "Configuration"
 
     ???+ important "Prometheus server not included"
-        Note that this software component **does not** install or configure a Prometheus server, it must be installed separately.
+        Note that this software component **does not** install or configure a Prometheus server. DietPi provides [**Prometheus Server**](#prometheus-server) as a separate software title (ID 218) that can be installed alongside this exporter.
 
     Your Prometheus server needs to be configured in order to scrape Node Exporter metrics. Full configuration of the Prometheus server is outside the scope of this documentation, but here is a sample `prometheus.yml` file for reference:
 
@@ -764,6 +765,88 @@ Official website: <https://github.com/prometheus/node_exporter>
 Official documentation: <https://prometheus.io/docs/guides/node-exporter/>  
 Prometheus RPi Exporter: <https://github.com/fahlke/raspberrypi_exporter>  
 License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE), [MIT](https://github.com/fahlke/raspberrypi_exporter/blob/master/LICENSE) (for RPi Exporter)
+
+## Prometheus Server
+
+Prometheus is an open-source monitoring system and time series database. It scrapes metrics from configured targets at given intervals, evaluates rule expressions, displays results, and can trigger alerts when specified conditions are observed. It is the natural companion to [**Prometheus Node Exporter**](#prometheus-node-exporter) and provides the server-side component of a monitoring stack that can be visualized through [Grafana](https://grafana.com/).
+
+=== "Web interface"
+
+    The Prometheus web interface is accessible via HTTP at TCP port **9090**:
+
+    - URL: `http://<your.IP>:9090`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Directories"
+
+    - Binaries: `/opt/prometheus/`
+    - Configuration file: `/mnt/dietpi_userdata/prometheus/prometheus.yml`
+    - Data directory: `/mnt/dietpi_userdata/prometheus/`
+
+=== "Configuration"
+
+    The Prometheus configuration file is located at `/mnt/dietpi_userdata/prometheus/prometheus.yml`. It is created on first install and preserved on reinstall. A minimal example that scrapes a local [Prometheus Node Exporter](#prometheus-node-exporter):
+
+    ```yaml
+    global:
+      scrape_interval: 15s
+
+    scrape_configs:
+    - job_name: your.hostname
+      static_configs:
+      - targets: ['localhost:9100']
+    ```
+
+    After editing the configuration file, restart the service to apply changes:
+
+    ```sh
+    systemctl restart prometheus
+    ```
+
+=== "Service control"
+
+    Since Prometheus Server runs as a systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status prometheus
+    ```
+
+    ```sh
+    systemctl start prometheus
+    ```
+
+    ```sh
+    systemctl stop prometheus
+    ```
+
+    ```sh
+    systemctl restart prometheus
+    ```
+
+=== "View logs"
+
+    Prometheus Server runs as a systemd service, hence logs can be viewed with the following command:
+
+    ```sh
+    journalctl -u prometheus
+    ```
+
+=== "Update"
+
+    Prometheus Server can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall 218
+    ```
+
+***
+
+Official website: <https://prometheus.io/>  
+Official documentation: <https://prometheus.io/docs/>  
+Source code: <https://github.com/prometheus/prometheus>  
+License: [Apache 2.0](https://github.com/prometheus/prometheus/blob/main/LICENSE)
 
 ## Homer
 
