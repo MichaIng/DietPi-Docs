@@ -283,7 +283,7 @@ A similar procedure may be used when moving the SD card contents to a smaller SD
     ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_3.webp "DietPi-Drive_Manager with auto-mount"){: width="600" height="309" loading="lazy"}
 
     The mount point will be `/media/<uuid>` with `<uuid>` as the UUID of the drive partitions.  
-    The UUID can also be retreived via the command `blkid` (example `blkid` output: `/dev/sdb1: UUID="2AAB-9D1A" ...` resp. `/dev/sdb2: UUID="6A15-D0E7" ...`).
+    The UUID can also be retrieved via the command `blkid` (example `blkid` output: `/dev/sdb1: UUID="2AAB-9D1A" ...` resp. `/dev/sdb2: UUID="6A15-D0E7" ...`).
 
 #### Mount network drive
 
