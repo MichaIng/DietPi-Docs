@@ -684,7 +684,7 @@ License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
 ## Prometheus Node Exporter
 
-Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by an external [Prometheus server](#prometheus), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](../hardware_projects/#grafana), the final piece of a very powerful monitoring stack.
+Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by a dedicated [Prometheus server](#prometheus), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](../hardware_projects/#grafana), the final piece of a very powerful monitoring stack.
 
 ![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png "Prometheus Node Exporter dialog"){: width="800" height="395" loading="lazy"}
 
@@ -794,7 +794,7 @@ Prometheus is an open-source monitoring system and time series database. It scra
 
 === "Service control"
 
-    Since Prometheus server runs as a systemd service, it can be controlled with the following commands:
+    Since Prometheus runs as a systemd service, it can be controlled with the following commands:
 
     ```sh
     systemctl status prometheus
@@ -814,7 +814,7 @@ Prometheus is an open-source monitoring system and time series database. It scra
 
 === "View logs"
 
-    Prometheus server runs as a systemd service, hence logs can be viewed with the following command:
+    Prometheus runs as a systemd service, hence logs can be viewed with the following command:
 
     ```sh
     journalctl -u prometheus
@@ -822,7 +822,7 @@ Prometheus is an open-source monitoring system and time series database. It scra
 
 === "Update"
 
-    Prometheus server can be updated by simply reinstalling it:
+    Prometheus can be updated by simply reinstalling it:
 
     ```sh
     dietpi-software reinstall 218
