@@ -11,6 +11,7 @@ addon
 addons
 ADF
 AdGuard
+admin's
 AdoptOpenJDK
 advanxer
 Adwaita
@@ -136,6 +137,7 @@ DDR
 DDX
 de
 deathmatch
+deduplicate
 deinstallation
 DER
 dereference
@@ -715,6 +717,7 @@ sysfs
 sysvinit
 syslog
 systemd
+systemd's
 SysV
 Tailscale
 TasmoAdmin
@@ -767,6 +770,7 @@ uncomment
 unencrypted
 unformatted
 unmount
+unmounts
 unicast
 UNISOC
 USBridge
