@@ -30,10 +30,6 @@ Home Assistant is an open-source home automation platform running on Python 3. T
         Some integrations may require additional APT and/or Python dependencies. The latter are usually installed ondemand by the Home Assistant core, when installing or accessing the integration, but APT packages need to be installed manually.  
         This can be automated with two `dietpi.txt` settings: `SOFTWARE_HOMEASSISTANT_APT_DEPS` and `SOFTWARE_HOMEASSISTANT_PIP_DEPS`
 
-    !!! warning "Long installation duration"
-        The install process on slower SBC models can take a while, hence take a coffee, find some other activity and check back once in a while.  
-        If you want to see processing details, run `htop` on a dedicated terminal or SSH session to watch the Python module build processes live.
-
     After `dietpi-software` has finished and the service starts the first time, please go through the following steps manually:
 
     - Run `htop` and wait until the CPU usage of the `homeassistant` processes goes down to nearly zero.
@@ -91,7 +87,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     ```
 
     Home Assistant updates may drop support for old Python versions. The release notes would inform about this: <https://github.com/home-assistant/core/releases>  
-    To update the Python version along with Home Assistant, reinstall it. Since Python dependencies need to be reinstalled, the first service start, and accessing certain integrations for the first time, may again take a while:
+    To update the Python version along with Home Assistant, reinstall it:
 
     ```sh
     dietpi-software reinstall 157
