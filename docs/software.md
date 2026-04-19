@@ -95,7 +95,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Chromium - Web browser**](software/desktop.md#chromium)
 - [**Firefox - Web browser**](software/desktop.md#firefox)
 - [**GIMP - Image editor**](software/desktop.md#gimp)
-- [**QuiteRSS - RSS and Atom news feeds reader**](software/desktop.md#quiterss)
 - [**Xfce Power Manager - Power manager with brightness control**](software/desktop.md#xfce-power-manager)
 
 ## [Development & Programming](software/programming.md)
@@ -271,7 +270,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**K3s - Lightweight Kubernetes**](software/system_stats.md#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](software/system_stats.md#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](software/system_stats.md#prometheus-node-exporter)
-- [**Prometheus Server - Monitoring system and time series database**](software/system_stats.md#prometheus-server)
+- [**Prometheus - Monitoring system and time series database**](software/system_stats.md#prometheus)
 - [**Homer - A modern homepage for your services**](software/system_stats.md#homer)
 - [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](software/system_stats.md#uptime-kuma)
 

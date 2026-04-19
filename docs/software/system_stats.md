@@ -21,7 +21,7 @@ description: Description of DietPi software options related to system statistics
 - [**K3s - Lightweight Kubernetes**](#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](#prometheus-node-exporter)
-- [**Prometheus Server - Monitoring system and time series database**](#prometheus-server)
+- [**Prometheus - Monitoring system and time series database**](#prometheus)
 - [**Homer - A modern homepage for your services**](#homer)
 - [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](#uptime-kuma)
 
@@ -684,7 +684,7 @@ License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
 ## Prometheus Node Exporter
 
-Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by an external [Prometheus Server](#prometheus-server), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](../hardware_projects/#grafana), the final piece of a very powerful monitoring stack.
+Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by a dedicated [Prometheus server](#prometheus), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](../hardware_projects/#grafana), the final piece of a very powerful monitoring stack.
 
 ![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png "Prometheus Node Exporter dialog"){: width="800" height="395" loading="lazy"}
 
@@ -701,7 +701,7 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
 
 === "Configuration"
 
-    A Prometheus server is required to scrape the metrics exposed by this exporter. It can be installed on this or another machine. DietPi provides [**Prometheus Server**](#prometheus-server) as a separate software title (ID 218), including a ready-to-use example configuration for this exporter.
+    A Prometheus server is required to scrape the metrics exposed by this exporter. It can be installed on this or another machine. DietPi provides [**Prometheus**](#prometheus) as a separate software title (ID 218), including a ready-to-use example configuration for this exporter.
 
 === "Grafana dashboard"
 
@@ -753,7 +753,7 @@ Official documentation: <https://prometheus.io/docs/guides/node-exporter/>
 Prometheus RPi Exporter: <https://github.com/fahlke/raspberrypi_exporter>  
 License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE), [MIT](https://github.com/fahlke/raspberrypi_exporter/blob/master/LICENSE) (for RPi Exporter)
 
-## Prometheus Server
+## Prometheus
 
 Prometheus is an open-source monitoring system and time series database. It scrapes metrics from configured targets at given intervals, evaluates rule expressions, displays results, and can trigger alerts when specified conditions are observed. It is the natural companion to [**Prometheus Node Exporter**](#prometheus-node-exporter) and provides the server-side component of a monitoring stack that can be visualized through [Grafana](../hardware_projects/#grafana).
 
@@ -794,7 +794,7 @@ Prometheus is an open-source monitoring system and time series database. It scra
 
 === "Service control"
 
-    Since Prometheus Server runs as a systemd service, it can be controlled with the following commands:
+    Since Prometheus runs as a systemd service, it can be controlled with the following commands:
 
     ```sh
     systemctl status prometheus
@@ -814,7 +814,7 @@ Prometheus is an open-source monitoring system and time series database. It scra
 
 === "View logs"
 
-    Prometheus Server runs as a systemd service, hence logs can be viewed with the following command:
+    Prometheus runs as a systemd service, hence logs can be viewed with the following command:
 
     ```sh
     journalctl -u prometheus
@@ -822,7 +822,7 @@ Prometheus is an open-source monitoring system and time series database. It scra
 
 === "Update"
 
-    Prometheus Server can be updated by simply reinstalling it:
+    Prometheus can be updated by simply reinstalling it:
 
     ```sh
     dietpi-software reinstall 218

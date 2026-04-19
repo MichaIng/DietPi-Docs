@@ -5,6 +5,7 @@ description: Overview of DietPi releases with applied new software and features,
 
 # DietPi Releases
 
+- [v10.3 April 2026](releases/v10_3.md)
 - [v10.2 March 2026](releases/v10_2.md)
 - [v10.1 February 2026](releases/v10_1.md)
 - [v10.0 January 2026](releases/v10_0.md)

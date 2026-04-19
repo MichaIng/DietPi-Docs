@@ -20,7 +20,6 @@ description: Description of DietPi software options related to graphical desktop
 - [**Chromium - Web browser**](#chromium)
 - [**Firefox - Web browser**](#firefox)
 - [**GIMP - Image editor**](#gimp)
-- [**QuiteRSS - RSS and Atom news feeds reader**](#quiterss)
 - [**Xfce Power Manager - Power manager with brightness control**](#xfce-power-manager)
 
 [//]: # (Include software expandable infoblock)
@@ -261,14 +260,6 @@ MS Paint on steroids. If you need to edit pixels with a vast number of tools, GI
 ***
 
 Website: <https://www.gimp.org>
-
-***
-
-### QuiteRSS
-
-QuiteRSS is an open-source cross-platform RSS / Atom news feeds reader, with the main idea to be fast and comfortable to the end-user.
-
-![QuiteRSS screenshot](../assets/images/dietpi-software-desktop-tools-quiterss.jpg "QuiteRSS screen"){: width="760" height="564" loading="lazy"}
 
 ***
 
