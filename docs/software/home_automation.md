@@ -31,8 +31,8 @@ Home Assistant is an open-source home automation platform running on Python 3. T
         This can be automated with two `dietpi.txt` settings: `SOFTWARE_HOMEASSISTANT_APT_DEPS` and `SOFTWARE_HOMEASSISTANT_PIP_DEPS`
 
     !!! warning "Long installation duration"
-        The install process on slower SBC models can take a up to 2 hours, hence take a coffee, find some other activity and check back once in a while. It will show "Installing Python-3.x.x..." a very long time.  
-        If you want to see processing details, run `htop` on a dedicated terminal or SSH session to watch Python build process live.
+        The install process on slower SBC models can take a while, hence take a coffee, find some other activity and check back once in a while.  
+        If you want to see processing details, run `htop` on a dedicated terminal or SSH session to watch the Python module build processes live.
 
     After `dietpi-software` has finished and the service starts the first time, please go through the following steps manually:
 
@@ -63,13 +63,11 @@ Home Assistant is an open-source home automation platform running on Python 3. T
 
 === "Customize Python environment"
 
-    Home Assistant is installed within a dedicated Python environment, powered by: <https://github.com/pyenv/pyenv>.  
-    This places a standalone Python instance which runs completely independent from any other installed Python instance or modules. If you need to install additional Python modules into this pyenv environment, update Python itself or similar, you need to open a shell as user `homeassistant` and activate the pyenv environment:
+    Home Assistant is installed within a dedicated Python virtual environment at `/opt/homeassistant/.venv`, managed by [uv](../software/programming.md#uv).  
+    This places a standalone Python instance which runs completely independent from any other installed Python instance or modules. If you need to install additional Python modules into this environment, run:
 
     ```sh
-    sudo -u homeassistant bash
-    . /home/homeassistant/pyenv-activate.sh
-    pip3 install <module> # Or whichever install/update you need to do
+    sudo -u homeassistant uv pip install --directory /opt/homeassistant <module>
     ```
 
 === "Known additional dependencies for device integration"
@@ -89,11 +87,11 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     To quickly update Home Assistant to the current version, run:
 
     ```sh
-    /home/homeassistant/homeassistant-update.sh
+    /opt/homeassistant/homeassistant-update.sh
     ```
 
     Home Assistant updates may drop support for old Python versions. The release notes would inform about this: <https://github.com/home-assistant/core/releases>  
-    To update the `pyenv` Python version along with Home Assistant, reinstall it. Since Python dependencies need to be reinstalled, the first service start, and accessing certain integrations for the first time, may again take a while:
+    To update the Python version along with Home Assistant, reinstall it. Since Python dependencies need to be reinstalled, the first service start, and accessing certain integrations for the first time, may again take a while:
 
     ```sh
     dietpi-software reinstall 157
