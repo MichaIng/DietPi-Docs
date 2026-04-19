@@ -16,8 +16,8 @@ dietpi-config
 
     The display options are used to
 
-    - Set your screen resolution, or go headless to save additional resources.  
-    - Control your GPU memory splits.  
+    - Set the screen resolution, or go headless to save additional resources.  
+    - Control the GPU memory splits.  
     - Enable/disable the RPi camera.
 
 === "Audio Options"
@@ -30,8 +30,8 @@ dietpi-config
 
     The performance options are used to
 
-    - Overclock your system with a vast selection of overclocking profiles for your device.
-    - Change the CPU governor and tweak your ARM temperature limits.
+    - Overclock the system with a vast selection of overclocking profiles for the device.
+    - Change the CPU governor and tweak the ARM temperature limits.
     - Change the source for the CPU temperature value.
 
 === "Advanced Options"
@@ -54,15 +54,15 @@ dietpi-config
 
     The language/regional options are used to
 
-    - Set timezone, locale and keyboard options. Everything you will need to make it feel like home
+    - Set timezone, locale and keyboard options. Everything which will be needed to make it feel like home
 
 === "Network Options: Adapters"
 
     The network options are used to
 
-    - Scan and connect to your WiFi router with ease
-    - Change to a static IP address on your network
-    - Configure your proxy settings
+    - Scan and connect to a WiFi router with ease
+    - Change to a static IP address on the network
+    - Configure proxy settings
     - Test internet connection
     - Toggle IPv6 support
 
@@ -71,13 +71,13 @@ dietpi-config
     The miscellaneous network options options are used to
 
     - Select an **APT mirror** to connect to the Debian (or Raspbian) APT repository.
-    - Select an **NTP mirror** to synchronise your system time.
+    - Select an **NTP mirror** to synchronise the system time.
     - Choose these options for the **network and URL connection tests**:
         - Set Network test connection timeout and number of connection test tries.
         - Set IPv4 and IPv6 addresses used for the connection test.
         - Set the domain used for the domain name resolution test.
-    - **Network Drives** redirects you to the **DietPi-Drive_Manager** which allows you to mount Samba and NFS shares on your DietPi system.
-    - Select one of several **Dynamic DNS** ([**DDNS**](https://wikipedia.org/wiki/Dynamic_DNS)) providers which allows you to access your home network/server with a static domain name. The client is required to inform the DDNS of your current dynamic external IP on a regular basis.
+    - **Network Drives** redirects to the **DietPi-Drive_Manager** which allows to mount Samba and NFS shares on the DietPi system.
+    - Select one of several **Dynamic DNS** ([**DDNS**](https://wikipedia.org/wiki/Dynamic_DNS)) providers which allows to access a home network/server with a static domain name. The client is required to inform the DDNS of a current dynamic external IP on a regular basis.
 
 === "AutoStart Options"
 
@@ -89,8 +89,8 @@ dietpi-config
 
     The tools options are used to
 
-    - Perform CPU, RAM, filesystem and network **benchmarks**, optionally upload your results and review statistics at: <https://dietpi.com/survey/#benchmark>
-    - Perform CPU/IO/RAM/DISK **stress tests** to test the stability of your system, e.g. after applying some overclocking.
+    - Perform CPU, RAM, filesystem and network **benchmarks**, optionally upload the results and review statistics at: <https://dietpi.com/survey/#benchmark>
+    - Perform CPU/IO/RAM/DISK **stress tests** to test the stability of the system, e.g. after applying some overclocking.
 
 ### DietPi-Config - Command line usage
 
@@ -128,9 +128,9 @@ Available values for <targetmenu_id>:
 
 ## DietPi drive manager
 
-Feature-rich drive management utility. It is a lightweight program that allows you to:
+Feature-rich drive management utility. It is a lightweight program that allows to:
 
-- Manage drives: Mount, format external drives
+- Manage drives: Mount (manual and automatic), format external drives
 - Maintenance drives: Check and repair drives, resize (expand) filesystem, change reserved blocks count
 - Set drive attributes: Set read only filesystems, set idle spindown time
 - Move DietPi User data
@@ -139,13 +139,13 @@ Feature-rich drive management utility. It is a lightweight program that allows y
 - Run benchmarks on drives
 - Mount network drives (NFS and Samba)
 
-To start DietPi-Drive_Manager, use the following command:
+To start DietPi-Drive_Manager, the following command is used:
 
 ```sh
 dietpi-drive_manager
 ```
 
-![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager.jpg "DietPi-Drive_Manager main menu"){: width="643" height="327" loading="lazy"}
+![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_1.webp "DietPi-Drive_Manager main menu"){: width="640" height="296" loading="lazy"}
 
 ### Software overview
 
@@ -154,9 +154,9 @@ dietpi-drive_manager
 To use an additional drive (example USB drive) the following steps have to be done:
 
 1. Run `dietpi-drive_manager` to bring up the main menu.
-1. Plug in the drive you wish to use.
+1. Plug in the drive which shall be used.
 1. Select `Refresh` from the menu (if it doesn't show up straight away, give it a few seconds for system to update, then try again).
-1. Select the drive you wish to use from the list, then press ++enter++.
+1. Select the drive which shall be used from the list, then press ++enter++.
 
     ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_2.png "DietPi-Drive_Manager unmounted drive dialog"){: width="600" height="297" loading="lazy"}
 
@@ -169,7 +169,7 @@ To use an additional drive (example USB drive) the following steps have to be do
 
 #### Move the location of user data and swap file
 
-You can move the location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swap file to a different location on a target drive. This may be useful if your filesystem containing the DietPi user data resp. swap file has only little space left.
+The location of the DietPi user data (default `/mnt/dietpi_userdata`) or the swap file can be moved to a different location on a target drive. This may be useful if the filesystem containing the DietPi user data resp. swap file has only little space left.
 Therefore execute the following steps (example user data, swap file is quite similar):
 
 1. Run `dietpi-drive_manager` to bring up the main menu.
@@ -187,12 +187,12 @@ Therefore execute the following steps (example user data, swap file is quite sim
 
 #### Format filesystem types
 
-Formatting filesystems lead you to these dialogues:
+Formatting filesystems leads to these dialogues:
 
 ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_6.png "DietPi-Drive_Manager format dialog"){: width="500" height="137" loading="lazy"}
 ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_7.png "DietPi-Drive_Manager format file system type options"){: width="500" height="326" loading="lazy"}
 
-In the latter dialog you have to choose the filesystem type. The following selections may be chosen:
+In the latter dialog the filesystem type has to be selected. The following options may be chosen:
 
 === "ext4 (Default)"
 
@@ -251,9 +251,9 @@ In the latter dialog you have to choose the filesystem type. The following selec
 
 #### Move DietPi system to a larger SD card
 
-If you want to extend your DietPi SD card space by moving the system to a larger memory card, this can be achieved by the following steps:
+If the DietPi SD card space shall be expanded by moving the system to a larger memory card, this can be achieved by the following steps:
 
-1. Shutdown your system and put the SD card into a card reader of a different systems.
+1. Shutdown the system and put the SD card into a card reader of a different systems.
 1. Copy the SD card contents to the new (larger) SD card. This can e.g. be done using
     - the `dd` command (command line option)
     - [balenaEtcher](https://etcher.balena.io/) or [Rufus](https://rufus.ie/) (graphical user interface option)
@@ -265,21 +265,37 @@ If you want to extend your DietPi SD card space by moving the system to a larger
 
     ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_8.png "DietPi-Drive_Manager resize filesystem"){: width="500" height="138" loading="lazy"}
 
-1. Reboot your system to expand the root filesystem to use the whole space of the new memory card.
+1. Reboot the system to expand the root filesystem to use the whole space of the new memory card.
 
-A similar procedure may be used when moving the SD card contents to a smaller SD card. During this procedure you typically need to shrink the partition size (e.g. with `parted` or `gparted`) before copying the partition image to a different memory card. Also, do the resize to use the full space on the new card.
+A similar procedure may be used when moving the SD card contents to a smaller SD card. During this procedure typically a shrink of the partition size (e.g. with `parted` or `gparted`) is necessary before copying the partition image to a different memory card. Also, do the resize to use the full space on the new card.
+
+#### Auto-mount of local USB drives
+
+`DietPi-Drive_Manager` has the option to auto-mount local USB devices to `/media/<uuid>` when they are plugged in. On removal they are automatically unmounted.
+
+- In case of a deselected auto-mount option the following output is given  
+  (example with `/dev/sdb` with two partitions `sdb1` and `sdb2`):
+
+    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_2.webp "DietPi-Drive_Manager without auto-mount"){: width="600" height="307" loading="lazy"}
+
+- With selected auto-mount option the following output results:
+
+    ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_3.webp "DietPi-Drive_Manager with auto-mount"){: width="600" height="309" loading="lazy"}
+
+    The mount point will be `/media/<uuid>` with `<uuid>` as the UUID of the drive partitions.  
+    The UUID can also be retreived via the command `blkid` (example `blkid` output: `/dev/sdb1: UUID="2AAB-9D1A" ...` resp. `/dev/sdb2: UUID="6A15-D0E7" ...`).
 
 #### Mount network drive
 
-If you want to mount a NFS drive or a Samba share, you can do this by:
+Mounting a NFS drive or a Samba share can be done this by:
 
 1. Run `dietpi-drive_manager` to bring up the main menu.
 1. Select `Add network drive`.
-1. Select the type of network drive that you have.
+1. Select the type of network drive that shall be mounted.
 1. Follow the prompts.
 
 !!! info "Mounting a macOS Samba share"
-    To mount a macOS Samba share enabled in `Sharing`, you need to (in the server) go to `Sharing > File Sharing > Options > Windows File Sharing` and select your username.
+    To mount a macOS Samba share enabled in `Sharing`, it is needed to (in the server) go to `Sharing > File Sharing > Options > Windows File Sharing` and select the appropriate username.
 
 ### DietPi drive manager - Command line usage
 
@@ -415,7 +431,7 @@ dietpi-display
 
 ## DietPi LED control
 
-Change triggers for the status LEDs on your SBC/motherboard. To start DietPi-LED_Control, use the following command:
+Change triggers for the status LEDs on the SBC/motherboard. To start DietPi-LED_Control, use the following command:
 
 ```sh
 dietpi-led_control
@@ -423,7 +439,7 @@ dietpi-led_control
 
 ![DietPi-LED_control screenshot](../assets/images/dietpi-ledcontrol.jpg "DietPi-LED_control main menu"){: width="643" height="269" loading="lazy"}
 
-Depending on your used hardware, the number of entries in the dialog will change.
+Depending on the used hardware, the number of entries in the dialog will change.
 
 ---
 
@@ -455,7 +471,7 @@ If no sound output is configured, the following dialog appears:
 
 ![DietPi-JustBoom screenshot](../assets/images/dietpi-justboom.jpg "DietPi-JustBoom no sound output message dialog"){: width="642" height="228" loading="lazy"}
 
-In this case you have to e.g. install a sound program package via `dietpi-software` or configure the sound output e.g. via `dietpi-config`.
+In this case e.g. a sound program package via `dietpi-software` has to be installed or the sound output e.g. via `dietpi-config` has to be configured.
 
 ---
 
@@ -471,7 +487,7 @@ dietpi-banner
 
 ### Software Overview
 
-Using these settings you can configure the information displayed initially, choosing the details displayed initially. See below an example where 4 options are selected:
+Using these settings the information displayed initially can be configured, choosing the details displayed initially. See below an example where 4 options are selected:
 
 ![DietPi-Banner print on login](../assets/images/dietpi-banner.jpg "DietPi-Banner output"){: width="636" height="359" loading="lazy"}
 
