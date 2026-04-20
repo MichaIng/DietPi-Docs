@@ -757,7 +757,7 @@ License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LI
 
 Prometheus is an open-source monitoring system and time series database. It scrapes metrics from configured targets at given intervals, evaluates rule expressions, displays results, and can trigger alerts when specified conditions are observed. It is the natural companion to [**Prometheus Node Exporter**](#prometheus-node-exporter) and provides the server-side component of a monitoring stack that can be visualized through [Grafana](hardware_projects.md#grafana).
 
-![Grafana Prometheus interface screenshot](../assets/images/grafana_prometheus_full.webp "Prometheus dialog"){: width="800" height="395" loading="lazy"}
+![Prometheus interface screenshot](../assets/images/prometheus_full.webp "Prometheus web interface"){: width="800" height="395" loading="lazy"}
 
 === "Web interface"
 
