@@ -184,7 +184,7 @@ Access the frontend for the `Let's Encrypt` integration by running
 dietpi-letsencrypt
 ```
 
-### Software overview
+### Feature overview
 
 In case of a non installed Certbot package it is installed at first:
 
@@ -225,7 +225,7 @@ dietpi-vpn
 
 ![OpenVPN logo](../assets/images/dietpi-software-vpn-openvpn-logo.png){: width="200" height="58" loading="lazy"}
 
-### Software overview
+### Feature overview
 
 === "Requires VPN Subscription"
 
