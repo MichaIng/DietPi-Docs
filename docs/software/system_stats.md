@@ -684,7 +684,7 @@ License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
 
 ## Prometheus Node Exporter
 
-Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by a dedicated [Prometheus server](#prometheus), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](hardware_projects.md#grafana), the final piece of a very powerful monitoring stack.
+Prometheus exporter for hardware and OS metrics. This component exposes system metrics, so they can be scraped by a dedicated [**Prometheus server**](#prometheus), which can aggregate metrics from many devices. These metrics can then be visualized through [Grafana](hardware_projects.md#grafana), the final piece of a very powerful monitoring stack.
 
 ![Grafana Node Exporter interface screenshot](../assets/images/grafana_node_exporter_full.png "Prometheus Node Exporter dialog"){: width="800" height="395" loading="lazy"}
 
@@ -756,6 +756,8 @@ License: [Apache 2.0](https://github.com/prometheus/node_exporter/blob/master/LI
 ## Prometheus
 
 Prometheus is an open-source monitoring system and time series database. It scrapes metrics from configured targets at given intervals, evaluates rule expressions, displays results, and can trigger alerts when specified conditions are observed. It is the natural companion to [**Prometheus Node Exporter**](#prometheus-node-exporter) and provides the server-side component of a monitoring stack that can be visualized through [Grafana](hardware_projects.md#grafana).
+
+![Prometheus interface screenshot](../assets/images/prometheus_full.webp "Prometheus web interface"){: width="800" height="395" loading="lazy"}
 
 === "Web interface"
 
