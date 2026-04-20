@@ -324,7 +324,7 @@ Defines software packages to start when the DietPi OS boots up. Example, boot in
 dietpi-autostart
 ```
 
-![DietPi-Autostart screenshot](../assets/images/dietpi-autostart.jpg "DietPi-Autostart main menu"){: width="640" height="458" loading="lazy"}
+![DietPi-Autostart screenshot](../assets/images/dietpi-autostart.webp "DietPi-Autostart main menu"){: width="640" height="441" loading="lazy"}
 
 ### DietPi autostart - Command line usage
 
