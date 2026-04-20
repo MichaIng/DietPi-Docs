@@ -10,7 +10,7 @@ dietpi-config
 
 ![DietPi-Config screenshot](../assets/images/dietpi-config.jpg "DietPi-Config main menu"){: width="643" height="335" loading="lazy"}
 
-### Software overview
+### Feature overview
 
 === "Display Options"
 
@@ -147,7 +147,7 @@ dietpi-drive_manager
 
 ![DietPi-Drive_Manager screenshot](../assets/images/dietpi-drive-manager_1.webp "DietPi-Drive_Manager main menu"){: width="640" height="296" loading="lazy"}
 
-### Software overview
+### Feature overview
 
 #### Setup a dedicated drive for DietPi
 
@@ -355,7 +355,7 @@ Provides service control, priority level tweaks and status print. To start DietP
 dietpi-services
 ```
 
-### Software overview
+### Feature overview
 
 If DietPi services are called via the command line without arguments, an interactive menu to apply service modes and settings comes up:
 
@@ -485,7 +485,7 @@ dietpi-banner
 
 ![DietPi-Banner config menu](../assets/images/dietpi-banner_config.jpg "DietPi-Banner main menu"){: width="640" height="368" loading="lazy"}
 
-### Software Overview
+### Feature overview
 
 Using these settings the information displayed initially can be configured, choosing the details displayed initially. See below an example where 4 options are selected:
 
