@@ -16,16 +16,16 @@
 ## Introduction
 
 This is the source code repository for the [DietPi Documentation website](https://dietpi.com/docs/).
-It uses extended Markdown, as implemented by [MkDocs](https://www.mkdocs.org/).
+It uses extended Markdown, as implemented by [Zensical](https://zensical.org/).
 
 [![CodeFactor](https://www.codefactor.io/repository/github/michaing/dietpi-docs/badge)](https://www.codefactor.io/repository/github/michaing/dietpi-docs)
 
 ## Building the documentation
 
 - Install/update dependencies: `python3 -m pip install -Ur requirements.txt`
-- From the root directory, run: `python3 -m mkdocs serve`
+- From the root directory, run: `python3 -m zensical serve`
 
-It builds the static HTML pages into a temporary directory and starts a local web server at `http://localhost:8000`. If you have troubles accessing the MkDocs website, you could also listen on a specific IP address or all IP addresses, e.g. `mkdocs serve -a 0.0.0.0:8000`.
+It builds the static HTML pages into a temporary directory and starts a local web server at `http://localhost:8000`. If you have troubles accessing the Zensical website, you could also listen on a specific IP address or all IP addresses, e.g. `zensical serve -a 0.0.0.0:8000`.
 
 ## Contributing
 
