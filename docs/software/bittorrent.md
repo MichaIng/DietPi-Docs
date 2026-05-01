@@ -23,7 +23,7 @@ description: Description of DietPi software options related to BitTorrent and ot
 - [**Jackett - API Support for your favourite torrent trackers**](#jackett)
 - [**NZBGet - NZB download manager with web interface**](#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](#htpc-manager)
-- [**yt-dlp - download videos from YouTube and other sites**](#youtube-dl)
+- [**yt-dlp - download videos from YouTube and other sites**](#yt-dlp)
 - [**LazyLibrarian - Ebook and audiobook collection manager**](#lazylibrarian)
 
 [//]: # (Include software expandable infoblock)
