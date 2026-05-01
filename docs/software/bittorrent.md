@@ -23,7 +23,7 @@ description: Description of DietPi software options related to BitTorrent and ot
 - [**Jackett - API Support for your favourite torrent trackers**](#jackett)
 - [**NZBGet - NZB download manager with web interface**](#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](#htpc-manager)
-- [**youtube-dl - download videos from YouTube and other sites**](#youtube-dl)
+- [**yt-dlp - download videos from YouTube and other sites**](#youtube-dl)
 - [**LazyLibrarian - Ebook and audiobook collection manager**](#lazylibrarian)
 
 [//]: # (Include software expandable infoblock)
@@ -1584,24 +1584,23 @@ Do all your HTPC tasks without using 5 different interfaces!
 Official website: <https://htpc.io/>  
 Official documentation: <https://nzbget.com/documentation/>  
 
-## youtube-dl
+## yt-dlp
 
-`youtube-dl` is a command-line program to download videos from YouTube.com and many more sites. See here the full list of supported websites: <https://ytdl-org.github.io/youtube-dl/supportedsites.html>
+`yt-dlp` is a command-line program to download videos from YouTube.com and many more sites. See here the full list of supported websites: <https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md>
 
 === "Quick start"
 
     This tool could be accessed from the command line
 
     ```sh
-    youtube-dl [OPTIONS] URL [URL...]
+    yt-dlp [OPTIONS] URL [URL...]
     ```
 
-    Read the documentation for more details on the options used: <https://github.com/ytdl-org/youtube-dl#options>
+    Read the documentation for more details on the options used: <https://github.com/yt-dlp/yt-dlp#usage-and-options>
 
 ***
 
-Official website: <https://ytdl-org.github.io/youtube-dl/>  
-Official documentation: <https://github.com/ytdl-org/youtube-dl/blob/master/README.md>
+Official repo and documentation: <https://github.com/yt-dlp/yt-dlp>  
 
 ## LazyLibrarian
 
