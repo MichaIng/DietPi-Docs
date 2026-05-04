@@ -155,6 +155,7 @@ distro
 DIY
 DLNA
 dl
+dlp
 dm
 DNS
 Domoticz
@@ -870,6 +871,8 @@ YDNS
 yescrypt
 ympd
 youtube
+yt
+yt-dlp
 Zeroconf
 ZeroPi
 ZeroTier

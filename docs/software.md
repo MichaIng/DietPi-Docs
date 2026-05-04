@@ -45,7 +45,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Jackett - API Support for your favourite torrent trackers**](software/bittorrent.md#jackett)
 - [**NZBGet - NZB download manager with web interface**](software/bittorrent.md#nzbget)
 - [**HTPC Manager - combines all your favourite software into one slick interface**](software/bittorrent.md#htpc-manager)
-- [**youtube-dl - download videos from YouTube and other sites**](software/bittorrent.md#youtube-dl)
+- [**yt-dlp - download videos from YouTube and other sites**](software/bittorrent.md#yt-dlp)
 - [**LazyLibrarian - Ebook and audiobook collection manager**](software/bittorrent.md#lazylibrarian)
 
 ## [Camera & Surveillance](software/camera.md)
