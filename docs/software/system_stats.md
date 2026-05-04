@@ -676,11 +676,11 @@ High availability - Low-ops, minimal production Kubernetes, for developers, clou
 
 ***
 
-Official website: <https://microk8s.io/>  
-Official documentation: <https://microk8s.io/docs>  
-Addons documentation: <https://microk8s.io/docs/addons>  
-Source code: <https://github.com/ubuntu/microk8s>  
-License: [Apache 2.0](https://github.com/ubuntu/microk8s/blob/master/LICENSE)
+Official website: <https://canonical.com/microk8s>  
+Official documentation: <https://canonical.com/microk8s/docs>  
+Addons documentation: <https://canonical.com/microk8s/docs/addons>  
+Source code: <https://github.com/canonical/microk8s>  
+License: [Apache 2.0](https://github.com/canonical/microk8s/blob/master/LICENSE)
 
 ## Prometheus Node Exporter
 

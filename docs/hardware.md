@@ -646,7 +646,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
 
 ### StarFive
 
-[StarFive](https://www.starfivetech.com/en/site/soc) is a RISC-V SoC and SBC manufacturer and offers the [VisionFive 2](https://www.starfivetech.com/uploads/VisionFive%202%20isionDocumentation.pdf), started as a [Kickstarter project](https://www.kickstarter.com/projects/starfive/visionfive-2). The board contains a quad-core RISC-V JH7110 SoC, 2/4/8 GiB of RAM and many other bells and whistles of the Raspberry Pi type world.
+[StarFive](https://www.starfivetech.com/en/index.php?s=computing&c=category&id=1) is a RISC-V SoC and SBC manufacturer and offers the [VisionFive 2](https://www.starfivetech.com/en/index.php?s=hardware&c=show&id=14), started as a [Kickstarter project](https://www.kickstarter.com/projects/starfive/visionfive-2). The board contains a quad-core RISC-V JH7110 SoC, 2/4/8 GiB of RAM and many other bells and whistles of the Raspberry Pi type world.
 
 ![StarFive VisionFive 2 photo](assets/images/riscv-starfive-visionfive2.jpg "StarFive VisionFive 2"){: width="500" height="420" loading="lazy"}
 

@@ -218,7 +218,11 @@ This node lets you download files through IPFS and add your own files to the net
     dietpi-software reinstall 186
     ```
 
-    IPFS has a built in update command (`ipfs update`), but this requires the `ipfs-update` binary found at https://dist.ipfs.io/#ipfs-update.
+    Alternatively, IPFS has an experimental built in update command:
+
+    ```sh
+    sudo ipfs update
+    ```
 
 ***
 
