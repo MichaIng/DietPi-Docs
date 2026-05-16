@@ -43,6 +43,8 @@ audiobooks
 Audiophonics
 Autobooting
 autologin
+automount
+automounts
 autostart
 AutoStart
 Avahi
@@ -104,6 +106,7 @@ Clonezilla
 Cloudflare
 CloudPrint
 CloudShell
+Codeberg
 codec
 codecs
 compat
@@ -177,6 +180,7 @@ ebook
 ebooks
 EDL
 EEPROM
+EFI
 embeddings
 Emby
 eMMC
