@@ -22,7 +22,7 @@ dietpi-benchmark
 
 ![DietPi-Benchmark screenshot](../assets/images/dietpi-tools-dietpi-benchmark.webp "DietPi-Benchmark menu"){: width="960" height="323" loading="lazy"}
 
-### Software overview
+### Feature overview
 
 The benchmark covers
 
@@ -74,7 +74,7 @@ dietpi-survey
 
 ![DietPi-Survey screenshot](../assets/images/dietpi-survey.jpg "DietPi-Survey main menu"){: width="645" height="368" loading="lazy"}
 
-### Software overview
+### Feature overview
 
 === "Data transmission events"
 
@@ -197,7 +197,7 @@ dietpi-servarr_to_ram
 
 ![DietPi-Servarr_to_RAM screenshot](../assets/images/dietpi-tools-dietpi-servarr-to-ram.webp "DietPi-Servarr_to_RAM main menu"){: width="960" height="272" loading="lazy"}
 
-### Software overview
+### Feature overview
 
 === "Link databases to RAM"
 

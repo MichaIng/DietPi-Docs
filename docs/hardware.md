@@ -571,9 +571,15 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
         </thead>
         <tbody>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi 5/5B</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi 5</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 5B</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5B-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -636,6 +642,12 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3LTS-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 4 LTS</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi4LTS-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -646,7 +658,7 @@ The [RISC-V platform](https://en.wikipedia.org/wiki/RISC-V) is an open source IS
 
 ### StarFive
 
-[StarFive](https://www.starfivetech.com/en/site/soc) is a RISC-V SoC and SBC manufacturer and offers the [VisionFive 2](https://www.starfivetech.com/uploads/VisionFive%202%20isionDocumentation.pdf), started as a [Kickstarter project](https://www.kickstarter.com/projects/starfive/visionfive-2). The board contains a quad-core RISC-V JH7110 SoC, 2/4/8 GiB of RAM and many other bells and whistles of the Raspberry Pi type world.
+[StarFive](https://www.starfivetech.com/en/index.php?s=computing&c=category&id=1) is a RISC-V SoC and SBC manufacturer and offers the [VisionFive 2](https://www.starfivetech.com/en/index.php?s=hardware&c=show&id=14), started as a [Kickstarter project](https://www.kickstarter.com/projects/starfive/visionfive-2). The board contains a quad-core RISC-V JH7110 SoC, 2/4/8 GiB of RAM and many other bells and whistles of the Raspberry Pi type world.
 
 ![StarFive VisionFive 2 photo](assets/images/riscv-starfive-visionfive2.jpg "StarFive VisionFive 2"){: width="500" height="420" loading="lazy"}
 

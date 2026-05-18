@@ -56,8 +56,8 @@ ownCloud Infinite Scale (oCIS) is the new file sync & share platform that will b
 
     oCIS has two config files:
 
-    1. The environment file `/mnt/dietpi_userdata/ocis/ocis.env` needs to be edited manually as needed, and requires a service restart to become effective. More variables can be found in the [official documentation](https://doc.owncloud.com/ocis/7.3/deployment/general/general-info.html#default-paths).
-    2. Other settings are stored in `/mnt/dietpi_userdata/ocis/ocis.yaml`, which however can be usually done via web interface. oCIS internally starts features as so called "services", which can be configured with individual config files as well. See the [official docs](https://doc.owncloud.com/ocis/7.3/deployment/general/general-info.html#configuration-rules) for further details.
+    1. The environment file `/mnt/dietpi_userdata/ocis/ocis.env` needs to be edited manually as needed, and requires a service restart to become effective. More variables can be found in the [official documentation](https://doc.owncloud.com/ocis/latest/deployment/general/general-info.html#default-paths).
+    2. Other settings are stored in `/mnt/dietpi_userdata/ocis/ocis.yaml`, which however can be usually done via web interface. oCIS internally starts features as so called "services", which can be configured with individual config files as well. See the [official docs](https://doc.owncloud.com/ocis/latest/deployment/general/general-info.html#configuration-rules) for further details.
 
 === "Directories"
 
@@ -98,12 +98,12 @@ ownCloud Infinite Scale (oCIS) is the new file sync & share platform that will b
     dietpi-software reinstall 47
     ```
 
-    Manual migration steps might be needed between major version upgrades. See the related official migration docs before upgrading: <https://doc.owncloud.com/ocis/next/migration/upgrading-ocis.html#introduction>
+    Manual migration steps might be needed between major version upgrades. See the related official migration docs before upgrading: <https://doc.owncloud.com/ocis/latest/migration/upgrading-ocis.html#introduction>
 
 ***
 
 Official website: <https://owncloud.com/infinite-scale/>  
-Official documentation: <https://doc.owncloud.com/ocis/>  
+Official documentation: <https://doc.owncloud.com/ocis/latest/>  
 Official forum: <https://central.owncloud.org/>  
 Source code: <https://github.com/owncloud/ocis>  
 License: [Apache 2.0](https://github.com/owncloud/ocis/blob/master/LICENSE)

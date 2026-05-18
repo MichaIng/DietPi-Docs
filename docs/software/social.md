@@ -405,7 +405,7 @@ License: [GPLv2](https://github.com/wikimedia/mediawiki/blob/master/COPYING)
 
 ## soju
 
-soju is an [IRC bouncer](https://wikipedia.org/wiki/BNC_(software)#IRC) – it connects to upstream IRC servers on your behalf, and then you can connect to it using multiple IRC clients. This causes chat history to be preserved without having to have the IRC client connected all the time.
+soju is an [IRC bouncer](https://en.wikipedia.org/wiki/IRC_bouncer) – it connects to upstream IRC servers on your behalf, and then you can connect to it using multiple IRC clients. This causes chat history to be preserved without having to have the IRC client connected all the time.
 
 ![Soju graphic](../assets/images/dietpi-software-social-soju.webp "Soju graphic"){: width="400" height="201" loading="lazy"}
 

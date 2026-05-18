@@ -58,7 +58,7 @@ dietpi-backup
 
 ![DietPi-Backup menu screenshot](../assets/images/dietpi-backup_1.png "DietPi-Backup main menu"){: width="643" height="306" loading="lazy"}
 
-### Software Overview
+### Feature overview
 
 === "Settings files"
 
@@ -224,7 +224,7 @@ dietpi-sync
 
 ![DietPi-Sync screenshot](../assets/images/dietpi-sync.jpg "DietPi-Sync main menu"){: width="646" height="322" loading="lazy"}
 
-### Software Overview
+### Feature overview
 
 Example: If you want to duplicate (sync) the data on your external USB HDD to another location, you simply select the USB HDD as the source, then select a target location. The target location can be anything from a networked samba file server, or even an FTP server.
 

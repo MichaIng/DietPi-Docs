@@ -51,8 +51,8 @@ jobs:
       # Skip on push events into master
       if: always() && steps.build.outcome == 'success' && ! endsWith(github.ref, '/master')
       run: |
-        curl -sSfLo lychee.tar.gz "$(curl -sSfH 'Authorization: Bearer ${{ github.token }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | mawk -F\" '/^ *"browser_download_url": ".*x86_64-unknown-linux-gnu\.tar\.gz"$/{print $4;exit}')"
-        tar xf lychee.tar.gz
+        curl -sSfLo lychee.tar.gz "$(curl -sSfH 'Authorization: Bearer ${{ github.token }}' 'https://api.github.com/repos/lycheeverse/lychee/releases/latest' | grep -Po '"browser_download_url": *"\K[^"]*/lychee-x86_64-unknown-linux-gnu\.tar\.gz(?=")')"
+        tar xf lychee.tar.gz --strip-components=1 lychee-x86_64-unknown-linux-gnu/lychee
     - name: Restore lychee cache
       uses: actions/cache/restore@v5
       if: always() && steps.lychee.outcome == 'success'
