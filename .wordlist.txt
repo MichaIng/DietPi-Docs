@@ -43,6 +43,8 @@ audiobooks
 Audiophonics
 Autobooting
 autologin
+automount
+automounts
 autostart
 AutoStart
 Avahi
@@ -104,6 +106,7 @@ Clonezilla
 Cloudflare
 CloudPrint
 CloudShell
+Codeberg
 codec
 codecs
 compat
@@ -128,6 +131,7 @@ Cuberite
 customisable
 customizable
 CVE
+CVEs
 DAC
 DALL
 DarkBetter
@@ -177,6 +181,7 @@ ebook
 ebooks
 EDL
 EEPROM
+EFI
 embeddings
 Emby
 eMMC
@@ -554,6 +559,7 @@ Prowlarr
 Proxmox
 PSK
 PSU
+pubkey
 PuTTY
 PVM
 PVR

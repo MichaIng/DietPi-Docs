@@ -571,9 +571,15 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
         </thead>
         <tbody>
             <tr>
-                <td><a class="table" href=""><strong>Orange Pi 5/5B</strong></a></td>
+                <td><a class="table" href=""><strong>Orange Pi 5</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 5B</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi5B-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
@@ -634,6 +640,12 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) w
                 <td><a class="table" href=""><strong>Orange Pi 3 LTS</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3LTS-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 4 LTS</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi4LTS-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
