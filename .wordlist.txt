@@ -131,6 +131,7 @@ Cuberite
 customisable
 customizable
 CVE
+CVEs
 DAC
 DALL
 DarkBetter
@@ -558,6 +559,7 @@ Prowlarr
 Proxmox
 PSK
 PSU
+pubkey
 PuTTY
 PVM
 PVR
