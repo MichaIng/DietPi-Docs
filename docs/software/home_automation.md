@@ -83,7 +83,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     To quickly update Home Assistant to the current version, run:
 
     ```sh
-    /opt/homeassistant/homeassistant-update.sh
+    /home/homeassistant/homeassistant-update.sh
     ```
 
     Home Assistant updates may drop support for old Python versions. The release notes would inform about this: <https://github.com/home-assistant/core/releases>  
