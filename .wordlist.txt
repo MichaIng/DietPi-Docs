@@ -155,6 +155,7 @@ DietPi's
 Dimitris
 DiogoAbu
 diskimager
+DispmanX
 distro
 DIY
 DLNA
@@ -182,6 +183,7 @@ ebooks
 EDL
 EEPROM
 EFI
+eFuse
 embeddings
 Emby
 eMMC
@@ -420,6 +422,7 @@ Mio
 MIPI
 mjpg
 MkDocs
+MMAL
 modder
 Mopidy
 morse
@@ -497,10 +500,11 @@ OOTB
 OPcache
 OrangePi
 OpenBazaar
-OpenJDK
 OpenGL
 OpenGLES
 openHAB
+OpenJDK
+OpenMAX
 OpenSSH
 OpenSSL
 openSUSE
