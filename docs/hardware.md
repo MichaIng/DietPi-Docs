@@ -555,7 +555,7 @@ For more details visit the [**FriendlyELEC**](https://www.friendlyelec.com/) web
 
 Orange Pi is an open source product brand of Shenzhen Xunlong Software Co., Ltd, which focuses on providing cost-effective open source hardware, open source software and OEM/ODM services for individuals and enterprises worldwide.
 
-For more details visit the [**Orange Pi**](http://www.orangepi.org/index.html) website.
+For more details visit the [**Orange Pi**](http://www.orangepi.org/) website.
 
 ![Orange Pi 5 photo](assets/images/dietpi-orange-pi-5.png "Orange Pi 5"){: width="500" height="334" loading="lazy"}
 
