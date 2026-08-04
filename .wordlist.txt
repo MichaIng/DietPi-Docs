@@ -449,7 +449,7 @@ mysql
 MySqli
 MySQLTuner
 NAA
-namespace
+namespaces
 NAND
 nano
 NanoPC
