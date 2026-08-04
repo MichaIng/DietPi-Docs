@@ -1110,6 +1110,61 @@ Official documentation: <https://filebrowser.org/>
 Source code: <https://github.com/filebrowser/filebrowser>  
 License: [Apache 2.0](https://github.com/filebrowser/filebrowser/blob/master/LICENSE)
 
+## Homebox
+
+Homebox is a self-hosted home inventory and organisation system. It helps you keep track of your belongings, warranties, maintenance schedules, and locations with a simple web interface. It uses a SQLite database and is designed to be lightweight and easy to deploy.
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **7745**:
+
+    - URL = `http://<your.IP>:7745`
+
+    On first access, you will be prompted to create an initial user account.
+
+=== "Directories"
+
+    - Install directory: `/opt/homebox`
+    - Data directory: `/mnt/dietpi_userdata/homebox`
+
+=== "Update"
+
+    You can update Homebox by reinstalling it. Your database and settings are preserved:
+
+    ```sh
+    dietpi-software reinstall 219
+    ```
+
+=== "Reverse proxy"
+
+    Homebox runs its own embedded web server. If you want to access it through a custom domain or with HTTPS, configure your web server as a reverse proxy. Example for Nginx:
+
+    ```nginx
+    location / {
+        proxy_pass http://127.0.0.1:7745;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+    ```
+
+    If you run Homebox under a sub-path (e.g. `/homebox`), set the `HBOX_OPTIONS_HOSTNAME` environment variable in `/mnt/dietpi_userdata/homebox/homebox.env` accordingly and restart the service:
+
+    ```sh
+    systemctl restart homebox
+    ```
+
+***
+
+Official documentation: <https://homebox.software/>  
+Source code: <https://github.com/sysadminsmedia/homebox>  
+License: [AGPL-3.0](https://github.com/sysadminsmedia/homebox/blob/main/LICENSE)
+
 ## Rclone
 
 Rclone is a command-line program to manage files on cloud storage. It is a feature-rich alternative to cloud vendors' web storage interfaces. Over [40 cloud storage products](https://rclone.org/#providers) support Rclone, including S3 object stores, business & consumer file storage services, as well as standard transfer protocols.
