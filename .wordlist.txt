@@ -449,6 +449,7 @@ mysql
 MySqli
 MySQLTuner
 NAA
+namespaces
 NAND
 nano
 NanoPC
@@ -496,6 +497,7 @@ ondemand
 Ondrej
 OneLogin
 oneshot
+ONNX
 OOTB
 OPcache
 OrangePi
@@ -874,6 +876,7 @@ XRDP
 XSS
 XU
 Xunlong
+Xunlong's
 xz
 YaCy
 YAML
