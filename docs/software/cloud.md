@@ -20,7 +20,7 @@ description: Description of DietPi software options related to cloud and backup 
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](#file-browser)
-- [**Homebox - Self-hosted home inventory and organisation system**](#homebox)
+- [**HomeBox - Self-hosted home inventory and organisation system**](#homebox)
 - [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](#restic)
 - [**Immich - Self-hosted photo and video management solution**](#immich)
@@ -1111,9 +1111,9 @@ Official documentation: <https://filebrowser.org/>
 Source code: <https://github.com/filebrowser/filebrowser>  
 License: [Apache 2.0](https://github.com/filebrowser/filebrowser/blob/master/LICENSE)
 
-## Homebox
+## HomeBox
 
-Homebox is a self-hosted home inventory and organisation system. It helps you keep track of your belongings, warranties, maintenance schedules, and locations with a simple web interface. It uses a SQLite database and is designed to be lightweight and easy to deploy.
+HomeBox is a self-hosted home inventory and organisation system. It helps you keep track of your belongings, warranties, maintenance schedules, and locations with a simple web interface. It uses a SQLite database and is designed to be lightweight and easy to deploy.
 
 === "Access to the web interface"
 
@@ -1136,7 +1136,7 @@ Homebox is a self-hosted home inventory and organisation system. It helps you ke
 
 === "Update"
 
-    You can update Homebox by reinstalling it. Your database and settings are preserved:
+    You can update HomeBox by reinstalling it. Your database and settings are preserved:
 
     ```sh
     dietpi-software reinstall 219
@@ -1144,7 +1144,7 @@ Homebox is a self-hosted home inventory and organisation system. It helps you ke
 
 === "HTTPS access via reverse proxy"
 
-    Homebox runs its own embedded web server on plain HTTP. To access it securely from the internet, you can run it behind the DietPi webserver (Apache, Nginx or Lighttpd) using an existing Let's Encrypt certificate created via [dietpi-letsencrypt](../dietpi_tools.md#dietpi-letsencrypt){:class="nospellcheck"}.
+    HomeBox runs its own embedded web server on plain HTTP. To access it securely from the internet, you can run it behind the DietPi webserver (Apache, Nginx or Lighttpd) using an existing Let's Encrypt certificate created via [dietpi-letsencrypt](../dietpi_tools.md#dietpi-letsencrypt){:class="nospellcheck"}.
 
     **Requirements**
 
@@ -1154,13 +1154,13 @@ Homebox is a self-hosted home inventory and organisation system. It helps you ke
 
     **Router port forwarding**
 
-    To reach Homebox from the internet, forward the following ports on your router to your DietPi device:
+    To reach HomeBox from the internet, forward the following ports on your router to your DietPi device:
 
-    - TCP **3100** → your DietPi IP address (Homebox HTTPS access)
+    - TCP **3100** → your DietPi IP address (HomeBox HTTPS access)
     - TCP **80** and **443** → your DietPi IP address (required by Let's Encrypt to issue and renew the certificate)
 
     !!! warning "Do not forward port 7745"
-        Port 7745 is the plain HTTP port used directly by Homebox. Keep it accessible on your LAN only. Do not forward it on your router.
+        Port 7745 is the plain HTTP port used directly by HomeBox. Keep it accessible on your LAN only. Do not forward it on your router.
 
     ???+ important "Keep port 80 open for Certbot renewal"
         Even if you only use HTTPS, Let's Encrypt requires port 80 to stay open for certificate renewals. See the [Let's Encrypt documentation](system_security.md#lets-encrypt){:class="nospellcheck"} for details.
@@ -1174,11 +1174,11 @@ Homebox is a self-hosted home inventory and organisation system. It helps you ke
     systemctl restart homebox
     ```
 
-    This tells Homebox to trust `X-Forwarded-*` headers from the reverse proxy, so client IP addresses and HTTPS detection work correctly.
+    This tells HomeBox to trust `X-Forwarded-*` headers from the reverse proxy, so client IP addresses and HTTPS detection work correctly.
 
     **Webserver configuration**
 
-    Use the tab matching your webserver. The examples below expose Homebox on a dedicated HTTPS port **3100** and proxy to `http://127.0.0.1:7745`. Replace `<your.domain>` with the domain name of your Let's Encrypt certificate.
+    Use the tab matching your webserver. The examples below expose HomeBox on a dedicated HTTPS port **3100** and proxy to `http://127.0.0.1:7745`. Replace `<your.domain>` with the domain name of your Let's Encrypt certificate.
 
     === "Lighttpd"
 
@@ -1206,7 +1206,7 @@ Homebox is a self-hosted home inventory and organisation system. It helps you ke
         systemctl reload lighttpd
         ```
 
-        Homebox uses a WebSocket on `/api/v1/ws/events`. Modern versions of Lighttpd (including the one shipped with Debian Bookworm) handle this automatically via `mod_proxy`. If you see WebSocket errors, install and enable `mod_wstunnel` and add a rule for `/api/v1/ws/events`.
+        HomeBox uses a WebSocket on `/api/v1/ws/events`. Modern versions of Lighttpd (including the one shipped with Debian Bookworm) handle this automatically via `mod_proxy`. If you see WebSocket errors, install and enable `mod_wstunnel` and add a rule for `/api/v1/ws/events`.
 
         !!! info "Certificate renewal"
             `dietpi-letsencrypt` installs a renewal hook that reloads Lighttpd automatically. Because this configuration references the certificate files directly, no further action is needed.
@@ -1288,10 +1288,10 @@ Homebox is a self-hosted home inventory and organisation system. It helps you ke
 
     **Troubleshooting**
 
-    - **502 Bad Gateway / connection refused**: Check that the Homebox service is running: `systemctl status homebox`
+    - **502 Bad Gateway / connection refused**: Check that the HomeBox service is running: `systemctl status homebox`
     - **Certificate errors**: Ensure the certificate files are readable by the webserver process and that the path `/etc/letsencrypt/live/<your.domain>/` matches the certificate created by `dietpi-letsencrypt`.
     - **WebSocket errors**: Make sure the WebSocket upgrade is passed through. See the notes above for each webserver.
-    - **LAN access still works**: Because Homebox remains bound to `0.0.0.0:7745`, you can still access it directly at `http://<your.IP>:7745` on the LAN. To disable this and allow proxy-only access, set `HBOX_WEB_HOST=127.0.0.1` in `/mnt/dietpi_userdata/homebox/homebox.env` and restart the service.
+    - **LAN access still works**: Because HomeBox remains bound to `0.0.0.0:7745`, you can still access it directly at `http://<your.IP>:7745` on the LAN. To disable this and allow proxy-only access, set `HBOX_WEB_HOST=127.0.0.1` in `/mnt/dietpi_userdata/homebox/homebox.env` and restart the service.
 
 ***
 
