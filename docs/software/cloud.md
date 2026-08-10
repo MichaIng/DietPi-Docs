@@ -20,6 +20,7 @@ description: Description of DietPi software options related to cloud and backup 
 - [**vaultwarden - Unofficial Bitwarden password manager server written in Rust**](#vaultwarden)
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](#file-browser)
+- [**HomeBox - Self-hosted home inventory and organisation system**](#homebox)
 - [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](#restic)
 - [**Immich - Self-hosted photo and video management solution**](#immich)
@@ -1109,6 +1110,194 @@ Access and manage your data from anywhere via browser with this lightweight remo
 Official documentation: <https://filebrowser.org/>  
 Source code: <https://github.com/filebrowser/filebrowser>  
 License: [Apache 2.0](https://github.com/filebrowser/filebrowser/blob/master/LICENSE)
+
+## HomeBox
+
+HomeBox is a self-hosted home inventory and organisation system. It helps you keep track of your belongings, warranties, maintenance schedules, and locations with a simple web interface. It uses a SQLite database and is designed to be lightweight and easy to deploy.
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **7745**:
+
+    - URL = `http://<your.IP>:7745`
+
+    On first access, you will be prompted to create an initial user account.
+
+    For secure access from the internet via HTTPS, see the **HTTPS access via reverse proxy** tab.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Directories"
+
+    - Install directory: `/opt/homebox`
+    - Data directory: `/mnt/dietpi_userdata/homebox`
+    - Environment file: `/mnt/dietpi_userdata/homebox/homebox.env`
+
+=== "Update"
+
+    You can update HomeBox by reinstalling it. Your database and settings are preserved:
+
+    ```sh
+    dietpi-software reinstall 219
+    ```
+
+=== "HTTPS access via reverse proxy"
+
+    HomeBox runs its own embedded web server on plain HTTP. To access it securely from the internet, you can run it behind the DietPi webserver (Apache, Nginx or Lighttpd) using an existing Let's Encrypt certificate created via [dietpi-letsencrypt](../dietpi_tools.md#dietpi-letsencrypt){:class="nospellcheck"}.
+
+    **Requirements**
+
+    - A DietPi webserver installed via `dietpi-software` (Apache, Nginx or Lighttpd)
+    - A valid Let's Encrypt certificate for your domain, created via `dietpi-letsencrypt` — see the [Let's Encrypt documentation](system_security.md#lets-encrypt){:class="nospellcheck"}
+    - A domain name pointing to your router's public IP address
+
+    **Router port forwarding**
+
+    To reach HomeBox from the internet, forward the following ports on your router to your DietPi device:
+
+    - TCP **3100** → your DietPi IP address (HomeBox HTTPS access)
+    - TCP **80** and **443** → your DietPi IP address (required by Let's Encrypt to issue and renew the certificate)
+
+    !!! warning "Do not forward port 7745"
+        Port 7745 is the plain HTTP port used directly by HomeBox. Keep it accessible on your LAN only. Do not forward it on your router.
+
+    ???+ important "Keep port 80 open for Certbot renewal"
+        Even if you only use HTTPS, Let's Encrypt requires port 80 to stay open for certificate renewals. See the [Let's Encrypt documentation](system_security.md#lets-encrypt){:class="nospellcheck"} for details.
+
+    **Enable proxy awareness**
+
+    Append the following line to the environment file and restart the service:
+
+    ```sh
+    echo 'HBOX_OPTIONS_TRUST_PROXY=true' >> /mnt/dietpi_userdata/homebox/homebox.env
+    systemctl restart homebox
+    ```
+
+    This tells HomeBox to trust `X-Forwarded-*` headers from the reverse proxy, so client IP addresses and HTTPS detection work correctly.
+
+    **Webserver configuration**
+
+    Use the tab matching your webserver. The examples below expose HomeBox on a dedicated HTTPS port **3100** and proxy to `http://127.0.0.1:7745`. Replace `<your.domain>` with the domain name of your Let's Encrypt certificate.
+
+    === "Lighttpd"
+
+        Create the file `/etc/lighttpd/conf-available/98-dietpi-homebox.conf`:
+
+        ```lighttpd
+        server.modules += ( "mod_proxy" )
+
+        $SERVER["socket"] == ":3100" {
+            protocol = "https://"
+            ssl.engine = "enable"
+            ssl.pemfile = "/etc/letsencrypt/live/<your.domain>/fullchain.pem"
+            ssl.privkey = "/etc/letsencrypt/live/<your.domain>/privkey.pem"
+
+            setenv.add-environment = ( "HTTPS" => "on" )
+
+            proxy.server = ( "" => ( ( "host" => "127.0.0.1", "port" => 7745 ) ) )
+        }
+        ```
+
+        Enable the configuration and reload the webserver:
+
+        ```sh
+        lighty-enable-mod dietpi-homebox
+        systemctl reload lighttpd
+        ```
+
+        HomeBox uses a WebSocket on `/api/v1/ws/events`. Modern versions of Lighttpd (including the one shipped with Debian Bookworm) handle this automatically via `mod_proxy`. If you see WebSocket errors, install and enable `mod_wstunnel` and add a rule for `/api/v1/ws/events`.
+
+        !!! info "Certificate renewal"
+            `dietpi-letsencrypt` installs a renewal hook that reloads Lighttpd automatically. Because this configuration references the certificate files directly, no further action is needed.
+
+    === "Apache"
+
+        Create the file `/etc/apache2/sites-available/dietpi-homebox.conf`:
+
+        ```apache
+        Listen 3100
+
+        <VirtualHost *:3100>
+            ServerName <your.domain>
+
+            SSLEngine on
+            SSLCertificateFile /etc/letsencrypt/live/<your.domain>/fullchain.pem
+            SSLCertificateKeyFile /etc/letsencrypt/live/<your.domain>/privkey.pem
+
+            ProxyPreserveHost On
+            ProxyPass / http://127.0.0.1:7745/ upgrade=websocket
+            ProxyPassReverse / http://127.0.0.1:7745/
+        </VirtualHost>
+        ```
+
+        Enable the required modules and the new site, then reload the webserver:
+
+        ```sh
+        a2enmod ssl proxy proxy_http proxy_wstunnel
+        a2ensite dietpi-homebox
+        systemctl reload apache2
+        ```
+
+        !!! info "Certificate renewal"
+            When using `dietpi-letsencrypt` with the Apache webserver, the certbot plugin reloads Apache automatically on renewal.
+
+    === "Nginx"
+
+        Create the file `/etc/nginx/conf.d/dietpi-homebox.conf` (not `/etc/nginx/sites-dietpi/`, because that directory is included inside the default server block):
+
+        ```nginx
+        server {
+            listen 3100 ssl;
+            server_name <your.domain>;
+
+            ssl_certificate /etc/letsencrypt/live/<your.domain>/fullchain.pem;
+            ssl_certificate_key /etc/letsencrypt/live/<your.domain>/privkey.pem;
+
+            location / {
+                proxy_pass http://127.0.0.1:7745;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto $scheme;
+            }
+        }
+        ```
+
+        Reload the webserver:
+
+        ```sh
+        nginx -t && systemctl reload nginx
+        ```
+
+        !!! info "Certificate renewal"
+            When using `dietpi-letsencrypt` with the Nginx webserver, the certbot plugin reloads Nginx automatically on renewal.
+
+    **Verification**
+
+    After setting up the proxy, verify it responds locally:
+
+    ```sh
+    curl -fk https://127.0.0.1:3100/api/v1/status
+    ```
+
+    Then open `https://<your.domain>:3100` in a browser.
+
+    **Troubleshooting**
+
+    - **502 Bad Gateway / connection refused**: Check that the HomeBox service is running: `systemctl status homebox`
+    - **Certificate errors**: Ensure the certificate files are readable by the webserver process and that the path `/etc/letsencrypt/live/<your.domain>/` matches the certificate created by `dietpi-letsencrypt`.
+    - **WebSocket errors**: Make sure the WebSocket upgrade is passed through. See the notes above for each webserver.
+    - **LAN access still works**: Because HomeBox remains bound to `0.0.0.0:7745`, you can still access it directly at `http://<your.IP>:7745` on the LAN. To disable this and allow proxy-only access, set `HBOX_WEB_HOST=127.0.0.1` in `/mnt/dietpi_userdata/homebox/homebox.env` and restart the service.
+
+***
+
+Official documentation: <https://homebox.software/>  
+Source code: <https://github.com/sysadminsmedia/homebox>  
+License: [AGPL-3.0](https://github.com/sysadminsmedia/homebox/blob/main/LICENSE)
 
 ## Rclone
 
