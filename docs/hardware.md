@@ -149,6 +149,24 @@ It is a new generation single-board computer based on the Amlogic S922X SoC and 
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidXU4-ARMv7-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Odroid M1</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidM1-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Odroid M1S</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidM1S-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Odroid M2</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidM2-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>
@@ -625,6 +643,12 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/) website.
                 </td>
             </tr
             <tr>
+                <td><a class="table" href=""><strong>Orange Pi Zero 3W</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3W-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr
+            <tr>
                 <td><a class="table" href=""><strong>Orange Pi 3</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3-ARMv8-Trixie.img.xz">DietPi image</a>
@@ -646,6 +670,12 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/) website.
                 <td><a class="table" href=""><strong>Orange Pi 4 LTS</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi4LTS-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 4 Pro</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi4Pro-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
         </tbody>
