@@ -12,6 +12,7 @@ description: Description of DietPi software options related to home automation
 - [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin)
 - [**openHAB - Open Home Automation Bus, an open source home automation platform**](#openhab)
 - [**Homebridge - Open Home Automation Bus, an open source home automation platform**](#homebridge)
+- [**Scrypted - High performance video integration and automation platform**](#scrypted)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -288,5 +289,42 @@ Homebridge allows you to integrate with smart home devices that do not natively 
 
 Official website: <https://homebridge.io/>  
 Official docs: <https://github.com/homebridge/homebridge/wiki>  
+
+## Scrypted
+
+Scrypted is a high performance home video integration platform and NVR with smart detections. Using various Plugins, Scrypted can receive streams from a range of cameras and send them to other platforms (HomeKit, Google Home, Alexa, Home Assistant).
+
+![Scrypted logo](../assets/images/dietpi-software-homeautomation-scrypted.png){: width="300" height="300" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **10443**:
+
+    - URL: `https://<your.IP>:10443`
+    - Username/Password: Are set at first web interface login
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Directories"
+
+    - Install directory: `/opt/scrypted`
+    - Data directory: `/mnt/dietpi_userdata/scrypted`
+    - NVR directory: Is set in web interface after installing NVR plugin
+
+=== "Update"
+
+    To update Scrypted to the latest version, reinstall it. The data directory will be preserved.
+
+    ```sh
+    dietpi-software reinstall 219
+    ```
+
+***
+
+Official website: <https://www.scrypted.app/>  
+Official docs: <https://docs.scrypted.app/>  
+Official docs (advanced): <https://github.com/koush/scrypted/wiki>
+Source code: <https://github.com/koush/scrypted>
 
 [Return to the **Optimised Software list**](../software.md)
