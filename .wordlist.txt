@@ -824,6 +824,7 @@ virtualised
 virtualiser
 virtualisers
 VisionFive
+VLAN
 VM
 VMDK
 VMs
