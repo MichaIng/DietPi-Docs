@@ -165,6 +165,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**TasmoAdmin - Administrative website for Tasmota devices**](software/home_automation.md#tasmoadmin)
 - [**openHAB - Open Home Automation Bus, an open source home automation platform**](software/home_automation.md#openhab)
 - [**Homebridge - Bringing HomeKit support where there is none**](software/home_automation.md#homebridge)
+- [**Scrypted - High performance video integration and automation platform**](software/home_automation.md#scrypted)
 
 ## [Logging Systems](software/log_system.md)
 
