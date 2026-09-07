@@ -1489,7 +1489,7 @@ HomeBox is a self-hosted home inventory and organisation system. It helps you ke
         ```
 
         !!! info "Certificate renewal"
-            When using `dietpi-letsencrypt` with the Apache webserver, the certbot plugin reloads Apache automatically on renewal.
+            When using `dietpi-letsencrypt` with the Apache webserver, the Certbot plugin reloads Apache automatically on renewal.
 
     === "Nginx"
 
@@ -1523,7 +1523,7 @@ HomeBox is a self-hosted home inventory and organisation system. It helps you ke
         ```
 
         !!! info "Certificate renewal"
-            When using `dietpi-letsencrypt` with the Nginx webserver, the certbot plugin reloads Nginx automatically on renewal.
+            When using `dietpi-letsencrypt` with the Nginx webserver, the Certbot plugin reloads Nginx automatically on renewal.
 
     **Verification**
 
@@ -1546,6 +1546,6 @@ HomeBox is a self-hosted home inventory and organisation system. It helps you ke
 
 Official documentation: <https://homebox.software/>  
 Source code: <https://github.com/sysadminsmedia/homebox>  
-License: [AGPL-3.0](https://github.com/sysadminsmedia/homebox/blob/main/LICENSE)
+License: [AGPLv3](https://github.com/sysadminsmedia/homebox/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)
