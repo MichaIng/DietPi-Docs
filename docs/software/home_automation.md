@@ -310,7 +310,8 @@ Scrypted is a high performance home video integration platform and NVR with smar
 
     - Install directory: `/opt/scrypted`
     - Data directory: `/mnt/dietpi_userdata/scrypted`
-    - NVR directory: Is set in web interface after installing NVR plugin
+    - Environment file: `/mnt/dietpi_userdata/scrypted/scrypted.env`
+    - NVR directory: Set `SCRYPTED_NVR_VOLUME` in the environment file
 
 === "Update"
 
