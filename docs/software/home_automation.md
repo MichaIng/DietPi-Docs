@@ -317,7 +317,7 @@ Scrypted is a high performance home video integration platform and NVR with smar
     To update Scrypted to the latest version, reinstall it. The data directory will be preserved.
 
     ```sh
-    dietpi-software reinstall 219
+    dietpi-software reinstall 220
     ```
 
 ***
