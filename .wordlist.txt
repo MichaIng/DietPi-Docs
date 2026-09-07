@@ -390,6 +390,7 @@ Logrotate
 loopback
 LPDDR
 LTS
+LubanCat
 LUCS
 LuidmilaKot
 LVM
