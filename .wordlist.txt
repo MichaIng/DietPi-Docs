@@ -20,6 +20,7 @@ aircrafts
 AirPlay
 Airsonic
 AIY
+Alexa
 Alicja
 Allo
 ALSA
@@ -477,6 +478,7 @@ Nukkit
 numpy
 Nvidia
 NVMe
+NVR
 nyx
 NZB
 NZBGet
@@ -646,11 +648,12 @@ SATA
 SBC
 SBCs
 scalable
+SCGI
 SCP
 scroller
-SCGI
 scriptable
 scrollback
+Scrypted
 SDK
 SDL
 SDN
