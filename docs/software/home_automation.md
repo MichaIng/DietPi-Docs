@@ -11,7 +11,7 @@ description: Description of DietPi software options related to home automation
 - [**Domoticz - Multi platform Home Automation System**](#domoticz)
 - [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin)
 - [**openHAB - Open Home Automation Bus, an open source home automation platform**](#openhab)
-- [**Homebridge - Open Home Automation Bus, an open source home automation platform**](#homebridge)
+- [**Homebridge - Bringing HomeKit support where there is none**](#homebridge)
 - [**Scrypted - High performance video integration and automation platform**](#scrypted)
 
 [//]: # (Include software expandable infoblock)
