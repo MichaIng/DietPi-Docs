@@ -11,7 +11,7 @@ description: Description of DietPi software options related to home automation
 - [**Domoticz - Multi platform Home Automation System**](#domoticz)
 - [**TasmoAdmin - Administrative website for Tasmota devices**](#tasmoadmin)
 - [**openHAB - Open Home Automation Bus, an open source home automation platform**](#openhab)
-- [**Homebridge - Open Home Automation Bus, an open source home automation platform**](#homebridge)
+- [**Homebridge - Bringing HomeKit support where there is none**](#homebridge)
 - [**Scrypted - High performance video integration and automation platform**](#scrypted)
 
 [//]: # (Include software expandable infoblock)
@@ -310,7 +310,8 @@ Scrypted is a high performance home video integration platform and NVR with smar
 
     - Install directory: `/opt/scrypted`
     - Data directory: `/mnt/dietpi_userdata/scrypted`
-    - NVR directory: Is set in web interface after installing NVR plugin
+    - Environment file: `/mnt/dietpi_userdata/scrypted/scrypted.env`
+    - NVR directory: Set `SCRYPTED_NVR_VOLUME` in the environment file
 
 === "Update"
 
