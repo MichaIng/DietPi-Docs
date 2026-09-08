@@ -63,7 +63,7 @@ dietpi-config
     - Scan and connect to a WiFi router with ease
     - Change to a static IP address on the network
     - Configure proxy settings
-    - Test internet connection
+    - Test Internet connection
     - Toggle IPv6 support
 
 === "Network Options: Misc"

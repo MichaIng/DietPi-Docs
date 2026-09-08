@@ -115,7 +115,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Folding@Home - Use processing power to assist with disease research**](software/distributed_projects.md#foldinghome)
 - [**Tor Relay - Add a node to the Tor network**](software/distributed_projects.md#tor-relay)
 - [**YaCy - Decentralized open source search engine**](software/distributed_projects.md#yacy)
-- [**IPFS Node - Contribute to a decentralized internet**](software/distributed_projects.md#ipfs-node)
+- [**IPFS Node - Contribute to a decentralized Internet**](software/distributed_projects.md#ipfs-node)
 - [**ADS-B Feeder - track airplanes, ships and weather balloons and share data**](software/distributed_projects.md#ads-b-feeder)
 
 ## [DNS Servers](software/dns_servers.md)
@@ -227,7 +227,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ### [Remote Access](software/remote_desktop.md#remote-access)
 
-- [**Remote.It - Access your device over the internet**](software/remote_desktop.md#remoteit)
+- [**Remote.It - Access your device over the Internet**](software/remote_desktop.md#remoteit)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](software/remote_desktop.md#virtualhere)
 
 ## [Social & Search](software/social.md)
