@@ -196,7 +196,7 @@ Network file system server.
     The NFS access configuration is done via **export files**.  
     Therefore, the file `/etc/exports` can be edited as well as adding further export files within the `/etc/exports.d` directory.
 
-    **Explanations of the export file format** are available in the internet or can be read in the man pages (use `man exports`, therefore the package **man** needs to be installed).
+    **Explanations of the export file format** are available in the Internet or can be read in the man pages (use `man exports`, therefore the package **man** needs to be installed).
 
     After changing the access configuration, the export information can be re-read via command
 
