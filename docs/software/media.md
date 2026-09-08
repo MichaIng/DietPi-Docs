@@ -704,7 +704,7 @@ Available UPnP clients: <https://www.wikipedia.org/wiki/List_of_UPnP_AV_media_se
 
 ## Ampache
 
-A web based audio/video streaming application and file manager allowing you to access your music & videos from anywhere, using almost any internet enabled device.
+A web based audio/video streaming application and file manager allowing you to access your music & videos from anywhere, using almost any Internet enabled device.
 
 Also installs:
 
