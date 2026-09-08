@@ -10,7 +10,7 @@ description: Description of DietPi software options related to distributed softw
 - [**Folding@Home - Use processing power to assist with disease research**](#foldinghome)
 - [**Tor Relay - Add a node to the Tor network**](#tor-relay)
 - [**YaCy - Decentralized open source search engine**](#yacy)
-- [**IPFS Node - Contribute to a decentralized internet**](#ipfs-node)
+- [**IPFS Node - Contribute to a decentralized Internet**](#ipfs-node)
 - [**ADS-B Feeder - track airplanes, ships and weather balloons and share data**](#ads-b-feeder)
 
 [//]: # (Include software expandable infoblock)
@@ -82,7 +82,7 @@ Official documentation: <https://foldingathome.org/guides/>
 
 ![Tor logo](../assets/images/dietpi-software-tor-logo.png){: width="150" height="91" loading="lazy"}
 
-Contribute a node to the Tor network, which allows people to be anonymous on the internet.
+Contribute a node to the Tor network, which allows people to be anonymous on the Internet.
 
 === "Types of relay"
 
@@ -228,8 +228,8 @@ This node lets you download files through IPFS and add your own files to the net
 
 Official documentation: <https://docs.ipfs.io>
 
-!!! warning "Do not expose to internet"
-    The IPFS web interface requires no authentication to use. Do not expose it to the internet without taking proper security measures, like an authenticated reverse proxy, VPN or similar.
+!!! warning "Do not expose to Internet"
+    The IPFS web interface requires no authentication to use. Do not expose it to the Internet without taking proper security measures, like an authenticated reverse proxy, VPN or similar.
 
 ## ADS-B Feeder
 

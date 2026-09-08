@@ -20,7 +20,7 @@ Run a **Desktop environment** on your device and access it accessed remotely via
 
 ### Remote Access
 
-- [**Remote.It - Access your device over the internet**](#remoteit)
+- [**Remote.It - Access your device over the Internet**](#remoteit)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](#virtualhere)
 
 [//]: # (Include software expandable infoblock)
@@ -194,7 +194,7 @@ NoMachine is a remote desktop server with advanced features, such as screen reco
 
 ## Remote.It
 
-Remote.It allows you to easily access your DietPi device over the internet.
+Remote.It allows you to easily access your DietPi device over the Internet.
 
 ![Remote.It web interface screenshot](../assets/images/dietpi-software-remotedesktop-remoteit.png "Remote.It web interface screen"){: width="400" height="140" loading="lazy"}
 
