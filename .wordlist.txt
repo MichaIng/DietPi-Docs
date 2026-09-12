@@ -177,6 +177,7 @@ dropdown
 DSI
 DSN
 DuckDNS
+DVB
 DVFS
 DXX
 Dynu
