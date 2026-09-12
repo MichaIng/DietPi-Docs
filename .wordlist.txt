@@ -101,6 +101,7 @@ cgroup
 changelog
 ChatGPT
 ClickHouse
+CIDR
 CIFS
 CLI
 Clonezilla
@@ -176,6 +177,7 @@ dropdown
 DSI
 DSN
 DuckDNS
+DVB
 DVFS
 DXX
 Dynu
@@ -186,6 +188,7 @@ EEPROM
 EFI
 eFuse
 embeddings
+EmbedFire
 Emby
 eMMC
 emoncms
@@ -278,6 +281,7 @@ HFS
 HiFi
 HiFiBerry
 Hipp
+HomeBox
 Homebridge
 HomeKit
 homeserver
@@ -389,6 +393,7 @@ Logrotate
 loopback
 LPDDR
 LTS
+LubanCat
 LUCS
 LuidmilaKot
 LVM
@@ -783,6 +788,7 @@ Unarchiver
 unbootable
 uncheck
 uncomment
+uncomments
 unencrypted
 unformatted
 unmount
@@ -825,6 +831,7 @@ virtualised
 virtualiser
 virtualisers
 VisionFive
+VLAN
 VM
 VMDK
 VMs
