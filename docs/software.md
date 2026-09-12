@@ -71,6 +71,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Rclone - Utility to sync your files to cloud storages**](software/cloud.md#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](software/cloud.md#restic)
 - [**Immich - Self-hosted photo and video management solution**](software/cloud.md#immich)
+- [**HomeBox - Self-hosted home inventory and organisation system**](software/cloud.md#homebox)
 
 ## [Databases & Data Stores](software/databases.md)
 
