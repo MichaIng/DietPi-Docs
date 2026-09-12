@@ -866,7 +866,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
         items:
           - name: "Adguard Home"
             logo: "assets/icons2/adguard.png"
-            subtitle: "A blackhole for the internet"
+            subtitle: "A blackhole for the Internet"
             tag: "Selfhosted"
             url: "https://adguard.box"
             target: "_blank"

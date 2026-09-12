@@ -20,6 +20,7 @@ aircrafts
 AirPlay
 Airsonic
 AIY
+Alexa
 Alicja
 Allo
 ALSA
@@ -100,6 +101,7 @@ cgroup
 changelog
 ChatGPT
 ClickHouse
+CIDR
 CIFS
 CLI
 Clonezilla
@@ -175,6 +177,7 @@ dropdown
 DSI
 DSN
 DuckDNS
+DVB
 DVFS
 DXX
 Dynu
@@ -185,6 +188,7 @@ EEPROM
 EFI
 eFuse
 embeddings
+EmbedFire
 Emby
 eMMC
 emoncms
@@ -277,6 +281,7 @@ HFS
 HiFi
 HiFiBerry
 Hipp
+HomeBox
 Homebridge
 HomeKit
 homeserver
@@ -388,6 +393,7 @@ Logrotate
 loopback
 LPDDR
 LTS
+LubanCat
 LUCS
 LuidmilaKot
 LVM
@@ -477,6 +483,7 @@ Nukkit
 numpy
 Nvidia
 NVMe
+NVR
 nyx
 NZB
 NZBGet
@@ -646,11 +653,12 @@ SATA
 SBC
 SBCs
 scalable
+SCGI
 SCP
 scroller
-SCGI
 scriptable
 scrollback
+Scrypted
 SDK
 SDL
 SDN
@@ -780,6 +788,7 @@ Unarchiver
 unbootable
 uncheck
 uncomment
+uncomments
 unencrypted
 unformatted
 unmount
@@ -822,6 +831,7 @@ virtualised
 virtualiser
 virtualisers
 VisionFive
+VLAN
 VM
 VMDK
 VMs
@@ -846,6 +856,7 @@ webroot
 webserver
 webservers
 WebServers
+WebSocket
 webstack
 Webtoons
 WebUI

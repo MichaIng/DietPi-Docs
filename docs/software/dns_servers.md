@@ -56,7 +56,7 @@ Pi-hole is a DNS sinkhole with web interface that will block ads for any device 
     ![Pi-hole DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png "Pi-hole DNS server software router setup"){: width="400" height="240" loading="lazy"}
 
     On your Pi-hole device, you will need to set a different DNS server.  
-    Depending on your router configuration, if you don't do this step, the Pi-hole device may not be able to access the internet. It's highly recommended to have the device running Pi-hole, pointing to a DNS server outside your network.
+    Depending on your router configuration, if you don't do this step, the Pi-hole device may not be able to access the Internet. It's highly recommended to have the device running Pi-hole, pointing to a DNS server outside your network.
 
     - Run the following command: `dietpi-config 8 1`
     - Select: *Ethernet*
@@ -148,7 +148,7 @@ Blog entry with YouTube video #5 (German language): [Unbound Installation für P
 
 ## Unbound
 
-Unbound is a validating, recursive, caching DNS resolver. It can resolve hostnames by querying the root name servers directly, replacing ISP/public DNS resolvers. Eliminating one player involved in handling your DNS requests, increases your internet privacy. Additionally Unbound can be configured to use the encrypted DoT (DNS over TLS) protocol, which requires again a public DNS provider, but masks requests for your LAN operator and ISP instead. For more info, see the "Activating DNS over TLS (DoT)" tab below.
+Unbound is a validating, recursive, caching DNS resolver. It can resolve hostnames by querying the root name servers directly, replacing ISP/public DNS resolvers. Eliminating one player involved in handling your DNS requests, increases your Internet privacy. Additionally Unbound can be configured to use the encrypted DoT (DNS over TLS) protocol, which requires again a public DNS provider, but masks requests for your LAN operator and ISP instead. For more info, see the "Activating DNS over TLS (DoT)" tab below.
 
 ![Unbound logo](../assets/images/dietpi-software-dnsserver-unbound.svg){: width="150" height="34" loading="lazy"}
 
@@ -265,7 +265,7 @@ AdGuard Home is a DNS sinkhole with web interface that will block ads for any de
     ![AdGuard Home DNS server software router setup](../assets/images/dietpi-software-dnsserver-router-setup.png "AdGuard Home DNS server software router setup"){: width="400" height="240" loading="lazy"}
 
     On your AdGuard Home device, you will need to set a different DNS server.  
-    Depending on your router configuration, if you don't do this step, the AdGuard Home device may not be able to access the internet. It's highly recommended to have the device running AdGuard Home, pointing to a DNS server outside your network.
+    Depending on your router configuration, if you don't do this step, the AdGuard Home device may not be able to access the Internet. It's highly recommended to have the device running AdGuard Home, pointing to a DNS server outside your network.
 
     - Run the following command: `dietpi-config 8 1`
     - Select: *Ethernet*

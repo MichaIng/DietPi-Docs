@@ -71,6 +71,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Rclone - Utility to sync your files to cloud storages**](software/cloud.md#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](software/cloud.md#restic)
 - [**Immich - Self-hosted photo and video management solution**](software/cloud.md#immich)
+- [**HomeBox - Self-hosted home inventory and organisation system**](software/cloud.md#homebox)
 
 ## [Databases & Data Stores](software/databases.md)
 
@@ -114,7 +115,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Folding@Home - Use processing power to assist with disease research**](software/distributed_projects.md#foldinghome)
 - [**Tor Relay - Add a node to the Tor network**](software/distributed_projects.md#tor-relay)
 - [**YaCy - Decentralized open source search engine**](software/distributed_projects.md#yacy)
-- [**IPFS Node - Contribute to a decentralized internet**](software/distributed_projects.md#ipfs-node)
+- [**IPFS Node - Contribute to a decentralized Internet**](software/distributed_projects.md#ipfs-node)
 - [**ADS-B Feeder - track airplanes, ships and weather balloons and share data**](software/distributed_projects.md#ads-b-feeder)
 
 ## [DNS Servers](software/dns_servers.md)
@@ -165,6 +166,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**TasmoAdmin - Administrative website for Tasmota devices**](software/home_automation.md#tasmoadmin)
 - [**openHAB - Open Home Automation Bus, an open source home automation platform**](software/home_automation.md#openhab)
 - [**Homebridge - Bringing HomeKit support where there is none**](software/home_automation.md#homebridge)
+- [**Scrypted - High performance video integration and automation platform**](software/home_automation.md#scrypted)
 
 ## [Logging Systems](software/log_system.md)
 
@@ -225,7 +227,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 
 ### [Remote Access](software/remote_desktop.md#remote-access)
 
-- [**Remote.It - Access your device over the internet**](software/remote_desktop.md#remoteit)
+- [**Remote.It - Access your device over the Internet**](software/remote_desktop.md#remoteit)
 - [**VirtualHere - Share physically attached USB devices from your SBC over the network**](software/remote_desktop.md#virtualhere)
 
 ## [Social & Search](software/social.md)

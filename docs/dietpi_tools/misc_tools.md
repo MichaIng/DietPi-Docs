@@ -82,7 +82,7 @@ dietpi-survey
 
 === "Uploaded amount of data"
 
-    The uploaded data is tiny (about 1 KB) and will not affect your internet bandwidth or system performance.
+    The uploaded data is tiny (about 1 KB) and will not affect your Internet bandwidth or system performance.
 
 === "Transmitted data contents"
 

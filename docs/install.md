@@ -769,7 +769,7 @@ Select the following tabs for the installation description of your target.
 
         You would need the next:
 
-        - one **working PC with internet access**, helping to write the boot media
+        - one **working PC with Internet access**, helping to write the boot media
         - one **bootable USB drive** (e.g. flash disk, at least 2 GiB), to hold the DietPi installer image and to boot the target PC
         - **target PC** to be installed
 
@@ -854,7 +854,7 @@ Select the following tabs for the installation description of your target.
 
         You would need the next:
 
-        - one **working PC with internet access**, helping to write the boot media
+        - one **working PC with Internet access**, helping to write the boot media
         - one **disk drive**, to hold the DietPi system. It is written with the direct write image and will be the disk drive in the DietPi system.
         - **target PC** to be installed
 
@@ -906,7 +906,7 @@ Select the following tabs for the installation description of your target.
 
         You would need the next:
 
-        - one **working PC with internet access**, helping to write the boot media
+        - one **working PC with Internet access**, helping to write the boot media
         - one **bootable USB drive** (e.g. flash disk, at least 2 GiB), to hold the DietPi installer image and to boot the target PC
         - **target PC** to be installed
 
@@ -985,7 +985,7 @@ Select the following tabs for the installation description of your target.
 
         You would need the next:
 
-        - one **working PC with internet access**, helping to write the boot media
+        - one **working PC with Internet access**, helping to write the boot media
         - one **disk drive**, to hold the DietPi system. It is written with the direct write image and will be the disk drive in the DietPi system.
         - **target PC** to be installed
 

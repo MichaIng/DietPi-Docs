@@ -208,7 +208,7 @@ Available commands:
 ```
 
 !!! info "Port forwarding on your router"
-    To be accessible from the internet, typically your router needs a port forwarding configuration to route incoming HTTP and HTTPS accesses to your DietPi system.  
+    To be accessible from the Internet, typically your router needs a port forwarding configuration to route incoming HTTP and HTTPS accesses to your DietPi system.  
     Although you only need a HTTPS protocol forwarding (typically port 443), you also need to forward the HTTP protocol (typically port 80) to your DietPi system, otherwise the certification renewal procedure will fail (due to the fact that the certification renewal procedure takes place several months later you may have forgotten this issue).
 
 ---
@@ -239,7 +239,7 @@ dietpi-vpn
 
 === "Killswitch"
 
-    DietPi-VPN comes with an optional killswitch that will shut off your internet in the case of you losing your connection to the VPN sever.
+    DietPi-VPN comes with an optional killswitch that will shut off your Internet in the case of you losing your connection to the VPN sever.
     This will still allow access from your LAN and allow you to fix any problems using SSH, if needed.
 
 ### DietPi VPN - Command line usage
