@@ -754,6 +754,7 @@ theming
 Thonny
 TiB
 TigerVNC
+timesync
 TimeSync
 TIOBE
 TLS
