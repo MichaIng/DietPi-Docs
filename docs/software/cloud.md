@@ -1419,7 +1419,7 @@ HomeBox is a self-hosted home inventory and organisation system. It helps you ke
     Append the following line to the environment file and restart the service:
 
     ```sh
-    echo 'HBOX_OPTIONS_TRUST_PROXY=true' >> /mnt/dietpi_userdata/homebox/homebox.env
+    G_CONFIG_INJECT 'HBOX_OPTIONS_TRUST_PROXY=' 'HBOX_OPTIONS_TRUST_PROXY=true' /mnt/dietpi_userdata/homebox/homebox.env
     systemctl restart homebox
     ```
 
