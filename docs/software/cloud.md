@@ -1364,7 +1364,7 @@ HomeBox is a self-hosted home inventory and organisation system. It helps you ke
 
     On first access, you will be prompted to create an initial user account. Therefore, click on the link "Register" below the login box.
 
-    For secure access from the internet via HTTPS, see the **HTTPS access via reverse proxy** tab.
+    For secure access from the Internet via HTTPS, see the **HTTPS access via reverse proxy** tab.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
@@ -1393,7 +1393,7 @@ HomeBox is a self-hosted home inventory and organisation system. It helps you ke
 
 === "HTTPS access via reverse proxy"
 
-    HomeBox runs its own embedded web server on plain HTTP. To access it securely from the internet, you can run it behind a webserver (Apache, Nginx or Lighttpd) using an existing Let's Encrypt certificate created via [DietPi-LetsEncrypt](../dietpi_tools.md#dietpi-letsencrypt){:class="nospellcheck"}.
+    HomeBox runs its own embedded web server on plain HTTP. To access it securely from the Internet, you can run it behind a webserver (Apache, Nginx or Lighttpd) using an existing Let's Encrypt certificate created via [DietPi-LetsEncrypt](../dietpi_tools.md#dietpi-letsencrypt){:class="nospellcheck"}.
 
     **Requirements**
 
@@ -1403,7 +1403,7 @@ HomeBox is a self-hosted home inventory and organisation system. It helps you ke
 
     **Router port forwarding**
 
-    To reach HomeBox from the internet, forward the following ports on your router to your DietPi device:
+    To reach HomeBox from the Internet, forward the following ports on your router to your DietPi device:
 
     - TCP **3100** → your DietPi IP address (HomeBox HTTPS access)
     - TCP **80** and **443** → your DietPi IP address (required by Let's Encrypt to issue and renew the certificate)
