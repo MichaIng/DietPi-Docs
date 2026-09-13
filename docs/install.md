@@ -148,8 +148,8 @@ Select the following tabs for the installation description of your target.
              ```sh
              mkdir ~/Downloads
              cd ~/Downloads
-             curl -LO 'https://download.virtualbox.org/virtualbox/7.0.10/virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb'
-             apt install ./virtualbox-7.0_7.0.10-158379~Debian~bookworm_amd64.deb
+             curl -LO 'https://download.virtualbox.org/virtualbox/7.2.16/virtualbox-7.2_7.2.16-174877~Debian~trixie_amd64.deb'
+             apt install ./virtualbox-7.2_7.2.16-174877~Debian~trixie_amd64.deb
              ```
 
         2. Installation of the VirtualBox extension pack on a Linux host system  
@@ -157,8 +157,8 @@ Select the following tabs for the installation description of your target.
 
              ```sh
              cd ~/Downloads
-             curl -LO 'https://download.virtualbox.org/virtualbox/7.0.10/Oracle_VM_VirtualBox_Extension_Pack-7.0.10-158379.vbox-extpack'
-             VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.10-158379.vbox-extpack
+             curl -LO 'https://download.virtualbox.org/virtualbox/7.2.16/Oracle_VirtualBox_Extension_Pack-7.2.16-174877.vbox-extpack'
+             VBoxManage extpack install Oracle_VirtualBox_Extension_Pack-7.2.16-174877.vbox-extpack
              ```
 
         After these two steps the host installation of the VirtualBox extension pack is completed. Further installation steps on the guest system are described below.
@@ -247,7 +247,7 @@ Select the following tabs for the installation description of your target.
             VBoxManage guestproperty set "<vm_name>" "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold" 10000
             ```
 
-            Replace `<vm_name>` with the name of your virtual machine, shown in the VM VirtualBox Manager UI, e.g. `DietPi_VirtualBox-x86_64-Bookworm` if you import the VM without changing its name.
+            Replace `<vm_name>` with the name of your virtual machine, shown in the VM VirtualBox Manager UI, e.g. `DietPi_VirtualBox-x86_64-Trixie` if you import the VM without changing its name.
 
         With all these setup steps the time synchronization with the usage of the extension pack should work. Sometimes it needs a couple of minutes until the time is synchronized, so be somehow patient.
 
@@ -337,7 +337,7 @@ Select the following tabs for the installation description of your target.
     [//]: # (Include hint how to extract .xz files with xz-utils)
     --8<---------- "snippet-includes/Extract-with-xz-utils_hintblock.md"
 
-    The resulting `DietPi_ESXi-x86_64-Bookworm.ova` has to be uploaded to the ESXi server.
+    The resulting `DietPi_ESXi-x86_64-Trixie.ova` has to be uploaded to the ESXi server.
 
     <h2>2. Create the Virtual Machine</h2>
 
@@ -412,7 +412,7 @@ Select the following tabs for the installation description of your target.
     1. Click the button "Download from URL" and enter the necessary fields in the following dialog
 
         - Insert the URL of the ISO image to the dialog  
-            (e.g. https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso)
+            (e.g. https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie_Installer.iso)
 
         - Press the button "Query URL" to verify the URL
 
@@ -423,7 +423,7 @@ Select the following tabs for the installation description of your target.
         
             - Activate the "Advanced" dialog option
             - Select SHA-256 as the "Hash algorithm"
-            - Open or download the SHA checksum (e.g. https://dietpi.com/downloads/images/DietPi_VM-x86_64-Bookworm_Installer.iso.sha256) and paste the checksum value from the file into the "Checksum" field
+            - Open or download the SHA checksum (e.g. https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie_Installer.iso.sha256) and paste the checksum value from the file into the "Checksum" field
 
     1. Click **Download**  
         The file is downloaded and the checksum is verified.
@@ -537,22 +537,20 @@ Select the following tabs for the installation description of your target.
             Click **Next**.
         1. Tab **Confirm**: Start the VM creation by clicking **Finish**.
 
-        <h2>2. Download, extract and import the DietPi image</h2>
+        <h2>2. Download and import the DietPi image</h2>
 
         !!! info "Transferring a disk image to Proxmox"
             A DietPi disk image can be transferred to the Proxmox server via e.g. USB flash drive or by uploading it as CD/DVD ISO image. Since the import needs to be done via console (accessible via web interface and SSH), we guide you through the path of downloading it directly on the Proxmox server.
 
         1. Select the Proxmox node, then click the **Shell** button at the top right corner. Alternatively connect via SSH to the Proxmox server, using the same login credentials you used for the Proxmox web interface.
-        1. In the console window, enter the following commands to download the DietPi image, optionally check its integrity, decompress it via `xz`, import it as disk to your new VM (using the **VM ID** you chose during creation) and make it the boot drive.  
+        1. In the console window, enter the following commands to download the DietPi image, optionally check its integrity, import it as disk to your new VM (using the **VM ID** you chose during creation) and make it the boot drive.  
             _If not done yet, we recommend to upgrade all APT packages to the latest version._
 
             ```sh
             apt update
             apt full-upgrade
-            apt install xz-utils
-            curl -O https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bookworm.qcow2.xz
-            sha256sum -c <(curl -sSf 'https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Bookworm.qcow2.xz.sha256')
-            xz -d DietPi_Proxmox-x86_64-Bookworm.qcow2.xz
+            curl -O https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Trixie.qcow2
+            sha256sum -c <(curl -sSf 'https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Trixie.qcow2.sha256')
             ```
 
             Next, the disk image is imported.  
@@ -560,7 +558,7 @@ Select the following tabs for the installation description of your target.
 
             ```sh
             ID=100
-            qm importdisk "$ID" DietPi_Proxmox-x86_64-Bookworm.qcow2 local-lvm
+            qm importdisk "$ID" DietPi_Proxmox-x86_64-Trixie.qcow2 local-lvm
             qm set "$ID" --scsi0 "local-lvm:vm-$ID-disk-0"
             qm set "$ID" --boot order=scsi0
             ```
