@@ -796,6 +796,12 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
         </thead>
         <tbody>
             <tr>
+                <td><a class="table" href=""><strong>Native PC for UEFI</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Trixie_Installer.iso">DietPi installer image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>Native PC for BIOS/CSM</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-BIOS-x86_64-Trixie.img.xz">DietPi image</a>
@@ -803,52 +809,63 @@ The Hyper-V virtual machine is great for those occasions where SBC performance j
                 </td>
             </tr>
             <tr>
-                <td><a class="table" href=""><strong>Native PC for UEFI</strong></a></td>
+                <td><a class="table" href=""><strong>Proxmox VM</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_NativePC-UEFI-x86_64-Trixie_Installer.iso">DietPi installer image</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table" href=""><strong>VMware Player / Fusion</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Trixie.tar.xz">DietPi VMX appliance</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table" href=""><strong>VMware ESXi Hypervisor</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ESXi-x86_64-Trixie.ova.xz">DietPi OVA appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie_Installer.iso">x86_64 installer ISO image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie.qcow2">x86_64 QCOW2 image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-UEFI-ARMv8-Trixie.qcow2">ARM64 QCOW2 image</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>VirtualBox</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Trixie.ova.xz">DietPi OVA appliance</a>
-                </td>
-            </tr>
-            <tr>
-                <td><a class="table" href=""><strong>Proxmox</strong></a></td>
-                <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie_Installer.iso">DietPi installer ISO image</a>
-                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Trixie.qcow2.xz">DietPi QCOW2 image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-x86_64-Trixie.ova.xz">x86_64 OVA appliance</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VirtualBox-UEFI-ARMv8-Trixie.ova.xz">ARM64 OVA appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Parallels</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Trixie.tar.xz">DietPi VMX appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Trixie.tar.xz">x86_64 VMX appliance</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-UEFI-ARMv8-Trixie.tar.xz">ARM64 VMX appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>UTM</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Trixie.tar.xz">DietPi UTM appliance</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-x86_64-Trixie.tar.xz">x86_64 UTM appliance</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_UTM-UEFI-ARMv8-Trixie.tar.xz">ARM64 UTM appliance</a>
                 </td>
             </tr>
             <tr>
                 <td><a class="table" href=""><strong>Hyper-V</strong></a></td>
                 <td>
-                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Hyper-V-x86_64-Trixie.vhdx.xz">DietPi VHDX image</a>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Hyper-V-x86_64-Trixie.vhdx.xz">x86_64 VHDX image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_Hyper-V-UEFI-ARMv8-Trixie.vhdx.xz">ARM64 VHDX image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>VMware Player / Fusion</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-x86_64-Trixie.tar.xz">x86_64 VMX appliance</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VMX-UEFI-ARMv8-Trixie.tar.xz">ARM64 VMX appliance</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>VMware ESXi Hypervisor</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ESXi-x86_64-Trixie.ova.xz">x86_64 OVA appliance</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_ESXi-UEFI-ARMv8-Trixie.ova.xz">ARM64 OVA appliance</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Generic VM</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie_Installer.iso">x86_64 installer ISO image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie.qcow2">x86_64 QCOW2 image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-UEFI-ARMv8-Trixie.qcow2">ARM64 QCOW2 image</a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie.img.xz">x86_64 raw <code>.img</code></a>
+                   <br><strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_VM-UEFI-ARMv8-Trixie.img.xz">ARM64 raw <code>.img</code></a>
                 </td>
             </tr>
         </tbody>
