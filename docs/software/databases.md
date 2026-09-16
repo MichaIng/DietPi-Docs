@@ -37,12 +37,6 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
 
     The MariaDB `root` account is intended for administrative tasks such as managing databases and database users. Services and software should use dedicated database users instead.
 
-    > **Note:** Run `mariadb` from an interactive Linux `root` shell rather than directly via `sudo`:
-    ```
-    sudo -i
-    mariadb
-    ```
-
 === "Configuration"
 
     <h2>Directories</h2>
