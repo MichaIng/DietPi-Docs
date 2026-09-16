@@ -34,7 +34,6 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
 
     * Username = `root`
     * Password = None
-    * Authentication = `unix_socket`
 
     The MariaDB `root` account is intended for administrative tasks such as managing databases and database users. Services and software should use dedicated database users instead.
 
