@@ -148,8 +148,8 @@ Select the following tabs for the installation description of your target.
              ```sh
              mkdir ~/Downloads
              cd ~/Downloads
-             curl -LO 'https://download.virtualbox.org/virtualbox/7.2.16/virtualbox-7.2_7.2.16-174877~Debian~trixie_amd64.deb'
-             apt install ./virtualbox-7.2_7.2.16-174877~Debian~trixie_amd64.deb
+             curl -LO 'https://download.virtualbox.org/virtualbox/7.2.18/virtualbox-7.2_7.2.18-175117~Debian~trixie_amd64.deb'
+             apt install ./virtualbox-7.2_7.2.18-175117~Debian~trixie_amd64.deb
              ```
 
         2. Installation of the VirtualBox extension pack on a Linux host system  
@@ -157,8 +157,8 @@ Select the following tabs for the installation description of your target.
 
              ```sh
              cd ~/Downloads
-             curl -LO 'https://download.virtualbox.org/virtualbox/7.2.16/Oracle_VirtualBox_Extension_Pack-7.2.16-174877.vbox-extpack'
-             VBoxManage extpack install Oracle_VirtualBox_Extension_Pack-7.2.16-174877.vbox-extpack
+             curl -LO 'https://download.virtualbox.org/virtualbox/7.2.18/Oracle_VirtualBox_Extension_Pack-7.2.18.vbox-extpack'
+             VBoxManage extpack install Oracle_VirtualBox_Extension_Pack-7.2.18.vbox-extpack
              ```
 
         After these two steps the host installation of the VirtualBox extension pack is completed. Further installation steps on the guest system are described below.
