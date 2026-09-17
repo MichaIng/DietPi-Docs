@@ -30,10 +30,12 @@ Source: [MariaDB](https://mariadb.com/), [LGPL](https://commons.wikimedia.org/w/
 
 === "Quick access"
 
-    As `root` user, run `mariadb` from command line, no separate authentication required. But note that this won’t work via sudo, but an interactive root user shell session is required.
+    Run `sudo mariadb`, or `mariadb` as UNIX `root` user from the command line. By default, the MariaDB root user account has no password assigned. Instead, authentication is coupled with the UNIX root user.
 
-    - Username = `root`
-    - Password = The same as your root login password, default is `dietpi`
+    * Username = `root`
+    * Password = None
+
+    The MariaDB `root` account is intended for administrative tasks such as managing databases and database users. Services and software should use dedicated database users instead.
 
 === "Configuration"
 
