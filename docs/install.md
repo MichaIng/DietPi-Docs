@@ -549,8 +549,8 @@ Select the following tabs for the installation description of your target.
             ```sh
             apt update
             apt full-upgrade
-            curl -O https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Trixie.qcow2
-            sha256sum -c <(curl -sSf 'https://dietpi.com/downloads/images/DietPi_Proxmox-x86_64-Trixie.qcow2.sha256')
+            curl -O https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie.qcow2
+            sha256sum -c <(curl -sSf 'https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie.qcow2.sha256')
             ```
 
             Next, the disk image is imported.  
@@ -558,7 +558,7 @@ Select the following tabs for the installation description of your target.
 
             ```sh
             ID=100
-            qm importdisk "$ID" DietPi_Proxmox-x86_64-Trixie.qcow2 local-lvm
+            qm importdisk "$ID" DDietPi_VM-x86_64-Trixie.qcow2 local-lvm
             qm set "$ID" --scsi0 "local-lvm:vm-$ID-disk-0"
             qm set "$ID" --boot order=scsi0
             ```
