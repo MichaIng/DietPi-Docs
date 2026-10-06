@@ -23,6 +23,7 @@ AIY
 Alexa
 Alicja
 Allo
+AllowedIPs
 ALSA
 Allwinner
 Allwinner's
@@ -345,6 +346,7 @@ JustBoom
 JVM
 Kavita
 Kbit
+keepalive
 Keychain
 keyring
 KiB
@@ -564,6 +566,7 @@ pre
 preboot
 preconfigured
 prefork
+PresharedKey
 Prioglio
 ProFTPD
 Prometheus
