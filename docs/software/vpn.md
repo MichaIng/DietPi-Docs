@@ -119,7 +119,7 @@ WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-
 
 ![WireGuard logo](../assets/images/dietpi-software-vpn-wireguard.svg){: width="300" height="53" loading="lazy"}
 
-When installing using `dietpi-software`, you can choose whether to install WireGuard as VPN server or client. Servers and clients are managed with [**DietPi-WireGuard**](../dietpi_tools/software_installation.md#dietpi-wireguard).
+When installing using `dietpi-software`, you can choose whether to install WireGuard as VPN server or client. Server and client configurations can be managed with [**DietPi-WireGuard**](../dietpi_tools/software_installation.md#dietpi-wireguard).
 
 === "Installing as VPN server"
 
@@ -138,24 +138,13 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 
     #### Adding clients
 
-    No client is created during the installation. Add one for each of your devices:
+    No client configuration is created during the installation. Add one for each of your devices:
 
     ```sh
     dietpi-wireguard
     ```
 
-    Select **Add client**, enter a name, and show the QR code. Scan it with the WireGuard app on your phone. For a computer, copy the config file `/etc/wireguard/clients/wg0-<name>.conf` to the device instead.
-
-    You can do the same on the command line:
-
-    ```sh
-    dietpi-wireguard add phone
-    dietpi-wireguard qr phone
-    ```
-
-    New clients connect to your public domain name, if you set `SOFTWARE_PUBLIC_DOMAIN_NAME` in `/boot/dietpi.txt`. Otherwise they use the hostname of your system. Change the **Endpoint** of the client to your domain or public IP address, if needed.
-
-    More commands, e.g. to disable or remove a client, are described in [**DietPi-WireGuard**](../dietpi_tools/software_installation.md#dietpi-wireguard).
+    How to add clients, show their QR codes and manage them is described in [**DietPi-WireGuard**](../dietpi_tools/software_installation.md#dietpi-wireguard).
 
     #### Which traffic goes through the VPN
 
@@ -194,7 +183,7 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 
 === "View logs"
 
-    The status of connected clients can be viewed with:
+    The status of the VPN connection and - when running it as server - connected clients can be viewed with:
 
     ```sh
     wg

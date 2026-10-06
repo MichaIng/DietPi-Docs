@@ -276,7 +276,7 @@ Missing packages are installed on first start. A WireGuard server which already 
 
     ![DietPi-WireGuard create server screenshot](../assets/images/dietpi-wireguard-create.png "DietPi-WireGuard create server"){: width="900" height="289" loading="lazy"}
 
-    The defaults are fine for most users. The server gets the name `wg0` and uses the UDP port `51820`. Its VPN address is `10.9.0.1`. When you select **Create**, the server starts. It also starts automatically after a reboot.
+    The defaults are fine for most users. The server gets the name `wg0` and uses the UDP port `51820`. Its VPN IPv4 address is `10.9.0.1`, and it gets a local IPv6 address `fd10:9::1`, if IPv6 is enabled on the host. When you select **Create**, the server starts. It also starts automatically after a reboot.
 
     If your DietPi system is behind a router, forward the UDP port to it.
 
@@ -285,10 +285,10 @@ Missing packages are installed on first start. A WireGuard server which already 
     - **Service state**: Start, stop or restart the server. You can also turn the start at boot on or off.
     - **Listen port**: Change the UDP port.
     - **Server address**: Change the VPN address of the server. The clients are updated automatically.
-    - **IPv6 (NAT66)**: Turn IPv6 for the VPN on or off, see the "IPv6" tab.
+    - **IPv6 (NAT66)**: Turn IPv6 for the VPN on or off, see the "IPv6" tab for details.
     - **Edit config**: Edit the config file by hand. Wrong settings are detected and not applied.
 
-    You can run more than one server. The menu then shows a **Server interface** entry to switch between them. Further servers are created with the command line, see the "Command line" tab.
+    You can run more than one server. The menu then shows a **Server interface** entry to switch between them. Further servers are created with the command line, see the "CLI" tab.
 
 === "Clients"
 
@@ -305,7 +305,7 @@ Missing packages are installed on first start. A WireGuard server which already 
     The settings are fine for most users. You can change them if needed:
 
     - **Address**: The VPN address of the client. The next free address is used.
-    - **Endpoint**: The address of your server on the Internet, followed by the port. Enter your domain name or public IP address here.
+    - **Endpoint**: The address of your server on the Internet, followed by the port. Enter your domain name or public IP address here. For the first client, the public domain name from `SOFTWARE_PUBLIC_DOMAIN_NAME` in `/boot/dietpi.txt` is used by default, otherwise the hostname of your system.
     - **DNS**: The DNS server which the client uses while connected.
     - **AllowedIPs**: The traffic which goes through the VPN. **Full tunnel** sends everything through it. **Server LAN** only sends the traffic to your home network.
     - **Keepalive**: Keeps the connection open, e.g. when the client is behind a router. A common value is 25 seconds.
@@ -335,9 +335,12 @@ Missing packages are installed on first start. A WireGuard server which already 
 
     If you enable IPv6 again later, DietPi-WireGuard reminds you to turn it on for your VPN.
 
-=== "Command line"
+    !!! info "IPv6 leaks are prevented in any case"
+        Even without IPv6 enabled for the VPN or on its host system, clients with "Full tunnel" are configured to send all IPv6 requests through the VPN. Most typical client software falls back to IPv4 quickly, if an IPv6 request does not get an answer. So usually, users won't recognize whether IPv6 is supported by the VPN or not, and their privacy is assured in any case.
 
-    Everything in the menu is also available on the command line, e.g. for scripts. The commands only manage the config files. To see which clients are connected right now, use `wg`.
+=== "CLI"
+
+    Everything in the menu is also available via command-line interface, e.g. for scripts. The commands only manage the config files. To see which clients are connected right now, use `wg`.
 
     Create a client and show its QR code:
 
