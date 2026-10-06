@@ -256,6 +256,169 @@ Available commands:
 
 ---
 
+## DietPi WireGuard
+
+DietPi-WireGuard helps you to run your own WireGuard VPN server. You can create the server and add your devices as clients. A QR code lets you set up a phone within seconds. To start DietPi-WireGuard, use the following command:
+
+```sh
+dietpi-wireguard
+```
+
+![DietPi-WireGuard main menu screenshot](../assets/images/dietpi-wireguard-main.png "DietPi-WireGuard main menu"){: width="900" height="374" loading="lazy"}
+
+Missing packages are installed on first start. A WireGuard server which already exists is found automatically, also if you did not create it with DietPi. The [WireGuard](../software/vpn.md#wireguard) software option of DietPi-Software uses this tool to create its server.
+
+### Feature overview {: id="dietpi-wireguard-features" }
+
+=== "Server"
+
+    If no server exists yet, select **Create server**.
+
+    ![DietPi-WireGuard create server screenshot](../assets/images/dietpi-wireguard-create.png "DietPi-WireGuard create server"){: width="900" height="289" loading="lazy"}
+
+    The defaults are fine for most users. The server gets the name `wg0` and uses the UDP port `51820`. Its VPN address is `10.9.0.1`. When you select **Create**, the server starts. It also starts automatically after a reboot.
+
+    If your DietPi system is behind a router, forward the UDP port to it.
+
+    The main menu shows the server settings. You can change them directly:
+
+    - **Service state**: Start, stop or restart the server. You can also turn the start at boot on or off.
+    - **Listen port**: Change the UDP port.
+    - **Server address**: Change the VPN address of the server. The clients are updated automatically.
+    - **IPv6 (NAT66)**: Turn IPv6 for the VPN on or off, see the "IPv6" tab.
+    - **Edit config**: Edit the config file by hand. Wrong settings are detected and not applied.
+
+    You can run more than one server. The menu then shows a **Server interface** entry to switch between them. Further servers are created with the command line, see the "Command line" tab.
+
+=== "Clients"
+
+    Each device which connects to your server is a client. The clients are listed below the server settings with their state:
+
+    - **active**: The client can connect.
+    - **disabled**: The client is blocked for now. Its config is kept, so that you can enable it again.
+    - **unused**: A config file exists, but the server does not know it. You can add it again or delete it.
+
+    Select **Add client** and enter a name, e.g. the name of the device.
+
+    ![DietPi-WireGuard add client screenshot](../assets/images/dietpi-wireguard-add.png "DietPi-WireGuard add client"){: width="900" height="306" loading="lazy"}
+
+    The settings are fine for most users. You can change them if needed:
+
+    - **Address**: The VPN address of the client. The next free address is used.
+    - **Endpoint**: The address of your server on the Internet, followed by the port. Enter your domain name or public IP address here.
+    - **DNS**: The DNS server which the client uses while connected.
+    - **AllowedIPs**: The traffic which goes through the VPN. **Full tunnel** sends everything through it. **Server LAN** only sends the traffic to your home network.
+    - **Keepalive**: Keeps the connection open, e.g. when the client is behind a router. A common value is 25 seconds.
+    - **PresharedKey**: An optional extra key for more security.
+
+    New clients use the settings of the newest client by default. This saves you time when you add several devices.
+
+    When the client is created, you can show its QR code. Open the WireGuard app on your phone, add a new tunnel and scan the code.
+
+    To manage a client, select it in the main menu. You can show its QR code and config, rename it, change its settings, disable, enable or remove it.
+
+    ![DietPi-WireGuard client menu screenshot](../assets/images/dietpi-wireguard-client.png "DietPi-WireGuard client menu"){: width="900" height="425" loading="lazy"}
+
+    After you change a client, the device needs its new config. Scan the QR code again or copy the config file. The config files are stored in `/etc/wireguard/clients/`.
+
+    Clients which were created by older DietPi versions or by hand are found automatically. Their old key files (`server_*.key` and `client_*.key`) are not needed anymore. Remove them with the **Old key files** entry in the menu.
+
+=== "IPv6"
+
+    New servers also get an IPv6 address range, e.g. `fd10:9::/64`. Every client gets an address from it, which ends like its IPv4 address. For example, `10.9.0.2` gets `fd10:9::2`. The menu calls this **IPv6 (NAT66)**.
+
+    This lets your clients use IPv6 websites and services through the VPN. Without it, connections to IPv6 services can hang or fail.
+
+    Use the **IPv6 (NAT66)** entry in the menu to turn IPv6 on or off. Your clients then need their new config.
+
+    A WireGuard server with IPv6 cannot start if IPv6 is disabled on your system. If you disable IPv6 with `dietpi-network`, DietPi therefore offers to turn it off for your VPN first. Without questions, e.g. in scripts, this happens automatically.
+
+    If you enable IPv6 again later, DietPi-WireGuard reminds you to turn it on for your VPN.
+
+=== "Command line"
+
+    Everything in the menu is also available on the command line, e.g. for scripts. The commands only manage the config files. To see which clients are connected right now, use `wg`.
+
+    Create a client and show its QR code:
+
+    ```sh
+    dietpi-wireguard add phone
+    dietpi-wireguard qr phone
+    ```
+
+    Show all clients, and disable, enable or remove one:
+
+    ```sh
+    dietpi-wireguard list
+    dietpi-wireguard disable phone
+    dietpi-wireguard enable phone
+    dietpi-wireguard remove phone
+    ```
+
+    Change settings of a client or of the server:
+
+    ```sh
+    dietpi-wireguard set phone dns=192.168.0.100
+    dietpi-wireguard server port=51821
+    ```
+
+    Turn IPv6 for the VPN on or off:
+
+    ```sh
+    dietpi-wireguard server ipv6=on
+    dietpi-wireguard server ipv6=off
+    ```
+
+    Create a further server, and remove old key files:
+
+    ```sh
+    dietpi-wireguard init wg1 port=51821 address=10.10.0.1/24
+    dietpi-wireguard cleanup
+    ```
+
+    Here is an overview of all available commands:
+
+    ```console
+    Usage: dietpi-wireguard [<command>] [<options>]
+    Available commands:
+        <empty>                         Open the interactive menu
+        init [<interface>] [<key>=<value>...]
+                                        Create a server config with defaults and start it, if no server config exists yet: port, address, ipv6
+                                        The interface defaults to the first free wg0, wg1, ...
+        list [<interface>]              List clients with address, state and config file
+        add <name> [<options>]          Create a new client and add it as peer to the server
+        remove <name>                   Remove a client: its server peer and its client config, after confirmation
+        disable <name>                  Disable a client: remove its server peer, but keep it for re-enabling
+        enable <name>                   Enable a disabled client again
+        qr <name>                       Print the client config as QR code, without comments
+        rename <name> <new name>        Rename a client config
+        set <name> <key>=<value>...     Change client settings: dns, allowedips, endpoint, keepalive, psk=on|off
+                                        An empty dns or keepalive value removes the setting.
+        server [<interface>] <key>=<value>...
+                                        Change server settings: port, address, ipv6
+        cleanup                         Remove unused client configs and key files which are not needed anymore, after confirmation
+    Server address:
+        address=<IPv4 address>/<prefix> The IPv4 address of the server, e.g. "10.9.0.1/24", whose subnet is used for the clients
+        ipv6=on|off|<address>/<prefix>  The IPv6 (NAT66) address of this server, e.g. "fd10:9::1/64", "on" for the default fd10:<n>::1/64,
+                                        whose subnet is used for the clients, with the same host part as their IPv4 address.
+                                        Without it, clients cannot use IPv6 through the VPN, so that connections to IPv6 hosts hang until
+                                        they fall back to IPv4, or fail. Defaults to "on" for new servers.
+                                        Changing the subnet and toggling IPv6 requires clients to import their config again.
+    Available options:
+        -i <interface>                  Server interface, required only if more than one server config exists
+        -y                              Do not ask for confirmation
+        --ip <address>                  Client VPN IPv4 address, defaults to the next free one
+        --dns <servers>                 Client DNS servers, comma-separated, empty for none
+        --allowed-ips <networks>        Client AllowedIPs, comma-separated
+        --endpoint <host>[:<port>]      Server endpoint for the client, port defaults to the server ListenPort
+        --keepalive <seconds>           Client PersistentKeepalive, 0 for none
+        --psk                           Add a PresharedKey
+    Defaults for "add" are taken from the newest client config of the same server.
+    <name> can also be the public key of a peer without local client config.
+    ```
+
+---
+
 ## DietPi DDNS
 
 DietPi-DDNS is a generic Dynamic DNS (DDNS) client. It can be used to setup a cron job which updates your dynamically changing public IP address every defined amount of minutes against a DDNS provider, so that your public domain stays valid. It supports No-IP and replaces the No-IP client, which was available as install option on previous DietPi versions. To start DietPi-DDNS, use the following command:

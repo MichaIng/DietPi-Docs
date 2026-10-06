@@ -119,74 +119,72 @@ WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-
 
 ![WireGuard logo](../assets/images/dietpi-software-vpn-wireguard.svg){: width="300" height="53" loading="lazy"}
 
-When installing using `dietpi-software`, you can choose whether to install WireGuard as VPN server or client.
+When installing using `dietpi-software`, you can choose whether to install WireGuard as VPN server or client. Servers and clients are managed with [**DietPi-WireGuard**](../dietpi_tools/software_installation.md#dietpi-wireguard).
 
 === "Installing as VPN server"
 
     #### General
 
-    You are asked to enter your public IP/domain and the port on which the VPN server should be available. Remember to open/forward the port (UDP) through NAT on your router.  
-    During installation, a client configuration file will be automatically created as well at:  
-    `/etc/wireguard/wg0-client.conf`
+    The installation creates a VPN server which is ready to use:
 
-    Configure the client configuration to your needs, it contains some informational comments. By default it will pass all clients network traffic through the VPN tunnel, including DNS requests which will be resolved by the servers DNS resolver.  
-    If you e.g. want to use the servers Pi-hole instance on the client only, but keep all other traffic outside the VPN tunnel, you would edit the following values:
+    - Name `wg0`, started automatically at boot
+    - UDP port `51820`. You can preset another port with `SOFTWARE_WIREGUARD_PORT` in `/boot/dietpi.txt`.
+    - VPN address `10.9.0.1`, so the clients get addresses like `10.9.0.2`
+    - An IPv6 address range, so that clients can use IPv6, unless IPv6 is disabled on your system
 
-    - `DNS = 192.168.0.100`
-    - `AllowedIPs = 192.168.0.100/32` (where the IP needs to match your DietPi servers local IP)
+    The clients can reach your home network and the Internet through the server.
 
-    If your client is another Linux machine with iptables installed, you can uncomment the two kill switch lines to have all network traffic automatically disabled, when VPN connection is lost.
-    If your client is a mobile phone with WireGuard app installed, you can simply apply the config by printing a QR code onto the servers terminal via:
+    Forward the UDP port from your router to your DietPi system, so that clients can connect from the Internet.
 
-    ```sh
-    grep -v '^#' /etc/wireguard/wg0-client.conf | qrencode -t ansiutf8
-    ```
+    #### Adding clients
 
-    To allow VPN clients accessing your local Pi-hole instance, you need to allow DNS requests from all network interfaces: `pihole -a -i local`
-
-    #### Adding multiple clients
-
-    Navigate to the servers WireGuard configuration directory: `cd /etc/wireguard`
-
-    Create a new client key pair. We use a shell variable `$name` here to give the client key and config files a consistent name `client2` throughout the steps. Use a unique and meaningful name so that you can identify and manage multiple clients easily:
+    No client is created during the installation. Add one for each of your devices:
 
     ```sh
-    name='client2'
-    umask 0077
-    wg genkey > "${name}_private.key"
-    wg pubkey < "${name}_private.key" > "${name}_public.key"
-    umask 0022
+    dietpi-wireguard
     ```
 
-    Create a new client config. Use `wg0-client.conf` as template, copy and edit it with below commands. In case adjust the client IP `10.9.0.3` to assure every client has its unique IP address.
+    Select **Add client**, enter a name, and show the QR code. Scan it with the WireGuard app on your phone. For a computer, copy the config file `/etc/wireguard/clients/wg0-<name>.conf` to the device instead.
+
+    You can do the same on the command line:
 
     ```sh
-    cp -a wg0-client.conf "wg0-$name.conf"
-    G_CONFIG_INJECT 'Address = ' 'Address = 10.9.0.3/24' "wg0-$name.conf"
-    G_CONFIG_INJECT 'PrivateKey = ' "PrivateKey = $(<"${name}_private.key")" "wg0-$name.conf"
+    dietpi-wireguard add phone
+    dietpi-wireguard qr phone
     ```
 
-    Add the following lines to the server config `wg0.conf` to allow the new client to connect:
+    New clients connect to your public domain name, if you set `SOFTWARE_PUBLIC_DOMAIN_NAME` in `/boot/dietpi.txt`. Otherwise they use the hostname of your system. Change the **Endpoint** of the client to your domain or public IP address, if needed.
 
-    ```ini
-    [Peer]
-    PublicKey = <paste content of ${name}_public.key here>
-    AllowedIPs = 10.9.0.3/32
+    More commands, e.g. to disable or remove a client, are described in [**DietPi-WireGuard**](../dietpi_tools/software_installation.md#dietpi-wireguard).
+
+    #### Which traffic goes through the VPN
+
+    By default, all traffic of a client goes through the VPN. This includes DNS requests, which your server answers.  
+    You may want to use only the Pi-hole of your server, and keep all other traffic outside the VPN. Then add the client with these options. The IP address needs to be the local IP address of your DietPi system:
+
+    ```sh
+    dietpi-wireguard add phone --dns 192.168.0.100 --allowed-ips 192.168.0.100/32
     ```
 
-    Restart the WireGuard service (`systemctl restart wg-quick@wg0`) and apply `wg0-$name.conf` to your new WireGuard client as you did before.
+    To allow VPN clients to use your local Pi-hole, allow DNS requests from all network interfaces: `pihole -a -i local`
+
+    #### Servers from older DietPi versions
+
+    Your existing server and its clients keep working. DietPi-WireGuard finds them automatically.
+
+    The IPv6 address range is not added to existing servers automatically. If you want it, turn it on with `dietpi-wireguard server ipv6=on`. Your clients then need their new config.
 
 === "Installing as VPN client"
 
     Usually the VPN provider will have install instructions and ship a configuration file.  
-    If the you want to connect to another DietPi machine, use the generated `/etc/wireguard/wg0-client.conf` as mentioned above.  
+    If you want to connect to another DietPi machine, create a client on that machine with `dietpi-wireguard add <name>`. Then copy the config file `/etc/wireguard/clients/wg0-<name>.conf` to this system, e.g. as `/etc/wireguard/wg-client.conf`.  
     If no WireGuard (auto)start instructions are included, but you require it, please do the following:
 
     - Check for the created configuration file/interface name: `ls -Al /etc/wireguard/`
-    - It has a `.conf` file ending, lets assume: `wg0-client.conf`
-    - To start the VPN interface, run: `systemctl start wg-quick@wg0-client`
-    - To autostart the VPN interface on boot, run: `systemctl enable wg-quick@wg0-client`
-    - To disable autostart again, run: `systemctl disable wg-quick@wg0-client`
+    - It has a `.conf` file ending, lets assume: `wg-client.conf`
+    - To start the VPN interface, run: `systemctl start wg-quick@wg-client`
+    - To autostart the VPN interface on boot, run: `systemctl enable wg-quick@wg-client`
+    - To disable autostart again, run: `systemctl disable wg-quick@wg-client`
 
     Remark: If the client config sets the DNS server via `DNS = ...` directive, assure that the `resolvconf` package is installed:
 
@@ -196,10 +194,16 @@ When installing using `dietpi-software`, you can choose whether to install WireG
 
 === "View logs"
 
-    The status of connected clients/peers can be viewed with:
+    The status of connected clients can be viewed with:
 
     ```sh
     wg
+    ```
+
+    The list of clients with their state can be viewed with:
+
+    ```sh
+    dietpi-wireguard list
     ```
 
     Local service logs can be viewed with:

@@ -15,6 +15,7 @@ dietpi-launcher
 - <a name="dietpi-software"></a>[**DietPi Software - Automated installation of software packages**](dietpi_tools/software_installation.md#dietpi-software)
 - <a name="dietpi-letsencrypt"></a>[**DietPi LetsEncrypt - A frontend for the Let's Encrypt integration**](dietpi_tools/software_installation.md#dietpi-letsencrypt)
 - <a name="dietpi-vpn"></a>[**DietPi VPN - A combination of OpenVPN installation and DietPi front end GUI**](dietpi_tools/software_installation.md#dietpi-vpn)
+- <a name="dietpi-wireguard"></a>[**DietPi WireGuard - Manage WireGuard servers and their clients**](dietpi_tools/software_installation.md#dietpi-wireguard)
 - <a name="dietpi-ddns"></a>[**DietPi DDNS - A generic Dynamic DNS (DDNS) client**](dietpi_tools/software_installation.md#dietpi-ddns)
 
 ## [System Configuration](dietpi_tools/system_configuration.md)
