@@ -402,10 +402,12 @@ Missing packages are installed on first start. A WireGuard server which already 
         cleanup                         Remove unused client configs and key files which are not needed anymore, after confirmation
     Server address:
         address=<IPv4 address>/<prefix> The IPv4 address of the server, e.g. "10.9.0.1/24", whose subnet is used for the clients
+                                        The CIDR netmask needs to be from 16 to 30.
         ipv6=on|off|<address>/<prefix>  The IPv6 (NAT66) address of this server, e.g. "fd10:9::1/64", "on" for the default fd10:<n>::1/64,
                                         whose subnet is used for the clients, with the same host part as their IPv4 address.
                                         Without it, clients cannot use IPv6 through the VPN, so that connections to IPv6 hosts hang until
                                         they fall back to IPv4, or fail. Defaults to "on" for new servers.
+                                        "off" removes all IPv6 addresses and routes, also those which are not part of the NAT66 subnet.
                                         Changing the subnet and toggling IPv6 requires clients to import their config again.
     Available options:
         -i <interface>                  Server interface, required only if more than one server config exists
