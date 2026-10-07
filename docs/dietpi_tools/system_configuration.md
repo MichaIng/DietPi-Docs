@@ -134,7 +134,7 @@ DietPi-Network sets up your network connections: Ethernet and WiFi, with automat
 dietpi-network
 ```
 
-![DietPi-Network main menu screenshot](../assets/images/dietpi-network-main.png "DietPi-Network main menu"){: width="1203" height="324" loading="lazy"}
+![DietPi-Network main menu screenshot](../assets/images/dietpi-network-main.png "DietPi-Network main menu"){: width="900" height="323" loading="lazy"}
 
 The same menu is opened by **Network Options: Adapters** in [DietPi-Config](#dietpi-config).
 
@@ -154,7 +154,7 @@ The same menu is opened by **Network Options: Adapters** in [DietPi-Config](#die
 
     Select your Ethernet adapter, e.g. `eth0`, in the main menu.
 
-    ![DietPi-Network Ethernet menu screenshot](../assets/images/dietpi-network-ethernet.png "DietPi-Network Ethernet menu"){: width="900" height="442" loading="lazy"}
+    ![DietPi-Network Ethernet menu screenshot](../assets/images/dietpi-network-ethernet.png "DietPi-Network Ethernet menu"){: width="900" height="425" loading="lazy"}
 
     - **Change Mode**: Switch between **DHCP** and **STATIC**. With DHCP, your router gives the IP address to your device. This is the best choice for most users. With STATIC, you choose the address yourself, and the following entries show up.
     - **Copy**: Take over the current address, gateway and DNS server as static values. This is a good start, if you want to keep the current address.
@@ -175,7 +175,7 @@ The same menu is opened by **Network Options: Adapters** in [DietPi-Config](#die
 
     Select your WiFi adapter, e.g. `wlan0`, in the main menu. WiFi has to be turned on with **WiFi modules** before.
 
-    ![DietPi-Network WiFi menu screenshot](../assets/images/dietpi-network-wifi.png "DietPi-Network WiFi menu"){: width="900" height="374" loading="lazy"}
+    ![DietPi-Network WiFi menu screenshot](../assets/images/dietpi-network-wifi.png "DietPi-Network WiFi menu"){: width="900" height="425" loading="lazy"}
 
     - **Scan**: Search for WiFi networks, select yours and enter the password.
     - **Change Mode**, **Static IP**, **Static Gateway**, **Static DNS**, **Boot Mode**, **Disable** / **Enable**, **Remove**, **Save** and **Apply**: Work like for Ethernet, see the "Ethernet" tab.
