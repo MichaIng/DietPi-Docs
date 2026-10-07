@@ -21,6 +21,7 @@ dietpi-launcher
 ## [System Configuration](dietpi_tools/system_configuration.md)
 
 - <a name="dietpi-configuration"></a>[**DietPi Config - Configure various system settings**](dietpi_tools/system_configuration.md#dietpi-config)
+- <a name="dietpi-network"></a>[**DietPi Network - Configure Ethernet and WiFi network adapters**](dietpi_tools/system_configuration.md#dietpi-network)
 - <a name="dietpi-drive-manager"></a>[**DietPi Drive Manager - Feature-rich drive management utility**](dietpi_tools/system_configuration.md#dietpi-drive-manager)
 - <a name="dietpi-autostart"></a>[**DietPi Autostart - Defines software packages to start when the DietPi OS boots up**](dietpi_tools/system_configuration.md#dietpi-autostart)
 - <a name="dietpi-services"></a>[**DietPi Services - Provides service control, priority level tweaks and status print**](dietpi_tools/system_configuration.md#dietpi-services)
