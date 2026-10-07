@@ -134,7 +134,7 @@ DietPi-Network sets up your network connections: Ethernet and WiFi, with automat
 dietpi-network
 ```
 
-![DietPi-Network main menu screenshot](../assets/images/dietpi-network-main.png "DietPi-Network main menu"){: width="900" height="255" loading="lazy"}
+![DietPi-Network main menu screenshot](../assets/images/dietpi-network-main.png "DietPi-Network main menu"){: width="1203" height="324" loading="lazy"}
 
 The same menu is opened by **Network Options: Adapters** in [DietPi-Config](#dietpi-config).
 
