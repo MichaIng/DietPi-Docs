@@ -291,6 +291,7 @@ hostname
 hostnames
 hotfix
 HotFix
+hotplug
 hotspot
 HotSpot
 hotspots
@@ -365,6 +366,8 @@ Kubernetes
 Kubo
 Kuma
 KVM
+LAN1
+LAN2
 LASP
 Laravel
 LazyLibrarian
@@ -467,6 +470,7 @@ natively
 Navidrome
 nd
 Netdata
+netmask
 Nextcloud
 NFS
 nftables

@@ -58,7 +58,7 @@ dietpi-config
 
 === "Network Options: Adapters"
 
-    The network options are used to
+    The network adapter options open [DietPi-Network](#dietpi-network). They are used to
 
     - Scan and connect to a WiFi router with ease
     - Change to a static IP address on the network
@@ -123,6 +123,150 @@ Available values for <targetmenu_id>:
     22          Open menu "Network Options: Misc" -> "Test domain name"
 
 ```
+
+---
+
+## DietPi Network
+
+DietPi-Network sets up your network connections: Ethernet and WiFi, with automatic (DHCP) or fixed (static) IP address. Every network adapter of your device is listed and can be configured on its own. This is helpful, if your device has more than one network port, e.g. a NanoPi R5S with the ports WAN, LAN1 and LAN2. To start DietPi-Network, use the following command:
+
+```sh
+dietpi-network
+```
+
+![DietPi-Network main menu screenshot](../assets/images/dietpi-network-main.png "DietPi-Network main menu"){: width="900" height="255" loading="lazy"}
+
+The same menu is opened by **Network Options: Adapters** in [DietPi-Config](#dietpi-config).
+
+### Feature overview {: id="dietpi-network-features" }
+
+=== "Main menu"
+
+    The menu lists all Ethernet and WiFi adapters which were found, with their state, e.g. `[On (hotplug)] | DHCP | Connected`. Select an adapter to change its settings. Below, the **Global Options** are found:
+
+    - **WiFi modules**: Turn WiFi support on or off for the whole system. When you turn it off, you can also remove the WiFi packages.
+    - **Onboard WiFi**: Turn the WiFi chip on your board on or off. This entry only shows up, if your board has WiFi onboard.
+    - **IPv6**: Turn IPv6 on or off.
+    - **Proxy**: Set up a proxy server, see the "Proxy" tab.
+    - **Test**: Enter a web address, e.g. `https://dietpi.com`, to test whether your Internet connection works.
+
+=== "Ethernet"
+
+    Select your Ethernet adapter, e.g. `eth0`, in the main menu.
+
+    ![DietPi-Network Ethernet menu screenshot](../assets/images/dietpi-network-ethernet.png "DietPi-Network Ethernet menu"){: width="900" height="442" loading="lazy"}
+
+    - **Change Mode**: Switch between **DHCP** and **STATIC**. With DHCP, your router gives the IP address to your device. This is the best choice for most users. With STATIC, you choose the address yourself, and the following entries show up.
+    - **Copy**: Take over the current address, gateway and DNS server as static values. This is a good start, if you want to keep the current address.
+    - **Static IP**: The IP address of your device, e.g. `192.168.0.100`. Optionally, add the netmask like `192.168.0.100/24`. Without it, `/24` (`255.255.255.0`) is used, which fits to most home networks.
+    - **Static Gateway**: The address of your router, e.g. `192.168.0.1`. It is used to reach the Internet. Leave it empty, if this adapter shall **not** be used for Internet access, see the "Several adapters" tab.
+    - **Static DNS**: The DNS server which translates domain names. Your router or a public DNS provider can be selected from a list.
+    - **Link Speed**: The connection speed. Leave it at **auto** unless you know that you need a fixed speed.
+    - **Boot Mode**: **hotplug** brings the adapter up as soon as it is detected. This is recommended. **auto** brings it up during early boot, which can fail if the adapter starts slowly.
+    - **Disable** / **Enable**: Turn the adapter off or on.
+    - **Remove**: Delete the settings of this adapter completely.
+    - **Save**: Save the settings. They are used from the next reboot.
+    - **Apply**: Save the settings and use them right now. Only this adapter is restarted.
+
+    !!! warning "Take care with a remote connection"
+        If you are connected via SSH, a wrong address or gateway can cut your connection when you select **Apply**. Make sure that the values are correct, and that you can reach your device otherwise, e.g. with a keyboard and monitor.
+
+=== "WiFi"
+
+    Select your WiFi adapter, e.g. `wlan0`, in the main menu. WiFi has to be turned on with **WiFi modules** before.
+
+    ![DietPi-Network WiFi menu screenshot](../assets/images/dietpi-network-wifi.png "DietPi-Network WiFi menu"){: width="900" height="374" loading="lazy"}
+
+    - **Scan**: Search for WiFi networks, select yours and enter the password.
+    - **Change Mode**, **Static IP**, **Static Gateway**, **Static DNS**, **Boot Mode**, **Disable** / **Enable**, **Remove**, **Save** and **Apply**: Work like for Ethernet, see the "Ethernet" tab.
+    - **Country**: Select your country. This is required to use the WiFi channels and power which are allowed in your region.
+    - **Auto Reconnect**: Reconnects automatically, if the WiFi connection is lost.
+
+    If you have installed the [WiFi HotSpot](../software/advanced_networking.md#wifi-hotspot) software, the WiFi adapter of the hotspot shows the hotspot settings instead: **SSID** (name), **Key** (password, at least 8 characters), **Frequency** (2.4 or 5 GHz), **Channel** and the WiFi standards **802.11n/ac/ax** (WiFi 4/5/6). With **State**, you can turn the hotspot on or off.
+
+=== "Several adapters"
+
+    With more than one network adapter, think about what each one shall do:
+
+    - **One adapter for the Internet**: This adapter needs a gateway. With DHCP, this is done by your router. With a static address, set **Static Gateway** to your router address.
+    - **Further adapters**: Usually, they get a static address and **no gateway**. Your device can then reach another local network with a different address range, e.g. a NAS or development board which is connected directly to your device. Or other devices from that network can reach your DietPi. Each adapter needs its own address range, e.g. `192.168.0.x` and `192.168.1.x`. DietPi-Network warns you, if two adapters would use the same range or if there would be two gateways.
+
+    !!! info "What DietPi-Network does not do"
+        DietPi-Network only sets up the adapters of your device itself. It does not forward traffic from one adapter to another, so it cannot be used for bridges or routers, and it does not provide a fallback Internet connection if one adapter fails. It also does not set up a hotspot from LAN to LAN, WiFi to LAN or WiFi to WiFi. Use the [WiFi HotSpot](../software/advanced_networking.md#wifi-hotspot) software for a hotspot with Internet access from your Ethernet connection.
+
+=== "Proxy"
+
+    ![DietPi-Network proxy menu screenshot](../assets/images/dietpi-network-proxy.png "DietPi-Network proxy menu"){: width="900" height="221" loading="lazy"}
+
+    If you need a proxy server to reach the Internet, e.g. in a company network, enter its **Address**, **Port** and, if needed, **Username** and **Password**. Then switch **State** to on. Log out and in again, so that the settings take effect.
+
+=== "CLI"
+
+    All menus can be opened directly, and all settings can be changed without the menu, e.g. for scripts. Open the settings of one adapter, the proxy or the WiFi country directly:
+
+    ```sh
+    dietpi-network eth0
+    dietpi-network proxy
+    dietpi-network country
+    ```
+
+    Set a static address on `eth0`, and go back to DHCP:
+
+    ```sh
+    dietpi-network apply eth0 --static --ip 192.168.0.100/24 --gateway 192.168.0.1 --dns "192.168.0.1"
+    dietpi-network apply eth0 --dhcp
+    ```
+
+    Set up a second adapter without gateway, so that it is not used for the Internet:
+
+    ```sh
+    dietpi-network apply eth1 --static --ip 192.168.1.10/24
+    ```
+
+    Change the proxy:
+
+    ```sh
+    dietpi-network proxy address proxy.example.com
+    dietpi-network proxy port 8080
+    dietpi-network proxy enable
+    ```
+
+    Here is an overview of all available commands:
+
+    ```console
+    Usage: dietpi-network [<command>]
+    Available commands:
+      <empty>, main                       Open the interactive top-level menu to control network settings
+      <ifname>                            Open the interactive submenu for network interface <ifname>
+      country                             Open the interactive WiFi country code submenu
+      proxy                               Open the interactive proxy submenu
+      apply <ifname> [<options>...]       Apply interface config for <ifname> and reconnect only that interface
+      remove <ifname>                     Remove the DietPi drop-in config for <ifname> and ifdown the interface
+      proxy enable|disable                Enable or disable the configured proxy globally
+      proxy address|port|username|password <value>
+                                          Apply <value> to the specified proxy setting
+    Available options for "apply" command:
+      --enable|--disable                  Enable or disable the interface
+      --dhcp|--static                     Select DHCP or static IPv4 mode
+      --ip <address>[/<cidr>]             Static IPv4 address with optional CIDR netmask, else /24
+      --gateway <address>                 Static IPv4 gateway
+      --dns "<ip> [<ip>...]"              Static DNS server list
+      --copy-current                      Copy current live IPv4/DNS values into static settings before applying
+      --hotplug|--auto                    Bring up interface once detected/plugged (hotplug) or during early boot (auto)
+                                          The hotplug mode is the recommended default on all systems but container guests.
+                                          The auto mode can fail if the adapter is not initializing fast enough.
+      --client|--hotspot                  WiFi client or hotspot mode, which defaults to client for new interfaces
+      --ssid <name>                       WiFi hotspot SSID
+      --key <passphrase>                  WiFi hotspot WPA passphrase
+      --freq 2.4|5                        WiFi hotspot frequency band
+      --channel <channel>                 WiFi hotspot channel for the selected frequency band
+      --wifi4 0|1                         Enable or disable WiFi 4 / 802.11n support for hotspot mode
+      --wifi5 0|1                         Enable or disable WiFi 5 / 802.11ac support for hotspot mode
+      --wifi6 0|1                         Enable or disable WiFi 6 / 802.11ax support for hotspot mode
+      --no-restart                        Write config only, do not reconnect the interface now
+      --force                             Proceed even if a network conflict (same subnet/duplicate default route) with
+                                          another enabled interface is detected, or if the interface does not exist at all.
+    ```
 
 ---
 
