@@ -275,6 +275,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Prometheus - Monitoring system and time series database**](software/system_stats.md#prometheus)
 - [**Homer - A modern homepage for your services**](software/system_stats.md#homer)
 - [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](software/system_stats.md#uptime-kuma)
+- [**SolidPing - Self-hosted uptime monitoring with status pages and alerting**](software/system_stats.md#solidping)
 
 ## [VPN](software/vpn.md)
 
