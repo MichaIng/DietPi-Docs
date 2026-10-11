@@ -24,6 +24,7 @@ description: Description of DietPi software options related to system statistics
 - [**Prometheus - Monitoring system and time series database**](#prometheus)
 - [**Homer - A modern homepage for your services**](#homer)
 - [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](#uptime-kuma)
+- [**SolidPing - Self-hosted uptime monitoring with status pages and alerting**](#solidping)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -1121,6 +1122,65 @@ Official documentation: <https://github.com/louislam/uptime-kuma/wiki>
 Official demo: <https://uptime.kuma.pet/>  
 License: [MIT](https://github.com/louislam/uptime-kuma/blob/master/LICENSE)  
 Additional information page: <https://uptimekuma.org/>
+
+## SolidPing
+
+SolidPing is a self-hosted uptime monitoring tool. It runs HTTP, TCP, DNS, ICMP, TLS certificate, database and many other checks, alerts you by email, Slack, Discord, Telegram and other channels, and serves public status pages. It is a single Go binary with an embedded SQLite database.
+
+![SolidPing checks list screenshot](../assets/images/solidping.webp "SolidPing checks list"){: width="1280" height="800" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **4002**:
+
+    - URL: `http://<your.IP>:4002`
+    - Username: `admin@solidping.io`
+    - Password: `solidpass`
+
+    You are asked to set a new password at the first login.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Directories/Configuration"
+
+    - Install directory: `/opt/solidping`
+    - Data directory: `/mnt/dietpi_userdata/solidping`
+    - Environment file: `/mnt/dietpi_userdata/solidping/solidping.env`
+
+    The data directory holds the SQLite database and uploaded files. The environment file holds the port, the public URL and the key used to encrypt stored check and integration credentials. Keep a backup of this file together with the database.
+
+    If you access SolidPing via a domain or a reverse proxy, set `SP_BASE_URL` in the environment file to that URL, then restart the service:
+
+    ```sh
+    systemctl restart solidping
+    ```
+
+    All available options are listed in the [SolidPing configuration documentation](https://docs.solidping.io/docs/configuration/).
+
+=== "View logs"
+
+    View the logs by executing:
+
+    ```sh
+    journalctl -u solidping
+    ```
+
+=== "Update"
+
+    To update SolidPing, reinstall it. The database and the environment file are preserved:
+
+    ```sh
+    dietpi-software reinstall solidping
+    ```
+
+***
+
+Official website: <https://www.solidping.io/>  
+Official documentation: <https://docs.solidping.io/>  
+Official demo: <https://solidping.io/d/login?demo=true>  
+Source code: <https://github.com/fclairamb/solidping>  
+License: [AGPLv3](https://github.com/fclairamb/solidping/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)
 
