@@ -39,6 +39,7 @@ Armbian
 Armbian's
 ARMv
 ASUS
+ATAPI
 Atheros
 audiobook
 audiobooks
@@ -727,11 +728,15 @@ StephanStS
 storages
 subdirectories
 subdirectory
-subshell
-sudo
+submenu
+submodule
 subnet
 subnets
+subshell
+subversions
 subvolume
+subvolumes
+sudo
 suju
 Sur
 SVG
