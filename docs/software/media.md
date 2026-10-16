@@ -2044,7 +2044,7 @@ DVB-C/C2, DVB-S/S2, DVB-T/T2, IPTV, SAT>IP and unix pipe input sources.
     Since Tvheadend runs as a systemd service under the hts user, its logs can be viewed via:
 
     ```sh
-    journalctl -u hts
+    journalctl -u tvheadend
     ```
 
 === "Update"
