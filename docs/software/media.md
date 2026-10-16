@@ -1983,7 +1983,7 @@ License: [GPLv3](https://github.com/navidrome/navidrome/blob/master/LICENSE)
 Tvheadend is the leading TV streaming server for Linux with ATSC,
 DVB-C/C2, DVB-S/S2, DVB-T/T2, IPTV, SAT>IP and unix pipe input sources.
 
-![Tvheadend web interface screenshot](../assets/images/dietpi-software-media-tvheadend.webp "Tvheadend web interface UI"){: width="400" height="225" loading="lazy"}
+![Tvheadend web interface screenshot](../assets/images/dietpi-software-media-tvheadend.webp "Tvheadend web interface UI"){: width="602" height="340" loading="lazy"}
 
 === "Web interface"
 
