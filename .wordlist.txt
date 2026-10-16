@@ -23,6 +23,7 @@ AIY
 Alexa
 Alicja
 Allo
+AllowedIPs
 ALSA
 Allwinner
 Allwinner's
@@ -290,6 +291,7 @@ hostname
 hostnames
 hotfix
 HotFix
+hotplug
 hotspot
 HotSpot
 hotspots
@@ -345,6 +347,7 @@ JustBoom
 JVM
 Kavita
 Kbit
+keepalive
 Keychain
 keyring
 KiB
@@ -363,6 +366,8 @@ Kubernetes
 Kubo
 Kuma
 KVM
+LAN1
+LAN2
 LASP
 Laravel
 LazyLibrarian
@@ -465,6 +470,7 @@ natively
 Navidrome
 nd
 Netdata
+netmask
 Nextcloud
 NFS
 nftables
@@ -564,6 +570,7 @@ pre
 preboot
 preconfigured
 prefork
+PresharedKey
 Prioglio
 ProFTPD
 Prometheus

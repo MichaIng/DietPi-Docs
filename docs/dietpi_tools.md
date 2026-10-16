@@ -15,11 +15,13 @@ dietpi-launcher
 - <a name="dietpi-software"></a>[**DietPi Software - Automated installation of software packages**](dietpi_tools/software_installation.md#dietpi-software)
 - <a name="dietpi-letsencrypt"></a>[**DietPi LetsEncrypt - A frontend for the Let's Encrypt integration**](dietpi_tools/software_installation.md#dietpi-letsencrypt)
 - <a name="dietpi-vpn"></a>[**DietPi VPN - A combination of OpenVPN installation and DietPi front end GUI**](dietpi_tools/software_installation.md#dietpi-vpn)
+- <a name="dietpi-wireguard"></a>[**DietPi WireGuard - Manage WireGuard servers and their clients**](dietpi_tools/software_installation.md#dietpi-wireguard)
 - <a name="dietpi-ddns"></a>[**DietPi DDNS - A generic Dynamic DNS (DDNS) client**](dietpi_tools/software_installation.md#dietpi-ddns)
 
 ## [System Configuration](dietpi_tools/system_configuration.md)
 
 - <a name="dietpi-configuration"></a>[**DietPi Config - Configure various system settings**](dietpi_tools/system_configuration.md#dietpi-config)
+- <a name="dietpi-network"></a>[**DietPi Network - Configure Ethernet and WiFi network adapters**](dietpi_tools/system_configuration.md#dietpi-network)
 - <a name="dietpi-drive-manager"></a>[**DietPi Drive Manager - Feature-rich drive management utility**](dietpi_tools/system_configuration.md#dietpi-drive-manager)
 - <a name="dietpi-autostart"></a>[**DietPi Autostart - Defines software packages to start when the DietPi OS boots up**](dietpi_tools/system_configuration.md#dietpi-autostart)
 - <a name="dietpi-services"></a>[**DietPi Services - Provides service control, priority level tweaks and status print**](dietpi_tools/system_configuration.md#dietpi-services)

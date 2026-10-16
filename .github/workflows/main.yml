@@ -11,7 +11,7 @@ permissions: { contents: read }
 jobs:
   main:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.owner.login != github.event.pull_request.base.repo.owner.login
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
     - name: Clone DietPi-Docs repository
       id: clone
@@ -25,14 +25,15 @@ jobs:
       run: sudo npm i -g markdownlint-cli2@latest
     - name: Run markdownlint-cli2 to check Markdown files
       run: markdownlint-cli2 '**.md'
-    - name: Install MkDocs and PySpelling
+    - name: Setup Python for MkDocs and PySpelling
       id: python
       if: always() && steps.clone.outcome == 'success'
       uses: actions/setup-python@v7
       with:
-        # Match version on dietpi.com server
-        python-version: 3.14.6
-    - id: mkdocs
+        python-version: 3.x
+        check-latest: true
+    - name: Install MkDocs and PySpelling
+      id: mkdocs
       if: always() && steps.python.outcome == 'success'
       run: pip install -Ur requirements.txt pyspelling
     - name: Build DietPi-Docs
