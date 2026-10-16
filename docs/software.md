@@ -207,6 +207,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Snapcast Server - Multi room audio server**](software/media.md#snapcast-server)
 - [**Snapcast Client - Multi room audio client**](software/media.md#snapcast-client)
 - [**Navidrome - Web interface media streaming server**](software/media.md#navidrome)
+- [**Tvheadend - A TV streaming server**](software/media.md#tvheadend)
 - [**Kavita - Your digital library in one place (manga, comics, and books)**](software/media.md#kavita)
 
 ## [Printing Server](software/printing.md)
