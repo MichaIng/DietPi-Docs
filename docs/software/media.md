@@ -40,6 +40,7 @@ description: Description of DietPi software options related to media systems lik
 - [**Snapcast Server - Multi room audio server**](#snapcast-server)
 - [**Snapcast Client - Multi room audio client**](#snapcast-client)
 - [**Navidrome - Web interface media streaming server**](#navidrome)
+- [**Tvheadend - A TV streaming server**](#tvheadend)
 - [**Kavita - Your digital library in one place (manga, comics, and books)**](#kavita)
 
 [//]: # (Include software expandable infoblock)
@@ -1976,6 +1977,84 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
 Website: <https://www.navidrome.org/>  
 Source code: <https://github.com/navidrome/navidrome>  
 License: [GPLv3](https://github.com/navidrome/navidrome/blob/master/LICENSE)
+
+## Tvheadend
+
+Tvheadend is the leading TV streaming server for Linux with ATSC,
+DVB-C/C2, DVB-S/S2, DVB-T/T2, IPTV, SAT>IP and unix pipe input sources.
+
+![Tvheadend web interface screenshot](../assets/images/dietpi-software-media-tvheadend.webp "Tvheadend web interface UI"){: width="400" height="225" loading="lazy"}
+
+=== "Web interface"
+
+    The web interface uses port **9981**:
+
+    - URL: `http://<your.IP>:9981`
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+    The HTSP stream offered to downstream clients such as Kodi use port **9982*.
+
+
+=== "Setup details"
+
+    The install, config and data directory is located at:
+
+    ```
+    /mnt/dietpi_userdata/tvheadend
+    ```
+
+    The default recordings directory is located at:
+
+    ```
+    /mnt/dietpi_userdata/tvheadend/recordings
+    ```
+
+=== "Clients/Players"
+
+    Tvheadend provides a backend for streaming, but can be configured to work with front-end
+    media servers such as VLC, or Kodi via a dedicated add-on.
+
+    - <https://www.videolan.org/vlc/>
+    - <https://kodi.wiki/view/Add-on:Tvheadend_HTSP_Client>
+
+=== "Service control"
+
+    Since Tvheadend runs as systemd service, it can be controlled with the following commands:
+
+    ```sh
+    systemctl status tvheadend
+    ```
+
+    ```sh
+    systemctl start tvheadend
+    ```
+
+    ```sh
+    systemctl stop tvheadend
+    ```
+
+    ```sh
+    systemctl restart tvheadend
+    ```
+
+=== "View logs"
+
+    Since Tvheadend runs as a systemd service under the hts user, its logs can be viewed via:
+
+    ```sh
+    journalctl -u hts
+    ```
+
+=== "Update"
+
+    Tvheadend can be updated by simply reinstalling it:
+
+    ```sh
+    dietpi-software reinstall tvheadend
+    ```
+
 
 ## Kavita
 
