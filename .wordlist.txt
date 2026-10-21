@@ -39,6 +39,7 @@ Armbian
 Armbian's
 ARMv
 ASUS
+ATAPI
 Atheros
 audiobook
 audiobooks
@@ -109,6 +110,7 @@ Clonezilla
 Cloudflare
 CloudPrint
 CloudShell
+cloudshell
 Codeberg
 codec
 codecs
@@ -240,6 +242,8 @@ fullscreen
 FuguHub
 GameStream
 Gbit
+geocoding
+GeoNames
 GiB
 GiBs
 GiBi
@@ -728,11 +732,15 @@ StephanStS
 storages
 subdirectories
 subdirectory
-subshell
-sudo
+submenu
+submodule
 subnet
 subnets
+subshell
+subversions
 subvolume
+subvolumes
+sudo
 suju
 Sur
 SVG
@@ -880,6 +888,7 @@ WinBtrfs
 WinSCP
 WIP
 WireGuard
+wireguard
 WiringPi
 Wokandapix
 WordPress
