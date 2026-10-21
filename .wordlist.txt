@@ -110,6 +110,7 @@ Clonezilla
 Cloudflare
 CloudPrint
 CloudShell
+cloudshell
 Codeberg
 codec
 codecs
@@ -241,6 +242,8 @@ fullscreen
 FuguHub
 GameStream
 Gbit
+geocoding
+GeoNames
 GiB
 GiBs
 GiBi
@@ -884,6 +887,7 @@ WinBtrfs
 WinSCP
 WIP
 WireGuard
+wireguard
 WiringPi
 Wokandapix
 WordPress
