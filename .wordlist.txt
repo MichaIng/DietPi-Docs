@@ -701,6 +701,7 @@ SNMP
 SoC
 SoCs
 soju
+SolidPing
 Sonarr
 SOQuartz
 Sora
