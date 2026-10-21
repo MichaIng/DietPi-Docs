@@ -23,6 +23,7 @@ AIY
 Alexa
 Alicja
 Allo
+AllowedIPs
 ALSA
 Allwinner
 Allwinner's
@@ -38,6 +39,7 @@ Armbian
 Armbian's
 ARMv
 ASUS
+ATAPI
 Atheros
 audiobook
 audiobooks
@@ -108,6 +110,7 @@ Clonezilla
 Cloudflare
 CloudPrint
 CloudShell
+cloudshell
 Codeberg
 codec
 codecs
@@ -239,6 +242,8 @@ fullscreen
 FuguHub
 GameStream
 Gbit
+geocoding
+GeoNames
 GiB
 GiBs
 GiBi
@@ -290,6 +295,7 @@ hostname
 hostnames
 hotfix
 HotFix
+hotplug
 hotspot
 HotSpot
 hotspots
@@ -345,6 +351,7 @@ JustBoom
 JVM
 Kavita
 Kbit
+keepalive
 Keychain
 keyring
 KiB
@@ -363,6 +370,8 @@ Kubernetes
 Kubo
 Kuma
 KVM
+LAN1
+LAN2
 LASP
 Laravel
 LazyLibrarian
@@ -465,6 +474,7 @@ natively
 Navidrome
 nd
 Netdata
+netmask
 Nextcloud
 NFS
 nftables
@@ -564,6 +574,7 @@ pre
 preboot
 preconfigured
 prefork
+PresharedKey
 Prioglio
 ProFTPD
 Prometheus
@@ -720,11 +731,15 @@ StephanStS
 storages
 subdirectories
 subdirectory
-subshell
-sudo
+submenu
+submodule
 subnet
 subnets
+subshell
+subversions
 subvolume
+subvolumes
+sudo
 suju
 Sur
 SVG
@@ -872,6 +887,7 @@ WinBtrfs
 WinSCP
 WIP
 WireGuard
+wireguard
 WiringPi
 Wokandapix
 WordPress
