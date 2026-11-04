@@ -1579,6 +1579,14 @@ Paperless-ngx is a document management system that turns your scanned paper docu
     - Copy them into the consumption directory `/mnt/dietpi_userdata/paperless-ngx/consume`. Paperless-ngx processes them automatically, including files in subdirectories, and removes them from this directory afterwards. Members of the `dietpi` group can write to it, so you can e.g. use [Samba](file_servers.md#samba) or let your network scanner save scans there.
     - Use one of the [mobile apps](https://docs.paperless-ngx.com/usage/#usage-mobile_upload) or the REST API.
 
+    !!! note "Subdirectories need to be writable for the `dietpi` group"
+        After processing a document, Paperless-ngx needs to remove it from the consumption directory, which requires write permissions on the directory containing it. Subdirectories created via Samba, FTP or File Browser are writable for the `dietpi` group already. Subdirectories created via SSH, SFTP or on the console are not, hence documents in them fail to be processed. In this case, make them writable for the group and restart the consumer service, which then processes them again:
+
+        ```sh
+        chmod -R g+w /mnt/dietpi_userdata/paperless-ngx/consume
+        systemctl restart paperless-consumer
+        ```
+
 === "Configuration"
 
     The configuration is stored in the following file:
