@@ -1576,7 +1576,7 @@ Paperless-ngx is a document management system that turns your scanned paper docu
     Documents can be added in several ways:
 
     - Upload them via the web interface, e.g. via drag and drop.
-    - Copy them into the consumption directory `/mnt/dietpi_userdata/paperless-ngx/consume`. Paperless-ngx processes them automatically and removes them from this directory afterwards. Members of the `dietpi` group can write to it, so you can e.g. use [Samba](file_servers.md#samba) or let your network scanner save scans there.
+    - Copy them into the consumption directory `/mnt/dietpi_userdata/paperless-ngx/consume`. Paperless-ngx processes them automatically, including files in subdirectories, and removes them from this directory afterwards. Members of the `dietpi` group can write to it, so you can e.g. use [Samba](file_servers.md#samba) or let your network scanner save scans there.
     - Use one of the [mobile apps](https://docs.paperless-ngx.com/usage/#usage-mobile_upload) or the REST API.
 
 === "Configuration"
@@ -1596,6 +1596,7 @@ Paperless-ngx is a document management system that turns your scanned paper docu
     | `PAPERLESS_DATA_DIR` | `/mnt/dietpi_userdata/paperless-ngx/data` | Database, search index and logs |
     | `PAPERLESS_MEDIA_ROOT` | `/mnt/dietpi_userdata/paperless-ngx/media` | Stored documents and thumbnails |
     | `PAPERLESS_CONSUMPTION_DIR` | `/mnt/dietpi_userdata/paperless-ngx/consume` | Directory for new documents |
+    | `PAPERLESS_CONSUMER_RECURSIVE` | `true` | Consume documents in subdirectories of the consumption directory as well |
     | `PAPERLESS_DBENGINE` | `sqlite` | Database engine |
     | `PAPERLESS_REDIS` | `unix:///run/redis/redis-server.sock` | Redis UNIX socket |
     | `PAPERLESS_SECRET_KEY` | *(random, set during install)* | Secret key for session cookies |
