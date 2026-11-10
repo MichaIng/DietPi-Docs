@@ -138,6 +138,7 @@ customizable
 CVE
 CVEs
 DAC
+daemonless
 DALL
 DarkBetter
 DarkIce
@@ -565,6 +566,7 @@ PiVPN
 piwheels
 Pixabay
 Plex
+Podman
 Portainer
 POSIX
 PostBoot
@@ -593,6 +595,7 @@ Pydev
 Pydio
 pyenv
 PyPI
+Quadlet
 RAR
 qBittorrent
 QCOW
