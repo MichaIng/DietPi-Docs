@@ -234,7 +234,7 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
 
 === "Install a desired Node.js version"
 
-    `DietPi-Software` generally handles Node.js dependencies for the software it installs. If Node.js is installed only via `DietPi-Software`, the latest version is installed unless another `DietPi-Software` package requires a specific version. Dependencies of manually installed software cannot be detected automatically.
+    `dietpi-software` generally handles Node.js dependencies for the software it installs. If Node.js is installed only via `dietpi-software`, the latest LTS version is installed. Dependencies of manually installed software cannot be detected automatically.
 
     To install a desired Node.js version, first install the `n` version manager. These commands require root privileges (use `sudo` if you are not logged in as root):
 
