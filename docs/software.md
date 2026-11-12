@@ -269,6 +269,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Docker - Build, ship, and run distributed applications**](software/system_stats.md#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](software/system_stats.md#docker-compose)
 - [**Portainer - Docker container management**](software/system_stats.md#portainer)
+- [**Podman - Daemonless container engine with Docker-compatible CLI and API**](software/system_stats.md#podman)
 - [**K3s - Lightweight Kubernetes**](software/system_stats.md#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](software/system_stats.md#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](software/system_stats.md#prometheus-node-exporter)
