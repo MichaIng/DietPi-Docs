@@ -105,6 +105,7 @@ ChatGPT
 ClickHouse
 CIDR
 CIFS
+CIX
 CLI
 Clonezilla
 Cloudflare
@@ -168,6 +169,7 @@ dl
 dlp
 dm
 DNS
+dodeca
 Domoticz
 Doomguy
 DoT
@@ -805,6 +807,7 @@ unbootable
 uncheck
 uncomment
 uncomments
+undervoltage
 unencrypted
 unformatted
 unmount
@@ -914,6 +917,7 @@ ympd
 youtube
 yt
 yt-dlp
+Yuvomi
 Zeroconf
 ZeroPi
 ZeroTier
