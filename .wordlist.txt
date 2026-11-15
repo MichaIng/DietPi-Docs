@@ -38,6 +38,7 @@ archiver
 Armbian
 Armbian's
 ARMv
+ARP
 ASUS
 ATAPI
 Atheros
@@ -253,6 +254,7 @@ Gilles
 Gitea
 github
 Globals
+globals
 GlusterFS
 GMediaRender
 GNUstep
@@ -437,6 +439,7 @@ MiniDLNA
 MinIO
 Mio
 MIPI
+misconfiguration
 mjpg
 MkDocs
 MMAL
@@ -481,6 +484,7 @@ Nextcloud
 NFS
 nftables
 Nginx
+ngx
 nodejs
 nm
 Nmap
@@ -703,6 +707,7 @@ SNMP
 SoC
 SoCs
 soju
+SolidPing
 Sonarr
 SOQuartz
 Sora
@@ -860,6 +865,7 @@ VMX
 VNC
 VNCSERVER
 VPN
+vpn
 VPS
 VSCode
 VSCodium
