@@ -593,7 +593,7 @@ Select the following tabs for the installation description of your target.
     ??? info "What the script configures"
         The script takes care of a few Proxmox specifics:
 
-        - The network is managed by Proxmox: The network settings of the container (DHCP or static IP address) apply as they are set in the Proxmox web interface. Change them there and not via `dietpi-config` inside the container.
+        - The network is managed by Proxmox: The network settings of the container (DHCP or static IP address) apply as they are set in the Proxmox web interface. Change them there and not via `dietpi-network` inside the container.
         - The hostname of the container is used as DietPi hostname.
         - An SSH public key given in the advanced settings is applied for the `root` user, so that a key based SSH login works right after the first run setup.
         - A root password given in the advanced settings becomes the DietPi global password, hence the password of the users `root` and `dietpi`. Without it, both users get the default password `dietpi`, and the container console logs in automatically as `root`, like with every container of the helper scripts.
