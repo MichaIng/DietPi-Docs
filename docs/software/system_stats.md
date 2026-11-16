@@ -643,6 +643,24 @@ Unlike Docker, Podman does not need a background service: Containers are started
 
     Container logs and events are sent to the systemd journal. This is configured in `/etc/containers/containers.conf.d/97-dietpi.conf`.
 
+    If D-Bus is not running at install time, which is the default on DietPi, the `cgroupfs` cgroup manager is set in the same file, as the default `systemd` cgroup manager of Podman requires D-Bus. Containers keep working when D-Bus is installed later.
+
+=== "Additional networks"
+
+    The default `podman` network has DNS disabled, so containers in it use the DNS servers of the host. Containers in additional networks, created via `podman network create`, use the network's gateway as DNS server instead, which is served by `aardvark-dns`. It is not installed by default, so install it before using additional networks:
+
+    ```sh
+    apt install aardvark-dns
+    ```
+
+    Without it, containers in additional networks cannot resolve any names, including other containers in the same network.
+
+=== "Podman and Docker"
+
+    Podman and [Docker](#docker) can be installed on the same system. Docker however sets the policy of the iptables `FORWARD` chain to `DROP`, which blocks the internet access of Podman containers and connections to their published ports. To allow them, DietPi adds rules for all Podman network bridges (`podman+`) to the `FORWARD` chain whenever Docker starts. This is done via `/etc/systemd/system/docker.service.d/dietpi-podman.conf`, which is created when both are installed, and removed when Podman is uninstalled.
+
+    Note that Podman enables IPv4 forwarding globally, and unlike Docker, it does not block access to container IPs from other hosts: A host in your LAN which routes the Podman subnet via your DietPi system can reach containers directly, including ports which are not published.
+
 === "View logs"
 
     Logs of a container can be viewed with:
