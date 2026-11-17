@@ -139,6 +139,7 @@ customizable
 CVE
 CVEs
 DAC
+daemonless
 DALL
 DarkBetter
 DarkIce
@@ -208,6 +209,7 @@ ESXi
 executables
 exFAT
 extlinux
+firewalld
 FS
 facto
 FAHClient
@@ -569,6 +571,7 @@ PiVPN
 piwheels
 Pixabay
 Plex
+Podman
 Portainer
 POSIX
 PostBoot
@@ -598,6 +601,7 @@ Pydio
 pyenv
 PyPI
 PyTorch
+Quadlet
 RAR
 qBittorrent
 QCOW
