@@ -884,6 +884,7 @@ VST
 Vulkan
 Waveshare
 WebAuthn
+WebDAV
 WebIOPi
 Webmin
 webroot

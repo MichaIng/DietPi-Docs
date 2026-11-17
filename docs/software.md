@@ -40,7 +40,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Radarr - Automatically download Movies**](software/bittorrent.md#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](software/bittorrent.md#bazarr)
 - [**Lidarr - Automatically download Music**](software/bittorrent.md#lidarr)
-- [**Readarr - Ebook and audiobook collection manager**](software/bittorrent.md#readarr)
 - [**Prowlarr - Indexer manager & proxy for PVR**](software/bittorrent.md#prowlarr)
 - [**Jackett - API Support for your favourite torrent trackers**](software/bittorrent.md#jackett)
 - [**NZBGet - NZB download manager with web interface**](software/bittorrent.md#nzbget)
@@ -72,6 +71,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Restic - Fast, efficient and secure command-line backup program**](software/cloud.md#restic)
 - [**Immich - Self-hosted photo and video management solution**](software/cloud.md#immich)
 - [**HomeBox - Self-hosted home inventory and organisation system**](software/cloud.md#homebox)
+- [**Yuvomi - Self-hosted family planner with calendar, tasks, meals, shopping and budget**](software/cloud.md#yuvomi)
 - [**Paperless-ngx - Document management system with OCR and full-text search**](software/cloud.md#paperless-ngx)
 
 ## [Databases & Data Stores](software/databases.md)
@@ -104,7 +104,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Python 3 - High-level interpreted programming language**](software/programming.md#python-3)
 - [**Go - Programming language**](software/programming.md#go)
 - [**Java - Programming language**](software/programming.md#java)
-- [**Mono - .NET Framework implementation**](software/programming.md#mono)
 - [**VSCodium - FLOSS version of Microsoft VSCode**](software/programming.md#vscodium)
 - [**Git - Distributed version control system**](software/programming.md#git)
 - [**PHP Composer - A Dependency Manager for PHP**](software/programming.md#php-composer)

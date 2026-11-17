@@ -583,6 +583,8 @@ Podman is a daemonless container engine to develop, manage and run containers. I
 
 Unlike Docker, Podman does not need a background service: Containers are started as regular processes, and can be managed as individual systemd units. This makes Podman a lightweight alternative to [Docker](#docker), especially on low-end systems.
 
+![Podman logo](../assets/images/podman.svg){: width="300" height="80" loading="lazy"}
+
 === "Run containers as systemd units"
 
     No Podman service is enabled by DietPi. The intended way to run containers permanently, including start at boot, is a systemd unit per container.
