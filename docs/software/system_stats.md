@@ -591,7 +591,9 @@ Unlike Docker, Podman does not need a background service: Containers are started
     ```ini
     [Container]
     Image=docker.io/library/nginx
+    ContainerName=nginx
     PublishPort=8080:80
+    AutoUpdate=registry
 
     [Install]
     WantedBy=multi-user.target
@@ -604,17 +606,19 @@ Unlike Docker, Podman does not need a background service: Containers are started
     systemctl start nginx
     ```
 
-    It is started automatically at boot as well, due to the `[Install]` section.
+    The unit is named after the file, `nginx.service`, and it is started automatically at boot as well, due to the `[Install]` section. `ContainerName` sets the container name to `nginx` as well, which is `systemd-nginx` otherwise. `AutoUpdate=registry` enables automatic image updates, see the "Update" tab.
 
     On **Debian Bookworm** (Podman v4.3), create the container first, then generate a systemd unit from it:
 
     ```sh
-    podman create --name nginx -p 8080:80 docker.io/library/nginx
+    podman create --name nginx -p 8080:80 --label io.containers.autoupdate=registry docker.io/library/nginx
     cd /etc/systemd/system
-    podman generate systemd --new --files --name nginx
+    podman generate systemd --new --files --name --container-prefix='' nginx
     systemctl daemon-reload
-    systemctl enable --now container-nginx
+    systemctl enable --now nginx
     ```
+
+    With the empty `--container-prefix`, the unit is named `nginx.service`, the same as with Quadlet above. The `io.containers.autoupdate=registry` label enables automatic image updates, see the "Update" tab.
 
 === "Docker-compatible API"
 
@@ -682,7 +686,19 @@ Unlike Docker, Podman does not need a background service: Containers are started
     apt upgrade
     ```
 
-    To update the image of a container, pull the new image and recreate the container, e.g. by restarting its systemd unit when it was created with `--new` resp. via Quadlet:
+    Container images can be updated with `podman auto-update`. It pulls new images for all containers which run as systemd unit with `AutoUpdate=registry` (Quadlet) resp. the `io.containers.autoupdate=registry` label (Bookworm), as in the examples of the first tab, and restarts their units:
+
+    ```sh
+    podman auto-update
+    ```
+
+    To check for updates without applying them, use `podman auto-update --dry-run`. To update images automatically once per day, enable the timer, which is enabled by default on Bookworm already:
+
+    ```sh
+    systemctl enable --now podman-auto-update.timer
+    ```
+
+    For containers without this setting, pull the new image and restart the systemd unit, which recreates the container when it was created via Quadlet resp. with `--new`:
 
     ```sh
     podman pull docker.io/library/nginx
