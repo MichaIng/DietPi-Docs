@@ -208,6 +208,7 @@ ESXi
 executables
 exFAT
 extlinux
+firewalld
 FS
 facto
 FAHClient

@@ -643,17 +643,15 @@ Unlike Docker, Podman does not need a background service: Containers are started
 
     Container logs and events are sent to the systemd journal. This is configured in `/etc/containers/containers.conf.d/97-dietpi.conf`.
 
-    If D-Bus is not running at install time, which is the default on DietPi, the `cgroupfs` cgroup manager is set in the same file, as the default `systemd` cgroup manager of Podman requires D-Bus. Containers keep working when D-Bus is installed later.
+    In the same file, `aardvark-dns` is set to listen on port `54` instead of `53` (see "Additional networks").
+
+    If D-Bus is not running at install time, which is the default on DietPi, the `cgroupfs` cgroup manager is set in the same file as well, as the default `systemd` cgroup manager of Podman requires D-Bus. Containers keep working when D-Bus is installed later. In this case, `netavark-firewalld-reload.service` is masked as well, as it cannot work without D-Bus, and DietPi does not use firewalld.
 
 === "Additional networks"
 
-    The default `podman` network has DNS disabled, so containers in it use the DNS servers of the host. Containers in additional networks, created via `podman network create`, use the network's gateway as DNS server instead, which is served by `aardvark-dns`. It is not installed by default, so install it before using additional networks:
+    The default `podman` network has DNS disabled, so containers in it use the DNS servers of the host. Containers in additional networks, created via `podman network create`, use the network's gateway as DNS server instead, which is served by `aardvark-dns`. This allows them to resolve each other by container name. `aardvark-dns` is installed with Podman, and started on demand only, when a container in such a network runs.
 
-    ```sh
-    apt install aardvark-dns
-    ```
-
-    Without it, containers in additional networks cannot resolve any names, including other containers in the same network.
+    To not conflict with DNS servers on the host, like [Pi-hole](dns_servers.md#pi-hole), [AdGuard Home](dns_servers.md#adguard-home) or [Unbound](dns_servers.md#unbound), or with containers which publish port `53`, `aardvark-dns` listens on port `54`. DNS queries from containers are redirected to it automatically.
 
 === "Podman and Docker"
 
