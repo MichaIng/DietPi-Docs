@@ -18,7 +18,6 @@ description: Description of DietPi software options related to BitTorrent and ot
 - [**Radarr - Automatically download Movies**](#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](#bazarr)
 - [**Lidarr - Automatically download Music**](#lidarr)
-- [**Readarr - Ebook and audiobook collection manager**](#readarr)
 - [**Prowlarr - Indexer manager & proxy for PVR**](#prowlarr)
 - [**Jackett - API Support for your favourite torrent trackers**](#jackett)
 - [**NZBGet - NZB download manager with web interface**](#nzbget)
@@ -761,6 +760,10 @@ Automatically download your favorite TV shows, as they become available.
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
+!!! info "Not available on ARMv6"
+
+    Since DietPi v10.9, this software cannot be installed on ARMv6 systems (Raspberry Pi 1 and Zero 1) anymore. It needed the outdated Mono runtime on these systems, which has been removed from DietPi. Existing installations are not removed by the DietPi update. More details: <https://github.com/MichaIng/DietPi/pull/8388>
+
 ![Sonarr web interface screenshot](../assets/images/dietpi-software-download-sonarr.png "Sonarr web interface screen"){: width="400" height="200" loading="lazy"}
 
 === "Access to the web interface"
@@ -884,6 +887,10 @@ Automatically download your favorite movies, as they become available.
 ??? note "A download client is required"
 
     Transmission BitTorrent server is recommended to enable automatic downloads
+
+!!! info "Not available on ARMv6"
+
+    Since DietPi v10.9, this software cannot be installed on ARMv6 systems (Raspberry Pi 1 and Zero 1) anymore. It needed the outdated Mono runtime on these systems, which has been removed from DietPi. Existing installations are not removed by the DietPi update. More details: <https://github.com/MichaIng/DietPi/pull/8388>
 
 ![Radarr web interface screenshot](../assets/images/dietpi-software-download-radarr.png "Radarr web interface screen"){: width="400" height="207" loading="lazy"}
 
@@ -1087,6 +1094,10 @@ Automatically download your favorite music.
 
     Transmission BitTorrent server is recommended to enable automatic downloads
 
+!!! info "Not available on ARMv6"
+
+    Since DietPi v10.9, this software cannot be installed on ARMv6 systems (Raspberry Pi 1 and Zero 1) anymore. It needed the outdated Mono runtime on these systems, which has been removed from DietPi. Existing installations are not removed by the DietPi update. More details: <https://github.com/MichaIng/DietPi/pull/8388>
+
 ![Lidarr web interface screenshot](../assets/images/dietpi-software-download-lidarr.jpg "Lidarr web interface screen"){: width="400" height="205" loading="lazy"}
 
 === "Access to the web interface"
@@ -1202,128 +1213,6 @@ Automatically download your favorite music.
 Official website: <https://lidarr.audio/>  
 Official documentation: <https://wiki.servarr.com/lidarr>  
 
-## Readarr
-
-Automatically download your favorite ebook, as they become available.
-
-??? note "A download client is required"
-
-    Transmission BitTorrent server is recommended to enable automatic downloads
-
-![Readarr web interface screenshot](../assets/images/dietpi-software-download-readarr.png "Readarr web interface screen"){: width="400" height="183" loading="lazy"}
-
-=== "Access to the web interface"
-
-    The web interface is accessible via port **8787**:
-
-    - URL: `http://<your.IP>:8787`
-
-    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
-    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
-
-=== "First run setup"
-
-    Before you can add ebooks, you'll need to select a search indexer to use from the web interface:
-
-    - Simply go to `Settings` \> `Indexer` then choose at least one indexer.
-
-    Setup your download client:
-
-    - Simply go to `Settings` \> `Download Client`, select your installed download client and enter [required credentials](#transmission).
-
-    Setup folder creation mask:  
-    If you require write access from other applications, you'll also need to set the folder creation mask to allow this.
-
-    - In the Readarr web interface, select `Settings`
-    - Toggle to `Advanced settings` (enable it)
-    - Under `Media Management` tab, scroll down to the bottom of the page under Permissions, set the following values:
-
-      ![Readarr permissions options](../assets/images/dietpi-software-download-readarrpermissions.png "Readarr permissions options dialog"){: width="400" height="254" loading="lazy"}
-
-    - Save changes
-
-=== "Add an ebook"
-
-    - Simply select `Add New Author`
-    - Type a name of the ebook or author you wish to find
-    - Once found, under `path` use the following location `/mnt/dietpi_userdata/downloads`
-    - Change any further options if needed, then select `Add`
-
-=== "Configuration"
-
-    Readarr can be configured via its config file: `/mnt/dietpi_userdata/readarr/config.xml`.  
-    See <https://wiki.servarr.com/readarr/settings> for details.  
-    To apply changes, restart the service:
-
-    ```sh
-    systemctl restart readarr
-    ```
-
-=== "Using custom download/media directories"
-
-    By default Readarr has strict permissions to only access download and media directories inside `/mnt/` and `/media`. If you need to use a different location, please do the following:
-
-    1. Run `dietpi-services` from console
-    2. Select `readarr`
-    3. Select `Edit`
-    4. Uncomment (remove leading `#`) the line, starting with `ReadWritePaths=`
-    5. Add your custom path to the end of this line, separated by one space
-    6. Press ++ctrl+o++ buttons to save and ++ctrl+x++ to exit
-
-=== "Setup details"
-
-    The install, config and data directory is located at:
-
-    - Install directory: `/opt/readarr`
-    - Data directory: `/mnt/dietpi_userdata/readarr`
-    - Readarr configuration file: `/mnt/dietpi_userdata/readarr/config.xml`
-
-=== "Service control"
-
-    Since Readarr runs as systemd service, it can be controlled with the following commands:
-
-    ```sh
-    systemctl status readarr
-    ```
-
-    ```sh
-    systemctl start readarr
-    ```
-
-    ```sh
-    systemctl stop readarr
-    ```
-
-    ```sh
-    systemctl restart readarr
-    ```
-
-=== "View logs"
-
-    Logs can be viewed with the following commands:
-
-    ```sh
-    journalctl -u readarr
-    ```
-
-    ```sh
-    cat /var/log/readarr/readarr.txt
-    ```
-
-=== "Update"
-
-    - Use the internal web based updater
-
-[//]: # (Include software expandable infoblock)
---8<---------- "snippet-includes/Protect-privacy-with-VPN_tab.md"
-
-***
-
-Official website: <https://readarr.com/>  
-Official documentation: <https://wiki.servarr.com/readarr>  
-Source code: <https://github.com/Readarr/Readarr>  
-License: [GPLv3](https://github.com/Readarr/Readarr/blob/develop/LICENSE.md)
-
 ## Prowlarr
 
 Prowlarr is an indexer manager/proxy built on the popular \*arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Lidarr, Mylar3, Radarr, Readarr, and Sonarr offering complete management of your indexers.
@@ -1405,6 +1294,10 @@ License: [GPLv3](https://github.com/Prowlarr/Prowlarr/blob/develop/LICENSE)
 ## Jackett
 
 Jackett works as a proxy server: it translates queries from apps (Sonarr, Radarr, Lidarr, Medusa) into tracker-site-specific HTTP queries, parses the HTML response, then sends results back to the requesting software. This allows for getting recent uploads (like RSS) and performing searches.
+
+!!! info "Not available on ARMv6"
+
+    Since DietPi v10.9, this software cannot be installed on ARMv6 systems (Raspberry Pi 1 and Zero 1) anymore. It needed the outdated Mono runtime on these systems, which has been removed from DietPi. Existing installations are not removed by the DietPi update. More details: <https://github.com/MichaIng/DietPi/pull/8388>
 
 ![Jackett web interface screenshot](../assets/images/dietpi-software-download-jackett.png "Jackett web interface screen"){: width="400" height="262" loading="lazy"}
 

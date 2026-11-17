@@ -105,6 +105,7 @@ ChatGPT
 ClickHouse
 CIDR
 CIFS
+CIX
 CLI
 Clonezilla
 Cloudflare
@@ -122,6 +123,7 @@ config
 configs
 containerd
 CORS
+Cortex
 Coturn
 CouchPotato
 COVID
@@ -138,6 +140,7 @@ customizable
 CVE
 CVEs
 DAC
+daemonless
 DALL
 DarkBetter
 DarkIce
@@ -207,6 +210,7 @@ ESXi
 executables
 exFAT
 extlinux
+firewalld
 FS
 facto
 FAHClient
@@ -479,6 +483,7 @@ Nextcloud
 NFS
 nftables
 Nginx
+ngx
 nodejs
 nm
 Nmap
@@ -498,6 +503,7 @@ nyx
 NZB
 NZBGet
 oCIS
+OCR
 OCSP
 OctoPrint
 ODM
@@ -540,6 +546,7 @@ OVH
 OVPN
 ownCloud
 Panokostas
+Paperless
 PaperMC
 pasja
 passwd
@@ -565,6 +572,7 @@ PiVPN
 piwheels
 Pixabay
 Plex
+Podman
 Portainer
 POSIX
 PostBoot
@@ -593,6 +601,8 @@ Pydev
 Pydio
 pyenv
 PyPI
+PyTorch
+Quadlet
 RAR
 qBittorrent
 QCOW
@@ -701,6 +711,7 @@ SNMP
 SoC
 SoCs
 soju
+SolidPing
 Sonarr
 SOQuartz
 Sora
@@ -762,6 +773,7 @@ Tautulli
 TCP
 tcpdump
 teleporter
+Tesseract
 TFTP
 th
 thechildofroth
@@ -866,6 +878,7 @@ VST
 Vulkan
 Waveshare
 WebAuthn
+WebDAV
 WebIOPi
 Webmin
 webroot
@@ -914,6 +927,7 @@ ympd
 youtube
 yt
 yt-dlp
+Yuvomi
 Zeroconf
 ZeroPi
 ZeroTier

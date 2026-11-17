@@ -10,7 +10,6 @@ description: Description of DietPi software options related to software developm
 - [**Python 3 - High-level interpreted programming language**](#python-3)
 - [**Go - Programming language**](#go)
 - [**Java - Programming language**](#java)
-- [**Mono - Programming language**](#mono)
 - [**VSCodium - FLOSS version of Microsoft VSCode**](#vscodium)
 - [**Git - Distributed version control system**](#git)
 - [**PHP Composer - A Dependency Manager for PHP**](#php-composer)
@@ -144,20 +143,6 @@ To find out which version of Java is installed, just run
 java -version
 ```
 
-## Mono
-
-![Mono .NET Framework implementation logo](../assets/images/dietpi-software-programming-mono.png){: width="100" height="119" loading="lazy"}
-
-Source: User [`OsamaK`](https://en.wikipedia.org/wiki/User:OsamaK) - <https://de.wikipedia.org/w/index.php?curid=3548404>
-
-[Mono](https://www.mono-project.com/) is a cross platform, open source .NET framework. Is an alternative implementation of the Microsoft .NET framework. It support the development of platform independent software on the standards of the Common Language Infrastructure and the programming language C#.
-
-To find out which version of Mono is installed, just run
-
-```sh
-mono --version
-```
-
 ## VSCodium
 
 VSCodium is a FLOSS version of [Microsoft's Visual Studio code](https://code.visualstudio.com/), built directly from the source on GitHub, without branding, tracking, or telemetry.
@@ -231,6 +216,30 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
     ```sh
     dietpi-software reinstall 9
     ```
+
+=== "Install a desired Node.js version"
+
+    `dietpi-software` generally handles Node.js dependencies for the software it installs. If Node.js is installed only via `dietpi-software`, the latest LTS version is installed. Dependencies of manually installed software cannot be detected automatically.
+
+    To install a desired Node.js version, first install the `n` version manager. These commands require root privileges (use `sudo` if you are not logged in as root):
+
+    ```sh
+    npm install -g n
+    ```
+
+    Then install the desired version:
+
+    ```sh
+    n lts       # Latest LTS version
+    n latest    # Latest version
+    n 26.13.0   # A specific version
+    n 24.22     # Latest patch release in the 24.22 series
+    n 24        # Latest version in the 24 series
+    ```
+
+    Check the installed version with `node -v`. For more options, run `n --help`.
+
+    See the [Node.js release schedule](https://nodejs.org/en/about/previous-releases) for version information.
 
 ***
 

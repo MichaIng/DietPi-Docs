@@ -40,7 +40,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Radarr - Automatically download Movies**](software/bittorrent.md#radarr)
 - [**Bazarr - Automatically download Subtitles for Sonarr/Radarr**](software/bittorrent.md#bazarr)
 - [**Lidarr - Automatically download Music**](software/bittorrent.md#lidarr)
-- [**Readarr - Ebook and audiobook collection manager**](software/bittorrent.md#readarr)
 - [**Prowlarr - Indexer manager & proxy for PVR**](software/bittorrent.md#prowlarr)
 - [**Jackett - API Support for your favourite torrent trackers**](software/bittorrent.md#jackett)
 - [**NZBGet - NZB download manager with web interface**](software/bittorrent.md#nzbget)
@@ -72,6 +71,8 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Restic - Fast, efficient and secure command-line backup program**](software/cloud.md#restic)
 - [**Immich - Self-hosted photo and video management solution**](software/cloud.md#immich)
 - [**HomeBox - Self-hosted home inventory and organisation system**](software/cloud.md#homebox)
+- [**Yuvomi - Self-hosted family planner with calendar, tasks, meals, shopping and budget**](software/cloud.md#yuvomi)
+- [**Paperless-ngx - Document management system with OCR and full-text search**](software/cloud.md#paperless-ngx)
 
 ## [Databases & Data Stores](software/databases.md)
 
@@ -103,7 +104,6 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Python 3 - High-level interpreted programming language**](software/programming.md#python-3)
 - [**Go - Programming language**](software/programming.md#go)
 - [**Java - Programming language**](software/programming.md#java)
-- [**Mono - .NET Framework implementation**](software/programming.md#mono)
 - [**VSCodium - FLOSS version of Microsoft VSCode**](software/programming.md#vscodium)
 - [**Git - Distributed version control system**](software/programming.md#git)
 - [**PHP Composer - A Dependency Manager for PHP**](software/programming.md#php-composer)
@@ -269,12 +269,14 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Docker - Build, ship, and run distributed applications**](software/system_stats.md#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](software/system_stats.md#docker-compose)
 - [**Portainer - Docker container management**](software/system_stats.md#portainer)
+- [**Podman - Daemonless container engine with Docker-compatible CLI and API**](software/system_stats.md#podman)
 - [**K3s - Lightweight Kubernetes**](software/system_stats.md#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](software/system_stats.md#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](software/system_stats.md#prometheus-node-exporter)
 - [**Prometheus - Monitoring system and time series database**](software/system_stats.md#prometheus)
 - [**Homer - A modern homepage for your services**](software/system_stats.md#homer)
 - [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](software/system_stats.md#uptime-kuma)
+- [**SolidPing - Self-hosted uptime monitoring with status pages and alerting**](software/system_stats.md#solidping)
 
 ## [VPN](software/vpn.md)
 

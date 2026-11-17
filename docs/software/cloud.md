@@ -21,10 +21,12 @@ description: Description of DietPi software options related to cloud and backup 
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](#file-browser)
 - [**HomeBox - Self-hosted home inventory and organisation system**](#homebox)
+- [**Yuvomi - Self-hosted family planner with calendar, tasks, meals, shopping and budget**](#yuvomi)
 - [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](#restic)
 - [**Immich - Self-hosted photo and video management solution**](#immich)
 - [**Immich Machine Learning - Machine learning server for Immich facial recognition and smart search**](#immich-machine-learning)
+- [**Paperless-ngx - Document management system with OCR and full-text search**](#paperless-ngx)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -1547,5 +1549,288 @@ HomeBox is a self-hosted home inventory and organisation system. It helps you ke
 Official documentation: <https://homebox.software/>  
 Source code: <https://github.com/sysadminsmedia/homebox>  
 License: [AGPLv3](https://github.com/sysadminsmedia/homebox/blob/main/LICENSE)
+
+## Yuvomi
+
+Yuvomi is a self-hosted family planner with a web interface. It combines calendar, tasks, meal planning, shopping lists, budget, notes, contacts, documents and more in a single application, which can be added to the home screen of mobile devices as well. Every family member gets their own account, and access to each module can be configured per family role.
+
+!!! info "Supported systems"
+    Yuvomi is available for ARMv8 (64-bit) and x86_64 systems only, since the native modules it depends on for the database and password hashing ship pre-compiled binaries for these architectures only.
+
+![Yuvomi logo](../assets/images/yuvomi.svg){: width="150" height="150" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **3004**:
+
+    - URL: `http://<your.IP>:3004`
+
+    On first access, you will be prompted to create the admin account. Other family members can then be invited via invite link, created by the admin.
+
+    For access from the Internet, and to receive push notifications, see the **HTTPS access via reverse proxy** tab.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Database encryption and backups"
+
+    The Yuvomi database is encrypted. On first start, Yuvomi generates the database encryption key and session secret, and stores them in `/mnt/dietpi_userdata/yuvomi/.secrets`. The encryption key can be shown in the web interface as well, via **Settings > Household > Backup and restore**.
+
+    !!! warning "Keep a backup of the encryption key"
+        Without the encryption key, the database and Yuvomi backups cannot be opened anymore. If the key gets lost or damaged, there is no way to recover it. It is hence strongly advised to backup the key, or the whole `/mnt/dietpi_userdata/yuvomi` directory, right after the initial setup of your instance, e.g. via [DietPi-Backup](../dietpi_tools/system_maintenance.md#dietpi-backup-backuprestore){:class="nospellcheck"}, and to note down the key at a safe place.
+
+    Yuvomi can create manual and scheduled backups via its web interface, which are stored in `/mnt/dietpi_userdata/yuvomi/backups`, and can optionally be uploaded to a WebDAV server. These backups are encrypted with the same key.
+
+=== "Configuration"
+
+    The configuration is stored in the following environment file:
+
+    ```
+    /mnt/dietpi_userdata/yuvomi/yuvomi.env
+    ```
+
+    It is pre-populated with the following options:
+
+    | Variable | Initial value | Description |
+    |---|---|---|
+    | `PORT` | `3004` | TCP port of the web interface |
+    | `BIND_ADDRESS` | *(commented: all interfaces)* | Address to listen on, e.g. `127.0.0.1` for access via a reverse proxy on the same host only |
+    | `TRUST_PROXY` | `loopback` | Proxies which are trusted to pass the client IP via `X-Forwarded-For` header |
+    | `SESSION_SECURE` | *(commented: `false`)* | Set to `true` if Yuvomi is accessed via HTTPS |
+    | `DB_PATH` | `/mnt/dietpi_userdata/yuvomi/yuvomi.db` | Database file |
+    | `BACKUP_DIR` | `/mnt/dietpi_userdata/yuvomi/backups` | Backups directory |
+    | `MODULES_DIR` | `/mnt/dietpi_userdata/yuvomi/modules` | Extension modules directory |
+    | `LOG_LEVEL` | *(commented: `info`)* | Log level: `debug`, `info`, `warn` or `error` |
+    | `WEATHER_LAT`, `WEATHER_LON`, `WEATHER_CITY` | *(commented: empty)* | Location for the weather widget |
+
+    All available options are described in the [example environment file](https://github.com/ulsklyc/yuvomi/blob/main/.env.example) of the project. After editing the file, restart the service to apply changes:
+
+    ```sh
+    systemctl restart yuvomi
+    ```
+
+    The file is preserved on reinstall.
+
+=== "HTTPS access via reverse proxy"
+
+    Yuvomi runs its own web server on plain HTTP. For secure access from the Internet, and for push notifications, which require HTTPS, it can be run behind a webserver (Apache, Nginx or Lighttpd) with a Let's Encrypt certificate created via [DietPi-LetsEncrypt](../dietpi_tools/software_installation.md#dietpi-letsencrypt){:class="nospellcheck"}. Configure the webserver to proxy requests to `http://127.0.0.1:3004`, including WebSocket upgrades. An Nginx example is provided by the project: <https://github.com/ulsklyc/yuvomi/blob/main/nginx.conf.example>
+
+    Then adjust the following options in the configuration file and restart the service:
+
+    ```sh
+    G_CONFIG_INJECT 'SESSION_SECURE=' 'SESSION_SECURE=true' /mnt/dietpi_userdata/yuvomi/yuvomi.env
+    systemctl restart yuvomi
+    ```
+
+    - `TRUST_PROXY=loopback` is set by default, which trusts a reverse proxy running on the same host. If the reverse proxy runs on another host, set its IP address or subnet instead.
+    - To allow access via the reverse proxy only, set `BIND_ADDRESS=127.0.0.1`.
+
+=== "Directories"
+
+    - Install directory: `/opt/yuvomi`
+    - Data directory: `/mnt/dietpi_userdata/yuvomi`
+    - Configuration file: `/mnt/dietpi_userdata/yuvomi/yuvomi.env`
+    - Database: `/mnt/dietpi_userdata/yuvomi/yuvomi.db`
+    - Encryption key and session secret: `/mnt/dietpi_userdata/yuvomi/.secrets`
+    - Backups: `/mnt/dietpi_userdata/yuvomi/backups`
+    - Extension modules: `/mnt/dietpi_userdata/yuvomi/modules`
+
+=== "Service control"
+
+    Yuvomi runs as systemd service `yuvomi`. It can be controlled with the following commands:
+
+    ```sh
+    systemctl status yuvomi
+    ```
+
+    ```sh
+    systemctl stop yuvomi
+    ```
+
+    ```sh
+    systemctl start yuvomi
+    ```
+
+    ```sh
+    systemctl restart yuvomi
+    ```
+
+=== "View logs"
+
+    ```sh
+    journalctl -u yuvomi
+    ```
+
+=== "Update"
+
+    You can update Yuvomi to the latest version by reinstalling it. Your database, backups and configuration are preserved:
+
+    ```sh
+    dietpi-software reinstall yuvomi
+    ```
+
+    `dietpi-software` asks whether to create a backup before the reinstall. It is advised to confirm this, or to create a backup via the Yuvomi web interface before.
+
+***
+
+Official website: <https://yuvomi.cloud/>  
+Installation guide: <https://yuvomi.cloud/install.html>  
+Source code: <https://github.com/ulsklyc/yuvomi>  
+License: [MIT](https://github.com/ulsklyc/yuvomi/blob/main/LICENSE)
+
+## Paperless-ngx
+
+Paperless-ngx is a document management system that turns your scanned paper documents into a searchable online archive. Documents are processed via OCR, so their text can be found via full-text search, and they can be organised with tags, correspondents and document types, which Paperless-ngx learns to assign automatically.
+
+!!! warning "Supported systems and resource requirements"
+    Paperless-ngx is available for ARMv8 (64-bit) and x86_64 systems only, since its PyTorch dependency is not available for other architectures. It requires at least 2 GiB total memory (RAM + swap). `dietpi-software` hence expands the swap size where needed. In idle, the four services use around 600 MiB RAM, more while processing documents. OCR is CPU-intensive: on Cortex-A53 class devices, expect around 20 seconds per page.
+
+![Paperless-ngx logo](../assets/images/dietpi-software-cloud-paperless-ngx.svg){: width="300" height="97" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **8010**:
+
+    - URL: `http://<your.IP>:8010`
+    - Username: `admin`
+    - Password: `<your global software password>` (default: `dietpi`)
+
+    The admin user is created on first install only. Changing the global software password afterwards does not change the password of this user. It can be changed via the web interface.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Adding documents"
+
+    Documents can be added in several ways:
+
+    - Upload them via the web interface, e.g. via drag and drop.
+    - Copy them into the consumption directory `/mnt/dietpi_userdata/paperless-ngx/consume`. Paperless-ngx processes them automatically, including files in subdirectories, and removes them from this directory afterwards. Members of the `dietpi` group can write to it, so you can e.g. use [Samba](file_servers.md#samba) or let your network scanner save scans there.
+    - Use one of the [mobile apps](https://docs.paperless-ngx.com/usage/#usage-mobile_upload) or the REST API.
+
+    !!! note "Subdirectories need to be writable for the `dietpi` group"
+        After processing a document, Paperless-ngx needs to remove it from the consumption directory, which requires write permissions on the directory containing it. Subdirectories created via Samba, FTP or File Browser are writable for the `dietpi` group already. Subdirectories created via SSH, SFTP or on the console are not, hence documents in them fail to be processed. In this case, make them writable for the group and restart the consumer service, which then processes them again:
+
+        ```sh
+        chmod -R g+w /mnt/dietpi_userdata/paperless-ngx/consume
+        systemctl restart paperless-consumer
+        ```
+
+=== "Configuration"
+
+    The configuration is stored in the following file:
+
+    ```
+    /mnt/dietpi_userdata/paperless-ngx/paperless.conf
+    ```
+
+    The file is pre-populated with the following options:
+
+    | Variable | Initial value | Description |
+    |---|---|---|
+    | `GRANIAN_HOST` | `0.0.0.0` | Bind address of the web interface |
+    | `GRANIAN_PORT` | `8010` | TCP port of the web interface |
+    | `PAPERLESS_DATA_DIR` | `/mnt/dietpi_userdata/paperless-ngx/data` | Database, search index and logs |
+    | `PAPERLESS_MEDIA_ROOT` | `/mnt/dietpi_userdata/paperless-ngx/media` | Stored documents and thumbnails |
+    | `PAPERLESS_CONSUMPTION_DIR` | `/mnt/dietpi_userdata/paperless-ngx/consume` | Directory for new documents |
+    | `PAPERLESS_CONSUMER_RECURSIVE` | `true` | Consume documents in subdirectories of the consumption directory as well |
+    | `PAPERLESS_DBENGINE` | `sqlite` | Database engine |
+    | `PAPERLESS_REDIS` | `unix:///run/redis/redis-server.sock` | Redis UNIX socket |
+    | `PAPERLESS_SECRET_KEY` | *(random, set during install)* | Secret key for session cookies |
+    | `PAPERLESS_TIME_ZONE` | *(system time zone)* | Time zone for dates and times |
+    | `PAPERLESS_OCR_LANGUAGE` | `eng` | OCR language(s), see the **OCR languages** tab |
+    | `PAPERLESS_TASK_WORKERS` | `1` | Number of documents processed in parallel, each needing several hundred MiB RAM |
+
+    All available options are described in the [official documentation](https://docs.paperless-ngx.com/configuration/). After editing the file, restart the services to apply changes:
+
+    ```sh
+    systemctl restart paperless-webserver paperless-consumer paperless-task-queue paperless-scheduler
+    ```
+
+    The file is preserved on reinstall.
+
+=== "OCR languages"
+
+    Only the English OCR language is installed by default. To process documents in other languages, install the related Tesseract language package, e.g. for German:
+
+    ```sh
+    apt install tesseract-ocr-deu
+    ```
+
+    Then add the language to `PAPERLESS_OCR_LANGUAGE` in the configuration file, multiple languages separated by `+`, e.g.:
+
+    ```
+    PAPERLESS_OCR_LANGUAGE=deu+eng
+    ```
+
+    Finally, restart the services as described in the **Configuration** tab. A list of available language packages can be shown via `apt search tesseract-ocr-`.
+
+=== "Directories"
+
+    - Install directory: `/opt/paperless-ngx`
+    - Python virtual environment: `/opt/paperless-ngx/venv`
+    - Data directory: `/mnt/dietpi_userdata/paperless-ngx`
+    - Configuration file: `/mnt/dietpi_userdata/paperless-ngx/paperless.conf`
+    - Documents: `/mnt/dietpi_userdata/paperless-ngx/media`
+    - Consumption directory: `/mnt/dietpi_userdata/paperless-ngx/consume`
+
+=== "Service control"
+
+    Paperless-ngx runs as four systemd services:
+
+    - `paperless-webserver`: Web interface and REST API
+    - `paperless-consumer`: Watches the consumption directory
+    - `paperless-task-queue`: Processes documents
+    - `paperless-scheduler`: Runs scheduled tasks like mail fetching and index optimisation
+
+    They can be controlled together with the following commands:
+
+    ```sh
+    systemctl status paperless-webserver paperless-consumer paperless-task-queue paperless-scheduler
+    ```
+
+    ```sh
+    systemctl stop paperless-webserver paperless-consumer paperless-task-queue paperless-scheduler
+    ```
+
+    ```sh
+    systemctl start paperless-webserver paperless-consumer paperless-task-queue paperless-scheduler
+    ```
+
+    ```sh
+    systemctl restart paperless-webserver paperless-consumer paperless-task-queue paperless-scheduler
+    ```
+
+=== "View logs"
+
+    ```sh
+    journalctl -u paperless-webserver -u paperless-consumer -u paperless-task-queue -u paperless-scheduler
+    ```
+
+    Additionally, Paperless-ngx writes its own log files to `/mnt/dietpi_userdata/paperless-ngx/data/log`.
+
+=== "Management commands"
+
+    Paperless-ngx provides [management commands](https://docs.paperless-ngx.com/administration/) e.g. for rebuilding the search index, or for backups via the [document exporter](https://docs.paperless-ngx.com/administration/#exporter). Run them as `paperless` user from the `src` directory, e.g. to export all documents into a new `export` directory:
+
+    ```sh
+    sudo -u paperless mkdir -p /mnt/dietpi_userdata/paperless-ngx/export
+    cd /opt/paperless-ngx/src
+    sudo -u paperless ../venv/bin/python3 manage.py document_exporter /mnt/dietpi_userdata/paperless-ngx/export
+    ```
+
+=== "Update"
+
+    You can update Paperless-ngx by reinstalling it. Your documents, database and configuration are preserved:
+
+    ```sh
+    dietpi-software reinstall paperlessngx
+    ```
+
+***
+
+Official website: <https://docs.paperless-ngx.com/>  
+Source code: <https://github.com/paperless-ngx/paperless-ngx>  
+License: [GPLv3](https://github.com/paperless-ngx/paperless-ngx/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)
