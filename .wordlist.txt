@@ -817,7 +817,6 @@ unbootable
 uncheck
 uncomment
 uncomments
-undervoltage
 unencrypted
 unformatted
 unmount

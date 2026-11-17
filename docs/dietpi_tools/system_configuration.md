@@ -640,19 +640,6 @@ Using these settings the information displayed initially can be configured, choo
 
 If the banner is not shown when you log in, a `.hushlogin` file in your home directory might be the reason. It hides all login messages. When you save the settings in DietPi-Banner, it asks you whether to remove this file.
 
-### Pre-login banner
-
-On local, serial and container consoles, a short banner is shown above the login prompt. It contains the DietPi version, the time and date, and the LAN IP address. Time, date and IP address are updated each time the login prompt is shown. Until the first run setup has finished, the default login credentials are shown there as well.
-
-The banner is stored in `/etc/issue.d/dietpi-banner.issue`. It is updated when you save the settings in DietPi-Banner, and can be updated manually with `dietpi-banner issue`. Notes about updates, a required reboot or undervoltage are not shown before login, but after login with the full banner.
-
-### Undervoltage and temperature warnings
-
-On Raspberry Pi models, the banner shows a warning if the firmware detected undervoltage or a high CPU temperature, and hence reduced the CPU frequency. The warning is shown in red if the problem exists right now, and in a different colour if it happened since the last boot only:
-
-- **Undervoltage**: Check the power supply, the cable and the connected devices, e.g. USB drives which draw much power.
-- **High temperature**: Consider better cooling, e.g. a heat sink or a fan.
-
 ### DietPi banner - Command line usage
 
 Beside the interactive setting via `dietpi-banner`, there is the option of the shell command line:
