@@ -878,6 +878,7 @@ VST
 Vulkan
 Waveshare
 WebAuthn
+WebDAV
 WebIOPi
 Webmin
 webroot
@@ -926,6 +927,7 @@ ympd
 youtube
 yt
 yt-dlp
+Yuvomi
 Zeroconf
 ZeroPi
 ZeroTier
