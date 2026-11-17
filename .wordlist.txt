@@ -105,6 +105,7 @@ ChatGPT
 ClickHouse
 CIDR
 CIFS
+CIX
 CLI
 Clonezilla
 Cloudflare
