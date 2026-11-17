@@ -72,6 +72,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Restic - Fast, efficient and secure command-line backup program**](software/cloud.md#restic)
 - [**Immich - Self-hosted photo and video management solution**](software/cloud.md#immich)
 - [**HomeBox - Self-hosted home inventory and organisation system**](software/cloud.md#homebox)
+- [**Paperless-ngx - Document management system with OCR and full-text search**](software/cloud.md#paperless-ngx)
 
 ## [Databases & Data Stores](software/databases.md)
 
@@ -269,12 +270,14 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Docker - Build, ship, and run distributed applications**](software/system_stats.md#docker)
 - [**Docker-Compose - Run multi-container applications on Docker**](software/system_stats.md#docker-compose)
 - [**Portainer - Docker container management**](software/system_stats.md#portainer)
+- [**Podman - Daemonless container engine with Docker-compatible CLI and API**](software/system_stats.md#podman)
 - [**K3s - Lightweight Kubernetes**](software/system_stats.md#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](software/system_stats.md#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](software/system_stats.md#prometheus-node-exporter)
 - [**Prometheus - Monitoring system and time series database**](software/system_stats.md#prometheus)
 - [**Homer - A modern homepage for your services**](software/system_stats.md#homer)
 - [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](software/system_stats.md#uptime-kuma)
+- [**SolidPing - Self-hosted uptime monitoring with status pages and alerting**](software/system_stats.md#solidping)
 
 ## [VPN](software/vpn.md)
 

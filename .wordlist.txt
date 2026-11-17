@@ -124,6 +124,7 @@ config
 configs
 containerd
 CORS
+Cortex
 Coturn
 CouchPotato
 COVID
@@ -140,6 +141,7 @@ customizable
 CVE
 CVEs
 DAC
+daemonless
 DALL
 DarkBetter
 DarkIce
@@ -210,6 +212,7 @@ ESXi
 executables
 exFAT
 extlinux
+firewalld
 FS
 facto
 FAHClient
@@ -504,6 +507,7 @@ nyx
 NZB
 NZBGet
 oCIS
+OCR
 OCSP
 OctoPrint
 ODM
@@ -546,6 +550,7 @@ OVH
 OVPN
 ownCloud
 Panokostas
+Paperless
 PaperMC
 pasja
 passwd
@@ -571,6 +576,7 @@ PiVPN
 piwheels
 Pixabay
 Plex
+Podman
 Portainer
 POSIX
 PostBoot
@@ -599,6 +605,8 @@ Pydev
 Pydio
 pyenv
 PyPI
+PyTorch
+Quadlet
 RAR
 qBittorrent
 QCOW
@@ -769,6 +777,7 @@ Tautulli
 TCP
 tcpdump
 teleporter
+Tesseract
 TFTP
 th
 thechildofroth

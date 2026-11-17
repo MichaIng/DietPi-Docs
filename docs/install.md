@@ -566,6 +566,49 @@ Select the following tabs for the installation description of your target.
         The VM can now be started, select it via left side navigation of the Proxmox web interface, then the **Start** button at the top right side, finally the **Console** button to watch and finish the DietPi first run setup.  
         Alternatively you can connect to the VM via SSH, after giving it some time to finish initial setup steps and obtaining its IP with your router or IP scanner.
 
+=== "Proxmox LXC"
+
+    <h2>Introduction</h2>
+
+    Next to a virtual machine, DietPi can run as an LXC container on Proxmox. A container shares the kernel of the Proxmox host, hence it starts within seconds, needs much less RAM and disk space than a VM and has no boot loader or virtual hardware to take care of. On the other hand it always runs the kernel of the host, so it is not the right choice if you need own kernel modules or drivers.
+
+    The container is created by a script from the community project [Proxmox VE Helper-Scripts](https://community-scripts.org/scripts/dietpi){: class="nospellcheck"}. It sets up a Debian container and converts it into a DietPi system with the same installer which builds the official DietPi images.
+
+    <h2>Prerequisites</h2>
+
+    - A Proxmox host with version 8 or 9 and Internet access
+    - A storage for container templates (usually `local`) and a storage for the container disk
+    - By default the container gets 1 CPU core, 512 MiB RAM and a 4 GiB disk, which is sufficient for a minimal DietPi system. The resources can be changed in the advanced settings of the script or at any time in the Proxmox web interface.
+
+    <h2>1. Run the helper script</h2>
+
+    Select the Proxmox node in the left side navigation of the Proxmox web interface, then click the **Shell** button at the top right corner (alternatively connect to the Proxmox host via SSH). Enter the following command:
+
+    ```sh
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/ct/dietpi.sh)"
+    ```
+
+    The script asks whether the default settings or the advanced settings shall be used. The advanced settings allow to choose e.g. the container ID, the hostname, the resources, a static IP address instead of DHCP, a root password and an SSH public key for the `root` user. Afterwards the Debian container template is downloaded if not present yet and the container is created. Before it is converted into DietPi, the script asks to confirm that the DietPi installer is downloaded and run, like the helper scripts do for every external installer, and continues by itself after 60 seconds. The conversion takes a few minutes, at the end the script restarts the container for the DietPi first boot.
+
+    ??? info "What the script configures"
+        The script takes care of a few Proxmox specifics:
+
+        - The network is managed by Proxmox: The network settings of the container (DHCP or static IP address) apply as they are set in the Proxmox web interface. Change them there and not via `dietpi-network` inside the container.
+        - The hostname of the container is used as DietPi hostname.
+        - An SSH public key given in the advanced settings is applied for the `root` user, so that a key based SSH login works right after the first run setup.
+        - A root password given in the advanced settings becomes the DietPi global password, hence the password of the users `root` and `dietpi`. Without it, both users get the default password `dietpi`, and the container console logs in automatically as `root`, like with every container of the helper scripts.
+        - The container is unprivileged with nesting enabled, the defaults of the helper scripts.
+
+    <h2>2. Go through the first run setup</h2>
+
+    When the script has finished, the container has already been restarted. Select it in the left side navigation of the Proxmox web interface and click the **Console** button: Without a root password, the console logs in automatically, else log in as `root` with the chosen password. The DietPi first run setup then starts, as described in the [First logon](#4-first-logon-on-dietpi) section below.  
+    Alternatively you can connect to the container via SSH with the user `root` and the password `dietpi` (or the chosen one), or with the SSH key given in the advanced settings.
+
+    !!! info "Automated first run setup"
+        Like on every DietPi image, the first run setup can be automated via the file `/boot/dietpi.txt` inside the container. As the first run setup starts with the first login, edit the file before logging in for the first time, e.g. from the Proxmox host shell with `pct exec <ID> -- nano /boot/dietpi.txt`. The hostname and the network are set by the script itself. See [DietPi-Automation](usage.md#how-to-do-an-automatic-base-installation-at-first-boot-dietpi-automation) for details.
+
+    Later updates are done like on any other DietPi system via `dietpi-update`. The `update` command of the helper scripts does the same.
+
 === "Parallels"
 
     <h2>Introduction</h2>
