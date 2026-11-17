@@ -27,6 +27,7 @@ dietpi-launcher
 - <a name="dietpi-services"></a>[**DietPi Services - Provides service control, priority level tweaks and status print**](dietpi_tools/system_configuration.md#dietpi-services)
 - <a name="dietpi-display"></a>[**DietPi Display - Allow controlling the console display modes and rotation via KMS/DRM**](dietpi_tools/system_configuration.md#dietpi-display)
 - <a name="dietpi-led-control"></a>[**DietPi LED Control - Change triggers for the status LEDs on your SBC/motherboard**](dietpi_tools/system_configuration.md#dietpi-led-control)
+- <a name="dietpi-fan-control"></a>[**DietPi Fan Control - Configure a temperature-controlled cooling fan on Raspberry Pi**](dietpi_tools/system_configuration.md#dietpi-fan-control)
 - <a name="dietpi-cron"></a>[**DietPi Cron - Modify the start times of specific cron job groups**](dietpi_tools/system_configuration.md#dietpi-cron)
 - <a name="dietpi-justboom"></a>[**DietPi JustBoom - Change the audio settings**](dietpi_tools/system_configuration.md#dietpi-justboom)
 - <a name="dietpi-banner"></a>[**DietPi Banner - Configuration of the initial banner, displayed on logon**](dietpi_tools/system_configuration.md#dietpi-banner)
