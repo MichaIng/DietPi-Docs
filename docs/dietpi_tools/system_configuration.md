@@ -159,7 +159,7 @@ The same menu is opened by **Network Options: Adapters** in [DietPi-Config](#die
     - **Change Mode**: Switch between **DHCP** and **STATIC**. With DHCP, your router gives the IP address to your device. This is the best choice for most users. With STATIC, you choose the address yourself, and the following entries show up.
     - **Copy**: Take over the current address, gateway and DNS server as static values. This is a good start, if you want to keep the current address.
     - **Static IP**: The IP address of your device, e.g. `192.168.0.100`. Optionally, add the netmask like `192.168.0.100/24`. Without it, `/24` (`255.255.255.0`) is used, which fits to most home networks.
-    - **Static Gateway**: The address of your router, e.g. `192.168.0.1`. It is used to reach the Internet. Leave it empty, if this adapter shall **not** be used for Internet access, see the "Several adapters" tab.
+    - **Static Gateway**: The address of your router, e.g. `192.168.0.1`. It is used to reach the Internet. Leave it empty, if this adapter shall **not** be used for Internet access, see the "Several adapters" tab. The gateway must be in the same subnet as the static IP address, e.g. `192.168.0.1` for `192.168.0.100/24`. If you change the static IP address to another subnet, the gateway is adjusted automatically. If you save or apply a gateway outside of the subnet, DietPi-Network warns you and offers to use the first address of the subnet instead.
     - **Static DNS**: The DNS server which translates domain names. Your router or a public DNS provider can be selected from a list.
     - **Link Speed**: The connection speed. Leave it at **auto** unless you know that you need a fixed speed.
     - **Boot Mode**: **hotplug** brings the adapter up as soon as it is detected. This is recommended. **auto** brings it up during early boot, which can fail if the adapter starts slowly.
@@ -180,7 +180,9 @@ The same menu is opened by **Network Options: Adapters** in [DietPi-Config](#die
     - **Scan**: Search for WiFi networks, select yours and enter the password.
     - **Change Mode**, **Static IP**, **Static Gateway**, **Static DNS**, **Boot Mode**, **Disable** / **Enable**, **Remove**, **Save** and **Apply**: Work like for Ethernet, see the "Ethernet" tab.
     - **Country**: Select your country. This is required to use the WiFi channels and power which are allowed in your region.
-    - **Auto Reconnect**: Reconnects automatically, if the WiFi connection is lost.
+    - **Auto Reconnect**: Reconnects automatically, if the WiFi connection is lost. In its submenu, **State** turns the WiFi monitor on or off. **Interval** sets the time in seconds between two connection checks (default: 10, at least 3). It is stored as `CONFIG_WIFI_MONITOR_INTERVAL` in `/boot/dietpi.txt`.
+
+    The WiFi monitor sends a ping to the gateway. If there is no reply, it keeps sending a ping every second for up to 10 seconds. The adapter is only restarted if there is still no reply, or an error reply. This is helpful for mobile devices, which move between several WiFi networks. If your signal is only a bit weak, the connection usually recovers by itself. A restart of the adapter then causes an outage of a few seconds which is not needed.
 
     If you have installed the [WiFi HotSpot](../software/advanced_networking.md#wifi-hotspot) software, the WiFi adapter of the hotspot shows the hotspot settings instead: **SSID** (name), **Key** (password, at least 8 characters), **Frequency** (2.4 or 5 GHz), **Channel** and the WiFi standards **802.11n/ac/ax** (WiFi 4/5/6). With **State**, you can turn the hotspot on or off.
 
@@ -266,6 +268,7 @@ The same menu is opened by **Network Options: Adapters** in [DietPi-Config](#die
       --no-restart                        Write config only, do not reconnect the interface now
       --force                             Proceed even if a network conflict (same subnet/duplicate default route) with
                                           another enabled interface is detected, or if the interface does not exist at all.
+                                          Also mutes the warning about a static gateway outside of the static IP subnet.
     ```
 
 ---
@@ -627,13 +630,28 @@ Enables the configuration of the initial banner, displayed on logon. To start Di
 dietpi-banner
 ```
 
-![DietPi-Banner config menu](../assets/images/dietpi-banner_config.jpg "DietPi-Banner main menu"){: width="640" height="368" loading="lazy"}
+![DietPi-Banner config menu](../assets/images/dietpi-banner-config.png "DietPi-Banner main menu"){: width="900" height="510" loading="lazy"}
 
 ### Feature overview
 
 Using these settings the information displayed initially can be configured, choosing the details displayed initially. See below an example where 4 options are selected:
 
 ![DietPi-Banner print on login](../assets/images/dietpi-banner.jpg "DietPi-Banner output"){: width="636" height="359" loading="lazy"}
+
+If the banner is not shown when you log in, a `.hushlogin` file in your home directory might be the reason. It hides all login messages. When you save the settings in DietPi-Banner, it asks you whether to remove this file.
+
+### Pre-login banner
+
+On local, serial and container consoles, a short banner is shown above the login prompt. It contains the DietPi version, the time and date, and the LAN IP address. Time, date and IP address are updated each time the login prompt is shown. Until the first run setup has finished, the default login credentials are shown there as well.
+
+The banner is stored in `/etc/issue.d/dietpi-banner.issue`. It is updated when you save the settings in DietPi-Banner, and can be updated manually with `dietpi-banner issue`. Notes about updates, a required reboot or undervoltage are not shown before login, but after login with the full banner.
+
+### Undervoltage and temperature warnings
+
+On Raspberry Pi models, the banner shows a warning if the firmware detected undervoltage or a high CPU temperature, and hence reduced the CPU frequency. The warning is shown in red if the problem exists right now, and in a different colour if it happened since the last boot only:
+
+- **Undervoltage**: Check the power supply, the cable and the connected devices, e.g. USB drives which draw much power.
+- **High temperature**: Consider better cooling, e.g. a heat sink or a fan.
 
 ### DietPi banner - Command line usage
 
@@ -645,6 +663,7 @@ Available commands:
     <empty>     Interactive menu to select banner entries
     0           Top section + LAN IP
     1           Clear terminal + top section + chosen entries
+    issue       Create/update the pre-login banner /etc/issue.d/dietpi-banner.issue
 ```
 
 ---
