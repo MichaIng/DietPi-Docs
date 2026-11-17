@@ -10,7 +10,6 @@ description: Description of DietPi software options related to software developm
 - [**Python 3 - High-level interpreted programming language**](#python-3)
 - [**Go - Programming language**](#go)
 - [**Java - Programming language**](#java)
-- [**Mono - Programming language**](#mono)
 - [**VSCodium - FLOSS version of Microsoft VSCode**](#vscodium)
 - [**Git - Distributed version control system**](#git)
 - [**PHP Composer - A Dependency Manager for PHP**](#php-composer)
@@ -142,20 +141,6 @@ To find out which version of Java is installed, just run
 
 ```sh
 java -version
-```
-
-## Mono
-
-![Mono .NET Framework implementation logo](../assets/images/dietpi-software-programming-mono.png){: width="100" height="119" loading="lazy"}
-
-Source: User [`OsamaK`](https://en.wikipedia.org/wiki/User:OsamaK) - <https://de.wikipedia.org/w/index.php?curid=3548404>
-
-[Mono](https://www.mono-project.com/) is a cross platform, open source .NET framework. Is an alternative implementation of the Microsoft .NET framework. It support the development of platform independent software on the standards of the Common Language Infrastructure and the programming language C#.
-
-To find out which version of Mono is installed, just run
-
-```sh
-mono --version
 ```
 
 ## VSCodium
