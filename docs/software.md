@@ -71,6 +71,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Restic - Fast, efficient and secure command-line backup program**](software/cloud.md#restic)
 - [**Immich - Self-hosted photo and video management solution**](software/cloud.md#immich)
 - [**HomeBox - Self-hosted home inventory and organisation system**](software/cloud.md#homebox)
+- [**Yuvomi - Self-hosted family planner with calendar, tasks, meals, shopping and budget**](software/cloud.md#yuvomi)
 - [**Paperless-ngx - Document management system with OCR and full-text search**](software/cloud.md#paperless-ngx)
 
 ## [Databases & Data Stores](software/databases.md)

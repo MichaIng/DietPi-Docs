@@ -21,6 +21,7 @@ description: Description of DietPi software options related to cloud and backup 
 - [**FuguHub - Your Own Personal Cloud Server**](#fuguhub)
 - [**File Browser - Light web based file manager with sharing features**](#file-browser)
 - [**HomeBox - Self-hosted home inventory and organisation system**](#homebox)
+- [**Yuvomi - Self-hosted family planner with calendar, tasks, meals, shopping and budget**](#yuvomi)
 - [**Rclone - Utility to sync your files to cloud storages**](#rclone)
 - [**Restic - Fast, efficient and secure command-line backup program**](#restic)
 - [**Immich - Self-hosted photo and video management solution**](#immich)
@@ -1548,6 +1549,134 @@ HomeBox is a self-hosted home inventory and organisation system. It helps you ke
 Official documentation: <https://homebox.software/>  
 Source code: <https://github.com/sysadminsmedia/homebox>  
 License: [AGPLv3](https://github.com/sysadminsmedia/homebox/blob/main/LICENSE)
+
+## Yuvomi
+
+Yuvomi is a self-hosted family planner with a web interface. It combines calendar, tasks, meal planning, shopping lists, budget, notes, contacts, documents and more in a single application, which can be added to the home screen of mobile devices as well. Every family member gets their own account, and access to each module can be configured per family role.
+
+!!! info "Supported systems"
+    Yuvomi is available for ARMv8 (64-bit) and x86_64 systems only, since the native modules it depends on for the database and password hashing ship pre-compiled binaries for these architectures only.
+
+![Yuvomi logo](../assets/images/yuvomi.svg){: width="150" height="150" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **3004**:
+
+    - URL: `http://<your.IP>:3004`
+
+    On first access, you will be prompted to create the admin account. Other family members can then be invited via invite link, created by the admin.
+
+    For access from the Internet, and to receive push notifications, see the **HTTPS access via reverse proxy** tab.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Database encryption and backups"
+
+    The Yuvomi database is encrypted. On first start, Yuvomi generates the database encryption key and session secret, and stores them in `/mnt/dietpi_userdata/yuvomi/.secrets`. The encryption key can be shown in the web interface as well, via **Settings > Household > Backup and restore**.
+
+    !!! warning "Keep a backup of the encryption key"
+        Without the encryption key, the database and Yuvomi backups cannot be opened anymore. If the key gets lost or damaged, there is no way to recover it. It is hence strongly advised to backup the key, or the whole `/mnt/dietpi_userdata/yuvomi` directory, right after the initial setup of your instance, e.g. via [DietPi-Backup](../dietpi_tools/system_maintenance.md#dietpi-backup-backuprestore){:class="nospellcheck"}, and to note down the key at a safe place.
+
+    Yuvomi can create manual and scheduled backups via its web interface, which are stored in `/mnt/dietpi_userdata/yuvomi/backups`, and can optionally be uploaded to a WebDAV server. These backups are encrypted with the same key.
+
+=== "Configuration"
+
+    The configuration is stored in the following environment file:
+
+    ```
+    /mnt/dietpi_userdata/yuvomi/yuvomi.env
+    ```
+
+    It is pre-populated with the following options:
+
+    | Variable | Initial value | Description |
+    |---|---|---|
+    | `PORT` | `3004` | TCP port of the web interface |
+    | `BIND_ADDRESS` | *(commented: all interfaces)* | Address to listen on, e.g. `127.0.0.1` for access via a reverse proxy on the same host only |
+    | `TRUST_PROXY` | `loopback` | Proxies which are trusted to pass the client IP via `X-Forwarded-For` header |
+    | `SESSION_SECURE` | *(commented: `false`)* | Set to `true` if Yuvomi is accessed via HTTPS |
+    | `DB_PATH` | `/mnt/dietpi_userdata/yuvomi/yuvomi.db` | Database file |
+    | `BACKUP_DIR` | `/mnt/dietpi_userdata/yuvomi/backups` | Backups directory |
+    | `MODULES_DIR` | `/mnt/dietpi_userdata/yuvomi/modules` | Extension modules directory |
+    | `LOG_LEVEL` | *(commented: `info`)* | Log level: `debug`, `info`, `warn` or `error` |
+    | `WEATHER_LAT`, `WEATHER_LON`, `WEATHER_CITY` | *(commented: empty)* | Location for the weather widget |
+
+    All available options are described in the [example environment file](https://github.com/ulsklyc/yuvomi/blob/main/.env.example) of the project. After editing the file, restart the service to apply changes:
+
+    ```sh
+    systemctl restart yuvomi
+    ```
+
+    The file is preserved on reinstall.
+
+=== "HTTPS access via reverse proxy"
+
+    Yuvomi runs its own web server on plain HTTP. For secure access from the Internet, and for push notifications, which require HTTPS, it can be run behind a webserver (Apache, Nginx or Lighttpd) with a Let's Encrypt certificate created via [DietPi-LetsEncrypt](../dietpi_tools/software_installation.md#dietpi-letsencrypt){:class="nospellcheck"}. Configure the webserver to proxy requests to `http://127.0.0.1:3004`, including WebSocket upgrades. An Nginx example is provided by the project: <https://github.com/ulsklyc/yuvomi/blob/main/nginx.conf.example>
+
+    Then adjust the following options in the configuration file and restart the service:
+
+    ```sh
+    G_CONFIG_INJECT 'SESSION_SECURE=' 'SESSION_SECURE=true' /mnt/dietpi_userdata/yuvomi/yuvomi.env
+    systemctl restart yuvomi
+    ```
+
+    - `TRUST_PROXY=loopback` is set by default, which trusts a reverse proxy running on the same host. If the reverse proxy runs on another host, set its IP address or subnet instead.
+    - To allow access via the reverse proxy only, set `BIND_ADDRESS=127.0.0.1`.
+
+=== "Directories"
+
+    - Install directory: `/opt/yuvomi`
+    - Data directory: `/mnt/dietpi_userdata/yuvomi`
+    - Configuration file: `/mnt/dietpi_userdata/yuvomi/yuvomi.env`
+    - Database: `/mnt/dietpi_userdata/yuvomi/yuvomi.db`
+    - Encryption key and session secret: `/mnt/dietpi_userdata/yuvomi/.secrets`
+    - Backups: `/mnt/dietpi_userdata/yuvomi/backups`
+    - Extension modules: `/mnt/dietpi_userdata/yuvomi/modules`
+
+=== "Service control"
+
+    Yuvomi runs as systemd service `yuvomi`. It can be controlled with the following commands:
+
+    ```sh
+    systemctl status yuvomi
+    ```
+
+    ```sh
+    systemctl stop yuvomi
+    ```
+
+    ```sh
+    systemctl start yuvomi
+    ```
+
+    ```sh
+    systemctl restart yuvomi
+    ```
+
+=== "View logs"
+
+    ```sh
+    journalctl -u yuvomi
+    ```
+
+=== "Update"
+
+    You can update Yuvomi to the latest version by reinstalling it. Your database, backups and configuration are preserved:
+
+    ```sh
+    dietpi-software reinstall yuvomi
+    ```
+
+    `dietpi-software` asks whether to create a backup before the reinstall. It is advised to confirm this, or to create a backup via the Yuvomi web interface before.
+
+***
+
+Official website: <https://yuvomi.cloud/>  
+Installation guide: <https://yuvomi.cloud/install.html>  
+Source code: <https://github.com/ulsklyc/yuvomi>  
+License: [MIT](https://github.com/ulsklyc/yuvomi/blob/main/LICENSE)
 
 ## Paperless-ngx
 
