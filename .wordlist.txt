@@ -122,6 +122,7 @@ config
 configs
 containerd
 CORS
+Cortex
 Coturn
 CouchPotato
 COVID
@@ -481,6 +482,7 @@ Nextcloud
 NFS
 nftables
 Nginx
+ngx
 nodejs
 nm
 Nmap
@@ -500,6 +502,7 @@ nyx
 NZB
 NZBGet
 oCIS
+OCR
 OCSP
 OctoPrint
 ODM
@@ -542,6 +545,7 @@ OVH
 OVPN
 ownCloud
 Panokostas
+Paperless
 PaperMC
 pasja
 passwd
@@ -596,6 +600,7 @@ Pydev
 Pydio
 pyenv
 PyPI
+PyTorch
 Quadlet
 RAR
 qBittorrent
@@ -766,6 +771,7 @@ Tautulli
 TCP
 tcpdump
 teleporter
+Tesseract
 TFTP
 th
 thechildofroth
