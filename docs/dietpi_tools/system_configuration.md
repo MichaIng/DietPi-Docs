@@ -33,6 +33,7 @@ dietpi-config
     - Overclock the system with a vast selection of overclocking profiles for the device.
     - Change the CPU governor and tweak the ARM temperature limits.
     - Change the source for the CPU temperature value.
+    - Configure a temperature-controlled cooling fan on Raspberry Pi, see [DietPi Fan Control](#dietpi-fan-control).
 
 === "Advanced Options"
 
@@ -584,6 +585,84 @@ dietpi-led_control
 ![DietPi-LED_control screenshot](../assets/images/dietpi-ledcontrol.jpg "DietPi-LED_control main menu"){: width="643" height="269" loading="lazy"}
 
 Depending on the used hardware, the number of entries in the dialog will change.
+
+---
+
+## DietPi Fan Control
+
+DietPi-Fan_Control lets you set up a cooling fan on your Raspberry Pi, which runs depending on the CPU temperature. You choose how the fan is connected, and at which temperatures it runs at which speed. To start DietPi-Fan_Control, use the following command:
+
+```sh
+dietpi-fan_control
+```
+
+You can also start it from `dietpi-config` > **Performance Options** > **Fan Control**.
+
+![DietPi-Fan_Control main menu screenshot](../assets/images/dietpi-fan_control-main.png "DietPi-Fan_Control main menu"){: width="900" height="323" loading="lazy"}
+
+The main menu shows the current CPU temperature and fan speed, and all fan settings. Changes are only saved when you select **Apply**.
+
+!!! info "Raspberry Pi only"
+
+    DietPi-Fan_Control is available on Raspberry Pi models only.
+
+### Feature overview {: id="dietpi-fan-control-features" }
+
+=== "Methods"
+
+    Select **Method** to choose how your fan is connected and controlled. Only the methods which work on your system are shown.
+
+    ![DietPi-Fan_Control method selection screenshot](../assets/images/dietpi-fan_control-method.png "DietPi-Fan_Control method selection"){: width="900" height="289" loading="lazy"}
+
+    | Method | Speed control | GPIO pin | Notes |
+    | ------ | ------------- | -------- | ----- |
+    | **RPi 5 fan port** | Yes | - | Dedicated 4-pin fan connector of the Raspberry Pi 5, e.g. for the official Active Cooler. RPi 5 only. |
+    | `pwm-fan` | Yes, smooth (hardware PWM) | 12, 13, 18 or 19 | RPi 1 to 4 with Debian Trixie or later. The analog audio output (3.5 mm jack) does not work well while it is used. HDMI, USB and I2S audio are not affected. |
+    | `pwm-gpio-fan` | Yes, the fan may run rougher (software PWM) | Any (2 to 27) | Requires a 64-bit system. Does not affect audio. |
+    | `gpio-fan` | No, on or off only | Any (2 to 27) | Uses one trip point only. Use it if your fan does not handle different speeds well. |
+
+    For all methods except the RPi 5 fan port, the main menu shows a **GPIO pin** entry. Enter the BCM GPIO number which the PWM/control wire of your fan is connected to, not the physical pin number of the GPIO header. See <https://pinout.xyz/> for the pin layout. The default is GPIO 18 for the PWM methods, and GPIO 12 for `gpio-fan`.
+
+    ![DietPi-Fan_Control main menu with software PWM screenshot](../assets/images/dietpi-fan_control-gpio.png "DietPi-Fan_Control main menu with software PWM"){: width="900" height="408" loading="lazy"}
+
+    !!! warning "Do not power a fan from a GPIO pin"
+
+        A GPIO pin can only switch the fan or send the PWM signal. It cannot provide enough power to drive the fan. Connect the power wires of your fan to a 5V or 3.3V pin, and the control wire to the GPIO pin. A simple 2-wire fan needs a transistor or a fan module for this.
+
+    On the Raspberry Pi 5, the dedicated fan port is turned off while another method is used.
+
+=== "Trip points"
+
+    A trip point defines at which CPU temperature the fan runs at which speed. There are 4 trip points, or 1 when using `gpio-fan`. Select a trip point in the main menu to change it:
+
+    ![DietPi-Fan_Control trip point screenshot](../assets/images/dietpi-fan_control-trip.png "DietPi-Fan_Control trip point menu"){: width="900" height="238" loading="lazy"}
+
+    - **Temperature**: The CPU temperature in °C at which the trip point becomes active, e.g. `60` or `67.5`.
+    - **Hysteresis**: The trip point becomes inactive again when the temperature falls this many °C below its temperature. This keeps the fan from changing its speed all the time when the temperature goes up and down a little.
+    - **Speed**: The fan speed as PWM value from `0` (off) to `255` (full speed). Many fans do not start reliably at low values.
+
+    Each trip point must have the same or a higher temperature and speed than the one before. The allowed range is shown when you enter a value.
+
+    The defaults match those of the Raspberry Pi firmware and overlays:
+
+    | Method | Trip point 1 | Trip point 2 | Trip point 3 | Trip point 4 |
+    | ------ | ------------ | ------------ | ------------ | ------------ |
+    | RPi 5 fan port and `pwm-fan` | 50 °C, speed 75 (29%) | 60 °C, speed 125 (49%) | 67.5 °C, speed 175 (69%) | 75 °C, speed 250 (98%) |
+    | `pwm-gpio-fan` | 55 °C, speed 114 (45%) | 60 °C, speed 152 (60%) | 67.5 °C, speed 204 (80%) | 75 °C, speed 255 (100%) |
+    | `gpio-fan` | 55 °C, fan on | - | - | - |
+
+    The hysteresis is 5 °C by default, and 10 °C for `gpio-fan`.
+
+=== "Apply and Reset"
+
+    - **Fan control**: Turn fan control on or off.
+    - **Apply**: Save the settings and apply them. If possible, they are applied to the running system right away. A reboot is needed if the `dtoverlay` command is missing (see **Install** below), or if a fan setting was already active at boot. In this case, you are asked to reboot when you leave the menu.
+    - **Reset**: Remove all fan settings and restore the defaults of the system. Without fan settings, no fan is controlled on the Raspberry Pi 1 to 4. The Raspberry Pi 5 runs its fan port with the default trip points, if a fan is detected at boot.
+    - **Install**: This entry is shown if the `dtoverlay` and `dtparam` commands are missing. They are needed to apply settings without a reboot. They are part of the `raspi-utils-dt` package, which requires the full Perl package. If you set up your fan only once, you can skip this, and reboot instead.
+
+    The settings are saved in `/boot/firmware/config-fan.txt`. This file is included by `/boot/firmware/config.txt` with the line `include config-fan.txt`. If you turn fan control off, your settings are kept, so that you can turn it on again later.
+
+    If `config.txt` contains fan settings already, e.g. a `dtoverlay=gpio-fan` line which you added by hand, DietPi-Fan_Control reads them on the first start. When you select **Apply**, you are asked to remove these lines from `config.txt`, since the settings are then managed in `config-fan.txt`.
 
 ---
 
