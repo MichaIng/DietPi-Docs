@@ -98,6 +98,10 @@
   font-size: medium;
 }
 
+.md-typeset .nowrap-first-column td:first-child {
+  white-space: nowrap;
+}
+
 .md-typeset table:not([class]) td {
   vertical-align: middle;
 }

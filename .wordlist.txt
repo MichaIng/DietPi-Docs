@@ -38,6 +38,7 @@ archiver
 Armbian
 Armbian's
 ARMv
+ARP
 ASUS
 ATAPI
 Atheros
@@ -105,6 +106,7 @@ ChatGPT
 ClickHouse
 CIDR
 CIFS
+CIX
 CLI
 Clonezilla
 Cloudflare
@@ -122,6 +124,7 @@ config
 configs
 containerd
 CORS
+Cortex
 Coturn
 CouchPotato
 COVID
@@ -138,6 +141,7 @@ customizable
 CVE
 CVEs
 DAC
+daemonless
 DALL
 DarkBetter
 DarkIce
@@ -168,6 +172,7 @@ dl
 dlp
 dm
 DNS
+dodeca
 Domoticz
 Doomguy
 DoT
@@ -207,6 +212,7 @@ ESXi
 executables
 exFAT
 extlinux
+firewalld
 FS
 facto
 FAHClient
@@ -251,6 +257,7 @@ Gilles
 Gitea
 github
 Globals
+globals
 GlusterFS
 GMediaRender
 GNUstep
@@ -435,6 +442,7 @@ MiniDLNA
 MinIO
 Mio
 MIPI
+misconfiguration
 mjpg
 MkDocs
 MMAL
@@ -479,6 +487,7 @@ Nextcloud
 NFS
 nftables
 Nginx
+ngx
 nodejs
 nm
 Nmap
@@ -498,6 +507,7 @@ nyx
 NZB
 NZBGet
 oCIS
+OCR
 OCSP
 OctoPrint
 ODM
@@ -540,6 +550,7 @@ OVH
 OVPN
 ownCloud
 Panokostas
+Paperless
 PaperMC
 pasja
 passwd
@@ -565,6 +576,7 @@ PiVPN
 piwheels
 Pixabay
 Plex
+Podman
 Portainer
 POSIX
 PostBoot
@@ -593,6 +605,8 @@ Pydev
 Pydio
 pyenv
 PyPI
+PyTorch
+Quadlet
 RAR
 qBittorrent
 QCOW
@@ -701,6 +715,7 @@ SNMP
 SoC
 SoCs
 soju
+SolidPing
 Sonarr
 SOQuartz
 Sora
@@ -762,6 +777,7 @@ Tautulli
 TCP
 tcpdump
 teleporter
+Tesseract
 TFTP
 th
 thechildofroth
@@ -805,6 +821,7 @@ unbootable
 uncheck
 uncomment
 uncomments
+undervoltage
 unencrypted
 unformatted
 unmount
@@ -857,6 +874,7 @@ VMX
 VNC
 VNCSERVER
 VPN
+vpn
 VPS
 VSCode
 VSCodium
@@ -866,6 +884,7 @@ VST
 Vulkan
 Waveshare
 WebAuthn
+WebDAV
 WebIOPi
 Webmin
 webroot
@@ -914,6 +933,7 @@ ympd
 youtube
 yt
 yt-dlp
+Yuvomi
 Zeroconf
 ZeroPi
 ZeroTier

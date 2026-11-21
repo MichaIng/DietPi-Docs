@@ -18,12 +18,14 @@ description: Description of DietPi software options related to system statistics
 - [**Docker -  Create, deploy, and run applications using containers**](#docker)
 - [**Docker Compose - Define and run multi-container Docker applications**](#docker-compose)
 - [**Portainer - Lightweight management UI, managing your Docker host or Swarm cluster**](#portainer)
+- [**Podman - Daemonless container engine with Docker-compatible CLI and API**](#podman)
 - [**K3s - Lightweight Kubernetes**](#k3s)
 - [**MicroK8s - Low-ops, minimal production Kubernetes**](#microk8s)
 - [**Prometheus Node Exporter - Prometheus exporter for hardware and OS metrics**](#prometheus-node-exporter)
 - [**Prometheus - Monitoring system and time series database**](#prometheus)
 - [**Homer - A modern homepage for your services**](#homer)
 - [**Uptime Kuma - An easy-to-use self-hosted monitoring tool**](#uptime-kuma)
+- [**SolidPing - Self-hosted uptime monitoring with status pages and alerting**](#solidping)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -575,6 +577,144 @@ Official documentation: <https://docs.portainer.io>
 Source code: <https://github.com/portainer/portainer>  
 Open-source license: [zlib](https://github.com/portainer/portainer/blob/develop/LICENSE)
 
+## Podman
+
+Podman is a daemonless container engine to develop, manage and run containers. Its command line interface is compatible with the Docker CLI, so most `docker` commands work the same with `podman`, and the same container images can be used.
+
+Unlike Docker, Podman does not need a background service: Containers are started as regular processes, and can be managed as individual systemd units. This makes Podman a lightweight alternative to [Docker](#docker), especially on low-end systems.
+
+![Podman logo](../assets/images/podman.svg){: width="300" height="80" loading="lazy"}
+
+=== "Run containers as systemd units"
+
+    No Podman service is enabled by DietPi. The intended way to run containers permanently, including start at boot, is a systemd unit per container.
+
+    On **Debian Trixie and newer** (Podman v4.4+), use [Quadlet](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html): Create a file like `/etc/containers/systemd/nginx.container`:
+
+    ```ini
+    [Container]
+    Image=docker.io/library/nginx
+    ContainerName=nginx
+    PublishPort=8080:80
+    AutoUpdate=registry
+
+    [Install]
+    WantedBy=multi-user.target
+    ```
+
+    Then let systemd generate the unit and start it:
+
+    ```sh
+    systemctl daemon-reload
+    systemctl start nginx
+    ```
+
+    The unit is named after the file, `nginx.service`, and it is started automatically at boot as well, due to the `[Install]` section. `ContainerName` sets the container name to `nginx` as well, which is `systemd-nginx` otherwise. `AutoUpdate=registry` enables automatic image updates, see the "Update" tab.
+
+    On **Debian Bookworm** (Podman v4.3), create the container first, then generate a systemd unit from it:
+
+    ```sh
+    podman create --name nginx -p 8080:80 --label io.containers.autoupdate=registry docker.io/library/nginx
+    cd /etc/systemd/system
+    podman generate systemd --new --files --name --container-prefix='' nginx
+    systemctl daemon-reload
+    systemctl enable --now nginx
+    ```
+
+    With the empty `--container-prefix`, the unit is named `nginx.service`, the same as with Quadlet above. The `io.containers.autoupdate=registry` label enables automatic image updates, see the "Update" tab.
+
+=== "Docker-compatible API"
+
+    For tools which require the Docker API, Podman provides a compatible API service. It is not enabled by default, but can be enabled with:
+
+    ```sh
+    systemctl enable --now podman.socket
+    ```
+
+    The API is then available via the UNIX socket `/run/podman/podman.sock`. Tools that use the Docker API can be pointed to it, e.g. via `DOCKER_HOST=unix:///run/podman/podman.sock`.
+
+=== "Restart policies"
+
+    Since there is no daemon, containers created with `--restart=always` or `--restart=unless-stopped` are not started at boot automatically. Systemd units, as described above, are the recommended way. Alternatively, the following service starts all containers with such a restart policy at boot:
+
+    ```sh
+    systemctl enable podman-restart
+    ```
+
+=== "Configuration"
+
+    Images and containers are stored in `/mnt/dietpi_userdata/podman-data`. This is configured in:
+
+    - Podman v6+: `/etc/containers/storage.conf.d/97-dietpi.conf`
+    - Older Podman versions: `/etc/containers/storage.conf`
+
+    Container logs and events are sent to the systemd journal. This is configured in `/etc/containers/containers.conf.d/97-dietpi.conf`.
+
+    In the same file, `aardvark-dns` is set to listen on port `54` instead of `53` (see "Additional networks").
+
+    If D-Bus is not running at install time, which is the default on DietPi, the `cgroupfs` cgroup manager is set in the same file as well, as the default `systemd` cgroup manager of Podman requires D-Bus. Containers keep working when D-Bus is installed later. In this case, `netavark-firewalld-reload.service` is masked as well, as it cannot work without D-Bus, and DietPi does not use firewalld.
+
+=== "Additional networks"
+
+    The default `podman` network has DNS disabled, so containers in it use the DNS servers of the host. Containers in additional networks, created via `podman network create`, use the network's gateway as DNS server instead, which is served by `aardvark-dns`. This allows them to resolve each other by container name. `aardvark-dns` is installed with Podman, and started on demand only, when a container in such a network runs.
+
+    To not conflict with DNS servers on the host, like [Pi-hole](dns_servers.md#pi-hole), [AdGuard Home](dns_servers.md#adguard-home) or [Unbound](dns_servers.md#unbound), or with containers which publish port `53`, `aardvark-dns` listens on port `54`. DNS queries from containers are redirected to it automatically.
+
+=== "Podman and Docker"
+
+    Podman and [Docker](#docker) can be installed on the same system. Docker however sets the policy of the iptables `FORWARD` chain to `DROP`, which blocks the internet access of Podman containers and connections to their published ports. To allow them, DietPi adds rules for all Podman network bridges (`podman+`) to the `FORWARD` chain whenever Docker starts. This is done via `/etc/systemd/system/docker.service.d/dietpi-podman.conf`, which is created when both are installed, and removed when Podman is uninstalled.
+
+    Note that Podman enables IPv4 forwarding globally, and unlike Docker, it does not block access to container IPs from other hosts: A host in your LAN which routes the Podman subnet via your DietPi system can reach containers directly, including ports which are not published.
+
+=== "View logs"
+
+    Logs of a container can be viewed with:
+
+    ```sh
+    podman logs <container>
+    ```
+
+    Or via systemd journal, e.g. for a Quadlet unit:
+
+    ```sh
+    journalctl -u <unit>
+    ```
+
+=== "Update"
+
+    Since Podman is installed via APT packages, it can be updated by running the following commands:
+
+    ```sh
+    apt update
+    apt upgrade
+    ```
+
+    Container images can be updated with `podman auto-update`. It pulls new images for all containers which run as systemd unit with `AutoUpdate=registry` (Quadlet) resp. the `io.containers.autoupdate=registry` label (Bookworm), as in the examples of the first tab, and restarts their units:
+
+    ```sh
+    podman auto-update
+    ```
+
+    To check for updates without applying them, use `podman auto-update --dry-run`. To update images automatically once per day, enable the timer, which is enabled by default on Bookworm already:
+
+    ```sh
+    systemctl enable --now podman-auto-update.timer
+    ```
+
+    For containers without this setting, pull the new image and restart the systemd unit, which recreates the container when it was created via Quadlet resp. with `--new`:
+
+    ```sh
+    podman pull docker.io/library/nginx
+    systemctl restart nginx
+    ```
+
+***
+
+Official documentation: <https://docs.podman.io/>  
+Quadlet documentation: <https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html>  
+Source code: <https://github.com/containers/podman>  
+License: [Apache-2.0](https://github.com/containers/podman/blob/main/LICENSE)
+
 ## K3s
 
 Lightweight Kubernetes - The certified Kubernetes distribution built for IoT & Edge computing
@@ -1121,6 +1261,65 @@ Official documentation: <https://github.com/louislam/uptime-kuma/wiki>
 Official demo: <https://uptime.kuma.pet/>  
 License: [MIT](https://github.com/louislam/uptime-kuma/blob/master/LICENSE)  
 Additional information page: <https://uptimekuma.org/>
+
+## SolidPing
+
+SolidPing is a self-hosted uptime monitoring tool. It runs HTTP, TCP, DNS, ICMP, TLS certificate, database and many other checks, alerts you by email, Slack, Discord, Telegram and other channels, and serves public status pages. It is a single Go binary with an embedded SQLite database.
+
+![SolidPing checks list screenshot](../assets/images/solidping.webp "SolidPing checks list"){: width="1280" height="800" loading="lazy"}
+
+=== "Access to the web interface"
+
+    The web interface is accessible via port **4002**:
+
+    - URL: `http://<your.IP>:4002`
+    - Username: `admin@solidping.io`
+    - Password: `solidpass`
+
+    You are asked to set a new password at the first login.
+
+    [//]: # (Include Avahi Daemon <hostname>.local access textblock)
+    --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
+
+=== "Directories/Configuration"
+
+    - Install directory: `/opt/solidping`
+    - Data directory: `/mnt/dietpi_userdata/solidping`
+    - Environment file: `/mnt/dietpi_userdata/solidping/solidping.env`
+
+    The data directory holds the SQLite database and uploaded files. The environment file holds the port, the public URL and the key used to encrypt stored check and integration credentials. Keep a backup of this file together with the database.
+
+    If you access SolidPing via a domain or a reverse proxy, set `SP_BASE_URL` in the environment file to that URL, then restart the service:
+
+    ```sh
+    systemctl restart solidping
+    ```
+
+    All available options are listed in the [SolidPing configuration documentation](https://docs.solidping.io/docs/configuration/).
+
+=== "View logs"
+
+    View the logs by executing:
+
+    ```sh
+    journalctl -u solidping
+    ```
+
+=== "Update"
+
+    To update SolidPing, reinstall it. The database and the environment file are preserved:
+
+    ```sh
+    dietpi-software reinstall solidping
+    ```
+
+***
+
+Official website: <https://www.solidping.io/>  
+Official documentation: <https://docs.solidping.io/>  
+Official demo: <https://solidping.io/d/login?demo=true>  
+Source code: <https://github.com/fclairamb/solidping>  
+License: [AGPLv3](https://github.com/fclairamb/solidping/blob/main/LICENSE)
 
 [Return to the **Optimised Software list**](../software.md)
 

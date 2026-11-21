@@ -132,6 +132,12 @@ It is a new generation single-board computer based on the Amlogic S922X SoC and 
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>Odroid C5</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidC5-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>Odroid HC4</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OdroidHC4-ARMv8-Trixie.img.xz">DietPi image</a>
@@ -579,7 +585,7 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/) website.
 
 **Orange Pi 5** uses Rockchip RK3588S new generation 8-core 64-bit processor, quad-core A76+quad-core A55, with 8nm process design, up to 2.4GHz main frequency, integrated ARM Mali-G610 GPU, embedded high-performance 3D/2D image acceleration module, built-in NPU with 6Tops computing power, with 4GB/8GB/16GB/32GB (LPDDR4/4x), and up to 8K display processing capability.
 
-<div class="md-typeset__table">
+<div class="md-typeset__table nowrap-first-column">
     <table>
         <thead>
             <tr>
@@ -631,6 +637,13 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/) website.
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>Orange Pi 6 / 6 Plus</strong></a></td>
+                <td>
+                   The image uses a generic ACPI kernel. Bootloader and device tree come from the UEFI firmware on the board. Hence it should work on any board with CIX P1 SoC and UEFI firmware with ACPI support.<br>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi6-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>Orange Pi Zero 2W</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero2W-ARMv8-Trixie.img.xz">DietPi image</a>
@@ -641,13 +654,19 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/) website.
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
-            </tr
+            </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi Zero 3W</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero3W-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
-            </tr
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi Zero 4</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero4-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
             <tr>
                 <td><a class="table" href=""><strong>Orange Pi 3</strong></a></td>
                 <td>
@@ -664,6 +683,13 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/) website.
                 <td><a class="table" href=""><strong>Orange Pi 3 LTS</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3LTS-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a class="table" href=""><strong>Orange Pi 4A</strong></a></td>
+                <td>
+                   The mainline Linux kernel does not support CPU frequency scaling on this board yet. Hence all CPU cores run at a fixed 768 MHz.<br>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi4A-ARMv8-Trixie.img.xz">DietPi image</a>
                 </td>
             </tr>
             <tr>
