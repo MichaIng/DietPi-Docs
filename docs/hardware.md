@@ -662,6 +662,12 @@ For more details visit the [**Orange Pi**](http://www.orangepi.org/) website.
                 </td>
             </tr>
             <tr>
+                <td><a class="table" href=""><strong>Orange Pi Zero 4</strong></a></td>
+                <td>
+                   <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePiZero4-ARMv8-Trixie.img.xz">DietPi image</a>
+                </td>
+            </tr>
+            <tr>
                 <td><a class="table" href=""><strong>Orange Pi 3</strong></a></td>
                 <td>
                    <strong>Download</strong>: <a href="https://dietpi.com/downloads/images/DietPi_OrangePi3-ARMv8-Trixie.img.xz">DietPi image</a>

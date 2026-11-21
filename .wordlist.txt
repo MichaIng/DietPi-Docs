@@ -38,6 +38,7 @@ archiver
 Armbian
 Armbian's
 ARMv
+ARP
 ASUS
 ATAPI
 Atheros
@@ -171,6 +172,7 @@ dl
 dlp
 dm
 DNS
+dodeca
 Domoticz
 Doomguy
 DoT
@@ -255,6 +257,7 @@ Gilles
 Gitea
 github
 Globals
+globals
 GlusterFS
 GMediaRender
 GNUstep
@@ -439,6 +442,7 @@ MiniDLNA
 MinIO
 Mio
 MIPI
+misconfiguration
 mjpg
 MkDocs
 MMAL
@@ -817,6 +821,7 @@ unbootable
 uncheck
 uncomment
 uncomments
+undervoltage
 unencrypted
 unformatted
 unmount
@@ -869,6 +874,7 @@ VMX
 VNC
 VNCSERVER
 VPN
+vpn
 VPS
 VSCode
 VSCodium
