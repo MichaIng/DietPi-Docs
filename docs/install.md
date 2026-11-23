@@ -596,12 +596,12 @@ Select the following tabs for the installation description of your target.
         - The network is managed by Proxmox: The network settings of the container (DHCP or static IP address) apply as they are set in the Proxmox web interface. Change them there and not via `dietpi-network` inside the container.
         - The hostname of the container is used as DietPi hostname.
         - An SSH public key given in the advanced settings is applied for the `root` user, so that a key based SSH login works right after the first run setup.
-        - A root password given in the advanced settings becomes the DietPi global password, hence the password of the users `root` and `dietpi`. Without it, both users get the default password `dietpi`, and the container console logs in automatically as `root`, like with every container of the helper scripts.
+        - A root password given in the advanced settings becomes the DietPi global password, hence the password of the users `root` and `dietpi`. Without it, both users get the default password `dietpi`, which the login prompt of the container console shows until the first run setup has finished.
         - The container is unprivileged with nesting enabled, the defaults of the helper scripts.
 
     <h2>2. Go through the first run setup</h2>
 
-    When the script has finished, the container has already been restarted. Select it in the left side navigation of the Proxmox web interface and click the **Console** button: Without a root password, the console logs in automatically, else log in as `root` with the chosen password. The DietPi first run setup then starts, as described in the [First logon](#4-first-logon-on-dietpi) section below.  
+    When the script has finished, the container has already been restarted. Select it in the left side navigation of the Proxmox web interface and click the **Console** button and log in as `root` with the password `dietpi` or the one chosen in the advanced settings. The DietPi first run setup then starts, as described in the [First logon](#4-first-logon-on-dietpi) section below.  
     Alternatively you can connect to the container via SSH with the user `root` and the password `dietpi` (or the chosen one), or with the SSH key given in the advanced settings.
 
     !!! info "Automated first run setup"
