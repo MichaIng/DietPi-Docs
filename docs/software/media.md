@@ -456,7 +456,7 @@ Feature rich media streaming server with a web interface, coded in Java.
     Airsonic-Advanced can be updated by simply reinstalling it:
 
     ```sh
-    dietpi-software reinstall 33
+    dietpi-software reinstall airsonic
     ```
 
 ***
@@ -506,7 +506,7 @@ Remark: If you do not own a hardware player, you can turn your DietPi system int
     Lyrion Music Server can be updated to the current version with the following command:
 
     ```sh
-    dietpi-software reinstall 35
+    dietpi-software reinstall lms
     ```
 
 ***
@@ -535,7 +535,7 @@ Squeezelite is a software audio player/client for the [Lyrion Music Server](#lyr
         - Assure Squeezelite has been updated to latest version:
 
         ```sh
-        dietpi-software reinstall 36
+        dietpi-software reinstall squeezelite
         ```
 
         - Migrate options from `/etc/systemd/system/squeezelite.service.d/dietpi-services_edit.conf` to `/etc/default/squeezelite`.
@@ -813,7 +813,7 @@ Also installs:
     To update Ampache to the current version, execute
 
     ```sh
-    dietpi-software reinstall 40
+    dietpi-software reinstall ampache
     ```
 
 ***
@@ -879,7 +879,7 @@ A web interface media streaming server. Think Kodi, but using any device with a 
     To update the Emby Server version simply reinstall Emby Server to update it to newest version. It will preserve any existing data and settings:
 
     ```sh
-    dietpi-software reinstall 41
+    dietpi-software reinstall emby
     ```
 
 ***
@@ -1082,7 +1082,7 @@ Turns your SBC into a Roon capable audio player. By using the main Roon applicat
     The Roon Bridge can be updated by reinstalling it, which preserves your data and configs:
 
     ```sh
-    dietpi-software reinstall 121
+    dietpi-software reinstall roonbridge
     ```
 
 ***
@@ -1129,7 +1129,7 @@ Turns your device into a Roon capable audio player and core server.
 
     ```sh
     AUTO_SETUP_AUTOMATED=1
-    AUTO_SETUP_INSTALL_SOFTWARE_ID=154
+    AUTO_SETUP_INSTALL_SOFTWARE_ID=roonserver
     SOFTWARE_ROONSERVER_EARLYACCESS=1
     ```
 
@@ -1180,7 +1180,7 @@ Turns your device into a Roon capable audio player and core server.
     The Roon Server comes with an internal updater which should be used. If the installation is broken in a way, you can repair it with a reinstall:
 
     ```sh
-    dietpi-software reinstall 154
+    dietpi-software reinstall roonserver
     ```
 
 ***
@@ -1264,7 +1264,7 @@ Also works with Roon.
 === "Update"
 
     ```sh
-    dietpi-software reinstall 124
+    dietpi-software reinstall naadaemon
     ```
 
 ***
@@ -1403,7 +1403,7 @@ Web interface music streamer.
     To update Koel to the recent version, simply reinstall it:
 
     ```sh
-    dietpi-software reinstall 143
+    dietpi-software reinstall koel
     ```
 
 ***
@@ -1435,7 +1435,7 @@ A DLNA audio render/endpoint. Allows you to stream and play music, from another 
         - Assure GMediaRender has been updated to latest version:
 
         ```sh
-        dietpi-software reinstall 163
+        dietpi-software reinstall gmediarender
         ```
 
         - Migrate options from `/etc/systemd/system/gmediarender.service.d/dietpi-services_edit.conf` to `/etc/default/gmediarender`.
@@ -1494,7 +1494,7 @@ Ubooquity is a free home server for your comics and ebooks library, with remote 
 === "Update"
 
     ```sh
-    dietpi-software reinstall 80
+    dietpi-software reinstall ubooquity
     ```
 
 ***
@@ -1569,7 +1569,7 @@ Free and open source comics/mangas media server with web UI.
     To update Komga to the latest version, simply reinstall it via DietPi-Software:
 
     ```sh
-    dietpi-software reinstall 179
+    dietpi-software reinstall komga
     ```
 
 ***
@@ -1851,7 +1851,7 @@ The Snapcast server needs to have its audio sources manually configured after in
     First install [Shairport Sync](#shairport-sync):
 
     ```sh
-    dietpi-software install 37
+    dietpi-software install shairportsync
     ```
 
     Then add the following config to `/etc/snapserver.conf` under `[stream]`. The `name` is the name as it will appear to Snapcast clients here I have called it `myAirport`. The `devicename` is the name that will be shown when searching for Airport devices. Check the Snapcast server docs for additional parameters you can pass in: <https://github.com/badaix/snapcast/blob/master/doc/configuration.md#airplay>
@@ -1968,7 +1968,7 @@ It is compatible with the [Subsonic media player](https://www.subsonic.org/pages
     Navidrome can be updated by simply reinstalling it:
 
     ```sh
-    dietpi-software reinstall 204
+    dietpi-software reinstall navidrome
     ```
 
 ***
@@ -2052,7 +2052,7 @@ A highlight of some of its key features:
     Kavita can be updated by simply reinstalling it:
 
     ```sh
-    dietpi-software reinstall 212
+    dietpi-software reinstall kavita
     ```
 
 ***

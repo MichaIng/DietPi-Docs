@@ -190,7 +190,7 @@ Website: <http://gnustep.org>
     1. Install Chromium browser via 
 
         ```sh
-        dietpi-software install 113
+        dietpi-software install chromium
         ```
 
         If Chromium is not installed, you will get a startup error message that the file `/var/lib/dietpi/dietpi-software/installed/chromium-autostart.sh` is not found if you activate Chromium kiosk mode via `dietpi-autostart`.
