@@ -70,19 +70,19 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
     - General server settings:
 
         ```
-        /mnt/dietpi_userdata/cubrite/settings.ini
+        /mnt/dietpi_userdata/cuberite/settings.ini
         ```
 
     - Settings for the web administration:
 
         ```
-        /mnt/dietpi_userdata/cubrite/webadmin.ini
+        /mnt/dietpi_userdata/cuberite/webadmin.ini
         ```
 
     - Settings for the world:
 
         ```
-        /mnt/dietpi_userdata/cubrite/world/world.ini
+        /mnt/dietpi_userdata/cuberite/world/world.ini
         ```
 
 === "Restart service"
@@ -95,7 +95,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
 
 === "View logs"
 
-    - Log files: `/mnt/dietpi_userdata/cubrite/logs/`
+    - Log files: `/mnt/dietpi_userdata/cuberite/logs/`
     - Service logs: `journalctl -u cuberite`
 
 === "Update"

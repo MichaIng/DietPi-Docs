@@ -273,17 +273,12 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     The Nextcloud admin panel includes a check for sufficient OPcache settings and in case shows a recommendation for settings to apply. If such appears, we recommend to apply them with an own configuration file, e.g.:
 
     ```sh
-    echo -e '; Custom Nextcloud OPcache settings\n; priority=99\nopcache.memory_consumption=128' > /etc/php/7.4/mods-available/custom.ini
+    php_version=$(php -r 'echo PHP_MAJOR_VERSION.".".PHP_MINOR_VERSION;')
+    echo -e '; Custom Nextcloud OPcache settings\n; priority=99\nopcache.memory_consumption=128' > "/etc/php/$php_version/mods-available/custom.ini"
     phpenmod custom
     ```
 
-    You can watch the actual usage with the pre-installed [opcache-gui](https://github.com/amnuts/opcache-gui){:class="nospellcheck"} by @amnuts.
-
-    - URL: `http://<your.IP>/opcache.php`
-
-    ![OPcache statistics page](../assets/images/OpCache_php_output.png "Nextcloud OPcache statistics output"){: width="700" height="976" loading="lazy"}
-
-    The dialog shows the cache status as well as the settings.
+    The PHP version is 8.2 on Debian Bookworm and 8.4 on Debian Trixie and newer. Restart the webserver/PHP services afterwards, e.g. via `dietpi-services restart`, so that the new settings are applied. Afterwards, the Nextcloud admin panel shows whether the OPcache settings are sufficient.
 
     **What shall I do about missing `bcmath`, `gmp` and `imagick` PHP modules?**
 

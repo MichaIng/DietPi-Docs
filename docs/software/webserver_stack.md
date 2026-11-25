@@ -516,11 +516,9 @@ Source: [The Apache Software Foundation](https://www.apache.org/logos/originals/
 
     | Debian version | Installation command | 
     | - | - |
-    | Debian 13 (Trixie)    | `apt install tomcat10`| 
-    | Debian 12 (Bookworm)  | `apt install tomcat10`| 
-    | Debian 11 (Bullseye)  | `apt install tomcat9`|
-    | Debian 10 (Buster)    | `apt install tomcat9`|
-    | Debian 9 (Stretch)    | `apt install tomcat8`|
+    | Debian 14 (Forky)     | `apt install tomcat11`|
+    | Debian 13 (Trixie)    | `apt install tomcat11` or `apt install tomcat10`|
+    | Debian 12 (Bookworm)  | `apt install tomcat10`|
 
     To install Tomcat, run the according command in the console, e.g. for Debian Trixie:
 
