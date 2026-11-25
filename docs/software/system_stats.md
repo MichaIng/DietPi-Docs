@@ -333,6 +333,10 @@ Official website: <https://github.com/XavierBerger/RPi-Monitor>.
 
 Netdata is a slick and feature-rich system stats monitor, with web interface.
 
+!!! info "Available on Debian Bookworm only"
+
+    Netdata can be installed on Debian Bookworm systems only, since the Debian `netdata` package is not available for Debian Trixie and newer: <https://bugs.debian.org/1107082>
+
 ![Netdata web interface screenshot](../assets/images/dietpi-software-systemstat-netdata.png "Netdata web interface dialog"){: width="500" height="260" loading="lazy"}
 
 === "Access to Netdata"
