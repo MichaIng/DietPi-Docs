@@ -1252,7 +1252,7 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
 === "Machine Learning"
 
-    Machine Learning (ML) features in Immich require the **Immich Machine Learning** server (software option **216**). Refer to the [Immich Machine Learning](#immich-machine-learning) section for installation and configuration details.
+    Machine Learning (ML) features in Immich require the **Immich Machine Learning** server (software ID `immichml`). Refer to the [Immich Machine Learning](#immich-machine-learning) section for installation and configuration details.
 
     When both Immich and the ML server are installed on the same device, `dietpi-software` automatically activates the ML connection in the Immich environment file. No manual configuration is needed.
 
@@ -1273,7 +1273,7 @@ License: [AGPLv3](https://github.com/immich-app/immich/blob/main/LICENSE)
 
 ## Immich Machine Learning
 
-The Immich Machine Learning server adds facial recognition and smart search via CLIP embeddings to your Immich installation. It can be installed on the same device as Immich (option **215**) or on a separate machine for distributed deployments.
+The Immich Machine Learning server adds facial recognition and smart search via CLIP embeddings to your Immich installation. It can be installed on the same device as Immich (software ID `immich`) or on a separate machine for distributed deployments.
 
 !!! warning "High memory demand"
     The Immich ML server requires substantial memory at runtime. `dietpi-software` hence expands the swap size where needed. Generally, while it is possible, we do not recommend to run Immich ML on a system with less than 2 GB RAM, or less than 4 GB when running [Immich Machine Learning](#immich-machine-learning) on the same host.
