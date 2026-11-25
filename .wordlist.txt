@@ -555,7 +555,6 @@ PaperMC
 pasja
 passwd
 passwordless
-PBKDF2
 PCI
 PCIe
 PCM
