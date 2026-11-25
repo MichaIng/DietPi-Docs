@@ -280,14 +280,22 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
 
     The PHP version is 8.2 on Debian Bookworm and 8.4 on Debian Trixie and newer. Restart the webserver/PHP services afterwards, e.g. via `dietpi-services restart`, so that the new settings are applied. Afterwards, the Nextcloud admin panel shows whether the OPcache settings are sufficient.
 
-    **What shall I do about missing `bcmath`, `gmp` and `imagick` PHP modules?**
+    **What shall I do about the missing `imagick` PHP module?**
 
-    After a fresh install via `dietpi-software`, the Nextcloud admin panel shows warnings about three missing modules. We propose to ignore them: `imagick` is not needed at all and a subject of discussion about security issues, `bcmath` and `gmp` are required only if you want to use the WebAuthn passwordless authentication with Nextcloud.  
-    If you must mute those warnings, you can install the modules manually:
+    After a fresh install via `dietpi-software`, the Nextcloud admin panel shows a warning about the missing `imagick` PHP module. We propose to ignore it: `imagick` is not needed at all and a subject of discussion about security issues.  
+    If you must mute this warning, you can install the module manually:
 
-    ```sh
-    sudo apt install php-bcmath php-gmp php-imagick libmagickcore-6.q16-6-extra
-    ```
+    - Debian Trixie and newer:
+
+        ```sh
+        sudo apt install php-imagick libmagickcore-7.q16-10-extra
+        ```
+
+    - Debian Bookworm:
+
+        ```sh
+        sudo apt install php-imagick libmagickcore-6.q16-6-extra
+        ```
 
     The `imagick` related warning can be solved alternatively by disabling the `Theming` app (in the Nextcloud apps settings), if no manual theming is done to the Nextcloud instance anyway.
 
