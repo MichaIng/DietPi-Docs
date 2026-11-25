@@ -1173,7 +1173,7 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
 !!! info "System requirements"
 
-    Immich can be installed on Debian Trixie and newer only, since the required `pgvector` PostgreSQL extension is not available as Debian package for Bookworm. It is available for ARMv8 (64-bit) and x86_64 systems only, since the VectorChord PostgreSQL extension provides packages for these architectures only.
+    Immich can be installed on Debian Trixie and newer only, since the required `pgvector` PostgreSQL extension is not available as Debian package for Bookworm. It is available for ARMv8 (64-bit) and x86_64 systems only, since the `VectorChord` PostgreSQL extension provides packages for these architectures only.
 
 !!! warning "High resource requirements"
     The Immich build process requires significant memory. `dietpi-software` hence temporarily expands the swap size where needed. On low-memory devices with slow drive, swapping can raise the build time to several hours. Generally, while it is possible, we do not recommend to run Immich on a system with less than 2 GB RAM, or less than 4 GB when running [Immich Machine Learning](#immich-machine-learning) on the same host.
