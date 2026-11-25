@@ -234,8 +234,8 @@ qBittorrent is a lightweight BitTorrent server with a slick web interface. As it
 
     - URL: `http://<your.IP>:1340`
     - Username: `qbittorrent`
-    - Password: `<your global password>` (default: `dietpi`)  
-        NB: Since qBittorrent v4.2.0 (Debian Bullseye), a new safer hash algorithm is used, which we are currently not able to replicate dynamically for the global software password with common shell tools. Until then, for your first login the password is `dietpi`. Please change it directly after first login: <https://github.com/MichaIng/DietPi/issues/5078>
+    - Password: `dietpi`  
+        NB: The global software password is not applied to qBittorrent. qBittorrent uses a PBKDF2 password hash, which we are currently not able to replicate dynamically with common shell tools. Hence for your first login, the password is always `dietpi`. Please change it directly after first login: <https://github.com/MichaIng/DietPi/issues/5078>
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"

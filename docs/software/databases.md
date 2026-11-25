@@ -109,7 +109,7 @@ Frequently used operations (_such as: managing databases, tables, columns, relat
 
     - URL = `http://<your.IP>/phpmyadmin`
     - Username = `phpmyadmin`
-    - Password = The same as your root login password, default is `dietpi`
+    - Password = `<your global software password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
