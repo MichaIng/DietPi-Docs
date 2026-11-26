@@ -1717,14 +1717,23 @@ Paperless-ngx is a document management system that turns your scanned paper docu
         ```
 
     !!! note "Allow other local services to write to the consumption directory"
-        Local services which run as their own user, e.g. `scanbd` (user `saned`) to save scans of a USB scanner, need to be members of the `dietpi` group to write to the consumption directory. Add the service user to the `dietpi` group and restart the service, so it can save its files there and Paperless-ngx can process them, e.g.:
+        Local services which run as their own user, e.g. a scanner button daemon to save scans of a USB scanner, need to be members of the `dietpi` group to write to the consumption directory. Add the service user to the `dietpi` group and restart the service, so it can save its files there and Paperless-ngx can process them:
 
         ```sh
-        usermod -aG dietpi saned
+        usermod -aG dietpi <user>
+        systemctl restart <service>
+        ```
+
+        Some services start as `root` and switch to their user themselves, without applying its group memberships, e.g. `scanbd`. For those, add the group to the systemd service instead:
+
+        ```sh
+        mkdir -p /etc/systemd/system/scanbd.service.d
+        echo -e '[Service]\nSupplementaryGroups=dietpi' > /etc/systemd/system/scanbd.service.d/dietpi.conf
+        systemctl daemon-reload
         systemctl restart scanbd
         ```
 
-        Replace `saned` and `scanbd` with the user and service of your application. The files must be readable for the `paperless` user, e.g. with mode 644.
+        The files must be readable for the `paperless` user, e.g. with mode 644.
 
 === "Configuration"
 
