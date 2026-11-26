@@ -187,8 +187,9 @@ It has these basic features:
 === "Access to the web interface"
 
     - URL: `http://<your.IP>:8127`
-    - Username: `root`
-    - Password: `<your global password>` (default: `dietpi`)
+    - Username/Password: Not required, the web interface is not password-protected by default
+
+    Authentication can be enabled in the `security` section of the configuration file, e.g. via `basicauth`, see the "Configuration files" tab.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"

@@ -993,9 +993,9 @@ Turn your device into a lightweight Mumble VoIP server.
 
     The server is accessible via port **64738**:
 
-    - URL: `http://<your.IP>:64738`
+    - Server address: `<your.IP>`, port `64738`
     - Password: No password required
-    - Superuser Password: `dietpi`
+    - Superuser Password: `<your global software password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
