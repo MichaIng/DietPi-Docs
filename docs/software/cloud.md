@@ -276,9 +276,10 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     php_version=$(php -r 'echo PHP_MAJOR_VERSION.".".PHP_MINOR_VERSION;')
     echo -e '; Custom Nextcloud OPcache settings\n; priority=99\nopcache.memory_consumption=128' > "/etc/php/$php_version/mods-available/custom.ini"
     phpenmod custom
+    systemctl restart "php$php_version-fpm"
     ```
 
-    The PHP version is 8.2 on Debian Bookworm and 8.4 on Debian Trixie and newer. Restart PHP-FPM afterwards, e.g. via `systemctl restart "php$php_version-fpm"`, so that the new settings are applied. Afterwards, the Nextcloud admin panel shows whether the OPcache settings are sufficient.
+    The first line detects the PHP version, which is 8.2 on Debian Bookworm and 8.4 on Debian Trixie and newer. The last line restarts PHP-FPM, so that the new settings are applied. Afterwards, the Nextcloud admin panel shows whether the OPcache settings are sufficient.
 
     **What shall I do about the missing `imagick` PHP module?**
 
