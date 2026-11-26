@@ -278,7 +278,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     phpenmod custom
     ```
 
-    The PHP version is 8.2 on Debian Bookworm and 8.4 on Debian Trixie and newer. Restart the webserver/PHP services afterwards, e.g. via `dietpi-services restart`, so that the new settings are applied. Afterwards, the Nextcloud admin panel shows whether the OPcache settings are sufficient.
+    The PHP version is 8.2 on Debian Bookworm and 8.4 on Debian Trixie and newer. Restart PHP-FPM afterwards, e.g. via `systemctl restart "php$php_version-fpm"`, so that the new settings are applied. Afterwards, the Nextcloud admin panel shows whether the OPcache settings are sufficient.
 
     **What shall I do about the missing `imagick` PHP module?**
 
