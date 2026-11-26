@@ -1171,6 +1171,10 @@ License: [BSD 2-Clause](https://github.com/restic/restic/blob/master/LICENSE)
 
 Immich is a self-hosted photo and video management solution. It provides a fast backup tool, allowing you to browse, search and organise your photos and videos without relying on cloud services. It includes features like facial recognition, object tagging, album sharing and a mobile app for automatic backup.
 
+!!! info "System requirements"
+
+    Immich can be installed on Debian Trixie and newer only, since the required `pgvector` PostgreSQL extension is not available as Debian package for Bookworm. It is available for ARMv8 (64-bit) and x86_64 systems only, since the `VectorChord` PostgreSQL extension provides packages for these architectures only.
+
 !!! warning "High resource requirements"
     The Immich build process requires significant memory. `dietpi-software` hence temporarily expands the swap size where needed. On low-memory devices with slow drive, swapping can raise the build time to several hours. Generally, while it is possible, we do not recommend to run Immich on a system with less than 2 GB RAM, or less than 4 GB when running [Immich Machine Learning](#immich-machine-learning) on the same host.
 
@@ -1274,6 +1278,10 @@ License: [AGPLv3](https://github.com/immich-app/immich/blob/main/LICENSE)
 ## Immich Machine Learning
 
 The Immich Machine Learning server adds facial recognition and smart search via CLIP embeddings to your Immich installation. It can be installed on the same device as Immich (option **215**) or on a separate machine for distributed deployments.
+
+!!! info "System requirements"
+
+    Immich Machine Learning can be installed on Debian Trixie only, since it requires Python 3.12 or newer (Debian Bookworm ships Python 3.11), while the used machine learning models do not support Python 3.14 yet (shipped with Debian Forky). It is available for ARMv8 (64-bit) and x86_64 systems only, since the required `onnxruntime` Python package is available for these architectures only.
 
 !!! warning "High memory demand"
     The Immich ML server requires substantial memory at runtime. `dietpi-software` hence expands the swap size where needed. Generally, while it is possible, we do not recommend to run Immich ML on a system with less than 2 GB RAM, or less than 4 GB when running [Immich Machine Learning](#immich-machine-learning) on the same host.
