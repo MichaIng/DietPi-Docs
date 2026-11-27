@@ -778,33 +778,19 @@ Also installs:
 
 === "Configuration"
 
-    Since Debian Bullseye (Ampache v6), the main configuration file is located at:
+    The main configuration file is located at:
 
     ```
     /mnt/dietpi_userdata/ampache/config/ampache.cfg.php
-    ```
-
-    Until Debian Buster (Ampache v4), the main configuration file is located at:
-
-    ```
-    /var/www/ampache/config/ampache.cfg.php
     ```
 
 === "Enable additional file formats via transcoding"
 
     E.g. to allow .m4a playback:
 
-    - Since Debian Bullseye (Ampache v6):
-
-        ```sh
-        G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /mnt/dietpi_userdata/ampache/config/ampache.cfg.php
-        ```
-
-    - Until Debian Buster (Ampache v4):
-
-        ```sh
-        G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /var/www/ampache/config/ampache.cfg.php
-        ```
+    ```sh
+    G_CONFIG_INJECT 'transcode_m4a[[:blank:]]' 'transcode_m4a = allowed' /mnt/dietpi_userdata/ampache/config/ampache.cfg.php
+    ```
 
     More info: <https://github.com/ampache/ampache/wiki/Transcoding>
 

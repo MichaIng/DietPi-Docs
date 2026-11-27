@@ -273,26 +273,30 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     The Nextcloud admin panel includes a check for sufficient OPcache settings and in case shows a recommendation for settings to apply. If such appears, we recommend to apply them with an own configuration file, e.g.:
 
     ```sh
-    echo -e '; Custom Nextcloud OPcache settings\n; priority=99\nopcache.memory_consumption=128' > /etc/php/7.4/mods-available/custom.ini
+    php_version=$(php -r 'echo PHP_MAJOR_VERSION.".".PHP_MINOR_VERSION;')
+    echo -e '; Custom Nextcloud OPcache settings\n; priority=99\nopcache.memory_consumption=128' > "/etc/php/$php_version/mods-available/custom.ini"
     phpenmod custom
+    systemctl restart "php$php_version-fpm"
     ```
 
-    You can watch the actual usage with the pre-installed [opcache-gui](https://github.com/amnuts/opcache-gui){:class="nospellcheck"} by @amnuts.
+    The first line detects the PHP version, which is 8.2 on Debian Bookworm and 8.4 on Debian Trixie and newer. The last line restarts PHP-FPM, so that the new settings are applied. Afterwards, the Nextcloud admin panel shows whether the OPcache settings are sufficient.
 
-    - URL: `http://<your.IP>/opcache.php`
+    **What shall I do about the missing `imagick` PHP module?**
 
-    ![OPcache statistics page](../assets/images/OpCache_php_output.png "Nextcloud OPcache statistics output"){: width="700" height="976" loading="lazy"}
+    After a fresh install via `dietpi-software`, the Nextcloud admin panel shows a warning about the missing `imagick` PHP module. We propose to ignore it: `imagick` is not needed at all and a subject of discussion about security issues.  
+    If you must mute this warning, you can install the module manually:
 
-    The dialog shows the cache status as well as the settings.
+    - Debian Trixie and newer:
 
-    **What shall I do about missing `bcmath`, `gmp` and `imagick` PHP modules?**
+        ```sh
+        sudo apt install php-imagick libmagickcore-7.q16-10-extra
+        ```
 
-    After a fresh install via `dietpi-software`, the Nextcloud admin panel shows warnings about three missing modules. We propose to ignore them: `imagick` is not needed at all and a subject of discussion about security issues, `bcmath` and `gmp` are required only if you want to use the WebAuthn passwordless authentication with Nextcloud.  
-    If you must mute those warnings, you can install the modules manually:
+    - Debian Bookworm:
 
-    ```sh
-    sudo apt install php-bcmath php-gmp php-imagick libmagickcore-6.q16-6-extra
-    ```
+        ```sh
+        sudo apt install php-imagick libmagickcore-6.q16-6-extra
+        ```
 
     The `imagick` related warning can be solved alternatively by disabling the `Theming` app (in the Nextcloud apps settings), if no manual theming is done to the Nextcloud instance anyway.
 
