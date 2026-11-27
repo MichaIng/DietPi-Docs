@@ -91,24 +91,21 @@ dietpi-survey
     Following is an example how this file may look like:
 
     ```bash
-    #!/bin/bash
-    ((aDIETPI_VERSION[6.34]++))
+    ((aDIETPI_VERSION[10.9]++))
     ((aGIT_BRANCH[MichaIng/master]++))
     ((aDEVICE_NAME[Virtual Machine (x86_64)]++))
     ((aCPU_ARCH[x86_64]++))
     ((aCPU_COUNT[2]++))
-    ((aDISTRO_VERSION[buster]++))
+    ((aDISTRO_VERSION[trixie]++))
     ((aAUTOSTART_OPTION[${aAUTOSTART_NAME[0]:=0}]++))
     ((aAUTO_SETUP_AUTOMATED[0]++))
     ((aNETWORK_INTERFACE[eth0]++))
-    # -------------------------
-    # DietPi-Software installs
-    # -------------------------
-    ((aSOFTWARE[${aSOFTWARE_NAME6_34[103]:=103}]++))
-    ((aSOFTWARE[${aSOFTWARE_NAME6_34[104]:=104}]++))
+    MMC=0
+    SOFTWARE=dietpiramlog
+    SOFTWARE=dropbear
     ```
 
-    The tail of the file lists installed software packages by their IDs. The example above shows a very basic system, so only two software packages (`#103`: DietPi-RAMlog, `#104`: Dropbear) are installed.
+    The tail of the file lists installed software packages by their IDs. The example above shows a very basic system, so only two software packages (`dietpiramlog`: DietPi-RAMlog, `dropbear`: Dropbear) are installed.
     To find out the names of the installed software package IDs installed via `dietpi-software` you can execute
 
     ```sh
@@ -119,8 +116,8 @@ dietpi-survey
 
     ```text
     # dietpi-software list | grep ' =2'
-    id 103 | =2 | dietpi-ramlog: minimal, optimised logging | | https://dietpi.com/docs/software/log_system/#dietpi-ramlog
-    id 104 | =2 | dropbear: lightweight ssh server | | https://dietpi.com/docs/software/ssh/#dropbear
+    ID dietpiramlog | =2 | DietPi-RAMlog: Makes /var/log a RAM disk, preserves file structure on reboot | | https://dietpi.com/docs/software/log_system/#dietpi-ramlog
+    ID dropbear | =2 | Dropbear: Lightweight SSH server | | https://dietpi.com/docs/software/ssh/#dropbear
     ```
 
 === "Selecting Opt-in or Opt-out"

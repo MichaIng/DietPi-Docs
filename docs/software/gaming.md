@@ -12,6 +12,7 @@ description: Description of DietPi software options related to games and userspa
 - [**MineOS - Multiple Minecraft servers with web interface**](#mineos)
 - [**Nukkit - Server for Minecraft Pocket Edition**](#nukkit)
 - [**Amiberry - Amiga emulation system**](#amiberry)
+- [**Amiberry-Lite - Amiga emulator optimised for low-end hardware**](#amiberry-lite)
 - [**DXX-Rebirth - Descent 1 and 2 OpenGL port**](#dxx-rebirth)
 - [**Steam - Steam client**](#steam)
 - [**PaperMC - Fast and optimised Minecraft server**](#papermc)
@@ -103,7 +104,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
     Cuberite can be updated to the latest version by reinstalling it via
 
     ```sh
-    dietpi-software reinstall 52
+    dietpi-software reinstall cuberite
     ```
 
 ## MineOS
@@ -198,7 +199,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
       Amiga Kickstart ROM images are required to run the system(s) you want to emulate. These can not be bundled due to copyright restrictions.  
       If you own the Amiga Forever product, you can legally download and use Kickstarts you are eligible for, from: <https://www.amigaroms.com/>  
       **Remark:** *Kickstart 1.3 (A500-A2500-A3000-CDTV) is highly recommended to work with most games.*  
-      Kickstarts can be placed in `/mnt/dietpi_userdata/amiberry/kickstarts`.
+      Kickstarts can be placed in `/mnt/dietpi_userdata/amiberry/roms` (on ARMv6 systems: `/mnt/dietpi_userdata/amiberry/kickstarts`).
     - **Floppy disks (Amiga `.adf` images)**  
       Amiga's floppy disk images have a `.adf` file extension.  
       You will need obtain at least one ADF image to start your Amiga experience.  
@@ -237,7 +238,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
         - On the left hand side, select **ROM**.
         - Under **Main ROM File:**, select the browse button (3 dots) ...
         - Navigate to your Kickstarts directory:  
-          `/mnt/dietpi_userdata/amiberry/kickstarts`\*
+          `/mnt/dietpi_userdata/amiberry/roms`\*
         - Select the Kickstart (1.3 is recommended) you wish to use.
 
     - Select a Floppy disk image (ADF):
@@ -281,7 +282,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     To update Amiberry to the latest version, simply reinstall it:
 
     ```sh
-    dietpi-software reinstall 108
+    dietpi-software reinstall amiberry
     ```
 
 === "FAQ"
@@ -291,7 +292,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     Make sure you have one of DietPi's File Servers installed.
 
     - Floppy Disk Image (`.adf`) directory as chosen before, e.g. `/amiberry/floppy_images`
-    - Kickstarts (`.rom`) directory = `/amiberry/kickstarts`
+    - Kickstarts (`.rom`) directory = `/amiberry/roms` (on ARMv6 systems: `/amiberry/kickstarts`)
 
     <h4>How can I open the configuration window once the emulator has started?</h4>
 
@@ -349,6 +350,46 @@ When ready, select **Start** to launch the emulator. Have fun!
 
 YouTube video tutorial #1: [Amiga on the Raspberry Pi with DietPi and Amiberry: I got the Pi 400 to work!](https://www.youtube.com/watch?v=osBU7iVSQ78)  
 YouTube video tutorial #2: [Amiga on the Raspberry Pi with DietPi and Amiberry: Workbench and Autobooting](https://www.youtube.com/watch?v=LU-G0PRNffQ)
+
+## Amiberry-Lite
+
+Amiberry-Lite is the lite version of [Amiberry](#amiberry): It has less features and less emulation accuracy, but is better suited for Raspberry Pi 3 level devices and other less powerful SBCs.
+
+!!! info "Not available on ARMv6"
+
+    Amiberry-Lite cannot be installed on ARMv6 systems (Raspberry Pi 1 and Zero 1). On these systems, use [Amiberry](#amiberry) instead.
+
+=== "First run setup"
+
+    Amiberry-Lite is set up the same way as Amiberry, see the [Amiberry](#amiberry) section, with its own directories:
+
+    - Data directory: `/mnt/dietpi_userdata/amiberry-lite`
+    - Kickstarts (Amiga ROM images): `/mnt/dietpi_userdata/amiberry-lite/roms`
+    - Configuration directory: `/mnt/dietpi_userdata/amiberry-lite/conf`
+
+=== "Starting"
+
+    - Amiberry-Lite can be started by running:
+
+        ```sh
+        systemctl start amiberry-lite
+        ```
+
+    - Optionally, you can enable Amiberry-Lite autostart to boot straight into the Amiga environment.  
+      Run `dietpi-autostart 3` from console or `dietpi-autostart` and select **Amiberry-Lite** from the menu, then reboot your system.
+
+=== "Update"
+
+    Amiberry-Lite is installed as APT package `amiberry-lite` from the DietPi APT repository, hence it is updated along with all other APT packages:
+
+    ```sh
+    apt update
+    apt upgrade
+    ```
+
+***
+
+Source code: <https://github.com/BlitterStudio/amiberry-lite>
 
 ## DXX-Rebirth
 
@@ -484,7 +525,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 === "Update"
 
     ```sh
-    dietpi-software reinstall 181
+    dietpi-software reinstall papermc
     ```
 
 === "FAQ"

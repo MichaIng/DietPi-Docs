@@ -91,7 +91,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     To update the Python version along with Home Assistant, reinstall it:
 
     ```sh
-    dietpi-software reinstall 157
+    dietpi-software reinstall homeassistant
     ```
 
 ***
@@ -112,14 +112,12 @@ Domoticz is a Home Automation System that lets you monitor and configure various
     The web interface is accessible via HTTPS on port **8424**:
 
     - URL: `https://<your.IP>:8424`
-    - Username: `admin`
-    - Password: `domoticz`
+    - Username/Password: Are set at first web interface access
+
+    On first access, Domoticz asks you to create an admin account ("Create your admin account to get started"). There is no default user or password.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
-
-    !!! tip "Change default user and password"
-        We recommend to create a new user with admin privileges via **Setup** -> **Users** and remove the default one, or at least change the default password.
 
 === "Install directory"
 
@@ -239,7 +237,7 @@ Homebridge allows you to integrate with smart home devices that do not natively 
 
     The web interface is accessible via port **8581**:
 
-    - URL: `https://<your.IP>:8581`
+    - URL: `http://<your.IP>:8581`
     - Username/Password: Are set at first web interface login
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
@@ -318,7 +316,7 @@ Scrypted is a high performance home video integration platform and NVR with smar
     To update Scrypted to the latest version, reinstall it. The data directory will be preserved.
 
     ```sh
-    dietpi-software reinstall 220
+    dietpi-software reinstall scrypted
     ```
 
 ***

@@ -98,7 +98,7 @@ ownCloud Infinite Scale (oCIS) is the new file sync & share platform that will b
     Update ownCloud Infinite Scale with a reinstall, which preserves existing data and configs:
 
     ```sh
-    dietpi-software reinstall 47
+    dietpi-software reinstall ocis
     ```
 
     Manual migration steps might be needed between major version upgrades. See the related official migration docs before upgrading: <https://doc.owncloud.com/ocis/latest/migration/upgrading-ocis.html#introduction>
@@ -157,7 +157,7 @@ Nextcloud gives you access to all your files wherever you are. Store your docume
     1. If not done yet, install Fail2Ban:
 
         ```sh
-        dietpi-software install 73
+        dietpi-software install fail2ban
         ```
 
     1. Set options in the ***Nextcloud configuration file***, typically `/var/www/nextcloud/config/config.php`:
@@ -423,7 +423,7 @@ Clients are available for Windows, macOS, Linux and FreeBSD.
     You can easily update UrBackup by reinstalling it. Your settings and data are preserved:
 
     ```sh
-    dietpi-software reinstall 111
+    dietpi-software reinstall urbackupserver
     ```
 
 ***
@@ -494,7 +494,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     You can easily update Gogs by reinstalling it. Your settings and data are preserved by this:
 
     ```sh
-    dietpi-software reinstall 49
+    dietpi-software reinstall gogs
     ```
 
 ***
@@ -612,7 +612,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     You can easily update Gitea by reinstalling it. Your settings and data are preserved by this:
 
     ```sh
-    dietpi-software reinstall 165
+    dietpi-software reinstall gitea
     ```
 
 ***
@@ -734,7 +734,7 @@ See also the [**Git**](programming.md#git) client which is available in `dietpi-
     You can easily update Forgejo by reinstalling it. Your settings and data are preserved by this:
 
     ```sh
-    dietpi-software reinstall 177
+    dietpi-software reinstall forgejo
     ```
 
 ***
@@ -792,7 +792,7 @@ Backup and sync server with web interface. Extremely lightweight and efficient a
 
     ```sh
     rm -R /opt/syncthing
-    dietpi-software reinstall 50
+    dietpi-software reinstall syncthing
     ```
 
 ***
@@ -1012,7 +1012,7 @@ FuguHub transforms your DietPi device into a secure online storage system, letti
     To update FuguHub, simply reinstall it:
 
     ```sh
-    dietpi-software reinstall 161
+    dietpi-software reinstall fuguhub
     ```
 
     All your settings and data will be preserved.
@@ -1108,7 +1108,7 @@ Access and manage your data from anywhere via browser with this lightweight remo
     You can easily update File Browser by reinstalling it. Your settings and data are preserved by this:
 
     ```sh
-    dietpi-software reinstall 198
+    dietpi-software reinstall filebrowser
     ```
 
 ***
@@ -1132,7 +1132,7 @@ Rclone is a command-line program to manage files on cloud storage. It is a featu
     Rclone can be updated by simply reinstalling it:
 
     ```sh
-    dietpi-software reinstall 202
+    dietpi-software reinstall rclone
     ```
 
 ***
@@ -1174,6 +1174,10 @@ License: [BSD 2-Clause](https://github.com/restic/restic/blob/master/LICENSE)
 ## Immich
 
 Immich is a self-hosted photo and video management solution. It provides a fast backup tool, allowing you to browse, search and organise your photos and videos without relying on cloud services. It includes features like facial recognition, object tagging, album sharing and a mobile app for automatic backup.
+
+!!! info "System requirements"
+
+    Immich can be installed on Debian Trixie and newer only, since the required `pgvector` PostgreSQL extension is not available as Debian package for Bookworm. It is available for ARMv8 (64-bit) and x86_64 systems only, since the `VectorChord` PostgreSQL extension provides packages for these architectures only.
 
 !!! warning "High resource requirements"
     The Immich build process requires significant memory. `dietpi-software` hence temporarily expands the swap size where needed. On low-memory devices with slow drive, swapping can raise the build time to several hours. Generally, while it is possible, we do not recommend to run Immich on a system with less than 2 GB RAM, or less than 4 GB when running [Immich Machine Learning](#immich-machine-learning) on the same host.
@@ -1256,7 +1260,7 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
 
 === "Machine Learning"
 
-    Machine Learning (ML) features in Immich require the **Immich Machine Learning** server (software option **216**). Refer to the [Immich Machine Learning](#immich-machine-learning) section for installation and configuration details.
+    Machine Learning (ML) features in Immich require the **Immich Machine Learning** server (software ID `immichml`). Refer to the [Immich Machine Learning](#immich-machine-learning) section for installation and configuration details.
 
     When both Immich and the ML server are installed on the same device, `dietpi-software` automatically activates the ML connection in the Immich environment file. No manual configuration is needed.
 
@@ -1265,7 +1269,7 @@ Immich is a self-hosted photo and video management solution. It provides a fast 
     You can update Immich by reinstalling it. Your data and configuration are preserved:
 
     ```sh
-    dietpi-software reinstall 215
+    dietpi-software reinstall immich
     ```
 
 ***
@@ -1277,7 +1281,11 @@ License: [AGPLv3](https://github.com/immich-app/immich/blob/main/LICENSE)
 
 ## Immich Machine Learning
 
-The Immich Machine Learning server adds facial recognition and smart search via CLIP embeddings to your Immich installation. It can be installed on the same device as Immich (option **215**) or on a separate machine for distributed deployments.
+The Immich Machine Learning server adds facial recognition and smart search via CLIP embeddings to your Immich installation. It can be installed on the same device as Immich (software ID `immich`) or on a separate machine for distributed deployments.
+
+!!! info "System requirements"
+
+    Immich Machine Learning can be installed on Debian Trixie only, since it requires Python 3.12 or newer (Debian Bookworm ships Python 3.11), while the used machine learning models do not support Python 3.14 yet (shipped with Debian Forky). It is available for ARMv8 (64-bit) and x86_64 systems only, since the required `onnxruntime` Python package is available for these architectures only.
 
 !!! warning "High memory demand"
     The Immich ML server requires substantial memory at runtime. `dietpi-software` hence expands the swap size where needed. Generally, while it is possible, we do not recommend to run Immich ML on a system with less than 2 GB RAM, or less than 4 GB when running [Immich Machine Learning](#immich-machine-learning) on the same host.
@@ -1346,7 +1354,7 @@ The Immich Machine Learning server adds facial recognition and smart search via 
     You can update Immich Machine Learning by reinstalling it. Your data and configuration are preserved:
 
     ```sh
-    dietpi-software reinstall 216
+    dietpi-software reinstall immichml
     ```
 
 ***
@@ -1394,7 +1402,7 @@ HomeBox is a self-hosted home inventory and organisation system. It helps you ke
     You can update HomeBox by reinstalling it. Your database and settings are preserved:
 
     ```sh
-    dietpi-software reinstall 219
+    dietpi-software reinstall homebox
     ```
 
 === "HTTPS access via reverse proxy"
@@ -1719,6 +1727,25 @@ Paperless-ngx is a document management system that turns your scanned paper docu
         chmod -R g+w /mnt/dietpi_userdata/paperless-ngx/consume
         systemctl restart paperless-consumer
         ```
+
+    !!! note "Allow other local services to write to the consumption directory"
+        Local services which run as their own user, e.g. a scanner button daemon to save scans of a USB scanner, need to be members of the `dietpi` group to write to the consumption directory. Add the service user to the `dietpi` group and restart the service, so it can save its files there and Paperless-ngx can process them:
+
+        ```sh
+        usermod -aG dietpi <user>
+        systemctl restart <service>
+        ```
+
+        Some services start as `root` and switch to their user themselves, without applying its group memberships, e.g. `scanbd`. For those, add the group to the systemd service instead:
+
+        ```sh
+        mkdir -p /etc/systemd/system/scanbd.service.d
+        echo -e '[Service]\nSupplementaryGroups=dietpi' > /etc/systemd/system/scanbd.service.d/dietpi.conf
+        systemctl daemon-reload
+        systemctl restart scanbd
+        ```
+
+        The files must be readable for the `paperless` user, e.g. with mode 644.
 
 === "Configuration"
 

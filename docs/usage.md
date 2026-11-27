@@ -47,7 +47,7 @@ Below, only the most important options are listed. For further options go into t
 To achieve the basic network configuration the following options shall be taken into account:
 
 - Run with WiFi: `AUTO_SETUP_NET_WIFI_ENABLED`, `AUTO_SETUP_NET_WIFI_COUNTRY_CODE` in combination with `dietpi-wifi.txt`
-- Use a static IP address: `AUTO_SETUP_NET_USESTATIC`, `AUTO_SETUP_NET_STATIC_IP`, `AUTO_SETUP_NET_STATIC_MASK`, `AUTO_SETUP_NET_STATIC_GATEWAY`, `AUTO_SETUP_NET_STATIC_DNS`, `AUTO_SETUP_DHCP_TO_STATIC`
+- Use a static IP address: `AUTO_SETUP_NET_USESTATIC`, `AUTO_SETUP_NET_STATIC_IP` (with optional netmask in CIDR notation, e.g. `192.168.0.100/24`), `AUTO_SETUP_NET_STATIC_GATEWAY`, `AUTO_SETUP_NET_STATIC_DNS`, `AUTO_SETUP_DHCP_TO_STATIC`
 - Usage of a proxy server: `CONFIG_PROXY_ADDRESS`, `CONFIG_PROXY_PORT`, `CONFIG_PROXY_USERNAME`, `CONFIG_PROXY_PASSWORD`
 
 #### System options
@@ -62,14 +62,14 @@ Many of the system options can be set with the automated installation and can be
 
 #### Software preferences
 
-Some server options can be set via `AUTO_SETUP_SSH_SERVER_INDEX`, `AUTO_SETUP_FILE_SERVER_INDEX`, `AUTO_SETUP_WEB_SERVER_INDEX`.
+Some server options can be set via `AUTO_SETUP_SSH_SERVER_INDEX` and `AUTO_SETUP_WEB_SERVER_INDEX`.
 
 #### Software packages installation
 
 All software packages, which can be installed via `dietpi-software` can also be installed automatically using the keyword `AUTO_SETUP_INSTALL_SOFTWARE_ID`.  
-The software packages are given with their software ID (a number) which can be found on the left side when browsing the software in the `dietpi-software` script. Additionally they are given in the [list of available software IDs](https://github.com/MichaIng/DietPi/wiki/DietPi-Software-list).
+The software packages are given with their software ID (the lower case software name without special characters, e.g. `nodered` for Node-RED), which can be found on the left side when browsing the software in the `dietpi-software` script, or via `dietpi-software list`. Additionally they are given in the [list of available software IDs](https://github.com/MichaIng/DietPi/wiki/DietPi-Software-list). Multiple IDs are separated by spaces. Legacy numeric IDs are still accepted.
 
-As an example the software package "Plex Media Server" has the ID 42.
+As an example the software package "Plex Media Server" has the ID `plex`.
 
 #### APT software packages installation
 
@@ -98,12 +98,9 @@ For further details refer to the documentation section [Automated restore at the
 
 #### General options
 
-These keywords are general ones and need to be used for fully automated setups:
+This keyword is a general one and needs to be used for fully automated setups:
 
-- `AUTO_SETUP_ACCEPT_LICENSE`
 - `AUTO_SETUP_AUTOMATED`
-
-Remark: If `AUTO_SETUP_AUTOMATED=1` is used, the `AUTO_SETUP_ACCEPT_LICENCE` needs not to be set.
 
 ### Wait for completion of the automated setup / Logging
 
@@ -122,7 +119,6 @@ The following lines give an example of needed changes within the `dietpi.txt` fi
 Then these entries need to be set within the file `dietpi.txt` prior the initial boot:
 
 ```sh
-AUTO_SETUP_ACCEPT_LICENSE=1
 AUTO_SETUP_LOCALE=de_DE.UTF-8
 AUTO_SETUP_KEYBOARD_LAYOUT=de
 AUTO_SETUP_TIMEZONE=Europe/Berlin
@@ -150,7 +146,7 @@ AUTO_SETUP_NET_HOSTNAME=myDietPiSystem
 AUTO_SETUP_BROWSER_INDEX=-2
 AUTO_SETUP_AUTOSTART_TARGET_INDEX=16
 AUTO_SETUP_AUTOMATED=1
-AUTO_SETUP_INSTALL_SOFTWARE_ID=25
+AUTO_SETUP_INSTALL_SOFTWARE_ID=xfce
 CONFIG_CHECK_DIETPI_UPDATES=1
 CONFIG_CHECK_APT_UPDATES=2
 ```

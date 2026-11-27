@@ -111,7 +111,7 @@ go version
 === "Update"
 
     ```sh
-    dietpi-software reinstall 188
+    dietpi-software reinstall go
     ```
 
 ***
@@ -214,7 +214,7 @@ By using the event-callback/non-blocking approach, Node.js offers a single-threa
     To update Node.js to the latest version, simply reinstall it:
 
     ```sh
-    dietpi-software reinstall 9
+    dietpi-software reinstall nodejs
     ```
 
 === "Install a desired Node.js version"
@@ -273,7 +273,7 @@ uv --version
     To update uv to the latest version, simply reinstall it:
 
     ```sh
-    dietpi-software reinstall 217
+    dietpi-software reinstall uv
     ```
 
 ***

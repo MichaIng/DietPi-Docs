@@ -306,7 +306,7 @@ Once installed, available VirtualHere devices will be shown in the client user i
     When a new version is available, VirtualHere can be updated by simply reinstalling it:
 
     ```sh
-    dietpi-software reinstall 138
+    dietpi-software reinstall virtualhere
     ```
 
 ***
@@ -412,7 +412,7 @@ See also <https://github.com/rustdesk/rustdesk/wiki/How-does-RustDesk-work%3F>.
     When a new version is available, RustDesk Server can be updated by simply reinstalling it:
 
     ```sh
-    dietpi-software reinstall 12
+    dietpi-software reinstall rustdeskserver
     ```
 
     The version info of the installed server versions can be displayed via
@@ -437,7 +437,7 @@ RustDesk clients for several operating systems are also available as open source
 In addition, RustDesk Client can be installed via `dietpi-software` in the category "Remote Desktop" or by executing
 
 ```sh
-dietpi-software install 13
+dietpi-software install rustdeskclient
 ```
 
 To connect to the self hosted RustDesk Server (instead of the public server from RustDesk), the configuration of the client has to be adjusted to the hostname resp. IP address of the RustDesk server in the field "ID Server" and the public key of the RustDesk server (contents of `id_ed25519.pub`) in the field "Key":
@@ -484,7 +484,7 @@ An X11 desktop environment is required by RustDesk Client and will be installed 
     When a new version is available, RustDesk Client can be updated by simply reinstalling it:
 
     ```sh
-    dietpi-software reinstall 13
+    dietpi-software reinstall rustdeskclient
     ```
 
     The version info of the installed client can be displayed via:
@@ -509,7 +509,7 @@ After the DietPi installation of RustDesk Client, the client is already configur
 
 === "Using a self-hosted RustDesk Server"
 
-    To connect to a self-hosted [RustDesk Server](#rustdesk-server) instead of the public server, the client has to be configured to use the hostname resp. IP address of the RustDesk server. Open the RustDesk Client, go to **Settings > Network** and set the **ID server** to the hostname or IP address of your self-hosted RustDesk Server, and set the **Key** to the public key of your RustDesk server (e.g. contents of `/mnt/dietpi_userdata/rustdesk/id_ed25519.pub` in case of a self-hosted server installed via `dietpi-software install 12`):
+    To connect to a self-hosted [RustDesk Server](#rustdesk-server) instead of the public server, the client has to be configured to use the hostname resp. IP address of the RustDesk server. Open the RustDesk Client, go to **Settings > Network** and set the **ID server** to the hostname or IP address of your self-hosted RustDesk Server, and set the **Key** to the public key of your RustDesk server (e.g. contents of `/mnt/dietpi_userdata/rustdesk/id_ed25519.pub` in case of a self-hosted server installed via `dietpi-software install rustdeskserver`):
 
     ![RustDesk client setup](../assets/images/dietpi-software-remotedesktop-rustdeskclient_02.png "RustDesk client configuration"){: width="549" height="321" loading="lazy"}
 

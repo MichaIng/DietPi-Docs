@@ -191,7 +191,7 @@ Node-RED is a visual tool for wiring together hardware devices, APIs and online 
     Newer Node-RED versions might require a newer Node.js version. If this is the case, to update Node.js as well, easiest is to reinstall Node-RED. Your additional plugins, data and configs are preserved:
 
     ```sh
-    dietpi-software reinstall 122
+    dietpi-software reinstall nodered
     ```
 
 ***
@@ -359,7 +359,7 @@ Also installs:
     Update Blynk with:
 
     ```sh
-    dietpi-software reinstall 131
+    dietpi-software reinstall blynkserver
     ```
 
 ***
@@ -408,7 +408,7 @@ Remark: Grafana binaries are specific to the CPU architecture, therefore, swappi
     You can do this using the install steps provided by **DietPi-Software** tool or running the next command line in the terminal:
 
     ```sh  
-    dietpi-software install 74
+    dietpi-software install influxdb
     ```
 
     After the InfluxDB is installed, please follow the database creation guide [here](databases.md#influxdb).

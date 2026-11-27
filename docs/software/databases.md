@@ -109,7 +109,7 @@ Frequently used operations (_such as: managing databases, tables, columns, relat
 
     - URL = `http://<your.IP>/phpmyadmin`
     - Username = `phpmyadmin`
-    - Password = The same as your root login password, default is `dietpi`
+    - Password = `<your global software password>` (default: `dietpi`)
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
@@ -467,7 +467,7 @@ License: [PostgreSQL Licence](https://www.postgresql.org/about/licence/)
     You can easily update WhoDB by reinstalling it. Your settings are preserved:
 
     ```sh
-    dietpi-software reinstall 214
+    dietpi-software reinstall whodb
     ```
 
 ***
