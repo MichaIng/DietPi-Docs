@@ -426,7 +426,7 @@ Also installs:
     If the ruTorrent web interface shall be updated as well, easiest is a reinstall:
 
     ```sh
-    dietpi-software reinstall 107
+    dietpi-software reinstall rtorrent
     ```
 
 [//]: # (Include software expandable infoblock)
@@ -640,7 +640,7 @@ NZB download manager with web interface.
 === "Update
 
     ```sh
-    dietpi-software reinstall 139
+    dietpi-software reinstall sabnzbd
     ```
 
 [//]: # (Include software expandable infoblock)
@@ -740,8 +740,14 @@ Searches both Bit Torrent and Usenet, has a feature to automatically download an
 
 === "Update"
 
+    **Medusa is updated with its built-in updater from the web interface.**
+
+    A reinstall via `dietpi-software` does not update Medusa: If the install directory `/mnt/dietpi_userdata/medusa` exists, download and install steps are skipped.  
+    If Medusa needs to be reinstalled or repaired (e.g. broken instance), back up your config files and data, remove the install directory and reinstall it:
+
     ```sh
-    dietpi-software reinstall 139
+    rm -R /mnt/dietpi_userdata/medusa
+    dietpi-software reinstall medusa
     ```
 
 [//]: # (Include software expandable infoblock)
@@ -1411,7 +1417,7 @@ Extremely efficient and fast NZB download manager with web interface. Coded in C
 === "Update"
 
     ```sh
-    dietpi-software reinstall 149
+    dietpi-software reinstall nzbget
     ```
 
 [//]: # (Include software expandable infoblock)
@@ -1469,7 +1475,7 @@ Do all your HTPC tasks without using 5 different interfaces!
 === "Update"
 
     ```sh
-    dietpi-software reinstall 155
+    dietpi-software reinstall htpcmanager
     ```
 
 ***
@@ -1582,7 +1588,7 @@ LazyLibrarian is a program to follow authors and grab metadata for all your digi
     To update LazyLibrarian, simply reinstall it:
 
     ```sh
-    dietpi-software reinstall 169
+    dietpi-software reinstall lazylibrarian
     ```
 
 [//]: # (Include software expandable infoblock)

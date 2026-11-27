@@ -91,7 +91,7 @@ Home Assistant is an open-source home automation platform running on Python 3. T
     To update the Python version along with Home Assistant, reinstall it:
 
     ```sh
-    dietpi-software reinstall 157
+    dietpi-software reinstall homeassistant
     ```
 
 ***
@@ -316,7 +316,7 @@ Scrypted is a high performance home video integration platform and NVR with smar
     To update Scrypted to the latest version, reinstall it. The data directory will be preserved.
 
     ```sh
-    dietpi-software reinstall 220
+    dietpi-software reinstall scrypted
     ```
 
 ***

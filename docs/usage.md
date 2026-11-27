@@ -67,9 +67,9 @@ Some server options can be set via `AUTO_SETUP_SSH_SERVER_INDEX` and `AUTO_SETUP
 #### Software packages installation
 
 All software packages, which can be installed via `dietpi-software` can also be installed automatically using the keyword `AUTO_SETUP_INSTALL_SOFTWARE_ID`.  
-The software packages are given with their software ID (a number) which can be found on the left side when browsing the software in the `dietpi-software` script. Additionally they are given in the [list of available software IDs](https://github.com/MichaIng/DietPi/wiki/DietPi-Software-list).
+The software packages are given with their software ID (the lower case software name without special characters, e.g. `nodered` for Node-RED), which can be found on the left side when browsing the software in the `dietpi-software` script, or via `dietpi-software list`. Additionally they are given in the [list of available software IDs](https://github.com/MichaIng/DietPi/wiki/DietPi-Software-list). Multiple IDs are separated by spaces. Legacy numeric IDs are still accepted.
 
-As an example the software package "Plex Media Server" has the ID 42.
+As an example the software package "Plex Media Server" has the ID `plex`.
 
 #### APT software packages installation
 
@@ -146,7 +146,7 @@ AUTO_SETUP_NET_HOSTNAME=myDietPiSystem
 AUTO_SETUP_BROWSER_INDEX=-2
 AUTO_SETUP_AUTOSTART_TARGET_INDEX=16
 AUTO_SETUP_AUTOMATED=1
-AUTO_SETUP_INSTALL_SOFTWARE_ID=25
+AUTO_SETUP_INSTALL_SOFTWARE_ID=xfce
 CONFIG_CHECK_DIETPI_UPDATES=1
 CONFIG_CHECK_APT_UPDATES=2
 ```

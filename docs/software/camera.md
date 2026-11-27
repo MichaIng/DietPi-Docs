@@ -139,7 +139,7 @@ Stream JPEG frames from various sources to various possible outputs. With the de
     mjpg-streamer can be updated to the latest version by reinstalling it via
 
     ```sh
-    dietpi-software reinstall 137
+    dietpi-software reinstall mjpgstreamer
     ```
 
 === "Logging"
@@ -234,7 +234,7 @@ It has these basic features:
     BirdNET-Go can be updated to the latest version by reinstalling it via
 
     ```sh
-    dietpi-software reinstall 127
+    dietpi-software reinstall birdnetgo
     ```
 
 ***

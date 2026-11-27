@@ -156,22 +156,23 @@ Beside the interactive software installation via `dietpi-software` with checking
 ```console
 Usage: dietpi-software [<command> [<software_id>...]]
 Available commands:
-    <empty>     Interactive menu
-    install     <software_id>...  Install each software given by space-separated list of IDs
-    reinstall   <software_id>...  Reinstall each software given by space-separated list of IDs
-    uninstall   <software_id>...  Uninstall each software given by space-separated list of IDs
-    list[--machine-readable]      Print a list with IDs and info for all available software titles
-    free                          Print an unused software ID, free for a new software implementation
+  <empty>                     Interactive menu to install or uninstall software
+  install <software_id>...    Install each software given by space-separated list of IDs
+  reinstall <software_id>...  Reinstall each software given by space-separated list of IDs
+  uninstall <software_id>...  Uninstall each software given by space-separated list of IDs
+  list [--machine-readable]   Print a list with IDs and info for all available software titles
+Software IDs are the lower case software names, without any special characters, e.g. "nodered" for Node-RED.
+Names are accepted as well, e.g. "Node-RED". Legacy numeric IDs are still supported.
 ```
 
-The `<software_id>` which has to be given is the one which is present in the software list within the `dietpi-software` dialogues:
+The `<software_id>` is the lower case software name without special characters, as shown in the software list within the `dietpi-software` dialogues and by `dietpi-software list`:
 
-![DietPi-Tools command line installation](../assets/images/dietpi-tools-command-line-installation.png "DietPi software IDs"){: width="454" height="129" loading="lazy"}
+![DietPi-Tools command line installation](../assets/images/dietpi-tools-command-line-installation.png "DietPi software IDs"){: width="650" height="102" loading="lazy"}
 
 E.g. to install Chromium, LXQt and GIMP you have to run next command in the terminal:
 
 ```sh
-dietpi-software install 113 173 174
+dietpi-software install chromium lxqt gimp
 ```
 
 ---

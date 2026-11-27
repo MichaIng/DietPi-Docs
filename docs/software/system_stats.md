@@ -136,7 +136,7 @@ DietPi-Dashboard is a very lightweight and standalone web interface for monitori
     You can easily update DietPi-Dashboard by reinstalling it and restarting the services for the change to take effect:
 
     ```sh
-    dietpi-software reinstall 200
+    dietpi-software reinstall dietpidashboard
     systemctl restart dietpi-dashboard-frontend
     systemctl restart dietpi-dashboard-backend
     ```
@@ -572,7 +572,7 @@ Portainer simplifies your Docker container management via Portainer web interfac
     To update Portainer, simply reinstall it:
 
     ```sh
-    dietpi-software reinstall 185
+    dietpi-software reinstall portainer
     ```
 
 ***
@@ -887,7 +887,7 @@ On Raspberry Pi SBCs, this software will include the [Raspberry Pi Exporter](htt
     Prometheus Node Exporter can be updated by simply reinstalling it:
 
     ```sh
-    dietpi-software reinstall 99
+    dietpi-software reinstall prometheusexporter
     ```
 
 ***
@@ -971,7 +971,7 @@ Prometheus is an open-source monitoring system and time series database. It scra
     Prometheus can be updated by simply reinstalling it:
 
     ```sh
-    dietpi-software reinstall 218
+    dietpi-software reinstall prometheus
     ```
 
 ***
@@ -1041,7 +1041,7 @@ Homer is a modern and lightweight dashboard & homepage for your services
     To update Homer simply re-run the installer by executing
 
     ```sh
-    dietpi-software reinstall 205
+    dietpi-software reinstall homer
     ```
 
     Remark: The `dietpi-software` script update procedure preserves the file `config.yml` automatically, there is no necessity for the user to do a restore manually.
@@ -1255,7 +1255,7 @@ Uptime Kuma is a fancy self-hosted monitoring tool.
     To update Uptime Kuma simply re-run the installer by executing
 
     ```sh
-    dietpi-software reinstall 176
+    dietpi-software reinstall uptimekuma
     ```
 
 ***

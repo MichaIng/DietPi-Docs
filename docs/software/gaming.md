@@ -104,7 +104,7 @@ Cuberite allows you to create a single, blazingly fast Minecraft server, which u
     Cuberite can be updated to the latest version by reinstalling it via
 
     ```sh
-    dietpi-software reinstall 52
+    dietpi-software reinstall cuberite
     ```
 
 ## MineOS
@@ -282,7 +282,7 @@ This installation is possible due to a collaboration with Dimitris Panokostas (A
     To update Amiberry to the latest version, simply reinstall it:
 
     ```sh
-    dietpi-software reinstall 108
+    dietpi-software reinstall amiberry
     ```
 
 === "FAQ"
@@ -525,7 +525,7 @@ PaperMC by default runs a single server, available on LAN, but can be port forwa
 === "Update"
 
     ```sh
-    dietpi-software reinstall 181
+    dietpi-software reinstall papermc
     ```
 
 === "FAQ"

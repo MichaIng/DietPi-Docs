@@ -215,7 +215,7 @@ This node lets you download files through IPFS and add your own files to the net
     You can update your IPFS node by running
 
     ```sh
-    dietpi-software reinstall 186
+    dietpi-software reinstall kubo
     ```
 
     Alternatively, IPFS has an experimental built in update command:
