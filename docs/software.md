@@ -131,6 +131,7 @@ description: Overview of ready-to-run DietPi-Software options, cloud & backup se
 - [**Samba - Feature rich file server**](software/file_servers.md#samba)
 - [**vsftpd - Feature rich FTP file server**](software/file_servers.md#vsftpd)
 - [**NFS - Network file system server**](software/file_servers.md#nfs)
+- [**OpenSSH SFTP Server - SFTP file access for Dropbear**](software/file_servers.md#openssh-sftp-server)
 
 ## [Gaming & Emulation](software/gaming.md)
 

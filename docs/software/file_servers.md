@@ -11,6 +11,7 @@ description: Description of DietPi software options related to file servers
 - [**Samba - Feature rich file server**](#samba)
 - [**vsftpd - Feature rich FTP file server**](#vsftpd)
 - [**NFS - Network file system server**](#nfs)
+- [**OpenSSH SFTP Server - SFTP file access for Dropbear**](#openssh-sftp-server)
 
 [//]: # (Include software expandable infoblock)
 --8<---------- "snippet-includes/DietPi-Software_infoblock.md"
@@ -308,5 +309,44 @@ Network file system server.
 
 Wikipedia: <https://wikipedia.org/wiki/Network_File_System>  
 DietPi Blog: [DietPi and NFS: Basics and improving security](https://dietpi.com/blog/?p=3581)
+
+## OpenSSH SFTP Server
+
+The SFTP server of OpenSSH, which enables file access via SFTP when using [Dropbear](ssh.md#dropbear) as SSH server.  
+Dropbear does not have an SFTP server built in. Since OpenSSH 9.0, also `scp` uses the SFTP protocol by default. Without an SFTP server, `sftp`, `scp`, `sshfs`, and clients like WinSCP or FileZilla in SFTP mode hence fail to connect to Dropbear. With the [OpenSSH server](ssh.md#openssh), the SFTP server is installed already.
+
+=== "Installation"
+
+    The OpenSSH SFTP Server can be installed together with Dropbear via the **SSH Server** menu of `dietpi-software` by selecting **Dropbear + SFTP**, or for automated first run setups with `AUTO_SETUP_SSH_SERVER_INDEX=-3` in `dietpi.txt`. Alternatively, it can be installed via command line:
+
+    ```sh
+    dietpi-software install sftpserver
+    ```
+
+    There is nothing to configure: Dropbear calls `/usr/lib/sftp-server` for SFTP connections, which is provided by the `openssh-sftp-server` package.
+
+=== "Access with an SFTP client"
+
+    The access with an **SFTP client** is achieved with the SSH login credentials:
+
+    - Address = Your IP address (e.g.: 192.168.0.100)
+    - Port = 22
+    - Username = `dietpi` or any other login user
+    - Password = The password of that user, or an SSH key
+
+    E.g. from the command line:
+
+    ```sh
+    sftp dietpi@192.168.0.100
+    ```
+
+    !!! note "Same permissions as the SSH login"
+
+        The SFTP server runs with the permissions of the logged in user, and it is not restricted to a specific directory. Logged in as `root`, all files of the system can be accessed and changed. Hence, it is a good idea to use the `dietpi` user or a dedicated user for file transfers.
+
+***
+
+Website: <https://www.openssh.com>  
+Official documentation: <https://manpages.debian.org/sftp-server>
 
 [Return to the **Optimised Software list**](../software.md)

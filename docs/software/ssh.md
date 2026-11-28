@@ -80,6 +80,10 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
     On Windows, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and [KiTTY](https://www.9bis.net/kitty/) are recommended SSH clients.
 
+=== "SFTP/SCP access"
+
+    Dropbear does not have an SFTP server built in, which is required for `sftp`, `sshfs`, modern `scp` and clients like WinSCP or FileZilla in SFTP mode. To enable SFTP access, select **Dropbear + SFTP** in the **SSH Server** menu of `dietpi-software`, which additionally installs the [OpenSSH SFTP Server](file_servers.md#openssh-sftp-server).
+
 ***
 
 Website: <https://matt.ucc.asn.au/dropbear/dropbear.html>  
@@ -149,6 +153,10 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 === "Windows SSH client"
 
     On Windows, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and [KiTTY](https://www.9bis.net/kitty/) are recommended SSH clients.
+
+=== "SFTP/SCP access"
+
+    SFTP access is available out of the box: The [OpenSSH SFTP Server](file_servers.md#openssh-sftp-server) is a dependency of the OpenSSH server, hence it is always installed along with it. `sftp`, `scp`, `sshfs` and clients like WinSCP or FileZilla in SFTP mode can connect with the SSH login credentials, without any further setup.
 
 === "Windows SFTP/SCP client"
 
