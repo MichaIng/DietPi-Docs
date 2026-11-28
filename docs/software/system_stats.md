@@ -1278,9 +1278,19 @@ SolidPing is a self-hosted uptime monitoring tool. It runs HTTP, TCP, DNS, ICMP,
 
     - URL: `http://<your.IP>:4002`
     - Username: `admin@solidping.io`
-    - Password: `solidpass`
+    - Password: `<your global software password>`
 
-    You are asked to set a new password at the first login.
+    You are asked to set a new password at the first login. The initial password is set via `SP_ADMIN_PASSWORD` in the environment file `/mnt/dietpi_userdata/solidping/solidping.env`. After the password change, this line is not used anymore and can be removed. More details can be found in the [SolidPing documentation](https://docs.solidping.io/docs/configuration/authentication#password-of-the-first-admin).
+
+    ??? info "Installed with DietPi v10.9?"
+
+        With DietPi v10.9, the initial password is generated randomly by SolidPing v0.53.0 and newer, and shown only once, in the log of the first service start. Older SolidPing versions used the password `solidpass` instead. You can find the generated password with this command:
+
+        ```sh
+        journalctl -u solidping | grep 'password='
+        ```
+
+        The password is the value after `password=` in that line. The log line can be gone, e.g. after a reboot, since DietPi keeps logs in RAM by default. As long as the initial password has not been changed yet, you can replace it: add the line `SP_ADMIN_PASSWORD="<your_password>"` to the environment file and restart the service with `systemctl restart solidping`. Then log in with this password. You will still be asked to set a new one.
 
     [//]: # (Include Avahi Daemon <hostname>.local access textblock)
     --8<---------- "snippet-includes/AvahiDaemon-WebInterface-access_infoblock.md"
