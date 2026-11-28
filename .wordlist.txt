@@ -223,6 +223,7 @@ FHS
 filebrowser
 filesystem
 filesystems
+FileZilla
 FirstBoot
 fka
 FlightAware

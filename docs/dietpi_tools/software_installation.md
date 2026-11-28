@@ -51,7 +51,8 @@ This lets you enable a graphical desktop installation and to select the desktop 
 
 ### SSH server selection
 
-This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.
+This lets you select your preferred SSH server. Also you can uninstall any SSH server to save memory and to exclude any external ssh based access.  
+The choice **Dropbear + SFTP** installs Dropbear together with the [OpenSSH SFTP Server](../software/file_servers.md#openssh-sftp-server), to enable SFTP access.
 
 ![DietPi-Software SSH Server menu screenshot](../assets/images/dietpi-software-ssh-selection.jpg "DietPi-Software SSH Server menu"){: width="550" height="320" loading="lazy"}
 
