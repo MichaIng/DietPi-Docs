@@ -154,6 +154,10 @@ Remark: You can swap or change your SSH server at any time using *DietPi-Softwar
 
     On Windows, [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and [KiTTY](https://www.9bis.net/kitty/) are recommended SSH clients.
 
+=== "SFTP/SCP access"
+
+    SFTP access is available out of the box: The [OpenSSH SFTP Server](file_servers.md#openssh-sftp-server) is a dependency of the OpenSSH server, hence it is always installed along with it. `sftp`, `scp`, `sshfs` and clients like WinSCP or FileZilla in SFTP mode can connect with the SSH login credentials, without any further setup.
+
 === "Windows SFTP/SCP client"
 
     WinSCP will allow you to transfer files and folders on your DietPi device ([WinSCP downloads page](https://winscp.net/eng/download.php)).
